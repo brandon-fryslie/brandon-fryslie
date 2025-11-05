@@ -6,6 +6,7 @@
 
 [![GitHub followers](https://img.shields.io/github/followers/brandon-fryslie?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=blue)](https://github.com/brandon-fryslie)
 [![Profile Views](https://komarev.com/ghpvc/?username=brandon-fryslie&style=for-the-badge&color=blueviolet)](https://github.com/brandon-fryslie)
+![Badge Whore](https://img.shields.io/badge/Badge%20Whore-FF69B4?style=for-the-badge&logo=sparkles&logoColor=white)
 
 </div>
 
