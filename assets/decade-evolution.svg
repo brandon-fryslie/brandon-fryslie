@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="timeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#777BB4">
+        <animate attributeName="stop-color" values="#777BB4;#F7DF1E;#3776AB;#412991" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#00D9FF">
+        <animate attributeName="stop-color" values="#00D9FF;#FF1493;#FFD700;#00D9FF" dur="12s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="evolutionGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    .evo-bg { fill: #0d1117; }
+    
+    .evo-title {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 56px;
+      font-weight: 900;
+      fill: url(#timeGrad);
+      text-anchor: middle;
+      filter: url(#evolutionGlow);
+    }
+    
+    .timeline-path {
+      stroke: url(#timeGrad);
+      stroke-width: 8;
+      fill: none;
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      filter: url(#evolutionGlow);
+      animation: drawEvolution 4s ease-out forwards;
+    }
+    
+    @keyframes drawEvolution {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    .era-circle {
+      fill: #0d1117;
+      stroke: url(#timeGrad);
+      stroke-width: 5;
+      opacity: 0;
+      animation: eraAppear 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+      transform-box: fill-box;
+      transform-origin: center;
+      filter: url(#evolutionGlow);
+    }
+    
+    @keyframes eraAppear {
+      0% { opacity: 0; transform: scale(0); }
+      70% { transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    
+    .era-year {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      fill: #FFD700;
+      text-anchor: middle;
+      opacity: 0;
+      animation: yearPop 0.6s ease-out forwards;
+    }
+    
+    @keyframes yearPop {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    .era-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      fill: #00D9FF;
+      text-anchor: middle;
+      opacity: 0;
+      animation: labelSlide 0.6s ease-out forwards;
+    }
+    
+    @keyframes labelSlide {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .era-tech {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      fill: #8b949e;
+      text-anchor: middle;
+    }
+    
+    .era-project {
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      fill: #c9d1d9;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    
+    .phase-arrow {
+      fill: url(#timeGrad);
+      opacity: 0.6;
+      animation: arrowPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes arrowPulse {
+      0%, 100% { opacity: 0.6; transform: translateX(0); }
+      50% { opacity: 1; transform: translateX(10px); }
+    }
+    
+    .achievement-star {
+      fill: #FFD700;
+      animation: achievementShine 3s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+      filter: url(#evolutionGlow);
+    }
+    
+    @keyframes achievementShine {
+      0%, 100% { opacity: 0.7; transform: scale(1) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1.3) rotate(180deg); }
+    }
+    
+    .wave-bg {
+      fill: none;
+      stroke: #30363d;
+      stroke-width: 40;
+      opacity: 0.1;
+      animation: waveMove 20s ease-in-out infinite;
+    }
+    
+    @keyframes waveMove {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .commit-dot {
+      fill: #FF1493;
+      animation: commitBlink 2s ease-in-out infinite;
+    }
+    
+    @keyframes commitBlink {
+      0%, 100% { opacity: 1; r: 4; }
+      50% { opacity: 0.5; r: 6; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="evo-bg" width="1200" height="600"/>
+  
+  <!-- Wave background -->
+  <path class="wave-bg" d="M 0,200 Q 300,150 600,200 T 1200,200"/>
+  <path class="wave-bg" d="M 0,400 Q 300,450 600,400 T 1200,400" style="animation-delay: -10s"/>
+  
+  <!-- Title -->
+  <text class="evo-title" x="600" y="70">A DECADE OF EVOLUTION</text>
+  
+  <!-- Main timeline path -->
+  <path class="timeline-path" d="M 150,300 Q 350,200 550,300 T 950,300 L 1050,300"/>
+  
+  <!-- Era 1: 2011 - The Foundation -->
+  <circle class="era-circle" cx="150" cy="300" r="60" style="animation-delay: 2s"/>
+  <text class="era-year" x="150" y="310" style="animation-delay: 2.2s">2011</text>
+  <text class="era-label" x="150" y="410" style="animation-delay: 2.4s">THE FOUNDATION</text>
+  <text class="era-project" x="150" y="440">Smoke Framework</text>
+  <text class="era-tech" x="150" y="460">PHP • MVC • Architecture</text>
+  <polygon class="achievement-star" points="150,220 155,235 170,235 158,245 163,260 150,250 137,260 142,245 130,235 145,235" style="animation-delay: 2.5s"/>
+  
+  <!-- Arrow 1 -->
+  <polygon class="phase-arrow" points="250,290 280,300 250,310" style="animation-delay: 3s"/>
+  
+  <!-- Era 2: 2014 - Modern Web -->
+  <circle class="era-circle" cx="400" cy="250" r="60" style="animation-delay: 2.5s"/>
+  <text class="era-year" x="400" y="260" style="animation-delay: 2.7s">2014</text>
+  <text class="era-label" x="400" y="360" style="animation-delay: 2.9s">MODERN WEB</text>
+  <text class="era-project" x="400" y="390">ember-rest.coffee</text>
+  <text class="era-tech" x="400" y="410">Ember • JS • Real-time</text>
+  <circle class="commit-dot" cx="400" cy="180" r="4" style="animation-delay: 3s"/>
+  <circle class="commit-dot" cx="420" cy="190" r="3" style="animation-delay: 3.2s"/>
+  
+  <!-- Arrow 2 -->
+  <polygon class="phase-arrow" points="500,290 530,300 500,310" style="animation-delay: 3.5s"/>
+  
+  <!-- Era 3: 2017 - The Breakthrough -->
+  <circle class="era-circle" cx="650" cy="300" r="80" style="animation-delay: 3s"/>
+  <text class="era-year" x="650" y="305" style="font-size: 32px; animation-delay: 3.2s">2017</text>
+  <text class="era-label" x="650" y="430" style="font-size: 24px; animation-delay: 3.4s">THE BREAKTHROUGH</text>
+  <text class="era-project" x="650" y="460" style="font-size: 20px; fill: #FFD700">rad-shell ⭐41</text>
+  <text class="era-tech" x="650" y="485">Zsh • Plugins • Themes</text>
+  <text class="era-tech" x="650" y="505">Thousands of users</text>
+  <polygon class="achievement-star" points="650,200 658,220 680,220 663,233 671,253 650,240 629,253 637,233 620,220 642,220" style="animation-delay: 3.5s; animation-duration: 2s"/>
+  <polygon class="achievement-star" points="600,240 605,250 615,250 608,256 611,266 600,259 589,266 592,256 585,250 595,250" style="animation-delay: 3.7s"/>
+  <polygon class="achievement-star" points="700,240 705,250 715,250 708,256 711,266 700,259 689,266 692,256 685,250 695,250" style="animation-delay: 3.9s"/>
+  
+  <!-- Arrow 3 -->
+  <polygon class="phase-arrow" points="780,290 810,300 780,310" style="animation-delay: 4s"/>
+  
+  <!-- Era 4: 2020 - Physical World -->
+  <circle class="era-circle" cx="900" cy="260" r="60" style="animation-delay: 3.5s"/>
+  <text class="era-year" x="900" y="270" style="animation-delay: 3.7s">2020</text>
+  <text class="era-label" x="900" y="370" style="animation-delay: 3.9s">PHYSICAL WORLD</text>
+  <text class="era-project" x="900" y="400">esp-bloom • pb-sync</text>
+  <text class="era-tech" x="900" y="420">IoT • Hardware • LEDs</text>
+  <circle class="commit-dot" cx="900" cy="195" r="4" style="animation-delay: 4s"/>
+  
+  <!-- Arrow 4 -->
+  <polygon class="phase-arrow" points="990,290 1020,300 990,310" style="animation-delay: 4.5s"/>
+  
+  <!-- Era 5: 2024+ - AI Era -->
+  <circle class="era-circle" cx="1050" cy="300" r="70" style="animation-delay: 4s"/>
+  <text class="era-year" x="1050" y="305" style="font-size: 30px; animation-delay: 4.2s">2024+</text>
+  <text class="era-label" x="1050" y="420" style="animation-delay: 4.4s">AI ERA</text>
+  <text class="era-project" x="1050" y="450">macos-tts • kalider</text>
+  <text class="era-tech" x="1050" y="470">AI/ML • OpenAI</text>
+  <text class="era-tech" x="1050" y="490">Real Integration</text>
+  <polygon class="achievement-star" points="1050,215 1057,230 1072,230 1060,240 1065,255 1050,245 1035,255 1040,240 1028,230 1043,230" style="animation-delay: 4.5s"/>
+  
+  <!-- Bottom summary -->
+  <text class="era-label" x="600" y="560" style="font-size: 22px; animation-delay: 5s; fill: #FF1493;">
+    PHP → JavaScript → Python → Shell → AI → IoT
+  </text>
+</svg>

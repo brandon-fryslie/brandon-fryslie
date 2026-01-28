@@ -1,8 +1,6 @@
 <div align="center">
 
-![Banner](./assets/banner.svg)
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=900&lines=Not+just+code.+Craft.;A+decade+of+commitment+%E2%80%A2+70%2B+repos+%E2%80%A2+%E2%88%9E+commits;rad-shell%3A+41%E2%98%85+and+thousands+of+users;From+2011+frameworks+to+2026+AI+to+physical+IoT;Master+fundamentals.+Build+with+intention.)](https://git.io/typing-svg)
+![Epic Hero Banner](./assets/hero-banner.svg)
 
 </div>
 
@@ -10,168 +8,183 @@
 
 <div align="center">
 
+## 🎭 Philosophy
+
 ![Philosophy](./assets/philosophy.svg)
+
+### *"If you're green, you're growing. If you're ripe, you're rotten."*
 
 </div>
 
 ```javascript
-const brandon = {
-    philosophy: "If you're green, you're growing. If you're ripe, you're rotten.",
-    approach: "Master fundamentals. Years, not weekends.",
-    proof: "rad-shell: 41★, thousands of users, 10+ years of commits",
-    range: "2011-2026 • PHP → JavaScript → Python → AI → IoT",
-    commitment: "70+ repos, but only the meaningful ones showcased here",
-    reality: "Not chasing frameworks. Building foundations."
+// This isn't a resume. It's a decade.
+const decade = {
+    started: 2011,
+    current: 2026,
+    projects: 70+,
+    meaningful: "Only what matters",
+    
+    flagship: {
+        name: "rad-shell",
+        stars: 41,
+        users: "thousands daily",
+        status: "still evolving"
+    },
+    
+    philosophy: "Master fundamentals. Build with intention. Commit for years.",
+    reality: "Not chasing frameworks. Creating foundations."
 };
+
+// Ten years of commits don't lie.
 ```
 
 ---
 
 <div align="center">
 
-## 🌊 Ripple Effects
-
-![Impact Rings](./assets/impact-rings.svg)
-
-*A single project, sustained over time, touches thousands of lives.*
+![The Masterpieces](./assets/masterpiece-showcase.svg)
 
 </div>
+
+---
+
+## 🐚 rad-shell: When Commitment Becomes Legend
+
+**★ 41 | 👥 Thousands | ⚡ 10+ Years | 🌍 Worldwide**
+
+This is what happens when you don't give up.
+
+Most developers: Build something cool, get bored, move on.  
+**Me**: Build something cool, commit for a decade, watch thousands of developers rely on it daily.
+
+**rad-shell** isn't a project. It's a **commitment incarnate**.
+
+- ⚡ **Performance obsession**: Millisecond startup when others take seconds
+- 🎨 **Visual intelligence**: Git-aware theming that actually helps you work
+- 🔌 **True extensibility**: Plugin architecture that doesn't break
+- 🌍 **Global impact**: Developers on every continent trust this daily
+- 📦 **Battle-proven**: Production environments, not just demos
+- 💚 **Still growing**: Because ripe means rotten
+
+**The Ecosystem**:
+- **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Architecture that actually works
+- **[git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme)** — Where the journey began
+- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — A decade of refinement
+
+When you use rad-shell, you're not using "some guy's dotfiles." You're using a **framework** refined over **ten years** by someone who **never stopped caring**.
+
+That's the difference.
 
 ---
 
 <div align="center">
 
-## 💎 Signature Work
-
-![Signature Projects](./assets/signature-work.svg)
+![A Decade of Evolution](./assets/decade-evolution.svg)
 
 </div>
 
 ---
 
-## 🐚 rad-shell — The Flagship
+## 🤖 AI/ML: Solving Problems That Matter
 
-**★ 41 stars • 7 forks • Thousands of daily users • Years of evolution**
-
-This is what **sustained commitment** looks like. Not a weekend hack. A complete Zsh framework that developers worldwide install, trust, and use daily.
-
-**Built over years with obsessive attention to:**
-- ⚡ **Performance**: Millisecond startup times, not seconds
-- 🎨 **Design**: Git-aware theming with visual intelligence
-- 🔌 **Architecture**: Plugin system that actually extends without breaking
-- 📦 **Reliability**: Battle-tested in production environments across continents
-
-**The Ecosystem:**
-- **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Extensible plugin architecture that works
-- **[git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme)** — Where the journey started
-- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — Personal config maintained since day one
-
-**This is the difference between a project and a commitment.**
-
-When you commit to something for years—really commit—it shows. rad-shell has been refined, optimized, battle-tested, and trusted by thousands. It's not about the star count. It's about building something people actually **use** and **rely on**.
-
----
-
-## 🤖 AI/ML — Real Integration, Real Problems
-
-Not building ChatGPT wrappers. Building **real integration** that solves **human problems**.
+Everyone's building ChatGPT wrappers.  
+I'm building **actual integration** that **actual humans** need.
 
 ### [macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)
-**OpenAI-powered screen reader you'd actually want to listen to.** Deep macOS accessibility integration with natural voice synthesis. This is AI serving humans, not performing tricks.
+**The screen reader you'd actually want to listen to.**
 
-Real accessibility. Real integration. Real impact.
+Natural voice synthesis. Deep macOS integration. Accessibility that doesn't sound like a robot reading tax forms.
 
-`Python` `OpenAI API` `macOS Accessibility` `Natural Voice Synthesis`
+This is AI **serving** humans, not performing tricks for demos.
+
+`Python` `OpenAI` `macOS Accessibility` `Real Impact`
 
 ### [kalider](https://github.com/brandon-fryslie/kalider)
-**Experimental AI research at the edges.** *"It might not be a good idea, but it's an idea!"* 
+**Experimental AI research. The kind that might fail.**
 
-Innovation requires trying things that might fail. This explores those boundaries. Not every experiment succeeds—but every experiment teaches.
+*"It might not be a good idea, but it's an idea!"*
 
-`Python` `Machine Learning` `Experimental Research`
+Innovation requires trying things that might not work. This is one of those things. No apologies.
+
+`Python` `Machine Learning` `Experimental` `Boundary-Pushing`
 
 ### [ptytest](https://github.com/brandon-fryslie/ptytest)
-**Terminal emulation testing infrastructure.** AI tools need solid foundations. This provides PTY testing for building robust CLI applications.
+**Because AI tools need Unix fundamentals.**
 
-Because even AI needs Unix fundamentals.
+Terminal emulation. PTY testing. The unglamorous infrastructure that makes everything else possible.
 
-`Python` `PTY Emulation` `Terminal Testing` `CLI Infrastructure`
+`Python` `PTY` `Terminal Emulation` `Infrastructure`
 
 ---
 
-## 🌐 Full-Stack — The Complete Picture
+## 🌐 Full-Stack: Built When It Mattered
 
 ### [tesseract-react](https://github.com/brandon-fryslie/tesseract-react)
-Modern React with clean architecture. Not following framework-of-the-week. Building with **intention and vision**.
+Modern React with clean architecture. Built with **intention**, not hype.
 
 ### [ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee) ⭐ 4
-**Early Ember.js adoption with CoffeeScript REST utilities.** Built when these were **cutting edge**, not legacy. Shows commitment to exploring new paradigms when they're still risky bets.
+**Built in 2014 when Ember was cutting edge.**
 
-Early adoption matters. It shows you're not just following—you're exploring.
+Not legacy. **Early adoption.** Shows I explore new territory when it's still risky.
 
 ### [sake](https://github.com/brandon-fryslie/sake)
-**WebSockets Made Easy.** Real-time communication with clean abstractions. Built before WebSockets were everywhere—when they were still hard.
+**WebSockets Made Easy**. Built before they were everywhere—when they were still **hard**.
 
 ### [storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)
-**Interactive web storytelling platform.** Technology should enable **creativity**, not just CRUD applications.
+Interactive storytelling platform. Because technology should enable **creativity**, not just CRUD.
 
 ---
 
-## 🎨 IoT & Hardware — Physical Computing
+## 🎨 IoT/Hardware: Software Meets Photons
 
 ### [esp-bloom](https://github.com/brandon-fryslie/esp-bloom)
-**Ambient bias lighting using ESP8266 microcontrollers.** Inspired by ScreenBloom, rebuilt with custom features, extended capabilities. Dynamic colors, screen synchronization, custom patterns.
+**Ambient bias lighting with ESP8266 microcontrollers.**
 
-Real hardware. Real challenges. Real photons.
+Inspired by ScreenBloom. Rebuilt better. Extended further.  
+Dynamic colors. Screen sync. Custom patterns.
 
-`Python` `ESP8266` `IoT` `LED Control` `Real-time Sync` `Hardware Integration`
+**Real hardware. Real challenges. Real photons.**
+
+`Python` `ESP8266` `IoT` `LED Control` `Real-time Sync`
 
 ### [pb-sync](https://github.com/brandon-fryslie/pb-sync)
-**PixelBlaze LED controller integration.** Clean TypeScript tooling for hardware control. Robust API design, hardware control done right.
+**PixelBlaze LED controller integration.**
 
-`TypeScript` `Hardware APIs` `LED Controllers` `System Integration`
+TypeScript. Hardware APIs. Clean abstractions.
 
-**Software is more than web apps.** Sometimes you need to control the physical world—lights, sensors, microcontrollers. That requires a different kind of thinking.
+Software isn't just web apps. Sometimes you need to **control the physical world**.
+
+`TypeScript` `Hardware` `System Integration` `LED Controllers`
 
 ---
 
-## 📚 Framework Development — Deep Knowledge
+## 📚 Framework Development: Deep Knowledge, 2011
 
 ### [Smoke](https://github.com/brandon-fryslie/Smoke) ⭐ 4
-**A complete reinterpretation of CodeIgniter 2.0.2.** Not a fork—a **fundamental rethinking** of what a PHP framework could be.
+**Not a fork. A rethinking.**
 
-Built in **2011** when I was exploring the deep fundamentals of MVC architecture, routing, and framework design. This is where you learn what frameworks **really are** beneath the surface.
+Built in **2011** when I wanted to understand **what frameworks really are** beneath the surface.
 
-`PHP` `MVC Architecture` `Framework Design` `2011` `Fundamentals`
+Complete reinterpretation of CodeIgniter. MVC architecture explored from first principles.
+
+This is where you learn frameworks aren't magic—they're **patterns you can understand and rebuild**.
+
+`PHP` `MVC` `Architecture` `2011` `First Principles`
 
 ### [combine](https://github.com/brandon-fryslie/combine)
-**PHP asset combination and minification.** Built **before asset pipelines were standard**. Before Webpack. Before the tooling explosion.
+**Asset combination and minification. Before Webpack existed.**
 
-**Solving problems before the industry caught up.**
+Solved problems **before** the industry caught up.
 
-`PHP` `Asset Pipeline` `Build Tools` `Pre-Webpack Era`
-
----
-
-<div align="center">
-
-## 📊 The Journey in Code
-
-![Commit History Art](./assets/commit-art.svg)
-
-*2011 → 2026: A decade of building, learning, evolving*
-
-</div>
+`PHP` `Build Tools` `Pre-Webpack` `Problem Solving`
 
 ---
 
 <div align="center">
-
-## ⚡ Skills Forged Through Time
 
 ![Skills Matrix](./assets/skills-matrix.svg)
 
-*Not just learned. Mastered through years of production code.*
+*Not learned in bootcamps. Forged through years of production code.*
 
 </div>
 
@@ -179,29 +192,29 @@ Built in **2011** when I was exploring the deep fundamentals of MVC architecture
 
 ## 💻 The Arsenal
 
-**Not buzzwords. Tools I've shipped production code with. For years.**
+**These aren't buzzwords. These are tools I've shipped production code with. For years.**
 
 <div align="center">
 
-### Core Languages — The Foundation
+### The Foundation
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
-### Frameworks & Runtime — The Builders
+### The Builders
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Ember](https://img.shields.io/badge/Ember-E04E39?style=for-the-badge&logo=ember.js&logoColor=white)
 
-### Modern Stack — The Cutting Edge
+### The Cutting Edge
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-### Hardware — The Physical Layer
+### The Physical Layer
 ![ESP8266](https://img.shields.io/badge/ESP8266-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberry-pi&logoColor=white)
 
@@ -209,19 +222,21 @@ Built in **2011** when I was exploring the deep fundamentals of MVC architecture
 
 ---
 
-## 🛠️ Developer Tools Built With One Principle
+## 🛠️ Developer Tools: Built on One Principle
 
-**If I wouldn't use it daily, why should anyone else?**
+**If I wouldn't use it every day, why should anyone else?**
 
-- **[handy-debugger](https://github.com/brandon-fryslie/handy-debugger)** — Node.js debugging without the frustration
-- **[stacker](https://github.com/brandon-fryslie/stacker)** — Boot your entire development stack properly
-- **[sublime-profile](https://github.com/brandon-fryslie/sublime-profile)** — Editor optimization that actually matters
+- **[handy-debugger](https://github.com/brandon-fryslie/handy-debugger)** — Node.js debugging without the pain
+- **[stacker](https://github.com/brandon-fryslie/stacker)** — Boot your entire dev stack correctly
+- **[sublime-profile](https://github.com/brandon-fryslie/sublime-profile)** — Editor optimization that matters
 
-Every tool scratches a real itch. Every tool gets used in production. Every tool maintained over time.
+Every tool scratches a real itch.  
+Every tool gets used in production.  
+Every tool maintained over time.
 
 ---
 
-## 📊 The Numbers Tell a Story
+## 📊 The Numbers Tell The Story
 
 <div align="center">
 
@@ -234,44 +249,61 @@ Every tool scratches a real itch. Every tool gets used in production. Every tool
 
 ---
 
-## 🎯 What Sets This Apart
+## 🎯 What Separates This From Every Other Profile
 
-**Most profiles: Resume dump.**  
-**This profile: Portfolio of sustained commitment.**
+Most developers:
+- ❌ Build for a weekend
+- ❌ Get bored
+- ❌ Move on
+- ❌ Chase frameworks
+- ❌ Resume dump their GitHub
 
-- ✅ **Proven impact**: rad-shell with 41★ and thousands of active users
-- ✅ **Temporal depth**: 2011-2026—not just riding recent trends
-- ✅ **Early adoption courage**: Ember & Smoke when they were **risky bets**
-- ✅ **Full spectrum mastery**: Frameworks → Full-Stack → AI → IoT → Hardware
-- ✅ **Real world usage**: Tools people **rely on**, not demos people clone once
-- ✅ **Deep understanding**: Framework architecture, not surface-level API knowledge
-- ✅ **Sustained evolution**: Years of commits, not weeks of excitement
-
-**This isn't a collection of weekend projects.**  
-**This is a body of work spanning a decade.**
-
-When you see 10+ years, 70+ repositories, thousands of users—you're seeing someone who doesn't just start projects. Someone who **finishes them, maintains them, and evolves them**.
+**This profile**:
+- ✅ **rad-shell**: 41★, thousands of users, **10+ years** of commitment
+- ✅ **Temporal depth**: 2011-2026, not riding trends
+- ✅ **Early adoption**: Ember & Smoke when they were **risky**
+- ✅ **Full spectrum**: PHP → JS → Python → AI → IoT → Hardware
+- ✅ **Production code**: Tools people **rely on**, not demos they clone once
+- ✅ **Deep understanding**: Framework architecture, not API calls
+- ✅ **Sustained evolution**: **Years** of commits, not weeks of excitement
 
 ---
 
-## 💼 Open for Collaboration
+## 💼 The Difference
 
-**Building the next generation of:**
+When you see:
+- **10+ years**
+- **70+ repositories**  
+- **Thousands of users**  
+- **41 stars on a framework**
 
-- 🤖 **AI/ML Systems** — Real integration solving real human problems
-- 🛠️ **Developer Tools** — Tools developers actually want to use daily
-- 🏗️ **System Architecture** — Scaling with intention, not cargo cult patterns
-- 🚀 **Innovation** — Creating new patterns, not just following established ones
+You're not seeing someone who starts projects.  
 
-**I don't follow trends.**  
-I **investigate** them. **Understand** them. **Build** on them. **Push beyond** them.
+You're seeing someone who **finishes them**, **maintains them**, **evolves them**, and **never stops caring**.
+
+---
+
+## 🚀 Open for Collaboration
+
+Building the next generation of:
+
+**🤖 AI/ML Systems** — Real integration solving real problems  
+**🛠️ Developer Tools** — Tools developers actually want to use  
+**🏗️ Architecture** — Scaling with intention, not cargo cult  
+**🚀 Innovation** — Creating patterns, not following them
+
+I don't follow trends.  
+I **investigate** them.  
+**Understand** them.  
+**Build** on them.  
+**Push beyond** them.
 
 ---
 
 <div align="center">
 
-[![GitHub Profile](https://img.shields.io/badge/GitHub-brandon--fryslie-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brandon-fryslie)
-[![Profile Views](https://komarev.com/ghpvc/?username=brandon-fryslie&style=for-the-badge&color=00D9FF&labelColor=0d1117)](https://github.com/brandon-fryslie)
+[![GitHub](https://img.shields.io/badge/GitHub-brandon--fryslie-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brandon-fryslie)
+[![Views](https://komarev.com/ghpvc/?username=brandon-fryslie&style=for-the-badge&color=00D9FF&labelColor=0d1117)](https://github.com/brandon-fryslie)
 
 ---
 
@@ -279,13 +311,11 @@ I **investigate** them. **Understand** them. **Build** on them. **Push beyond** 
 
 **70+ repositories • 10+ years • ∞ curiosity • 100% commitment**
 
-Built with intention. Maintained with dedication. Used with trust.
-
 ---
 
-**Profile designed as art.**  
-*All animations: custom SVG + pure CSS @keyframes*  
-*Following GitHub's rendering constraints*  
-*Because engineering excellence deserves visual excellence*
+**This profile is art.**  
+*Custom SVG animations with pure CSS @keyframes*  
+*Where engineering excellence meets visual excellence*  
+*Because a decade of craft deserves more than bullet points*
 
 </div>
