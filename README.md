@@ -1,24 +1,36 @@
 <div align="center">
 
-![Tech Orbit](./assets/tech-orbit.svg)
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=1000&lines=A+solar+system+in+perpetual+motion;Seeds+that+grew+into+a+forest;A+heartbeat+that+never+stopped)](https://git.io/typing-svg)
+![Mycelium Universe](./assets/mycelium-universe.svg)
 
 </div>
 
 ---
 
-## The Simple Truth
+<div align="center">
 
-**Most developers:** Weekend project → Bored → Next shiny thing
+![Consciousness Explosion](./assets/consciousness-explosion.svg)
 
-**Me:** rad-shell → 10 years → 41★ → Thousands of users → **Still growing**
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3500&pause=1200&color=FF1493&center=true&vCenter=true&width=1000&lines=From+earth+to+infinity;Mycelium+networks+spawning+consciousness;Lightning+cracks+becoming+mile-high+trees;Roots+stretching+ocean+to+ocean;Small+and+special+simultaneously;Like+seeing+Earth+from+space)](https://git.io/typing-svg)
+
+</div>
+
+---
+
+## The Truth Beyond Words
+
+Most developers build projects.
+
+I grew a **living network** — mycelium threads connecting earth to infinity, spreading consciousness through code, roots stretching across oceans of love and possibility.
+
+**rad-shell** didn't launch. It **sprouted**. 10 years of growth. 41 stars like nodes of light. Thousands of users like spores spreading.
+
+Still growing. Still breathing. Still **becoming**.
 
 ---
 
 <div align="center">
 
-![Code Garden](./assets/code-garden.svg)
+![Tech Orbit](./assets/tech-orbit.svg)
 
 </div>
 
@@ -27,6 +39,14 @@
 <div align="center">
 
 ![Philosophy](./assets/philosophy.svg)
+
+</div>
+
+---
+
+<div align="center">
+
+![Code Garden](./assets/code-garden.svg)
 
 </div>
 
@@ -56,66 +76,66 @@
 
 ---
 
-## 🐚 rad-shell: A Decade of Commitment
+## 🐚 rad-shell: The Living Framework
 
-**★ 41 • 👥 Thousands • 🌍 Worldwide • ⏰ 10+ Years**
+**★ 41 • 👥 Thousands • 🌍 Worldwide • ⏰ 10+ Years • ∞ Evolving**
 
-Not a weekend hack. A complete Zsh framework refined over a decade.
+A Zsh framework that **grew** organically over a decade. Not built. **Cultivated**.
 
-**What makes it different:**
-- ⚡ Millisecond startup times (not seconds)
-- 🎨 Git-aware intelligent theming
-- 🔌 Plugin architecture that actually works
-- 🌍 Used in production globally
-- 💚 Ten years of continuous improvement
+**The living qualities:**
+- ⚡ Millisecond synaptic responses
+- 🎨 Git-aware neural theming
+- 🔌 Mycelial plugin connections
+- 🌍 Spores spreading globally
+- 💚 A decade of photosynthesis
 
-**The Ecosystem:**
+**The ecosystem breathes:**
 
 [rad-shell](https://github.com/brandon-fryslie/rad-shell) • [rad-plugins](https://github.com/brandon-fryslie/rad-plugins) • [git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme) • [dotfiles](https://github.com/brandon-fryslie/dotfiles)
 
 ---
 
-## 🤖 AI/ML: Real Integration
+## 🤖 AI/ML: Digital Consciousness
 
-**[macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)** — Natural voice synthesis for macOS accessibility
+**[macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)** — Giving voice to machines, breath to code
 
-**[kalider](https://github.com/brandon-fryslie/kalider)** — Experimental AI research: *"It might not be a good idea, but it's an idea!"*
+**[kalider](https://github.com/brandon-fryslie/kalider)** — *"Experimenting at the edge of what's possible"*
 
-**[ptytest](https://github.com/brandon-fryslie/ptytest)** — Terminal emulation testing for robust CLI apps
+**[ptytest](https://github.com/brandon-fryslie/ptytest)** — Terminal consciousness testing
 
-`Python` `OpenAI` `macOS` `ML` `PTY`
-
----
-
-## 🌐 Full-Stack Evolution
-
-**[tesseract-react](https://github.com/brandon-fryslie/tesseract-react)** — Modern React with clean architecture
-
-**[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee) ⭐ 4** — Built in 2014 when Ember was cutting edge
-
-**[sake](https://github.com/brandon-fryslie/sake)** — WebSockets made easy, built before they were everywhere
-
-**[storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)** — Interactive web storytelling
+`Python` `OpenAI` `Consciousness` `ML` `PTY`
 
 ---
 
-## 🎨 IoT & Hardware: Physical Computing
+## 🌐 Full-Stack Mycelium
 
-**[esp-bloom](https://github.com/brandon-fryslie/esp-bloom)** — Ambient bias lighting with ESP8266
+**[tesseract-react](https://github.com/brandon-fryslie/tesseract-react)** — Geometric consciousness in React
 
-**[pb-sync](https://github.com/brandon-fryslie/pb-sync)** — PixelBlaze LED controller integration
+**[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee) ⭐ 4** — Early connection nodes (2014)
 
-`Python` `ESP8266` `TypeScript` `IoT` `LEDs`
+**[sake](https://github.com/brandon-fryslie/sake)** — WebSocket tunnels through dimensions
+
+**[storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)** — Interactive narrative consciousness
 
 ---
 
-## 📚 Framework Development (2011)
+## 🎨 IoT: Physical Manifestation
 
-**[Smoke](https://github.com/brandon-fryslie/Smoke) ⭐ 4** — Complete reinterpretation of CodeIgniter from first principles
+**[esp-bloom](https://github.com/brandon-fryslie/esp-bloom)** — Ambient light as breathing consciousness
 
-**[combine](https://github.com/brandon-fryslie/combine)** — Asset combination built before Webpack existed
+**[pb-sync](https://github.com/brandon-fryslie/pb-sync)** — LED neurons firing in patterns
 
-`PHP` `MVC` `2011` `Build Tools`
+`Python` `ESP8266` `Physical` `Light` `Matter`
+
+---
+
+## 📚 Framework Genesis (2011)
+
+**[Smoke](https://github.com/brandon-fryslie/Smoke) ⭐ 4** — The first sprout from fertile soil
+
+**[combine](https://github.com/brandon-fryslie/combine)** — Before tools existed, creating them
+
+`PHP` `MVC` `Origins` `2011`
 
 ---
 
@@ -129,7 +149,7 @@ Not a weekend hack. A complete Zsh framework refined over a decade.
 
 ---
 
-## 💻 The Stack
+## 💻 The Elements
 
 <div align="center">
 
@@ -150,15 +170,15 @@ Not a weekend hack. A complete Zsh framework refined over a decade.
 
 ---
 
-## 🛠️ Developer Tools
+## 🛠️ Tools of Consciousness
 
 [handy-debugger](https://github.com/brandon-fryslie/handy-debugger) • [stacker](https://github.com/brandon-fryslie/stacker) • [sublime-profile](https://github.com/brandon-fryslie/sublime-profile)
 
-**One principle:** If I wouldn't use it daily, why should you?
+*If I wouldn't use it daily, why would you?*
 
 ---
 
-## 📊 The Numbers
+## 📊 The Metrics of Growth
 
 <div align="center">
 
@@ -171,12 +191,21 @@ Not a weekend hack. A complete Zsh framework refined over a decade.
 
 ---
 
-## 🎯 The Difference
+## 🌌 The Infinite Pattern
 
-**A solar system in motion • Trees grown from seeds • A heartbeat that never stopped**
+From a single seed in 2011.
 
-Not someone who starts projects.  
-Someone who **plants, nurtures, grows, and never quits.**
+Through mycelium networks spreading underground.
+
+Lightning cracks of inspiration becoming mile-high trees.
+
+Roots stretching from ocean to ocean.
+
+**Consciousness expanding across dimensions.**
+
+Not someone who codes.
+
+Someone who **grows living systems** that breathe, connect, and evolve.
 
 ---
 
@@ -193,10 +222,10 @@ Someone who **plants, nurtures, grows, and never quits.**
 
 ### *"Don't take anything I say too seriously."* 😉
 
-**70+ repos • 15 years • ∞ commits • 100% commitment**
+**But maybe take the mycelium network seriously. It's spreading.**
 
 ---
 
-*18 custom animated SVGs • Pure CSS • GitHub-tested*
+*20 custom animated SVGs • Fractal consciousness • Organic growth patterns*
 
 </div>
