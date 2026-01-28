@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00D9FF;#FF1493;#00D9FF" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#FF1493;stop-opacity:1">
+        <animate attributeName="stop-color" values="#FF1493;#FFD700;#FF1493" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    .signature {
+      font-family: 'Courier New', monospace;
+      font-size: 48px;
+      font-weight: bold;
+      fill: url(#textGrad);
+      filter: url(#glow);
+    }
+    
+    .subtitle {
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      fill: #00D9FF;
+      opacity: 0.8;
+    }
+    
+    .dot {
+      fill: #00D9FF;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    
+    .dot1 { animation-delay: 0s; }
+    .dot2 { animation-delay: 0.3s; }
+    .dot3 { animation-delay: 0.6s; }
+    .dot4 { animation-delay: 0.9s; }
+    .dot5 { animation-delay: 1.2s; }
+    
+    .underline {
+      stroke: #FF1493;
+      stroke-width: 2;
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: draw 4s ease-out forwards;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+    
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+  </style>
+  
+  <!-- Signature text -->
+  <text x="600" y="60" text-anchor="middle" class="signature">brandon-fryslie</text>
+  
+  <!-- Animated underline -->
+  <path d="M 200 75 Q 600 85, 1000 75" fill="none" class="underline"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="150" cy="60" r="4" class="dot dot1"/>
+  <circle cx="180" cy="60" r="3" class="dot dot2"/>
+  <circle cx="1020" cy="60" r="3" class="dot dot3"/>
+  <circle cx="1050" cy="60" r="4" class="dot dot4"/>
+  
+  <!-- Subtitle -->
+  <text x="600" y="105" text-anchor="middle" class="subtitle">Ten Years. Still Building.</text>
+  
+  <!-- Corner stars -->
+  <circle cx="100" cy="30" r="2" class="dot dot5"/>
+  <circle cx="1100" cy="90" r="2" class="dot dot1"/>
+</svg>
