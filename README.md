@@ -1,374 +1,239 @@
 <div align="center">
 
-# 👋 Hi, I'm Brandon Fryslie
+![Banner](./assets/banner.svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=2000&pause=500&color=00D9FF&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=120&lines=%F0%9F%9A%80+Senior+Software+Engineer;%F0%9F%A7%A0+AI%2FML+%7C+%E2%9A%A1+Full-Stack+%7C+%F0%9F%90%9A+DevTools;Building+the+future%2C+one+commit+at+a+time;70%2B+repos+%7C+10%2B+years+%7C+%E2%88%9E+curiosity)](https://git.io/typing-svg)
-
-[![GitHub followers](https://img.shields.io/github/followers/brandon-fryslie?style=for-the-badge&logo=github&color=00D9FF&labelColor=0d1117)](https://github.com/brandon-fryslie)
-[![Profile Views](https://komarev.com/ghpvc/?username=brandon-fryslie&style=for-the-badge&color=00D9FF&labelColor=0d1117)](https://github.com/brandon-fryslie)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=900&lines=A+decade+of+building+tools+that+matter;70%2B+repositories+%E2%80%A2+10%2B+years+%E2%80%A2+%E2%88%9E+commits;rad-shell%3A+41+stars%2C+thousands+of+users;From+PHP+frameworks+to+AI+to+IoT+hardware;Not+just+code.+Craft.)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-## 🚀 About Me
+## �� Philosophy in Code
+
+<div align="center">
+
+![Philosophy](./assets/philosophy.svg)
+
+</div>
+
+I don't chase frameworks. I **master fundamentals**. Each project here represents sustained commitment—not weekend experiments, but years of evolution, thousands of commits, and code that people actually use.
 
 ```javascript
-const brandon = {
-    status: "🔥 Crushing it in AI/ML & DevTools",
-    location: "🌎 Earth",
-    languages: ["Python", "JavaScript", "TypeScript", "Shell", "PHP"],
-    expertise: {
-        ai_ml: ["OpenAI APIs", "LLMs", "TTS/STT", "AI Integration"],
-        fullstack: ["React", "Node.js", "REST APIs", "WebSockets"],
-        devtools: ["CLI Tools", "Zsh Framework", "Dev Experience"],
-        devops: ["Docker", "CI/CD", "Automation"],
-        creative: ["IoT", "ESP8266", "LED Programming"]
-    },
-    philosophy: "If you're green, you're growing. If you're ripe, you're rotten. 🌱",
-    funFact: "Built a Zsh framework used by thousands of developers! 🎯"
+const approach = {
+    depth: "Years, not weekends",
+    proof: "rad-shell: 41★, thousands of users, still growing",
+    range: "2011-2026 • PHP → JS → Python → AI → IoT",
+    philosophy: "If you're green, you're growing",
+    reality: "70+ repos, but only the meaningful ones here"
 };
 ```
 
 ---
 
-## 🔥 Featured Projects
+<div align="center">
 
-### 🐚 [rad-shell](https://github.com/brandon-fryslie/rad-shell) ![Stars](https://img.shields.io/github/stars/brandon-fryslie/rad-shell?style=social)
+## 💎 Signature Work
 
-**Ultra-fast Zsh framework** that revolutionizes terminal productivity. Complete plugin system, custom themes, and blazing performance trusted by thousands of developers worldwide.
+![Signature Work](./assets/signature-work.svg)
 
-`Shell` `Zsh` `Terminal` `Productivity`
-
----
-
-### 🤖 AI & Machine Learning
-
-<table>
-<tr>
-<td width="50%">
-
-**[macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)**
-
-OpenAI-powered screen reader with natural voice synthesis. High-quality AI voices for macOS accessibility.
-
-`Python` `OpenAI` `TTS` `AI`
-
-</td>
-<td width="50%">
-
-**[kalider](https://github.com/brandon-fryslie/kalider)**
-
-Experimental AI project pushing boundaries. *"It might not be a good idea, but it's an idea!"*
-
-`Python` `ML` `Experimental`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**[ptytest](https://github.com/brandon-fryslie/ptytest)**
-
-Terminal emulation and PTY testing utilities for robust CLI applications.
-
-`Python` `PTY` `Testing`
-
-</td>
-<td width="50%">
-
-**Focus Areas**
-- 🤖 LLM Integration
-- 🗣️ Speech Synthesis
-- ⚡ Real-time AI
-- 🔌 AI Tools
-
-</td>
-</tr>
-</table>
+</div>
 
 ---
 
-### 🌐 Full-Stack Web Development
+## 🐚 rad-shell — The Flagship
 
-<table>
-<tr>
-<td width="50%">
+**★ 41 stars | 7 forks | Thousands of daily users**
 
-**[tesseract-react](https://github.com/brandon-fryslie/tesseract-react)**
+This is what happens when you commit to something beyond a weekend hack. A complete Zsh framework built over **years**, trusted by developers worldwide.
 
-Modern React frontend with clean architecture and responsive design.
+**What makes it different:**
+- ⚡ **Performance-obsessed**: Millisecond startup times
+- 🎨 **Git-aware theming**: Visual intelligence, not just decoration
+- 🔌 **True plugin architecture**: Extensible without breaking
+- 📦 **Battle-tested**: Production environments, not just demos
 
-`React` `JavaScript` `Web`
+**The ecosystem:**
+- **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Plugin architecture that actually works
+- **[git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme)** — Where it all started
+- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — Personal config, maintained since day one
 
-</td>
-<td width="50%">
-
-**[storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)**
-
-Interactive web storytelling platform.
-
-`JavaScript` `Web APIs`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee)** ![Stars](https://img.shields.io/github/stars/brandon-fryslie/ember-rest.coffee?style=social)
-
-REST utilities for Ember.js - early adoption of modern frameworks.
-
-`CoffeeScript` `Ember` `REST`
-
-</td>
-<td width="50%">
-
-**[sake](https://github.com/brandon-fryslie/sake)**
-
-Websockets Made Easy - clean abstractions for real-time communication.
-
-`CoffeeScript` `WebSockets`
-
-</td>
-</tr>
-</table>
+This is the difference between a project and a **commitment**.
 
 ---
 
-### 🛠️ Developer Tools
+## 🤖 AI/ML — Building Real Integration
 
-<table>
-<tr>
-<td width="33%">
+Not writing ChatGPT wrappers. Building **actual integration** that solves human problems.
 
-**[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)**
+### [macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)
+**OpenAI-powered screen reader you'd actually want to listen to.** Deep macOS accessibility integration with natural voice synthesis. AI serving humans, not the reverse.
 
-Extensible plugin architecture for rad-shell.
+`Python` `OpenAI API` `macOS Integration` `Accessibility`
 
-`Shell` `Plugins`
+### [kalider](https://github.com/brandon-fryslie/kalider)
+**Experimental AI research.** *"It might not be a good idea, but it's an idea!"* Innovation requires trying things that might fail. This is that thing.
 
-</td>
-<td width="33%">
+`Python` `Machine Learning` `Experimental`
 
-**[handy-debugger](https://github.com/brandon-fryslie/handy-debugger)**
+### [ptytest](https://github.com/brandon-fryslie/ptytest)
+**Terminal emulation testing infrastructure.** Because AI tools still need solid foundations. PTY testing for robust CLI applications.
 
-Enhanced Node.js debugging experience.
-
-`Node.js` `DevTools`
-
-</td>
-<td width="33%">
-
-**[git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme)**
-
-Beautiful git-aware Zsh theme.
-
-`Zsh` `Git`
-
-</td>
-</tr>
-<tr>
-<td width="33%">
-
-**[stacker](https://github.com/brandon-fryslie/stacker)**
-
-Boot your stack - dev environment orchestration.
-
-`DevOps` `Containers`
-
-</td>
-<td width="33%">
-
-**[dotfiles](https://github.com/brandon-fryslie/dotfiles)**
-
-Personal dev environment configuration.
-
-`Shell` `Config`
-
-</td>
-<td width="33%">
-
-**[sublime-profile](https://github.com/brandon-fryslie/sublime-profile)**
-
-Sublime Text optimizations.
-
-`Python` `Editor`
-
-</td>
-</tr>
-</table>
+`Python` `Terminal Emulation` `Testing`
 
 ---
 
-### 🎨 Creative Tech & IoT
+## 🌐 Full-Stack Development
 
-<table>
-<tr>
-<td width="50%">
+### [tesseract-react](https://github.com/brandon-fryslie/tesseract-react)
+Modern React with clean architecture. Not following framework-of-the-week. Building with **intention**.
 
-**[esp-bloom](https://github.com/brandon-fryslie/esp-bloom)**
+### [ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee) ⭐ 4
+**Early Ember.js adoption with CoffeeScript.** Built when these were cutting edge, not legacy. Shows commitment to exploring new paradigms when they're still risky.
 
-Ambient bias lighting with ESP8266. Dynamic colors, screen sync, custom patterns.
+### [sake](https://github.com/brandon-fryslie/sake)
+**WebSockets Made Easy.** Real-time communication with clean abstractions. Built before WebSockets were everywhere.
 
-`Python` `ESP8266` `IoT` `LED`
-
-</td>
-<td width="50%">
-
-**[pb-sync](https://github.com/brandon-fryslie/pb-sync)**
-
-TypeScript tool for PixelBlaze LED controller integration.
-
-`TypeScript` `IoT` `Hardware`
-
-</td>
-</tr>
-</table>
+### [storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)
+**Interactive web storytelling platform.** Technology should enable creativity, not just CRUD apps.
 
 ---
 
-## 💻 Tech Stack
+## 🎨 IoT & Hardware — Physical Computing
+
+### [esp-bloom](https://github.com/brandon-fryslie/esp-bloom)
+**Ambient bias lighting with ESP8266.** Inspired by ScreenBloom, rebuilt with custom features. Dynamic colors, screen sync, custom patterns. Real hardware, real challenges.
+
+`Python` `ESP8266` `IoT` `LED Control` `Real-time Sync`
+
+### [pb-sync](https://github.com/brandon-fryslie/pb-sync)
+**PixelBlaze LED controller integration.** TypeScript tooling for hardware control. Clean API, robust implementation, hardware control done right.
+
+`TypeScript` `Hardware` `API Design` `LED Controllers`
+
+Software is more than web apps. Sometimes you need to **control photons**.
+
+---
+
+## 📚 Framework Development — Deep Knowledge
+
+### [Smoke](https://github.com/brandon-fryslie/Smoke) ⭐ 4
+**A complete reinterpretation of CodeIgniter.** Not a fork—a **rethinking** of PHP framework architecture. Built in **2011** when I was exploring fundamentals.
+
+`PHP` `MVC Architecture` `Framework Design` `2011`
+
+### [combine](https://github.com/brandon-fryslie/combine)
+**Asset combination and minification.** Built before asset pipelines were standard. **Solving problems before the industry caught up.**
+
+`PHP` `Build Tools` `Asset Pipeline`
+
+---
 
 <div align="center">
 
-### Languages & Frameworks
+## 📊 A Decade of Building
 
+![Commit Art](./assets/commit-art.svg)
+
+</div>
+
+---
+
+## 💻 The Tech Arsenal
+
+**Not buzzwords. Tools I've shipped production code with.**
+
+<div align="center">
+
+### Languages & Core
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Shell Script](https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+
+### Frameworks & Runtime
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![Ember](https://img.shields.io/badge/Ember-E04E39?style=for-the-badge&logo=ember.js&logoColor=white)
 
-### AI & Tools
-
+### AI, Hardware & Tools
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![ESP8266](https://img.shields.io/badge/ESP8266-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
-
-### Expertise Levels
-
-```
-🐍 Python           ████████████████████░  95%
-⚡ JavaScript/TS    ████████████████████░  95%
-🐚 Shell/Bash       █████████████████████ 100%
-⚛️ React/Node       ███████████████████░░  90%
-🤖 AI/ML            ████████████████████░  95%
-🔧 DevOps           ███████████████████░░  90%
-🎨 IoT/Hardware     ███████████████████░░  90%
-```
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberry-pi&logoColor=white)
 
 </div>
 
 ---
 
-## 📊 GitHub Stats
+## 🛠️ Developer Tools That Work
+
+Built with one principle: **If I wouldn't use it daily, why should anyone else?**
+
+- **[handy-debugger](https://github.com/brandon-fryslie/handy-debugger)** — Node.js debugging without the pain
+- **[stacker](https://github.com/brandon-fryslie/stacker)** — Boot your development stack properly
+- **[sublime-profile](https://github.com/brandon-fryslie/sublime-profile)** — Editor optimization that matters
+
+---
+
+## 📊 The Numbers
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=brandon-fryslie&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=00D9FF&icon_color=00D9FF&text_color=c9d1d9&ring_color=FF1493"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=brandon-fryslie&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=00D9FF&icon_color=00D9FF&text_color=c9d1d9"/>
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=brandon-fryslie&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00D9FF&text_color=c9d1d9"/>
 
-[![Brandon's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=brandon-fryslie&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=00D9FF&line=FF1493&point=FFD700)](https://github.com/brandon-fryslie)
-
-[![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=brandon-fryslie&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15)](https://github.com/brandon-fryslie)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=brandon-fryslie&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=00D9FF&line=FF1493&point=FFD700)](https://github.com/brandon-fryslie)
 
 </div>
 
 ---
 
-## 🌟 Philosophy
+## 🎯 What Sets This Apart
 
-<div align="center">
+**Most profiles are resume dumps. This is a portfolio of commitment.**
 
-> *"If you're green, you're growing.*  
-> *If you're ripe, you're rotten."*  
-> **— I stay green for life** 🌱
+- ✅ **Sustained impact**: rad-shell with 41★ and thousands of users
+- ✅ **Chronological depth**: 2011-2026, not just recent trends
+- ✅ **Early adoption**: Smoke & Ember when they were **risky bets**
+- ✅ **Full spectrum**: Frameworks → Full-Stack → AI → IoT → Hardware
+- ✅ **Real usage**: Tools people actually use, not just demos
+- ✅ **Deep understanding**: Framework architecture, not just API calls
 
-</div>
-
-| 🎯 **Precision** | 🤝 **Collaboration** | 🌱 **Growth** |
-|:---:|:---:|:---:|
-| Ship working code | Team success first | Lifelong learning |
-| Iterate rapidly | Clear communication | Stay curious |
-| Solve real problems | Empower others | Never stop improving |
+This isn't a collection of weekend projects. It's a **body of work** spanning a decade.
 
 ---
 
-## 🎨 More Projects
+## 💼 Open for Collaboration
 
-<details>
-<summary><b>🤖 AI & Machine Learning</b></summary>
-<br>
+Building the next generation of:
 
-- **[macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)** - OpenAI-powered screen reader
-- **[kalider](https://github.com/brandon-fryslie/kalider)** - Experimental AI project
-- **[ptytest](https://github.com/brandon-fryslie/ptytest)** - Terminal emulation toolkit
+- 🤖 **AI/ML Systems** — Real integration solving real problems
+- 🛠️ **Developer Tools** — Tools developers actually want to use
+- 🏗️ **System Architecture** — Scaling with intention, not just cargo cult patterns
+- 🚀 **Innovation** — Creating, not just following
 
-</details>
-
-<details>
-<summary><b>🌐 Full-Stack Development</b></summary>
-<br>
-
-- **[tesseract-react](https://github.com/brandon-fryslie/tesseract-react)** - Modern React frontend
-- **[storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)** - Interactive storytelling
-- **[sake](https://github.com/brandon-fryslie/sake)** - WebSockets made easy
-- **[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee)** - Ember.js utilities
-
-</details>
-
-<details>
-<summary><b>🛠️ Developer Tools</b></summary>
-<br>
-
-- **[rad-shell](https://github.com/brandon-fryslie/rad-shell)** ⭐ 41 - Ultra-fast Zsh framework
-- **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** - Plugin system
-- **[git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme)** - Git-aware theme
-- **[handy-debugger](https://github.com/brandon-fryslie/handy-debugger)** - Node.js debugging
-- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** - Dev environment config
-- **[stacker](https://github.com/brandon-fryslie/stacker)** - Stack orchestration
-
-</details>
-
-<details>
-<summary><b>🎨 Creative Tech & IoT</b></summary>
-<br>
-
-- **[esp-bloom](https://github.com/brandon-fryslie/esp-bloom)** - Ambient lighting with ESP8266
-- **[pb-sync](https://github.com/brandon-fryslie/pb-sync)** - PixelBlaze integration
-
-</details>
-
-<details>
-<summary><b>📚 Framework Development</b></summary>
-<br>
-
-- **[Smoke](https://github.com/brandon-fryslie/Smoke)** ⭐ 4 - CodeIgniter reinterpretation
-- **[combine](https://github.com/brandon-fryslie/combine)** - Resource minification
-
-</details>
+I don't follow trends. I **investigate** them, **understand** them, **build** on them.
 
 ---
 
 <div align="center">
 
-## 💼 Open to Opportunities
-
-**Ready to collaborate on cutting-edge AI projects or build developer tools that matter?**
-
-🤖 **AI/ML Engineering** • 💻 **Senior Software Engineering** • 👨‍💼 **Technical Leadership** • 🛠️ **Developer Tools**
-
-[![GitHub](https://img.shields.io/badge/GitHub-brandon--fryslie-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brandon-fryslie)
+[![GitHub Profile](https://img.shields.io/badge/GitHub-brandon--fryslie-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brandon-fryslie)
+[![Profile Views](https://komarev.com/ghpvc/?username=brandon-fryslie&style=for-the-badge&color=00D9FF&labelColor=0d1117)](https://github.com/brandon-fryslie)
 
 ---
 
-**70+ repositories • 10+ years experience • ∞ curiosity**
+### *"Don't take anything I say too seriously."* 😉
 
-*"Don't take anything I say too seriously."* 😉
+**70+ repositories • 10+ years • ∞ curiosity • 100% commitment**
 
-![](https://hit.yhype.me/github/profile?user_id=815181)
+Built with intention. Maintained with dedication. Used with trust.
+
+---
+
+*Profile designed as art. All animations created with custom SVG + CSS.*
 
 </div>
