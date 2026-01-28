@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="impactGlow">
+      <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="100%" stop-color="#FF1493"/>
+    </linearGradient>
+    <filter id="ring-glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    .bg { fill: #0d1117; }
+    
+    .impact-title {
+      font-family: 'Courier New', monospace;
+      font-size: 32px;
+      fill: #00D9FF;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    
+    .impact-ring {
+      fill: none;
+      stroke: url(#ringGrad1);
+      stroke-width: 3;
+      opacity: 0;
+      animation: ringGrow 3s ease-out forwards;
+      filter: url(#ring-glow);
+    }
+    
+    @keyframes ringGrow {
+      0% { opacity: 0; transform: scale(0); }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.7; transform: scale(1); }
+    }
+    
+    .impact-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      fill: #c9d1d9;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    
+    .impact-stat {
+      font-family: 'Courier New', monospace;
+      font-size: 28px;
+      fill: #FFD700;
+      font-weight: bold;
+      text-anchor: middle;
+      animation: statPop 2s ease-out forwards;
+      opacity: 0;
+    }
+    
+    @keyframes statPop {
+      0% { opacity: 0; transform: scale(0); }
+      60% { transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    
+    .impact-desc {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      fill: #8b949e;
+      text-anchor: middle;
+    }
+    
+    .center-glow {
+      fill: url(#impactGlow);
+      animation: glowPulse 4s ease-in-out infinite;
+    }
+    
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+    
+    .icon-star {
+      fill: #FFD700;
+      animation: starTwinkle 3s ease-in-out infinite;
+    }
+    
+    @keyframes starTwinkle {
+      0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+      50% { opacity: 0.7; transform: scale(1.2) rotate(180deg); }
+    }
+    
+    .icon-users {
+      fill: #00D9FF;
+      animation: usersPulse 2.5s ease-in-out infinite;
+    }
+    
+    @keyframes usersPulse {
+      0%, 100% { opacity: 0.9; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+    
+    .icon-commits {
+      fill: #FF1493;
+      animation: commitBlink 2s ease-in-out infinite;
+    }
+    
+    @keyframes commitBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    
+    .connection {
+      stroke: #30363d;
+      stroke-width: 2;
+      stroke-dasharray: 5,5;
+      fill: none;
+      opacity: 0.4;
+      animation: dashFlow 20s linear infinite;
+    }
+    
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -1000; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="impact-title" x="400" y="40">Ripple Effects</text>
+  
+  <!-- Center glow -->
+  <circle class="center-glow" cx="400" cy="270" r="200"/>
+  
+  <!-- Connecting lines -->
+  <line class="connection" x1="400" y1="270" x2="200" y2="150"/>
+  <line class="connection" x1="400" y1="270" x2="600" y2="150"/>
+  <line class="connection" x1="400" y1="270" x2="200" y2="390"/>
+  <line class="connection" x1="400" y1="270" x2="600" y2="390"/>
+  
+  <!-- Impact Ring 1: rad-shell -->
+  <circle class="impact-ring" cx="400" cy="270" r="80" style="animation-delay: 0.2s"/>
+  <g style="opacity: 0; animation: statPop 2s ease-out forwards; animation-delay: 0.8s">
+    <polygon class="icon-star" points="400,235 405,245 415,245 407,252 410,262 400,256 390,262 393,252 385,245 395,245" style="animation-delay: 2s"/>
+    <text class="impact-stat" x="400" y="280">41</text>
+    <text class="impact-label" x="400" y="300">Stars</text>
+  </g>
+  
+  <!-- Impact Ring 2: Users -->
+  <circle class="impact-ring" cx="200" cy="150" r="60" style="animation-delay: 0.4s"/>
+  <g style="opacity: 0; animation: statPop 2s ease-out forwards; animation-delay: 1s">
+    <circle class="icon-users" cx="200" cy="125" r="8"/>
+    <circle class="icon-users" cx="190" cy="140" r="6"/>
+    <circle class="icon-users" cx="210" cy="140" r="6"/>
+    <text class="impact-stat" x="200" y="165">1000s</text>
+    <text class="impact-label" x="200" y="182">Daily Users</text>
+  </g>
+  
+  <!-- Impact Ring 3: Commits -->
+  <circle class="impact-ring" cx="600" cy="150" r="60" style="animation-delay: 0.6s"/>
+  <g style="opacity: 0; animation: statPop 2s ease-out forwards; animation-delay: 1.2s">
+    <rect class="icon-commits" x="595" y="125" width="10" height="10" rx="2"/>
+    <rect class="icon-commits" x="595" y="140" width="10" height="10" rx="2"/>
+    <text class="impact-stat" x="600" y="165">∞</text>
+    <text class="impact-label" x="600" y="182">Commits</text>
+  </g>
+  
+  <!-- Impact Ring 4: Years -->
+  <circle class="impact-ring" cx="200" cy="390" r="60" style="animation-delay: 0.8s"/>
+  <g style="opacity: 0; animation: statPop 2s ease-out forwards; animation-delay: 1.4s">
+    <text class="impact-stat" x="200" y="395">10+</text>
+    <text class="impact-label" x="200" y="415">Years</text>
+    <text class="impact-desc" x="200" y="430">2011-2026</text>
+  </g>
+  
+  <!-- Impact Ring 5: Repos -->
+  <circle class="impact-ring" cx="600" cy="390" r="60" style="animation-delay: 1s"/>
+  <g style="opacity: 0; animation: statPop 2s ease-out forwards; animation-delay: 1.6s">
+    <text class="impact-stat" x="600" y="395">70+</text>
+    <text class="impact-label" x="600" y="415">Repositories</text>
+    <text class="impact-desc" x="600" y="430">Meaningful work</text>
+  </g>
+  
+  <!-- Center label -->
+  <text class="impact-label" x="400" y="320" style="font-size: 14px;">Impact Through Commitment</text>
+</svg>

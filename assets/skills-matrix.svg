@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="skillGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="100%" stop-color="#FF1493"/>
+    </linearGradient>
+    <linearGradient id="skillGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF1493"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <linearGradient id="skillGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#4EAA25"/>
+    </linearGradient>
+    <filter id="matrix-glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    .bg { fill: #0d1117; }
+    
+    .matrix-title {
+      font-family: 'Courier New', monospace;
+      font-size: 28px;
+      fill: #00D9FF;
+      font-weight: bold;
+    }
+    
+    .skill-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      fill: #c9d1d9;
+      font-weight: bold;
+    }
+    
+    .skill-level {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      fill: #8b949e;
+    }
+    
+    .skill-bar-bg {
+      fill: #21262d;
+      stroke: #30363d;
+      stroke-width: 1;
+    }
+    
+    .skill-bar-fill {
+      opacity: 0;
+      animation: fillBar 2s ease-out forwards;
+      filter: url(#matrix-glow);
+    }
+    
+    @keyframes fillBar {
+      0% { opacity: 0; transform: scaleX(0); }
+      50% { opacity: 0.9; }
+      100% { opacity: 0.95; transform: scaleX(1); }
+    }
+    
+    .level-master { fill: url(#skillGrad1); }
+    .level-expert { fill: url(#skillGrad2); }
+    .level-advanced { fill: url(#skillGrad3); }
+    
+    .hexagon {
+      fill: none;
+      stroke: #00D9FF;
+      stroke-width: 2;
+      opacity: 0.3;
+      animation: hexPulse 4s ease-in-out infinite;
+    }
+    
+    @keyframes hexPulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.05); }
+    }
+    
+    .data-point {
+      fill: #FFD700;
+      animation: dataPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes dataPulse {
+      0%, 100% { opacity: 1; r: 4; }
+      50% { opacity: 0.6; r: 6; }
+    }
+    
+    .connection-line {
+      stroke: #30363d;
+      stroke-width: 1;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      fill: none;
+      animation: drawLine 3s ease-out forwards;
+    }
+    
+    @keyframes drawLine {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    .floating-code {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      fill: #00D9FF;
+      opacity: 0.2;
+      animation: codeFloat 20s linear infinite;
+    }
+    
+    @keyframes codeFloat {
+      0% { transform: translateX(0); opacity: 0.2; }
+      50% { opacity: 0.4; }
+      100% { transform: translateX(-50px); opacity: 0.2; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="500"/>
+  
+  <!-- Hexagon pattern background -->
+  <polygon class="hexagon" points="150,50 200,75 200,125 150,150 100,125 100,75" style="animation-delay: 0s"/>
+  <polygon class="hexagon" points="700,350 750,375 750,425 700,450 650,425 650,375" style="animation-delay: 1s"/>
+  <polygon class="hexagon" points="800,100 850,125 850,175 800,200 750,175 750,125" style="animation-delay: 2s"/>
+  
+  <!-- Connection lines -->
+  <path class="connection-line" d="M 100,150 Q 450,250 800,150" style="animation-delay: 0.5s"/>
+  <path class="connection-line" d="M 150,400 Q 450,350 750,400" style="animation-delay: 1s"/>
+  
+  <!-- Floating code snippets -->
+  <text class="floating-code" x="50" y="80">async function build() {</text>
+  <text class="floating-code" x="700" y="200" style="animation-delay: 5s">const mastery = years * commits;</text>
+  <text class="floating-code" x="100" y="450" style="animation-delay: 10s">return innovation;</text>
+  
+  <!-- Title -->
+  <text class="matrix-title" x="450" y="40" text-anchor="middle">Skills Forged Through Time</text>
+  
+  <!-- Skill Category 1: Languages (Master Level) -->
+  <text class="skill-label" x="80" y="100">Shell Scripting</text>
+  <text class="skill-level" x="750" y="100">10+ yrs • rad-shell framework</text>
+  <rect class="skill-bar-bg" x="80" y="105" width="700" height="25" rx="3"/>
+  <rect class="skill-bar-fill level-master" x="80" y="105" width="665" height="25" rx="3" style="animation-delay: 0.2s; transform-origin: 80px 117px"/>
+  <circle class="data-point" cx="745" cy="117" r="4" style="animation-delay: 2.2s"/>
+  
+  <text class="skill-label" x="80" y="160">Python</text>
+  <text class="skill-level" x="750" y="160">AI/ML • IoT • CLI tools</text>
+  <rect class="skill-bar-bg" x="80" y="165" width="700" height="25" rx="3"/>
+  <rect class="skill-bar-fill level-master" x="80" y="165" width="630" height="25" rx="3" style="animation-delay: 0.4s; transform-origin: 80px 177px"/>
+  <circle class="data-point" cx="710" cy="177" r="4" style="animation-delay: 2.4s"/>
+  
+  <text class="skill-label" x="80" y="220">JavaScript/Node</text>
+  <text class="skill-level" x="750" y="220">Full-stack • Real-time</text>
+  <rect class="skill-bar-bg" x="80" y="225" width="700" height="25" rx="3"/>
+  <rect class="skill-bar-fill level-expert" x="80" y="225" width="595" height="25" rx="3" style="animation-delay: 0.6s; transform-origin: 80px 237px"/>
+  <circle class="data-point" cx="675" cy="237" r="4" style="animation-delay: 2.6s"/>
+  
+  <!-- Skill Category 2: Frameworks & Systems -->
+  <text class="skill-label" x="80" y="280">TypeScript</text>
+  <text class="skill-level" x="750" y="280">Type-safe systems</text>
+  <rect class="skill-bar-bg" x="80" y="285" width="700" height="25" rx="3"/>
+  <rect class="skill-bar-fill level-expert" x="80" y="285" width="560" height="25" rx="3" style="animation-delay: 0.8s; transform-origin: 80px 297px"/>
+  <circle class="data-point" cx="640" cy="297" r="4" style="animation-delay: 2.8s"/>
+  
+  <text class="skill-label" x="80" y="340">React</text>
+  <text class="skill-level" x="750" y="340">Modern UI architecture</text>
+  <rect class="skill-bar-bg" x="80" y="345" width="700" height="25" rx="3"/>
+  <rect class="skill-bar-fill level-expert" x="80" y="345" width="525" height="25" rx="3" style="animation-delay: 1s; transform-origin: 80px 357px"/>
+  <circle class="data-point" cx="605" cy="357" r="4" style="animation-delay: 3s"/>
+  
+  <!-- Skill Category 3: Specialized -->
+  <text class="skill-label" x="80" y="400">AI/ML Integration</text>
+  <text class="skill-level" x="750" y="400">OpenAI • Real problems</text>
+  <rect class="skill-bar-bg" x="80" y="405" width="700" height="25" rx="3"/>
+  <rect class="skill-bar-fill level-advanced" x="80" y="405" width="490" height="25" rx="3" style="animation-delay: 1.2s; transform-origin: 80px 417px"/>
+  <circle class="data-point" cx="570" cy="417" r="4" style="animation-delay: 3.2s"/>
+  
+  <text class="skill-label" x="80" y="460">IoT/Hardware</text>
+  <text class="skill-level" x="750" y="460">ESP8266 • Physical computing</text>
+  <rect class="skill-bar-bg" x="80" y="465" width="700" height="25" rx="3"/>
+  <rect class="skill-bar-fill level-advanced" x="80" y="465" width="455" height="25" rx="3" style="animation-delay: 1.4s; transform-origin: 80px 477px"/>
+  <circle class="data-point" cx="535" cy="477" r="4" style="animation-delay: 3.4s"/>
+</svg>
