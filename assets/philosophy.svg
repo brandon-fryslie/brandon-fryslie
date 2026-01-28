@@ -1,66 +1,158 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="100%" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
   <defs>
-    <style>
-      .quote {
-        font-family: Georgia, serif;
-        font-size: 28px;
-        font-style: italic;
-        fill: #00D9FF;
-        text-anchor: middle;
-      }
-      .author {
-        font-family: Arial, sans-serif;
-        font-size: 18px;
-        fill: #c9d1d9;
-        text-anchor: middle;
-      }
-      .leaf {
-        animation: grow 4s ease-in-out infinite;
-      }
-      .leaf-2 {
-        animation: grow 4s ease-in-out 1.3s infinite;
-      }
-      .leaf-3 {
-        animation: grow 4s ease-in-out 2.6s infinite;
-      }
-      @keyframes grow {
-        0%, 100% { transform: scale(1); opacity: 0.6; }
-        50% { transform: scale(1.3); opacity: 1; }
-      }
-    </style>
-    <radialGradient id="leafGlow" cx="50%" cy="50%">
-      <stop offset="0%" style="stop-color:#00FF7F;stop-opacity:0.8"/>
-      <stop offset="100%" style="stop-color:#00FF7F;stop-opacity:0"/>
+    <radialGradient id="centerGlow">
+      <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.3">
+        <animate attributeName="stop-opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </radialGradient>
+    
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4EAA25"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+    
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
-  <!-- Glowing background -->
-  <circle cx="400" cy="125" r="100" fill="url(#leafGlow)" opacity="0.3">
-    <animate attributeName="r" values="100;140;100" dur="6s" repeatCount="indefinite"/>
-  </circle>
+  <style>
+    .bg { fill: #0d1117; }
+    
+    .center-glow {
+      fill: url(#centerGlow);
+    }
+    
+    .quote-text {
+      font-family: 'Georgia', serif;
+      font-size: 36px;
+      font-style: italic;
+      fill: #c9d1d9;
+      filter: url(#softGlow);
+    }
+    
+    .author-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      fill: #8b949e;
+    }
+    
+    .leaf {
+      fill: url(#leafGradient);
+      transform-box: fill-box;
+      transform-origin: bottom center;
+      animation: leafGrow 3s ease-out forwards;
+      opacity: 0;
+    }
+    
+    @keyframes leafGrow {
+      0% { opacity: 0; transform: scale(0) rotate(-45deg); }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.9; transform: scale(1) rotate(0deg); }
+    }
+    
+    .leaf-wiggle {
+      animation: leafGrow 3s ease-out forwards, wiggle 4s ease-in-out infinite;
+    }
+    
+    @keyframes wiggle {
+      0%, 100% { transform: scale(1) rotate(-2deg); }
+      50% { transform: scale(1) rotate(2deg); }
+    }
+    
+    .energy-particle {
+      fill: #00D9FF;
+      animation: energyFloat 6s ease-in-out infinite;
+    }
+    
+    @keyframes energyFloat {
+      0%, 100% { opacity: 0; transform: translateY(0); }
+      50% { opacity: 0.8; transform: translateY(-30px); }
+    }
+    
+    .growth-ring {
+      stroke: #00D9FF;
+      stroke-width: 2;
+      fill: none;
+      opacity: 0;
+      animation: ringExpand 4s ease-out infinite;
+    }
+    
+    @keyframes ringExpand {
+      0% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 0.4; }
+      100% { opacity: 0; transform: scale(2); }
+    }
+    
+    .highlight {
+      fill: #FFD700;
+      opacity: 0.2;
+    }
+  </style>
   
-  <!-- Growing leaves -->
-  <g class="leaf" transform="translate(400, 125)">
-    <circle cx="-60" cy="-60" r="15" fill="#00FF7F" opacity="0.6"/>
-    <text x="-60" y="-52" font-size="24" text-anchor="middle">🌱</text>
-  </g>
-  <g class="leaf-2" transform="translate(400, 125)">
-    <circle cx="60" cy="-60" r="15" fill="#00FF7F" opacity="0.6"/>
-    <text x="60" y="-52" font-size="24" text-anchor="middle">🌱</text>
-  </g>
-  <g class="leaf-3" transform="translate(400, 125)">
-    <circle cx="0" cy="70" r="15" fill="#00FF7F" opacity="0.6"/>
-    <text x="0" y="78" font-size="24" text-anchor="middle">🌱</text>
-  </g>
+  <!-- Background -->
+  <rect class="bg" width="800" height="400"/>
   
-  <!-- Quote -->
-  <text class="quote" x="400" y="110">"If you're green, you're growing.</text>
-  <text class="quote" x="400" y="145">If you're ripe, you're rotten."</text>
-  <text class="author" x="400" y="190">— Philosophy in Code</text>
+  <!-- Center glow effect -->
+  <circle class="center-glow" cx="400" cy="200" r="250"/>
   
-  <!-- Decorative elements -->
-  <line x1="200" y1="210" x2="600" y2="210" stroke="#00D9FF" stroke-width="2" opacity="0.5">
-    <animate attributeName="stroke-dasharray" values="0,400;400,0" dur="3s" repeatCount="indefinite"/>
-  </line>
+  <!-- Growth rings -->
+  <circle class="growth-ring" cx="400" cy="200" r="80" style="animation-delay: 0s"/>
+  <circle class="growth-ring" cx="400" cy="200" r="80" style="animation-delay: 1.3s"/>
+  <circle class="growth-ring" cx="400" cy="200" r="80" style="animation-delay: 2.6s"/>
+  
+  <!-- Leaves in circular pattern -->
+  <!-- Top leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="400" cy="80" rx="15" ry="30" style="animation-delay: 0.2s; animation-duration: 3s, 4s"/>
+  <ellipse class="leaf leaf-wiggle" cx="450" cy="95" rx="12" ry="25" style="animation-delay: 0.4s; animation-duration: 3s, 4.2s"/>
+  <ellipse class="leaf leaf-wiggle" cx="350" cy="95" rx="12" ry="25" style="animation-delay: 0.3s; animation-duration: 3s, 3.8s"/>
+  
+  <!-- Upper right leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="550" cy="130" rx="15" ry="28" transform="rotate(45 550 130)" style="animation-delay: 0.6s; animation-duration: 3s, 4.5s"/>
+  <ellipse class="leaf leaf-wiggle" cx="590" cy="170" rx="13" ry="26" transform="rotate(60 590 170)" style="animation-delay: 0.8s; animation-duration: 3s, 4.8s"/>
+  
+  <!-- Right leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="640" cy="200" rx="18" ry="32" transform="rotate(90 640 200)" style="animation-delay: 1s; animation-duration: 3s, 4.3s"/>
+  <ellipse class="leaf leaf-wiggle" cx="680" cy="220" rx="14" ry="27" transform="rotate(100 680 220)" style="animation-delay: 1.2s; animation-duration: 3s, 4.6s"/>
+  
+  <!-- Lower right leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="590" cy="280" rx="15" ry="29" transform="rotate(135 590 280)" style="animation-delay: 1.4s; animation-duration: 3s, 4.1s"/>
+  <ellipse class="leaf leaf-wiggle" cx="550" cy="320" rx="12" ry="24" transform="rotate(150 550 320)" style="animation-delay: 1.6s; animation-duration: 3s, 4.4s"/>
+  
+  <!-- Bottom leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="450" cy="350" rx="14" ry="28" transform="rotate(170 450 350)" style="animation-delay: 1.8s; animation-duration: 3s, 4.7s"/>
+  <ellipse class="leaf leaf-wiggle" cx="400" cy="360" rx="16" ry="30" transform="rotate(180 400 360)" style="animation-delay: 2s; animation-duration: 3s, 4.2s"/>
+  <ellipse class="leaf leaf-wiggle" cx="350" cy="350" rx="14" ry="28" transform="rotate(-170 350 350)" style="animation-delay: 2.2s; animation-duration: 3s, 4.9s"/>
+  
+  <!-- Lower left leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="250" cy="320" rx="13" ry="26" transform="rotate(-150 250 320)" style="animation-delay: 2.4s; animation-duration: 3s, 4.3s"/>
+  <ellipse class="leaf leaf-wiggle" cx="210" cy="280" rx="15" ry="29" transform="rotate(-135 210 280)" style="animation-delay: 2.6s; animation-duration: 3s, 4.6s"/>
+  
+  <!-- Left leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="160" cy="220" rx="17" ry="31" transform="rotate(-90 160 220)" style="animation-delay: 2.8s; animation-duration: 3s, 4.1s"/>
+  <ellipse class="leaf leaf-wiggle" cx="120" cy="200" rx="14" ry="27" transform="rotate(-80 120 200)" style="animation-delay: 3s; animation-duration: 3s, 4.5s"/>
+  
+  <!-- Upper left leaves -->
+  <ellipse class="leaf leaf-wiggle" cx="210" cy="170" rx="13" ry="25" transform="rotate(-60 210 170)" style="animation-delay: 3.2s; animation-duration: 3s, 4.8s"/>
+  <ellipse class="leaf leaf-wiggle" cx="250" cy="130" rx="15" ry="28" transform="rotate(-45 250 130)" style="animation-delay: 3.4s; animation-duration: 3s, 4.2s"/>
+  
+  <!-- Energy particles rising -->
+  <circle class="energy-particle" cx="350" cy="250" r="3" style="animation-delay: 0s"/>
+  <circle class="energy-particle" cx="450" cy="270" r="2" style="animation-delay: 1s"/>
+  <circle class="energy-particle" cx="380" cy="230" r="2.5" style="animation-delay: 2s"/>
+  <circle class="energy-particle" cx="420" cy="260" r="2" style="animation-delay: 3s"/>
+  <circle class="energy-particle" cx="400" cy="240" r="3" style="animation-delay: 4s"/>
+  
+  <!-- Quote text -->
+  <text class="quote-text" x="400" y="180" text-anchor="middle">"If you're green,</text>
+  <text class="quote-text" x="400" y="225" text-anchor="middle">you're growing.</text>
+  
+  <text class="author-text" x="400" y="270" text-anchor="middle">— Ray Kroc</text>
+  
+  <rect class="highlight" x="300" y="155" width="200" height="90" rx="5"/>
 </svg>

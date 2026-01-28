@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <linearGradient id="commitGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="50%" stop-color="#FF1493"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    
+    <filter id="commitBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+  
+  <style>
+    .bg { fill: #0d1117; }
+    
+    .commit-title {
+      font-family: 'Courier New', monospace;
+      font-size: 24px;
+      fill: #00D9FF;
+      font-weight: bold;
+    }
+    
+    .year-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      fill: #8b949e;
+      font-weight: bold;
+    }
+    
+    .commit-bar {
+      fill: url(#commitGlow);
+      opacity: 0;
+      animation: growBar 2s ease-out forwards;
+    }
+    
+    @keyframes growBar {
+      0% { opacity: 0; transform: scaleX(0); }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.9; transform: scaleX(1); }
+    }
+    
+    .commit-dot {
+      fill: #FFD700;
+      animation: ping 2s ease-in-out infinite;
+    }
+    
+    @keyframes ping {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    
+    .grid-line {
+      stroke: #30363d;
+      stroke-width: 1;
+      stroke-dasharray: 5,5;
+      fill: none;
+    }
+    
+    .data-label {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      fill: #58a6ff;
+    }
+    
+    .sparkle {
+      fill: #FFD700;
+      animation: sparkle 3s ease-in-out infinite;
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+    
+    .wave-line {
+      stroke: #FF1493;
+      stroke-width: 3;
+      fill: none;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawWave 4s ease-out forwards;
+    }
+    
+    @keyframes drawWave {
+      to { stroke-dashoffset: 0; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="400"/>
+  
+  <!-- Title -->
+  <text class="commit-title" x="450" y="35" text-anchor="middle">A Decade of Building</text>
+  <text class="data-label" x="450" y="55" text-anchor="middle">70+ repositories • 10+ years • ∞ commits</text>
+  
+  <!-- Grid lines -->
+  <line class="grid-line" x1="100" y1="100" x2="100" y2="350"/>
+  <line class="grid-line" x1="100" y1="350" x2="800" y2="350"/>
+  
+  <!-- Year markers -->
+  <text class="year-label" x="120" y="370">2011</text>
+  <text class="year-label" x="260" y="370">2015</text>
+  <text class="year-label" x="400" y="370">2017</text>
+  <text class="year-label" x="540" y="370">2020</text>
+  <text class="year-label" x="680" y="370">2024</text>
+  
+  <!-- Data labels on y-axis -->
+  <text class="data-label" x="80" y="350" text-anchor="end">0</text>
+  <text class="data-label" x="80" y="280" text-anchor="end">250</text>
+  <text class="data-label" x="80" y="210" text-anchor="end">500</text>
+  <text class="data-label" x="80" y="140" text-anchor="end">750</text>
+  <text class="data-label" x="80" y="105" text-anchor="end">1k</text>
+  
+  <!-- Commit bars (representing activity over years) -->
+  <rect class="commit-bar" x="120" y="240" width="120" height="110" style="animation-delay: 0.2s; transform-origin: 120px 350px"/>
+  <rect class="commit-bar" x="260" y="180" width="120" height="170" style="animation-delay: 0.4s; transform-origin: 260px 350px"/>
+  <rect class="commit-bar" x="400" y="120" width="120" height="230" style="animation-delay: 0.6s; transform-origin: 400px 350px"/>
+  <rect class="commit-bar" x="540" y="160" width="120" height="190" style="animation-delay: 0.8s; transform-origin: 540px 350px"/>
+  <rect class="commit-bar" x="680" y="140" width="120" height="210" style="animation-delay: 1s; transform-origin: 680px 350px"/>
+  
+  <!-- Wave overlay showing growth trajectory -->
+  <path class="wave-line" d="M 120,300 Q 260,250 400,150 T 780,160"/>
+  
+  <!-- Milestone dots -->
+  <circle class="commit-dot" cx="180" cy="300" r="5" style="animation-delay: 0.5s"/>
+  <circle class="commit-dot" cx="320" cy="250" r="5" style="animation-delay: 0.7s"/>
+  <circle class="commit-dot" cx="460" cy="150" r="6" style="animation-delay: 0.9s"/>
+  <circle class="commit-dot" cx="600" cy="180" r="5" style="animation-delay: 1.1s"/>
+  <circle class="commit-dot" cx="740" cy="160" r="6" style="animation-delay: 1.3s"/>
+  
+  <!-- Sparkles for key milestones -->
+  <circle class="sparkle" cx="460" cy="150" r="3" style="animation-delay: 2s"/>
+  <circle class="sparkle" cx="740" cy="160" r="3" style="animation-delay: 2.2s"/>
+  <circle class="sparkle" cx="320" cy="250" r="2" style="animation-delay: 2.4s"/>
+  
+  <!-- Labels for key projects -->
+  <text class="data-label" x="180" y="290" text-anchor="middle" font-size="10">Smoke</text>
+  <text class="data-label" x="320" y="240" text-anchor="middle" font-size="10">Modern Web</text>
+  <text class="data-label" x="460" y="140" text-anchor="middle" font-size="10">rad-shell★</text>
+  <text class="data-label" x="600" y="170" text-anchor="middle" font-size="10">IoT</text>
+  <text class="data-label" x="740" y="150" text-anchor="middle" font-size="10">AI/ML</text>
+</svg>
