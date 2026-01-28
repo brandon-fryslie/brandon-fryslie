@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title {
+        font-family: 'Courier New', monospace;
+        font-size: 72px;
+        font-weight: bold;
+        fill: url(#titleGradient);
+        text-anchor: middle;
+      }
+      .subtitle {
+        font-family: 'Courier New', monospace;
+        font-size: 24px;
+        fill: #00D9FF;
+        text-anchor: middle;
+      }
+      .code-line {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        fill: #00FF41;
+        opacity: 0.6;
+      }
+      .orbit {
+        transform-origin: center;
+        animation: orbit 20s linear infinite;
+      }
+      .pulse {
+        animation: pulse 3s ease-in-out infinite;
+      }
+      .float {
+        animation: float 4s ease-in-out infinite;
+      }
+      @keyframes orbit {
+        from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; r: 8px; }
+        50% { opacity: 1; r: 12px; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+    </style>
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF">
+        <animate attributeName="stop-color" values="#00D9FF;#7B68EE;#FF1493;#FFD700;#00D9FF" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#7B68EE">
+        <animate attributeName="stop-color" values="#7B68EE;#FF1493;#FFD700;#00D9FF;#7B68EE" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#FF1493">
+        <animate attributeName="stop-color" values="#FF1493;#FFD700;#00D9FF;#7B68EE;#FF1493" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  
+  <!-- Code rain effect -->
+  <text class="code-line" x="50" y="0">const craft = require('excellence');<animate attributeName="y" values="-20;320" dur="8s" repeatCount="indefinite"/></text>
+  <text class="code-line" x="250" y="0">import { innovation } from 'ai';<animate attributeName="y" values="-20;320" dur="10s" repeatCount="indefinite"/></text>
+  <text class="code-line" x="450" y="0">function buildTheFuture() {<animate attributeName="y" values="-20;320" dur="12s" repeatCount="indefinite"/></text>
+  <text class="code-line" x="700" y="0">class DevTools extends Awesome<animate attributeName="y" values="-20;320" dur="9s" repeatCount="indefinite"/></text>
+  <text class="code-line" x="950" y="0">export default creativity;<animate attributeName="y" values="-20;320" dur="11s" repeatCount="indefinite"/></text>
+  <text class="code-line" x="1150" y="0">#!/usr/bin/env innovation<animate attributeName="y" values="-20;320" dur="7s" repeatCount="indefinite"/></text>
+  
+  <!-- Orbiting tech symbols -->
+  <g class="orbit" transform="translate(600, 150)">
+    <circle cx="0" cy="0" r="10" fill="#3776AB" opacity="0.8"/>
+    <text x="0" y="5" font-size="16" text-anchor="middle">🐍</text>
+  </g>
+  <g class="orbit" transform="translate(600, 150)" style="animation-delay: -5s">
+    <circle cx="0" cy="0" r="10" fill="#F7DF1E" opacity="0.8"/>
+    <text x="0" y="5" font-size="16" text-anchor="middle">⚡</text>
+  </g>
+  <g class="orbit" transform="translate(600, 150)" style="animation-delay: -10s">
+    <circle cx="0" cy="0" r="10" fill="#61DAFB" opacity="0.8"/>
+    <text x="0" y="5" font-size="16" text-anchor="middle">⚛️</text>
+  </g>
+  <g class="orbit" transform="translate(600, 150)" style="animation-delay: -15s">
+    <circle cx="0" cy="0" r="10" fill="#00D9FF" opacity="0.8"/>
+    <text x="0" y="5" font-size="16" text-anchor="middle">🤖</text>
+  </g>
+  
+  <!-- Floating particles -->
+  <circle class="pulse" cx="150" cy="100" r="8" fill="#00D9FF"/>
+  <circle class="pulse" cx="1050" cy="200" r="8" fill="#FF1493" style="animation-delay: -1s"/>
+  <circle class="pulse" cx="200" cy="250" r="8" fill="#FFD700" style="animation-delay: -2s"/>
+  <circle class="pulse" cx="1000" cy="80" r="8" fill="#7B68EE" style="animation-delay: -1.5s"/>
+  
+  <!-- Main title -->
+  <text class="float title" x="600" y="140">BRANDON FRYSLIE</text>
+  <text class="subtitle" x="600" y="180">Building Excellence Since Day One</text>
+  <text class="subtitle" x="600" y="210" style="font-size: 18px; opacity: 0.8">
+    Senior Engineer • AI Architect • Tool Craftsman
+  </text>
+</svg>
