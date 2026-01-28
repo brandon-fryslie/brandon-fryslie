@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500">
+  <defs>
+    <linearGradient id="cosmicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D9FF">
+        <animate attributeName="stop-color" values="#00D9FF;#FF1493;#FFD700;#4EAA25;#00D9FF" dur="20s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#FF1493">
+        <animate attributeName="stop-color" values="#FF1493;#FFD700;#4EAA25;#00D9FF;#FF1493" dur="20s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#FFD700">
+        <animate attributeName="stop-color" values="#FFD700;#4EAA25;#00D9FF;#FF1493;#FFD700" dur="20s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <radialGradient id="starburst">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF1493" stop-opacity="0"/>
+    </radialGradient>
+    
+    <filter id="cosmicGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    .cosmic-bg { fill: #0d1117; }
+    
+    .constellation-line {
+      stroke: url(#cosmicGrad);
+      stroke-width: 2;
+      fill: none;
+      opacity: 0;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawConstellation 6s ease-out forwards;
+    }
+    
+    @keyframes drawConstellation {
+      to { opacity: 0.6; stroke-dashoffset: 0; }
+    }
+    
+    .name-cosmic {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 140px;
+      font-weight: 900;
+      fill: url(#cosmicGrad);
+      filter: url(#cosmicGlow);
+      text-anchor: middle;
+      opacity: 0;
+      animation: nameReveal 2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+    }
+    
+    @keyframes nameReveal {
+      0% { opacity: 0; transform: scale(0.3) rotateX(90deg); }
+      70% { transform: scale(1.05) rotateX(-5deg); }
+      100% { opacity: 1; transform: scale(1) rotateX(0deg); }
+    }
+    
+    .tagline {
+      font-family: 'Courier New', monospace;
+      font-size: 32px;
+      font-weight: bold;
+      fill: #00D9FF;
+      text-anchor: middle;
+      opacity: 0;
+      animation: taglineSlide 1.5s ease-out 1.5s forwards;
+    }
+    
+    @keyframes taglineSlide {
+      from { opacity: 0; transform: translateX(-100px); }
+      to { opacity: 0.9; transform: translateX(0); }
+    }
+    
+    .star-major {
+      fill: #FFD700;
+      filter: url(#cosmicGlow);
+      animation: starBurst 4s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    @keyframes starBurst {
+      0%, 100% { opacity: 0.8; transform: scale(1) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1.5) rotate(180deg); }
+    }
+    
+    .orbit-trail {
+      stroke: url(#cosmicGrad);
+      stroke-width: 3;
+      fill: none;
+      opacity: 0.3;
+      stroke-dasharray: 10,10;
+      animation: orbitFlow 30s linear infinite;
+    }
+    
+    @keyframes orbitFlow {
+      to { stroke-dashoffset: -1000; }
+    }
+    
+    .tech-planet {
+      animation: planetOrbit 25s linear infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    @keyframes planetOrbit {
+      from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+    }
+    
+    .stat-cosmic {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      fill: #FF1493;
+      text-anchor: middle;
+      opacity: 0;
+      animation: statPopIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+    
+    @keyframes statPopIn {
+      0% { opacity: 0; transform: scale(0) rotate(-180deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    
+    .energy-wave {
+      fill: none;
+      stroke: url(#starburst);
+      stroke-width: 3;
+      opacity: 0;
+      animation: waveExpand 4s ease-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    @keyframes waveExpand {
+      0% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 0.8; }
+      100% { opacity: 0; transform: scale(2); }
+    }
+    
+    .particle-cosmic {
+      fill: #00D9FF;
+      opacity: 0;
+      animation: particleRise 8s ease-in-out infinite;
+    }
+    
+    @keyframes particleRise {
+      0% { opacity: 0; transform: translateY(0) scale(0); }
+      20% { opacity: 1; transform: translateY(-100px) scale(1); }
+      80% { opacity: 1; transform: translateY(-300px) scale(0.5); }
+      100% { opacity: 0; transform: translateY(-400px) scale(0); }
+    }
+    
+    .subtitle-badge {
+      fill: #161b22;
+      stroke: url(#cosmicGrad);
+      stroke-width: 2;
+      opacity: 0;
+      animation: badgeReveal 1s ease-out 2s forwards;
+    }
+    
+    @keyframes badgeReveal {
+      from { opacity: 0; transform: scaleX(0); }
+      to { opacity: 1; transform: scaleX(1); }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="cosmic-bg" width="1600" height="500"/>
+  
+  <!-- Constellation connections -->
+  <path class="constellation-line" d="M 200,100 L 400,150 L 600,120 L 800,180 L 1000,140 L 1200,160 L 1400,130" style="animation-delay: 1s"/>
+  <path class="constellation-line" d="M 300,350 L 500,320 L 700,360 L 900,330 L 1100,350 L 1300,340" style="animation-delay: 1.5s"/>
+  <path class="constellation-line" d="M 250,250 L 800,250 L 1350,250" style="animation-delay: 2s"/>
+  
+  <!-- Orbit trails -->
+  <ellipse class="orbit-trail" cx="800" cy="250" rx="500" ry="200"/>
+  <ellipse class="orbit-trail" cx="800" cy="250" rx="400" ry="150" style="animation-duration: 20s; animation-direction: reverse"/>
+  <ellipse class="orbit-trail" cx="800" cy="250" rx="300" ry="120" style="animation-duration: 25s"/>
+  
+  <!-- Energy waves from center -->
+  <circle class="energy-wave" cx="800" cy="250" r="100" style="animation-delay: 0s"/>
+  <circle class="energy-wave" cx="800" cy="250" r="100" style="animation-delay: 1.3s"/>
+  <circle class="energy-wave" cx="800" cy="250" r="100" style="animation-delay: 2.6s"/>
+  
+  <!-- Particles rising -->
+  <circle class="particle-cosmic" cx="300" cy="450" r="4" style="animation-delay: 0s"/>
+  <circle class="particle-cosmic" cx="500" cy="450" r="3" style="animation-delay: 2s"/>
+  <circle class="particle-cosmic" cx="800" cy="450" r="5" style="animation-delay: 4s"/>
+  <circle class="particle-cosmic" cx="1100" cy="450" r="3" style="animation-delay: 6s"/>
+  <circle class="particle-cosmic" cx="1300" cy="450" r="4" style="animation-delay: 1s"/>
+  
+  <!-- Tech planets orbiting -->
+  <g transform="translate(800, 250)">
+    <!-- Python planet -->
+    <g class="tech-planet" style="animation-delay: 0s">
+      <circle fill="#3776AB" r="25"/>
+      <text fill="white" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" dy="7">Py</text>
+    </g>
+    
+    <!-- JavaScript planet -->
+    <g class="tech-planet" style="animation-delay: -6.25s">
+      <circle fill="#F7DF1E" r="25"/>
+      <text fill="black" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" dy="7">JS</text>
+    </g>
+    
+    <!-- Shell planet -->
+    <g class="tech-planet" style="animation-delay: -12.5s">
+      <circle fill="#4EAA25" r="28"/>
+      <text fill="white" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" dy="8">⚡</text>
+    </g>
+    
+    <!-- AI planet -->
+    <g class="tech-planet" style="animation-delay: -18.75s">
+      <circle fill="#412991" r="25"/>
+      <text fill="white" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" dy="7">AI</text>
+    </g>
+  </g>
+  
+  <!-- Major achievement stars -->
+  <polygon class="star-major" points="400,150 408,170 430,170 413,182 421,202 400,190 379,202 387,182 370,170 392,170" style="animation-delay: 2s"/>
+  <polygon class="star-major" points="1200,160 1210,185 1238,185 1216,200 1226,225 1200,210 1174,225 1184,200 1162,185 1190,185" style="animation-delay: 2.5s; animation-duration: 3s"/>
+  
+  <!-- Main name -->
+  <text class="name-cosmic" x="800" y="220">BRANDON FRYSLIE</text>
+  
+  <!-- Tagline -->
+  <text class="tagline" x="800" y="310">Ten Years of Commitment • Not Trends</text>
+  
+  <!-- Stat badges below -->
+  <g transform="translate(800, 380)">
+    <!-- Background badges -->
+    <rect class="subtitle-badge" x="-380" y="-25" width="180" height="50" rx="25" style="animation-delay: 2.2s"/>
+    <rect class="subtitle-badge" x="-180" y="-25" width="140" height="50" rx="25" style="animation-delay: 2.4s"/>
+    <rect class="subtitle-badge" x="-20" y="-25" width="160" height="50" rx="25" style="animation-delay: 2.6s"/>
+    <rect class="subtitle-badge" x="160" y="-25" width="220" height="50" rx="25" style="animation-delay: 2.8s"/>
+    
+    <!-- Stats text -->
+    <text class="stat-cosmic" x="-290" y="8" style="animation-delay: 2.3s">70+ Repos</text>
+    <text class="stat-cosmic" x="-110" y="8" style="animation-delay: 2.5s">rad-shell ★41</text>
+    <text class="stat-cosmic" x="60" y="8" style="animation-delay: 2.7s">1000s Users</text>
+    <text class="stat-cosmic" x="270" y="8" style="animation-delay: 2.9s">2011-2026</text>
+  </g>
+</svg>
