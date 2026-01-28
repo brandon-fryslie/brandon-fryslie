@@ -1,0 +1,134 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#FF1493;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.6"/>
+    </linearGradient>
+    
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF1493;stop-opacity:0.4"/>
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:0.4"/>
+    </linearGradient>
+  </defs>
+  
+  <style>
+    .wave {
+      fill: none;
+      stroke-width: 3;
+    }
+    
+    .wave1 {
+      stroke: url(#waveGrad1);
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: draw-wave 4s ease-out forwards;
+    }
+    
+    .wave2 {
+      stroke: url(#waveGrad2);
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: draw-wave 4s ease-out 0.5s forwards;
+    }
+    
+    .wave3 {
+      stroke: #00D9FF;
+      stroke-width: 2;
+      opacity: 0.3;
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: draw-wave 4s ease-out 1s forwards;
+    }
+    
+    .commit-dot {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    .dot-2011 {
+      fill: #00D9FF;
+      animation: pulse-dot 2s infinite ease-in-out 0s;
+    }
+    
+    .dot-2014 {
+      fill: #61DAFB;
+      animation: pulse-dot 2s infinite ease-in-out 0.4s;
+    }
+    
+    .dot-2017 {
+      fill: #FFD700;
+      animation: pulse-dot 2s infinite ease-in-out 0.8s;
+    }
+    
+    .dot-2020 {
+      fill: #E7352C;
+      animation: pulse-dot 2s infinite ease-in-out 1.2s;
+    }
+    
+    .dot-2024 {
+      fill: #FF1493;
+      animation: pulse-dot 2s infinite ease-in-out 1.6s;
+    }
+    
+    .wave-label {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      fill: #00D9FF;
+      opacity: 0;
+      animation: fade-in 1s ease-out 2s forwards;
+    }
+    
+    @keyframes draw-wave {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+    
+    @keyframes fade-in {
+      to { opacity: 0.8; }
+    }
+  </style>
+  
+  <!-- Wave paths representing commit activity over time -->
+  <path class="wave wave1" d="M 50 150 Q 200 80, 350 120 T 650 140 T 950 100 T 1150 130"/>
+  <path class="wave wave2" d="M 50 180 Q 200 110, 350 150 T 650 170 T 950 130 T 1150 160"/>
+  <path class="wave wave3" d="M 50 200 Q 200 140, 350 180 T 650 200 T 950 160 T 1150 190"/>
+  
+  <!-- Milestone dots at key years -->
+  <circle class="commit-dot dot-2011" cx="180" cy="105" r="8"/>
+  <circle class="commit-dot dot-2014" cx="420" cy="135" r="8"/>
+  <circle class="commit-dot dot-2017" cx="650" cy="140" r="10"/>
+  <circle class="commit-dot dot-2020" cx="880" cy="115" r="8"/>
+  <circle class="commit-dot dot-2024" cx="1050" cy="120" r="8"/>
+  
+  <!-- Year labels -->
+  <text x="180" y="80" text-anchor="middle" class="wave-label" style="animation-delay: 2s">2011</text>
+  <text x="180" y="95" text-anchor="middle" class="wave-label" style="animation-delay: 2.1s; font-size: 10px">Smoke</text>
+  
+  <text x="420" y="110" text-anchor="middle" class="wave-label" style="animation-delay: 2.2s">2014</text>
+  <text x="420" y="125" text-anchor="middle" class="wave-label" style="animation-delay: 2.3s; font-size: 10px">Ember</text>
+  
+  <text x="650" y="110" text-anchor="middle" class="wave-label" style="animation-delay: 2.4s; fill: #FFD700; font-weight: bold">2017</text>
+  <text x="650" y="125" text-anchor="middle" class="wave-label" style="animation-delay: 2.5s; font-size: 10px; fill: #FFD700">rad-shell ★</text>
+  
+  <text x="880" y="90" text-anchor="middle" class="wave-label" style="animation-delay: 2.6s">2020</text>
+  <text x="880" y="105" text-anchor="middle" class="wave-label" style="animation-delay: 2.7s; font-size: 10px">IoT</text>
+  
+  <text x="1050" y="95" text-anchor="middle" class="wave-label" style="animation-delay: 2.8s">2024</text>
+  <text x="1050" y="110" text-anchor="middle" class="wave-label" style="animation-delay: 2.9s; font-size: 10px">AI/ML</text>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-family="Courier New" font-size="28" fill="#00D9FF" font-weight="bold">
+    The Wave Never Stops
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="270" text-anchor="middle" font-family="Courier New" font-size="14" fill="#FF1493" opacity="0.7">
+    15 years of continuous evolution • Each peak a breakthrough • Each valley a lesson
+  </text>
+</svg>
