@@ -2,7 +2,7 @@
 
 ![Tech Orbit](./assets/tech-orbit.svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=1000&lines=A+solar+system+of+skills+in+perpetual+orbit;Ten+years+of+commits+never+lie;Master+fundamentals.+Build+with+intention.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=1000&lines=A+solar+system+in+perpetual+motion;Seeds+that+grew+into+a+forest;A+heartbeat+that+never+stopped)](https://git.io/typing-svg)
 
 </div>
 
@@ -12,13 +12,13 @@
 
 **Most developers:** Weekend project → Bored → Next shiny thing
 
-**Me:** rad-shell → 10 years → 41★ → Thousands of users → **Still evolving**
+**Me:** rad-shell → 10 years → 41★ → Thousands of users → **Still growing**
 
 ---
 
 <div align="center">
 
-![Code Waves](./assets/code-waves.svg)
+![Code Garden](./assets/code-garden.svg)
 
 </div>
 
@@ -27,6 +27,22 @@
 <div align="center">
 
 ![Philosophy](./assets/philosophy.svg)
+
+</div>
+
+---
+
+<div align="center">
+
+![Heartbeat](./assets/heartbeat.svg)
+
+</div>
+
+---
+
+<div align="center">
+
+![Code Waves](./assets/code-waves.svg)
 
 </div>
 
@@ -50,7 +66,7 @@ Not a weekend hack. A complete Zsh framework refined over a decade.
 - ⚡ Millisecond startup times (not seconds)
 - 🎨 Git-aware intelligent theming
 - 🔌 Plugin architecture that actually works
-- �� Used in production globally
+- 🌍 Used in production globally
 - 💚 Ten years of continuous improvement
 
 **The Ecosystem:**
@@ -157,10 +173,10 @@ Not a weekend hack. A complete Zsh framework refined over a decade.
 
 ## 🎯 The Difference
 
-**10 years • 70 repos • Thousands of users • 41 stars**
+**A solar system in motion • Trees grown from seeds • A heartbeat that never stopped**
 
 Not someone who starts projects.  
-Someone who **finishes, maintains, evolves, and never stops.**
+Someone who **plants, nurtures, grows, and never quits.**
 
 ---
 
@@ -177,10 +193,10 @@ Someone who **finishes, maintains, evolves, and never stops.**
 
 ### *"Don't take anything I say too seriously."* 😉
 
-**70+ repos • 10+ years • ∞ commits • 100% commitment**
+**70+ repos • 15 years • ∞ commits • 100% commitment**
 
 ---
 
-*16 custom animated SVGs • Pure CSS • GitHub-tested*
+*18 custom animated SVGs • Pure CSS • GitHub-tested*
 
 </div>

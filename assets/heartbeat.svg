@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heartbeatGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF"/>
+      <stop offset="50%" style="stop-color:#FF1493"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+  </defs>
+  
+  <style>
+    .heartbeat-line {
+      stroke: url(#heartbeatGrad);
+      stroke-width: 3;
+      fill: none;
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+      animation: draw-heartbeat 5s ease-out forwards;
+    }
+    
+    .pulse-dot {
+      transform-box: fill-box;
+      transform-origin: center;
+      opacity: 0;
+    }
+    
+    .pulse-1 {
+      animation: pulse-appear 0.6s ease-out 1s forwards, pulse-beat 1.5s ease-in-out 1.6s infinite;
+    }
+    
+    .pulse-2 {
+      animation: pulse-appear 0.6s ease-out 1.8s forwards, pulse-beat 1.5s ease-in-out 2.4s infinite;
+    }
+    
+    .pulse-3 {
+      animation: pulse-appear 0.6s ease-out 2.6s forwards, pulse-beat 1.5s ease-in-out 3.2s infinite;
+    }
+    
+    .pulse-4 {
+      animation: pulse-appear 0.6s ease-out 3.4s forwards, pulse-beat 1.5s ease-in-out 4s infinite;
+    }
+    
+    .pulse-5 {
+      animation: pulse-appear 0.6s ease-out 4.2s forwards, pulse-beat 1.5s ease-in-out 4.8s infinite;
+    }
+    
+    .beat-text {
+      font-family: 'Courier New', monospace;
+      fill: #00D9FF;
+      opacity: 0;
+      animation: fade-in-text 0.8s ease-out 5.5s forwards;
+    }
+    
+    @keyframes draw-heartbeat {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    @keyframes pulse-appear {
+      to { opacity: 1; }
+    }
+    
+    @keyframes pulse-beat {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.4); opacity: 1; }
+    }
+    
+    @keyframes fade-in-text {
+      to { opacity: 0.9; }
+    }
+  </style>
+  
+  <!-- Heartbeat line -->
+  <path class="heartbeat-line" d="
+    M 50 100 
+    L 150 100 
+    L 180 60 
+    L 210 140 
+    L 240 100 
+    L 340 100
+    L 370 50
+    L 400 150
+    L 430 100
+    L 530 100
+    L 560 70
+    L 590 130
+    L 620 100
+    L 720 100
+    L 750 80
+    L 780 120
+    L 810 100
+    L 910 100
+    L 940 75
+    L 970 125
+    L 1000 100
+    L 1150 100
+  "/>
+  
+  <!-- Pulse dots at key moments -->
+  <circle class="pulse-dot pulse-1" cx="210" cy="100" r="6" fill="#00D9FF"/>
+  <circle class="pulse-dot pulse-2" cx="400" cy="100" r="6" fill="#61DAFB"/>
+  <circle class="pulse-dot pulse-3" cx="590" cy="100" r="8" fill="#FFD700"/>
+  <circle class="pulse-dot pulse-4" cx="780" cy="100" r="6" fill="#E7352C"/>
+  <circle class="pulse-dot pulse-5" cx="970" cy="100" r="6" fill="#FF1493"/>
+  
+  <!-- Year labels -->
+  <text x="210" y="170" text-anchor="middle" class="beat-text" font-size="11" style="animation-delay: 5.5s">
+    2011
+  </text>
+  <text x="400" y="170" text-anchor="middle" class="beat-text" font-size="11" style="animation-delay: 5.6s">
+    2014
+  </text>
+  <text x="590" y="170" text-anchor="middle" class="beat-text" font-size="12" font-weight="bold" fill="#FFD700" style="animation-delay: 5.7s">
+    2017
+  </text>
+  <text x="780" y="170" text-anchor="middle" class="beat-text" font-size="11" style="animation-delay: 5.8s">
+    2020
+  </text>
+  <text x="970" y="170" text-anchor="middle" class="beat-text" font-size="11" style="animation-delay: 5.9s">
+    2024
+  </text>
+  
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-family="Courier New" font-size="24" fill="#00D9FF" font-weight="bold" class="beat-text" style="animation-delay: 5.3s">
+    The Heartbeat of Commitment
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="190" text-anchor="middle" font-family="Courier New" font-size="13" fill="#FF1493" class="beat-text" style="animation-delay: 6s">
+    15 years • Still beating • Never stopped
+  </text>
+</svg>

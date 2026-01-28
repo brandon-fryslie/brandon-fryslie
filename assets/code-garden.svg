@@ -1,0 +1,196 @@
+<svg viewBox="0 0 1200 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Trees grow from seeds */
+    .tree {
+      transform-box: fill-box;
+      transform-origin: bottom center;
+    }
+    
+    .tree-2011 {
+      animation: grow 3s ease-out forwards;
+    }
+    
+    .tree-2014 {
+      animation: grow 3s ease-out 0.5s forwards;
+    }
+    
+    .tree-2017 {
+      animation: grow-large 4s ease-out 1s forwards;
+    }
+    
+    .tree-2020 {
+      animation: grow 3s ease-out 1.5s forwards;
+    }
+    
+    .tree-2024 {
+      animation: grow 3s ease-out 2s forwards;
+    }
+    
+    /* Leaves rustle */
+    .leaves {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: rustle 4s ease-in-out infinite;
+    }
+    
+    .leaves-1 { animation-delay: 0s; }
+    .leaves-2 { animation-delay: 0.3s; }
+    .leaves-3 { animation-delay: 0.6s; }
+    .leaves-4 { animation-delay: 0.9s; }
+    .leaves-5 { animation-delay: 1.2s; }
+    
+    /* Roots spread */
+    .roots {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: spread-roots 2s ease-out forwards;
+    }
+    
+    .roots-1 { animation-delay: 2.5s; }
+    .roots-2 { animation-delay: 2.7s; }
+    .roots-3 { animation-delay: 2.9s; }
+    .roots-4 { animation-delay: 3.1s; }
+    .roots-5 { animation-delay: 3.3s; }
+    
+    /* Stars appear in trees */
+    .star {
+      transform-box: fill-box;
+      transform-origin: center;
+      opacity: 0;
+      animation: appear-star 1s ease-out 4s forwards, twinkle 2s ease-in-out 5s infinite;
+    }
+    
+    .ground-line {
+      stroke: #4a5568;
+      stroke-width: 2;
+      opacity: 0.5;
+    }
+    
+    .title {
+      font-family: 'Courier New', monospace;
+      fill: #00D9FF;
+      opacity: 0;
+      animation: fade-in 1s ease-out forwards;
+    }
+    
+    .tree-label {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      fill: #00D9FF;
+      opacity: 0;
+      animation: fade-in 0.8s ease-out forwards;
+    }
+    
+    @keyframes grow {
+      from { transform: scaleY(0); opacity: 0; }
+      to { transform: scaleY(1); opacity: 1; }
+    }
+    
+    @keyframes grow-large {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1.2); opacity: 1; }
+    }
+    
+    @keyframes rustle {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+    
+    @keyframes spread-roots {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    @keyframes appear-star {
+      to { opacity: 1; }
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    
+    @keyframes fade-in {
+      to { opacity: 1; }
+    }
+  </style>
+  
+  <!-- Ground line -->
+  <line class="ground-line" x1="50" y1="280" x2="1150" y2="280"/>
+  
+  <!-- Tree 1: 2011 Smoke (Small tree) -->
+  <g class="tree tree-2011">
+    <rect x="140" y="220" width="8" height="60" fill="#8B4513"/>
+    <circle class="leaves leaves-1" cx="144" cy="210" r="25" fill="#00D9FF" opacity="0.7"/>
+    <circle class="leaves leaves-1" cx="134" cy="220" r="20" fill="#00D9FF" opacity="0.6"/>
+    <circle class="leaves leaves-1" cx="154" cy="220" r="20" fill="#00D9FF" opacity="0.6"/>
+  </g>
+  <path class="roots roots-1" d="M 144 280 Q 130 295, 115 300 M 144 280 Q 158 295, 173 300" 
+        stroke="#8B4513" stroke-width="2" fill="none" opacity="0.5"/>
+  <text x="144" y="315" text-anchor="middle" class="tree-label" style="animation-delay: 3s">2011</text>
+  <text x="144" y="328" text-anchor="middle" class="tree-label" style="animation-delay: 3.1s; font-size: 9px">Smoke</text>
+  
+  <!-- Tree 2: 2014 Ember (Medium tree) -->
+  <g class="tree tree-2014">
+    <rect x="326" y="200" width="10" height="80" fill="#8B4513"/>
+    <circle class="leaves leaves-2" cx="331" cy="185" r="30" fill="#61DAFB" opacity="0.7"/>
+    <circle class="leaves leaves-2" cx="318" cy="200" r="25" fill="#61DAFB" opacity="0.6"/>
+    <circle class="leaves leaves-2" cx="344" cy="200" r="25" fill="#61DAFB" opacity="0.6"/>
+    <circle class="leaves leaves-2" cx="331" cy="210" r="20" fill="#61DAFB" opacity="0.5"/>
+  </g>
+  <path class="roots roots-2" d="M 331 280 Q 310 298, 290 305 M 331 280 Q 352 298, 372 305" 
+        stroke="#8B4513" stroke-width="2" fill="none" opacity="0.5"/>
+  <text x="331" y="315" text-anchor="middle" class="tree-label" style="animation-delay: 3.2s">2014</text>
+  <text x="331" y="328" text-anchor="middle" class="tree-label" style="animation-delay: 3.3s; font-size: 9px">Ember</text>
+  
+  <!-- Tree 3: 2017 rad-shell (LARGE TREE with star) -->
+  <g class="tree tree-2017">
+    <rect x="595" y="160" width="14" height="120" fill="#8B4513"/>
+    <circle class="leaves leaves-3" cx="602" cy="140" r="45" fill="#FFD700" opacity="0.8"/>
+    <circle class="leaves leaves-3" cx="575" cy="160" r="38" fill="#FFD700" opacity="0.7"/>
+    <circle class="leaves leaves-3" cx="629" cy="160" r="38" fill="#FFD700" opacity="0.7"/>
+    <circle class="leaves leaves-3" cx="602" cy="180" r="35" fill="#FFD700" opacity="0.6"/>
+    <circle class="leaves leaves-3" cx="560" cy="180" r="28" fill="#FFD700" opacity="0.5"/>
+    <circle class="leaves leaves-3" cx="644" cy="180" r="28" fill="#FFD700" opacity="0.5"/>
+    <!-- Star for 41 stars -->
+    <polygon class="star" points="602,125 607,135 618,137 610,145 612,156 602,150 592,156 594,145 586,137 597,135" 
+             fill="#FF1493"/>
+    <text x="602" y="143" text-anchor="middle" font-size="14" fill="#000" font-weight="bold" 
+          class="star" style="animation-delay: 4.1s">★41</text>
+  </g>
+  <path class="roots roots-3" d="M 602 280 Q 570 300, 540 310 M 602 280 Q 634 300, 664 310 M 602 280 Q 602 305, 602 315" 
+        stroke="#8B4513" stroke-width="3" fill="none" opacity="0.5"/>
+  <text x="602" y="315" text-anchor="middle" class="tree-label" style="animation-delay: 3.4s; fill: #FFD700; font-weight: bold">2017</text>
+  <text x="602" y="328" text-anchor="middle" class="tree-label" style="animation-delay: 3.5s; font-size: 9px; fill: #FFD700">rad-shell</text>
+  
+  <!-- Tree 4: 2020 IoT (Medium tree) -->
+  <g class="tree tree-2020">
+    <rect x="826" y="210" width="10" height="70" fill="#8B4513"/>
+    <circle class="leaves leaves-4" cx="831" cy="195" r="28" fill="#E7352C" opacity="0.7"/>
+    <circle class="leaves leaves-4" cx="818" cy="210" r="24" fill="#E7352C" opacity="0.6"/>
+    <circle class="leaves leaves-4" cx="844" cy="210" r="24" fill="#E7352C" opacity="0.6"/>
+  </g>
+  <path class="roots roots-4" d="M 831 280 Q 812 296, 795 303 M 831 280 Q 850 296, 867 303" 
+        stroke="#8B4513" stroke-width="2" fill="none" opacity="0.5"/>
+  <text x="831" y="315" text-anchor="middle" class="tree-label" style="animation-delay: 3.6s">2020</text>
+  <text x="831" y="328" text-anchor="middle" class="tree-label" style="animation-delay: 3.7s; font-size: 9px">IoT</text>
+  
+  <!-- Tree 5: 2024 AI (Growing tree) -->
+  <g class="tree tree-2024">
+    <rect x="1026" y="220" width="10" height="60" fill="#8B4513"/>
+    <circle class="leaves leaves-5" cx="1031" cy="205" r="26" fill="#FF1493" opacity="0.7"/>
+    <circle class="leaves leaves-5" cx="1018" cy="218" r="22" fill="#FF1493" opacity="0.6"/>
+    <circle class="leaves leaves-5" cx="1044" cy="218" r="22" fill="#FF1493" opacity="0.6"/>
+  </g>
+  <path class="roots roots-5" d="M 1031 280 Q 1014 294, 998 300 M 1031 280 Q 1048 294, 1064 300" 
+        stroke="#8B4513" stroke-width="2" fill="none" opacity="0.5"/>
+  <text x="1031" y="315" text-anchor="middle" class="tree-label" style="animation-delay: 3.8s">2024</text>
+  <text x="1031" y="328" text-anchor="middle" class="tree-label" style="animation-delay: 3.9s; font-size: 9px">AI/ML</text>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" class="title" font-size="28" font-weight="bold">
+    The Code Garden
+  </text>
+  <text x="600" y="65" text-anchor="middle" class="title" font-size="14" fill="#FF1493" style="animation-delay: 0.5s">
+    From Seeds to Forest • 15 Years of Growth
+  </text>
+</svg>
