@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 350">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9FF"/>
+      <stop offset="50%" stop-color="#FF1493"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+  
+  <style>
+    .bg{ fill:#0d1117; }
+    
+    .name{
+      font-family:'Arial Black',sans-serif;
+      font-size:100px;
+      font-weight:900;
+      fill:url(#grad1);
+      text-anchor:middle;
+    }
+    
+    .subtitle{
+      font-family:'Courier New',monospace;
+      font-size:24px;
+      fill:#00D9FF;
+      text-anchor:middle;
+    }
+    
+    .spin{
+      transform-box:fill-box;
+      transform-origin:center;
+      animation:spin 20s infinite linear;
+    }
+    
+    @keyframes spin{
+      0%{transform:rotate(0deg)}
+      100%{transform:rotate(360deg)}
+    }
+    
+    .pulse{
+      transform-box:fill-box;
+      transform-origin:center;
+      animation:pulse 3s infinite ease-in-out;
+    }
+    
+    @keyframes pulse{
+      0%,100%{opacity:0.6;transform:scale(1)}
+      50%{opacity:1;transform:scale(1.2)}
+    }
+    
+    .orbit{
+      transform-box:fill-box;
+      transform-origin:center;
+      animation:orbit 15s infinite linear;
+    }
+    
+    @keyframes orbit{
+      from{transform:rotate(0deg) translateX(200px) rotate(0deg)}
+      to{transform:rotate(360deg) translateX(200px) rotate(-360deg)}
+    }
+  </style>
+  
+  <rect class="bg" width="1400" height="350"/>
+  
+  <!-- Spinning rings -->
+  <g transform="translate(700,175)">
+    <circle class="spin" cx="0" cy="0" r="150" fill="none" stroke="#FF1493" stroke-width="2" opacity="0.3"/>
+    <circle class="spin" cx="0" cy="0" r="180" fill="none" stroke="#00D9FF" stroke-width="2" opacity="0.3" style="animation-duration:25s;animation-direction:reverse"/>
+  </g>
+  
+  <!-- Pulsing stars -->
+  <circle class="pulse" cx="300" cy="100" r="4" fill="#FFD700"/>
+  <circle class="pulse" cx="1100" cy="100" r="4" fill="#FFD700" style="animation-delay:1s"/>
+  <circle class="pulse" cx="250" cy="250" r="3" fill="#FFD700" style="animation-delay:2s"/>
+  <circle class="pulse" cx="1150" cy="250" r="3" fill="#FFD700" style="animation-delay:0.5s"/>
+  
+  <!-- Orbiting tech icons -->
+  <g transform="translate(700,175)">
+    <g class="orbit" style="animation-delay:0s">
+      <circle fill="#3776AB" r="20"/>
+      <text fill="white" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" dy="5">Py</text>
+    </g>
+    <g class="orbit" style="animation-delay:-3.75s">
+      <circle fill="#F7DF1E" r="20"/>
+      <text fill="black" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" dy="5">JS</text>
+    </g>
+    <g class="orbit" style="animation-delay:-7.5s">
+      <circle fill="#4EAA25" r="22"/>
+      <text fill="white" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" dy="6">⚡</text>
+    </g>
+    <g class="orbit" style="animation-delay:-11.25s">
+      <circle fill="#412991" r="20"/>
+      <text fill="white" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" dy="5">AI</text>
+    </g>
+  </g>
+  
+  <!-- Name -->
+  <text class="name" x="700" y="150">BRANDON FRYSLIE</text>
+  
+  <!-- Subtitle -->
+  <text class="subtitle" x="700" y="210">Ten Years • 70 Repos • Thousands of Users</text>
+  <text class="subtitle" x="700" y="245" font-size="20">rad-shell ★41 | 2011-2026 | Master Fundamentals</text>
+</svg>
