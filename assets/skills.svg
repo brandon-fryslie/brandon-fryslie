@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .skill-title {
+        font-size: 32px;
+        font-weight: bold;
+        fill: #00D9FF;
+      }
+      .skill-label {
+        font-size: 18px;
+        fill: #ffffff;
+        font-weight: bold;
+      }
+      .skill-percent {
+        font-size: 16px;
+        fill: #00FF7F;
+        font-weight: bold;
+      }
+      .bar-bg {
+        fill: #1a1a1a;
+        stroke: #00D9FF;
+        stroke-width: 1;
+      }
+      .bar-fill-1 {
+        fill: url(#skillGrad1);
+        animation: fillBar1 2s ease-out forwards;
+      }
+      .bar-fill-2 {
+        fill: url(#skillGrad2);
+        animation: fillBar2 2s ease-out 0.2s forwards;
+      }
+      .bar-fill-3 {
+        fill: url(#skillGrad1);
+        animation: fillBar3 2s ease-out 0.4s forwards;
+      }
+      .bar-fill-4 {
+        fill: url(#skillGrad2);
+        animation: fillBar4 2s ease-out 0.6s forwards;
+      }
+      .bar-fill-5 {
+        fill: url(#skillGrad2);
+        animation: fillBar5 2s ease-out 0.8s forwards;
+      }
+      .bar-fill-6 {
+        fill: url(#skillGrad3);
+        animation: fillBar6 2s ease-out 1s forwards;
+      }
+      .bar-fill-7 {
+        fill: url(#skillGrad3);
+        animation: fillBar7 2s ease-out 1.2s forwards;
+      }
+      @keyframes fillBar1 { from { width: 0; } to { width: 570px; } }
+      @keyframes fillBar2 { from { width: 0; } to { width: 570px; } }
+      @keyframes fillBar3 { from { width: 0; } to { width: 600px; } }
+      @keyframes fillBar4 { from { width: 0; } to { width: 540px; } }
+      @keyframes fillBar5 { from { width: 0; } to { width: 570px; } }
+      @keyframes fillBar6 { from { width: 0; } to { width: 540px; } }
+      @keyframes fillBar7 { from { width: 0; } to { width: 540px; } }
+    </style>
+    <linearGradient id="skillGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF"/>
+      <stop offset="100%" style="stop-color:#00FF7F"/>
+    </linearGradient>
+    <linearGradient id="skillGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7B68EE"/>
+      <stop offset="100%" style="stop-color:#FF1493"/>
+    </linearGradient>
+    <linearGradient id="skillGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FF8C00"/>
+    </linearGradient>
+  </defs>
+  
+  <text x="400" y="40" class="skill-title" text-anchor="middle">💻 EXPERTISE LEVELS</text>
+  
+  <!-- Python -->
+  <text x="30" y="95" class="skill-label">🐍 Python</text>
+  <rect x="180" y="78" width="600" height="25" rx="12" class="bar-bg"/>
+  <rect x="180" y="78" width="0" height="25" rx="12" class="bar-fill-1"/>
+  <text x="790" y="95" class="skill-percent">95%</text>
+  
+  <!-- JavaScript/TypeScript -->
+  <text x="30" y="145" class="skill-label">⚡ JavaScript/TS</text>
+  <rect x="180" y="128" width="600" height="25" rx="12" class="bar-bg"/>
+  <rect x="180" y="128" width="0" height="25" rx="12" class="bar-fill-2"/>
+  <text x="790" y="145" class="skill-percent">95%</text>
+  
+  <!-- Shell/Bash -->
+  <text x="30" y="195" class="skill-label">🐚 Shell/Bash</text>
+  <rect x="180" y="178" width="600" height="25" rx="12" class="bar-bg"/>
+  <rect x="180" y="178" width="0" height="25" rx="12" class="bar-fill-3"/>
+  <text x="790" y="195" class="skill-percent">100%</text>
+  
+  <!-- React/Node -->
+  <text x="30" y="245" class="skill-label">⚛️ React/Node</text>
+  <rect x="180" y="228" width="600" height="25" rx="12" class="bar-bg"/>
+  <rect x="180" y="228" width="0" height="25" rx="12" class="bar-fill-4"/>
+  <text x="790" y="245" class="skill-percent">90%</text>
+  
+  <!-- AI/ML -->
+  <text x="30" y="295" class="skill-label">🤖 AI/ML</text>
+  <rect x="180" y="278" width="600" height="25" rx="12" class="bar-bg"/>
+  <rect x="180" y="278" width="0" height="25" rx="12" class="bar-fill-5"/>
+  <text x="790" y="295" class="skill-percent">95%</text>
+  
+  <!-- DevOps -->
+  <text x="30" y="345" class="skill-label">🔧 DevOps</text>
+  <rect x="180" y="328" width="600" height="25" rx="12" class="bar-bg"/>
+  <rect x="180" y="328" width="0" height="25" rx="12" class="bar-fill-6"/>
+  <text x="790" y="345" class="skill-percent">90%</text>
+  
+  <!-- IoT/Hardware -->
+  <text x="30" y="395" class="skill-label">🎨 IoT/Hardware</text>
+  <rect x="180" y="378" width="600" height="25" rx="12" class="bar-bg"/>
+  <rect x="180" y="378" width="0" height="25" rx="12" class="bar-fill-7"/>
+  <text x="790" y="395" class="skill-percent">90%</text>
+</svg>
