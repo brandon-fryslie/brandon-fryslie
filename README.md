@@ -1,34 +1,26 @@
 <div align="center">
 
-![Cosmic Header](./assets/cosmic-header.svg)
+![Header](./assets/ultimate-header.svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=1000&lines=Master+fundamentals.+Build+with+intention.;If+you're+green%2C+you're+growing.;Ten+years+of+commits+don't+lie.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=1000&lines=Master+fundamentals.+Build+with+intention.;Ten+years+of+commits+don't+lie.;If+you're+green%2C+you're+growing.)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-## 🌟 The Commitment
+## 🌟 The Simple Truth
 
-**Most developers**: Build for a weekend. Get bored. Move on.
+**Most developers**: Weekend project → Boredom → Next shiny thing
 
-**Me**: Build for a decade. Keep evolving. Watch thousands rely on it.
+**Me**: rad-shell → 10 years → 41 stars → Thousands of users → Still evolving
 
 ```javascript
-const reality = {
-    timeline: "2011 → 2026",
-    repos: 70,
-    focus: "Only what matters",
-    
-    flagship: {
-        project: "rad-shell",
-        stars: 41,
-        users: "thousands daily",
-        age: "10+ years",
-        status: "still growing"
-    },
-    
-    truth: "Sustained commitment beats weekend hacks. Every time."
+const decade = {
+    start: 2011,
+    now: 2026,
+    flagship: "rad-shell ★41",
+    users: "thousands daily",
+    truth: "Commitment beats hype"
 };
 ```
 
@@ -38,9 +30,7 @@ const reality = {
 
 ![Philosophy](./assets/philosophy.svg)
 
-### *"If you're green, you're growing. If you're ripe, you're rotten."* — Ray Kroc
-
-**This is my code. This is my philosophy.**
+*"If you're green, you're growing. If you're ripe, you're rotten."*
 
 </div>
 
@@ -48,7 +38,7 @@ const reality = {
 
 <div align="center">
 
-![Decade of Evolution](./assets/decade-evolution.svg)
+![Decade Evolution](./assets/decade-evolution.svg)
 
 </div>
 
@@ -56,26 +46,22 @@ const reality = {
 
 ## 🐚 rad-shell: The Decade Project
 
-**★ 41 | 👥 Thousands | 🌍 Worldwide | ⏰ 10+ Years**
+**★ 41 | 👥 Thousands | 🌍 Worldwide | ⏰ 10 Years**
 
-This is what **not giving up** looks like.
+A complete Zsh framework. Not a weekend hack. A **decade of refinement**.
 
-A complete Zsh framework. Built over a decade. Refined through thousands of commits. Trusted by developers on every continent. Used in production environments worldwide.
-
-**What makes it different**:
-- ⚡ **Performance**: Millisecond startup times
-- 🎨 **Intelligence**: Git-aware theming that helps you work
-- 🔌 **Architecture**: Plugin system that doesn't break
-- 🌍 **Impact**: Thousands of daily users
-- 💚 **Evolution**: Still improving after 10 years
+**Why it matters**:
+- ⚡ Millisecond startup times
+- 🎨 Git-aware intelligent theming
+- 🔌 Plugin architecture that works
+- 🌍 Used in production globally
+- 💚 Still improving after 10 years
 
 **The Ecosystem**:
-- **[rad-shell](https://github.com/brandon-fryslie/rad-shell)** — The framework
-- **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Extensible architecture
-- **[git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme)** — Where it began
-- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — A decade of refinement
-
-**This isn't "some guy's dotfiles." This is a framework refined over ten years by someone who never stopped caring.**
+- [rad-shell](https://github.com/brandon-fryslie/rad-shell) — The framework
+- [rad-plugins](https://github.com/brandon-fryslie/rad-plugins) — Plugin system
+- [git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme) — The original theme
+- [dotfiles](https://github.com/brandon-fryslie/dotfiles) — A decade of config
 
 ---
 
@@ -87,98 +73,66 @@ A complete Zsh framework. Built over a decade. Refined through thousands of comm
 
 ---
 
-## 🤖 AI/ML: Real Problems, Real Solutions
-
-Not building wrappers. Building **integration** that **matters**.
+## 🤖 AI/ML: Real Integration
 
 ### [macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)
-**Natural voice synthesis for macOS accessibility.**
+Natural voice synthesis for macOS accessibility. AI serving humans.
 
-The screen reader you'd actually want to listen to. Deep integration. Natural voices. Real accessibility.
-
-AI serving humans, not performing tricks.
-
-`Python` `OpenAI` `macOS Accessibility` `Production Ready`
+`Python` `OpenAI` `macOS` `Accessibility`
 
 ### [kalider](https://github.com/brandon-fryslie/kalider)
-**Experimental AI research.**
+Experimental AI research. *"It might not be a good idea, but it's an idea!"*
 
-*"It might not be a good idea, but it's an idea!"*
-
-Innovation requires trying things that might fail. This explores those boundaries.
-
-`Python` `Machine Learning` `Experimental` `Research`
+`Python` `ML` `Experimental`
 
 ### [ptytest](https://github.com/brandon-fryslie/ptytest)
-**Terminal emulation testing.**
+Terminal emulation testing for robust CLI apps.
 
-Because AI tools need Unix fundamentals. PTY testing for robust CLI applications.
-
-`Python` `PTY` `Terminal` `Infrastructure`
+`Python` `PTY` `Testing`
 
 ---
 
-## 🌐 Full-Stack Evolution
+## 🌐 Full-Stack
 
 ### [tesseract-react](https://github.com/brandon-fryslie/tesseract-react)
-Modern React. Clean architecture. Built with intention, not hype.
+Modern React. Clean architecture. Built with intention.
 
 ### [ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee) ⭐ 4
-**Built in 2014 when Ember was cutting edge.**
-
-Early adoption. Shows I explore new territory when it's still risky.
+Built in 2014 when Ember was cutting edge. Early adoption matters.
 
 ### [sake](https://github.com/brandon-fryslie/sake)
-**WebSockets Made Easy.**
-
-Built before they were everywhere. When they were still hard.
+WebSockets made easy. Built before they were everywhere.
 
 ### [storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)
-**Interactive storytelling platform.**
-
-Technology should enable creativity, not just CRUD.
+Interactive storytelling. Technology should enable creativity.
 
 ---
 
-## 🎨 IoT & Hardware: Physical Computing
-
-Software meets photons. Code meets circuits.
+## 🎨 IoT & Hardware
 
 ### [esp-bloom](https://github.com/brandon-fryslie/esp-bloom)
-**Ambient bias lighting with ESP8266.**
+Ambient bias lighting with ESP8266. Dynamic colors, screen sync, custom patterns.
 
-Inspired by ScreenBloom. Rebuilt better. Extended further.
-
-Dynamic colors. Screen sync. Custom patterns. Real hardware. Real challenges.
-
-`Python` `ESP8266` `IoT` `LED Control` `Real-time`
+`Python` `ESP8266` `IoT` `LED Control`
 
 ### [pb-sync](https://github.com/brandon-fryslie/pb-sync)
-**PixelBlaze LED controller integration.**
+PixelBlaze LED controller integration. Software meets hardware.
 
-TypeScript. Hardware APIs. Clean abstractions. Control the physical world.
-
-`TypeScript` `Hardware` `LED Controllers` `System Integration`
+`TypeScript` `Hardware` `LEDs`
 
 ---
 
-## 📚 Framework Development: 2011
+## 📚 Framework Development (2011)
 
 ### [Smoke](https://github.com/brandon-fryslie/Smoke) ⭐ 4
-**Not a fork. A rethinking.**
+Complete reinterpretation of CodeIgniter. Built to understand frameworks from first principles.
 
-Built in 2011 to understand what frameworks really are beneath the surface.
-
-Complete reinterpretation of CodeIgniter. MVC explored from first principles.
-
-`PHP` `MVC` `Architecture` `2011` `Fundamentals`
+`PHP` `MVC` `2011`
 
 ### [combine](https://github.com/brandon-fryslie/combine)
-**Asset combination and minification.**
+Asset combination and minification. Built before Webpack existed.
 
-Built before Webpack. Before the tooling explosion. Solving problems before the industry caught up.
-
-`PHP` `Build Tools` `Pre-Webpack Era`
+`PHP` `Build Tools`
 
 ---
 
@@ -194,31 +148,23 @@ Built before Webpack. Before the tooling explosion. Solving problems before the 
 
 ## 💻 The Stack
 
-**Not buzzwords. Production code. For years.**
-
 <div align="center">
 
-### Foundation
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Shell](https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
-### Frameworks
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Ember](https://img.shields.io/badge/Ember-E04E39?style=for-the-badge&logo=ember.js&logoColor=white)
 
-### Modern
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-### Hardware
 ![ESP8266](https://img.shields.io/badge/ESP8266-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberry-pi&logoColor=white)
 
 </div>
 
@@ -226,13 +172,11 @@ Built before Webpack. Before the tooling explosion. Solving problems before the 
 
 ## 🛠️ Developer Tools
 
-**Built on one principle: If I wouldn't use it every day, why should anyone else?**
+**One principle: If I wouldn't use it daily, why should you?**
 
-- **[handy-debugger](https://github.com/brandon-fryslie/handy-debugger)** — Node.js debugging that works
-- **[stacker](https://github.com/brandon-fryslie/stacker)** — Boot your dev stack correctly
-- **[sublime-profile](https://github.com/brandon-fryslie/sublime-profile)** — Editor optimization that matters
-
-Every tool scratches a real itch. Every tool gets used. Every tool maintained.
+- [handy-debugger](https://github.com/brandon-fryslie/handy-debugger) — Node.js debugging
+- [stacker](https://github.com/brandon-fryslie/stacker) — Boot your dev stack
+- [sublime-profile](https://github.com/brandon-fryslie/sublime-profile) — Editor optimization
 
 ---
 
@@ -251,30 +195,27 @@ Every tool scratches a real itch. Every tool gets used. Every tool maintained.
 
 ## 🎯 The Difference
 
-When you see **10+ years**, **70+ repos**, **thousands of users**, **41 stars on a framework**—
+**10 years. 70 repos. Thousands of users. 41 stars.**
 
-You're not seeing someone who starts projects.
-
-You're seeing someone who **finishes**, **maintains**, **evolves**, and **never stops caring**.
+You're not seeing someone who starts projects.  
+You're seeing someone who **finishes, maintains, evolves,** and **never stops**.
 
 ---
 
-## 💼 Collaboration
+## 💼 Open for Collaboration
 
 Building:
-- 🤖 **AI/ML** — Real integration, real problems
-- 🛠️ **Developer Tools** — Tools developers want to use
-- 🏗️ **Architecture** — Scaling with intention
-- 🚀 **Innovation** — Creating, not following
-
-I don't follow trends. I **investigate**, **understand**, **build**, and **push beyond** them.
+- 🤖 AI/ML — Real problems
+- 🛠️ Developer Tools — Actually useful
+- 🏗️ Architecture — Intentional scaling
+- 🚀 Innovation — Creating, not following
 
 ---
 
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-brandon--fryslie-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brandon-fryslie)
-[![Profile Views](https://komarev.com/ghpvc/?username=brandon-fryslie&style=for-the-badge&color=00D9FF&labelColor=0d1117)](https://github.com/brandon-fryslie)
+[![Views](https://komarev.com/ghpvc/?username=brandon-fryslie&style=for-the-badge&color=00D9FF&labelColor=0d1117)](https://github.com/brandon-fryslie)
 
 ---
 
@@ -284,8 +225,6 @@ I don't follow trends. I **investigate**, **understand**, **build**, and **push 
 
 ---
 
-*This profile is art. Custom SVG animations with pure CSS.*  
-*Where engineering excellence meets visual excellence.*  
-*A decade of craft deserves more than bullet points.*
+*Custom SVG animations. Pure CSS. GitHub-compatible.*
 
 </div>
