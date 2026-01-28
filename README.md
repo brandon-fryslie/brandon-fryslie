@@ -1,8 +1,8 @@
 <div align="center">
 
-![Header](./assets/ultimate-header.svg)
+![Tech Orbit](./assets/tech-orbit.svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=1000&lines=Ten+years+of+commits+don't+lie;Master+fundamentals.+Build+with+intention;If+you're+green%2C+you're+growing)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=1000&lines=A+solar+system+of+skills+in+perpetual+orbit;Ten+years+of+commits+never+lie;Master+fundamentals.+Build+with+intention.)](https://git.io/typing-svg)
 
 </div>
 
@@ -10,9 +10,17 @@
 
 ## The Simple Truth
 
-Most developers: **Weekend project** → Bored → Next shiny thing
+**Most developers:** Weekend project → Bored → Next shiny thing
 
-Me: **rad-shell** → 10 years → 41★ → Thousands of users → **Still evolving**
+**Me:** rad-shell → 10 years → 41★ → Thousands of users → **Still evolving**
+
+---
+
+<div align="center">
+
+![Code Waves](./assets/code-waves.svg)
+
+</div>
 
 ---
 
@@ -26,7 +34,7 @@ Me: **rad-shell** → 10 years → 41★ → Thousands of users → **Still evol
 
 <div align="center">
 
-![Decade Evolution](./assets/decade-evolution.svg)
+![Constellation](./assets/constellation.svg)
 
 </div>
 
@@ -42,20 +50,12 @@ Not a weekend hack. A complete Zsh framework refined over a decade.
 - ⚡ Millisecond startup times (not seconds)
 - 🎨 Git-aware intelligent theming
 - 🔌 Plugin architecture that actually works
-- 🌍 Used in production globally
+- �� Used in production globally
 - 💚 Ten years of continuous improvement
 
 **The Ecosystem:**
 
 [rad-shell](https://github.com/brandon-fryslie/rad-shell) • [rad-plugins](https://github.com/brandon-fryslie/rad-plugins) • [git-taculous-zsh-theme](https://github.com/brandon-fryslie/git-taculous-zsh-theme) • [dotfiles](https://github.com/brandon-fryslie/dotfiles)
-
----
-
-<div align="center">
-
-![Masterpiece Showcase](./assets/masterpiece-showcase.svg)
-
-</div>
 
 ---
 
@@ -181,6 +181,6 @@ Someone who **finishes, maintains, evolves, and never stops.**
 
 ---
 
-*Custom SVG animations • Pure CSS • GitHub-tested*
+*16 custom animated SVGs • Pure CSS • GitHub-tested*
 
 </div>
