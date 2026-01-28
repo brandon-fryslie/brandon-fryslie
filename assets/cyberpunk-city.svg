@@ -1,0 +1,217 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF006E;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8338EC;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00F5FF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0077B6;stop-opacity:1"/>
+    </linearGradient>
+    
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    /* Cityscape buildings */
+    .building {
+      transform-box: fill-box;
+      transform-origin: bottom;
+    }
+    
+    .build-1 { animation: rise-building 2s ease-out 0s forwards; }
+    .build-2 { animation: rise-building 2s ease-out 0.2s forwards; }
+    .build-3 { animation: rise-building 2s ease-out 0.4s forwards; }
+    .build-4 { animation: rise-building 2s ease-out 0.6s forwards; }
+    .build-5 { animation: rise-building 2s ease-out 0.8s forwards; }
+    .build-6 { animation: rise-building 2s ease-out 1s forwards; }
+    .build-7 { animation: rise-building 2s ease-out 1.2s forwards; }
+    
+    /* Neon signs flicker */
+    .neon-sign {
+      filter: url(#neonGlow);
+      animation: flicker 0.15s infinite steps(2);
+    }
+    
+    .sign-1 { animation-delay: 0s; }
+    .sign-2 { animation-delay: 0.05s; }
+    .sign-3 { animation-delay: 0.1s; }
+    .sign-4 { animation-delay: 0.15s; }
+    .sign-5 { animation-delay: 0.2s; }
+    
+    /* Data streams */
+    .data-stream {
+      stroke: url(#neonCyan);
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      opacity: 0.7;
+      animation: stream-data 3s linear infinite;
+    }
+    
+    .stream-1 { animation-delay: 0s; }
+    .stream-2 { animation-delay: 0.5s; }
+    .stream-3 { animation-delay: 1s; }
+    .stream-4 { animation-delay: 1.5s; }
+    .stream-5 { animation-delay: 2s; }
+    
+    /* Flying cars/drones */
+    .drone {
+      transform-box: fill-box;
+      animation: fly-drone 8s linear infinite;
+    }
+    
+    .drone-1 { animation-delay: 0s; }
+    .drone-2 { animation-delay: 2s; }
+    .drone-3 { animation-delay: 4s; }
+    
+    /* Window lights blink */
+    .window-light {
+      animation: blink-window 2s infinite steps(1);
+    }
+    
+    .w1 { animation-delay: 0s; }
+    .w2 { animation-delay: 0.3s; }
+    .w3 { animation-delay: 0.6s; }
+    .w4 { animation-delay: 0.9s; }
+    .w5 { animation-delay: 1.2s; }
+    
+    /* Scanlines */
+    .scanline {
+      opacity: 0.1;
+      animation: scan 4s linear infinite;
+    }
+    
+    .text-cyber {
+      font-family: 'Courier New', monospace;
+      fill: #00F5FF;
+      filter: url(#neonGlow);
+    }
+    
+    @keyframes rise-building {
+      from { transform: scaleY(0); opacity: 0; }
+      to { transform: scaleY(1); opacity: 1; }
+    }
+    
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+    
+    @keyframes stream-data {
+      0% { stroke-dashoffset: 150; }
+      100% { stroke-dashoffset: -150; }
+    }
+    
+    @keyframes fly-drone {
+      0% { transform: translateX(-100px); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateX(1300px); opacity: 0; }
+    }
+    
+    @keyframes blink-window {
+      0%, 40% { opacity: 1; }
+      41%, 100% { opacity: 0.3; }
+    }
+    
+    @keyframes scan {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(400px); }
+    }
+  </style>
+  
+  <!-- Sky gradient background -->
+  <rect width="1200" height="400" fill="#0a0e27"/>
+  
+  <!-- Cyberpunk city skyline -->
+  <!-- Building 1 (left) -->
+  <rect class="building build-1" x="50" y="200" width="80" height="200" fill="url(#neonPink)" opacity="0.8"/>
+  <rect class="window-light w1" x="60" y="220" width="8" height="12" fill="#00F5FF"/>
+  <rect class="window-light w2" x="75" y="220" width="8" height="12" fill="#00F5FF"/>
+  <rect class="window-light w3" x="90" y="220" width="8" height="12" fill="#00F5FF"/>
+  <rect class="window-light w1" x="60" y="250" width="8" height="12" fill="#00F5FF"/>
+  <rect class="window-light w4" x="75" y="250" width="8" height="12" fill="#00F5FF"/>
+  <rect class="window-light w2" x="90" y="250" width="8" height="12" fill="#00F5FF"/>
+  
+  <!-- Building 2 -->
+  <rect class="building build-2" x="150" y="150" width="90" height="250" fill="url(#neonCyan)" opacity="0.7"/>
+  <rect class="window-light w3" x="165" y="180" width="8" height="12" fill="#FF006E"/>
+  <rect class="window-light w5" x="185" y="180" width="8" height="12" fill="#FF006E"/>
+  <rect class="window-light w1" x="205" y="180" width="8" height="12" fill="#FF006E"/>
+  <rect class="window-light w2" x="165" y="220" width="8" height="12" fill="#FF006E"/>
+  <rect class="window-light w4" x="185" y="220" width="8" height="12" fill="#FF006E"/>
+  <rect class="window-light w3" x="205" y="220" width="8" height="12" fill="#FF006E"/>
+  
+  <!-- Building 3 (tall center) -->
+  <rect class="building build-3" x="260" y="80" width="100" height="320" fill="url(#neonPink)" opacity="0.9"/>
+  <rect class="neon-sign sign-1" x="275" y="100" width="70" height="25" fill="#00F5FF" opacity="0.8"/>
+  <text x="310" y="118" text-anchor="middle" font-family="Courier New" font-size="14" fill="#000" font-weight="bold">2011</text>
+  
+  <!-- Building 4 -->
+  <rect class="building build-4" x="380" y="120" width="95" height="280" fill="url(#neonCyan)" opacity="0.8"/>
+  <rect class="neon-sign sign-2" x="395" y="140" width="65" height="25" fill="#FF006E" opacity="0.8"/>
+  <text x="427" y="158" text-anchor="middle" font-family="Courier New" font-size="14" fill="#fff" font-weight="bold">2014</text>
+  
+  <!-- Building 5 (tallest - rad-shell) -->
+  <rect class="building build-5" x="495" y="50" width="110" height="350" fill="url(#neonPink)" opacity="1"/>
+  <rect class="neon-sign sign-3" x="510" y="70" width="80" height="30" fill="#FFD700" opacity="0.9"/>
+  <text x="550" y="92" text-anchor="middle" font-family="Courier New" font-size="16" fill="#000" font-weight="bold">rad-shell</text>
+  <text x="550" y="105" text-anchor="middle" font-family="Courier New" font-size="10" fill="#000" font-weight="bold">★41</text>
+  
+  <!-- Building 6 -->
+  <rect class="building build-6" x="625" y="140" width="85" height="260" fill="url(#neonCyan)" opacity="0.8"/>
+  <rect class="neon-sign sign-4" x="640" y="160" width="55" height="25" fill="#FF006E" opacity="0.8"/>
+  <text x="667" y="178" text-anchor="middle" font-family="Courier New" font-size="14" fill="#fff" font-weight="bold">2020</text>
+  
+  <!-- Building 7 -->
+  <rect class="building build-7" x="730" y="170" width="90" height="230" fill="url(#neonPink)" opacity="0.7"/>
+  <rect class="neon-sign sign-5" x="745" y="190" width="60" height="25" fill="#00F5FF" opacity="0.8"/>
+  <text x="775" y="208" text-anchor="middle" font-family="Courier New" font-size="14" fill="#000" font-weight="bold">2024</text>
+  
+  <!-- Data streams flowing upward -->
+  <path class="data-stream stream-1" d="M 100 400 L 100 350 L 120 320 L 100 280"/>
+  <path class="data-stream stream-2" d="M 200 400 L 200 340 L 180 300 L 200 250"/>
+  <path class="data-stream stream-3" d="M 550 400 L 550 320 L 570 280 L 550 220"/>
+  <path class="data-stream stream-4" d="M 670 400 L 670 350 L 650 310 L 670 260"/>
+  <path class="data-stream stream-5" d="M 775 400 L 775 360 L 795 330 L 775 290"/>
+  
+  <!-- Flying drones/cars -->
+  <g class="drone drone-1">
+    <rect x="0" y="120" width="20" height="8" fill="#00F5FF" opacity="0.8" filter="url(#neonGlow)"/>
+    <circle cx="5" cy="124" r="2" fill="#FFD700"/>
+    <circle cx="15" cy="124" r="2" fill="#FFD700"/>
+  </g>
+  
+  <g class="drone drone-2">
+    <rect x="0" y="90" width="25" height="10" fill="#FF006E" opacity="0.8" filter="url(#neonGlow)"/>
+    <circle cx="6" cy="95" r="2" fill="#00F5FF"/>
+    <circle cx="19" cy="95" r="2" fill="#00F5FF"/>
+  </g>
+  
+  <g class="drone drone-3">
+    <rect x="0" y="150" width="22" height="9" fill="#8338EC" opacity="0.8" filter="url(#neonGlow)"/>
+    <circle cx="5" cy="154" r="2" fill="#FFD700"/>
+    <circle cx="17" cy="154" r="2" fill="#FFD700"/>
+  </g>
+  
+  <!-- Scanline effect -->
+  <rect class="scanline" width="1200" height="3" fill="#00F5FF"/>
+  
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" class="text-cyber" font-size="28" font-weight="bold">
+    CYBERPUNK 2026
+  </text>
+  <text x="600" y="380" text-anchor="middle" class="text-cyber" font-size="14">
+    Building the Future • One Neon Line at a Time
+  </text>
+</svg>
