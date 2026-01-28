@@ -1,0 +1,307 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="shellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4EAA25"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#412991"/>
+      <stop offset="100%" stop-color="#FF1493"/>
+    </linearGradient>
+    <linearGradient id="iotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E7352C"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <filter id="masterGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    .showcase-bg { fill: #0d1117; }
+    
+    .title-master {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      fill: #00D9FF;
+      filter: url(#masterGlow);
+      text-anchor: middle;
+    }
+    
+    .project-card {
+      fill: #161b22;
+      stroke-width: 3;
+      filter: url(#masterGlow);
+      opacity: 0;
+      animation: cardReveal 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    @keyframes cardReveal {
+      0% { opacity: 0; transform: scale(0.5) rotateY(180deg); }
+      100% { opacity: 1; transform: scale(1) rotateY(0deg); }
+    }
+    
+    .card-shell { stroke: url(#shellGrad); animation-delay: 0.2s; }
+    .card-ai { stroke: url(#aiGrad); animation-delay: 0.4s; }
+    .card-iot { stroke: url(#iotGrad); animation-delay: 0.6s; }
+    
+    .card-glow-shell {
+      fill: url(#shellGrad);
+      opacity: 0.1;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+    
+    .card-glow-ai {
+      fill: url(#aiGrad);
+      opacity: 0.1;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+    
+    .card-glow-iot {
+      fill: url(#iotGrad);
+      opacity: 0.1;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(1.05); }
+    }
+    
+    .project-title {
+      font-family: 'Arial', sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      fill: #FFD700;
+      text-anchor: middle;
+    }
+    
+    .project-stat {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 56px;
+      font-weight: 900;
+      fill: #FF1493;
+      text-anchor: middle;
+      opacity: 0;
+      animation: statBoom 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+    
+    @keyframes statBoom {
+      0% { opacity: 0; transform: scale(0) rotate(-180deg); }
+      70% { transform: scale(1.3) rotate(10deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    
+    .project-desc {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      fill: #c9d1d9;
+      text-anchor: middle;
+    }
+    
+    .tech-badge {
+      fill: #21262d;
+      stroke: #30363d;
+      stroke-width: 1;
+      rx: 10;
+    }
+    
+    .tech-text {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      fill: #58a6ff;
+      font-weight: bold;
+    }
+    
+    .star-mega {
+      fill: #FFD700;
+      filter: url(#masterGlow);
+      animation: starMega 2s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    @keyframes starMega {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.3) rotate(180deg); }
+    }
+    
+    .impact-number {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 20px;
+      fill: #00D9FF;
+      font-weight: 900;
+    }
+    
+    .users-icon {
+      fill: #00D9FF;
+      animation: usersWave 3s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center bottom;
+    }
+    
+    @keyframes usersWave {
+      0%, 100% { transform: scale(1) translateY(0); }
+      50% { transform: scale(1.1) translateY(-3px); }
+    }
+    
+    .timeline-line {
+      stroke: #30363d;
+      stroke-width: 3;
+      fill: none;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawTimeline 3s ease-out forwards;
+    }
+    
+    @keyframes drawTimeline {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    .year-marker {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      fill: #8b949e;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .connecting-beam {
+      stroke: url(#shellGrad);
+      stroke-width: 2;
+      fill: none;
+      opacity: 0.3;
+      stroke-dasharray: 5,5;
+      animation: beamFlow 8s linear infinite;
+    }
+    
+    @keyframes beamFlow {
+      to { stroke-dashoffset: -100; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="showcase-bg" width="1200" height="700"/>
+  
+  <!-- Title -->
+  <text class="title-master" x="600" y="60">THE MASTERPIECES</text>
+  
+  <!-- Timeline -->
+  <path class="timeline-line" d="M 100,120 L 1100,120"/>
+  <text class="year-marker" x="100" y="110" style="animation-delay: 1s">2011</text>
+  <text class="year-marker" x="600" y="110" style="animation-delay: 1.3s">2017</text>
+  <text class="year-marker" x="1100" y="110" style="animation-delay: 1.6s">2026</text>
+  
+  <!-- Connecting beams between cards -->
+  <path class="connecting-beam" d="M 350,350 Q 600,250 850,350" style="animation-delay: 1s"/>
+  
+  <!-- Card 1: rad-shell -->
+  <rect class="card-glow-shell" x="80" y="160" width="380" height="480" rx="20" style="animation-delay: 1s"/>
+  <rect class="project-card card-shell" x="80" y="160" width="380" height="480" rx="20"/>
+  
+  <text class="project-title" x="270" y="220">rad-shell</text>
+  
+  <!-- Star with animation -->
+  <g transform="translate(230, 240)">
+    <polygon class="star-mega" points="15,0 18,11 30,11 20,18 23,30 15,23 7,30 10,18 0,11 12,11" style="animation-delay: 1.5s"/>
+  </g>
+  <text class="project-stat" x="300" y="275" style="animation-delay: 1.2s">41</text>
+  
+  <text class="project-desc" x="270" y="310">The flagship Zsh framework</text>
+  <text class="project-desc" x="270" y="330">trusted by developers worldwide</text>
+  
+  <!-- User icons -->
+  <g transform="translate(200, 350)">
+    <circle class="users-icon" cx="0" cy="0" r="8" style="animation-delay: 0s"/>
+    <circle class="users-icon" cx="30" cy="0" r="8" style="animation-delay: 0.2s"/>
+    <circle class="users-icon" cx="60" cy="0" r="8" style="animation-delay: 0.4s"/>
+    <circle class="users-icon" cx="90" cy="0" r="8" style="animation-delay: 0.6s"/>
+    <circle class="users-icon" cx="120" cy="0" r="8" style="animation-delay: 0.8s"/>
+  </g>
+  <text class="impact-number" x="270" y="390">THOUSANDS OF USERS</text>
+  
+  <text class="project-desc" x="270" y="430" font-weight="bold" fill="#4EAA25">10+ years of evolution</text>
+  <text class="project-desc" x="270" y="450">Performance • Plugins • Themes</text>
+  <text class="project-desc" x="270" y="470">Millisecond startup times</text>
+  <text class="project-desc" x="270" y="490">Production battle-tested</text>
+  
+  <!-- Tech badges -->
+  <rect class="tech-badge" x="120" y="510" width="60" height="25"/>
+  <text class="tech-text" x="150" y="527" text-anchor="middle">Shell</text>
+  <rect class="tech-badge" x="190" y="510" width="60" height="25"/>
+  <text class="tech-text" x="220" y="527" text-anchor="middle">Zsh</text>
+  <rect class="tech-badge" x="260" y="510" width="60" height="25"/>
+  <text class="tech-text" x="290" y="527" text-anchor="middle">Git</text>
+  <rect class="tech-badge" x="330" y="510" width="70" height="25"/>
+  <text class="tech-text" x="365" y="527" text-anchor="middle">Plugins</text>
+  
+  <!-- Card 2: AI/ML Suite -->
+  <rect class="card-glow-ai" x="490" y="160" width="380" height="480" rx="20" style="animation-delay: 1.2s"/>
+  <rect class="project-card card-ai" x="490" y="160" width="380" height="480" rx="20"/>
+  
+  <text class="project-title" x="680" y="220">AI/ML Suite</text>
+  <text class="project-stat" x="680" y="270" style="font-size: 48px; animation-delay: 1.4s">🤖</text>
+  
+  <text class="project-desc" x="680" y="320" font-size="16px" font-weight="bold">macos-tts-via-openai</text>
+  <text class="project-desc" x="680" y="345">Natural voice synthesis</text>
+  <text class="project-desc" x="680" y="365">macOS accessibility integration</text>
+  
+  <text class="project-desc" x="680" y="400" font-size="16px" font-weight="bold">kalider</text>
+  <text class="project-desc" x="680" y="425">Experimental AI research</text>
+  <text class="project-desc" x="680" y="445">Pushing boundaries</text>
+  
+  <text class="project-desc" x="680" y="480" font-size="16px" font-weight="bold">ptytest</text>
+  <text class="project-desc" x="680" y="505">Terminal emulation for AI tools</text>
+  
+  <!-- Tech badges -->
+  <rect class="tech-badge" x="550" y="540" width="70" height="25"/>
+  <text class="tech-text" x="585" y="557" text-anchor="middle">Python</text>
+  <rect class="tech-badge" x="630" y="540" width="70" height="25"/>
+  <text class="tech-text" x="665" y="557" text-anchor="middle">OpenAI</text>
+  <rect class="tech-badge" x="710" y="540" width="60" height="25"/>
+  <text class="tech-text" x="740" y="557" text-anchor="middle">ML</text>
+  <rect class="tech-badge" x="780" y="540" width="60" height="25"/>
+  <text class="tech-text" x="810" y="557" text-anchor="middle">PTY</text>
+  
+  <text class="impact-number" x="680" y="600" fill="#FF1493">REAL AI • REAL PROBLEMS</text>
+  
+  <!-- Card 3: IoT/Hardware (bottom, spanning) -->
+  <rect class="card-glow-iot" x="900" y="160" width="270" height="480" rx="20" style="animation-delay: 1.4s"/>
+  <rect class="project-card card-iot" x="900" y="160" width="270" height="480" rx="20"/>
+  
+  <text class="project-title" x="1035" y="220" font-size="28px">IoT</text>
+  <text class="project-stat" x="1035" y="270" style="font-size: 48px; animation-delay: 1.6s">🔧</text>
+  
+  <text class="project-desc" x="1035" y="320" font-size="16px" font-weight="bold">esp-bloom</text>
+  <text class="project-desc" x="1035" y="345">ESP8266 LED control</text>
+  <text class="project-desc" x="1035" y="365">Screen sync</text>
+  <text class="project-desc" x="1035" y="385">Custom patterns</text>
+  
+  <text class="project-desc" x="1035" y="420" font-size="16px" font-weight="bold">pb-sync</text>
+  <text class="project-desc" x="1035" y="445">PixelBlaze</text>
+  <text class="project-desc" x="1035" y="465">integration</text>
+  
+  <text class="impact-number" x="1035" y="520" fill="#E7352C" font-size="16px">HARDWARE</text>
+  <text class="impact-number" x="1035" y="545" fill="#FFD700" font-size="16px">MEETS</text>
+  <text class="impact-number" x="1035" y="570" fill="#00D9FF" font-size="16px">SOFTWARE</text>
+  
+  <!-- Tech badges -->
+  <rect class="tech-badge" x="940" y="595" width="70" height="25"/>
+  <text class="tech-text" x="975" y="612" text-anchor="middle">Python</text>
+  <rect class="tech-badge" x="1020" y="595" width="90" height="25"/>
+  <text class="tech-text" x="1065" y="612" text-anchor="middle">ESP8266</text>
+</svg>
