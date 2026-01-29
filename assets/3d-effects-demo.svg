@@ -1,0 +1,153 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* 3D Rotating Cube using CSS transforms */
+      @keyframes rotateCube {
+        0% { transform: rotateX(0deg) rotateY(0deg); }
+        100% { transform: rotateX(360deg) rotateY(360deg); }
+      }
+      
+      .cube-container {
+        animation: rotateCube 8s linear infinite;
+        transform-origin: center;
+        transform-style: preserve-3d;
+      }
+      
+      /* Parallax layers */
+      @keyframes parallaxBack {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-30px); }
+      }
+      
+      @keyframes parallaxMid {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-60px); }
+      }
+      
+      @keyframes parallaxFront {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-90px); }
+      }
+      
+      .parallax-back { animation: parallaxBack 6s ease-in-out infinite; }
+      .parallax-mid { animation: parallaxMid 6s ease-in-out infinite; }
+      .parallax-front { animation: parallaxFront 6s ease-in-out infinite; }
+      
+      /* Depth via scale + shadow */
+      @keyframes floatDepth {
+        0%, 100% { 
+          transform: scale(1) translateY(0);
+          filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        50% { 
+          transform: scale(1.3) translateY(-20px);
+          filter: drop-shadow(0 15px 20px rgba(0,0,0,0.5));
+        }
+      }
+      
+      .float-sphere {
+        animation: floatDepth 4s ease-in-out infinite;
+      }
+    </style>
+    
+    <filter id="depth-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    GitHub-Compatible Pseudo-3D Effects
+  </text>
+  
+  <!-- Section 1: Isometric Cube (Static but looks 3D) -->
+  <g transform="translate(100, 120)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="12" fill="#888888">1. Isometric</text>
+    
+    <!-- Top face -->
+    <polygon points="0,0 60,30 0,60 -60,30" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+    
+    <!-- Left face -->
+    <polygon points="-60,30 0,60 0,120 -60,90" fill="#2E7D32" stroke="#1B5E20" stroke-width="2"/>
+    
+    <!-- Right face -->
+    <polygon points="0,60 60,30 60,90 0,120" fill="#66BB6A" stroke="#2E7D32" stroke-width="2"/>
+  </g>
+  
+  <!-- Section 2: Parallax Layers -->
+  <g transform="translate(300, 100)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="12" fill="#888888">2. Parallax Depth</text>
+    
+    <g class="parallax-back">
+      <circle cx="0" cy="80" r="25" fill="#1976D2" opacity="0.4"/>
+    </g>
+    <g class="parallax-mid">
+      <circle cx="0" cy="80" r="35" fill="#2196F3" opacity="0.6"/>
+    </g>
+    <g class="parallax-front">
+      <circle cx="0" cy="80" r="45" fill="#42A5F5" opacity="0.9"/>
+    </g>
+  </g>
+  
+  <!-- Section 3: Floating with Depth -->
+  <g transform="translate(500, 180)">
+    <text x="0" y="-80" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">3. Scale + Shadow</text>
+    
+    <g class="float-sphere">
+      <circle cx="0" cy="0" r="40" fill="url(#sphereGrad)"/>
+    </g>
+  </g>
+  
+  <!-- Section 4: Rotating 3D Shape using SMIL -->
+  <g transform="translate(680, 180)">
+    <text x="0" y="-80" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">4. 3D Rotate</text>
+    
+    <!-- Hexagon that rotates in 3D space -->
+    <g filter="url(#depth-shadow)">
+      <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="#FF9800" stroke="#F57C00" stroke-width="2">
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 0 0"
+          to="360 0 0"
+          dur="4s"
+          repeatCount="indefinite"/>
+      </polygon>
+      
+      <!-- Inner detail for depth perception -->
+      <polygon points="0,-20 18,-10 18,10 0,20 -18,10 -18,-10" fill="#FFB74D" opacity="0.8">
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 0 0"
+          to="360 0 0"
+          dur="4s"
+          repeatCount="indefinite"/>
+      </polygon>
+    </g>
+  </g>
+  
+  <!-- Sphere gradient for lighting effect -->
+  <defs>
+    <radialGradient id="sphereGrad" cx="35%" cy="35%">
+      <stop offset="0%" style="stop-color:#E91E63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#880E4F;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Bottom info -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="11" fill="#666666" text-anchor="middle" font-style="italic">
+    All effects use pure CSS/SMIL animations - no JavaScript required
+  </text>
+</svg>

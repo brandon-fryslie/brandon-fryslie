@@ -1,0 +1,159 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Floating animation for depth */
+      @keyframes floatUp {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+      }
+      
+      @keyframes floatDown {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(15px); }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      
+      .float-1 { animation: floatUp 3s ease-in-out infinite; }
+      .float-2 { animation: floatUp 3s ease-in-out infinite 0.5s; }
+      .float-3 { animation: floatUp 3s ease-in-out infinite 1s; }
+      .float-4 { animation: floatDown 4s ease-in-out infinite; }
+      
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      
+      /* Rotating elements for 3D effect */
+      @keyframes spinY {
+        from { transform: rotateY(0deg); }
+        to { transform: rotateY(360deg); }
+      }
+      
+      .spin-y { 
+        animation: spinY 6s linear infinite;
+        transform-origin: center;
+      }
+    </style>
+    
+    <linearGradient id="buildingGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E5C8A;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="buildingGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E24A90;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8A2E5C;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="buildingGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4AE290;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E8A5C;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="4" dy="8" stdDeviation="4" flood-opacity="0.5"/>
+    </filter>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0f0f1e"/>
+  
+  <!-- Ground plane (isometric) -->
+  <g opacity="0.2">
+    <line x1="200" y1="500" x2="600" y2="300" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="200" y1="500" x2="200" y2="100" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="600" y1="300" x2="600" y2="100" stroke="#4A90E2" stroke-width="1"/>
+    
+    <!-- Grid lines -->
+    <line x1="250" y1="475" x2="550" y2="325" stroke="#4A90E2" stroke-width="0.5"/>
+    <line x1="300" y1="450" x2="500" y2="350" stroke="#4A90E2" stroke-width="0.5"/>
+    <line x1="350" y1="425" x2="450" y2="375" stroke="#4A90E2" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    Isometric 3D Scene with Depth
+  </text>
+  
+  <!-- Building 1 (Left) - Tallest -->
+  <g class="float-1" filter="url(#shadow)">
+    <!-- Top -->
+    <polygon points="150,250 250,200 250,300 150,350" fill="url(#buildingGrad1)" opacity="0.9"/>
+    <!-- Front face -->
+    <polygon points="150,350 250,300 250,450 150,500" fill="url(#buildingGrad1)" opacity="0.7"/>
+    <!-- Side face -->
+    <polygon points="250,300 350,250 350,400 250,450" fill="#2E5C8A"/>
+    
+    <!-- Windows (glowing) -->
+    <g class="pulse">
+      <rect x="170" y="320" width="15" height="20" fill="#FFD700" filter="url(#glow)" opacity="0.8"/>
+      <rect x="200" y="335" width="15" height="20" fill="#FFD700" filter="url(#glow)" opacity="0.8"/>
+      <rect x="170" y="370" width="15" height="20" fill="#FFD700" filter="url(#glow)" opacity="0.8"/>
+      <rect x="200" y="385" width="15" height="20" fill="#FFD700" filter="url(#glow)" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Building 2 (Center) - Medium -->
+  <g class="float-2" filter="url(#shadow)">
+    <!-- Top -->
+    <polygon points="300,300 400,250 400,330 300,380" fill="url(#buildingGrad2)" opacity="0.9"/>
+    <!-- Front face -->
+    <polygon points="300,380 400,330 400,480 300,530" fill="url(#buildingGrad2)" opacity="0.7"/>
+    <!-- Side face -->
+    <polygon points="400,330 500,280 500,430 400,480" fill="#8A2E5C"/>
+    
+    <!-- Antenna on top -->
+    <line x1="350" y1="300" x2="350" y2="240" stroke="#E24A90" stroke-width="3"/>
+    <circle cx="350" cy="240" r="5" fill="#FFD700" filter="url(#glow)" class="pulse"/>
+  </g>
+  
+  <!-- Building 3 (Right) - Short -->
+  <g class="float-3" filter="url(#shadow)">
+    <!-- Top -->
+    <polygon points="450,350 550,300 550,370 450,420" fill="url(#buildingGrad3)" opacity="0.9"/>
+    <!-- Front face -->
+    <polygon points="450,420 550,370 550,500 450,550" fill="url(#buildingGrad3)" opacity="0.7"/>
+    <!-- Side face -->
+    <polygon points="550,370 650,320 650,450 550,500" fill="#2E8A5C"/>
+    
+    <!-- Helipad on top -->
+    <ellipse cx="500" cy="355" rx="25" ry="12" fill="none" stroke="#4AE290" stroke-width="2" opacity="0.8"/>
+    <line x1="475" y1="355" x2="525" y2="355" stroke="#4AE290" stroke-width="2" opacity="0.8"/>
+    <line x1="500" y1="343" x2="500" y2="367" stroke="#4AE290" stroke-width="2" opacity="0.8"/>
+  </g>
+  
+  <!-- Floating data particles (for depth) -->
+  <g class="float-4">
+    <circle cx="250" cy="200" r="3" fill="#4A90E2" opacity="0.6" filter="url(#glow)"/>
+    <circle cx="400" cy="180" r="3" fill="#E24A90" opacity="0.6" filter="url(#glow)"/>
+    <circle cx="550" cy="220" r="3" fill="#4AE290" opacity="0.6" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Spinning ring in foreground for depth -->
+  <g transform="translate(200, 450)">
+    <ellipse cx="0" cy="0" rx="30" ry="8" fill="none" stroke="#4A90E2" stroke-width="2" opacity="0.5" class="spin-y"/>
+  </g>
+  
+  <g transform="translate(600, 420)">
+    <ellipse cx="0" cy="0" rx="25" ry="6" fill="none" stroke="#E24A90" stroke-width="2" opacity="0.5" class="spin-y"/>
+  </g>
+  
+  <!-- Ground shadows -->
+  <ellipse cx="250" cy="520" rx="80" ry="15" fill="#000000" opacity="0.3"/>
+  <ellipse cx="400" cy="540" rx="90" ry="18" fill="#000000" opacity="0.3"/>
+  <ellipse cx="550" cy="560" rx="70" ry="14" fill="#000000" opacity="0.3"/>
+  
+  <!-- Info text -->
+  <text x="400" y="585" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle" font-style="italic">
+    Isometric projection + parallax + floating animations = pseudo-3D depth
+  </text>
+</svg>
