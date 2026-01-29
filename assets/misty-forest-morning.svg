@@ -1,0 +1,273 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Parallax layers - different speeds create depth */
+      @keyframes parallax-far {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-8px); }
+      }
+      
+      @keyframes parallax-mid {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-20px); }
+      }
+      
+      @keyframes parallax-near {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-40px); }
+      }
+      
+      .layer-far { animation: parallax-far 40s ease-in-out infinite; }
+      .layer-mid { animation: parallax-mid 35s ease-in-out infinite; }
+      .layer-near { animation: parallax-near 30s ease-in-out infinite; }
+      
+      /* Floating fireflies at different depths */
+      @keyframes firefly1 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+        25% { transform: translate(30px, -25px); opacity: 1; }
+        50% { transform: translate(50px, -10px); opacity: 0.6; }
+        75% { transform: translate(20px, -30px); opacity: 0.9; }
+      }
+      
+      @keyframes firefly2 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.5; }
+        33% { transform: translate(-40px, -35px); opacity: 1; }
+        66% { transform: translate(-20px, -15px); opacity: 0.7; }
+      }
+      
+      @keyframes firefly3 {
+        0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+        30% { transform: translate(45px, -20px); opacity: 0.9; }
+        60% { transform: translate(15px, -40px); opacity: 0.5; }
+        90% { transform: translate(-10px, -25px); opacity: 0.8; }
+      }
+      
+      .firefly-1 { animation: firefly1 17s ease-in-out infinite; }
+      .firefly-2 { animation: firefly2 23s ease-in-out infinite; }
+      .firefly-3 { animation: firefly3 19s ease-in-out infinite; }
+      
+      /* Rain drops falling at different speeds */
+      @keyframes rain-drop {
+        0% { transform: translateY(-10px); opacity: 0; }
+        10% { opacity: 0.6; }
+        100% { transform: translateY(400px); opacity: 0; }
+      }
+      
+      .rain { animation: rain-drop linear infinite; }
+      
+      /* Water ripples expanding */
+      @keyframes ripple {
+        0% { r: 0; opacity: 0.6; }
+        100% { r: 20; opacity: 0; }
+      }
+      
+      .ripple { animation: ripple 2s ease-out infinite; }
+      
+      /* Gentle mist movement */
+      @keyframes mist-drift {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(30px, -10px); }
+      }
+      
+      .mist { animation: mist-drift 50s ease-in-out infinite; }
+    </style>
+    
+    <!-- Atmospheric mist using turbulence -->
+    <filter id="mist-filter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="42">
+        <animate attributeName="baseFrequency" values="0.01;0.015;0.01" dur="30s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix type="matrix" values="1 0 0 0 0.8
+                                           0 1 0 0 0.9
+                                           0 0 1 0 0.95
+                                           0 0 0 0.4 0"/>
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    
+    <!-- Depth blur for distance -->
+    <filter id="far-blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    
+    <filter id="mid-blur">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+    
+    <!-- Firefly glow -->
+    <filter id="firefly-glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Water reflection blur -->
+    <filter id="water-blur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    
+    <!-- Gradients for atmosphere -->
+    <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b8c5d6;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#d4dce6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8eef5;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mountain-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8a9aa8;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#b8c5d6;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <linearGradient id="water-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a7a8f;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#7a95a8;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <radialGradient id="firefly-light" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#d4ff00;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#b8e600;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#9acc00;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky/Atmosphere -->
+  <rect width="1200" height="400" fill="url(#sky-gradient)"/>
+  
+  <!-- Distant mountains (layered for depth) -->
+  <g class="layer-far" filter="url(#far-blur)" opacity="0.4">
+    <path d="M 0,200 Q 200,140 400,160 T 800,140 L 1200,180 L 1200,400 L 0,400 Z" 
+          fill="url(#mountain-gradient)"/>
+  </g>
+  
+  <g class="layer-far" filter="url(#far-blur)" opacity="0.5">
+    <path d="M 0,220 Q 300,180 600,190 T 1200,200 L 1200,400 L 0,400 Z" 
+          fill="url(#mountain-gradient)" transform="translate(50, 0)"/>
+  </g>
+  
+  <!-- Mid-distance trees (silhouettes) -->
+  <g class="layer-mid" filter="url(#mid-blur)" opacity="0.6">
+    <!-- Tall conifers -->
+    <polygon points="200,180 210,120 220,180" fill="#6a8a7a" opacity="0.5"/>
+    <polygon points="195,160 210,120 225,160" fill="#5a7a6a" opacity="0.4"/>
+    
+    <polygon points="350,200 365,130 380,200" fill="#6a8a7a" opacity="0.5"/>
+    <polygon points="345,175 365,130 385,175" fill="#5a7a6a" opacity="0.4"/>
+    
+    <polygon points="550,190 560,140 570,190" fill="#6a8a7a" opacity="0.5"/>
+    <polygon points="546,170 560,140 574,170" fill="#5a7a6a" opacity="0.4"/>
+    
+    <polygon points="800,210 815,145 830,210" fill="#6a8a7a" opacity="0.5"/>
+    <polygon points="795,185 815,145 835,185" fill="#5a7a6a" opacity="0.4"/>
+    
+    <polygon points="1000,195 1012,135 1024,195" fill="#6a8a7a" opacity="0.5"/>
+    <polygon points="996,175 1012,135 1028,175" fill="#5a7a6a" opacity="0.4"/>
+  </g>
+  
+  <!-- Mist layers (moving) -->
+  <g class="mist" opacity="0.5">
+    <rect x="0" y="150" width="1200" height="150" filter="url(#mist-filter)"/>
+  </g>
+  
+  <g class="mist" opacity="0.4" style="animation-duration: 60s; animation-delay: -10s;">
+    <rect x="0" y="200" width="1200" height="100" filter="url(#mist-filter)"/>
+  </g>
+  
+  <!-- Water/Pond -->
+  <ellipse cx="600" cy="320" rx="500" ry="60" fill="url(#water-gradient)" opacity="0.7"/>
+  
+  <!-- Water ripples from rain drops -->
+  <g opacity="0.4">
+    <circle class="ripple" cx="450" cy="310" r="0" fill="none" stroke="#ffffff" stroke-width="1">
+      <animate attributeName="r" values="0;25" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle class="ripple" cx="680" cy="325" r="0" fill="none" stroke="#ffffff" stroke-width="1">
+      <animate attributeName="r" values="0;20" dur="2.5s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="2.5s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle class="ripple" cx="550" cy="318" r="0" fill="none" stroke="#ffffff" stroke-width="1">
+      <animate attributeName="r" values="0;22" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle class="ripple" cx="720" cy="315" r="0" fill="none" stroke="#ffffff" stroke-width="1">
+      <animate attributeName="r" values="0;18" dur="2.3s" begin="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="2.3s" begin="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Near trees (more detailed) -->
+  <g class="layer-near" opacity="0.8">
+    <!-- Left tree trunk and branches -->
+    <rect x="80" y="150" width="25" height="250" fill="#3a4a3a" rx="3"/>
+    <ellipse cx="92" cy="170" rx="40" ry="60" fill="#4a6a5a" opacity="0.7"/>
+    <ellipse cx="92" cy="200" rx="45" ry="65" fill="#3a5a4a" opacity="0.6"/>
+    
+    <!-- Right tree trunk -->
+    <rect x="1050" y="120" width="30" height="280" fill="#3a4a3a" rx="3"/>
+    <ellipse cx="1065" cy="140" rx="50" ry="70" fill="#4a6a5a" opacity="0.7"/>
+    <ellipse cx="1065" cy="180" rx="55" ry="75" fill="#3a5a4a" opacity="0.6"/>
+  </g>
+  
+  <!-- Foreground grass/reeds near water -->
+  <g class="layer-near" opacity="0.9">
+    <!-- Left side reeds -->
+    <path d="M 50,350 Q 52,320 50,300" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M 60,360 Q 63,330 62,310" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 75,355 Q 77,325 75,305" stroke="#5a7a5a" stroke-width="2" fill="none" opacity="0.7"/>
+    
+    <!-- Right side reeds -->
+    <path d="M 1150,360 Q 1148,330 1150,310" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M 1140,355 Q 1137,325 1138,305" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 1125,358 Q 1123,328 1125,308" stroke="#5a7a5a" stroke-width="2" fill="none" opacity="0.7"/>
+  </g>
+  
+  <!-- Rain drops (gentle, various depths and speeds) -->
+  <g opacity="0.3">
+    <line class="rain" x1="150" y1="-10" x2="150" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3s; animation-delay: 0s;"/>
+    <line class="rain" x1="300" y1="-10" x2="300" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.5s; animation-delay: 0.5s;"/>
+    <line class="rain" x1="450" y1="-10" x2="450" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 2.8s; animation-delay: 1s;"/>
+    <line class="rain" x1="600" y1="-10" x2="600" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.2s; animation-delay: 1.5s;"/>
+    <line class="rain" x1="750" y1="-10" x2="750" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.7s; animation-delay: 0.3s;"/>
+    <line class="rain" x1="900" y1="-10" x2="900" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 2.9s; animation-delay: 0.8s;"/>
+    <line class="rain" x1="1050" y1="-10" x2="1050" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.4s; animation-delay: 1.2s;"/>
+    
+    <!-- More rain for density -->
+    <line class="rain" x1="220" y1="-10" x2="220" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.1s; animation-delay: 0.7s;"/>
+    <line class="rain" x1="380" y1="-10" x2="380" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.6s; animation-delay: 1.3s;"/>
+    <line class="rain" x1="520" y1="-10" x2="520" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 2.7s; animation-delay: 0.4s;"/>
+    <line class="rain" x1="680" y1="-10" x2="680" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.3s; animation-delay: 1.6s;"/>
+    <line class="rain" x1="820" y1="-10" x2="820" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.8s; animation-delay: 0.2s;"/>
+    <line class="rain" x1="970" y1="-10" x2="970" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.0s; animation-delay: 0.9s;"/>
+  </g>
+  
+  <!-- Fireflies (glowing insects at different depths) -->
+  <!-- Far fireflies (smaller, dimmer) -->
+  <g opacity="0.6">
+    <circle class="firefly-1" cx="400" cy="220" r="2" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
+    <circle class="firefly-2" cx="750" cy="240" r="2" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
+    <circle class="firefly-3" cx="900" cy="200" r="2" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
+  </g>
+  
+  <!-- Mid fireflies -->
+  <g opacity="0.8">
+    <circle class="firefly-2" cx="300" cy="180" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -5s;"/>
+    <circle class="firefly-1" cx="600" cy="160" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -8s;"/>
+    <circle class="firefly-3" cx="850" cy="190" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -3s;"/>
+    <circle class="firefly-1" cx="500" cy="210" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -12s;"/>
+  </g>
+  
+  <!-- Near fireflies (larger, brighter) -->
+  <g opacity="1">
+    <circle class="firefly-3" cx="250" cy="250" r="4" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -7s;"/>
+    <circle class="firefly-1" cx="700" cy="230" r="4" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -10s;"/>
+    <circle class="firefly-2" cx="950" cy="270" r="4" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -4s;"/>
+  </g>
+  
+  <!-- Subtle foreground mist -->
+  <rect x="0" y="300" width="1200" height="100" filter="url(#mist-filter)" opacity="0.2"/>
+</svg>
