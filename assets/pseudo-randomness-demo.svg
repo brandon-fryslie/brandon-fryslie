@@ -1,0 +1,181 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Prime number durations create long-period "random" patterns */
+      @keyframes chaos1 { 
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(120px, -80px); }
+      }
+      @keyframes chaos2 { 
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(-90px, 100px); }
+      }
+      @keyframes chaos3 { 
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(70px, 110px); }
+      }
+      @keyframes chaos4 { 
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(-130px, -60px); }
+      }
+      @keyframes chaos5 { 
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(100px, 90px); }
+      }
+      
+      /* Using prime numbers: 7s, 11s, 13s, 17s, 19s */
+      /* These won't sync for 7*11*13*17*19 = 323,323 seconds (≈90 hours) */
+      .chaos-1 { animation: chaos1 7s ease-in-out infinite; }
+      .chaos-2 { animation: chaos2 11s ease-in-out infinite; }
+      .chaos-3 { animation: chaos3 13s ease-in-out infinite; }
+      .chaos-4 { animation: chaos4 17s ease-in-out infinite; }
+      .chaos-5 { animation: chaos5 19s ease-in-out infinite; }
+      
+      /* Different opacity patterns */
+      @keyframes flicker { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+      .flicker-1 { animation: flicker 2.3s ease-in-out infinite; }
+      .flicker-2 { animation: flicker 3.7s ease-in-out infinite; }
+      .flicker-3 { animation: flicker 5.1s ease-in-out infinite; }
+      .flicker-4 { animation: flicker 7.9s ease-in-out infinite; }
+      .flicker-5 { animation: flicker 11.3s ease-in-out infinite; }
+    </style>
+    
+    <!-- Turbulence filter creates pseudo-random patterns -->
+    <filter id="turbulence1">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="42">
+        <animate attributeName="baseFrequency" values="0.05;0.08;0.05" dur="10s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix type="hueRotate">
+        <animate attributeName="values" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+      </feColorMatrix>
+    </filter>
+    
+    <filter id="turbulence2">
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="5" seed="123">
+        <animate attributeName="seed" values="123;456;789;123" dur="15s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="30"/>
+    </filter>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Using different seeds creates different "random" patterns -->
+    <filter id="noise1">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="1"/>
+      <feColorMatrix values="0 0 0 0 0.2,
+                             0 0 0 0 0.5,
+                             0 0 0 0 0.9,
+                             0 0 0 1 0"/>
+    </filter>
+    
+    <filter id="noise2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="999"/>
+      <feColorMatrix values="0 0 0 0 0.9,
+                             0 0 0 0 0.2,
+                             0 0 0 0 0.5,
+                             0 0 0 1 0"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    Pseudo-Randomness in GitHub SVGs
+  </text>
+  <text x="400" y="55" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle" font-style="italic">
+    No true randomness, but these techniques create chaotic, unpredictable patterns
+  </text>
+  
+  <!-- Section 1: Prime Duration Chaos -->
+  <g>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      1. Prime Duration Chaos
+    </text>
+    <text x="50" y="118" font-family="Arial, sans-serif" font-size="10" fill="#666666" font-style="italic">
+      Animations with prime durations (7s, 11s, 13s, 17s, 19s) won't sync for 90+ hours
+    </text>
+    
+    <g transform="translate(200, 180)">
+      <circle class="chaos-1 flicker-1" cx="0" cy="0" r="8" fill="#667eea" filter="url(#glow)"/>
+      <circle class="chaos-2 flicker-2" cx="0" cy="0" r="8" fill="#764ba2" filter="url(#glow)"/>
+      <circle class="chaos-3 flicker-3" cx="0" cy="0" r="8" fill="#f093fb" filter="url(#glow)"/>
+      <circle class="chaos-4 flicker-4" cx="0" cy="0" r="8" fill="#f5576c" filter="url(#glow)"/>
+      <circle class="chaos-5 flicker-5" cx="0" cy="0" r="8" fill="#4facfe" filter="url(#glow)"/>
+      
+      <!-- Center reference -->
+      <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.3"/>
+      <circle cx="0" cy="0" r="100" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1"/>
+    </g>
+  </g>
+  
+  <!-- Section 2: feTurbulence with animated seed -->
+  <g>
+    <text x="450" y="100" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      2. Animated Turbulence
+    </text>
+    <text x="450" y="118" font-family="Arial, sans-serif" font-size="10" fill="#666666" font-style="italic">
+      feTurbulence creates organic noise patterns
+    </text>
+    
+    <rect x="450" y="140" width="300" height="150" fill="url(#turbulence1)" opacity="0.8" rx="10"/>
+  </g>
+  
+  <!-- Section 3: Different seeds = different patterns -->
+  <g>
+    <text x="50" y="320" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      3. Seed Variation
+    </text>
+    <text x="50" y="338" font-family="Arial, sans-serif" font-size="10" fill="#666666" font-style="italic">
+      Same turbulence settings, different seeds = different "random" patterns
+    </text>
+    
+    <rect x="50" y="350" width="120" height="120" filter="url(#noise1)" opacity="0.7" rx="5"/>
+    <text x="110" y="485" font-family="monospace" font-size="9" fill="#888888" text-anchor="middle">seed=1</text>
+    
+    <rect x="190" y="350" width="120" height="120" filter="url(#noise2)" opacity="0.7" rx="5"/>
+    <text x="250" y="485" font-family="monospace" font-size="9" fill="#888888" text-anchor="middle">seed=999</text>
+  </g>
+  
+  <!-- Section 4: Displacement map creates distortion -->
+  <g>
+    <text x="450" y="320" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      4. Displacement Chaos
+    </text>
+    <text x="450" y="338" font-family="Arial, sans-serif" font-size="10" fill="#666666" font-style="italic">
+      Turbulence + displacement = organic warping
+    </text>
+    
+    <g filter="url(#turbulence2)">
+      <rect x="450" y="350" width="300" height="120" fill="#667eea" opacity="0.6"/>
+      <circle cx="530" cy="410" r="30" fill="#f093fb"/>
+      <circle cx="650" cy="410" r="30" fill="#f5576c"/>
+    </g>
+  </g>
+  
+  <!-- Code examples -->
+  <g transform="translate(50, 510)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-weight="bold">
+      Techniques:
+    </text>
+    <text x="0" y="20" font-family="monospace" font-size="10" fill="#4facfe">
+      • Prime durations: 7s, 11s, 13s, 17s, 19s (LCM = 323,323s ≈ 90 hours)
+    </text>
+    <text x="0" y="38" font-family="monospace" font-size="10" fill="#f093fb">
+      • feTurbulence seed attribute: &lt;feTurbulence seed="42" /&gt;
+    </text>
+    <text x="0" y="56" font-family="monospace" font-size="10" fill="#f5576c">
+      • Animated baseFrequency: creates evolving patterns
+    </text>
+    <text x="0" y="74" font-family="monospace" font-size="10" fill="#667eea">
+      • Staggered delays: create phase differences that appear random
+    </text>
+  </g>
+</svg>
