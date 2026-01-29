@@ -1,0 +1,170 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Create 8 different states that cycle through */
+      /* Each element has a different phase, creating "random" combinations */
+      
+      @keyframes state1 { 
+        0%, 12.5%, 100% { opacity: 1; }
+        12.6%, 99.9% { opacity: 0; }
+      }
+      @keyframes state2 { 
+        0%, 12.5% { opacity: 0; }
+        12.6%, 25%, 100% { opacity: 1; }
+        25.1%, 99.9% { opacity: 0; }
+      }
+      @keyframes state3 { 
+        0%, 25% { opacity: 0; }
+        25.1%, 37.5%, 100% { opacity: 1; }
+        37.6%, 99.9% { opacity: 0; }
+      }
+      @keyframes state4 { 
+        0%, 37.5% { opacity: 0; }
+        37.6%, 50%, 100% { opacity: 1; }
+        50.1%, 99.9% { opacity: 0; }
+      }
+      @keyframes state5 { 
+        0%, 50% { opacity: 0; }
+        50.1%, 62.5%, 100% { opacity: 1; }
+        62.6%, 99.9% { opacity: 0; }
+      }
+      @keyframes state6 { 
+        0%, 62.5% { opacity: 0; }
+        62.6%, 75%, 100% { opacity: 1; }
+        75.1%, 99.9% { opacity: 0; }
+      }
+      @keyframes state7 { 
+        0%, 75% { opacity: 0; }
+        75.1%, 87.5%, 100% { opacity: 1; }
+        87.6%, 99.9% { opacity: 0; }
+      }
+      @keyframes state8 { 
+        0%, 87.5% { opacity: 0; }
+        87.6%, 100% { opacity: 1; }
+      }
+      
+      /* Apply different prime durations to each "slot" */
+      .slot1-a { animation: state1 7s infinite; }
+      .slot1-b { animation: state2 7s infinite; }
+      .slot1-c { animation: state3 7s infinite; }
+      .slot1-d { animation: state4 7s infinite; }
+      .slot1-e { animation: state5 7s infinite; }
+      .slot1-f { animation: state6 7s infinite; }
+      .slot1-g { animation: state7 7s infinite; }
+      .slot1-h { animation: state8 7s infinite; }
+      
+      .slot2-a { animation: state1 11s infinite; }
+      .slot2-b { animation: state2 11s infinite; }
+      .slot2-c { animation: state3 11s infinite; }
+      .slot2-d { animation: state4 11s infinite; }
+      .slot2-e { animation: state5 11s infinite; }
+      .slot2-f { animation: state6 11s infinite; }
+      .slot2-g { animation: state7 11s infinite; }
+      .slot2-h { animation: state8 11s infinite; }
+      
+      .slot3-a { animation: state1 13s infinite; }
+      .slot3-b { animation: state2 13s infinite; }
+      .slot3-c { animation: state3 13s infinite; }
+      .slot3-d { animation: state4 13s infinite; }
+      .slot3-e { animation: state5 13s infinite; }
+      .slot3-f { animation: state6 13s infinite; }
+      .slot3-g { animation: state7 13s infinite; }
+      .slot3-h { animation: state8 13s infinite; }
+      
+      @keyframes glow {
+        0%, 100% { filter: drop-shadow(0 0 5px #4facfe); }
+        50% { filter: drop-shadow(0 0 20px #4facfe); }
+      }
+      
+      .machine { animation: glow 2s ease-in-out infinite; }
+    </style>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    "Random" Choice Machine
+  </text>
+  <text x="400" y="65" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle" font-style="italic">
+    Three slots cycling through 8 options at different prime speeds (7s, 11s, 13s)
+  </text>
+  
+  <!-- Machine frame -->
+  <rect x="150" y="100" width="500" height="280" fill="#1a1a1a" stroke="#4facfe" stroke-width="3" rx="20" class="machine"/>
+  
+  <!-- Slot windows -->
+  <rect x="190" y="140" width="120" height="180" fill="#0a0a0a" stroke="#667eea" stroke-width="2" rx="10"/>
+  <rect x="340" y="140" width="120" height="180" fill="#0a0a0a" stroke="#667eea" stroke-width="2" rx="10"/>
+  <rect x="490" y="140" width="120" height="180" fill="#0a0a0a" stroke="#667eea" stroke-width="2" rx="10"/>
+  
+  <!-- Slot 1 (7 second cycle) -->
+  <g transform="translate(250, 230)">
+    <!-- 8 different emojis/symbols -->
+    <text class="slot1-a" x="0" y="0" font-size="60" text-anchor="middle" fill="#4facfe" filter="url(#glow)">🚀</text>
+    <text class="slot1-b" x="0" y="0" font-size="60" text-anchor="middle" fill="#f093fb" filter="url(#glow)">⚡</text>
+    <text class="slot1-c" x="0" y="0" font-size="60" text-anchor="middle" fill="#f5576c" filter="url(#glow)">🎯</text>
+    <text class="slot1-d" x="0" y="0" font-size="60" text-anchor="middle" fill="#667eea" filter="url(#glow)">💎</text>
+    <text class="slot1-e" x="0" y="0" font-size="60" text-anchor="middle" fill="#4AE290" filter="url(#glow)">🔥</text>
+    <text class="slot1-f" x="0" y="0" font-size="60" text-anchor="middle" fill="#FFD700" filter="url(#glow)">⭐</text>
+    <text class="slot1-g" x="0" y="0" font-size="60" text-anchor="middle" fill="#FF6B6B" filter="url(#glow)">🎨</text>
+    <text class="slot1-h" x="0" y="0" font-size="60" text-anchor="middle" fill="#4ECDC4" filter="url(#glow)">🎪</text>
+  </g>
+  
+  <!-- Slot 2 (11 second cycle) -->
+  <g transform="translate(400, 230)">
+    <text class="slot2-a" x="0" y="0" font-size="60" text-anchor="middle" fill="#4facfe" filter="url(#glow)">🌟</text>
+    <text class="slot2-b" x="0" y="0" font-size="60" text-anchor="middle" fill="#f093fb" filter="url(#glow)">💫</text>
+    <text class="slot2-c" x="0" y="0" font-size="60" text-anchor="middle" fill="#f5576c" filter="url(#glow)">✨</text>
+    <text class="slot2-d" x="0" y="0" font-size="60" text-anchor="middle" fill="#667eea" filter="url(#glow)">🌈</text>
+    <text class="slot2-e" x="0" y="0" font-size="60" text-anchor="middle" fill="#4AE290" filter="url(#glow)">🎭</text>
+    <text class="slot2-f" x="0" y="0" font-size="60" text-anchor="middle" fill="#FFD700" filter="url(#glow)">🎬</text>
+    <text class="slot2-g" x="0" y="0" font-size="60" text-anchor="middle" fill="#FF6B6B" filter="url(#glow)">🎮</text>
+    <text class="slot2-h" x="0" y="0" font-size="60" text-anchor="middle" fill="#4ECDC4" filter="url(#glow)">🎲</text>
+  </g>
+  
+  <!-- Slot 3 (13 second cycle) -->
+  <g transform="translate(550, 230)">
+    <text class="slot3-a" x="0" y="0" font-size="60" text-anchor="middle" fill="#4facfe" filter="url(#glow)">🔮</text>
+    <text class="slot3-b" x="0" y="0" font-size="60" text-anchor="middle" fill="#f093fb" filter="url(#glow)">💻</text>
+    <text class="slot3-c" x="0" y="0" font-size="60" text-anchor="middle" fill="#f5576c" filter="url(#glow)">📡</text>
+    <text class="slot3-d" x="0" y="0" font-size="60" text-anchor="middle" fill="#667eea" filter="url(#glow)">🛸</text>
+    <text class="slot3-e" x="0" y="0" font-size="60" text-anchor="middle" fill="#4AE290" filter="url(#glow)">🌀</text>
+    <text class="slot3-f" x="0" y="0" font-size="60" text-anchor="middle" fill="#FFD700" filter="url(#glow)">⚙️</text>
+    <text class="slot3-g" x="0" y="0" font-size="60" text-anchor="middle" fill="#FF6B6B" filter="url(#glow)">🔧</text>
+    <text class="slot3-h" x="0" y="0" font-size="60" text-anchor="middle" fill="#4ECDC4" filter="url(#glow)">🎛️</text>
+  </g>
+  
+  <!-- Labels -->
+  <text x="250" y="340" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">7s cycle</text>
+  <text x="400" y="340" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">11s cycle</text>
+  <text x="550" y="340" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">13s cycle</text>
+  
+  <!-- Explanation -->
+  <g transform="translate(50, 410)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-weight="bold">
+      How it works:
+    </text>
+    <text x="0" y="20" font-family="monospace" font-size="10" fill="#4facfe">
+      • Each slot cycles through 8 states (opacity on/off)
+    </text>
+    <text x="0" y="38" font-family="monospace" font-size="10" fill="#f093fb">
+      • Different prime durations mean they won't sync for 7×11×13 = 1,001 seconds (16.7 minutes)
+    </text>
+    <text x="0" y="56" font-family="monospace" font-size="10" fill="#f5576c">
+      • With 8 options per slot = 8³ = 512 unique combinations appear "randomly"
+    </text>
+    <text x="0" y="74" font-family="monospace" font-size="10" fill="#667eea">
+      • Pure CSS - no JavaScript needed!
+    </text>
+  </g>
+</svg>
