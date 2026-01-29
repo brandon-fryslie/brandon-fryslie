@@ -4,7 +4,7 @@ This profile comes in multiple complete theme variations. Each theme reimagines 
 
 ---
 
-## 📂 Available Themes
+## 📂 Available Complete Themes
 
 ### 🍄 [Transcendent / Psychedelic](./README.md) ← CURRENTLY ACTIVE
 **Concept:** Mycelium networks, consciousness expansion, fractal patterns
@@ -18,6 +18,8 @@ This profile comes in multiple complete theme variations. Each theme reimagines 
 - `mycelium-universe.svg` - Fractal threads spreading from earth
 - `consciousness-explosion.svg` - 12 rays from singularity
 
+**Vibe:** Mind-expanding, organic, mystical, deep
+
 ---
 
 ### 🌃 [Cyberpunk Neon City](./README-CYBERPUNK.md)
@@ -30,6 +32,22 @@ This profile comes in multiple complete theme variations. Each theme reimagines 
 
 **Key SVGs:**
 - `cyberpunk-city.svg` - Cityscape timeline with neon towers
+
+**Vibe:** Tech-noir, urban, futuristic, edgy
+
+---
+
+### 🎪 [Maximum Ridiculous](./README-MAXIMUM-RIDICULOUS.md)
+**Concept:** Over-the-top, ALL the emojis, zero chill
+- Warning labels
+- Emoji tables
+- Maximum caps
+- ALL 8 animations visible
+- Complete overkill
+
+**Vibe:** Celebratory, loud, fun, unapologetic
+
+**Perfect for:** When you want to make people smile
 
 ---
 

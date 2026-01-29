@@ -1,0 +1,40 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b7355;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b8936f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b5d47;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer circle (maker's mark border) -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#brass)" stroke-width="2"/>
+  
+  <!-- Telescope silhouette -->
+  <!-- Main tube -->
+  <rect x="60" y="95" width="80" height="10" fill="url(#brass)" transform="rotate(-25 100 100)"/>
+  
+  <!-- Eyepiece end -->
+  <rect x="52" y="92" width="12" height="16" fill="url(#brass)" transform="rotate(-25 100 100)"/>
+  
+  <!-- Objective lens end -->
+  <rect x="136" y="92" width="8" height="16" fill="url(#brass)" transform="rotate(-25 100 100)"/>
+  
+  <!-- Mount -->
+  <circle cx="100" cy="105" r="8" fill="url(#brass)"/>
+  <rect x="98" y="105" width="4" height="30" fill="url(#brass)"/>
+  <rect x="85" y="133" width="30" height="4" fill="url(#brass)"/>
+  
+  <!-- Decorative stars -->
+  <circle cx="40" cy="50" r="1.5" fill="url(#brass)" opacity="0.6"/>
+  <circle cx="160" cy="60" r="1.5" fill="url(#brass)" opacity="0.6"/>
+  <circle cx="140" cy="140" r="1.5" fill="url(#brass)" opacity="0.6"/>
+  
+  <!-- Text around circle -->
+  <path id="circleText" d="M 100,10 A 90,90 0 1,1 99.9,10" fill="none"/>
+  <text font-family="Georgia, serif" font-size="14" fill="url(#brass)" font-variant="small-caps">
+    <textPath href="#circleText" startOffset="15%">
+      Observatory of Determinism
+    </textPath>
+  </text>
+</svg>
