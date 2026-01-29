@@ -1,7 +1,6 @@
 <svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      /* Parallax layers - different speeds create depth */
       @keyframes parallax-far {
         0%, 100% { transform: translateX(0); }
         50% { transform: translateX(-15px); }
@@ -21,15 +20,19 @@
       .layer-mid { animation: parallax-mid 35s ease-in-out infinite; }
       .layer-near { animation: parallax-near 30s ease-in-out infinite; }
       
-      /* Swaying vines */
       @keyframes sway {
         0%, 100% { transform: rotate(0deg); }
         50% { transform: rotate(3deg); }
       }
       
-      .vine { animation: sway 8s ease-in-out infinite; transform-origin: top center; }
+      @keyframes sway-branch {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(1.5deg); }
+      }
       
-      /* Floating fireflies at different depths */
+      .vine { animation: sway 8s ease-in-out infinite; transform-origin: top center; }
+      .branch { animation: sway-branch 6s ease-in-out infinite; transform-origin: left center; }
+      
       @keyframes firefly1 {
         0%, 100% { transform: translate(0, 0); opacity: 0.4; }
         25% { transform: translate(30px, -25px); opacity: 1; }
@@ -54,7 +57,6 @@
       .firefly-2 { animation: firefly2 23s ease-in-out infinite; }
       .firefly-3 { animation: firefly3 19s ease-in-out infinite; }
       
-      /* Rain drops falling at different speeds */
       @keyframes rain-drop {
         0% { transform: translateY(-10px); opacity: 0; }
         10% { opacity: 0.6; }
@@ -63,15 +65,6 @@
       
       .rain { animation: rain-drop linear infinite; }
       
-      /* Water ripples expanding */
-      @keyframes ripple {
-        0% { r: 0; opacity: 0.6; }
-        100% { r: 20; opacity: 0; }
-      }
-      
-      .ripple { animation: ripple 2s ease-out infinite; }
-      
-      /* Gentle mist movement */
       @keyframes mist-drift {
         0%, 100% { transform: translate(0, 0); }
         50% { transform: translate(30px, -10px); }
@@ -80,19 +73,17 @@
       .mist { animation: mist-drift 50s ease-in-out infinite; }
     </style>
     
-    <!-- Atmospheric mist using turbulence -->
     <filter id="mist-filter">
       <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="42">
         <animate attributeName="baseFrequency" values="0.01;0.015;0.01" dur="30s" repeatCount="indefinite"/>
       </feTurbulence>
-      <feColorMatrix type="matrix" values="1 0 0 0 0.8
-                                           0 1 0 0 0.9
-                                           0 0 1 0 0.95
-                                           0 0 0 0.4 0"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0.9
+                                           0 1 0 0 0.95
+                                           0 0 1 0 0.88
+                                           0 0 0 0.3 0"/>
       <feGaussianBlur stdDeviation="20"/>
     </filter>
     
-    <!-- Depth blur for distance -->
     <filter id="far-blur">
       <feGaussianBlur stdDeviation="2"/>
     </filter>
@@ -101,7 +92,6 @@
       <feGaussianBlur stdDeviation="0.8"/>
     </filter>
     
-    <!-- Firefly glow -->
     <filter id="firefly-glow">
       <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
       <feMerge>
@@ -111,12 +101,6 @@
       </feMerge>
     </filter>
     
-    <!-- Water reflection blur -->
-    <filter id="water-blur">
-      <feGaussianBlur stdDeviation="1.5"/>
-    </filter>
-    
-    <!-- Gradients for warm forest atmosphere -->
     <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#4a5f3a;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#7a9a5a;stop-opacity:1" />
@@ -127,11 +111,6 @@
       <stop offset="0%" style="stop-color:#3a2820;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#5a4230;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3a2820;stop-opacity:1" />
-    </linearGradient>
-    
-    <linearGradient id="foliage-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#6a9a4a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4a7a3a;stop-opacity:1" />
     </linearGradient>
     
     <radialGradient id="sunlight" cx="50%" cy="20%">
@@ -147,10 +126,10 @@
     </radialGradient>
   </defs>
   
-  <!-- Sky with warm gradient -->
+  <!-- Sky -->
   <rect width="1200" height="400" fill="url(#sky-gradient)"/>
   
-  <!-- Sun rays / god rays -->
+  <!-- Sun rays -->
   <g opacity="0.3">
     <polygon points="500,0 480,400 520,400" fill="url(#sunlight)"/>
     <polygon points="600,0 580,400 620,400" fill="url(#sunlight)"/>
@@ -160,123 +139,197 @@
   <!-- Deep forest background -->
   <rect width="1200" height="400" fill="#3a5a2a" opacity="0.4"/>
   
-  <!-- Far background trees (dense) -->
+  <!-- Far background conifers -->
   <g class="layer-far" filter="url(#far-blur)" opacity="0.5">
-    <polygon points="100,250 115,100 130,250" fill="#4a6a3a"/>
-    <polygon points="200,230 218,80 236,230" fill="#4a6a3a"/>
-    <polygon points="320,240 335,110 350,240" fill="#5a7a4a"/>
-    <polygon points="450,235 468,90 486,235" fill="#4a6a3a"/>
-    <polygon points="580,245 595,120 610,245" fill="#5a7a4a"/>
-    <polygon points="720,230 738,95 756,230" fill="#4a6a3a"/>
-    <polygon points="850,240 865,105 880,240" fill="#5a7a4a"/>
-    <polygon points="970,235 988,85 1006,235" fill="#4a6a3a"/>
-    <polygon points="1090,245 1105,115 1120,245" fill="#5a7a4a"/>
+    <path d="M 100,280 L 115,200 L 105,220 L 115,200 L 125,220 L 115,200 L 130,280 Z" fill="#4a6a3a"/>
+    <path d="M 220,270 L 238,180 L 228,205 L 238,180 L 248,205 L 238,180 L 256,270 Z" fill="#4a6a3a"/>
+    <path d="M 340,275 L 355,195 L 345,218 L 355,195 L 365,218 L 355,195 L 370,275 Z" fill="#5a7a4a"/>
+    <path d="M 470,268 L 488,175 L 478,200 L 488,175 L 498,200 L 488,175 L 506,268 Z" fill="#4a6a3a"/>
+    <path d="M 600,278 L 615,190 L 605,215 L 615,190 L 625,215 L 615,190 L 630,278 Z" fill="#5a7a4a"/>
+    <path d="M 740,272 L 758,182 L 748,207 L 758,182 L 768,207 L 758,182 L 776,272 Z" fill="#4a6a3a"/>
+    <path d="M 870,276 L 885,192 L 875,216 L 885,192 L 895,216 L 885,192 L 900,276 Z" fill="#5a7a4a"/>
+    <path d="M 990,270 L 1008,178 L 998,204 L 1008,178 L 1018,204 L 1008,178 L 1026,270 Z" fill="#4a6a3a"/>
+    <path d="M 1110,278 L 1125,195 L 1115,218 L 1125,195 L 1135,218 L 1125,195 L 1140,278 Z" fill="#5a7a4a"/>
   </g>
   
-  <!-- Mid-distance dense forest -->
-  <g class="layer-mid" filter="url(#mid-blur)" opacity="0.7">
-    <!-- Large trees -->
-    <rect x="150" y="120" width="40" height="280" fill="url(#tree-trunk)" rx="5"/>
-    <ellipse cx="170" cy="140" rx="70" ry="90" fill="url(#foliage-gradient)" opacity="0.8"/>
-    <ellipse cx="170" cy="180" rx="75" ry="85" fill="#5a8a3a" opacity="0.7"/>
+  <!-- Mid-distance detailed deciduous trees -->
+  <g class="layer-mid" filter="url(#mid-blur)" opacity="0.75">
+    <!-- Tree 1 - Spreading oak-like -->
+    <g transform="translate(180, 150)">
+      <!-- Trunk -->
+      <path d="M 0,0 Q -3,80 -5,150 L 5,150 Q 3,80 0,0" fill="url(#tree-trunk)"/>
+      <!-- Major branches -->
+      <path d="M -2,40 Q -35,45 -50,35 Q -55,33 -52,30 Q -33,38 -2,35 Z" fill="#4a3a28" class="branch"/>
+      <path d="M 2,50 Q 40,55 58,48 Q 62,46 59,43 Q 38,50 2,45 Z" fill="#5a4a38" class="branch" style="animation-delay: -2s;"/>
+      <path d="M -1,70 Q -28,80 -42,78 Q -46,77 -44,73 Q -26,75 -1,65 Z" fill="#4a3a28" class="branch" style="animation-delay: -4s;"/>
+      <!-- Foliage clusters (organic shapes) -->
+      <path d="M -52,25 Q -65,20 -70,28 Q -72,35 -68,42 Q -60,48 -50,47 Q -40,45 -35,38 Q -32,30 -40,24 Q -48,22 -52,25 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M -45,30 Q -55,28 -58,35 Q -59,42 -52,48 Q -45,52 -38,49 Q -32,45 -30,38 Q -30,30 -38,28 Q -45,27 -45,30 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M 52,38 Q 42,35 38,42 Q 37,50 43,56 Q 50,60 58,58 Q 65,55 68,48 Q 69,40 62,36 Q 55,34 52,38 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 45,43 Q 38,40 35,46 Q 34,52 40,58 Q 47,62 54,60 Q 60,57 62,50 Q 62,43 56,40 Q 50,39 45,43 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M -42,68 Q -52,65 -56,72 Q -58,80 -52,86 Q -45,90 -38,88 Q -32,85 -30,78 Q -29,70 -36,66 Q -42,64 -42,68 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+    </g>
     
-    <rect x="380" y="100" width="45" height="300" fill="url(#tree-trunk)" rx="5"/>
-    <ellipse cx="402" cy="120" rx="80" ry="100" fill="url(#foliage-gradient)" opacity="0.8"/>
-    <ellipse cx="402" cy="170" rx="85" ry="95" fill="#6a9a4a" opacity="0.7"/>
+    <!-- Tree 2 - Tall narrow -->
+    <g transform="translate(400, 110)">
+      <path d="M 0,0 Q -2,100 -3,190 L 3,190 Q 2,100 0,0" fill="url(#tree-trunk)"/>
+      <path d="M -1,30 Q -20,32 -28,28 Q -30,26 -28,24 Q -18,27 -1,25 Z" fill="#4a3a28" class="branch"/>
+      <path d="M 1,50 Q 25,52 35,48 Q 37,46 35,44 Q 23,47 1,45 Z" fill="#5a4a38" class="branch" style="animation-delay: -1s;"/>
+      <!-- Narrow foliage -->
+      <path d="M -28,20 Q -35,18 -38,24 Q -39,30 -34,35 Q -28,38 -22,36 Q -18,33 -17,28 Q -17,22 -22,19 Q -27,18 -28,20 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 30,40 Q 25,38 22,43 Q 21,48 25,52 Q 30,55 36,53 Q 40,50 41,45 Q 41,40 37,38 Q 33,37 30,40 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M -15,60 Q -22,58 -25,63 Q -26,69 -21,74 Q -15,77 -9,75 Q -5,72 -4,67 Q -4,61 -9,59 Q -14,58 -15,60 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 12,75 Q 7,73 4,78 Q 3,83 7,88 Q 12,91 18,89 Q 22,86 23,81 Q 23,75 19,73 Q 14,72 12,75 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+    </g>
     
-    <rect x="650" y="110" width="42" height="290" fill="url(#tree-trunk)" rx="5"/>
-    <ellipse cx="671" cy="130" rx="75" ry="95" fill="url(#foliage-gradient)" opacity="0.8"/>
-    <ellipse cx="671" cy="175" rx="80" ry="90" fill="#5a8a3a" opacity="0.7"/>
+    <!-- Tree 3 - Wide spreading -->
+    <g transform="translate(680, 130)">
+      <path d="M 0,0 Q -4,90 -6,170 L 6,170 Q 4,90 0,0" fill="url(#tree-trunk)"/>
+      <path d="M -3,35 Q -45,40 -65,32 Q -68,30 -65,27 Q -43,35 -3,30 Z" fill="#4a3a28" class="branch"/>
+      <path d="M 3,45 Q 50,50 72,43 Q 75,41 72,38 Q 48,45 3,40 Z" fill="#5a4a38" class="branch" style="animation-delay: -3s;"/>
+      <path d="M -2,65 Q -35,72 -52,68 Q -55,67 -53,63 Q -33,67 -2,60 Z" fill="#4a3a28" class="branch" style="animation-delay: -5s;"/>
+      <!-- Wide foliage -->
+      <path d="M -65,22 Q -78,18 -82,26 Q -84,34 -78,42 Q -70,48 -60,46 Q -50,43 -46,35 Q -44,27 -52,22 Q -62,19 -65,22 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M -55,28 Q -65,25 -68,32 Q -69,39 -62,45 Q -54,49 -46,47 Q -40,44 -38,37 Q -38,29 -45,26 Q -53,25 -55,28 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M 65,35 Q 55,32 50,39 Q 48,46 54,52 Q 62,56 70,54 Q 77,51 80,44 Q 81,37 74,33 Q 68,31 65,35 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 55,40 Q 48,37 44,43 Q 43,49 49,55 Q 56,59 64,57 Q 70,54 72,47 Q 72,40 66,37 Q 60,36 55,40 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M -52,58 Q -62,55 -66,62 Q -68,70 -62,76 Q -55,80 -48,78 Q -42,75 -40,68 Q -39,60 -46,56 Q -52,54 -52,58 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M -8,80 Q -18,77 -22,84 Q -24,92 -18,98 Q -11,102 -4,100 Q 2,97 4,90 Q 5,82 -2,78 Q -8,76 -8,80 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+    </g>
     
-    <rect x="900" y="105" width="48" height="295" fill="url(#tree-trunk)" rx="5"/>
-    <ellipse cx="924" cy="125" rx="82" ry="98" fill="url(#foliage-gradient)" opacity="0.8"/>
-    <ellipse cx="924" cy="172" rx="87" ry="92" fill="#6a9a4a" opacity="0.7"/>
+    <!-- Tree 4 -->
+    <g transform="translate(920, 125)">
+      <path d="M 0,0 Q -3,85 -5,165 L 5,165 Q 3,85 0,0" fill="url(#tree-trunk)"/>
+      <path d="M -2,38 Q -30,42 -45,37 Q -48,35 -45,32 Q -28,37 -2,33 Z" fill="#4a3a28" class="branch"/>
+      <path d="M 2,52 Q 35,56 52,50 Q 55,48 52,45 Q 33,51 2,47 Z" fill="#5a4a38" class="branch" style="animation-delay: -2.5s;"/>
+      <path d="M -48,28 Q -58,25 -62,32 Q -64,39 -58,45 Q -51,49 -43,47 Q -37,44 -35,37 Q -34,29 -41,25 Q -47,24 -48,28 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 48,42 Q 40,39 36,45 Q 35,51 41,57 Q 48,61 56,59 Q 62,56 64,49 Q 64,42 58,39 Q 52,38 48,42 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M -25,70 Q -35,67 -39,74 Q -41,82 -35,88 Q -28,92 -21,90 Q -15,87 -13,80 Q -12,72 -19,68 Q -25,66 -25,70 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+    </g>
     
-    <rect x="1050" y="115" width="40" height="285" fill="url(#tree-trunk)" rx="5"/>
-    <ellipse cx="1070" cy="135" rx="70" ry="88" fill="url(#foliage-gradient)" opacity="0.8"/>
-    <ellipse cx="1070" cy="180" rx="75" ry="85" fill="#5a8a3a" opacity="0.7"/>
+    <!-- Tree 5 -->
+    <g transform="translate(1070, 140)">
+      <path d="M 0,0 Q -2,80 -4,155 L 4,155 Q 2,80 0,0" fill="url(#tree-trunk)"/>
+      <path d="M -1,32 Q -25,35 -38,30 Q -40,28 -38,26 Q -23,30 -1,27 Z" fill="#4a3a28" class="branch"/>
+      <path d="M 1,48 Q 30,51 45,46 Q 47,44 45,42 Q 28,46 1,43 Z" fill="#5a4a38" class="branch" style="animation-delay: -1.5s;"/>
+      <path d="M -38,22 Q -46,20 -49,26 Q -50,32 -45,37 Q -39,40 -33,38 Q -29,35 -28,30 Q -28,24 -33,21 Q -37,20 -38,22 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 42,38 Q 36,36 33,41 Q 32,46 37,51 Q 43,54 49,52 Q 53,49 54,44 Q 54,38 50,36 Q 45,35 42,38 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M -20,62 Q -28,60 -31,66 Q -32,72 -27,77 Q -21,80 -15,78 Q -11,75 -10,70 Q -10,64 -15,61 Q -20,60 -20,62 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+    </g>
   </g>
   
-  <!-- Mist layers (golden-tinted) -->
+  <!-- Mist -->
   <g class="mist" opacity="0.25">
     <rect x="0" y="180" width="1200" height="120" filter="url(#mist-filter)"/>
   </g>
   
-  <g class="mist" opacity="0.2" style="animation-duration: 60s; animation-delay: -10s;">
-    <rect x="0" y="220" width="1200" height="100" filter="url(#mist-filter)"/>
-  </g>
-  
-  <!-- Ground / mossy floor -->
+  <!-- Ground -->
   <ellipse cx="600" cy="350" rx="600" ry="50" fill="#4a6a3a" opacity="0.6"/>
   <ellipse cx="600" cy="360" rx="550" ry="40" fill="#3a5a2a" opacity="0.7"/>
   
-  <!-- Wooden platforms / structures -->
+  <!-- Wooden platforms -->
   <g class="layer-mid" opacity="0.8">
-    <!-- Left platform -->
     <rect x="100" y="200" width="120" height="8" fill="#5a4230" rx="2"/>
     <rect x="102" y="202" width="116" height="4" fill="#6a5240" opacity="0.6"/>
-    <!-- Support posts -->
     <rect x="110" y="208" width="8" height="60" fill="#4a3220"/>
     <rect x="200" y="208" width="8" height="60" fill="#4a3220"/>
     
-    <!-- Right platform -->
     <rect x="980" y="220" width="140" height="8" fill="#5a4230" rx="2"/>
     <rect x="982" y="222" width="136" height="4" fill="#6a5240" opacity="0.6"/>
     <rect x="990" y="228" width="8" height="70" fill="#4a3220"/>
     <rect x="1100" y="228" width="8" height="70" fill="#4a3220"/>
   </g>
   
-  <!-- Near trees (large, detailed) -->
+  <!-- Near foreground trees -->
   <g class="layer-near" opacity="0.9">
-    <!-- Left massive tree -->
-    <rect x="30" y="0" width="80" height="400" fill="url(#tree-trunk)" rx="8"/>
-    <!-- Bark texture -->
-    <rect x="40" y="50" width="3" height="80" fill="#2a1810" opacity="0.4"/>
-    <rect x="60" y="120" width="4" height="100" fill="#2a1810" opacity="0.4"/>
-    <rect x="85" y="180" width="3" height="90" fill="#2a1810" opacity="0.4"/>
-    <!-- Moss patches -->
-    <ellipse cx="55" cy="100" rx="15" ry="20" fill="#5a8a3a" opacity="0.6"/>
-    <ellipse cx="75" cy="200" rx="18" ry="25" fill="#4a7a2a" opacity="0.5"/>
-    <!-- Foliage -->
-    <ellipse cx="70" cy="80" rx="90" ry="120" fill="url(#foliage-gradient)" opacity="0.8"/>
-    <ellipse cx="70" cy="140" rx="95" ry="110" fill="#6a9a4a" opacity="0.7"/>
-    <ellipse cx="70" cy="190" rx="85" ry="105" fill="#5a8a3a" opacity="0.75"/>
+    <!-- Left tree -->
+    <g transform="translate(60, 0)">
+      <path d="M 0,0 Q -8,100 -12,200 Q -15,300 -18,400 L 18,400 Q 15,300 12,200 Q 8,100 0,0 Z" fill="url(#tree-trunk)"/>
+      <path d="M -5,80 Q -7,120 -9,160" stroke="#2a1810" stroke-width="2" fill="none" opacity="0.4"/>
+      <path d="M 3,110 Q 4,180 5,250" stroke="#2a1810" stroke-width="2.5" fill="none" opacity="0.4"/>
+      <ellipse cx="-8" cy="120" rx="18" ry="28" fill="#5a8a3a" opacity="0.6"/>
+      <ellipse cx="8" cy="220" rx="22" ry="32" fill="#4a7a2a" opacity="0.5"/>
+      <path d="M -8,70 Q -55,75 -85,65 Q -90,63 -87,59 Q -53,68 -8,62 Z" fill="#4a3a28" class="branch"/>
+      <path d="M 8,90 Q 60,96 95,88 Q 99,86 96,82 Q 58,90 8,83 Z" fill="#5a4a38" class="branch" style="animation-delay: -3s;"/>
+      <path d="M -5,130 Q -45,140 -70,135 Q -74,134 -72,129 Q -43,134 -5,123 Z" fill="#4a3a28" class="branch" style="animation-delay: -6s;"/>
+      <!-- Foliage -->
+      <path d="M -87,52 Q -105,48 -112,58 Q -116,68 -110,80 Q -102,90 -88,88 Q -74,85 -68,74 Q -64,63 -73,54 Q -83,49 -87,52 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M -78,58 Q -92,55 -98,64 Q -101,73 -94,83 Q -85,91 -73,89 Q -63,86 -58,77 Q -55,67 -63,59 Q -72,56 -78,58 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M 90,75 Q 75,71 68,80 Q 65,90 72,100 Q 82,108 95,106 Q 106,103 111,93 Q 114,82 105,74 Q 97,70 90,75 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 78,80 Q 66,77 60,85 Q 58,93 64,102 Q 73,109 84,107 Q 94,104 98,95 Q 100,86 93,79 Q 86,76 78,80 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M -72,120 Q -85,117 -91,126 Q -94,136 -87,145 Q -78,152 -67,150 Q -58,147 -54,138 Q -52,128 -60,121 Q -70,118 -72,120 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+    </g>
     
-    <!-- Right massive tree -->
-    <rect x="1090" y="0" width="85" height="400" fill="url(#tree-trunk)" rx="8"/>
-    <rect x="1100" y="60" width="3" height="90" fill="#2a1810" opacity="0.4"/>
-    <rect x="1125" y="140" width="4" height="110" fill="#2a1810" opacity="0.4"/>
-    <rect x="1150" y="200" width="3" height="95" fill="#2a1810" opacity="0.4"/>
-    <ellipse cx="1115" cy="120" rx="16" ry="22" fill="#5a8a3a" opacity="0.6"/>
-    <ellipse cx="1140" cy="220" rx="19" ry="27" fill="#4a7a2a" opacity="0.5"/>
-    <ellipse cx="1132" cy="90" rx="92" ry="125" fill="url(#foliage-gradient)" opacity="0.8"/>
-    <ellipse cx="1132" cy="150" rx="97" ry="115" fill="#6a9a4a" opacity="0.7"/>
-    <ellipse cx="1132" cy="200" rx="87" ry="108" fill="#5a8a3a" opacity="0.75"/>
+    <!-- Right tree -->
+    <g transform="translate(1140, 0)">
+      <path d="M 0,0 Q 8,100 12,200 Q 15,300 18,400 L -18,400 Q -15,300 -12,200 Q -8,100 0,0 Z" fill="url(#tree-trunk)"/>
+      <path d="M 5,75 Q 7,125 9,175" stroke="#2a1810" stroke-width="2" fill="none" opacity="0.4"/>
+      <path d="M -3,105 Q -4,175 -5,245" stroke="#2a1810" stroke-width="2.5" fill="none" opacity="0.4"/>
+      <ellipse cx="8" cy="115" rx="19" ry="29" fill="#5a8a3a" opacity="0.6"/>
+      <ellipse cx="-8" cy="215" rx="23" ry="33" fill="#4a7a2a" opacity="0.5"/>
+      <path d="M 8,65 Q 58,70 88,60 Q 92,58 89,54 Q 56,63 8,57 Z" fill="#4a3a28" class="branch"/>
+      <path d="M -8,85 Q -62,91 -98,83 Q -102,81 -99,77 Q -60,85 -8,78 Z" fill="#5a4a38" class="branch" style="animation-delay: -4s;"/>
+      <path d="M 87,47 Q 108,43 115,53 Q 119,63 113,75 Q 105,85 91,83 Q 77,80 71,69 Q 67,58 76,49 Q 86,44 87,47 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M 76,53 Q 92,50 98,59 Q 101,68 94,78 Q 85,86 73,84 Q 63,81 58,72 Q 55,62 63,54 Q 72,51 76,53 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+      <path d="M -92,70 Q -77,66 -70,75 Q -67,85 -74,95 Q -84,103 -97,101 Q -108,98 -113,88 Q -116,77 -107,69 Q -99,65 -92,70 Z" 
+            fill="#5a8a3a" opacity="0.85"/>
+      <path d="M -80,75 Q -68,72 -62,80 Q -60,88 -66,97 Q -75,104 -86,102 Q -96,99 -100,90 Q -102,81 -95,74 Q -88,71 -80,75 Z" 
+            fill="#6a9a4a" opacity="0.8"/>
+    </g>
   </g>
   
-  <!-- Hanging vines -->
+  <!-- Vines -->
   <g opacity="0.7">
-    <path class="vine" d="M 80,50 Q 82,150 78,250" stroke="#4a6a2a" stroke-width="3" fill="none" style="animation-delay: 0s;"/>
-    <path class="vine" d="M 95,70 Q 98,170 92,270" stroke="#5a7a3a" stroke-width="2.5" fill="none" style="animation-delay: 2s;"/>
-    <path class="vine" d="M 1120,60 Q 1118,160 1122,260" stroke="#4a6a2a" stroke-width="3" fill="none" style="animation-delay: 1s;"/>
-    <path class="vine" d="M 1145,80 Q 1142,180 1148,280" stroke="#5a7a3a" stroke-width="2.5" fill="none" style="animation-delay: 3s;"/>
+    <path class="vine" d="M 70,50 Q 72,150 68,250 Q 67,300 66,350" stroke="#4a6a2a" stroke-width="3" fill="none"/>
+    <ellipse class="vine" cx="72" cy="150" rx="8" ry="12" fill="#5a8a3a" opacity="0.8"/>
+    <ellipse class="vine" cx="68" cy="220" rx="7" ry="11" fill="#5a8a3a" opacity="0.8"/>
     
-    <!-- Vine leaves -->
-    <ellipse cx="82" cy="150" rx="8" ry="12" fill="#5a8a3a" opacity="0.8"/>
-    <ellipse cx="78" cy="200" rx="7" ry="11" fill="#5a8a3a" opacity="0.8"/>
-    <ellipse cx="1118" cy="140" rx="8" ry="12" fill="#5a8a3a" opacity="0.8"/>
-    <ellipse cx="1122" cy="190" rx="7" ry="11" fill="#5a8a3a" opacity="0.8"/>
+    <path class="vine" d="M 85,70 Q 88,170 84,270 Q 83,320 82,370" stroke="#5a7a3a" stroke-width="2.5" fill="none" style="animation-delay: 2s;"/>
+    <ellipse class="vine" cx="88" cy="170" rx="7" ry="10" fill="#6a9a4a" opacity="0.8" style="animation-delay: 2s;"/>
+    
+    <path class="vine" d="M 1150,60 Q 1148,160 1152,260 Q 1153,310 1154,360" stroke="#4a6a2a" stroke-width="3" fill="none" style="animation-delay: 1s;"/>
+    <ellipse class="vine" cx="1148" cy="160" rx="8" ry="12" fill="#5a8a3a" opacity="0.8" style="animation-delay: 1s;"/>
+    <ellipse class="vine" cx="1152" cy="230" rx="7" ry="11" fill="#5a8a3a" opacity="0.8" style="animation-delay: 1s;"/>
+    
+    <path class="vine" d="M 1165,80 Q 1162,180 1168,280 Q 1169,330 1170,380" stroke="#5a7a3a" stroke-width="2.5" fill="none" style="animation-delay: 3s;"/>
+    <ellipse class="vine" cx="1162" cy="180" rx="7" ry="10" fill="#6a9a4a" opacity="0.8" style="animation-delay: 3s;"/>
   </g>
   
-  <!-- Foreground undergrowth -->
+  <!-- Undergrowth -->
   <g class="layer-near" opacity="0.8">
-    <!-- Ferns and bushes -->
     <ellipse cx="200" cy="370" rx="40" ry="25" fill="#4a7a3a" opacity="0.7"/>
     <ellipse cx="240" cy="375" rx="35" ry="22" fill="#5a8a4a" opacity="0.6"/>
     <ellipse cx="950" cy="372" rx="42" ry="26" fill="#4a7a3a" opacity="0.7"/>
     <ellipse cx="1000" cy="377" rx="38" ry="24" fill="#5a8a4a" opacity="0.6"/>
     
-    <!-- Grass tufts -->
     <path d="M 180,380 Q 182,360 180,350" stroke="#5a8a3a" stroke-width="2" fill="none"/>
     <path d="M 185,382 Q 188,362 186,352" stroke="#6a9a4a" stroke-width="1.5" fill="none"/>
     <path d="M 190,381 Q 191,361 192,351" stroke="#5a8a3a" stroke-width="2" fill="none"/>
@@ -285,9 +338,9 @@
     <path d="M 1020,381 Q 1021,361 1019,351" stroke="#5a8a3a" stroke-width="2" fill="none"/>
   </g>
   
-  <!-- Light rain (very gentle) -->
+  <!-- Rain -->
   <g opacity="0.15">
-    <line class="rain" x1="250" y1="-10" x2="250" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4s; animation-delay: 0s;"/>
+    <line class="rain" x1="250" y1="-10" x2="250" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4s;"/>
     <line class="rain" x1="400" y1="-10" x2="400" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.5s; animation-delay: 1s;"/>
     <line class="rain" x1="550" y1="-10" x2="550" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.2s; animation-delay: 2s;"/>
     <line class="rain" x1="700" y1="-10" x2="700" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.7s; animation-delay: 0.5s;"/>
@@ -295,8 +348,7 @@
     <line class="rain" x1="1000" y1="-10" x2="1000" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.6s; animation-delay: 0.8s;"/>
   </g>
   
-  <!-- Fireflies (warm glowing) -->
-  <!-- Far layer -->
+  <!-- Fireflies -->
   <g opacity="0.7">
     <circle class="firefly-1" cx="280" cy="180" r="2.5" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
     <circle class="firefly-2" cx="480" cy="200" r="2.5" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
@@ -304,7 +356,6 @@
     <circle class="firefly-1" cx="920" cy="175" r="2.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -5s;"/>
   </g>
   
-  <!-- Mid layer -->
   <g opacity="0.85">
     <circle class="firefly-2" cx="350" cy="220" r="3.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -7s;"/>
     <circle class="firefly-1" cx="550" cy="210" r="3.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -11s;"/>
@@ -312,16 +363,13 @@
     <circle class="firefly-2" cx="800" cy="225" r="3.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -9s;"/>
   </g>
   
-  <!-- Near layer (brightest) -->
   <g opacity="1">
     <circle class="firefly-3" cx="300" cy="260" r="5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -13s;"/>
     <circle class="firefly-1" cx="600" cy="250" r="5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -6s;"/>
     <circle class="firefly-2" cx="900" cy="270" r="5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -15s;"/>
   </g>
   
-  <!-- Warm overlay for atmosphere -->
+  <!-- Atmosphere -->
   <rect width="1200" height="400" fill="#f8e8a8" opacity="0.05"/>
-  
-  <!-- Subtle ground mist -->
   <rect x="0" y="320" width="1200" height="80" filter="url(#mist-filter)" opacity="0.15"/>
 </svg>

@@ -11,24 +11,29 @@ A peaceful, atmospheric SVG scene reminiscent of the Kokiri Forest from Zelda: O
 ## 🎨 Scene Elements
 
 ### Depth Layers (Near to Far)
-1. **Foreground** - Grass and reeds at water's edge
-2. **Near trees** - Detailed trunks with foliage
-3. **Mid-distance** - Silhouetted conifer trees
-4. **Far mountains** - Layered peaks fading into mist
-5. **Sky** - Gradient atmosphere
+1. **Foreground** - Large detailed trees with organic branching structures, undergrowth, wooden platforms
+2. **Mid-distance** - Detailed deciduous trees with path-based foliage clusters and swaying branches
+3. **Far background** - Simplified conifer silhouettes
+4. **Sky** - Warm green gradient with god rays
 
 ### Atmospheric Effects
 - **Mist** - Using `feTurbulence` with animated frequency
-- **Rain** - Gentle drops falling at varied speeds (2.7s - 3.8s)
-- **Water ripples** - Expanding circles where rain hits
+- **Rain** - Gentle drops falling at varied speeds
+- **Vines** - Hanging greenery swaying gently from canopy
 - **Depth blur** - Far objects more blurred than near
+- **God rays** - Soft sunlight filtering through trees
 
 ### Living Details
-- **Fireflies** - 10 glowing insects at 3 depth levels
-  - Far: Small (2px), dim
-  - Mid: Medium (3px)
-  - Near: Large (4px), bright
-- **Movement** - Everything floats organically on prime duration cycles
+- **Fireflies** - 15 glowing insects at 3 depth levels with natural flickering
+  - Far: Small (2.5px), dim
+  - Mid: Medium (3.5px)
+  - Near: Large (5px), bright
+- **Trees** - Organic path-based shapes with:
+  - Tapered trunks using bezier curves
+  - Branch structures that sway independently
+  - Irregular foliage clusters (not circles!)
+  - Bark texture overlays
+- **Movement** - Everything floats organically on prime duration cycles (17s, 23s, 19s)
 
 ---
 
@@ -36,9 +41,9 @@ A peaceful, atmospheric SVG scene reminiscent of the Kokiri Forest from Zelda: O
 
 ### 1. **Parallax Layering**
 ```css
-@keyframes parallax-far { /* 8px movement, 40s */ }
-@keyframes parallax-mid { /* 20px movement, 35s */ }
-@keyframes parallax-near { /* 40px movement, 30s */ }
+@keyframes parallax-far { /* 15px movement, 40s */ }
+@keyframes parallax-mid { /* 30px movement, 35s */ }
+@keyframes parallax-near { /* 50px movement, 30s */ }
 ```
 Layers move at different speeds creating depth perception.
 
@@ -57,19 +62,20 @@ Two mist layers at different heights, each with 50-60s drift cycles, using fract
 
 ### 5. **Organic Animation**
 - Fireflies: Prime durations (17s, 19s, 23s) = won't sync for hours
+- Tree branches: Independent sway with transform-origin at base (6s cycles)
+- Vines: Gentle sway from top center (8s cycles with staggered delays)
 - Rain: Staggered delays create natural rhythm
-- Ripples: Each has unique timing (2.3s - 3s)
 
 ---
 
 ## 🎭 Mood & Atmosphere
 
 **Color Palette:**
-- Sky: `#b8c5d6` → `#e8eef5` (cool morning blues)
-- Mountains: `#8a9aa8` (soft gray-blue)
-- Trees: `#3a4a3a`, `#4a6a5a` (muted forest greens)
-- Water: `#5a7a8f` (reflective blue-gray)
-- Fireflies: `#d4ff00` (soft yellow-green glow)
+- Sky: `#4a5f3a` → `#7a9a5a` → `#a8c898` (warm green gradient)
+- Tree trunks: `#3a2820` → `#5a4230` (warm browns)
+- Foliage: `#5a8a3a`, `#6a9a4a`, `#4a7a3a` (rich greens)
+- Wooden structures: `#5a4230`, `#6a5240` (warm wood tones)
+- Fireflies: `#f8ff88` (warm yellow-green glow)
 
 **Inspired by:**
 - Japanese mountain forests (misty, serene)
@@ -79,20 +85,26 @@ Two mist layers at different heights, each with 50-60s drift cycles, using fract
 
 ---
 
-## 🌧️ Rain Physics
+## 🌲 Organic Tree Design
 
-Each rain drop:
-- Starts slightly above viewport
-- Falls 400px down
-- Takes 2.7-3.8 seconds
-- Staggered start times prevent uniformity
-- Creates ripples on water surface
+Each tree is hand-crafted using SVG paths (not ellipses!):
 
-Ripples:
-- Expand from 0 to 18-25px radius
-- Fade from 60% to 0% opacity
-- Each has unique timing
-- Positioned where rain would naturally hit
+**Trunk construction:**
+- Quadratic bezier curves create natural taper
+- Gradient fills add dimension
+- Texture lines overlay for bark detail
+
+**Branch structure:**
+- Individual path elements extending from trunk
+- Each has transform-origin at connection point
+- Independent sway animation (6s cycles)
+- Gradual color variation from trunk
+
+**Foliage clusters:**
+- Irregular closed paths using multiple Q curves
+- Layered for depth (some in front, some behind)
+- Varied opacity (0.8-0.85) for natural look
+- Asymmetric shapes - no two identical
 
 ---
 
@@ -114,11 +126,12 @@ Ripples:
 
 ## 📐 Technical Stats
 
-- **Total elements:** ~80 (optimized for performance)
-- **Animation cycles:** 15+ unique timings
-- **Filters used:** 5 (mist, blur at 3 depths, glow, water)
-- **Layers:** 7 depth planes
-- **File size:** 13.5 KB
+- **Total elements:** ~150 (optimized for performance)
+- **Animation cycles:** 20+ unique timings
+- **Filters used:** 4 (mist turbulence, blur at 3 depths, firefly glow)
+- **Layers:** 5 depth planes
+- **Trees:** 14 unique detailed trees with organic shapes
+- **File size:** ~18 KB
 - **No JavaScript** - Pure CSS/SMIL
 
 ---
