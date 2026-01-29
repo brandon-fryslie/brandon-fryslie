@@ -1,27 +1,24 @@
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      @keyframes rotate-slow {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      
-      .outer-ring { animation: rotate-slow 30s linear infinite; transform-origin: center; }
-    </style>
-  </defs>
-  
   <!-- Ivory background circle -->
   <circle cx="100" cy="100" r="95" fill="#f5f0e8"/>
   
   <!-- Geometric knot - Celtic/mathematical style -->
   <g transform="translate(100, 100)">
-    <!-- Outer rotating ring -->
-    <g class="outer-ring">
+    <!-- Outer rotating ring - animated with SMIL -->
+    <g id="outer-ring">
       <circle r="70" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.1"/>
-      <circle cx="70" cy="0" r="3" fill="#8b4049" opacity="0.3"/>
-      <circle cx="-70" cy="0" r="3" fill="#8b4049" opacity="0.3"/>
-      <circle cx="0" cy="70" r="3" fill="#8b4049" opacity="0.3"/>
-      <circle cx="0" cy="-70" r="3" fill="#8b4049" opacity="0.3"/>
+      <circle cx="70" cy="0" r="3" fill="#8b4049" opacity="0.3">
+        <animateTransform attributeName="transform" type="rotate" values="0; 360; 0" dur="30s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-70" cy="0" r="3" fill="#8b4049" opacity="0.3">
+        <animateTransform attributeName="transform" type="rotate" values="0; 360; 0" dur="30s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="70" r="3" fill="#8b4049" opacity="0.3">
+        <animateTransform attributeName="transform" type="rotate" values="0; 360; 0" dur="30s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="-70" r="3" fill="#8b4049" opacity="0.3">
+        <animateTransform attributeName="transform" type="rotate" values="0; 360; 0" dur="30s" repeatCount="indefinite"/>
+      </circle>
     </g>
     
     <!-- Main knot paths -->
@@ -35,7 +32,7 @@
     
     <!-- Over-under weave effect -->
     <!-- White gaps create illusion of threading -->
-    <circle cx="-20" cy="-20" r="6" fill="#f5f0e8"/>
+      ircle cx="-20" cy="-20" r="6" fill="#f5f0e8"/>
     <circle cx="20" cy="20" r="6" fill="#f5f0e8"/>
     
     <!-- Re-draw center crossing -->
@@ -44,17 +41,18 @@
     
     <!-- Corner loops -->
     <path d="M -45,-45 Q -55,-40 -55,-30 Q -55,-20 -50,-15" 
-          stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+          stroke="#1a1a1a" st         h="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
     <path d="M 45,45 Q 55,40 55,30 Q 55,20 50,15" 
           stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M 45,-45 Q 55,-40 55,-30 Q 55,-20 50,-15" 
+           ="M 45,-45 Q 55,-40 55,-30 Q 55,-20 50,-15" 
           stroke="#8b4049" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M -45,45 Q -55,40 -55,30 Q -55,20 -50,15" 
-          stroke="#8b4049" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d= M -45,45 Q -55,40 -55,30 Q -55,20 -50,15" 
+          stroke="#8b4049" stroke-width="2.5" fill="none" strok   in    ="round" opacity="0.6"/>
     
-    <!-- Center accent -->
-    <circle r="8" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
-    <circle r="3" fill="#8b4049"/>
+                       -->
+    <circle r="8" fill="none"    <circlea1a1a" stroke-width="1.5"/>
+    <circle r=    <circle r=    <circle r=    <circle r=    <ci"r   al    <circle r=    <ci" repeatCount="indefinite"/>
+    </circle>
   </g>
   
   <!-- Subtle border -->

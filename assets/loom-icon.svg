@@ -1,35 +1,26 @@
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      @keyframes thread-float-1 {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-3px); }
-      }
-      
-      @keyframes thread-float-2 {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-3px); }
-      }
-      
-      .warp-1 { animation: thread-float-1 4s ease-in-out infinite; }
-      .warp-2 { animation: thread-float-2 4s ease-in-out infinite; animation-delay: -1s; }
-      .warp-3 { animation: thread-float-1 4s ease-in-out infinite; animation-delay: -2s; }
-      .warp-4 { animation: thread-float-2 4s ease-in-out infinite; animation-delay: -3s; }
-    </style>
-  </defs>
-  
   <!-- Ivory background circle -->
   <circle cx="100" cy="100" r="95" fill="#f5f0e8"/>
   
   <!-- Loom frame -->
   <rect x="40" y="50" width="120" height="100" fill="none" stroke="#1a1a1a" stroke-width="2" rx="2"/>
   
-  <!-- Warp threads (vertical) -->
-  <line class="warp-1" x1="60" y1="50" x2="60" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
-  <line class="warp-2" x1="80" y1="50" x2="80" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
-  <line class="warp-3" x1="100" y1="50" x2="100" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
-  <line class="warp-4" x1="120" y1="50" x2="120" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
-  <line class="warp-1" x1="140" y1="50" x2="140" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Warp threads (vertical) with SMIL animation -->
+  <line x1="60" y1="50" x2="60" y2="150" stroke="#2a2a2a" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="4s" repeatCount="indefinite" additive="sum"/>
+  </line>
+  <line x1="80" y1="50" x2="80" y2="150" stroke="#2a2a2a" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="4s" repeatCount="indefinite" additive="sum" begin="1s"/>
+  </line>
+  <line x1="100" y1="50" x2="100" y2="150" stroke="#2a2a2a" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="4s" repeatCount="indefinite" additive="sum" begin="2s"/>
+  </line>
+  <line x1="120" y1="50" x2="120" y2="150" stroke="#2a2a2a" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="4s" repeatCount="indefinite" additive="sum" begin="3s"/>
+  </line>
+  <line x1="140"  1=  <l x2="140" y2="150" stroke="#2a2a2a" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="4s" repeatCount="indefinite" additive="sum" begin="0.5s"/>
+  </line>
   
   <!-- Weft thread (horizontal weaving pattern) with accent color -->
   <path d="M 40,80 Q 50,78 60,80 Q 70,82 80,80 Q 90,78 100,80 Q 110,82 120,80 Q 130,78 140,80 Q 150,82 160,80" 
