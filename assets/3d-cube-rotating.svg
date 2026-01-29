@@ -1,0 +1,114 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes rotate3d {
+        0% { transform: rotateX(0deg) rotateY(0deg); }
+        100% { transform: rotateX(360deg) rotateY(360deg); }
+      }
+      
+      .rotating-cube {
+        animation: rotate3d 10s linear infinite;
+        transform-origin: center;
+      }
+      
+      .cube-face-front { opacity: 0.9; }
+      .cube-face-back { opacity: 0.3; }
+    </style>
+    
+    <linearGradient id="cubeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cubeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="600" fill="#0a0a0a"/>
+  
+  <!-- Grid lines for depth reference -->
+  <g opacity="0.1">
+    <line x1="0" y1="300" x2="600" y2="300" stroke="#ffffff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="600" stroke="#ffffff" stroke-width="1"/>
+  </g>
+  
+  <!-- 3D Rotating Cube -->
+  <g transform="translate(300, 300)">
+    <g class="rotating-cube">
+      <!-- Back face -->
+      <g class="cube-face-back">
+        <rect x="-60" y="-60" width="120" height="120" fill="url(#cubeGrad1)" stroke="#667eea" stroke-width="2" opacity="0.3" transform="translate(0, -40)"/>
+      </g>
+      
+      <!-- Left face (darker) -->
+      <polygon points="-60,-100 -60,20 -60,60 -60,-60" fill="#4a5568" stroke="#667eea" stroke-width="2" opacity="0.6"/>
+      
+      <!-- Bottom face -->
+      <polygon points="-60,20 60,20 60,60 -60,60" fill="#2d3748" stroke="#667eea" stroke-width="2" opacity="0.7"/>
+      
+      <!-- Right face (lighter) -->
+      <polygon points="60,-100 60,20 60,60 60,-60" fill="#667eea" stroke="#764ba2" stroke-width="2" opacity="0.7"/>
+      
+      <!-- Top face -->
+      <polygon points="-60,-100 60,-100 60,-60 -60,-60" fill="url(#cubeGrad2)" stroke="#f5576c" stroke-width="2" opacity="0.8"/>
+      
+      <!-- Front face (brightest) -->
+      <g class="cube-face-front">
+        <rect x="-60" y="-60" width="120" height="120" fill="url(#cubeGrad1)" stroke="#667eea" stroke-width="3" filter="url(#glow)" transform="translate(0, 40)"/>
+        
+        <!-- Inner detail -->
+        <circle cx="0" cy="40" r="20" fill="#f093fb" opacity="0.6" filter="url(#glow)">
+          <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      
+      <!-- Wireframe edges for depth -->
+      <line x1="-60" y1="-100" x2="-60" y2="60" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="60" y1="-100" x2="60" y2="60" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="-60" y1="-100" x2="60" y2="-100" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="-60" y1="60" x2="60" y2="60" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    </g>
+  </g>
+  
+  <!-- Corner vertices with depth -->
+  <g transform="translate(300, 300)">
+    <circle cx="-60" cy="-100" r="4" fill="#f093fb" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="-100" r="4" fill="#f093fb" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-60" cy="60" r="4" fill="#667eea" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="60" r="4" fill="#667eea" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Shadow beneath -->
+  <ellipse cx="300" cy="480" rx="100" ry="20" fill="#000000" opacity="0.3">
+    <animate attributeName="rx" values="100;120;100" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Title -->
+  <text x="300" y="550" font-family="Arial, sans-serif" font-size="16" fill="#667eea" text-anchor="middle" font-weight="bold">
+    3D Rotating Cube - Pure CSS Animation
+  </text>
+  
+  <text x="300" y="575" font-family="Arial, sans-serif" font-size="11" fill="#888888" text-anchor="middle" font-style="italic">
+    GitHub-compatible • No JavaScript • SMIL + CSS transforms
+  </text>
+</svg>
