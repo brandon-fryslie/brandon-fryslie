@@ -4,22 +4,30 @@
       /* Parallax layers - different speeds create depth */
       @keyframes parallax-far {
         0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(-8px); }
+        50% { transform: translateX(-15px); }
       }
       
       @keyframes parallax-mid {
         0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(-20px); }
+        50% { transform: translateX(-30px); }
       }
       
       @keyframes parallax-near {
         0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(-40px); }
+        50% { transform: translateX(-50px); }
       }
       
       .layer-far { animation: parallax-far 40s ease-in-out infinite; }
       .layer-mid { animation: parallax-mid 35s ease-in-out infinite; }
       .layer-near { animation: parallax-near 30s ease-in-out infinite; }
+      
+      /* Swaying vines */
+      @keyframes sway {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(3deg); }
+      }
+      
+      .vine { animation: sway 8s ease-in-out infinite; transform-origin: top center; }
       
       /* Floating fireflies at different depths */
       @keyframes firefly1 {
@@ -108,166 +116,212 @@
       <feGaussianBlur stdDeviation="1.5"/>
     </filter>
     
-    <!-- Gradients for atmosphere -->
+    <!-- Gradients for warm forest atmosphere -->
     <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#b8c5d6;stop-opacity:1" />
-      <stop offset="40%" style="stop-color:#d4dce6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#e8eef5;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#4a5f3a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7a9a5a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a8c898;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="mountain-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#8a9aa8;stop-opacity:0.6" />
-      <stop offset="100%" style="stop-color:#b8c5d6;stop-opacity:0.3" />
+    <linearGradient id="tree-trunk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3a2820;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5a4230;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a2820;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="water-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#5a7a8f;stop-opacity:0.6" />
-      <stop offset="100%" style="stop-color:#7a95a8;stop-opacity:0.4" />
+    <linearGradient id="foliage-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a9a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7a3a;stop-opacity:1" />
     </linearGradient>
+    
+    <radialGradient id="sunlight" cx="50%" cy="20%">
+      <stop offset="0%" style="stop-color:#fef9d6;stop-opacity:0.8" />
+      <stop offset="40%" style="stop-color:#f8e8a8;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#7a9a5a;stop-opacity:0" />
+    </radialGradient>
     
     <radialGradient id="firefly-light" cx="50%" cy="50%">
-      <stop offset="0%" style="stop-color:#d4ff00;stop-opacity:1" />
-      <stop offset="40%" style="stop-color:#b8e600;stop-opacity:0.8" />
-      <stop offset="100%" style="stop-color:#9acc00;stop-opacity:0" />
+      <stop offset="0%" style="stop-color:#f8ff88;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#d8e860;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#b8c840;stop-opacity:0" />
     </radialGradient>
   </defs>
   
-  <!-- Sky/Atmosphere -->
+  <!-- Sky with warm gradient -->
   <rect width="1200" height="400" fill="url(#sky-gradient)"/>
   
-  <!-- Distant mountains (layered for depth) -->
-  <g class="layer-far" filter="url(#far-blur)" opacity="0.4">
-    <path d="M 0,200 Q 200,140 400,160 T 800,140 L 1200,180 L 1200,400 L 0,400 Z" 
-          fill="url(#mountain-gradient)"/>
-  </g>
-  
-  <g class="layer-far" filter="url(#far-blur)" opacity="0.5">
-    <path d="M 0,220 Q 300,180 600,190 T 1200,200 L 1200,400 L 0,400 Z" 
-          fill="url(#mountain-gradient)" transform="translate(50, 0)"/>
-  </g>
-  
-  <!-- Mid-distance trees (silhouettes) -->
-  <g class="layer-mid" filter="url(#mid-blur)" opacity="0.6">
-    <!-- Tall conifers -->
-    <polygon points="200,180 210,120 220,180" fill="#6a8a7a" opacity="0.5"/>
-    <polygon points="195,160 210,120 225,160" fill="#5a7a6a" opacity="0.4"/>
-    
-    <polygon points="350,200 365,130 380,200" fill="#6a8a7a" opacity="0.5"/>
-    <polygon points="345,175 365,130 385,175" fill="#5a7a6a" opacity="0.4"/>
-    
-    <polygon points="550,190 560,140 570,190" fill="#6a8a7a" opacity="0.5"/>
-    <polygon points="546,170 560,140 574,170" fill="#5a7a6a" opacity="0.4"/>
-    
-    <polygon points="800,210 815,145 830,210" fill="#6a8a7a" opacity="0.5"/>
-    <polygon points="795,185 815,145 835,185" fill="#5a7a6a" opacity="0.4"/>
-    
-    <polygon points="1000,195 1012,135 1024,195" fill="#6a8a7a" opacity="0.5"/>
-    <polygon points="996,175 1012,135 1028,175" fill="#5a7a6a" opacity="0.4"/>
-  </g>
-  
-  <!-- Mist layers (moving) -->
-  <g class="mist" opacity="0.5">
-    <rect x="0" y="150" width="1200" height="150" filter="url(#mist-filter)"/>
-  </g>
-  
-  <g class="mist" opacity="0.4" style="animation-duration: 60s; animation-delay: -10s;">
-    <rect x="0" y="200" width="1200" height="100" filter="url(#mist-filter)"/>
-  </g>
-  
-  <!-- Water/Pond -->
-  <ellipse cx="600" cy="320" rx="500" ry="60" fill="url(#water-gradient)" opacity="0.7"/>
-  
-  <!-- Water ripples from rain drops -->
-  <g opacity="0.4">
-    <circle class="ripple" cx="450" cy="310" r="0" fill="none" stroke="#ffffff" stroke-width="1">
-      <animate attributeName="r" values="0;25" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    
-    <circle class="ripple" cx="680" cy="325" r="0" fill="none" stroke="#ffffff" stroke-width="1">
-      <animate attributeName="r" values="0;20" dur="2.5s" begin="0.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0" dur="2.5s" begin="0.8s" repeatCount="indefinite"/>
-    </circle>
-    
-    <circle class="ripple" cx="550" cy="318" r="0" fill="none" stroke="#ffffff" stroke-width="1">
-      <animate attributeName="r" values="0;22" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
-    </circle>
-    
-    <circle class="ripple" cx="720" cy="315" r="0" fill="none" stroke="#ffffff" stroke-width="1">
-      <animate attributeName="r" values="0;18" dur="2.3s" begin="2.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0" dur="2.3s" begin="2.2s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  
-  <!-- Near trees (more detailed) -->
-  <g class="layer-near" opacity="0.8">
-    <!-- Left tree trunk and branches -->
-    <rect x="80" y="150" width="25" height="250" fill="#3a4a3a" rx="3"/>
-    <ellipse cx="92" cy="170" rx="40" ry="60" fill="#4a6a5a" opacity="0.7"/>
-    <ellipse cx="92" cy="200" rx="45" ry="65" fill="#3a5a4a" opacity="0.6"/>
-    
-    <!-- Right tree trunk -->
-    <rect x="1050" y="120" width="30" height="280" fill="#3a4a3a" rx="3"/>
-    <ellipse cx="1065" cy="140" rx="50" ry="70" fill="#4a6a5a" opacity="0.7"/>
-    <ellipse cx="1065" cy="180" rx="55" ry="75" fill="#3a5a4a" opacity="0.6"/>
-  </g>
-  
-  <!-- Foreground grass/reeds near water -->
-  <g class="layer-near" opacity="0.9">
-    <!-- Left side reeds -->
-    <path d="M 50,350 Q 52,320 50,300" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.7"/>
-    <path d="M 60,360 Q 63,330 62,310" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.6"/>
-    <path d="M 75,355 Q 77,325 75,305" stroke="#5a7a5a" stroke-width="2" fill="none" opacity="0.7"/>
-    
-    <!-- Right side reeds -->
-    <path d="M 1150,360 Q 1148,330 1150,310" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.7"/>
-    <path d="M 1140,355 Q 1137,325 1138,305" stroke="#4a6a4a" stroke-width="2" fill="none" opacity="0.6"/>
-    <path d="M 1125,358 Q 1123,328 1125,308" stroke="#5a7a5a" stroke-width="2" fill="none" opacity="0.7"/>
-  </g>
-  
-  <!-- Rain drops (gentle, various depths and speeds) -->
+  <!-- Sun rays / god rays -->
   <g opacity="0.3">
-    <line class="rain" x1="150" y1="-10" x2="150" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3s; animation-delay: 0s;"/>
-    <line class="rain" x1="300" y1="-10" x2="300" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.5s; animation-delay: 0.5s;"/>
-    <line class="rain" x1="450" y1="-10" x2="450" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 2.8s; animation-delay: 1s;"/>
-    <line class="rain" x1="600" y1="-10" x2="600" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.2s; animation-delay: 1.5s;"/>
-    <line class="rain" x1="750" y1="-10" x2="750" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.7s; animation-delay: 0.3s;"/>
-    <line class="rain" x1="900" y1="-10" x2="900" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 2.9s; animation-delay: 0.8s;"/>
-    <line class="rain" x1="1050" y1="-10" x2="1050" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.4s; animation-delay: 1.2s;"/>
+    <polygon points="500,0 480,400 520,400" fill="url(#sunlight)"/>
+    <polygon points="600,0 580,400 620,400" fill="url(#sunlight)"/>
+    <polygon points="700,0 685,400 715,400" fill="url(#sunlight)"/>
+  </g>
+  
+  <!-- Deep forest background -->
+  <rect width="1200" height="400" fill="#3a5a2a" opacity="0.4"/>
+  
+  <!-- Far background trees (dense) -->
+  <g class="layer-far" filter="url(#far-blur)" opacity="0.5">
+    <polygon points="100,250 115,100 130,250" fill="#4a6a3a"/>
+    <polygon points="200,230 218,80 236,230" fill="#4a6a3a"/>
+    <polygon points="320,240 335,110 350,240" fill="#5a7a4a"/>
+    <polygon points="450,235 468,90 486,235" fill="#4a6a3a"/>
+    <polygon points="580,245 595,120 610,245" fill="#5a7a4a"/>
+    <polygon points="720,230 738,95 756,230" fill="#4a6a3a"/>
+    <polygon points="850,240 865,105 880,240" fill="#5a7a4a"/>
+    <polygon points="970,235 988,85 1006,235" fill="#4a6a3a"/>
+    <polygon points="1090,245 1105,115 1120,245" fill="#5a7a4a"/>
+  </g>
+  
+  <!-- Mid-distance dense forest -->
+  <g class="layer-mid" filter="url(#mid-blur)" opacity="0.7">
+    <!-- Large trees -->
+    <rect x="150" y="120" width="40" height="280" fill="url(#tree-trunk)" rx="5"/>
+    <ellipse cx="170" cy="140" rx="70" ry="90" fill="url(#foliage-gradient)" opacity="0.8"/>
+    <ellipse cx="170" cy="180" rx="75" ry="85" fill="#5a8a3a" opacity="0.7"/>
     
-    <!-- More rain for density -->
-    <line class="rain" x1="220" y1="-10" x2="220" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.1s; animation-delay: 0.7s;"/>
-    <line class="rain" x1="380" y1="-10" x2="380" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.6s; animation-delay: 1.3s;"/>
-    <line class="rain" x1="520" y1="-10" x2="520" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 2.7s; animation-delay: 0.4s;"/>
-    <line class="rain" x1="680" y1="-10" x2="680" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.3s; animation-delay: 1.6s;"/>
-    <line class="rain" x1="820" y1="-10" x2="820" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.8s; animation-delay: 0.2s;"/>
-    <line class="rain" x1="970" y1="-10" x2="970" y2="10" stroke="#c8d8e8" stroke-width="1" style="animation-duration: 3.0s; animation-delay: 0.9s;"/>
+    <rect x="380" y="100" width="45" height="300" fill="url(#tree-trunk)" rx="5"/>
+    <ellipse cx="402" cy="120" rx="80" ry="100" fill="url(#foliage-gradient)" opacity="0.8"/>
+    <ellipse cx="402" cy="170" rx="85" ry="95" fill="#6a9a4a" opacity="0.7"/>
+    
+    <rect x="650" y="110" width="42" height="290" fill="url(#tree-trunk)" rx="5"/>
+    <ellipse cx="671" cy="130" rx="75" ry="95" fill="url(#foliage-gradient)" opacity="0.8"/>
+    <ellipse cx="671" cy="175" rx="80" ry="90" fill="#5a8a3a" opacity="0.7"/>
+    
+    <rect x="900" y="105" width="48" height="295" fill="url(#tree-trunk)" rx="5"/>
+    <ellipse cx="924" cy="125" rx="82" ry="98" fill="url(#foliage-gradient)" opacity="0.8"/>
+    <ellipse cx="924" cy="172" rx="87" ry="92" fill="#6a9a4a" opacity="0.7"/>
+    
+    <rect x="1050" y="115" width="40" height="285" fill="url(#tree-trunk)" rx="5"/>
+    <ellipse cx="1070" cy="135" rx="70" ry="88" fill="url(#foliage-gradient)" opacity="0.8"/>
+    <ellipse cx="1070" cy="180" rx="75" ry="85" fill="#5a8a3a" opacity="0.7"/>
   </g>
   
-  <!-- Fireflies (glowing insects at different depths) -->
-  <!-- Far fireflies (smaller, dimmer) -->
-  <g opacity="0.6">
-    <circle class="firefly-1" cx="400" cy="220" r="2" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
-    <circle class="firefly-2" cx="750" cy="240" r="2" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
-    <circle class="firefly-3" cx="900" cy="200" r="2" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
+  <!-- Mist layers (golden-tinted) -->
+  <g class="mist" opacity="0.25">
+    <rect x="0" y="180" width="1200" height="120" filter="url(#mist-filter)"/>
   </g>
   
-  <!-- Mid fireflies -->
-  <g opacity="0.8">
-    <circle class="firefly-2" cx="300" cy="180" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -5s;"/>
-    <circle class="firefly-1" cx="600" cy="160" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -8s;"/>
-    <circle class="firefly-3" cx="850" cy="190" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -3s;"/>
-    <circle class="firefly-1" cx="500" cy="210" r="3" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -12s;"/>
+  <g class="mist" opacity="0.2" style="animation-duration: 60s; animation-delay: -10s;">
+    <rect x="0" y="220" width="1200" height="100" filter="url(#mist-filter)"/>
   </g>
   
-  <!-- Near fireflies (larger, brighter) -->
+  <!-- Ground / mossy floor -->
+  <ellipse cx="600" cy="350" rx="600" ry="50" fill="#4a6a3a" opacity="0.6"/>
+  <ellipse cx="600" cy="360" rx="550" ry="40" fill="#3a5a2a" opacity="0.7"/>
+  
+  <!-- Wooden platforms / structures -->
+  <g class="layer-mid" opacity="0.8">
+    <!-- Left platform -->
+    <rect x="100" y="200" width="120" height="8" fill="#5a4230" rx="2"/>
+    <rect x="102" y="202" width="116" height="4" fill="#6a5240" opacity="0.6"/>
+    <!-- Support posts -->
+    <rect x="110" y="208" width="8" height="60" fill="#4a3220"/>
+    <rect x="200" y="208" width="8" height="60" fill="#4a3220"/>
+    
+    <!-- Right platform -->
+    <rect x="980" y="220" width="140" height="8" fill="#5a4230" rx="2"/>
+    <rect x="982" y="222" width="136" height="4" fill="#6a5240" opacity="0.6"/>
+    <rect x="990" y="228" width="8" height="70" fill="#4a3220"/>
+    <rect x="1100" y="228" width="8" height="70" fill="#4a3220"/>
+  </g>
+  
+  <!-- Near trees (large, detailed) -->
+  <g class="layer-near" opacity="0.9">
+    <!-- Left massive tree -->
+    <rect x="30" y="0" width="80" height="400" fill="url(#tree-trunk)" rx="8"/>
+    <!-- Bark texture -->
+    <rect x="40" y="50" width="3" height="80" fill="#2a1810" opacity="0.4"/>
+    <rect x="60" y="120" width="4" height="100" fill="#2a1810" opacity="0.4"/>
+    <rect x="85" y="180" width="3" height="90" fill="#2a1810" opacity="0.4"/>
+    <!-- Moss patches -->
+    <ellipse cx="55" cy="100" rx="15" ry="20" fill="#5a8a3a" opacity="0.6"/>
+    <ellipse cx="75" cy="200" rx="18" ry="25" fill="#4a7a2a" opacity="0.5"/>
+    <!-- Foliage -->
+    <ellipse cx="70" cy="80" rx="90" ry="120" fill="url(#foliage-gradient)" opacity="0.8"/>
+    <ellipse cx="70" cy="140" rx="95" ry="110" fill="#6a9a4a" opacity="0.7"/>
+    <ellipse cx="70" cy="190" rx="85" ry="105" fill="#5a8a3a" opacity="0.75"/>
+    
+    <!-- Right massive tree -->
+    <rect x="1090" y="0" width="85" height="400" fill="url(#tree-trunk)" rx="8"/>
+    <rect x="1100" y="60" width="3" height="90" fill="#2a1810" opacity="0.4"/>
+    <rect x="1125" y="140" width="4" height="110" fill="#2a1810" opacity="0.4"/>
+    <rect x="1150" y="200" width="3" height="95" fill="#2a1810" opacity="0.4"/>
+    <ellipse cx="1115" cy="120" rx="16" ry="22" fill="#5a8a3a" opacity="0.6"/>
+    <ellipse cx="1140" cy="220" rx="19" ry="27" fill="#4a7a2a" opacity="0.5"/>
+    <ellipse cx="1132" cy="90" rx="92" ry="125" fill="url(#foliage-gradient)" opacity="0.8"/>
+    <ellipse cx="1132" cy="150" rx="97" ry="115" fill="#6a9a4a" opacity="0.7"/>
+    <ellipse cx="1132" cy="200" rx="87" ry="108" fill="#5a8a3a" opacity="0.75"/>
+  </g>
+  
+  <!-- Hanging vines -->
+  <g opacity="0.7">
+    <path class="vine" d="M 80,50 Q 82,150 78,250" stroke="#4a6a2a" stroke-width="3" fill="none" style="animation-delay: 0s;"/>
+    <path class="vine" d="M 95,70 Q 98,170 92,270" stroke="#5a7a3a" stroke-width="2.5" fill="none" style="animation-delay: 2s;"/>
+    <path class="vine" d="M 1120,60 Q 1118,160 1122,260" stroke="#4a6a2a" stroke-width="3" fill="none" style="animation-delay: 1s;"/>
+    <path class="vine" d="M 1145,80 Q 1142,180 1148,280" stroke="#5a7a3a" stroke-width="2.5" fill="none" style="animation-delay: 3s;"/>
+    
+    <!-- Vine leaves -->
+    <ellipse cx="82" cy="150" rx="8" ry="12" fill="#5a8a3a" opacity="0.8"/>
+    <ellipse cx="78" cy="200" rx="7" ry="11" fill="#5a8a3a" opacity="0.8"/>
+    <ellipse cx="1118" cy="140" rx="8" ry="12" fill="#5a8a3a" opacity="0.8"/>
+    <ellipse cx="1122" cy="190" rx="7" ry="11" fill="#5a8a3a" opacity="0.8"/>
+  </g>
+  
+  <!-- Foreground undergrowth -->
+  <g class="layer-near" opacity="0.8">
+    <!-- Ferns and bushes -->
+    <ellipse cx="200" cy="370" rx="40" ry="25" fill="#4a7a3a" opacity="0.7"/>
+    <ellipse cx="240" cy="375" rx="35" ry="22" fill="#5a8a4a" opacity="0.6"/>
+    <ellipse cx="950" cy="372" rx="42" ry="26" fill="#4a7a3a" opacity="0.7"/>
+    <ellipse cx="1000" cy="377" rx="38" ry="24" fill="#5a8a4a" opacity="0.6"/>
+    
+    <!-- Grass tufts -->
+    <path d="M 180,380 Q 182,360 180,350" stroke="#5a8a3a" stroke-width="2" fill="none"/>
+    <path d="M 185,382 Q 188,362 186,352" stroke="#6a9a4a" stroke-width="1.5" fill="none"/>
+    <path d="M 190,381 Q 191,361 192,351" stroke="#5a8a3a" stroke-width="2" fill="none"/>
+    <path d="M 1010,380 Q 1008,360 1010,350" stroke="#5a8a3a" stroke-width="2" fill="none"/>
+    <path d="M 1015,382 Q 1012,362 1014,352" stroke="#6a9a4a" stroke-width="1.5" fill="none"/>
+    <path d="M 1020,381 Q 1021,361 1019,351" stroke="#5a8a3a" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Light rain (very gentle) -->
+  <g opacity="0.15">
+    <line class="rain" x1="250" y1="-10" x2="250" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4s; animation-delay: 0s;"/>
+    <line class="rain" x1="400" y1="-10" x2="400" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.5s; animation-delay: 1s;"/>
+    <line class="rain" x1="550" y1="-10" x2="550" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.2s; animation-delay: 2s;"/>
+    <line class="rain" x1="700" y1="-10" x2="700" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.7s; animation-delay: 0.5s;"/>
+    <line class="rain" x1="850" y1="-10" x2="850" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.3s; animation-delay: 1.5s;"/>
+    <line class="rain" x1="1000" y1="-10" x2="1000" y2="10" stroke="#f8ff88" stroke-width="0.8" style="animation-duration: 4.6s; animation-delay: 0.8s;"/>
+  </g>
+  
+  <!-- Fireflies (warm glowing) -->
+  <!-- Far layer -->
+  <g opacity="0.7">
+    <circle class="firefly-1" cx="280" cy="180" r="2.5" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
+    <circle class="firefly-2" cx="480" cy="200" r="2.5" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
+    <circle class="firefly-3" cx="720" cy="190" r="2.5" fill="url(#firefly-light)" filter="url(#firefly-glow)"/>
+    <circle class="firefly-1" cx="920" cy="175" r="2.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -5s;"/>
+  </g>
+  
+  <!-- Mid layer -->
+  <g opacity="0.85">
+    <circle class="firefly-2" cx="350" cy="220" r="3.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -7s;"/>
+    <circle class="firefly-1" cx="550" cy="210" r="3.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -11s;"/>
+    <circle class="firefly-3" cx="650" cy="235" r="3.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -3s;"/>
+    <circle class="firefly-2" cx="800" cy="225" r="3.5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -9s;"/>
+  </g>
+  
+  <!-- Near layer (brightest) -->
   <g opacity="1">
-    <circle class="firefly-3" cx="250" cy="250" r="4" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -7s;"/>
-    <circle class="firefly-1" cx="700" cy="230" r="4" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -10s;"/>
-    <circle class="firefly-2" cx="950" cy="270" r="4" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -4s;"/>
+    <circle class="firefly-3" cx="300" cy="260" r="5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -13s;"/>
+    <circle class="firefly-1" cx="600" cy="250" r="5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -6s;"/>
+    <circle class="firefly-2" cx="900" cy="270" r="5" fill="url(#firefly-light)" filter="url(#firefly-glow)" style="animation-delay: -15s;"/>
   </g>
   
-  <!-- Subtle foreground mist -->
-  <rect x="0" y="300" width="1200" height="100" filter="url(#mist-filter)" opacity="0.2"/>
+  <!-- Warm overlay for atmosphere -->
+  <rect width="1200" height="400" fill="#f8e8a8" opacity="0.05"/>
+  
+  <!-- Subtle ground mist -->
+  <rect x="0" y="320" width="1200" height="80" filter="url(#mist-filter)" opacity="0.15"/>
 </svg>
