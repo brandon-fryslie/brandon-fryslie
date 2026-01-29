@@ -1,0 +1,303 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes flow {
+        0% { stroke-dashoffset: 20; }
+        100% { stroke-dashoffset: 0; }
+      }
+      
+      .data-flow { animation: flow 2s linear infinite; }
+      
+      @keyframes fold {
+        0%, 100% { transform: rotateY(0deg); }
+        50% { transform: rotateY(10deg); }
+      }
+      
+      .fold-line { animation: fold 4s ease-in-out infinite; transform-origin: center; }
+    </style>
+    
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8b4049" />
+    </marker>
+    
+    <pattern id="seam-pattern" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M 0,2 L 2,0 M 2,4 L 4,2" stroke="#8b4049" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Ivory background -->
+  <rect width="800" height="600" fill="#f5f0e8"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="18" 
+        font-weight="300"
+        letter-spacing="4"
+        fill="#1a1a1a" 
+        text-anchor="middle">PATTERN: DATA TRANSFORMATION PIPELINE</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="60" 
+        font-family="system-ui, -apple-system, monospace" 
+        font-size="10" 
+        letter-spacing="1"
+        fill="#4a4a4a" 
+        text-anchor="middle">CUT → SEAM → DRAPE</text>
+  
+  <!-- Main pattern pieces -->
+  
+  <!-- Piece 1: Raw Input (pattern piece with cut lines) -->
+  <g transform="translate(100, 120)">
+    <rect width="180" height="140" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+    
+    <!-- Cut lines (dashed) -->
+    <line x1="0" y1="50" x2="180" y2="50" stroke="#8b4049" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="90" y1="0" x2="90" y2="140" stroke="#8b4049" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    
+    <!-- Label -->
+    <text x="90" y="25" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="14" 
+          font-weight="500"
+          letter-spacing="2"
+          fill="#1a1a1a" 
+          text-anchor="middle">RAW INPUT</text>
+    
+    <!-- Annotation -->
+    <text x="90" y="75" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">Untyped data</text>
+    <text x="90" y="90" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">Mixed sources</text>
+    <text x="90" y="105" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">No guarantees</text>
+    
+    <!-- Measurement marks -->
+    <g stroke="#1a1a1a" stroke-width="0.5" opacity="0.3">
+      <line x1="-10" y1="0" x2="-10" y2="140"/>
+      <line x1="-12" y1="0" x2="-8" y2="0"/>
+      <line x1="-12" y1="140" x2="-8" y2="140"/>
+      <text x="-18" y="75" font-family="monospace" font-size="8" text-anchor="end">140</text>
+    </g>
+  </g>
+  
+  <!-- Arrow: Cut operation -->
+  <g>
+    <line class="data-flow" x1="290" y1="190" x2="370" y2="190" 
+          stroke="#8b4049" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+    <text x="330" y="180" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="11" 
+          font-weight="500"
+          fill="#8b4049" 
+          text-anchor="middle">CUT</text>
+    <text x="330" y="210" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="8" 
+          fill="#6a6a6a" 
+          text-anchor="middle">Parse & validate</text>
+  </g>
+  
+  <!-- Piece 2: Typed Graph (folded pattern) -->
+  <g transform="translate(380, 120)">
+    <rect width="180" height="140" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+    
+    <!-- Fold line (shows 3D transformation) -->
+    <line class="fold-line" x1="90" y1="0" x2="90" y2="140" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <!-- Label -->
+    <text x="90" y="25" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="14" 
+          font-weight="500"
+          letter-spacing="2"
+          fill="#1a1a1a" 
+          text-anchor="middle">TYPED GRAPH</text>
+    
+    <!-- Annotation -->
+    <text x="90" y="70" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">Nodes: Typed</text>
+    <text x="90" y="85" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">Edges: Validated</text>
+    <text x="90" y="100" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">DAG enforced</text>
+    
+    <!-- Seam indicator -->
+    <rect x="170" y="50" width="10" height="40" fill="url(#seam-pattern)"/>
+    <text x="195" y="75" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="8" 
+          fill="#8b4049" 
+          text-anchor="start">SEAM:</text>
+    <text x="195" y="87" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="7" 
+          fill="#6a6a6a" 
+          text-anchor="start">Interface</text>
+    <text x="195" y="96" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="7" 
+          fill="#6a6a6a" 
+          text-anchor="start">boundary</text>
+  </g>
+  
+  <!-- Arrow: Drape operation -->
+  <g>
+    <path class="data-flow" d="M 470,270 L 470,320 L 400,320" 
+          stroke="#8b4049" stroke-width="2" stroke-dasharray="5,5" 
+          fill="none" marker-end="url(#arrow)"/>
+    <text x="500" y="300" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="11" 
+          font-weight="500"
+          fill="#8b4049" 
+          text-anchor="start">DRAPE</text>
+    <text x="500" y="312" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="8" 
+          fill="#6a6a6a" 
+          text-anchor="start">Flow transforms</text>
+  </g>
+  
+  <!-- Piece 3: Output IR (finished garment) -->
+  <g transform="translate(180, 330)">
+    <rect width="210" height="160" fill="#fff" stroke="#1a1a1a" stroke-width="2.5"/>
+    
+    <!-- Finished seams (solid) -->
+    <line x1="0" y1="60" x2="210" y2="60" stroke="#8b4049" stroke-width="1.5"/>
+    <line x1="105" y1="0" x2="105" y2="160" stroke="#8b4049" stroke-width="1.5"/>
+    
+    <!-- Label -->
+    <text x="105" y="30" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="14" 
+          font-weight="500"
+          letter-spacing="2"
+          fill="#1a1a1a" 
+          text-anchor="middle">OUTPUT IR</text>
+    
+    <!-- Annotation -->
+    <text x="105" y="90" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">Fully typed</text>
+    <text x="105" y="105" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">Linearized</text>
+    <text x="105" y="120" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a" 
+          text-anchor="middle">Ready to execute</text>
+    
+    <!-- Quality mark -->
+    <circle cx="180" cy="140" r="12" fill="none" stroke="#8b4049" stroke-width="1.5"/>
+    <text x="180" y="144" 
+          font-family="Georgia, serif" 
+          font-size="11" 
+          font-weight="bold"
+          fill="#8b4049" 
+          text-anchor="middle">✓</text>
+  </g>
+  
+  <!-- Materials list -->
+  <g transform="translate(580, 130)">
+    <text x="0" y="0" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="12" 
+          font-weight="500"
+          letter-spacing="2"
+          fill="#1a1a1a">MATERIALS</text>
+    
+    <text x="0" y="25" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">Parser: nom v7.1</text>
+    <text x="0" y="40" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">Validator: Custom</text>
+    <text x="0" y="55" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">Graph: petgraph v0.6</text>
+    <text x="0" y="70" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">IR: Custom AST</text>
+    
+    <line x1="0" y1="85" x2="180" y2="85" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+    
+    <text x="0" y="105" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="12" 
+          font-weight="500"
+          letter-spacing="2"
+          fill="#1a1a1a">TOLERANCES</text>
+    
+    <text x="0" y="130" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">Parse error: Fail fast</text>
+    <text x="0" y="145" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">Type error: Zero</text>
+    <text x="0" y="160" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">Cycle detect: Panic</text>
+    <text x="0" y="175" 
+          font-family="system-ui, -apple-system, monospace" 
+          font-size="9" 
+          fill="#4a4a4a">Memory: Bounded</text>
+  </g>
+  
+  <!-- Corner measurements (atelier detail) -->
+  <g stroke="#1a1a1a" stroke-width="0.5" opacity="0.15">
+    <line x1="30" y1="30" x2="30" y2="40"/>
+    <line x1="30" y1="30" x2="40" y2="30"/>
+    
+    <line x1="770" y1="30" x2="770" y2="40"/>
+    <line x1="770" y1="30" x2="760" y2="30"/>
+    
+    <line x1="30" y1="570" x2="30" y2="560"/>
+    <line x1="30" y1="570" x2="40" y2="570"/>
+    
+    <line x1="770" y1="570" x2="770" y2="560"/>
+    <line x1="770" y1="570" x2="760" y2="570"/>
+  </g>
+  
+  <!-- Footer -->
+  <text x="40" y="585" 
+        font-family="system-ui, -apple-system, monospace" 
+        font-size="8" 
+        fill="#7a7a7a">PATTERN № 04.01</text>
+  
+  <text x="760" y="585" 
+        font-family="system-ui, -apple-system, monospace" 
+        font-size="8" 
+        fill="#7a7a7a" 
+        text-anchor="end">WINTER 2026</text>
+</svg>

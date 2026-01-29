@@ -1,0 +1,53 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes thread-float-1 {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+      }
+      
+      @keyframes thread-float-2 {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+      }
+      
+      .warp-1 { animation: thread-float-1 4s ease-in-out infinite; }
+      .warp-2 { animation: thread-float-2 4s ease-in-out infinite; animation-delay: -1s; }
+      .warp-3 { animation: thread-float-1 4s ease-in-out infinite; animation-delay: -2s; }
+      .warp-4 { animation: thread-float-2 4s ease-in-out infinite; animation-delay: -3s; }
+    </style>
+  </defs>
+  
+  <!-- Ivory background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f5f0e8"/>
+  
+  <!-- Loom frame -->
+  <rect x="40" y="50" width="120" height="100" fill="none" stroke="#1a1a1a" stroke-width="2" rx="2"/>
+  
+  <!-- Warp threads (vertical) -->
+  <line class="warp-1" x1="60" y1="50" x2="60" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line class="warp-2" x1="80" y1="50" x2="80" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line class="warp-3" x1="100" y1="50" x2="100" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line class="warp-4" x1="120" y1="50" x2="120" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line class="warp-1" x1="140" y1="50" x2="140" y2="150" stroke="#2a2a2a" stroke-width="1.5"/>
+  
+  <!-- Weft thread (horizontal weaving pattern) with accent color -->
+  <path d="M 40,80 Q 50,78 60,80 Q 70,82 80,80 Q 90,78 100,80 Q 110,82 120,80 Q 130,78 140,80 Q 150,82 160,80" 
+        fill="none" stroke="#8b4049" stroke-width="2"/>
+  
+  <path d="M 40,95 Q 50,97 60,95 Q 70,93 80,95 Q 90,97 100,95 Q 110,93 120,95 Q 130,97 140,95 Q 150,93 160,95" 
+        fill="none" stroke="#8b4049" stroke-width="2"/>
+  
+  <path d="M 40,110 Q 50,108 60,110 Q 70,112 80,110 Q 90,108 100,110 Q 110,112 120,110 Q 130,108 140,110 Q 150,112 160,110" 
+        fill="none" stroke="#8b4049" stroke-width="2"/>
+  
+  <path d="M 40,125 Q 50,127 60,125 Q 70,123 80,125 Q 90,127 100,125 Q 110,123 120,125 Q 130,127 140,125 Q 150,123 160,125" 
+        fill="none" stroke="#8b4049" stroke-width="2"/>
+  
+  <!-- Center knot detail -->
+  <circle cx="100" cy="100" r="8" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="100" cy="100" r="4" fill="#8b4049"/>
+  
+  <!-- Subtle border -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.15"/>
+</svg>

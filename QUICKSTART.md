@@ -2,12 +2,13 @@
 
 ## ✅ What You Have
 
-**5 Complete Theme Variations:**
+**6 Complete Theme Variations:**
 1. `README.md` - Observatory of Determinism (ACTIVE)
 2. `README-CYBERPUNK.md` - Cyberpunk/Neon
 3. `README-MAXIMUM-RIDICULOUS.md` - Over-the-top fun
 4. `README-OBSERVATORY.md` - Observatory of Determinism
-5. `README-COURT.md` - Court of Types and Contracts (NEW!)
+5. `README-COURT.md` - Court of Types and Contracts
+6. `README-ATELIER.md` - Atelier of Machines That Dream in Geometry (NEW!)
 
 **21 Animated SVGs** in `/assets/` folder
 
@@ -39,6 +40,11 @@ cp README-OBSERVATORY.md README.md && git add README.md && git commit -m "Observ
 cp README-COURT.md README.md && git add README.md && git commit -m "Court theme" && git push
 ```
 
+**To Atelier of Machines That Dream in Geometry:**
+```bash
+cp README-ATELIER.md README.md && git add README.md && git commit -m "Atelier theme" && git push
+```
+
 **Back to Original:**
 ```bash
 git checkout HEAD -- README.md && git push
@@ -48,8 +54,8 @@ git checkout HEAD -- README.md && git push
 
 ## 📊 Stats
 
-- **Animations:** 29+ custom SVGs
-- **Themes:** 5 complete + infinite on request
+- **Animations:** 35+ custom SVGs
+- **Themes:** 6 complete + infinite on request
 - **All factual:** rad-shell 41★, 10 years, thousands of users
 - **All working:** GitHub-compatible animations
 
