@@ -1,0 +1,80 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="wax" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#b8324d;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b1538;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a0f24;stop-opacity:1" />
+    </radialGradient>
+    
+    <filter id="waxTexture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="4" result="noise"/>
+      <feDiffuseLighting in="noise" lighting-color="#8b1538" surfaceScale="2">
+        <feDistantLight azimuth="45" elevation="50"/>
+      </feDiffuseLighting>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    
+    <filter id="emboss">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75" specularExponent="20" lighting-color="#d4a574" result="spec">
+        <fePointLight x="80" y="60" z="150"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
+  
+  <!-- Wax blob (irregular) -->
+  <ellipse cx="100" cy="100" rx="85" ry="82" fill="url(#wax)" filter="url(#waxTexture)"/>
+  <ellipse cx="95" cy="105" rx="83" ry="80" fill="url(#wax)" opacity="0.8"/>
+  
+  <!-- Seal impression (embossed) -->
+  <g filter="url(#emboss)">
+    <!-- Outer circle -->
+    <circle cx="100" cy="100" r="65" fill="none" stroke="#5a0f24" stroke-width="2" opacity="0.6"/>
+    <circle cx="100" cy="100" r="60" fill="none" stroke="#5a0f24" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Scales of justice (centered) -->
+    <g transform="translate(100, 100)">
+      <!-- Central pole -->
+      <rect x="-2" y="-35" width="4" height="50" fill="#5a0f24" opacity="0.7"/>
+      
+      <!-- Crossbar -->
+      <rect x="-30" y="-35" width="60" height="3" fill="#5a0f24" opacity="0.7"/>
+      
+      <!-- Left scale -->
+      <path d="M -25,-32 L -30,-20 L -20,-20 Z" fill="none" stroke="#5a0f24" stroke-width="1.5" opacity="0.7"/>
+      <line x1="-25" y1="-35" x2="-25" y2="-32" stroke="#5a0f24" stroke-width="1" opacity="0.7"/>
+      
+      <!-- Right scale -->
+      <path d="M 25,-32 L 20,-20 L 30,-20 Z" fill="none" stroke="#5a0f24" stroke-width="1.5" opacity="0.7"/>
+      <line x1="25" y1="-35" x2="25" y2="-32" stroke="#5a0f24" stroke-width="1" opacity="0.7"/>
+      
+      <!-- Base -->
+      <rect x="-8" y="15" width="16" height="4" fill="#5a0f24" opacity="0.7"/>
+      <path d="M -12,19 L -8,19 L -6,23 L 6,23 L 8,19 L 12,19 L 8,27 L -8,27 Z" fill="#5a0f24" opacity="0.7"/>
+    </g>
+    
+    <!-- Text around seal -->
+    <path id="sealTopText" d="M 50,100 A 50,50 0 0,1 150,100" fill="none"/>
+    <path id="sealBottomText" d="M 150,100 A 50,50 0 0,1 50,100" fill="none"/>
+    
+    <text font-family="Garamond, Georgia, serif" font-size="11" fill="#5a0f24" opacity="0.8" font-weight="bold" letter-spacing="1.5">
+      <textPath href="#sealTopText" startOffset="50%" text-anchor="middle">
+        TYPES • CONTRACTS
+      </textPath>
+    </text>
+    
+    <text font-family="Garamond, Georgia, serif" font-size="9" fill="#5a0f24" opacity="0.7" letter-spacing="1">
+      <textPath href="#sealBottomText" startOffset="50%" text-anchor="middle">
+        MMXI • DETERMINISM
+      </textPath>
+    </text>
+  </g>
+  
+  <!-- Drips -->
+  <ellipse cx="85" cy="175" rx="8" ry="10" fill="#8b1538" opacity="0.6"/>
+  <ellipse cx="115" cy="178" rx="6" ry="8" fill="#8b1538" opacity="0.5"/>
+  <ellipse cx="100" cy="180" rx="7" ry="9" fill="#8b1538" opacity="0.55"/>
+</svg>
