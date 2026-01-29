@@ -2,11 +2,12 @@
 
 ## ✅ What You Have
 
-**4 Complete Theme Variations:**
-1. `README.md` - Transcendent/Psychedelic (ACTIVE)
+**5 Complete Theme Variations:**
+1. `README.md` - Observatory of Determinism (ACTIVE)
 2. `README-CYBERPUNK.md` - Cyberpunk/Neon
 3. `README-MAXIMUM-RIDICULOUS.md` - Over-the-top fun
-4. `README-OBSERVATORY.md` - Observatory of Determinism (NEW!)
+4. `README-OBSERVATORY.md` - Observatory of Determinism
+5. `README-COURT.md` - Court of Types and Contracts (NEW!)
 
 **21 Animated SVGs** in `/assets/` folder
 
@@ -33,7 +34,12 @@ cp README-MAXIMUM-RIDICULOUS.md README.md && git add README.md && git commit -m 
 cp README-OBSERVATORY.md README.md && git add README.md && git commit -m "Observatory theme" && git push
 ```
 
-**Back to Transcendent:**
+**To Court of Types and Contracts:**
+```bash
+cp README-COURT.md README.md && git add README.md && git commit -m "Court theme" && git push
+```
+
+**Back to Original:**
 ```bash
 git checkout HEAD -- README.md && git push
 ```
@@ -42,8 +48,8 @@ git checkout HEAD -- README.md && git push
 
 ## 📊 Stats
 
-- **Animations:** 26+ custom SVGs
-- **Themes:** 4 complete + infinite on request
+- **Animations:** 29+ custom SVGs
+- **Themes:** 5 complete + infinite on request
 - **All factual:** rad-shell 41★, 10 years, thousands of users
 - **All working:** GitHub-compatible animations
 
