@@ -1,0 +1,162 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="voidGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <style>
+      .star-node { cursor: pointer; transition: all 0.3s; }
+      .star-node:hover { transform: scale(1.5); }
+      .star-node:hover + .label { opacity: 1; }
+      .label { opacity: 0; transition: opacity 0.3s; }
+      .orbit { stroke-dasharray: 5,5; animation: rotate 20s linear infinite; transform-origin: 300px 300px; }
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background void -->
+  <rect width="600" height="600" fill="url(#voidGrad)"/>
+  
+  <!-- Central star (core architecture) -->
+  <circle cx="300" cy="300" r="8" fill="#d4c5a9" filter="url(#starGlow)"/>
+  <text x="300" y="330" font-family="Georgia, serif" font-size="12" fill="#8b7355" text-anchor="middle" font-variant="small-caps">Core</text>
+  
+  <!-- Orbital rings -->
+  <circle class="orbit" cx="300" cy="300" r="80" fill="none" stroke="#6b5d47" stroke-width="0.5" opacity="0.3"/>
+  <circle class="orbit" cx="300" cy="300" r="140" fill="none" stroke="#6b5d47" stroke-width="0.5" opacity="0.3"/>
+  <circle class="orbit" cx="300" cy="300" r="200" fill="none" stroke="#6b5d47" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Inner ring - Type System -->
+  <g>
+    <circle class="star-node" cx="300" cy="220" r="4" fill="#b8936f" filter="url(#starGlow)">
+      <title>TypeScript: Static type checking ensures deterministic behavior at compile time</title>
+    </circle>
+    <text class="label" x="300" y="210" font-family="Georgia, serif" font-size="9" fill="#8b7355" text-anchor="middle" font-variant="small-caps">Type Safety</text>
+    
+    <circle class="star-node" cx="380" cy="300" r="4" fill="#b8936f" filter="url(#starGlow)">
+      <title>Immutability: Data structures that cannot change prevent temporal coupling</title>
+    </circle>
+    <text class="label" x="390" y="300" font-family="Georgia, serif" font-size="9" fill="#8b7355" text-anchor="start" font-variant="small-caps">Immutable</text>
+    
+    <circle class="star-node" cx="300" cy="380" r="4" fill="#b8936f" filter="url(#starGlow)">
+      <title>Pure Functions: Same input always produces same output</title>
+    </circle>
+    <text class="label" x="300" y="395" font-family="Georgia, serif" font-size="9" fill="#8b7355" text-anchor="middle" font-variant="small-caps">Pure</text>
+    
+    <circle class="star-node" cx="220" cy="300" r="4" fill="#b8936f" filter="url(#starGlow)">
+      <title>Deterministic: No hidden state, no race conditions</title>
+    </circle>
+    <text class="label" x="210" y="300" font-family="Georgia, serif" font-size="9" fill="#8b7355" text-anchor="end" font-variant="small-caps">Deterministic</text>
+  </g>
+  
+  <!-- Middle ring - Architecture -->
+  <g>
+    <circle class="star-node" cx="300" cy="160" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>Event Sourcing: Complete audit trail of all state changes</title>
+    </circle>
+    <text class="label" x="300" y="150" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="middle" font-variant="small-caps">Event Source</text>
+    
+    <circle class="star-node" cx="399" cy="241" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>CQRS: Separate read and write models for clarity</title>
+    </circle>
+    <text class="label" x="420" y="241" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="start" font-variant="small-caps">CQRS</text>
+    
+    <circle class="star-node" cx="440" cy="300" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>Idempotency: Operations that can be repeated safely</title>
+    </circle>
+    <text class="label" x="455" y="300" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="start" font-variant="small-caps">Idempotent</text>
+    
+    <circle class="star-node" cx="399" cy="359" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>Transaction Boundaries: Explicit atomicity guarantees</title>
+    </circle>
+    <text class="label" x="420" y="369" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="start" font-variant="small-caps">Transactional</text>
+    
+    <circle class="star-node" cx="300" cy="440" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>Versioning: Explicit schema evolution prevents drift</title>
+    </circle>
+    <text class="label" x="300" y="455" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="middle" font-variant="small-caps">Versioned</text>
+    
+    <circle class="star-node" cx="201" cy="359" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>Error Boundaries: Failures isolated and recoverable</title>
+    </circle>
+    <text class="label" x="180" y="369" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="end" font-variant="small-caps">Fault Tolerant</text>
+    
+    <circle class="star-node" cx="160" cy="300" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>Observability: Complete visibility into system state</title>
+    </circle>
+    <text class="label" x="145" y="300" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="end" font-variant="small-caps">Observable</text>
+    
+    <circle class="star-node" cx="201" cy="241" r="4" fill="#8b7355" filter="url(#starGlow)">
+      <title>Reproducible Builds: Bit-for-bit identical artifacts</title>
+    </circle>
+    <text class="label" x="180" y="241" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="end" font-variant="small-caps">Reproducible</text>
+  </g>
+  
+  <!-- Outer ring - Infrastructure -->
+  <g>
+    <circle class="star-node" cx="300" cy="100" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Seeded Randomness: Pseudorandom but deterministic</title>
+    </circle>
+    <text class="label" x="300" y="90" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="middle" font-variant="small-caps" opacity="0.8">Seeded RNG</text>
+    
+    <circle class="star-node" cx="441" cy="159" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Time Mocking: Temporal determinism in tests</title>
+    </circle>
+    <text class="label" x="455" y="159" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="start" font-variant="small-caps" opacity="0.8">Time Control</text>
+    
+    <circle class="star-node" cx="500" cy="300" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Property Testing: Prove behavior across input space</title>
+    </circle>
+    <text class="label" x="515" y="300" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="start" font-variant="small-caps" opacity="0.8">Property Tests</text>
+    
+    <circle class="star-node" cx="441" cy="441" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Snapshot Testing: Detect unintended changes</title>
+    </circle>
+    <text class="label" x="455" y="451" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="start" font-variant="small-caps" opacity="0.8">Snapshots</text>
+    
+    <circle class="star-node" cx="300" cy="500" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Contract Testing: Verify interface boundaries</title>
+    </circle>
+    <text class="label" x="300" y="515" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="middle" font-variant="small-caps" opacity="0.8">Contracts</text>
+    
+    <circle class="star-node" cx="159" cy="441" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Chaos Engineering: Verify resilience under failure</title>
+    </circle>
+    <text class="label" x="145" y="451" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="end" font-variant="small-caps" opacity="0.8">Chaos Tests</text>
+    
+    <circle class="star-node" cx="100" cy="300" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Continuous Integration: Every commit verified</title>
+    </circle>
+    <text class="label" x="85" y="300" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="end" font-variant="small-caps" opacity="0.8">CI/CD</text>
+    
+    <circle class="star-node" cx="159" cy="159" r="4" fill="#6b5d47" filter="url(#starGlow)">
+      <title>Infrastructure as Code: Declarative, versioned config</title>
+    </circle>
+    <text class="label" x="145" y="159" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="end" font-variant="small-caps" opacity="0.8">IaC</text>
+  </g>
+  
+  <!-- Connecting lines -->
+  <line x1="300" y1="300" x2="300" y2="220" stroke="#6b5d47" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="300" x2="380" y2="300" stroke="#6b5d47" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="300" x2="300" y2="380" stroke="#6b5d47" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="300" x2="220" y2="300" stroke="#6b5d47" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Title -->
+  <text x="300" y="40" font-family="Georgia, serif" font-size="16" fill="#8b7355" text-anchor="middle" font-variant="small-caps">Architectural Invariants</text>
+  <text x="300" y="58" font-family="Georgia, serif" font-size="10" fill="#6b5d47" text-anchor="middle" font-style="italic">Hover to reveal constraints</text>
+  
+  <!-- Footer -->
+  <text x="300" y="580" font-family="Georgia, serif" font-size="9" fill="#6b5d47" text-anchor="middle" font-variant="small-caps" opacity="0.6">Figure 3: The Impossible Star</text>
+</svg>
