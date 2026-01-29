@@ -1,0 +1,192 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* ATTEMPT 1: CSS :hover (won't work in GitHub's <img> context) */
+      .hover-test {
+        fill: #667eea;
+        transition: fill 0.3s;
+      }
+      .hover-test:hover {
+        fill: #f5576c;
+      }
+      
+      /* ATTEMPT 2: Simulated hover with animation */
+      @keyframes fake-hover {
+        0%, 70%, 100% { fill: #667eea; }
+        80%, 90% { fill: #f5576c; }
+      }
+      .fake-hover {
+        animation: fake-hover 4s ease-in-out infinite;
+      }
+      
+      /* ATTEMPT 3: :focus pseudo-class */
+      .focus-test {
+        fill: #667eea;
+      }
+      .focus-test:focus {
+        fill: #4AE290;
+      }
+    </style>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    Interactivity Tests (Most Won't Work on GitHub)
+  </text>
+  
+  <!-- Test 1: CSS :hover -->
+  <g transform="translate(100, 100)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      Test 1: CSS :hover
+    </text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" fill="#666666" font-style="italic">
+      Should turn red on hover
+    </text>
+    <text x="0" y="16" font-family="Arial, sans-serif" font-size="11" fill="#ff6b6b" font-style="italic">
+      (Won't work in GitHub README)
+    </text>
+    
+    <rect class="hover-test" x="0" y="30" width="150" height="80" rx="10" filter="url(#glow)"/>
+    <text x="75" y="75" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">
+      Hover Me?
+    </text>
+  </g>
+  
+  <!-- Test 2: Animated "hover" simulation -->
+  <g transform="translate(350, 100)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      Test 2: Fake Hover
+    </text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" fill="#666666" font-style="italic">
+      Simulates hover with animation
+    </text>
+    <text x="0" y="16" font-family="Arial, sans-serif" font-size="11" fill="#4AE290" font-style="italic">
+      ✓ Works on GitHub!
+    </text>
+    
+    <rect class="fake-hover" x="0" y="30" width="150" height="80" rx="10" filter="url(#glow)"/>
+    <text x="75" y="75" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">
+      Auto Pulse
+    </text>
+  </g>
+  
+  <!-- Test 3: SMIL click event -->
+  <g transform="translate(600, 100)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      Test 3: SMIL Click
+    </text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" fill="#666666" font-style="italic">
+      Should change on click
+    </text>
+    <text x="0" y="16" font-family="Arial, sans-serif" font-size="11" fill="#ff6b6b" font-style="italic">
+      (Won't work in README)
+    </text>
+    
+    <rect x="0" y="30" width="150" height="80" rx="10" fill="#667eea" filter="url(#glow)">
+      <set attributeName="fill" to="#f5576c" begin="click"/>
+    </rect>
+    <text x="75" y="75" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">
+      Click Me?
+    </text>
+  </g>
+  
+  <!-- Test 4: Focusable element -->
+  <g transform="translate(100, 280)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      Test 4: :focus
+    </text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" fill="#666666" font-style="italic">
+      Should highlight when focused
+    </text>
+    <text x="0" y="16" font-family="Arial, sans-serif" font-size="11" fill="#ff6b6b" font-style="italic">
+      (Won't work - no tab navigation)
+    </text>
+    
+    <rect class="focus-test" x="0" y="30" width="150" height="80" rx="10" tabindex="0" filter="url(#glow)"/>
+    <text x="75" y="75" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">
+      Tab to Me?
+    </text>
+  </g>
+  
+  <!-- Test 5: Link attempt -->
+  <g transform="translate(350, 280)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      Test 5: SVG Link
+    </text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" fill="#666666" font-style="italic">
+      Should link to URL
+    </text>
+    <text x="0" y="16" font-family="Arial, sans-serif" font-size="11" fill="#ff6b6b" font-style="italic">
+      (Links stripped by GitHub)
+    </text>
+    
+    <a href="https://github.com" target="_blank">
+      <rect x="0" y="30" width="150" height="80" rx="10" fill="#667eea" filter="url(#glow)"/>
+      <text x="75" y="75" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">
+        Link?
+      </text>
+    </a>
+  </g>
+  
+  <!-- Test 6: What actually works -->
+  <g transform="translate(600, 280)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-weight="bold">
+      Test 6: Time-Based
+    </text>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" fill="#666666" font-style="italic">
+      Auto-animates forever
+    </text>
+    <text x="0" y="16" font-family="Arial, sans-serif" font-size="11" fill="#4AE290" font-style="italic">
+      ✓ Always works!
+    </text>
+    
+    <rect x="0" y="30" width="150" height="80" rx="10" fill="#667eea" filter="url(#glow)">
+      <animate attributeName="fill" values="#667eea;#f5576c;#4AE290;#667eea" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="75" y="75" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">
+      Auto Color
+    </text>
+  </g>
+  
+  <!-- Summary -->
+  <g transform="translate(50, 440)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">
+      Results on GitHub:
+    </text>
+    
+    <text x="0" y="30" font-family="monospace" font-size="12" fill="#ff6b6b">
+      ❌ Test 1 (CSS :hover): Doesn't work - <tspan font-style="italic">SVG embedded as &lt;img&gt;</tspan>
+    </text>
+    <text x="0" y="52" font-family="monospace" font-size="12" fill="#4AE290">
+      ✓ Test 2 (Fake hover): Works - <tspan font-style="italic">Pure animation</tspan>
+    </text>
+    <text x="0" y="74" font-family="monospace" font-size="12" fill="#ff6b6b">
+      ❌ Test 3 (SMIL click): Doesn't work - <tspan font-style="italic">No event delivery in &lt;img&gt;</tspan>
+    </text>
+    <text x="0" y="96" font-family="monospace" font-size="12" fill="#ff6b6b">
+      ❌ Test 4 (:focus): Doesn't work - <tspan font-style="italic">No focus events in &lt;img&gt;</tspan>
+    </text>
+    <text x="0" y="118" font-family="monospace" font-size="12" fill="#ff6b6b">
+      ❌ Test 5 (Links): Stripped - <tspan font-style="italic">Security policy removes &lt;a&gt; tags</tspan>
+    </text>
+    <text x="0" y="140" font-family="monospace" font-size="12" fill="#4AE290">
+      ✓ Test 6 (Time-based): Always works - <tspan font-style="italic">No user input needed</tspan>
+    </text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="11" fill="#666666" text-anchor="middle" font-style="italic">
+    If you're viewing this directly (not in README), some tests might work. In README: only time-based animations work.
+  </text>
+</svg>
