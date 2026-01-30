@@ -4,7 +4,7 @@
 
 # Brandon Fryslie
 
-Developer tools · Terminal systems · LED art installations · 15 years of shipping
+Terminal systems · OS-level browser automation · Animation compilers · LED sculpture control · 15 years
 
 ![Years Badge](https://img.shields.io/badge/Years-15%2B-6b5d47?style=flat-square&labelColor=1a1a1a)
 ![Repos Badge](https://img.shields.io/badge/Repos-71-6b5d47?style=flat-square&labelColor=1a1a1a)
@@ -16,15 +16,19 @@ Developer tools · Terminal systems · LED art installations · 15 years of ship
 
 ## Now
 
-<table><tr><td width="65%" valign="top">
+<table><tr><td width="60%" valign="top">
 
-**[Oscilla Animator v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation tool with custom type system and compiler. Pattern-based keyframe generation, SVG export, mathematical expressions.
+**[Oscilla Animator v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** *(pushed today Jan 30 2026)*
 
-**[Cherry Chrome MCP](https://github.com/brandon-fryslie/cherry-chrome-mcp)** — Chrome DevTools for AI coding agents. Network inspection, console access, DOM manipulation via Model Context Protocol.
+Block-graph animation architecture with custom type system. Compiler pipeline: parse → validate → optimize → emit. Domain-specific language for animation with extensive architectural documentation.
 
-**This profile** — 41 animated SVGs within GitHub's security sandbox. SMIL animations, prime-number durations, pseudo-random effects without JavaScript.
+**[Cherry Chrome MCP](https://github.com/brandon-fryslie/cherry-chrome-mcp)** *(last push Jan 27 2026)*
 
-</td><td width="35%" valign="top" align="center">
+Chrome DevTools Protocol server for AI coding agents. Design philosophy: "Less is More" — CSS selectors, not accessibility tree. Returns only queried data, caps at 5 elements (max 20). Tools hidden based on connection state. Smart Mode auto-bundles info.
+
+**This profile** — 41 animated SVGs within GitHub's security sandbox. SMIL animations, prime-number durations (7s, 11s, 13s), pseudo-random effects without JavaScript.
+
+</td><td width="40%" valign="top" align="center">
 
 <img src="./assets/heartbeat.svg" width="100%" />
 
@@ -43,37 +47,47 @@ Developer tools · Terminal systems · LED art installations · 15 years of ship
 <td width="50%" valign="top">
 
 ### [rad-shell](https://github.com/brandon-fryslie/rad-shell)
-**41★ · Shell · 8+ years**
+**41★ · Shell · 8+ years active maintenance**
 
-Zsh framework with plugin architecture and fast Git status rendering. Modular design, lazy loading, performance optimizations. Active maintenance since 2017.
+Preconfigured Zsh environment combining Prezto + Zgen plugin manager. The real innovation: plugin management pattern that solves "Zsh setup is fragmented and slow." Interactive history/branch/commit selection via keyboard shortcuts. Performance-optimized startup. Created 2017, last push Nov 2025.
 
-### [Tesseract](https://github.com/brandon-fryslie/tesseract-react)
-**2★ · JavaScript + Java + Hardware**
+### [browsergeist](https://github.com/brandon-fryslie/browsergeist)
+**Python · Last push Aug 2025**
 
-Kinetic LED sculpture control system. React UI, Java backend, physical hardware integration. Real-time pattern generation and motor control.
+macOS browser automation using virtual HID drivers at OS level — NOT Selenium/Puppeteer. Undetectable by JavaScript (bypasses `navigator.webdriver`, timing analysis). Physics-based cursor movement with acceleration curves and behavioral randomization. Customizable motion profiles (careful, fast, natural). Vision capabilities: template matching, feature detection, OCR.
 
-### [pb-sync](https://github.com/brandon-fryslie/pb-sync) / [esp-bloom](https://github.com/brandon-fryslie/esp-bloom)
-**2★ · TypeScript + Python**
+### [Tesseract React](https://github.com/brandon-fryslie/tesseract-react)
+**2★ · JavaScript · 2025**
 
-PixelBlaze and ESP8266 LED art tools. Pattern synchronization, wireless updates, animation libraries for addressable LEDs.
+React UI for "Draco" kinetic LED sculpture — REAL PHYSICAL HARDWARE. Not just a React app — it controls actual art installations. Docker deployment, hardware integration.
+
+### [Firestorm](https://github.com/brandon-fryslie/Firestorm)
+**Last push ~2021**
+
+Centralized control console for multiple Pixelblaze WiFi LED controllers. Custom NTP-like time synchronization protocol using UDP beacons. Automatic recovery: disconnected devices get cached commands within 5 minutes. Web UI for pattern management across distributed LED installations.
 
 </td>
 <td width="50%" valign="top">
 
 ### [ptydriver](https://github.com/brandon-fryslie/ptydriver)
-**Python · 2025**
+**Python · MIT · Last push Jan 20 2026**
 
-Programmatic terminal automation. PTY management, command execution, output parsing. Foundation for AI terminal agents.
-
-### [claude-powerline](https://github.com/brandon-fryslie/claude-powerline)
-**Shell · 2025**
-
-Vim-style statusline for Claude Code. Git integration, directory context, customizable segments. Clear visual feedback in AI coding sessions.
+PTY automation library for interactive CLI programs. Treats programs as black boxes via PTY protocol. Send keystrokes, monitor output with regex, parallel execution via ProcessPool. Foundation for AI agents controlling terminals.
 
 ### [chaperone-auth-gateway](https://github.com/brandon-fryslie/chaperone-auth-gateway)
-**Go · 2026**
+**Go · MIT · Last push Jan 15 2026**
 
-Authentication gateway with session management. JWT handling, middleware architecture, secure token validation.
+Authentication gateway with JWT/session management. Real infrastructure: CI/CD workflows (test, beta, production releases). PROJECT_SPEC.md, ROADMAP.md, SECURITY.md — properly planned. 99.2% Go.
+
+### [esp-bloom](https://github.com/brandon-fryslie/esp-bloom)
+**Python**
+
+Bias lighting system: captures macOS screen content → processes into LED colors → drives SK6812 LEDs via ESP8266. Real hardware project with active TODOs.
+
+### [Smoke](https://github.com/brandon-fryslie/Smoke)
+**4★ · PHP · 2011**
+
+NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extracted from CodeIgniter for when full framework is overkill. "CI is overkill for sites that only need one simple form."
 
 </td>
 </tr>
@@ -85,6 +99,51 @@ Authentication gateway with session management. JWT handling, middleware archite
 
 ---
 
+## More Projects
+
+<details>
+<summary><strong>AI & Automation (2024–2026)</strong></summary>
+
+- **[claude-powerline](https://github.com/brandon-fryslie/claude-powerline)** (Shell/Node, 2025) — Vim-style statusline for Claude Code. Real-time token tracking, git integration, customizable themes
+- **[kalider](https://github.com/brandon-fryslie/kalider)** (Python, Apache 2.0) — Kali Linux automation: natural language → security commands. Pentesting workflow automation
+- **[long-term](https://github.com/brandon-fryslie/long-term)** (Go, Jan 20 2026) — PTY wrapper that reports fake terminal height to fix tmux rendering bugs. Elegant solution to specific problem
+- **[macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)** — Text-to-speech via OpenAI API
+- **[mcp-server-template](https://github.com/brandon-fryslie/mcp-server-template)** — Model Context Protocol server template
+
+</details>
+
+<details>
+<summary><strong>Hardware & LED Art (2019–2021)</strong></summary>
+
+- **[pb-sync](https://github.com/brandon-fryslie/pb-sync)** (TypeScript/Shell) — PixelBlaze pattern synchronization — backup/restore LED animation patterns across devices
+- **[qmk_firmware](https://github.com/brandon-fryslie/qmk_firmware)** — Custom keyboard firmware
+- **[ergodox-layout](https://github.com/brandon-fryslie/ergodox-layout)** — ErgoDox keyboard layout
+
+</details>
+
+<details>
+<summary><strong>DevOps & Infrastructure (2015–2020)</strong></summary>
+
+- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** (3★, Shell, Jan 27 2026) — Development environment configuration, actively maintained
+- **[terraform-provider-datadog](https://github.com/brandon-fryslie/terraform-provider-datadog)** — Datadog Terraform provider contributions
+- **[gradle-baseline](https://github.com/brandon-fryslie/gradle-baseline)** — Gradle plugin development
+
+</details>
+
+<details>
+<summary><strong>Web & Frameworks (2011–2018)</strong></summary>
+
+- **[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee)** — Ember.js REST adapter
+- **[combine](https://github.com/brandon-fryslie/combine)** — Legacy tooling
+
+</details>
+
+<div align="center">
+<img src="./assets/constellation.svg" width="500" />
+</div>
+
+---
+
 ## Arc
 
 <table>
@@ -92,7 +151,7 @@ Authentication gateway with session management. JWT handling, middleware archite
 <td width="20%" valign="top" align="right"><strong>2011–2014</strong></td>
 <td width="80%" valign="top">
 
-**PHP/Ruby foundations** — [Smoke framework](https://github.com/brandon-fryslie/Smoke) (4★), early web tools, MVC patterns, database abstraction
+**PHP/Ruby foundations** — [Smoke framework](https://github.com/brandon-fryslie/Smoke) (4★, anti-MVC philosophy), early web tools, database abstraction
 
 </td>
 </tr>
@@ -100,7 +159,7 @@ Authentication gateway with session management. JWT handling, middleware archite
 <td width="20%" valign="top" align="right"><strong>2015–2018</strong></td>
 <td width="80%" valign="top">
 
-**JavaScript/CoffeeScript era** — DevOps, [rad-shell](https://github.com/brandon-fryslie/rad-shell) matures, [ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee), terminal tooling
+**JavaScript/Shell era** — [rad-shell](https://github.com/brandon-fryslie/rad-shell) matures (still most-starred work), [ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee), terminal tooling, DevOps patterns
 
 </td>
 </tr>
@@ -108,7 +167,15 @@ Authentication gateway with session management. JWT handling, middleware archite
 <td width="20%" valign="top" align="right"><strong>2019–2021</strong></td>
 <td width="80%" valign="top">
 
-**Hardware** — ESP8266 LED art, [pb-sync](https://github.com/brandon-fryslie/pb-sync), [esp-bloom](https://github.com/brandon-fryslie/esp-bloom), keyboard firmware, physical computing
+**Hardware focus** — [esp-bloom](https://github.com/brandon-fryslie/esp-bloom), [pb-sync](https://github.com/brandon-fryslie/pb-sync), [Firestorm](https://github.com/brandon-fryslie/Firestorm) (UDP time sync for distributed LEDs), keyboard firmware, physical computing
+
+</td>
+</tr>
+<tr>
+<td width="20%" valign="top" align="right"><strong>2022–2023</strong></td>
+<td width="80%" valign="top">
+
+**Quiet period** — Few public repos (likely private/corporate work)
 
 </td>
 </tr>
@@ -116,7 +183,7 @@ Authentication gateway with session management. JWT handling, middleware archite
 <td width="20%" valign="top" align="right"><strong>2024–2025</strong></td>
 <td width="80%" valign="top">
 
-**AI tooling explosion** — [browsergeist](https://github.com/brandon-fryslie/browsergeist), [ptydriver](https://github.com/brandon-fryslie/ptydriver), [macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai), 23 repos in one year
+**AI tooling explosion** — [browsergeist](https://github.com/brandon-fryslie/browsergeist) (OS-level HID automation), [ptydriver](https://github.com/brandon-fryslie/ptydriver), [kalider](https://github.com/brandon-fryslie/kalider), 23+ repos in one year
 
 </td>
 </tr>
@@ -124,7 +191,7 @@ Authentication gateway with session management. JWT handling, middleware archite
 <td width="20%" valign="top" align="right"><strong>2026</strong></td>
 <td width="80%" valign="top">
 
-**Animation compilers** — [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2), custom type systems, [cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp)
+**Animation compilers** — [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2) (custom type system, compiler pipeline), [cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp) (Chrome DevTools for AI agents)
 
 </td>
 </tr>
@@ -160,6 +227,8 @@ Authentication gateway with session management. JWT handling, middleware archite
 
 </div>
 
+**Real distribution** (from GitHub API): Python 30% (21 repos) · JavaScript 10% (7 repos) · CoffeeScript 10% (7 repos) · TypeScript 8% (6 repos) · Shell 8% (6 repos) · Go 4% (3 repos) · PHP 4% (3 repos)
+
 <div align="center">
 <img src="./assets/code-garden.svg" width="600" />
 </div>
@@ -175,50 +244,10 @@ Authentication gateway with session management. JWT handling, middleware archite
 
 </div>
 
+**Portfolio stats**: 143 total public repos (71 original, 72 forks) · 78 total stars · Account since Dec 2010 (15+ years)
+
 <div align="center">
 <img src="./assets/commit-art.svg" width="700" />
-</div>
-
----
-
-## More Projects
-
-<details>
-<summary><strong>AI & Automation (2024–2026)</strong></summary>
-
-- **[browsergeist](https://github.com/brandon-fryslie/browsergeist)** — Browser automation for AI agents
-- **[macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)** — Text-to-speech via OpenAI API
-- **[mcp-server-template](https://github.com/brandon-fryslie/mcp-server-template)** — Model Context Protocol server template
-
-</details>
-
-<details>
-<summary><strong>DevOps & Infrastructure (2015–2020)</strong></summary>
-
-- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** (3★) — Personal development environment configuration
-- **[terraform-provider-datadog](https://github.com/brandon-fryslie/terraform-provider-datadog)** — Datadog Terraform provider contributions
-- **[gradle-baseline](https://github.com/brandon-fryslie/gradle-baseline)** — Gradle plugin development
-
-</details>
-
-<details>
-<summary><strong>Hardware & Embedded (2019–2021)</strong></summary>
-
-- **[qmk_firmware](https://github.com/brandon-fryslie/qmk_firmware)** — Custom keyboard firmware
-- **[ergodox-layout](https://github.com/brandon-fryslie/ergodox-layout)** — ErgoDox keyboard layout
-
-</details>
-
-<details>
-<summary><strong>Web & Frameworks (2011–2018)</strong></summary>
-
-- **[Smoke](https://github.com/brandon-fryslie/Smoke)** (4★) — PHP MVC framework
-- **[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee)** — Ember.js REST adapter
-
-</details>
-
-<div align="center">
-<img src="./assets/constellation.svg" width="600" />
 </div>
 
 ---
@@ -313,7 +342,7 @@ Zero chill
 
 **Typography:** System fonts, no external dependencies
 
-**Technique:** All animations work within GitHub's SVG security sandbox (no JS, no hover, no links)
+**Technique:** All animations work within GitHub's SVG security sandbox (no JS, no hover, no links). Prime-number durations (7s, 11s, 13s) with staggered delays for pseudo-random visual variety. Prefer SMIL over CSS animations for better GitHub rendering compatibility.
 
 **Updated:** January 2026
 
