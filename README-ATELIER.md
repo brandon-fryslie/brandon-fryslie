@@ -1,161 +1,96 @@
-# THE ATELIER
-
 ![Atelier Banner](./assets/atelier-banner.svg)
 
-**Machines That Dream in Geometry**  
-*Winter 2026: Continuity & Gauge*
+# Brandon Fryslie
+
+I build developer tools, terminal systems, and LED art installations. 15 years of shipping.
 
 ---
 
-## CURRENT SEASON
+## Now
 
-This season explores **continuity in discrete systems**—how to make step functions feel smooth, how to bridge index sets without tearing, how to measure drift without breaking determinism.
+**[Oscilla Animator v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation tool with custom type system and compiler
 
-**Collection pieces:**
-- **Warp** — Timebase, scheduling, determinism  
-- **Weft** — Data flowing through index sets  
-- **Selvage** — Boundary conditions: adapters, defaults, ingestion rules  
-- **Drape** — Smoothing, slew filters, continuity  
-- **Cut** — Compilation passes that shape raw graphs into typed IR  
+**[Cherry Chrome MCP](https://github.com/brandon-fryslie/cherry-chrome-mcp)** — Chrome DevTools for AI coding agents
+
+**This profile** — 41 animated SVGs within GitHub's security sandbox
 
 ---
 
-## PATTERN SHEETS
+## Signature Work
 
-Each piece is documented as a **pattern sheet**:
+**[rad-shell](https://github.com/brandon-fryslie/rad-shell)** (41★, 8+ years) — Zsh framework with plugin architecture and fast Git status rendering
 
-### **Materials** (Dependencies)
-What you'll need to construct this piece. Versions matter—like thread count.
+**[Tesseract](https://github.com/brandon-fryslie/tesseract-react)** — Kinetic LED sculpture control system (React + Java + physical hardware)
 
-### **Measurements** (Complexities)
-O(n log n) here, O(1) there. Where the seams strain under load.
+**[pb-sync](https://github.com/brandon-fryslie/pb-sync)** / **[esp-bloom](https://github.com/brandon-fryslie/esp-bloom)** — PixelBlaze and ESP8266 LED art tools
 
-### **Seams** (Interfaces)
-Points of contact between modules. This is where nondeterminism leaks in—reinforce carefully.
+**[ptydriver](https://github.com/brandon-fryslie/ptydriver)** — Programmatic terminal automation
 
-### **Tolerances** (Error Bounds)
-How much slippage can the system absorb before it shows? ±0.001? ±1 frame?
+**[claude-powerline](https://github.com/brandon-fryslie/claude-powerline)** — Vim-style statusline for Claude Code
 
 ---
 
-## ATELIER NOTES
+## Arc
 
-### On Determinism as a Material Property
+**2011–2014** • PHP/Ruby foundations — [Smoke framework](https://github.com/brandon-fryslie/Smoke), early web tools
 
-Nondeterminism is not a bug—it's a cheap fabric. It frays. You can work with it if you line the seams: seed your randoms, version your floats, pin your timestamps. The result feels tighter.
+**2015–2018** • JavaScript/CoffeeScript era — DevOps, [rad-shell](https://github.com/brandon-fryslie/rad-shell) matures, [ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee)
 
-### On Index Sets as Looms
+**2019–2021** • Hardware — ESP8266 LED art, [pb-sync](https://github.com/brandon-fryslie/pb-sync), [esp-bloom](https://github.com/brandon-fryslie/esp-bloom), keyboard firmware
 
-A loom holds warp threads taut while weft threads weave through. An index set is the same: a structure that constrains what can move, defining where data can flow. The pattern emerges from tension between the fixed and the free.
+**2024–2025** • AI tooling — [browsergeist](https://github.com/brandon-fryslie/browsergeist), [ptydriver](https://github.com/brandon-fryslie/ptydriver), [macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai), 23 repos in one year
 
-### On Smoothing Without Lying
-
-A slew filter is not interpolation—it's a controlled fall. You're not inventing data; you're admitting that discrete steps are a rendering artifact. The underlying signal was always continuous; you're just letting it breathe.
+**2026** • Animation compilers — [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2), custom type systems, [cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp)
 
 ---
 
-## LIVING GALLERY
+## Languages & Domains
 
-![Daily Generative Art](./assets/atelier-daily-art.svg)
+**Primary:** Python, TypeScript, JavaScript, Shell/Zsh, Go
 
-One piece in this collection is **alive**: a GitHub Action that generates a new visual each day from a deterministic seed. The image is not decoration—it's a **diagnostic artifact**. Each shape corresponds to:
-- A render tree layout
-- A phase field state
-- A particle index set distribution
+**Also:** Kotlin, Groovy, CoffeeScript, HCL, C, PHP, Ruby
 
-**Today's piece:**  
-Seed: `2026-01-29` | Commit: `310fb71` | Pattern: _Voronoi tesselation of constraint satisfaction states_
-
-View the [**Gallery Archive**](./GALLERY.md) to see the full seasonal collection.
+**Domains:** Terminal tooling, LED/hardware art, AI/MCP, DevOps, animation systems
 
 ---
 
-## PREVIOUS SEASONS
+## Principles
 
-### [Autumn 2025: Boundaries & Adapters](./seasons/autumn-2025.md)
-*Selvage, ingestion rules, protocol negotiation. How systems touch without tearing.*
+**Restraint** — Few projects, finished well. Every repo earns its place.
 
-### [Summer 2025: Phase & Rhythm](./seasons/summer-2025.md)
-*Scheduling, tempo maps, frame budgets. Making time feel right, not just correct.*
+**Coherence** — Consistent naming, structure, voice. Not a storage unit.
 
-### [Spring 2025: Foundation Garments](./seasons/spring-2025.md)
-*Core data structures, indexing, the invisible scaffolding that everything drapes over.*
+**Finish** — The last 10% is half the work. Polish the READMEs. Draw the diagrams. Write the tests that prove the claim.
 
----
-
-## CRAFT PRINCIPLES
-
-### **Restraint**
-Few pieces, finished well. Every repo earns its place.
-
-### **Coherence**
-Consistent naming. Consistent structure. Consistent voice. This is not a storage unit.
-
-### **Finish**
-The last 10% is half the work. Polish the READMEs. Draw the diagrams. Write the tests that prove the claim.
-
-### **Seasonality**
-Work in focused arcs. Not "ongoing" or "maintenance mode"—**complete**. Then archive and begin again.
+**Seasonality** — Work in focused arcs. Complete, then archive and begin again.
 
 ---
 
-## TAILORING DIAGRAMS
+## Alternate Views
 
-Documentation includes **pattern-style diagrams**: flat shapes with annotations, sewn seams, fold lines. These map naturally to:
-- Block graphs (modules as pattern pieces)
-- IR transforms (cutting and refolding)
-- Data flow (how the fabric drapes)
+This profile can be read through different lenses:
 
-Example:
-```
-    ╔═══════════════╗
-    ║   Raw Input   ║
-    ╚═══════════════╝
-           ↓ (cut)
-    ╔═══════════════╗
-    ║  Typed Graph  ║──→ (seam: interface boundary)
-    ╚═══════════════╝
-           ↓ (drape)
-    ╔═══════════════╗
-    ║  Output IR    ║
-    ╚═══════════════╝
-```
-
-See [**PATTERN-GUIDE.md**](./PATTERN-GUIDE.md) for the full visual language.
+- **[Observatory](./README-OBSERVATORY.md)** — Science and instrumentation
+- **[Court](./README-COURT.md)** — Contracts and ceremony
+- **[Cyberpunk](./README-CYBERPUNK.md)** — Neon and chrome
+- **[Maximum Ridiculous](./README-MAXIMUM-RIDICULOUS.md)** — Zero chill
 
 ---
 
-## COMMISSIONS & INQUIRIES
+## Colophon
 
-This atelier does not take commissions—but you may study the patterns.
+**Banner:** Custom SVG with SMIL animations — faint wireframe over ivory, single burgundy accent
 
-All pieces are open-source. The techniques are yours to learn. The philosophy is yours to question.
+**Typography:** System fonts, no external dependencies
 
-If you build something with these methods, I'd love to see it.
+**Technique:** All animations work within GitHub's SVG security sandbox (no JS, no hover, no links)
 
----
+**Updated:** January 2026
 
-## MATERIALS & TOOLS
-
-**Languages:** Rust, Zig, TypeScript  
-**Substrates:** WASM, native, GPU  
-**Instruments:** Deterministic chaos, seeded noise, constraint solvers  
-**Philosophy:** [README-OBSERVATORY.md](./README-OBSERVATORY.md) for the science; this atelier for the craft.
+View the [Gallery](./GALLERY.md) for all 41 animated SVGs.
 
 ---
 
-## COLOPHON
+**— Brandon Fryslie**
 
-This profile is itself a piece in the collection.
-
-**Banner:** Faint wireframe over ivory, single burgundy accent  
-**Typography:** GT America, Inter, system monospace  
-**Diagrams:** Hand-drawn in SVG, then cleaned in code  
-**Updated:** Each season's first commit  
-
----
-
-*The Atelier does not chase trends. It makes pieces that last.*
-
-**— BRANDON FRYSLIE**  
 *Winter 2026*
