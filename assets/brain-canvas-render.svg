@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="800" height="260">
+  <defs>
+    <!-- Gradients for JSON and UI sides -->
+    <linearGradient id="json-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a5f8f"/>
+      <stop offset="100%" style="stop-color:#2a3f5f"/>
+    </linearGradient>
+
+    <linearGradient id="ui-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8f5f4a"/>
+      <stop offset="100%" style="stop-color:#5f3f2a"/>
+    </linearGradient>
+
+    <!-- Data flow gradient -->
+    <linearGradient id="flow-stream" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a5f8f;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#6a7faf;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8f5f4a;stop-opacity:0"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="260" fill="#0f0f1a"/>
+
+  <!-- Left side: JSON representation -->
+  <g id="json-side">
+    <!-- JSON bracket symbols -->
+    <text x="80" y="80" font-family="monospace" font-size="48" fill="#4a5f8f" opacity="0.8" filter="url(#glow)">{</text>
+    <text x="80" y="180" font-family="monospace" font-size="48" fill="#4a5f8f" opacity="0.8" filter="url(#glow)">}</text>
+
+    <!-- JSON data flowing -->
+    <g opacity="0.6">
+      <text x="130" y="90" font-family="monospace" font-size="10" fill="#6a7faf">"type": "hero"</text>
+      <text x="130" y="110" font-family="monospace" font-size="10" fill="#6a7faf">"content": {...}</text>
+      <text x="130" y="130" font-family="monospace" font-size="10" fill="#6a7faf">"sections": [...]</text>
+
+      <!-- Animated data appearing -->
+      <rect x="130" y="145" width="80" height="2" fill="#6a7faf">
+        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.2;0.8;1" dur="11s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="130" y="155" width="60" height="2" fill="#6a7faf">
+        <animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.3;0.8;1" dur="11s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- LLM label -->
+    <text x="140" y="40" font-family="monospace" font-size="11" fill="#4a5f8f" opacity="0.7">LLM OUTPUT</text>
+  </g>
+
+  <!-- Data stream arrow/flow -->
+  <g id="data-flow">
+    <!-- Arrow shape -->
+    <line x1="280" y1="130" x2="480" y2="130" stroke="url(#flow-stream)" stroke-width="3">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="480,130 470,125 470,135" fill="#6a7faf">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+    </polygon>
+
+    <!-- Data particles flowing -->
+    <circle r="3" fill="#6a7faf" filter="url(#glow)">
+      <animate attributeName="cx" values="280;480" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="130;130" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2" fill="#8a9fbf" opacity="0.7">
+      <animate attributeName="cx" values="280;480" dur="7s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="130;130" dur="7s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.5;1" dur="7s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2" fill="#8a9fbf" opacity="0.7">
+      <animate attributeName="cx" values="280;480" dur="7s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="130;130" dur="7s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.5;1" dur="7s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Transform label -->
+    <text x="380" y="115" font-family="monospace" font-size="9" fill="#6a7faf" text-anchor="middle" opacity="0.6">TRANSFORM</text>
+  </g>
+
+  <!-- Right side: Rendered UI sections -->
+  <g id="ui-side">
+    <!-- UI container -->
+    <rect x="520" y="50" width="240" height="170" rx="4" fill="#1a1a2a" stroke="#8f5f4a" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Section 1: Hero (appears first) -->
+    <rect x="530" y="60" width="220" height="18" rx="2" fill="#8f5f4a" opacity="0">
+      <animate attributeName="opacity" values="0;0.8" dur="1s" begin="2s" fill="freeze"/>
+    </rect>
+    <text x="640" y="72" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="1s" begin="2s" fill="freeze"/>
+      HERO
+    </text>
+
+    <!-- Section 2: Text block -->
+    <rect x="530" y="85" width="220" height="14" rx="2" fill="#6f4f3a" opacity="0">
+      <animate attributeName="opacity" values="0;0.7" dur="1s" begin="3s" fill="freeze"/>
+    </rect>
+
+    <!-- Section 3: Code -->
+    <rect x="530" y="105" width="220" height="20" rx="2" fill="#4a3f2a" opacity="0">
+      <animate attributeName="opacity" values="0;0.7" dur="1s" begin="4s" fill="freeze"/>
+    </rect>
+    <rect x="535" y="110" width="40" height="2" fill="#00ff41" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="1s" begin="4s" fill="freeze"/>
+    </rect>
+    <rect x="535" y="115" width="60" height="2" fill="#00ff41" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="1s" begin="4s" fill="freeze"/>
+    </rect>
+
+    <!-- Section 4: List -->
+    <rect x="530" y="132" width="220" height="12" rx="2" fill="#6f4f3a" opacity="0">
+      <animate attributeName="opacity" values="0;0.7" dur="1s" begin="5s" fill="freeze"/>
+    </rect>
+    <circle cx="540" cy="138" r="2" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.6" dur="1s" begin="5s" fill="freeze"/>
+    </circle>
+
+    <!-- Section 5: Image placeholder -->
+    <rect x="530" y="150" width="220" height="14" rx="2" fill="#5f4f4a" opacity="0">
+      <animate attributeName="opacity" values="0;0.7" dur="1s" begin="6s" fill="freeze"/>
+    </rect>
+
+    <!-- Section 6: Table -->
+    <rect x="530" y="170" width="220" height="14" rx="2" fill="#4a3f3a" opacity="0">
+      <animate attributeName="opacity" values="0;0.7" dur="1s" begin="7s" fill="freeze"/>
+    </rect>
+    <line x1="530" y1="177" x2="750" y2="177" stroke="#2a2a2a" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="1s" begin="7s" fill="freeze"/>
+    </line>
+    <line x1="640" y1="170" x2="640" y2="184" stroke="#2a2a2a" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="1s" begin="7s" fill="freeze"/>
+    </line>
+
+    <!-- Section 7: Callout -->
+    <rect x="530" y="190" width="220" height="12" rx="2" fill="#7f5f4a" opacity="0">
+      <animate attributeName="opacity" values="0;0.7" dur="1s" begin="8s" fill="freeze"/>
+    </rect>
+
+    <!-- Rendered UI label -->
+    <text x="640" y="235" font-family="monospace" font-size="11" fill="#8f5f4a" text-anchor="middle" opacity="0.7">INTERACTIVE UI</text>
+  </g>
+
+  <!-- Section type indicators (staggered animation) -->
+  <g opacity="0.5">
+    <text x="540" y="75" font-family="monospace" font-size="7" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="0.5s" begin="2s" fill="freeze"/>
+      1
+    </text>
+    <text x="540" y="95" font-family="monospace" font-size="7" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="0.5s" begin="3s" fill="freeze"/>
+      2
+    </text>
+    <text x="540" y="118" font-family="monospace" font-size="7" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="0.5s" begin="4s" fill="freeze"/>
+      3
+    </text>
+    <text x="540" y="140" font-family="monospace" font-size="7" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="0.5s" begin="5s" fill="freeze"/>
+      4
+    </text>
+    <text x="540" y="160" font-family="monospace" font-size="7" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="0.5s" begin="6s" fill="freeze"/>
+      5
+    </text>
+    <text x="540" y="180" font-family="monospace" font-size="7" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="0.5s" begin="7s" fill="freeze"/>
+      6
+    </text>
+    <text x="540" y="198" font-family="monospace" font-size="7" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.5" dur="0.5s" begin="8s" fill="freeze"/>
+      7
+    </text>
+  </g>
+
+  <!-- Bottom labels -->
+  <text x="400" y="25" font-family="monospace" font-size="12" fill="#6a7faf" text-anchor="middle" opacity="0.8">JSON → UI TRANSFORMATION</text>
+  <text x="50" y="250" font-family="monospace" font-size="10" fill="#4a5f8f" opacity="0.6">220 LINES</text>
+  <text x="720" y="250" font-family="monospace" font-size="10" fill="#8f5f4a" opacity="0.6" text-anchor="end">10 SECTION TYPES</text>
+</svg>

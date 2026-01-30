@@ -4,7 +4,7 @@
 
 # Brandon Fryslie
 
-Terminal systems · OS-level browser automation · Animation compilers · LED sculpture control · 15 years
+Terminal systems, OS-level browser automation, animation compilers, distributed LED sync, and 15 years of finishing what I start.
 
 ![Years Badge](https://img.shields.io/badge/Years-15%2B-6b5d47?style=flat-square&labelColor=1a1a1a)
 ![Repos Badge](https://img.shields.io/badge/Repos-71-6b5d47?style=flat-square&labelColor=1a1a1a)
@@ -16,26 +16,26 @@ Terminal systems · OS-level browser automation · Animation compilers · LED sc
 
 ## Now
 
-<table><tr><td width="60%" valign="top">
+<table><tr><td width="55%" valign="top">
 
-**[Oscilla Animator v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** *(pushed today Jan 30 2026)*
+**[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** *(753 commits, pushed today)*
 
-Block-graph animation architecture with custom type system. Compiler pipeline: parse → validate → optimize → emit. Domain-specific language for animation with extensive architectural documentation.
+Custom type system and compiler for animation. Block-graph architecture: blocks process/emit signals through typed connections (domains, payloads, cardinality). Compiler pipeline: parse → validate → optimize → emit. Not a tool — a domain-specific language.
 
-**[Cherry Chrome MCP](https://github.com/brandon-fryslie/cherry-chrome-mcp)** *(last push Jan 27 2026)*
+**[cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp)** *(last push Jan 27 2026)*
 
-Chrome DevTools Protocol server for AI coding agents. Design philosophy: "Less is More" — CSS selectors, not accessibility tree. Returns only queried data, caps at 5 elements (max 20). Tools hidden based on connection state. Smart Mode auto-bundles info.
+Chrome DevTools for AI agents. CSS selectors, not accessibility tree. "Less is More" — caps results at 5 elements. Dynamic tool visibility based on connection state.
 
 **This profile** — 41 animated SVGs within GitHub's security sandbox. SMIL animations, prime-number durations (7s, 11s, 13s), pseudo-random effects without JavaScript.
 
-</td><td width="40%" valign="top" align="center">
+</td><td width="45%" valign="top" align="center">
 
-<img src="./assets/heartbeat.svg" width="100%" />
+<img src="./assets/oscilla-compiler.svg" width="100%" />
 
 </td></tr></table>
 
 <div align="center">
-<img src="./assets/code-waves.svg" width="700" />
+<img src="./assets/heartbeat.svg" width="600" />
 </div>
 
 ---
@@ -47,54 +47,68 @@ Chrome DevTools Protocol server for AI coding agents. Design philosophy: "Less i
 <td width="50%" valign="top">
 
 ### [rad-shell](https://github.com/brandon-fryslie/rad-shell)
-**41★ · Shell · 8+ years active maintenance**
+**41★ · 7 forks · 8 years active**
 
-Preconfigured Zsh environment combining Prezto + Zgen plugin manager. The real innovation: plugin management pattern that solves "Zsh setup is fragmented and slow." Interactive history/branch/commit selection via keyboard shortcuts. Performance-optimized startup. Created 2017, last push Nov 2025.
+Preconfigured Zsh with Prezto + Zgen. The `.rad-plugins` composition model: user config is single source of truth, plugins loaded from any GitHub repo. Lazy-load NVM for fast startup. Includes rad-spinner: procedural braille-grid animations (12×4 grid, geometric rules).
+
+<img src="./assets/rad-shell-prompt.svg" width="100%" />
 
 ### [browsergeist](https://github.com/brandon-fryslie/browsergeist)
-**Python · Last push Aug 2025**
+**Python · macOS**
 
-macOS browser automation using virtual HID drivers at OS level — NOT Selenium/Puppeteer. Undetectable by JavaScript (bypasses `navigator.webdriver`, timing analysis). Physics-based cursor movement with acceleration curves and behavioral randomization. Customizable motion profiles (careful, fast, natural). Vision capabilities: template matching, feature detection, OCR.
+macOS browser automation via virtual HID drivers at OS level. NOT Selenium/Puppeteer — undetectable by JavaScript. Physics-based cursor movement with acceleration curves and behavioral randomization. Vision pipeline: OpenCV template matching, SIFT feature descriptors, OCR. Motion profiles: NATURAL, CAREFUL, FAST.
 
-### [Tesseract React](https://github.com/brandon-fryslie/tesseract-react)
-**2★ · JavaScript · 2025**
+<img src="./assets/browsergeist-hid.svg" width="100%" />
 
-React UI for "Draco" kinetic LED sculpture — REAL PHYSICAL HARDWARE. Not just a React app — it controls actual art installations. Docker deployment, hardware integration.
+### [ptydriver](https://github.com/brandon-fryslie/ptydriver) + [ptytest](https://github.com/brandon-fryslie/ptytest)
+**Python · MIT**
+
+PTY automation: spawns processes in virtual terminals (pyte library), maintains 2D screen buffer, sends keystrokes, matches output patterns. ProcessPool for parallel instances. ptytest adds pytest integration with app-specific key abstractions: `FzfKeys.NAVIGATE_DOWN`, `VimKeys.ENTER_INSERT_MODE`, `TmuxKeys.SPLIT_HORIZONTAL`.
+
+<img src="./assets/ptydriver-terminal.svg" width="100%" />
 
 ### [Firestorm](https://github.com/brandon-fryslie/Firestorm)
-**Last push ~2021**
 
-Centralized control console for multiple Pixelblaze WiFi LED controllers. Custom NTP-like time synchronization protocol using UDP beacons. Automatic recovery: disconnected devices get cached commands within 5 minutes. Web UI for pattern management across distributed LED installations.
+Centralized control for multiple Pixelblaze WiFi LED controllers. NTP-like time sync via UDP beacons — leverages Pixelblaze's discovery protocol. Client-driven sequence choreography. Automatic recovery: disconnected devices get cached commands within 5 minutes.
+
+<img src="./assets/firestorm-sync.svg" width="100%" />
 
 </td>
 <td width="50%" valign="top">
 
-### [ptydriver](https://github.com/brandon-fryslie/ptydriver)
-**Python · MIT · Last push Jan 20 2026**
+### [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)
+**TypeScript · 753 commits**
 
-PTY automation library for interactive CLI programs. Treats programs as black boxes via PTY protocol. Send keystrokes, monitor output with regex, parallel execution via ProcessPool. Foundation for AI agents controlling terminals.
+Animation compiler with custom type system. Block-graph architecture: blocks process/emit signals through typed connections (domains, payloads, cardinality). Compiler pipeline: parse → validate → optimize → emit. Not a tool — a domain-specific language.
+
+### [tesseract-react](https://github.com/brandon-fryslie/tesseract-react)
+**2★ · JavaScript**
+
+React UI controlling "Draco" kinetic LED sculpture. Real physical art installation. Docker deployment, iPad/local network access.
 
 ### [chaperone-auth-gateway](https://github.com/brandon-fryslie/chaperone-auth-gateway)
-**Go · MIT · Last push Jan 15 2026**
+**Go · 99.2% · MIT**
 
-Authentication gateway with JWT/session management. Real infrastructure: CI/CD workflows (test, beta, production releases). PROJECT_SPEC.md, ROADMAP.md, SECURITY.md — properly planned. 99.2% Go.
+JWT/session auth gateway with multi-stage release pipeline (beta → production). Multi-platform binaries (Linux/macOS/Windows × amd64/arm64). Has PROJECT_SPEC.md, ROADMAP.md, SECURITY.md — properly planned infrastructure.
 
-### [esp-bloom](https://github.com/brandon-fryslie/esp-bloom)
-**Python**
+### [brain-canvas](https://github.com/brandon-fryslie/brain-canvas)
+**JavaScript · 220 lines, 13 KB**
 
-Bias lighting system: captures macOS screen content → processes into LED colors → drives SK6812 LEDs via ESP8266. Real hardware project with active TODOs.
+Zero dependencies. Any LLM sends JSON → browser renders interactive UI. 10 section types. One command: `npx brain-canvas`.
+
+<img src="./assets/brain-canvas-render.svg" width="100%" />
 
 ### [Smoke](https://github.com/brandon-fryslie/Smoke)
 **4★ · PHP · 2011**
 
-NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extracted from CodeIgniter for when full framework is overkill. "CI is overkill for sites that only need one simple form."
+NOT an MVC framework. Service locator extracting CodeIgniter's libraries for standalone scripts. `smoke()->calendar->generate()`. Deliberately excluded routing, controllers, caching. Predates widespread DI adoption.
 
 </td>
 </tr>
 </table>
 
 <div align="center">
-<img src="./assets/tech-orbit.svg" width="600" />
+<img src="./assets/tech-orbit.svg" width="700" />
 </div>
 
 ---
@@ -102,44 +116,52 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 ## More Projects
 
 <details>
-<summary><strong>AI & Automation (2024–2026)</strong></summary>
+<summary><strong>Developer Tools</strong></summary>
 
-- **[claude-powerline](https://github.com/brandon-fryslie/claude-powerline)** (Shell/Node, 2025) — Vim-style statusline for Claude Code. Real-time token tracking, git integration, customizable themes
-- **[kalider](https://github.com/brandon-fryslie/kalider)** (Python, Apache 2.0) — Kali Linux automation: natural language → security commands. Pentesting workflow automation
-- **[long-term](https://github.com/brandon-fryslie/long-term)** (Go, Jan 20 2026) — PTY wrapper that reports fake terminal height to fix tmux rendering bugs. Elegant solution to specific problem
-- **[macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)** — Text-to-speech via OpenAI API
-- **[mcp-server-template](https://github.com/brandon-fryslie/mcp-server-template)** — Model Context Protocol server template
+<br/>
 
-</details>
+- **[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests. Debug Claude Code itself.
 
-<details>
-<summary><strong>Hardware & LED Art (2019–2021)</strong></summary>
+<img src="./assets/cc-dump-traffic.svg" width="100%" />
 
-- **[pb-sync](https://github.com/brandon-fryslie/pb-sync)** (TypeScript/Shell) — PixelBlaze pattern synchronization — backup/restore LED animation patterns across devices
-- **[qmk_firmware](https://github.com/brandon-fryslie/qmk_firmware)** — Custom keyboard firmware
-- **[ergodox-layout](https://github.com/brandon-fryslie/ergodox-layout)** — ErgoDox keyboard layout
+- **[claude-powerline](https://github.com/brandon-fryslie/claude-powerline)** — Vim-style statusline for Claude Code. Session cost, 5-hour rate-limit window, daily spend. Opus tokens weighted 5x Sonnet. "Today" segment cached: ~50ms after first ~250ms load.
+
+- **[long-term](https://github.com/brandon-fryslie/long-term)** (Go) — PTY wrapper reporting fake terminal height. Solves tmux rendering bugs. Interactive mode: Ctrl+\ ×3 enters overlay UI, adjust height live, watch app re-render.
+
+- **[kalider](https://github.com/brandon-fryslie/kalider)** (Python, Apache 2.0) — Natural language → Kali Linux commands. Review-before-execute safety model. Chains: "Found SSH on port 22 → suggest Hydra commands?"
 
 </details>
 
 <details>
-<summary><strong>DevOps & Infrastructure (2015–2020)</strong></summary>
+<summary><strong>Hardware & LED Art</strong></summary>
 
-- **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** (3★, Shell, Jan 27 2026) — Development environment configuration, actively maintained
-- **[terraform-provider-datadog](https://github.com/brandon-fryslie/terraform-provider-datadog)** — Datadog Terraform provider contributions
-- **[gradle-baseline](https://github.com/brandon-fryslie/gradle-baseline)** — Gradle plugin development
+<br/>
+
+- **[esp-bloom](https://github.com/brandon-fryslie/esp-bloom)** — Bias lighting: macOS screen capture → color processing → SK6812 RGBW LEDs via ESP8266 at 115200 baud. RGBW over RGB for better luminosity precision.
+
+- **[pb-sync](https://github.com/brandon-fryslie/pb-sync)** — Version control for LED patterns. Backup .epe files + metadata from Pixelblaze devices. Planned: bi-directional sync, watch directory, auto-upload.
+
+- **[ergodox-layout](https://github.com/brandon-fryslie/ergodox-layout)** — Custom ErgoDox mechanical keyboard layout.
 
 </details>
 
 <details>
-<summary><strong>Web & Frameworks (2011–2018)</strong></summary>
+<summary><strong>Legacy</strong></summary>
 
-- **[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee)** — Ember.js REST adapter
-- **[combine](https://github.com/brandon-fryslie/combine)** — Legacy tooling
+<br/>
+
+- **[Smoke](https://github.com/brandon-fryslie/Smoke)** (4★, 2011) — NOT an MVC framework. Service locator extracting CodeIgniter's libraries for standalone scripts. `smoke()->calendar->generate()`. Deliberately excluded routing, controllers, caching. Predates widespread DI adoption.
+
+- **[ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee)** (CoffeeScript, 2014) — REST adapter for Ember.js pre-Ember Data era. Auto-serialization, validation, `save()`/`destroy()`.
+
+- **[sake](https://github.com/brandon-fryslie/sake)** — WebSocket REPL. `./sake server [PORT]`, `./sake client [PORT]`, interactive message sending.
+
+- **[combine](https://github.com/brandon-fryslie/combine)** — PHP asset pipeline (CSS/JS minification) from the pre-npm era.
 
 </details>
 
 <div align="center">
-<img src="./assets/constellation.svg" width="500" />
+<img src="./assets/constellation.svg" width="600" />
 </div>
 
 ---
@@ -151,7 +173,7 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 <td width="20%" valign="top" align="right"><strong>2011–2014</strong></td>
 <td width="80%" valign="top">
 
-**PHP/Ruby foundations** — [Smoke framework](https://github.com/brandon-fryslie/Smoke) (4★, anti-MVC philosophy), early web tools, database abstraction
+**PHP/Ruby foundations** — [Smoke framework](https://github.com/brandon-fryslie/Smoke) (service locator predating DI adoption), early asset pipelines
 
 </td>
 </tr>
@@ -159,7 +181,7 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 <td width="20%" valign="top" align="right"><strong>2015–2018</strong></td>
 <td width="80%" valign="top">
 
-**JavaScript/Shell era** — [rad-shell](https://github.com/brandon-fryslie/rad-shell) matures (still most-starred work), [ember-rest.coffee](https://github.com/brandon-fryslie/ember-rest.coffee), terminal tooling, DevOps patterns
+**JavaScript/Shell era** — [rad-shell](https://github.com/brandon-fryslie/rad-shell) matures (still most-starred work at 41★), Ember, CoffeeScript, DevOps
 
 </td>
 </tr>
@@ -167,7 +189,7 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 <td width="20%" valign="top" align="right"><strong>2019–2021</strong></td>
 <td width="80%" valign="top">
 
-**Hardware focus** — [esp-bloom](https://github.com/brandon-fryslie/esp-bloom), [pb-sync](https://github.com/brandon-fryslie/pb-sync), [Firestorm](https://github.com/brandon-fryslie/Firestorm) (UDP time sync for distributed LEDs), keyboard firmware, physical computing
+**Hardware** — ESP8266 LED art, [Firestorm](https://github.com/brandon-fryslie/Firestorm) distributed sync, Pixelblaze pattern management, ErgoDox keyboard firmware
 
 </td>
 </tr>
@@ -175,7 +197,7 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 <td width="20%" valign="top" align="right"><strong>2022–2023</strong></td>
 <td width="80%" valign="top">
 
-**Quiet period** — Few public repos (likely private/corporate work)
+**Quiet period** — Few public repos (private/corporate work)
 
 </td>
 </tr>
@@ -183,7 +205,7 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 <td width="20%" valign="top" align="right"><strong>2024–2025</strong></td>
 <td width="80%" valign="top">
 
-**AI tooling explosion** — [browsergeist](https://github.com/brandon-fryslie/browsergeist) (OS-level HID automation), [ptydriver](https://github.com/brandon-fryslie/ptydriver), [kalider](https://github.com/brandon-fryslie/kalider), 23+ repos in one year
+**AI tooling explosion** — 23 repos in one year. [ptydriver](https://github.com/brandon-fryslie/ptydriver), [browsergeist](https://github.com/brandon-fryslie/browsergeist), [cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp), [kalider](https://github.com/brandon-fryslie/kalider), [cc-dump](https://github.com/brandon-fryslie/cc-dump), [brain-canvas](https://github.com/brandon-fryslie/brain-canvas), [claude-powerline](https://github.com/brandon-fryslie/claude-powerline)
 
 </td>
 </tr>
@@ -191,7 +213,7 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 <td width="20%" valign="top" align="right"><strong>2026</strong></td>
 <td width="80%" valign="top">
 
-**Animation compilers** — [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2) (custom type system, compiler pipeline), [cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp) (Chrome DevTools for AI agents)
+**Animation compilers** — [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2) (753 commits), auth infrastructure ([chaperone](https://github.com/brandon-fryslie/chaperone-auth-gateway)), active daily development
 
 </td>
 </tr>
@@ -208,29 +230,27 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 
 ![CoffeeScript](https://img.shields.io/badge/CoffeeScript-2F2625?style=for-the-badge&logo=coffeescript&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![Groovy](https://img.shields.io/badge/Groovy-4298B8?style=for-the-badge&logo=apache-groovy&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![HCL](https://img.shields.io/badge/HCL-623CE4?style=for-the-badge&logo=terraform&logoColor=white)
 ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 
-![Terminal](https://img.shields.io/badge/Terminal_Tooling-000000?style=for-the-badge&logo=windows-terminal&logoColor=white)
-![LED](https://img.shields.io/badge/LED_Hardware-FF6B6B?style=for-the-badge&logo=raspberry-pi&logoColor=white)
-![AI](https://img.shields.io/badge/AI_MCP-412991?style=for-the-badge&logo=openai&logoColor=white)
-![DevOps](https://img.shields.io/badge/DevOps-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Animation](https://img.shields.io/badge/Animation_Systems-FF61F6?style=for-the-badge&logo=adobe-after-effects&logoColor=white)
+**Domains:** Terminal/CLI · AI/MCP · LED/Hardware · Auth/Infra · Animation Systems · Security
 
 </div>
 
-**Real distribution** (from GitHub API): Python 30% (21 repos) · JavaScript 10% (7 repos) · CoffeeScript 10% (7 repos) · TypeScript 8% (6 repos) · Shell 8% (6 repos) · Go 4% (3 repos) · PHP 4% (3 repos)
+**Real distribution** (from GitHub): Python 30% (21 repos) · JavaScript 10% · TypeScript 8% · Shell 8% · Go 4%
 
 <div align="center">
-<img src="./assets/code-garden.svg" width="600" />
+<img src="./assets/skills-matrix.svg" width="700" />
 </div>
 
 ---
@@ -244,10 +264,8 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 
 </div>
 
-**Portfolio stats**: 143 total public repos (71 original, 72 forks) · 78 total stars · Account since Dec 2010 (15+ years)
-
 <div align="center">
-<img src="./assets/commit-art.svg" width="700" />
+<img src="./assets/code-garden.svg" width="700" />
 </div>
 
 ---
@@ -260,35 +278,35 @@ NOT an MVC framework — deliberately ANTI-MVC. Lightweight utility library extr
 
 **Restraint**
 
-Few projects, finished well. Every repo earns its place.
+Few projects, finished well
 
 </td>
 <td width="25%" valign="top">
 
 **Coherence**
 
-Consistent naming, structure, voice. Not a storage unit.
+Consistent naming, structure, voice
 
 </td>
 <td width="25%" valign="top">
 
 **Finish**
 
-The last 10% is half the work. Polish the READMEs. Draw the diagrams. Write the tests that prove the claim.
+The last 10% is half the work
 
 </td>
 <td width="25%" valign="top">
 
 **Seasonality**
 
-Work in focused arcs. Complete, then archive and begin again.
+Work in focused arcs, then archive
 
 </td>
 </tr>
 </table>
 
 <div align="center">
-<img src="./assets/philosophy.svg" width="500" />
+<img src="./assets/philosophy.svg" width="600" />
 </div>
 
 ---
@@ -331,7 +349,7 @@ Zero chill
 </table>
 
 <div align="center">
-<img src="./assets/geometric-knot.svg" width="400" />
+<img src="./assets/geometric-knot.svg" width="500" />
 </div>
 
 ---
@@ -346,7 +364,7 @@ Zero chill
 
 **Updated:** January 2026
 
-View the [Gallery](./GALLERY.md) for all 41 animated SVGs.
+View the [Gallery](./GALLERY.md) for all 41+ animated SVGs.
 
 <div align="center">
 <img src="./assets/signature.svg" width="400" />
