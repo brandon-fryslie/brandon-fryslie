@@ -24,8 +24,8 @@
 This is not a portfolio. This is a **catalog of instruments** built to measure, transform, and illuminate deterministic truths.
 
 Every artifact here operates under three principles:
-- **What it measures** — purpose without ambiguity  
-- **What it assumes** — preconditions and invariants  
+- **What it measures** — purpose without ambiguity
+- **What it assumes** — preconditions and invariants
 - **How it fails** — error modes and noise floors
 
 You cannot negotiate with orbital mechanics. You cannot negotiate with type safety.
@@ -38,14 +38,14 @@ You cannot negotiate with orbital mechanics. You cannot negotiate with type safe
 <tr><td width="50%" valign="top">
 
 ### **TransitLens** ⟨rad-shell⟩
-*Classification:* Terminal Observation System  
-*Calibration:* 10+ years, 41 stellar objects tracked  
+*Classification:* Terminal Observation System
+*Calibration:* 10+ years, 41 stellar objects tracked
 *Purpose:* Real-time Git state measurement with millisecond resolution
 
-**Sky Conditions:**  
-✓ Deterministic theme rendering  
-✓ Phase-locked plugin architecture  
-✓ Cross-platform stability (macOS, Linux)  
+**Sky Conditions:**
+✓ Deterministic theme rendering
+✓ Phase-locked plugin architecture
+✓ Cross-platform stability (macOS, Linux)
 ⚠ Requires Zsh ≥5.0
 
 **Observation ID:** [rad-shell v10.x](https://github.com/brandon-fryslie/rad-shell)
@@ -53,16 +53,16 @@ You cannot negotiate with orbital mechanics. You cannot negotiate with type safe
 ---
 
 ### **Ephemeris** ⟨dotfiles⟩
-*Classification:* Configuration Calibration System  
-*Purpose:* Reproducible development environment state  
+*Classification:* Configuration Calibration System
+*Purpose:* Reproducible development environment state
 
-**What it measures:**  
+**What it measures:**
 Exact configuration drift across machines
 
-**What it assumes:**  
+**What it assumes:**
 POSIX compliance, shell accessibility
 
-**How it fails:**  
+**How it fails:**
 Divergence under non-standard shells
 
 **Observation ID:** [dotfiles](https://github.com/brandon-fryslie/dotfiles)
@@ -70,29 +70,42 @@ Divergence under non-standard shells
 ---
 
 ### **SpectralForge** ⟨macos-tts-via-openai⟩
-*Classification:* Acoustic Transform Engine  
+*Classification:* Acoustic Transform Engine
 *Purpose:* Text → Speech waveform synthesis via OpenAI
 
-**Sky Conditions:**  
-✓ Deterministic voice selection  
-✓ Async buffering prevents frame drops  
+**Sky Conditions:**
+✓ Deterministic voice selection
+✓ Async buffering prevents frame drops
 ⚠ macOS-only (AVFoundation dependency)
 
 **Observation ID:** [macos-tts-via-openai](https://github.com/brandon-fryslie/macos-tts-via-openai)
 
+---
+
+### **Oscillation Compiler** ⟨oscilla-animator-v2⟩
+*Classification:* Animation Type System
+*Purpose:* Deterministic motion synthesis with compile-time guarantees
+
+**Sky Conditions:**
+✓ Custom type system enforces timeline coherence
+✓ Compiler pass architecture (parse → validate → optimize → emit)
+✓ Deterministic output for identical input
+
+**Observation ID:** [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)
+
 </td><td width="50%" valign="top">
 
 ### **ParallaxEngine** ⟨tesseract-react⟩
-*Classification:* Geometric State Projector  
+*Classification:* Geometric State Projector
 *Purpose:* 4D state → 2D canvas projection with rotation invariance
 
-**What it measures:**  
+**What it measures:**
 Hypercube rotation under quaternion transforms
 
-**What it assumes:**  
+**What it assumes:**
 WebGL availability, 60Hz refresh rate
 
-**How it fails:**  
+**How it fails:**
 Gimbal lock at degenerate angles, frame drops <30Hz
 
 **Observation ID:** [tesseract-react](https://github.com/brandon-fryslie/tesseract-react)
@@ -100,12 +113,12 @@ Gimbal lock at degenerate angles, frame drops <30Hz
 ---
 
 ### **Null Meridian** ⟨handy-debugger⟩
-*Classification:* Trace Instrument  
+*Classification:* Trace Instrument
 *Purpose:* Zero-overhead runtime inspection
 
-**Sky Conditions:**  
-✓ No production artifacts  
-✓ Conditional compilation gates  
+**Sky Conditions:**
+✓ No production artifacts
+✓ Conditional compilation gates
 ✓ Type-preserving transforms
 
 **Observation ID:** [handy-debugger](https://github.com/brandon-fryslie/handy-debugger)
@@ -113,19 +126,32 @@ Gimbal lock at degenerate angles, frame drops <30Hz
 ---
 
 ### **LightField Array** ⟨esp-bloom⟩
-*Classification:* Ambient Photon Modulator  
+*Classification:* Ambient Photon Modulator
 *Purpose:* Physical light control via deterministic patterns
 
-**What it measures:**  
+**What it measures:**
 Color temperature, brightness curves, network latency
 
-**What it assumes:**  
+**What it assumes:**
 ESP8266 hardware, stable WiFi
 
-**How it fails:**  
+**How it fails:**
 Network partition → fallback to local patterns
 
 **Observation ID:** [esp-bloom](https://github.com/brandon-fryslie/esp-bloom)
+
+---
+
+### **Chrome Telemetry Interface** ⟨cherry-chrome-mcp⟩
+*Classification:* DevTools Protocol Adapter
+*Purpose:* Expose Chrome debugging to AI coding agents
+
+**Sky Conditions:**
+✓ MCP (Model Context Protocol) compliant
+✓ Real-time page state observation
+✓ "Less is More" principle — minimal surface area
+
+**Observation ID:** [cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp)
 
 </td></tr>
 </table>
@@ -164,13 +190,13 @@ Every commit is a measurement. Below: the last 30 orbital traces.
 
 ## ⚙️ ATMOSPHERIC CONDITIONS ⟨TECH STACK⟩
 
-**Primary Optics:**  
-`Python` `TypeScript` `JavaScript` `Zsh` `Bash`
+**Primary Optics:**
+`Python` `TypeScript` `JavaScript` `Zsh` `Bash` `Go`
 
-**Secondary Filters:**  
-`React` `Node.js` `OpenAI` `Docker` `Git` `ESP8266` `PHP`
+**Secondary Filters:**
+`React` `Node.js` `OpenAI` `Docker` `Git` `ESP8266` `PHP` `Kotlin` `Groovy` `CoffeeScript`
 
-**Noise Sources:**  
+**Noise Sources:**
 Nondeterministic timers, GPU driver quirks, network jitter, cosmic rays (≈1 bit-flip per 4GB-hour at sea level)
 
 ---
@@ -183,7 +209,7 @@ Nondeterministic timers, GPU driver quirks, network jitter, cosmic rays (≈1 bi
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
  SITE CONDITIONS................ NOMINAL
- PRIMARY MIRROR................. ALIGNED  
+ PRIMARY MIRROR................. ALIGNED
  INSTRUMENT DRIFT............... <0.01%
  CLOCK SYNC..................... LOCKED
  NOISE FLOOR.................... -73 dB
@@ -202,19 +228,19 @@ Nondeterministic timers, GPU driver quirks, network jitter, cosmic rays (≈1 bi
 <details>
 <summary><strong>📦 Early-Era Instruments (2011-2014)</strong></summary>
 
-### **Smoke Framework**  
-*Classification:* PHP MVC Architecture  
-*Status:* Decommissioned • Archived  
+### **Smoke Framework**
+*Classification:* PHP MVC Architecture
+*Status:* Decommissioned • Archived
 *Observation ID:* [Smoke ⭐4](https://github.com/brandon-fryslie/Smoke)
 
-### **ember-rest.coffee**  
-*Classification:* REST Adapter Layer  
-*Status:* Archived • Historical Record  
+### **ember-rest.coffee**
+*Classification:* REST Adapter Layer
+*Status:* Archived • Historical Record
 *Observation ID:* [ember-rest.coffee ⭐4](https://github.com/brandon-fryslie/ember-rest.coffee)
 
-### **Combine**  
-*Classification:* Asset Pipeline Pre-processor  
-*Status:* Superseded by modern tooling  
+### **Combine**
+*Classification:* Asset Pipeline Pre-processor
+*Status:* Superseded by modern tooling
 *Observation ID:* [combine](https://github.com/brandon-fryslie/combine)
 
 ---
@@ -227,11 +253,13 @@ Nondeterministic timers, GPU driver quirks, network jitter, cosmic rays (≈1 bi
 
 ## 🛰️ SPECIALIZED INSTRUMENTS
 
-**Terminal Consciousness Testing** → [ptytest](https://github.com/brandon-fryslie/ptytest)  
-**WebSocket Dimensional Tunneling** → [sake](https://github.com/brandon-fryslie/sake)  
-**Interactive Narrative State Machine** → [storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)  
-**LED Neural Pattern Engine** → [pb-sync](https://github.com/brandon-fryslie/pb-sync)  
+**Terminal Consciousness Testing** → [ptydriver](https://github.com/brandon-fryslie/ptydriver) • [ptytest](https://github.com/brandon-fryslie/ptytest)
+**WebSocket Dimensional Tunneling** → [sake](https://github.com/brandon-fryslie/sake)
+**Interactive Narrative State Machine** → [storyportal-web-client](https://github.com/brandon-fryslie/storyportal-web-client)
+**LED Neural Pattern Engine** → [pb-sync](https://github.com/brandon-fryslie/pb-sync)
 **Editor Configuration Time-Machine** → [sublime-profile](https://github.com/brandon-fryslie/sublime-profile)
+**UI Automation Horror Show** → [browsergeist](https://github.com/brandon-fryslie/browsergeist)
+**Authentication Gateway** → [chaperone-auth-gateway](https://github.com/brandon-fryslie/chaperone-auth-gateway)
 
 ---
 
@@ -249,24 +277,25 @@ Nondeterministic timers, GPU driver quirks, network jitter, cosmic rays (≈1 bi
 
 ## 📘 OBSERVATORY LOGBOOK
 
-> **2011** — First light. PHP instruments commissioned.  
-> **2014** — JavaScript optics installed. React lenses calibrated.  
-> **2017** — Terminal observation system (rad-shell) reaches maturity.  
-> **2020** — IoT photon modulators deployed. ESP8266 array operational.  
-> **2023** — AI acoustic transform engine integrated.  
-> **2026** — Continuous refinement. Instruments in daily use.
+> **2011** — First light. PHP instruments commissioned.
+> **2014** — JavaScript optics installed. React lenses calibrated.
+> **2017** — Terminal observation system (rad-shell) reaches maturity.
+> **2020** — IoT photon modulators deployed. ESP8266 array operational.
+> **2023** — AI acoustic transform engine integrated.
+> **2025** — AI tooling explosion. 23 instruments in one year.
+> **2026** — Animation compilers, custom type systems. Continuous refinement.
 
 ---
 
 ## 🧭 METHODOLOGY
 
-**I do not "show off projects."**  
+**I do not "show off projects."**
 I publish measurements from instruments that refuse to lie.
 
-**I do not "build cool stuff."**  
+**I do not "build cool stuff."**
 I construct deterministic systems with defined failure modes.
 
-**I do not "share my work."**  
+**I do not "share my work."**
 I catalog observations from an observatory that watches the universe.
 
 ---
@@ -275,7 +304,7 @@ I catalog observations from an observatory that watches the universe.
 
 ![Brass Seal](./assets/brass-seal.svg)
 
-**OBSERVATORY OF DETERMINISM**  
+**OBSERVATORY OF DETERMINISM**
 *Precision • Repeatability • Truth*
 
 ---
