@@ -141,8 +141,6 @@ NOT an MVC framework. Service locator extracting CodeIgniter's libraries for sta
 
 - **[pb-sync](https://github.com/brandon-fryslie/pb-sync)** — Version control for LED patterns. Backup .epe files + metadata from Pixelblaze devices. Planned: bi-directional sync, watch directory, auto-upload.
 
-- **[ergodox-layout](https://github.com/brandon-fryslie/ergodox-layout)** — Custom ErgoDox mechanical keyboard layout.
-
 </details>
 
 <details>

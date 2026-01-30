@@ -132,10 +132,49 @@ Constellation design with energy waves and particles.
 
 ---
 
+## 🔧 Project-Specific Animations
+
+### Browsergeist HID
+![Browsergeist HID](./assets/browsergeist-hid.svg)
+
+Physics-based cursor trajectories with OS-level HID injection visualization. Cyan, magenta, and amber motion paths.
+
+### Oscilla Compiler
+![Oscilla Compiler](./assets/oscilla-compiler.svg)
+
+4-stage compiler pipeline (PARSE → VALIDATE → OPTIMIZE → EMIT) with data flow pulses.
+
+### Firestorm Sync
+![Firestorm Sync](./assets/firestorm-sync.svg)
+
+Central hub with peripheral LED controllers, UDP beacon pulses, and synchronized LED color animations.
+
+### PTYdriver Terminal
+![PTYdriver Terminal](./assets/ptydriver-terminal.svg)
+
+Virtual terminal buffer with blinking cursor, keystroke injection, and pattern matching visualization.
+
+### Brain Canvas Render
+![Brain Canvas Render](./assets/brain-canvas-render.svg)
+
+JSON input flowing through a pipeline into rendered UI sections appearing sequentially.
+
+### rad-shell Prompt
+![rad-shell Prompt](./assets/rad-shell-prompt.svg)
+
+Hub-and-spoke plugin architecture around a central prompt with fast startup indicator.
+
+### cc-dump Traffic
+![cc-dump Traffic](./assets/cc-dump-traffic.svg)
+
+Three-lane packet inspection (CLIENT → PROXY → API) with diff markers for system prompt changes.
+
+---
+
 ## 📈 Summary
 
-**Total Animations:** 20
-**Themes:** 7 distinct artistic directions
+**Total Animations:** 27+
+**Themes:** 8 distinct artistic directions
 **Animation Techniques:**
 - Stroke-dasharray drawing
 - Transform rotations and scales
@@ -145,4 +184,4 @@ Constellation design with energy waves and particles.
 - Color cycling
 - Organic growth patterns
 
-All animations follow GitHub-compatible CSS @keyframes patterns with `transform-box: fill-box` for reliable rendering.
+All animations follow GitHub-compatible CSS @keyframes and SMIL patterns with `transform-box: fill-box` for reliable rendering. Prime-number durations (7s, 11s, 13s) with staggered delays for pseudo-random variety.
