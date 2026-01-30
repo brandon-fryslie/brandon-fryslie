@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240">
+  <defs>
+    <!-- Gradient for prompt -->
+    <linearGradient id="prompt-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a90e2"/>
+      <stop offset="50%" style="stop-color:#9b59b6"/>
+      <stop offset="100%" style="stop-color:#e67e22"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong glow -->
+    <filter id="strong-glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="240" fill="#0f0f1a"/>
+
+  <!-- Terminal prompt line (central element) -->
+  <g id="prompt-line">
+    <!-- User@host -->
+    <text x="80" y="120" font-family="monospace" font-size="14" fill="#4a90e2" filter="url(#glow)">user</text>
+    <text x="122" y="120" font-family="monospace" font-size="14" fill="#6a7f9f">@</text>
+    <text x="136" y="120" font-family="monospace" font-size="14" fill="#9b59b6">host</text>
+
+    <!-- Current directory -->
+    <text x="190" y="120" font-family="monospace" font-size="14" fill="#6a7f9f">~/</text>
+    <text x="208" y="120" font-family="monospace" font-size="14" fill="#e67e22">project</text>
+
+    <!-- Git status symbols (animated) -->
+    <g id="git-status">
+      <!-- Branch symbol -->
+      <text x="280" y="120" font-family="monospace" font-size="14" fill="#00ff41" opacity="0.8">⎇</text>
+      <text x="295" y="120" font-family="monospace" font-size="12" fill="#00ff41">main</text>
+
+      <!-- Modified indicator -->
+      <text x="340" y="120" font-family="monospace" font-size="12" fill="#ffaa00">✗</text>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite"/>
+
+      <!-- Ahead indicator -->
+      <text x="355" y="120" font-family="monospace" font-size="12" fill="#4a90e2">↑2</text>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="11s" begin="2s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Prompt character -->
+    <text x="385" y="120" font-family="monospace" font-size="14" fill="#ffffff" filter="url(#strong-glow)">❯</text>
+
+    <!-- Cursor (blinking) -->
+    <rect x="400" y="108" width="10" height="16" fill="#ffffff" opacity="0.7">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Plugin connections (hub-and-spoke) -->
+  <g id="plugins" opacity="0.6">
+    <!-- Central hub point -->
+    <circle cx="400" cy="120" r="3" fill="#9b59b6" filter="url(#glow)"/>
+
+    <!-- Plugin 1: top-left -->
+    <line x1="400" y1="120" x2="200" y2="50" stroke="#4a90e2" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="200" cy="50" r="4" fill="#4a90e2"/>
+    <text x="200" y="40" font-family="monospace" font-size="9" fill="#4a90e2" text-anchor="middle" opacity="0">
+      git
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="13s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Plugin 2: top -->
+    <line x1="400" y1="120" x2="400" y2="40" stroke="#9b59b6" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="400" cy="40" r="4" fill="#9b59b6"/>
+    <text x="400" y="30" font-family="monospace" font-size="9" fill="#9b59b6" text-anchor="middle" opacity="0">
+      fzf
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="17s" begin="3s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Plugin 3: top-right -->
+    <line x1="400" y1="120" x2="600" y2="50" stroke="#e67e22" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="600" cy="50" r="4" fill="#e67e22"/>
+    <text x="600" y="40" font-family="monospace" font-size="9" fill="#e67e22" text-anchor="middle" opacity="0">
+      syntax
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Plugin 4: left -->
+    <line x1="400" y1="120" x2="150" y2="120" stroke="#00ff41" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="150" cy="120" r="4" fill="#00ff41"/>
+    <text x="150" y="110" font-family="monospace" font-size="9" fill="#00ff41" text-anchor="middle" opacity="0">
+      history
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="19s" begin="5s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Plugin 5: right -->
+    <line x1="400" y1="120" x2="650" y2="120" stroke="#ff00ff" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="650" cy="120" r="4" fill="#ff00ff"/>
+    <text x="650" y="110" font-family="monospace" font-size="9" fill="#ff00ff" text-anchor="middle" opacity="0">
+      autosuggestions
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="23s" begin="7s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Plugin 6: bottom-left -->
+    <line x1="400" y1="120" x2="200" y2="190" stroke="#00aaff" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="200" cy="190" r="4" fill="#00aaff"/>
+    <text x="200" y="205" font-family="monospace" font-size="9" fill="#00aaff" text-anchor="middle" opacity="0">
+      completions
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="13s" begin="2s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Plugin 7: bottom -->
+    <line x1="400" y1="120" x2="400" y2="200" stroke="#ffaa00" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="400" cy="200" r="4" fill="#ffaa00"/>
+    <text x="400" y="215" font-family="monospace" font-size="9" fill="#ffaa00" text-anchor="middle" opacity="0">
+      nvm (lazy)
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="17s" begin="4s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Plugin 8: bottom-right -->
+    <line x1="400" y1="120" x2="600" y2="190" stroke="#ff5555" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+    <circle cx="600" cy="190" r="4" fill="#ff5555"/>
+    <text x="600" y="205" font-family="monospace" font-size="9" fill="#ff5555" text-anchor="middle" opacity="0">
+      prezto
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.2;0.7;1" dur="11s" begin="6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Performance indicator (loading bar) -->
+  <g id="performance">
+    <rect x="50" y="230" width="200" height="4" fill="#1a1a2a" rx="2"/>
+    <rect x="50" y="230" width="0" height="4" fill="#00ff41" rx="2">
+      <animate attributeName="width" values="0;200" dur="2s" fill="freeze"/>
+    </rect>
+    <text x="50" y="225" font-family="monospace" font-size="8" fill="#00ff41" opacity="0.7">Fast startup (lazy-load)</text>
+  </g>
+
+  <!-- Labels -->
+  <text x="400" y="25" font-family="monospace" font-size="12" fill="#9b59b6" text-anchor="middle" opacity="0.8">RAD-SHELL PLUGIN ECOSYSTEM</text>
+  <text x="750" y="235" font-family="monospace" font-size="10" fill="#4a4a5f" opacity="0.6" text-anchor="end">41★ · 8 YEARS</text>
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
+  <defs>
+    <!-- Glowing line gradients -->
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#00ffff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.2"/>
+    </linearGradient>
+    <linearGradient id="magenta-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#ff00ff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:0.2"/>
+    </linearGradient>
+    <linearGradient id="amber-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffaa00;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#ffaa00;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ffaa00;stop-opacity:0.2"/>
+    </linearGradient>
+
+    <!-- Filters for glow effects -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="250" fill="#0a0a0f"/>
+
+  <!-- Browser window outline (faint) -->
+  <rect x="500" y="30" width="280" height="190" rx="8" fill="none" stroke="#2a2a3f" stroke-width="1.5"/>
+  <rect x="500" y="30" width="280" height="25" rx="8" fill="#1a1a2f"/>
+  <circle cx="515" cy="42.5" r="4" fill="#ff5555"/>
+  <circle cx="530" cy="42.5" r="4" fill="#ffaa00"/>
+  <circle cx="545" cy="42.5" r="4" fill="#55ff55"/>
+
+  <!-- Cursor path 1: Cyan - S-curve with acceleration -->
+  <path id="path1" d="M 50,60 Q 150,50 250,120 T 450,160" fill="none" stroke="url(#cyan-glow)" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="13s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Cursor dot 1 -->
+  <circle r="4" fill="#00ffff" filter="url(#glow)">
+    <animateMotion dur="13s" repeatCount="indefinite">
+      <mpath href="#path1"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Target crosshair 1 -->
+  <g opacity="0.6">
+    <circle cx="450" cy="160" r="12" fill="none" stroke="#00ffff" stroke-width="1">
+      <animate attributeName="r" values="12;16;12" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="438" y1="160" x2="462" y2="160" stroke="#00ffff" stroke-width="1"/>
+    <line x1="450" y1="148" x2="450" y2="172" stroke="#00ffff" stroke-width="1"/>
+  </g>
+
+  <!-- Cursor path 2: Magenta - Complex curve -->
+  <path id="path2" d="M 80,180 Q 180,220 300,140 T 520,100" fill="none" stroke="url(#magenta-glow)" stroke-width="2" stroke-dasharray="450" stroke-dashoffset="450" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="450" to="0" dur="17s" begin="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Cursor dot 2 -->
+  <circle r="4" fill="#ff00ff" filter="url(#glow)">
+    <animateMotion dur="17s" begin="3s" repeatCount="indefinite">
+      <mpath href="#path2"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="17s" begin="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Target crosshair 2 -->
+  <g opacity="0.6">
+    <circle cx="520" cy="100" r="12" fill="none" stroke="#ff00ff" stroke-width="1">
+      <animate attributeName="r" values="12;16;12" dur="11s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="508" y1="100" x2="532" y2="100" stroke="#ff00ff" stroke-width="1"/>
+    <line x1="520" y1="88" x2="520" y2="112" stroke="#ff00ff" stroke-width="1"/>
+  </g>
+
+  <!-- Cursor path 3: Amber - Fast arc -->
+  <path id="path3" d="M 100,110 Q 250,80 400,180 Q 550,220 680,120" fill="none" stroke="url(#amber-glow)" stroke-width="2" stroke-dasharray="600" stroke-dashoffset="600" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="600" to="0" dur="19s" begin="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Cursor dot 3 -->
+  <circle r="4" fill="#ffaa00" filter="url(#glow)">
+    <animateMotion dur="19s" begin="5s" repeatCount="indefinite">
+      <mpath href="#path3"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="19s" begin="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Target crosshair 3 -->
+  <g opacity="0.6">
+    <circle cx="680" cy="120" r="12" fill="none" stroke="#ffaa00" stroke-width="1">
+      <animate attributeName="r" values="12;16;12" dur="13s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="13s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="668" y1="120" x2="692" y2="120" stroke="#ffaa00" stroke-width="1"/>
+    <line x1="680" y1="108" x2="680" y2="132" stroke="#ffaa00" stroke-width="1"/>
+  </g>
+
+  <!-- Velocity/acceleration indicators (small arrows along paths) -->
+  <g opacity="0.4">
+    <!-- Arrow 1 -->
+    <polygon points="150,50 155,48 155,52" fill="#00ffff">
+      <animate attributeName="opacity" values="0;0.6;0" dur="13s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- Arrow 2 -->
+    <polygon points="300,140 305,138 305,142" fill="#ff00ff">
+      <animate attributeName="opacity" values="0;0.6;0" dur="17s" begin="3s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- Arrow 3 -->
+    <polygon points="400,180 405,178 405,182" fill="#ffaa00">
+      <animate attributeName="opacity" values="0;0.6;0" dur="19s" begin="5s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- HID label (subtle) -->
+  <text x="30" y="230" font-family="monospace" font-size="11" fill="#4a4a5f" opacity="0.7">OS-LEVEL HID INJECTION</text>
+  <text x="650" y="230" font-family="monospace" font-size="11" fill="#4a4a5f" opacity="0.7">PHYSICS-BASED</text>
+</svg>
