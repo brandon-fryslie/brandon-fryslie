@@ -186,6 +186,38 @@ NOT an MVC framework. Service locator extracting CodeIgniter's libraries for sta
 
 ---
 
+## Case Studies
+
+In-depth writeups exploring how specific projects evolved:
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**[rad-shell: From Personal Tool to Open Source](./case-studies/rad-shell.md)**
+
+How a personal shell configuration became a maintained project with 41 stars and 8 years of active development. Plugin architecture, composition model, and what makes personal tools worth maintaining.
+
+</td>
+<td width="33%" valign="top">
+
+**[LED Art Stack: Building a Hardware Art Pipeline](./case-studies/led-art-stack.md)**
+
+From ESP8266 bias lighting to PixelBlaze sync tools to kinetic sculpture installations. Building a multi-layer stack for controlling LED art, including network synchronization and physical deployments.
+
+</td>
+<td width="33%" valign="top">
+
+**[AI Productivity: Force Multiplier, Not Replacement](./case-studies/ai-productivity.md)**
+
+23 repos in 2025 vs ~5/year historically. What changed, what stayed the same, and how AI accelerates iteration without replacing architecture, taste, or decision-making.
+
+</td>
+</tr>
+</table>
+
+---
+
 ## Arc
 
 <table>
