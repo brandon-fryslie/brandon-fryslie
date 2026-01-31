@@ -49,6 +49,11 @@ Three waves flowing across time, showing peaks and valleys of the journey.
 
 Growing leaves circling wisdom: "If you're green, you're growing. If you're ripe, you're rotten."
 
+### Misty Forest Morning
+![Misty Forest Morning](./assets/misty-forest-morning.svg)
+
+Layered parallax forest scene with swaying trees in mist. Three depth layers (far/mid/near) moving at different rates. Organic Kokiri Forest aesthetic with warm amber and forest green tones.
+
 ---
 
 ## 💓 Life / Energy Theme
@@ -171,10 +176,125 @@ Three-lane packet inspection (CLIENT → PROXY → API) with diff markers for sy
 
 ---
 
+## 🏛️ Theme Banners
+
+### Atelier Banner
+![Atelier Banner](./assets/atelier-banner.svg)
+
+Ivory parchment with wireframe grid overlay and subtle weaving thread animation. Burgundy accent line. "Machines That Dream in Geometry" aesthetic.
+
+### Observatory Banner
+![Observatory Banner](./assets/observatory-banner.svg)
+
+Night sky gradient with brass telescope icon and star trails representing commit arcs. Science and instrumentation theme.
+
+### Court Banner
+![Court Banner](./assets/court-vellum-banner.svg)
+
+Aged vellum with margin lines and decorative corner flourishes. Medieval manuscript aesthetic with burgundy accents.
+
+### Cyberpunk City
+![Cyberpunk City](./assets/cyberpunk-city.svg)
+
+Neon-lit cityscape with rising buildings in pink/cyan gradients. Glowing windows and chrome atmosphere.
+
+---
+
+## 🎖️ Theme Seals & Marks
+
+### Telescope Mark
+![Telescope Mark](./assets/telescope-mark.svg)
+
+Brass telescope icon for Observatory theme. Scientific instrument detail.
+
+### Brass Seal
+![Brass Seal](./assets/brass-seal.svg)
+
+Observatory seal with brass finish and astronomical motifs.
+
+### Court Seal (Detailed)
+![Court Seal Detailed](./assets/court-seal-detailed.svg)
+
+Elaborate wax seal with heraldic design for Court theme. Medieval authenticity.
+
+### Wax Seal
+![Wax Seal](./assets/wax-seal.svg)
+
+Simple wax seal stamp design. Royal red wax with embossed crest.
+
+---
+
+## 🎪 Interactive Demonstrations
+
+### Planetarium Interactive
+![Planetarium Interactive](./assets/planetarium-interactive.svg)
+
+Interactive star chart with orbital paths and celestial mechanics. Observatory theme showcase piece.
+
+### Interactivity Test
+![Interactivity Test](./assets/interactivity-test.svg)
+
+Test SVG demonstrating GitHub's interactivity limitations. Shows what works (SMIL, CSS animations) vs what's blocked (hover, links, JS).
+
+### Pseudo-Randomness Demo
+![Pseudo-Randomness Demo](./assets/pseudo-randomness-demo.svg)
+
+Demonstrates prime-number duration technique for creating pseudo-random motion patterns. Five circles with durations 7s, 11s, 13s, 17s, 19s won't sync for 90+ hours.
+
+### Random Choice Demo
+![Random Choice Demo](./assets/random-choice-demo.svg)
+
+Shows staggered delay technique for creating appearance of random selection without JavaScript.
+
+### Pattern Diagram
+![Pattern Diagram](./assets/pattern-diagram.svg)
+
+Technical diagram showing animation pattern architecture and timing relationships.
+
+---
+
+## 🔨 Atelier Icons
+
+### Loom Icon
+![Loom Icon](./assets/loom-icon.svg)
+
+Weaving loom with animated warp threads. Represents the "craft" aspect of the Atelier theme.
+
+### Geometric Knot
+![Geometric Knot](./assets/geometric-knot.svg)
+
+Celtic-style geometric knot with rotating accent points. Mathematical precision meets visual elegance.
+
+### Atelier Daily Art
+![Atelier Daily Art](./assets/atelier-daily-art.svg)
+
+Daily practice visualization for the Atelier theme. Represents consistent craft and iteration.
+
+---
+
+## 🧊 3D Gallery Pieces
+
+### 3D Cube Rotating
+![3D Cube Rotating](./assets/3d-cube-rotating.svg)
+
+Rotating 3D cube with gradient faces demonstrating CSS 3D transforms in SVG. Shows front/back opacity variation.
+
+### 3D Effects Demo
+![3D Effects Demo](./assets/3d-effects-demo.svg)
+
+Comprehensive 3D transform showcase including perspective, rotation axes, and depth layering.
+
+### 3D Isometric City
+![3D Isometric City](./assets/3d-isometric-city.svg)
+
+Isometric cityscape using 3D transforms. Buildings at various heights creating depth without perspective distortion.
+
+---
+
 ## 📈 Summary
 
-**Total Animations:** 27+
-**Themes:** 8 distinct artistic directions
+**Total Animations:** 48 SVGs
+**Themes:** 11 distinct artistic directions
 **Animation Techniques:**
 - Stroke-dasharray drawing
 - Transform rotations and scales
@@ -183,5 +303,14 @@ Three-lane packet inspection (CLIENT → PROXY → API) with diff markers for sy
 - Staggered delays
 - Color cycling
 - Organic growth patterns
+- Parallax layering
+- Prime-number pseudo-randomness
+- 3D transforms
 
 All animations follow GitHub-compatible CSS @keyframes and SMIL patterns with `transform-box: fill-box` for reliable rendering. Prime-number durations (7s, 11s, 13s) with staggered delays for pseudo-random variety.
+
+## References
+
+- [INTERACTIVITY-LIMITS.md](./INTERACTIVITY-LIMITS.md) — What works in GitHub's SVG sandbox
+- [RANDOMNESS-GUIDE.md](./RANDOMNESS-GUIDE.md) — Pseudo-random techniques without JS
+- [3D-GALLERY.md](./3D-GALLERY.md) — 3D transform techniques
