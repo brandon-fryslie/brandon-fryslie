@@ -40,6 +40,18 @@ Chrome DevTools for AI agents. CSS selectors, not accessibility tree. "Less is M
 
 ---
 
+## Recent Activity
+
+<!-- RECENT-ACTIVITY:START -->
+
+*Updated automatically · Last 5 repositories*
+
+This section will be updated automatically by GitHub Actions.
+
+<!-- RECENT-ACTIVITY:END -->
+
+---
+
 ## Signature Work
 
 <table>
