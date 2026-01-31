@@ -46,16 +46,16 @@ Chrome DevTools for AI agents. CSS selectors, not accessibility tree. "Less is M
 
 *Updated automatically · Last 5 repositories*
 
+**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
+<br/><sub>Unknown · today</sub>
+
+**[cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp)** — Chrome DevTools MCP server for AI agents. CSS selectors, dynamic tool visibility, 'Less is More' design.
+<br/><sub>TypeScript · today</sub>
+
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
 <br/><sub>TypeScript · today</sub>
 
-**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — My work speaks for itself.  But considering it's almost entirely non-public, I'll have to speak up a little myself
-<br/><sub>Unknown · today</sub>
-
 **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Plugins for rad-shell zsh setup
-<br/><sub>Shell · ⭐ 3 · 2 days ago</sub>
-
-**[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — No description
 <br/><sub>Shell · ⭐ 3 · 3 days ago</sub>
 
 <!-- RECENT-ACTIVITY:END -->
