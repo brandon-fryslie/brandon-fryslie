@@ -46,11 +46,11 @@ Chrome DevTools for AI agents. CSS selectors, not accessibility tree. "Less is M
 
 *Updated automatically · Last 5 repositories*
 
-**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — My work speaks for itself.  But considering it's almost entirely non-public, I'll have to speak up a little myself
-<br/><sub>Unknown · today</sub>
-
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
 <br/><sub>TypeScript · today</sub>
+
+**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — My work speaks for itself.  But considering it's almost entirely non-public, I'll have to speak up a little myself
+<br/><sub>Unknown · today</sub>
 
 **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Plugins for rad-shell zsh setup
 <br/><sub>Shell · ⭐ 3 · 2 days ago</sub>
