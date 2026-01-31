@@ -1,101 +1,80 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <!-- Ivory background -->
-  <rect width="600" height="400" fill="#f5f0e8"/>
-  
-  <!-- Voronoi cells (deterministically generated from seed) with SMIL pulse animation -->
-  <g stroke="#1a1a1a" stroke-width="1.5" fill="none">
-    <!-- Cell 1: Top-left region (satisfied constraints) -->
-    <path d="M 0,0 L 150,0 L 180,100 L 120,180 L 50,150 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.15;0.25;0.15" dur="7s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- Cell 2: Top-center (partial satisfaction) -->
-    <path d="M 150,0 L 400,0 L 380,120 L 280,140 L 180,100 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.25;0.35;0.25" dur="11s" repeatCount="indefinite" begin="3s"/>
-    </path>
-    
-    <!-- Cell 3: Top-right (high energy state) -->
-    <path d="M 400,0 L 600,0 L 600,150 L 480,160 L 380,120 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.08;0.15;0.08" dur="13s" repeatCount="indefinite" begin="5s"/>
-    </path>
-    
-    <!-- Cell 4: Left-center -->
-    <path d="M 0,0 L 50,150 L 40,250 L 0,300 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.2;0.3;0.2" dur="17s" repeatCount="indefinite" begin="7s"/>
-    </path>
-    
-    <!-- Cell 5: Center-left (strong satisfaction) -->
-    <path d="M 50,150 L 120,180 L 140,260 L 100,320 L 40,250 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.35;0.45;0.35" dur="19s" repeatCount="indefinite" begin="2s"/>
-    </path>
-    
-    <!-- Cell 6: Center (optimal region) -->
-    <path d="M 120,180 L 280,140 L 320,220 L 280,300 L 140,260 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.45;0.55;0.45" dur="23s" repeatCount="indefinite" begin="9s"/>
-    </path>
-    
-    <!-- Cell 7: Center-right -->
-    <path d="M 280,140 L 380,120 L 440,200 L 400,280 L 320,220 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.18;0.28;0.18" dur="29s" repeatCount="indefinite" begin="4s"/>
-    </path>
-    
-    <!-- Cell 8: Right-center -->
-    <path d="M 380,120 L 480,160 L 550,240 L 520,300 L 440,200 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.12;0.22;0.12" dur="31s" repeatCount="indefinite" begin="11s"/>
-    </path>
-    
-    <!-- Cell 9: Far-right -->
-    <path d="M 480,160 L 600,150 L 600,320 L 550,240 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.1;0.18;0.1" dur="37s" repeatCount="indefinite" begin="6s"/>
-    </path>
-    
-    <!-- Cell 10: Bottom-left -->
-    <path d="M 0,300 L 40,250 L 100,320 L 80,400 L 0,400 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.22;0.32;0.22" dur="41s" repeatCount="indefinite" begin="8s"/>
-    </path>
-    
-    <!-- Cell 11: Bottom-center-left -->
-    <path d="M 40,250 L 140,260 L 200,350 L 180,400 L 80,400 L 100,320 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.28;0.38;0.28" dur="43s" repeatCount="indefinite" begin="10s"/>
-    </path>
-    
-    <!-- Cell 12: Bottom-center (deep satisfaction) -->
-    <path d="M 140,260 L 280,300 L 320,380 L 300,400 L 180,400 L 200,350 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.4;0.5;0.4" dur="47s" repeatCount="indefinite" begin="1s"/>
-    </path>
-    
-    <!-- Ce    <!-- Ce    <!-- Ce    <!-- Ce    <!-- Ce    <!-- Ce 400,280 L 450,360 L 420,400 L 300,400 L 320,380 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.16;0.26;0.16" dur="53s" repeatCount="indefinite" begin="12s"      <animate attributeName="opacity" values="0.16;0.26;0.<path d="M 400,280 L 520,300 L 600,320 L 600,400 L 420,400 L 450,360 Z" 
-          fill="#8b4049">
-      <animate attributeName="opacity" values="0.14;0.24;      <animate attributeName="opacity" "       <animate attributeName="opacity" values="0.14;0.24;      <animate ans) -->
-  <g fill="#1a1a1a">  <g fill="#1a1a1a">  <g fill="#1a1a1a">  <g fill="#1a1a1a">  <g fill="#1a1a1a">  <g fill="#1a1a1a">  <g fill=>
-    <circle cx="2    <circle cx="2    <circle cx="2    <ciy="210" r="2"/>    <circle cx="2    <circle cx="2    <circle cx="2    <ciy="210" r="2"/>   c    <circle cx="2    </>
-                       ="200" r="2"/>
-    <circle cx="570" cy="230" r="2"/>
-    <circle cx="50" cy="330" r="2"/>
-    <circle c    <circle c    <circle c    <circle c    <circle c    <circle c    <circle c    <circle c    <circle c    <circle c52    <circle c    <circleg>
-  
-  <!-- Measurement annotations (atelier style) -->
-  <g font-family="system-ui, -apple-system, monospace" font-size="8" fill="#4a4a4a">
-    <text x="10" y="20">SEED: 2026-01-29</text>
-    <text x="10" y="35">COMMIT: 386d60f</text>
-    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1    <text x="10" t=    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1    <text x="10" y="50">CELLS: 1  .5" opacity="0.3">
-    <line x1="10" y1="10" x2="10" y2="20"/>
-    <line x1="10" y1="10" x2="20" y2="10"/>
-    
-    <line x1="590" y1="10" x2="590" y2="20"/>
-    <line x1="590"     <line x1="590"     <line x1="590<l    <line x y1="390" x2="10" y2="380"/>
-    <line x1="10" y1="390" x2="20"     <line x1="10" y1="390" x2="20"     <line x1="10" y1="390" x2="20"     <line x1="10" y1="390" x2="20"     <line x1="10"vg>
+<svg width="1200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5f0e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ebe6dd;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#6b5d47" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="200" fill="url(#bg)"/>
+  <rect width="1200" height="200" fill="url(#grid)">
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="13s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Border -->
+  <rect x="2" y="2" width="1196" height="196" fill="none" stroke="#8b4049" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="40" y="45" font-family="monospace" font-size="24" fill="#1a1a1a" font-weight="bold">
+    Daily Statistics
+  </text>
+  <text x="40" y="70" font-family="monospace" font-size="14" fill="#6b5d47">
+    Updated 2026-01-31
+  </text>
+
+  <!-- Stats Grid -->
+  <g transform="translate(40, 100)">
+    <!-- Repos -->
+    <text x="0" y="0" font-family="monospace" font-size="16" fill="#8b4049" font-weight="bold">
+      100
+      <animate attributeName="opacity" values="1;0.6;1" dur="7s" repeatCount="indefinite"/>
+    </text>
+    <text x="0" y="20" font-family="monospace" font-size="12" fill="#6b5d47">
+      Repositories
+    </text>
+
+    <!-- Stars -->
+    <text x="200" y="0" font-family="monospace" font-size="16" fill="#8b4049" font-weight="bold">
+      24
+      <animate attributeName="opacity" values="1;0.6;1" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <text x="200" y="20" font-family="monospace" font-size="12" fill="#6b5d47">
+      Stars
+    </text>
+
+    <!-- Commits -->
+    <text x="400" y="0" font-family="monospace" font-size="16" fill="#8b4049" font-weight="bold">
+      994
+      <animate attributeName="opacity" values="1;0.6;1" dur="13s" repeatCount="indefinite"/>
+    </text>
+    <text x="400" y="20" font-family="monospace" font-size="12" fill="#6b5d47">
+      Commits (30d)
+    </text>
+
+    <!-- Years -->
+    <text x="600" y="0" font-family="monospace" font-size="16" fill="#8b4049" font-weight="bold">
+      14+
+      <animate attributeName="opacity" values="1;0.6;1" dur="17s" repeatCount="indefinite"/>
+    </text>
+    <text x="600" y="20" font-family="monospace" font-size="12" fill="#6b5d47">
+      Years Active
+    </text>
+  </g>
+
+  <!-- Languages -->
+  <text x="40" y="170" font-family="monospace" font-size="12" fill="#6b5d47">
+    Top Languages: Python (15) · JavaScript (11) · TypeScript (7)
+  </text>
+
+  <!-- Animated accent line -->
+  <line x1="0" y1="100.0" x2="1200" y2="100.0" stroke="#8b4049" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="11s" repeatCount="indefinite"/>
+  </line>
+</svg>
