@@ -46,20 +46,20 @@ Chrome DevTools for AI agents. CSS selectors, not accessibility tree. "Less is M
 
 *Updated automatically · Last 5 repositories*
 
-**[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
-<br/><sub>Python · today</sub>
-
-**[cc-viz](https://github.com/brandon-fryslie/cc-viz)** — No description
-<br/><sub>TypeScript · today</sub>
-
-**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
-<br/><sub>Unknown · today</sub>
+**[chaperone-auth-gateway](https://github.com/brandon-fryslie/chaperone-auth-gateway)** — Chaperone Auth Gateway
+<br/><sub>Go · today</sub>
 
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
-<br/><sub>TypeScript · 2 days ago</sub>
+<br/><sub>TypeScript · today</sub>
 
-**[cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp)** — Chrome DevTools MCP server for AI agents. CSS selectors, dynamic tool visibility, 'Less is More' design.
-<br/><sub>TypeScript · 3 days ago</sub>
+**[ha-gingerizer](https://github.com/brandon-fryslie/ha-gingerizer)** — Home Assistant Configuration + Jinja2!  Let's Gingerize!
+<br/><sub>Python · today</sub>
+
+**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
+<br/><sub>Unknown · yesterday</sub>
+
+**[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
+<br/><sub>Python · yesterday</sub>
 
 <!-- RECENT-ACTIVITY:END -->
 
