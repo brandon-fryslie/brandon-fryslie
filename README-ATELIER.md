@@ -46,6 +46,9 @@ Chrome DevTools for AI agents. CSS selectors, not accessibility tree. "Less is M
 
 *Updated automatically · Last 5 repositories*
 
+**[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Plugins for rad-shell zsh setup
+<br/><sub>Shell · ⭐ 3 · today</sub>
+
 **[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
 <br/><sub>Python · today</sub>
 
@@ -53,13 +56,10 @@ Chrome DevTools for AI agents. CSS selectors, not accessibility tree. "Less is M
 <br/><sub>Unknown · today</sub>
 
 **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — No description
-<br/><sub>Shell · ⭐ 3 · yesterday</sub>
+<br/><sub>Shell · ⭐ 3 · 2 days ago</sub>
 
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
-<br/><sub>TypeScript · 2 days ago</sub>
-
-**[chaperone-auth-gateway](https://github.com/brandon-fryslie/chaperone-auth-gateway)** — Chaperone Auth Gateway
-<br/><sub>Go · 5 days ago</sub>
+<br/><sub>TypeScript · 3 days ago</sub>
 
 <!-- RECENT-ACTIVITY:END -->
 
