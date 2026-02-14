@@ -164,20 +164,10 @@ Multi-layer stack from ESP8266 microcontrollers to React interfaces for kinetic 
 
 ---
 
-## Languages
+## Languages & Domains
 
 <div align="center">
-
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![HCL](https://img.shields.io/badge/HCL-623CE4?style=flat-square&logo=terraform&logoColor=white)
-
-**Domains:** Backend Systems · Platform Infrastructure · Access Control · Distributed Coordination · Developer Tooling · Compiler Design
-
+<img src="./assets/tech-constellation.svg" width="800" />
 </div>
 
 ---
@@ -185,15 +175,6 @@ Multi-layer stack from ESP8266 microcontrollers to React interfaces for kinetic 
 ## Education
 
 **University of Arizona** — Computer Science & Philosophy
-
----
-
-<div align="center">
-
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=brandon-fryslie&show_icons=true&theme=default&hide_border=true&include_all_commits=true&count_private=true&bg_color=ffffff&title_color=24292e&text_color=586069&icon_color=0366d6"/>
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=brandon-fryslie&layout=compact&theme=default&hide_border=true&bg_color=ffffff&title_color=24292e&text_color=586069"/>
-
-</div>
 
 ---
 
