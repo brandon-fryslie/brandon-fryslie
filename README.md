@@ -20,22 +20,22 @@ I build backend systems, platform infrastructure, and the tooling that connects 
 
 <!-- RECENT-ACTIVITY:START -->
 
-*Updated automatically · Last 5 repositories*
-
-**[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
-<br/><sub>Python · today</sub>
+*Last updated February 14, 2026 · 5 most recently active repositories*
 
 **[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
-<br/><sub>Unknown · today</sub>
+<br/><sub>Unknown · Feb 14, 2026</sub>
+
+**[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
+<br/><sub>Python · Feb 13, 2026</sub>
 
 **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Plugins for rad-shell zsh setup
-<br/><sub>Shell · ⭐ 3 · yesterday</sub>
+<br/><sub>Shell · ⭐ 3 · Feb 12, 2026</sub>
 
 **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — No description
-<br/><sub>Shell · ⭐ 3 · 3 days ago</sub>
+<br/><sub>Shell · ⭐ 3 · Feb 09, 2026</sub>
 
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
-<br/><sub>TypeScript · 4 days ago</sub>
+<br/><sub>TypeScript · Feb 08, 2026</sub>
 
 <!-- RECENT-ACTIVITY:END -->
 
