@@ -179,6 +179,10 @@ Multi-layer stack from ESP8266 microcontrollers to React interfaces for kinetic 
 ---
 
 <div align="center">
+<img src="./assets/vision.svg" width="800" />
+</div>
+
+<div align="center">
 
 brandon@fryslie.com · Boulder, CO
 
