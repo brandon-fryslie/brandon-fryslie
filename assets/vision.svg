@@ -1,0 +1,230 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg-glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0f0f2a"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </radialGradient>
+    <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="center-pulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E9D5FF"/>
+      <stop offset="40%" stop-color="#A78BFA" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flow-v" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="flow-vr" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="flow-c" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="flow-cr" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="flow-g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="flow-gr" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="flow-m" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="flow-mr" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bg-glow)"/>
+
+  <!-- Sacred geometry - concentric circles -->
+  <g stroke="#1a1a3e" fill="none" stroke-width="0.4" opacity="0.5">
+    <circle cx="400" cy="150" r="35"/>
+    <circle cx="400" cy="150" r="65"/>
+    <circle cx="400" cy="150" r="95"/>
+    <circle cx="400" cy="150" r="130"/>
+    <circle cx="400" cy="150" r="175"/>
+    <circle cx="400" cy="150" r="230"/>
+  </g>
+
+  <!-- Sacred geometry - radial lines -->
+  <g stroke="#1a1a3e" fill="none" stroke-width="0.3" opacity="0.35" transform="translate(400,150)">
+    <line x1="0" y1="-230" x2="0" y2="230"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(15)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(30)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(45)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(60)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(75)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(90)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(105)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(120)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(135)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(150)"/>
+    <line x1="0" y1="-230" x2="0" y2="230" transform="rotate(165)"/>
+  </g>
+
+  <!-- Center glow pulse -->
+  <circle cx="400" cy="150" r="160" fill="url(#center-pulse)" opacity="0.4">
+    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Flowing curves - Pair 1: violet→cyan (upper) -->
+  <g fill="none" opacity="0.7">
+    <animate attributeName="opacity" values="0.6;0.8;0.6" dur="13s" repeatCount="indefinite"/>
+    <path d="M -30,85 C 100,15 240,175 400,95" stroke="url(#flow-v)" stroke-width="3"/>
+    <path d="M -30,90 C 100,20 240,180 400,100" stroke="url(#flow-v)" stroke-width="2" opacity="0.5"/>
+    <path d="M -30,95 C 100,25 240,185 400,105" stroke="url(#flow-v)" stroke-width="1.2" opacity="0.25"/>
+  </g>
+  <g fill="none" opacity="0.7">
+    <animate attributeName="opacity" values="0.6;0.8;0.6" dur="13s" repeatCount="indefinite"/>
+    <path d="M 830,85 C 700,15 560,175 400,95" stroke="url(#flow-vr)" stroke-width="3"/>
+    <path d="M 830,90 C 700,20 560,180 400,100" stroke="url(#flow-vr)" stroke-width="2" opacity="0.5"/>
+    <path d="M 830,95 C 700,25 560,185 400,105" stroke="url(#flow-vr)" stroke-width="1.2" opacity="0.25"/>
+  </g>
+
+  <!-- Flowing curves - Pair 2: cyan→magenta (lower) -->
+  <g fill="none" opacity="0.7">
+    <animate attributeName="opacity" values="0.55;0.75;0.55" dur="17s" repeatCount="indefinite"/>
+    <path d="M -30,215 C 100,285 240,125 400,205" stroke="url(#flow-c)" stroke-width="3"/>
+    <path d="M -30,210 C 100,280 240,120 400,200" stroke="url(#flow-c)" stroke-width="2" opacity="0.5"/>
+    <path d="M -30,205 C 100,275 240,115 400,195" stroke="url(#flow-c)" stroke-width="1.2" opacity="0.25"/>
+  </g>
+  <g fill="none" opacity="0.7">
+    <animate attributeName="opacity" values="0.55;0.75;0.55" dur="17s" repeatCount="indefinite"/>
+    <path d="M 830,215 C 700,285 560,125 400,205" stroke="url(#flow-cr)" stroke-width="3"/>
+    <path d="M 830,210 C 700,280 560,120 400,200" stroke="url(#flow-cr)" stroke-width="2" opacity="0.5"/>
+    <path d="M 830,205 C 700,275 560,115 400,195" stroke="url(#flow-cr)" stroke-width="1.2" opacity="0.25"/>
+  </g>
+
+  <!-- Flowing curves - Pair 3: gold→rose (crossing through center) -->
+  <g fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.45;0.65;0.45" dur="19s" repeatCount="indefinite" begin="3s"/>
+    <path d="M -30,150 C 80,45 230,250 400,150" stroke="url(#flow-g)" stroke-width="2.5"/>
+    <path d="M -30,155 C 80,50 230,255 400,155" stroke="url(#flow-g)" stroke-width="1.5" opacity="0.45"/>
+    <path d="M -30,160 C 80,55 230,260 400,160" stroke="url(#flow-g)" stroke-width="1" opacity="0.2"/>
+  </g>
+  <g fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.45;0.65;0.45" dur="19s" repeatCount="indefinite" begin="3s"/>
+    <path d="M 830,150 C 720,45 570,250 400,150" stroke="url(#flow-gr)" stroke-width="2.5"/>
+    <path d="M 830,155 C 720,50 570,255 400,155" stroke="url(#flow-gr)" stroke-width="1.5" opacity="0.45"/>
+    <path d="M 830,160 C 720,55 570,260 400,160" stroke="url(#flow-gr)" stroke-width="1" opacity="0.2"/>
+  </g>
+
+  <!-- Flowing curves - Pair 4: magenta→violet (wide arc) -->
+  <g fill="none" opacity="0.5">
+    <animate attributeName="opacity" values="0.35;0.55;0.35" dur="23s" repeatCount="indefinite" begin="5s"/>
+    <path d="M -30,40 C 130,110 270,20 400,70" stroke="url(#flow-m)" stroke-width="2"/>
+    <path d="M -30,45 C 130,115 270,25 400,75" stroke="url(#flow-m)" stroke-width="1.2" opacity="0.4"/>
+  </g>
+  <g fill="none" opacity="0.5">
+    <animate attributeName="opacity" values="0.35;0.55;0.35" dur="23s" repeatCount="indefinite" begin="5s"/>
+    <path d="M 830,40 C 670,110 530,20 400,70" stroke="url(#flow-mr)" stroke-width="2"/>
+    <path d="M 830,45 C 670,115 530,25 400,75" stroke="url(#flow-mr)" stroke-width="1.2" opacity="0.4"/>
+  </g>
+  <g fill="none" opacity="0.5">
+    <animate attributeName="opacity" values="0.35;0.55;0.35" dur="23s" repeatCount="indefinite" begin="7s"/>
+    <path d="M -30,260 C 130,190 270,280 400,230" stroke="url(#flow-m)" stroke-width="2"/>
+    <path d="M -30,255 C 130,185 270,275 400,225" stroke="url(#flow-m)" stroke-width="1.2" opacity="0.4"/>
+  </g>
+  <g fill="none" opacity="0.5">
+    <animate attributeName="opacity" values="0.35;0.55;0.35" dur="23s" repeatCount="indefinite" begin="7s"/>
+    <path d="M 830,260 C 670,190 530,280 400,230" stroke="url(#flow-mr)" stroke-width="2"/>
+    <path d="M 830,255 C 670,185 530,275 400,225" stroke="url(#flow-mr)" stroke-width="1.2" opacity="0.4"/>
+  </g>
+
+  <!-- Mandala - Outer ring -->
+  <g transform="translate(400,150)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="180s" repeatCount="indefinite"/>
+      <circle r="110" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.5"/>
+      <circle r="110" fill="none" stroke="#8B5CF6" stroke-width="4" stroke-dasharray="1.5 17.7" opacity="0.35" stroke-linecap="round"/>
+      <circle r="106" fill="none" stroke="#A78BFA" stroke-width="0.3" opacity="0.25"/>
+    </g>
+  </g>
+
+  <!-- Mandala - Middle ring -->
+  <g transform="translate(400,150)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="120s" repeatCount="indefinite"/>
+      <circle r="75" fill="none" stroke="#06B6D4" stroke-width="0.6" opacity="0.45"/>
+      <circle r="75" fill="none" stroke="#06B6D4" stroke-width="3.5" stroke-dasharray="2 17.6" opacity="0.3" stroke-linecap="round"/>
+      <circle r="72" fill="none" stroke="#22D3EE" stroke-width="0.25" opacity="0.2"/>
+    </g>
+  </g>
+
+  <!-- Mandala - Inner ring -->
+  <g transform="translate(400,150)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="67s" repeatCount="indefinite"/>
+      <circle r="45" fill="none" stroke="#EC4899" stroke-width="0.5" opacity="0.45"/>
+      <circle r="45" fill="none" stroke="#EC4899" stroke-width="3" stroke-dasharray="2.5 21.1" opacity="0.3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Mandala - Innermost ring -->
+  <g transform="translate(400,150)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="41s" repeatCount="indefinite"/>
+      <circle r="22" fill="none" stroke="#F59E0B" stroke-width="0.4" opacity="0.5"/>
+      <circle r="22" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="2 9.3" opacity="0.35" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Mandala - Core -->
+  <circle cx="400" cy="150" r="12" fill="url(#core-glow)" opacity="0.9">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="150" r="4" fill="#E9D5FF" opacity="0.85">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Accent nodes at curve-geometry intersections -->
+  <circle cx="270" cy="150" r="2.5" fill="#06B6D4" opacity="0.5">
+    <animate attributeName="opacity" values="0.25;0.7;0.25" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="530" cy="150" r="2.5" fill="#06B6D4" opacity="0.5">
+    <animate attributeName="opacity" values="0.25;0.7;0.25" dur="7s" repeatCount="indefinite" begin="3.5s"/>
+  </circle>
+  <circle cx="400" cy="40" r="2" fill="#8B5CF6" opacity="0.4">
+    <animate attributeName="opacity" values="0.15;0.6;0.15" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="260" r="2" fill="#8B5CF6" opacity="0.4">
+    <animate attributeName="opacity" values="0.15;0.6;0.15" dur="11s" repeatCount="indefinite" begin="5.5s"/>
+  </circle>
+  <circle cx="185" cy="95" r="1.5" fill="#EC4899" opacity="0.35">
+    <animate attributeName="opacity" values="0.15;0.5;0.15" dur="13s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <circle cx="615" cy="95" r="1.5" fill="#EC4899" opacity="0.35">
+    <animate attributeName="opacity" values="0.15;0.5;0.15" dur="13s" repeatCount="indefinite" begin="8s"/>
+  </circle>
+  <circle cx="185" cy="205" r="1.5" fill="#F59E0B" opacity="0.35">
+    <animate attributeName="opacity" values="0.15;0.5;0.15" dur="17s" repeatCount="indefinite" begin="4s"/>
+  </circle>
+  <circle cx="615" cy="205" r="1.5" fill="#F59E0B" opacity="0.35">
+    <animate attributeName="opacity" values="0.15;0.5;0.15" dur="17s" repeatCount="indefinite" begin="10s"/>
+  </circle>
+
+  <!-- Shimmer sweep -->
+  <rect x="-120" y="0" width="120" height="300" fill="url(#shimmer)">
+    <animate attributeName="x" values="-120;920" dur="23s" repeatCount="indefinite"/>
+  </rect>
+</svg>
