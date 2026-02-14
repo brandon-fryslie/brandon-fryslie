@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate daily stats SVG for GitHub profile.
-Queries GitHub API for stats and creates an animated SVG matching the atelier aesthetic.
+Queries GitHub API for stats and creates a clean SVG with live data.
 """
 
 import os
@@ -14,14 +14,15 @@ except ImportError:
     import urllib.request
     import json
 
-# Colors from atelier theme
-IVORY = "#f5f0e8"
-BURGUNDY = "#8b4049"
-WARM_GRAY = "#6b5d47"
-DARK = "#1a1a1a"
+# Professional color palette (GitHub Primer)
+BG = "#fafbfc"
+TEXT = "#24292e"
+SECONDARY = "#586069"
+ACCENT = "#0366d6"
+BORDER = "#e1e4e8"
 
 USERNAME = "brandon-fryslie"
-OUTPUT_PATH = "assets/atelier-daily-art.svg"
+OUTPUT_PATH = "assets/daily-stats.svg"
 
 
 def github_api_get(endpoint, token):
@@ -83,99 +84,57 @@ def get_stats(token):
             lang = repo["language"]
             lang_counts[lang] = lang_counts.get(lang, 0) + 1
 
-    # Top 3 languages
-    stats["top_languages"] = sorted(lang_counts.items(), key=lambda x: x[1], reverse=True)[:3]
+    # Top 5 languages
+    stats["top_languages"] = sorted(lang_counts.items(), key=lambda x: x[1], reverse=True)[:5]
 
     return stats
 
 
 def generate_svg(stats):
-    """Generate SVG with SMIL animations."""
-    width = 1200
-    height = 200
+    """Generate clean professional stats SVG."""
+    width = 800
+    height = 160
+
+    # Format date
+    date_str = datetime.now().strftime("%B %d, %Y")
 
     # Format top languages
-    lang_text = " · ".join([f"{lang} ({count})" for lang, count in stats["top_languages"]])
+    lang_text = " / ".join([f"{lang} ({count})" for lang, count in stats["top_languages"]])
+
+    # Stat items
+    stat_items = [
+        (stats["repos"], "Repositories"),
+        (stats["stars"], "Stars"),
+        (stats["commits_30d"], "Commits (30d)"),
+        (f"{stats['years_active']}+", "Years Active"),
+    ]
+
+    # Build stat cells
+    stat_cells = ""
+    cell_width = width // len(stat_items)
+    for i, (value, label) in enumerate(stat_items):
+        x = i * cell_width + cell_width // 2
+        stat_cells += f'''
+    <text x="{x}" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="{ACCENT}" font-weight="600" text-anchor="middle">{value}</text>
+    <text x="{x}" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="{SECONDARY}" text-anchor="middle">{label}</text>'''
 
     svg = f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Gradient background -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:{IVORY};stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ebe6dd;stop-opacity:1" />
-    </linearGradient>
+  <rect width="{width}" height="{height}" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
 
-    <!-- Grid pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="{WARM_GRAY}" stroke-width="0.5" opacity="0.2"/>
-    </pattern>
-  </defs>
+  <!-- Header -->
+  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="{TEXT}" font-weight="600">Live GitHub Stats</text>
+  <text x="{width - 20}" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="{SECONDARY}" text-anchor="end">Updated {date_str}</text>
 
-  <!-- Background -->
-  <rect width="{width}" height="{height}" fill="url(#bg)"/>
-  <rect width="{width}" height="{height}" fill="url(#grid)">
-    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="13s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Divider -->
+  <line x1="20" y1="42" x2="{width - 20}" y2="42" stroke="{BORDER}" stroke-width="1"/>
 
-  <!-- Border -->
-  <rect x="2" y="2" width="{width-4}" height="{height-4}" fill="none" stroke="{BURGUNDY}" stroke-width="2"/>
-
-  <!-- Title -->
-  <text x="40" y="45" font-family="monospace" font-size="24" fill="{DARK}" font-weight="bold">
-    Daily Statistics
-  </text>
-  <text x="40" y="70" font-family="monospace" font-size="14" fill="{WARM_GRAY}">
-    Updated {datetime.now().strftime("%Y-%m-%d")}
-  </text>
-
-  <!-- Stats Grid -->
-  <g transform="translate(40, 100)">
-    <!-- Repos -->
-    <text x="0" y="0" font-family="monospace" font-size="16" fill="{BURGUNDY}" font-weight="bold">
-      {stats["repos"]}
-      <animate attributeName="opacity" values="1;0.6;1" dur="7s" repeatCount="indefinite"/>
-    </text>
-    <text x="0" y="20" font-family="monospace" font-size="12" fill="{WARM_GRAY}">
-      Repositories
-    </text>
-
-    <!-- Stars -->
-    <text x="200" y="0" font-family="monospace" font-size="16" fill="{BURGUNDY}" font-weight="bold">
-      {stats["stars"]}
-      <animate attributeName="opacity" values="1;0.6;1" dur="11s" repeatCount="indefinite"/>
-    </text>
-    <text x="200" y="20" font-family="monospace" font-size="12" fill="{WARM_GRAY}">
-      Stars
-    </text>
-
-    <!-- Commits -->
-    <text x="400" y="0" font-family="monospace" font-size="16" fill="{BURGUNDY}" font-weight="bold">
-      {stats["commits_30d"]}
-      <animate attributeName="opacity" values="1;0.6;1" dur="13s" repeatCount="indefinite"/>
-    </text>
-    <text x="400" y="20" font-family="monospace" font-size="12" fill="{WARM_GRAY}">
-      Commits (30d)
-    </text>
-
-    <!-- Years -->
-    <text x="600" y="0" font-family="monospace" font-size="16" fill="{BURGUNDY}" font-weight="bold">
-      {stats["years_active"]}+
-      <animate attributeName="opacity" values="1;0.6;1" dur="17s" repeatCount="indefinite"/>
-    </text>
-    <text x="600" y="20" font-family="monospace" font-size="12" fill="{WARM_GRAY}">
-      Years Active
-    </text>
+  <!-- Stats -->
+  <g>{stat_cells}
   </g>
 
   <!-- Languages -->
-  <text x="40" y="170" font-family="monospace" font-size="12" fill="{WARM_GRAY}">
-    Top Languages: {lang_text}
-  </text>
-
-  <!-- Animated accent line -->
-  <line x1="0" y1="{height/2}" x2="{width}" y2="{height/2}" stroke="{BURGUNDY}" stroke-width="1" opacity="0.3">
-    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="11s" repeatCount="indefinite"/>
-  </line>
+  <line x1="20" y1="118" x2="{width - 20}" y2="118" stroke="{BORDER}" stroke-width="1"/>
+  <text x="{width // 2}" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="{SECONDARY}" text-anchor="middle">{lang_text}</text>
 </svg>'''
 
     return svg

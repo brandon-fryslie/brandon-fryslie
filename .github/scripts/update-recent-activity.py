@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Update Recent Activity section in README files.
+Update Recent Activity section in README.
 Replaces content between comment markers with latest repo activity.
 """
 
@@ -16,7 +16,7 @@ except ImportError:
     import json
 
 USERNAME = "brandon-fryslie"
-README_FILES = ["README.md", "README-ATELIER.md"]
+README_FILES = ["README.md"]
 START_MARKER = "<!-- RECENT-ACTIVITY:START -->"
 END_MARKER = "<!-- RECENT-ACTIVITY:END -->"
 
@@ -42,9 +42,8 @@ def github_api_get(endpoint, token):
 
 def get_recent_repos(token, limit=5):
     """Get the most recently pushed repos by the user."""
-    # Get all repos, sorted by push date
     repos = github_api_get(
-        f"/users/{USERNAME}/repos?sort=pushed&direction=desc&per_page={limit}",
+        f"/users/{USERNAME}/repos?sort=pushed&direction=desc&per_page={limit + 5}",
         token
     )
 
@@ -55,21 +54,7 @@ def get_recent_repos(token, limit=5):
             continue
 
         pushed_at = datetime.strptime(repo["pushed_at"], "%Y-%m-%dT%H:%M:%SZ")
-        days_ago = (datetime.now() - pushed_at).days
-
-        # Format time ago
-        if days_ago == 0:
-            time_ago = "today"
-        elif days_ago == 1:
-            time_ago = "yesterday"
-        elif days_ago < 7:
-            time_ago = f"{days_ago} days ago"
-        elif days_ago < 30:
-            weeks = days_ago // 7
-            time_ago = f"{weeks} week{'s' if weeks > 1 else ''} ago"
-        else:
-            months = days_ago // 30
-            time_ago = f"{months} month{'s' if months > 1 else ''} ago"
+        date_str = pushed_at.strftime("%b %d, %Y")
 
         recent.append({
             "name": repo["name"],
@@ -77,7 +62,7 @@ def get_recent_repos(token, limit=5):
             "description": repo.get("description") or "No description",
             "html_url": repo["html_url"],
             "pushed_at": pushed_at,
-            "time_ago": time_ago,
+            "date_str": date_str,
             "stars": repo.get("stargazers_count", 0),
             "language": repo.get("language") or "Unknown"
         })
@@ -87,17 +72,17 @@ def get_recent_repos(token, limit=5):
 
 def format_activity_section(repos):
     """Format the activity section as markdown."""
+    now_str = datetime.now().strftime("%B %d, %Y")
     lines = [
         START_MARKER,
         "",
-        "*Updated automatically · Last 5 repositories*",
+        f"*Last updated {now_str} · 5 most recently active repositories*",
         ""
     ]
 
     for repo in repos:
-        # Format: **[repo-name](url)** — description · Language · ⭐ stars · time_ago
         stars_text = f"⭐ {repo['stars']}" if repo['stars'] > 0 else ""
-        parts = [repo['language'], stars_text, repo['time_ago']]
+        parts = [repo['language'], stars_text, repo['date_str']]
         meta = " · ".join(filter(None, parts))
 
         lines.append(f"**[{repo['name']}]({repo['html_url']})** — {repo['description']}")
@@ -145,7 +130,7 @@ def main():
 
     print(f"Found {len(repos)} recent repos:")
     for repo in repos:
-        print(f"  - {repo['name']} (pushed {repo['time_ago']})")
+        print(f"  - {repo['name']} ({repo['date_str']})")
 
     print("\nGenerating activity section...")
     new_content = format_activity_section(repos)
