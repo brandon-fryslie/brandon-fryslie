@@ -20,10 +20,10 @@ I build backend systems, platform infrastructure, and the tooling that connects 
 
 <!-- RECENT-ACTIVITY:START -->
 
-*Last updated February 16, 2026 · 5 most recently active repositories*
+*Last updated February 17, 2026 · 5 most recently active repositories*
 
 **[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
-<br/><sub>Unknown · Feb 15, 2026</sub>
+<br/><sub>Unknown · Feb 16, 2026</sub>
 
 **[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
 <br/><sub>Python · Feb 14, 2026</sub>
