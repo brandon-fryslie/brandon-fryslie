@@ -1,0 +1,415 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Mycelium Network - The Wood Wide Web">
+  <title>Mycelium Network - Underground Fungal Communication</title>
+
+  <defs>
+    <!-- Background gradient - deep earth tones -->
+    <linearGradient id="earthGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#050505;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0808;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Fungal node gradients -->
+    <radialGradient id="nodeGlow1">
+      <stop offset="0%" style="stop-color:#E5E5D0;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#C9C9B0;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#C9C9B0;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="nodeGlow2">
+      <stop offset="0%" style="stop-color:#D4D4C0;stop-opacity:0.85" />
+      <stop offset="50%" style="stop-color:#B9B9A0;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#B9B9A0;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Decomposition zone glow -->
+    <radialGradient id="decompositionGlow">
+      <stop offset="0%" style="stop-color:#3a2a1a;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#050505;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Thread gradient - warm to cool -->
+    <linearGradient id="threadGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5E5D0;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#B4D4E4;stop-opacity:0.4" />
+    </linearGradient>
+
+    <linearGradient id="threadGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9C9B0;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#B4D4E4;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#earthGradient)"/>
+
+  <!-- Soil particles - background texture -->
+  <g opacity="0.3">
+    <circle cx="45" cy="23" r="0.8" fill="#4a3a2a"/>
+    <circle cx="123" cy="67" r="0.6" fill="#3a2a1a"/>
+    <circle cx="234" cy="145" r="0.9" fill="#4a3a2a"/>
+    <circle cx="345" cy="89" r="0.7" fill="#5a4a3a"/>
+    <circle cx="456" cy="234" r="0.8" fill="#3a2a1a"/>
+    <circle cx="567" cy="156" r="0.6" fill="#4a3a2a"/>
+    <circle cx="678" cy="78" r="0.9" fill="#5a4a3a"/>
+    <circle cx="734" cy="267" r="0.7" fill="#3a2a1a"/>
+    <circle cx="189" cy="234" r="0.8" fill="#4a3a2a"/>
+    <circle cx="412" cy="178" r="0.6" fill="#5a4a3a"/>
+    <circle cx="523" cy="45" r="0.7" fill="#3a2a1a"/>
+    <circle cx="645" cy="189" r="0.8" fill="#4a3a2a"/>
+    <circle cx="90" cy="156" r="0.6" fill="#5a4a3a"/>
+    <circle cx="267" cy="45" r="0.9" fill="#3a2a1a"/>
+    <circle cx="378" cy="267" r="0.7" fill="#4a3a2a"/>
+    <circle cx="489" cy="123" r="0.8" fill="#3a2a1a"/>
+    <circle cx="601" cy="234" r="0.6" fill="#5a4a3a"/>
+    <circle cx="712" cy="145" r="0.9" fill="#4a3a2a"/>
+    <circle cx="156" cy="189" r="0.7" fill="#3a2a1a"/>
+    <circle cx="301" cy="112" r="0.8" fill="#5a4a3a"/>
+  </g>
+
+  <!-- Decomposition zone -->
+  <ellipse cx="650" cy="200" rx="90" ry="70" fill="url(#decompositionGlow)"/>
+
+  <!-- Mycelium threads - fractal network from 5 hub nodes -->
+  <!-- Node 1 center: (150, 150) -->
+  <g stroke="#E5E5D0" fill="none" opacity="0.8">
+    <!-- Primary branches from node 1 -->
+    <path d="M 150 150 Q 180 120, 220 110" stroke-width="1.8" stroke="url(#threadGradient1)"/>
+    <path d="M 150 150 Q 130 180, 90 210" stroke-width="1.6" stroke="url(#threadGradient1)"/>
+    <path d="M 150 150 Q 190 160, 240 170" stroke-width="1.7" stroke="url(#threadGradient2)"/>
+    <path d="M 150 150 Q 140 130, 110 100" stroke-width="1.5" stroke="url(#threadGradient1)"/>
+
+    <!-- Secondary branches from node 1 primaries -->
+    <path d="M 220 110 Q 250 100, 280 95" stroke-width="1.2" stroke="#C9C9B0"/>
+    <path d="M 220 110 Q 230 130, 260 145" stroke-width="1.0" stroke="#C9C9B0"/>
+    <path d="M 90 210 Q 60 230, 30 245" stroke-width="1.1" stroke="#C9C9B0"/>
+    <path d="M 90 210 Q 85 240, 75 270" stroke-width="0.9" stroke="#C9C9B0"/>
+    <path d="M 240 170 Q 270 180, 300 185" stroke-width="1.3" stroke="#C9C9B0"/>
+    <path d="M 110 100 Q 90 80, 65 60" stroke-width="1.0" stroke="#C9C9B0"/>
+
+    <!-- Tertiary fine branches -->
+    <path d="M 280 95 Q 310 90, 340 88" stroke-width="0.7" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 280 95 Q 290 105, 310 115" stroke-width="0.5" stroke="#B4D4E4" opacity="0.5"/>
+    <path d="M 260 145 Q 280 160, 295 175" stroke-width="0.6" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 30 245 Q 15 260, 5 275" stroke-width="0.5" stroke="#B4D4E4" opacity="0.5"/>
+    <path d="M 75 270 Q 70 285, 68 295" stroke-width="0.4" stroke="#B4D4E4" opacity="0.5"/>
+  </g>
+
+  <!-- Node 2 center: (400, 100) -->
+  <g stroke="#E5E5D0" fill="none" opacity="0.8">
+    <path d="M 400 100 Q 430 80, 470 70" stroke-width="1.9" stroke="url(#threadGradient1)"/>
+    <path d="M 400 100 Q 370 120, 340 145" stroke-width="1.7" stroke="url(#threadGradient2)"/>
+    <path d="M 400 100 Q 410 130, 420 165" stroke-width="1.6" stroke="url(#threadGradient1)"/>
+    <path d="M 400 100 Q 380 85, 350 75" stroke-width="1.5" stroke="url(#threadGradient2)"/>
+
+    <path d="M 470 70 Q 500 60, 530 55" stroke-width="1.2" stroke="#C9C9B0"/>
+    <path d="M 470 70 Q 485 85, 505 100" stroke-width="1.1" stroke="#C9C9B0"/>
+    <path d="M 340 145 Q 310 160, 280 175" stroke-width="1.3" stroke="#C9C9B0"/>
+    <path d="M 420 165 Q 440 185, 460 200" stroke-width="1.2" stroke="#C9C9B0"/>
+    <path d="M 350 75 Q 330 65, 305 58" stroke-width="0.9" stroke="#C9C9B0"/>
+
+    <path d="M 530 55 Q 560 50, 590 48" stroke-width="0.6" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 505 100 Q 520 110, 540 118" stroke-width="0.7" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 280 175 Q 260 185, 245 195" stroke-width="0.5" stroke="#B4D4E4" opacity="0.5"/>
+  </g>
+
+  <!-- Node 3 center: (550, 180) -->
+  <g stroke="#E5E5D0" fill="none" opacity="0.8">
+    <path d="M 550 180 Q 580 160, 620 150" stroke-width="1.8" stroke="url(#threadGradient1)"/>
+    <path d="M 550 180 Q 530 210, 505 240" stroke-width="1.7" stroke="url(#threadGradient2)"/>
+    <path d="M 550 180 Q 570 200, 590 225" stroke-width="1.6" stroke="url(#threadGradient1)"/>
+    <path d="M 550 180 Q 520 170, 485 165" stroke-width="1.5" stroke="url(#threadGradient2)"/>
+    <path d="M 550 180 Q 555 155, 560 125" stroke-width="1.4" stroke="url(#threadGradient1)"/>
+
+    <path d="M 620 150 Q 650 140, 680 135" stroke-width="1.2" stroke="#C9C9B0"/>
+    <path d="M 620 150 Q 635 165, 655 180" stroke-width="1.1" stroke="#C9C9B0"/>
+    <path d="M 505 240 Q 480 260, 455 275" stroke-width="1.3" stroke="#C9C9B0"/>
+    <path d="M 590 225 Q 610 245, 630 260" stroke-width="1.2" stroke="#C9C9B0"/>
+    <path d="M 485 165 Q 465 160, 445 158" stroke-width="0.9" stroke="#C9C9B0"/>
+    <path d="M 560 125 Q 565 105, 570 85" stroke-width="1.0" stroke="#C9C9B0"/>
+
+    <path d="M 680 135 Q 710 130, 740 128" stroke-width="0.7" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 655 180 Q 675 190, 695 198" stroke-width="0.6" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 455 275 Q 435 285, 420 292" stroke-width="0.5" stroke="#B4D4E4" opacity="0.5"/>
+    <path d="M 630 260 Q 650 275, 670 287" stroke-width="0.6" stroke="#B4D4E4" opacity="0.6"/>
+  </g>
+
+  <!-- Node 4 center: (280, 230) -->
+  <g stroke="#E5E5D0" fill="none" opacity="0.8">
+    <path d="M 280 230 Q 250 250, 210 265" stroke-width="1.7" stroke="url(#threadGradient1)"/>
+    <path d="M 280 230 Q 310 245, 345 255" stroke-width="1.6" stroke="url(#threadGradient2)"/>
+    <path d="M 280 230 Q 270 205, 260 175" stroke-width="1.5" stroke="url(#threadGradient1)"/>
+    <path d="M 280 230 Q 295 215, 315 200" stroke-width="1.4" stroke="url(#threadGradient2)"/>
+
+    <path d="M 210 265 Q 180 278, 145 288" stroke-width="1.1" stroke="#C9C9B0"/>
+    <path d="M 210 265 Q 200 285, 188 298" stroke-width="0.9" stroke="#C9C9B0"/>
+    <path d="M 345 255 Q 375 262, 405 268" stroke-width="1.2" stroke="#C9C9B0"/>
+    <path d="M 260 175 Q 248 155, 235 135" stroke-width="1.0" stroke="#C9C9B0"/>
+    <path d="M 315 200 Q 335 190, 355 182" stroke-width="1.1" stroke="#C9C9B0"/>
+
+    <path d="M 145 288 Q 120 295, 95 298" stroke-width="0.6" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 405 268 Q 435 273, 465 277" stroke-width="0.7" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 235 135 Q 225 118, 215 100" stroke-width="0.5" stroke="#B4D4E4" opacity="0.5"/>
+  </g>
+
+  <!-- Node 5 center: (650, 80) -->
+  <g stroke="#E5E5D0" fill="none" opacity="0.8">
+    <path d="M 650 80 Q 680 70, 715 65" stroke-width="1.8" stroke="url(#threadGradient1)"/>
+    <path d="M 650 80 Q 630 100, 605 120" stroke-width="1.6" stroke="url(#threadGradient2)"/>
+    <path d="M 650 80 Q 660 105, 670 135" stroke-width="1.5" stroke="url(#threadGradient1)"/>
+    <path d="M 650 80 Q 620 75, 585 72" stroke-width="1.4" stroke="url(#threadGradient2)"/>
+    <path d="M 650 80 Q 655 55, 660 30" stroke-width="1.3" stroke="url(#threadGradient1)"/>
+
+    <path d="M 715 65 Q 745 60, 775 58" stroke-width="1.1" stroke="#C9C9B0"/>
+    <path d="M 715 65 Q 725 80, 740 95" stroke-width="0.9" stroke="#C9C9B0"/>
+    <path d="M 605 120 Q 585 135, 565 148" stroke-width="1.2" stroke="#C9C9B0"/>
+    <path d="M 670 135 Q 680 155, 688 175" stroke-width="1.0" stroke="#C9C9B0"/>
+    <path d="M 585 72 Q 560 70, 535 69" stroke-width="0.8" stroke="#C9C9B0"/>
+    <path d="M 660 30 Q 665 15, 668 5" stroke-width="0.7" stroke="#C9C9B0"/>
+
+    <path d="M 775 58 Q 790 57, 798 56" stroke-width="0.5" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 740 95 Q 755 108, 770 120" stroke-width="0.6" stroke="#B4D4E4" opacity="0.6"/>
+    <path d="M 688 175 Q 695 190, 700 205" stroke-width="0.5" stroke="#B4D4E4" opacity="0.5"/>
+  </g>
+
+  <!-- Connecting threads between nodes -->
+  <g stroke="#C9C9B0" fill="none" opacity="0.7">
+    <path d="M 240 170 Q 310 185, 380 165" stroke-width="1.0"/>
+    <path d="M 420 165 Q 480 170, 520 175" stroke-width="1.1"/>
+    <path d="M 300 185 Q 290 210, 285 225" stroke-width="0.8"/>
+    <path d="M 460 200 Q 500 210, 540 215" stroke-width="0.9"/>
+    <path d="M 505 100 Q 530 120, 555 145" stroke-width="0.7"/>
+  </g>
+
+  <!-- Root tips at edges -->
+  <g stroke="#B4D4E4" fill="none" opacity="0.5">
+    <path d="M 5 275 Q 3 285, 2 295" stroke-width="0.3" stroke-linecap="round"/>
+    <path d="M 68 295 L 68 300" stroke-width="0.3"/>
+    <path d="M 798 56 L 800 56" stroke-width="0.3"/>
+    <path d="M 668 5 Q 668 3, 668 0" stroke-width="0.3"/>
+    <path d="M 740 128 Q 760 125, 780 123" stroke-width="0.4"/>
+    <path d="M 590 48 Q 610 45, 630 43" stroke-width="0.4"/>
+    <path d="M 95 298 Q 75 299, 55 300" stroke-width="0.4"/>
+    <path d="M 420 292 Q 410 296, 400 299" stroke-width="0.3"/>
+  </g>
+
+  <!-- Additional fine thread detail -->
+  <g stroke="#B4D4E4" fill="none" opacity="0.4">
+    <path d="M 340 88 Q 360 86, 380 85" stroke-width="0.4"/>
+    <path d="M 310 115 Q 320 125, 328 138" stroke-width="0.3"/>
+    <path d="M 295 175 Q 305 185, 312 198" stroke-width="0.4"/>
+    <path d="M 245 195 Q 235 205, 228 218" stroke-width="0.3"/>
+    <path d="M 540 118 Q 548 122, 558 128" stroke-width="0.4"/>
+    <path d="M 695 198 Q 710 205, 725 210" stroke-width="0.3"/>
+    <path d="M 670 287 Q 685 292, 698 296" stroke-width="0.4"/>
+    <path d="M 465 277 Q 480 279, 495 280" stroke-width="0.3"/>
+    <path d="M 215 100 Q 208 88, 202 75" stroke-width="0.3"/>
+    <path d="M 770 120 Q 780 128, 788 136" stroke-width="0.3"/>
+    <path d="M 700 205 Q 708 218, 715 232" stroke-width="0.4"/>
+  </g>
+
+  <!-- Fungal nodes with pulsing life -->
+  <!-- Node 1 -->
+  <g>
+    <circle cx="150" cy="150" r="8" fill="url(#nodeGlow1)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="150" r="4" fill="#E5E5D0" opacity="0.9">
+      <animate attributeName="r" values="4;5;4" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Node 2 -->
+  <g>
+    <circle cx="400" cy="100" r="9" fill="url(#nodeGlow2)">
+      <animate attributeName="opacity" values="0.65;0.95;0.65" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="100" r="4.5" fill="#D4D4C0" opacity="0.85">
+      <animate attributeName="r" values="4.5;5.5;4.5" dur="11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Node 3 -->
+  <g>
+    <circle cx="550" cy="180" r="10" fill="url(#nodeGlow1)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="180" r="5" fill="#E5E5D0" opacity="0.9">
+      <animate attributeName="r" values="5;6;5" dur="13s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Node 4 -->
+  <g>
+    <circle cx="280" cy="230" r="7" fill="url(#nodeGlow2)">
+      <animate attributeName="opacity" values="0.7;0.95;0.7" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="230" r="3.5" fill="#D4D4C0" opacity="0.85">
+      <animate attributeName="r" values="3.5;4.5;3.5" dur="17s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Node 5 -->
+  <g>
+    <circle cx="650" cy="80" r="8" fill="url(#nodeGlow1)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="80" r="4" fill="#E5E5D0" opacity="0.9">
+      <animate attributeName="r" values="4;5;4" dur="19s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Mushroom fruiting bodies -->
+  <!-- Mushroom 1 - near node 1 -->
+  <g opacity="0.7">
+    <ellipse cx="140" cy="135" rx="6" ry="3" fill="#C9C9B0"/>
+    <rect x="138" y="135" width="4" height="8" fill="#B9B9A0"/>
+    <animate attributeName="opacity" values="0.7;0.85;0.7" dur="23s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Mushroom 2 - near node 3 with spore release -->
+  <g opacity="0.75">
+    <ellipse cx="540" cy="165" rx="7" ry="3.5" fill="#D4D4C0"/>
+    <rect x="537.5" y="165" width="5" height="10" fill="#C9C9B0"/>
+    <animate attributeName="opacity" values="0.75;0.9;0.75" dur="29s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Mushroom 3 - near node 4 -->
+  <g opacity="0.65">
+    <ellipse cx="270" cy="215" rx="5" ry="2.5" fill="#B9B9A0"/>
+    <rect x="268" y="215" width="4" height="7" fill="#A9A990"/>
+    <animate attributeName="opacity" values="0.65;0.8;0.65" dur="31s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Mushroom 4 - near node 5 -->
+  <g opacity="0.7">
+    <ellipse cx="660" cy="65" rx="6" ry="3" fill="#C9C9B0"/>
+    <rect x="658" y="65" width="4" height="8" fill="#B9B9A0"/>
+    <animate attributeName="opacity" values="0.7;0.85;0.7" dur="37s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Spore release from mushroom 2 -->
+  <g opacity="0.4">
+    <circle cx="537" cy="163" r="0.8" fill="#E5E5D0">
+      <animate attributeName="cy" values="163;130;100;70" dur="47s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.4;0" dur="47s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="542" cy="164" r="0.7" fill="#D4D4C0">
+      <animate attributeName="cy" values="164;135;105;80" dur="53s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0.3;0" dur="53s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="539" cy="162" r="0.6" fill="#E5E5D0">
+      <animate attributeName="cy" values="162;125;90;60" dur="59s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.4;0" dur="59s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="541" cy="165" r="0.7" fill="#C9C9B0">
+      <animate attributeName="cy" values="165;132;98;65" dur="61s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0.3;0" dur="61s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Nutrient signals traveling along threads -->
+  <!-- Signal path definitions for animation -->
+
+  <!-- Green nutrient signal 1: Node 1 → Node 2 -->
+  <circle r="2" fill="#34D399" opacity="0.9">
+    <animateMotion dur="41s" repeatCount="indefinite">
+      <mpath href="#path1"/>
+    </animateMotion>
+  </circle>
+  <path id="path1" d="M 150 150 Q 190 160, 240 170 Q 310 185, 380 165 Q 390 140, 400 100" fill="none" opacity="0"/>
+
+  <!-- Gold chemical signal 2: Node 2 → Node 3 -->
+  <circle r="1.8" fill="#F59E0B" opacity="0.85">
+    <animateMotion dur="37s" repeatCount="indefinite">
+      <mpath href="#path2"/>
+    </animateMotion>
+  </circle>
+  <path id="path2" d="M 400 100 Q 410 130, 420 165 Q 480 170, 520 175 Q 535 178, 550 180" fill="none" opacity="0"/>
+
+  <!-- Cyan water signal 3: Node 3 → Node 4 -->
+  <circle r="2.2" fill="#06B6D4" opacity="0.8">
+    <animateMotion dur="43s" repeatCount="indefinite">
+      <mpath href="#path3"/>
+    </animateMotion>
+  </circle>
+  <path id="path3" d="M 550 180 Q 520 170, 485 165 Q 420 160, 355 182 Q 315 200, 280 230" fill="none" opacity="0"/>
+
+  <!-- Green nutrient signal 4: Node 4 → Node 1 -->
+  <circle r="1.9" fill="#34D399" opacity="0.85">
+    <animateMotion dur="47s" repeatCount="indefinite">
+      <mpath href="#path4"/>
+    </animateMotion>
+  </circle>
+  <path id="path4" d="M 280 230 Q 270 205, 260 175 Q 248 155, 235 135 Q 210 145, 180 148 Q 165 149, 150 150" fill="none" opacity="0"/>
+
+  <!-- Gold chemical signal 5: Node 1 → outward -->
+  <circle r="2" fill="#F59E0B" opacity="0.9">
+    <animateMotion dur="53s" repeatCount="indefinite">
+      <mpath href="#path5"/>
+    </animateMotion>
+  </circle>
+  <path id="path5" d="M 150 150 Q 180 120, 220 110 Q 250 100, 280 95 Q 310 90, 340 88" fill="none" opacity="0"/>
+
+  <!-- Cyan water signal 6: Node 5 → Node 3 -->
+  <circle r="2.1" fill="#06B6D4" opacity="0.85">
+    <animateMotion dur="39s" repeatCount="indefinite">
+      <mpath href="#path6"/>
+    </animateMotion>
+  </circle>
+  <path id="path6" d="M 650 80 Q 630 100, 605 120 Q 585 135, 565 148 Q 558 155, 550 180" fill="none" opacity="0"/>
+
+  <!-- Green nutrient signal 7: Node 2 → Node 5 -->
+  <circle r="1.8" fill="#34D399" opacity="0.9">
+    <animateMotion dur="49s" repeatCount="indefinite">
+      <mpath href="#path7"/>
+    </animateMotion>
+  </circle>
+  <path id="path7" d="M 400 100 Q 430 80, 470 70 Q 500 60, 530 55 Q 555 65, 580 72 Q 615 78, 650 80" fill="none" opacity="0"/>
+
+  <!-- Gold chemical signal 8: Node 3 → outward -->
+  <circle r="2" fill="#F59E0B" opacity="0.8">
+    <animateMotion dur="51s" repeatCount="indefinite">
+      <mpath href="#path8"/>
+    </animateMotion>
+  </circle>
+  <path id="path8" d="M 550 180 Q 580 160, 620 150 Q 650 140, 680 135 Q 710 130, 740 128" fill="none" opacity="0"/>
+
+  <!-- Cyan water signal 9: Node 4 → outward -->
+  <circle r="1.9" fill="#06B6D4" opacity="0.85">
+    <animateMotion dur="44s" repeatCount="indefinite">
+      <mpath href="#path9"/>
+    </animateMotion>
+  </circle>
+  <path id="path9" d="M 280 230 Q 250 250, 210 265 Q 180 278, 145 288 Q 120 295, 95 298" fill="none" opacity="0"/>
+
+  <!-- Green nutrient signal 10: circular path -->
+  <circle r="2.1" fill="#34D399" opacity="0.8">
+    <animateMotion dur="67s" repeatCount="indefinite">
+      <mpath href="#path10"/>
+    </animateMotion>
+  </circle>
+  <path id="path10" d="M 150 150 Q 240 170, 300 185 Q 290 210, 285 225 Q 285 230, 280 230 Q 260 175, 240 170 Q 180 160, 150 150" fill="none" opacity="0"/>
+
+  <!-- Gold chemical signal 11: Node 5 → outward -->
+  <circle r="1.8" fill="#F59E0B" opacity="0.85">
+    <animateMotion dur="46s" repeatCount="indefinite">
+      <mpath href="#path11"/>
+    </animateMotion>
+  </circle>
+  <path id="path11" d="M 650 80 Q 660 105, 670 135 Q 680 155, 688 175 Q 695 190, 700 205" fill="none" opacity="0"/>
+
+  <!-- Cyan water signal 12: Node 2 → Node 4 -->
+  <circle r="2" fill="#06B6D4" opacity="0.9">
+    <animateMotion dur="42s" repeatCount="indefinite">
+      <mpath href="#path12"/>
+    </animateMotion>
+  </circle>
+  <path id="path12" d="M 400 100 Q 370 120, 340 145 Q 310 160, 280 175 Q 280 200, 280 230" fill="none" opacity="0"/>
+
+  <style>
+    @keyframes gentlePulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+  </style>
+</svg>

@@ -1,0 +1,574 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradients -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#050508;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a12;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Pool water gradient with depth -->
+    <radialGradient id="poolWater1" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#0f1828;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1020;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="poolWater2" cx="60%" cy="40%">
+      <stop offset="0%" style="stop-color:#0f1828;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1020;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="poolWater3" cx="40%" cy="35%">
+      <stop offset="0%" style="stop-color:#0f1828;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1020;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Bioluminescent glow filters -->
+    <filter id="bioGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="starGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="1" />
+    </filter>
+  </defs>
+
+  <!-- Night sky background -->
+  <rect width="800" height="300" fill="url(#skyGradient)"/>
+
+  <!-- Stars in sky -->
+  <g id="stars" filter="url(#starGlow)">
+    <circle cx="50" cy="15" r="0.8" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="35" r="0.6" fill="#ffffff" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="20" r="0.7" fill="#ffffff" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.55;0.85" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="290" cy="45" r="0.5" fill="#ffffff" opacity="0.75">
+      <animate attributeName="opacity" values="0.75;0.5;0.75" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="25" r="0.8" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="470" cy="38" r="0.6" fill="#ffffff" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="18" r="0.7" fill="#ffffff" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.6;0.85" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="42" r="0.5" fill="#ffffff" opacity="0.75">
+      <animate attributeName="opacity" values="0.75;0.5;0.75" dur="31s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="730" cy="28" r="0.8" fill="#ffffff" opacity="0.88">
+      <animate attributeName="opacity" values="0.88;0.58;0.88" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="165" cy="50" r="0.5" fill="#ffffff" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.45;0.7" dur="41s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="55" r="0.6" fill="#ffffff" opacity="0.78">
+      <animate attributeName="opacity" values="0.78;0.52;0.78" dur="43s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="610" cy="52" r="0.55" fill="#ffffff" opacity="0.72">
+      <animate attributeName="opacity" values="0.72;0.48;0.72" dur="47s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Dim moon -->
+  <circle cx="700" cy="40" r="18" fill="#2a2a35" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.5;0.6" dur="53s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="40" r="18" fill="none" stroke="#3a3a45" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Rock formations - creating natural pool basins -->
+  <!-- Left side rocks -->
+  <path d="M 0,90 Q 30,85 60,95 L 75,110 Q 80,130 70,145 L 60,160 Q 40,170 20,165 L 0,155 Z"
+        fill="#15151a" opacity="0.95"/>
+  <path d="M 45,100 Q 70,95 95,105 L 110,125 Q 105,145 95,155 L 75,165 Q 60,168 50,160 L 40,145 Q 38,125 45,100 Z"
+        fill="#1a1a20"/>
+
+  <!-- Center-left major rocks forming large pool -->
+  <path d="M 90,140 Q 120,135 160,145 L 185,155 Q 195,175 190,195 L 180,220 Q 165,235 140,235 L 110,230 Q 95,220 88,200 L 85,170 Q 87,155 90,140 Z"
+        fill="#1a1a20"/>
+  <path d="M 170,150 Q 210,148 245,160 L 265,180 Q 270,205 260,225 L 245,245 Q 220,255 195,250 L 175,240 Q 168,220 170,200 L 172,175 Q 170,160 170,150 Z"
+        fill="#15151a" opacity="0.98"/>
+
+  <!-- Center rocks forming medium pool -->
+  <path d="M 320,110 Q 360,108 395,120 L 415,135 Q 420,155 415,175 L 405,195 Q 385,208 360,206 L 330,200 Q 318,185 315,165 L 318,135 Q 320,120 320,110 Z"
+        fill="#1a1a20"/>
+  <path d="M 405,125 Q 440,123 470,135 L 485,150 Q 490,170 482,188 L 468,202 Q 448,210 425,206 L 410,195 Q 408,175 410,155 L 405,135 Q 405,128 405,125 Z"
+        fill="#15151a"/>
+
+  <!-- Right side rocks forming smaller pool -->
+  <path d="M 550,140 Q 585,138 615,148 L 635,165 Q 642,185 635,205 L 620,225 Q 595,238 570,235 L 550,225 Q 545,205 547,185 L 548,165 Q 550,150 550,140 Z"
+        fill="#1a1a20" opacity="0.96"/>
+  <path d="M 625,155 Q 660,153 690,165 L 710,180 Q 715,200 708,220 L 690,238 Q 665,248 640,243 L 622,230 Q 620,210 623,190 L 625,170 Q 625,160 625,155 Z"
+        fill="#15151a"/>
+
+  <!-- Far right edge rocks -->
+  <path d="M 720,130 Q 755,128 785,140 L 800,155 L 800,180 Q 795,200 780,215 L 755,230 Q 735,235 718,228 L 715,205 Q 717,180 720,155 Q 720,140 720,130 Z"
+        fill="#1a1a20"/>
+
+  <!-- Bottom base rocks -->
+  <rect x="0" y="260" width="800" height="40" fill="#1a1a20"/>
+  <path d="M 0,240 Q 100,235 200,245 L 300,250 Q 400,248 500,252 L 600,248 Q 700,250 800,245 L 800,300 L 0,300 Z"
+        fill="#15151a"/>
+
+  <!-- Pool water areas -->
+  <!-- Large left pool -->
+  <ellipse cx="145" cy="195" rx="55" ry="35" fill="url(#poolWater1)"/>
+
+  <!-- Medium center pool -->
+  <ellipse cx="400" cy="160" rx="48" ry="28" fill="url(#poolWater2)"/>
+
+  <!-- Small right pool -->
+  <ellipse cx="595" cy="190" rx="40" ry="25" fill="url(#poolWater3)"/>
+
+  <!-- Seaweed in and around pools -->
+  <g id="seaweed" opacity="0.7">
+    <!-- Seaweed strand 1 -->
+    <path d="M 110,230 Q 112,215 108,200 Q 106,185 110,170"
+          fill="none" stroke="#1a3020" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 110 230; -3 110 230; 0 110 230; 3 110 230; 0 110 230"
+                        dur="11s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 115,228 Q 118,213 114,198 Q 112,183 116,168"
+          fill="none" stroke="#1a3020" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 115 228; 4 115 228; 0 115 228; -2 115 228; 0 115 228"
+                        dur="13s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Seaweed strand 2 -->
+    <path d="M 370,200 Q 372,188 368,176 Q 366,164 370,152"
+          fill="none" stroke="#1a3020" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 370 200; 2 370 200; 0 370 200; -3 370 200; 0 370 200"
+                        dur="17s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 375,198 Q 378,186 374,174 Q 372,162 376,150"
+          fill="none" stroke="#1a3020" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 375 198; -2 375 198; 0 375 198; 4 375 198; 0 375 198"
+                        dur="19s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Seaweed strand 3 -->
+    <path d="M 565,225 Q 567,213 563,201 Q 561,189 565,177"
+          fill="none" stroke="#1a3020" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 565 225; -4 565 225; 0 565 225; 2 565 225; 0 565 225"
+                        dur="23s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Bioluminescent glow edges of pools -->
+  <g filter="url(#softGlow)">
+    <!-- Large pool glow -->
+    <ellipse cx="145" cy="195" rx="56" ry="36" fill="none" stroke="#06B6D4" stroke-width="1.5" opacity="0.15">
+      <animate attributeName="opacity" values="0.15;0.25;0.15" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="145" cy="195" rx="55" ry="35" fill="none" stroke="#34D399" stroke-width="1" opacity="0.12">
+      <animate attributeName="opacity" values="0.12;0.22;0.12" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Medium pool glow -->
+    <ellipse cx="400" cy="160" rx="49" ry="29" fill="none" stroke="#06B6D4" stroke-width="1.5" opacity="0.14">
+      <animate attributeName="opacity" values="0.14;0.24;0.14" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="400" cy="160" rx="48" ry="28" fill="none" stroke="#34D399" stroke-width="1" opacity="0.11">
+      <animate attributeName="opacity" values="0.11;0.21;0.11" dur="17s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Small pool glow -->
+    <ellipse cx="595" cy="190" rx="41" ry="26" fill="none" stroke="#06B6D4" stroke-width="1.5" opacity="0.16">
+      <animate attributeName="opacity" values="0.16;0.26;0.16" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="595" cy="190" rx="40" ry="25" fill="none" stroke="#34D399" stroke-width="1" opacity="0.13">
+      <animate attributeName="opacity" values="0.13;0.23;0.13" dur="23s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Bioluminescent streaks in water (disturbed plankton trails) -->
+  <g filter="url(#bioGlow)">
+    <!-- Large pool streaks -->
+    <path d="M 125,185 Q 135,188 145,187 Q 155,186 165,190"
+          fill="none" stroke="#06B6D4" stroke-width="0.8" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;0.35;0.2" dur="29s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 130,200 Q 140,202 150,201 Q 160,200 168,203"
+          fill="none" stroke="#34D399" stroke-width="0.7" opacity="0.18">
+      <animate attributeName="opacity" values="0.18;0.32;0.18" dur="31s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 118,195 Q 125,193 132,195 Q 138,197 145,196"
+          fill="none" stroke="#06B6D4" stroke-width="0.6" opacity="0.16">
+      <animate attributeName="opacity" values="0.16;0.3;0.16" dur="37s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Medium pool streaks -->
+    <path d="M 380,155 Q 390,157 400,156 Q 410,155 420,158"
+          fill="none" stroke="#06B6D4" stroke-width="0.8" opacity="0.19">
+      <animate attributeName="opacity" values="0.19;0.33;0.19" dur="41s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 385,165 Q 395,167 405,166 Q 413,165 422,167"
+          fill="none" stroke="#34D399" stroke-width="0.7" opacity="0.17">
+      <animate attributeName="opacity" values="0.17;0.31;0.17" dur="43s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Small pool streaks -->
+    <path d="M 575,185 Q 585,187 595,186 Q 605,185 615,188"
+          fill="none" stroke="#06B6D4" stroke-width="0.8" opacity="0.21">
+      <animate attributeName="opacity" values="0.21;0.36;0.21" dur="47s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 580,195 Q 588,196 595,195 Q 602,194 610,197"
+          fill="none" stroke="#34D399" stroke-width="0.6" opacity="0.15">
+      <animate attributeName="opacity" values="0.15;0.28;0.15" dur="53s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Individual bioluminescent plankton (tiny flickering dots) -->
+  <g filter="url(#bioGlow)">
+    <!-- Large pool plankton -->
+    <circle cx="120" cy="192" r="1" fill="#06B6D4" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.7;0.3;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="135" cy="198" r="1.2" fill="#34D399" opacity="0.25">
+      <animate attributeName="opacity" values="0.25;0.65;0.25;0" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="152" cy="190" r="1" fill="#06B6D4" opacity="0.28">
+      <animate attributeName="opacity" values="0.28;0.68;0.28;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="160" cy="200" r="1.3" fill="#34D399" opacity="0.32">
+      <animate attributeName="opacity" values="0.32;0.72;0.32;0" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="142" cy="188" r="1.1" fill="#06B6D4" opacity="0.26">
+      <animate attributeName="opacity" values="0.26;0.66;0.26;0" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="128" cy="203" r="1" fill="#34D399" opacity="0.29">
+      <animate attributeName="opacity" values="0.29;0.69;0.29;0" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="148" cy="195" r="1.2" fill="#06B6D4" opacity="0.27">
+      <animate attributeName="opacity" values="0.27;0.67;0.27;0" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="138" cy="185" r="1" fill="#34D399" opacity="0.31">
+      <animate attributeName="opacity" values="0.31;0.71;0.31;0" dur="31s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Medium pool plankton -->
+    <circle cx="385" cy="158" r="1" fill="#06B6D4" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.7;0.3;0" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="398" cy="165" r="1.1" fill="#34D399" opacity="0.28">
+      <animate attributeName="opacity" values="0.28;0.68;0.28;0" dur="41s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="410" cy="157" r="1.2" fill="#06B6D4" opacity="0.32">
+      <animate attributeName="opacity" values="0.32;0.72;0.32;0" dur="43s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="392" cy="162" r="1" fill="#34D399" opacity="0.26">
+      <animate attributeName="opacity" values="0.26;0.66;0.26;0" dur="47s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="405" cy="168" r="1.3" fill="#06B6D4" opacity="0.29">
+      <animate attributeName="opacity" values="0.29;0.69;0.29;0" dur="53s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Small pool plankton -->
+    <circle cx="582" cy="188" r="1" fill="#06B6D4" opacity="0.31">
+      <animate attributeName="opacity" values="0.31;0.71;0.31;0" dur="59s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="595" cy="193" r="1.2" fill="#34D399" opacity="0.27">
+      <animate attributeName="opacity" values="0.27;0.67;0.27;0" dur="61s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="605" cy="186" r="1.1" fill="#06B6D4" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.7;0.3;0" dur="67s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="590" cy="195" r="1" fill="#34D399" opacity="0.28">
+      <animate attributeName="opacity" values="0.28;0.68;0.28;0" dur="71s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Bioluminescent jellyfish -->
+  <g filter="url(#softGlow)">
+    <!-- Jellyfish 1 in large pool -->
+    <g opacity="0.4">
+      <ellipse cx="155" cy="192" rx="4" ry="3" fill="#8B5CF6" opacity="0.6">
+        <animate attributeName="cy" values="192;188;192" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.8;0.6" dur="13s" repeatCount="indefinite"/>
+      </ellipse>
+      <path d="M 152,194 Q 152,198 151,200" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5">
+        <animate attributeName="d"
+                 values="M 152,194 Q 152,198 151,200;M 152,190 Q 152,194 151,196;M 152,194 Q 152,198 151,200"
+                 dur="13s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 155,194 Q 155,199 155,201" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5">
+        <animate attributeName="d"
+                 values="M 155,194 Q 155,199 155,201;M 155,190 Q 155,195 155,197;M 155,194 Q 155,199 155,201"
+                 dur="13s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 158,194 Q 158,197 159,199" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5">
+        <animate attributeName="d"
+                 values="M 158,194 Q 158,197 159,199;M 158,190 Q 158,193 159,195;M 158,194 Q 158,197 159,199"
+                 dur="13s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Jellyfish 2 in medium pool -->
+    <g opacity="0.35">
+      <ellipse cx="412" cy="163" rx="3.5" ry="2.8" fill="#8B5CF6" opacity="0.65">
+        <animate attributeName="cy" values="163;159;163" dur="17s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.65;0.85;0.65" dur="17s" repeatCount="indefinite"/>
+      </ellipse>
+      <path d="M 410,165 Q 409,169 408,171" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5">
+        <animate attributeName="d"
+                 values="M 410,165 Q 409,169 408,171;M 410,161 Q 409,165 408,167;M 410,165 Q 409,169 408,171"
+                 dur="17s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 412,165 Q 412,170 412,172" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5">
+        <animate attributeName="d"
+                 values="M 412,165 Q 412,170 412,172;M 412,161 Q 412,166 412,168;M 412,165 Q 412,170 412,172"
+                 dur="17s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 414,165 Q 415,168 416,170" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5">
+        <animate attributeName="d"
+                 values="M 414,165 Q 415,168 416,170;M 414,161 Q 415,164 416,166;M 414,165 Q 415,168 416,170"
+                 dur="17s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- Sea anemones with waving tentacles -->
+  <g id="anemones">
+    <!-- Anemone 1 -->
+    <g transform-box="fill-box">
+      <circle cx="170" cy="210" r="3" fill="#2a1a30" opacity="0.8"/>
+      <line x1="170" y1="210" x2="168" y2="202" stroke="#3a2a40" stroke-width="1" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 170 210; -8 170 210; 0 170 210; 5 170 210; 0 170 210"
+                          dur="11s" repeatCount="indefinite"/>
+      </line>
+      <line x1="170" y1="210" x2="170" y2="201" stroke="#3a2a40" stroke-width="1" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 170 210; 6 170 210; 0 170 210; -4 170 210; 0 170 210"
+                          dur="13s" repeatCount="indefinite"/>
+      </line>
+      <line x1="170" y1="210" x2="172" y2="203" stroke="#3a2a40" stroke-width="1" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 170 210; 7 170 210; 0 170 210; -6 170 210; 0 170 210"
+                          dur="17s" repeatCount="indefinite"/>
+      </line>
+      <line x1="170" y1="210" x2="166" y2="204" stroke="#3a2a40" stroke-width="1" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 170 210; -5 170 210; 0 170 210; 7 170 210; 0 170 210"
+                          dur="19s" repeatCount="indefinite"/>
+      </line>
+      <line x1="170" y1="210" x2="174" y2="204" stroke="#3a2a40" stroke-width="1" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 170 210; 9 170 210; 0 170 210; -3 170 210; 0 170 210"
+                          dur="23s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Anemone 2 -->
+    <g transform-box="fill-box">
+      <circle cx="425" cy="180" r="2.5" fill="#2a1a30" opacity="0.8"/>
+      <line x1="425" y1="180" x2="423" y2="173" stroke="#3a2a40" stroke-width="0.8" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 425 180; 7 425 180; 0 425 180; -5 425 180; 0 425 180"
+                          dur="29s" repeatCount="indefinite"/>
+      </line>
+      <line x1="425" y1="180" x2="425" y2="172" stroke="#3a2a40" stroke-width="0.8" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 425 180; -6 425 180; 0 425 180; 4 425 180; 0 425 180"
+                          dur="31s" repeatCount="indefinite"/>
+      </line>
+      <line x1="425" y1="180" x2="427" y2="174" stroke="#3a2a40" stroke-width="0.8" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 425 180; 8 425 180; 0 425 180; -7 425 180; 0 425 180"
+                          dur="37s" repeatCount="indefinite"/>
+      </line>
+      <line x1="425" y1="180" x2="422" y2="175" stroke="#3a2a40" stroke-width="0.8" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 425 180; -4 425 180; 0 425 180; 6 425 180; 0 425 180"
+                          dur="41s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Anemone 3 -->
+    <g transform-box="fill-box">
+      <circle cx="608" cy="208" r="2.8" fill="#2a1a30" opacity="0.8"/>
+      <line x1="608" y1="208" x2="606" y2="200" stroke="#3a2a40" stroke-width="0.9" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 608 208; -7 608 208; 0 608 208; 6 608 208; 0 608 208"
+                          dur="43s" repeatCount="indefinite"/>
+      </line>
+      <line x1="608" y1="208" x2="608" y2="199" stroke="#3a2a40" stroke-width="0.9" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 608 208; 5 608 208; 0 608 208; -4 608 208; 0 608 208"
+                          dur="47s" repeatCount="indefinite"/>
+      </line>
+      <line x1="608" y1="208" x2="610" y2="201" stroke="#3a2a40" stroke-width="0.9" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 608 208; 6 608 208; 0 608 208; -8 608 208; 0 608 208"
+                          dur="53s" repeatCount="indefinite"/>
+      </line>
+      <line x1="608" y1="208" x2="604" y2="202" stroke="#3a2a40" stroke-width="0.9" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 608 208; -9 608 208; 0 608 208; 5 608 208; 0 608 208"
+                          dur="59s" repeatCount="indefinite"/>
+      </line>
+      <line x1="608" y1="208" x2="611" y2="203" stroke="#3a2a40" stroke-width="0.9" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 608 208; 8 608 208; 0 608 208; -6 608 208; 0 608 208"
+                          dur="61s" repeatCount="indefinite"/>
+      </line>
+    </g>
+  </g>
+
+  <!-- Starfish -->
+  <g id="starfish" transform="translate(390, 172)" opacity="0.75">
+    <path d="M 0,-4 L 1,-1 L 4,-1 L 2,1 L 3,4 L 0,2 L -3,4 L -2,1 L -4,-1 L -1,-1 Z"
+          fill="#8a5a3a" stroke="#6a4a2a" stroke-width="0.3"/>
+    <circle cx="0" cy="0" r="0.5" fill="#6a4a2a"/>
+  </g>
+
+  <!-- Hermit crab (tiny) -->
+  <g id="crab" transform="translate(575, 212)" opacity="0.6">
+    <ellipse cx="0" cy="0" rx="3" ry="2" fill="#4a3a2a"/>
+    <circle cx="-1.5" cy="-1" r="0.3" fill="#2a2a2a"/>
+    <circle cx="1.5" cy="-1" r="0.3" fill="#2a2a2a"/>
+    <line x1="-2" y1="1" x2="-3.5" y2="2" stroke="#3a2a1a" stroke-width="0.5"/>
+    <line x1="2" y1="1" x2="3.5" y2="2" stroke="#3a2a1a" stroke-width="0.5"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="575,212; 577,212; 575,212"
+                      dur="67s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Star reflections in pool water (slightly wavering) -->
+  <g id="starReflections" opacity="0.4">
+    <!-- Large pool reflections -->
+    <circle cx="128" cy="188" r="0.5" fill="#ffffff" opacity="0.5">
+      <animate attributeName="cx" values="128;129;128;127;128" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.3;0.5" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="152" cy="202" r="0.4" fill="#ffffff" opacity="0.45">
+      <animate attributeName="cx" values="152;153;152;151;152" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0.25;0.45" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="195" r="0.45" fill="#ffffff" opacity="0.48">
+      <animate attributeName="cx" values="140;141;140;139;140" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.48;0.28;0.48" dur="17s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Medium pool reflections -->
+    <circle cx="395" cy="158" r="0.4" fill="#ffffff" opacity="0.46">
+      <animate attributeName="cx" values="395;396;395;394;395" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.46;0.26;0.46" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="408" cy="165" r="0.45" fill="#ffffff" opacity="0.5">
+      <animate attributeName="cx" values="408;409;408;407;408" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.3;0.5" dur="23s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Small pool reflections -->
+    <circle cx="588" cy="187" r="0.4" fill="#ffffff" opacity="0.47">
+      <animate attributeName="cx" values="588;589;588;587;588" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.47;0.27;0.47" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="602" cy="193" r="0.45" fill="#ffffff" opacity="0.49">
+      <animate attributeName="cx" values="602;603;602;601;602" dur="31s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.49;0.29;0.49" dur="31s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Wet rock highlights (moisture catching moonlight) -->
+  <g id="wetRockHighlights" opacity="0.3">
+    <circle cx="95" cy="148" r="1" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.4;0.6;0.4" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="178" cy="162" r="0.8" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.35;0.55;0.35" dur="41s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="252" cy="172" r="1.2" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.38;0.58;0.38" dur="43s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="132" r="0.9" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.36;0.56;0.36" dur="47s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="418" cy="145" r="1.1" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.39;0.59;0.39" dur="53s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="478" cy="158" r="0.85" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.37;0.57;0.37" dur="59s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="558" cy="152" r="1" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.4;0.6;0.4" dur="61s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="168" r="0.95" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.38;0.58;0.38" dur="67s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="695" cy="182" r="1.05" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.41;0.61;0.41" dur="71s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="112" cy="165" r="0.75" fill="#8a8a95">
+      <animate attributeName="opacity" values="0.34;0.54;0.34" dur="73s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Wave foam at edges (advancing and retreating) -->
+  <g id="waves" opacity="0.25">
+    <path d="M 0,245 Q 15,243 30,245 Q 45,247 60,245 Q 75,243 90,245"
+          fill="none" stroke="#ffffff" stroke-width="1.5">
+      <animate attributeName="d"
+               values="M 0,245 Q 15,243 30,245 Q 45,247 60,245 Q 75,243 90,245;
+                       M 0,242 Q 15,240 30,242 Q 45,244 60,242 Q 75,240 90,242;
+                       M 0,245 Q 15,243 30,245 Q 45,247 60,245 Q 75,243 90,245"
+               dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.15;0.3" dur="19s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 250,252 Q 270,250 290,252 Q 310,254 330,252"
+          fill="none" stroke="#ffffff" stroke-width="1.5">
+      <animate attributeName="d"
+               values="M 250,252 Q 270,250 290,252 Q 310,254 330,252;
+                       M 250,249 Q 270,247 290,249 Q 310,251 330,249;
+                       M 250,252 Q 270,250 290,252 Q 310,254 330,252"
+               dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.28;0.13;0.28" dur="23s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 500,248 Q 520,246 540,248 Q 560,250 580,248 Q 600,246 620,248"
+          fill="none" stroke="#ffffff" stroke-width="1.5">
+      <animate attributeName="d"
+               values="M 500,248 Q 520,246 540,248 Q 560,250 580,248 Q 600,246 620,248;
+                       M 500,245 Q 520,243 540,245 Q 560,247 580,245 Q 600,243 620,245;
+                       M 500,248 Q 520,246 540,248 Q 560,250 580,248 Q 600,246 620,248"
+               dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.32;0.16;0.32" dur="29s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 720,250 Q 740,248 760,250 Q 780,252 800,250"
+          fill="none" stroke="#ffffff" stroke-width="1.5">
+      <animate attributeName="d"
+               values="M 720,250 Q 740,248 760,250 Q 780,252 800,250;
+                       M 720,247 Q 740,245 760,247 Q 780,249 800,247;
+                       M 720,250 Q 740,248 760,250 Q 780,252 800,250"
+               dur="31s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.29;0.14;0.29" dur="31s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

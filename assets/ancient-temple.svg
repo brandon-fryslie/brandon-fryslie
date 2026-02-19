@@ -1,0 +1,347 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Ancient Temple at Twilight">
+  <title>Ancient Temple at Twilight</title>
+
+  <defs>
+    <!-- Twilight gradient background -->
+    <linearGradient id="twilight-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0020;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#1a0a30;stop-opacity:1" />
+      <stop offset="65%" style="stop-color:#1a0a10;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050505;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Portal doorway glow -->
+    <radialGradient id="portal-glow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.9" />
+      <stop offset="30%" style="stop-color:#FBBF24;stop-opacity:0.6" />
+      <stop offset="60%" style="stop-color:#FCD34D;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Moon glow -->
+    <radialGradient id="moon-glow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#FDE68A;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#FCD34D;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Lantern glow -->
+    <radialGradient id="lantern-glow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#F59E0B;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Firefly cyan glow -->
+    <radialGradient id="firefly-cyan" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#67E8F9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#22D3EE;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Firefly gold glow -->
+    <radialGradient id="firefly-gold" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FBBF24;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="800" height="300" fill="url(#twilight-sky)"/>
+
+  <!-- Moon with glow -->
+  <circle cx="680" cy="60" r="35" fill="url(#moon-glow)"/>
+  <circle cx="680" cy="60" r="28" fill="#FEF3C7" opacity="0.95"/>
+  <circle cx="675" cy="55" r="3" fill="#FFFBEB" opacity="0.7"/>
+  <circle cx="685" cy="58" r="4" fill="#FFFBEB" opacity="0.5"/>
+  <circle cx="678" cy="65" r="2.5" fill="#FFFBEB" opacity="0.6"/>
+
+  <!-- Stars (30 total, varying brightness) -->
+  <circle cx="120" cy="25" r="1.2" fill="#FEF3C7" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="45" r="0.8" fill="#FDE68A" opacity="0.7"/>
+  <circle cx="250" cy="30" r="1" fill="#FEF3C7" opacity="0.85">
+    <animate attributeName="opacity" values="0.85;0.3;0.85" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="310" cy="50" r="0.7" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="380" cy="35" r="1.1" fill="#FEF3C7" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.35;0.8" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="55" r="0.9" fill="#FDE68A" opacity="0.75"/>
+  <circle cx="520" cy="40" r="1" fill="#FEF3C7" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="17s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="590" cy="28" r="0.8" fill="#FBBF24" opacity="0.7"/>
+  <circle cx="730" cy="120" r="1" fill="#FEF3C7" opacity="0.85">
+    <animate attributeName="opacity" values="0.85;0.3;0.85" dur="19s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="760" cy="95" r="0.7" fill="#FDE68A" opacity="0.65"/>
+
+  <!-- More stars (non-twinkling) -->
+  <circle cx="95" cy="60" r="0.6" fill="#FDE68A" opacity="0.5"/>
+  <circle cx="145" cy="75" r="0.8" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="205" cy="68" r="0.7" fill="#FEF3C7" opacity="0.55"/>
+  <circle cx="275" cy="85" r="0.6" fill="#FDE68A" opacity="0.5"/>
+  <circle cx="340" cy="72" r="0.75" fill="#FBBF24" opacity="0.58"/>
+  <circle cx="415" cy="90" r="0.65" fill="#FEF3C7" opacity="0.52"/>
+  <circle cx="485" cy="78" r="0.7" fill="#FDE68A" opacity="0.55"/>
+  <circle cx="555" cy="88" r="0.8" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="625" cy="75" r="0.6" fill="#FEF3C7" opacity="0.5"/>
+  <circle cx="695" cy="92" r="0.7" fill="#FDE68A" opacity="0.55"/>
+  <circle cx="85" cy="110" r="0.65" fill="#FBBF24" opacity="0.53"/>
+  <circle cx="165" cy="105" r="0.7" fill="#FEF3C7" opacity="0.56"/>
+  <circle cx="235" cy="118" r="0.6" fill="#FDE68A" opacity="0.5"/>
+  <circle cx="305" cy="112" r="0.75" fill="#FBBF24" opacity="0.58"/>
+  <circle cx="565" cy="115" r="0.7" fill="#FDE68A" opacity="0.55"/>
+  <circle cx="635" cy="125" r="0.65" fill="#FEF3C7" opacity="0.52"/>
+  <circle cx="705" cy="135" r="0.8" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="775" cy="145" r="0.6" fill="#FDE68A" opacity="0.5"/>
+  <circle cx="50" cy="85" r="0.7" fill="#FEF3C7" opacity="0.55"/>
+  <circle cx="750" cy="165" r="0.65" fill="#FBBF24" opacity="0.53"/>
+
+  <!-- Sacred constellation (connecting stars) -->
+  <g stroke="#FCD34D" stroke-width="0.4" opacity="0.4" fill="none">
+    <line x1="120" y1="25" x2="180" y2="45"/>
+    <line x1="180" y1="45" x2="250" y2="30"/>
+    <line x1="250" y1="30" x2="310" y2="50"/>
+    <line x1="310" y1="50" x2="380" y2="35"/>
+    <line x1="250" y1="30" x2="380" y2="35"/>
+  </g>
+
+  <!-- Water reflection base -->
+  <ellipse cx="400" cy="285" rx="300" ry="12" fill="#0a0520" opacity="0.6"/>
+
+  <!-- Temple reflection (mirrored, low opacity) -->
+  <g opacity="0.15" transform="translate(0, 0) scale(1, -1) translate(0, -300)">
+    <!-- Simplified reflection of main temple structure -->
+    <polygon points="400,180 440,200 440,240 360,240 360,200" fill="#1a1030"/>
+    <rect x="375" y="165" width="50" height="15" fill="#0f0820"/>
+    <rect x="385" y="150" width="30" height="15" fill="#1a1030"/>
+  </g>
+
+  <!-- Ground/steps base -->
+  <rect x="0" y="240" width="800" height="60" fill="#0a0515" opacity="0.8"/>
+
+  <!-- Temple steps (3 tiers) -->
+  <rect x="330" y="230" width="140" height="8" fill="#1a1030" opacity="0.9"/>
+  <rect x="340" y="220" width="120" height="10" fill="#0f0820" opacity="0.9"/>
+  <rect x="350" y="210" width="100" height="10" fill="#1a1030" opacity="0.9"/>
+
+  <!-- Temple main structure -->
+  <!-- Base platform -->
+  <rect x="320" y="180" width="160" height="30" fill="#1a1030"/>
+
+  <!-- Columns (6 pillars) -->
+  <rect x="330" y="150" width="8" height="60" fill="#0f0820"/>
+  <rect x="360" y="150" width="8" height="60" fill="#0f0820"/>
+  <rect x="390" y="150" width="8" height="60" fill="#0f0820"/>
+  <rect x="420" y="150" width="8" height="60" fill="#0f0820"/>
+  <rect x="450" y="150" width="8" height="60" fill="#0f0820"/>
+  <rect x="462" y="150" width="8" height="60" fill="#0f0820"/>
+
+  <!-- Column capitals -->
+  <rect x="328" y="148" width="12" height="4" fill="#1a1030"/>
+  <rect x="358" y="148" width="12" height="4" fill="#1a1030"/>
+  <rect x="388" y="148" width="12" height="4" fill="#1a1030"/>
+  <rect x="418" y="148" width="12" height="4" fill="#1a1030"/>
+  <rect x="448" y="148" width="12" height="4" fill="#1a1030"/>
+  <rect x="460" y="148" width="12" height="4" fill="#1a1030"/>
+
+  <!-- Tiered roof (ziggurat/pagoda style - 4 levels) -->
+  <!-- Level 1 (bottom) -->
+  <polygon points="310,150 490,150 480,135 320,135" fill="#0f0820"/>
+  <rect x="315" y="133" width="170" height="3" fill="#1a1030" opacity="0.6"/>
+
+  <!-- Level 2 -->
+  <polygon points="330,135 470,135 462,122 338,122" fill="#1a1030"/>
+  <rect x="335" y="120" width="130" height="3" fill="#0f0820" opacity="0.5"/>
+
+  <!-- Level 3 -->
+  <polygon points="348,122 452,122 446,111 354,111" fill="#0f0820"/>
+  <rect x="352" y="109" width="96" height="2.5" fill="#1a1030" opacity="0.5"/>
+
+  <!-- Level 4 (top) -->
+  <polygon points="365,111 435,111 430,102 370,102" fill="#1a1030"/>
+  <rect x="368" y="100" width="64" height="2" fill="#0f0820" opacity="0.4"/>
+
+  <!-- Ornamental details - carved symbols on facade -->
+  <circle cx="340" cy="190" r="3" fill="#2a1050" opacity="0.4"/>
+  <circle cx="370" cy="185" r="2.5" fill="#2a1050" opacity="0.35"/>
+  <circle cx="430" cy="185" r="2.5" fill="#2a1050" opacity="0.35"/>
+  <circle cx="460" cy="190" r="3" fill="#2a1050" opacity="0.4"/>
+  <polygon points="400,175 403,180 397,180" fill="#2a1050" opacity="0.3"/>
+  <polygon points="400,195 403,200 397,200" fill="#2a1050" opacity="0.3"/>
+
+  <!-- Glowing doorway/portal -->
+  <ellipse cx="400" cy="185" rx="32" ry="45" fill="url(#portal-glow)"/>
+  <rect x="382" y="160" width="36" height="50" rx="18" fill="#F59E0B" opacity="0.7"/>
+  <rect x="385" y="163" width="30" height="44" rx="15" fill="#FBBF24" opacity="0.8"/>
+  <ellipse cx="400" cy="185" rx="12" ry="18" fill="#FCD34D" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.6;0.9" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Incense smoke (3 wavy lines) -->
+  <g stroke="#9CA3AF" stroke-width="0.8" fill="none" opacity="0.3">
+    <path d="M 360 200 Q 362 180 360 160 Q 358 140 360 120">
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="7s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 2,0; 0,0; -2,0; 0,0" dur="11s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 440 200 Q 438 180 440 160 Q 442 140 440 120">
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="11s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; -2,0; 0,0; 2,0; 0,0" dur="13s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 400 185 Q 402 165 400 145 Q 398 125 400 105">
+      <animate attributeName="opacity" values="0.25;0.05;0.25" dur="13s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 1,0; 0,0; -1,0; 0,0" dur="17s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Floating lanterns (8 total) -->
+  <!-- Lantern 1 -->
+  <g>
+    <ellipse cx="280" cy="140" rx="12" ry="12" fill="url(#lantern-glow)" opacity="0.6"/>
+    <rect x="276" y="138" width="8" height="12" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;-3;0;3;0" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="277" y="139" width="6" height="10" rx="1" fill="#F59E0B">
+      <animate attributeName="cy" values="0;-3;0;3;0" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Lantern 2 -->
+  <g>
+    <ellipse cx="520" cy="155" rx="12" ry="12" fill="url(#lantern-glow)" opacity="0.6"/>
+    <rect x="516" y="153" width="8" height="12" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;2;0;-2;0" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="517" y="154" width="6" height="10" rx="1" fill="#F59E0B">
+      <animate attributeName="cy" values="0;2;0;-2;0" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Lantern 3 -->
+  <g>
+    <ellipse cx="250" cy="175" rx="10" ry="10" fill="url(#lantern-glow)" opacity="0.5"/>
+    <rect x="247" y="173" width="6" height="10" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;-2;0;2;0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="248" y="174" width="4" height="8" rx="0.5" fill="#F59E0B">
+      <animate attributeName="cy" values="0;-2;0;2;0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Lantern 4 -->
+  <g>
+    <ellipse cx="550" cy="125" rx="10" ry="10" fill="url(#lantern-glow)" opacity="0.5"/>
+    <rect x="547" y="123" width="6" height="10" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;3;0;-3;0" dur="17s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="548" y="124" width="4" height="8" rx="0.5" fill="#F59E0B">
+      <animate attributeName="cy" values="0;3;0;-3;0" dur="17s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Lantern 5 -->
+  <g>
+    <ellipse cx="220" cy="145" rx="11" ry="11" fill="url(#lantern-glow)" opacity="0.55"/>
+    <rect x="217" y="143" width="7" height="11" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;-2.5;0;2.5;0" dur="19s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="218" y="144" width="5" height="9" rx="0.5" fill="#F59E0B">
+      <animate attributeName="cy" values="0;-2.5;0;2.5;0" dur="19s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Lantern 6 -->
+  <g>
+    <ellipse cx="580" cy="170" rx="11" ry="11" fill="url(#lantern-glow)" opacity="0.55"/>
+    <rect x="577" y="168" width="7" height="11" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;2.5;0;-2.5;0" dur="23s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="578" y="169" width="5" height="9" rx="0.5" fill="#F59E0B">
+      <animate attributeName="cy" values="0;2.5;0;-2.5;0" dur="23s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Lantern 7 -->
+  <g>
+    <ellipse cx="195" cy="160" rx="9" ry="9" fill="url(#lantern-glow)" opacity="0.5"/>
+    <rect x="192" y="158" width="6" height="10" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;-3;0;3;0" dur="29s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="193" y="159" width="4" height="8" rx="0.5" fill="#F59E0B">
+      <animate attributeName="cy" values="0;-3;0;3;0" dur="29s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Lantern 8 -->
+  <g>
+    <ellipse cx="605" cy="145" rx="9" ry="9" fill="url(#lantern-glow)" opacity="0.5"/>
+    <rect x="602" y="143" width="6" height="10" rx="1" fill="#D97706" opacity="0.8">
+      <animate attributeName="cy" values="0;3;0;-3;0" dur="31s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="603" y="144" width="4" height="8" rx="0.5" fill="#F59E0B">
+      <animate attributeName="cy" values="0;3;0;-3;0" dur="31s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Fireflies/spirits (8 orbs with movement) -->
+  <!-- Cyan firefly 1 -->
+  <circle cx="150" cy="200" r="2.5" fill="url(#firefly-cyan)" opacity="0.8">
+    <animate attributeName="cx" values="150;165;145;160;150" dur="19s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="200;195;205;198;200" dur="17s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Gold firefly 1 -->
+  <circle cx="650" cy="210" r="2" fill="url(#firefly-gold)" opacity="0.75">
+    <animate attributeName="cx" values="650;635;655;640;650" dur="23s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="210;215;205;212;210" dur="19s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;0.25;0.75" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Cyan firefly 2 -->
+  <circle cx="180" cy="220" r="2" fill="url(#firefly-cyan)" opacity="0.7">
+    <animate attributeName="cx" values="180;190;175;185;180" dur="29s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="220;218;225;220;220" dur="23s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="13s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Gold firefly 2 -->
+  <circle cx="620" cy="195" r="2.5" fill="url(#firefly-gold)" opacity="0.8">
+    <animate attributeName="cx" values="620;610;625;615;620" dur="31s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="195;200;190;197;195" dur="29s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="17s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Cyan firefly 3 -->
+  <circle cx="290" cy="215" r="2.2" fill="url(#firefly-cyan)" opacity="0.75">
+    <animate attributeName="cx" values="290;280;295;285;290" dur="37s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="215;220;210;218;215" dur="31s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;0.25;0.75" dur="19s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Gold firefly 3 -->
+  <circle cx="510" cy="225" r="2.2" fill="url(#firefly-gold)" opacity="0.75">
+    <animate attributeName="cx" values="510;520;505;515;510" dur="41s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="225;220;228;223;225" dur="37s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;0.25;0.75" dur="23s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Cyan firefly 4 -->
+  <circle cx="320" cy="190" r="1.8" fill="url(#firefly-cyan)" opacity="0.7">
+    <animate attributeName="cx" values="320;315;325;318;320" dur="43s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="190;195;188;192;190" dur="41s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="29s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Gold firefly 4 -->
+  <circle cx="480" cy="200" r="1.8" fill="url(#firefly-gold)" opacity="0.7">
+    <animate attributeName="cx" values="480;485;475;482;480" dur="47s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="200;195;203;198;200" dur="43s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="31s" repeatCount="indefinite"/>
+  </circle>
+</svg>

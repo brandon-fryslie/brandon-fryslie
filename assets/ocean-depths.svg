@@ -1,0 +1,496 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Deep Ocean Abyss">
+  <title>Deep Ocean Abyss</title>
+  <defs>
+    <!-- [LAW:dataflow-not-control-flow] All animations execute unconditionally; visual variety comes from staggered timing values -->
+
+    <!-- Background gradient: midnight blue to absolute black -->
+    <linearGradient id="oceanDepth" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#020820;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#010614;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#010108;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Light ray gradients -->
+    <linearGradient id="lightRay1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.06" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="lightRay2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.04" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="lightRay3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="lightRay4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.03" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+
+    <!-- Bioluminescent glows -->
+    <radialGradient id="cyanGlow">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#06B6D4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="violetGlow">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="goldGlow">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#F59E0B;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="anglerGlow">
+      <stop offset="0%" style="stop-color:#FDE047;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FDE047;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FDE047;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="ambientGlow">
+      <stop offset="0%" style="stop-color:#1a4d5c;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#1a4d5c;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Water caustic filter -->
+    <filter id="caustics" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" seed="42">
+        <animate attributeName="baseFrequency"
+          values="0.015;0.018;0.015"
+          dur="23s"
+          repeatCount="indefinite" />
+      </feTurbulence>
+      <feColorMatrix type="matrix"
+        values="0 0 0 0 0.02
+                0 0 0 0 0.08
+                0 0 0 0 0.15
+                0 0 0 0.08 0"/>
+    </filter>
+
+    <!-- Blur for soft glows -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+  </defs>
+
+  <!-- Ocean background -->
+  <rect width="800" height="300" fill="url(#oceanDepth)" />
+
+  <!-- Caustic water effect overlay at top -->
+  <rect width="800" height="120" fill="white" filter="url(#caustics)" opacity="0.6" />
+
+  <!-- Light rays from surface -->
+  <!-- [LAW:one-type-per-behavior] All light rays behave identically (sway animation), differ only in position/timing -->
+  <g id="lightRays">
+    <polygon points="120,-10 140,-10 180,310 150,310" fill="url(#lightRay1)">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-1.5 130 0; 1.5 130 0; -1.5 130 0"
+        dur="19s" repeatCount="indefinite" />
+    </polygon>
+
+    <polygon points="320,-10 345,-10 395,310 360,310" fill="url(#lightRay2)">
+      <animateTransform attributeName="transform" type="rotate"
+        values="2 332.5 0; -1 332.5 0; 2 332.5 0"
+        dur="29s" repeatCount="indefinite" />
+    </polygon>
+
+    <polygon points="480,-10 500,-10 535,310 510,310" fill="url(#lightRay3)">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-1 490 0; 1.8 490 0; -1 490 0"
+        dur="23s" repeatCount="indefinite" />
+    </polygon>
+
+    <polygon points="630,-10 648,-10 675,310 655,310" fill="url(#lightRay4)">
+      <animateTransform attributeName="transform" type="rotate"
+        values="1.2 639 0; -1.5 639 0; 1.2 639 0"
+        dur="31s" repeatCount="indefinite" />
+    </polygon>
+
+    <polygon points="210,-10 228,-10 265,310 240,310" fill="url(#lightRay2)">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-0.8 219 0; 1.3 219 0; -0.8 219 0"
+        dur="37s" repeatCount="indefinite" />
+    </polygon>
+  </g>
+
+  <!-- Ambient glow spots that pulse -->
+  <g id="ambientGlows">
+    <circle cx="150" cy="180" r="60" fill="url(#ambientGlow)" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="17s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="580" cy="140" r="70" fill="url(#ambientGlow)" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="23s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="380" cy="220" r="55" fill="url(#ambientGlow)" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values="0.25;0.55;0.25" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="680" cy="260" r="50" fill="url(#ambientGlow)" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values="0.35;0.65;0.35" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="100" r="45" fill="url(#ambientGlow)" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="13s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="420" cy="80" r="40" fill="url(#ambientGlow)" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values="0.28;0.58;0.28" dur="31s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Marine snow particles drifting down -->
+  <!-- [LAW:dataflow-not-control-flow] Particles always animate; variety in speed/position, not conditional execution -->
+  <g id="marineSnow" opacity="0.4">
+    <circle cx="80" cy="20" r="0.5" fill="#8fb3c4">
+      <animate attributeName="cy" values="20;320" dur="41s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="150" cy="-10" r="0.8" fill="#7fa8ba">
+      <animate attributeName="cy" values="-10;310" dur="47s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="240" cy="40" r="0.6" fill="#9ec0d1">
+      <animate attributeName="cy" values="40;340" dur="37s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="310" cy="5" r="1" fill="#6d9bb0">
+      <animate attributeName="cy" values="5;305" dur="43s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="380" cy="60" r="0.7" fill="#85adc0">
+      <animate attributeName="cy" values="60;360" dur="53s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="455" cy="15" r="0.9" fill="#7aa4b8">
+      <animate attributeName="cy" values="15;315" dur="59s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="520" cy="45" r="0.5" fill="#92b8ca">
+      <animate attributeName="cy" values="45;345" dur="61s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="590" cy="30" r="1.2" fill="#6a98ae">
+      <animate attributeName="cy" values="30;330" dur="67s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="660" cy="10" r="0.6" fill="#88b0c2">
+      <animate attributeName="cy" values="10;310" dur="71s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="720" cy="55" r="0.8" fill="#7ca6b9">
+      <animate attributeName="cy" values="55;355" dur="73s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="120" cy="70" r="0.7" fill="#8fb3c4">
+      <animate attributeName="cy" values="70;370" dur="79s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="195" cy="25" r="1.1" fill="#6f9db2">
+      <animate attributeName="cy" values="25;325" dur="83s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="275" cy="50" r="0.5" fill="#95bac8">
+      <animate attributeName="cy" values="50;350" dur="89s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="340" cy="35" r="0.9" fill="#7ba5b9">
+      <animate attributeName="cy" values="35;335" dur="97s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="415" cy="12" r="0.6" fill="#8eb2c3">
+      <animate attributeName="cy" values="12;312" dur="41s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="485" cy="58" r="1.3" fill="#6896ad">
+      <animate attributeName="cy" values="58;358" dur="47s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="555" cy="22" r="0.7" fill="#91b7c7">
+      <animate attributeName="cy" values="22;322" dur="53s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="625" cy="42" r="0.8" fill="#79a3b7">
+      <animate attributeName="cy" values="42;342" dur="59s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="690" cy="18" r="1" fill="#8db1c2">
+      <animate attributeName="cy" values="18;318" dur="61s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="750" cy="38" r="0.6" fill="#7da7ba">
+      <animate attributeName="cy" values="38;338" dur="67s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="45" cy="28" r="0.9" fill="#90b5c6">
+      <animate attributeName="cy" values="28;328" dur="71s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="165" cy="48" r="0.5" fill="#6e9cb1">
+      <animate attributeName="cy" values="48;348" dur="73s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="225" cy="8" r="1.1" fill="#96bbc9">
+      <animate attributeName="cy" values="8;308" dur="79s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="295" cy="62" r="0.7" fill="#7aa4b8">
+      <animate attributeName="cy" values="62;362" dur="83s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="365" cy="32" r="0.8" fill="#8fb3c4">
+      <animate attributeName="cy" values="32;332" dur="89s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="435" cy="52" r="0.6" fill="#6d9bb0">
+      <animate attributeName="cy" values="52;352" dur="97s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="505" cy="5" r="1.2" fill="#93b9c8">
+      <animate attributeName="cy" values="5;305" dur="101s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="575" cy="65" r="0.5" fill="#78a2b6">
+      <animate attributeName="cy" values="65;365" dur="103s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="640" cy="15" r="0.9" fill="#8cb0c1">
+      <animate attributeName="cy" values="15;315" dur="107s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="705" cy="45" r="0.7" fill="#7ca6b9">
+      <animate attributeName="cy" values="45;345" dur="109s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="770" cy="25" r="1" fill="#8fb3c4">
+      <animate attributeName="cy" values="25;325" dur="113s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="100" cy="55" r="0.6" fill="#6a98ae">
+      <animate attributeName="cy" values="55;355" dur="43s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="180" cy="35" r="0.8" fill="#94b9c7">
+      <animate attributeName="cy" values="35;335" dur="37s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="260" cy="18" r="1.1" fill="#7ba5b9">
+      <animate attributeName="cy" values="18;318" dur="31s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="330" cy="48" r="0.5" fill="#8db1c2">
+      <animate attributeName="cy" values="48;348" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="400" cy="8" r="0.9" fill="#6f9db2">
+      <animate attributeName="cy" values="8;308" dur="23s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="470" cy="38" r="0.7" fill="#91b7c7">
+      <animate attributeName="cy" values="38;338" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="540" cy="58" r="1.3" fill="#6896ad">
+      <animate attributeName="cy" values="58;358" dur="17s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="610" cy="12" r="0.6" fill="#8fb3c4">
+      <animate attributeName="cy" values="12;312" dur="13s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="675" cy="52" r="0.8" fill="#7da7ba">
+      <animate attributeName="cy" values="52;352" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="735" cy="28" r="1" fill="#90b5c6">
+      <animate attributeName="cy" values="28;328" dur="7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Rising bubbles with wobble -->
+  <g id="bubbles" opacity="0.3">
+    <circle cx="200" cy="280" r="2" fill="#d1e8f0" stroke="#e8f4f8" stroke-width="0.3">
+      <animate attributeName="cy" values="280;-10" dur="37s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="200;205;198;202;200" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="290" r="1.5" fill="#c8e3ed" stroke="#dff0f6" stroke-width="0.2">
+      <animate attributeName="cy" values="290;-5" dur="41s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="450;447;453;449;450" dur="13s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="620" cy="270" r="2.5" fill="#d8ecf3" stroke="#edf6f9" stroke-width="0.4">
+      <animate attributeName="cy" values="270;-15" dur="43s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="620;623;617;621;620" dur="17s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="285" r="1.8" fill="#cfe6ef" stroke="#e5f3f7" stroke-width="0.3">
+      <animate attributeName="cy" values="285;-8" dur="47s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="90;87;92;89;90" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="730" cy="295" r="2.2" fill="#d4eaf1" stroke="#eaf5f8" stroke-width="0.3">
+      <animate attributeName="cy" values="295;-12" dur="53s" repeatCount="indefinite" />
+      <animate attributeName="cx" values="730;733;728;731;730" dur="23s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Jellyfish creatures -->
+  <!-- [LAW:one-type-per-behavior] All jellyfish have identical structure/animation, differ only in position/color/timing -->
+  <g id="jellyfish">
+    <!-- Cyan jellyfish 1 -->
+    <g opacity="0.7">
+      <ellipse cx="180" cy="180" rx="12" ry="8" fill="url(#cyanGlow)" filter="url(#softGlow)">
+        <animate attributeName="cy" values="180;140;180" dur="31s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.6;0.8;0.6" dur="7s" repeatCount="indefinite" />
+      </ellipse>
+      <path d="M174,188 Q174,200 172,210" stroke="#06B6D4" stroke-width="0.5" fill="none" opacity="0.4">
+        <animate attributeName="d"
+          values="M174,188 Q174,200 172,210;M174,188 Q176,200 174,210;M174,188 Q174,200 172,210"
+          dur="5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="7s" repeatCount="indefinite" />
+      </path>
+      <path d="M180,188 Q180,202 180,212" stroke="#06B6D4" stroke-width="0.5" fill="none" opacity="0.5">
+        <animate attributeName="d"
+          values="M180,188 Q180,202 180,212;M180,188 Q178,202 180,212;M180,188 Q180,202 180,212"
+          dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="7s" repeatCount="indefinite" />
+      </path>
+      <path d="M186,188 Q186,200 188,210" stroke="#06B6D4" stroke-width="0.5" fill="none" opacity="0.4">
+        <animate attributeName="d"
+          values="M186,188 Q186,200 188,210;M186,188 Q184,200 186,210;M186,188 Q186,200 188,210"
+          dur="5.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="7s" repeatCount="indefinite" />
+      </path>
+    </g>
+
+    <!-- Violet jellyfish 1 -->
+    <g opacity="0.65">
+      <ellipse cx="520" cy="220" rx="15" ry="10" fill="url(#violetGlow)" filter="url(#softGlow)">
+        <animate attributeName="cy" values="220;170;220" dur="37s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.5;0.7;0.5" dur="11s" repeatCount="indefinite" />
+      </ellipse>
+      <path d="M510,230 Q508,245 506,258" stroke="#8B5CF6" stroke-width="0.6" fill="none" opacity="0.4">
+        <animate attributeName="d"
+          values="M510,230 Q508,245 506,258;M510,230 Q512,245 510,258;M510,230 Q508,245 506,258"
+          dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="11s" repeatCount="indefinite" />
+      </path>
+      <path d="M520,230 Q520,246 520,260" stroke="#8B5CF6" stroke-width="0.6" fill="none" opacity="0.5">
+        <animate attributeName="d"
+          values="M520,230 Q520,246 520,260;M520,230 Q518,246 520,260;M520,230 Q520,246 520,260"
+          dur="7s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="11s" repeatCount="indefinite" />
+      </path>
+      <path d="M530,230 Q532,245 534,258" stroke="#8B5CF6" stroke-width="0.6" fill="none" opacity="0.4">
+        <animate attributeName="d"
+          values="M530,230 Q532,245 534,258;M530,230 Q528,245 530,258;M530,230 Q532,245 534,258"
+          dur="6.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="11s" repeatCount="indefinite" />
+      </path>
+      <path d="M515,230 Q514,244 512,255" stroke="#8B5CF6" stroke-width="0.5" fill="none" opacity="0.35">
+        <animate attributeName="d"
+          values="M515,230 Q514,244 512,255;M515,230 Q516,244 515,255;M515,230 Q514,244 512,255"
+          dur="5.8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.25;0.45;0.25" dur="11s" repeatCount="indefinite" />
+      </path>
+      <path d="M525,230 Q526,244 528,255" stroke="#8B5CF6" stroke-width="0.5" fill="none" opacity="0.35">
+        <animate attributeName="d"
+          values="M525,230 Q526,244 528,255;M525,230 Q524,244 525,255;M525,230 Q526,244 528,255"
+          dur="6.2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.25;0.45;0.25" dur="11s" repeatCount="indefinite" />
+      </path>
+    </g>
+
+    <!-- Cyan jellyfish 2 -->
+    <g opacity="0.6">
+      <ellipse cx="650" cy="160" rx="10" ry="7" fill="url(#cyanGlow)" filter="url(#softGlow)">
+        <animate attributeName="cy" values="160;115;160" dur="41s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.5;0.75;0.5" dur="13s" repeatCount="indefinite" />
+      </ellipse>
+      <path d="M645,167 Q644,178 642,187" stroke="#06B6D4" stroke-width="0.4" fill="none" opacity="0.4">
+        <animate attributeName="d"
+          values="M645,167 Q644,178 642,187;M645,167 Q646,178 645,187;M645,167 Q644,178 642,187"
+          dur="5.2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="13s" repeatCount="indefinite" />
+      </path>
+      <path d="M650,167 Q650,179 650,189" stroke="#06B6D4" stroke-width="0.4" fill="none" opacity="0.45">
+        <animate attributeName="d"
+          values="M650,167 Q650,179 650,189;M650,167 Q648,179 650,189;M650,167 Q650,179 650,189"
+          dur="6.1s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.35;0.55;0.35" dur="13s" repeatCount="indefinite" />
+      </path>
+      <path d="M655,167 Q656,178 658,187" stroke="#06B6D4" stroke-width="0.4" fill="none" opacity="0.4">
+        <animate attributeName="d"
+          values="M655,167 Q656,178 658,187;M655,167 Q654,178 655,187;M655,167 Q656,178 658,187"
+          dur="5.7s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="13s" repeatCount="indefinite" />
+      </path>
+    </g>
+
+    <!-- Violet jellyfish 2 -->
+    <g opacity="0.7">
+      <ellipse cx="320" cy="200" rx="13" ry="9" fill="url(#violetGlow)" filter="url(#softGlow)">
+        <animate attributeName="cy" values="200;155;200" dur="43s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.55;0.8;0.55" dur="17s" repeatCount="indefinite" />
+      </ellipse>
+      <path d="M312,209 Q310,222 308,233" stroke="#8B5CF6" stroke-width="0.55" fill="none" opacity="0.45">
+        <animate attributeName="d"
+          values="M312,209 Q310,222 308,233;M312,209 Q314,222 312,233;M312,209 Q310,222 308,233"
+          dur="5.9s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.35;0.55;0.35" dur="17s" repeatCount="indefinite" />
+      </path>
+      <path d="M320,209 Q320,223 320,235" stroke="#8B5CF6" stroke-width="0.55" fill="none" opacity="0.5">
+        <animate attributeName="d"
+          values="M320,209 Q320,223 320,235;M320,209 Q318,223 320,235;M320,209 Q320,223 320,235"
+          dur="6.8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="17s" repeatCount="indefinite" />
+      </path>
+      <path d="M328,209 Q330,222 332,233" stroke="#8B5CF6" stroke-width="0.55" fill="none" opacity="0.45">
+        <animate attributeName="d"
+          values="M328,209 Q330,222 332,233;M328,209 Q326,222 328,233;M328,209 Q330,222 332,233"
+          dur="6.3s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.35;0.55;0.35" dur="17s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+
+  <!-- Glowing plankton -->
+  <g id="plankton">
+    <circle cx="420" cy="150" r="2" fill="url(#goldGlow)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2;2.5;2" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="580" cy="95" r="1.8" fill="url(#goldGlow)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.5;0.95;0.5" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="r" values="1.8;2.3;1.8" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="240" cy="130" r="2.2" fill="url(#goldGlow)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.45;0.85;0.45" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.2;2.7;2.2" dur="13s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="710" cy="190" r="1.9" fill="url(#goldGlow)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="17s" repeatCount="indefinite" />
+      <animate attributeName="r" values="1.9;2.4;1.9" dur="17s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="130" cy="240" r="2.1" fill="url(#goldGlow)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.4;0.88;0.4" dur="19s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.1;2.6;2.1" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="480" cy="260" r="1.7" fill="url(#goldGlow)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.48;0.92;0.48" dur="23s" repeatCount="indefinite" />
+      <animate attributeName="r" values="1.7;2.2;1.7" dur="23s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Angler fish lures -->
+  <g id="anglerLures">
+    <!-- Lure 1 with glow halo -->
+    <circle cx="95" cy="210" r="8" fill="url(#anglerGlow)" filter="url(#strongGlow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="95" cy="210" r="2.5" fill="#FDE047">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Lure 2 with glow halo -->
+    <circle cx="690" cy="235" r="9" fill="url(#anglerGlow)" filter="url(#strongGlow)" opacity="0.55">
+      <animate attributeName="opacity" values="0.45;0.75;0.45" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="690" cy="235" r="2.8" fill="#FDE047">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Lure 3 with glow halo -->
+    <circle cx="440" cy="270" r="7" fill="url(#anglerGlow)" filter="url(#strongGlow)" opacity="0.58">
+      <animate attributeName="opacity" values="0.48;0.78;0.48" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="440" cy="270" r="2.2" fill="#FDE047">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Deep creature silhouette - massive eye barely visible -->
+  <g id="deepCreature" opacity="0.12">
+    <!-- Curved body outline -->
+    <path d="M -20,280 Q 200,320 400,285 Q 600,250 850,290"
+      stroke="#1a1a3e" stroke-width="3" fill="none" opacity="0.15">
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="61s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Eye -->
+    <ellipse cx="420" cy="283" rx="8" ry="12" fill="#1a1a3e" opacity="0.25">
+      <animate attributeName="opacity" values="0.2;0.35;0.2" dur="61s" repeatCount="indefinite" />
+    </ellipse>
+
+    <!-- Eye highlight -->
+    <ellipse cx="422" cy="280" rx="2" ry="3" fill="#2a2a4e" opacity="0.3">
+      <animate attributeName="opacity" values="0.25;0.4;0.25" dur="61s" repeatCount="indefinite" />
+    </ellipse>
+  </g>
+</svg>

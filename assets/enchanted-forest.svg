@@ -1,0 +1,379 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- [LAW:one-source-of-truth] Gradients defined once, reused throughout -->
+
+    <!-- Sky gradient -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#020D05;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a1a0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050510;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Moon glow -->
+    <radialGradient id="moonGlow">
+      <stop offset="0%" style="stop-color:#E2E8F0;stop-opacity:0.8" />
+      <stop offset="30%" style="stop-color:#E2E8F0;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Firefly glows - different colors -->
+    <radialGradient id="fireflyGold">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#F59E0B;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="fireflyGreen">
+      <stop offset="0%" style="stop-color:#34D399;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#34D399;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#34D399;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="fireflyYellow">
+      <stop offset="0%" style="stop-color:#FDE68A;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FDE68A;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FDE68A;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Mushroom glows -->
+    <radialGradient id="mushroomCyan">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#06B6D4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="mushroomViolet">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Blur for mist -->
+    <filter id="mistBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#skyGradient)"/>
+
+  <!-- Stars through canopy gaps -->
+  <circle cx="120" cy="30" r="1" fill="#E2E8F0" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="20" r="1" fill="#E2E8F0" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="35" r="1" fill="#E2E8F0" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="620" cy="25" r="1" fill="#E2E8F0" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="730" cy="40" r="1" fill="#E2E8F0" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="17s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Moon with glow -->
+  <circle cx="680" cy="60" r="35" fill="url(#moonGlow)">
+    <animate attributeName="r" values="35;38;35" dur="19s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M 680 25 A 25 25 0 1 1 680 95 A 20 20 0 0 0 680 25 Z" fill="#E2E8F0" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="19s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Distant tree layer (lighter, hazier) -->
+  <!-- Tall pine 1 -->
+  <path d="M 100 180 L 80 160 L 85 160 L 70 140 L 75 140 L 60 115 L 100 115 L 85 140 L 90 140 L 75 160 L 80 160 Z"
+        fill="#0f1f13" opacity="0.4"/>
+  <rect x="98" y="180" width="4" height="40" fill="#0f1f13" opacity="0.4"/>
+
+  <!-- Bare tree 1 -->
+  <g opacity="0.35">
+    <rect x="238" y="140" width="4" height="80" fill="#121a15"/>
+    <path d="M 240 160 Q 220 150 215 145 M 240 155 Q 225 148 222 145" stroke="#121a15" stroke-width="2" fill="none"/>
+    <path d="M 240 170 Q 260 155 270 148 M 240 165 Q 255 158 262 153" stroke="#121a15" stroke-width="2" fill="none"/>
+    <path d="M 240 180 Q 225 175 218 172" stroke="#121a15" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Tall pine 2 -->
+  <path d="M 520 190 L 495 165 L 502 165 L 485 140 L 492 140 L 475 110 L 520 110 L 503 140 L 510 140 L 493 165 L 500 165 Z"
+        fill="#0e1d12" opacity="0.45"/>
+  <rect x="517" y="190" width="5" height="35" fill="#0e1d12" opacity="0.45"/>
+
+  <!-- Mid-layer trees (medium darkness) -->
+  <!-- Tall pine 3 -->
+  <path d="M 350 200 L 325 170 L 332 170 L 312 140 L 319 140 L 300 105 L 350 105 L 331 140 L 338 140 L 318 170 L 325 170 Z"
+        fill="#0a1a0f" opacity="0.7"/>
+  <rect x="347" y="200" width="6" height="50" fill="#0a1a0f" opacity="0.7"/>
+
+  <!-- Bare tree 2 -->
+  <g opacity="0.65">
+    <rect x="588" y="160" width="5" height="90" fill="#0d1a10"/>
+    <path d="M 590 180 Q 565 168 555 160 M 590 175 Q 570 165 562 160" stroke="#0d1a10" stroke-width="2.5" fill="none"/>
+    <path d="M 590 195 Q 610 180 625 170 M 590 190 Q 605 182 615 175" stroke="#0d1a10" stroke-width="2.5" fill="none"/>
+    <path d="M 590 210 Q 575 200 568 195" stroke="#0d1a10" stroke-width="2" fill="none"/>
+    <path d="M 590 205 Q 605 198 615 192" stroke="#0d1a10" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Front layer trees (darkest, sharpest) -->
+  <!-- Tall pine 4 -->
+  <path d="M 180 220 L 150 185 L 158 185 L 135 150 L 143 150 L 120 110 L 180 110 L 157 150 L 165 150 L 142 185 L 150 185 Z"
+        fill="#081208" opacity="0.9"/>
+  <rect x="177" y="220" width="7" height="60" fill="#081208" opacity="0.9"/>
+
+  <!-- Bare tree 3 with owl -->
+  <g opacity="0.85">
+    <rect x="418" y="130" width="6" height="120" fill="#081208"/>
+    <!-- Branches -->
+    <path d="M 421 155 Q 395 142 380 135 M 421 150 Q 400 140 388 135" stroke="#081208" stroke-width="3" fill="none"/>
+    <path d="M 421 175 Q 448 158 465 148 M 421 170 Q 440 160 452 152" stroke="#081208" stroke-width="3" fill="none"/>
+    <path d="M 421 195 Q 405 183 395 178" stroke="#081208" stroke-width="2.5" fill="none"/>
+    <path d="M 421 210 Q 440 200 450 195" stroke="#081208" stroke-width="2.5" fill="none"/>
+
+    <!-- Owl on branch -->
+    <ellipse cx="455" cy="151" rx="8" ry="10" fill="#0a1208"/>
+    <circle cx="452" cy="149" r="2" fill="#FDE68A" opacity="0.8">
+      <!-- Blink animation -->
+      <animate attributeName="opacity" values="0.8;0.8;0;0.8;0.8" keyTimes="0;0.4;0.5;0.6;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="458" cy="149" r="2" fill="#FDE68A" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.8;0;0.8;0.8" keyTimes="0;0.4;0.5;0.6;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M 455 155 L 453 157 L 457 157 Z" fill="#1a1208"/>
+  </g>
+
+  <!-- Tall pine 5 -->
+  <path d="M 720 230 L 690 195 L 698 195 L 675 160 L 683 160 L 660 120 L 720 120 L 697 160 L 705 160 L 682 195 L 690 195 Z"
+        fill="#081208" opacity="0.95"/>
+  <rect x="717" y="230" width="7" height="55" fill="#081208" opacity="0.95"/>
+
+  <!-- Mist layers -->
+  <ellipse cx="400" cy="260" rx="300" ry="25" fill="#1a3a2a" opacity="0.08" filter="url(#mistBlur)">
+    <animate attributeName="cx" values="400;420;400" dur="37s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="200" cy="275" rx="250" ry="20" fill="#1a3a2a" opacity="0.06" filter="url(#mistBlur)">
+    <animate attributeName="cx" values="200;180;200" dur="43s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="600" cy="270" rx="280" ry="22" fill="#1a3a2a" opacity="0.07" filter="url(#mistBlur)">
+    <animate attributeName="cx" values="600;630;600" dur="41s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Fireflies with halos and realistic flash patterns -->
+  <!-- [LAW:dataflow-not-control-flow] Each firefly executes same animation pattern; timing values vary -->
+
+  <!-- Gold fireflies -->
+  <g>
+    <circle cx="150" cy="160" r="8" fill="url(#fireflyGold)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.8;0.3;0" keyTimes="0;0.7;0.75;0.8;0.85;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="160" r="2" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.5;0" keyTimes="0;0.7;0.75;0.8;0.85;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="380" cy="140" r="8" fill="url(#fireflyGold)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.9;0.4;0" keyTimes="0;0.6;0.65;0.7;0.75;1" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="140" r="2" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.6;0" keyTimes="0;0.6;0.65;0.7;0.75;1" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="640" cy="180" r="8" fill="url(#fireflyGold)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.85;0.35;0" keyTimes="0;0.75;0.8;0.85;0.9;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="180" r="2" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.55;0" keyTimes="0;0.75;0.8;0.85;0.9;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="280" cy="200" r="8" fill="url(#fireflyGold)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.75;0.3;0" keyTimes="0;0.65;0.7;0.75;0.8;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="200" r="2" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.5;0" keyTimes="0;0.65;0.7;0.75;0.8;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Green fireflies -->
+  <g>
+    <circle cx="220" cy="175" r="8" fill="url(#fireflyGreen)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.8;0.35;0" keyTimes="0;0.8;0.85;0.9;0.95;1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="175" r="2" fill="#34D399" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.6;0" keyTimes="0;0.8;0.85;0.9;0.95;1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="480" cy="155" r="8" fill="url(#fireflyGreen)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.85;0.4;0" keyTimes="0;0.7;0.75;0.8;0.85;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="155" r="2" fill="#34D399" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.65;0" keyTimes="0;0.7;0.75;0.8;0.85;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="560" cy="195" r="8" fill="url(#fireflyGreen)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.75;0.3;0" keyTimes="0;0.6;0.65;0.7;0.75;1" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="195" r="2" fill="#34D399" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.55;0" keyTimes="0;0.6;0.65;0.7;0.75;1" dur="17s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="320" cy="185" r="8" fill="url(#fireflyGreen)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.9;0.38;0" keyTimes="0;0.72;0.77;0.82;0.87;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="185" r="2" fill="#34D399" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.62;0" keyTimes="0;0.72;0.77;0.82;0.87;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Yellow fireflies -->
+  <g>
+    <circle cx="420" cy="210" r="8" fill="url(#fireflyYellow)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.8;0.32;0" keyTimes="0;0.78;0.83;0.88;0.93;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="210" r="2" fill="#FDE68A" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.58;0" keyTimes="0;0.78;0.83;0.88;0.93;1" dur="8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="540" cy="170" r="8" fill="url(#fireflyYellow)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.85;0.36;0" keyTimes="0;0.68;0.73;0.78;0.83;1" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="540" cy="170" r="2" fill="#FDE68A" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.6;0" keyTimes="0;0.68;0.73;0.78;0.83;1" dur="19s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="190" cy="145" r="8" fill="url(#fireflyYellow)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.75;0.3;0" keyTimes="0;0.75;0.8;0.85;0.9;1" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="190" cy="145" r="2" fill="#FDE68A" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.52;0" keyTimes="0;0.75;0.8;0.85;0.9;1" dur="23s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="680" cy="150" r="8" fill="url(#fireflyYellow)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.82;0.34;0" keyTimes="0;0.7;0.75;0.8;0.85;1" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="680" cy="150" r="2" fill="#FDE68A" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.56;0" keyTimes="0;0.7;0.75;0.8;0.85;1" dur="29s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <circle cx="90" cy="190" r="8" fill="url(#fireflyYellow)" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.78;0.31;0" keyTimes="0;0.73;0.78;0.83;0.88;1" dur="31s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="190" r="2" fill="#FDE68A" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;1;0.54;0" keyTimes="0;0.73;0.78;0.83;0.88;1" dur="31s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Bioluminescent mushrooms -->
+  <g>
+    <!-- Cyan mushroom -->
+    <circle cx="165" cy="250" r="12" fill="url(#mushroomCyan)" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.6;0.4" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <ellipse cx="165" cy="252" rx="6" ry="4" fill="#06B6D4" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect x="163" y="252" width="4" height="8" fill="#0a3a3a" opacity="0.5"/>
+  </g>
+
+  <g>
+    <!-- Violet mushroom -->
+    <circle cx="710" cy="255" r="10" fill="url(#mushroomViolet)" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.55;0.35" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <ellipse cx="710" cy="257" rx="5" ry="3" fill="#8B5CF6" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.75;0.55" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect x="708" y="257" width="4" height="7" fill="#2a1a3a" opacity="0.5"/>
+  </g>
+
+  <g>
+    <!-- Small cyan mushroom -->
+    <circle cx="185" cy="258" r="8" fill="url(#mushroomCyan)" opacity="0.38">
+      <animate attributeName="opacity" values="0.38;0.58;0.38" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <ellipse cx="185" cy="260" rx="4" ry="2.5" fill="#06B6D4" opacity="0.58">
+      <animate attributeName="opacity" values="0.58;0.78;0.58" dur="17s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect x="183.5" y="260" width="3" height="6" fill="#0a3a3a" opacity="0.5"/>
+  </g>
+
+  <!-- Falling leaves -->
+  <g>
+    <path d="M 250 80 Q 253 82 250 84 Q 247 82 250 80 Z" fill="#2a4a1a" opacity="0.6">
+      <animate attributeName="d"
+               values="M 250 80 Q 253 82 250 84 Q 247 82 250 80 Z;
+                       M 248 100 Q 251 102 248 104 Q 245 102 248 100 Z;
+                       M 252 120 Q 255 122 252 124 Q 249 122 252 120 Z;
+                       M 250 140 Q 253 142 250 144 Q 247 142 250 140 Z;
+                       M 246 160 Q 249 162 246 164 Q 243 162 246 160 Z;
+                       M 250 180 Q 253 182 250 184 Q 247 182 250 180 Z;
+                       M 248 200 Q 251 202 248 204 Q 245 202 248 200 Z;
+                       M 250 220 Q 253 222 250 224 Q 247 222 250 220 Z"
+               dur="37s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g>
+    <path d="M 500 40 Q 503 42 500 44 Q 497 42 500 40 Z" fill="#3a4a2a" opacity="0.65">
+      <animate attributeName="d"
+               values="M 500 40 Q 503 42 500 44 Q 497 42 500 40 Z;
+                       M 505 65 Q 508 67 505 69 Q 502 67 505 65 Z;
+                       M 498 90 Q 501 92 498 94 Q 495 92 498 90 Z;
+                       M 503 115 Q 506 117 503 119 Q 500 117 503 115 Z;
+                       M 500 140 Q 503 142 500 144 Q 497 142 500 140 Z;
+                       M 496 165 Q 499 167 496 169 Q 493 167 496 165 Z;
+                       M 501 190 Q 504 192 501 194 Q 498 192 501 190 Z;
+                       M 500 215 Q 503 217 500 219 Q 497 217 500 215 Z"
+               dur="41s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g>
+    <path d="M 620 60 Q 623 62 620 64 Q 617 62 620 60 Z" fill="#2a3a1a" opacity="0.7">
+      <animate attributeName="d"
+               values="M 620 60 Q 623 62 620 64 Q 617 62 620 60 Z;
+                       M 615 85 Q 618 87 615 89 Q 612 87 615 85 Z;
+                       M 622 110 Q 625 112 622 114 Q 619 112 622 110 Z;
+                       M 618 135 Q 621 137 618 139 Q 615 137 618 135 Z;
+                       M 624 160 Q 627 162 624 164 Q 621 162 624 160 Z;
+                       M 620 185 Q 623 187 620 189 Q 617 187 620 185 Z;
+                       M 616 210 Q 619 212 616 214 Q 613 212 616 210 Z;
+                       M 620 235 Q 623 237 620 239 Q 617 237 620 235 Z"
+               dur="43s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g>
+    <path d="M 380 50 Q 383 52 380 54 Q 377 52 380 50 Z" fill="#3a4a3a" opacity="0.55">
+      <animate attributeName="d"
+               values="M 380 50 Q 383 52 380 54 Q 377 52 380 50 Z;
+                       M 376 75 Q 379 77 376 79 Q 373 77 376 75 Z;
+                       M 382 100 Q 385 102 382 104 Q 379 102 382 100 Z;
+                       M 378 125 Q 381 127 378 129 Q 375 127 378 125 Z;
+                       M 384 150 Q 387 152 384 154 Q 381 152 384 150 Z;
+                       M 380 175 Q 383 177 380 179 Q 377 177 380 175 Z;
+                       M 375 200 Q 378 202 375 204 Q 372 202 375 200 Z;
+                       M 380 225 Q 383 227 380 229 Q 377 227 380 225 Z"
+               dur="47s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

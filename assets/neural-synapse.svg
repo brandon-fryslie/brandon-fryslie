@@ -1,0 +1,360 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Neural Synapse Network Animation">
+  <title>Neural Synapse Network</title>
+
+  <!-- Definitions -->
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#0a0a20;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050510;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Noise filter for texture -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="turbulence" />
+      <feColorMatrix type="saturate" values="0" in="turbulence" result="grayscale" />
+      <feBlend in="SourceGraphic" in2="grayscale" mode="overlay" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.05" />
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Node glow filters -->
+    <filter id="glow-cyan">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-violet">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-rose">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-hub">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Node gradients -->
+    <radialGradient id="node-cyan">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0891B2;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.2" />
+    </radialGradient>
+
+    <radialGradient id="node-violet">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7C3AED;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.2" />
+    </radialGradient>
+
+    <radialGradient id="node-rose">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DB2777;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:0.2" />
+    </radialGradient>
+
+    <radialGradient id="node-hub">
+      <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#8B5CF6;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#7C3AED;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#6D28D9;stop-opacity:0.1" />
+    </radialGradient>
+
+    <!-- Impulse gradients -->
+    <radialGradient id="impulse-cyan">
+      <stop offset="0%" style="stop-color:#22D3EE;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06B6D4;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="impulse-violet">
+      <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0" />
+    </radialGradient>
+
+    <radialGradient id="impulse-rose">
+      <stop offset="0%" style="stop-color:#F472B6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#EC4899;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGrad)" />
+  <rect width="800" height="300" fill="url(#bgGrad)" filter="url(#noise)" />
+
+  <!-- Connection lines (drawn first, behind nodes) -->
+  <g stroke="#1a1a3e" stroke-width="0.8" fill="none" opacity="0.6">
+    <!-- Hub connections (central node at 400,150) -->
+    <line x1="400" y1="150" x2="120" y2="80" />
+    <line x1="400" y1="150" x2="280" y2="50" />
+    <line x1="400" y1="150" x2="520" y2="60" />
+    <line x1="400" y1="150" x2="680" y2="90" />
+    <line x1="400" y1="150" x2="180" y2="220" />
+    <line x1="400" y1="150" x2="620" y2="230" />
+    <line x1="400" y1="150" x2="350" y2="250" />
+    <line x1="400" y1="150" x2="550" y2="200" />
+
+    <!-- Sensory layer connections -->
+    <line x1="120" y1="80" x2="280" y2="50" />
+    <line x1="280" y1="50" x2="520" y2="60" />
+    <line x1="520" y1="60" x2="680" y2="90" />
+    <line x1="680" y1="90" x2="720" y2="140" />
+
+    <!-- Processing layer connections -->
+    <line x1="180" y1="220" x2="280" y2="180" />
+    <line x1="280" y1="180" x2="350" y2="250" />
+    <line x1="550" y1="200" x2="620" y2="230" />
+    <line x1="280" y1="180" x2="550" y2="200" />
+
+    <!-- Output layer connections -->
+    <line x1="350" y1="250" x2="470" y2="270" />
+    <line x1="470" y1="270" x2="620" y2="230" />
+
+    <!-- Cross-layer connections -->
+    <line x1="120" y1="80" x2="180" y2="220" />
+    <line x1="680" y1="90" x2="620" y2="230" />
+    <line x1="280" y1="50" x2="280" y2="180" />
+    <line x1="80" y1="140" x2="120" y2="80" />
+    <line x1="720" y1="140" x2="680" y2="90" />
+    <line x1="520" y1="60" x2="550" y2="200" />
+  </g>
+
+  <!-- Dendrite-like branches -->
+  <g stroke="#1a1a3e" stroke-width="0.5" fill="none" opacity="0.3">
+    <!-- Branches from sensory nodes -->
+    <path d="M 120 80 l -15 -10 M 120 80 l -10 -15 M 120 80 l -12 5" />
+    <path d="M 280 50 l -8 -12 M 280 50 l 8 -12 M 280 50 l 0 -15" />
+    <path d="M 680 90 l 12 -8 M 680 90 l 15 5 M 680 90 l 10 -12" />
+
+    <!-- Branches from processing nodes -->
+    <path d="M 180 220 l -15 8 M 180 220 l -10 15 M 180 220 l -18 0" />
+    <path d="M 550 200 l 15 -5 M 550 200 l 12 8 M 550 200 l 15 0" />
+
+    <!-- Branches from output nodes -->
+    <path d="M 350 250 l -10 12 M 350 250 l 0 15 M 350 250 l -12 8" />
+    <path d="M 620 230 l 12 10 M 620 230 l 15 0 M 620 230 l 10 15" />
+
+    <!-- Branches from hub -->
+    <path d="M 400 150 l -5 -20 M 400 150 l 5 -20 M 400 150 l -8 -18 M 400 150 l 8 -18" />
+  </g>
+
+  <!-- Neural nodes -->
+
+  <!-- Sensory nodes (cyan) -->
+  <g id="sensory-nodes">
+    <!-- Node 1 -->
+    <circle cx="120" cy="80" r="6" fill="url(#node-cyan)" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="11s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 2 -->
+    <circle cx="280" cy="50" r="5" fill="url(#node-cyan)" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="13s" begin="1.3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 3 -->
+    <circle cx="520" cy="60" r="5.5" fill="url(#node-cyan)" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="17s" begin="2.7s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 4 -->
+    <circle cx="680" cy="90" r="6" fill="url(#node-cyan)" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="19s" begin="0.8s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 5 -->
+    <circle cx="80" cy="140" r="4.5" fill="url(#node-cyan)" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="23s" begin="3.1s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 6 -->
+    <circle cx="720" cy="140" r="5" fill="url(#node-cyan)" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="1.9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Processing nodes (violet) -->
+  <g id="processing-nodes">
+    <!-- Node 7 -->
+    <circle cx="180" cy="220" r="5.5" fill="url(#node-violet)" filter="url(#glow-violet)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="13s" begin="2.1s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 8 -->
+    <circle cx="280" cy="180" r="5" fill="url(#node-violet)" filter="url(#glow-violet)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="17s" begin="0.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 9 -->
+    <circle cx="550" cy="200" r="5.5" fill="url(#node-violet)" filter="url(#glow-violet)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="3.7s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 10 -->
+    <circle cx="650" cy="150" r="5" fill="url(#node-violet)" filter="url(#glow-violet)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="19s" begin="1.1s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 11 -->
+    <circle cx="200" cy="120" r="4.5" fill="url(#node-violet)" filter="url(#glow-violet)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="23s" begin="2.9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Output nodes (rose) -->
+  <g id="output-nodes">
+    <!-- Node 12 -->
+    <circle cx="350" cy="250" r="6" fill="url(#node-rose)" filter="url(#glow-rose)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.7s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 13 -->
+    <circle cx="470" cy="270" r="5.5" fill="url(#node-rose)" filter="url(#glow-rose)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="13s" begin="0.3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 14 -->
+    <circle cx="620" cy="230" r="6" fill="url(#node-rose)" filter="url(#glow-rose)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="2.3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 15 -->
+    <circle cx="560" cy="260" r="5" fill="url(#node-rose)" filter="url(#glow-rose)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="17s" begin="3.3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Central hub node (larger, violet) -->
+  <circle cx="400" cy="150" r="9" fill="url(#node-hub)" filter="url(#glow-hub)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Electrical impulses (traveling dots) -->
+  <g id="impulses">
+    <!-- Impulse 1: Hub to top-left sensory -->
+    <circle r="2.5" fill="url(#impulse-cyan)">
+      <animate attributeName="cx" values="400;120" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="150;80" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="11s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 2: Sensory to hub -->
+    <circle r="2.5" fill="url(#impulse-cyan)">
+      <animate attributeName="cx" values="280;400" dur="13s" begin="2.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="50;150" dur="13s" begin="2.1s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="13s" begin="2.1s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 3: Hub to right sensory -->
+    <circle r="2.5" fill="url(#impulse-cyan)">
+      <animate attributeName="cx" values="400;680" dur="17s" begin="1.3s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="150;90" dur="17s" begin="1.3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="17s" begin="1.3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 4: Sensory to sensory -->
+    <circle r="2.5" fill="url(#impulse-cyan)">
+      <animate attributeName="cx" values="520;680" dur="19s" begin="3.7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="60;90" dur="19s" begin="3.7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="19s" begin="3.7s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 5: Hub to processing -->
+    <circle r="2.5" fill="url(#impulse-violet)">
+      <animate attributeName="cx" values="400;180" dur="23s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="150;220" dur="23s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="23s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 6: Processing to processing -->
+    <circle r="2.5" fill="url(#impulse-violet)">
+      <animate attributeName="cx" values="280;550" dur="7s" begin="1.9s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="180;200" dur="7s" begin="1.9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="7s" begin="1.9s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 7: Hub to output -->
+    <circle r="2.5" fill="url(#impulse-rose)">
+      <animate attributeName="cx" values="400;620" dur="13s" begin="0.7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="150;230" dur="13s" begin="0.7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="13s" begin="0.7s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 8: Processing to output -->
+    <circle r="2.5" fill="url(#impulse-rose)">
+      <animate attributeName="cx" values="180;350" dur="11s" begin="2.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="220;250" dur="11s" begin="2.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="11s" begin="2.8s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 9: Output to output -->
+    <circle r="2.5" fill="url(#impulse-rose)">
+      <animate attributeName="cx" values="350;470" dur="17s" begin="1.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="250;270" dur="17s" begin="1.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="17s" begin="1.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 10: Sensory to processing cross-layer -->
+    <circle r="2.5" fill="url(#impulse-violet)">
+      <animate attributeName="cx" values="120;180" dur="19s" begin="0.9s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="80;220" dur="19s" begin="0.9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="19s" begin="0.9s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 11: Reverse path sensory to hub -->
+    <circle r="2.5" fill="url(#impulse-cyan)">
+      <animate attributeName="cx" values="680;400" dur="23s" begin="4.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="90;150" dur="23s" begin="4.1s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="23s" begin="4.1s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 12: Reverse output to hub -->
+    <circle r="2.5" fill="url(#impulse-rose)">
+      <animate attributeName="cx" values="620;400" dur="7s" begin="3.3s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="230;150" dur="7s" begin="3.3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="7s" begin="3.3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 13: Cross-layer sensory to processing -->
+    <circle r="2.5" fill="url(#impulse-violet)">
+      <animate attributeName="cx" values="280;280" dur="11s" begin="1.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="50;180" dur="11s" begin="1.1s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="11s" begin="1.1s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 14: Processing reverse -->
+    <circle r="2.5" fill="url(#impulse-violet)">
+      <animate attributeName="cx" values="550;280" dur="13s" begin="2.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="200;180" dur="13s" begin="2.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="13s" begin="2.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Impulse 15: Edge sensory connection -->
+    <circle r="2.5" fill="url(#impulse-cyan)">
+      <animate attributeName="cx" values="80;120" dur="17s" begin="4.7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="140;80" dur="17s" begin="4.7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="17s" begin="4.7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

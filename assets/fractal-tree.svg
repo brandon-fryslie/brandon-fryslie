@@ -1,0 +1,370 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <!-- [LAW:one-source-of-truth] Background gradient defined once -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#0a0a15;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#030308;stop-opacity:1"/>
+    </radialGradient>
+
+    <!-- [LAW:one-source-of-truth] Trunk/branch gradient -->
+    <linearGradient id="trunkGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B6914"/>
+      <stop offset="60%" style="stop-color:#B8860B"/>
+      <stop offset="100%" style="stop-color:#34D399"/>
+    </linearGradient>
+
+    <!-- Root gradient (darker, earthier) -->
+    <linearGradient id="rootGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A3410;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#2A1A08;stop-opacity:0.6"/>
+    </linearGradient>
+
+    <!-- Tree aura -->
+    <radialGradient id="auraGrad" cx="50%" cy="70%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.15"/>
+      <stop offset="50%" style="stop-color:#B8860B;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#030308;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Leaf gradients -->
+    <radialGradient id="leafGreen">
+      <stop offset="0%" style="stop-color:#6EE7B7"/>
+      <stop offset="100%" style="stop-color:#34D399"/>
+    </radialGradient>
+
+    <radialGradient id="leafGold">
+      <stop offset="0%" style="stop-color:#FCD34D"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </radialGradient>
+
+    <!-- Energy particle filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Tree aura -->
+  <ellipse cx="400" cy="220" rx="180" ry="140" fill="url(#auraGrad)"/>
+
+  <!-- Fibonacci spiral hints (very subtle) -->
+  <path d="M 400,240 Q 420,220 440,210 Q 460,200 480,195" stroke="#FFD700" stroke-width="0.3" fill="none" opacity="0.1"/>
+  <path d="M 400,240 Q 380,220 360,210 Q 340,200 320,195" stroke="#FFD700" stroke-width="0.3" fill="none" opacity="0.1"/>
+  <path d="M 400,180 Q 430,160 450,150 Q 470,140 485,135" stroke="#FFD700" stroke-width="0.3" fill="none" opacity="0.15"/>
+  <path d="M 400,180 Q 370,160 350,150 Q 330,140 315,135" stroke="#FFD700" stroke-width="0.3" fill="none" opacity="0.15"/>
+
+  <!-- Ground line -->
+  <line x1="0" y1="240" x2="800" y2="240" stroke="#1a1a2e" stroke-width="1" opacity="0.5"/>
+
+  <!-- Grass strokes -->
+  <g opacity="0.3">
+    <line x1="320" y1="240" x2="318" y2="235" stroke="#34D399" stroke-width="0.5"/>
+    <line x1="340" y1="240" x2="342" y2="234" stroke="#34D399" stroke-width="0.5"/>
+    <line x1="360" y1="240" x2="358" y2="236" stroke="#34D399" stroke-width="0.5"/>
+    <line x1="380" y1="240" x2="382" y2="233" stroke="#34D399" stroke-width="0.5"/>
+    <line x1="420" y1="240" x2="418" y2="235" stroke="#34D399" stroke-width="0.5"/>
+    <line x1="440" y1="240" x2="442" y2="236" stroke="#34D399" stroke-width="0.5"/>
+    <line x1="460" y1="240" x2="458" y2="234" stroke="#34D399" stroke-width="0.5"/>
+    <line x1="480" y1="240" x2="482" y2="233" stroke="#34D399" stroke-width="0.5"/>
+  </g>
+
+  <!-- ROOT SYSTEM (mirror of branches, below ground) -->
+  <g id="roots" stroke="url(#rootGrad)" fill="none" opacity="0.6">
+    <!-- Main root trunk -->
+    <path d="M 400,240 L 400,260" stroke-width="3"/>
+
+    <!-- Level 1 roots -->
+    <path d="M 400,260 L 370,275" stroke-width="2.5"/>
+    <path d="M 400,260 L 430,275" stroke-width="2.5"/>
+
+    <!-- Level 2 roots -->
+    <path d="M 370,275 L 350,287" stroke-width="2"/>
+    <path d="M 370,275 L 360,290" stroke-width="2"/>
+    <path d="M 430,275 L 450,287" stroke-width="2"/>
+    <path d="M 430,275 L 440,290" stroke-width="2"/>
+
+    <!-- Level 3 roots -->
+    <path d="M 350,287 L 335,295" stroke-width="1.5"/>
+    <path d="M 350,287 L 340,298" stroke-width="1.5"/>
+    <path d="M 360,290 L 348,298" stroke-width="1.5"/>
+    <path d="M 360,290 L 355,300" stroke-width="1.5"/>
+    <path d="M 450,287 L 465,295" stroke-width="1.5"/>
+    <path d="M 450,287 L 460,298" stroke-width="1.5"/>
+    <path d="M 440,290 L 452,298" stroke-width="1.5"/>
+    <path d="M 440,290 L 445,300" stroke-width="1.5"/>
+  </g>
+
+  <!-- TREE STRUCTURE -->
+  <g id="tree" stroke="url(#trunkGrad)" fill="none" stroke-linecap="round">
+    <!-- Trunk -->
+    <path id="trunk" d="M 400,240 L 400,180" stroke-width="5"/>
+
+    <!-- Level 1: 2 main branches -->
+    <path id="branch1a" d="M 400,180 L 360,140" stroke-width="3"/>
+    <path id="branch1b" d="M 400,180 L 440,140" stroke-width="3"/>
+
+    <!-- Level 2: 4 sub-branches -->
+    <path d="M 360,140 L 340,110" stroke-width="2"/>
+    <path d="M 360,140 L 350,120" stroke-width="2"/>
+    <path d="M 440,140 L 460,110" stroke-width="2"/>
+    <path d="M 440,140 L 450,120" stroke-width="2"/>
+
+    <!-- Level 3: 8 smaller branches -->
+    <path d="M 340,110 L 325,90" stroke-width="1.5"/>
+    <path d="M 340,110 L 332,95" stroke-width="1.5"/>
+    <path d="M 350,120 L 338,100" stroke-width="1.5"/>
+    <path d="M 350,120 L 345,105" stroke-width="1.5"/>
+    <path d="M 460,110 L 475,90" stroke-width="1.5"/>
+    <path d="M 460,110 L 468,95" stroke-width="1.5"/>
+    <path d="M 450,120 L 462,100" stroke-width="1.5"/>
+    <path d="M 450,120 L 455,105" stroke-width="1.5"/>
+
+    <!-- Level 4: 16 twigs -->
+    <path d="M 325,90 L 315,75" stroke-width="1"/>
+    <path d="M 325,90 L 320,80" stroke-width="1"/>
+    <path d="M 332,95 L 325,82" stroke-width="1"/>
+    <path d="M 332,95 L 328,87" stroke-width="1"/>
+    <path d="M 338,100 L 330,88" stroke-width="1"/>
+    <path d="M 338,100 L 335,92" stroke-width="1"/>
+    <path d="M 345,105 L 340,94" stroke-width="1"/>
+    <path d="M 345,105 L 342,98" stroke-width="1"/>
+    <path d="M 475,90 L 485,75" stroke-width="1"/>
+    <path d="M 475,90 L 480,80" stroke-width="1"/>
+    <path d="M 468,95 L 475,82" stroke-width="1"/>
+    <path d="M 468,95 L 472,87" stroke-width="1"/>
+    <path d="M 462,100 L 470,88" stroke-width="1"/>
+    <path d="M 462,100 L 465,92" stroke-width="1"/>
+    <path d="M 455,105 L 460,94" stroke-width="1"/>
+    <path d="M 455,105 L 458,98" stroke-width="1"/>
+
+    <!-- Level 5: 32 tips (finest branches) -->
+    <path d="M 315,75 L 308,65" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 315,75 L 312,68" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 320,80 L 315,72" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 320,80 L 318,74" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 325,82 L 320,74" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 325,82 L 322,76" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 328,87 L 324,79" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 328,87 L 326,82" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 330,88 L 326,80" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 330,88 L 328,83" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 335,92 L 331,85" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 335,92 L 333,88" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 340,94 L 336,88" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 340,94 L 338,90" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 342,98 L 338,92" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 342,98 L 340,94" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 485,75 L 492,65" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 485,75 L 488,68" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 480,80 L 485,72" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 480,80 L 482,74" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 475,82 L 480,74" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 475,82 L 478,76" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 472,87 L 476,79" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 472,87 L 474,82" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 470,88 L 474,80" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 470,88 L 472,83" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 465,92 L 469,85" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 465,92 L 467,88" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 460,94 L 464,88" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 460,94 L 462,90" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 458,98 L 462,92" stroke-width="0.5" stroke="#34D399"/>
+    <path d="M 458,98 L 460,94" stroke-width="0.5" stroke="#34D399"/>
+  </g>
+
+  <!-- LEAVES at branch tips -->
+  <g id="leaves">
+    <!-- Left side leaves (green) -->
+    <circle cx="308" cy="65" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="312" cy="68" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="315" cy="72" r="2.5" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.6;0.95;0.6" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="318" cy="74" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="74" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.7;0.98;0.7" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="322" cy="76" r="2" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.65;0.95;0.65" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="324" cy="79" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="326" cy="82" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.7;0.96;0.7" dur="31s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="326" cy="80" r="2.5" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.68;0.98;0.68" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="328" cy="83" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="41s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="331" cy="85" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.72;0.97;0.72" dur="43s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="333" cy="88" r="2" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.66;0.94;0.66" dur="47s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="336" cy="88" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="53s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="338" cy="90" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.7;0.95;0.7" dur="59s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="338" cy="92" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.76;0.99;0.76" dur="61s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Right side leaves (green and gold mix) -->
+    <circle cx="492" cy="65" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="67s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="488" cy="68" r="2" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="71s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="485" cy="72" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.6;0.95;0.6" dur="73s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="482" cy="74" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="79s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="74" r="2.5" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.7;0.98;0.7" dur="83s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="478" cy="76" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.65;0.95;0.65" dur="89s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="476" cy="79" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="97s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="474" cy="82" r="2" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.7;0.96;0.7" dur="101s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="474" cy="80" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.68;0.98;0.68" dur="103s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="472" cy="83" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="107s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="469" cy="85" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.72;0.97;0.72" dur="109s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="467" cy="88" r="2" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.66;0.94;0.66" dur="113s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="464" cy="88" r="2.5" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="127s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="462" cy="90" r="2" fill="url(#leafGreen)">
+      <animate attributeName="opacity" values="0.7;0.95;0.7" dur="131s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="462" cy="92" r="2.5" fill="url(#leafGold)">
+      <animate attributeName="opacity" values="0.76;0.99;0.76" dur="137s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ENERGY FLOW: particles traveling from roots to leaves -->
+  <g id="energy" filter="url(#glow)">
+    <!-- Energy path 1: root to left branches -->
+    <circle r="2" fill="#FFD700" opacity="0.8">
+      <animateMotion dur="23s" repeatCount="indefinite"
+        path="M 380,270 L 400,240 L 400,180 L 360,140 L 340,110 L 325,90 L 315,75"/>
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" dur="23s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Energy path 2: root to right branches -->
+    <circle r="2" fill="#34D399" opacity="0.8">
+      <animateMotion dur="29s" repeatCount="indefinite" begin="3s"
+        path="M 420,270 L 400,240 L 400,180 L 440,140 L 460,110 L 475,90 L 485,75"/>
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" dur="29s" repeatCount="indefinite" begin="3s"/>
+    </circle>
+
+    <!-- Energy path 3: center to left mid -->
+    <circle r="1.5" fill="#6EE7B7" opacity="0.7">
+      <animateMotion dur="31s" repeatCount="indefinite" begin="7s"
+        path="M 400,260 L 400,180 L 360,140 L 350,120 L 345,105"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.15;0.85;1" dur="31s" repeatCount="indefinite" begin="7s"/>
+    </circle>
+
+    <!-- Energy path 4: center to right mid -->
+    <circle r="1.5" fill="#F59E0B" opacity="0.7">
+      <animateMotion dur="37s" repeatCount="indefinite" begin="11s"
+        path="M 400,260 L 400,180 L 440,140 L 450,120 L 455,105"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.15;0.85;1" dur="37s" repeatCount="indefinite" begin="11s"/>
+    </circle>
+  </g>
+
+  <!-- FLOATING PARTICLES (pollen/seeds drifting upward) -->
+  <g id="pollen" opacity="0.6">
+    <circle cx="310" cy="65" r="0.8" fill="#FCD34D">
+      <animate attributeName="cy" values="65;50;45" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.8;0" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="85" r="0.8" fill="#FFD700">
+      <animate attributeName="cy" values="85;70;60" dur="19s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="opacity" values="0.6;0.8;0" dur="19s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    <circle cx="470" cy="80" r="0.8" fill="#6EE7B7">
+      <animate attributeName="cy" values="80;65;55" dur="23s" repeatCount="indefinite" begin="5s"/>
+      <animate attributeName="opacity" values="0.6;0.8;0" dur="23s" repeatCount="indefinite" begin="5s"/>
+    </circle>
+    <circle cx="490" cy="68" r="0.8" fill="#FCD34D">
+      <animate attributeName="cy" values="68;53;48" dur="29s" repeatCount="indefinite" begin="8s"/>
+      <animate attributeName="opacity" values="0.6;0.8;0" dur="29s" repeatCount="indefinite" begin="8s"/>
+    </circle>
+  </g>
+
+  <!-- FALLING LEAVES (spiraling down) -->
+  <g id="falling">
+    <!-- Falling leaf 1 -->
+    <circle r="2" fill="url(#leafGold)" opacity="0.7">
+      <animateMotion dur="41s" repeatCount="indefinite"
+        path="M 340,100 Q 350,130 340,160 Q 330,190 340,220 Q 350,240 340,250"/>
+      <animate attributeName="opacity" values="0.7;0.8;0.6;0.3" dur="41s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Falling leaf 2 -->
+    <circle r="2.5" fill="url(#leafGreen)" opacity="0.7">
+      <animateMotion dur="47s" repeatCount="indefinite" begin="13s"
+        path="M 460,95 Q 450,125 460,155 Q 470,185 460,215 Q 450,235 460,248"/>
+      <animate attributeName="opacity" values="0.7;0.8;0.6;0.3" dur="47s" repeatCount="indefinite" begin="13s"/>
+    </circle>
+
+    <!-- Falling leaf 3 -->
+    <circle r="2" fill="url(#leafGold)" opacity="0.6">
+      <animateMotion dur="53s" repeatCount="indefinite" begin="23s"
+        path="M 380,120 Q 390,150 380,180 Q 370,210 380,235"/>
+      <animate attributeName="opacity" values="0.6;0.7;0.5;0.2" dur="53s" repeatCount="indefinite" begin="23s"/>
+    </circle>
+
+    <!-- Falling leaf 4 -->
+    <circle r="2.5" fill="url(#leafGreen)" opacity="0.6">
+      <animateMotion dur="59s" repeatCount="indefinite" begin="31s"
+        path="M 420,125 Q 410,155 420,185 Q 430,215 420,238"/>
+      <animate attributeName="opacity" values="0.6;0.7;0.5;0.2" dur="59s" repeatCount="indefinite" begin="31s"/>
+    </circle>
+  </g>
+
+  <!-- CRESCENT MOON -->
+  <g id="moon" transform="translate(680, 50)">
+    <circle cx="0" cy="0" r="18" fill="#FCD34D" opacity="0.85"/>
+    <circle cx="6" cy="-2" r="15" fill="#030308" opacity="0.9"/>
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <style>
+    /* [LAW:dataflow-not-control-flow] Animations run unconditionally with prime-number cycles */
+  </style>
+</svg>

@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <!-- [LAW:one-source-of-truth] Collision vertex gradient defined once, animated via opacity -->
+    <radialGradient id="collisionFlash" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1">
+        <animate attributeName="stop-opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="30%" stop-color="#06B6D4" stop-opacity="0.8">
+        <animate attributeName="stop-opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#010108" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- [LAW:one-source-of-truth] Probability cloud blur filter -->
+    <filter id="quantumBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+
+    <!-- [LAW:one-source-of-truth] Strong blur for quantum foam -->
+    <filter id="foamBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+
+    <!-- Glow filter for particle tracks -->
+    <filter id="trackGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- [LAW:dataflow-not-control-flow] Particle track patterns defined declaratively -->
+    <!-- Electron spiral path (tight logarithmic spiral) -->
+    <path id="electronSpiral1" d="M 400,150 Q 420,140 430,135 Q 450,125 465,120 Q 490,112 510,110" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.8" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="5s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="electronSpiral2" d="M 400,150 Q 380,135 360,128 Q 330,118 300,115" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.7" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="7s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="electronSpiral3" d="M 400,150 Q 405,170 410,190 Q 418,220 425,245" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="6s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="electronSpiral4" d="M 400,150 Q 395,130 388,110 Q 378,80 365,55" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.65" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.65;0.35;0.65" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="8s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Positron spirals (opposite curvature) -->
+    <path id="positronSpiral1" d="M 400,150 Q 380,140 360,135 Q 330,125 305,120" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.75" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.75;0.35;0.75" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="70" dur="9s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="positronSpiral2" d="M 400,150 Q 420,160 445,168 Q 480,180 520,188" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="70" dur="11s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="positronSpiral3" d="M 400,150 Q 385,165 375,185 Q 360,215 350,250" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.68" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.68;0.32;0.68" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="70" dur="13s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Muon tracks (wider arcs) -->
+    <path id="muonTrack1" d="M 400,150 Q 500,100 600,80" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="5 4" opacity="0.8" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="31s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="90" dur="15s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="muonTrack2" d="M 400,150 Q 300,200 200,230" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="5 4" opacity="0.75" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.75;0.35;0.75" dur="37s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="90" dur="17s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Photon tracks (straight lines) -->
+    <path id="photonTrack1" d="M 400,150 L 680,45" fill="none" stroke="#F59E0B" stroke-width="1" stroke-dasharray="2 3" opacity="0.9" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="41s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="4s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="photonTrack2" d="M 400,150 L 120,260" fill="none" stroke="#F59E0B" stroke-width="1" stroke-dasharray="2 3" opacity="0.85" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.85;0.35;0.85" dur="43s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="5s" repeatCount="indefinite"/>
+    </path>
+
+    <path id="photonTrack3" d="M 400,150 L 750,150" fill="none" stroke="#F59E0B" stroke-width="1" stroke-dasharray="2 3" opacity="0.8" filter="url(#trackGlow)">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="47s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="50" dur="6s" repeatCount="indefinite"/>
+    </path>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#010108"/>
+
+  <!-- [LAW:dataflow-not-control-flow] Feynman diagram elements - all render, opacity varies by data -->
+  <!-- Wavy photon lines (background) -->
+  <path d="M 50,50 Q 70,40 90,50 T 130,50" stroke="#1a1a2e" stroke-width="1" fill="none" opacity="0.3">
+    <animate attributeName="d" values="M 50,50 Q 70,40 90,50 T 130,50;M 50,50 Q 70,60 90,50 T 130,50;M 50,50 Q 70,40 90,50 T 130,50" dur="19s" repeatCount="indefinite"/>
+  </path>
+
+  <path d="M 650,240 Q 670,230 690,240 T 730,240" stroke="#1a1a2e" stroke-width="1" fill="none" opacity="0.25">
+    <animate attributeName="d" values="M 650,240 Q 670,230 690,240 T 730,240;M 650,240 Q 670,250 690,240 T 730,240;M 650,240 Q 670,230 690,240 T 730,240" dur="23s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Straight fermion lines -->
+  <line x1="100" y1="200" x2="180" y2="220" stroke="#1a1a2e" stroke-width="1.5" opacity="0.2"/>
+  <line x1="620" y1="80" x2="700" y2="60" stroke="#1a1a2e" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- Loop diagrams -->
+  <circle cx="150" cy="100" r="25" stroke="#1a1a2e" stroke-width="1" fill="none" opacity="0.15">
+    <animateTransform attributeName="transform" type="rotate" from="0 150 100" to="360 150 100" dur="53s" repeatCount="indefinite"/>
+  </circle>
+
+  <ellipse cx="700" cy="250" rx="30" ry="20" stroke="#1a1a2e" stroke-width="1" fill="none" opacity="0.15">
+    <animateTransform attributeName="transform" type="rotate" from="0 700 250" to="360 700 250" dur="59s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- [LAW:dataflow-not-control-flow] Probability clouds - always present, visibility controlled by opacity values -->
+  <ellipse cx="180" cy="80" rx="45" ry="35" fill="#06B6D4" opacity="0.08" filter="url(#quantumBlur)">
+    <animate attributeName="opacity" values="0.08;0.15;0.08" dur="61s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="scale" values="1;1.2;1" additive="sum" dur="67s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <ellipse cx="620" cy="200" rx="55" ry="40" fill="#8B5CF6" opacity="0.1" filter="url(#quantumBlur)">
+    <animate attributeName="opacity" values="0.1;0.18;0.1" dur="71s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="scale" values="1;1.15;1" additive="sum" dur="73s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <ellipse cx="400" cy="250" rx="60" ry="30" fill="#EC4899" opacity="0.09" filter="url(#quantumBlur)">
+    <animate attributeName="opacity" values="0.09;0.16;0.09" dur="79s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="scale" values="1;1.25;1" additive="sum" dur="83s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Wave functions (sinusoidal curves) -->
+  <path d="M 0,100 Q 50,80 100,100 T 200,100 T 300,100 T 400,100" stroke="#06B6D4" stroke-width="0.5" fill="none" opacity="0.15">
+    <animate attributeName="d" values="M 0,100 Q 50,80 100,100 T 200,100 T 300,100 T 400,100;M 0,100 Q 50,120 100,100 T 200,100 T 300,100 T 400,100;M 0,100 Q 50,80 100,100 T 200,100 T 300,100 T 400,100" dur="89s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="100 0" dur="97s" repeatCount="indefinite"/>
+  </path>
+
+  <path d="M 400,200 Q 500,185 600,200 T 800,200" stroke="#8B5CF6" stroke-width="0.5" fill="none" opacity="0.15">
+    <animate attributeName="d" values="M 400,200 Q 500,185 600,200 T 800,200;M 400,200 Q 500,215 600,200 T 800,200;M 400,200 Q 500,185 600,200 T 800,200" dur="101s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-100 0" dur="103s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- [LAW:dataflow-not-control-flow] Quantum foam - all dots always present, visibility via opacity animation -->
+  <g filter="url(#foamBlur)">
+    <circle cx="80" cy="140" r="2" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.3s" repeatCount="indefinite" begin="0s"/>
+    </circle>
+    <circle cx="230" cy="95" r="1.5" fill="#06B6D4" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="1.7s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="450" cy="65" r="2" fill="#EC4899" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.1s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+    <circle cx="590" cy="130" r="1.5" fill="#8B5CF6" opacity="0">
+      <animate attributeName="opacity" values="0;0.55;0" dur="1.9s" repeatCount="indefinite" begin="1.1s"/>
+    </circle>
+    <circle cx="720" cy="180" r="2" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0" dur="2.5s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <circle cx="155" cy="245" r="1.5" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.7s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="340" cy="200" r="2" fill="#06B6D4" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="1.8s" repeatCount="indefinite" begin="0.9s"/>
+    </circle>
+    <circle cx="515" cy="275" r="1.5" fill="#EC4899" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.2s" repeatCount="indefinite" begin="1.3s"/>
+    </circle>
+    <circle cx="675" cy="45" r="2" fill="#8B5CF6" opacity="0">
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.0s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <circle cx="120" cy="170" r="1.5" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0" dur="2.4s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <circle cx="280" cy="150" r="2" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="1.6s" repeatCount="indefinite" begin="1.0s"/>
+    </circle>
+    <circle cx="420" cy="110" r="1.5" fill="#06B6D4" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="2.3s" repeatCount="indefinite" begin="1.4s"/>
+    </circle>
+    <circle cx="560" cy="220" r="2" fill="#EC4899" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="1.9s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+    <circle cx="710" cy="125" r="1.5" fill="#8B5CF6" opacity="0">
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.1s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <circle cx="190" cy="190" r="2" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0" dur="2.6s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+    <circle cx="365" cy="55" r="1.5" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.0s" repeatCount="indefinite" begin="0.1s"/>
+    </circle>
+    <circle cx="490" cy="145" r="2" fill="#06B6D4" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="1.7s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="635" cy="265" r="1.5" fill="#EC4899" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.2s" repeatCount="indefinite" begin="0.9s"/>
+    </circle>
+    <circle cx="750" cy="90" r="2" fill="#8B5CF6" opacity="0">
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.4s" repeatCount="indefinite" begin="1.3s"/>
+    </circle>
+    <circle cx="95" cy="115" r="1.5" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="255" cy="235" r="2" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.5s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+    <circle cx="410" cy="285" r="1.5" fill="#06B6D4" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="2.1s" repeatCount="indefinite" begin="1.1s"/>
+    </circle>
+    <circle cx="540" cy="35" r="2" fill="#EC4899" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="1.9s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <circle cx="685" cy="155" r="1.5" fill="#8B5CF6" opacity="0">
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.3s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <circle cx="140" cy="210" r="2" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0" dur="2.7s" repeatCount="indefinite" begin="1.0s"/>
+    </circle>
+    <circle cx="315" cy="75" r="1.5" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.0s" repeatCount="indefinite" begin="1.4s"/>
+    </circle>
+    <circle cx="465" cy="195" r="2" fill="#06B6D4" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="1.6s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+    <circle cx="605" cy="250" r="1.5" fill="#EC4899" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <circle cx="765" cy="225" r="2" fill="#8B5CF6" opacity="0">
+      <animate attributeName="opacity" values="0;0.55;0" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+    <circle cx="210" cy="135" r="1.5" fill="#F59E0B" opacity="0">
+      <animate attributeName="opacity" values="0;0.65;0" dur="1.8s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+
+  <!-- Particle tracks -->
+  <use href="#electronSpiral1"/>
+  <use href="#electronSpiral2"/>
+  <use href="#electronSpiral3"/>
+  <use href="#electronSpiral4"/>
+  <use href="#positronSpiral1"/>
+  <use href="#positronSpiral2"/>
+  <use href="#positronSpiral3"/>
+  <use href="#muonTrack1"/>
+  <use href="#muonTrack2"/>
+  <use href="#photonTrack1"/>
+  <use href="#photonTrack2"/>
+  <use href="#photonTrack3"/>
+
+  <!-- [LAW:one-source-of-truth] Collision vertex - single bright point with breathing animation -->
+  <circle cx="400" cy="150" r="8" fill="url(#collisionFlash)">
+    <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Entanglement - two particles connected by pulsing line -->
+  <circle cx="100" cy="50" r="3" fill="#06B6D4" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="107s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="50" r="3" fill="#06B6D4" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="107s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="100" y1="50" x2="700" y2="50" stroke="#06B6D4" stroke-width="0.5" stroke-dasharray="5 5" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="109s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" from="0" to="100" dur="11s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- [LAW:dataflow-not-control-flow] Measurement detector bar - all indicators always present, activation via opacity -->
+  <rect x="780" y="0" width="20" height="300" fill="#1a1a2e" opacity="0.3"/>
+
+  <!-- Detector indicators -->
+  <circle cx="790" cy="45" r="2" fill="#F59E0B" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="3.1s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="80" r="2" fill="#8B5CF6" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="5.3s" begin="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="110" r="2" fill="#06B6D4" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="4.7s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="150" r="2" fill="#EC4899" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="6.1s" begin="3.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="188" r="2" fill="#8B5CF6" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="5.9s" begin="1.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="230" r="2" fill="#06B6D4" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="4.3s" begin="2.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="260" r="2" fill="#EC4899" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="5.7s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

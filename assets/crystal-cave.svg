@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Crystal Cave - Glowing Geode Interior">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#030308;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#080812;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Crystal glows -->
+    <radialGradient id="amethyst-glow">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#7C3AED;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="quartz-glow">
+      <stop offset="0%" style="stop-color:#E2E8F0;stop-opacity:0.5"/>
+      <stop offset="50%" style="stop-color:#94A3B8;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#94A3B8;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="emerald-glow">
+      <stop offset="0%" style="stop-color:#34D399;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="citrine-glow">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#B45309;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#B45309;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Crystal face gradients -->
+    <linearGradient id="amethyst-face-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.7"/>
+    </linearGradient>
+
+    <linearGradient id="amethyst-face-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#6D28D9;stop-opacity:0.6"/>
+    </linearGradient>
+
+    <linearGradient id="quartz-face-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#CBD5E1;stop-opacity:0.6"/>
+    </linearGradient>
+
+    <linearGradient id="emerald-face-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6EE7B7;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.7"/>
+    </linearGradient>
+
+    <linearGradient id="citrine-face-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#B45309;stop-opacity:0.7"/>
+    </linearGradient>
+
+    <!-- Animations -->
+    <style>
+      @keyframes glow-pulse-7 {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+      @keyframes glow-pulse-11 {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 0.9; }
+      }
+      @keyframes glow-pulse-13 {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.7; }
+      }
+      @keyframes sparkle-5 {
+        0%, 90%, 100% { opacity: 0; }
+        45% { opacity: 1; }
+      }
+      @keyframes sparkle-7 {
+        0%, 85%, 100% { opacity: 0; }
+        42% { opacity: 1; }
+      }
+      @keyframes sparkle-11 {
+        0%, 80%, 100% { opacity: 0; }
+        40% { opacity: 1; }
+      }
+      .glow-7 { animation: glow-pulse-7 7s ease-in-out infinite; }
+      .glow-11 { animation: glow-pulse-11 11s ease-in-out infinite; }
+      .glow-13 { animation: glow-pulse-13 13s ease-in-out infinite; }
+      .sparkle-5 { animation: sparkle-5 5s ease-in-out infinite; }
+      .sparkle-7 { animation: sparkle-7 7s ease-in-out infinite; }
+      .sparkle-11 { animation: sparkle-11 11s ease-in-out infinite; }
+      .sparkle-5-delay { animation: sparkle-5 5s ease-in-out infinite 2.3s; }
+      .sparkle-7-delay { animation: sparkle-7 7s ease-in-out infinite 3.1s; }
+      .sparkle-11-delay { animation: sparkle-11 11s ease-in-out infinite 4.7s; }
+      .sparkle-5-delay2 { animation: sparkle-5 5s ease-in-out infinite 1.7s; }
+      .sparkle-7-delay2 { animation: sparkle-7 7s ease-in-out infinite 5.3s; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bg-grad)"/>
+
+  <!-- Cave pool reflection at bottom -->
+  <ellipse cx="400" cy="285" rx="280" ry="12" fill="#0a0a15" opacity="0.8"/>
+
+  <!-- Amethyst glow 1 (large left) -->
+  <ellipse cx="220" cy="200" rx="90" ry="100" fill="url(#amethyst-glow)" class="glow-7"/>
+
+  <!-- Amethyst glow 2 (center) -->
+  <ellipse cx="400" cy="180" rx="100" ry="120" fill="url(#amethyst-glow)" class="glow-11"/>
+
+  <!-- Amethyst glow 3 (right) -->
+  <ellipse cx="600" cy="190" rx="80" ry="90" fill="url(#amethyst-glow)" class="glow-13"/>
+
+  <!-- Quartz glow (left center) -->
+  <ellipse cx="320" cy="170" rx="60" ry="80" fill="url(#quartz-glow)" class="glow-11"/>
+
+  <!-- Emerald glow (right center) -->
+  <ellipse cx="520" cy="185" rx="70" ry="85" fill="url(#emerald-glow)" class="glow-7"/>
+
+  <!-- Citrine glow (small right) -->
+  <ellipse cx="650" cy="210" rx="45" ry="55" fill="url(#citrine-glow)" class="glow-13"/>
+
+  <!-- Cave floor base -->
+  <path d="M 0 300 L 0 260 Q 100 245 200 255 Q 300 265 400 250 Q 500 240 600 258 Q 700 268 800 255 L 800 300 Z" fill="#0a0a15"/>
+
+  <!-- Large Amethyst Crystal 1 (left, dominant) -->
+  <!-- Base facet -->
+  <polygon points="180,280 200,275 220,280 230,220 220,200 200,195 180,200 170,220" fill="url(#amethyst-face-2)" opacity="0.8"/>
+  <!-- Left facet -->
+  <polygon points="180,280 170,220 180,200 200,195 200,275" fill="#6D28D9" opacity="0.6"/>
+  <!-- Right facet -->
+  <polygon points="220,280 230,220 220,200 200,195 200,275" fill="url(#amethyst-face-1)" opacity="0.85"/>
+  <!-- Top facet -->
+  <polygon points="200,195 180,200 170,220 200,185 230,220 220,200" fill="#A78BFA" opacity="0.9"/>
+  <!-- Highlight edge -->
+  <line x1="200" y1="195" x2="200" y2="275" stroke="#C4B5FD" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Large Amethyst Crystal 2 (center-left) -->
+  <polygon points="240,270 255,268 270,272 275,215 268,195 255,190 242,195 238,215" fill="url(#amethyst-face-1)" opacity="0.8"/>
+  <polygon points="240,270 238,215 242,195 255,190 255,268" fill="#7C3AED" opacity="0.65"/>
+  <polygon points="270,272 275,215 268,195 255,190 255,268" fill="url(#amethyst-face-2)" opacity="0.85"/>
+  <line x1="255" y1="190" x2="255" y2="268" stroke="#C4B5FD" stroke-width="1" opacity="0.6"/>
+
+  <!-- Large Amethyst Crystal 3 (center, tallest) -->
+  <polygon points="380,285 395,283 415,287 425,200 418,170 400,160 382,170 375,200" fill="url(#amethyst-face-2)" opacity="0.8"/>
+  <polygon points="380,285 375,200 382,170 400,160 400,283" fill="#6D28D9" opacity="0.7"/>
+  <polygon points="415,287 425,200 418,170 400,160 400,283" fill="url(#amethyst-face-1)" opacity="0.9"/>
+  <polygon points="400,160 382,170 375,200 400,145 425,200 418,170" fill="#A78BFA" opacity="0.95"/>
+  <line x1="400" y1="160" x2="400" y2="283" stroke="#DDD6FE" stroke-width="2" opacity="0.8"/>
+
+  <!-- Medium Amethyst Crystal 4 (right) -->
+  <polygon points="580,275 595,273 610,276 615,220 608,205 595,200 582,205 578,220" fill="url(#amethyst-face-1)" opacity="0.8"/>
+  <polygon points="580,275 578,220 582,205 595,200 595,273" fill="#7C3AED" opacity="0.7"/>
+  <polygon points="610,276 615,220 608,205 595,200 595,273" fill="url(#amethyst-face-2)" opacity="0.85"/>
+  <line x1="595" y1="200" x2="595" y2="273" stroke="#C4B5FD" stroke-width="1.2" opacity="0.65"/>
+
+  <!-- Small Amethyst Crystal 5 (far right) -->
+  <polygon points="630,265 640,264 650,266 653,235 648,225 640,222 632,225 630,235" fill="url(#amethyst-face-2)" opacity="0.75"/>
+  <polygon points="630,265 630,235 632,225 640,222 640,264" fill="#8B5CF6" opacity="0.6"/>
+  <polygon points="650,266 653,235 648,225 640,222 640,264" fill="url(#amethyst-face-1)" opacity="0.8"/>
+
+  <!-- Quartz Crystal 1 (left-center, tall) -->
+  <polygon points="300,280 312,278 325,281 330,210 325,190 312,182 300,190 296,210" fill="url(#quartz-face-1)" opacity="0.85"/>
+  <polygon points="300,280 296,210 300,190 312,182 312,278" fill="#CBD5E1" opacity="0.6"/>
+  <polygon points="325,281 330,210 325,190 312,182 312,278" fill="#F8FAFC" opacity="0.9"/>
+  <polygon points="312,182 300,190 296,210 312,175 330,210 325,190" fill="#FFFFFF" opacity="0.95"/>
+  <line x1="312" y1="182" x2="312" y2="278" stroke="#FFFFFF" stroke-width="1.5" opacity="0.85"/>
+
+  <!-- Quartz Crystal 2 (center-right) -->
+  <polygon points="450,275 460,273 472,276 476,225 472,210 460,205 448,210 446,225" fill="url(#quartz-face-1)" opacity="0.8"/>
+  <polygon points="450,275 446,225 448,210 460,205 460,273" fill="#CBD5E1" opacity="0.55"/>
+  <polygon points="472,276 476,225 472,210 460,205 460,273" fill="#F8FAFC" opacity="0.88"/>
+  <line x1="460" y1="205" x2="460" y2="273" stroke="#FFFFFF" stroke-width="1.2" opacity="0.75"/>
+
+  <!-- Quartz Crystal 3 (small accent) -->
+  <polygon points="340,268 348,267 356,269 358,245 355,235 348,232 341,235 339,245" fill="#F8FAFC" opacity="0.85"/>
+  <polygon points="340,268 339,245 341,235 348,232 348,267" fill="#CBD5E1" opacity="0.5"/>
+  <polygon points="356,269 358,245 355,235 348,232 348,267" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Emerald Crystal 1 (right-center) -->
+  <polygon points="500,280 515,278 530,281 535,220 530,200 515,192 500,200 496,220" fill="url(#emerald-face-1)" opacity="0.85"/>
+  <polygon points="500,280 496,220 500,200 515,192 515,278" fill="#059669" opacity="0.7"/>
+  <polygon points="530,281 535,220 530,200 515,192 515,278" fill="#6EE7B7" opacity="0.9"/>
+  <polygon points="515,192 500,200 496,220 515,180 535,220 530,200" fill="#A7F3D0" opacity="0.95"/>
+  <line x1="515" y1="192" x2="515" y2="278" stroke="#D1FAE5" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Emerald Crystal 2 (medium) -->
+  <polygon points="540,272 550,271 562,273 565,235 561,222 550,217 539,222 537,235" fill="url(#emerald-face-1)" opacity="0.8"/>
+  <polygon points="540,272 537,235 539,222 550,217 550,271" fill="#059669" opacity="0.65"/>
+  <polygon points="562,273 565,235 561,222 550,217 550,271" fill="#6EE7B7" opacity="0.88"/>
+  <line x1="550" y1="217" x2="550" y2="271" stroke="#D1FAE5" stroke-width="1" opacity="0.7"/>
+
+  <!-- Emerald Crystal 3 (small) -->
+  <polygon points="482,268 490,267 498,269 500,243 497,233 490,230 483,233 481,243" fill="#6EE7B7" opacity="0.85"/>
+  <polygon points="482,268 481,243 483,233 490,230 490,267" fill="#059669" opacity="0.6"/>
+  <polygon points="498,269 500,243 497,233 490,230 490,267" fill="#A7F3D0" opacity="0.9"/>
+
+  <!-- Citrine Crystal 1 (far right, medium) -->
+  <polygon points="660,275 672,273 685,276 688,230 684,215 672,210 660,215 657,230" fill="url(#citrine-face-1)" opacity="0.85"/>
+  <polygon points="660,275 657,230 660,215 672,210 672,273" fill="#B45309" opacity="0.7"/>
+  <polygon points="685,276 688,230 684,215 672,210 672,273" fill="#FCD34D" opacity="0.9"/>
+  <polygon points="672,210 660,215 657,230 672,202 688,230 684,215" fill="#FDE68A" opacity="0.95"/>
+  <line x1="672" y1="210" x2="672" y2="273" stroke="#FEF3C7" stroke-width="1.3" opacity="0.8"/>
+
+  <!-- Citrine Crystal 2 (small) -->
+  <polygon points="620,268 628,267 636,269 638,245 635,235 628,232 621,235 619,245" fill="#FCD34D" opacity="0.85"/>
+  <polygon points="620,268 619,245 621,235 628,232 628,267" fill="#B45309" opacity="0.65"/>
+  <polygon points="636,269 638,245 635,235 628,232 628,267" fill="#FEF3C7" opacity="0.9"/>
+
+  <!-- Light refraction beams between crystals -->
+  <line x1="220" y1="220" x2="312" y2="200" stroke="#A78BFA" stroke-width="1" opacity="0.4"/>
+  <line x1="312" y1="195" x2="400" y2="175" stroke="#E2E8F0" stroke-width="1" opacity="0.35"/>
+  <line x1="400" y1="170" x2="460" y2="220" stroke="#DDD6FE" stroke-width="1" opacity="0.4"/>
+  <line x1="460" y1="218" x2="515" y2="205" stroke="#F8FAFC" stroke-width="1" opacity="0.38"/>
+  <line x1="515" y1="200" x2="595" y2="215" stroke="#6EE7B7" stroke-width="1" opacity="0.42"/>
+  <line x1="595" y1="212" x2="672" y2="220" stroke="#A78BFA" stroke-width="1" opacity="0.4"/>
+  <line x1="255" y1="200" x2="348" y2="240" stroke="#C4B5FD" stroke-width="0.8" opacity="0.35"/>
+  <line x1="550" y1="230" x2="628" y2="245" stroke="#34D399" stroke-width="0.8" opacity="0.38"/>
+
+  <!-- Mineral veins in cave walls (gold) -->
+  <path d="M 50 100 Q 80 120 110 105 Q 140 90 170 110" stroke="#F59E0B" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 680 80 Q 710 95 735 85 Q 760 75 780 90" stroke="#F59E0B" stroke-width="1.5" fill="none" opacity="0.45"/>
+  <path d="M 30 180 Q 60 200 85 185" stroke="#F59E0B" stroke-width="1.2" fill="none" opacity="0.38"/>
+
+  <!-- Mineral veins (cyan) -->
+  <path d="M 720 150 Q 745 165 765 155" stroke="#06B6D4" stroke-width="1.3" fill="none" opacity="0.42"/>
+  <path d="M 90 50 Q 115 65 140 55 Q 165 45 185 58" stroke="#06B6D4" stroke-width="1.4" fill="none" opacity="0.45"/>
+
+  <!-- Pool reflections (glows reflected in bottom pool) -->
+  <ellipse cx="220" cy="285" rx="60" ry="8" fill="#8B5CF6" opacity="0.2" class="glow-7"/>
+  <ellipse cx="400" cy="285" rx="70" ry="8" fill="#7C3AED" opacity="0.25" class="glow-11"/>
+  <ellipse cx="600" cy="285" rx="55" ry="7" fill="#8B5CF6" opacity="0.18" class="glow-13"/>
+  <ellipse cx="515" cy="285" rx="45" ry="6" fill="#34D399" opacity="0.2" class="glow-7"/>
+
+  <!-- Stalactites from ceiling -->
+  <path d="M 120 0 L 115 45 L 125 45 Z" fill="#12121e"/>
+  <path d="M 120 0 L 118 45 L 122 45 Z" fill="#1a1a2e"/>
+  <path d="M 280 0 L 272 38 L 288 38 Z" fill="#12121e"/>
+  <path d="M 280 0 L 276 38 L 284 38 Z" fill="#1a1a2e"/>
+  <path d="M 480 0 L 475 32 L 485 32 Z" fill="#0a0a15"/>
+  <path d="M 480 0 L 478 32 L 482 32 Z" fill="#12121e"/>
+  <path d="M 620 0 L 613 42 L 627 42 Z" fill="#12121e"/>
+  <path d="M 620 0 L 617 42 L 623 42 Z" fill="#1a1a2e"/>
+  <path d="M 720 0 L 715 28 L 725 28 Z" fill="#0a0a15"/>
+
+  <!-- Stalagmites from floor -->
+  <path d="M 140 300 L 145 265 L 135 265 Z" fill="#0a0a15"/>
+  <path d="M 140 300 L 142 265 L 138 265 Z" fill="#12121e"/>
+  <path d="M 360 300 L 365 272 L 355 272 Z" fill="#0a0a15"/>
+  <path d="M 360 300 L 362 272 L 358 272 Z" fill="#12121e"/>
+  <path d="M 700 300 L 705 268 L 695 268 Z" fill="#12121e"/>
+  <path d="M 700 300 L 702 268 L 698 268 Z" fill="#1a1a2e"/>
+
+  <!-- Cave wall - top left -->
+  <path d="M 0 0 L 0 150 Q 30 140 50 155 Q 70 170 85 160 Q 105 145 120 158 Q 140 172 160 165 L 180 85 Q 160 70 145 80 Q 125 92 110 78 Q 90 60 70 72 Q 50 85 35 68 Q 20 50 10 58 Z" fill="#0a0a15"/>
+
+  <!-- Cave wall - top right -->
+  <path d="M 800 0 L 800 145 Q 770 135 750 148 Q 730 162 710 155 Q 690 147 675 160 L 640 90 Q 660 75 680 85 Q 700 96 720 83 Q 745 65 770 75 Q 790 88 795 70 Z" fill="#0a0a15"/>
+
+  <!-- Cave wall - left side jagged -->
+  <path d="M 0 150 Q 15 160 25 175 Q 35 195 45 185 Q 60 172 68 188 Q 75 205 82 198 L 95 245 Q 80 250 70 240 Q 55 228 42 238 Q 28 250 18 235 Q 8 218 0 225 Z" fill="#12121e"/>
+
+  <!-- Cave wall - right side jagged -->
+  <path d="M 800 145 Q 785 155 775 168 Q 765 185 755 177 Q 740 165 732 178 Q 725 192 718 186 L 705 235 Q 720 242 730 232 Q 745 222 758 230 Q 772 242 782 228 Q 792 213 800 220 Z" fill="#12121e"/>
+
+  <!-- Dripping water drops -->
+  <circle cx="120" cy="45" r="2" fill="#94A3B8" opacity="0.7">
+    <animate attributeName="cy" values="45;290;45" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.7;0;0;0.7" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="480" cy="32" r="2" fill="#94A3B8" opacity="0.7">
+    <animate attributeName="cy" values="32;288;32" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.7;0;0;0.7" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="620" cy="42" r="2" fill="#94A3B8" opacity="0.7">
+    <animate attributeName="cy" values="42;286;42" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.7;0;0;0.7" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Splash ripples at bottom (appear when drops hit) -->
+  <circle cx="120" cy="290" r="4" fill="none" stroke="#94A3B8" stroke-width="0.5">
+    <animate attributeName="r" values="2;12;18" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.6;0.3;0" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="480" cy="288" r="4" fill="none" stroke="#94A3B8" stroke-width="0.5">
+    <animate attributeName="r" values="2;12;18" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.6;0.3;0" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="620" cy="286" r="4" fill="none" stroke="#94A3B8" stroke-width="0.5">
+    <animate attributeName="r" values="2;12;18" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.6;0.3;0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Crystal surface sparkles -->
+  <circle cx="200" cy="240" r="2" fill="#FFFFFF" class="sparkle-5"/>
+  <circle cx="255" cy="220" r="1.5" fill="#DDD6FE" class="sparkle-7"/>
+  <circle cx="400" cy="200" r="2.5" fill="#FFFFFF" class="sparkle-11"/>
+  <circle cx="312" cy="210" r="2" fill="#F8FAFC" class="sparkle-5-delay"/>
+  <circle cx="460" cy="235" r="1.5" fill="#FFFFFF" class="sparkle-7-delay"/>
+  <circle cx="515" cy="215" r="2" fill="#D1FAE5" class="sparkle-11-delay"/>
+  <circle cx="595" cy="230" r="2" fill="#DDD6FE" class="sparkle-5-delay2"/>
+  <circle cx="672" cy="235" r="2" fill="#FEF3C7" class="sparkle-7-delay2"/>
+  <circle cx="550" cy="245" r="1.5" fill="#A7F3D0" class="sparkle-11"/>
+  <circle cx="640" cy="255" r="1.5" fill="#C4B5FD" class="sparkle-5"/>
+</svg>

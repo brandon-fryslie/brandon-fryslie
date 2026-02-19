@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#010108"/>
+      <stop offset="100%" style="stop-color:#050510"/>
+    </radialGradient>
+
+    <!-- Vesica Piscis gradient -->
+    <linearGradient id="vesicaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0"/>
+    </linearGradient>
+
+    <!-- Core glow filter -->
+    <filter id="coreGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#F59E0B" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Node pulse filter -->
+    <filter id="nodePulse">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Styles -->
+    <style>
+      .flower-circle { fill: none; stroke: #1a1a3e; stroke-width: 0.5; opacity: 0.3; }
+      .metatron-circle { fill: none; stroke: #2a2a4e; stroke-width: 0.6; opacity: 0.4; }
+      .metatron-line { stroke: #2a2a4e; stroke-width: 0.4; opacity: 0.5; }
+      .platonic-tetra { fill: none; stroke: #F59E0B; stroke-width: 1.2; opacity: 0.7; }
+      .platonic-cube { fill: none; stroke: #06B6D4; stroke-width: 1.2; opacity: 0.7; }
+      .spiral-path { fill: none; stroke: #F59E0B; stroke-width: 0.8; opacity: 0.2; }
+      .phi-line { stroke: #F59E0B; stroke-width: 0.3; opacity: 0.1; }
+      .node-dot { fill: #F59E0B; opacity: 0.8; filter: url(#nodePulse); }
+      .energy-dot { fill: #06B6D4; opacity: 0.9; }
+      .aura-ring { fill: none; stroke: #8B5CF6; stroke-width: 0.5; opacity: 0.1; }
+
+      @keyframes breathe {
+        0%, 100% { opacity: 0.4; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.05); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; r: 1.5; }
+        50% { opacity: 1; r: 2.5; }
+      }
+
+      @keyframes auraBreath {
+        0%, 100% { opacity: 0.05; }
+        50% { opacity: 0.15; }
+      }
+
+      .core-glow {
+        animation: breathe 7s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      .aura-ring {
+        animation: auraBreath 11s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Aura rings (outermost) -->
+  <g class="aura-ring">
+    <ellipse cx="400" cy="150" rx="280" ry="135" style="animation-delay: 0s"/>
+    <ellipse cx="400" cy="150" rx="260" ry="125" style="animation-delay: 1.571s"/>
+    <ellipse cx="400" cy="150" rx="240" ry="115" style="animation-delay: 3.142s"/>
+  </g>
+
+  <!-- PHI Grid (golden ratio divisions) -->
+  <g class="phi-line">
+    <!-- Vertical divisions by phi (1.618) -->
+    <line x1="247" y1="0" x2="247" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="553" y1="0" x2="553" y2="300"/>
+    <!-- Horizontal divisions by phi -->
+    <line x1="0" y1="92.7" x2="800" y2="92.7"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="207.3" x2="800" y2="207.3"/>
+  </g>
+
+  <!-- Golden Spiral -->
+  <path class="spiral-path" d="M 400,150
+    Q 420,150 420,170
+    Q 420,190 400,190
+    Q 370,190 370,160
+    Q 370,120 410,120
+    Q 460,120 460,170
+    Q 460,230 400,230
+    Q 320,230 320,150
+    Q 320,60 420,60
+    Q 530,60 530,180
+    Q 530,300 390,300"/>
+
+  <!-- FLOWER OF LIFE LAYER (rotates clockwise) -->
+  <g id="flowerOfLife" transform-origin="400 150">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 400 150"
+      to="360 400 150"
+      dur="240s"
+      repeatCount="indefinite"/>
+
+    <!-- Center circle -->
+    <circle class="flower-circle" cx="400" cy="150" r="40"/>
+
+    <!-- First ring (6 circles) -->
+    <circle class="flower-circle" cx="440" cy="150" r="40"/>
+    <circle class="flower-circle" cx="420" cy="184.64" r="40"/>
+    <circle class="flower-circle" cx="380" cy="184.64" r="40"/>
+    <circle class="flower-circle" cx="360" cy="150" r="40"/>
+    <circle class="flower-circle" cx="380" cy="115.36" r="40"/>
+    <circle class="flower-circle" cx="420" cy="115.36" r="40"/>
+
+    <!-- Second ring (12 circles) -->
+    <circle class="flower-circle" cx="480" cy="150" r="40"/>
+    <circle class="flower-circle" cx="460" cy="184.64" r="40"/>
+    <circle class="flower-circle" cx="460" cy="115.36" r="40"/>
+    <circle class="flower-circle" cx="440" cy="219.28" r="40"/>
+    <circle class="flower-circle" cx="400" cy="219.28" r="40"/>
+    <circle class="flower-circle" cx="360" cy="219.28" r="40"/>
+    <circle class="flower-circle" cx="340" cy="184.64" r="40"/>
+    <circle class="flower-circle" cx="320" cy="150" r="40"/>
+    <circle class="flower-circle" cx="340" cy="115.36" r="40"/>
+    <circle class="flower-circle" cx="360" cy="80.72" r="40"/>
+    <circle class="flower-circle" cx="400" cy="80.72" r="40"/>
+    <circle class="flower-circle" cx="440" cy="80.72" r="40"/>
+
+    <!-- Vesica Piscis highlight (central overlapping region) -->
+    <path d="M 400,110
+      A 40,40 0 0,1 440,150
+      A 40,40 0 0,1 400,190
+      A 40,40 0 0,1 360,150
+      A 40,40 0 0,1 400,110 Z"
+      fill="url(#vesicaGrad)"/>
+  </g>
+
+  <!-- METATRON'S CUBE LAYER (rotates counter-clockwise) -->
+  <g id="metatronCube" transform-origin="400 150">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 400 150"
+      to="-360 400 150"
+      dur="180s"
+      repeatCount="indefinite"/>
+
+    <!-- 13 circles of Metatron's Cube -->
+    <!-- Center -->
+    <circle class="metatron-circle" cx="400" cy="150" r="35"/>
+    <!-- Inner ring (6) -->
+    <circle class="metatron-circle" cx="435" cy="150" r="35"/>
+    <circle class="metatron-circle" cx="417.5" cy="180.31" r="35"/>
+    <circle class="metatron-circle" cx="382.5" cy="180.31" r="35"/>
+    <circle class="metatron-circle" cx="365" cy="150" r="35"/>
+    <circle class="metatron-circle" cx="382.5" cy="119.69" r="35"/>
+    <circle class="metatron-circle" cx="417.5" cy="119.69" r="35"/>
+    <!-- Outer ring (6) -->
+    <circle class="metatron-circle" cx="470" cy="150" r="35"/>
+    <circle class="metatron-circle" cx="435" cy="210.62" r="35"/>
+    <circle class="metatron-circle" cx="365" cy="210.62" r="35"/>
+    <circle class="metatron-circle" cx="330" cy="150" r="35"/>
+    <circle class="metatron-circle" cx="365" cy="89.38" r="35"/>
+    <circle class="metatron-circle" cx="435" cy="89.38" r="35"/>
+
+    <!-- Connecting lines (all 13 circles connected) -->
+    <!-- From center to inner 6 -->
+    <line class="metatron-line" x1="400" y1="150" x2="435" y2="150"/>
+    <line class="metatron-line" x1="400" y1="150" x2="417.5" y2="180.31"/>
+    <line class="metatron-line" x1="400" y1="150" x2="382.5" y2="180.31"/>
+    <line class="metatron-line" x1="400" y1="150" x2="365" y2="150"/>
+    <line class="metatron-line" x1="400" y1="150" x2="382.5" y2="119.69"/>
+    <line class="metatron-line" x1="400" y1="150" x2="417.5" y2="119.69"/>
+
+    <!-- Inner to outer connections (key structural lines) -->
+    <line class="metatron-line" x1="435" y1="150" x2="470" y2="150"/>
+    <line class="metatron-line" x1="435" y1="150" x2="435" y2="89.38"/>
+    <line class="metatron-line" x1="435" y1="150" x2="435" y2="210.62"/>
+    <line class="metatron-line" x1="365" y1="150" x2="330" y2="150"/>
+    <line class="metatron-line" x1="365" y1="150" x2="365" y2="89.38"/>
+    <line class="metatron-line" x1="365" y1="150" x2="365" y2="210.62"/>
+    <line class="metatron-line" x1="417.5" y1="180.31" x2="435" y2="210.62"/>
+    <line class="metatron-line" x1="382.5" y1="180.31" x2="365" y2="210.62"/>
+    <line class="metatron-line" x1="417.5" y1="119.69" x2="435" y2="89.38"/>
+    <line class="metatron-line" x1="382.5" y1="119.69" x2="365" y2="89.38"/>
+
+    <!-- Diagonal connections -->
+    <line class="metatron-line" x1="417.5" y1="180.31" x2="470" y2="150"/>
+    <line class="metatron-line" x1="382.5" y1="180.31" x2="330" y2="150"/>
+    <line class="metatron-line" x1="417.5" y1="119.69" x2="470" y2="150"/>
+    <line class="metatron-line" x1="382.5" y1="119.69" x2="330" y2="150"/>
+    <line class="metatron-line" x1="435" y1="210.62" x2="470" y2="150"/>
+    <line class="metatron-line" x1="365" y1="210.62" x2="330" y2="150"/>
+    <line class="metatron-line" x1="435" y1="89.38" x2="470" y2="150"/>
+    <line class="metatron-line" x1="365" y1="89.38" x2="330" y2="150"/>
+  </g>
+
+  <!-- PLATONIC SOLIDS LAYER (rotates clockwise) -->
+  <g id="platonicSolids" transform-origin="400 150">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 400 150"
+      to="360 400 150"
+      dur="120s"
+      repeatCount="indefinite"/>
+
+    <!-- Tetrahedron (equilateral triangle) -->
+    <path class="platonic-tetra" d="M 400,110 L 445,175 L 355,175 Z"/>
+
+    <!-- Cube (square in 2D projection) -->
+    <rect class="platonic-cube" x="370" y="130" width="60" height="40"/>
+
+    <!-- Additional tetrahedron variant (inverted) -->
+    <path class="platonic-tetra" d="M 400,190 L 355,125 L 445,125 Z" opacity="0.4"/>
+  </g>
+
+  <!-- Core glow (breathes) -->
+  <circle class="core-glow" cx="400" cy="150" r="25" fill="#F59E0B" opacity="0.4" filter="url(#coreGlow)"/>
+
+  <!-- Node points at key intersections -->
+  <g class="node-dot">
+    <!-- Center -->
+    <circle cx="400" cy="150" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Inner ring nodes (6 points) -->
+    <circle cx="435" cy="150" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="11s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="417.5" cy="180.31" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="13s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="382.5" cy="180.31" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="17s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="17s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="365" cy="150" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="19s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="19s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="382.5" cy="119.69" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="23s" begin="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="23s" begin="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="417.5" cy="119.69" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="29s" begin="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="29s" begin="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Outer ring nodes (6 points) -->
+    <circle cx="470" cy="150" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="31s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="31s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="435" cy="210.62" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="37s" begin="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="37s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="365" cy="210.62" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="41s" begin="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="41s" begin="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="150" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="43s" begin="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="43s" begin="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="365" cy="89.38" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="47s" begin="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="47s" begin="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="435" cy="89.38" r="2">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="53s" begin="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="53s" begin="6.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Energy flow particles traveling along geometric lines -->
+  <!-- Particle 1: Horizontal line -->
+  <circle class="energy-dot" cx="330" cy="150" r="2.5">
+    <animate attributeName="cx" values="330;470;330" dur="17s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Particle 2: Diagonal upper right -->
+  <circle class="energy-dot" cx="365" cy="89.38" r="2.5">
+    <animate attributeName="cx" values="365;435;365" dur="13s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="89.38;210.62;89.38" dur="13s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Particle 3: Vertical line -->
+  <circle class="energy-dot" cx="400" cy="89.38" r="2.5">
+    <animate attributeName="cy" values="89.38;210.62;89.38" dur="19s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Particle 4: Circular path around center -->
+  <circle class="energy-dot" cx="435" cy="150" r="2.5">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 400 150"
+      to="360 400 150"
+      dur="23s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Particle 5: Spiral outward -->
+  <circle class="energy-dot" cx="400" cy="150" r="2.5">
+    <animate attributeName="cx" values="400;470;400;330;400" dur="29s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="150;150;150;150;150" dur="29s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Particle 6: Figure-8 pattern -->
+  <circle class="energy-dot" cx="365" cy="150" r="2.5">
+    <animate attributeName="cx" values="365;400;435;400;365" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="150;119.69;150;180.31;150" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Particle 7: Pentagonal path -->
+  <circle class="energy-dot" cx="400" cy="110" r="2.5">
+    <animate attributeName="cx" values="400;445;430;370;355;400" dur="31s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="110;135;180;180;135;110" dur="31s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Particle 8: Outer ring patrol -->
+  <circle class="energy-dot" cx="470" cy="150" r="2.5">
+    <animate attributeName="cx" values="470;435;365;330;365;435;470" dur="37s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="150;210.62;210.62;150;89.38;89.38;150" dur="37s" repeatCount="indefinite"/>
+  </circle>
+</svg>
