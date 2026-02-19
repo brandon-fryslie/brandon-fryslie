@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Aurora Borealis over Mountains">
+  <defs>
+    <!-- Night sky gradient -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#020812;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1025;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Aurora gradients - vertical from color to transparent -->
+    <linearGradient id="greenAurora" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34D399;stop-opacity:0.3" />
+      <stop offset="30%" style="stop-color:#059669;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="cyanAurora" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.25" />
+      <stop offset="30%" style="stop-color:#0891B2;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="violetAurora" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.22" />
+      <stop offset="30%" style="stop-color:#7C3AED;stop-opacity:0.18" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="pinkAurora" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:0.2" />
+      <stop offset="30%" style="stop-color:#DB2777;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#DB2777;stop-opacity:0" />
+    </linearGradient>
+
+    <linearGradient id="tealAurora" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:0.23" />
+      <stop offset="30%" style="stop-color:#0D9488;stop-opacity:0.19" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:0" />
+    </linearGradient>
+
+    <!-- Turbulence filter for organic aurora edges -->
+    <filter id="auroraTurbulence" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.02" numOctaves="3" seed="42">
+        <animate attributeName="baseFrequency"
+                 values="0.015 0.02; 0.018 0.025; 0.015 0.02"
+                 dur="29s"
+                 repeatCount="indefinite" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="25">
+        <animate attributeName="scale"
+                 values="25;35;25"
+                 dur="31s"
+                 repeatCount="indefinite" />
+      </feDisplacementMap>
+    </filter>
+
+    <!-- Blur for reflections -->
+    <filter id="reflectionBlur">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+
+    <!-- Blur for shooting star -->
+    <filter id="starBlur">
+      <feGaussianBlur stdDeviation="1.5" />
+    </filter>
+  </defs>
+
+  <!-- Night sky background -->
+  <rect width="800" height="300" fill="url(#skyGradient)" />
+
+  <!-- Star field (behind aurora) -->
+  <g id="stars" opacity="0.9">
+    <!-- Static stars -->
+    <circle cx="45" cy="25" r="0.8" fill="white" />
+    <circle cx="120" cy="15" r="0.6" fill="white" />
+    <circle cx="190" cy="35" r="0.7" fill="white" />
+    <circle cx="245" cy="20" r="0.5" fill="white" />
+    <circle cx="310" cy="45" r="0.6" fill="white" />
+    <circle cx="380" cy="30" r="0.7" fill="white" />
+    <circle cx="445" cy="18" r="0.6" fill="white" />
+    <circle cx="520" cy="38" r="0.5" fill="white" />
+    <circle cx="590" cy="22" r="0.7" fill="white" />
+    <circle cx="655" cy="42" r="0.6" fill="white" />
+    <circle cx="720" cy="28" r="0.5" fill="white" />
+    <circle cx="780" cy="35" r="0.6" fill="white" />
+    <circle cx="75" cy="55" r="0.5" fill="white" />
+    <circle cx="150" cy="65" r="0.6" fill="white" />
+    <circle cx="220" cy="58" r="0.5" fill="white" />
+    <circle cx="285" cy="70" r="0.6" fill="white" />
+    <circle cx="350" cy="62" r="0.5" fill="white" />
+    <circle cx="420" cy="75" r="0.6" fill="white" />
+    <circle cx="490" cy="68" r="0.5" fill="white" />
+    <circle cx="560" cy="72" r="0.7" fill="white" />
+    <circle cx="630" cy="65" r="0.5" fill="white" />
+    <circle cx="700" cy="58" r="0.6" fill="white" />
+    <circle cx="760" cy="70" r="0.5" fill="white" />
+    <circle cx="100" cy="90" r="0.6" fill="white" />
+    <circle cx="170" cy="95" r="0.5" fill="white" />
+    <circle cx="240" cy="88" r="0.6" fill="white" />
+    <circle cx="320" cy="92" r="0.5" fill="white" />
+    <circle cx="390" cy="100" r="0.6" fill="white" />
+    <circle cx="470" cy="95" r="0.5" fill="white" />
+    <circle cx="540" cy="88" r="0.6" fill="white" />
+
+    <!-- Twinkling stars with prime-number durations -->
+    <circle cx="85" cy="40" r="0.7" fill="white">
+      <animate attributeName="opacity" values="1;0.3;1" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="200" cy="50" r="0.6" fill="white">
+      <animate attributeName="opacity" values="1;0.4;1" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="330" cy="25" r="0.7" fill="white">
+      <animate attributeName="opacity" values="1;0.35;1" dur="13s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="460" cy="55" r="0.6" fill="white">
+      <animate attributeName="opacity" values="1;0.3;1" dur="17s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="575" cy="45" r="0.7" fill="white">
+      <animate attributeName="opacity" values="1;0.4;1" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="680" cy="32" r="0.6" fill="white">
+      <animate attributeName="opacity" values="1;0.35;1" dur="23s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="135" cy="78" r="0.6" fill="white">
+      <animate attributeName="opacity" values="1;0.3;1" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="270" cy="85" r="0.7" fill="white">
+      <animate attributeName="opacity" values="1;0.4;1" dur="31s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="410" cy="82" r="0.6" fill="white">
+      <animate attributeName="opacity" values="1;0.35;1" dur="37s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="615" cy="90" r="0.7" fill="white">
+      <animate attributeName="opacity" values="1;0.3;1" dur="41s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Aurora curtains with filter and animations -->
+  <g id="aurora" filter="url(#auroraTurbulence)">
+    <!-- Green curtain (dominant, tallest) -->
+    <path d="M 150 0 Q 155 50, 150 100 Q 145 150, 150 200 Q 155 220, 150 230 L 180 230 Q 185 220, 180 200 Q 175 150, 180 100 Q 185 50, 180 0 Z"
+          fill="url(#greenAurora)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -8,5; 0,0"
+                        dur="23s"
+                        repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.7;1" dur="29s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Cyan curtain -->
+    <path d="M 320 10 Q 325 60, 320 110 Q 315 160, 320 210 L 345 210 Q 350 160, 345 110 Q 340 60, 345 10 Z"
+          fill="url(#cyanAurora)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 10,-3; 0,0"
+                        dur="29s"
+                        repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.65;1" dur="31s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Violet curtain -->
+    <path d="M 480 5 Q 485 55, 480 105 Q 475 155, 480 205 Q 485 225, 480 235 L 515 235 Q 520 225, 515 205 Q 510 155, 515 105 Q 520 55, 515 5 Z"
+          fill="url(#violetAurora)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -12,8; 0,0"
+                        dur="31s"
+                        repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.6;1" dur="37s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Pink-edged curtain -->
+    <path d="M 620 15 Q 625 65, 620 115 Q 615 165, 620 215 L 640 215 Q 645 165, 640 115 Q 635 65, 640 15 Z"
+          fill="url(#pinkAurora)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 15,-5; 0,0"
+                        dur="37s"
+                        repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.7;1" dur="23s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Teal curtain (additional) -->
+    <path d="M 50 20 Q 55 70, 50 120 Q 45 170, 50 220 L 75 220 Q 80 170, 75 120 Q 70 70, 75 20 Z"
+          fill="url(#tealAurora)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -10,6; 0,0"
+                        dur="41s"
+                        repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.65;1" dur="43s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Lake reflection (before mountains) -->
+  <g id="lakeReflection" opacity="0.15" filter="url(#reflectionBlur)">
+    <ellipse cx="165" cy="245" rx="45" ry="12" fill="#34D399" opacity="0.4" />
+    <ellipse cx="335" cy="248" rx="38" ry="10" fill="#06B6D4" opacity="0.35" />
+    <ellipse cx="500" cy="246" rx="42" ry="11" fill="#8B5CF6" opacity="0.3" />
+    <ellipse cx="630" cy="250" rx="35" ry="9" fill="#EC4899" opacity="0.35" />
+    <ellipse cx="65" cy="252" rx="30" ry="8" fill="#14B8A6" opacity="0.3" />
+  </g>
+
+  <!-- Distant mountain layer (lighter) -->
+  <path d="M 0 270 L 80 240 L 150 255 L 220 235 L 290 250 L 360 230 L 430 245 L 500 225 L 570 240 L 640 220 L 710 235 L 780 215 L 800 225 L 800 300 L 0 300 Z"
+        fill="#0a0a15"
+        opacity="0.6" />
+
+  <!-- Close mountain layer (darker) -->
+  <path d="M 0 280 L 60 255 L 130 270 L 200 250 L 270 265 L 340 245 L 410 260 L 480 240 L 550 255 L 620 235 L 690 250 L 760 230 L 800 245 L 800 300 L 0 300 Z"
+        fill="#080810" />
+
+  <!-- Snow-capped peaks -->
+  <g id="snowCaps" fill="white" opacity="0.7">
+    <path d="M 80 240 L 85 237 L 90 240 L 85 238 Z" />
+    <path d="M 220 235 L 226 232 L 232 235 L 226 233 Z" />
+    <path d="M 360 230 L 367 226 L 374 230 L 367 227 Z" />
+    <path d="M 500 225 L 507 221 L 514 225 L 507 222 Z" />
+    <path d="M 640 220 L 648 216 L 656 220 L 648 217 Z" />
+    <path d="M 780 215 L 788 211 L 796 215 L 788 212 Z" />
+    <path d="M 60 255 L 65 252 L 70 255 L 65 253 Z" />
+    <path d="M 200 250 L 206 247 L 212 250 L 206 248 Z" />
+    <path d="M 340 245 L 347 241 L 354 245 L 347 242 Z" />
+    <path d="M 480 240 L 487 236 L 494 240 L 487 237 Z" />
+    <path d="M 620 235 L 628 231 L 636 235 L 628 232 Z" />
+    <path d="M 760 230 L 768 226 L 776 230 L 768 227 Z" />
+  </g>
+
+  <!-- Shooting star -->
+  <line x1="-50" y1="60" x2="0" y2="50" stroke="white" stroke-width="1.5" opacity="0" filter="url(#starBlur)">
+    <animate attributeName="x1" values="-50;750" dur="41s" repeatCount="indefinite" />
+    <animate attributeName="y1" values="60;100" dur="41s" repeatCount="indefinite" />
+    <animate attributeName="x2" values="0;800" dur="41s" repeatCount="indefinite" />
+    <animate attributeName="y2" values="50;90" dur="41s" repeatCount="indefinite" />
+    <animate attributeName="opacity"
+             values="0;0;0;0;0;0;0;0;0.8;1;0.8;0;0;0;0;0;0;0;0;0"
+             dur="41s"
+             repeatCount="indefinite" />
+  </line>
+</svg>

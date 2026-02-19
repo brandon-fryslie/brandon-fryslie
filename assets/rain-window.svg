@@ -1,0 +1,318 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for dark cityscape background -->
+    <linearGradient id="cityGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a15;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a25;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Gaussian blur for bokeh lights -->
+    <filter id="bokeh">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+    </filter>
+
+    <!-- Stronger blur for distant rain -->
+    <filter id="rainBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+
+    <!-- Radial gradient for water droplets (lens/refraction effect) -->
+    <radialGradient id="dropGradient">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
+      <stop offset="40%" style="stop-color:#ffffff;stop-opacity:0.08" />
+      <stop offset="70%" style="stop-color:#4a5568;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.4" />
+    </radialGradient>
+
+    <!-- Gradient for light reflections inside drops -->
+    <radialGradient id="reflectionGradient">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Breath fog gradient -->
+    <radialGradient id="fogGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15">
+        <animate attributeName="stop-opacity" values="0.15;0.08;0.15" dur="17s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Dark cityscape background -->
+  <rect width="800" height="300" fill="url(#cityGradient)" />
+
+  <!-- Bokeh city lights (blurred colored circles) -->
+  <g filter="url(#bokeh)" opacity="0.6">
+    <circle cx="120" cy="80" r="25" fill="#F59E0B">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="280" cy="120" r="35" fill="#EF4444">
+      <animate attributeName="opacity" values="0.5;0.7;0.5" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="70" r="20" fill="#06B6D4">
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="13s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="620" cy="110" r="30" fill="#EC4899">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="700" cy="60" r="22" fill="#F59E0B">
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="23s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="200" r="28" fill="#06B6D4">
+      <animate attributeName="opacity" values="0.5;0.7;0.5" dur="17s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="350" cy="220" r="32" fill="#EF4444">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="550" cy="190" r="24" fill="#EC4899">
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="31s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="200" cy="150" r="18" fill="#F59E0B">
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="37s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Horizontal smeared light bands (traffic/neon) -->
+  <rect x="50" y="140" width="700" height="3" fill="#F59E0B" opacity="0.3" filter="url(#bokeh)" />
+  <rect x="0" y="160" width="800" height="2" fill="#06B6D4" opacity="0.25" filter="url(#bokeh)">
+    <animate attributeName="opacity" values="0.25;0.35;0.25" dur="13s" repeatCount="indefinite" />
+  </rect>
+  <rect x="100" y="95" width="650" height="4" fill="#EC4899" opacity="0.28" filter="url(#bokeh)" />
+
+  <!-- Background diagonal rain (behind the glass) -->
+  <g filter="url(#rainBlur)" opacity="0.15">
+    <!-- Multiple sets of rain lines with staggered animations -->
+    <g>
+      <line x1="50" y1="-20" x2="30" y2="50" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3s" repeatCount="indefinite" />
+      </line>
+      <line x1="150" y1="-10" x2="130" y2="60" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3.2s" repeatCount="indefinite" />
+      </line>
+      <line x1="250" y1="-30" x2="230" y2="40" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="2.8s" repeatCount="indefinite" />
+      </line>
+      <line x1="350" y1="-15" x2="330" y2="55" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3.1s" repeatCount="indefinite" />
+      </line>
+      <line x1="450" y1="-25" x2="430" y2="45" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="2.9s" repeatCount="indefinite" />
+      </line>
+      <line x1="550" y1="-5" x2="530" y2="65" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3.3s" repeatCount="indefinite" />
+      </line>
+      <line x1="650" y1="-20" x2="630" y2="50" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="2.7s" repeatCount="indefinite" />
+      </line>
+      <line x1="750" y1="-10" x2="730" y2="60" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3.4s" repeatCount="indefinite" />
+      </line>
+    </g>
+
+    <!-- Second layer of rain with offset timing -->
+    <g>
+      <line x1="100" y1="-20" x2="80" y2="50" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3s" begin="1.5s" repeatCount="indefinite" />
+      </line>
+      <line x1="200" y1="-10" x2="180" y2="60" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3.2s" begin="1.6s" repeatCount="indefinite" />
+      </line>
+      <line x1="300" y1="-30" x2="280" y2="40" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+      </line>
+      <line x1="400" y1="-15" x2="380" y2="55" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3.1s" begin="1.55s" repeatCount="indefinite" />
+      </line>
+      <line x1="500" y1="-25" x2="480" y2="45" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="2.9s" begin="1.45s" repeatCount="indefinite" />
+      </line>
+      <line x1="600" y1="-5" x2="580" y2="65" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="3.3s" begin="1.65s" repeatCount="indefinite" />
+      </line>
+      <line x1="700" y1="-20" x2="680" y2="50" stroke="#ffffff" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -100,350" dur="2.7s" begin="1.35s" repeatCount="indefinite" />
+      </line>
+    </g>
+  </g>
+
+  <!-- Breath fog effect -->
+  <ellipse cx="400" cy="180" rx="120" ry="80" fill="url(#fogGradient)" />
+
+  <!-- Static water droplets on glass (large drops with refraction) -->
+  <g id="staticDrops">
+    <!-- Large drops with internal reflections -->
+    <g>
+      <circle cx="150" cy="90" r="7" fill="url(#dropGradient)" />
+      <circle cx="152" cy="87" r="2" fill="url(#reflectionGradient)" />
+    </g>
+    <g>
+      <circle cx="320" cy="140" r="8" fill="url(#dropGradient)" />
+      <circle cx="323" cy="137" r="2.5" fill="url(#reflectionGradient)" />
+    </g>
+    <g>
+      <circle cx="480" cy="100" r="6" fill="url(#dropGradient)" />
+      <circle cx="482" cy="98" r="1.8" fill="url(#reflectionGradient)" />
+    </g>
+    <g>
+      <circle cx="600" cy="170" r="7.5" fill="url(#dropGradient)" />
+      <circle cx="603" cy="167" r="2.2" fill="url(#reflectionGradient)" />
+    </g>
+    <g>
+      <circle cx="220" cy="200" r="6.5" fill="url(#dropGradient)" />
+      <circle cx="222" cy="198" r="2" fill="url(#reflectionGradient)" />
+    </g>
+    <g>
+      <circle cx="700" cy="130" r="8" fill="url(#dropGradient)" />
+      <circle cx="703" cy="127" r="2.5" fill="url(#reflectionGradient)" />
+    </g>
+
+    <!-- Medium drops -->
+    <circle cx="90" cy="120" r="4" fill="url(#dropGradient)" />
+    <circle cx="270" cy="80" r="3.5" fill="url(#dropGradient)" />
+    <circle cx="420" cy="190" r="4.5" fill="url(#dropGradient)" />
+    <circle cx="560" cy="60" r="3" fill="url(#dropGradient)" />
+    <circle cx="180" cy="240" r="4" fill="url(#dropGradient)" />
+    <circle cx="650" cy="220" r="3.5" fill="url(#dropGradient)" />
+    <circle cx="380" cy="50" r="3" fill="url(#dropGradient)" />
+
+    <!-- Small beading dots -->
+    <circle cx="110" cy="70" r="2" fill="#ffffff" opacity="0.3" />
+    <circle cx="200" cy="110" r="1.5" fill="#ffffff" opacity="0.25" />
+    <circle cx="340" cy="180" r="2" fill="#ffffff" opacity="0.3" />
+    <circle cx="470" cy="150" r="1.5" fill="#ffffff" opacity="0.28" />
+    <circle cx="530" cy="210" r="2" fill="#ffffff" opacity="0.32" />
+    <circle cx="620" cy="90" r="1.5" fill="#ffffff" opacity="0.27" />
+    <circle cx="730" cy="160" r="2" fill="#ffffff" opacity="0.3" />
+    <circle cx="250" cy="250" r="1.5" fill="#ffffff" opacity="0.26" />
+    <circle cx="400" cy="230" r="2" fill="#ffffff" opacity="0.29" />
+    <circle cx="140" cy="180" r="1.5" fill="#ffffff" opacity="0.31" />
+  </g>
+
+  <!-- Condensation texture at edges -->
+  <g opacity="0.2">
+    <!-- Top edge condensation -->
+    <circle cx="30" cy="15" r="1" fill="#ffffff" />
+    <circle cx="80" cy="20" r="0.8" fill="#ffffff" />
+    <circle cx="130" cy="12" r="1" fill="#ffffff" />
+    <circle cx="200" cy="18" r="0.9" fill="#ffffff" />
+    <circle cx="290" cy="15" r="0.8" fill="#ffffff" />
+    <circle cx="350" cy="22" r="1" fill="#ffffff" />
+    <circle cx="420" cy="17" r="0.9" fill="#ffffff" />
+    <circle cx="510" cy="20" r="0.8" fill="#ffffff" />
+    <circle cx="600" cy="14" r="1" fill="#ffffff" />
+    <circle cx="680" cy="19" r="0.9" fill="#ffffff" />
+    <circle cx="750" cy="16" r="0.8" fill="#ffffff" />
+
+    <!-- Bottom edge condensation -->
+    <circle cx="40" cy="285" r="1" fill="#ffffff" />
+    <circle cx="110" cy="280" r="0.8" fill="#ffffff" />
+    <circle cx="190" cy="288" r="0.9" fill="#ffffff" />
+    <circle cx="270" cy="283" r="1" fill="#ffffff" />
+    <circle cx="360" cy="286" r="0.8" fill="#ffffff" />
+    <circle cx="450" cy="281" r="0.9" fill="#ffffff" />
+    <circle cx="540" cy="287" r="1" fill="#ffffff" />
+    <circle cx="630" cy="284" r="0.8" fill="#ffffff" />
+    <circle cx="720" cy="289" r="0.9" fill="#ffffff" />
+
+    <!-- Left edge condensation -->
+    <circle cx="15" cy="60" r="0.9" fill="#ffffff" />
+    <circle cx="20" cy="130" r="0.8" fill="#ffffff" />
+    <circle cx="12" cy="200" r="1" fill="#ffffff" />
+    <circle cx="18" cy="250" r="0.9" fill="#ffffff" />
+
+    <!-- Right edge condensation -->
+    <circle cx="785" cy="70" r="0.8" fill="#ffffff" />
+    <circle cx="788" cy="140" r="1" fill="#ffffff" />
+    <circle cx="782" cy="210" r="0.9" fill="#ffffff" />
+    <circle cx="790" cy="260" r="0.8" fill="#ffffff" />
+  </g>
+
+  <!-- Running drops that slide down the window -->
+  <!-- Drop 1 with trail -->
+  <g>
+    <circle cx="240" r="5" fill="url(#dropGradient)">
+      <animate attributeName="cy" values="-10;310" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="241" r="1.5" fill="url(#reflectionGradient)">
+      <animate attributeName="cy" values="-10;310" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <!-- Trail dots -->
+    <circle cx="240" r="2" fill="#ffffff" opacity="0.15">
+      <animate attributeName="cy" values="-20;300" dur="19s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="240" r="1.5" fill="#ffffff" opacity="0.1">
+      <animate attributeName="cy" values="-30;290" dur="19s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Drop 2 with trail -->
+  <g>
+    <circle cx="500" r="6" fill="url(#dropGradient)">
+      <animate attributeName="cy" values="-15;315" dur="23s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="502" r="2" fill="url(#reflectionGradient)">
+      <animate attributeName="cy" values="-15;315" dur="23s" repeatCount="indefinite" />
+    </circle>
+    <!-- Trail -->
+    <line x1="500" y1="-25" x2="500" y2="-15" stroke="#ffffff" stroke-width="1" opacity="0.12">
+      <animate attributeName="y1" values="-35;305" dur="23s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="-25;315" dur="23s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Drop 3 with trail -->
+  <g>
+    <circle cx="670" r="5.5" fill="url(#dropGradient)">
+      <animate attributeName="cy" values="-20;320" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="672" r="1.8" fill="url(#reflectionGradient)">
+      <animate attributeName="cy" values="-20;320" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <!-- Trail dots -->
+    <circle cx="670" r="2" fill="#ffffff" opacity="0.15">
+      <animate attributeName="cy" values="-30;310" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="670" r="1.5" fill="#ffffff" opacity="0.1">
+      <animate attributeName="cy" values="-40;300" dur="29s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="670" r="1" fill="#ffffff" opacity="0.08">
+      <animate attributeName="cy" values="-50;290" dur="29s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Drop 4 with trail -->
+  <g>
+    <circle cx="100" r="5" fill="url(#dropGradient)">
+      <animate attributeName="cy" values="-25;325" dur="31s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="101" r="1.5" fill="url(#reflectionGradient)">
+      <animate attributeName="cy" values="-25;325" dur="31s" repeatCount="indefinite" />
+    </circle>
+    <!-- Trail line -->
+    <line x1="100" y1="-35" x2="100" y2="-25" stroke="#ffffff" stroke-width="0.8" opacity="0.1">
+      <animate attributeName="y1" values="-45;315" dur="31s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="-35;325" dur="31s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Drop 5 with trail -->
+  <g>
+    <circle cx="380" r="6.5" fill="url(#dropGradient)">
+      <animate attributeName="cy" values="-12;312" dur="37s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="383" r="2.2" fill="url(#reflectionGradient)">
+      <animate attributeName="cy" values="-12;312" dur="37s" repeatCount="indefinite" />
+    </circle>
+    <!-- Trail dots -->
+    <circle cx="380" r="2.5" fill="#ffffff" opacity="0.15">
+      <animate attributeName="cy" values="-22;302" dur="37s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="380" r="2" fill="#ffffff" opacity="0.12">
+      <animate attributeName="cy" values="-32;292" dur="37s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="380" r="1.5" fill="#ffffff" opacity="0.09">
+      <animate attributeName="cy" values="-42;282" dur="37s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050510;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a1e;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Radial glow behind helix -->
+    <radialGradient id="helixGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#1a3a5a;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#050510;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a3e" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+
+    <!-- Glow filters -->
+    <filter id="cyanGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="magentaGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="scanBeamGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scanning beam gradient -->
+    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#00ffff;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGradient)"/>
+  <rect width="800" height="300" fill="url(#grid)"/>
+  <ellipse cx="400" cy="150" rx="500" ry="180" fill="url(#helixGlow)"/>
+
+  <!-- DNA Helix Structure -->
+  <!-- The helix has 18 base pairs, spanning 800px width (44.4px per segment) -->
+  <!-- Amplitude of sine wave: 60px, creating the helix curve -->
+
+  <g id="helixGroup">
+    <!-- Cyan backbone (top strand) -->
+    <path id="cyanBackbone" d="
+      M 0,150
+      Q 25,90 50,90
+      Q 75,90 100,150
+      Q 125,210 150,210
+      Q 175,210 200,150
+      Q 225,90 250,90
+      Q 275,90 300,150
+      Q 325,210 350,210
+      Q 375,210 400,150
+      Q 425,90 450,90
+      Q 475,90 500,150
+      Q 525,210 550,210
+      Q 575,210 600,150
+      Q 625,90 650,90
+      Q 675,90 700,150
+      Q 725,210 750,210
+      Q 775,210 800,150
+    " fill="none" stroke="#06B6D4" stroke-width="3" filter="url(#cyanGlow)">
+      <animate attributeName="d" dur="41s" repeatCount="indefinite"
+        values="
+          M 0,150 Q 25,90 50,90 Q 75,90 100,150 Q 125,210 150,210 Q 175,210 200,150 Q 225,90 250,90 Q 275,90 300,150 Q 325,210 350,210 Q 375,210 400,150 Q 425,90 450,90 Q 475,90 500,150 Q 525,210 550,210 Q 575,210 600,150 Q 625,90 650,90 Q 675,90 700,150 Q 725,210 750,210 Q 775,210 800,150;
+          M -100,150 Q -75,90 -50,90 Q -25,90 0,150 Q 25,210 50,210 Q 75,210 100,150 Q 125,90 150,90 Q 175,90 200,150 Q 225,210 250,210 Q 275,210 300,150 Q 325,90 350,90 Q 375,90 400,150 Q 425,210 450,210 Q 475,210 500,150 Q 525,90 550,90 Q 575,90 600,150 Q 625,210 650,210 Q 675,210 700,150 Q 725,90 750,90 Q 775,90 800,150;
+          M 0,150 Q 25,90 50,90 Q 75,90 100,150 Q 125,210 150,210 Q 175,210 200,150 Q 225,90 250,90 Q 275,90 300,150 Q 325,210 350,210 Q 375,210 400,150 Q 425,90 450,90 Q 475,90 500,150 Q 525,210 550,210 Q 575,210 600,150 Q 625,90 650,90 Q 675,90 700,150 Q 725,210 750,210 Q 775,210 800,150
+        "/>
+    </path>
+
+    <!-- Magenta backbone (bottom strand) -->
+    <path id="magentaBackbone" d="
+      M 0,150
+      Q 25,210 50,210
+      Q 75,210 100,150
+      Q 125,90 150,90
+      Q 175,90 200,150
+      Q 225,210 250,210
+      Q 275,210 300,150
+      Q 325,90 350,90
+      Q 375,90 400,150
+      Q 425,210 450,210
+      Q 475,210 500,150
+      Q 525,90 550,90
+      Q 575,90 600,150
+      Q 625,210 650,210
+      Q 675,210 700,150
+      Q 725,90 750,90
+      Q 775,90 800,150
+    " fill="none" stroke="#EC4899" stroke-width="3" filter="url(#magentaGlow)">
+      <animate attributeName="d" dur="41s" repeatCount="indefinite"
+        values="
+          M 0,150 Q 25,210 50,210 Q 75,210 100,150 Q 125,90 150,90 Q 175,90 200,150 Q 225,210 250,210 Q 275,210 300,150 Q 325,90 350,90 Q 375,90 400,150 Q 425,210 450,210 Q 475,210 500,150 Q 525,90 550,90 Q 575,90 600,150 Q 625,210 650,210 Q 675,210 700,150 Q 725,90 750,90 Q 775,90 800,150;
+          M -100,150 Q -75,210 -50,210 Q -25,210 0,150 Q 25,90 50,90 Q 75,90 100,150 Q 125,210 150,210 Q 175,210 200,150 Q 225,90 250,90 Q 275,90 300,150 Q 325,210 350,210 Q 375,210 400,150 Q 425,90 450,90 Q 475,90 500,150 Q 525,210 550,210 Q 575,210 600,150 Q 625,90 650,90 Q 675,90 700,150 Q 725,210 750,210 Q 775,210 800,150;
+          M 0,150 Q 25,210 50,210 Q 75,210 100,150 Q 125,90 150,90 Q 175,90 200,150 Q 225,210 250,210 Q 275,210 300,150 Q 325,90 350,90 Q 375,90 400,150 Q 425,210 450,210 Q 475,210 500,150 Q 525,90 550,90 Q 575,90 600,150 Q 625,210 650,210 Q 675,210 700,150 Q 725,90 750,90 Q 775,90 800,150
+        "/>
+    </path>
+
+    <!-- Base pairs (rungs) - 18 pairs, alternating A-T (gold) and G-C (violet) -->
+    <!-- Pair 0: x=0 -->
+    <line x1="0" y1="150" x2="0" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="y1" dur="41s" repeatCount="indefinite" values="150;150;150"/>
+      <animate attributeName="y2" dur="41s" repeatCount="indefinite" values="150;150;150"/>
+      <animate attributeName="opacity" dur="17s" repeatCount="indefinite" values="0.8;0.4;0.8;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 1: x=50 -->
+    <line x1="50" y1="90" x2="50" y2="210" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="19s" repeatCount="indefinite" values="0.8;0.9;0.4;0.8;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 2: x=100 -->
+    <line x1="100" y1="150" x2="100" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" values="0.8;0.4;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 3: x=150 -->
+    <line x1="150" y1="210" x2="150" y2="90" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="23s" repeatCount="indefinite" values="0.8;0.9;0.4;0.8"/>
+    </line>
+
+    <!-- Pair 4: x=200 -->
+    <line x1="200" y1="150" x2="200" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="11s" repeatCount="indefinite" values="0.8;0.4;0.8;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 5: x=250 -->
+    <line x1="250" y1="90" x2="250" y2="210" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="29s" repeatCount="indefinite" values="0.8;0.9;0.8;0.4;0.8"/>
+    </line>
+
+    <!-- Pair 6: x=300 -->
+    <line x1="300" y1="150" x2="300" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="17s" repeatCount="indefinite" values="0.8;0.4;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 7: x=350 -->
+    <line x1="350" y1="210" x2="350" y2="90" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="19s" repeatCount="indefinite" values="0.8;0.9;0.4;0.8;0.8"/>
+    </line>
+
+    <!-- Pair 8: x=400 (center) -->
+    <line x1="400" y1="150" x2="400" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" values="0.8;0.4;0.8;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 9: x=450 -->
+    <line x1="450" y1="90" x2="450" y2="210" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="23s" repeatCount="indefinite" values="0.8;0.9;0.8;0.4;0.8"/>
+    </line>
+
+    <!-- Pair 10: x=500 -->
+    <line x1="500" y1="150" x2="500" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="11s" repeatCount="indefinite" values="0.8;0.4;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 11: x=550 -->
+    <line x1="550" y1="210" x2="550" y2="90" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="29s" repeatCount="indefinite" values="0.8;0.9;0.4;0.8;0.8"/>
+    </line>
+
+    <!-- Pair 12: x=600 -->
+    <line x1="600" y1="150" x2="600" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="17s" repeatCount="indefinite" values="0.8;0.4;0.8;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 13: x=650 -->
+    <line x1="650" y1="90" x2="650" y2="210" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="19s" repeatCount="indefinite" values="0.8;0.9;0.8;0.4;0.8"/>
+    </line>
+
+    <!-- Pair 14: x=700 -->
+    <line x1="700" y1="150" x2="700" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" values="0.8;0.4;0.9;0.8"/>
+    </line>
+
+    <!-- Pair 15: x=750 -->
+    <line x1="750" y1="210" x2="750" y2="90" stroke="#8B5CF6" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="23s" repeatCount="indefinite" values="0.8;0.9;0.4;0.8;0.8"/>
+    </line>
+
+    <!-- Pair 16: x=800 -->
+    <line x1="800" y1="150" x2="800" y2="150" stroke="#F59E0B" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" dur="11s" repeatCount="indefinite" values="0.8;0.4;0.8;0.9;0.8"/>
+    </line>
+
+    <!-- Phosphate group accents along cyan backbone -->
+    <g id="cyanPhosphates">
+      <circle cx="0" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="cy" dur="41s" repeatCount="indefinite" values="150;150;150"/>
+        <animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="100" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="11s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="200" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="13s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="300" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="17s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="400" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="19s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="500" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="23s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="600" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="29s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="700" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="31s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="800" cy="150" r="3" fill="#06B6D4" opacity="0.9">
+        <animate attributeName="opacity" dur="37s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+    </g>
+
+    <!-- Phosphate group accents along magenta backbone -->
+    <g id="magentaPhosphates">
+      <circle cx="50" cy="210" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="11s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="150" cy="90" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="13s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="250" cy="210" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="17s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="350" cy="90" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="19s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="450" cy="210" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="23s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="550" cy="90" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="29s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="650" cy="210" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="31s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+      <circle cx="750" cy="90" r="3" fill="#EC4899" opacity="0.9">
+        <animate attributeName="opacity" dur="37s" repeatCount="indefinite" values="0.9;0.6;0.9"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Floating particles (nucleotides/enzymes) -->
+  <g id="particles">
+    <circle cx="120" cy="60" r="2" fill="#06B6D4" opacity="0.6">
+      <animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      <animate attributeName="cy" dur="13s" repeatCount="indefinite" values="60;75;60"/>
+    </circle>
+    <circle cx="280" cy="240" r="2" fill="#EC4899" opacity="0.6">
+      <animate attributeName="opacity" dur="11s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      <animate attributeName="cy" dur="17s" repeatCount="indefinite" values="240;225;240"/>
+    </circle>
+    <circle cx="450" cy="50" r="2" fill="#F59E0B" opacity="0.6">
+      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      <animate attributeName="cy" dur="19s" repeatCount="indefinite" values="50;65;50"/>
+    </circle>
+    <circle cx="580" cy="250" r="2" fill="#8B5CF6" opacity="0.6">
+      <animate attributeName="opacity" dur="17s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      <animate attributeName="cy" dur="23s" repeatCount="indefinite" values="250;235;250"/>
+    </circle>
+    <circle cx="700" cy="70" r="2" fill="#06B6D4" opacity="0.6">
+      <animate attributeName="opacity" dur="19s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      <animate attributeName="cy" dur="29s" repeatCount="indefinite" values="70;85;70"/>
+    </circle>
+    <circle cx="200" cy="30" r="1.5" fill="#EC4899" opacity="0.5">
+      <animate attributeName="opacity" dur="23s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      <animate attributeName="cy" dur="31s" repeatCount="indefinite" values="30;45;30"/>
+    </circle>
+    <circle cx="380" cy="270" r="1.5" fill="#F59E0B" opacity="0.5">
+      <animate attributeName="opacity" dur="29s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      <animate attributeName="cy" dur="37s" repeatCount="indefinite" values="270;255;270"/>
+    </circle>
+    <circle cx="520" cy="40" r="1.5" fill="#8B5CF6" opacity="0.5">
+      <animate attributeName="opacity" dur="31s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      <animate attributeName="cy" dur="41s" repeatCount="indefinite" values="40;55;40"/>
+    </circle>
+    <circle cx="650" cy="260" r="1.5" fill="#06B6D4" opacity="0.5">
+      <animate attributeName="opacity" dur="37s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      <animate attributeName="cy" dur="43s" repeatCount="indefinite" values="260;245;260"/>
+    </circle>
+    <circle cx="90" cy="230" r="2" fill="#EC4899" opacity="0.6">
+      <animate attributeName="opacity" dur="41s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      <animate attributeName="cy" dur="47s" repeatCount="indefinite" values="230;215;230"/>
+    </circle>
+  </g>
+
+  <!-- Scanning beam -->
+  <rect x="-30" y="0" width="30" height="300" fill="url(#scanBeam)" filter="url(#scanBeamGlow)" opacity="0.7">
+    <animate attributeName="x" dur="23s" repeatCount="indefinite" values="-30;830;-30"/>
+  </rect>
+</svg>

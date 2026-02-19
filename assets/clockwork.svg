@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" aria-label="Clockwork Mechanism">
+  <defs>
+    <!-- Gradients for metallic gears -->
+    <radialGradient id="brassGrad" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B45309;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="silverGrad" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#94A3B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="copperGrad" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#FB7185;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9F1239;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="steelGrad" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#64748B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="darkSteelGrad" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#475569;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </radialGradient>
+
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050510;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f2a;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Crosshatch pattern -->
+    <pattern id="crosshatch" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="20" y2="20" stroke="#1a1a3a" stroke-width="0.5" opacity="0.15" />
+      <line x1="20" y1="0" x2="0" y2="20" stroke="#1a1a3a" stroke-width="0.5" opacity="0.15" />
+    </pattern>
+
+    <!-- Gear tooth path generator - creates a gear with specified teeth count -->
+    <!-- Large brass gear - 24 teeth, radius 60 -->
+    <path id="gear24" d="
+      M 0,-60 L 5,-65 L 5,-68 L -5,-68 L -5,-65 Z
+      M 15.643,-57.588 L 20.211,-63.018 L 19.284,-65.933 L 9.567,-61.365 L 10.494,-58.45 Z
+      M 29.389,-47.553 L 33.065,-53.706 L 31.177,-56.177 L 22.343,-50.024 L 24.231,-47.553 Z
+      M 40.451,-33.541 L 43.116,-40.298 L 40.298,-42.116 L 32.541,-34.451 L 35.359,-32.633 Z
+      M 47.553,-17.101 L 49.024,-24.231 L 45.706,-25.065 L 39.553,-16.389 L 42.871,-15.555 Z
+      M 50,-0 L 50,-7.5 L 46.5,-7.5 L 42,-0 L 45.5,0 Z
+      M 47.553,17.101 L 49.024,24.231 L 45.706,25.065 L 39.553,16.389 L 42.871,15.555 Z
+      M 40.451,33.541 L 43.116,40.298 L 40.298,42.116 L 32.541,34.451 L 35.359,32.633 Z
+      M 29.389,47.553 L 33.065,53.706 L 31.177,56.177 L 22.343,50.024 L 24.231,47.553 Z
+      M 15.643,57.588 L 20.211,63.018 L 19.284,65.933 L 9.567,61.365 L 10.494,58.45 Z
+      M 0,60 L 5,65 L 5,68 L -5,68 L -5,65 Z
+      M -15.643,57.588 L -20.211,63.018 L -19.284,65.933 L -9.567,61.365 L -10.494,58.45 Z
+      M -29.389,47.553 L -33.065,53.706 L -31.177,56.177 L -22.343,50.024 L -24.231,47.553 Z
+      M -40.451,33.541 L -43.116,40.298 L -40.298,42.116 L -32.541,34.451 L -35.359,32.633 Z
+      M -47.553,17.101 L -49.024,24.231 L -45.706,25.065 L -39.553,16.389 L -42.871,15.555 Z
+      M -50,0 L -50,7.5 L -46.5,7.5 L -42,0 L -45.5,0 Z
+      M -47.553,-17.101 L -49.024,-24.231 L -45.706,-25.065 L -39.553,-16.389 L -42.871,-15.555 Z
+      M -40.451,-33.541 L -43.116,-40.298 L -40.298,-42.116 L -32.541,-34.451 L -35.359,-32.633 Z
+      M -29.389,-47.553 L -33.065,-53.706 L -31.177,-56.177 L -22.343,-50.024 L -24.231,-47.553 Z
+      M -15.643,-57.588 L -20.211,-63.018 L -19.284,-65.933 L -9.567,-61.365 L -10.494,-58.45 Z" />
+
+    <!-- Medium silver gear - 16 teeth, radius 40 -->
+    <path id="gear16" d="
+      M 0,-40 L 3,-43 L 3,-46 L -3,-46 L -3,-43 Z
+      M 15.307,-36.955 L 17.678,-40.615 L 16.615,-43.678 L 10.955,-39.307 L 12.018,-36.244 Z
+      M 28.284,-28.284 L 30.305,-32.426 L 28.426,-35.305 L 21.716,-29.716 L 23.595,-26.837 Z
+      M 36.955,-15.307 L 38.426,-19.898 L 35.898,-21.426 L 28.284,-14.142 L 30.812,-12.614 Z
+      M 40,0 L 40,-5 L 37,-5 L 33,0 L 36,0 Z
+      M 36.955,15.307 L 38.426,19.898 L 35.898,21.426 L 28.284,14.142 L 30.812,12.614 Z
+      M 28.284,28.284 L 30.305,32.426 L 28.426,35.305 L 21.716,29.716 L 23.595,26.837 Z
+      M 15.307,36.955 L 17.678,40.615 L 16.615,43.678 L 10.955,39.307 L 12.018,36.244 Z
+      M 0,40 L 3,43 L 3,46 L -3,46 L -3,43 Z
+      M -15.307,36.955 L -17.678,40.615 L -16.615,43.678 L -10.955,39.307 L -12.018,36.244 Z
+      M -28.284,28.284 L -30.305,32.426 L -28.426,35.305 L -21.716,29.716 L -23.595,26.837 Z
+      M -36.955,15.307 L -38.426,19.898 L -35.898,21.426 L -28.284,14.142 L -30.812,12.614 Z
+      M -40,0 L -40,5 L -37,5 L -33,0 L -36,0 Z
+      M -36.955,-15.307 L -38.426,-19.898 L -35.898,-21.426 L -28.284,-14.142 L -30.812,-12.614 Z
+      M -28.284,-28.284 L -30.305,-32.426 L -28.426,-35.305 L -21.716,-29.716 L -23.595,-26.837 Z
+      M -15.307,-36.955 L -17.678,-40.615 L -16.615,-43.678 L -10.955,-39.307 L -12.018,-36.244 Z" />
+
+    <!-- Small copper gear - 12 teeth, radius 30 -->
+    <path id="gear12" d="
+      M 0,-30 L 2.5,-32.5 L 2.5,-35 L -2.5,-35 L -2.5,-32.5 Z
+      M 15,-25.98 L 17,-28.98 L 16,-31.98 L 11,-27.98 L 12,-24.98 Z
+      M 25.98,-15 L 27.5,-18.5 L 25.5,-21 L 19.98,-15.98 L 21.98,-13.48 Z
+      M 30,0 L 30,-4 L 27,-4 L 24,0 L 27,0 Z
+      M 25.98,15 L 27.5,18.5 L 25.5,21 L 19.98,15.98 L 21.98,13.48 Z
+      M 15,25.98 L 17,28.98 L 16,31.98 L 11,27.98 L 12,24.98 Z
+      M 0,30 L 2.5,32.5 L 2.5,35 L -2.5,35 L -2.5,32.5 Z
+      M -15,25.98 L -17,28.98 L -16,31.98 L -11,27.98 L -12,24.98 Z
+      M -25.98,15 L -27.5,18.5 L -25.5,21 L -19.98,15.98 L -21.98,13.48 Z
+      M -30,0 L -30,4 L -27,4 L -24,0 L -27,0 Z
+      M -25.98,-15 L -27.5,-18.5 L -25.5,-21 L -19.98,-15.98 L -21.98,-13.48 Z
+      M -15,-25.98 L -17,-28.98 L -16,-31.98 L -11,-27.98 L -12,-24.98 Z" />
+
+    <!-- Tiny steel gear - 8 teeth, radius 20 -->
+    <path id="gear8" d="
+      M 0,-20 L 2,-22 L 2,-24 L -2,-24 L -2,-22 Z
+      M 14.14,-14.14 L 15.8,-16.3 L 14.8,-18.8 L 10.14,-14.14 L 11.14,-11.64 Z
+      M 20,0 L 20,-3 L 18,-3 L 16,0 L 18,0 Z
+      M 14.14,14.14 L 15.8,16.3 L 14.8,18.8 L 10.14,14.14 L 11.14,11.64 Z
+      M 0,20 L 2,22 L 2,24 L -2,24 L -2,22 Z
+      M -14.14,14.14 L -15.8,16.3 L -14.8,18.8 L -10.14,14.14 L -11.14,11.64 Z
+      M -20,0 L -20,3 L -18,3 L -16,0 L -18,0 Z
+      M -14.14,-14.14 L -15.8,-16.3 L -14.8,-18.8 L -10.14,-14.14 L -11.14,-11.64 Z" />
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGrad)" />
+  <rect width="800" height="300" fill="url(#crosshatch)" />
+
+  <!-- Faint watch face circles -->
+  <circle cx="400" cy="150" r="140" fill="none" stroke="#1a1a3a" stroke-width="0.5" opacity="0.2" />
+  <circle cx="400" cy="150" r="130" fill="none" stroke="#1a1a3a" stroke-width="0.5" opacity="0.15" />
+  <circle cx="400" cy="150" r="120" fill="none" stroke="#1a1a3a" stroke-width="0.5" opacity="0.1" />
+
+  <!-- Decorative screws -->
+  <g opacity="0.6">
+    <circle cx="50" cy="30" r="3" fill="#475569" stroke="#1E293B" stroke-width="0.5" />
+    <line x1="48" y1="30" x2="52" y2="30" stroke="#1E293B" stroke-width="0.8" />
+    <line x1="50" y1="28" x2="50" y2="32" stroke="#1E293B" stroke-width="0.8" />
+
+    <circle cx="750" cy="30" r="3" fill="#475569" stroke="#1E293B" stroke-width="0.5" />
+    <line x1="748" y1="30" x2="752" y2="30" stroke="#1E293B" stroke-width="0.8" />
+    <line x1="750" y1="28" x2="750" y2="32" stroke="#1E293B" stroke-width="0.8" />
+
+    <circle cx="50" cy="270" r="3" fill="#475569" stroke="#1E293B" stroke-width="0.5" />
+    <line x1="48" y1="270" x2="52" y2="270" stroke="#1E293B" stroke-width="0.8" />
+    <line x1="50" y1="268" x2="50" y2="272" stroke="#1E293B" stroke-width="0.8" />
+
+    <circle cx="750" cy="270" r="3" fill="#475569" stroke="#1E293B" stroke-width="0.5" />
+    <line x1="748" y1="270" x2="752" y2="270" stroke="#1E293B" stroke-width="0.8" />
+    <line x1="750" y1="268" x2="750" y2="272" stroke="#1E293B" stroke-width="0.8" />
+  </g>
+
+  <!-- Large brass gear (24 teeth, center, slow rotation) - baseline speed -->
+  <g id="mainGear">
+    <circle cx="400" cy="150" r="52" fill="url(#brassGrad)" stroke="#92400E" stroke-width="1.5" />
+    <use href="#gear24" x="400" y="150" fill="url(#brassGrad)" stroke="#92400E" stroke-width="1" />
+    <circle cx="400" cy="150" r="8" fill="#1E293B" stroke="#0f172a" stroke-width="1" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 400 150"
+      to="360 400 150"
+      dur="23s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Medium silver gear top-left (16 teeth, meshes with main gear, clockwise) -->
+  <!-- Gear ratio: 24/16 = 1.5, so this rotates 1.5x faster, opposite direction -->
+  <g id="gear2">
+    <circle cx="280" cy="80" r="36" fill="url(#silverGrad)" stroke="#334155" stroke-width="1.5" />
+    <use href="#gear16" x="280" y="80" fill="url(#silverGrad)" stroke="#334155" stroke-width="1" />
+    <circle cx="280" cy="80" r="6" fill="#1E293B" stroke="#0f172a" stroke-width="1" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="360 280 80"
+      to="0 280 80"
+      dur="15.33s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Small copper gear top-right (12 teeth, meshes with main gear, clockwise) -->
+  <!-- Gear ratio: 24/12 = 2, so this rotates 2x faster, opposite direction -->
+  <g id="gear3">
+    <circle cx="520" cy="80" r="27" fill="url(#copperGrad)" stroke="#881337" stroke-width="1.5" />
+    <use href="#gear12" x="520" y="80" fill="url(#copperGrad)" stroke="#881337" stroke-width="1" />
+    <circle cx="520" cy="80" r="5" fill="#1E293B" stroke="#0f172a" stroke-width="1" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="360 520 80"
+      to="0 520 80"
+      dur="11.5s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Medium dark steel gear bottom-left (16 teeth, meshes with main gear, clockwise) -->
+  <g id="gear4">
+    <circle cx="280" cy="220" r="36" fill="url(#darkSteelGrad)" stroke="#0f172a" stroke-width="1.5" />
+    <use href="#gear16" x="280" y="220" fill="url(#darkSteelGrad)" stroke="#0f172a" stroke-width="1" />
+    <circle cx="280" cy="220" r="6" fill="#1E293B" stroke="#0f172a" stroke-width="1" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="360 280 220"
+      to="0 280 220"
+      dur="15.33s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Small steel gear bottom-right (12 teeth, meshes with main gear, clockwise) -->
+  <g id="gear5">
+    <circle cx="520" cy="220" r="27" fill="url(#steelGrad)" stroke="#1E293B" stroke-width="1.5" />
+    <use href="#gear12" x="520" y="220" fill="url(#steelGrad)" stroke="#1E293B" stroke-width="1" />
+    <circle cx="520" cy="220" r="5" fill="#1E293B" stroke="#0f172a" stroke-width="1" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="360 520 220"
+      to="0 520 220"
+      dur="11.5s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Tiny brass gear far left (8 teeth, meshes with top-left gear, counter-clockwise) -->
+  <!-- Meshes with 16-tooth gear, ratio: 16/8 = 2, so 2x faster than gear2 -->
+  <g id="gear6">
+    <circle cx="180" cy="80" r="18" fill="url(#brassGrad)" stroke="#92400E" stroke-width="1" />
+    <use href="#gear8" x="180" y="80" fill="url(#brassGrad)" stroke="#92400E" stroke-width="0.8" />
+    <circle cx="180" cy="80" r="4" fill="#1E293B" stroke="#0f172a" stroke-width="0.8" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 180 80"
+      to="360 180 80"
+      dur="7.67s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Tiny copper gear far right (8 teeth, meshes with top-right gear, counter-clockwise) -->
+  <g id="gear7">
+    <circle cx="620" cy="80" r="18" fill="url(#copperGrad)" stroke="#881337" stroke-width="1" />
+    <use href="#gear8" x="620" y="80" fill="url(#copperGrad)" stroke="#881337" stroke-width="0.8" />
+    <circle cx="620" cy="80" r="4" fill="#1E293B" stroke="#0f172a" stroke-width="0.8" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 620 80"
+      to="360 620 80"
+      dur="5.75s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Escapement mechanism (pendulum-like oscillation at bottom center) -->
+  <g id="escapement">
+    <line x1="400" y1="240" x2="400" y2="285" stroke="#94A3B8" stroke-width="2" />
+    <circle cx="400" cy="285" r="6" fill="url(#silverGrad)" stroke="#475569" stroke-width="1" />
+    <circle cx="400" cy="240" r="3" fill="#1E293B" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      values="-25 400 240; 25 400 240; -25 400 240"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+
+  <!-- Connecting rods (static lines showing mechanical linkages) -->
+  <line x1="400" y1="150" x2="280" y2="80" stroke="#334155" stroke-width="1.5" opacity="0.4" />
+  <line x1="400" y1="150" x2="520" y2="80" stroke="#881337" stroke-width="1.5" opacity="0.4" />
+  <line x1="400" y1="150" x2="280" y2="220" stroke="#1E293B" stroke-width="1.5" opacity="0.4" />
+  <line x1="280" y1="80" x2="180" y2="80" stroke="#92400E" stroke-width="1.2" opacity="0.4" />
+  <line x1="520" y1="80" x2="620" y2="80" stroke="#881337" stroke-width="1.2" opacity="0.4" />
+
+  <!-- Sparks at gear mesh points (subtle flashing) -->
+  <!-- Spark 1: main gear + top-left gear -->
+  <circle cx="340" cy="115" r="2" fill="#FCD34D">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0" dur="17s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Spark 2: main gear + top-right gear -->
+  <circle cx="460" cy="115" r="2" fill="#FCD34D">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0" dur="19s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Spark 3: main gear + bottom-left gear -->
+  <circle cx="340" cy="185" r="2" fill="#FBBF24">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0" dur="13s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Spark 4: top-left gear + tiny left gear -->
+  <circle cx="230" cy="80" r="1.5" fill="#FCD34D">
+    <animate attributeName="opacity" values="0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0" dur="11s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Spark 5: top-right gear + tiny right gear -->
+  <circle cx="570" cy="80" r="1.5" fill="#FBBF24">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0" dur="7s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Pivot points / decorative elements -->
+  <circle cx="100" cy="150" r="2.5" fill="#64748B" opacity="0.5" />
+  <circle cx="700" cy="150" r="2.5" fill="#64748B" opacity="0.5" />
+  <circle cx="400" cy="40" r="2" fill="#475569" opacity="0.4" />
+  <circle cx="400" cy="260" r="2" fill="#475569" opacity="0.4" />
+</svg>

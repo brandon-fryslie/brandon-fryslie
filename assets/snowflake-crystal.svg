@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Snowflake Crystallography">
+  <title>Snowflake Crystallography</title>
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030812;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1020;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Ice crystal gradient -->
+    <linearGradient id="iceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F2FE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B4E4F7;stop-opacity:0.85" />
+    </linearGradient>
+
+    <!-- Prismatic rainbow gradient -->
+    <linearGradient id="prismGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF0080;stop-opacity:0.15" />
+      <stop offset="20%" style="stop-color:#7F00FF;stop-opacity:0.15" />
+      <stop offset="40%" style="stop-color:#0080FF;stop-opacity:0.15" />
+      <stop offset="60%" style="stop-color:#00FF80;stop-opacity:0.15" />
+      <stop offset="80%" style="stop-color:#FFFF00;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#FF8000;stop-opacity:0.15" />
+    </linearGradient>
+
+    <!-- Frost pattern definition -->
+    <pattern id="hexGrid" x="0" y="0" width="40" height="34.64" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L30,8.66 L30,25.98 L20,34.64 L10,25.98 L10,8.66 Z"
+            fill="none" stroke="#1a2a3e" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+
+    <!-- Main snowflake structure - 6-fold symmetry -->
+    <g id="snowflakeArm">
+      <!-- Main arm spine -->
+      <line x1="0" y1="0" x2="0" y2="90" stroke="url(#iceGrad)" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Hexagonal node at 30px -->
+      <path d="M-3,30 L0,27 L3,30 L3,36 L0,39 L-3,36 Z" fill="url(#iceGrad)" opacity="0.9"/>
+
+      <!-- Hexagonal node at 60px -->
+      <path d="M-4,60 L0,56 L4,60 L4,68 L0,72 L-4,68 Z" fill="url(#iceGrad)" opacity="0.9"/>
+
+      <!-- Primary branches -->
+      <line x1="0" y1="30" x2="-20" y2="45" stroke="url(#iceGrad)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="30" x2="20" y2="45" stroke="url(#iceGrad)" stroke-width="2" stroke-linecap="round"/>
+
+      <line x1="0" y1="60" x2="-25" y2="78" stroke="url(#iceGrad)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="60" x2="25" y2="78" stroke="url(#iceGrad)" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Secondary crystalline branches -->
+      <line x1="-20" y1="45" x2="-28" y2="52" stroke="url(#iceGrad)" stroke-width="1.2"/>
+      <line x1="-20" y1="45" x2="-18" y2="55" stroke="url(#iceGrad)" stroke-width="1.2"/>
+
+      <line x1="20" y1="45" x2="28" y2="52" stroke="url(#iceGrad)" stroke-width="1.2"/>
+      <line x1="20" y1="45" x2="18" y2="55" stroke="url(#iceGrad)" stroke-width="1.2"/>
+
+      <line x1="-25" y1="78" x2="-32" y2="86" stroke="url(#iceGrad)" stroke-width="1.2"/>
+      <line x1="-25" y1="78" x2="-22" y2="88" stroke="url(#iceGrad)" stroke-width="1.2"/>
+
+      <line x1="25" y1="78" x2="32" y2="86" stroke="url(#iceGrad)" stroke-width="1.2"/>
+      <line x1="25" y1="78" x2="22" y2="88" stroke="url(#iceGrad)" stroke-width="1.2"/>
+
+      <!-- Tertiary crystal details - tiny hexagons and needles -->
+      <circle cx="-28" cy="52" r="1.5" fill="#E0F2FE" opacity="0.8"/>
+      <circle cx="-18" cy="55" r="1.5" fill="#E0F2FE" opacity="0.8"/>
+      <circle cx="28" cy="52" r="1.5" fill="#E0F2FE" opacity="0.8"/>
+      <circle cx="18" cy="55" r="1.5" fill="#E0F2FE" opacity="0.8"/>
+
+      <!-- Needle tips -->
+      <line x1="0" y1="90" x2="-3" y2="97" stroke="#B4E4F7" stroke-width="0.8"/>
+      <line x1="0" y1="90" x2="3" y2="97" stroke="#B4E4F7" stroke-width="0.8"/>
+      <circle cx="0" cy="100" r="2" fill="#E0F2FE"/>
+
+      <!-- Sparkle points for animation -->
+      <circle class="sparkle" cx="0" cy="100" r="3" fill="#FFFFFF" opacity="0">
+        <animate attributeName="opacity" values="0;1;0" dur="7s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Simple snowflake for background -->
+    <g id="simpleFlake">
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#B4E4F7" stroke-width="0.8"/>
+      <line x1="-7" y1="-4" x2="7" y2="4" stroke="#B4E4F7" stroke-width="0.8"/>
+      <line x1="-7" y1="4" x2="7" y2="-4" stroke="#B4E4F7" stroke-width="0.8"/>
+
+      <!-- Tiny branches -->
+      <line x1="0" y1="-8" x2="-2" y2="-5" stroke="#B4E4F7" stroke-width="0.5"/>
+      <line x1="0" y1="-8" x2="2" y2="-5" stroke="#B4E4F7" stroke-width="0.5"/>
+      <line x1="0" y1="8" x2="-2" y2="5" stroke="#B4E4F7" stroke-width="0.5"/>
+      <line x1="0" y1="8" x2="2" y2="5" stroke="#B4E4F7" stroke-width="0.5"/>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Hexagonal crystal lattice background -->
+  <rect width="800" height="300" fill="url(#hexGrid)"/>
+
+  <!-- Frost patterns from edges -->
+  <g opacity="0.15">
+    <!-- Left frost -->
+    <path d="M0,150 L40,130 M0,150 L40,170 M40,130 L70,120 M40,130 L65,145 M40,170 L70,180 M40,170 L65,155"
+          stroke="#1a2a3e" stroke-width="0.5" fill="none"/>
+    <path d="M70,120 L95,115 M70,120 L90,135 M70,180 L95,185 M70,180 L90,165"
+          stroke="#1a2a3e" stroke-width="0.5" fill="none"/>
+
+    <!-- Right frost -->
+    <path d="M800,150 L760,130 M800,150 L760,170 M760,130 L730,120 M760,130 L735,145 M760,170 L730,180 M760,170 L735,155"
+          stroke="#1a2a3e" stroke-width="0.5" fill="none"/>
+    <path d="M730,120 L705,115 M730,120 L710,135 M730,180 L705,185 M730,180 L710,165"
+          stroke="#1a2a3e" stroke-width="0.5" fill="none"/>
+
+    <!-- Top frost -->
+    <path d="M400,0 L380,30 M400,0 L420,30 M380,30 L370,55 M380,30 L395,50 M420,30 L430,55 M420,30 L405,50"
+          stroke="#1a2a3e" stroke-width="0.5" fill="none"/>
+  </g>
+
+  <!-- Prismatic light sweep -->
+  <rect x="-100" y="0" width="80" height="300" fill="url(#prismGrad)" opacity="0.3">
+    <animateTransform attributeName="transform" type="translate"
+                      values="0,0; 900,0" dur="29s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Falling snow particles -->
+  <circle cx="120" cy="20" r="1.5" fill="#FFFFFF" opacity="0.7">
+    <animate attributeName="cy" values="20;320" dur="13s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="120;115;120" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="50" r="1" fill="#FFFFFF" opacity="0.6">
+    <animate attributeName="cy" values="50;350" dur="17s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="250;255;250" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="580" cy="10" r="1.2" fill="#FFFFFF" opacity="0.8">
+    <animate attributeName="cy" values="10;310" dur="19s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="580;575;580" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="680" cy="40" r="0.8" fill="#FFFFFF" opacity="0.5">
+    <animate attributeName="cy" values="40;340" dur="23s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="680;685;680" dur="17s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="80" r="1.8" fill="#FFFFFF" opacity="0.7">
+    <animate attributeName="cy" values="80;380" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="150;145;150" dur="19s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="320" cy="5" r="0.9" fill="#FFFFFF" opacity="0.6">
+    <animate attributeName="cy" values="5;305" dur="29s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="320;325;320" dur="23s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="30" r="1.3" fill="#FFFFFF" opacity="0.8">
+    <animate attributeName="cy" values="30;330" dur="31s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="450;455;450" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="520" cy="60" r="0.7" fill="#FFFFFF" opacity="0.5">
+    <animate attributeName="cy" values="60;360" dur="37s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="520;515;520" dur="29s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="15" r="1.6" fill="#FFFFFF" opacity="0.7">
+    <animate attributeName="cy" values="15;315" dur="41s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="720;725;720" dur="31s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90" cy="45" r="1.1" fill="#FFFFFF" opacity="0.6">
+    <animate attributeName="cy" values="45;345" dur="43s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="90;85;90" dur="37s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="25" r="0.6" fill="#FFFFFF" opacity="0.4">
+    <animate attributeName="cy" values="25;325" dur="47s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="200;205;200" dur="41s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="380" cy="70" r="2" fill="#FFFFFF" opacity="0.8">
+    <animate attributeName="cy" values="70;370" dur="53s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="380;375;380" dur="43s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="620" cy="35" r="0.9" fill="#FFFFFF" opacity="0.6">
+    <animate attributeName="cy" values="35;335" dur="59s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="620;625;620" dur="47s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="55" r="1.4" fill="#FFFFFF" opacity="0.7">
+    <animate attributeName="cy" values="55;355" dur="61s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="750;745;750" dur="53s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="65" r="0.5" fill="#FFFFFF" opacity="0.5">
+    <animate attributeName="cy" values="65;365" dur="67s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="50;55;50" dur="59s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="15" r="1.7" fill="#FFFFFF" opacity="0.8">
+    <animate attributeName="cy" values="15;315" dur="71s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="280;285;280" dur="61s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="410" cy="50" r="1" fill="#FFFFFF" opacity="0.6">
+    <animate attributeName="cy" values="50;350" dur="73s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="410;405;410" dur="67s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="550" cy="20" r="1.3" fill="#FFFFFF" opacity="0.7">
+    <animate attributeName="cy" values="20;320" dur="79s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="550;555;550" dur="71s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="75" r="0.8" fill="#FFFFFF" opacity="0.5">
+    <animate attributeName="cy" values="75;375" dur="83s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="650;645;650" dur="73s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="35" r="1.2" fill="#FFFFFF" opacity="0.7">
+    <animate attributeName="cy" values="35;335" dur="89s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="180;175;180" dur="79s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Background small snowflakes -->
+  <g opacity="0.4">
+    <use href="#simpleFlake" transform="translate(100,80)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 100 80; 360 100 80" dur="23s" repeatCount="indefinite"/>
+    </use>
+    <use href="#simpleFlake" transform="translate(650,100) scale(1.3)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 650 100; -360 650 100" dur="31s" repeatCount="indefinite"
+                        additive="sum"/>
+    </use>
+    <use href="#simpleFlake" transform="translate(180,220) scale(0.9)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 180 220; 360 180 220" dur="29s" repeatCount="indefinite"
+                        additive="sum"/>
+    </use>
+    <use href="#simpleFlake" transform="translate(720,200) scale(1.1)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 720 200; -360 720 200" dur="37s" repeatCount="indefinite"
+                        additive="sum"/>
+    </use>
+    <use href="#simpleFlake" transform="translate(250,50) scale(0.7)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 250 50; 360 250 50" dur="41s" repeatCount="indefinite"
+                        additive="sum"/>
+    </use>
+    <use href="#simpleFlake" transform="translate(550,240) scale(1.4)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 550 240; -360 550 240" dur="43s" repeatCount="indefinite"
+                        additive="sum"/>
+    </use>
+    <use href="#simpleFlake" transform="translate(75,180) scale(0.8)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 75 180; 360 75 180" dur="47s" repeatCount="indefinite"
+                        additive="sum"/>
+    </use>
+    <use href="#simpleFlake" transform="translate(480,60) scale(1.2)">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 480 60; -360 480 60" dur="53s" repeatCount="indefinite"
+                        additive="sum"/>
+    </use>
+  </g>
+
+  <!-- Center main snowflake with 6-fold symmetry -->
+  <g transform="translate(400,150)">
+    <!-- Six arms at 60-degree intervals -->
+    <use href="#snowflakeArm" transform="rotate(0)"/>
+    <use href="#snowflakeArm" transform="rotate(60)"/>
+    <use href="#snowflakeArm" transform="rotate(120)"/>
+    <use href="#snowflakeArm" transform="rotate(180)"/>
+    <use href="#snowflakeArm" transform="rotate(240)"/>
+    <use href="#snowflakeArm" transform="rotate(300)"/>
+
+    <!-- Central hexagon -->
+    <path d="M-6,0 L-3,-5.2 L3,-5.2 L6,0 L3,5.2 L-3,5.2 Z"
+          fill="url(#iceGrad)" stroke="#FFFFFF" stroke-width="0.5"/>
+
+    <!-- Rotate entire snowflake -->
+    <animateTransform attributeName="transform" type="rotate"
+                      values="0 400 150; 360 400 150" dur="180s" repeatCount="indefinite"
+                      additive="sum"/>
+  </g>
+
+  <!-- Additional sparkles at crystal tips -->
+  <g transform="translate(400,150)">
+    <circle cx="0" cy="-100" r="2.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="11s" begin="1.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="86.6" cy="-50" r="2.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="13s" begin="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="86.6" cy="50" r="2.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="17s" begin="4.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="100" r="2.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="19s" begin="5.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-86.6" cy="50" r="2.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="23s" begin="7.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-86.6" cy="-50" r="2.5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="29s" begin="8.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

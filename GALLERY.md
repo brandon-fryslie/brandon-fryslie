@@ -291,9 +291,143 @@ Isometric cityscape using 3D transforms. Buildings at various heights creating d
 
 ---
 
+## 🌍 Nature & Science Collection
+
+### Neural Synapse
+![Neural Synapse](./assets/neural-synapse.svg)
+
+Firing neurons with branching dendrites and synaptic pulses.
+
+### DNA Helix
+![DNA Helix](./assets/dna-helix.svg)
+
+Double helix with rotating base pairs and phosphate backbone.
+
+### Wave Interference
+![Wave Interference](./assets/wave-interference.svg)
+
+Overlapping wave patterns creating constructive and destructive interference.
+
+### Clockwork
+![Clockwork](./assets/clockwork.svg)
+
+Interlocking gears and escapement mechanisms in perpetual motion.
+
+### Cosmic Nebula
+![Cosmic Nebula](./assets/cosmic-nebula.svg)
+
+Swirling gas clouds with stellar nursery glow and particle fields.
+
+### Snowflake Crystal
+![Snowflake Crystal](./assets/snowflake-crystal.svg)
+
+Hexagonal ice crystal with fractal branching and prismatic light.
+
+### Enchanted Forest
+![Enchanted Forest](./assets/enchanted-forest.svg)
+
+Deep woodland with bioluminescent flora and drifting fireflies.
+
+### Ocean Depths
+![Ocean Depths](./assets/ocean-depths.svg)
+
+Abyssal layers with bioluminescent creatures and pressure gradients.
+
+### Ancient Temple
+![Ancient Temple](./assets/ancient-temple.svg)
+
+Weathered stone columns with sacred geometry and flickering torchlight.
+
+### Aurora Borealis
+![Aurora Borealis](./assets/aurora-borealis.svg)
+
+Shimmering curtains of charged particles across a polar sky.
+
+### Vision Quest
+![Vision Quest](./assets/vision-quest.svg)
+
+Meditative journey through layered consciousness and symbolic landscapes.
+
+### Coral Reef
+![Coral Reef](./assets/coral-reef.svg)
+
+Living reef ecosystem with swaying polyps, darting fish, and current flow.
+
+### Circuit Board
+![Circuit Board](./assets/circuit-board.svg)
+
+PCB traces with signal propagation, component outlines, and power planes.
+
+### Galaxy Spiral
+![Galaxy Spiral](./assets/galaxy-spiral.svg)
+
+Barred spiral galaxy with rotating arms and stellar density waves.
+
+### Zen Garden
+![Zen Garden](./assets/zen-garden.svg)
+
+Raked sand patterns around moss-covered stones with falling leaves.
+
+### Volcanic Forge
+![Volcanic Forge](./assets/volcanic-forge.svg)
+
+Magma chamber with convection currents, eruption plumes, and cooling lava flows.
+
+### Rain Window
+![Rain Window](./assets/rain-window.svg)
+
+Raindrops streaming down glass with refraction, pooling, and ambient light.
+
+### Fractal Tree
+![Fractal Tree](./assets/fractal-tree.svg)
+
+Recursive branching with seasonal color shifts and wind response.
+
+### Mycelium Web
+![Mycelium Web](./assets/mycelium-web.svg)
+
+Underground fungal network with nutrient pulses and fruiting bodies.
+
+### Quantum Field
+![Quantum Field](./assets/quantum-field.svg)
+
+Particle-antiparticle fluctuations with probability clouds and field lines.
+
+### Sacred Mandala
+![Sacred Mandala](./assets/sacred-mandala.svg)
+
+Concentric geometric patterns with rotational symmetry and color meditation.
+
+### Celestial Orrery
+![Celestial Orrery](./assets/celestial-orrery.svg)
+
+Mechanical planetary model with brass armatures and orbital tracks.
+
+### Tidal Pools
+![Tidal Pools](./assets/tidal-pools.svg)
+
+Rocky shore pools with anemones, starfish, and tidal rhythms.
+
+### Sound Waves
+![Sound Waves](./assets/sound-waves.svg)
+
+Acoustic waveforms with harmonics, resonance, and frequency visualization.
+
+### Crystal Cave
+![Crystal Cave](./assets/crystal-cave.svg)
+
+Geode interior with prismatic crystal formations and refracted light.
+
+### Desert Oasis
+![Desert Oasis](./assets/desert-oasis.svg)
+
+Sand dunes with heat shimmer, palm grove, and mirage effects.
+
+---
+
 ## 📈 Summary
 
-**Total Animations:** 48 SVGs
+**Total Animations:** 74 SVGs
 **Themes:** 11 distinct artistic directions
 **Animation Techniques:**
 - Stroke-dasharray drawing

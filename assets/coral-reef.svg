@@ -1,0 +1,393 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <!-- Ocean gradient background -->
+    <linearGradient id="oceanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#061830;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#043852;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#031218;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Caustic light filter -->
+    <filter id="caustics" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.04" numOctaves="2" seed="1">
+        <animate attributeName="baseFrequency" values="0.02 0.04;0.025 0.045;0.02 0.04" dur="7s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix type="luminanceToAlpha"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0 0 0 0 1 1 1 1 1"/>
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Glow effects for corals -->
+    <filter id="coralGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Brain coral texture pattern -->
+    <pattern id="brainTexture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0,10 Q5,5 10,10 T20,10 M0,15 Q5,10 10,15 T20,15" stroke="#FB7185" stroke-width="1.5" fill="none" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Ocean background -->
+  <rect width="800" height="300" fill="url(#oceanGradient)"/>
+
+  <!-- Caustic light patterns (surface light) -->
+  <g opacity="0.15">
+    <ellipse cx="200" cy="40" rx="120" ry="60" fill="#7DD3FC" filter="url(#caustics)">
+      <animate attributeName="cx" values="200;240;200" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="120;140;120" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="500" cy="30" rx="100" ry="50" fill="#7DD3FC" filter="url(#caustics)">
+      <animate attributeName="cx" values="500;460;500" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="100;120;100" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="680" cy="50" rx="90" ry="55" fill="#7DD3FC" filter="url(#caustics)">
+      <animate attributeName="cx" values="680;650;680" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="55;70;55" dur="29s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Seagrass at the base -->
+  <g opacity="0.7">
+    <path d="M 50,300 Q 48,250 50,200" stroke="#34D399" stroke-width="2" fill="none">
+      <animate attributeName="d" values="M 50,300 Q 48,250 50,200;M 50,300 Q 52,250 50,200;M 50,300 Q 48,250 50,200" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 80,300 Q 82,260 80,220" stroke="#34D399" stroke-width="1.5" fill="none">
+      <animate attributeName="d" values="M 80,300 Q 82,260 80,220;M 80,300 Q 78,260 80,220;M 80,300 Q 82,260 80,220" dur="11s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 120,300 Q 118,255 120,210" stroke="#2DD4BF" stroke-width="2" fill="none">
+      <animate attributeName="d" values="M 120,300 Q 118,255 120,210;M 120,300 Q 122,255 120,210;M 120,300 Q 118,255 120,210" dur="13s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 650,300 Q 652,265 650,230" stroke="#34D399" stroke-width="1.5" fill="none">
+      <animate attributeName="d" values="M 650,300 Q 652,265 650,230;M 650,300 Q 648,265 650,230;M 650,300 Q 652,265 650,230" dur="17s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 690,300 Q 688,270 690,240" stroke="#2DD4BF" stroke-width="2" fill="none">
+      <animate attributeName="d" values="M 690,300 Q 688,270 690,240;M 690,300 Q 692,270 690,240;M 690,300 Q 688,270 690,240" dur="19s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 730,300 Q 732,260 730,220" stroke="#34D399" stroke-width="1.5" fill="none">
+      <animate attributeName="d" values="M 730,300 Q 732,260 730,220;M 730,300 Q 728,260 730,220;M 730,300 Q 732,260 730,220" dur="23s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Brain coral formations -->
+  <g filter="url(#coralGlow)">
+    <!-- Brain coral 1 -->
+    <ellipse cx="150" cy="260" rx="45" ry="35" fill="#EC4899" fill="url(#brainTexture)">
+      <animate attributeName="ry" values="35;37;35" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="150" cy="260" rx="45" ry="35" fill="#EC4899" opacity="0.6">
+      <animate attributeName="ry" values="35;37;35" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Brain coral 2 -->
+    <ellipse cx="580" cy="270" rx="50" ry="30" fill="#FB7185">
+      <animate attributeName="rx" values="50;52;50" dur="17s" repeatCount="indefinite"/>
+    </ellipse>
+    <path d="M 540,270 Q 545,260 560,265 T 580,270 T 600,275 Q 610,270 620,270" stroke="#EC4899" stroke-width="2" fill="none" opacity="0.7">
+      <animate attributeName="d" values="M 540,270 Q 545,260 560,265 T 580,270 T 600,275 Q 610,270 620,270;M 540,270 Q 545,265 560,268 T 580,270 T 600,272 Q 610,268 620,270;M 540,270 Q 545,260 560,265 T 580,270 T 600,275 Q 610,270 620,270" dur="11s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Tube coral -->
+  <g opacity="0.9">
+    <rect x="420" y="230" width="8" height="70" rx="4" fill="#A855F7">
+      <animate attributeName="height" values="70;75;70" dur="19s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="432" y="240" width="8" height="60" rx="4" fill="#C084FC">
+      <animate attributeName="height" values="60;65;60" dur="23s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="444" y="235" width="8" height="65" rx="4" fill="#A855F7">
+      <animate attributeName="height" values="65;70;65" dur="29s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Branching coral (tree-like) -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cyan branching coral -->
+    <g stroke="#06B6D4" fill="none" stroke-width="4">
+      <path d="M 300,300 L 300,250 M 300,270 L 285,240 M 300,270 L 315,245 M 285,240 L 280,220 M 285,240 L 290,225">
+        <animate attributeName="d" values="M 300,300 L 300,250 M 300,270 L 285,240 M 300,270 L 315,245 M 285,240 L 280,220 M 285,240 L 290,225;M 300,300 L 300,250 M 300,270 L 283,240 M 300,270 L 317,245 M 283,240 L 278,220 M 283,240 L 288,225;M 300,300 L 300,250 M 300,270 L 285,240 M 300,270 L 315,245 M 285,240 L 280,220 M 285,240 L 290,225" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 315,245 L 320,230 M 315,245 L 310,225">
+        <animate attributeName="d" values="M 315,245 L 320,230 M 315,245 L 310,225;M 317,245 L 322,230 M 317,245 L 312,225;M 315,245 L 320,230 M 315,245 L 310,225" dur="11s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Violet branching coral -->
+    <g stroke="#8B5CF6" fill="none" stroke-width="3.5">
+      <path d="M 360,300 L 360,260 M 360,280 L 348,255 M 360,280 L 372,258 M 348,255 L 343,235 M 372,258 L 377,240">
+        <animate attributeName="d" values="M 360,300 L 360,260 M 360,280 L 348,255 M 360,280 L 372,258 M 348,255 L 343,235 M 372,258 L 377,240;M 360,300 L 360,260 M 360,280 L 346,255 M 360,280 L 374,258 M 346,255 L 341,235 M 374,258 L 379,240;M 360,300 L 360,260 M 360,280 L 348,255 M 360,280 L 372,258 M 348,255 L 343,235 M 372,258 L 377,240" dur="13s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- Fan coral (swaying) -->
+  <g transform-origin="500 300" filter="url(#coralGlow)">
+    <path d="M 500,300 Q 480,260 470,220 M 500,300 Q 490,270 485,230 M 500,300 Q 500,260 500,220 M 500,300 Q 510,270 515,230 M 500,300 Q 520,260 530,220" stroke="#F59E0B" stroke-width="2.5" fill="none" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="0 500 300;-8 500 300;0 500 300;8 500 300;0 500 300" dur="17s" repeatCount="indefinite"/>
+    </path>
+    <!-- Fan membrane -->
+    <path d="M 470,220 Q 485,240 500,220 Q 515,240 530,220" fill="#F59E0B" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="0 500 300;-8 500 300;0 500 300;8 500 300;0 500 300" dur="17s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Orange fan coral -->
+  <g transform-origin="240 300" filter="url(#coralGlow)">
+    <path d="M 240,300 Q 225,270 215,235 M 240,300 Q 232,275 228,245 M 240,300 Q 240,270 240,240 M 240,300 Q 248,275 252,245 M 240,300 Q 255,270 265,235" stroke="#FB923C" stroke-width="2" fill="none" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="0 240 300;10 240 300;0 240 300;-10 240 300;0 240 300" dur="23s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 215,235 Q 228,250 240,240 Q 252,250 265,235" fill="#FB923C" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="0 240 300;10 240 300;0 240 300;-10 240 300;0 240 300" dur="23s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Sea anemones with waving tentacles -->
+  <g>
+    <!-- Anemone 1 -->
+    <circle cx="750" cy="275" r="12" fill="#EC4899" opacity="0.6"/>
+    <g stroke="#FB7185" stroke-width="1.5" fill="none">
+      <line x1="750" y1="275" x2="745" y2="255">
+        <animate attributeName="x2" values="745;743;745" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="255;250;255" dur="7s" repeatCount="indefinite"/>
+      </line>
+      <line x1="750" y1="275" x2="755" y2="253">
+        <animate attributeName="x2" values="755;757;755" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="253;248;253" dur="11s" repeatCount="indefinite"/>
+      </line>
+      <line x1="750" y1="275" x2="740" y2="260">
+        <animate attributeName="x2" values="740;738;740" dur="13s" repeatCount="indefinite"/>
+      </line>
+      <line x1="750" y1="275" x2="760" y2="258">
+        <animate attributeName="x2" values="760;762;760" dur="17s" repeatCount="indefinite"/>
+      </line>
+      <line x1="750" y1="275" x2="750" y2="252">
+        <animate attributeName="y2" values="252;248;252" dur="19s" repeatCount="indefinite"/>
+      </line>
+      <line x1="750" y1="275" x2="735" y2="262">
+        <animate attributeName="x2" values="735;733;735" dur="23s" repeatCount="indefinite"/>
+      </line>
+      <line x1="750" y1="275" x2="765" y2="264">
+        <animate attributeName="x2" values="765;767;765" dur="29s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Anemone 2 -->
+    <circle cx="200" cy="285" r="10" fill="#8B5CF6" opacity="0.6"/>
+    <g stroke="#A78BFA" stroke-width="1.5" fill="none">
+      <line x1="200" y1="285" x2="195" y2="268">
+        <animate attributeName="x2" values="195;193;195" dur="11s" repeatCount="indefinite"/>
+      </line>
+      <line x1="200" y1="285" x2="205" y2="266">
+        <animate attributeName="x2" values="205;207;205" dur="13s" repeatCount="indefinite"/>
+      </line>
+      <line x1="200" y1="285" x2="190" y2="273">
+        <animate attributeName="x2" values="190;188;190" dur="17s" repeatCount="indefinite"/>
+      </line>
+      <line x1="200" y1="285" x2="210" y2="271">
+        <animate attributeName="x2" values="210;212;210" dur="19s" repeatCount="indefinite"/>
+      </line>
+      <line x1="200" y1="285" x2="200" y2="265">
+        <animate attributeName="y2" values="265;262;265" dur="23s" repeatCount="indefinite"/>
+      </line>
+    </g>
+  </g>
+
+  <!-- Starfish on coral -->
+  <g transform="translate(145, 245) rotate(25)">
+    <path d="M 0,-8 L 2,-2 L 8,-2 L 3,2 L 5,8 L 0,4 L -5,8 L -3,2 L -8,-2 L -2,-2 Z" fill="#F97316" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" values="0 0 0;5 0 0;0 0 0;-5 0 0;0 0 0" dur="31s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Seahorse -->
+  <g transform="translate(305, 265)">
+    <path d="M 0,0 Q -2,-5 -1,-10 Q 1,-13 3,-12 Q 4,-10 3,-8 L 3,-3 Q 5,2 3,5 Q 2,8 0,10 Q -1,8 -1,5 L -1,2" fill="#0EA5E9" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.85;0.7" dur="13s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Fish swimming -->
+  <!-- Fish 1 - small tropical fish -->
+  <g opacity="0.8">
+    <ellipse rx="12" ry="6" fill="#FCD34D">
+      <animate attributeName="cx" values="-30;830" dur="37s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="120;125;120" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <path d="M 0,0 L -6,-4 L -6,4 Z" fill="#FCD34D">
+      <animate attributeName="transform" values="translate(-30,120);translate(830,120)" dur="37s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Fish 2 - medium fish -->
+  <g opacity="0.75">
+    <ellipse rx="15" ry="7" fill="#06B6D4">
+      <animate attributeName="cx" values="830;-30" dur="47s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="180;175;180" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <path d="M 0,0 L 8,-5 L 8,5 Z" fill="#06B6D4">
+      <animate attributeName="transform" values="translate(830,180) scale(-1,1);translate(-30,180) scale(-1,1)" dur="47s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Fish 3 - small fish -->
+  <g opacity="0.7">
+    <ellipse rx="10" ry="5" fill="#F472B6">
+      <animate attributeName="cx" values="-30;830" dur="41s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="150;155;150" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <path d="M 0,0 L -5,-3 L -5,3 Z" fill="#F472B6">
+      <animate attributeName="transform" values="translate(-30,150);translate(830,150)" dur="41s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Fish 4 - tiny fish -->
+  <g opacity="0.6">
+    <ellipse rx="8" ry="4" fill="#A78BFA">
+      <animate attributeName="cx" values="830;-30" dur="43s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="140;142;140" dur="17s" repeatCount="indefinite"/>
+    </ellipse>
+    <path d="M 0,0 L 4,-2.5 L 4,2.5 Z" fill="#A78BFA">
+      <animate attributeName="transform" values="translate(830,140) scale(-1,1);translate(-30,140) scale(-1,1)" dur="43s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Sea turtle -->
+  <g opacity="0.65">
+    <!-- Shell -->
+    <ellipse rx="25" ry="18" fill="#059669">
+      <animate attributeName="cx" values="-50;850" dur="71s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="110;108;110" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Shell pattern -->
+    <g stroke="#047857" stroke-width="1.5" fill="none">
+      <ellipse rx="15" ry="11">
+        <animate attributeName="cx" values="-50;850" dur="71s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="110;108;110" dur="19s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <!-- Head -->
+    <ellipse rx="8" ry="6" fill="#10B981">
+      <animate attributeName="cx" values="-25;875" dur="71s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="110;108;110" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Flippers (simplified) -->
+    <ellipse rx="12" ry="4" fill="#059669" opacity="0.8">
+      <animate attributeName="cx" values="-55;845" dur="71s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="105;103;105" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="4;5;4" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="12" ry="4" fill="#059669" opacity="0.8">
+      <animate attributeName="cx" values="-55;845" dur="71s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="115;113;115" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="4;5;4" dur="3.5s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Bubbles rising from coral -->
+  <g fill="#7DD3FC" opacity="0.5">
+    <circle r="2">
+      <animate attributeName="cx" values="150;155;150" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="260;80;260" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.5">
+      <animate attributeName="cx" values="300;295;300" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="250;70;250" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.5">
+      <animate attributeName="cx" values="430;435;430" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="230;50;230" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.8">
+      <animate attributeName="cx" values="500;495;500" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="240;60;240" dur="19s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.2">
+      <animate attributeName="cx" values="360;365;360" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="260;75;260" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.5">
+      <animate attributeName="cx" values="580;575;580" dur="2.7s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="270;85;270" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2">
+      <animate attributeName="cx" values="750;755;750" dur="3.1s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="275;90;275" dur="31s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.7">
+      <animate attributeName="cx" values="240;235;240" dur="2.9s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="255;65;255" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.3">
+      <animate attributeName="cx" values="690;692;690" dur="3.3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="265;70;265" dur="41s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.6">
+      <animate attributeName="cx" values="120;118;120" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="245;55;245" dur="43s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Floating plankton particles -->
+  <g fill="#BFDBFE" opacity="0.4">
+    <circle cx="100" cy="80" r="1">
+      <animate attributeName="cx" values="100;120;100" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="80;95;80" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="120" r="1">
+      <animate attributeName="cx" values="250;235;250" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="120;105;120" dur="29s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="90" r="1">
+      <animate attributeName="cx" values="380;395;380" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="90;110;90" dur="31s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="130" r="1">
+      <animate attributeName="cx" values="520;505;520" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="130;115;130" dur="37s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="100" r="1">
+      <animate attributeName="cx" values="640;655;640" dur="31s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="100;85;100" dur="41s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="140" r="1">
+      <animate attributeName="cx" values="720;710;720" dur="37s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="140;125;140" dur="43s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="160" r="1">
+      <animate attributeName="cx" values="180;195;180" dur="41s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="160;145;160" dur="47s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="70" r="1">
+      <animate attributeName="cx" values="450;440;450" dur="43s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="70;85;70" dur="53s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Additional small coral details -->
+  <g opacity="0.8">
+    <!-- Small pink coral cluster -->
+    <circle cx="210" cy="285" r="8" fill="#F472B6">
+      <animate attributeName="r" values="8;9;8" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="222" cy="288" r="6" fill="#FB7185">
+      <animate attributeName="r" values="6;7;6" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="218" cy="280" r="7" fill="#EC4899">
+      <animate attributeName="r" values="7;8;7" dur="19s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Small orange coral cluster -->
+    <circle cx="620" cy="282" r="7" fill="#FB923C">
+      <animate attributeName="r" values="7;8;7" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="630" cy="285" r="6" fill="#F97316">
+      <animate attributeName="r" values="6;7;6" dur="29s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

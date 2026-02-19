@@ -172,6 +172,12 @@ Multi-layer stack from ESP8266 microcontrollers to React interfaces for kinetic 
 
 ---
 
+## [SVG Animation Gallery](./GALLERY.md)
+
+26 animated nature & science scenes — neural synapses, ocean depths, volcanic forges, quantum fields, and more. Pure CSS keyframes and SMIL, no JavaScript.
+
+---
+
 ## Education
 
 **University of Arizona** — Computer Science & Philosophy
