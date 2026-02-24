@@ -20,16 +20,16 @@ I build backend systems, platform infrastructure, and the tooling that connects 
 
 <!-- RECENT-ACTIVITY:START -->
 
-*Last updated February 23, 2026 · 5 most recently active repositories*
+*Last updated February 24, 2026 · 5 most recently active repositories*
 
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
-<br/><sub>TypeScript · Feb 22, 2026</sub>
+<br/><sub>TypeScript · Feb 24, 2026</sub>
 
 **[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
-<br/><sub>Python · Feb 22, 2026</sub>
+<br/><sub>Python · Feb 24, 2026</sub>
 
 **[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
-<br/><sub>Unknown · Feb 22, 2026</sub>
+<br/><sub>Unknown · Feb 23, 2026</sub>
 
 **[rad-plugins](https://github.com/brandon-fryslie/rad-plugins)** — Plugins for rad-shell zsh setup
 <br/><sub>Shell · ⭐ 3 · Feb 12, 2026</sub>
