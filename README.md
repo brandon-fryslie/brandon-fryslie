@@ -20,19 +20,19 @@ I build backend systems, platform infrastructure, and the tooling that connects 
 
 <!-- RECENT-ACTIVITY:START -->
 
-*Last updated February 27, 2026 · 5 most recently active repositories*
+*Last updated February 28, 2026 · 5 most recently active repositories*
 
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
-<br/><sub>TypeScript · Feb 27, 2026</sub>
+<br/><sub>TypeScript · Feb 28, 2026</sub>
 
 **[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
 <br/><sub>Python · Feb 27, 2026</sub>
 
+**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
+<br/><sub>Unknown · Feb 27, 2026</sub>
+
 **[snarfx](https://github.com/brandon-fryslie/snarfx)** — No description
 <br/><sub>Python · Feb 26, 2026</sub>
-
-**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
-<br/><sub>Unknown · Feb 26, 2026</sub>
 
 **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — No description
 <br/><sub>Shell · ⭐ 3 · Feb 26, 2026</sub>
