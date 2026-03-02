@@ -1,4 +1,4 @@
-name: Copilot Functional Refactor
+name: Copilot Portfolio Review
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: copilot-functional-refactor
+  group: copilot-portfolio-review
   cancel-in-progress: false
 
 jobs:
@@ -19,8 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # // [LAW:dataflow-not-control-flow] The workflow always executes the same steps; only prompt and repository metadata vary.
-      # // [LAW:one-source-of-truth] The Copilot task prompt lives in one file instead of being duplicated in workflow YAML.
+      # // [LAW:dataflow-not-control-flow] The workflow always executes the same steps; only repository data and the prompt content vary.
+      # // [LAW:one-source-of-truth] The review brief lives in one prompt file instead of being duplicated in workflow YAML.
       - name: Validate Copilot agent token
         env:
           GH_TOKEN: ${{ secrets.COPILOT_AGENT_TOKEN }}
@@ -39,4 +39,4 @@ jobs:
           gh agent-task create \
             --repo "$GITHUB_REPOSITORY" \
             --base "$DEFAULT_BRANCH" \
-            --from-file .github/copilot-prompts/functional-refactor.md
+            --from-file .github/copilot-prompts/portfolio-review.md
