@@ -20,19 +20,19 @@ I build backend systems, platform infrastructure, and the tooling that connects 
 
 <!-- RECENT-ACTIVITY:START -->
 
-*Last updated March 15, 2026 · 5 most recently active repositories*
-
-**[links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)** — Worktree-native issue tracker with Dolt-backed sync
-<br/><sub>Go · Mar 15, 2026</sub>
+*Last updated March 16, 2026 · 5 most recently active repositories*
 
 **[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
-<br/><sub>TypeScript · Mar 14, 2026</sub>
+<br/><sub>TypeScript · Mar 16, 2026</sub>
 
-**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
-<br/><sub>Unknown · Mar 14, 2026</sub>
+**[links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)** — Worktree-native issue tracker with Dolt-backed sync
+<br/><sub>Go · Mar 16, 2026</sub>
 
 **[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
-<br/><sub>Python · Mar 13, 2026</sub>
+<br/><sub>Python · Mar 15, 2026</sub>
+
+**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
+<br/><sub>Unknown · Mar 15, 2026</sub>
 
 **[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — No description
 <br/><sub>Shell · ⭐ 3 · Mar 08, 2026</sub>
