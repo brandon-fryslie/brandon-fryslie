@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      id-token: write
     env:
       GH_TOKEN: ${{ github.token }}
       GITHUB_TOKEN: ${{ github.token }}
@@ -36,7 +35,7 @@ jobs:
           prompt: |
             You are updating Brandon Fryslie's GitHub profile README with daily engineering highlights.
 
-            TODAY: Run `date -u +%Y-%m-%d` to get today's date and day of week.
+            TODAY: Run `date -u '+%Y-%m-%d %A'` to get today's ISO date and day of week (e.g., "2026-03-17 Monday"). Use the day of week for accent color selection.
 
             Read the CLAUDE.md file first for SVG constraints and project context.
 
@@ -45,11 +44,12 @@ jobs:
             ## Task 1: Archive Previous Highlights
 
             1. Read README.md and extract content between `<!-- RECENT-ACTIVITY:START -->` and `<!-- RECENT-ACTIVITY:END -->`
-            2. Look for a date in the extracted content (e.g., "Updated March 17, 2026")
-            3. If found and `daily-archive/` doesn't already have that date:
+            2. Look for a date in the extracted content — match both "Updated ..." and "Last updated ..." patterns (e.g., "Updated March 17, 2026" or "Last updated February 18, 2026")
+            3. Convert the found date to ISO format (YYYY-MM-DD) for the archive filename
+            4. If a date was found and `daily-archive/YYYY-MM-DD.md` doesn't already exist:
                - Create `daily-archive/` directory if needed
                - Save the extracted content to `daily-archive/YYYY-MM-DD.md`
-            4. If no datable previous content or archive already exists, skip
+            5. If no datable previous content or archive already exists, skip
 
             ## Task 2: Gather Commit Data
 
@@ -61,8 +61,8 @@ jobs:
             Past 7 days:
               gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --jq '.items[] | {repo: .repository.full_name, msg: .commit.message, date: .commit.committer.date}'
 
-            Past 30 days (count and repos):
-              gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --jq '{total: .total_count, repos: [.items[].repository.full_name] | unique}'
+            Past 30 days (count and repos — use --paginate to capture all pages):
+              gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '{total: .total_count, repos: [.items[].repository.full_name]}' | jq -s '{total: (.[0].total // 0), repos: [.[].repos[]] | unique}'
 
             Recent repo info:
               gh api "users/brandon-fryslie/repos?sort=pushed&per_page=10" --jq '.[] | {name, description, language, pushed_at}'
@@ -93,9 +93,7 @@ jobs:
 
             ## Task 4: Update README
 
-            Replace ALL content between the `<!-- RECENT-ACTIVITY:START -->` and `<!-- RECENT-ACTIVITY:END -->` markers in README.md. The new content should follow this structure (these are the LITERAL markers already in README.md):
-
-            Start with the START marker, then include:
+            In README.md, find the `<!-- RECENT-ACTIVITY:START -->` and `<!-- RECENT-ACTIVITY:END -->` markers. Keep both markers exactly as they are. Replace ONLY the content between them (do not duplicate or remove the markers themselves). The new content between the markers should be:
 
             An h2 heading "Recent Engineering Work"
 
@@ -110,8 +108,6 @@ jobs:
             An h3 "This Month" section: 2-4 sentences with the broader 30-day narrative. What themes emerge? What problems is Brandon solving? Emphasize versatility and judgment.
 
             A horizontal rule, then a details/summary block titled "Previous highlights" containing links to the most recent daily-archive files (up to 7, newest first). Format each as [YYYY-MM-DD](./daily-archive/YYYY-MM-DD.md). If no archives exist, write "No previous highlights yet."
-
-            End with the END marker.
 
             ### Writing Guidelines
 
