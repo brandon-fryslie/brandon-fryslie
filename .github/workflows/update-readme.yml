@@ -1,12 +1,7 @@
-name: Update Recent Activity
+name: Update Recent Activity (disabled - replaced by daily-highlights.yml)
 
 on:
-  schedule:
-    - cron: '0 6 * * *'  # Daily at 6 AM UTC
-  push:
-    branches:
-      - master
-  workflow_dispatch:  # Manual trigger for testing
+  workflow_dispatch:  # Manual trigger only — effectively disabled
 
 jobs:
   update:
