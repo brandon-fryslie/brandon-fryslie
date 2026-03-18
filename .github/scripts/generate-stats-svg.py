@@ -3,7 +3,7 @@
 Generate daily stats SVGs for GitHub profile.
 
 Picks 4 random metrics (from 8) with random time periods each day,
-queries GitHub API with proper pagination, and creates both the
+queries GitHub API with pagination, and creates both the
 stats card and the data-driven tech constellation.
 """
 
@@ -29,6 +29,7 @@ except ImportError:
 USERNAME = "brandon-fryslie"
 STATS_PATH = "assets/daily-stats.svg"
 CONSTELLATION_PATH = "assets/tech-constellation.svg"
+API_TIMEOUT = 30  # seconds
 FONT = (
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
 )
@@ -104,7 +105,7 @@ METRIC_DEFS = {
     "active_repos":  ("Active Repos",  ["7d", "30d", "1y"]),
     "days_active":   ("Days Active",   ["30d", "1y"]),
     "repos_created": ("Repos Created", ["1y", "all"]),
-    "issues_closed": ("Issues Closed", ["30d", "1y", "all"]),
+    "issues_closed": ("My Issues Closed", ["30d", "1y", "all"]),
 }
 
 
@@ -118,24 +119,26 @@ def api_get(endpoint, token):
         "Accept": "application/vnd.github.v3+json",
     }
     if HAS_REQUESTS:
-        resp = requests.get(url, headers=headers)
+        resp = requests.get(url, headers=headers, timeout=API_TIMEOUT)
         resp.raise_for_status()
         return resp.json()
     else:
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req) as resp:
+        with urllib.request.urlopen(req, timeout=API_TIMEOUT) as resp:
             return json.loads(resp.read().decode())
 
 
-def api_paginate_list(endpoint, token, max_pages=10):
-    """Paginate a GitHub list endpoint (repos, etc). Returns combined list."""
+def api_paginate_list(endpoint, token):
+    """Paginate a GitHub list endpoint (repos, etc) to exhaustion."""
     results = []
     sep = "&" if "?" in endpoint else "?"
-    for page in range(1, max_pages + 1):
+    page = 1
+    while True:
         data = api_get(f"{endpoint}{sep}page={page}&per_page=100", token)
         results.extend(data)
         if len(data) < 100:
             break
+        page += 1
     return results
 
 
@@ -146,11 +149,12 @@ def search_total_count(path, query, token):
     return data.get("total_count", 0)
 
 
-def search_commit_items(query, token, max_pages=10):
-    """Paginate commit search and return all items."""
+def search_commit_items(query, token):
+    """Paginate commit search to exhaustion."""
     encoded_q = quote(query, safe="+:")
     items = []
-    for page in range(1, max_pages + 1):
+    page = 1
+    while True:
         data = api_get(
             f"/search/commits?q={encoded_q}&per_page=100&page={page}", token
         )
@@ -158,6 +162,7 @@ def search_commit_items(query, token, max_pages=10):
         items.extend(batch)
         if len(batch) < 100:
             break
+        page += 1
     return items
 
 
@@ -217,7 +222,7 @@ class GitHubData:
         since = cutoff_iso(period)
         q = f"reviewed-by:{USERNAME}+type:pr+-author:{USERNAME}"
         if since:
-            q += f"+created:>{since}"
+            q += f"+updated:>{since}"
         return search_total_count("issues", q, self.token)
 
     def issue_closed_count(self, period):
