@@ -56,10 +56,10 @@ jobs:
             Use `gh api` to fetch commit activity across all of Brandon's public repos.
 
             Past 24 hours:
-              gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --jq '.items[] | {repo: .repository.full_name, msg: .commit.message, date: .commit.committer.date}'
+              gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '.items[] | {repo: .repository.full_name, msg: .commit.message, date: .commit.committer.date}'
 
             Past 7 days:
-              gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --jq '.items[] | {repo: .repository.full_name, msg: .commit.message, date: .commit.committer.date}'
+              gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '.items[] | {repo: .repository.full_name, msg: .commit.message, date: .commit.committer.date}'
 
             Past 30 days (count and repos — use --paginate to capture all pages):
               gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '{total: .total_count, repos: [.items[].repository.full_name]}' | jq -s '{total: (.[0].total // 0), repos: [.[].repos[]] | unique}'
