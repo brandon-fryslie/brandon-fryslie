@@ -123,9 +123,22 @@ jobs:
 
             ## Task 5: Commit and push
 
-            After all file changes are complete, commit and push to master:
+            After all file changes are complete, commit and push:
             ```
             git add README.md assets/*.svg daily-archive/
             git commit -m 'chore: update daily engineering highlights'
             git push
             ```
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: daily-highlights
+          path: |
+            README.md
+            assets/daily-highlight.svg
+            assets/daily-stats.svg
+            assets/tech-constellation.svg
+            daily-archive/
+          if-no-files-found: ignore
