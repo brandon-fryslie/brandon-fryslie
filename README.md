@@ -2,13 +2,17 @@
 
 # Brandon Fryslie
 
-**Backend & Platform Engineer** · Boulder, CO · brandon@fryslie.com
+**Full-Stack & Cloud Platform Engineer** · Boulder, CO
 
 </div>
 
 ---
 
-I build backend systems, platform infrastructure, and the tooling that connects them. Most of my career has been spent inside large engineering organizations, working on the kinds of systems that stay invisible when they're working correctly — access layers, deployment pipelines, environment management. The projects here are personal and open-source work in the same vein.
+I build software.  Professionally, that has typically been front-end using React, enterprise backend (microservices/monoliths), cloud infrastructure automation, the architectural design work that enforces stability and alignment, and the tooling that holds it together and ensures an organization is able to fire on all cylinders.
+
+Outside of work, I enjoy writing a variety of developer focused tooling and pet projects.  Some of them are practical, some of them are to learn a particular technology or skill, some of them are to create art, but all of them are fun.
+
+My passion lately has been around designing autonomous generative engineering workflows using AI.  Such as this repo, which is largely AI generated on a daily basis.
 
 <div align="center">
 <img src="./assets/daily-stats.svg" width="800" />
@@ -16,9 +20,9 @@ I build backend systems, platform infrastructure, and the tooling that connects 
 
 ---
 
-## Recent Repositories
-
 <!-- RECENT-ACTIVITY:START -->
+
+## Recent Repositories
 
 *Last updated March 17, 2026 · 5 most recently active repositories*
 

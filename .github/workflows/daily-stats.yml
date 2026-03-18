@@ -1,9 +1,7 @@
-name: Generate Daily Stats SVG
+name: Generate Daily Stats SVG (disabled - replaced by daily-highlights.yml)
 
 on:
-  schedule:
-    - cron: '0 6 * * *'  # Daily at 6 AM UTC
-  workflow_dispatch:  # Manual trigger for testing
+  workflow_dispatch:  # Manual trigger only — effectively disabled
 
 jobs:
   generate:
