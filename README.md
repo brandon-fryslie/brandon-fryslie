@@ -16,9 +16,9 @@ I build backend systems, platform infrastructure, and the tooling that connects 
 
 ---
 
-## Recent Repositories
-
 <!-- RECENT-ACTIVITY:START -->
+
+## Recent Repositories
 
 *Last updated March 17, 2026 · 5 most recently active repositories*
 
