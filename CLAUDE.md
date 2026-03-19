@@ -31,7 +31,7 @@ All SVG assets live in `assets/`. GitHub renders SVGs via `<img>` tags in an iso
 
 The `daily-highlights.yml` workflow runs daily at 6 AM UTC (or via manual dispatch):
 
-1. **Python script** generates mechanical stats SVGs (`assets/daily-stats.svg`, `assets/tech-constellation.svg`)
+1. **Python script** generates the mechanical stats SVG (`assets/daily-stats.svg`)
 2. **Claude Code** (`anthropics/claude-code-action@v1`) handles creative work:
    - Archives previous highlights to `daily-archive/YYYY-MM-DD.md`
    - Fetches commit activity via `gh api` (past day, week, month)
@@ -72,7 +72,7 @@ Work is NOT complete until `git push` succeeds. Mandatory end-of-session workflo
 
 ## Stats SVG Generation
 
-`python .github/scripts/generate-stats-svg.py` — requires `GITHUB_TOKEN` env var and `pip install requests`. Generates `assets/daily-stats.svg` (repo count, stars, 30-day commits, years active) and `assets/tech-constellation.svg` (animated language node graph). Both use dark theme (`#0d1117`) with the GitHub Primer color palette.
+`python .github/scripts/generate-stats-svg.py` — requires `GITHUB_TOKEN` env var and `pip install requests`. Generates `assets/daily-stats.svg` with 4 randomized metrics (from 8 possible) with varying time periods, using light theme with the GitHub Primer color palette.
 
 ## Manual Workflow Triggers
 
