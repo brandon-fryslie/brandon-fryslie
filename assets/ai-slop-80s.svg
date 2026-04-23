@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" role="img" aria-label="AI SLOP — 1980s style rotating text">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0420"/>
+      <stop offset="55%" stop-color="#2a0a5c"/>
+      <stop offset="100%" stop-color="#ff2d95"/>
+    </linearGradient>
+
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff2a8"/>
+      <stop offset="45%" stop-color="#ffb13b"/>
+      <stop offset="100%" stop-color="#ff2d95"/>
+    </linearGradient>
+
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff8ff"/>
+      <stop offset="25%" stop-color="#7efcff"/>
+      <stop offset="50%" stop-color="#1a66ff"/>
+      <stop offset="55%" stop-color="#ff2d95"/>
+      <stop offset="80%" stop-color="#ffb13b"/>
+      <stop offset="100%" stop-color="#7a00ff"/>
+    </linearGradient>
+
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2d95" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ff2d95" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="1"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="bigglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="300" fill="url(#sky)"/>
+
+  <!-- Stars (static twinkle via opacity) -->
+  <g fill="#fff">
+    <circle cx="60"  cy="30" r="1.2"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s"  repeatCount="indefinite"/></circle>
+    <circle cx="180" cy="50" r="1"  ><animate attributeName="opacity" values="1;0.1;1"   dur="5s"  repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="20" r="1.4"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="520" cy="35" r="1"  ><animate attributeName="opacity" values="1;0.2;1"   dur="4s"  repeatCount="indefinite"/></circle>
+    <circle cx="680" cy="55" r="1.3"><animate attributeName="opacity" values="0.2;1;0.2" dur="6s"  repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="25" r="1"  ><animate attributeName="opacity" values="1;0.3;1"   dur="8s"  repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Sun with horizontal slits -->
+  <g>
+    <circle cx="400" cy="180" r="90" fill="url(#sun)" filter="url(#bigglow)" opacity="0.6"/>
+    <circle cx="400" cy="180" r="80" fill="url(#sun)"/>
+    <g fill="#0a0420">
+      <rect x="320" y="205" width="160" height="4"/>
+      <rect x="320" y="215" width="160" height="5"/>
+      <rect x="320" y="227" width="160" height="6"/>
+      <rect x="320" y="241" width="160" height="8"/>
+      <rect x="320" y="257" width="160" height="10"/>
+    </g>
+  </g>
+
+  <!-- Grid floor (perspective faked with converging lines) -->
+  <g stroke="url(#gridFade)" stroke-width="1.2" fill="none">
+    <!-- horizontal lines -->
+    <line x1="0"   y1="220" x2="800" y2="220"/>
+    <line x1="-20" y1="235" x2="820" y2="235"/>
+    <line x1="-50" y1="252" x2="850" y2="252"/>
+    <line x1="-90" y1="272" x2="890" y2="272"/>
+    <line x1="-140" y1="295" x2="940" y2="295"/>
+    <!-- vanishing point verticals (vp at 400,215) -->
+    <line x1="400" y1="215" x2="-200" y2="300"/>
+    <line x1="400" y1="215" x2="0"    y2="300"/>
+    <line x1="400" y1="215" x2="150"  y2="300"/>
+    <line x1="400" y1="215" x2="280"  y2="300"/>
+    <line x1="400" y1="215" x2="400"  y2="300"/>
+    <line x1="400" y1="215" x2="520"  y2="300"/>
+    <line x1="400" y1="215" x2="650"  y2="300"/>
+    <line x1="400" y1="215" x2="800"  y2="300"/>
+    <line x1="400" y1="215" x2="1000" y2="300"/>
+  </g>
+
+  <!-- Rotating 3D-ish text. Fake Y-axis rotation by animating scale-x between 1 and -1. -->
+  <g font-family="Impact, 'Arial Black', sans-serif" font-weight="900" text-anchor="middle">
+
+    <!-- AI: flips on Y axis -->
+    <g transform="translate(240,140)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1; 0.2 1; -1 1; -0.2 1; 1 1"
+          keyTimes="0;0.25;0.5;0.75;1"
+          dur="6s" repeatCount="indefinite"/>
+        <!-- shadow/depth layers -->
+        <text x="4" y="4" font-size="120" fill="#7a00ff" opacity="0.55" filter="url(#glow)">AI</text>
+        <text x="2" y="2" font-size="120" fill="#ff2d95" opacity="0.8">AI</text>
+        <text x="0" y="0" font-size="120" fill="url(#chrome)" stroke="#fff" stroke-width="1.2">AI</text>
+      </g>
+    </g>
+
+    <!-- SLOP: flips on Y axis, offset so they alternate -->
+    <g transform="translate(540,140)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1; -0.2 1; -1 1; 0.2 1; 1 1"
+          keyTimes="0;0.25;0.5;0.75;1"
+          dur="6s" repeatCount="indefinite"/>
+        <text x="4" y="4" font-size="120" fill="#7a00ff" opacity="0.55" filter="url(#glow)">SLOP</text>
+        <text x="2" y="2" font-size="120" fill="#00f0ff" opacity="0.8">SLOP</text>
+        <text x="0" y="0" font-size="120" fill="url(#chrome)" stroke="#fff" stroke-width="1.2">SLOP</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Scanlines -->
+  <g fill="#000" opacity="0.12">
+    <rect y="0"   width="800" height="1"/>
+    <rect y="6"   width="800" height="1"/>
+    <rect y="12"  width="800" height="1"/>
+    <rect y="18"  width="800" height="1"/>
+    <rect y="24"  width="800" height="1"/>
+    <rect y="30"  width="800" height="1"/>
+    <rect y="36"  width="800" height="1"/>
+    <rect y="42"  width="800" height="1"/>
+    <rect y="48"  width="800" height="1"/>
+    <rect y="54"  width="800" height="1"/>
+    <rect y="60"  width="800" height="1"/>
+    <rect y="66"  width="800" height="1"/>
+    <rect y="72"  width="800" height="1"/>
+    <rect y="78"  width="800" height="1"/>
+    <rect y="84"  width="800" height="1"/>
+    <rect y="90"  width="800" height="1"/>
+    <rect y="96"  width="800" height="1"/>
+    <rect y="102" width="800" height="1"/>
+    <rect y="108" width="800" height="1"/>
+    <rect y="114" width="800" height="1"/>
+    <rect y="120" width="800" height="1"/>
+    <rect y="126" width="800" height="1"/>
+    <rect y="132" width="800" height="1"/>
+    <rect y="138" width="800" height="1"/>
+    <rect y="144" width="800" height="1"/>
+    <rect y="150" width="800" height="1"/>
+    <rect y="156" width="800" height="1"/>
+    <rect y="162" width="800" height="1"/>
+    <rect y="168" width="800" height="1"/>
+    <rect y="174" width="800" height="1"/>
+    <rect y="180" width="800" height="1"/>
+    <rect y="186" width="800" height="1"/>
+    <rect y="192" width="800" height="1"/>
+    <rect y="198" width="800" height="1"/>
+    <rect y="204" width="800" height="1"/>
+    <rect y="210" width="800" height="1"/>
+  </g>
+</svg>

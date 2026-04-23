@@ -1,4 +1,8 @@
 <div align="center">
+<img src="./assets/ai-slop-80s.svg" width="800" alt="AI SLOP" />
+</div>
+
+<div align="center">
 
 # Brandon Fryslie
 
