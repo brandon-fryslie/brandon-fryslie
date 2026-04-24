@@ -32,10 +32,6 @@ My passion lately has been around designing autonomous generative engineering wo
 
 *Updated April 24, 2026*
 
-<div align="center">
-<img src="./assets/daily-highlight.svg" width="800" />
-</div>
-
 ### Today
 
 Spent the day hardening the very workflow that produces this profile and shipping the daily doodle that now sits at the top of the README. The Claude action is pinned to Opus 4.7 with a verification step that fails the job when the run reports `is_error`, non-zero permission denials, or a HEAD that didn't advance — closing a silent failure mode that had quietly produced no commits for over a month — and a concurrency group serializes overlapping daily-highlights runs so manual triggers no longer race the cron. Granted the action the Bash, Read, Write, Edit, and `gh` permissions it actually needed, and stripped a personal email from the footer. In `links-issue-tracker`, three follow-ups landed on `lit ready`: a `pflag.Changed` proxy plus the `lit quickstart --eject` template-override model, exclusion of epics from the default ready set so agents don't try to claim them, and a parent-epic column on remaining ready rows for context.
