@@ -22,24 +22,34 @@ My passion lately has been around designing autonomous generative engineering wo
 
 <!-- RECENT-ACTIVITY:START -->
 
-## Recent Repositories
+## Recent Engineering Work
 
-*Last updated March 17, 2026 · 5 most recently active repositories*
+*Updated April 24, 2026*
 
-**[cc-dump](https://github.com/brandon-fryslie/cc-dump)** — HTTP proxy intercepting Anthropic API calls. Shows unified diffs of system prompt changes between requests.
-<br/><sub>Python · Mar 17, 2026</sub>
+<div align="center">
+<img src="./assets/daily-highlight.svg" width="800" />
+</div>
 
-**[links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)** — Worktree-native issue tracker with Dolt-backed sync
-<br/><sub>Go · Mar 16, 2026</sub>
+### Today
 
-**[oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)** — Animation compiler with custom type system. Block-graph architecture, typed connections, 4-stage pipeline: parse → validate → optimize → emit.
-<br/><sub>TypeScript · Mar 16, 2026</sub>
+Fixed the `daily-highlights` CI workflow — the action had been silently denied every file write and `gh` call since its rewrite, producing zero commits despite appearing to succeed. Shipped two substantive features to `links-issue-tracker`: a filter preventing epics from surfacing in `lit ready` (agents can't claim epics directly), and a template-eject system (`lit quickstart --eject`) that separates user overrides from embedded defaults, ending silent cache-staleness. Meanwhile, `shader-playground` landed Phase A of a nested Poisson-multigrid gravity solver — inner 128³ grid at ±16 with Dirichlet boundary conditions sampled from an outer 64³ grid at ±64, delivering 4× sharper central gravity with a smoothstep-blended force transition and full V-cycle per frame.
 
-**[brandon-fryslie](https://github.com/brandon-fryslie/brandon-fryslie)** — GitHub profile with animated SVG themes and multiple artistic lenses
-<br/><sub>Unknown · Mar 16, 2026</sub>
+### This Week
 
-**[dotfiles](https://github.com/brandon-fryslie/dotfiles)** — No description
-<br/><sub>Shell · ⭐ 3 · Mar 08, 2026</sub>
+Executed a large-scale modularization of `links-issue-tracker`, splitting the monolithic `cli.go` (2,875 lines) into eight focused modules — sync, bulk, backup, doctor, dependency, issue relations, and text output — while simultaneously decomposing `store.go` (3,320 lines) into schema, labels, ranking, relations, and import/export packages. Alongside the refactor, shipped an empty-remote detection fix for cold-start sync failures and a `pflag.Changed` proxy to correctly distinguish flag-absent from flag-passed-with-empty-value. In `shader-playground`, resolved a phase-split V-cycle bug that was producing static animation, then built and enabled the full nested PM gravity scheme with Dirichlet inner boundary conditions — a significant architecture milestone for the WebGPU N-body simulation.
+
+### This Month
+
+296 commits across 12 repositories over the past 30 days, with `shader-playground` and `links-issue-tracker` as the dominant workstreams. The month shows a consistent pattern: deep systems work (GPU compute pipelines, Dolt-backed issue sync, Go package architecture) running in parallel with developer tooling (gh-pages deployment multiplexer, rich terminal components in `rich-js-ink`, rad-shell plugins). Architectural judgment is evident throughout — from the `withMutation` combinator design in the links refactor plan to the dataflow-over-control-flow shader discipline in the PM solver. Active projects span Go, TypeScript, WebGPU/WGSL, Python, and Shell, demonstrating consistent depth across the full stack.
+
+---
+
+<details>
+<summary>Previous highlights</summary>
+
+- [2026-03-17](./daily-archive/2026-03-17.md)
+
+</details>
 
 <!-- RECENT-ACTIVITY:END -->
 

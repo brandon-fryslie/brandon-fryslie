@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <radialGradient id="dh-bg" cx="42%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+    <radialGradient id="dh-blueHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#1f6feb" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dh-orangeHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f78166" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#da3633" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft glow: blur + composite over source -->
+    <filter id="dh-softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Core halo: pure blur used as a separate layer behind the core -->
+    <filter id="dh-coreHalo" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <!-- Text glow -->
+    <filter id="dh-textGlow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Star twinkle blur -->
+    <filter id="dh-starBlur">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#dh-bg)"/>
+
+  <!-- Static star field -->
+  <g fill="white" opacity="1">
+    <circle cx="22"  cy="17"  r="0.7" opacity="0.45"/>
+    <circle cx="67"  cy="38"  r="0.5" opacity="0.30"/>
+    <circle cx="108" cy="11"  r="0.8" opacity="0.40"/>
+    <circle cx="183" cy="29"  r="0.5" opacity="0.55"/>
+    <circle cx="254" cy="19"  r="0.6" opacity="0.35"/>
+    <circle cx="323" cy="8"   r="0.7" opacity="0.50"/>
+    <circle cx="478" cy="14"  r="0.6" opacity="0.30"/>
+    <circle cx="531" cy="33"  r="0.8" opacity="0.45"/>
+    <circle cx="594" cy="10"  r="0.5" opacity="0.40"/>
+    <circle cx="648" cy="26"  r="0.7" opacity="0.55"/>
+    <circle cx="714" cy="9"   r="0.6" opacity="0.30"/>
+    <circle cx="769" cy="40"  r="0.5" opacity="0.45"/>
+    <circle cx="38"  cy="163" r="0.7" opacity="0.40"/>
+    <circle cx="81"  cy="181" r="0.5" opacity="0.28"/>
+    <circle cx="148" cy="188" r="0.6" opacity="0.50"/>
+    <circle cx="226" cy="173" r="0.8" opacity="0.30"/>
+    <circle cx="298" cy="190" r="0.5" opacity="0.55"/>
+    <circle cx="462" cy="177" r="0.7" opacity="0.35"/>
+    <circle cx="537" cy="185" r="0.6" opacity="0.28"/>
+    <circle cx="607" cy="169" r="0.8" opacity="0.45"/>
+    <circle cx="673" cy="184" r="0.5" opacity="0.38"/>
+    <circle cx="741" cy="176" r="0.7" opacity="0.28"/>
+    <circle cx="785" cy="160" r="0.6" opacity="0.45"/>
+    <circle cx="50"  cy="95"  r="0.9" opacity="0.35"/>
+    <circle cx="752" cy="107" r="0.9" opacity="0.30"/>
+  </g>
+
+  <!-- Twinkling accent stars -->
+  <circle cx="44" cy="98" r="1.1" fill="white" opacity="0.5" filter="url(#dh-starBlur)">
+    <animate attributeName="opacity" values="0.5;0.1;0.7;0.1;0.5" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="756" cy="102" r="1.1" fill="white" opacity="0.3" filter="url(#dh-starBlur)">
+    <animate attributeName="opacity" values="0.3;0.8;0.2;0.8;0.3" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="9" r="1.2" fill="white" opacity="0.6" filter="url(#dh-starBlur)">
+    <animate attributeName="opacity" values="0.6;0.15;0.6" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="191" r="1.0" fill="white" opacity="0.4" filter="url(#dh-starBlur)">
+    <animate attributeName="opacity" values="0.4;0.85;0.4" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ══════════════════════════════════════════
+       LEFT GRAVITY WELL — Blue  (center: 140,100)
+       ══════════════════════════════════════════ -->
+
+  <!-- Outer halo -->
+  <circle cx="140" cy="100" r="68" fill="url(#dh-blueHalo)" opacity="0.38">
+    <animate attributeName="opacity" values="0.28;0.52;0.28" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="68;74;68" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Decorative orbital rings (tilted ellipses — 3D illusion) -->
+  <ellipse cx="140" cy="100" rx="58" ry="19" fill="none"
+    stroke="#58a6ff" stroke-width="0.7" opacity="0.22"
+    transform="rotate(-28 140 100)"/>
+  <ellipse cx="140" cy="100" rx="42" ry="13" fill="none"
+    stroke="#79c0ff" stroke-width="0.5" opacity="0.16"
+    transform="rotate(18 140 100)"/>
+  <ellipse cx="140" cy="100" rx="72" ry="24" fill="none"
+    stroke="#388bfd" stroke-width="0.4" opacity="0.12"
+    transform="rotate(-8 140 100)"/>
+
+  <!-- Core halo layer (blurred, behind core) -->
+  <circle cx="140" cy="100" r="16" fill="#58a6ff" opacity="0.45" filter="url(#dh-coreHalo)">
+    <animate attributeName="opacity" values="0.35;0.6;0.35" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Core body -->
+  <circle cx="140" cy="100" r="10" fill="#0d2554" stroke="#58a6ff" stroke-width="2">
+    <animate attributeName="r" values="10;12;10" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="2;3;2" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Core bright center -->
+  <circle cx="140" cy="100" r="4.5" fill="#58a6ff" filter="url(#dh-softGlow)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Orbiting particles (SMIL rotation around 140,100) -->
+  <!-- Particle A: inner fast, radius=58 -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="0 140 100" to="360 140 100" dur="7s" repeatCount="indefinite"/>
+    <circle cx="198" cy="100" r="3.5" fill="#58a6ff" filter="url(#dh-softGlow)" opacity="0.92"/>
+  </g>
+  <!-- Particle B: outer slow reverse, radius=72 -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="360 140 100" to="0 140 100" dur="11s" repeatCount="indefinite"/>
+    <circle cx="212" cy="100" r="2.5" fill="#79c0ff" opacity="0.70"/>
+  </g>
+  <!-- Particle C: mid, offset start, radius=42 -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="180 140 100" to="540 140 100" dur="13s" repeatCount="indefinite"/>
+    <circle cx="182" cy="100" r="2" fill="#388bfd" opacity="0.62"/>
+  </g>
+  <!-- Particle D: fast tiny, radius=58, offset 90° -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="90 140 100" to="450 140 100" dur="7s" repeatCount="indefinite"/>
+    <circle cx="198" cy="100" r="1.5" fill="#cae8ff" opacity="0.50"/>
+  </g>
+
+  <!-- ══════════════════════════════════════════
+       CENTER — Date Display  (x=400, y=100)
+       ══════════════════════════════════════════ -->
+
+  <!-- Outer accent ring -->
+  <ellipse cx="400" cy="100" rx="158" ry="50" fill="none"
+    stroke="#21262d" stroke-width="1.5" opacity="0.55"/>
+  <ellipse cx="400" cy="100" rx="158" ry="50" fill="none"
+    stroke="#58a6ff" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Tiny orbiting accent on the outer ring -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="0 400 100" to="360 400 100" dur="17s" repeatCount="indefinite"/>
+    <circle cx="558" cy="100" r="2.5" fill="#58a6ff" opacity="0.5" filter="url(#dh-softGlow)"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="180 400 100" to="540 400 100" dur="17s" repeatCount="indefinite"/>
+    <circle cx="558" cy="100" r="1.5" fill="#f78166" opacity="0.4"/>
+  </g>
+
+  <!-- Date text glow layer -->
+  <text x="400" y="91"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="50" font-weight="700" fill="#58a6ff" text-anchor="middle"
+    letter-spacing="5" opacity="0.09" filter="url(#dh-coreHalo)">APR 24</text>
+
+  <!-- Main date text -->
+  <text x="400" y="91"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="50" font-weight="700" fill="#e6edf3" text-anchor="middle"
+    letter-spacing="5" filter="url(#dh-textGlow)">
+    APR 24
+    <animate attributeName="opacity" values="0.88;1;0.88" dur="13s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="118"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="11" font-weight="400" fill="#8b949e" text-anchor="middle"
+    letter-spacing="7">FRIDAY · 2026</text>
+
+  <!-- Decorative divider flanking subtitle -->
+  <line x1="282" y1="126" x2="355" y2="126" stroke="#30363d" stroke-width="0.8" opacity="0.65"/>
+  <line x1="445" y1="126" x2="518" y2="126" stroke="#30363d" stroke-width="0.8" opacity="0.65"/>
+  <circle cx="400" cy="126" r="2.2" fill="#30363d" opacity="0.65"/>
+
+  <!-- ══════════════════════════════════════════
+       RIGHT GRAVITY WELL — Orange  (center: 660,100)
+       ══════════════════════════════════════════ -->
+
+  <!-- Outer halo -->
+  <circle cx="660" cy="100" r="64" fill="url(#dh-orangeHalo)" opacity="0.33">
+    <animate attributeName="opacity" values="0.22;0.46;0.22" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="64;70;64" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Decorative orbital rings -->
+  <ellipse cx="660" cy="100" rx="55" ry="19" fill="none"
+    stroke="#f78166" stroke-width="0.7" opacity="0.20"
+    transform="rotate(22 660 100)"/>
+  <ellipse cx="660" cy="100" rx="42" ry="14" fill="none"
+    stroke="#ffa198" stroke-width="0.5" opacity="0.15"
+    transform="rotate(-18 660 100)"/>
+  <ellipse cx="660" cy="100" rx="68" ry="23" fill="none"
+    stroke="#da3633" stroke-width="0.4" opacity="0.10"
+    transform="rotate(5 660 100)"/>
+
+  <!-- Core halo layer -->
+  <circle cx="660" cy="100" r="14" fill="#f78166" opacity="0.40" filter="url(#dh-coreHalo)">
+    <animate attributeName="opacity" values="0.30;0.55;0.30" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Core body -->
+  <circle cx="660" cy="100" r="9" fill="#3d1410" stroke="#f78166" stroke-width="2">
+    <animate attributeName="r" values="9;11;9" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="2;3;2" dur="11s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Core bright center -->
+  <circle cx="660" cy="100" r="3.8" fill="#f78166" filter="url(#dh-softGlow)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Orbiting particles around right well -->
+  <!-- Particle A: fast, radius=55 -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="0 660 100" to="360 660 100" dur="9s" repeatCount="indefinite"/>
+    <circle cx="715" cy="100" r="3" fill="#f78166" filter="url(#dh-softGlow)" opacity="0.88"/>
+  </g>
+  <!-- Particle B: slow reverse, radius=68 -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="360 660 100" to="0 660 100" dur="13s" repeatCount="indefinite"/>
+    <circle cx="728" cy="100" r="2" fill="#ffa198" opacity="0.65"/>
+  </g>
+  <!-- Particle C: mid, offset start, radius=42 -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="220 660 100" to="580 660 100" dur="7s" repeatCount="indefinite"/>
+    <circle cx="702" cy="100" r="2.5" fill="#f78166" opacity="0.58"/>
+  </g>
+  <!-- Particle D: tiny fast, radius=55, offset -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      from="270 660 100" to="630 660 100" dur="9s" repeatCount="indefinite"/>
+    <circle cx="715" cy="100" r="1.5" fill="#ffc6bd" opacity="0.45"/>
+  </g>
+
+  <!-- ══════════════════════════════════════════
+       FIELD LINES connecting the two wells
+       ══════════════════════════════════════════ -->
+  <path d="M 198 93 Q 300 65 400 100 Q 500 135 602 93"
+    fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.09"
+    stroke-dasharray="7 14">
+    <animate attributeName="stroke-dashoffset" values="0;-63" dur="7s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 198 107 Q 300 135 400 100 Q 500 65 602 107"
+    fill="none" stroke="#f78166" stroke-width="0.6" opacity="0.07"
+    stroke-dasharray="7 14">
+    <animate attributeName="stroke-dashoffset" values="0;63" dur="11s" repeatCount="indefinite"/>
+  </path>
+
+</svg>
