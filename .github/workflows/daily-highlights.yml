@@ -29,6 +29,10 @@ jobs:
       - name: Generate stats SVG (mechanical)
         run: python .github/scripts/generate-stats-svg.py
 
+      - name: Capture HEAD before Claude runs
+        id: pre_claude
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
       - name: Generate highlights with Claude (creative)
         id: claude
         uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
@@ -144,6 +148,8 @@ jobs:
 
       - name: Verify Claude actually produced output
         if: always() && steps.claude.conclusion != 'skipped'
+        env:
+          HEAD_BEFORE: ${{ steps.pre_claude.outputs.sha }}
         run: |
           set -euo pipefail
           EXEC_FILE="${{ steps.claude.outputs.execution_file }}"
@@ -151,20 +157,30 @@ jobs:
             echo "::error::Claude execution output file missing — the step did not run to completion."
             exit 1
           fi
-          IS_ERROR=$(jq -r '.[] | select(.type=="result") | .is_error' "$EXEC_FILE")
-          DENIALS=$(jq -r '.[] | select(.type=="result") | .permission_denials_count' "$EXEC_FILE")
+          RESULT=$(jq -c '[.[] | select(.type=="result")] | last' "$EXEC_FILE")
+          if [ -z "$RESULT" ] || [ "$RESULT" = "null" ]; then
+            echo "::error::Claude execution output has no result entry — shape unexpected."
+            exit 1
+          fi
+          IS_ERROR=$(echo "$RESULT" | jq -r '.is_error')
+          DENIALS=$(echo "$RESULT" | jq -r '.permission_denials_count // 0')
           echo "Claude result: is_error=$IS_ERROR permission_denials_count=$DENIALS"
           if [ "$IS_ERROR" != "false" ]; then
             echo "::error::Claude reported is_error=$IS_ERROR"
             exit 1
           fi
-          if [ "${DENIALS:-0}" -gt 0 ]; then
+          if [ "$DENIALS" -gt 0 ]; then
             echo "::error::Claude had $DENIALS permission denials — the prompt's tools are not fully authorized."
             exit 1
           fi
-          LATEST=$(git log -1 --format=%s)
-          if [ "$LATEST" != "chore: update daily engineering highlights" ]; then
-            echo "::error::Expected a 'chore: update daily engineering highlights' commit at HEAD, got: $LATEST"
+          HEAD_AFTER=$(git rev-parse HEAD)
+          if [ "$HEAD_AFTER" = "$HEAD_BEFORE" ]; then
+            echo "::error::HEAD did not advance during the Claude step — no commit was produced (before=$HEAD_BEFORE)."
+            exit 1
+          fi
+          SUBJECT=$(git log -1 --format=%s)
+          if [ "$SUBJECT" != "chore: update daily engineering highlights" ]; then
+            echo "::error::HEAD moved from $HEAD_BEFORE to $HEAD_AFTER but the commit subject is unexpected: $SUBJECT"
             exit 1
           fi
 
