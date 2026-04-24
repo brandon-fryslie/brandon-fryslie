@@ -1,3 +1,9 @@
+<!-- DAILY-DOODLE:START -->
+<div align="center">
+<img src="./assets/daily-highlight.svg" width="800" alt="Daily highlight" />
+</div>
+<!-- DAILY-DOODLE:END -->
+
 <div align="center">
 
 # Brandon Fryslie
