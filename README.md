@@ -1,6 +1,6 @@
 <!-- DAILY-DOODLE:START -->
 <div align="center">
-<img src="./assets/daily-highlight.svg" width="800" alt="Daily highlight" />
+<a href="./DOODLES.md"><img src="./assets/daily-highlight.svg" width="800" alt="Daily highlight — click for the gallery" /></a>
 </div>
 <!-- DAILY-DOODLE:END -->
 
