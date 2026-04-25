@@ -241,121 +241,77 @@
     </g>
 
     <!-- Traveling pulses.
-         Each orb cycles through 3 different paths via chained <animateMotion>
-         elements with cyclic begin references (begin="0s; mNc.end" on the first
-         segment loops the chain). Durations are irrational multiples (π, e,
-         √2, √3, √5, √7, √10) so the six orbs never lock into a repeating beat —
-         the combined pattern's period is effectively non-repeating for any
-         realistic viewing duration.
+         Six orbs, each on a single fixed path with an irrational-duration
+         motion animation. The six durations are pairwise irrational (π, e,
+         2√2, 2√3, 1.5√5, √10) so the global pattern of "where each orb is
+         right now" never exactly repeats.
 
-         Each orb also has:
-         - A continuous size pulse (r animated independently, irrational dur)
-         - Per-segment opacity fade (0→1→1→0 with fill="freeze") so the orb is
-           invisible during the teleport between path segments. The freeze is
-           load-bearing — without it, opacity returns to 1 between segments and
-           the eye catches the ~600px snap from output-column back to
-           input-column as a "shudder". -->
+         Each orb has three animations:
+           1. Continuous size pulse (independent irrational dur, never locks
+              with motion timing).
+           2. Motion along the fixed path (repeatCount=indefinite).
+           3. Opacity 0→1→1→0 over the same dur as motion (repeatCount=
+              indefinite). Orb is invisible at start and end of each cycle,
+              masking the once-per-cycle teleport from output-column back to
+              input-column. No fill="freeze" needed because the cycle restarts
+              cleanly with opacity returning to 0.
+
+         Static cx/cy match each path's start point so that if any animation
+         hasn't started yet (e.g., during page-load timing edge cases), the
+         orb falls back to its lane's input node, not (0,0). -->
     <g filter="url(#nnGlow)">
-      <!-- Orb 1: cyan, starts at input row 1 -->
-      <circle r="5" fill="#00f0ff" opacity="0">
+      <!-- Orb 1: cyan, lane 1 -->
+      <circle cx="100" cy="40" r="5" fill="#00f0ff" opacity="0">
         <animate attributeName="r" values="3.5;6.5;3.5" dur="2.236s" repeatCount="indefinite"/>
-        <animateMotion id="m1a" dur="3.14159s" begin="0s; m1c.end"
+        <animateMotion dur="3.14159s" repeatCount="indefinite"
           path="M100,40 L300,55 L500,165 L700,85"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.14159s" begin="0s; m1c.end" fill="freeze"/>
-        <animateMotion id="m1b" dur="2.82843s" begin="m1a.end"
-          path="M100,40 L300,110 L500,55 L700,135"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.82843s" begin="m1a.end" fill="freeze"/>
-        <animateMotion id="m1c" dur="2.71828s" begin="m1b.end"
-          path="M100,40 L300,165 L500,110 L700,85"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.71828s" begin="m1b.end" fill="freeze"/>
+          dur="3.14159s" repeatCount="indefinite"/>
       </circle>
 
-      <!-- Orb 2: magenta, starts at input row 2 -->
-      <circle r="5" fill="#ff2d95" opacity="0">
-        <animate attributeName="r" values="3.5;6.5;3.5" dur="2.646s" repeatCount="indefinite"/>
-        <animateMotion id="m2a" dur="2.71828s" begin="0.4s; m2c.end"
+      <!-- Orb 2: magenta, lane 2 -->
+      <circle cx="100" cy="85" r="5" fill="#ff2d95" opacity="0">
+        <animate attributeName="r" values="3.5;6.5;3.5" dur="2.449s" repeatCount="indefinite"/>
+        <animateMotion dur="2.71828s" begin="0.4s" repeatCount="indefinite"
           path="M100,85 L300,165 L500,110 L700,135"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.71828s" begin="0.4s; m2c.end" fill="freeze"/>
-        <animateMotion id="m2b" dur="3.46410s" begin="m2a.end"
-          path="M100,85 L300,55 L500,55 L700,85"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.46410s" begin="m2a.end" fill="freeze"/>
-        <animateMotion id="m2c" dur="3.14159s" begin="m2b.end"
-          path="M100,85 L300,110 L500,165 L700,85"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.14159s" begin="m2b.end" fill="freeze"/>
+          dur="2.71828s" begin="0.4s" repeatCount="indefinite"/>
       </circle>
 
-      <!-- Orb 3: amber, starts at input row 3 -->
-      <circle r="5" fill="#ffb13b" opacity="0">
-        <animate attributeName="r" values="3.5;6.5;3.5" dur="2.449s" repeatCount="indefinite"/>
-        <animateMotion id="m3a" dur="3.35410s" begin="0.8s; m3c.end"
-          path="M100,130 L300,55 L500,110 L700,135"/>
+      <!-- Orb 3: amber, lane 3 -->
+      <circle cx="100" cy="130" r="5" fill="#ffb13b" opacity="0">
+        <animate attributeName="r" values="3.5;6.5;3.5" dur="2.646s" repeatCount="indefinite"/>
+        <animateMotion dur="3.46410s" begin="0.8s" repeatCount="indefinite"
+          path="M100,130 L300,55 L500,110 L700,85"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.35410s" begin="0.8s; m3c.end" fill="freeze"/>
-        <animateMotion id="m3b" dur="3.14159s" begin="m3a.end"
-          path="M100,130 L300,165 L500,55 L700,85"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.14159s" begin="m3a.end" fill="freeze"/>
-        <animateMotion id="m3c" dur="2.71828s" begin="m3b.end"
-          path="M100,130 L300,110 L500,55 L700,135"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.71828s" begin="m3b.end" fill="freeze"/>
+          dur="3.46410s" begin="0.8s" repeatCount="indefinite"/>
       </circle>
 
-      <!-- Orb 4: light cyan, starts at input row 4 -->
-      <circle r="5" fill="#7efcff" opacity="0">
+      <!-- Orb 4: light cyan, lane 4 -->
+      <circle cx="100" cy="175" r="5" fill="#7efcff" opacity="0">
         <animate attributeName="r" values="3.5;6.5;3.5" dur="2.828s" repeatCount="indefinite"/>
-        <animateMotion id="m4a" dur="2.82843s" begin="1.2s; m4c.end"
-          path="M100,175 L300,55 L500,165 L700,135"/>
+        <animateMotion dur="2.82843s" begin="1.2s" repeatCount="indefinite"
+          path="M100,175 L300,110 L500,55 L700,135"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.82843s" begin="1.2s; m4c.end" fill="freeze"/>
-        <animateMotion id="m4b" dur="2.71828s" begin="m4a.end"
-          path="M100,175 L300,110 L500,110 L700,85"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.71828s" begin="m4a.end" fill="freeze"/>
-        <animateMotion id="m4c" dur="3.43941s" begin="m4b.end"
-          path="M100,175 L300,165 L500,55 L700,135"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.43941s" begin="m4b.end" fill="freeze"/>
+          dur="2.82843s" begin="1.2s" repeatCount="indefinite"/>
       </circle>
 
-      <!-- Orb 5: magenta, starts at input row 1 (shares lane with Orb 1) -->
-      <circle r="5" fill="#ff2d95" opacity="0">
+      <!-- Orb 5: magenta, lane 1 (shares input node with Orb 1, different route) -->
+      <circle cx="100" cy="40" r="5" fill="#ff2d95" opacity="0">
         <animate attributeName="r" values="3.5;6.5;3.5" dur="3.162s" repeatCount="indefinite"/>
-        <animateMotion id="m5a" dur="3.14159s" begin="1.6s; m5c.end"
+        <animateMotion dur="3.35410s" begin="1.6s" repeatCount="indefinite"
           path="M100,40 L300,165 L500,55 L700,135"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.14159s" begin="1.6s; m5c.end" fill="freeze"/>
-        <animateMotion id="m5b" dur="2.71828s" begin="m5a.end"
-          path="M100,40 L300,55 L500,110 L700,135"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.71828s" begin="m5a.end" fill="freeze"/>
-        <animateMotion id="m5c" dur="3.16228s" begin="m5b.end"
-          path="M100,40 L300,110 L500,165 L700,85"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.16228s" begin="m5b.end" fill="freeze"/>
+          dur="3.35410s" begin="1.6s" repeatCount="indefinite"/>
       </circle>
 
-      <!-- Orb 6: amber, starts at input row 4 (shares lane with Orb 4) -->
-      <circle r="5" fill="#ffb13b" opacity="0">
-        <animate attributeName="r" values="3.5;6.5;3.5" dur="2.236s" begin="0.7s" repeatCount="indefinite"/>
-        <animateMotion id="m6a" dur="2.71828s" begin="0.2s; m6c.end"
-          path="M100,175 L300,55 L500,55 L700,135"/>
+      <!-- Orb 6: amber, lane 4 (shares input node with Orb 4, different route) -->
+      <circle cx="100" cy="175" r="5" fill="#ffb13b" opacity="0">
+        <animate attributeName="r" values="3.5;6.5;3.5" dur="3.317s" repeatCount="indefinite"/>
+        <animateMotion dur="3.16228s" begin="0.2s" repeatCount="indefinite"
+          path="M100,175 L300,55 L500,165 L700,85"/>
         <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.71828s" begin="0.2s; m6c.end" fill="freeze"/>
-        <animateMotion id="m6b" dur="3.46410s" begin="m6a.end"
-          path="M100,175 L300,110 L500,165 L700,85"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="3.46410s" begin="m6a.end" fill="freeze"/>
-        <animateMotion id="m6c" dur="2.82843s" begin="m6b.end"
-          path="M100,175 L300,165 L500,110 L700,135"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1"
-          dur="2.82843s" begin="m6b.end" fill="freeze"/>
+          dur="3.16228s" begin="0.2s" repeatCount="indefinite"/>
       </circle>
     </g>
 
