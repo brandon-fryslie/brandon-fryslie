@@ -69,17 +69,17 @@ The profile repo gained a daily doodle gallery: `DOODLES.md` (single growing fil
 ### [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)
 **TypeScript**
 
-Compiler for a domain-specific animation language. Block-graph architecture with a custom type system; typed connections enforce domain, payload, and cardinality constraints across a parse → validate → optimize → emit pipeline. Recently replaced the source-text-parsing GPU-IR DSL (`fn.toString()` → acorn → walker → IR) with a typed expression builder (`E` class for fluent arithmetic and swizzle, `Scope` callable for thread/instance/vertex intrinsics) covering all 29 fixtures, landed the 4-pillar architecture refactor, added Phase 5 MRT plus depth-only render passes with MSAA reconciliation, and finished a GPU-IR gap analysis pass.
+Compiler for a domain-specific animation language. Block-graph architecture with a custom type system; typed connections enforce domain, payload, and cardinality constraints across a parse → validate → optimize → emit pipeline. Recent commits delivered the 4-pillar architecture refactor with WASM-boundary API iteration and Zod-driven semantic validation, a typed GPU-IR DSL replacing the prior `fn.toString()` → acorn → walker pipeline across all 29 fixtures, a camera system overhaul (DSL redesign, ortho projection, semantic IR nodes, `StoreGlobal`, `System_CameraUpdate`, C1 backend slices), Phase 5 MRT plus depth-only render passes with MSAA reconciliation, viewport and quad-camera fixes for Safari WebGPU, and a GPU-IR gap analysis pass.
 
 ### [cc-dump](https://github.com/brandon-fryslie/cc-dump)
 **Python · MIT**
 
-HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recently skipped geometry work on search-highlight rerenders (style-only changes never alter line counts or strip widths), fixed `_invalidate_cache_for_turns` to bound `[0, end)` correctly so viewport-only search rerenders no longer wipe the entire cache, cached per-turn search traversal data, unified expansion overrides behind a single `vis_override` field on `BlockViewState`, and removed the AI side-channel feature.
+HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recent commits skipped geometry work on search-highlight rerenders (style-only bgcolor changes never alter line counts or strip widths), bounded `_invalidate_cache_for_turns` to `[0, end)` so viewport-only rerenders no longer wipe the entire cache, cached per-turn search traversal data, unified the dual expansion-override system behind a single `vis_override` field on `BlockViewState`, introduced a Fenwick tree for O(log n) line-to-turn lookup, and removed the AI side-channel feature along with the hot-reload panel-removal bug.
 
 ### [shader-playground](https://github.com/brandon-fryslie/shader-playground)
 **TypeScript**
 
-WebGPU shader experimentation environment. Recently scaffolded a nested Poisson-multigrid gravity scheme — a 64³ outer grid spanning the full ±64 periodic domain running alongside the existing 128³ inner grid, both reusing the same `pm.*` shaders via `gridRes`/`domainHalf`/`cellSize` uniforms — and wired diagnostics (`__pmDumpOuterDensity`, `__pmDumpOuterPotential`, `__pmMaxResidual` returning per-grid residuals) ahead of the inner-grid shrink to ±16 and the smoothstep-blended force transition.
+WebGPU shader experimentation environment. Recent commits brought the nested Poisson-multigrid gravity scheme online: a 64³ outer grid spanning the ±64 periodic domain runs alongside a shrunk 128³ inner grid over ±16 (cell size 0.25, restoring 4× sharper galaxy-region resolution), `pm.interpolate_nested.wgsl` smoothstep-blends inner/outer force across the `[domainHalf-2, domainHalf]` shell, `pm.deposit.wgsl` filters out-of-domain particles to avoid wrap-pollution, and diagnostics (`__pmDumpOuterDensity`, `__pmDumpOuterPotential`, `__pmMaxResidual` returning per-grid residuals) cover convergence on both grids.
 
 </td>
 <td width="50%" valign="top">
@@ -87,17 +87,17 @@ WebGPU shader experimentation environment. Recently scaffolded a nested Poisson-
 ### [gh-pages-multiplexer](https://github.com/brandon-fryslie/gh-pages-multiplexer)
 **TypeScript**
 
-GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages`, with auto-generated index pages, a navigation widget, and PR previews. Recently added opt-in transparent localStorage/sessionStorage namespacing — a synchronous head-injected `<script>` that wraps `window.localStorage` and `window.sessionStorage` in a Proxy prefixing keys with `gh-pm:<owner>/<repo>/<version>` to prevent collisions across repos served from a shared `<user>.github.io` origin — plus generated `robots.txt` and `sitemap.xml`, canonical-URL injection on non-PR versions, `noindex` meta tags on PR preview directories, and GitHub Release metadata for tag deploys.
+GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages`, with auto-generated index pages, a navigation widget, and PR previews. Recent commits added opt-in transparent storage namespacing — a synchronous head-injected `<script>` replaces `window.localStorage` and `window.sessionStorage` with a Proxy that prefixes keys with `gh-pm:<owner>/<repo>/<version>`, scopes `.length`/`.key(i)`/`.clear()` to the namespace, sets `__ghPmStorageWrapped` to prevent double-wrapping, and ships behind a `namespace-storage` action input and `--namespace-storage` CLI flag — alongside 19 new tests (12 jsdom runtime, 7 injector) and a `vitest.config.ts` switch to `pool: 'threads'` so per-file jsdom environments resolve correctly.
 
 ### [links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)
 **Go**
 
-Agent-native issue tracker. Recently added a composite `(epic_rank, own_rank)` sort to `lit ready` so leaves group by epic without forcing cross-epic context switches (an epic re-rank now moves its leaves as a block without touching child ranks), inlined parent descriptions in `lit show` so the containing fat-ticket context is read first, normalized indent handling so trailing-newline parent descriptions stop emitting a stray prefix-only line, and excluded epics from the default ready set.
+Agent-native issue tracker. Recent commits ordered `lit ready` leaves by a composite `(effective_epic_rank, own_rank)` key so re-ranking an epic moves its leaves as a block without touching child ranks, inlined parent descriptions in `lit show` so fat-ticket context is read first (one tool call instead of two), normalized indent handling so trailing-newline parent descriptions stop emitting a stray prefix-only line, excluded epics from the default ready set, and closed slice 4/6 of the `links-agent-epic-model-uew` epic.
 
 ### [tmux-control-mode-js](https://github.com/promptctl/tmux-control-mode-js)
 **TypeScript · MIT**
 
-Node.js client for the tmux control mode protocol. Recently scoped the package as `@promptctl/tmux-control-mode-js` with `publishConfig.access=public`, added a Release-triggered npm publish workflow running the full lint/format/typecheck/test gate before `npm publish --provenance`, adopted npm workspaces for the `examples/web-multiplexer` demo (one root install covers both, the demo's separate lockfile removed), gated the `requestReport` integration test on a tmux-version probe at module load, and shipped a 0.1.0 changelog with the documented tmux 3.2+ compatibility floor.
+Node.js client for the tmux control mode protocol. Recent commits scoped the package as `@promptctl/tmux-control-mode-js` with `publishConfig.access=public` ahead of the first npm publish, added a Release-triggered workflow running lint/format/typecheck/tests before `npm publish --provenance` (guarded by `prepublishOnly` running `check:deps` and `build`), adopted npm workspaces so one root `npm install` covers `examples/web-multiplexer` and the demo's separate lockfile is gone, gated the `requestReport` integration test on a tmux-version probe at module load, dropped `--noEmit` from typecheck so `tsc --build` accepts referenced projects, and skipped `requestReport` on tmux versions lacking the `-r` flag.
 
 </td>
 </tr>
