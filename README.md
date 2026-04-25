@@ -60,6 +60,7 @@ A heavy day of meta-tooling and agent ergonomics. Hardened the `daily-highlights
 
 ## Selected Projects
 
+<!-- SELECTED-PROJECTS:START -->
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -100,6 +101,7 @@ Browser automation through macOS virtual HID drivers — operates at the OS leve
 </td>
 </tr>
 </table>
+<!-- SELECTED-PROJECTS:END -->
 
 ---
 
