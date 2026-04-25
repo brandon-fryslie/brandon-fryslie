@@ -7,4 +7,10 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 ---
 
 <!-- DOODLE-GALLERY:START -->
+## April 25, 2026 — DNA Day
+
+<img src="./doodle-archive/2026/04/2026-04-25.svg" width="800" alt="Daily doodle for April 25, 2026: DNA Day">
+
+---
+
 <!-- DOODLE-GALLERY:END -->
