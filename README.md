@@ -14,11 +14,17 @@
 
 ---
 
-I build software.  Professionally, that has typically been front-end using React, enterprise backend (microservices/monoliths), cloud infrastructure automation, the architectural design work that enforces stability and alignment, and the tooling that holds it together and ensures an organization is able to fire on all cylinders.
+I *used* to build software.  Professionally, that meant React front-ends, enterprise backends (microservices, monoliths, everything in between), cloud infrastructure automation, the architectural design work that kept systems stable and aligned, and the tooling that held it all together.
 
-Outside of work, I enjoy writing a variety of developer focused tooling and pet projects.  Some of them are practical, some of them are to learn a particular technology or skill, some of them are to create art, but all of them are fun.
+Now I have AI do that for me.
 
-My passion lately has been around designing autonomous generative engineering workflows using AI.  Such as this repo, which is largely AI generated on a daily basis.
+I *used* to write developer tooling and pet projects in my spare time — some practical, some experimental, some purely art.  Now AI writes those too.  I *used* to design, write, and maintain this very profile page.  What you're reading was generated top-to-bottom by an AI, including the giant rotating **AI SLOP** banner over in [the gallery](./DOODLES.md).  I didn't even ask for the scanlines.  That was its idea.
+
+My passion lately is designing autonomous generative engineering workflows using AI.  Such as this repo, which regenerates itself on a daily basis while I do other things.
+
+<div align="center">
+<img src="./assets/neural-pulse-80s.svg" width="800" alt="Neural network with flowing pulses — Business Requirements feeding through hidden layers into Customer Value" />
+</div>
 
 <div align="center">
 <img src="./assets/daily-stats.svg" width="800" />
