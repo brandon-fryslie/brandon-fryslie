@@ -19,6 +19,7 @@ try:
     HAS_REQUESTS = True
 except ImportError:
     import json
+    import urllib.error
     import urllib.request
 
     HAS_REQUESTS = False
@@ -61,8 +62,21 @@ METRIC_DEFS = {
 
 # ─── API Layer ──────────────────────────────────────────────
 
+class GitHubAPIError(RuntimeError):
+    def __init__(self, url, status, body):
+        super().__init__(f"GET {url} failed with status {status}: {body[:300]}")
+        self.url = url
+        self.status = status
+        self.body = body
+
+
 def api_get(endpoint, token):
-    """Make a single GitHub API GET request. Returns parsed JSON."""
+    """Make a single GitHub API GET request. Returns parsed JSON.
+
+    On non-2xx, raises GitHubAPIError with the status code and body so callers
+    can distinguish 422 (search past 1000 results) from 403 (rate limit)
+    instead of getting a generic "—" with no signal.
+    """
     url = f"https://api.github.com{endpoint}"
     headers = {
         "Authorization": f"token {token}",
@@ -70,12 +84,16 @@ def api_get(endpoint, token):
     }
     if HAS_REQUESTS:
         resp = requests.get(url, headers=headers, timeout=API_TIMEOUT)
-        resp.raise_for_status()
+        if not resp.ok:
+            raise GitHubAPIError(url, resp.status_code, resp.text)
         return resp.json()
-    else:
-        req = urllib.request.Request(url, headers=headers)
+    req = urllib.request.Request(url, headers=headers)
+    try:
         with urllib.request.urlopen(req, timeout=API_TIMEOUT) as resp:
             return json.loads(resp.read().decode())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise GitHubAPIError(url, e.code, body) from e
 
 
 def api_paginate_list(endpoint, token):
@@ -99,12 +117,19 @@ def search_total_count(path, query, token):
     return data.get("total_count", 0)
 
 
+SEARCH_PAGE_CAP = 10  # GitHub search caps at 1000 results (10 pages * 100); page 11 returns 422.
+
+
 def search_commit_items(query, token):
-    """Paginate commit search to exhaustion."""
+    """Paginate commit search up to the GitHub 1000-result cap.
+
+    Going past page 10 returns 422 ('Only the first 1000 search results are
+    available'), which previously turned every metric depending on this list
+    into "—" once Brandon's commit volume in the period exceeded 1000.
+    """
     encoded_q = quote(query, safe="+:")
     items = []
-    page = 1
-    while True:
+    for page in range(1, SEARCH_PAGE_CAP + 1):
         data = api_get(
             f"/search/commits?q={encoded_q}&per_page=100&page={page}", token
         )
@@ -112,7 +137,6 @@ def search_commit_items(query, token):
         items.extend(batch)
         if len(batch) < 100:
             break
-        page += 1
     return items
 
 
@@ -140,14 +164,33 @@ class GitHubData:
 
     def __init__(self, token):
         self.token = token
+        self._user = None
         self._repos = None
         self._commit_items = {}
 
+    def user(self):
+        """Canonical /users/{username} payload — has public_repos as a single field."""
+        if self._user is None:
+            self._user = api_get(f"/users/{USERNAME}", self.token)
+        return self._user
+
+    def public_repo_count(self):
+        """The truth-source count for public repos. Avoids list-endpoint pagination quirks."""
+        return self.user().get("public_repos", 0)
+
     def repos(self):
+        """Paginated repo list. Logs a warning if its length disagrees with public_repos
+        so silent pagination caps surface instead of producing a wrong number."""
         if self._repos is None:
             self._repos = api_paginate_list(
                 f"/users/{USERNAME}/repos", self.token
             )
+            expected = self.public_repo_count()
+            if expected and len(self._repos) != expected:
+                print(
+                    f"Warning: paginated repo list returned {len(self._repos)} but /users/{USERNAME}.public_repos = {expected}",
+                    file=sys.stderr,
+                )
         return self._repos
 
     def commit_items(self, period):
@@ -226,10 +269,10 @@ def compute_metric(name, period, data):
 
     if name == "repos_created":
         since = cutoff_iso(period)
-        repos = data.repos()
         if since is None:
-            return len(repos)
-        return sum(1 for r in repos if r["created_at"] > since)
+            # Use the canonical public_repos field instead of paginated list length.
+            return data.public_repo_count()
+        return sum(1 for r in data.repos() if r["created_at"] > since)
 
     return 0
 
