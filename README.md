@@ -8,7 +8,9 @@
 
 # Brandon Fryslie
 
-**Vibe Coder** ~~Full-Stack & Cloud Platform Engineer~~
+~~Full-Stack & Cloud Platform Engineer~~<br>
+**Vibe Coder**<br>
+Boulder, CO
 
 </div>
 
