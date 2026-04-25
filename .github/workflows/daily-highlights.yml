@@ -146,40 +146,14 @@ jobs:
 
             ### Writing Guidelines
 
-            **Tone: matter-of-fact reporting. No editorialization. No promotional voice.**
+            **Tone: matter-of-fact reporting. Third-person past tense. Plain verbs ("Added", "Renamed", "Migrated", "Fixed"). Name repos and concrete artifacts. No editorial adjectives, no promotional framing, no characterization of engineering quality — describe what code did or where it landed, and stop there.**
 
             - ACCURACY IS PARAMOUNT. Only reference real commits and real work. Never fabricate.
-            - Third-person past tense, plain verbs: "Added X", "Renamed Y", "Migrated Z to N", "Fixed Q in R". Name repos and concrete artifacts.
-            - **Banned**: editorial adjectives and adverbs that color the work — "thoughtful", "comprehensive", "demolished", "carefully", "significant", "deep", "consistent", "substantial", "notable", "meticulous", "elegant", "robust", "carries the workstream", "shows architectural judgment", "the bulk of the heavy lifting", "themes emerge clearly", "running alongside", "deep systems work", and any synonyms. Do not characterize Brandon's qualities as an engineer; describe what code did or where it landed.
-            - **Banned**: promotional framing of any kind ("position Brandon as ..." was the old guidance — explicitly do NOT do that).
             - Routine commits (merge commits, CI tweaks, dependency bumps, typo fixes) get one neutral sentence at most, or are folded into a single line.
             - Keep scannable.
             - Do NOT include commit hashes or SHAs.
 
-            ## Task 5: Rotate Selected Projects
-
-            README has a third marker pair `<!-- SELECTED-PROJECTS:START -->` / `<!-- SELECTED-PROJECTS:END -->` wrapping a six-cell project table. Replace its contents with six projects Brandon has actually made substantial recent commits to.
-
-            **Selection — do not invent or rank by stars:**
-            1. Aggregate Brandon's commits per repo over the past 90 days (use the same `gh api search/commits` data already gathered in Task 2, or fetch it now with `committer-date:>$(date -u -d '90 days ago' +%Y-%m-%dT%H:%M:%SZ)`).
-            2. A repo qualifies as "substantial" if it has at least **10 commits by Brandon** in those 90 days.
-            3. Pick the top 6 qualifying repos by commit count.
-            4. If fewer than 6 qualify, fill the remaining slots with the highest-commit-count repos from the past 365 days that have at least 5 commits. If still short, leave fewer than 6 cells rather than padding with low-activity repos.
-
-            **For each chosen repo, fetch metadata** with `gh api repos/<owner>/<name>` to get `description`, `language`, `stargazers_count`, and (if helpful) `license.spdx_id`. Do NOT fabricate these — if a field is empty, omit it.
-
-            **Render** as a 2-column HTML `<table>` matching the existing layout: 3 cells per `<td width="50%" valign="top">`. Each cell:
-
-            ```
-            ### [<repo-name>](https://github.com/brandon-fryslie/<repo-name>)
-            **<one-line metadata: language · license, or stars + age, etc.>**
-
-            <2–3 sentences of plain description: what the project is, what it does, and one sentence on what shipped recently in it. Same matter-of-fact tone as Task 4 — no editorial adjectives, no "thoughtful/comprehensive/deep/significant", no characterizations of engineering quality.>
-            ```
-
-            Apply Task 4's Writing Guidelines verbatim to these cells.
-
-            ## Task 6: Commit and push
+            ## Task 5: Commit and push
 
             After all file changes are complete, commit and push:
             ```
@@ -188,41 +162,112 @@ jobs:
             git push
             ```
 
+      - name: Rotate Selected Projects (Claude)
+        id: claude_projects
+        uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(gh:*),Bash(git:*),Bash(date:*),Bash(jq:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Read,Write,Edit,Glob,Grep"'
+          prompt: |
+            You are rotating the Selected Projects table on Brandon Fryslie's GitHub profile. This is the only thing you do — do not touch the daily-highlight SVG, the RECENT-ACTIVITY block, the daily-stats SVG, or anything else. Those are handled by a separate step that already ran.
+
+            Read the CLAUDE.md file first for project context.
+
+            ## Selection
+
+            README.md has a marker pair `<!-- SELECTED-PROJECTS:START -->` / `<!-- SELECTED-PROJECTS:END -->` wrapping a six-cell project table. Replace the content between those markers with up to six projects Brandon has actually made substantial recent commits to.
+
+            1. Aggregate Brandon's commits per repo over the past 90 days:
+               `gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '90 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '.items[].repository.full_name' | sort | uniq -c | sort -rn`
+            2. A repo qualifies as "substantial" if it has at least **10 commits by Brandon** in those 90 days.
+            3. Pick the top 6 qualifying repos by commit count.
+            4. If fewer than 6 qualify, fill remaining slots with the highest-commit-count repos from the past 365 days that have at least 5 commits. If still short of 6, render fewer cells rather than padding with low-activity repos.
+
+            ## Per-repo metadata
+
+            For each chosen repo, fetch:
+            `gh api repos/<owner>/<name> --jq '{description, language, stargazers_count, license: .license.spdx_id}'`
+
+            Do NOT fabricate any field — if it's empty or null, omit it.
+
+            ## Render
+
+            Replace the content between the markers with a 2-column HTML `<table>` matching the existing layout: 3 cells per `<td width="50%" valign="top">`. Each cell:
+
+            ```
+            ### [<repo-name>](https://github.com/brandon-fryslie/<repo-name>)
+            **<one-line metadata: e.g. "Go · MIT" or "TypeScript · 41★">**
+
+            <2–3 sentences of plain description: what the project is, what it does, plus one sentence on what shipped recently in it.>
+            ```
+
+            ## Tone
+
+            Matter-of-fact reporting. Third-person past tense. Plain verbs ("Added", "Renamed", "Migrated", "Fixed"). Name concrete artifacts. No editorial adjectives, no promotional framing, no characterization of engineering quality — describe what the project does and what code recently landed, and stop there.
+
+            ## Commit and push
+
+            ```
+            git add README.md
+            git diff --cached --quiet && exit 0  # nothing changed, no commit
+            git commit -m 'chore: rotate selected projects'
+            git pull --rebase origin master
+            git push
+            ```
+
       - name: Verify Claude actually produced output
         if: always() && steps.claude.conclusion != 'skipped'
         env:
           HEAD_BEFORE: ${{ steps.pre_claude.outputs.sha }}
+          DOODLE_EXEC: ${{ steps.claude.outputs.execution_file }}
+          PROJECTS_EXEC: ${{ steps.claude_projects.outputs.execution_file }}
         run: |
           set -euo pipefail
-          EXEC_FILE="${{ steps.claude.outputs.execution_file }}"
-          if [ -z "$EXEC_FILE" ] || [ ! -f "$EXEC_FILE" ]; then
-            echo "::error::Claude execution output file missing — the step did not run to completion."
-            exit 1
+
+          check_claude_result () {
+            local label="$1"
+            local exec_file="$2"
+            if [ -z "$exec_file" ] || [ ! -f "$exec_file" ]; then
+              echo "::error::$label execution output file missing — the step did not run to completion."
+              return 1
+            fi
+            local result is_error denials
+            result=$(jq -c '[.[] | select(.type=="result")] | last' "$exec_file")
+            if [ -z "$result" ] || [ "$result" = "null" ]; then
+              echo "::error::$label execution output has no result entry — shape unexpected."
+              return 1
+            fi
+            is_error=$(echo "$result" | jq -r '.is_error')
+            denials=$(echo "$result" | jq -r '.permission_denials_count // 0')
+            echo "$label result: is_error=$is_error permission_denials_count=$denials"
+            if [ "$is_error" != "false" ]; then
+              echo "::error::$label reported is_error=$is_error"
+              return 1
+            fi
+            if [ "$denials" -gt 0 ]; then
+              echo "::error::$label had $denials permission denials — the prompt's tools are not fully authorized."
+              return 1
+            fi
+          }
+
+          check_claude_result "Doodle Claude" "$DOODLE_EXEC"
+          # Selected-Projects Claude only ran if the prior step succeeded; if it
+          # was skipped the env var is empty and we don't fail on that here.
+          if [ -n "${PROJECTS_EXEC:-}" ]; then
+            check_claude_result "Projects Claude" "$PROJECTS_EXEC"
           fi
-          RESULT=$(jq -c '[.[] | select(.type=="result")] | last' "$EXEC_FILE")
-          if [ -z "$RESULT" ] || [ "$RESULT" = "null" ]; then
-            echo "::error::Claude execution output has no result entry — shape unexpected."
-            exit 1
-          fi
-          IS_ERROR=$(echo "$RESULT" | jq -r '.is_error')
-          DENIALS=$(echo "$RESULT" | jq -r '.permission_denials_count // 0')
-          echo "Claude result: is_error=$IS_ERROR permission_denials_count=$DENIALS"
-          if [ "$IS_ERROR" != "false" ]; then
-            echo "::error::Claude reported is_error=$IS_ERROR"
-            exit 1
-          fi
-          if [ "$DENIALS" -gt 0 ]; then
-            echo "::error::Claude had $DENIALS permission denials — the prompt's tools are not fully authorized."
-            exit 1
-          fi
+
           HEAD_AFTER=$(git rev-parse HEAD)
           if [ "$HEAD_AFTER" = "$HEAD_BEFORE" ]; then
-            echo "::error::HEAD did not advance during the Claude step — no commit was produced (before=$HEAD_BEFORE)."
+            echo "::error::HEAD did not advance — no commit was produced (before=$HEAD_BEFORE)."
             exit 1
           fi
-          SUBJECT=$(git log -1 --format=%s)
-          if [ "$SUBJECT" != "chore: update daily engineering highlights" ]; then
-            echo "::error::HEAD moved from $HEAD_BEFORE to $HEAD_AFTER but the commit subject is unexpected: $SUBJECT"
+          # The doodle step is mandatory and always commits when it succeeds, so
+          # at least one of the expected subjects must appear in the new range.
+          if ! git log --format=%s "$HEAD_BEFORE..$HEAD_AFTER" | grep -qE '^(chore: update daily engineering highlights|chore: rotate selected projects)$'; then
+            echo "::error::HEAD moved but no expected chore subject is in $HEAD_BEFORE..$HEAD_AFTER:"
+            git log --format=%s "$HEAD_BEFORE..$HEAD_AFTER"
             exit 1
           fi
 
