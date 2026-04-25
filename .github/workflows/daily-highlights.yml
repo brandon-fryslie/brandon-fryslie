@@ -6,11 +6,14 @@ on:
   workflow_dispatch:  # Manual trigger for testing
 
 concurrency:
+  # Workflow-level: prevents two whole runs of this workflow from interleaving.
+  # Within a single run, the doodle and selected_projects jobs deliberately run
+  # in parallel and resolve their push race with rebase-retry below.
   group: daily-highlights
   cancel-in-progress: false
 
 jobs:
-  highlights:
+  doodle:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0  # full history so rebase-on-push can find a common ancestor
 
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
@@ -33,11 +36,7 @@ jobs:
       - name: Generate stats SVG (mechanical)
         run: python .github/scripts/generate-stats-svg.py
 
-      - name: Capture HEAD before Claude runs
-        id: pre_claude
-        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Generate highlights with Claude (creative)
+      - name: Generate doodle and recent activity (Claude)
         id: claude
         uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
         with:
@@ -153,24 +152,104 @@ jobs:
             - Keep scannable.
             - Do NOT include commit hashes or SHAs.
 
-            ## Task 5: Commit and push
+            ## Final note
 
-            After all file changes are complete, commit and push:
-            ```
-            git add README.md assets/*.svg daily-archive/
-            git commit -m 'chore: update daily engineering highlights'
-            git push
-            ```
+            Do NOT run `git commit` or `git push`. A subsequent shell step in the workflow will stage your changes, commit them as `chore: update daily engineering highlights`, and push with rebase-retry so it can race the parallel selected-projects job safely. Just write the files and finish.
+
+      - name: Verify Claude result
+        id: parse_claude
+        run: |
+          set -euo pipefail
+          EXEC_FILE="${{ steps.claude.outputs.execution_file }}"
+          if [ -z "$EXEC_FILE" ] || [ ! -f "$EXEC_FILE" ]; then
+            echo "::error::Claude execution_file missing — the action did not run to completion."
+            exit 1
+          fi
+          RESULT=$(jq -c '[.[] | select(.type=="result")] | last' "$EXEC_FILE")
+          if [ -z "$RESULT" ] || [ "$RESULT" = "null" ]; then
+            echo "::error::Claude execution output has no result entry — shape unexpected."
+            exit 1
+          fi
+          IS_ERROR=$(echo "$RESULT" | jq -r '.is_error')
+          DENIALS=$(echo "$RESULT" | jq -r '.permission_denials_count // 0')
+          echo "Doodle Claude: is_error=$IS_ERROR permission_denials_count=$DENIALS"
+          if [ "$IS_ERROR" != "false" ]; then
+            echo "::error::Doodle Claude reported is_error=$IS_ERROR"
+            exit 1
+          fi
+          if [ "$DENIALS" -gt 0 ]; then
+            echo "::error::Doodle Claude had $DENIALS permission denials."
+            exit 1
+          fi
+
+      - name: Commit and push (rebase-retry on race with parallel job)
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Stage exactly what this job is responsible for. Restrict to these
+          # paths so we can't accidentally pick up stray files in the runner.
+          git add README.md assets/daily-stats.svg assets/daily-highlight.svg daily-archive/ 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "::error::Doodle job produced no staged changes — Claude did not write the expected files."
+            exit 1
+          fi
+
+          git commit -m 'chore: update daily engineering highlights'
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:master; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt rejected — fetching and rebasing."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              echo "::error::Rebase failed (real conflict). Aborting."
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep $(( (RANDOM % 4) + 1 ))
+          done
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: daily-highlights-doodle
+          path: |
+            README.md
+            assets/daily-highlight.svg
+            assets/daily-stats.svg
+            daily-archive/
+          if-no-files-found: ignore
+
+  selected_projects:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
 
       - name: Rotate Selected Projects (Claude)
-        id: claude_projects
+        id: claude
         uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ github.token }}
           claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(gh:*),Bash(git:*),Bash(date:*),Bash(jq:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Read,Write,Edit,Glob,Grep"'
           prompt: |
-            You are rotating the Selected Projects table on Brandon Fryslie's GitHub profile. This is the only thing you do — do not touch the daily-highlight SVG, the RECENT-ACTIVITY block, the daily-stats SVG, or anything else. Those are handled by a separate step that already ran.
+            You are rotating the Selected Projects table on Brandon Fryslie's GitHub profile. This is the only thing you do — do not touch the daily-highlight SVG, the RECENT-ACTIVITY block, the daily-stats SVG, or anything else. Those are handled by a parallel job.
 
             Read the CLAUDE.md file first for project context.
 
@@ -206,79 +285,65 @@ jobs:
 
             Matter-of-fact reporting. Third-person past tense. Plain verbs ("Added", "Renamed", "Migrated", "Fixed"). Name concrete artifacts. No editorial adjectives, no promotional framing, no characterization of engineering quality — describe what the project does and what code recently landed, and stop there.
 
-            ## Commit and push
+            ## Final note
 
-            ```
-            git add README.md
-            git diff --cached --quiet && exit 0  # nothing changed, no commit
-            git commit -m 'chore: rotate selected projects'
-            git pull --rebase origin master
-            git push
-            ```
+            Do NOT run `git commit` or `git push`. A subsequent shell step in the workflow will stage your changes, commit them as `chore: rotate selected projects`, and push with rebase-retry so it can race the parallel doodle job safely. Just edit the file and finish.
 
-      - name: Verify Claude actually produced output
-        if: always() && steps.claude.conclusion != 'skipped'
-        env:
-          HEAD_BEFORE: ${{ steps.pre_claude.outputs.sha }}
-          DOODLE_EXEC: ${{ steps.claude.outputs.execution_file }}
-          PROJECTS_EXEC: ${{ steps.claude_projects.outputs.execution_file }}
+      - name: Verify Claude result
+        id: parse_claude
         run: |
           set -euo pipefail
-
-          check_claude_result () {
-            local label="$1"
-            local exec_file="$2"
-            if [ -z "$exec_file" ] || [ ! -f "$exec_file" ]; then
-              echo "::error::$label execution output file missing — the step did not run to completion."
-              return 1
-            fi
-            local result is_error denials
-            result=$(jq -c '[.[] | select(.type=="result")] | last' "$exec_file")
-            if [ -z "$result" ] || [ "$result" = "null" ]; then
-              echo "::error::$label execution output has no result entry — shape unexpected."
-              return 1
-            fi
-            is_error=$(echo "$result" | jq -r '.is_error')
-            denials=$(echo "$result" | jq -r '.permission_denials_count // 0')
-            echo "$label result: is_error=$is_error permission_denials_count=$denials"
-            if [ "$is_error" != "false" ]; then
-              echo "::error::$label reported is_error=$is_error"
-              return 1
-            fi
-            if [ "$denials" -gt 0 ]; then
-              echo "::error::$label had $denials permission denials — the prompt's tools are not fully authorized."
-              return 1
-            fi
-          }
-
-          check_claude_result "Doodle Claude" "$DOODLE_EXEC"
-          # Selected-Projects Claude only ran if the prior step succeeded; if it
-          # was skipped the env var is empty and we don't fail on that here.
-          if [ -n "${PROJECTS_EXEC:-}" ]; then
-            check_claude_result "Projects Claude" "$PROJECTS_EXEC"
-          fi
-
-          HEAD_AFTER=$(git rev-parse HEAD)
-          if [ "$HEAD_AFTER" = "$HEAD_BEFORE" ]; then
-            echo "::error::HEAD did not advance — no commit was produced (before=$HEAD_BEFORE)."
+          EXEC_FILE="${{ steps.claude.outputs.execution_file }}"
+          if [ -z "$EXEC_FILE" ] || [ ! -f "$EXEC_FILE" ]; then
+            echo "::error::Claude execution_file missing — the action did not run to completion."
             exit 1
           fi
-          # The doodle step is mandatory and always commits when it succeeds, so
-          # at least one of the expected subjects must appear in the new range.
-          if ! git log --format=%s "$HEAD_BEFORE..$HEAD_AFTER" | grep -qE '^(chore: update daily engineering highlights|chore: rotate selected projects)$'; then
-            echo "::error::HEAD moved but no expected chore subject is in $HEAD_BEFORE..$HEAD_AFTER:"
-            git log --format=%s "$HEAD_BEFORE..$HEAD_AFTER"
+          RESULT=$(jq -c '[.[] | select(.type=="result")] | last' "$EXEC_FILE")
+          if [ -z "$RESULT" ] || [ "$RESULT" = "null" ]; then
+            echo "::error::Claude execution output has no result entry — shape unexpected."
+            exit 1
+          fi
+          IS_ERROR=$(echo "$RESULT" | jq -r '.is_error')
+          DENIALS=$(echo "$RESULT" | jq -r '.permission_denials_count // 0')
+          echo "Projects Claude: is_error=$IS_ERROR permission_denials_count=$DENIALS"
+          if [ "$IS_ERROR" != "false" ]; then
+            echo "::error::Projects Claude reported is_error=$IS_ERROR"
+            exit 1
+          fi
+          if [ "$DENIALS" -gt 0 ]; then
+            echo "::error::Projects Claude had $DENIALS permission denials."
             exit 1
           fi
 
-      - name: Upload artifacts
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        with:
-          name: daily-highlights
-          path: |
-            README.md
-            assets/daily-highlight.svg
-            assets/daily-stats.svg
-            daily-archive/
-          if-no-files-found: ignore
+      - name: Commit and push (rebase-retry on race with parallel job)
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            # Legitimate no-op: no qualifying rotation today, or the same six repos.
+            echo "Selected Projects: no changes to commit; skipping push."
+            exit 0
+          fi
+
+          git commit -m 'chore: rotate selected projects'
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:master; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt rejected — fetching and rebasing."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              echo "::error::Rebase failed (real conflict). Aborting."
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep $(( (RANDOM % 4) + 1 ))
+          done
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
