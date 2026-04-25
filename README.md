@@ -69,35 +69,35 @@ My passion lately has been around designing autonomous generative engineering wo
 ### [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)
 **TypeScript**
 
-Compiler for a domain-specific animation language. Block-graph architecture with a custom type system; typed connections enforce domain, payload, and cardinality constraints across a parse → validate → optimize → emit pipeline. Recently replaced the source-text-parsing GPU-IR DSL (`fn.toString()` → acorn → walker → IR) with a typed expression builder for all 29 fixtures, landed the 4-pillar architecture refactor, added MRT + depth-only render passes, and wired a camera system with ortho projection and semantic IR nodes.
-
-### [shader-playground](https://github.com/brandon-fryslie/shader-playground)
-**TypeScript**
-
-WebGPU shader experimentation environment. Recently shipped Phase A of a nested Poisson-multigrid gravity scheme: a 128³ inner grid at ±16 nested inside a 64³ outer grid at ±64, with Dirichlet boundary conditions sampled from the outer potential and a smoothstep-blended inner/outer force transition across the ±14..±16 shell.
-
-### [links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)
-**Go**
-
-Agent-native issue tracker. Recently added composite `(epic_rank, own_rank)` ordering to `lit ready` so leaves group by epic without forcing cross-epic context switches, inlined parent descriptions in `lit show` so containing context is read first, and excluded epics from the default ready set.
-
-</td>
-<td width="50%" valign="top">
+Compiler for a domain-specific animation language. Block-graph architecture with a custom type system; typed connections enforce domain, payload, and cardinality constraints across a parse → validate → optimize → emit pipeline. Recently replaced the source-text-parsing GPU-IR DSL (`fn.toString()` → acorn → walker → IR) with a typed expression builder (`E` class for fluent arithmetic and swizzle, `Scope` callable for thread/instance/vertex intrinsics) covering all 29 fixtures, landed the 4-pillar architecture refactor, added Phase 5 MRT plus depth-only render passes with MSAA reconciliation, and finished a GPU-IR gap analysis pass.
 
 ### [cc-dump](https://github.com/brandon-fryslie/cc-dump)
 **Python · MIT**
 
-HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recently skipped geometry work on search-highlight rerenders (style-only changes never alter line counts or strip widths), fixed a cache-staleness bug in `_invalidate_cache_for_turns`, cached per-turn search traversal data, and removed the AI side-channel feature.
+HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recently skipped geometry work on search-highlight rerenders (style-only changes never alter line counts or strip widths), fixed `_invalidate_cache_for_turns` to bound `[0, end)` correctly so viewport-only search rerenders no longer wipe the entire cache, cached per-turn search traversal data, unified expansion overrides behind a single `vis_override` field on `BlockViewState`, and removed the AI side-channel feature.
+
+### [shader-playground](https://github.com/brandon-fryslie/shader-playground)
+**TypeScript**
+
+WebGPU shader experimentation environment. Recently scaffolded a nested Poisson-multigrid gravity scheme — a 64³ outer grid spanning the full ±64 periodic domain running alongside the existing 128³ inner grid, both reusing the same `pm.*` shaders via `gridRes`/`domainHalf`/`cellSize` uniforms — and wired diagnostics (`__pmDumpOuterDensity`, `__pmDumpOuterPotential`, `__pmMaxResidual` returning per-grid residuals) ahead of the inner-grid shrink to ±16 and the smoothstep-blended force transition.
+
+</td>
+<td width="50%" valign="top">
 
 ### [gh-pages-multiplexer](https://github.com/brandon-fryslie/gh-pages-multiplexer)
 **TypeScript**
 
-GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages`, with auto-generated index pages, a navigation widget, and PR previews. Recently added opt-in transparent localStorage/sessionStorage namespacing — a Proxy-wrapped storage object that prefixes keys with `gh-pm:<owner>/<repo>/<version>` to prevent cross-repo collisions on shared `<user>.github.io` origins — plus generated `robots.txt` and `sitemap.xml`, canonical-URL injection on non-PR versions, and `noindex` meta tags on PR preview directories.
+GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages`, with auto-generated index pages, a navigation widget, and PR previews. Recently added opt-in transparent localStorage/sessionStorage namespacing — a synchronous head-injected `<script>` that wraps `window.localStorage` and `window.sessionStorage` in a Proxy prefixing keys with `gh-pm:<owner>/<repo>/<version>` to prevent collisions across repos served from a shared `<user>.github.io` origin — plus generated `robots.txt` and `sitemap.xml`, canonical-URL injection on non-PR versions, `noindex` meta tags on PR preview directories, and GitHub Release metadata for tag deploys.
+
+### [links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)
+**Go**
+
+Agent-native issue tracker. Recently added a composite `(epic_rank, own_rank)` sort to `lit ready` so leaves group by epic without forcing cross-epic context switches (an epic re-rank now moves its leaves as a block without touching child ranks), inlined parent descriptions in `lit show` so the containing fat-ticket context is read first, normalized indent handling so trailing-newline parent descriptions stop emitting a stray prefix-only line, and excluded epics from the default ready set.
 
 ### [tmux-control-mode-js](https://github.com/promptctl/tmux-control-mode-js)
 **TypeScript · MIT**
 
-Node.js client for the tmux control mode protocol. Recently scoped the package as `@promptctl/tmux-control-mode-js`, added a Release-triggered npm publish workflow with provenance, adopted npm workspaces for the `examples/web-multiplexer` demo, and gated the `requestReport` integration test on a tmux-version probe at module load.
+Node.js client for the tmux control mode protocol. Recently scoped the package as `@promptctl/tmux-control-mode-js` with `publishConfig.access=public`, added a Release-triggered npm publish workflow running the full lint/format/typecheck/test gate before `npm publish --provenance`, adopted npm workspaces for the `examples/web-multiplexer` demo (one root install covers both, the demo's separate lockfile removed), gated the `requestReport` integration test on a tmux-version probe at module load, and shipped a 0.1.0 changelog with the documented tmux 3.2+ compatibility floor.
 
 </td>
 </tr>
