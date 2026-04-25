@@ -33,6 +33,9 @@ jobs:
       - name: Install Python dependencies
         run: pip install requests
 
+      - name: Install rsvg-convert (for doodle preview)
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+
       - name: Generate stats SVG (mechanical)
         run: python .github/scripts/generate-stats-svg.py
 
@@ -42,7 +45,7 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ github.token }}
-          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(gh:*),Bash(git:*),Bash(date:*),Bash(jq:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Read,Write,Edit,Glob,Grep"'
+          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(gh:*),Bash(git:*),Bash(date:*),Bash(jq:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(rsvg-convert:*),Bash(rm:*),Read,Write,Edit,Glob,Grep"'
           prompt: |
             You are updating Brandon Fryslie's GitHub profile README with daily engineering highlights.
 
@@ -135,6 +138,23 @@ jobs:
 
             Be bold. Be weird. Be creative. This is art, not a dashboard widget.
 
+            **Self-review before finalizing — render and look at it.**
+
+            After writing `assets/daily-highlight.svg`, rasterize it and view the PNG with the Read tool:
+
+                rsvg-convert -w 800 -h 200 assets/daily-highlight.svg -o /tmp/preview.png
+
+            Then `Read /tmp/preview.png` and honestly evaluate the static image:
+
+            - **Is the date readable at a glance?** Adequate size, strong contrast against whatever sits behind it, not lost in decorative micro-text.
+            - **Composition:** does it feel like a deliberate piece, or random elements floating? Does the eye know where to land first?
+            - **Theme legibility:** would a stranger glancing at this PNG identify the theme without being told?
+            - **Color/contrast:** any text smudging into background? Any near-invisible elements?
+
+            Important caveat: `rsvg-convert` renders only the *static frame 0* — it cannot evaluate animation. Don't try to judge motion from the PNG. It's specifically for catching bad layout, weak composition, and illegible text — which is where most of these doodles fail.
+
+            **Iterate if needed, but cap strictly at 3 total attempts.** If the first preview is bad, rewrite the SVG (don't patch — start over with a different approach), re-render, re-view. After 3 attempts, accept the current version even if imperfect — do NOT loop indefinitely. Each attempt should be a real rethink, not a tweak; if you're tweaking the same composition over and over, stop and pick a different visual direction entirely.
+
             ## Task 4: Update README
 
             README.md has TWO marker pairs you must update. Keep every marker exactly as it appears — replace ONLY the content between each pair.
@@ -143,7 +163,7 @@ jobs:
 
             These live at the very top of the README. Replace the content between them with:
 
-            A single centered div containing an img tag pointing to `./assets/daily-highlight.svg`, width 800, with alt text "Daily highlight". Nothing else.
+            A single centered div containing an anchor `<a href="./DOODLES.md">` that wraps an `<img>` tag pointing to `./assets/daily-highlight.svg`, width 800, with alt text "Daily highlight — click for the gallery". The anchor makes the live doodle clickable: visitors land on `DOODLES.md`, which is the running gallery of all previous doodles. Nothing else inside the marker pair.
 
             ### Marker pair 2: `<!-- RECENT-ACTIVITY:START -->` / `<!-- RECENT-ACTIVITY:END -->`
 
