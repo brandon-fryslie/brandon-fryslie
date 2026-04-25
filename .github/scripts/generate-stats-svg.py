@@ -84,7 +84,7 @@ def api_get(endpoint, token):
     }
     if HAS_REQUESTS:
         resp = requests.get(url, headers=headers, timeout=API_TIMEOUT)
-        if not resp.ok:
+        if not (200 <= resp.status_code < 300):
             raise GitHubAPIError(url, resp.status_code, resp.text)
         return resp.json()
     req = urllib.request.Request(url, headers=headers)
