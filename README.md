@@ -65,38 +65,38 @@ My passion lately has been around designing autonomous generative engineering wo
 <tr>
 <td width="50%" valign="top">
 
-### [chaperone-auth-gateway](https://github.com/brandon-fryslie/chaperone-auth-gateway)
-**Go · MIT**
-
-Authentication gateway supporting JWT and session-based auth with a multi-stage release pipeline. Cross-platform binaries for Linux, macOS, and Windows across amd64/arm64. Composable credential handling with documented security model.
-
 ### [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)
-**TypeScript · 753 commits**
+**TypeScript**
 
-Compiler for a domain-specific animation language. Custom type system built on a block-graph architecture: blocks process and emit signals through typed connections with enforced domain, payload, and cardinality constraints. Pipeline: parse, validate, optimize, emit.
+Compiler for a domain-specific animation language. Block-graph architecture with a custom type system; typed connections enforce domain, payload, and cardinality constraints across a parse → validate → optimize → emit pipeline. Recently landed a 4-pillar architecture refactor, a GPU-IR DSL with a reverse translator, a camera system with ortho projection and semantic IR nodes, and MRT + depth-only render passes.
 
-### [rad-shell](https://github.com/brandon-fryslie/rad-shell)
-**41★ · 7 forks · 8 years maintained**
+### [shader-playground](https://github.com/brandon-fryslie/shader-playground)
+**TypeScript**
 
-Preconfigured Zsh environment with declarative plugin composition. Plugins resolve from any GitHub repository with a single-file manifest. Lazy-load architecture keeps startup fast under heavy plugin load. Includes rad-spinner: procedural braille-grid animations for terminal spinners.
+WebGPU shader experimentation environment. Recently shipped Phase A of a nested Poisson-multigrid gravity scheme: a 128³ inner grid at ±16 nested inside a 64³ outer grid at ±64, with Dirichlet boundary conditions sampled from the outer potential and a smoothstep-blended inner/outer force transition across the ±14..±16 shell.
+
+### [links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)
+**Go**
+
+Agent-native issue tracker. Recently added composite `(epic_rank, own_rank)` ordering to `lit ready` so leaves group by epic without forcing cross-epic context switches, inlined parent descriptions in `lit show`, and excluded epics from the ready list.
 
 </td>
 <td width="50%" valign="top">
 
-### [Firestorm](https://github.com/brandon-fryslie/Firestorm)
-**Distributed coordination**
+### [cc-dump](https://github.com/brandon-fryslie/cc-dump)
+**Python · MIT**
 
-Control layer for networked WiFi LED controllers. NTP-style time synchronization via UDP, client-driven sequence choreography, and automatic recovery for disconnected devices. Deployed across physical art installations running continuously for multi-day events.
+HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recently skipped geometry work on search-highlight rerenders, fixed a cache-staleness bug in `_invalidate_cache_for_turns`, cached per-turn search traversal data, and removed the AI side-channel feature.
 
-### [cherry-chrome-mcp](https://github.com/brandon-fryslie/cherry-chrome-mcp)
+### [gh-pages-multiplexer](https://github.com/brandon-fryslie/gh-pages-multiplexer)
 **TypeScript**
 
-Chrome DevTools bridge for AI agents via Model Context Protocol. CSS selector-based element targeting with bounded result sets. Tool visibility adapts dynamically based on browser connection state.
+GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages`, with auto-generated index pages, a navigation widget, and PR previews. Recently added opt-in transparent localStorage/sessionStorage namespacing — a Proxy-wrapped storage object that prefixes keys with `gh-pm:<owner>/<repo>/<version>` to prevent cross-repo collisions on shared `<user>.github.io` origins.
 
-### [browsergeist](https://github.com/brandon-fryslie/browsergeist)
-**Python · macOS**
+### [tmux-control-mode-js](https://github.com/promptctl/tmux-control-mode-js)
+**TypeScript · MIT**
 
-Browser automation through macOS virtual HID drivers — operates at the OS level, below the browser layer. Physics-based cursor movement with acceleration profiles and behavioral randomization. Vision pipeline: OpenCV template matching, SIFT feature descriptors, OCR.
+Node.js client for the tmux control mode protocol. Recently scoped the package as `@promptctl/tmux-control-mode-js`, added a Release-triggered npm publish workflow with provenance, adopted npm workspaces for the `examples/web-multiplexer` demo, and gated a `requestReport` integration test on a tmux version probe.
 
 </td>
 </tr>
