@@ -1,196 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: DNA Day (April 25) — 73rd anniversary of Watson & Crick's double-helix paper, Nature 1953 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="DNA Day, April 25, 2026">
+<!-- theme: DNA Day (April 25) — anniversary of Watson & Crick's 1953 Nature double-helix paper. Genomic-sequencing-tape interpretation, distinct from prior helix-tile rendering. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 25, 2026, DNA Day">
   <title>DNA Day — April 25, 2026</title>
   <defs>
     <style>
-      .bg { fill: #0d1117; }
-      .strand { fill: none; stroke-width: 2.6; stroke-linecap: round; opacity: 0.92; }
-      .strand-a { stroke: #58a6ff; }
-      .strand-b { stroke: #f778ba; }
-      .rung { stroke-width: 2.2; stroke-linecap: round; opacity: 0.85; }
-      .date-main {
+      .A { fill: #ff7b72; }
+      .T { fill: #79c0ff; }
+      .G { fill: #7ee787; }
+      .C { fill: #d2a8ff; }
+      .tape {
+        font-family: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+        font-size: 22px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .label {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 800;
-        font-size: 44px;
-        letter-spacing: 4px;
-        fill: #f0f6fc;
+        text-anchor: middle;
       }
-      .date-sub {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 6px;
-        fill: #7ee787;
-        text-transform: uppercase;
+      @keyframes haloPulse {
+        0%, 100% { opacity: 0.55; }
+        50%      { opacity: 0.95; }
       }
-      .date-tag {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 500;
-        font-size: 10px;
-        letter-spacing: 2px;
-        fill: #8b949e;
+      .halo { animation: haloPulse 11s ease-in-out infinite; }
+      @keyframes wavePulse {
+        0%, 100% { opacity: 0.32; }
+        50%      { opacity: 0.62; }
       }
-      @keyframes drift {
-        0%   { transform: translateX(0); }
-        100% { transform: translateX(-40px); }
-      }
-      .helix-flow { animation: drift 11s linear infinite; }
-      @keyframes plaquepulse {
-        0%, 100% { opacity: 0.72; }
-        50%      { opacity: 0.92; }
-      }
-      .plaque { animation: plaquepulse 7s ease-in-out infinite; }
+      .wave { animation: wavePulse 13s ease-in-out infinite; }
     </style>
 
-    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
-      <stop offset="0%"   stop-color="#1f6feb" stop-opacity="0.18"/>
-      <stop offset="60%"  stop-color="#1f6feb" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#0d1117"/>
+      <stop offset="0.5" stop-color="#161b22"/>
+      <stop offset="1"   stop-color="#0d1117"/>
+    </linearGradient>
+
+    <radialGradient id="centerHalo" cx="50%" cy="55%" r="46%">
+      <stop offset="0"    stop-color="#7ee787" stop-opacity="0.18"/>
+      <stop offset="0.45" stop-color="#1f6feb" stop-opacity="0.08"/>
+      <stop offset="1"    stop-color="#0d1117" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="fadeEdges" x1="0" x2="1" y1="0" y2="0">
+
+    <linearGradient id="edgeFade" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0"    stop-color="#0d1117" stop-opacity="1"/>
-      <stop offset="0.18" stop-color="#0d1117" stop-opacity="0"/>
-      <stop offset="0.82" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="0.07" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="0.93" stop-color="#0d1117" stop-opacity="0"/>
       <stop offset="1"    stop-color="#0d1117" stop-opacity="1"/>
     </linearGradient>
-    <linearGradient id="dateGrad" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0%"   stop-color="#79c0ff"/>
-      <stop offset="50%"  stop-color="#f0f6fc"/>
-      <stop offset="100%" stop-color="#ffa198"/>
+
+    <linearGradient id="plaque" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="0.20" stop-color="#0d1117" stop-opacity="0.85"/>
+      <stop offset="0.50" stop-color="#0d1117" stop-opacity="0.95"/>
+      <stop offset="0.80" stop-color="#0d1117" stop-opacity="0.85"/>
+      <stop offset="1"    stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- One repeating tile of the double helix, 80px wide (one full crossing-pair).
-         y_a(x) = 100 + 35·sin(2π·x/80)
-         y_b(x) = 100 - 35·sin(2π·x/80) -->
-    <g id="helix-tile">
-      <path class="strand strand-a" d="
-        M 0,100
-        C 5,76.9 15,53.1 20,30
-        C 25,53.1 35,76.9 40,100
-        C 45,123.1 55,146.9 60,170
-        C 65,146.9 75,123.1 80,100"/>
-      <path class="strand strand-b" d="
-        M 0,100
-        C 5,123.1 15,146.9 20,170
-        C 25,146.9 35,123.1 40,100
-        C 45,76.9 55,53.1 60,30
-        C 65,53.1 75,76.9 80,100"/>
-      <!-- Rungs every 4px; colors cycle through nucleotide-pair palette. -->
-      <line class="rung" x1="4"  y1="110.8" x2="4"  y2="89.2"  stroke="#ff7b72"/>
-      <line class="rung" x1="8"  y1="120.6" x2="8"  y2="79.4"  stroke="#7ee787"/>
-      <line class="rung" x1="12" y1="128.3" x2="12" y2="71.7"  stroke="#d2a8ff"/>
-      <line class="rung" x1="16" y1="133.3" x2="16" y2="66.7"  stroke="#ffa657"/>
-      <line class="rung" x1="20" y1="135"   x2="20" y2="65"    stroke="#ff7b72"/>
-      <line class="rung" x1="24" y1="133.3" x2="24" y2="66.7"  stroke="#7ee787"/>
-      <line class="rung" x1="28" y1="128.3" x2="28" y2="71.7"  stroke="#d2a8ff"/>
-      <line class="rung" x1="32" y1="120.6" x2="32" y2="79.4"  stroke="#ffa657"/>
-      <line class="rung" x1="36" y1="110.8" x2="36" y2="89.2"  stroke="#ff7b72"/>
-      <!-- x=40: strands cross — omit rung -->
-      <line class="rung" x1="44" y1="89.2"  x2="44" y2="110.8" stroke="#7ee787"/>
-      <line class="rung" x1="48" y1="79.4"  x2="48" y2="120.6" stroke="#ff7b72"/>
-      <line class="rung" x1="52" y1="71.7"  x2="52" y2="128.3" stroke="#ffa657"/>
-      <line class="rung" x1="56" y1="66.7"  x2="56" y2="133.3" stroke="#d2a8ff"/>
-      <line class="rung" x1="60" y1="65"    x2="60" y2="135"   stroke="#7ee787"/>
-      <line class="rung" x1="64" y1="66.7"  x2="64" y2="133.3" stroke="#ff7b72"/>
-      <line class="rung" x1="68" y1="71.7"  x2="68" y2="128.3" stroke="#ffa657"/>
-      <line class="rung" x1="72" y1="79.4"  x2="72" y2="120.6" stroke="#d2a8ff"/>
-      <line class="rung" x1="76" y1="89.2"  x2="76" y2="110.8" stroke="#7ee787"/>
-    </g>
+    <filter id="dateGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
   </defs>
 
-  <!-- Background -->
-  <rect class="bg" width="800" height="200"/>
+  <!-- background -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+  <rect width="800" height="200" fill="url(#centerHalo)" class="halo"/>
 
-  <!-- Faint floating nucleotide letters in the periphery -->
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700">
-    <text x="40"  y="28"  fill="#7ee787" opacity="0.35">A
-      <animate attributeName="opacity" values="0.1;0.55;0.1" dur="13s" repeatCount="indefinite"/>
-    </text>
-    <text x="120" y="180" fill="#ff7b72" opacity="0.35">T
-      <animate attributeName="opacity" values="0.55;0.1;0.55" dur="11s" repeatCount="indefinite"/>
-    </text>
-    <text x="690" y="32"  fill="#79c0ff" opacity="0.3">C
-      <animate attributeName="opacity" values="0.1;0.5;0.1" dur="17s" repeatCount="indefinite"/>
-    </text>
-    <text x="740" y="178" fill="#ffa657" opacity="0.4">G
-      <animate attributeName="opacity" values="0.5;0.15;0.5" dur="7s" repeatCount="indefinite"/>
-    </text>
-    <text x="22"  y="180" fill="#d2a8ff" opacity="0.35">G
-      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="19s" repeatCount="indefinite"/>
-    </text>
-    <text x="772" y="100" fill="#7ee787" opacity="0.3">A
-      <animate attributeName="opacity" values="0.15;0.55;0.15" dur="11s" repeatCount="indefinite"/>
-    </text>
+  <!-- subtle sinusoid backbone, drifts slowly -->
+  <g class="wave">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0;-160,0" dur="29s" repeatCount="indefinite"/>
+      <path d="M -160 100
+               Q -120 70, -80 100 T 0 100 T 80 100 T 160 100
+               T 240 100 T 320 100 T 400 100 T 480 100
+               T 560 100 T 640 100 T 720 100 T 800 100
+               T 880 100 T 960 100"
+        fill="none" stroke="#1f6feb" stroke-width="1" opacity="0.5"/>
+      <path d="M -160 100
+               Q -120 130, -80 100 T 0 100 T 80 100 T 160 100
+               T 240 100 T 320 100 T 400 100 T 480 100
+               T 560 100 T 640 100 T 720 100 T 800 100
+               T 880 100 T 960 100"
+        fill="none" stroke="#bc8cff" stroke-width="1" opacity="0.5"/>
+    </g>
   </g>
 
-  <!-- Glow halo behind the date plaque -->
-  <ellipse cx="400" cy="105" rx="320" ry="80" fill="url(#glow)"/>
-
-  <!-- Helix band: tiled across full width, drifting horizontally for rotation/translation feel -->
-  <g class="helix-flow" opacity="0.85">
-    <use href="#helix-tile" x="-40"/>
-    <use href="#helix-tile" x="40"/>
-    <use href="#helix-tile" x="120"/>
-    <use href="#helix-tile" x="200"/>
-    <use href="#helix-tile" x="280"/>
-    <use href="#helix-tile" x="360"/>
-    <use href="#helix-tile" x="440"/>
-    <use href="#helix-tile" x="520"/>
-    <use href="#helix-tile" x="600"/>
-    <use href="#helix-tile" x="680"/>
-    <use href="#helix-tile" x="760"/>
-    <!-- SMIL parallel to CSS @keyframes for GitHub-renderer compatibility -->
+  <!-- TOP tape: drifts right→left over 17s, sequence repeated twice for seamless loop -->
+  <g class="tape">
     <animateTransform attributeName="transform" type="translate"
-                      from="0 0" to="-40 0" dur="11s" repeatCount="indefinite"/>
+      values="0,0;-560,0" dur="17s" repeatCount="indefinite"/>
+    <text y="38" opacity="0.85">
+      <tspan x="14" class="G">G</tspan><tspan x="42" class="A">A</tspan><tspan x="70" class="T">T</tspan><tspan x="98" class="C">C</tspan><tspan x="126" class="A">A</tspan><tspan x="154" class="T">T</tspan><tspan x="182" class="G">G</tspan><tspan x="210" class="G">G</tspan><tspan x="238" class="C">C</tspan><tspan x="266" class="A">A</tspan><tspan x="294" class="T">T</tspan><tspan x="322" class="C">C</tspan><tspan x="350" class="G">G</tspan><tspan x="378" class="A">A</tspan><tspan x="406" class="T">T</tspan><tspan x="434" class="C">C</tspan><tspan x="462" class="A">A</tspan><tspan x="490" class="G">G</tspan><tspan x="518" class="C">C</tspan><tspan x="546" class="T">T</tspan><tspan x="574" class="G">G</tspan><tspan x="602" class="A">A</tspan><tspan x="630" class="T">T</tspan><tspan x="658" class="C">C</tspan><tspan x="686" class="A">A</tspan><tspan x="714" class="T">T</tspan><tspan x="742" class="G">G</tspan><tspan x="770" class="G">G</tspan><tspan x="798" class="C">C</tspan><tspan x="826" class="A">A</tspan><tspan x="854" class="T">T</tspan><tspan x="882" class="C">C</tspan><tspan x="910" class="G">G</tspan><tspan x="938" class="A">A</tspan><tspan x="966" class="T">T</tspan><tspan x="994" class="C">C</tspan><tspan x="1022" class="A">A</tspan><tspan x="1050" class="G">G</tspan><tspan x="1078" class="C">C</tspan><tspan x="1106" class="T">T</tspan>
+    </text>
   </g>
 
-  <!-- Edge fades to soften the helix at the canvas borders -->
-  <rect width="800" height="200" fill="url(#fadeEdges)"/>
-
-  <!-- Center plaque: keeps the date crisply legible against the helix -->
-  <rect class="plaque" x="180" y="60" width="440" height="84" rx="8" ry="8"
-        fill="#0d1117" fill-opacity="0.78"
-        stroke="#30363d" stroke-width="1"/>
-
-  <!-- Subtitle above the date -->
-  <text class="date-sub" x="400" y="82" text-anchor="middle">
-    DNA Day · 73 years of the double helix
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
-  </text>
-
-  <!-- The date — primary, prominent, gradient-filled -->
-  <text class="date-main" x="400" y="120" text-anchor="middle" fill="url(#dateGrad)">
-    APRIL 25, 2026
-  </text>
-
-  <!-- Citation tag below -->
-  <text class="date-tag" x="400" y="138" text-anchor="middle">
-    WATSON · CRICK · NATURE · 1953
-  </text>
-
-  <!-- Photo-51-style spots gently orbiting the plaque corners -->
-  <g>
-    <circle cx="180" cy="60"  r="3" fill="#7ee787">
-      <animate attributeName="r"       values="2.4;4;2.4"   dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.4;1;0.4"   dur="13s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="620" cy="60"  r="3" fill="#79c0ff">
-      <animate attributeName="r"       values="3.6;2.2;3.6" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;0.4;1"     dur="11s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="180" cy="144" r="3" fill="#ffa657">
-      <animate attributeName="r"       values="2.2;3.6;2.2" dur="17s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.5;1;0.5"   dur="17s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="620" cy="144" r="3" fill="#f778ba">
-      <animate attributeName="r"       values="3.8;2.4;3.8" dur="7s"  repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;0.5;1"     dur="7s"  repeatCount="indefinite"/>
-    </circle>
+  <!-- BOTTOM tape: drifts left→right over 19s, complementary sequence -->
+  <g class="tape">
+    <animateTransform attributeName="transform" type="translate"
+      values="-560,0;0,0" dur="19s" repeatCount="indefinite"/>
+    <text y="184" opacity="0.85">
+      <tspan x="14" class="C">C</tspan><tspan x="42" class="T">T</tspan><tspan x="70" class="A">A</tspan><tspan x="98" class="G">G</tspan><tspan x="126" class="T">T</tspan><tspan x="154" class="A">A</tspan><tspan x="182" class="C">C</tspan><tspan x="210" class="C">C</tspan><tspan x="238" class="G">G</tspan><tspan x="266" class="T">T</tspan><tspan x="294" class="A">A</tspan><tspan x="322" class="G">G</tspan><tspan x="350" class="C">C</tspan><tspan x="378" class="T">T</tspan><tspan x="406" class="A">A</tspan><tspan x="434" class="G">G</tspan><tspan x="462" class="T">T</tspan><tspan x="490" class="C">C</tspan><tspan x="518" class="G">G</tspan><tspan x="546" class="A">A</tspan><tspan x="574" class="C">C</tspan><tspan x="602" class="T">T</tspan><tspan x="630" class="A">A</tspan><tspan x="658" class="G">G</tspan><tspan x="686" class="T">T</tspan><tspan x="714" class="A">A</tspan><tspan x="742" class="C">C</tspan><tspan x="770" class="C">C</tspan><tspan x="798" class="G">G</tspan><tspan x="826" class="T">T</tspan><tspan x="854" class="A">A</tspan><tspan x="882" class="G">G</tspan><tspan x="910" class="C">C</tspan><tspan x="938" class="T">T</tspan><tspan x="966" class="A">A</tspan><tspan x="994" class="G">G</tspan><tspan x="1022" class="T">T</tspan><tspan x="1050" class="C">C</tspan><tspan x="1078" class="G">G</tspan><tspan x="1106" class="A">A</tspan>
+    </text>
   </g>
 
-  <!-- Faint scanning sweep across the plaque -->
-  <rect x="180" y="60" width="60" height="84" fill="#79c0ff" opacity="0.06">
-    <animate attributeName="x" values="180;560;180" dur="13s" repeatCount="indefinite"/>
-  </rect>
+  <!-- side fades to soften tape edges -->
+  <rect width="800" height="200" fill="url(#edgeFade)"/>
+
+  <!-- center darkening plaque so the date dominates over the tapes -->
+  <rect x="0" y="55" width="800" height="90" fill="url(#plaque)"/>
+
+  <!-- soft halo behind the date, breathing -->
+  <ellipse cx="400" cy="108" rx="220" ry="42" fill="#1f6feb" opacity="0.16" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.10;0.22;0.10" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- title block: DNA Day kicker, big date, small attribution -->
+  <g class="label">
+    <text x="400" y="78" font-size="13" font-weight="700" fill="#7ee787" letter-spacing="9">DNA DAY</text>
+    <g filter="url(#dateGlow)">
+      <text x="400" y="122" font-size="48" font-weight="900" fill="#f0f6fc" letter-spacing="3">April 25, 2026</text>
+    </g>
+    <text x="400" y="146" font-size="10.5" font-weight="500" fill="#8b949e" letter-spacing="4">WATSON · CRICK · NATURE · 1953</text>
+  </g>
 </svg>
