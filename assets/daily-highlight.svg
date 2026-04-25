@@ -1,198 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Hubble Space Telescope deployment anniversary (April 25, 1990 from STS-31 Discovery) — 36 years on orbit. Picked over DNA Day to avoid repeating the prior run's theme. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 25, 2026 — 36 years of Hubble Space Telescope">
-  <title>Hubble — April 25, 2026</title>
+<!-- theme: World Penguin Day (April 25). Picked to avoid repeating today's earlier Hubble run and yesterday's DNA Day. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 25, 2026 — World Penguin Day">
+  <title>World Penguin Day — April 25, 2026</title>
 
   <defs>
-    <!-- deep space backdrop -->
-    <radialGradient id="space" cx="65%" cy="50%" r="80%">
-      <stop offset="0%" stop-color="#1a2845"/>
-      <stop offset="40%" stop-color="#0f1730"/>
-      <stop offset="100%" stop-color="#06080f"/>
-    </radialGradient>
-
-    <!-- nebula clouds -->
-    <radialGradient id="nebula1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ff7a59" stop-opacity="0.55"/>
-      <stop offset="55%" stop-color="#7a3aa8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="nebula2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#3ea7ff" stop-opacity="0.6"/>
-      <stop offset="60%" stop-color="#2a4f9e" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="nebula3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffd479" stop-opacity="0.45"/>
-      <stop offset="60%" stop-color="#a85a30" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- the iconic Pillars of Creation silhouette nod (procedural fingers) -->
-    <linearGradient id="pillar" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e08858" stop-opacity="0.65"/>
-      <stop offset="60%" stop-color="#5a2a48" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#1a1228" stop-opacity="0"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#142036"/>
+      <stop offset="100%" stop-color="#1f3a5e"/>
     </linearGradient>
 
-    <!-- procedural starfield via turbulence + threshold -->
-    <filter id="grain" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
-      <feColorMatrix values="0 0 0 0 1
-                             0 0 0 0 1
-                             0 0 0 0 1
-                             0 0 0 18 -10"/>
-    </filter>
+    <linearGradient id="aurora" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#7ee787" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
 
-    <!-- subtle glow for the telescope -->
+    <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6f1ff"/>
+      <stop offset="100%" stop-color="#6f88af"/>
+    </linearGradient>
+
+    <radialGradient id="penguinBody" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2a2a30"/>
+      <stop offset="100%" stop-color="#07070a"/>
+    </radialGradient>
+
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
-    <!-- Hubble silhouette: cylinder + solar arrays + aperture cone -->
-    <symbol id="hubble" viewBox="-60 -22 120 44" overflow="visible">
-      <!-- solar arrays -->
-      <rect x="-58" y="-3" width="34" height="6" rx="1" fill="#1d3a6d" stroke="#5a8fd6" stroke-width="0.4"/>
-      <rect x="24"  y="-3" width="34" height="6" rx="1" fill="#1d3a6d" stroke="#5a8fd6" stroke-width="0.4"/>
-      <line x1="-24" y1="0" x2="-14" y2="0" stroke="#9aa9c0" stroke-width="0.8"/>
-      <line x1="14"  y1="0" x2="24"  y2="0" stroke="#9aa9c0" stroke-width="0.8"/>
-      <!-- main body -->
-      <rect x="-14" y="-7" width="28" height="14" rx="2" fill="#cfd6e1" stroke="#7e8ba2" stroke-width="0.5"/>
-      <rect x="-14" y="-7" width="6"  height="14" fill="#9099ad"/>
-      <!-- aperture (front) -->
-      <rect x="11" y="-8" width="6" height="16" rx="1" fill="#222a3a" stroke="#7e8ba2" stroke-width="0.5"/>
-      <!-- antenna dish -->
-      <circle cx="-3" cy="-9" r="2" fill="#cfd6e1" stroke="#7e8ba2" stroke-width="0.4"/>
-      <line x1="-3" y1="-7" x2="-3" y2="-3" stroke="#7e8ba2" stroke-width="0.5"/>
-      <!-- aperture cone of view -->
-      <path d="M17 -6 L78 -22 L78 22 L17 6 Z" fill="#fff5d6" fill-opacity="0.05"/>
-      <path d="M17 -3 L78 -10 L78 10 L17 3 Z" fill="#fff5d6" fill-opacity="0.08"/>
-    </symbol>
-
-    <style>
-      .date-main {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 800;
-        font-size: 44px;
-        letter-spacing: 2px;
-        fill: #f5f0e0;
-      }
-      .date-sub {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        letter-spacing: 6px;
-        fill: #c9a86a;
-      }
-      .label {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 500;
-        font-size: 11px;
-        letter-spacing: 2.5px;
-        fill: #a4b3cc;
-      }
-    </style>
   </defs>
 
-  <!-- background -->
-  <rect width="800" height="200" fill="url(#space)"/>
+  <!-- Night sky -->
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- procedural starfield from turbulence -->
-  <rect width="800" height="200" filter="url(#grain)" opacity="0.7"/>
+  <!-- Aurora ribbon -->
+  <path d="M0,25 Q200,5 400,35 T800,25 L800,95 Q600,115 400,85 T0,95 Z" fill="url(#aurora)" opacity="0.6">
+    <animate attributeName="d"
+      values="M0,25 Q200,5 400,35 T800,25 L800,95 Q600,115 400,85 T0,95 Z;
+              M0,35 Q200,15 400,25 T800,35 L800,85 Q600,105 400,95 T0,85 Z;
+              M0,25 Q200,5 400,35 T800,25 L800,95 Q600,115 400,85 T0,95 Z"
+      dur="13s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="11s" repeatCount="indefinite"/>
+  </path>
 
-  <!-- drifting nebula clouds -->
-  <g opacity="0.85">
-    <ellipse cx="180" cy="100" rx="220" ry="120" fill="url(#nebula1)">
-      <animate attributeName="cx" values="160;200;160" dur="29s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0.95;0.6" dur="13s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="600" cy="120" rx="260" ry="140" fill="url(#nebula2)">
-      <animate attributeName="cx" values="610;580;610" dur="23s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.5;0.85;0.5" dur="11s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="380" cy="60" rx="180" ry="60" fill="url(#nebula3)">
-      <animate attributeName="opacity" values="0.4;0.75;0.4" dur="17s" repeatCount="indefinite"/>
-    </ellipse>
-  </g>
-
-  <!-- "Pillars" — tall vertical wisps low in the frame, evoking M16 -->
-  <g opacity="0.75">
-    <path d="M120 200 C 124 160, 140 140, 138 120 C 136 110, 130 105, 132 95 L 150 95 C 152 110, 158 120, 156 135 C 154 155, 168 175, 165 200 Z" fill="url(#pillar)">
-      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="11s" repeatCount="indefinite"/>
-    </path>
-    <path d="M70 200 C 74 170, 86 158, 84 138 C 82 128, 78 122, 80 112 L 96 112 C 98 124, 104 134, 102 148 C 100 168, 110 184, 108 200 Z" fill="url(#pillar)" opacity="0.7">
-      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="13s" repeatCount="indefinite"/>
-    </path>
-    <path d="M170 200 C 174 178, 184 170, 182 156 C 180 148, 178 144, 180 136 L 192 136 C 194 146, 198 154, 196 166 C 194 180, 200 190, 198 200 Z" fill="url(#pillar)" opacity="0.55">
-      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="17s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- twinkling foreground stars, hand-placed for composition -->
+  <!-- Stars -->
   <g fill="#ffffff">
-    <circle cx="60"  cy="30"  r="1.4"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  repeatCount="indefinite"/></circle>
-    <circle cx="105" cy="55"  r="0.9"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="160" cy="22"  r="1.2"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" repeatCount="indefinite"/></circle>
-    <circle cx="215" cy="48"  r="0.8"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="7s"  begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="260" cy="18"  r="1.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="320" cy="42"  r="1.0"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" begin="3s" repeatCount="indefinite"/></circle>
-    <circle cx="405" cy="28"  r="1.3"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  begin="4s" repeatCount="indefinite"/></circle>
-    <circle cx="455" cy="62"  r="0.7"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="520" cy="20"  r="1.1"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="5s" repeatCount="indefinite"/></circle>
-    <circle cx="580" cy="50"  r="0.9"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="17s" repeatCount="indefinite"/></circle>
-    <circle cx="650" cy="35"  r="1.4"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  begin="3s" repeatCount="indefinite"/></circle>
-    <circle cx="705" cy="60"  r="1.0"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="6s" repeatCount="indefinite"/></circle>
-    <circle cx="765" cy="28"  r="1.2"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="40"  cy="100" r="0.8"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="4s" repeatCount="indefinite"/></circle>
-    <circle cx="35"  cy="155" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="775" cy="170" r="0.9"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s"  begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="730" cy="135" r="0.7"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" begin="5s" repeatCount="indefinite"/></circle>
+    <circle cx="60" cy="22" r="1"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="155" cy="14" r="1.3"><animate attributeName="opacity" values="1;0.3;1" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="270" cy="28" r="0.8"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="450" cy="20" r="1"/>
+    <circle cx="585" cy="38" r="1.2"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="18" r="0.9"/>
+    <circle cx="745" cy="48" r="1"><animate attributeName="opacity" values="1;0.4;1" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="370" cy="50" r="0.7"/>
+    <circle cx="105" cy="58" r="0.8"/>
   </g>
 
-  <!-- a few diffraction-spike "anchor" stars -->
-  <g stroke="#ffffff" stroke-linecap="round" opacity="0.85">
-    <g transform="translate(245,75)">
-      <line x1="-9" y1="0" x2="9" y2="0" stroke-width="0.6"/>
-      <line x1="0" y1="-9" x2="0" y2="9" stroke-width="0.6"/>
-      <circle r="1.4" fill="#ffffff" stroke="none"/>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="29s" additive="sum" repeatCount="indefinite"/>
+  <!-- Snowflakes drifting -->
+  <g fill="#ffffff">
+    <circle cx="40" cy="0" r="1.6">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; 25,210" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="0" r="1.4">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; -18,220" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="0" r="1.6">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; 12,215" dur="7s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="7s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="490" cy="0" r="1.4">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; -22,210" dur="11s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="11s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    <circle cx="630" cy="0" r="1.6">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; 18,220" dur="13s" repeatCount="indefinite" begin="3s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite" begin="3s"/>
+    </circle>
+    <circle cx="760" cy="0" r="1.4">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; -10,210" dur="11s" repeatCount="indefinite" begin="4s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="11s" repeatCount="indefinite" begin="4s"/>
+    </circle>
+    <circle cx="240" cy="0" r="1.4">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; 14,215" dur="13s" repeatCount="indefinite" begin="5s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite" begin="5s"/>
+    </circle>
+    <circle cx="555" cy="0" r="1.6">
+      <animateTransform attributeName="transform" type="translate" values="0,-10; -16,220" dur="7s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="7s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+
+  <!-- Ice shelf -->
+  <path d="M0,168 Q200,160 400,164 T800,166 L800,200 L0,200 Z" fill="url(#ice)"/>
+  <path d="M0,176 Q200,170 400,173 T800,175 L800,200 L0,200 Z" fill="#ffffff" opacity="0.55"/>
+
+  <!-- Subtle moon glow behind date -->
+  <circle cx="400" cy="98" r="70" fill="#ffffff" opacity="0.06" filter="url(#glow)"/>
+
+  <!-- Prominent date -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="400" y="100" font-size="46" font-weight="800" fill="#ffffff" letter-spacing="2">April 25, 2026</text>
+    <text x="400" y="128" font-size="13" font-weight="600" fill="#7ee787" letter-spacing="6">W O R L D &#183; P E N G U I N &#183; D A Y</text>
+  </g>
+
+  <!-- Penguin: large, walking left side -->
+  <g transform="translate(150,128)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-5 0 38; 5 0 38; -5 0 38" dur="2.2s" repeatCount="indefinite"/>
+      <!-- body -->
+      <ellipse cx="0" cy="22" rx="16" ry="22" fill="url(#penguinBody)"/>
+      <!-- belly -->
+      <ellipse cx="0" cy="25" rx="10" ry="17" fill="#f5f7fb"/>
+      <!-- left wing -->
+      <ellipse cx="-15" cy="18" rx="5" ry="14" fill="#0a0a0d">
+        <animateTransform attributeName="transform" type="rotate" values="-15 -15 8; 10 -15 8; -15 -15 8" dur="1.7s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- right wing -->
+      <ellipse cx="15" cy="18" rx="5" ry="14" fill="#0a0a0d">
+        <animateTransform attributeName="transform" type="rotate" values="15 15 8; -10 15 8; 15 15 8" dur="1.7s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- head -->
+      <circle cx="0" cy="-2" r="12" fill="url(#penguinBody)"/>
+      <!-- white face patch -->
+      <ellipse cx="0" cy="2" rx="7" ry="6" fill="#f5f7fb"/>
+      <!-- eyes -->
+      <circle cx="-4" cy="-3" r="2" fill="#ffffff"/>
+      <circle cx="4" cy="-3" r="2" fill="#ffffff"/>
+      <circle cx="-4" cy="-3" r="1.1" fill="#0d1117"/>
+      <circle cx="4" cy="-3" r="1.1" fill="#0d1117"/>
+      <!-- beak -->
+      <polygon points="-2.5,2 2.5,2 0,7" fill="#f0a500"/>
+      <!-- feet -->
+      <ellipse cx="-6" cy="46" rx="5" ry="2.4" fill="#f0a500"/>
+      <ellipse cx="6" cy="46" rx="5" ry="2.4" fill="#f0a500"/>
     </g>
-    <g transform="translate(675,80)">
-      <line x1="-7" y1="0" x2="7" y2="0" stroke-width="0.5"/>
-      <line x1="0" y1="-7" x2="0" y2="7" stroke-width="0.5"/>
-      <circle r="1.1" fill="#ffffff" stroke="none"/>
+  </g>
+
+  <!-- Penguin: medium, right side -->
+  <g transform="translate(625,134)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="5 0 32; -5 0 32; 5 0 32" dur="2.6s" repeatCount="indefinite"/>
+      <ellipse cx="0" cy="20" rx="13" ry="18" fill="url(#penguinBody)"/>
+      <ellipse cx="0" cy="22" rx="8" ry="14" fill="#f5f7fb"/>
+      <ellipse cx="-12" cy="16" rx="4" ry="11" fill="#0a0a0d"/>
+      <ellipse cx="12" cy="16" rx="4" ry="11" fill="#0a0a0d"/>
+      <circle cx="0" cy="-1" r="10" fill="url(#penguinBody)"/>
+      <ellipse cx="0" cy="2" rx="6" ry="5" fill="#f5f7fb"/>
+      <circle cx="-3.5" cy="-2" r="1.7" fill="#ffffff"/>
+      <circle cx="3.5" cy="-2" r="1.7" fill="#ffffff"/>
+      <circle cx="-3.5" cy="-2" r="0.9" fill="#0d1117"/>
+      <circle cx="3.5" cy="-2" r="0.9" fill="#0d1117"/>
+      <polygon points="-2,2 2,2 0,5.5" fill="#f0a500"/>
+      <ellipse cx="-5" cy="40" rx="4" ry="2" fill="#f0a500"/>
+      <ellipse cx="5" cy="40" rx="4" ry="2" fill="#f0a500"/>
     </g>
   </g>
 
-  <!-- the Hubble silhouette, slow drift across the frame -->
-  <g filter="url(#glow)">
-    <use href="#hubble" x="0" y="0" width="120" height="44">
-      <animateTransform attributeName="transform" type="translate"
-        values="80,40; 92,46; 80,40" dur="23s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="rotate"
-        values="-3 60 22; 1 60 22; -3 60 22" dur="29s" additive="sum" repeatCount="indefinite"/>
-    </use>
-  </g>
-
-  <!-- date — primary visual element, integrated as the "destination" the telescope is looking toward -->
-  <g transform="translate(420,118)">
-    <text class="date-sub" x="0" y="-44">36 YEARS ABOVE THE CLOUDS</text>
-    <text class="date-main" x="0" y="0">APRIL 25 · 2026</text>
-    <!-- subtle underline that traces in -->
-    <line x1="0" y1="14" x2="328" y2="14" stroke="#c9a86a" stroke-width="1.2" opacity="0.6">
-      <animate attributeName="stroke-dasharray" values="0 328; 328 0" dur="11s" repeatCount="indefinite"/>
-    </line>
-    <text class="label" x="0" y="38">HUBBLE · STS-31 · 1990</text>
-  </g>
-
-  <!-- a quiet light beam from telescope toward the date — the "observation" -->
-  <g opacity="0.18">
-    <path d="M 200 62 L 420 95 L 420 118 L 200 78 Z" fill="#ffe6a8">
-      <animate attributeName="opacity" values="0.1;0.28;0.1" dur="13s" repeatCount="indefinite"/>
-    </path>
+  <!-- Penguin: chick, smallest, far right -->
+  <g transform="translate(710,148)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-4 0 22; 4 0 22; -4 0 22" dur="1.6s" repeatCount="indefinite"/>
+      <ellipse cx="0" cy="14" rx="9" ry="13" fill="#5a4a3a"/>
+      <ellipse cx="0" cy="16" rx="5.5" ry="9" fill="#d6d6cf"/>
+      <circle cx="0" cy="-1" r="7" fill="#5a4a3a"/>
+      <circle cx="-2.3" cy="-2" r="1.2" fill="#ffffff"/>
+      <circle cx="2.3" cy="-2" r="1.2" fill="#ffffff"/>
+      <circle cx="-2.3" cy="-2" r="0.6" fill="#0d1117"/>
+      <circle cx="2.3" cy="-2" r="0.6" fill="#0d1117"/>
+      <polygon points="-1.4,1 1.4,1 0,3.5" fill="#f0a500"/>
+      <ellipse cx="-3.5" cy="28" rx="3" ry="1.6" fill="#f0a500"/>
+      <ellipse cx="3.5" cy="28" rx="3" ry="1.6" fill="#f0a500"/>
+    </g>
   </g>
 </svg>
