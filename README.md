@@ -68,7 +68,7 @@ My passion lately has been around designing autonomous generative engineering wo
 ### [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)
 **TypeScript**
 
-Compiler for a domain-specific animation language. Block-graph architecture with a custom type system; typed connections enforce domain, payload, and cardinality constraints across a parse → validate → optimize → emit pipeline. Recently landed a 4-pillar architecture refactor, a GPU-IR DSL with a reverse translator, a camera system with ortho projection and semantic IR nodes, and MRT + depth-only render passes.
+Compiler for a domain-specific animation language. Block-graph architecture with a custom type system; typed connections enforce domain, payload, and cardinality constraints across a parse → validate → optimize → emit pipeline. Recently replaced the source-text-parsing GPU-IR DSL (`fn.toString()` → acorn → walker → IR) with a typed expression builder for all 29 fixtures, landed the 4-pillar architecture refactor, added MRT + depth-only render passes, and wired a camera system with ortho projection and semantic IR nodes.
 
 ### [shader-playground](https://github.com/brandon-fryslie/shader-playground)
 **TypeScript**
@@ -78,7 +78,7 @@ WebGPU shader experimentation environment. Recently shipped Phase A of a nested 
 ### [links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)
 **Go**
 
-Agent-native issue tracker. Recently added composite `(epic_rank, own_rank)` ordering to `lit ready` so leaves group by epic without forcing cross-epic context switches, inlined parent descriptions in `lit show`, and excluded epics from the ready list.
+Agent-native issue tracker. Recently added composite `(epic_rank, own_rank)` ordering to `lit ready` so leaves group by epic without forcing cross-epic context switches, inlined parent descriptions in `lit show` so containing context is read first, and excluded epics from the default ready set.
 
 </td>
 <td width="50%" valign="top">
@@ -86,17 +86,17 @@ Agent-native issue tracker. Recently added composite `(epic_rank, own_rank)` ord
 ### [cc-dump](https://github.com/brandon-fryslie/cc-dump)
 **Python · MIT**
 
-HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recently skipped geometry work on search-highlight rerenders, fixed a cache-staleness bug in `_invalidate_cache_for_turns`, cached per-turn search traversal data, and removed the AI side-channel feature.
+HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recently skipped geometry work on search-highlight rerenders (style-only changes never alter line counts or strip widths), fixed a cache-staleness bug in `_invalidate_cache_for_turns`, cached per-turn search traversal data, and removed the AI side-channel feature.
 
 ### [gh-pages-multiplexer](https://github.com/brandon-fryslie/gh-pages-multiplexer)
 **TypeScript**
 
-GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages`, with auto-generated index pages, a navigation widget, and PR previews. Recently added opt-in transparent localStorage/sessionStorage namespacing — a Proxy-wrapped storage object that prefixes keys with `gh-pm:<owner>/<repo>/<version>` to prevent cross-repo collisions on shared `<user>.github.io` origins.
+GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages`, with auto-generated index pages, a navigation widget, and PR previews. Recently added opt-in transparent localStorage/sessionStorage namespacing — a Proxy-wrapped storage object that prefixes keys with `gh-pm:<owner>/<repo>/<version>` to prevent cross-repo collisions on shared `<user>.github.io` origins — plus generated `robots.txt` and `sitemap.xml`, canonical-URL injection on non-PR versions, and `noindex` meta tags on PR preview directories.
 
 ### [tmux-control-mode-js](https://github.com/promptctl/tmux-control-mode-js)
 **TypeScript · MIT**
 
-Node.js client for the tmux control mode protocol. Recently scoped the package as `@promptctl/tmux-control-mode-js`, added a Release-triggered npm publish workflow with provenance, adopted npm workspaces for the `examples/web-multiplexer` demo, and gated a `requestReport` integration test on a tmux version probe.
+Node.js client for the tmux control mode protocol. Recently scoped the package as `@promptctl/tmux-control-mode-js`, added a Release-triggered npm publish workflow with provenance, adopted npm workspaces for the `examples/web-multiplexer` demo, and gated the `requestReport` integration test on a tmux-version probe at module load.
 
 </td>
 </tr>
