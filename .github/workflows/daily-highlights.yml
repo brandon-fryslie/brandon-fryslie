@@ -272,10 +272,10 @@ jobs:
 
             ## Render
 
-            Replace the content between the markers with a 2-column HTML `<table>` matching the existing layout: 3 cells per `<td width="50%" valign="top">`. Each cell:
+            Replace the content between the markers with a 2-column HTML `<table>` matching the existing layout: two `<td width="50%" valign="top">` columns with 3 project entries stacked in each (6 total when available). For each project entry, use the actual `<owner>/<name>` from the commit data — do NOT hard-code `brandon-fryslie/` since a qualifying repo could be a fork or org-owned. Each entry:
 
             ```
-            ### [<repo-name>](https://github.com/brandon-fryslie/<repo-name>)
+            ### [<name>](https://github.com/<owner>/<name>)
             **<one-line metadata: e.g. "Go · MIT" or "TypeScript · 41★">**
 
             <2–3 sentences of plain description: what the project is, what it does, plus one sentence on what shipped recently in it.>
