@@ -1,182 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: World Penguin Day (April 25). Picked to avoid repeating today's earlier Hubble run and yesterday's DNA Day. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 25, 2026 — World Penguin Day">
-  <title>World Penguin Day — April 25, 2026</title>
+<!-- theme: Spring Bloom — Sunday, April 26, 2026. Late-April day-of-week fallback; chose a botanical scene to contrast yesterday's monochrome penguin doodle. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 26, 2026 — Spring Bloom">
+  <title>Spring Bloom — April 26, 2026</title>
 
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="55%" stop-color="#142036"/>
-      <stop offset="100%" stop-color="#1f3a5e"/>
-    </linearGradient>
-
-    <linearGradient id="aurora" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3fb950" stop-opacity="0"/>
-      <stop offset="55%" stop-color="#7ee787" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e6f1ff"/>
-      <stop offset="100%" stop-color="#6f88af"/>
-    </linearGradient>
-
-    <radialGradient id="penguinBody" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#2a2a30"/>
-      <stop offset="100%" stop-color="#07070a"/>
+    <radialGradient id="sky" cx="20%" cy="20%" r="120%">
+      <stop offset="0%" stop-color="#2a3340"/>
+      <stop offset="55%" stop-color="#161d28"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </radialGradient>
 
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe08a" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#f59e3a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f59e3a" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="dateFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7e6"/>
+      <stop offset="100%" stop-color="#ffd6a5"/>
+    </linearGradient>
+
+    <linearGradient id="stem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7bc46a"/>
+      <stop offset="100%" stop-color="#2f6b34"/>
+    </linearGradient>
+
+    <g id="flower">
+      <g>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(60)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(120)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(240)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(300)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite"/>
+      </g>
+      <circle r="5" fill="#ffe066"/>
+      <circle r="2.4" fill="#f59e3a"/>
+    </g>
+
+    <g id="flowerBlue">
+      <g>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(288)"/>
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite"/>
+      </g>
+      <circle r="4" fill="#ffe066"/>
+    </g>
+
+    <g id="flowerLav">
+      <g>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(45)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(90)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(135)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(225)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(270)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(315)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="17s" repeatCount="indefinite"/>
+      </g>
+      <circle r="4.5" fill="#ffe066"/>
+      <circle r="2" fill="#f59e3a"/>
+    </g>
+
+    <path id="petal" d="M0,0 q4,-4 8,-2 q-2,4 -8,2 z" fill="#ff7eb6" opacity="0.85"/>
+    <path id="petalY" d="M0,0 q4,-4 8,-2 q-2,4 -8,2 z" fill="#ffe066" opacity="0.85"/>
+    <path id="petalL" d="M0,0 q4,-4 8,-2 q-2,4 -8,2 z" fill="#c5a0ff" opacity="0.85"/>
+
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.5"/>
     </filter>
   </defs>
 
-  <!-- Night sky -->
   <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- Aurora ribbon -->
-  <path d="M0,25 Q200,5 400,35 T800,25 L800,95 Q600,115 400,85 T0,95 Z" fill="url(#aurora)" opacity="0.6">
-    <animate attributeName="d"
-      values="M0,25 Q200,5 400,35 T800,25 L800,95 Q600,115 400,85 T0,95 Z;
-              M0,35 Q200,15 400,25 T800,35 L800,85 Q600,105 400,95 T0,85 Z;
-              M0,25 Q200,5 400,35 T800,25 L800,95 Q600,115 400,85 T0,95 Z"
-      dur="13s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="11s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- Stars -->
-  <g fill="#ffffff">
-    <circle cx="60" cy="22" r="1"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/></circle>
-    <circle cx="155" cy="14" r="1.3"><animate attributeName="opacity" values="1;0.3;1" dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="270" cy="28" r="0.8"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></circle>
-    <circle cx="450" cy="20" r="1"/>
-    <circle cx="585" cy="38" r="1.2"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="690" cy="18" r="0.9"/>
-    <circle cx="745" cy="48" r="1"><animate attributeName="opacity" values="1;0.4;1" dur="7s" repeatCount="indefinite"/></circle>
-    <circle cx="370" cy="50" r="0.7"/>
-    <circle cx="105" cy="58" r="0.8"/>
-  </g>
-
-  <!-- Snowflakes drifting -->
-  <g fill="#ffffff">
-    <circle cx="40" cy="0" r="1.6">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; 25,210" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="11s" repeatCount="indefinite"/>
+  <g>
+    <circle cx="120" cy="60" r="90" fill="url(#sun)">
+      <animate attributeName="r" values="85;100;85" dur="11s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="180" cy="0" r="1.4">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; -18,220" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="330" cy="0" r="1.6">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; 12,215" dur="7s" repeatCount="indefinite" begin="1s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="7s" repeatCount="indefinite" begin="1s"/>
-    </circle>
-    <circle cx="490" cy="0" r="1.4">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; -22,210" dur="11s" repeatCount="indefinite" begin="2s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="11s" repeatCount="indefinite" begin="2s"/>
-    </circle>
-    <circle cx="630" cy="0" r="1.6">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; 18,220" dur="13s" repeatCount="indefinite" begin="3s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite" begin="3s"/>
-    </circle>
-    <circle cx="760" cy="0" r="1.4">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; -10,210" dur="11s" repeatCount="indefinite" begin="4s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="11s" repeatCount="indefinite" begin="4s"/>
-    </circle>
-    <circle cx="240" cy="0" r="1.4">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; 14,215" dur="13s" repeatCount="indefinite" begin="5s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite" begin="5s"/>
-    </circle>
-    <circle cx="555" cy="0" r="1.6">
-      <animateTransform attributeName="transform" type="translate" values="0,-10; -16,220" dur="7s" repeatCount="indefinite" begin="0.5s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="7s" repeatCount="indefinite" begin="0.5s"/>
+    <circle cx="120" cy="60" r="22" fill="#ffe08a" opacity="0.95">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Ice shelf -->
-  <path d="M0,168 Q200,160 400,164 T800,166 L800,200 L0,200 Z" fill="url(#ice)"/>
-  <path d="M0,176 Q200,170 400,173 T800,175 L800,200 L0,200 Z" fill="#ffffff" opacity="0.55"/>
-
-  <!-- Subtle moon glow behind date -->
-  <circle cx="400" cy="98" r="70" fill="#ffffff" opacity="0.06" filter="url(#glow)"/>
-
-  <!-- Prominent date -->
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
-    <text x="400" y="100" font-size="46" font-weight="800" fill="#ffffff" letter-spacing="2">April 25, 2026</text>
-    <text x="400" y="128" font-size="13" font-weight="600" fill="#7ee787" letter-spacing="6">W O R L D &#183; P E N G U I N &#183; D A Y</text>
-  </g>
-
-  <!-- Penguin: large, walking left side -->
-  <g transform="translate(150,128)">
+  <g transform="translate(120 60)" opacity="0.55">
     <g>
-      <animateTransform attributeName="transform" type="rotate" values="-5 0 38; 5 0 38; -5 0 38" dur="2.2s" repeatCount="indefinite"/>
-      <!-- body -->
-      <ellipse cx="0" cy="22" rx="16" ry="22" fill="url(#penguinBody)"/>
-      <!-- belly -->
-      <ellipse cx="0" cy="25" rx="10" ry="17" fill="#f5f7fb"/>
-      <!-- left wing -->
-      <ellipse cx="-15" cy="18" rx="5" ry="14" fill="#0a0a0d">
-        <animateTransform attributeName="transform" type="rotate" values="-15 -15 8; 10 -15 8; -15 -15 8" dur="1.7s" repeatCount="indefinite"/>
-      </ellipse>
-      <!-- right wing -->
-      <ellipse cx="15" cy="18" rx="5" ry="14" fill="#0a0a0d">
-        <animateTransform attributeName="transform" type="rotate" values="15 15 8; -10 15 8; 15 15 8" dur="1.7s" repeatCount="indefinite"/>
-      </ellipse>
-      <!-- head -->
-      <circle cx="0" cy="-2" r="12" fill="url(#penguinBody)"/>
-      <!-- white face patch -->
-      <ellipse cx="0" cy="2" rx="7" ry="6" fill="#f5f7fb"/>
-      <!-- eyes -->
-      <circle cx="-4" cy="-3" r="2" fill="#ffffff"/>
-      <circle cx="4" cy="-3" r="2" fill="#ffffff"/>
-      <circle cx="-4" cy="-3" r="1.1" fill="#0d1117"/>
-      <circle cx="4" cy="-3" r="1.1" fill="#0d1117"/>
-      <!-- beak -->
-      <polygon points="-2.5,2 2.5,2 0,7" fill="#f0a500"/>
-      <!-- feet -->
-      <ellipse cx="-6" cy="46" rx="5" ry="2.4" fill="#f0a500"/>
-      <ellipse cx="6" cy="46" rx="5" ry="2.4" fill="#f0a500"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(45)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(90)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(135)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(180)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(225)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(270)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(315)"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="29s" repeatCount="indefinite"/>
     </g>
   </g>
 
-  <!-- Penguin: medium, right side -->
-  <g transform="translate(625,134)">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="5 0 32; -5 0 32; 5 0 32" dur="2.6s" repeatCount="indefinite"/>
-      <ellipse cx="0" cy="20" rx="13" ry="18" fill="url(#penguinBody)"/>
-      <ellipse cx="0" cy="22" rx="8" ry="14" fill="#f5f7fb"/>
-      <ellipse cx="-12" cy="16" rx="4" ry="11" fill="#0a0a0d"/>
-      <ellipse cx="12" cy="16" rx="4" ry="11" fill="#0a0a0d"/>
-      <circle cx="0" cy="-1" r="10" fill="url(#penguinBody)"/>
-      <ellipse cx="0" cy="2" rx="6" ry="5" fill="#f5f7fb"/>
-      <circle cx="-3.5" cy="-2" r="1.7" fill="#ffffff"/>
-      <circle cx="3.5" cy="-2" r="1.7" fill="#ffffff"/>
-      <circle cx="-3.5" cy="-2" r="0.9" fill="#0d1117"/>
-      <circle cx="3.5" cy="-2" r="0.9" fill="#0d1117"/>
-      <polygon points="-2,2 2,2 0,5.5" fill="#f0a500"/>
-      <ellipse cx="-5" cy="40" rx="4" ry="2" fill="#f0a500"/>
-      <ellipse cx="5" cy="40" rx="4" ry="2" fill="#f0a500"/>
-    </g>
+  <g opacity="0.85">
+    <use href="#petal">
+      <animateMotion dur="13s" repeatCount="indefinite" path="M-30,40 Q200,10 420,70 T840,30"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petalY">
+      <animateMotion dur="17s" repeatCount="indefinite" path="M-40,90 Q220,140 460,80 T860,120" begin="-3s"/>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petalL">
+      <animateMotion dur="19s" repeatCount="indefinite" path="M-30,150 Q180,90 440,160 T860,100" begin="-7s"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petal">
+      <animateMotion dur="23s" repeatCount="indefinite" path="M-30,170 Q260,40 520,180 T860,60" begin="-11s"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="9s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petalY">
+      <animateMotion dur="29s" repeatCount="indefinite" path="M-30,15 Q300,180 600,20 T860,180" begin="-5s"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
   </g>
 
-  <!-- Penguin: chick, smallest, far right -->
-  <g transform="translate(710,148)">
+  <g stroke="url(#stem)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M30,200 Q34,170 32,150"/>
+    <path d="M70,200 Q66,160 72,140"/>
+    <path d="M110,200 Q115,175 108,155"/>
+    <path d="M180,200 Q175,168 184,148"/>
+    <path d="M250,200 Q256,170 248,150"/>
+    <path d="M340,200 Q336,168 344,148"/>
+    <path d="M450,200 Q444,170 456,148"/>
+    <path d="M540,200 Q548,170 540,150"/>
+    <path d="M620,200 Q614,170 626,150"/>
+    <path d="M700,200 Q706,170 696,148"/>
+    <path d="M760,200 Q754,170 766,150"/>
+  </g>
+
+  <g transform="translate(50 158)">
+    <line x1="0" y1="0" x2="0" y2="35" stroke="url(#stem)" stroke-width="2.4" stroke-linecap="round"/>
     <g>
-      <animateTransform attributeName="transform" type="rotate" values="-4 0 22; 4 0 22; -4 0 22" dur="1.6s" repeatCount="indefinite"/>
-      <ellipse cx="0" cy="14" rx="9" ry="13" fill="#5a4a3a"/>
-      <ellipse cx="0" cy="16" rx="5.5" ry="9" fill="#d6d6cf"/>
-      <circle cx="0" cy="-1" r="7" fill="#5a4a3a"/>
-      <circle cx="-2.3" cy="-2" r="1.2" fill="#ffffff"/>
-      <circle cx="2.3" cy="-2" r="1.2" fill="#ffffff"/>
-      <circle cx="-2.3" cy="-2" r="0.6" fill="#0d1117"/>
-      <circle cx="2.3" cy="-2" r="0.6" fill="#0d1117"/>
-      <polygon points="-1.4,1 1.4,1 0,3.5" fill="#f0a500"/>
-      <ellipse cx="-3.5" cy="28" rx="3" ry="1.6" fill="#f0a500"/>
-      <ellipse cx="3.5" cy="28" rx="3" ry="1.6" fill="#f0a500"/>
+      <use href="#flower">
+        <animateTransform attributeName="transform" type="scale" values="0.9;1.12;0.9" dur="7s" repeatCount="indefinite" additive="sum"/>
+      </use>
     </g>
+  </g>
+  <g transform="translate(85 168)">
+    <line x1="0" y1="0" x2="0" y2="30" stroke="url(#stem)" stroke-width="2" stroke-linecap="round"/>
+    <use href="#flowerBlue">
+      <animateTransform attributeName="transform" type="scale" values="0.85;1.15;0.85" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+
+  <g transform="translate(720 162)">
+    <line x1="0" y1="0" x2="0" y2="34" stroke="url(#stem)" stroke-width="2.4" stroke-linecap="round"/>
+    <use href="#flowerLav">
+      <animateTransform attributeName="transform" type="scale" values="0.9;1.12;0.9" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(755 170)">
+    <line x1="0" y1="0" x2="0" y2="28" stroke="url(#stem)" stroke-width="2" stroke-linecap="round"/>
+    <use href="#flower">
+      <animateTransform attributeName="transform" type="scale" values="0.85;1.1;0.85" dur="7s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+    </use>
+  </g>
+  <g transform="translate(685 172)">
+    <line x1="0" y1="0" x2="0" y2="26" stroke="url(#stem)" stroke-width="2" stroke-linecap="round"/>
+    <use href="#flowerBlue">
+      <animateTransform attributeName="transform" type="scale" values="0.85;1.1;0.85" dur="11s" repeatCount="indefinite" additive="sum" begin="-4s"/>
+    </use>
+  </g>
+
+  <g filter="url(#soft)">
+    <text x="400" y="108" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="56" font-weight="800" letter-spacing="1.5"
+          fill="url(#dateFill)">
+      April 26, 2026
+    </text>
+  </g>
+
+  <g transform="translate(400 50)">
+    <circle r="3" fill="#ffe066">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="400" y="142" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="500" letter-spacing="6"
+        fill="#9aa6b2">
+    SPRING · SUNDAY · BLOOM
+  </text>
+
+  <g transform="translate(220 70)">
+    <use href="#flowerBlue" transform="scale(0.7)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(580 70)">
+    <use href="#flowerLav" transform="scale(0.7)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(640 50)">
+    <use href="#flower" transform="scale(0.55)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(170 110)">
+    <use href="#flower" transform="scale(0.5)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="11s" repeatCount="indefinite" additive="sum" begin="-3s"/>
+    </use>
   </g>
 </svg>
