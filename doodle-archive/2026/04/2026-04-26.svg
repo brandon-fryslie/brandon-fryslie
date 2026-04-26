@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Spring Bloom — Sunday, April 26, 2026. Late-April day-of-week fallback; chose a botanical scene to contrast yesterday's monochrome penguin doodle. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 26, 2026 — Spring Bloom">
+  <title>Spring Bloom — April 26, 2026</title>
+
+  <defs>
+    <radialGradient id="sky" cx="20%" cy="20%" r="120%">
+      <stop offset="0%" stop-color="#2a3340"/>
+      <stop offset="55%" stop-color="#161d28"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe08a" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#f59e3a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f59e3a" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="dateFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7e6"/>
+      <stop offset="100%" stop-color="#ffd6a5"/>
+    </linearGradient>
+
+    <linearGradient id="stem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7bc46a"/>
+      <stop offset="100%" stop-color="#2f6b34"/>
+    </linearGradient>
+
+    <g id="flower">
+      <g>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(60)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(120)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(240)"/>
+        <ellipse cx="0" cy="-12" rx="6" ry="11" fill="#ff7eb6" transform="rotate(300)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite"/>
+      </g>
+      <circle r="5" fill="#ffe066"/>
+      <circle r="2.4" fill="#f59e3a"/>
+    </g>
+
+    <g id="flowerBlue">
+      <g>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-10" rx="5" ry="9" fill="#7cc4ff" transform="rotate(288)"/>
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite"/>
+      </g>
+      <circle r="4" fill="#ffe066"/>
+    </g>
+
+    <g id="flowerLav">
+      <g>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(45)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(90)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(135)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(225)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(270)"/>
+        <ellipse cx="0" cy="-11" rx="5.5" ry="10" fill="#c5a0ff" transform="rotate(315)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="17s" repeatCount="indefinite"/>
+      </g>
+      <circle r="4.5" fill="#ffe066"/>
+      <circle r="2" fill="#f59e3a"/>
+    </g>
+
+    <path id="petal" d="M0,0 q4,-4 8,-2 q-2,4 -8,2 z" fill="#ff7eb6" opacity="0.85"/>
+    <path id="petalY" d="M0,0 q4,-4 8,-2 q-2,4 -8,2 z" fill="#ffe066" opacity="0.85"/>
+    <path id="petalL" d="M0,0 q4,-4 8,-2 q-2,4 -8,2 z" fill="#c5a0ff" opacity="0.85"/>
+
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <g>
+    <circle cx="120" cy="60" r="90" fill="url(#sun)">
+      <animate attributeName="r" values="85;100;85" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="60" r="22" fill="#ffe08a" opacity="0.95">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g transform="translate(120 60)" opacity="0.55">
+    <g>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(45)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(90)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(135)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(180)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(225)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(270)"/>
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#ffe08a" stroke-width="2" transform="rotate(315)"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="29s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <g opacity="0.85">
+    <use href="#petal">
+      <animateMotion dur="13s" repeatCount="indefinite" path="M-30,40 Q200,10 420,70 T840,30"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petalY">
+      <animateMotion dur="17s" repeatCount="indefinite" path="M-40,90 Q220,140 460,80 T860,120" begin="-3s"/>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petalL">
+      <animateMotion dur="19s" repeatCount="indefinite" path="M-30,150 Q180,90 440,160 T860,100" begin="-7s"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petal">
+      <animateMotion dur="23s" repeatCount="indefinite" path="M-30,170 Q260,40 520,180 T860,60" begin="-11s"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="9s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#petalY">
+      <animateMotion dur="29s" repeatCount="indefinite" path="M-30,15 Q300,180 600,20 T860,180" begin="-5s"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+
+  <g stroke="url(#stem)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M30,200 Q34,170 32,150"/>
+    <path d="M70,200 Q66,160 72,140"/>
+    <path d="M110,200 Q115,175 108,155"/>
+    <path d="M180,200 Q175,168 184,148"/>
+    <path d="M250,200 Q256,170 248,150"/>
+    <path d="M340,200 Q336,168 344,148"/>
+    <path d="M450,200 Q444,170 456,148"/>
+    <path d="M540,200 Q548,170 540,150"/>
+    <path d="M620,200 Q614,170 626,150"/>
+    <path d="M700,200 Q706,170 696,148"/>
+    <path d="M760,200 Q754,170 766,150"/>
+  </g>
+
+  <g transform="translate(50 158)">
+    <line x1="0" y1="0" x2="0" y2="35" stroke="url(#stem)" stroke-width="2.4" stroke-linecap="round"/>
+    <g>
+      <use href="#flower">
+        <animateTransform attributeName="transform" type="scale" values="0.9;1.12;0.9" dur="7s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+  </g>
+  <g transform="translate(85 168)">
+    <line x1="0" y1="0" x2="0" y2="30" stroke="url(#stem)" stroke-width="2" stroke-linecap="round"/>
+    <use href="#flowerBlue">
+      <animateTransform attributeName="transform" type="scale" values="0.85;1.15;0.85" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+
+  <g transform="translate(720 162)">
+    <line x1="0" y1="0" x2="0" y2="34" stroke="url(#stem)" stroke-width="2.4" stroke-linecap="round"/>
+    <use href="#flowerLav">
+      <animateTransform attributeName="transform" type="scale" values="0.9;1.12;0.9" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(755 170)">
+    <line x1="0" y1="0" x2="0" y2="28" stroke="url(#stem)" stroke-width="2" stroke-linecap="round"/>
+    <use href="#flower">
+      <animateTransform attributeName="transform" type="scale" values="0.85;1.1;0.85" dur="7s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+    </use>
+  </g>
+  <g transform="translate(685 172)">
+    <line x1="0" y1="0" x2="0" y2="26" stroke="url(#stem)" stroke-width="2" stroke-linecap="round"/>
+    <use href="#flowerBlue">
+      <animateTransform attributeName="transform" type="scale" values="0.85;1.1;0.85" dur="11s" repeatCount="indefinite" additive="sum" begin="-4s"/>
+    </use>
+  </g>
+
+  <g filter="url(#soft)">
+    <text x="400" y="108" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="56" font-weight="800" letter-spacing="1.5"
+          fill="url(#dateFill)">
+      April 26, 2026
+    </text>
+  </g>
+
+  <g transform="translate(400 50)">
+    <circle r="3" fill="#ffe066">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="400" y="142" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="500" letter-spacing="6"
+        fill="#9aa6b2">
+    SPRING · SUNDAY · BLOOM
+  </text>
+
+  <g transform="translate(220 70)">
+    <use href="#flowerBlue" transform="scale(0.7)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(580 70)">
+    <use href="#flowerLav" transform="scale(0.7)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(640 50)">
+    <use href="#flower" transform="scale(0.55)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+  <g transform="translate(170 110)">
+    <use href="#flower" transform="scale(0.5)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="11s" repeatCount="indefinite" additive="sum" begin="-3s"/>
+    </use>
+  </g>
+</svg>

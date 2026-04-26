@@ -7,6 +7,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 ---
 
 <!-- DOODLE-GALLERY:START -->
+## April 26, 2026 — Spring Bloom
+
+<img src="./doodle-archive/2026/04/2026-04-26.svg" width="800" alt="Daily doodle for April 26, 2026: Spring Bloom">
+
+---
+
 ## AI SLOP
 
 <img src="./assets/ai-slop-80s.svg" width="800" alt="AI SLOP — 1980s style rotating retro-futurist banner with chrome lettering and a synthwave sun">
