@@ -22,6 +22,8 @@ Boulder, CO
 
 </div>
 
+<!-- INTRO-PROSE:START -->
+
 I *used* to build software.  Professionally, that meant React front-ends, enterprise backends (microservices, monoliths, everything in between), cloud infrastructure automation, the architectural design work that kept systems stable and aligned, and the tooling that held it all together.
 
 Now I have AI do that for me.
@@ -29,6 +31,8 @@ Now I have AI do that for me.
 I *used* to write developer tooling and pet projects in my spare time — some practical, some experimental, some purely art.  Now AI writes those too.  I *used* to design, write, and maintain this very profile page.  What you're reading was generated top-to-bottom by an AI, including the giant rotating **AI SLOP** banner over in [the gallery](./DOODLES.md).  I didn't even ask for the scanlines.  That was its idea.
 
 My passion lately is designing autonomous generative engineering workflows using AI.  Such as this repo, which regenerates itself on a daily basis while I do other things.
+
+<!-- INTRO-PROSE:END -->
 
 <div align="center">
 <img src="./assets/neural-pulse-80s.svg" width="800" alt="Neural network with flowing pulses — Business Requirements feeding through hidden layers into Customer Value" />
