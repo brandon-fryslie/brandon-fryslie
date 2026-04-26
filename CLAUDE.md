@@ -12,10 +12,10 @@ When you are asked to change "what shows up on the profile," the answer is almos
 
 `.github/workflows/daily-highlights.yml` is the system. It runs at 06:00 UTC and on `workflow_dispatch`. One workflow run contains two jobs that **execute in parallel** and both push to `master`:
 
-| Job                 | Owns these paths                                                          | What it produces |
-|---------------------|---------------------------------------------------------------------------|------------------|
-| `doodle`            | `README.md` (DAILY-DOODLE + RECENT-ACTIVITY blocks), `DOODLES.md` (DOODLE-GALLERY block), `assets/daily-highlight.svg`, `assets/daily-stats.svg`, `daily-archive/`, `doodle-archive/` | Today's animated SVG "doodle", the recent-activity narrative, an archive of yesterday's narrative, an archive copy of yesterday's doodle SVG, and a prepended gallery entry in `DOODLES.md`. |
-| `selected_projects` | `README.md` (SELECTED-PROJECTS block only)                                | A 6-cell project table chosen from Brandon's substantial commit activity over the last 90 days (fallback: 365). |
+| Job         | Owns these paths                                                          | What it produces |
+|-------------|---------------------------------------------------------------------------|------------------|
+| `doodle`    | `README.md` (DAILY-DOODLE block only), `DOODLES.md` (DOODLE-GALLERY block), `assets/daily-highlight.svg`, `assets/daily-stats.svg`, `doodle-archive/` | Today's animated SVG "doodle", an archive copy of yesterday's doodle SVG, and a prepended gallery entry in `DOODLES.md`. The `<img>` tag inside `DAILY-DOODLE` is rewritten idempotently each run. Owns one creative output and its archival infrastructure. |
+| `narrative` | `README.md` (INTRO-PROSE + RECENT-ACTIVITY + SELECTED-PROJECTS blocks), `daily-archive/` | All three text regions: the daily-rewritten first-person intro prose (anchored to `.github/intro-seed.md`), the bulleted Today/Week/Month recent-activity list with commit/PR links, the 6-cell project table, and an archive of yesterday's recent-activity content. Owns all text-rendering and shares one commit-data query across all three regions. |
 
 Concurrency model — important to understand before changing anything:
 
@@ -27,25 +27,29 @@ If you are editing this workflow, preserve all three properties: per-job path wh
 
 ## README Marker Contract
 
-`README.md` is partly hand-authored and partly machine-rewritten. Three marker pairs delimit the machine-owned regions. Markers are exact strings; never rename, reformat, or move them:
+`README.md` is partly hand-authored and partly machine-rewritten. Four marker pairs delimit the machine-owned regions. Markers are exact strings; never rename, reformat, or move them:
 
 ```
 README.md
-  <!-- DAILY-DOODLE:START -->        ... <!-- DAILY-DOODLE:END -->
-  <!-- RECENT-ACTIVITY:START -->     ... <!-- RECENT-ACTIVITY:END -->
-  <!-- SELECTED-PROJECTS:START -->   ... <!-- SELECTED-PROJECTS:END -->
+  <!-- DAILY-DOODLE:START -->        ... <!-- DAILY-DOODLE:END -->        (doodle job)
+  <!-- INTRO-PROSE:START -->         ... <!-- INTRO-PROSE:END -->         (narrative job)
+  <!-- RECENT-ACTIVITY:START -->     ... <!-- RECENT-ACTIVITY:END -->     (narrative job)
+  <!-- SELECTED-PROJECTS:START -->   ... <!-- SELECTED-PROJECTS:END -->   (narrative job)
 
 DOODLES.md
-  <!-- DOODLE-GALLERY:START -->      ... <!-- DOODLE-GALLERY:END -->
+  <!-- DOODLE-GALLERY:START -->      ... <!-- DOODLE-GALLERY:END -->      (doodle job)
 ```
 
 Everything outside these markers is hand-authored and should not be touched by automation. Inside the README markers, content is replaced wholesale each run. Inside the `DOODLE-GALLERY` markers, the doodle job *prepends* a new entry per day (newest first) — it does not rewrite prior entries.
 
+Both jobs concurrently write `README.md` (each owning a non-overlapping marker region) and resolve their push race via the rebase-retry loop. The marker isolation is what makes the parallelism safe.
+
 ## Update the Generator, Not the Generated Output
 
-For anything inside the marker regions, in `assets/daily-highlight.svg`, `assets/daily-stats.svg`, or under `daily-archive/`: **change the prompt or the generator script, not the current artifact.** Editing generated output directly will be overwritten on the next 06:00 UTC run, and worse, it hides the real problem (a bad prompt or generator). The two places to actually fix things:
+For anything inside the marker regions, in `assets/daily-highlight.svg`, `assets/daily-stats.svg`, or under `daily-archive/`: **change the prompt or the generator script, not the current artifact.** Editing generated output directly will be overwritten on the next 06:00 UTC run, and worse, it hides the real problem (a bad prompt or generator). The three places to actually fix things:
 
-- **`.github/workflows/daily-highlights.yml`** — the prompt strings for both `doodle` and `selected_projects` jobs. This is where tone rules, theme-picking priorities, the Selected Projects qualification thresholds (≥10 commits in 90d, fallback ≥5 in 365d), and SVG creative direction all live.
+- **`.github/workflows/daily-highlights.yml`** — the prompt strings for both `doodle` and `narrative` jobs. This is where SVG creative direction, theme-picking priorities, the Recent Activity bullet format and link-construction rules, the Selected Projects qualification thresholds (≥10 commits in 90d, fallback ≥5 in 365d), and per-region tone rules all live.
+- **`.github/intro-seed.md`** — the durable voice and identity scaffolding for the INTRO-PROSE region. Read once per run by the narrative job and combined with that day's recent-commit summary to produce the intro prose. It deliberately contains no specific projects, dates, or claims that could go stale — those come from live commit data each day. Edit this when you want to change *who the intro says I am* or *how the intro should sound*; do not edit it to add transient facts.
 - **`.github/scripts/generate-stats-svg.py`** — the deterministic stats SVG. Picks 4 metrics from a pool of 8 with varying time periods. Requires `GITHUB_TOKEN` and `pip install requests`. The doodle job runs this *before* invoking Claude, and the Claude prompt is explicitly told not to touch the resulting file.
 
 The one legitimate exception is a **one-time legacy cleanup** — e.g., a stale archive entry from before a prompt change. Even then, fix the prompt in the same commit.
@@ -63,9 +67,15 @@ GitHub renders profile-README SVGs via `<img>` tags in a sanitized, isolated con
 
 `INTERACTIVITY-LIMITS.md` is the comprehensive reference; `RANDOMNESS-GUIDE.md` documents pseudo-random techniques without JS.
 
-## Tone Rules for Generated Narrative
+## Tone Rules for Generated Text
 
-Both Claude prompts enforce: **matter-of-fact reporting, third-person past tense, plain verbs ("Added", "Renamed", "Migrated", "Fixed"). Name repos and concrete artifacts. No editorial adjectives, no promotional framing, no characterization of engineering quality.** If you need to adjust voice, edit the prompts in `daily-highlights.yml` — do not edit yesterday's generated output to "fix" the voice, because tomorrow's run will reintroduce the same drift.
+Tone splits per region:
+
+- **INTRO-PROSE** (`narrative` job): first-person, dry, slightly self-deprecating about the AI-does-it-all gag. Voice and identity claims are anchored in `.github/intro-seed.md` — adjust voice there, not in the workflow prompt. The seed is read fresh each run, so there is no carry-forward from yesterday's prose; drift is impossible by construction.
+- **RECENT-ACTIVITY** (`narrative` job, bulleted format): matter-of-fact, third-person past tense, plain verbs ("Added", "Renamed", "Migrated", "Fixed"). One bullet per repo with activity. Name concrete artifacts. No editorial adjectives, no promotional framing. Links carry SHAs/PR numbers — never put commit hashes in visible text.
+- **SELECTED-PROJECTS** (`narrative` job): same matter-of-fact rules as RECENT-ACTIVITY.
+
+If you need to adjust voice, edit the prompts in `daily-highlights.yml` (or `intro-seed.md` for the intro) — do not edit yesterday's generated output to "fix" the voice, because tomorrow's run will reintroduce the same drift.
 
 ## Theme System (Manual)
 
