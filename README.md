@@ -8,17 +8,31 @@
 
 # Brandon Fryslie
 
-**Full-Stack & Cloud Platform Engineer** · Boulder, CO
+~~Full-Stack & Cloud Platform Engineer~~<br>
+**Vibe Coder**<br>
+Boulder, CO
 
 </div>
 
 ---
 
-I build software.  Professionally, that has typically been front-end using React, enterprise backend (microservices/monoliths), cloud infrastructure automation, the architectural design work that enforces stability and alignment, and the tooling that holds it together and ensures an organization is able to fire on all cylinders.
+<div align="center">
 
-Outside of work, I enjoy writing a variety of developer focused tooling and pet projects.  Some of them are practical, some of them are to learn a particular technology or skill, some of them are to create art, but all of them are fun.
+**Note: This profile was meticulously and painstakingly hand-crafted by generative AI**
 
-My passion lately has been around designing autonomous generative engineering workflows using AI.  Such as this repo, which is largely AI generated on a daily basis.
+</div>
+
+I *used* to build software.  Professionally, that meant React front-ends, enterprise backends (microservices, monoliths, everything in between), cloud infrastructure automation, the architectural design work that kept systems stable and aligned, and the tooling that held it all together.
+
+Now I have AI do that for me.
+
+I *used* to write developer tooling and pet projects in my spare time — some practical, some experimental, some purely art.  Now AI writes those too.  I *used* to design, write, and maintain this very profile page.  What you're reading was generated top-to-bottom by an AI, including the giant rotating **AI SLOP** banner over in [the gallery](./DOODLES.md).  I didn't even ask for the scanlines.  That was its idea.
+
+My passion lately is designing autonomous generative engineering workflows using AI.  Such as this repo, which regenerates itself on a daily basis while I do other things.
+
+<div align="center">
+<img src="./assets/neural-pulse-80s.svg" width="800" alt="Neural network with flowing pulses — Business Requirements feeding through hidden layers into Customer Value" />
+</div>
 
 <div align="center">
 <img src="./assets/daily-stats.svg" width="800" />
@@ -146,7 +160,7 @@ Node.js client for the tmux control mode protocol. Recent commits scoped the pac
 
 ---
 
-## Technical Writing
+## Technical "Writing" (Claude wrote these)
 
 <table>
 <tr>
@@ -176,7 +190,7 @@ Multi-layer stack from ESP8266 microcontrollers to React interfaces for kinetic 
 
 ---
 
-## Publication
+## Publications
 
 *Genome-level diversity within a single Amoebophilus asiaticus strain reveals within-genome heterogeneity and extensive repetitive elements.*
 <br/>The ISME Journal (Nature Publishing Group), 2013
@@ -206,10 +220,4 @@ Multi-layer stack from ESP8266 microcontrollers to React interfaces for kinetic 
 
 <div align="center">
 <img src="./assets/vision.svg" width="800" />
-</div>
-
-<div align="center">
-
-Boulder, CO
-
 </div>

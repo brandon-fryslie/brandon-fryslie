@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" width="800" height="310" role="img" aria-label="AI Revolution — neural network with flowing pulses">
+  <defs>
+    <linearGradient id="nnBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0a0420"/>
+      <stop offset="100%" stop-color="#1a0a3c"/>
+    </linearGradient>
+    <radialGradient id="nodeCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#eaffff"/>
+      <stop offset="40%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#1a66ff"/>
+    </radialGradient>
+    <radialGradient id="nodeMagenta" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fff0ff"/>
+      <stop offset="40%" stop-color="#ff2d95"/>
+      <stop offset="100%" stop-color="#7a00ff"/>
+    </radialGradient>
+    <radialGradient id="nodeAmber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fff8d8"/>
+      <stop offset="40%" stop-color="#ffb13b"/>
+      <stop offset="100%" stop-color="#ff2d95"/>
+    </radialGradient>
+
+    <linearGradient id="titleChrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff8ff"/>
+      <stop offset="25%" stop-color="#7efcff"/>
+      <stop offset="50%" stop-color="#1a66ff"/>
+      <stop offset="55%" stop-color="#ff2d95"/>
+      <stop offset="80%" stop-color="#ffb13b"/>
+      <stop offset="100%" stop-color="#7a00ff"/>
+    </linearGradient>
+
+    <linearGradient id="shimmerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="35%"  stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="50%"  stop-color="#eaffff" stop-opacity="1"/>
+      <stop offset="65%"  stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="nnGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="titleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <clipPath id="cvClip">
+      <text x="700" y="275" text-anchor="middle"
+            font-family="Impact, 'Arial Black', sans-serif" font-weight="900"
+            font-size="18" letter-spacing="2">CUSTOMER</text>
+      <text x="700" y="296" text-anchor="middle"
+            font-family="Impact, 'Arial Black', sans-serif" font-weight="900"
+            font-size="18" letter-spacing="2">VALUE</text>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="310" fill="url(#nnBg)"/>
+
+  <!-- Subtle grid backdrop (network area) -->
+  <g stroke="#ff2d95" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="115" x2="800" y2="115"/>
+    <line x1="0" y1="170" x2="800" y2="170"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+  </g>
+
+  <!-- ===================== TITLE: AI REVOLUTION (3D flipping letters) ===================== -->
+  <g font-family="Impact, 'Arial Black', sans-serif" font-weight="900"
+     font-size="40" text-anchor="middle" letter-spacing="1">
+    <!-- Letter positions (skipping slot 2 for the space between AI and REVOLUTION) -->
+    <!-- A -->
+    <g transform="translate(232,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="0s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">A</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">A</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">A</text>
+      </g>
+    </g>
+    <!-- I -->
+    <g transform="translate(260,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="0.15s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">I</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">I</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">I</text>
+      </g>
+    </g>
+    <!-- R -->
+    <g transform="translate(316,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="0.45s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">R</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">R</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">R</text>
+      </g>
+    </g>
+    <!-- E -->
+    <g transform="translate(344,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="0.6s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">E</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">E</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">E</text>
+      </g>
+    </g>
+    <!-- V -->
+    <g transform="translate(372,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="0.75s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">V</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">V</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">V</text>
+      </g>
+    </g>
+    <!-- O -->
+    <g transform="translate(400,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="0.9s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">O</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">O</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">O</text>
+      </g>
+    </g>
+    <!-- L -->
+    <g transform="translate(428,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="1.05s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">L</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">L</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">L</text>
+      </g>
+    </g>
+    <!-- U -->
+    <g transform="translate(456,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="1.2s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">U</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">U</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">U</text>
+      </g>
+    </g>
+    <!-- T -->
+    <g transform="translate(484,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="1.35s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">T</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">T</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">T</text>
+      </g>
+    </g>
+    <!-- I -->
+    <g transform="translate(512,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="1.5s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">I</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">I</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">I</text>
+      </g>
+    </g>
+    <!-- O -->
+    <g transform="translate(540,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="1.65s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">O</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">O</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">O</text>
+      </g>
+    </g>
+    <!-- N -->
+    <g transform="translate(568,48)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1;0 1;-1 1;0 1;1 1" keyTimes="0;0.25;0.5;0.75;1"
+          dur="4s" begin="1.8s" repeatCount="indefinite"/>
+        <text x="2" y="2" fill="#7a00ff" opacity="0.6" filter="url(#titleGlow)">N</text>
+        <text x="1" y="1" fill="#ff2d95" opacity="0.85">N</text>
+        <text x="0" y="0" fill="url(#titleChrome)" stroke="#fff" stroke-width="0.7">N</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===================== NEURAL NETWORK (shifted down 60px) ===================== -->
+  <g transform="translate(0,60)">
+    <!-- Edges -->
+    <g stroke="#7a00ff" stroke-opacity="0.55" stroke-width="1">
+      <!-- IN -> H1 (12 edges) -->
+      <line x1="100" y1="40"  x2="300" y2="55"/>
+      <line x1="100" y1="40"  x2="300" y2="110"/>
+      <line x1="100" y1="40"  x2="300" y2="165"/>
+      <line x1="100" y1="85"  x2="300" y2="55"/>
+      <line x1="100" y1="85"  x2="300" y2="110"/>
+      <line x1="100" y1="85"  x2="300" y2="165"/>
+      <line x1="100" y1="130" x2="300" y2="55"/>
+      <line x1="100" y1="130" x2="300" y2="110"/>
+      <line x1="100" y1="130" x2="300" y2="165"/>
+      <line x1="100" y1="175" x2="300" y2="55"/>
+      <line x1="100" y1="175" x2="300" y2="110"/>
+      <line x1="100" y1="175" x2="300" y2="165"/>
+      <!-- H1 -> H2 -->
+      <line x1="300" y1="55"  x2="500" y2="55"/>
+      <line x1="300" y1="55"  x2="500" y2="110"/>
+      <line x1="300" y1="55"  x2="500" y2="165"/>
+      <line x1="300" y1="110" x2="500" y2="55"/>
+      <line x1="300" y1="110" x2="500" y2="110"/>
+      <line x1="300" y1="110" x2="500" y2="165"/>
+      <line x1="300" y1="165" x2="500" y2="55"/>
+      <line x1="300" y1="165" x2="500" y2="110"/>
+      <line x1="300" y1="165" x2="500" y2="165"/>
+      <!-- H2 -> OUT -->
+      <line x1="500" y1="55"  x2="700" y2="85"/>
+      <line x1="500" y1="55"  x2="700" y2="135"/>
+      <line x1="500" y1="110" x2="700" y2="85"/>
+      <line x1="500" y1="110" x2="700" y2="135"/>
+      <line x1="500" y1="165" x2="700" y2="85"/>
+      <line x1="500" y1="165" x2="700" y2="135"/>
+    </g>
+
+    <!-- Traveling pulses -->
+    <g filter="url(#nnGlow)">
+      <circle r="4" fill="#00f0ff">
+        <animateMotion dur="3s" repeatCount="indefinite"
+          path="M100,40 L300,110 L500,110 L700,85"/>
+      </circle>
+      <circle r="4" fill="#ff2d95">
+        <animateMotion dur="3.5s" begin="0.4s" repeatCount="indefinite"
+          path="M100,85 L300,55 L500,165 L700,135"/>
+      </circle>
+      <circle r="4" fill="#ffb13b">
+        <animateMotion dur="4s" begin="0.8s" repeatCount="indefinite"
+          path="M100,130 L300,165 L500,55 L700,85"/>
+      </circle>
+      <circle r="4" fill="#7efcff">
+        <animateMotion dur="2.7s" begin="1.2s" repeatCount="indefinite"
+          path="M100,175 L300,110 L500,55 L700,135"/>
+      </circle>
+      <circle r="4" fill="#ff2d95">
+        <animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite"
+          path="M100,40 L300,55 L500,110 L700,85"/>
+      </circle>
+      <circle r="4" fill="#ffb13b">
+        <animateMotion dur="3.8s" begin="0.2s" repeatCount="indefinite"
+          path="M100,175 L300,165 L500,165 L700,135"/>
+      </circle>
+    </g>
+
+    <!-- Nodes -->
+    <g filter="url(#nnGlow)">
+      <circle cx="100" cy="40"  r="9" fill="url(#nodeCyan)"><animate attributeName="r" values="8;11;8" dur="2.3s" repeatCount="indefinite"/></circle>
+      <circle cx="100" cy="85"  r="9" fill="url(#nodeCyan)"><animate attributeName="r" values="9;11;9" dur="2.7s" repeatCount="indefinite"/></circle>
+      <circle cx="100" cy="130" r="9" fill="url(#nodeCyan)"><animate attributeName="r" values="8;12;8" dur="3.1s" repeatCount="indefinite"/></circle>
+      <circle cx="100" cy="175" r="9" fill="url(#nodeCyan)"><animate attributeName="r" values="9;11;9" dur="2.5s" repeatCount="indefinite"/></circle>
+
+      <circle cx="300" cy="55"  r="10" fill="url(#nodeMagenta)"><animate attributeName="r" values="9;12;9"  dur="2.9s" repeatCount="indefinite"/></circle>
+      <circle cx="300" cy="110" r="10" fill="url(#nodeMagenta)"><animate attributeName="r" values="10;13;10" dur="3.3s" repeatCount="indefinite"/></circle>
+      <circle cx="300" cy="165" r="10" fill="url(#nodeMagenta)"><animate attributeName="r" values="9;12;9"  dur="2.6s" repeatCount="indefinite"/></circle>
+
+      <circle cx="500" cy="55"  r="10" fill="url(#nodeMagenta)"><animate attributeName="r" values="10;13;10" dur="3.0s" repeatCount="indefinite"/></circle>
+      <circle cx="500" cy="110" r="10" fill="url(#nodeMagenta)"><animate attributeName="r" values="9;12;9"   dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="500" cy="165" r="10" fill="url(#nodeMagenta)"><animate attributeName="r" values="10;13;10" dur="3.4s" repeatCount="indefinite"/></circle>
+
+      <circle cx="700" cy="85"  r="11" fill="url(#nodeAmber)"><animate attributeName="r" values="10;14;10" dur="2.8s" repeatCount="indefinite"/></circle>
+      <circle cx="700" cy="135" r="11" fill="url(#nodeAmber)"><animate attributeName="r" values="11;14;11" dur="3.2s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <!-- ===================== LABELS ===================== -->
+  <g font-family="Impact, 'Arial Black', sans-serif" font-weight="900" text-anchor="middle" letter-spacing="2">
+    <!-- Business Requirements (two lines) -->
+    <text x="100" y="275" fill="#00f0ff" font-size="13">BUSINESS</text>
+    <text x="100" y="292" fill="#00f0ff" font-size="13">REQUIREMENTS</text>
+
+    <!-- Hidden layer captions stay -->
+    <text x="300" y="282" fill="#ff2d95" font-size="11" opacity="0.85">HIDDEN</text>
+    <text x="500" y="282" fill="#ff2d95" font-size="11" opacity="0.85">HIDDEN</text>
+
+    <!-- Customer Value (base, two lines, with a subtle size pulse) -->
+    <text x="700" y="275" fill="#ffb13b" font-size="18">CUSTOMER<animate attributeName="font-size" values="18;19;18" dur="3.1s" repeatCount="indefinite"/></text>
+    <text x="700" y="296" fill="#ffb13b" font-size="18">VALUE<animate attributeName="font-size" values="18;19;18" dur="3.1s" repeatCount="indefinite"/></text>
+
+    <!-- Shimmer wave: wide gradient rect clipped to the text outlines.
+         Starts well left of the first letter so the fade-in is gradual. -->
+    <g clip-path="url(#cvClip)">
+      <rect y="258" width="140" height="48" fill="url(#shimmerGrad)">
+        <animate attributeName="x" from="490" to="840" dur="2.6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Sparkle dots around Customer / Value -->
+    <g fill="#fff8d8">
+      <circle cx="625" cy="268" r="1.4">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="0.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="780" cy="268" r="1.4">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="655" cy="302" r="1.2">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="745" cy="302" r="1.2">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="700" cy="258" r="1.3">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" begin="0.9s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+</svg>
