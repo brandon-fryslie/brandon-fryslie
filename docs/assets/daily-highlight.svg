@@ -1,186 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Audubon's 241st Birthday (April 26, 1785) — ornithological illustration in motion. Anniversary pick over day-of-week fallback; replaces today's earlier Spring Bloom doodle on a re-run. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 26, 2026 — Audubon's 241st Birthday">
-  <title>Audubon · 241 — April 26, 2026</title>
+<!-- theme: Kon-Tiki 79th anniversary (April 28, 1947) — Thor Heyerdahl's balsa raft sets sail across the Pacific. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 28, 2026 — 79th anniversary of the Kon-Tiki expedition">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.55" stop-color="#1a1410"/>
-      <stop offset="1" stop-color="#2a1d10"/>
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="40%" stop-color="#1a2238"/>
+      <stop offset="70%" stop-color="#4a2a3a"/>
+      <stop offset="100%" stop-color="#a84020"/>
     </linearGradient>
-    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#f6c87a" stop-opacity="0.95"/>
-      <stop offset="0.55" stop-color="#c98b3b" stop-opacity="0.45"/>
-      <stop offset="1" stop-color="#c98b3b" stop-opacity="0"/>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff0c0" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#ffaa50" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#cc4020" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#aa2010" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="parchment" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#f3d9a4"/>
-      <stop offset="1" stop-color="#d4a85f"/>
+    <radialGradient id="sunDisk" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff5d0"/>
+      <stop offset="60%" stop-color="#ffc070"/>
+      <stop offset="100%" stop-color="#e07020"/>
+    </radialGradient>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d3a52"/>
+      <stop offset="100%" stop-color="#040a12"/>
     </linearGradient>
-    <filter id="grain" x="0" y="0" width="1" height="1">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
-      <feColorMatrix values="0 0 0 0 0.18  0 0 0 0 0.13  0 0 0 0 0.08  0 0 0 0.08 0"/>
-      <feComposite in2="SourceGraphic" operator="in"/>
+    <linearGradient id="dateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff4d8"/>
+      <stop offset="100%" stop-color="#ffc070"/>
+    </linearGradient>
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="0" dy="1" result="offsetblur"/>
+      <feFlood flood-color="#000" flood-opacity="0.7"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="softGlow" x="-0.4" y="-0.4" width="1.8" height="1.8">
-      <feGaussianBlur stdDeviation="6"/>
-    </filter>
 
-    <!-- Bird silhouettes: stylized "M"-form gulls at various sizes -->
-    <symbol id="bird" viewBox="-20 -10 40 20" overflow="visible">
-      <path d="M -18 0 Q -10 -8 0 -2 Q 10 -8 18 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <animate attributeName="d"
-          values="M -18 0 Q -10 -8 0 -2 Q 10 -8 18 0;
-                  M -18 2 Q -10 -2 0 -1 Q 10 -2 18 2;
-                  M -18 0 Q -10 -8 0 -2 Q 10 -8 18 0"
-          dur="0.7s" repeatCount="indefinite"/>
-      </path>
-    </symbol>
-
-    <!-- Big detailed bird (Audubon-style heron-ish silhouette) -->
-    <symbol id="heron" viewBox="-60 -30 120 60" overflow="visible">
-      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
-        <!-- body -->
-        <path d="M -22 4 Q -8 -6 14 -2 Q 26 0 30 6 Q 14 8 -4 8 Q -18 8 -22 4 Z" fill="currentColor" fill-opacity="0.18"/>
-        <!-- neck + head -->
-        <path d="M 14 -2 Q 22 -10 28 -16 Q 34 -20 40 -18 L 46 -16 L 41 -14 L 44 -12"/>
-        <!-- legs -->
-        <path d="M -2 8 L -4 22 M 6 8 L 8 22"/>
-        <!-- wing (animated) -->
-        <path d="M -4 0 Q -10 -18 -28 -22 Q -36 -22 -40 -16 Q -28 -8 -10 -2 Z" fill="currentColor" fill-opacity="0.28">
-          <animate attributeName="d"
-            values="M -4 0 Q -10 -18 -28 -22 Q -36 -22 -40 -16 Q -28 -8 -10 -2 Z;
-                    M -4 0 Q -14 -10 -32 -8 Q -38 -4 -36 2 Q -22 0 -10 -2 Z;
-                    M -4 0 Q -10 -18 -28 -22 Q -36 -22 -40 -16 Q -28 -8 -10 -2 Z"
-            dur="2.3s" repeatCount="indefinite"/>
-        </path>
-      </g>
-    </symbol>
-
-    <!-- Branch silhouette -->
-    <symbol id="branch" viewBox="0 0 220 60" overflow="visible">
-      <g fill="none" stroke="#4a3520" stroke-width="1.6" stroke-linecap="round">
-        <path d="M 0 40 Q 60 30 110 22 T 220 8"/>
-        <path d="M 60 32 Q 70 18 90 12"/>
-        <path d="M 130 18 Q 150 8 180 4"/>
-        <path d="M 90 12 Q 96 6 104 4"/>
-      </g>
-      <!-- leaves -->
-      <g fill="#6b8a3a" fill-opacity="0.7">
-        <ellipse cx="92" cy="11" rx="4" ry="2" transform="rotate(-25 92 11)"/>
-        <ellipse cx="100" cy="6" rx="4" ry="2" transform="rotate(-20 100 6)"/>
-        <ellipse cx="178" cy="5" rx="4" ry="2" transform="rotate(-15 178 5)"/>
-        <ellipse cx="186" cy="3" rx="3" ry="1.6" transform="rotate(-10 186 3)"/>
-      </g>
-    </symbol>
+    <!-- single wave tile, repeats wider than canvas so translate animation can loop seamlessly -->
+    <path id="waveTile" d="M0 0 Q 30 -8 60 0 T 120 0 T 180 0 T 240 0 T 300 0 T 360 0 T 420 0 T 480 0 T 540 0 T 600 0 T 660 0 T 720 0 T 780 0 T 840 0 T 900 0 T 960 0 L 960 40 L 0 40 Z"/>
   </defs>
 
-  <!-- Sky -->
+  <!-- sky -->
   <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- Sun disc, low and warm -->
+  <!-- stars -->
+  <g fill="#ffffff">
+    <circle cx="48" cy="22" r="0.9"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="115" cy="14" r="0.6"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="180" cy="36" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="240" cy="18" r="0.5"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="7s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="42" r="0.8"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="80" cy="50" r="0.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="500" cy="20" r="0.6"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" begin="4s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="36" r="0.5"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="14" r="0.7"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="5s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="40" r="0.6"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="7s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="12" r="0.5"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="440" cy="48" r="0.6"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="13s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- setting sun (background glow) -->
+  <circle cx="650" cy="135" r="100" fill="url(#sunGlow)">
+    <animate attributeName="r" values="98;108;98" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <!-- sun disk -->
+  <circle cx="650" cy="135" r="38" fill="url(#sunDisk)" opacity="0.95">
+    <animate attributeName="r" values="37;40;37" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- horizon haze line -->
+  <line x1="0" y1="135" x2="800" y2="135" stroke="#ff9050" stroke-width="0.4" opacity="0.4"/>
+
+  <!-- ocean body -->
+  <rect x="0" y="135" width="800" height="65" fill="url(#ocean)"/>
+
+  <!-- sun reflection on water -->
+  <g opacity="0.7">
+    <ellipse cx="650" cy="148" rx="36" ry="2" fill="#ffd080">
+      <animate attributeName="rx" values="30;42;30" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="650" cy="158" rx="28" ry="1.5" fill="#ff9050">
+      <animate attributeName="rx" values="20;34;20" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="650" cy="170" rx="20" ry="1" fill="#ff7040">
+      <animate attributeName="rx" values="14;26;14" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="650" cy="182" rx="14" ry="0.8" fill="#cc5030">
+      <animate attributeName="rx" values="10;18;10" dur="7s" begin="1s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- back wave layer (slow, lighter) -->
+  <g fill="#2c4a64" opacity="0.55">
+    <use href="#waveTile" x="-100" y="135">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 60 0; 0 0" dur="13s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- mid wave layer -->
+  <g fill="#172f44" opacity="0.75">
+    <use href="#waveTile" x="-60" y="148">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -50 0; 0 0" dur="11s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- raft (rides the swell) -->
   <g>
-    <circle cx="640" cy="135" r="80" fill="url(#sun)"/>
-    <circle cx="640" cy="135" r="34" fill="#f6c87a" opacity="0.85" filter="url(#softGlow)"/>
-    <circle cx="640" cy="135" r="26" fill="#fde2a8"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 1; 0 -2; 0 0" dur="7s" repeatCount="indefinite"/>
+    <g transform="translate(225 152)">
+      <!-- balsa logs -->
+      <rect x="-26" y="0" width="52" height="5" rx="1.5" fill="#6a3a20"/>
+      <rect x="-26" y="0" width="52" height="5" rx="1.5" fill="none" stroke="#2a1408" stroke-width="0.4"/>
+      <line x1="-22" y1="0" x2="-22" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="-14" y1="0" x2="-14" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="-6" y1="0" x2="-6" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="2" y1="0" x2="2" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="10" y1="0" x2="10" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="18" y1="0" x2="18" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <!-- shadow under raft -->
+      <ellipse cx="0" cy="6" rx="28" ry="1" fill="#000" opacity="0.5"/>
+      <!-- mast -->
+      <line x1="0" y1="0" x2="-2" y2="-32" stroke="#2a1408" stroke-width="1.4"/>
+      <!-- yard -->
+      <line x1="-14" y1="-22" x2="14" y2="-22" stroke="#2a1408" stroke-width="0.8"/>
+      <!-- sail (square rig) -->
+      <path d="M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z" fill="#e8d4a0" opacity="0.95">
+        <animate attributeName="d" values="M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z;M-13 -22 L 13 -22 L 17 -2 L -11 -2 Z;M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <!-- sail shading -->
+      <path d="M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z" fill="none" stroke="#a07040" stroke-width="0.4"/>
+      <!-- a stylized face/sun motif on the sail (Kon-Tiki's signature painted sail) -->
+      <circle cx="0" cy="-12" r="3.5" fill="none" stroke="#a04020" stroke-width="0.6"/>
+      <line x1="0" y1="-17" x2="0" y2="-15" stroke="#a04020" stroke-width="0.5"/>
+      <line x1="0" y1="-9" x2="0" y2="-7" stroke="#a04020" stroke-width="0.5"/>
+      <line x1="-5" y1="-12" x2="-3" y2="-12" stroke="#a04020" stroke-width="0.5"/>
+      <line x1="3" y1="-12" x2="5" y2="-12" stroke="#a04020" stroke-width="0.5"/>
+    </g>
   </g>
 
-  <!-- Distant horizon hills -->
-  <path d="M 0 165 Q 120 150 220 158 Q 360 168 480 152 Q 600 138 720 150 Q 780 156 800 152 L 800 200 L 0 200 Z"
-        fill="#1c1208" opacity="0.85"/>
-  <path d="M 0 175 Q 160 168 320 172 Q 500 178 680 170 Q 760 167 800 170 L 800 200 L 0 200 Z"
-        fill="#0f0905"/>
+  <!-- front wave layer (fastest, darkest) -->
+  <g fill="#06121e" opacity="0.92">
+    <use href="#waveTile" x="-80" y="170">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 50 0; 0 0" dur="11s" repeatCount="indefinite"/>
+    </use>
+  </g>
 
-  <!-- Parchment plate behind the date -->
-  <g transform="translate(40 36)">
-    <rect x="0" y="0" width="360" height="118" rx="3" ry="3" fill="url(#parchment)" opacity="0.96"/>
-    <rect x="0" y="0" width="360" height="118" rx="3" ry="3" fill="url(#parchment)" filter="url(#grain)"/>
-    <!-- inner border -->
-    <rect x="6" y="6" width="348" height="106" fill="none" stroke="#3a2410" stroke-width="0.8" opacity="0.55"/>
-    <rect x="9" y="9" width="342" height="100" fill="none" stroke="#3a2410" stroke-width="0.4" opacity="0.4"/>
-
-    <!-- Plate header -->
-    <text x="180" y="26" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="11" letter-spacing="3"
-          fill="#3a2410" opacity="0.78">PLATE CCXLI</text>
-
-    <!-- The date — primary visual element -->
-    <text x="180" y="62" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="34" font-weight="700" letter-spacing="1"
-          fill="#2a1808">April 26, 2026</text>
-
-    <!-- Subtitle -->
-    <text x="180" y="84" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="13" font-style="italic"
-          fill="#3a2410">Audubon · 241 years aloft</text>
-
-    <!-- Hairline rule + flourish -->
-    <line x1="60" y1="94" x2="300" y2="94" stroke="#3a2410" stroke-width="0.6" opacity="0.5"/>
-    <text x="180" y="106" text-anchor="middle"
+  <!-- date — primary visual element -->
+  <g filter="url(#textShadow)">
+    <text x="400" y="78" text-anchor="middle"
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="9" letter-spacing="4"
-          fill="#3a2410" opacity="0.7">SUNDAY · BIRDS OF AMERICA</text>
+          font-size="42" font-weight="800" fill="url(#dateGrad)" letter-spacing="2.5">
+      APRIL 28, 2026
+    </text>
   </g>
 
-  <!-- Branch with leaves, low along the horizon (clear of the parchment plate) -->
-  <g transform="translate(420 162)">
-    <use href="#branch" width="260" height="50"/>
+  <!-- subtitle -->
+  <text x="400" y="105" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-weight="600" fill="#f0d8b0" letter-spacing="5" opacity="0.92">
+    KON-TIKI · 79 YEARS SINCE 28 APRIL 1947
+    <animate attributeName="opacity" values="0.78;0.98;0.78" dur="11s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- distant seabird silhouettes drifting across the sky -->
+  <g fill="none" stroke="#1a1a1a" stroke-width="0.9" opacity="0.55">
+    <path d="M0 0 q 3 -2 6 0 q 3 -2 6 0">
+      <animateTransform attributeName="transform" type="translate" values="-30 30; 830 22; 830 22" dur="29s" repeatCount="indefinite"/>
+    </path>
   </g>
-
-  <!-- Heron perched at end of branch, silhouetted against the sun — gentle sway -->
-  <g transform="translate(620 158)" color="#1a0f06">
-    <g>
-      <use href="#heron" width="140" height="70" x="-70" y="-35"/>
-      <animateTransform attributeName="transform" type="rotate"
-        values="-1 0 0; 1.5 0 0; -1 0 0" dur="11s" repeatCount="indefinite" additive="sum"/>
-    </g>
+  <g fill="none" stroke="#1a1a1a" stroke-width="0.7" opacity="0.45">
+    <path d="M0 0 q 2.5 -1.6 5 0 q 2.5 -1.6 5 0">
+      <animateTransform attributeName="transform" type="translate" values="-30 45; 830 38; 830 38" dur="37s" begin="6s" repeatCount="indefinite"/>
+    </path>
   </g>
-
-  <!-- Drifting flock — left to right, varied speeds and altitudes.
-       Negative begins ensure several birds are mid-flight in static frame 0. -->
-  <g color="#e6c98a" opacity="0.95">
-    <g>
-      <use href="#bird" x="-40" y="40" width="22" height="11"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="0 0; 880 -8" dur="13s" begin="-4s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <use href="#bird" x="-40" y="56" width="16" height="8"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="0 0; 880 -4" dur="17s" begin="-9s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <use href="#bird" x="-40" y="28" width="14" height="7"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="0 0; 880 -10" dur="19s" begin="-12s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <use href="#bird" x="-40" y="68" width="20" height="10"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="0 0; 880 0" dur="23s" begin="-6s" repeatCount="indefinite"/>
-    </g>
-  </g>
-
-  <!-- A few darker birds gliding right-to-left in front of the sun -->
-  <g color="#1a0f06" opacity="0.9">
-    <g>
-      <use href="#bird" x="0" y="60" width="18" height="9"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="820 0; -60 -6" dur="29s" begin="-14s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <use href="#bird" x="0" y="44" width="14" height="7"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="820 0; -60 4" dur="31s" begin="-22s" repeatCount="indefinite"/>
-    </g>
-  </g>
-
-  <!-- Faint paper-grain over the entire frame -->
-  <rect width="800" height="200" fill="#000" opacity="0.0"/>
-
-  <!-- Outer hairline frame, like an engraved plate -->
-  <rect x="2" y="2" width="796" height="196" fill="none" stroke="#3a2410" stroke-width="0.6" opacity="0.55"/>
 </svg>
