@@ -1,222 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Samuel Morse 235th birthday (April 27, 1791) — telegraph, dots & dashes traveling a wire. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 27, 2026 — Samuel Morse 235th birthday">
-  <title>Morse · 235 — April 27, 2026</title>
+<!-- theme: Kon-Tiki 79th anniversary (April 28, 1947) — Thor Heyerdahl's balsa raft sets sail across the Pacific. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 28, 2026 — 79th anniversary of the Kon-Tiki expedition">
   <defs>
-    <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#1a2435"/>
-      <stop offset="60%" stop-color="#0f1620"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="40%" stop-color="#1a2238"/>
+      <stop offset="70%" stop-color="#4a2a3a"/>
+      <stop offset="100%" stop-color="#a84020"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff0c0" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#ffaa50" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#cc4020" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#aa2010" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="brassKey" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f5d488"/>
-      <stop offset="45%" stop-color="#c89a3c"/>
-      <stop offset="100%" stop-color="#7a5b1d"/>
+    <radialGradient id="sunDisk" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff5d0"/>
+      <stop offset="60%" stop-color="#ffc070"/>
+      <stop offset="100%" stop-color="#e07020"/>
+    </radialGradient>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d3a52"/>
+      <stop offset="100%" stop-color="#040a12"/>
     </linearGradient>
-    <linearGradient id="brassBase" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#a07a2a"/>
-      <stop offset="100%" stop-color="#4a3612"/>
+    <linearGradient id="dateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff4d8"/>
+      <stop offset="100%" stop-color="#ffc070"/>
     </linearGradient>
-    <linearGradient id="dateGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff5d8"/>
-      <stop offset="55%" stop-color="#f4c552"/>
-      <stop offset="100%" stop-color="#c08a1f"/>
-    </linearGradient>
-    <linearGradient id="wireGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3a4458" stop-opacity="0"/>
-      <stop offset="10%" stop-color="#3a4458" stop-opacity="1"/>
-      <stop offset="90%" stop-color="#3a4458" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#3a4458" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="sparkBlur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.5"/>
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="0" dy="1" result="offsetblur"/>
+      <feFlood flood-color="#000" flood-opacity="0.7"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="bigBlur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
-    <!-- A single morse "pip" element reused for the traveling pulses -->
-    <symbol id="dot" overflow="visible">
-      <circle r="4" fill="#ffd770"/>
-      <circle r="9" fill="#ffd770" opacity="0.35" filter="url(#sparkBlur)"/>
-    </symbol>
-    <symbol id="dash" overflow="visible">
-      <rect x="-12" y="-3.5" width="24" height="7" rx="3.5" fill="#ffd770"/>
-      <rect x="-16" y="-6" width="32" height="12" rx="6" fill="#ffd770" opacity="0.3" filter="url(#sparkBlur)"/>
-    </symbol>
+
+    <!-- single wave tile, repeats wider than canvas so translate animation can loop seamlessly -->
+    <path id="waveTile" d="M0 0 Q 30 -8 60 0 T 120 0 T 180 0 T 240 0 T 300 0 T 360 0 T 420 0 T 480 0 T 540 0 T 600 0 T 660 0 T 720 0 T 780 0 T 840 0 T 900 0 T 960 0 L 960 40 L 0 40 Z"/>
   </defs>
 
-  <!-- background -->
-  <rect width="800" height="200" fill="url(#bgGlow)"/>
+  <!-- sky -->
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- faint paper-grid pattern (telegraph form) -->
-  <g opacity="0.06" stroke="#7a8aa0" stroke-width="0.5">
-    <path d="M0 40 H800 M0 80 H800 M0 120 H800 M0 160 H800"/>
-    <path d="M80 0 V200 M200 0 V200 M320 0 V200 M440 0 V200 M560 0 V200 M680 0 V200"/>
+  <!-- stars -->
+  <g fill="#ffffff">
+    <circle cx="48" cy="22" r="0.9"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="115" cy="14" r="0.6"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="180" cy="36" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="240" cy="18" r="0.5"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="7s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="42" r="0.8"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="80" cy="50" r="0.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="500" cy="20" r="0.6"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" begin="4s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="36" r="0.5"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="14" r="0.7"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="5s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="40" r="0.6"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="7s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="12" r="0.5"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="440" cy="48" r="0.6"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="13s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- The telegraph wire -->
-  <line x1="0" y1="155" x2="800" y2="155" stroke="url(#wireGrad)" stroke-width="1.4"/>
-  <!-- glass insulators on the wire -->
-  <g fill="#5a6f88" opacity="0.7">
-    <circle cx="120" cy="155" r="2.2"/>
-    <circle cx="280" cy="155" r="2.2"/>
-    <circle cx="520" cy="155" r="2.2"/>
-    <circle cx="680" cy="155" r="2.2"/>
+  <!-- setting sun (background glow) -->
+  <circle cx="650" cy="135" r="100" fill="url(#sunGlow)">
+    <animate attributeName="r" values="98;108;98" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <!-- sun disk -->
+  <circle cx="650" cy="135" r="38" fill="url(#sunDisk)" opacity="0.95">
+    <animate attributeName="r" values="37;40;37" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- horizon haze line -->
+  <line x1="0" y1="135" x2="800" y2="135" stroke="#ff9050" stroke-width="0.4" opacity="0.4"/>
+
+  <!-- ocean body -->
+  <rect x="0" y="135" width="800" height="65" fill="url(#ocean)"/>
+
+  <!-- sun reflection on water -->
+  <g opacity="0.7">
+    <ellipse cx="650" cy="148" rx="36" ry="2" fill="#ffd080">
+      <animate attributeName="rx" values="30;42;30" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="650" cy="158" rx="28" ry="1.5" fill="#ff9050">
+      <animate attributeName="rx" values="20;34;20" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="650" cy="170" rx="20" ry="1" fill="#ff7040">
+      <animate attributeName="rx" values="14;26;14" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="650" cy="182" rx="14" ry="0.8" fill="#cc5030">
+      <animate attributeName="rx" values="10;18;10" dur="7s" begin="1s" repeatCount="indefinite"/>
+    </ellipse>
   </g>
 
-  <!-- Traveling morse pulses along the wire: ".... .. -...-" style burst sequence -->
+  <!-- back wave layer (slow, lighter) -->
+  <g fill="#2c4a64" opacity="0.55">
+    <use href="#waveTile" x="-100" y="135">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 60 0; 0 0" dur="13s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- mid wave layer -->
+  <g fill="#172f44" opacity="0.75">
+    <use href="#waveTile" x="-60" y="148">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -50 0; 0 0" dur="11s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- raft (rides the swell) -->
   <g>
-    <use href="#dot" x="-30" y="155">
-      <animate attributeName="x" values="-30;830" dur="11s" begin="0s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="0s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dot" x="-30" y="155">
-      <animate attributeName="x" values="-30;830" dur="11s" begin="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="0.6s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dash" x="-30" y="155">
-      <animate attributeName="x" values="-30;830" dur="11s" begin="1.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="1.4s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dot" x="-30" y="155">
-      <animate attributeName="x" values="-30;830" dur="11s" begin="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="2.4s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dash" x="-30" y="155">
-      <animate attributeName="x" values="-30;830" dur="11s" begin="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="3.2s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dash" x="-30" y="155">
-      <animate attributeName="x" values="-30;830" dur="11s" begin="4.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="4.4s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dot" x="-30" y="155">
-      <animate attributeName="x" values="-30;830" dur="11s" begin="5.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="5.8s" repeatCount="indefinite"/>
-    </use>
-  </g>
-
-  <!-- Telegraph key (left side): brass arm pivoting on a base, tapping out signals -->
-  <g transform="translate(70 168)">
-    <!-- wooden plinth -->
-    <rect x="-46" y="0" width="92" height="14" rx="2" fill="#3a2618" stroke="#1a0e08" stroke-width="0.5"/>
-    <rect x="-46" y="0" width="92" height="3" fill="#5a3a22" opacity="0.6"/>
-    <!-- contact post -->
-    <rect x="22" y="-10" width="6" height="10" fill="url(#brassBase)"/>
-    <circle cx="25" cy="-11" r="3" fill="url(#brassKey)"/>
-    <!-- pivot post -->
-    <rect x="-30" y="-12" width="6" height="12" fill="url(#brassBase)"/>
-    <!-- the lever arm itself, pivots at (-27,-11) -->
-    <g style="transform-origin: -27px -11px; transform-box: fill-box;">
-      <animateTransform attributeName="transform" type="rotate"
-        values="0;0;-7;-7;0;0;-7;-7;0;0;-7;0;0"
-        keyTimes="0;0.04;0.08;0.13;0.17;0.22;0.26;0.31;0.36;0.55;0.62;0.68;1"
-        dur="13s" repeatCount="indefinite"/>
-      <rect x="-32" y="-13" width="62" height="4" rx="1.5" fill="url(#brassKey)" stroke="#3a2810" stroke-width="0.4"/>
-      <!-- knob (the part you tap) -->
-      <circle cx="32" cy="-11" r="6" fill="url(#brassKey)" stroke="#3a2810" stroke-width="0.5"/>
-      <circle cx="30.5" cy="-12.5" r="1.6" fill="#fff5cc" opacity="0.7"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 1; 0 -2; 0 0" dur="7s" repeatCount="indefinite"/>
+    <g transform="translate(225 152)">
+      <!-- balsa logs -->
+      <rect x="-26" y="0" width="52" height="5" rx="1.5" fill="#6a3a20"/>
+      <rect x="-26" y="0" width="52" height="5" rx="1.5" fill="none" stroke="#2a1408" stroke-width="0.4"/>
+      <line x1="-22" y1="0" x2="-22" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="-14" y1="0" x2="-14" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="-6" y1="0" x2="-6" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="2" y1="0" x2="2" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="10" y1="0" x2="10" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <line x1="18" y1="0" x2="18" y2="5" stroke="#2a1408" stroke-width="0.3"/>
+      <!-- shadow under raft -->
+      <ellipse cx="0" cy="6" rx="28" ry="1" fill="#000" opacity="0.5"/>
+      <!-- mast -->
+      <line x1="0" y1="0" x2="-2" y2="-32" stroke="#2a1408" stroke-width="1.4"/>
+      <!-- yard -->
+      <line x1="-14" y1="-22" x2="14" y2="-22" stroke="#2a1408" stroke-width="0.8"/>
+      <!-- sail (square rig) -->
+      <path d="M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z" fill="#e8d4a0" opacity="0.95">
+        <animate attributeName="d" values="M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z;M-13 -22 L 13 -22 L 17 -2 L -11 -2 Z;M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <!-- sail shading -->
+      <path d="M-13 -22 L 13 -22 L 14 -2 L -14 -2 Z" fill="none" stroke="#a07040" stroke-width="0.4"/>
+      <!-- a stylized face/sun motif on the sail (Kon-Tiki's signature painted sail) -->
+      <circle cx="0" cy="-12" r="3.5" fill="none" stroke="#a04020" stroke-width="0.6"/>
+      <line x1="0" y1="-17" x2="0" y2="-15" stroke="#a04020" stroke-width="0.5"/>
+      <line x1="0" y1="-9" x2="0" y2="-7" stroke="#a04020" stroke-width="0.5"/>
+      <line x1="-5" y1="-12" x2="-3" y2="-12" stroke="#a04020" stroke-width="0.5"/>
+      <line x1="3" y1="-12" x2="5" y2="-12" stroke="#a04020" stroke-width="0.5"/>
     </g>
-    <!-- spark when key closes -->
-    <circle cx="25" cy="-11" r="4" fill="#fff5b0" opacity="0">
-      <animate attributeName="opacity"
-        values="0;0;1;0.4;0;0;1;0.4;0;0;1;0.4;0;0"
-        keyTimes="0;0.07;0.085;0.11;0.13;0.25;0.265;0.29;0.31;0.61;0.625;0.65;0.67;1"
-        dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="r"
-        values="3;3;7;5;3;3;7;5;3;3;7;5;3;3"
-        keyTimes="0;0.07;0.085;0.11;0.13;0.25;0.265;0.29;0.31;0.61;0.625;0.65;0.67;1"
-        dur="13s" repeatCount="indefinite"/>
-    </circle>
   </g>
 
-  <!-- Wire from key up to overhead line -->
-  <path d="M95 160 Q98 158 100 155" stroke="#3a4458" stroke-width="1" fill="none"/>
+  <!-- front wave layer (fastest, darkest) -->
+  <g fill="#06121e" opacity="0.92">
+    <use href="#waveTile" x="-80" y="170">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 50 0; 0 0" dur="11s" repeatCount="indefinite"/>
+    </use>
+  </g>
 
-  <!-- Center: prominent date + subtitle -->
-  <g text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <!-- Soft halo behind the date so it stays legible over any pulse -->
-    <text x="400" y="92" font-size="46" font-weight="800" letter-spacing="2"
-          fill="#0d1117" stroke="#0d1117" stroke-width="10" opacity="0.85">APRIL 27 · 2026</text>
-    <text x="400" y="92" font-size="46" font-weight="800" letter-spacing="2" fill="url(#dateGrad)">APRIL 27 · 2026</text>
-
-    <!-- Subtitle: Samuel Morse 235 -->
-    <text x="400" y="118" font-size="13" font-weight="600" letter-spacing="6" fill="#9aa9bf">
-      SAMUEL F. B. MORSE  ·  BORN 1791  ·  235 YEARS
+  <!-- date — primary visual element -->
+  <g filter="url(#textShadow)">
+    <text x="400" y="78" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="42" font-weight="800" fill="url(#dateGrad)" letter-spacing="2.5">
+      APRIL 28, 2026
     </text>
   </g>
 
-  <!-- Morse code rendering of "MORSE" beneath the subtitle, with a soft pulse -->
-  <!-- letters: M / O / R / S / E -->
-  <g transform="translate(252 134)" fill="#ffd770">
-    <!-- M dash dash -->
-    <rect x="0" y="-3" width="14" height="6" rx="2"/>
-    <rect x="18" y="-3" width="14" height="6" rx="2"/>
-    <!-- O dash dash dash -->
-    <rect x="50" y="-3" width="14" height="6" rx="2"/>
-    <rect x="68" y="-3" width="14" height="6" rx="2"/>
-    <rect x="86" y="-3" width="14" height="6" rx="2"/>
-    <!-- R  .-. -->
-    <circle cx="120" cy="0" r="3"/>
-    <rect x="128" y="-3" width="14" height="6" rx="2"/>
-    <circle cx="148" cy="0" r="3"/>
-    <!-- S  ... -->
-    <circle cx="166" cy="0" r="3"/>
-    <circle cx="176" cy="0" r="3"/>
-    <circle cx="186" cy="0" r="3"/>
-    <!-- E  . -->
-    <circle cx="206" cy="0" r="3"/>
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite"/>
-  </g>
+  <!-- subtitle -->
+  <text x="400" y="105" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-weight="600" fill="#f0d8b0" letter-spacing="5" opacity="0.92">
+    KON-TIKI · 79 YEARS SINCE 28 APRIL 1947
+    <animate attributeName="opacity" values="0.78;0.98;0.78" dur="11s" repeatCount="indefinite"/>
+  </text>
 
-  <!-- Floating dots/dashes drifting in the upper field, like signals lifting off -->
-  <g fill="#ffd770" opacity="0.5">
-    <circle cx="120" cy="40" r="2">
-      <animate attributeName="cy" values="40;25;40" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="13s" repeatCount="indefinite"/>
-    </circle>
-    <rect x="180" y="33" width="14" height="4" rx="2">
-      <animate attributeName="y" values="35;18;35" dur="11s" begin="1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.6;0" dur="11s" begin="1s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="640" cy="38" r="2">
-      <animate attributeName="cy" values="38;22;38" dur="13s" begin="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="13s" begin="2s" repeatCount="indefinite"/>
-    </circle>
-    <rect x="700" y="42" width="14" height="4" rx="2">
-      <animate attributeName="y" values="44;26;44" dur="11s" begin="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.6;0" dur="11s" begin="3s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="540" cy="48" r="2">
-      <animate attributeName="cy" values="48;30;48" dur="13s" begin="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="13s" begin="4s" repeatCount="indefinite"/>
-    </circle>
+  <!-- distant seabird silhouettes drifting across the sky -->
+  <g fill="none" stroke="#1a1a1a" stroke-width="0.9" opacity="0.55">
+    <path d="M0 0 q 3 -2 6 0 q 3 -2 6 0">
+      <animateTransform attributeName="transform" type="translate" values="-30 30; 830 22; 830 22" dur="29s" repeatCount="indefinite"/>
+    </path>
   </g>
-
-  <!-- Receiver / sounder on the right side -->
-  <g transform="translate(720 168)">
-    <rect x="-36" y="0" width="72" height="14" rx="2" fill="#3a2618" stroke="#1a0e08" stroke-width="0.5"/>
-    <rect x="-36" y="0" width="72" height="3" fill="#5a3a22" opacity="0.6"/>
-    <!-- electromagnet coil -->
-    <rect x="-18" y="-16" width="36" height="16" rx="2" fill="#1a1208" stroke="#3a2810" stroke-width="0.6"/>
-    <g stroke="#c89a3c" stroke-width="1.2" fill="none">
-      <path d="M-15 -14 H15"/>
-      <path d="M-15 -10 H15"/>
-      <path d="M-15 -6 H15"/>
-      <path d="M-15 -2 H15"/>
-    </g>
-    <!-- armature lever -->
-    <g style="transform-origin: -22px -8px; transform-box: fill-box;">
-      <animateTransform attributeName="transform" type="rotate"
-        values="0;0;3;3;0;0;3;3;0;0;3;0;0"
-        keyTimes="0;0.04;0.08;0.13;0.17;0.22;0.26;0.31;0.36;0.55;0.62;0.68;1"
-        dur="13s" repeatCount="indefinite"/>
-      <rect x="-22" y="-22" width="44" height="3" rx="1" fill="url(#brassKey)" stroke="#3a2810" stroke-width="0.4"/>
-    </g>
+  <g fill="none" stroke="#1a1a1a" stroke-width="0.7" opacity="0.45">
+    <path d="M0 0 q 2.5 -1.6 5 0 q 2.5 -1.6 5 0">
+      <animateTransform attributeName="transform" type="translate" values="-30 45; 830 38; 830 38" dur="37s" begin="6s" repeatCount="indefinite"/>
+    </path>
   </g>
-
-  <!-- Subtle scanning glow sweeping across the date once per cycle, telegraph-pulse feel -->
-  <rect x="-200" y="60" width="120" height="60" fill="#ffd770" opacity="0.07" filter="url(#bigBlur)">
-    <animate attributeName="x" values="-200;900" dur="13s" repeatCount="indefinite"/>
-  </rect>
 </svg>

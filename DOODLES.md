@@ -7,6 +7,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 ---
 
 <!-- DOODLE-GALLERY:START -->
+## April 27, 2026 — Samuel Morse 235th birthday (April 27, 1791) — telegraph, dots & dashes traveling a wire.
+
+<img src="./doodle-archive/2026/04/2026-04-27.svg" width="800" alt="Daily doodle for April 27, 2026: Samuel Morse 235th birthday (April 27, 1791) — telegraph, dots & dashes traveling a wire.">
+
+---
+
 ## April 26, 2026 — Spring Bloom
 
 <img src="./doodle-archive/2026/04/2026-04-26.svg" width="800" alt="Daily doodle for April 26, 2026: Spring Bloom">
