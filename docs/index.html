@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Fryslie</title>
+  <meta name="description" content="The unconstrained counterpart to my GitHub profile — daily-regenerated, WebGPU-rendered, and free of the sandbox.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%B0%EF%B8%8F%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="topnav">
+    <span class="brand">brandon-fryslie</span>
+    <nav>
+      <a href="#intro">intro</a>
+      <a href="#activity">activity</a>
+      <a href="#projects">projects</a>
+      <a href="https://github.com/brandon-fryslie" target="_blank" rel="noopener">profile ↗</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-stage">
+      <!-- WebGPU procedural render goes here when shader work lands.
+           For now: feature-detect, fall back to the SVG version that the
+           profile also uses. The SVG IS the no-WebGPU floor of this site. -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <img id="hero-fallback" src="assets/flatirons-banner.svg" alt="Boulder Flatirons from Chautauqua">
+    </div>
+    <div class="hero-overlay">
+      <h1>Brandon Fryslie</h1>
+      <p class="tagline" id="tagline">Loading the day's tagline…</p>
+      <div class="hero-meta">
+        <span id="render-mode" class="badge">render: detecting…</span>
+        <span id="generated-at" class="badge">updated: —</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="intro" class="content">
+      <div class="container">
+        <h2>Today</h2>
+        <div class="prose" id="intro-prose">Loading…</div>
+      </div>
+    </section>
+
+    <section id="activity" class="content">
+      <div class="container">
+        <h2>Recent activity</h2>
+        <div class="activity" id="activity-content">Loading…</div>
+      </div>
+    </section>
+
+    <section id="projects" class="content">
+      <div class="container">
+        <h2>Selected projects</h2>
+        <div class="projects-grid" id="projects-content">Loading…</div>
+      </div>
+    </section>
+
+    <section id="doodle" class="content">
+      <div class="container">
+        <h2>Doodle of the day</h2>
+        <div class="doodle-frame" id="doodle-content">Loading…</div>
+      </div>
+    </section>
+
+    <section id="continuum" class="content footer-note">
+      <div class="container">
+        <p>
+          This site and <a href="https://github.com/brandon-fryslie">my GitHub profile</a>
+          are two faces of the same daily content engine. The profile renders the
+          constrained projection (markdown + sandboxed SVG); this site renders the
+          unconstrained one (HTML, JS, WebGPU when available). Both are regenerated
+          every 24 hours by the same workflow.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      Source: <a href="https://github.com/brandon-fryslie/brandon-fryslie">brandon-fryslie/brandon-fryslie</a>
+      · regenerated daily
+    </small>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

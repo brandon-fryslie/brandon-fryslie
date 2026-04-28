@@ -186,6 +186,15 @@ jobs:
             exit 1
           fi
 
+      - name: Mirror doodle SVG to docs/ (for Pages site)
+        # The Pages site (brandon-fryslie.github.io/brandon-fryslie/) is served
+        # from /docs/ and can't reach back to /assets/, so the freshly-generated
+        # doodle has to live in both places. Same byte content, different path.
+        run: |
+          set -euo pipefail
+          mkdir -p docs/assets
+          cp assets/daily-highlight.svg docs/assets/daily-highlight.svg
+
       - name: Commit and push (rebase-retry on race with parallel job)
         run: |
           set -euo pipefail
@@ -196,7 +205,9 @@ jobs:
           # paths so we can't accidentally pick up stray files in the runner.
           # README.md is included for the DAILY-DOODLE marker pair only — the
           # narrative job owns INTRO-PROSE/RECENT-ACTIVITY/SELECTED-PROJECTS.
-          git add README.md DOODLES.md assets/daily-stats.svg assets/daily-highlight.svg doodle-archive/ 2>/dev/null || true
+          # docs/assets/daily-highlight.svg mirrors the doodle for the Pages
+          # site (the narrative job owns docs/daily.json).
+          git add README.md DOODLES.md assets/daily-stats.svg assets/daily-highlight.svg doodle-archive/ docs/assets/daily-highlight.svg 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "::error::Doodle job produced no staged changes — Claude did not write the expected files."
@@ -233,6 +244,7 @@ jobs:
             assets/daily-highlight.svg
             assets/daily-stats.svg
             doodle-archive/
+            docs/assets/daily-highlight.svg
           if-no-files-found: ignore
 
   narrative:
@@ -247,6 +259,10 @@ jobs:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
 
       - name: Generate narrative (Claude)
         id: claude
@@ -419,6 +435,13 @@ jobs:
             exit 1
           fi
 
+      - name: Extract README markers to docs/daily.json (Pages source of truth)
+        # The Pages site fetches docs/daily.json on load and renders an
+        # elaborated version of the same content the profile renders in
+        # markdown form. Profile is the constrained projection; Pages is the
+        # unconstrained one. Both read from the same engine output.
+        run: python .github/scripts/extract-daily-json.py
+
       - name: Commit and push (rebase-retry on race with parallel job)
         run: |
           set -euo pipefail
@@ -427,8 +450,9 @@ jobs:
 
           # Stage exactly what this job is responsible for. The narrative job
           # owns INTRO-PROSE/RECENT-ACTIVITY/SELECTED-PROJECTS regions of
-          # README.md plus the daily-archive/ tree.
-          git add README.md daily-archive/ 2>/dev/null || true
+          # README.md plus the daily-archive/ tree, and docs/daily.json which
+          # is the Pages site's data feed (the doodle job owns docs/assets/).
+          git add README.md daily-archive/ docs/daily.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "::error::Narrative job produced no staged changes — Claude did not write the expected files."
@@ -462,4 +486,5 @@ jobs:
           path: |
             README.md
             daily-archive/
+            docs/daily.json
           if-no-files-found: ignore
