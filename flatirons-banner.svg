@@ -1,0 +1,504 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="Boulder Flatirons from Chautauqua Meadow">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#2f7ec0"/>
+      <stop offset="0.55" stop-color="#6aa6d8"/>
+      <stop offset="1"    stop-color="#bcd8ec"/>
+    </linearGradient>
+
+    <!-- Sandstone variants — slightly richer warmth than v8 -->
+    <linearGradient id="slabA" x1="0.9" y1="0" x2="0.1" y2="1">
+      <stop offset="0"    stop-color="#e2bc9c"/>
+      <stop offset="0.3"  stop-color="#bf977a"/>
+      <stop offset="0.7"  stop-color="#8f6a50"/>
+      <stop offset="1"    stop-color="#5c3e2a"/>
+    </linearGradient>
+    <linearGradient id="slabB" x1="0.9" y1="0" x2="0.1" y2="1">
+      <stop offset="0"    stop-color="#d4ae8e"/>
+      <stop offset="0.35" stop-color="#a88068"/>
+      <stop offset="0.75" stop-color="#7c5a44"/>
+      <stop offset="1"    stop-color="#503424"/>
+    </linearGradient>
+    <linearGradient id="slabC" x1="0.9" y1="0" x2="0.1" y2="1">
+      <stop offset="0"    stop-color="#daa982"/>
+      <stop offset="0.35" stop-color="#a87e62"/>
+      <stop offset="0.75" stop-color="#7c5840"/>
+      <stop offset="1"    stop-color="#523622"/>
+    </linearGradient>
+    <linearGradient id="slabF1" x1="0.9" y1="0" x2="0.1" y2="1">
+      <stop offset="0"    stop-color="#ecc4a2"/>
+      <stop offset="0.25" stop-color="#cc9a76"/>
+      <stop offset="0.6"  stop-color="#946850"/>
+      <stop offset="1"    stop-color="#583c28"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeForest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#42624a"/>
+      <stop offset="0.5" stop-color="#2a4628"/>
+      <stop offset="1"   stop-color="#152018"/>
+    </linearGradient>
+
+    <linearGradient id="midForest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c4628"/>
+      <stop offset="1" stop-color="#142018"/>
+    </linearGradient>
+
+    <linearGradient id="meadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#9bbc62"/>
+      <stop offset="0.5" stop-color="#85a84e"/>
+      <stop offset="1"   stop-color="#5e7e36"/>
+    </linearGradient>
+
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#c4a06a" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#c8a574"/>
+      <stop offset="1"   stop-color="#d8b888"/>
+    </linearGradient>
+
+    <filter id="cloudBlur" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+
+    <symbol id="pine" viewBox="0 0 20 36" overflow="visible">
+      <polygon points="10,2 16,12 13,12 17,20 12,20 18,30 10,34 2,30 8,20 3,20 7,12 4,12" fill="#16241a"/>
+    </symbol>
+    <symbol id="pineMid" viewBox="0 0 20 36" overflow="visible">
+      <polygon points="10,2 16,12 13,12 17,20 12,20 18,30 10,34 2,30 8,20 3,20 7,12 4,12" fill="#1f3220"/>
+    </symbol>
+    <symbol id="pineHi" viewBox="0 0 20 36" overflow="visible">
+      <polygon points="10,2 16,12 13,12 17,20 12,20 18,30 10,34 2,30 8,20 3,20 7,12 4,12" fill="#2c4226"/>
+    </symbol>
+    <symbol id="tuft" viewBox="0 0 6 6" overflow="visible">
+      <circle cx="3" cy="3" r="2.4" fill="#1f3220"/>
+    </symbol>
+  </defs>
+
+  <!-- SKY -->
+  <rect width="1200" height="400" fill="url(#sky)"/>
+
+  <!-- MASTER SCENE WRAPPER — subtle scene-wide motion: gentle scale breath,
+       slow rotation tilt, and a persistent leftward drift. All centered on
+       (600,220) so edges don't shear. The translate(600,220) outer + matching
+       translate(-600,-220) inner transform let the middle group's animated
+       transforms pivot around scene center while keeping content in its
+       original coordinates. -->
+  <g transform="translate(600 220)">
+    <g>
+      <animateTransform attributeName="transform" type="scale"
+        values="1; 1.014; 1.005; 1.012; 1" dur="46s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate"
+        values="-0.9 0 0; 1.1 0 0; -0.6 0 0; 0.8 0 0; -0.9 0 0" dur="58s" repeatCount="indefinite" additive="sum"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; -14 -1; -22 0; -14 1; 0 0" dur="84s" repeatCount="indefinite" additive="sum"/>
+      <g transform="translate(-600 -220)">
+
+  <!-- Daytime moon -->
+  <g opacity="0.55">
+    <circle cx="700" cy="118" r="10" fill="#f4f0e0"/>
+    <circle cx="703" cy="116" r="7.5" fill="#3a82c0" opacity="0.22"/>
+  </g>
+
+  <!-- SWIRLING SKY — sinuous ribbon-clouds with curls and counter-curls.
+       A taste of the reference art's scrollwork energy without the
+       zentangle outlining. Several layered groups gently shift to give
+       a living, breathing sky. -->
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+    <!-- LEFT cloud cluster: a swooping ribbon with a curl at the right end -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; -8 4; 0 0" dur="14s" repeatCount="indefinite"/>
+      <path d="M -50 90
+               C 60 50, 130 110, 220 70
+               C 280 44, 340 80, 360 110
+               C 372 130, 348 138, 336 122
+               C 326 110, 340 96, 354 104"
+            stroke-width="11" opacity="0.6"/>
+      <path d="M -40 116
+               C 70 80, 140 132, 220 100
+               C 270 80, 320 108, 332 128"
+            stroke-width="4" opacity="0.42"/>
+      <!-- Tight spiral curl detail -->
+      <path d="M 86 60
+               C 70 48, 88 36, 100 48
+               C 110 58, 96 72, 86 64"
+            stroke-width="3" opacity="0.55"/>
+    </g>
+
+    <!-- CENTER cloud cluster: long flowing ribbon weaving above slabs -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; -12 2; 0 0" dur="18s" repeatCount="indefinite"/>
+      <path d="M 320 60
+               C 420 30, 500 90, 580 56
+               C 640 32, 700 76, 760 50
+               C 820 28, 880 70, 940 46"
+            stroke-width="9" opacity="0.55"/>
+      <path d="M 380 92
+               C 460 76, 540 116, 620 88
+               C 680 70, 740 100, 800 84"
+            stroke-width="3.5" opacity="0.4"/>
+      <!-- Counter-curl over the moon area -->
+      <path d="M 666 96
+               C 654 80, 678 72, 690 86
+               C 700 96, 686 108, 678 100"
+            stroke-width="3" opacity="0.5"/>
+    </g>
+
+    <!-- RIGHT cloud cluster: terminal scroll curl over F1 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; -10 -3; 0 0" dur="16s" repeatCount="indefinite"/>
+      <path d="M 880 50
+               C 980 22, 1060 78, 1140 46
+               C 1200 26, 1260 60, 1280 90"
+            stroke-width="10" opacity="0.55"/>
+      <path d="M 920 74
+               C 990 56, 1060 100, 1140 72"
+            stroke-width="3.5" opacity="0.4"/>
+      <!-- Big terminal scroll, pulling back over itself -->
+      <path d="M 1080 30
+               C 1110 10, 1150 22, 1148 50
+               C 1146 70, 1118 78, 1108 60
+               C 1100 46, 1116 36, 1126 44"
+            stroke-width="3.5" opacity="0.55"/>
+    </g>
+
+    <!-- Faint high wisp drifting across -->
+    <path d="M -40 26
+             C 200 8, 460 44, 720 18
+             C 920 0, 1080 30, 1260 16"
+          stroke-width="2.5" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-80 0" dur="120s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- FLATIRONS — apex shifted RIGHT (~70-75% of width from left), giving the
+       photo-true silhouette: long shallow LEFT dip-slope rising to the apex,
+       short steep RIGHT back-cliff dropping into trees. F1 is more pyramidal
+       (apex closer to center) but still the dominant mass. Drawn back-to-front. -->
+
+  <!-- F1 (rightmost, dominant) -->
+  <g>
+    <polygon points="740,310 908,102 1020,310" fill="url(#slabF1)"/>
+    <!-- Back-cliff shadow stripe along the steep RIGHT edge -->
+    <polygon points="908,102 1020,310 1010,310 902,118" fill="#3a2818" opacity="0.32"/>
+    <!-- Striations following the dip-slope (running from apex down-LEFT to base) -->
+    <line x1="888" y1="118" x2="758" y2="304" stroke="#5e3e2a" stroke-width="1.1" opacity="0.55"/>
+    <line x1="878" y1="160" x2="816" y2="298" stroke="#5e3e2a" stroke-width="0.9" opacity="0.45"/>
+    <line x1="868" y1="200" x2="864" y2="290" stroke="#5e3e2a" stroke-width="0.8" opacity="0.38"/>
+    <line x1="856" y1="240" x2="900" y2="284" stroke="#5e3e2a" stroke-width="0.7" opacity="0.3"/>
+    <!-- Crossing horizontal-ish strata lines -->
+    <path d="M 800 220 Q 870 210 940 196" stroke="#7a5638" stroke-width="0.6" fill="none" opacity="0.35"/>
+    <path d="M 810 256 Q 870 246 928 234" stroke="#7a5638" stroke-width="0.6" fill="none" opacity="0.28"/>
+    <!-- Mottled weathering patches (oriented along the dip-slope) -->
+    <ellipse cx="830" cy="220" rx="22" ry="8"  fill="#7a5236" opacity="0.18" transform="rotate(-50 830 220)"/>
+    <ellipse cx="858" cy="180" rx="18" ry="6"  fill="#7a5236" opacity="0.18" transform="rotate(-50 858 180)"/>
+    <ellipse cx="800" cy="266" rx="20" ry="7"  fill="#5a3826" opacity="0.22" transform="rotate(-50 800 266)"/>
+    <!-- Pattern hint: chevron stack down the dip-slope (a taste of the
+         reference art's interior linework, kept sparse and parallel) -->
+    <g fill="none" stroke="#5e3e2a" stroke-linecap="round" opacity="0.42">
+      <path d="M 850 158 L 830 178 L 854 192" stroke-width="0.9"/>
+      <path d="M 838 196 L 818 216 L 842 230" stroke-width="0.9"/>
+      <path d="M 826 234 L 806 254 L 830 268" stroke-width="0.8"/>
+    </g>
+    <!-- Diamond / kite accent (suggestive of the artist's geometric infill) -->
+    <g fill="none" stroke="#7a5638" stroke-linecap="round" opacity="0.4">
+      <path d="M 880 178 L 866 196 L 880 212 L 894 196 Z" stroke-width="0.7"/>
+    </g>
+    <!-- Sun-catching highlight along the upper ridge -->
+    <path d="M 908 104 L 868 138 L 894 148 Z" fill="#f0d4b6" opacity="0.4"/>
+    <!-- Snow patches in shaded crevices — gentle light-shift breathing -->
+    <path d="M898 130 L 906 130 L 902 144 L 894 144 Z" fill="#f0f0e8">
+      <animate attributeName="opacity" values="0.78; 0.92; 0.7; 0.78" dur="22s" repeatCount="indefinite"/>
+    </path>
+    <path d="M884 174 L 892 174 L 890 184 L 882 184 Z" fill="#f0f0e8">
+      <animate attributeName="opacity" values="0.6; 0.78; 0.55; 0.6" dur="26s" repeatCount="indefinite"/>
+    </path>
+    <path d="M918 222 L 926 222 L 924 234 L 916 234 Z" fill="#f0f0e8">
+      <animate attributeName="opacity" values="0.5; 0.66; 0.45; 0.5" dur="30s" repeatCount="indefinite"/>
+    </path>
+    <!-- Faint warm shimmer drifting across F1's lit face — like a slow
+         passing wash of stronger sunlight (the "alive" rock effect) -->
+    <polygon points="740,310 908,102 1020,310" fill="#f5d8b4" opacity="0">
+      <animate attributeName="opacity" values="0; 0.08; 0.04; 0; 0" dur="38s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- mini-fin between F2 and F1 -->
+  <g opacity="0.95">
+    <polygon points="700,308 751,232 778,308" fill="url(#slabC)"/>
+    <polygon points="751,232 778,308 774,308 747,242" fill="#3a2818" opacity="0.3"/>
+    <line x1="744" y1="244" x2="712" y2="302" stroke="#5e3e2a" stroke-width="0.7" opacity="0.45"/>
+    <line x1="738" y1="266" x2="722" y2="300" stroke="#5e3e2a" stroke-width="0.5" opacity="0.32"/>
+  </g>
+
+  <!-- F2 -->
+  <g>
+    <polygon points="572,310 731,142 776,310" fill="url(#slabA)"/>
+    <polygon points="731,142 776,310 770,310 727,156" fill="#3a2818" opacity="0.3"/>
+    <line x1="715" y1="158" x2="600" y2="302" stroke="#5e3e2a" stroke-width="0.95" opacity="0.5"/>
+    <line x1="708" y1="196" x2="650" y2="298" stroke="#5e3e2a" stroke-width="0.8" opacity="0.4"/>
+    <line x1="700" y1="234" x2="690" y2="296" stroke="#5e3e2a" stroke-width="0.7" opacity="0.32"/>
+    <line x1="690" y1="270" x2="722" y2="296" stroke="#5e3e2a" stroke-width="0.5" opacity="0.22"/>
+    <path d="M 620 224 Q 680 216 730 204" stroke="#7a5638" stroke-width="0.6" fill="none" opacity="0.3"/>
+    <ellipse cx="660" cy="240" rx="20" ry="7" fill="#684a32" opacity="0.18" transform="rotate(-52 660 240)"/>
+    <!-- Pattern hint on F2 -->
+    <g fill="none" stroke="#5e3e2a" stroke-linecap="round" opacity="0.4">
+      <path d="M 690 198 L 668 216 L 694 232" stroke-width="0.8"/>
+      <path d="M 676 240 L 656 258 L 682 270" stroke-width="0.7"/>
+    </g>
+    <path d="M 731 144 L 700 174 L 718 180 Z" fill="#f0d4b6" opacity="0.32"/>
+  </g>
+
+  <!-- F3 -->
+  <g>
+    <polygon points="478,310 600,168 638,310" fill="url(#slabB)"/>
+    <polygon points="600,168 638,310 632,310 596,180" fill="#3a2818" opacity="0.3"/>
+    <line x1="586" y1="180" x2="500" y2="302" stroke="#5e3e2a" stroke-width="0.85" opacity="0.5"/>
+    <line x1="578" y1="220" x2="540" y2="296" stroke="#5e3e2a" stroke-width="0.7" opacity="0.38"/>
+    <line x1="570" y1="258" x2="580" y2="294" stroke="#5e3e2a" stroke-width="0.55" opacity="0.26"/>
+    <path d="M 510 226 Q 560 218 600 208" stroke="#7a5638" stroke-width="0.55" fill="none" opacity="0.3"/>
+    <ellipse cx="540" cy="244" rx="16" ry="6" fill="#684a32" opacity="0.18" transform="rotate(-52 540 244)"/>
+    <path d="M 600 170 L 580 192 L 594 198 Z" fill="#f0d4b6" opacity="0.3"/>
+  </g>
+
+  <!-- F4 -->
+  <g>
+    <polygon points="378,310 480,210 514,310" fill="url(#slabA)"/>
+    <polygon points="480,210 514,310 510,310 476,222" fill="#3a2818" opacity="0.28"/>
+    <line x1="468" y1="222" x2="402" y2="302" stroke="#5e3e2a" stroke-width="0.75" opacity="0.45"/>
+    <line x1="462" y1="252" x2="436" y2="298" stroke="#5e3e2a" stroke-width="0.6" opacity="0.32"/>
+    <path d="M 480 212 L 464 230 L 476 234 Z" fill="#f0d4b6" opacity="0.3"/>
+  </g>
+
+  <!-- F5 (smallest) -->
+  <g>
+    <polygon points="298,310 366,254 388,310" fill="url(#slabC)"/>
+    <polygon points="366,254 388,310 384,310 362,264" fill="#3a2818" opacity="0.26"/>
+    <line x1="358" y1="264" x2="320" y2="302" stroke="#5e3e2a" stroke-width="0.6" opacity="0.42"/>
+    <line x1="352" y1="282" x2="338" y2="304" stroke="#5e3e2a" stroke-width="0.5" opacity="0.28"/>
+  </g>
+
+  <!-- Snow patches in shadowed crevices between slabs -->
+  <g fill="#e8e8e8" opacity="0.6">
+    <path d="M388 290 l8 -2 l3 6 l-9 2 z"/>
+    <path d="M514 286 l9 -2 l3 6 l-10 2 z"/>
+    <path d="M638 286 l8 -2 l3 6 l-9 2 z"/>
+  </g>
+
+  <!-- FORESTED FOOTHILL — wraps around slab bases. Slightly higher coverage
+       and richer green, inspired by the dense conifer foothill in the
+       reference art. -->
+  <path d="M0 290
+           Q 50 282 110 286 Q 160 290 220 282 Q 270 274 320 280
+           Q 360 274 400 280 Q 440 270 480 278 Q 520 282 560 278
+           Q 600 268 640 276 Q 680 282 720 278 Q 760 270 800 276
+           Q 840 284 880 280 Q 920 274 960 280 Q 1000 286 1040 282
+           Q 1080 278 1130 284 Q 1170 290 1200 286
+           L 1200 348 L 0 348 Z"
+        fill="url(#ridgeForest)"/>
+
+  <!-- Forest canopy texture — denser scatter of tree-tuft sprites -->
+  <g opacity="0.7">
+    <use href="#tuft" x="20"  y="282" width="6" height="6"/>
+    <use href="#tuft" x="60"  y="276" width="7" height="7"/>
+    <use href="#tuft" x="98"  y="282" width="6" height="6"/>
+    <use href="#tuft" x="138" y="278" width="7" height="7"/>
+    <use href="#tuft" x="178" y="284" width="6" height="6"/>
+    <use href="#tuft" x="220" y="276" width="7" height="7"/>
+    <use href="#tuft" x="260" y="282" width="6" height="6"/>
+    <use href="#tuft" x="298" y="278" width="6" height="6"/>
+    <use href="#tuft" x="350" y="274" width="7" height="7"/>
+    <use href="#tuft" x="408" y="278" width="6" height="6"/>
+    <use href="#tuft" x="442" y="272" width="7" height="7"/>
+    <use href="#tuft" x="484" y="278" width="6" height="6"/>
+    <use href="#tuft" x="540" y="276" width="6" height="6"/>
+    <use href="#tuft" x="600" y="268" width="7" height="7"/>
+    <use href="#tuft" x="650" y="276" width="6" height="6"/>
+    <use href="#tuft" x="700" y="280" width="6" height="6"/>
+    <use href="#tuft" x="744" y="270" width="7" height="7"/>
+    <use href="#tuft" x="800" y="276" width="6" height="6"/>
+    <use href="#tuft" x="844" y="280" width="6" height="6"/>
+    <use href="#tuft" x="892" y="276" width="7" height="7"/>
+    <use href="#tuft" x="950" y="278" width="6" height="6"/>
+    <use href="#tuft" x="1010" y="284" width="6" height="6"/>
+    <use href="#tuft" x="1058" y="278" width="7" height="7"/>
+    <use href="#tuft" x="1108" y="280" width="6" height="6"/>
+    <use href="#tuft" x="1148" y="284" width="7" height="7"/>
+  </g>
+
+  <!-- Pines clinging to slab edges (denser pass than v8) -->
+  <g>
+    <use href="#pineMid" x="320" y="266" width="9"  height="14"/>
+    <use href="#pineMid" x="350" y="270" width="8"  height="12"/>
+    <use href="#pineMid" x="376" y="270" width="10" height="16"/>
+    <use href="#pineMid" x="406" y="262" width="8"  height="12"/>
+    <use href="#pineMid" x="432" y="252" width="10" height="16"/>
+    <use href="#pineMid" x="466" y="266" width="11" height="18"/>
+    <use href="#pineMid" x="498" y="262" width="8"  height="12"/>
+    <use href="#pineMid" x="524" y="248" width="11" height="18"/>
+    <use href="#pineMid" x="556" y="262" width="10" height="16"/>
+    <use href="#pineMid" x="586" y="252" width="9"  height="14"/>
+    <use href="#pineMid" x="608" y="240" width="11" height="18"/>
+    <use href="#pineMid" x="666" y="262" width="11" height="18"/>
+    <use href="#pineMid" x="698" y="254" width="9"  height="14"/>
+    <use href="#pineMid" x="722" y="244" width="10" height="16"/>
+    <use href="#pineMid" x="754" y="262" width="11" height="18"/>
+    <use href="#pineMid" x="780" y="256" width="9"  height="14"/>
+    <use href="#pineMid" x="810" y="246" width="11" height="18"/>
+    <use href="#pineMid" x="840" y="234" width="11" height="18"/>
+    <use href="#pineMid" x="868" y="222" width="11" height="18"/>
+    <use href="#pineMid" x="898" y="216" width="11" height="18"/>
+    <use href="#pineMid" x="928" y="226" width="11" height="18"/>
+    <use href="#pineMid" x="962" y="240" width="11" height="18"/>
+    <use href="#pineMid" x="996" y="258" width="11" height="18"/>
+  </g>
+
+  <!-- Mid-ground conifer belt -->
+  <path d="M0 318
+           Q 80 312 160 316 T 320 318 Q 400 310 480 316 T 640 318
+           Q 720 310 800 316 T 960 318 Q 1040 310 1120 316 T 1200 318
+           L 1200 348 L 0 348 Z"
+        fill="url(#midForest)"/>
+
+  <!-- Mid-ground tree silhouettes (denser bracketing) -->
+  <g>
+    <use href="#pine" x="20"   y="300" width="13" height="20"/>
+    <use href="#pine" x="50"   y="296" width="14" height="22"/>
+    <use href="#pine" x="78"   y="302" width="11" height="18"/>
+    <use href="#pine" x="118"  y="304" width="10" height="16"/>
+    <use href="#pine" x="148"  y="300" width="13" height="20"/>
+    <use href="#pine" x="186"  y="304" width="11" height="18"/>
+    <use href="#pine" x="218"  y="304" width="10" height="16"/>
+    <use href="#pine" x="252"  y="302" width="11" height="18"/>
+    <use href="#pine" x="284"  y="304" width="10" height="16"/>
+    <use href="#pine" x="1018" y="304" width="11" height="18"/>
+    <use href="#pine" x="1042" y="302" width="13" height="20"/>
+    <use href="#pine" x="1072" y="306" width="10" height="16"/>
+    <use href="#pine" x="1098" y="304" width="11" height="18"/>
+    <use href="#pine" x="1130" y="306" width="10" height="16"/>
+    <use href="#pine" x="1158" y="304" width="13" height="20"/>
+    <use href="#pine" x="1186" y="306" width="10" height="16"/>
+  </g>
+
+  <!-- MEADOW (Chautauqua) -->
+  <rect x="0" y="346" width="1200" height="54" fill="url(#meadow)"/>
+
+  <!-- Meadow texture: tufts and grass highlights -->
+  <g fill="#3e5a26" opacity="0.55">
+    <circle cx="60"   cy="372" r="1.3"/>
+    <circle cx="135"  cy="388" r="1.0"/>
+    <circle cx="210"  cy="364" r="1.1"/>
+    <circle cx="295"  cy="382" r="0.9"/>
+    <circle cx="370"  cy="370" r="1.2"/>
+    <circle cx="455"  cy="386" r="1.0"/>
+    <circle cx="540"  cy="368" r="1.1"/>
+    <circle cx="625"  cy="384" r="0.9"/>
+    <circle cx="710"  cy="372" r="1.2"/>
+    <circle cx="795"  cy="388" r="1.0"/>
+    <circle cx="880"  cy="366" r="1.1"/>
+    <circle cx="965"  cy="384" r="1.0"/>
+    <circle cx="1050" cy="372" r="1.1"/>
+    <circle cx="1135" cy="388" r="0.9"/>
+  </g>
+  <g fill="#b8d47a" opacity="0.32">
+    <ellipse cx="200"  cy="362" rx="80"  ry="2.5"/>
+    <ellipse cx="500"  cy="368" rx="100" ry="2.5"/>
+    <ellipse cx="820"  cy="362" rx="90"  ry="2.5"/>
+    <ellipse cx="1080" cy="370" rx="60"  ry="2"/>
+  </g>
+  <!-- Meadow flow bands — curving waves of lighter grass with a slow drift
+       so the field feels alive with breeze. -->
+  <g fill="none" stroke="#bcd87e" stroke-linecap="round" opacity="0.5">
+    <animateTransform attributeName="transform" type="translate" values="0 0; -8 -1; 4 0; -2 -1; 0 0" dur="34s" repeatCount="indefinite"/>
+    <path d="M -20 358 C 160 348, 320 366, 500 354 C 660 344, 820 360, 1000 350 C 1140 344, 1220 354, 1220 354" stroke-width="2.5"/>
+    <path d="M -20 374 C 200 364, 380 380, 580 370 C 760 362, 940 378, 1100 370 C 1180 366, 1220 372, 1220 372" stroke-width="2"/>
+    <path d="M -20 388 C 240 380, 460 392, 680 384 C 880 378, 1060 390, 1220 386" stroke-width="1.5"/>
+  </g>
+  <g fill="none" stroke="#e6d068" stroke-linecap="round" opacity="0.42">
+    <animateTransform attributeName="transform" type="translate" values="0 0; 6 0; -3 -1; 2 0; 0 0" dur="42s" repeatCount="indefinite"/>
+    <path d="M 60 364 C 140 358, 240 366, 340 360" stroke-width="1.6"/>
+    <path d="M 480 370 C 600 364, 720 374, 840 368" stroke-width="1.6"/>
+    <path d="M 920 382 C 1020 376, 1100 386, 1180 380" stroke-width="1.4"/>
+  </g>
+
+  <!-- Foreground stones and trail marker (fence removed) -->
+  <g fill="#7a6a52">
+    <ellipse cx="382" cy="392" rx="4"   ry="1.8"/>
+    <ellipse cx="396" cy="394" rx="2.5" ry="1.3"/>
+    <ellipse cx="450" cy="389" rx="3"   ry="1.4"/>
+    <ellipse cx="652" cy="395" rx="3.5" ry="1.6"/>
+    <ellipse cx="720" cy="386" rx="2.2" ry="1.1"/>
+    <ellipse cx="900" cy="392" rx="3.5" ry="1.6"/>
+    <ellipse cx="918" cy="394" rx="2.2" ry="1.1"/>
+  </g>
+  <rect x="888" y="376" width="1.6" height="9" fill="#f0f0e8"/>
+
+  <!-- Dirt path arcing in from the right (golden warmth nod to the art) -->
+  <path d="M1200 372 Q 1100 366 1000 376 Q 900 388 820 398" fill="none" stroke="url(#path)" stroke-width="3.8" opacity="0.9"/>
+  <path d="M1200 374 Q 1100 368 1000 378 Q 900 390 820 400" fill="none" stroke="#e0c089" stroke-width="1.2" opacity="0.8"/>
+
+  <!-- Foreground pine clusters with gentle individual sway — life and motion
+       from the breeze, each tree pivoting around its own base, with offset
+       phases so the cluster doesn't move in lockstep. -->
+  <g>
+    <!-- LEFT cluster -->
+    <use href="#pineHi"  x="-6"   y="316" width="32" height="52">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-1.0 10 368; 0.8 10 368; -0.6 10 368; 0.4 10 368; -1.0 10 368"
+        dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pine"    x="20"   y="302" width="40" height="64">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-0.8 40 366; 1.1 40 366; -0.5 40 366; 0.6 40 366; -0.8 40 366"
+        dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pineMid" x="56"   y="320" width="28" height="46">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0.6 70 366; -0.9 70 366; 0.5 70 366; -0.4 70 366; 0.6 70 366"
+        dur="9s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pine"    x="84"   y="308" width="36" height="58">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-0.7 102 366; 1.0 102 366; -0.4 102 366; 0.5 102 366; -0.7 102 366"
+        dur="14s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pineMid" x="116"  y="326" width="24" height="40">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0.5 128 366; -0.7 128 366; 0.3 128 366; -0.5 128 366; 0.5 128 366"
+        dur="10s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pineHi"  x="44"   y="334" width="20" height="32">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-0.4 54 366; 0.6 54 366; -0.3 54 366; 0.4 54 366; -0.4 54 366"
+        dur="8s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pineHi"  x="100"  y="336" width="18" height="28">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0.3 109 364; -0.5 109 364; 0.2 109 364; -0.3 109 364; 0.3 109 364"
+        dur="7s" repeatCount="indefinite"/>
+    </use>
+    <!-- RIGHT cluster -->
+    <use href="#pineMid" x="1100" y="320" width="28" height="46">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-0.6 1114 366; 0.9 1114 366; -0.5 1114 366; 0.4 1114 366; -0.6 1114 366"
+        dur="12s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pine"    x="1124" y="306" width="36" height="58">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0.7 1142 364; -1.0 1142 364; 0.5 1142 364; -0.6 1142 364; 0.7 1142 364"
+        dur="15s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pineHi"  x="1156" y="322" width="26" height="42">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-0.5 1169 364; 0.7 1169 364; -0.4 1169 364; 0.4 1169 364; -0.5 1169 364"
+        dur="10s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pineHi"  x="1144" y="334" width="20" height="32">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0.4 1154 366; -0.6 1154 366; 0.3 1154 366; -0.4 1154 366; 0.4 1154 366"
+        dur="9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+      </g>
+    </g>
+  </g>
+</svg>
