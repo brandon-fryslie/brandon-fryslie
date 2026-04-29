@@ -24,15 +24,15 @@ Boulder, CO
 
 <!-- INTRO-PROSE:START -->
 
-I *used* to build software for a living. React front-ends. Enterprise backends — microservices, monoliths, the awkward space between. Cloud infrastructure. Architectural design. The whole stack, plus the meetings about the stack.
+I *used* to build software for a living. React front-ends. Enterprise backends — microservices, monoliths, the awkward space between. Cloud infrastructure. Architectural design.
 
 Now AI does that for me.
 
-I *used* to write developer tooling and pet projects in the cracks too. AI writes those now. Yesterday it shipped a Pages site for this profile — the README is the constrained projection (markdown plus sandboxed SVG inside GitHub's `<img>` sanitizer); the Pages site is the unconstrained one, HTML and JS and WebGPU when available. Same content, different fidelity. I read the commit message after it landed.
+I *used* to write developer tooling and pet projects in the cracks too. AI writes those now. Lately it has been moving `claude-powerline` toward a daemon — client/server vertical slice, an fs-watcher cache keyed on `repoRoot`, self-shutdown on RSS and age. I read the commit messages after they land.
 
-I *used* to maintain this profile by hand. AI writes it now, including the rotating **AI SLOP** banner over in [the gallery](./DOODLES.md). I didn't ask for the scanlines. Today's hero is an animated SVG of the Boulder Flatirons that it iterated against a reference photo until the slab tilt was right. Also unsolicited.
+I *used* to maintain this profile by hand. AI writes it now, including the rotating **AI SLOP** banner over in [the gallery](./DOODLES.md). I didn't ask for the scanlines.
 
-Lately I'm into designing autonomous generative engineering workflows. Over in `links-issue-tracker` the same pattern keeps showing up: epic state derived from children at the hydration boundary, container-vs-leaf dispatch absorbed into a single capability-driven projection. Lifecycle as expression, not a status field updated by hand.
+What I'm into lately is designing autonomous generative engineering workflows. Over in `links-issue-tracker` the project keeps turning into a study of ticket lifecycle as expression — an agent-identity-and-ticket-ownership design landed today, alongside `lit orphaned` for stale `in_progress` issues and a `needs-design` label that blocks readiness until the design actually exists. The point is the agent loop, not the tracker.
 
 <!-- INTRO-PROSE:END -->
 
@@ -50,37 +50,46 @@ Lately I'm into designing autonomous generative engineering workflows. Over in `
 
 ## Recent Engineering Work
 
-*Updated April 28, 2026*
+*Updated April 29, 2026*
 
 ### Today
 
-- `brandon-fryslie/brandon-fryslie` — Added a Pages site as the unconstrained continuum of the profile (`/docs/` HTML+JS site with a WebGPU feature-detect), wired `extract-daily-json.py` to publish a `docs/daily.json` feed scraped from the README marker regions, extended the workflow path-whitelist to keep `doodle` and `narrative` race-safe across the new files, and added an animated Flatirons banner SVG hand-iterated against a reference photo ([commits](https://github.com/brandon-fryslie/brandon-fryslie/commits?author=brandon-fryslie&since=2026-04-27)).
-- `brandon-fryslie/links-issue-tracker` — Made the issue `status` column NULL on containers with a single CHECK clause encoding the container/leaf invariant ([#79](https://github.com/brandon-fryslie/links-issue-tracker/pull/79)), scanned the nullable column as `sql.NullString` ([#80](https://github.com/brandon-fryslie/links-issue-tracker/pull/80)), absorbed shape dispatch into a single `HydrateRow` entry point with a hydration post-condition consumers can trust ([#81](https://github.com/brandon-fryslie/links-issue-tracker/pull/81)), added a children rollup with per-child state inline in `lit show` ([#82](https://github.com/brandon-fryslie/links-issue-tracker/pull/82)), and shipped the lit-ergonomics epic — preamble routed to stderr, `lit-ls`-style filters on `lit ready`, named `--blocker`/`--blocked` flags on `lit dep add`, atomic `lit rank set`, and `lit import` for declarative tree specs ([#83](https://github.com/brandon-fryslie/links-issue-tracker/pull/83)).
+- `promptctl/tmux-control-mode-js` — Added a headless keymap engine for standard tmux shortcuts with state observation and `dispatchAction`, closed the e07.5–e07.8 electron audit findings ([#2](https://github.com/promptctl/tmux-control-mode-js/pull/2), [#3](https://github.com/promptctl/tmux-control-mode-js/pull/3)), refactored connectors to absorb RPC variance into shared `rpc.ts`/`rpc-dispatch.ts` and frame-dispatch into mapped tables, and hardened the demo launcher and web-multiplexer UI ([commits](https://github.com/promptctl/tmux-control-mode-js/commits?author=brandon-fryslie&since=2026-04-28)).
+- `brandon-fryslie/brandon-fryslie.github.io` — Stood up the project index as a hand-curated deployed-sites list (browsergeist, cathode, cc-dump, cc-nerf-buster, electric-cherry, gh-pages-showcase) and removed the `generate.sh` scaffold ([commits](https://github.com/brandon-fryslie/brandon-fryslie.github.io/commits?author=brandon-fryslie&since=2026-04-28)).
+- `promptctl/claude-powerline` — Stood up a daemon vertical slice (client/server in Phase 1; `gitCache` keyed on `repoRoot`, fs watchers with mtime sanity check, and `usageCache` keyed on `sessionId` in Phase 2; a stats endpoint with a `daemon-stats` subcommand and self-shutdown on RSS/age with heap snapshots in Phase 3), added a `gitTaculous` toolbar with a click-action DSL, and rebranded the install flow with cmd-click open-vscode actions ([commits](https://github.com/promptctl/claude-powerline/commits?author=brandon-fryslie&since=2026-04-28)).
+- `brandon-fryslie/links-issue-tracker` — Added the agent-identity-and-ticket-ownership design ([#84](https://github.com/brandon-fryslie/links-issue-tracker/pull/84)), `lit orphaned` for stale `in_progress` issues ([#85](https://github.com/brandon-fryslie/links-issue-tracker/pull/85)), the `needs-design` label that blocks readiness ([#86](https://github.com/brandon-fryslie/links-issue-tracker/pull/86)) with `lit quickstart` documentation ([#87](https://github.com/brandon-fryslie/links-issue-tracker/pull/87)), relocated engineering design docs out of the mkdocs site ([#88](https://github.com/brandon-fryslie/links-issue-tracker/pull/88)), and landed the agent work-loop and cue-framework design ([#89](https://github.com/brandon-fryslie/links-issue-tracker/pull/89)).
+- `brandon-fryslie/gh-pages-showcase` — Initial template, then replaced the JSON-driven shape with a `showcase-kit` React component library (`<Header>`, `<MetadataFooter>`, `<CodeBlock>`, `<ScrollPin>` plus design tokens consumers override on `:root`), and added a `prepare` script so git-installed consumers get a built `dist/` ([commits](https://github.com/brandon-fryslie/gh-pages-showcase/commits?author=brandon-fryslie&since=2026-04-28)).
+- `brandon-fryslie/rich-js` — Added the `Strip` + `Joiner` edge-aware horizontal layout primitive and tightened output target and error handling per PR [#1](https://github.com/brandon-fryslie/rich-js/pull/1) review ([commits](https://github.com/brandon-fryslie/rich-js/commits?author=brandon-fryslie&since=2026-04-28)).
 
 ### This Week
 
-- `promptctl/claude-powerline` — 18 commits: forked under `@promptctl`, added five CLI override flags so the entire config can live in argv, session-id length truncation, the `install` / `install-url-handler` / `url-handle` subcommands wiring cmd-click sessionId-to-clipboard via a `cpwl://` URL scheme, prompt-cache warmth as a countdown bar with regex-based candidate parsing and tail-read transcripts, cross-process git-status caching, install fixes for bundled-dist resolution and `@<version>` pinning, and releases through 0.2.3 ([commits](https://github.com/promptctl/claude-powerline/commits?author=brandon-fryslie&since=2026-04-21)).
-- `brandon-fryslie/dotfiles` — 14 commits: pinned the statusline `--config` to the home file and switched to invoking the local fork directly, set `refreshInterval=30s` for the cache countdown, restored the `@promptctl/claude-powerline` install command, added the `organize-commits` and `prompt-scaffold` skills with dotbot wiring, symlinked `~/.agents/skills` entries via glob, gave non-claude agents their own skill sources, stripped claude-only `allowed-tools` from agent-side firecrawl, captured tmux pane contents and restored agent REPLs via `tmux-resurrect`, tuned claude settings (auto mode, high effort, skip auto perms), added a homelab-consumer skill, and documented the agent skill layout and frontmatter boundary ([commits](https://github.com/brandon-fryslie/dotfiles/commits?author=brandon-fryslie&since=2026-04-21)).
-- `brandon-fryslie/brandon-fryslie` — 14 commits: stood up the Pages site as the unconstrained continuum of the profile with a `docs/daily.json` feed and animated Flatirons banner, split `daily-highlights` into parallel `doodle` and `narrative` jobs with per-job path whitelists, merged the intro prose + neural-pulse banner rewrite ([#12](https://github.com/brandon-fryslie/brandon-fryslie/pull/12)), added an `rsvg-convert` preview loop and click-to-gallery anchor, stood up the doodle gallery (`DOODLES.md`) and per-day `doodle-archive/YYYY/MM/` store, switched to a matter-of-fact narrative voice with rotating Selected Projects ([#11](https://github.com/brandon-fryslie/brandon-fryslie/pull/11)), corrected the stats-card numbers ([#10](https://github.com/brandon-fryslie/brandon-fryslie/pull/10)), and added a date-prominence rule for future doodles ([#9](https://github.com/brandon-fryslie/brandon-fryslie/pull/9)) ([commits](https://github.com/brandon-fryslie/brandon-fryslie/commits?author=brandon-fryslie&since=2026-04-21)).
-- `brandon-fryslie/links-issue-tracker` — 12 commits: status-column schema cleanup ([#79](https://github.com/brandon-fryslie/links-issue-tracker/pull/79), [#80](https://github.com/brandon-fryslie/links-issue-tracker/pull/80)), shape dispatch collapsed into a single `HydrateRow` ([#81](https://github.com/brandon-fryslie/links-issue-tracker/pull/81)), `lit show` children rollup with per-child state ([#82](https://github.com/brandon-fryslie/links-issue-tracker/pull/82)), the lit-ergonomics epic with stderr-routed preamble, `lit-ls`-style filters, named `--blocker`/`--blocked` dep flags, atomic `lit rank set`, and JSON `lit import` ([#83](https://github.com/brandon-fryslie/links-issue-tracker/pull/83)), `lit next` returning exactly one workable leaf ([#78](https://github.com/brandon-fryslie/links-issue-tracker/pull/78)), lifecycle-as-expression epic-state derivation ([#77](https://github.com/brandon-fryslie/links-issue-tracker/pull/77)), composite `(epic_rank, own_rank)` ordering for `lit ready` ([#75](https://github.com/brandon-fryslie/links-issue-tracker/pull/75)), inline parent descriptions in `lit show` ([#74](https://github.com/brandon-fryslie/links-issue-tracker/pull/74)), parent-epic context per row ([#73](https://github.com/brandon-fryslie/links-issue-tracker/pull/73)), epics excluded from the default ready set ([#72](https://github.com/brandon-fryslie/links-issue-tracker/pull/72)), and `lit quickstart --eject` template overrides ([#71](https://github.com/brandon-fryslie/links-issue-tracker/pull/71)).
-- `brandon-fryslie/vibedungeon-voice` — 3 commits: forked from `elevenlabs/elevenlabs-mcp`, ignored `*.egg-info` build metadata, declared `claude/channel` for Claude Code channel registration ([commits](https://github.com/brandon-fryslie/vibedungeon-voice/commits?author=brandon-fryslie&since=2026-04-21)).
+- `promptctl/claude-powerline` — 27 commits: forked under `@promptctl`, added five CLI override flags so the entire config can live in argv, session-id length truncation, the prompt-cache warmth countdown bar with regex-based candidate parsing and tail-read transcripts, cross-process git-status caching, install fixes for bundled-dist resolution and `@<version>` pinning, releases through 0.2.3, the daemon vertical slice (Phases 1–3), `gitTaculous` toolbar with click-action DSL, and the install rebrand with cmd-click open-vscode actions ([commits](https://github.com/promptctl/claude-powerline/commits?author=brandon-fryslie&since=2026-04-22)).
+- `promptctl/tmux-control-mode-js` — 19 commits: headless keymap engine with state observation and `dispatchAction`, KEYMAP.md and demo wiring, electron audit closures across e07.5–e07.8 ([#2](https://github.com/promptctl/tmux-control-mode-js/pull/2), [#3](https://github.com/promptctl/tmux-control-mode-js/pull/3)), connector refactors absorbing RPC variance into shared `rpc.ts`/`rpc-dispatch.ts` and frame-dispatch into mapped tables, single-source pane-output discriminator, demo derivation of active session/window from the subscription tree, and a hardened demo launcher ([commits](https://github.com/promptctl/tmux-control-mode-js/commits?author=brandon-fryslie&since=2026-04-22)).
+- `brandon-fryslie/links-issue-tracker` — 18 commits: status-column schema cleanup ([#79](https://github.com/brandon-fryslie/links-issue-tracker/pull/79), [#80](https://github.com/brandon-fryslie/links-issue-tracker/pull/80)), shape dispatch collapsed into `HydrateRow` ([#81](https://github.com/brandon-fryslie/links-issue-tracker/pull/81)), `lit show` children rollup ([#82](https://github.com/brandon-fryslie/links-issue-tracker/pull/82)), the lit-ergonomics epic ([#83](https://github.com/brandon-fryslie/links-issue-tracker/pull/83)), agent identity & ticket ownership ([#84](https://github.com/brandon-fryslie/links-issue-tracker/pull/84)), `lit orphaned` for stale `in_progress` ([#85](https://github.com/brandon-fryslie/links-issue-tracker/pull/85)), the `needs-design` label gating readiness ([#86](https://github.com/brandon-fryslie/links-issue-tracker/pull/86), [#87](https://github.com/brandon-fryslie/links-issue-tracker/pull/87)), engineering design docs relocated out of mkdocs ([#88](https://github.com/brandon-fryslie/links-issue-tracker/pull/88)), and the agent work-loop and cue-framework design ([#89](https://github.com/brandon-fryslie/links-issue-tracker/pull/89)).
+- `brandon-fryslie/brandon-fryslie` — 14 commits: stood up the Pages site as the unconstrained continuum of the profile with a `docs/daily.json` feed and animated Flatirons banner, split `daily-highlights` into parallel `doodle` and `narrative` jobs with per-job path whitelists, merged the intro prose + neural-pulse banner rewrite ([#12](https://github.com/brandon-fryslie/brandon-fryslie/pull/12)), added an `rsvg-convert` preview loop and click-to-gallery anchor, stood up the doodle gallery and per-day archive store, switched to a matter-of-fact narrative voice ([#11](https://github.com/brandon-fryslie/brandon-fryslie/pull/11)), corrected the stats-card numbers ([#10](https://github.com/brandon-fryslie/brandon-fryslie/pull/10)), and added a date-prominence rule for future doodles ([#9](https://github.com/brandon-fryslie/brandon-fryslie/pull/9)) ([commits](https://github.com/brandon-fryslie/brandon-fryslie/commits?author=brandon-fryslie&since=2026-04-22)).
+- `brandon-fryslie/dotfiles` — 14 commits: pinned the statusline `--config` to the home file and switched to invoking the local fork directly, set `refreshInterval=30s`, restored the `@promptctl/claude-powerline` install command, added the `organize-commits` and `prompt-scaffold` skills with dotbot wiring, symlinked `~/.agents/skills` entries via glob, gave non-claude agents their own skill sources, stripped claude-only `allowed-tools` from agent-side firecrawl, captured tmux pane contents and restored agent REPLs via `tmux-resurrect`, tuned claude settings (auto mode, high effort, skip auto perms), added a homelab-consumer skill, added a ticket-lifecycle wisdom rule, and documented the agent skill layout and frontmatter boundary ([commits](https://github.com/brandon-fryslie/dotfiles/commits?author=brandon-fryslie&since=2026-04-22)).
+- `brandon-fryslie/brandon-fryslie.github.io` — 10 commits: stood up the project index, switched to a hand-curated static list, rewrote it as a deployed-sites index, and added entries for browsergeist, cathode, cc-dump, cc-nerf-buster, electric-cherry, and gh-pages-showcase ([commits](https://github.com/brandon-fryslie/brandon-fryslie.github.io/commits?author=brandon-fryslie&since=2026-04-22)).
+- `brandon-fryslie/gh-pages-showcase` — 4 commits: initial template, replaced the JSON-driven shape with a `showcase-kit` React component library, and added a `prepare` script so git-installed consumers get a built `dist/` ([commits](https://github.com/brandon-fryslie/gh-pages-showcase/commits?author=brandon-fryslie&since=2026-04-22)).
 - `brandon-fryslie/cherry-chrome-mcp` — 3 commits: three `press-key` fixes covering puppeteer keyboard for trusted layout-aware events ([#2](https://github.com/brandon-fryslie/cherry-chrome-mcp/pull/2)), digit/letter Code-form translation ([#3](https://github.com/brandon-fryslie/cherry-chrome-mcp/pull/3)), and an explicit `SYMBOL_TO_CODE` map for the eleven shifted ASCII symbols ([#4](https://github.com/brandon-fryslie/cherry-chrome-mcp/pull/4)).
-- `brandon-fryslie/tinkerpad` — 2 commits: added a Milkdrop-style WebGPU music visualizer with gh-pages PR previews ([commits](https://github.com/brandon-fryslie/tinkerpad/commits?author=brandon-fryslie&since=2026-04-21)).
+- `brandon-fryslie/vibedungeon-voice` — 3 commits: forked from `elevenlabs/elevenlabs-mcp`, ignored `*.egg-info` build metadata, and declared `claude/channel` for Claude Code channel registration ([commits](https://github.com/brandon-fryslie/vibedungeon-voice/commits?author=brandon-fryslie&since=2026-04-22)).
+- `brandon-fryslie/cc-nerf-buster` — 2 commits: initial commit plus a defensive `.gitignore` covering TLS material, secrets, coverage, venvs, and editor dirs ([commits](https://github.com/brandon-fryslie/cc-nerf-buster/commits?author=brandon-fryslie&since=2026-04-22)).
+- `brandon-fryslie/rich-js` — 2 commits: added the `Strip` + `Joiner` edge-aware horizontal layout primitive and tightened output target and error handling per PR [#1](https://github.com/brandon-fryslie/rich-js/pull/1) review ([commits](https://github.com/brandon-fryslie/rich-js/commits?author=brandon-fryslie&since=2026-04-22)).
 - `brandon-fryslie/shader-playground` — 2 commits: nested Poisson-multigrid gravity (inner ±16 + outer ±64) ([#13](https://github.com/brandon-fryslie/shader-playground/pull/13)) and the `xr-panel` rewrite wiring the hand-tracking foundation ([#12](https://github.com/brandon-fryslie/shader-playground/pull/12)).
-- `brandon-fryslie/cc-nerf-buster` — 2 commits: initial commit plus a defensive `.gitignore` covering TLS material, secrets, coverage, venvs, and editor dirs ([commits](https://github.com/brandon-fryslie/cc-nerf-buster/commits?author=brandon-fryslie&since=2026-04-21)).
 
 ### This Month
 
-371 commits across 16 repositories over the past 30 days. Top by volume:
+433 commits across 18 repositories over the past 30 days. Top by volume:
 
 - [`brandon-fryslie/shader-playground`](https://github.com/brandon-fryslie/shader-playground) — 90 commits
 - [`brandon-fryslie/gh-pages-multiplexer`](https://github.com/brandon-fryslie/gh-pages-multiplexer) — 82
-- [`promptctl/tmux-control-mode-js`](https://github.com/promptctl/tmux-control-mode-js) — 55
+- [`promptctl/tmux-control-mode-js`](https://github.com/promptctl/tmux-control-mode-js) — 74
 - [`brandon-fryslie/rich-js-ink`](https://github.com/brandon-fryslie/rich-js-ink) — 32
 - [`brandon-fryslie/dotfiles`](https://github.com/brandon-fryslie/dotfiles) — 32
-- [`brandon-fryslie/links-issue-tracker`](https://github.com/brandon-fryslie/links-issue-tracker) — 25
-- [`promptctl/claude-powerline`](https://github.com/promptctl/claude-powerline) — 18
+- [`brandon-fryslie/links-issue-tracker`](https://github.com/brandon-fryslie/links-issue-tracker) — 31
+- [`promptctl/claude-powerline`](https://github.com/promptctl/claude-powerline) — 27
+- [`brandon-fryslie/rich-js`](https://github.com/brandon-fryslie/rich-js) — 18
 - [`brandon-fryslie/brandon-fryslie`](https://github.com/brandon-fryslie/brandon-fryslie) — 16
+- [`brandon-fryslie/brandon-fryslie.github.io`](https://github.com/brandon-fryslie/brandon-fryslie.github.io) — 10
 
 Languages: TypeScript, Go, Python, Shell, JavaScript, WebGPU/WGSL.
 
@@ -89,6 +98,7 @@ Languages: TypeScript, Go, Python, Shell, JavaScript, WebGPU/WGSL.
 <details>
 <summary>Previous highlights</summary>
 
+- [2026-04-28](./daily-archive/2026-04-28.md)
 - [2026-04-27](./daily-archive/2026-04-27.md)
 - [2026-04-26](./daily-archive/2026-04-26.md)
 - [2026-04-25](./daily-archive/2026-04-25.md)
@@ -108,38 +118,38 @@ Languages: TypeScript, Go, Python, Shell, JavaScript, WebGPU/WGSL.
 <tr>
 <td width="50%" valign="top">
 
+### [shader-playground](https://github.com/brandon-fryslie/shader-playground)
+**TypeScript**
+
+WebGPU shader experimentation environment. Recent commits landed the nested Poisson-multigrid gravity scheme (inner ±16 + outer ±64 with smoothstep-blended force across the boundary shell) ([#13](https://github.com/brandon-fryslie/shader-playground/pull/13)) and rewrote `xr-panel` to wire the hand-tracking foundation ([#12](https://github.com/brandon-fryslie/shader-playground/pull/12)).
+
+### [tmux-control-mode-js](https://github.com/promptctl/tmux-control-mode-js)
+**TypeScript · MIT**
+
+Node.js client for the tmux control mode protocol. Recent commits added a headless keymap engine for standard tmux shortcuts with state observation and `dispatchAction`, closed the e07.5–e07.8 electron audit findings ([#2](https://github.com/promptctl/tmux-control-mode-js/pull/2), [#3](https://github.com/promptctl/tmux-control-mode-js/pull/3)), refactored connectors to absorb RPC and frame-dispatch variance into shared mapped tables, and hardened the demo launcher and web-multiplexer UI.
+
+### [gh-pages-multiplexer](https://github.com/brandon-fryslie/gh-pages-multiplexer)
+**TypeScript**
+
+GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages` with an auto-generated index page, a navigation widget, and PR previews. Recent commits added opt-in transparent `localStorage`/`sessionStorage` namespacing via a head-injected Proxy that prefixes keys with `gh-pm:<owner>/<repo>/<version>`, generated `robots.txt` and `sitemap.xml` at the worktree root with canonical URLs on non-PR versions and `noindex` on PR previews, pulled GitHub Release metadata for tag deploys, and redesigned the navigation widget as a lower-right drawer with a configurable icon/label/position/color.
+
+</td>
+<td width="50%" valign="top">
+
 ### [oscilla-animator-v2](https://github.com/brandon-fryslie/oscilla-animator-v2)
 **TypeScript**
 
 Animation compiler with a custom type system: block-graph architecture, typed connections enforcing domain/payload/cardinality constraints, and a parse → validate → optimize → emit pipeline. Recent commits landed a GPU-IR gap analysis pass, the MRT/depth pillar cleanup, removed the fluid subsystem paths, added the boundary-contract single enforcer plus payload fixture infrastructure, fixed the sink pointer map being incorrectly cleared during pipeline rebuild, and added Naga DSL helpers and reference docs.
 
-### [cc-dump](https://github.com/brandon-fryslie/cc-dump)
-**Python · MIT**
-
-HTTP proxy that intercepts Anthropic API calls and prints unified diffs of system prompt changes between requests. Recent commits skipped geometry work on search-highlight rerenders, cached per-turn search traversal data, preserved the line cache during selection updates, removed the AI side-channel feature and fixed hot-reload panel removal, combined request and response into single turns with cache-zone analysis, reintroduced search match reveal/navigation through public view seams, and standardized the estimated-token source of truth.
-
-### [shader-playground](https://github.com/brandon-fryslie/shader-playground)
-**TypeScript**
-
-WebGPU shader experimentation environment. Recent commits brought online the nested Poisson-multigrid gravity scheme (inner ±16 + outer ±64 with smoothstep-blended force across the boundary shell), rewrote `xr-panel` to wire the hand-tracking foundation, added a unified two-hand pinch-to-scale gesture pipeline, fixed the release-ray surviving pinch-end with stale reticles dropped, extended the zoom-out range to 200m to match desktop, and added `XR.md` documenting the gesture pipeline and zoom behavior.
-
-</td>
-<td width="50%" valign="top">
-
-### [gh-pages-multiplexer](https://github.com/brandon-fryslie/gh-pages-multiplexer)
-**TypeScript**
-
-GitHub Action and CLI that deploys static sites to versioned subdirectories on `gh-pages` with an auto-generated index page, a navigation widget, and PR previews. Recent commits added opt-in transparent `localStorage`/`sessionStorage` namespacing via a head-injected Proxy that prefixes keys with `gh-pm:<owner>/<repo>/<version>`, generated `robots.txt` and `sitemap.xml` at the worktree root with canonical URLs on non-PR versions and `noindex` on PR previews, pulled GitHub Release metadata for tag deploys, redesigned the navigation widget as a lower-right drawer with a configurable icon/label/position/color, added PR cleanup with PR-scoped commit metadata and a root redirect, and added an explicit version input with `base-path-mode none` for build-time base URLs.
-
 ### [links-issue-tracker](https://github.com/brandon-fryslie/links-issue-tracker)
 **Go**
 
-Agent-native issue tracker. Recent commits made the `status` column NULL on containers with a single CHECK clause encoding the container/leaf invariant ([#79](https://github.com/brandon-fryslie/links-issue-tracker/pull/79)), scanned the nullable column as `sql.NullString` ([#80](https://github.com/brandon-fryslie/links-issue-tracker/pull/80)), absorbed shape dispatch into a single `HydrateRow` entry point with a hydration post-condition consumers can trust ([#81](https://github.com/brandon-fryslie/links-issue-tracker/pull/81)), added a children rollup with per-child state in `lit show` ([#82](https://github.com/brandon-fryslie/links-issue-tracker/pull/82)), shipped the lit-ergonomics epic — stderr-routed preamble, `lit-ls`-style filters, named `--blocker`/`--blocked` dep flags, atomic `lit rank set`, and JSON `lit import` ([#83](https://github.com/brandon-fryslie/links-issue-tracker/pull/83)) — and added `lit next` returning exactly one workable leaf per call ([#78](https://github.com/brandon-fryslie/links-issue-tracker/pull/78)).
+Agent-native issue tracker. Recent commits made the `status` column NULL on containers with a single CHECK clause encoding the container/leaf invariant ([#79](https://github.com/brandon-fryslie/links-issue-tracker/pull/79)), absorbed shape dispatch into a single `HydrateRow` entry point ([#81](https://github.com/brandon-fryslie/links-issue-tracker/pull/81)), shipped the lit-ergonomics epic ([#83](https://github.com/brandon-fryslie/links-issue-tracker/pull/83)), added `lit orphaned` for stale `in_progress` issues ([#85](https://github.com/brandon-fryslie/links-issue-tracker/pull/85)), introduced the `needs-design` label that blocks readiness ([#86](https://github.com/brandon-fryslie/links-issue-tracker/pull/86)), and landed the agent work-loop and cue-framework design ([#89](https://github.com/brandon-fryslie/links-issue-tracker/pull/89)).
 
-### [tmux-control-mode-js](https://github.com/promptctl/tmux-control-mode-js)
-**TypeScript · MIT**
+### [rich-js-ink](https://github.com/brandon-fryslie/rich-js-ink)
+**TypeScript**
 
-Node.js client for the tmux control mode protocol. Recent commits scoped the package as `@promptctl/tmux-control-mode-js` with `publishConfig.access=public` ahead of the first npm publish, added a Release-triggered workflow running lint/format/typecheck/tests before `npm publish --provenance`, adopted npm workspaces so one root `npm install` covers `examples/web-multiplexer`, gated the `requestReport` integration test on a tmux-version probe at module load, and dropped `--noEmit` from typecheck so `tsc --build` accepts referenced projects.
+Ink components for `rich-js` — terminal renderables exposed as React components for Ink-based CLIs.
 
 </td>
 </tr>
