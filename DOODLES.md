@@ -7,6 +7,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 ---
 
 <!-- DOODLE-GALLERY:START -->
+## April 29, 2026 — International Dance Day (April 29) — UNESCO observance honoring Jean-Georges Noverre's birthday
+
+<img src="./doodle-archive/2026/04/2026-04-29.svg" width="800" alt="Daily doodle for April 29, 2026: International Dance Day (April 29) — UNESCO observance honoring Jean-Georges Noverre's birthday">
+
+---
+
 ## April 28, 2026 — Kon-Tiki 79th anniversary (April 28, 1947) — Thor Heyerdahl's balsa raft sets sail across the Pacific.
 
 <img src="./doodle-archive/2026/04/2026-04-28.svg" width="800" alt="Daily doodle for April 28, 2026: Kon-Tiki 79th anniversary (April 28, 1947) — Thor Heyerdahl's balsa raft sets sail across the Pacific.">
