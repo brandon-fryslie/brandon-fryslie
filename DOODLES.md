@@ -7,6 +7,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 ---
 
 <!-- DOODLE-GALLERY:START -->
+## April 30, 2026 — World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain
+
+<img src="./doodle-archive/2026/04/2026-04-30.svg" width="800" alt="Daily doodle for April 30, 2026: World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain">
+
+---
+
 ## April 29, 2026 — International Dance Day (April 29) — UNESCO observance honoring Jean-Georges Noverre's birthday
 
 <img src="./doodle-archive/2026/04/2026-04-29.svg" width="800" alt="Daily doodle for April 29, 2026: International Dance Day (April 29) — UNESCO observance honoring Jean-Georges Noverre's birthday">

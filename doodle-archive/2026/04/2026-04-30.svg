@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="April 30, 2026 — 33 years since CERN released the World Wide Web into the public domain">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#0a2540"/>
+      <stop offset="60%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#05080d"/>
+    </radialGradient>
+
+    <radialGradient id="globeFill" cx="0.4" cy="0.35" r="0.85">
+      <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#0a3a8a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#020a18" stop-opacity="0.9"/>
+    </radialGradient>
+
+    <linearGradient id="freeBeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7ee4ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="dateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#9ddcff"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Reusable network node -->
+    <g id="netNode">
+      <circle r="3" fill="#7ee4ff"/>
+      <circle r="6" fill="none" stroke="#7ee4ff" stroke-width="0.6" opacity="0.7">
+        <animate attributeName="r" values="3;14;3" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0;0.9" dur="7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="200" fill="url(#bgGlow)"/>
+
+  <!-- subtle scanline grid -->
+  <g opacity="0.07" stroke="#58a6ff" stroke-width="0.5">
+    <line x1="0" y1="40"  x2="800" y2="40"/>
+    <line x1="0" y1="80"  x2="800" y2="80"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="160" x2="800" y2="160"/>
+  </g>
+
+  <!-- ============== GLOBE (center) ============== -->
+  <g transform="translate(400 100)">
+    <!-- slow rotating wrapper for ellipses -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        from="0" to="360" dur="71s" repeatCount="indefinite"/>
+
+      <!-- globe disc -->
+      <circle r="78" fill="url(#globeFill)" stroke="#1f6feb" stroke-width="0.8" opacity="0.85"/>
+
+      <!-- latitudes -->
+      <ellipse rx="78" ry="20" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.55"/>
+      <ellipse rx="78" ry="40" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.45"/>
+      <ellipse rx="78" ry="60" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.35"/>
+
+      <!-- longitudes via rotated ellipse strokes -->
+      <g>
+        <ellipse rx="20" ry="78" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.55"/>
+        <ellipse rx="40" ry="78" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.45"/>
+        <ellipse rx="60" ry="78" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.35"/>
+      </g>
+
+      <!-- equator highlight -->
+      <line x1="-78" y1="0" x2="78" y2="0" stroke="#7ee4ff" stroke-width="0.8" opacity="0.55"/>
+    </g>
+
+    <!-- network nodes orbiting (counter-rotating) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        from="0" to="-360" dur="53s" repeatCount="indefinite"/>
+      <use href="#netNode" x="78"  y="0"/>
+      <use href="#netNode" x="55"  y="-55"/>
+      <use href="#netNode" x="0"   y="-78"/>
+      <use href="#netNode" x="-55" y="-55"/>
+      <use href="#netNode" x="-78" y="0"/>
+      <use href="#netNode" x="-55" y="55"/>
+      <use href="#netNode" x="0"   y="78"/>
+      <use href="#netNode" x="55"  y="55"/>
+    </g>
+
+    <!-- hyperlink chord lines crisscrossing the globe (drawn-in animation) -->
+    <g stroke="#7ee4ff" stroke-width="0.7" fill="none" opacity="0.85" filter="url(#softGlow)">
+      <path d="M -70 -30 Q 0 0 70 30">
+        <animate attributeName="stroke-dasharray" values="0,300;300,0;0,300" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M -65 40 Q 0 -10 70 -25">
+        <animate attributeName="stroke-dasharray" values="0,300;300,0;0,300" dur="13s" begin="-3s" repeatCount="indefinite"/>
+      </path>
+      <path d="M -25 -72 Q 5 0 30 70">
+        <animate attributeName="stroke-dasharray" values="0,300;300,0;0,300" dur="17s" begin="-5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 60 -50 Q -10 5 -55 60">
+        <animate attributeName="stroke-dasharray" values="0,300;300,0;0,300" dur="19s" begin="-7s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- "beam of freedom" — light pulse sweeping outward from center -->
+    <circle r="0" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0">
+      <animate attributeName="r" values="0;110" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="0" fill="none" stroke="#7ee4ff" stroke-width="1" opacity="0">
+      <animate attributeName="r" values="0;130" dur="11s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ============== LEFT: BIG DATE ============== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- "APR 30" -->
+    <text x="30" y="78" font-size="44" font-weight="800" fill="url(#dateGrad)" letter-spacing="2" filter="url(#softGlow)">APR 30</text>
+    <!-- year -->
+    <text x="32" y="118" font-size="28" font-weight="600" fill="#9ddcff" letter-spacing="6">2 0 2 6</text>
+    <!-- THURSDAY tag -->
+    <text x="32" y="142" font-size="11" font-weight="600" fill="#58a6ff" letter-spacing="4">THURSDAY</text>
+
+    <!-- Underline accent that draws in -->
+    <line x1="30" y1="152" x2="30" y2="152" stroke="#00d4ff" stroke-width="2">
+      <animate attributeName="x2" values="30;220;220" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0;1" keyTimes="0;0.7;0.85;1" dur="13s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- ============== RIGHT: WWW · 33 · FREE ============== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+     transform="translate(560 0)">
+
+    <!-- "WORLD WIDE WEB" stacked label above 33 -->
+    <text x="115" y="22" font-size="11" font-weight="700" fill="#58a6ff" text-anchor="middle" letter-spacing="6">WORLD WIDE WEB</text>
+    <text x="115" y="38" font-size="9"  font-weight="500" fill="#7ee4ff" text-anchor="middle" letter-spacing="3">PUBLIC DOMAIN · 1993</text>
+
+    <!-- "33" giant numeral -->
+    <text x="115" y="115" font-size="78" font-weight="900" fill="#7ee4ff" text-anchor="middle"
+          filter="url(#strongGlow)" letter-spacing="-2">
+      33
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- "YEARS FREE" pill below 33 -->
+    <g>
+      <rect x="55" y="125" width="120" height="22" rx="11" ry="11"
+            fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.85"/>
+      <text x="115" y="141" font-size="11" font-weight="700" fill="#00d4ff" text-anchor="middle" letter-spacing="5">YEARS FREE</text>
+      <!-- pill shimmer -->
+      <rect x="55" y="125" width="120" height="22" rx="11" ry="11"
+            fill="url(#freeBeam)" opacity="0.5">
+        <animate attributeName="opacity" values="0;0.6;0" dur="11s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- HTTP-ish tag accent -->
+    <text x="115" y="170" font-size="9" font-weight="500" fill="#58a6ff" text-anchor="middle" letter-spacing="2" opacity="0.85">
+      &lt;a href="everything"&gt;
+    </text>
+  </g>
+
+  <!-- ============== BOTTOM CAPTION ============== -->
+  <text x="400" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="9.5" font-weight="500" fill="#7d8590" text-anchor="middle" letter-spacing="2.5">
+    CERN · 30 APRIL 1993 · THE WEB BECOMES EVERYONE'S
+  </text>
+
+  <!-- floating link-cursor sparks crossing the banner -->
+  <g filter="url(#softGlow)">
+    <circle r="1.6" fill="#7ee4ff">
+      <animate attributeName="cx" values="0;800" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="20;180;30;170;25" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.2" fill="#00d4ff">
+      <animate attributeName="cx" values="800;0" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="170;20;160;40;180" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1" fill="#9ddcff">
+      <animate attributeName="cx" values="0;800" dur="19s" begin="-5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="60;140;90;110;70" dur="19s" begin="-5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0.8;0.8;0" dur="19s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
