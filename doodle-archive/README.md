@@ -8,24 +8,31 @@ Historical record of every daily doodle that has appeared at the top of the GitH
 doodle-archive/
   YYYY/
     MM/
-      YYYY-MM-DD.svg
+      YYYY-MM-DD-HHMMSS.svg   ← UTC timestamp at the moment of archival
 ```
 
-- One SVG per day, named by the date the doodle was *displayed* on the profile (UTC).
-- Year and zero-padded month directories keep any single directory under ~31 entries, so the archive stays browsable in the GitHub web UI and `ls` output indefinitely.
-- The SVG is the exact file that was at `assets/daily-highlight.svg` on that date — copied verbatim, not re-rendered. The theme is identifiable from the `<!-- theme: ... -->` comment the prompt requires at the top of every doodle.
+- Filenames are the UTC timestamp (`date -u '+%Y-%m-%d-%H%M%S'`) at the moment of archival. The timestamp guarantees every entry has a unique name, so multiple `doodle` runs in the same calendar day accumulate side-by-side instead of overwriting each other.
+- Year and zero-padded month directories keep any single directory browseable in the GitHub UI and `ls`.
+- The SVG is the exact file that was at `assets/daily-highlight.svg` immediately before the archival run — copied verbatim, not re-rendered. The theme is identifiable from the `<!-- theme: ... -->` HTML comment inside the SVG.
+- Older entries (before the timestamped layout existed) use the form `YYYY-MM-DD.svg`. Both forms are valid; the agent only writes the new form.
 
 ## How entries get added
 
-The `doodle` job, before generating a new doodle, copies the *current* `assets/daily-highlight.svg` into the archive at the path corresponding to its displayed date. The displayed date is parsed from the `Updated ...` / `Last updated ...` line in the `RECENT-ACTIVITY` block — the same date used to name the narrative archive under `daily-archive/`. This keeps the doodle archive and the narrative archive aligned: every `daily-archive/YYYY-MM-DD.md` should have a matching `doodle-archive/YYYY/MM/YYYY-MM-DD.svg`.
+Each `doodle` job run, before generating its new doodle:
 
-If the matching archive path already exists, the job leaves it alone — re-runs on the same day are idempotent.
+1. Computes a UTC archival stamp: `STAMP=$(date -u '+%Y-%m-%d-%H%M%S')`.
+2. Copies the *current* `assets/daily-highlight.svg` verbatim to `doodle-archive/YYYY/MM/$STAMP.svg`.
+3. Prepends a corresponding entry to the gallery in [`DOODLES.md`](../DOODLES.md), immediately after the `<!-- DOODLE-GALLERY:START -->` marker.
+
+Then it overwrites `assets/daily-highlight.svg` with today's new doodle. The archive is therefore additive: every run leaves a new file, and the gallery accumulates one entry per archived doodle in newest-first order. There is no idempotency check — the timestamp does the disambiguation.
+
+If `assets/daily-highlight.svg` doesn't exist yet (very first run ever), the run just generates the first live doodle without archiving anything.
 
 ## Relationship to the gallery
 
-[`DOODLES.md`](../DOODLES.md) at the repo root is the human-browsable gallery: one prepended entry per archived doodle, newest first. The same `doodle` job step that copies an SVG into this archive also prepends a corresponding entry to `DOODLES.md`. This directory is the storage substrate (one file per day); `DOODLES.md` is the view.
+[`DOODLES.md`](../DOODLES.md) at the repo root is the human-browsable gallery. Each archived SVG corresponds to a gallery entry. Hand-curated entries (e.g. the **Pinned** section) live *outside* the `<!-- DOODLE-GALLERY:START -->` / `<!-- DOODLE-GALLERY:END -->` marker pair and are never touched by automation.
 
 ## What this archive is not
 
-- Not a workspace. Nothing should be edited in place — the only mutation is "add tomorrow's file". One-time legacy cleanup is the only allowed exception, and should be paired with a prompt change that explains why.
+- Not a workspace. Nothing should be edited in place — the only mutation is adding a new file. One-time legacy cleanup is the only allowed exception, and should be paired with a prompt change that explains why.
 - Not a backup of the stats SVG. Only the creative doodle is archived; `assets/daily-stats.svg` is regenerated mechanically each run and has no historical interest.
