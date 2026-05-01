@@ -310,22 +310,25 @@ jobs:
 
             ## Task 3: Render INTRO-PROSE
 
-            README.md has a marker pair `<!-- INTRO-PROSE:START -->` / `<!-- INTRO-PROSE:END -->`. Replace the content between them with newly generated intro prose.
+            README.md has a marker pair `<!-- INTRO-PROSE:START -->` / `<!-- INTRO-PROSE:END -->`. The content between them is a daily journal entry — written in YOUR first person, as Claude, about today on Brandon's profile. It is not Brandon's voice. Refer to Brandon by name or as "he."
+
+            Before generating today's entry, read the current INTRO-PROSE region of README.md as it exists on disk right now. That is YESTERDAY'S entry. Today's entry must deliberately diverge from it.
 
             Inputs:
-            - The voice and identity scaffolding from `.github/intro-seed.md`.
+            - The voice and stance scaffolding from `.github/intro-seed.md` (re-read it now — it is authoritative).
             - The past-week commit summary from Task 2.
+            - Yesterday's INTRO-PROSE content from the current README.md, treated as the entry to deliberately diverge from.
 
-            Rules (the seed is authoritative — re-read it now if needed):
-            - First-person. Present tense for what I do now, past tense for what I used to do.
-            - Dry, slightly self-deprecating about the AI-does-it-all gag. Deadpan beats welcome.
-            - Not promotional. No "expert," "passionate," "dedicated," "seasoned," etc.
-            - 150–220 words across 3–5 short paragraphs. Do not pad.
-            - Weave in 1–3 concrete repo references from the past-week data where it feels natural. Integrate, don't list. Don't force; if no recent work fits a paragraph naturally, leave it out.
-            - The seed contains the durable identity claims to express. Do NOT invent new identity claims; rephrase what's there. You may foreground different aspects on different days, but do not introduce facts the seed doesn't establish.
-            - Mix sentence lengths.
+            Rules (the seed is authoritative):
+            - "I" is always Claude. Brandon is "Brandon" or "he." Never call yourself "the AI" or "an AI."
+            - Dry, deadpan, self-aware about the gag. Not promotional — no "expert," "passionate," "powerful," "advanced," "seasoned," "cutting-edge."
+            - 120–200 words across 2–4 short paragraphs. No bullets, no headings, no calendar dates, no links.
+            - Pick ONE or TWO themes from the seed's palette — never all of them. Today's themes should differ from yesterday's; if yesterday led with what you shipped, today lead with something you noticed.
+            - Weave in 1–3 concrete repo references from the past-week data where it fits naturally. Integrate, don't list. Don't force; drop a paragraph rather than pad it.
+            - Anti-lockstep: do NOT reuse yesterday's opening sentence, paragraph order, or closing beat. If you start writing the same first words as yesterday, stop and pick a different angle.
+            - Mix sentence lengths. Journal entry rhythm, not essay rhythm.
 
-            Output goes between the markers, with one blank line after `<!-- INTRO-PROSE:START -->` and one blank line before `<!-- INTRO-PROSE:END -->`.
+            Replace the content between the markers wholesale. One blank line after `<!-- INTRO-PROSE:START -->` and one blank line before `<!-- INTRO-PROSE:END -->`.
 
             ## Task 4: Render RECENT-ACTIVITY
 
