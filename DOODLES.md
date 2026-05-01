@@ -1,10 +1,18 @@
 # Daily Doodles
 
-A running gallery of every daily doodle that has appeared at the top of this profile. Newest first. Generated automatically by the `doodle` job in `.github/workflows/daily-highlights.yml` — do not hand-edit; the next run will reorganize around any manual changes.
+A running gallery of every daily doodle that has appeared at the top of this profile. Generated automatically by the `doodle` job in `.github/workflows/daily-highlights.yml`. Only the section between the `<!-- DOODLE-GALLERY:START -->` and `<!-- DOODLE-GALLERY:END -->` markers below is rewritten by automation — everything else (this header, the **Pinned** section) is hand-curated and stays put.
 
-Today's doodle is shown live at the top of [README.md](./README.md). The moment it's replaced by tomorrow's, it gets a permanent slot here. The SVG files themselves are stored under [`doodle-archive/`](./doodle-archive/).
+Today's doodle is shown live at the top of [README.md](./README.md). The moment a new run archives it, it gets a permanent slot in the gallery below. The SVG files themselves are stored under [`doodle-archive/`](./doodle-archive/).
+
+## Pinned
+
+<img src="./assets/ai-slop-80s.svg" width="800" alt="AI SLOP — 1980s style rotating retro-futurist banner with chrome lettering and a synthwave sun">
 
 ---
+
+## Gallery
+
+Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
 ## April 30, 2026 — World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain
@@ -34,12 +42,6 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 ## April 26, 2026 — Spring Bloom
 
 <img src="./doodle-archive/2026/04/2026-04-26.svg" width="800" alt="Daily doodle for April 26, 2026: Spring Bloom">
-
----
-
-## AI SLOP
-
-<img src="./assets/ai-slop-80s.svg" width="800" alt="AI SLOP — 1980s style rotating retro-futurist banner with chrome lettering and a synthwave sun">
 
 ---
 
