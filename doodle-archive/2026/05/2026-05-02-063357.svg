@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: May Day (May 1) — maypole, ribbons, and spring bloom -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 1, 2026 — May Day, with a maypole and flowing ribbons">
+  <defs>
+    <radialGradient id="bg" cx="0.35" cy="0.55" r="0.85">
+      <stop offset="0%" stop-color="#1a2233"/>
+      <stop offset="55%" stop-color="#0f141f"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <linearGradient id="poleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a06a"/>
+      <stop offset="100%" stop-color="#7a5230"/>
+    </linearGradient>
+
+    <linearGradient id="dateGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff5d6"/>
+      <stop offset="50%" stop-color="#ffd97a"/>
+      <stop offset="100%" stop-color="#ff9966"/>
+    </linearGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- petal shape: a single tear-drop petal pointing up from origin -->
+    <symbol id="petal" overflow="visible">
+      <path d="M0,0 C-6,-6 -6,-16 0,-22 C6,-16 6,-6 0,0 Z"/>
+    </symbol>
+
+    <!-- a 6-petal blossom centered at origin -->
+    <symbol id="blossom" overflow="visible">
+      <g>
+        <use href="#petal" transform="rotate(0)"/>
+        <use href="#petal" transform="rotate(60)"/>
+        <use href="#petal" transform="rotate(120)"/>
+        <use href="#petal" transform="rotate(180)"/>
+        <use href="#petal" transform="rotate(240)"/>
+        <use href="#petal" transform="rotate(300)"/>
+      </g>
+      <circle r="3.2" fill="#ffd97a"/>
+    </symbol>
+
+    <!-- ribbon path templates: gentle s-curves originating from top of pole -->
+  </defs>
+
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- distant motes / pollen drifting -->
+  <g opacity="0.55">
+    <circle cx="120" cy="40" r="1.4" fill="#ffe6a6">
+      <animate attributeName="cy" values="40;180;40" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="20" r="1.1" fill="#ffd1a6">
+      <animate attributeName="cy" values="20;180;20" dur="17s" repeatCount="indefinite" begin="-3s"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="17s" repeatCount="indefinite" begin="-3s"/>
+    </circle>
+    <circle cx="430" cy="60" r="1.6" fill="#ffe6a6">
+      <animate attributeName="cy" values="60;200;60" dur="19s" repeatCount="indefinite" begin="-6s"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="19s" repeatCount="indefinite" begin="-6s"/>
+    </circle>
+    <circle cx="600" cy="30" r="1.3" fill="#ffc1a6">
+      <animate attributeName="cy" values="30;200;30" dur="11s" repeatCount="indefinite" begin="-2s"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="11s" repeatCount="indefinite" begin="-2s"/>
+    </circle>
+    <circle cx="710" cy="50" r="1.2" fill="#ffe6a6">
+      <animate attributeName="cy" values="50;200;50" dur="23s" repeatCount="indefinite" begin="-9s"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="23s" repeatCount="indefinite" begin="-9s"/>
+    </circle>
+    <circle cx="350" cy="90" r="1.0" fill="#fff0c2">
+      <animate attributeName="cy" values="90;210;90" dur="29s" repeatCount="indefinite" begin="-12s"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="29s" repeatCount="indefinite" begin="-12s"/>
+    </circle>
+  </g>
+
+  <!-- Maypole on left side -->
+  <g transform="translate(110,170)">
+    <!-- ground shadow -->
+    <ellipse cx="0" cy="2" rx="32" ry="5" fill="#000" opacity="0.4"/>
+    <!-- pole -->
+    <rect x="-4" y="-150" width="8" height="150" fill="url(#poleGrad)" rx="2"/>
+    <!-- crown of flowers at top -->
+    <g transform="translate(0,-150)">
+      <circle r="20" fill="#3a2548" opacity="0.6"/>
+      <use href="#blossom" transform="translate(-12,-8) scale(0.55)" fill="#ff7a9a">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
+      </use>
+      <use href="#blossom" transform="translate(14,-6) scale(0.5)" fill="#ffd966">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite" additive="sum"/>
+      </use>
+      <use href="#blossom" transform="translate(0,8) scale(0.6)" fill="#a3e6c2">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="17s" repeatCount="indefinite" additive="sum"/>
+      </use>
+      <use href="#blossom" transform="translate(-8,6) scale(0.45)" fill="#c19aff">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="19s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+
+    <!-- ribbons: each anchored at the top of the pole, fluttering rightward -->
+    <g stroke-linecap="round" fill="none" stroke-width="3.5" filter="url(#glow)">
+      <!-- ribbon 1 -->
+      <path stroke="#ff5577" opacity="0.95" d="M0,-148 C 60,-130 130,-110 220,-95 S 380,-80 540,-55">
+        <animate attributeName="d"
+          values="M0,-148 C 60,-130 130,-110 220,-95 S 380,-80 540,-55;
+                  M0,-148 C 70,-120 140,-130 230,-85 S 380,-95 540,-65;
+                  M0,-148 C 60,-130 130,-110 220,-95 S 380,-80 540,-55"
+          dur="11s" repeatCount="indefinite"/>
+      </path>
+      <!-- ribbon 2 -->
+      <path stroke="#ffb347" opacity="0.95" d="M0,-148 C 80,-110 170,-130 260,-70 S 420,-110 600,-30">
+        <animate attributeName="d"
+          values="M0,-148 C 80,-110 170,-130 260,-70 S 420,-110 600,-30;
+                  M0,-148 C 90,-120 180,-100 270,-80 S 430,-90 600,-50;
+                  M0,-148 C 80,-110 170,-130 260,-70 S 420,-110 600,-30"
+          dur="13s" repeatCount="indefinite"/>
+      </path>
+      <!-- ribbon 3 -->
+      <path stroke="#7ad7ff" opacity="0.9" d="M0,-148 C 70,-90 160,-50 250,-40 S 410,-30 580,-10">
+        <animate attributeName="d"
+          values="M0,-148 C 70,-90 160,-50 250,-40 S 410,-30 580,-10;
+                  M0,-148 C 80,-100 170,-30 260,-50 S 420,-20 580,-25;
+                  M0,-148 C 70,-90 160,-50 250,-40 S 410,-30 580,-10"
+          dur="17s" repeatCount="indefinite"/>
+      </path>
+      <!-- ribbon 4 -->
+      <path stroke="#9aff9a" opacity="0.85" d="M0,-148 C 60,-160 140,-150 230,-130 S 400,-110 560,-100">
+        <animate attributeName="d"
+          values="M0,-148 C 60,-160 140,-150 230,-130 S 400,-110 560,-100;
+                  M0,-148 C 70,-150 150,-160 240,-120 S 410,-120 560,-90;
+                  M0,-148 C 60,-160 140,-150 230,-130 S 400,-110 560,-100"
+          dur="19s" repeatCount="indefinite"/>
+      </path>
+      <!-- ribbon 5 -->
+      <path stroke="#c19aff" opacity="0.85" d="M0,-148 C 50,-100 130,-70 220,-60 S 380,-60 520,-70">
+        <animate attributeName="d"
+          values="M0,-148 C 50,-100 130,-70 220,-60 S 380,-60 520,-70;
+                  M0,-148 C 60,-110 140,-60 230,-70 S 390,-50 520,-80;
+                  M0,-148 C 50,-100 130,-70 220,-60 S 380,-60 520,-70"
+          dur="23s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- Date typography on right side, the dominant element -->
+  <g transform="translate(780,100)" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- soft glow halo behind text -->
+    <ellipse cx="-130" cy="-2" rx="245" ry="60" fill="#ff9966" opacity="0.12" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.10;0.20;0.10" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <text y="-6" font-size="56" font-weight="800" fill="url(#dateGrad)" letter-spacing="-1">May 1, 2026</text>
+    <text y="28" font-size="14" font-weight="600" fill="#a3b1c2" letter-spacing="6">M A Y &#160; D A Y</text>
+    <text y="50" font-size="11" font-weight="400" fill="#6b7a8f" letter-spacing="2.5">maypole · ribbons · spring bloom · Friday</text>
+  </g>
+
+  <!-- scattered blossoms across the lower band -->
+  <g>
+    <use href="#blossom" transform="translate(200,178) scale(0.55)" fill="#ff7a9a" opacity="0.95">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="29s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#blossom" transform="translate(255,188) scale(0.4)" fill="#ffd966" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="23s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#blossom" transform="translate(310,182) scale(0.5)" fill="#c19aff" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="19s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#blossom" transform="translate(370,190) scale(0.35)" fill="#a3e6c2" opacity="0.95">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="17s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#blossom" transform="translate(425,184) scale(0.5)" fill="#ff9966" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </use>
+    <use href="#blossom" transform="translate(160,190) scale(0.42)" fill="#7ad7ff" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="31s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#blossom" transform="translate(485,192) scale(0.38)" fill="#ff7a9a" opacity="0.85">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="37s" repeatCount="indefinite" additive="sum"/>
+    </use>
+  </g>
+
+  <!-- a few rising petals drifting upward (counterpoint to the falling motes) -->
+  <g opacity="0.85" filter="url(#glow)">
+    <use href="#petal" transform="translate(540,210) scale(0.45)" fill="#ff7a9a">
+      <animateTransform attributeName="transform" type="translate" values="540,210;560,40" dur="11s" repeatCount="indefinite" additive="replace"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#petal" transform="translate(620,210) scale(0.4)" fill="#ffd966">
+      <animateTransform attributeName="transform" type="translate" values="620,210;640,30" dur="13s" repeatCount="indefinite" additive="replace" begin="-4s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite" begin="-4s"/>
+    </use>
+    <use href="#petal" transform="translate(680,210) scale(0.38)" fill="#c19aff">
+      <animateTransform attributeName="transform" type="translate" values="680,210;700,50" dur="17s" repeatCount="indefinite" additive="replace" begin="-7s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="17s" repeatCount="indefinite" begin="-7s"/>
+    </use>
+    <use href="#petal" transform="translate(460,210) scale(0.42)" fill="#a3e6c2">
+      <animateTransform attributeName="transform" type="translate" values="460,210;480,60" dur="19s" repeatCount="indefinite" additive="replace" begin="-2s"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="19s" repeatCount="indefinite" begin="-2s"/>
+    </use>
+  </g>
+</svg>

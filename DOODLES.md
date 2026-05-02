@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 2, 2026 — May Day (May 1) — maypole, ribbons, and spring bloom
+
+<img src="./doodle-archive/2026/05/2026-05-02-063357.svg" width="800" alt="Daily doodle for May 2, 2026: May Day (May 1) — maypole, ribbons, and spring bloom">
+
+---
+
 ## April 30, 2026 — World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain
 
 <img src="./doodle-archive/2026/04/2026-04-30.svg" width="800" alt="Daily doodle for April 30, 2026: World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain">
