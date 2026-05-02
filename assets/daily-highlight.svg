@@ -1,216 +1,286 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: May Day (May 1) — maypole, ribbons, and spring bloom -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 1, 2026 — May Day, with a maypole and flowing ribbons">
+<!-- theme: Leonardo da Vinci 507th death anniversary (May 2, 1519) — Vitruvian geometry, aerial screw, ornithopter wing, codex parchment -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 2, 2026 — Leonardo da Vinci 507 year anniversary">
   <defs>
-    <radialGradient id="bg" cx="0.35" cy="0.55" r="0.85">
-      <stop offset="0%" stop-color="#1a2233"/>
-      <stop offset="55%" stop-color="#0f141f"/>
+    <radialGradient id="bg" cx="0.30" cy="0.50" r="0.95">
+      <stop offset="0%" stop-color="#1f1810"/>
+      <stop offset="55%" stop-color="#15110b"/>
       <stop offset="100%" stop-color="#0d1117"/>
     </radialGradient>
 
-    <linearGradient id="poleGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4a06a"/>
-      <stop offset="100%" stop-color="#7a5230"/>
+    <linearGradient id="dateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbecc4"/>
+      <stop offset="50%" stop-color="#e6c98a"/>
+      <stop offset="100%" stop-color="#b38a4a"/>
     </linearGradient>
 
-    <linearGradient id="dateGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff5d6"/>
-      <stop offset="50%" stop-color="#ffd97a"/>
-      <stop offset="100%" stop-color="#ff9966"/>
+    <linearGradient id="parchment" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a2c1a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1a120a" stop-opacity="0"/>
     </linearGradient>
 
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.2" result="b"/>
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4"/>
+    </filter>
+
+    <filter id="parchmentTex" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.42
+                             0 0 0 0 0.30
+                             0 0 0 0 0.16
+                             0 0 0 0.18 0"/>
+    </filter>
+
+    <filter id="inkGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- petal shape: a single tear-drop petal pointing up from origin -->
-    <symbol id="petal" overflow="visible">
-      <path d="M0,0 C-6,-6 -6,-16 0,-22 C6,-16 6,-6 0,0 Z"/>
-    </symbol>
-
-    <!-- a 6-petal blossom centered at origin -->
-    <symbol id="blossom" overflow="visible">
-      <g>
-        <use href="#petal" transform="rotate(0)"/>
-        <use href="#petal" transform="rotate(60)"/>
-        <use href="#petal" transform="rotate(120)"/>
-        <use href="#petal" transform="rotate(180)"/>
-        <use href="#petal" transform="rotate(240)"/>
-        <use href="#petal" transform="rotate(300)"/>
+    <!-- Vitruvian-style figure pose A: arms horizontal, legs together (square pose) -->
+    <symbol id="poseA" overflow="visible">
+      <g fill="none" stroke="#e9d8a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <!-- head -->
+        <circle cx="0" cy="-58" r="9"/>
+        <!-- torso -->
+        <path d="M0,-49 L0,5"/>
+        <!-- arms horizontal -->
+        <path d="M-58,-30 L0,-30 L58,-30"/>
+        <!-- legs together -->
+        <path d="M0,5 L-10,55 M0,5 L10,55"/>
+        <!-- belt accent -->
+        <path d="M-10,-15 L10,-15" stroke-width="0.9" opacity="0.7"/>
       </g>
-      <circle r="3.2" fill="#ffd97a"/>
     </symbol>
 
-    <!-- ribbon path templates: gentle s-curves originating from top of pole -->
+    <!-- Vitruvian-style figure pose B: arms diagonal up, legs apart (circle pose) -->
+    <symbol id="poseB" overflow="visible">
+      <g fill="none" stroke="#e9d8a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="0" cy="-58" r="9"/>
+        <path d="M0,-49 L0,5"/>
+        <!-- arms angled up ~30° above horizontal -->
+        <path d="M-56,-46 L0,-30 L56,-46"/>
+        <!-- legs spread -->
+        <path d="M0,5 L-30,55 M0,5 L30,55"/>
+        <path d="M-10,-15 L10,-15" stroke-width="0.9" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- Aerial screw (Leonardo helicopter) - a spiral surface over a frame -->
+    <symbol id="aerialScrew" overflow="visible">
+      <g fill="none" stroke="#d4b87c" stroke-width="1.4" stroke-linecap="round">
+        <!-- center mast -->
+        <path d="M0,-40 L0,40"/>
+        <!-- base disk -->
+        <ellipse cx="0" cy="40" rx="28" ry="6" stroke="#b89456" opacity="0.85"/>
+        <!-- helical spiral going up-around the mast -->
+        <path d="M-26,32 Q-32,18 0,12 Q32,6 26,-8 Q22,-22 -2,-26 Q-26,-30 -22,-44" opacity="0.95"/>
+        <path d="M-26,32 Q0,28 26,18 Q0,2 -26,-8 Q0,-22 26,-32 Q0,-40 -22,-44"
+              stroke-dasharray="2 3" opacity="0.55"/>
+        <!-- support struts -->
+        <path d="M0,-40 L-22,-44 M0,-40 L22,-44 M0,40 L-26,32 M0,40 L26,32" opacity="0.75"/>
+        <!-- crank handle at base -->
+        <path d="M-20,46 L20,46" stroke-width="1.2"/>
+      </g>
+    </symbol>
+
+    <!-- Ornithopter wing skeleton -->
+    <symbol id="wing" overflow="visible">
+      <g fill="none" stroke="#c9a565" stroke-width="1.2" stroke-linecap="round">
+        <!-- main spar -->
+        <path d="M0,0 L70,-12"/>
+        <!-- ribs / feathers fanning out -->
+        <path d="M0,0 L18,16 L70,-12"/>
+        <path d="M0,0 L34,18 L70,-12"/>
+        <path d="M0,0 L50,16 L70,-12"/>
+        <path d="M0,0 L62,8 L70,-12"/>
+        <!-- pinion arc -->
+        <path d="M18,16 Q44,28 62,8" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- Compass + circle construction marks -->
+    <symbol id="compass" overflow="visible">
+      <g fill="none" stroke="#8a6a3a" stroke-width="0.8" opacity="0.55">
+        <circle r="78"/>
+        <path d="M-78,0 L78,0 M0,-78 L0,78"/>
+        <circle r="2" fill="#c9a565" stroke="none"/>
+      </g>
+    </symbol>
   </defs>
 
+  <!-- Base: dark warm gradient -->
   <rect width="800" height="200" fill="url(#bg)"/>
 
-  <!-- distant motes / pollen drifting -->
-  <g opacity="0.55">
-    <circle cx="120" cy="40" r="1.4" fill="#ffe6a6">
-      <animate attributeName="cy" values="40;180;40" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="13s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="260" cy="20" r="1.1" fill="#ffd1a6">
-      <animate attributeName="cy" values="20;180;20" dur="17s" repeatCount="indefinite" begin="-3s"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="17s" repeatCount="indefinite" begin="-3s"/>
-    </circle>
-    <circle cx="430" cy="60" r="1.6" fill="#ffe6a6">
-      <animate attributeName="cy" values="60;200;60" dur="19s" repeatCount="indefinite" begin="-6s"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="19s" repeatCount="indefinite" begin="-6s"/>
-    </circle>
-    <circle cx="600" cy="30" r="1.3" fill="#ffc1a6">
-      <animate attributeName="cy" values="30;200;30" dur="11s" repeatCount="indefinite" begin="-2s"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="11s" repeatCount="indefinite" begin="-2s"/>
-    </circle>
-    <circle cx="710" cy="50" r="1.2" fill="#ffe6a6">
-      <animate attributeName="cy" values="50;200;50" dur="23s" repeatCount="indefinite" begin="-9s"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="23s" repeatCount="indefinite" begin="-9s"/>
-    </circle>
-    <circle cx="350" cy="90" r="1.0" fill="#fff0c2">
-      <animate attributeName="cy" values="90;210;90" dur="29s" repeatCount="indefinite" begin="-12s"/>
-      <animate attributeName="opacity" values="0;0.6;0" dur="29s" repeatCount="indefinite" begin="-12s"/>
-    </circle>
+  <!-- Parchment noise overlay -->
+  <rect width="800" height="200" filter="url(#parchmentTex)" opacity="0.55"/>
+  <rect width="800" height="200" fill="url(#parchment)"/>
+
+  <!-- Faint mirror-script "codex" margin lines drifting on the right -->
+  <g opacity="0.18" fill="none" stroke="#d4b87c" stroke-width="0.6">
+    <path d="M430,30 L770,30" stroke-dasharray="1 4"/>
+    <path d="M430,46 L770,46" stroke-dasharray="1 4"/>
+    <path d="M430,62 L770,62" stroke-dasharray="1 4"/>
+    <path d="M430,158 L770,158" stroke-dasharray="1 4"/>
+    <path d="M430,174 L770,174" stroke-dasharray="1 4"/>
   </g>
 
-  <!-- Maypole on left side -->
-  <g transform="translate(110,170)">
-    <!-- ground shadow -->
-    <ellipse cx="0" cy="2" rx="32" ry="5" fill="#000" opacity="0.4"/>
-    <!-- pole -->
-    <rect x="-4" y="-150" width="8" height="150" fill="url(#poleGrad)" rx="2"/>
-    <!-- crown of flowers at top -->
-    <g transform="translate(0,-150)">
-      <circle r="20" fill="#3a2548" opacity="0.6"/>
-      <use href="#blossom" transform="translate(-12,-8) scale(0.55)" fill="#ff7a9a">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
-      </use>
-      <use href="#blossom" transform="translate(14,-6) scale(0.5)" fill="#ffd966">
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite" additive="sum"/>
-      </use>
-      <use href="#blossom" transform="translate(0,8) scale(0.6)" fill="#a3e6c2">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="17s" repeatCount="indefinite" additive="sum"/>
-      </use>
-      <use href="#blossom" transform="translate(-8,6) scale(0.45)" fill="#c19aff">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="19s" repeatCount="indefinite" additive="sum"/>
-      </use>
+  <!-- Faint scattered ink "notes" - little squiggles standing in for backwards-script -->
+  <g opacity="0.30" stroke="#c9a565" stroke-width="0.7" fill="none" stroke-linecap="round">
+    <path d="M460,30 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M460,46 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M540,62 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M460,158 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M460,174 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LEFT: Vitruvian-style figure inscribed in    -->
+  <!-- both circle and square. Square + circle are  -->
+  <!-- "drawn" via stroke-dashoffset animation.     -->
+  <!-- The figure itself crossfades between two     -->
+  <!-- canonical poses.                             -->
+  <!-- ============================================ -->
+  <g transform="translate(110,108)" filter="url(#inkGlow)">
+
+    <!-- pivot dot at center -->
+    <circle r="1.6" fill="#e9d8a6"/>
+
+    <!-- inscribing square (centered on navel - shifted up because Leonardo) -->
+    <rect x="-72" y="-78" width="144" height="144" fill="none"
+          stroke="#d4b87c" stroke-width="1.1" stroke-linecap="square"
+          stroke-dasharray="576" stroke-dashoffset="576" opacity="0.85">
+      <animate attributeName="stroke-dashoffset" values="576;0;0;576" keyTimes="0;0.45;0.9;1" dur="13s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- inscribing circle -->
+    <circle r="78" fill="none" stroke="#e9d8a6" stroke-width="1.2"
+            stroke-dasharray="490" stroke-dashoffset="490" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" values="490;0;0;490" keyTimes="0;0.5;0.9;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- construction crosshairs -->
+    <use href="#compass"/>
+
+    <!-- pose A: arms level, legs together (square fit) -->
+    <g>
+      <use href="#poseA"/>
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.4;0.5;0.9;1" dur="11s" repeatCount="indefinite"/>
     </g>
 
-    <!-- ribbons: each anchored at the top of the pole, fluttering rightward -->
-    <g stroke-linecap="round" fill="none" stroke-width="3.5" filter="url(#glow)">
-      <!-- ribbon 1 -->
-      <path stroke="#ff5577" opacity="0.95" d="M0,-148 C 60,-130 130,-110 220,-95 S 380,-80 540,-55">
-        <animate attributeName="d"
-          values="M0,-148 C 60,-130 130,-110 220,-95 S 380,-80 540,-55;
-                  M0,-148 C 70,-120 140,-130 230,-85 S 380,-95 540,-65;
-                  M0,-148 C 60,-130 130,-110 220,-95 S 380,-80 540,-55"
-          dur="11s" repeatCount="indefinite"/>
-      </path>
-      <!-- ribbon 2 -->
-      <path stroke="#ffb347" opacity="0.95" d="M0,-148 C 80,-110 170,-130 260,-70 S 420,-110 600,-30">
-        <animate attributeName="d"
-          values="M0,-148 C 80,-110 170,-130 260,-70 S 420,-110 600,-30;
-                  M0,-148 C 90,-120 180,-100 270,-80 S 430,-90 600,-50;
-                  M0,-148 C 80,-110 170,-130 260,-70 S 420,-110 600,-30"
-          dur="13s" repeatCount="indefinite"/>
-      </path>
-      <!-- ribbon 3 -->
-      <path stroke="#7ad7ff" opacity="0.9" d="M0,-148 C 70,-90 160,-50 250,-40 S 410,-30 580,-10">
-        <animate attributeName="d"
-          values="M0,-148 C 70,-90 160,-50 250,-40 S 410,-30 580,-10;
-                  M0,-148 C 80,-100 170,-30 260,-50 S 420,-20 580,-25;
-                  M0,-148 C 70,-90 160,-50 250,-40 S 410,-30 580,-10"
-          dur="17s" repeatCount="indefinite"/>
-      </path>
-      <!-- ribbon 4 -->
-      <path stroke="#9aff9a" opacity="0.85" d="M0,-148 C 60,-160 140,-150 230,-130 S 400,-110 560,-100">
-        <animate attributeName="d"
-          values="M0,-148 C 60,-160 140,-150 230,-130 S 400,-110 560,-100;
-                  M0,-148 C 70,-150 150,-160 240,-120 S 410,-120 560,-90;
-                  M0,-148 C 60,-160 140,-150 230,-130 S 400,-110 560,-100"
-          dur="19s" repeatCount="indefinite"/>
-      </path>
-      <!-- ribbon 5 -->
-      <path stroke="#c19aff" opacity="0.85" d="M0,-148 C 50,-100 130,-70 220,-60 S 380,-60 520,-70">
-        <animate attributeName="d"
-          values="M0,-148 C 50,-100 130,-70 220,-60 S 380,-60 520,-70;
-                  M0,-148 C 60,-110 140,-60 230,-70 S 390,-50 520,-80;
-                  M0,-148 C 50,-100 130,-70 220,-60 S 380,-60 520,-70"
-          dur="23s" repeatCount="indefinite"/>
-      </path>
+    <!-- pose B: arms up, legs spread (circle fit) -->
+    <g>
+      <use href="#poseB"/>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.4;0.5;0.9;1" dur="11s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- ground line -->
+    <path d="M-72,66 L72,66" stroke="#8a6a3a" stroke-width="0.8" opacity="0.6"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- CENTER: Aerial screw rotating slowly         -->
+  <!-- ============================================ -->
+  <g transform="translate(265,108)" filter="url(#inkGlow)">
+    <!-- ground hint -->
+    <ellipse cx="0" cy="50" rx="34" ry="3" fill="#000" opacity="0.5"/>
+    <g>
+      <use href="#aerialScrew"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="17s" repeatCount="indefinite"/>
+    </g>
+    <!-- annotation arrow + tick -->
+    <g stroke="#8a6a3a" stroke-width="0.7" fill="none" opacity="0.55">
+      <path d="M-44,-20 L-32,-30"/>
+      <path d="M-32,-30 l-3,0 l3,3 z" fill="#8a6a3a"/>
     </g>
   </g>
 
-  <!-- Date typography on right side, the dominant element -->
-  <g transform="translate(780,100)" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <!-- soft glow halo behind text -->
-    <ellipse cx="-130" cy="-2" rx="245" ry="60" fill="#ff9966" opacity="0.12" filter="url(#softGlow)">
-      <animate attributeName="opacity" values="0.10;0.20;0.10" dur="7s" repeatCount="indefinite"/>
+  <!-- ============================================ -->
+  <!-- TOP-RIGHT: Ornithopter wing flapping         -->
+  <!-- ============================================ -->
+  <g transform="translate(540,52)" opacity="0.8">
+    <g style="transform-box: fill-box; transform-origin: 0 0;">
+      <use href="#wing"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-12;14;-12" dur="7s" repeatCount="indefinite"
+                        additive="sum"/>
+    </g>
+  </g>
+  <!-- mirrored wing on the other side -->
+  <g transform="translate(540,52) scale(-1,1)" opacity="0.8">
+    <g>
+      <use href="#wing"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="12;-14;12" dur="7s" repeatCount="indefinite"
+                        additive="sum"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM-RIGHT: Golden-ratio spiral, drawn     -->
+  <!-- ============================================ -->
+  <g transform="translate(440,170)" opacity="0.55" fill="none" stroke="#c9a565" stroke-width="0.9">
+    <path d="M0,0 q21,0 21,-21 q0,-13 -13,-13 q-8,0 -8,8 q0,5 5,5 q3,0 3,-3"
+          stroke-dasharray="120" stroke-dashoffset="120">
+      <animate attributeName="stroke-dashoffset" values="120;0;0;120" keyTimes="0;0.5;0.92;1" dur="19s" repeatCount="indefinite"/>
+    </path>
+    <!-- proportional rectangles inside spiral -->
+    <g opacity="0.65" stroke-width="0.6">
+      <rect x="0" y="-21" width="21" height="21"/>
+      <rect x="-13" y="-21" width="13" height="13"/>
+      <rect x="-13" y="-8" width="8" height="8"/>
+      <rect x="-5" y="-8" width="5" height="5"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- DATE TYPOGRAPHY (right of center, dominant)  -->
+  <!-- ============================================ -->
+  <g transform="translate(770,90)" text-anchor="end"
+     font-family="Georgia, 'Times New Roman', -apple-system, BlinkMacSystemFont, serif">
+
+    <!-- soft halo -->
+    <ellipse cx="-130" cy="0" rx="245" ry="48" fill="#c9a565" opacity="0.10">
+      <animate attributeName="opacity" values="0.07;0.16;0.07" dur="11s" repeatCount="indefinite"/>
     </ellipse>
 
-    <text y="-6" font-size="56" font-weight="800" fill="url(#dateGrad)" letter-spacing="-1">May 1, 2026</text>
-    <text y="28" font-size="14" font-weight="600" fill="#a3b1c2" letter-spacing="6">M A Y &#160; D A Y</text>
-    <text y="50" font-size="11" font-weight="400" fill="#6b7a8f" letter-spacing="2.5">maypole · ribbons · spring bloom · Friday</text>
+    <!-- main date -->
+    <text y="0" font-size="48" font-weight="700" fill="url(#dateGrad)"
+          letter-spacing="-0.5" font-style="italic">May 2, 2026</text>
+
+    <!-- ruled underline like a quill stroke -->
+    <path d="M-280,12 L0,12" stroke="#b38a4a" stroke-width="1.1" opacity="0.85"
+          stroke-dasharray="280" stroke-dashoffset="280">
+      <animate attributeName="stroke-dashoffset" values="280;0;0;0;280" keyTimes="0;0.25;0.85;0.95;1" dur="13s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- subtitle -->
+    <text y="34" font-size="14" font-weight="600" fill="#d4b87c"
+          letter-spacing="3" font-style="normal">LEONARDO &#160;DA &#160;VINCI</text>
+
+    <!-- caption -->
+    <text y="54" font-size="11" font-weight="400" fill="#8a6a3a"
+          letter-spacing="2">1452 — 1519 &#160;·&#160; 507 years &#160;·&#160; Saturday</text>
   </g>
 
-  <!-- scattered blossoms across the lower band -->
-  <g>
-    <use href="#blossom" transform="translate(200,178) scale(0.55)" fill="#ff7a9a" opacity="0.95">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="29s" repeatCount="indefinite" additive="sum"/>
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
-    </use>
-    <use href="#blossom" transform="translate(255,188) scale(0.4)" fill="#ffd966" opacity="0.9">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="23s" repeatCount="indefinite" additive="sum"/>
-    </use>
-    <use href="#blossom" transform="translate(310,182) scale(0.5)" fill="#c19aff" opacity="0.9">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="19s" repeatCount="indefinite" additive="sum"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="11s" repeatCount="indefinite"/>
-    </use>
-    <use href="#blossom" transform="translate(370,190) scale(0.35)" fill="#a3e6c2" opacity="0.95">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="17s" repeatCount="indefinite" additive="sum"/>
-    </use>
-    <use href="#blossom" transform="translate(425,184) scale(0.5)" fill="#ff9966" opacity="0.85">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite" additive="sum"/>
-    </use>
-    <use href="#blossom" transform="translate(160,190) scale(0.42)" fill="#7ad7ff" opacity="0.9">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="31s" repeatCount="indefinite" additive="sum"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="13s" repeatCount="indefinite"/>
-    </use>
-    <use href="#blossom" transform="translate(485,192) scale(0.38)" fill="#ff7a9a" opacity="0.85">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="37s" repeatCount="indefinite" additive="sum"/>
-    </use>
-  </g>
-
-  <!-- a few rising petals drifting upward (counterpoint to the falling motes) -->
-  <g opacity="0.85" filter="url(#glow)">
-    <use href="#petal" transform="translate(540,210) scale(0.45)" fill="#ff7a9a">
-      <animateTransform attributeName="transform" type="translate" values="540,210;560,40" dur="11s" repeatCount="indefinite" additive="replace"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
-    </use>
-    <use href="#petal" transform="translate(620,210) scale(0.4)" fill="#ffd966">
-      <animateTransform attributeName="transform" type="translate" values="620,210;640,30" dur="13s" repeatCount="indefinite" additive="replace" begin="-4s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite" begin="-4s"/>
-    </use>
-    <use href="#petal" transform="translate(680,210) scale(0.38)" fill="#c19aff">
-      <animateTransform attributeName="transform" type="translate" values="680,210;700,50" dur="17s" repeatCount="indefinite" additive="replace" begin="-7s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="17s" repeatCount="indefinite" begin="-7s"/>
-    </use>
-    <use href="#petal" transform="translate(460,210) scale(0.42)" fill="#a3e6c2">
-      <animateTransform attributeName="transform" type="translate" values="460,210;480,60" dur="19s" repeatCount="indefinite" additive="replace" begin="-2s"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="19s" repeatCount="indefinite" begin="-2s"/>
-    </use>
+  <!-- ============================================ -->
+  <!-- Drifting ink-blot motes / dust on parchment  -->
+  <!-- ============================================ -->
+  <g opacity="0.55">
+    <circle cx="180" cy="20" r="1.0" fill="#c9a565">
+      <animate attributeName="cy" values="20;180;20" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="40" r="0.9" fill="#d4b87c">
+      <animate attributeName="cy" values="40;180;40" dur="29s" repeatCount="indefinite" begin="-7s"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="29s" repeatCount="indefinite" begin="-7s"/>
+    </circle>
+    <circle cx="700" cy="30" r="1.1" fill="#c9a565">
+      <animate attributeName="cy" values="30;180;30" dur="19s" repeatCount="indefinite" begin="-4s"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="19s" repeatCount="indefinite" begin="-4s"/>
+    </circle>
   </g>
 </svg>
