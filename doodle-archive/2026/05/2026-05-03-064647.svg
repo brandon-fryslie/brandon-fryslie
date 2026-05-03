@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Leonardo da Vinci 507th death anniversary (May 2, 1519) — Vitruvian geometry, aerial screw, ornithopter wing, codex parchment -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 2, 2026 — Leonardo da Vinci 507 year anniversary">
+  <defs>
+    <radialGradient id="bg" cx="0.30" cy="0.50" r="0.95">
+      <stop offset="0%" stop-color="#1f1810"/>
+      <stop offset="55%" stop-color="#15110b"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <linearGradient id="dateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbecc4"/>
+      <stop offset="50%" stop-color="#e6c98a"/>
+      <stop offset="100%" stop-color="#b38a4a"/>
+    </linearGradient>
+
+    <linearGradient id="parchment" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a2c1a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1a120a" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4"/>
+    </filter>
+
+    <filter id="parchmentTex" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.42
+                             0 0 0 0 0.30
+                             0 0 0 0 0.16
+                             0 0 0 0.18 0"/>
+    </filter>
+
+    <filter id="inkGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Vitruvian-style figure pose A: arms horizontal, legs together (square pose) -->
+    <symbol id="poseA" overflow="visible">
+      <g fill="none" stroke="#e9d8a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <!-- head -->
+        <circle cx="0" cy="-58" r="9"/>
+        <!-- torso -->
+        <path d="M0,-49 L0,5"/>
+        <!-- arms horizontal -->
+        <path d="M-58,-30 L0,-30 L58,-30"/>
+        <!-- legs together -->
+        <path d="M0,5 L-10,55 M0,5 L10,55"/>
+        <!-- belt accent -->
+        <path d="M-10,-15 L10,-15" stroke-width="0.9" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- Vitruvian-style figure pose B: arms diagonal up, legs apart (circle pose) -->
+    <symbol id="poseB" overflow="visible">
+      <g fill="none" stroke="#e9d8a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="0" cy="-58" r="9"/>
+        <path d="M0,-49 L0,5"/>
+        <!-- arms angled up ~30° above horizontal -->
+        <path d="M-56,-46 L0,-30 L56,-46"/>
+        <!-- legs spread -->
+        <path d="M0,5 L-30,55 M0,5 L30,55"/>
+        <path d="M-10,-15 L10,-15" stroke-width="0.9" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- Aerial screw (Leonardo helicopter) - a spiral surface over a frame -->
+    <symbol id="aerialScrew" overflow="visible">
+      <g fill="none" stroke="#d4b87c" stroke-width="1.4" stroke-linecap="round">
+        <!-- center mast -->
+        <path d="M0,-40 L0,40"/>
+        <!-- base disk -->
+        <ellipse cx="0" cy="40" rx="28" ry="6" stroke="#b89456" opacity="0.85"/>
+        <!-- helical spiral going up-around the mast -->
+        <path d="M-26,32 Q-32,18 0,12 Q32,6 26,-8 Q22,-22 -2,-26 Q-26,-30 -22,-44" opacity="0.95"/>
+        <path d="M-26,32 Q0,28 26,18 Q0,2 -26,-8 Q0,-22 26,-32 Q0,-40 -22,-44"
+              stroke-dasharray="2 3" opacity="0.55"/>
+        <!-- support struts -->
+        <path d="M0,-40 L-22,-44 M0,-40 L22,-44 M0,40 L-26,32 M0,40 L26,32" opacity="0.75"/>
+        <!-- crank handle at base -->
+        <path d="M-20,46 L20,46" stroke-width="1.2"/>
+      </g>
+    </symbol>
+
+    <!-- Ornithopter wing skeleton -->
+    <symbol id="wing" overflow="visible">
+      <g fill="none" stroke="#c9a565" stroke-width="1.2" stroke-linecap="round">
+        <!-- main spar -->
+        <path d="M0,0 L70,-12"/>
+        <!-- ribs / feathers fanning out -->
+        <path d="M0,0 L18,16 L70,-12"/>
+        <path d="M0,0 L34,18 L70,-12"/>
+        <path d="M0,0 L50,16 L70,-12"/>
+        <path d="M0,0 L62,8 L70,-12"/>
+        <!-- pinion arc -->
+        <path d="M18,16 Q44,28 62,8" opacity="0.7"/>
+      </g>
+    </symbol>
+
+    <!-- Compass + circle construction marks -->
+    <symbol id="compass" overflow="visible">
+      <g fill="none" stroke="#8a6a3a" stroke-width="0.8" opacity="0.55">
+        <circle r="78"/>
+        <path d="M-78,0 L78,0 M0,-78 L0,78"/>
+        <circle r="2" fill="#c9a565" stroke="none"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <!-- Base: dark warm gradient -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- Parchment noise overlay -->
+  <rect width="800" height="200" filter="url(#parchmentTex)" opacity="0.55"/>
+  <rect width="800" height="200" fill="url(#parchment)"/>
+
+  <!-- Faint mirror-script "codex" margin lines drifting on the right -->
+  <g opacity="0.18" fill="none" stroke="#d4b87c" stroke-width="0.6">
+    <path d="M430,30 L770,30" stroke-dasharray="1 4"/>
+    <path d="M430,46 L770,46" stroke-dasharray="1 4"/>
+    <path d="M430,62 L770,62" stroke-dasharray="1 4"/>
+    <path d="M430,158 L770,158" stroke-dasharray="1 4"/>
+    <path d="M430,174 L770,174" stroke-dasharray="1 4"/>
+  </g>
+
+  <!-- Faint scattered ink "notes" - little squiggles standing in for backwards-script -->
+  <g opacity="0.30" stroke="#c9a565" stroke-width="0.7" fill="none" stroke-linecap="round">
+    <path d="M460,30 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M460,46 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M540,62 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M460,158 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+    <path d="M460,174 q3,-4 6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0 t6,0"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LEFT: Vitruvian-style figure inscribed in    -->
+  <!-- both circle and square. Square + circle are  -->
+  <!-- "drawn" via stroke-dashoffset animation.     -->
+  <!-- The figure itself crossfades between two     -->
+  <!-- canonical poses.                             -->
+  <!-- ============================================ -->
+  <g transform="translate(110,108)" filter="url(#inkGlow)">
+
+    <!-- pivot dot at center -->
+    <circle r="1.6" fill="#e9d8a6"/>
+
+    <!-- inscribing square (centered on navel - shifted up because Leonardo) -->
+    <rect x="-72" y="-78" width="144" height="144" fill="none"
+          stroke="#d4b87c" stroke-width="1.1" stroke-linecap="square"
+          stroke-dasharray="576" stroke-dashoffset="576" opacity="0.85">
+      <animate attributeName="stroke-dashoffset" values="576;0;0;576" keyTimes="0;0.45;0.9;1" dur="13s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- inscribing circle -->
+    <circle r="78" fill="none" stroke="#e9d8a6" stroke-width="1.2"
+            stroke-dasharray="490" stroke-dashoffset="490" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" values="490;0;0;490" keyTimes="0;0.5;0.9;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- construction crosshairs -->
+    <use href="#compass"/>
+
+    <!-- pose A: arms level, legs together (square fit) -->
+    <g>
+      <use href="#poseA"/>
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.4;0.5;0.9;1" dur="11s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- pose B: arms up, legs spread (circle fit) -->
+    <g>
+      <use href="#poseB"/>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.4;0.5;0.9;1" dur="11s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- ground line -->
+    <path d="M-72,66 L72,66" stroke="#8a6a3a" stroke-width="0.8" opacity="0.6"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- CENTER: Aerial screw rotating slowly         -->
+  <!-- ============================================ -->
+  <g transform="translate(265,108)" filter="url(#inkGlow)">
+    <!-- ground hint -->
+    <ellipse cx="0" cy="50" rx="34" ry="3" fill="#000" opacity="0.5"/>
+    <g>
+      <use href="#aerialScrew"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="17s" repeatCount="indefinite"/>
+    </g>
+    <!-- annotation arrow + tick -->
+    <g stroke="#8a6a3a" stroke-width="0.7" fill="none" opacity="0.55">
+      <path d="M-44,-20 L-32,-30"/>
+      <path d="M-32,-30 l-3,0 l3,3 z" fill="#8a6a3a"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- TOP-RIGHT: Ornithopter wing flapping         -->
+  <!-- ============================================ -->
+  <g transform="translate(540,52)" opacity="0.8">
+    <g style="transform-box: fill-box; transform-origin: 0 0;">
+      <use href="#wing"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-12;14;-12" dur="7s" repeatCount="indefinite"
+                        additive="sum"/>
+    </g>
+  </g>
+  <!-- mirrored wing on the other side -->
+  <g transform="translate(540,52) scale(-1,1)" opacity="0.8">
+    <g>
+      <use href="#wing"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="12;-14;12" dur="7s" repeatCount="indefinite"
+                        additive="sum"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM-RIGHT: Golden-ratio spiral, drawn     -->
+  <!-- ============================================ -->
+  <g transform="translate(440,170)" opacity="0.55" fill="none" stroke="#c9a565" stroke-width="0.9">
+    <path d="M0,0 q21,0 21,-21 q0,-13 -13,-13 q-8,0 -8,8 q0,5 5,5 q3,0 3,-3"
+          stroke-dasharray="120" stroke-dashoffset="120">
+      <animate attributeName="stroke-dashoffset" values="120;0;0;120" keyTimes="0;0.5;0.92;1" dur="19s" repeatCount="indefinite"/>
+    </path>
+    <!-- proportional rectangles inside spiral -->
+    <g opacity="0.65" stroke-width="0.6">
+      <rect x="0" y="-21" width="21" height="21"/>
+      <rect x="-13" y="-21" width="13" height="13"/>
+      <rect x="-13" y="-8" width="8" height="8"/>
+      <rect x="-5" y="-8" width="5" height="5"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- DATE TYPOGRAPHY (right of center, dominant)  -->
+  <!-- ============================================ -->
+  <g transform="translate(770,90)" text-anchor="end"
+     font-family="Georgia, 'Times New Roman', -apple-system, BlinkMacSystemFont, serif">
+
+    <!-- soft halo -->
+    <ellipse cx="-130" cy="0" rx="245" ry="48" fill="#c9a565" opacity="0.10">
+      <animate attributeName="opacity" values="0.07;0.16;0.07" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- main date -->
+    <text y="0" font-size="48" font-weight="700" fill="url(#dateGrad)"
+          letter-spacing="-0.5" font-style="italic">May 2, 2026</text>
+
+    <!-- ruled underline like a quill stroke -->
+    <path d="M-280,12 L0,12" stroke="#b38a4a" stroke-width="1.1" opacity="0.85"
+          stroke-dasharray="280" stroke-dashoffset="280">
+      <animate attributeName="stroke-dashoffset" values="280;0;0;0;280" keyTimes="0;0.25;0.85;0.95;1" dur="13s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- subtitle -->
+    <text y="34" font-size="14" font-weight="600" fill="#d4b87c"
+          letter-spacing="3" font-style="normal">LEONARDO &#160;DA &#160;VINCI</text>
+
+    <!-- caption -->
+    <text y="54" font-size="11" font-weight="400" fill="#8a6a3a"
+          letter-spacing="2">1452 — 1519 &#160;·&#160; 507 years &#160;·&#160; Saturday</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Drifting ink-blot motes / dust on parchment  -->
+  <!-- ============================================ -->
+  <g opacity="0.55">
+    <circle cx="180" cy="20" r="1.0" fill="#c9a565">
+      <animate attributeName="cy" values="20;180;20" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="40" r="0.9" fill="#d4b87c">
+      <animate attributeName="cy" values="40;180;40" dur="29s" repeatCount="indefinite" begin="-7s"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="29s" repeatCount="indefinite" begin="-7s"/>
+    </circle>
+    <circle cx="700" cy="30" r="1.1" fill="#c9a565">
+      <animate attributeName="cy" values="30;180;30" dur="19s" repeatCount="indefinite" begin="-4s"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="19s" repeatCount="indefinite" begin="-4s"/>
+    </circle>
+  </g>
+</svg>

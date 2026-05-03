@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 3, 2026 — Leonardo da Vinci 507th death anniversary (May 2, 1519) — Vitruvian geometry, aerial screw, ornithopter wing, codex parchment
+
+<img src="./doodle-archive/2026/05/2026-05-03-064647.svg" width="800" alt="Daily doodle for May 3, 2026: Leonardo da Vinci 507th death anniversary (May 2, 1519) — Vitruvian geometry, aerial screw, ornithopter wing, codex parchment">
+
+---
+
 ## May 2, 2026 — May Day (May 1) — maypole, ribbons, and spring bloom
 
 <img src="./doodle-archive/2026/05/2026-05-02-063357.svg" width="800" alt="Daily doodle for May 2, 2026: May Day (May 1) — maypole, ribbons, and spring bloom">
