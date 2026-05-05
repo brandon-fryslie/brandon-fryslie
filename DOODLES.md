@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 5, 2026 — Star Wars Day (May 4) — "May the Fourth Be With You"; crossed lightsabers, hyperspace, twin suns
+
+<img src="./doodle-archive/2026/05/2026-05-05-064020.svg" width="800" alt="Daily doodle for May 5, 2026: Star Wars Day (May 4) — May the Fourth Be With You; crossed lightsabers, hyperspace, twin suns">
+
+---
+
 ## May 4, 2026 — World Press Freedom Day (May 3) — UNESCO observance; typewriter, newsprint masthead, ink
 
 <img src="./doodle-archive/2026/05/2026-05-04-065400.svg" width="800" alt="Daily doodle for May 4, 2026: World Press Freedom Day (May 3) — UNESCO observance; typewriter, newsprint masthead, ink">

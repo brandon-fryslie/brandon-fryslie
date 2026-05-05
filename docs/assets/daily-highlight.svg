@@ -1,54 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Star Wars Day (May 4) — "May the Fourth Be With You"; crossed lightsabers, hyperspace, twin suns -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 4, 2026 — Star Wars Day, May the Fourth Be With You">
+<!-- theme: Cinco de Mayo (May 5) — papel picado, marigolds, festive colors -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 5, 2026 — Cinco de Mayo, papel picado banners and festive blooms">
   <defs>
-    <radialGradient id="space" cx="50%" cy="55%" r="75%">
-      <stop offset="0%" stop-color="#1a1f33"/>
-      <stop offset="55%" stop-color="#0e1320"/>
-      <stop offset="100%" stop-color="#05060b"/>
+    <!-- warm festival backdrop -->
+    <radialGradient id="bg" cx="50%" cy="65%" r="80%">
+      <stop offset="0%" stop-color="#1a1326"/>
+      <stop offset="55%" stop-color="#11101c"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </radialGradient>
 
-    <!-- twin-sun corona -->
-    <radialGradient id="sunA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff3c8"/>
-      <stop offset="40%" stop-color="#ffb347"/>
-      <stop offset="80%" stop-color="#a14a14" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#a14a14" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="sunB" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffe9a8"/>
-      <stop offset="50%" stop-color="#ff7a3d"/>
-      <stop offset="100%" stop-color="#7a2a08" stop-opacity="0"/>
+    <!-- soft warm glow under the title -->
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb74a" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#d2426c" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- lightsaber blade gradients -->
-    <linearGradient id="bladeBlue" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#ffffff"/>
-      <stop offset="20%"  stop-color="#cdeaff"/>
-      <stop offset="100%" stop-color="#3aa9ff"/>
-    </linearGradient>
-    <linearGradient id="bladeRed" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#ff5252"/>
-      <stop offset="80%"  stop-color="#ffe7e7"/>
-      <stop offset="100%" stop-color="#ffffff"/>
+    <!-- marigold gradient -->
+    <radialGradient id="marigoldFill" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe27a"/>
+      <stop offset="55%" stop-color="#ff8a1f"/>
+      <stop offset="100%" stop-color="#b53a0a"/>
+    </radialGradient>
+
+    <!-- title gradient: papel-picado paper colors -->
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#ffd24a"/>
+      <stop offset="35%" stop-color="#ff8a1f"/>
+      <stop offset="70%" stop-color="#ff5172"/>
+      <stop offset="100%" stop-color="#c43cff"/>
     </linearGradient>
 
-    <!-- saber glow -->
-    <filter id="glowBlue" x="-50%" y="-200%" width="200%" height="500%">
-      <feGaussianBlur stdDeviation="3.2" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="glowRed" x="-50%" y="-200%" width="200%" height="500%">
-      <feGaussianBlur stdDeviation="3.2" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="textGlow" x="-10%" y="-50%" width="120%" height="200%">
+    <filter id="titleGlow" x="-10%" y="-50%" width="120%" height="200%">
       <feGaussianBlur stdDeviation="1.6" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
@@ -56,171 +39,310 @@
       </feMerge>
     </filter>
 
-    <!-- starfield noise -->
-    <filter id="stars" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="2.4" numOctaves="1" seed="11"/>
-      <feColorMatrix values="0 0 0 0 1
-                             0 0 0 0 1
-                             0 0 0 0 1
-                             0 0 0 22 -19"/>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
     </filter>
 
-    <!-- saber hilt -->
-    <symbol id="hilt" overflow="visible">
+    <!-- ============= PAPEL PICADO TILES ============= -->
+    <!-- one rectangular flag panel, ~60w x 38h, with decorative cutouts -->
+    <symbol id="papelPink" overflow="visible">
       <g>
-        <rect x="0" y="-3.6" width="40" height="7.2" fill="#1a1a1a" stroke="#666" stroke-width="0.6"/>
-        <rect x="3" y="-3.6" width="2" height="7.2" fill="#3a3a3a"/>
-        <rect x="8" y="-3.6" width="2" height="7.2" fill="#3a3a3a"/>
-        <rect x="13" y="-3.6" width="2" height="7.2" fill="#3a3a3a"/>
-        <rect x="22" y="-4.2" width="6" height="8.4" fill="#2c2c2c" stroke="#777" stroke-width="0.5"/>
-        <rect x="33" y="-4.4" width="3" height="8.8" fill="#444"/>
-        <circle cx="38" cy="0" r="1.6" fill="#c8c8c8"/>
+        <!-- panel -->
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#ff4d8a"/>
+        <!-- center diamond cutout -->
+        <path d="M 30 9 L 38 17 L 30 25 L 22 17 Z" fill="#0d1117"/>
+        <!-- side cutouts -->
+        <circle cx="12" cy="14" r="3.2" fill="#0d1117"/>
+        <circle cx="48" cy="14" r="3.2" fill="#0d1117"/>
+        <!-- scallop notches along bottom -->
+        <circle cx="12" cy="32" r="2.6" fill="#0d1117"/>
+        <circle cx="30" cy="36" r="2.8" fill="#0d1117"/>
+        <circle cx="48" cy="32" r="2.6" fill="#0d1117"/>
+        <!-- tiny accents -->
+        <circle cx="20" cy="6"  r="1.1" fill="#0d1117"/>
+        <circle cx="40" cy="6"  r="1.1" fill="#0d1117"/>
       </g>
     </symbol>
 
-    <!-- hyperspace streak -->
-    <symbol id="streak" overflow="visible">
-      <line x1="0" y1="0" x2="60" y2="0" stroke="#cfe9ff" stroke-width="0.8" stroke-linecap="round" opacity="0.85"/>
+    <symbol id="papelYellow" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#ffce3a"/>
+        <!-- flower star cutout -->
+        <g fill="#0d1117">
+          <circle cx="30" cy="17" r="3.2"/>
+          <circle cx="30" cy="9"  r="2"/>
+          <circle cx="30" cy="25" r="2"/>
+          <circle cx="22" cy="17" r="2"/>
+          <circle cx="38" cy="17" r="2"/>
+        </g>
+        <path d="M 8 12 q 4 -8 8 0 z" fill="#0d1117"/>
+        <path d="M 44 12 q 4 -8 8 0 z" fill="#0d1117"/>
+        <circle cx="14" cy="32" r="2.4" fill="#0d1117"/>
+        <circle cx="46" cy="32" r="2.4" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <symbol id="papelTeal" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#33d3c2"/>
+        <!-- heart cutout -->
+        <path d="M 30 24 C 18 16, 18 8, 24 8 C 28 8, 30 11, 30 13 C 30 11, 32 8, 36 8 C 42 8, 42 16, 30 24 Z" fill="#0d1117"/>
+        <circle cx="10" cy="14" r="2" fill="#0d1117"/>
+        <circle cx="50" cy="14" r="2" fill="#0d1117"/>
+        <circle cx="20" cy="34" r="2.2" fill="#0d1117"/>
+        <circle cx="40" cy="34" r="2.2" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <symbol id="papelPurple" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#a55cff"/>
+        <!-- triangular cuts -->
+        <polygon points="30,8 36,18 24,18" fill="#0d1117"/>
+        <polygon points="30,28 36,18 24,18" fill="#0d1117"/>
+        <circle cx="14" cy="14" r="2.4" fill="#0d1117"/>
+        <circle cx="46" cy="14" r="2.4" fill="#0d1117"/>
+        <circle cx="12" cy="32" r="2" fill="#0d1117"/>
+        <circle cx="48" cy="32" r="2" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <symbol id="papelOrange" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#ff8a1f"/>
+        <!-- sun-burst cutout -->
+        <circle cx="30" cy="17" r="3.2" fill="#0d1117"/>
+        <g stroke="#0d1117" stroke-width="1.6" stroke-linecap="round">
+          <line x1="30" y1="6"  x2="30" y2="9"/>
+          <line x1="30" y1="25" x2="30" y2="28"/>
+          <line x1="20" y1="17" x2="23" y2="17"/>
+          <line x1="37" y1="17" x2="40" y2="17"/>
+          <line x1="22" y1="9"  x2="24" y2="11"/>
+          <line x1="36" y1="23" x2="38" y2="25"/>
+          <line x1="22" y1="25" x2="24" y2="23"/>
+          <line x1="36" y1="11" x2="38" y2="9"/>
+        </g>
+        <circle cx="14" cy="32" r="2.2" fill="#0d1117"/>
+        <circle cx="46" cy="32" r="2.2" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <!-- a marigold flower with multiple petal layers -->
+    <symbol id="marigold" overflow="visible">
+      <g>
+        <!-- outer petal ring -->
+        <g fill="url(#marigoldFill)">
+          <circle cx="0"   cy="-12" r="5"/>
+          <circle cx="8.5" cy="-8.5" r="5"/>
+          <circle cx="12"  cy="0"   r="5"/>
+          <circle cx="8.5" cy="8.5" r="5"/>
+          <circle cx="0"   cy="12"  r="5"/>
+          <circle cx="-8.5" cy="8.5" r="5"/>
+          <circle cx="-12" cy="0"   r="5"/>
+          <circle cx="-8.5" cy="-8.5" r="5"/>
+        </g>
+        <!-- inner petal ring -->
+        <g fill="#ffae3d">
+          <circle cx="0"  cy="-6" r="3.4"/>
+          <circle cx="6"  cy="0"  r="3.4"/>
+          <circle cx="0"  cy="6"  r="3.4"/>
+          <circle cx="-6" cy="0"  r="3.4"/>
+          <circle cx="4.5" cy="-4.5" r="3.4"/>
+          <circle cx="4.5" cy="4.5"  r="3.4"/>
+          <circle cx="-4.5" cy="-4.5" r="3.4"/>
+          <circle cx="-4.5" cy="4.5" r="3.4"/>
+        </g>
+        <!-- center -->
+        <circle r="3.2" fill="#7a2a08"/>
+        <circle r="1.4" fill="#ffe27a"/>
+      </g>
+    </symbol>
+
+    <!-- a small confetti piece (rectangle) -->
+    <symbol id="confetti" overflow="visible">
+      <rect x="-2" y="-1" width="4" height="2" rx="0.5"/>
     </symbol>
   </defs>
 
   <!-- ============= BACKDROP ============= -->
-  <rect width="800" height="200" fill="url(#space)"/>
+  <rect width="800" height="200" fill="url(#bg)"/>
+  <!-- soft warm halo behind title -->
+  <ellipse cx="400" cy="118" rx="320" ry="80" fill="url(#warmGlow)"/>
 
-  <!-- subtle nebula sweeps -->
-  <g opacity="0.55">
-    <ellipse cx="180" cy="60" rx="240" ry="40" fill="#3b1f5e" opacity="0.30"/>
-    <ellipse cx="640" cy="140" rx="260" ry="45" fill="#0a3a55" opacity="0.32"/>
-    <ellipse cx="430" cy="100" rx="200" ry="35" fill="#2a1a3a" opacity="0.25"/>
-  </g>
-
-  <!-- starfield (procedural) -->
-  <rect width="800" height="200" filter="url(#stars)" opacity="0.85"/>
-
-  <!-- hand-placed twinkling stars -->
-  <g fill="#ffffff">
-    <circle cx="60"  cy="30"  r="1.2"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.7s" repeatCount="indefinite"/></circle>
-    <circle cx="130" cy="170" r="1.0"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="4.1s" repeatCount="indefinite" begin="-1s"/></circle>
-    <circle cx="260" cy="40"  r="1.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" repeatCount="indefinite" begin="-0.6s"/></circle>
-    <circle cx="370" cy="160" r="1.1"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.3s" repeatCount="indefinite" begin="-1.7s"/></circle>
-    <circle cx="500" cy="32"  r="1.6"><animate attributeName="opacity" values="0.4;1;0.4" dur="5.1s" repeatCount="indefinite"/></circle>
-    <circle cx="700" cy="50"  r="1.3"><animate attributeName="opacity" values="0.3;0.95;0.3" dur="4.3s" repeatCount="indefinite" begin="-2s"/></circle>
-    <circle cx="760" cy="170" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.1s" repeatCount="indefinite" begin="-0.4s"/></circle>
-    <circle cx="610" cy="180" r="1.2"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.9s" repeatCount="indefinite" begin="-1.2s"/></circle>
-  </g>
-
-  <!-- ============= HYPERSPACE STREAKS (left + right margins) ============= -->
-  <g opacity="0.7">
-    <!-- left -->
+  <!-- ============= PAPEL PICADO — three sagging strings ============= -->
+  <!-- String 1 (front, lowest sag) -->
+  <g>
+    <!-- string -->
+    <path d="M 0 14 Q 400 36 800 14" stroke="#5a4a2a" stroke-width="0.7" fill="none" opacity="0.7"/>
+    <!-- flags hung from string, 11 across -->
     <g>
-      <use href="#streak" x="-80" y="22"><animate attributeName="x" values="-80;820" dur="1.4s" repeatCount="indefinite" begin="0s"/></use>
-      <use href="#streak" x="-80" y="48"><animate attributeName="x" values="-80;820" dur="1.7s" repeatCount="indefinite" begin="-0.4s"/></use>
-      <use href="#streak" x="-80" y="78"><animate attributeName="x" values="-80;820" dur="2.0s" repeatCount="indefinite" begin="-0.9s"/></use>
-      <use href="#streak" x="-80" y="125"><animate attributeName="x" values="-80;820" dur="1.6s" repeatCount="indefinite" begin="-0.2s"/></use>
-      <use href="#streak" x="-80" y="156"><animate attributeName="x" values="-80;820" dur="1.9s" repeatCount="indefinite" begin="-1.1s"/></use>
-      <use href="#streak" x="-80" y="184"><animate attributeName="x" values="-80;820" dur="1.5s" repeatCount="indefinite" begin="-0.7s"/></use>
+      <!-- each flag: translate to a point on the curve, slight rotation, gentle sway -->
+      <g transform="translate(20,16) rotate(-5)">
+        <use href="#papelPink"/>
+        <animateTransform attributeName="transform" type="rotate" values="-7;-3;-7" dur="11s" repeatCount="indefinite" additive="sum"/>
+      </g>
+      <g transform="translate(92,20) rotate(-3)">
+        <use href="#papelYellow"/>
+        <animateTransform attributeName="transform" type="rotate" values="-5;-1;-5" dur="13s" repeatCount="indefinite" additive="sum" begin="-1s"/>
+      </g>
+      <g transform="translate(164,24) rotate(-2)">
+        <use href="#papelTeal"/>
+        <animateTransform attributeName="transform" type="rotate" values="-4;0;-4" dur="11s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </g>
+      <g transform="translate(236,28) rotate(-1)">
+        <use href="#papelPurple"/>
+        <animateTransform attributeName="transform" type="rotate" values="-3;1;-3" dur="13s" repeatCount="indefinite" additive="sum" begin="-3s"/>
+      </g>
+      <g transform="translate(308,30) rotate(0)">
+        <use href="#papelOrange"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="11s" repeatCount="indefinite" additive="sum" begin="-0.5s"/>
+      </g>
+      <g transform="translate(380,31) rotate(0)">
+        <use href="#papelPink"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="13s" repeatCount="indefinite" additive="sum" begin="-1.5s"/>
+      </g>
+      <g transform="translate(452,30) rotate(0)">
+        <use href="#papelYellow"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="11s" repeatCount="indefinite" additive="sum" begin="-2.5s"/>
+      </g>
+      <g transform="translate(524,28) rotate(1)">
+        <use href="#papelTeal"/>
+        <animateTransform attributeName="transform" type="rotate" values="-1;3;-1" dur="13s" repeatCount="indefinite" additive="sum" begin="-3.5s"/>
+      </g>
+      <g transform="translate(596,24) rotate(2)">
+        <use href="#papelPurple"/>
+        <animateTransform attributeName="transform" type="rotate" values="0;4;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-1s"/>
+      </g>
+      <g transform="translate(668,20) rotate(3)">
+        <use href="#papelOrange"/>
+        <animateTransform attributeName="transform" type="rotate" values="1;5;1" dur="13s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </g>
+      <g transform="translate(740,16) rotate(5)">
+        <use href="#papelPink"/>
+        <animateTransform attributeName="transform" type="rotate" values="3;7;3" dur="11s" repeatCount="indefinite" additive="sum" begin="-0.7s"/>
+      </g>
     </g>
   </g>
 
-  <!-- ============= TWIN SUNS on far right (Tatooine binary) ============= -->
-  <g transform="translate(708,52)">
-    <!-- big sun -->
-    <circle cx="0" cy="0" r="36" fill="url(#sunA)" opacity="0.95">
-      <animate attributeName="r" values="34;38;34" dur="11s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="0" r="14" fill="#fff5cf">
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
-    </circle>
-    <!-- small sun -->
-    <circle cx="22" cy="22" r="20" fill="url(#sunB)" opacity="0.85">
-      <animate attributeName="r" values="18;22;18" dur="13s" repeatCount="indefinite" begin="-2s"/>
-    </circle>
-    <circle cx="22" cy="22" r="6.5" fill="#ffd089"/>
-  </g>
-
-  <!-- subtle horizon haze under suns -->
-  <ellipse cx="700" cy="178" rx="220" ry="14" fill="#ff8c4a" opacity="0.10"/>
-
-  <!-- ============= CROSSED LIGHTSABERS (lower-left composition) ============= -->
-  <!-- BLUE saber: hilt at lower-left, blade up-right -->
-  <g transform="translate(72,162) rotate(-38)">
-    <!-- blade (extends from end of hilt, x=40 onward) -->
-    <g filter="url(#glowBlue)">
-      <!-- outer halo -->
-      <rect x="40" y="-7" width="0" height="14" rx="6" fill="#9bd6ff" opacity="0.55">
-        <animate attributeName="width" values="0;180;180;180" keyTimes="0;0.20;0.95;1" dur="11s" repeatCount="indefinite"/>
-      </rect>
-      <!-- core -->
-      <rect x="40" y="-2.6" width="0" height="5.2" rx="2.6" fill="url(#bladeBlue)">
-        <animate attributeName="width" values="0;180;180;180" keyTimes="0;0.20;0.95;1" dur="11s" repeatCount="indefinite"/>
-      </rect>
-      <!-- bright tip -->
-      <circle cx="40" cy="0" r="3.6" fill="#ffffff" opacity="0">
-        <animate attributeName="cx" values="40;220;220;220" keyTimes="0;0.20;0.95;1" dur="11s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.22;0.94;1" dur="11s" repeatCount="indefinite"/>
-      </circle>
+  <!-- ============= MARIGOLDS in lower corners ============= -->
+  <g opacity="0.95">
+    <!-- left bouquet -->
+    <g transform="translate(36,170)">
+      <use href="#marigold" transform="scale(1.0)">
+        <animateTransform attributeName="transform" type="rotate" values="0;6;0;-6;0" dur="13s" repeatCount="indefinite" additive="sum"/>
+      </use>
     </g>
-    <!-- hilt on top -->
-    <use href="#hilt" x="0" y="0"/>
-  </g>
-
-  <!-- RED saber: hilt at right, blade up-left, crossing the blue -->
-  <g transform="translate(280,178) rotate(-142)">
-    <g filter="url(#glowRed)">
-      <rect x="40" y="-7" width="0" height="14" rx="6" fill="#ff8a8a" opacity="0.55">
-        <animate attributeName="width" values="0;165;165;165" keyTimes="0;0.22;0.95;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
-      </rect>
-      <rect x="40" y="-2.6" width="0" height="5.2" rx="2.6" fill="url(#bladeRed)">
-        <animate attributeName="width" values="0;165;165;165" keyTimes="0;0.22;0.95;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
-      </rect>
-      <circle cx="40" cy="0" r="3.4" fill="#ffffff" opacity="0">
-        <animate attributeName="cx" values="40;205;205;205" keyTimes="0;0.22;0.95;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.24;0.94;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
-      </circle>
+    <g transform="translate(74,182)">
+      <use href="#marigold" transform="scale(0.7)">
+        <animateTransform attributeName="transform" type="rotate" values="0;-8;0;8;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-1s"/>
+      </use>
     </g>
-    <use href="#hilt" x="0" y="0"/>
+    <g transform="translate(20,194)">
+      <use href="#marigold" transform="scale(0.5)">
+        <animateTransform attributeName="transform" type="rotate" values="0;10;0;-10;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </use>
+    </g>
+
+    <!-- right bouquet -->
+    <g transform="translate(764,170)">
+      <use href="#marigold" transform="scale(1.0)">
+        <animateTransform attributeName="transform" type="rotate" values="0;-6;0;6;0" dur="13s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </use>
+    </g>
+    <g transform="translate(726,184)">
+      <use href="#marigold" transform="scale(0.7)">
+        <animateTransform attributeName="transform" type="rotate" values="0;8;0;-8;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-0.5s"/>
+      </use>
+    </g>
+    <g transform="translate(780,196)">
+      <use href="#marigold" transform="scale(0.5)">
+        <animateTransform attributeName="transform" type="rotate" values="0;-10;0;10;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-3s"/>
+      </use>
+    </g>
+
+    <!-- a couple of stray small marigolds floating mid-frame -->
+    <g transform="translate(140,150)">
+      <use href="#marigold" transform="scale(0.45)">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="29s" repeatCount="indefinite" additive="sum"/>
+      </use>
+      <animateTransform attributeName="transform" type="translate" values="140,150;145,146;140,150" dur="11s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(660,150)">
+      <use href="#marigold" transform="scale(0.45)">
+        <animateTransform attributeName="transform" type="rotate" values="360;0" dur="29s" repeatCount="indefinite" additive="sum"/>
+      </use>
+      <animateTransform attributeName="transform" type="translate" values="660,150;655,146;660,150" dur="11s" repeatCount="indefinite" begin="-2s"/>
+    </g>
   </g>
 
-  <!-- spark at the crossing point -->
-  <g transform="translate(218,86)" opacity="0.95">
-    <circle r="0" fill="#ffffff">
-      <animate attributeName="r" values="0;9;0" dur="2.3s" repeatCount="indefinite" begin="-0.3s"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="2.3s" repeatCount="indefinite" begin="-0.3s"/>
-    </circle>
-    <circle r="0" fill="#ffe7a8">
-      <animate attributeName="r" values="0;5;0" dur="1.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="1.7s" repeatCount="indefinite"/>
-    </circle>
+  <!-- ============= CONFETTI rain ============= -->
+  <g>
+    <g fill="#ff4d8a">
+      <use href="#confetti" x="80" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="0s"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 80 0;360 80 220" dur="7s" repeatCount="indefinite"/>
+      </use>
+      <use href="#confetti" x="540" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-3s"/>
+      </use>
+    </g>
+    <g fill="#ffd24a">
+      <use href="#confetti" x="200" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-2s"/>
+      </use>
+      <use href="#confetti" x="620" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="-1s"/>
+      </use>
+    </g>
+    <g fill="#33d3c2">
+      <use href="#confetti" x="320" y="-10">
+        <animate attributeName="y" values="-10;220" dur="13s" repeatCount="indefinite" begin="-4s"/>
+      </use>
+      <use href="#confetti" x="700" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-2.5s"/>
+      </use>
+    </g>
+    <g fill="#a55cff">
+      <use href="#confetti" x="260" y="-10">
+        <animate attributeName="y" values="-10;220" dur="13s" repeatCount="indefinite" begin="-1.5s"/>
+      </use>
+      <use href="#confetti" x="460" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="-3.5s"/>
+      </use>
+    </g>
+    <g fill="#ff8a1f">
+      <use href="#confetti" x="120" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-0.7s"/>
+      </use>
+      <use href="#confetti" x="380" y="-10">
+        <animate attributeName="y" values="-10;220" dur="13s" repeatCount="indefinite" begin="-2.7s"/>
+      </use>
+      <use href="#confetti" x="580" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="-4.7s"/>
+      </use>
+    </g>
   </g>
 
   <!-- ============= TITLE BLOCK ============= -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
-    <!-- top kicker -->
-    <text x="430" y="44" font-size="11" fill="#ffd66b" letter-spacing="8" font-weight="800" filter="url(#textGlow)">
-      MAY THE FOURTH BE WITH YOU
+    <!-- Kicker -->
+    <text x="400" y="86" font-size="14" letter-spacing="9" font-weight="800" fill="#ffd24a" filter="url(#titleGlow)">
+      <tspan>¡</tspan><tspan>CINCO DE MAYO</tspan><tspan>!</tspan>
       <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
     </text>
 
-    <!-- main date -->
-    <text x="430" y="108" font-size="62" font-weight="900" fill="#ffe27a"
-          letter-spacing="3" filter="url(#textGlow)">
-      MAY 4, 2026
+    <!-- Main date — primary visual -->
+    <text x="400" y="146" font-size="64" font-weight="900" letter-spacing="2"
+          fill="url(#titleGrad)" filter="url(#titleGlow)">
+      MAY 5, 2026
     </text>
 
-    <!-- crawl-style subhead -->
-    <text x="430" y="138" font-size="11" fill="#cfd6e6" letter-spacing="5" font-weight="600" opacity="0.92">
-      A LONG TIME AGO IN A REPO FAR, FAR AWAY...
-    </text>
-
-    <!-- meta line -->
-    <text x="430" y="170" font-size="8" fill="#7a8aa8" letter-spacing="6" font-weight="700">
-      EPISODE V · STAR WARS DAY · MONDAY
+    <!-- subtle drop-shadow underline word -->
+    <text x="400" y="174" font-size="10" letter-spacing="6" font-weight="700" fill="#cfd6e6" opacity="0.85">
+      FIESTA · MARIGOLDS · PAPEL PICADO · TUESDAY
     </text>
   </g>
 
-  <!-- top + bottom thin yellow rule (faint, like an HUD frame) -->
-  <g stroke="#ffd66b" stroke-width="0.5" opacity="0.35">
-    <line x1="120" y1="20" x2="740" y2="20"/>
-    <line x1="120" y1="184" x2="740" y2="184"/>
-  </g>
+  <!-- subtle bottom horizon -->
+  <rect x="0" y="198" width="800" height="2" fill="#ff8a1f" opacity="0.30"/>
 </svg>
