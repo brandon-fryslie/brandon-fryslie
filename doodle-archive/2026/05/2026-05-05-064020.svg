@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Star Wars Day (May 4) — "May the Fourth Be With You"; crossed lightsabers, hyperspace, twin suns -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 4, 2026 — Star Wars Day, May the Fourth Be With You">
+  <defs>
+    <radialGradient id="space" cx="50%" cy="55%" r="75%">
+      <stop offset="0%" stop-color="#1a1f33"/>
+      <stop offset="55%" stop-color="#0e1320"/>
+      <stop offset="100%" stop-color="#05060b"/>
+    </radialGradient>
+
+    <!-- twin-sun corona -->
+    <radialGradient id="sunA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff3c8"/>
+      <stop offset="40%" stop-color="#ffb347"/>
+      <stop offset="80%" stop-color="#a14a14" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#a14a14" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe9a8"/>
+      <stop offset="50%" stop-color="#ff7a3d"/>
+      <stop offset="100%" stop-color="#7a2a08" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- lightsaber blade gradients -->
+    <linearGradient id="bladeBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="20%"  stop-color="#cdeaff"/>
+      <stop offset="100%" stop-color="#3aa9ff"/>
+    </linearGradient>
+    <linearGradient id="bladeRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ff5252"/>
+      <stop offset="80%"  stop-color="#ffe7e7"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- saber glow -->
+    <filter id="glowBlue" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowRed" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- starfield noise -->
+    <filter id="stars" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="2.4" numOctaves="1" seed="11"/>
+      <feColorMatrix values="0 0 0 0 1
+                             0 0 0 0 1
+                             0 0 0 0 1
+                             0 0 0 22 -19"/>
+    </filter>
+
+    <!-- saber hilt -->
+    <symbol id="hilt" overflow="visible">
+      <g>
+        <rect x="0" y="-3.6" width="40" height="7.2" fill="#1a1a1a" stroke="#666" stroke-width="0.6"/>
+        <rect x="3" y="-3.6" width="2" height="7.2" fill="#3a3a3a"/>
+        <rect x="8" y="-3.6" width="2" height="7.2" fill="#3a3a3a"/>
+        <rect x="13" y="-3.6" width="2" height="7.2" fill="#3a3a3a"/>
+        <rect x="22" y="-4.2" width="6" height="8.4" fill="#2c2c2c" stroke="#777" stroke-width="0.5"/>
+        <rect x="33" y="-4.4" width="3" height="8.8" fill="#444"/>
+        <circle cx="38" cy="0" r="1.6" fill="#c8c8c8"/>
+      </g>
+    </symbol>
+
+    <!-- hyperspace streak -->
+    <symbol id="streak" overflow="visible">
+      <line x1="0" y1="0" x2="60" y2="0" stroke="#cfe9ff" stroke-width="0.8" stroke-linecap="round" opacity="0.85"/>
+    </symbol>
+  </defs>
+
+  <!-- ============= BACKDROP ============= -->
+  <rect width="800" height="200" fill="url(#space)"/>
+
+  <!-- subtle nebula sweeps -->
+  <g opacity="0.55">
+    <ellipse cx="180" cy="60" rx="240" ry="40" fill="#3b1f5e" opacity="0.30"/>
+    <ellipse cx="640" cy="140" rx="260" ry="45" fill="#0a3a55" opacity="0.32"/>
+    <ellipse cx="430" cy="100" rx="200" ry="35" fill="#2a1a3a" opacity="0.25"/>
+  </g>
+
+  <!-- starfield (procedural) -->
+  <rect width="800" height="200" filter="url(#stars)" opacity="0.85"/>
+
+  <!-- hand-placed twinkling stars -->
+  <g fill="#ffffff">
+    <circle cx="60"  cy="30"  r="1.2"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.7s" repeatCount="indefinite"/></circle>
+    <circle cx="130" cy="170" r="1.0"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="4.1s" repeatCount="indefinite" begin="-1s"/></circle>
+    <circle cx="260" cy="40"  r="1.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" repeatCount="indefinite" begin="-0.6s"/></circle>
+    <circle cx="370" cy="160" r="1.1"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.3s" repeatCount="indefinite" begin="-1.7s"/></circle>
+    <circle cx="500" cy="32"  r="1.6"><animate attributeName="opacity" values="0.4;1;0.4" dur="5.1s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="50"  r="1.3"><animate attributeName="opacity" values="0.3;0.95;0.3" dur="4.3s" repeatCount="indefinite" begin="-2s"/></circle>
+    <circle cx="760" cy="170" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.1s" repeatCount="indefinite" begin="-0.4s"/></circle>
+    <circle cx="610" cy="180" r="1.2"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.9s" repeatCount="indefinite" begin="-1.2s"/></circle>
+  </g>
+
+  <!-- ============= HYPERSPACE STREAKS (left + right margins) ============= -->
+  <g opacity="0.7">
+    <!-- left -->
+    <g>
+      <use href="#streak" x="-80" y="22"><animate attributeName="x" values="-80;820" dur="1.4s" repeatCount="indefinite" begin="0s"/></use>
+      <use href="#streak" x="-80" y="48"><animate attributeName="x" values="-80;820" dur="1.7s" repeatCount="indefinite" begin="-0.4s"/></use>
+      <use href="#streak" x="-80" y="78"><animate attributeName="x" values="-80;820" dur="2.0s" repeatCount="indefinite" begin="-0.9s"/></use>
+      <use href="#streak" x="-80" y="125"><animate attributeName="x" values="-80;820" dur="1.6s" repeatCount="indefinite" begin="-0.2s"/></use>
+      <use href="#streak" x="-80" y="156"><animate attributeName="x" values="-80;820" dur="1.9s" repeatCount="indefinite" begin="-1.1s"/></use>
+      <use href="#streak" x="-80" y="184"><animate attributeName="x" values="-80;820" dur="1.5s" repeatCount="indefinite" begin="-0.7s"/></use>
+    </g>
+  </g>
+
+  <!-- ============= TWIN SUNS on far right (Tatooine binary) ============= -->
+  <g transform="translate(708,52)">
+    <!-- big sun -->
+    <circle cx="0" cy="0" r="36" fill="url(#sunA)" opacity="0.95">
+      <animate attributeName="r" values="34;38;34" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="14" fill="#fff5cf">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- small sun -->
+    <circle cx="22" cy="22" r="20" fill="url(#sunB)" opacity="0.85">
+      <animate attributeName="r" values="18;22;18" dur="13s" repeatCount="indefinite" begin="-2s"/>
+    </circle>
+    <circle cx="22" cy="22" r="6.5" fill="#ffd089"/>
+  </g>
+
+  <!-- subtle horizon haze under suns -->
+  <ellipse cx="700" cy="178" rx="220" ry="14" fill="#ff8c4a" opacity="0.10"/>
+
+  <!-- ============= CROSSED LIGHTSABERS (lower-left composition) ============= -->
+  <!-- BLUE saber: hilt at lower-left, blade up-right -->
+  <g transform="translate(72,162) rotate(-38)">
+    <!-- blade (extends from end of hilt, x=40 onward) -->
+    <g filter="url(#glowBlue)">
+      <!-- outer halo -->
+      <rect x="40" y="-7" width="0" height="14" rx="6" fill="#9bd6ff" opacity="0.55">
+        <animate attributeName="width" values="0;180;180;180" keyTimes="0;0.20;0.95;1" dur="11s" repeatCount="indefinite"/>
+      </rect>
+      <!-- core -->
+      <rect x="40" y="-2.6" width="0" height="5.2" rx="2.6" fill="url(#bladeBlue)">
+        <animate attributeName="width" values="0;180;180;180" keyTimes="0;0.20;0.95;1" dur="11s" repeatCount="indefinite"/>
+      </rect>
+      <!-- bright tip -->
+      <circle cx="40" cy="0" r="3.6" fill="#ffffff" opacity="0">
+        <animate attributeName="cx" values="40;220;220;220" keyTimes="0;0.20;0.95;1" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.22;0.94;1" dur="11s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- hilt on top -->
+    <use href="#hilt" x="0" y="0"/>
+  </g>
+
+  <!-- RED saber: hilt at right, blade up-left, crossing the blue -->
+  <g transform="translate(280,178) rotate(-142)">
+    <g filter="url(#glowRed)">
+      <rect x="40" y="-7" width="0" height="14" rx="6" fill="#ff8a8a" opacity="0.55">
+        <animate attributeName="width" values="0;165;165;165" keyTimes="0;0.22;0.95;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
+      </rect>
+      <rect x="40" y="-2.6" width="0" height="5.2" rx="2.6" fill="url(#bladeRed)">
+        <animate attributeName="width" values="0;165;165;165" keyTimes="0;0.22;0.95;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
+      </rect>
+      <circle cx="40" cy="0" r="3.4" fill="#ffffff" opacity="0">
+        <animate attributeName="cx" values="40;205;205;205" keyTimes="0;0.22;0.95;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.24;0.94;1" dur="13s" repeatCount="indefinite" begin="-1s"/>
+      </circle>
+    </g>
+    <use href="#hilt" x="0" y="0"/>
+  </g>
+
+  <!-- spark at the crossing point -->
+  <g transform="translate(218,86)" opacity="0.95">
+    <circle r="0" fill="#ffffff">
+      <animate attributeName="r" values="0;9;0" dur="2.3s" repeatCount="indefinite" begin="-0.3s"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="2.3s" repeatCount="indefinite" begin="-0.3s"/>
+    </circle>
+    <circle r="0" fill="#ffe7a8">
+      <animate attributeName="r" values="0;5;0" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ============= TITLE BLOCK ============= -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- top kicker -->
+    <text x="430" y="44" font-size="11" fill="#ffd66b" letter-spacing="8" font-weight="800" filter="url(#textGlow)">
+      MAY THE FOURTH BE WITH YOU
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- main date -->
+    <text x="430" y="108" font-size="62" font-weight="900" fill="#ffe27a"
+          letter-spacing="3" filter="url(#textGlow)">
+      MAY 4, 2026
+    </text>
+
+    <!-- crawl-style subhead -->
+    <text x="430" y="138" font-size="11" fill="#cfd6e6" letter-spacing="5" font-weight="600" opacity="0.92">
+      A LONG TIME AGO IN A REPO FAR, FAR AWAY...
+    </text>
+
+    <!-- meta line -->
+    <text x="430" y="170" font-size="8" fill="#7a8aa8" letter-spacing="6" font-weight="700">
+      EPISODE V · STAR WARS DAY · MONDAY
+    </text>
+  </g>
+
+  <!-- top + bottom thin yellow rule (faint, like an HUD frame) -->
+  <g stroke="#ffd66b" stroke-width="0.5" opacity="0.35">
+    <line x1="120" y1="20" x2="740" y2="20"/>
+    <line x1="120" y1="184" x2="740" y2="184"/>
+  </g>
+</svg>
