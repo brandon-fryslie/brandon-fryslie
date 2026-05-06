@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Cinco de Mayo (May 5) — papel picado, marigolds, festive colors -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 5, 2026 — Cinco de Mayo, papel picado banners and festive blooms">
+  <defs>
+    <!-- warm festival backdrop -->
+    <radialGradient id="bg" cx="50%" cy="65%" r="80%">
+      <stop offset="0%" stop-color="#1a1326"/>
+      <stop offset="55%" stop-color="#11101c"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <!-- soft warm glow under the title -->
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb74a" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#d2426c" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- marigold gradient -->
+    <radialGradient id="marigoldFill" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe27a"/>
+      <stop offset="55%" stop-color="#ff8a1f"/>
+      <stop offset="100%" stop-color="#b53a0a"/>
+    </radialGradient>
+
+    <!-- title gradient: papel-picado paper colors -->
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#ffd24a"/>
+      <stop offset="35%" stop-color="#ff8a1f"/>
+      <stop offset="70%" stop-color="#ff5172"/>
+      <stop offset="100%" stop-color="#c43cff"/>
+    </linearGradient>
+
+    <filter id="titleGlow" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+
+    <!-- ============= PAPEL PICADO TILES ============= -->
+    <!-- one rectangular flag panel, ~60w x 38h, with decorative cutouts -->
+    <symbol id="papelPink" overflow="visible">
+      <g>
+        <!-- panel -->
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#ff4d8a"/>
+        <!-- center diamond cutout -->
+        <path d="M 30 9 L 38 17 L 30 25 L 22 17 Z" fill="#0d1117"/>
+        <!-- side cutouts -->
+        <circle cx="12" cy="14" r="3.2" fill="#0d1117"/>
+        <circle cx="48" cy="14" r="3.2" fill="#0d1117"/>
+        <!-- scallop notches along bottom -->
+        <circle cx="12" cy="32" r="2.6" fill="#0d1117"/>
+        <circle cx="30" cy="36" r="2.8" fill="#0d1117"/>
+        <circle cx="48" cy="32" r="2.6" fill="#0d1117"/>
+        <!-- tiny accents -->
+        <circle cx="20" cy="6"  r="1.1" fill="#0d1117"/>
+        <circle cx="40" cy="6"  r="1.1" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <symbol id="papelYellow" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#ffce3a"/>
+        <!-- flower star cutout -->
+        <g fill="#0d1117">
+          <circle cx="30" cy="17" r="3.2"/>
+          <circle cx="30" cy="9"  r="2"/>
+          <circle cx="30" cy="25" r="2"/>
+          <circle cx="22" cy="17" r="2"/>
+          <circle cx="38" cy="17" r="2"/>
+        </g>
+        <path d="M 8 12 q 4 -8 8 0 z" fill="#0d1117"/>
+        <path d="M 44 12 q 4 -8 8 0 z" fill="#0d1117"/>
+        <circle cx="14" cy="32" r="2.4" fill="#0d1117"/>
+        <circle cx="46" cy="32" r="2.4" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <symbol id="papelTeal" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#33d3c2"/>
+        <!-- heart cutout -->
+        <path d="M 30 24 C 18 16, 18 8, 24 8 C 28 8, 30 11, 30 13 C 30 11, 32 8, 36 8 C 42 8, 42 16, 30 24 Z" fill="#0d1117"/>
+        <circle cx="10" cy="14" r="2" fill="#0d1117"/>
+        <circle cx="50" cy="14" r="2" fill="#0d1117"/>
+        <circle cx="20" cy="34" r="2.2" fill="#0d1117"/>
+        <circle cx="40" cy="34" r="2.2" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <symbol id="papelPurple" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#a55cff"/>
+        <!-- triangular cuts -->
+        <polygon points="30,8 36,18 24,18" fill="#0d1117"/>
+        <polygon points="30,28 36,18 24,18" fill="#0d1117"/>
+        <circle cx="14" cy="14" r="2.4" fill="#0d1117"/>
+        <circle cx="46" cy="14" r="2.4" fill="#0d1117"/>
+        <circle cx="12" cy="32" r="2" fill="#0d1117"/>
+        <circle cx="48" cy="32" r="2" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <symbol id="papelOrange" overflow="visible">
+      <g>
+        <path d="M 0 0 L 60 0 L 60 30 Q 30 42 0 30 Z" fill="#ff8a1f"/>
+        <!-- sun-burst cutout -->
+        <circle cx="30" cy="17" r="3.2" fill="#0d1117"/>
+        <g stroke="#0d1117" stroke-width="1.6" stroke-linecap="round">
+          <line x1="30" y1="6"  x2="30" y2="9"/>
+          <line x1="30" y1="25" x2="30" y2="28"/>
+          <line x1="20" y1="17" x2="23" y2="17"/>
+          <line x1="37" y1="17" x2="40" y2="17"/>
+          <line x1="22" y1="9"  x2="24" y2="11"/>
+          <line x1="36" y1="23" x2="38" y2="25"/>
+          <line x1="22" y1="25" x2="24" y2="23"/>
+          <line x1="36" y1="11" x2="38" y2="9"/>
+        </g>
+        <circle cx="14" cy="32" r="2.2" fill="#0d1117"/>
+        <circle cx="46" cy="32" r="2.2" fill="#0d1117"/>
+      </g>
+    </symbol>
+
+    <!-- a marigold flower with multiple petal layers -->
+    <symbol id="marigold" overflow="visible">
+      <g>
+        <!-- outer petal ring -->
+        <g fill="url(#marigoldFill)">
+          <circle cx="0"   cy="-12" r="5"/>
+          <circle cx="8.5" cy="-8.5" r="5"/>
+          <circle cx="12"  cy="0"   r="5"/>
+          <circle cx="8.5" cy="8.5" r="5"/>
+          <circle cx="0"   cy="12"  r="5"/>
+          <circle cx="-8.5" cy="8.5" r="5"/>
+          <circle cx="-12" cy="0"   r="5"/>
+          <circle cx="-8.5" cy="-8.5" r="5"/>
+        </g>
+        <!-- inner petal ring -->
+        <g fill="#ffae3d">
+          <circle cx="0"  cy="-6" r="3.4"/>
+          <circle cx="6"  cy="0"  r="3.4"/>
+          <circle cx="0"  cy="6"  r="3.4"/>
+          <circle cx="-6" cy="0"  r="3.4"/>
+          <circle cx="4.5" cy="-4.5" r="3.4"/>
+          <circle cx="4.5" cy="4.5"  r="3.4"/>
+          <circle cx="-4.5" cy="-4.5" r="3.4"/>
+          <circle cx="-4.5" cy="4.5" r="3.4"/>
+        </g>
+        <!-- center -->
+        <circle r="3.2" fill="#7a2a08"/>
+        <circle r="1.4" fill="#ffe27a"/>
+      </g>
+    </symbol>
+
+    <!-- a small confetti piece (rectangle) -->
+    <symbol id="confetti" overflow="visible">
+      <rect x="-2" y="-1" width="4" height="2" rx="0.5"/>
+    </symbol>
+  </defs>
+
+  <!-- ============= BACKDROP ============= -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+  <!-- soft warm halo behind title -->
+  <ellipse cx="400" cy="118" rx="320" ry="80" fill="url(#warmGlow)"/>
+
+  <!-- ============= PAPEL PICADO — three sagging strings ============= -->
+  <!-- String 1 (front, lowest sag) -->
+  <g>
+    <!-- string -->
+    <path d="M 0 14 Q 400 36 800 14" stroke="#5a4a2a" stroke-width="0.7" fill="none" opacity="0.7"/>
+    <!-- flags hung from string, 11 across -->
+    <g>
+      <!-- each flag: translate to a point on the curve, slight rotation, gentle sway -->
+      <g transform="translate(20,16) rotate(-5)">
+        <use href="#papelPink"/>
+        <animateTransform attributeName="transform" type="rotate" values="-7;-3;-7" dur="11s" repeatCount="indefinite" additive="sum"/>
+      </g>
+      <g transform="translate(92,20) rotate(-3)">
+        <use href="#papelYellow"/>
+        <animateTransform attributeName="transform" type="rotate" values="-5;-1;-5" dur="13s" repeatCount="indefinite" additive="sum" begin="-1s"/>
+      </g>
+      <g transform="translate(164,24) rotate(-2)">
+        <use href="#papelTeal"/>
+        <animateTransform attributeName="transform" type="rotate" values="-4;0;-4" dur="11s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </g>
+      <g transform="translate(236,28) rotate(-1)">
+        <use href="#papelPurple"/>
+        <animateTransform attributeName="transform" type="rotate" values="-3;1;-3" dur="13s" repeatCount="indefinite" additive="sum" begin="-3s"/>
+      </g>
+      <g transform="translate(308,30) rotate(0)">
+        <use href="#papelOrange"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="11s" repeatCount="indefinite" additive="sum" begin="-0.5s"/>
+      </g>
+      <g transform="translate(380,31) rotate(0)">
+        <use href="#papelPink"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="13s" repeatCount="indefinite" additive="sum" begin="-1.5s"/>
+      </g>
+      <g transform="translate(452,30) rotate(0)">
+        <use href="#papelYellow"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;2;-2" dur="11s" repeatCount="indefinite" additive="sum" begin="-2.5s"/>
+      </g>
+      <g transform="translate(524,28) rotate(1)">
+        <use href="#papelTeal"/>
+        <animateTransform attributeName="transform" type="rotate" values="-1;3;-1" dur="13s" repeatCount="indefinite" additive="sum" begin="-3.5s"/>
+      </g>
+      <g transform="translate(596,24) rotate(2)">
+        <use href="#papelPurple"/>
+        <animateTransform attributeName="transform" type="rotate" values="0;4;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-1s"/>
+      </g>
+      <g transform="translate(668,20) rotate(3)">
+        <use href="#papelOrange"/>
+        <animateTransform attributeName="transform" type="rotate" values="1;5;1" dur="13s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </g>
+      <g transform="translate(740,16) rotate(5)">
+        <use href="#papelPink"/>
+        <animateTransform attributeName="transform" type="rotate" values="3;7;3" dur="11s" repeatCount="indefinite" additive="sum" begin="-0.7s"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============= MARIGOLDS in lower corners ============= -->
+  <g opacity="0.95">
+    <!-- left bouquet -->
+    <g transform="translate(36,170)">
+      <use href="#marigold" transform="scale(1.0)">
+        <animateTransform attributeName="transform" type="rotate" values="0;6;0;-6;0" dur="13s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <g transform="translate(74,182)">
+      <use href="#marigold" transform="scale(0.7)">
+        <animateTransform attributeName="transform" type="rotate" values="0;-8;0;8;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-1s"/>
+      </use>
+    </g>
+    <g transform="translate(20,194)">
+      <use href="#marigold" transform="scale(0.5)">
+        <animateTransform attributeName="transform" type="rotate" values="0;10;0;-10;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </use>
+    </g>
+
+    <!-- right bouquet -->
+    <g transform="translate(764,170)">
+      <use href="#marigold" transform="scale(1.0)">
+        <animateTransform attributeName="transform" type="rotate" values="0;-6;0;6;0" dur="13s" repeatCount="indefinite" additive="sum" begin="-2s"/>
+      </use>
+    </g>
+    <g transform="translate(726,184)">
+      <use href="#marigold" transform="scale(0.7)">
+        <animateTransform attributeName="transform" type="rotate" values="0;8;0;-8;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-0.5s"/>
+      </use>
+    </g>
+    <g transform="translate(780,196)">
+      <use href="#marigold" transform="scale(0.5)">
+        <animateTransform attributeName="transform" type="rotate" values="0;-10;0;10;0" dur="11s" repeatCount="indefinite" additive="sum" begin="-3s"/>
+      </use>
+    </g>
+
+    <!-- a couple of stray small marigolds floating mid-frame -->
+    <g transform="translate(140,150)">
+      <use href="#marigold" transform="scale(0.45)">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="29s" repeatCount="indefinite" additive="sum"/>
+      </use>
+      <animateTransform attributeName="transform" type="translate" values="140,150;145,146;140,150" dur="11s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(660,150)">
+      <use href="#marigold" transform="scale(0.45)">
+        <animateTransform attributeName="transform" type="rotate" values="360;0" dur="29s" repeatCount="indefinite" additive="sum"/>
+      </use>
+      <animateTransform attributeName="transform" type="translate" values="660,150;655,146;660,150" dur="11s" repeatCount="indefinite" begin="-2s"/>
+    </g>
+  </g>
+
+  <!-- ============= CONFETTI rain ============= -->
+  <g>
+    <g fill="#ff4d8a">
+      <use href="#confetti" x="80" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="0s"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 80 0;360 80 220" dur="7s" repeatCount="indefinite"/>
+      </use>
+      <use href="#confetti" x="540" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-3s"/>
+      </use>
+    </g>
+    <g fill="#ffd24a">
+      <use href="#confetti" x="200" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-2s"/>
+      </use>
+      <use href="#confetti" x="620" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="-1s"/>
+      </use>
+    </g>
+    <g fill="#33d3c2">
+      <use href="#confetti" x="320" y="-10">
+        <animate attributeName="y" values="-10;220" dur="13s" repeatCount="indefinite" begin="-4s"/>
+      </use>
+      <use href="#confetti" x="700" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-2.5s"/>
+      </use>
+    </g>
+    <g fill="#a55cff">
+      <use href="#confetti" x="260" y="-10">
+        <animate attributeName="y" values="-10;220" dur="13s" repeatCount="indefinite" begin="-1.5s"/>
+      </use>
+      <use href="#confetti" x="460" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="-3.5s"/>
+      </use>
+    </g>
+    <g fill="#ff8a1f">
+      <use href="#confetti" x="120" y="-10">
+        <animate attributeName="y" values="-10;220" dur="11s" repeatCount="indefinite" begin="-0.7s"/>
+      </use>
+      <use href="#confetti" x="380" y="-10">
+        <animate attributeName="y" values="-10;220" dur="13s" repeatCount="indefinite" begin="-2.7s"/>
+      </use>
+      <use href="#confetti" x="580" y="-10">
+        <animate attributeName="y" values="-10;220" dur="7s" repeatCount="indefinite" begin="-4.7s"/>
+      </use>
+    </g>
+  </g>
+
+  <!-- ============= TITLE BLOCK ============= -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- Kicker -->
+    <text x="400" y="86" font-size="14" letter-spacing="9" font-weight="800" fill="#ffd24a" filter="url(#titleGlow)">
+      <tspan>¡</tspan><tspan>CINCO DE MAYO</tspan><tspan>!</tspan>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Main date — primary visual -->
+    <text x="400" y="146" font-size="64" font-weight="900" letter-spacing="2"
+          fill="url(#titleGrad)" filter="url(#titleGlow)">
+      MAY 5, 2026
+    </text>
+
+    <!-- subtle drop-shadow underline word -->
+    <text x="400" y="174" font-size="10" letter-spacing="6" font-weight="700" fill="#cfd6e6" opacity="0.85">
+      FIESTA · MARIGOLDS · PAPEL PICADO · TUESDAY
+    </text>
+  </g>
+
+  <!-- subtle bottom horizon -->
+  <rect x="0" y="198" width="800" height="2" fill="#ff8a1f" opacity="0.30"/>
+</svg>

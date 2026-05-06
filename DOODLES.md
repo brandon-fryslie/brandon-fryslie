@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 6, 2026 — Cinco de Mayo (May 5) — papel picado, marigolds, festive colors
+
+<img src="./doodle-archive/2026/05/2026-05-06-064938.svg" width="800" alt="Daily doodle for May 6, 2026: Cinco de Mayo (May 5) — papel picado, marigolds, festive colors">
+
+---
+
 ## May 5, 2026 — Star Wars Day (May 4) — "May the Fourth Be With You"; crossed lightsabers, hyperspace, twin suns
 
 <img src="./doodle-archive/2026/05/2026-05-05-064020.svg" width="800" alt="Daily doodle for May 5, 2026: Star Wars Day (May 4) — May the Fourth Be With You; crossed lightsabers, hyperspace, twin suns">
