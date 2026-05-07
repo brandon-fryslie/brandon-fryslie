@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Roger Bannister 4-minute mile 72nd anniversary (May 6, 1954) — track, stopwatch, motion blur -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 6, 2026 — 72 years since Roger Bannister broke the four-minute mile">
+  <defs>
+    <!-- pre-race dawn backdrop -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#0f1722"/>
+      <stop offset="85%" stop-color="#1a1f1b"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- cinder-track surface -->
+    <linearGradient id="trackGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#7a3220"/>
+      <stop offset="100%" stop-color="#3a160c"/>
+    </linearGradient>
+
+    <!-- horizon glow -->
+    <radialGradient id="horizonGlow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%"  stop-color="#ffb347" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#d8612a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- title gradient -->
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#ffe27a"/>
+      <stop offset="55%" stop-color="#ff9b3d"/>
+      <stop offset="100%" stop-color="#e54b2a"/>
+    </linearGradient>
+
+    <filter id="titleGlow" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="streakBlur" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+
+    <!-- repeating lane-line stripe pattern -->
+    <pattern id="laneDash" x="0" y="0" width="40" height="6" patternUnits="userSpaceOnUse">
+      <rect width="40" height="6" fill="none"/>
+      <rect x="0" y="2" width="22" height="2" fill="#ffffff" opacity="0.55"/>
+    </pattern>
+
+    <!-- runner silhouette in light tone so it pops on dark sky -->
+    <symbol id="runner" overflow="visible">
+      <g fill="#f5f7fb" stroke="#f5f7fb" stroke-linecap="round" stroke-linejoin="round">
+        <!-- head -->
+        <circle cx="0" cy="-44" r="6"/>
+        <!-- torso (leaning forward) -->
+        <path d="M 1 -38 L 4 -16" stroke-width="8"/>
+        <!-- forward driving arm -->
+        <path d="M 2 -32 L 18 -22" stroke-width="5"/>
+        <!-- back arm bent up -->
+        <path d="M 2 -32 L -14 -38" stroke-width="5"/>
+        <!-- forward extended leg -->
+        <path d="M 4 -16 L 22 0" stroke-width="6"/>
+        <!-- back lifted leg -->
+        <path d="M 4 -16 L -16 -8" stroke-width="6"/>
+        <!-- shoes -->
+        <ellipse cx="22" cy="0" rx="3" ry="1.6" fill="#ff4d4d"/>
+        <ellipse cx="-16" cy="-8" rx="3" ry="1.6" fill="#ff4d4d"/>
+        <!-- chest number -->
+        <rect x="-4" y="-30" width="10" height="6" fill="#ffffff"/>
+        <text x="1" y="-25" font-size="5" font-weight="900" fill="#0d1117" text-anchor="middle"
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">41</text>
+      </g>
+    </symbol>
+
+    <!-- stopwatch tick -->
+    <symbol id="tick" overflow="visible">
+      <rect x="-0.6" y="-30" width="1.2" height="4" fill="#cfd6e6"/>
+    </symbol>
+  </defs>
+
+  <!-- ============= BACKDROP ============= -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+  <ellipse cx="400" cy="170" rx="520" ry="60" fill="url(#horizonGlow)"/>
+
+  <!-- distant grandstand silhouette -->
+  <g fill="#0a1018" opacity="0.9">
+    <path d="M 0 138 L 60 132 L 120 136 L 180 130 L 240 134 L 300 128 L 360 132 L 420 128 L 480 134 L 540 130 L 600 136 L 660 132 L 720 138 L 800 134 L 800 152 L 0 152 Z"/>
+  </g>
+  <g fill="#1f2a3a" opacity="0.7">
+    <circle cx="30"  cy="140" r="1.2"/>
+    <circle cx="78"  cy="138" r="1.2"/>
+    <circle cx="142" cy="136" r="1.2"/>
+    <circle cx="206" cy="138" r="1.2"/>
+    <circle cx="268" cy="135" r="1.2"/>
+    <circle cx="332" cy="137" r="1.2"/>
+    <circle cx="398" cy="134" r="1.2"/>
+    <circle cx="462" cy="137" r="1.2"/>
+    <circle cx="528" cy="135" r="1.2"/>
+    <circle cx="592" cy="138" r="1.2"/>
+    <circle cx="658" cy="136" r="1.2"/>
+    <circle cx="722" cy="139" r="1.2"/>
+    <circle cx="780" cy="137" r="1.2"/>
+  </g>
+
+  <!-- ============= CINDER TRACK ============= -->
+  <rect x="0" y="152" width="800" height="48" fill="url(#trackGrad)"/>
+  <rect x="0" y="158" width="800" height="6" fill="url(#laneDash)" opacity="0.85">
+    <animate attributeName="x" values="0;-40" dur="0.7s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="178" width="800" height="6" fill="url(#laneDash)" opacity="0.7">
+    <animate attributeName="x" values="0;-40" dur="0.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="192" width="800" height="6" fill="url(#laneDash)" opacity="0.55">
+    <animate attributeName="x" values="0;-40" dur="0.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <line x1="0" y1="152" x2="800" y2="152" stroke="#ffb347" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- ============= STOPWATCH (left side) ============= -->
+  <g transform="translate(80,100)">
+    <rect x="-4" y="-58" width="8" height="6" rx="1.5" fill="#cfd6e6"/>
+    <rect x="-2" y="-62" width="4" height="4" rx="1" fill="#cfd6e6"/>
+    <circle r="46" fill="#15202b" stroke="#cfd6e6" stroke-width="2.2"/>
+    <circle r="42" fill="#0d1117" stroke="#3a4a5e" stroke-width="0.8"/>
+    <g>
+      <use href="#tick" transform="rotate(0)"/>
+      <use href="#tick" transform="rotate(30)"/>
+      <use href="#tick" transform="rotate(60)"/>
+      <use href="#tick" transform="rotate(90)"/>
+      <use href="#tick" transform="rotate(120)"/>
+      <use href="#tick" transform="rotate(150)"/>
+      <use href="#tick" transform="rotate(180)"/>
+      <use href="#tick" transform="rotate(210)"/>
+      <use href="#tick" transform="rotate(240)"/>
+      <use href="#tick" transform="rotate(270)"/>
+      <use href="#tick" transform="rotate(300)"/>
+      <use href="#tick" transform="rotate(330)"/>
+    </g>
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+       font-size="9" font-weight="700" fill="#cfd6e6" text-anchor="middle">
+      <text x="0"  y="-15">0</text>
+      <text x="22" y="3">15</text>
+      <text x="0"  y="22">30</text>
+      <text x="-22" y="3">45</text>
+    </g>
+    <text x="0" y="-26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="6" font-weight="800" fill="#ff9b3d" text-anchor="middle" letter-spacing="1.2">FINAL</text>
+    <text x="0" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="13" font-weight="900" fill="#ffe27a" text-anchor="middle" letter-spacing="1">3:59.4</text>
+    <!-- second-hand sweep -->
+    <g>
+      <line x1="0" y1="4" x2="0" y2="-36" stroke="#ff4d4d" stroke-width="1.6" stroke-linecap="round"/>
+      <circle r="2.4" fill="#ff4d4d"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="11s" repeatCount="indefinite"/>
+    </g>
+    <circle r="1.4" fill="#0d1117"/>
+  </g>
+
+  <!-- ============= TITLE BLOCK (center, above the track) ============= -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="400" y="46" font-size="11" letter-spacing="6" font-weight="800" fill="#cfd6e6" opacity="0.85" text-anchor="middle">
+      OXFORD · IFFLEY ROAD · 72 YEARS
+    </text>
+
+    <text x="400" y="100" font-size="56" font-weight="900" letter-spacing="3"
+          fill="url(#titleGrad)" filter="url(#titleGlow)" text-anchor="middle">
+      MAY 6, 2026
+      <animate attributeName="opacity" values="0.96;1;0.96" dur="7s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="400" y="128" font-size="13" font-weight="700" letter-spacing="4" fill="#ffe27a" opacity="0.95" text-anchor="middle">
+      THE FOUR-MINUTE MILE · BROKEN
+    </text>
+  </g>
+
+  <!-- ============= MOTION STREAKS behind runner (right side) ============= -->
+  <g filter="url(#streakBlur)" opacity="0.85">
+    <rect x="430" y="138" width="180" height="3"   fill="#ff9b3d"/>
+    <rect x="410" y="146" width="220" height="2.4" fill="#ffe27a" opacity="0.75"/>
+    <rect x="450" y="156" width="160" height="2"   fill="#ff4d4d" opacity="0.6"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;6,0;0,0" dur="0.6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- ============= THE RUNNER (right of center, charging the tape) ============= -->
+  <g transform="translate(640,160)">
+    <use href="#runner">
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-2;0,0;0,-1;0,0" dur="0.55s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ============= FINISH-LINE TAPE (right edge) ============= -->
+  <g>
+    <rect x="700" y="100" width="2.4" height="60" fill="#cfd6e6" opacity="0.85"/>
+    <rect x="788" y="100" width="2.4" height="60" fill="#cfd6e6" opacity="0.85"/>
+    <path d="M 702 130 Q 745 132 788 130" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round">
+      <animate attributeName="d"
+               values="M 702 130 Q 745 132 788 130;
+                       M 702 130 Q 745 110 788 130;
+                       M 702 130 Q 745 138 788 130;
+                       M 702 130 Q 745 132 788 130"
+               dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.4;1;1" dur="13s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
