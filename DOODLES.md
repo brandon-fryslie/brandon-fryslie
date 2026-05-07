@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 7, 2026 — Roger Bannister 4-minute mile 72nd anniversary (May 6, 1954) — track, stopwatch, motion blur
+
+<img src="./doodle-archive/2026/05/2026-05-07-065320.svg" width="800" alt="Daily doodle for May 7, 2026: Roger Bannister 4-minute mile 72nd anniversary (May 6, 1954) — track, stopwatch, motion blur">
+
+---
+
 ## May 6, 2026 — Cinco de Mayo (May 5) — papel picado, marigolds, festive colors
 
 <img src="./doodle-archive/2026/05/2026-05-06-064938.svg" width="800" alt="Daily doodle for May 6, 2026: Cinco de Mayo (May 5) — papel picado, marigolds, festive colors">
