@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Beethoven's 9th Symphony "Ode to Joy" 202nd anniversary (May 7, 1824) — staff lines, notes, conductor's baton -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 7, 2026 — 202 years since the premiere of Beethoven's 9th Symphony">
+  <defs>
+    <!-- candle-lit hall backdrop -->
+    <radialGradient id="bg" cx="50%" cy="55%" r="80%">
+      <stop offset="0%"  stop-color="#3a2418"/>
+      <stop offset="35%" stop-color="#1d1410"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <!-- gold leaf gradient for title -->
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff5c8"/>
+      <stop offset="40%"  stop-color="#f3c969"/>
+      <stop offset="70%"  stop-color="#c98a32"/>
+      <stop offset="100%" stop-color="#7a4914"/>
+    </linearGradient>
+
+    <linearGradient id="staffGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#f3c969" stop-opacity="0"/>
+      <stop offset="15%"  stop-color="#f3c969" stop-opacity="0.85"/>
+      <stop offset="85%"  stop-color="#f3c969" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f3c969" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- subtle glow on the title -->
+    <filter id="glow" x="-15%" y="-50%" width="130%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- soft warm glow for floating notes -->
+    <filter id="noteGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0.8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- a quarter note glyph: stem + filled head -->
+    <symbol id="quarter" overflow="visible">
+      <ellipse cx="0" cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#f3c969"/>
+      <rect x="4.2" y="-22" width="1.6" height="22" fill="#f3c969"/>
+    </symbol>
+
+    <!-- an eighth note pair (beamed) -->
+    <symbol id="beamed" overflow="visible">
+      <ellipse cx="0"  cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#fff5c8"/>
+      <ellipse cx="14" cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#fff5c8"/>
+      <rect x="4.2"  y="-22" width="1.6" height="22" fill="#fff5c8"/>
+      <rect x="18.2" y="-22" width="1.6" height="22" fill="#fff5c8"/>
+      <rect x="4.2" y="-22" width="15.6" height="2.6" fill="#fff5c8"/>
+    </symbol>
+
+    <!-- a single eighth note with flag -->
+    <symbol id="eighth" overflow="visible">
+      <ellipse cx="0" cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#f3c969"/>
+      <rect x="4.2" y="-22" width="1.6" height="22" fill="#f3c969"/>
+      <path d="M 5.8 -22 Q 14 -18 11 -8" stroke="#f3c969" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <!-- ============= BACKDROP ============= -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- soft candle-light halo behind the title -->
+  <ellipse cx="400" cy="100" rx="260" ry="80" fill="#3a2418" opacity="0.55"/>
+  <ellipse cx="400" cy="100" rx="180" ry="50" fill="#5a3a1c" opacity="0.35"/>
+
+  <!-- ============= STAFF LINES (full width, the visual spine) ============= -->
+  <g stroke="url(#staffGrad)" stroke-width="0.9" opacity="0.7">
+    <line x1="0" y1="148" x2="800" y2="148"/>
+    <line x1="0" y1="158" x2="800" y2="158"/>
+    <line x1="0" y1="168" x2="800" y2="168"/>
+    <line x1="0" y1="178" x2="800" y2="178"/>
+    <line x1="0" y1="188" x2="800" y2="188"/>
+  </g>
+
+  <!-- treble clef on the left of the staff -->
+  <g transform="translate(40,168)" fill="none" stroke="#f3c969" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M 0 24
+             C -10 18, -10 6, -2 2
+             C 6 -2, 12 6, 8 14
+             C 4 22, -6 22, -8 14
+             C -10 4, 2 -10, 4 -22
+             C 6 -32, -2 -38, -6 -34
+             C -10 -30, -8 -22, 0 -18"/>
+    <line x1="0" y1="-18" x2="0" y2="34"/>
+    <circle cx="0" cy="34" r="2.2" fill="#f3c969" stroke="none"/>
+  </g>
+
+  <!-- time signature -->
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#f3c969" font-weight="900" opacity="0.9">
+    <text x="64" y="162" font-size="16" text-anchor="middle">4</text>
+    <text x="64" y="184" font-size="16" text-anchor="middle">4</text>
+  </g>
+
+  <!-- ============= ODE TO JOY MOTIF on the staff (E E F G G F E D C C D E E D D) -->
+  <!-- pitch on staff: roughly E line at y=178, F space y=173, G line y=168, D space y=183, C below y=188 -->
+  <g>
+    <!-- E E F G -->
+    <use href="#quarter" x="92"  y="178">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="116" y="178">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.15s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="140" y="173">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.3s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="164" y="168">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.45s" fill="freeze"/>
+    </use>
+    <!-- bar line -->
+    <line x1="186" y1="148" x2="186" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
+    <!-- G F E D -->
+    <use href="#quarter" x="200" y="168">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.6s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="224" y="173">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.75s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="248" y="178">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.9s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="272" y="183">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.05s" fill="freeze"/>
+    </use>
+    <line x1="294" y1="148" x2="294" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
+    <!-- C C D E -->
+    <use href="#quarter" x="308" y="188">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.2s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="332" y="188">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.35s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="356" y="183">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.5s" fill="freeze"/>
+    </use>
+    <use href="#quarter" x="380" y="178">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.65s" fill="freeze"/>
+    </use>
+    <line x1="402" y1="148" x2="402" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
+    <!-- E D D (last bar) -->
+    <use href="#quarter" x="418" y="178">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.8s" fill="freeze"/>
+    </use>
+    <!-- dotted half D (half-note open + dot) -->
+    <g>
+      <ellipse cx="448" cy="183" rx="5.2" ry="3.8" transform="rotate(-22 448 183)" fill="none" stroke="#f3c969" stroke-width="1.6"/>
+      <rect x="452" y="161" width="1.6" height="22" fill="#f3c969"/>
+      <circle cx="460" cy="183" r="1.6" fill="#f3c969"/>
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.95s" fill="freeze"/>
+    </g>
+    <line x1="488" y1="148" x2="488" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- subtle pulse on whole motif synced to ~tempo -->
+    <animate attributeName="opacity" values="0.95;1;0.92;1" dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- floating notes drifting upward (independent of staff motif) -->
+  <g filter="url(#noteGlow)">
+    <use href="#beamed" x="540" y="120" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -8,-50; -16,-100" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#eighth" x="640" y="100" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 6,-60; 12,-120" dur="11s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
+    </use>
+    <use href="#quarter" x="710" y="130" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -4,-70; -10,-140" dur="17s" begin="-7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="17s" begin="-7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#beamed" x="60" y="115" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 4,-55; 10,-110" dur="13s" begin="-5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="13s" begin="-5s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ============= CONDUCTOR'S BATON (top right), waving in time ============= -->
+  <g transform="translate(700,55)">
+    <g>
+      <!-- baton: dark grip + tapering pale shaft -->
+      <rect x="-2" y="0" width="4" height="14" rx="1.6" fill="#2a1a10"/>
+      <line x1="0" y1="0" x2="-2" y2="-58" stroke="#fff5c8" stroke-width="2.6" stroke-linecap="round"/>
+      <circle cx="-2" cy="-58" r="2.4" fill="#fff5c8"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-22; 18; -22; 14; -22"
+                        keyTimes="0; 0.25; 0.5; 0.75; 1"
+                        dur="2.2s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ============= TITLE BLOCK (center, dominant) ============= -->
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="400" y="48" font-size="11" letter-spacing="6" font-weight="700" fill="#c98a32" opacity="0.95">
+      KÄRNTNERTORTHEATER · VIENNA · 1824
+    </text>
+
+    <text x="400" y="100" font-size="58" font-weight="900" letter-spacing="2"
+          fill="url(#goldGrad)" filter="url(#glow)" stroke="#7a4914" stroke-width="0.4">
+      May 7, 2026
+      <animate attributeName="opacity" values="0.97;1;0.97" dur="7s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="400" y="128" font-size="13" font-weight="700" letter-spacing="5" fill="#f3c969" opacity="0.95">
+      ODE TO JOY · 202 YEARS
+    </text>
+  </g>
+
+  <!-- ============= TEMPO PULSE INDICATOR (left, beneath stopwatch position) ============= -->
+  <!-- subtle breathing glow under the staff to imply tempo -->
+  <ellipse cx="400" cy="168" rx="380" ry="22" fill="#c98a32" opacity="0.06">
+    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="2.2s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>

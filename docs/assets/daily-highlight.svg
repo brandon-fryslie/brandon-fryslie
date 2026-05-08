@@ -1,222 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Beethoven's 9th Symphony "Ode to Joy" 202nd anniversary (May 7, 1824) — staff lines, notes, conductor's baton -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 7, 2026 — 202 years since the premiere of Beethoven's 9th Symphony">
+<!-- theme: David Attenborough centenary (May 8, 1926) — lush leaves, wildlife silhouettes, ocean-and-emerald palette, a quiet "100" laurel -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 8, 2026 — David Attenborough turns 100">
   <defs>
-    <!-- candle-lit hall backdrop -->
-    <radialGradient id="bg" cx="50%" cy="55%" r="80%">
-      <stop offset="0%"  stop-color="#3a2418"/>
-      <stop offset="35%" stop-color="#1d1410"/>
+    <!-- jungle-canopy-meets-ocean backdrop -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0d1f1a"/>
+      <stop offset="45%"  stop-color="#0f2a2f"/>
       <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <radialGradient id="sun" cx="50%" cy="55%" r="55%">
+      <stop offset="0%"   stop-color="#1d4a4a" stop-opacity="0.55"/>
+      <stop offset="60%"  stop-color="#0f2a2f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- gold leaf gradient for title -->
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#fff5c8"/>
-      <stop offset="40%"  stop-color="#f3c969"/>
-      <stop offset="70%"  stop-color="#c98a32"/>
-      <stop offset="100%" stop-color="#7a4914"/>
+    <!-- emerald-to-cream title -->
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff8e0"/>
+      <stop offset="45%"  stop-color="#e8d59a"/>
+      <stop offset="100%" stop-color="#a78d4a"/>
     </linearGradient>
 
-    <linearGradient id="staffGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#f3c969" stop-opacity="0"/>
-      <stop offset="15%"  stop-color="#f3c969" stop-opacity="0.85"/>
-      <stop offset="85%"  stop-color="#f3c969" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#f3c969" stop-opacity="0"/>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#1a5b3a"/>
+      <stop offset="100%" stop-color="#0d3328"/>
     </linearGradient>
 
-    <!-- subtle glow on the title -->
-    <filter id="glow" x="-15%" y="-50%" width="130%" height="200%">
-      <feGaussianBlur stdDeviation="1.6" result="b"/>
+    <linearGradient id="leafGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#2d7a4a"/>
+      <stop offset="100%" stop-color="#13402c"/>
+    </linearGradient>
+
+    <linearGradient id="oceanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1c4a5a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1c4a5a" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- soft warm glow for floating notes -->
-    <filter id="noteGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="0.8" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="leafBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.4"/>
     </filter>
 
-    <!-- a quarter note glyph: stem + filled head -->
-    <symbol id="quarter" overflow="visible">
-      <ellipse cx="0" cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#f3c969"/>
-      <rect x="4.2" y="-22" width="1.6" height="22" fill="#f3c969"/>
+    <!-- a single elegant leaf (monstera-ish, used for flora cluster) -->
+    <symbol id="leaf" overflow="visible">
+      <path d="M 0 0
+               C -10 -8, -22 -22, -28 -42
+               C -32 -58, -28 -72, -16 -78
+               C -4 -82, 10 -76, 18 -62
+               C 26 -46, 26 -28, 18 -14
+               C 12 -4, 4 0, 0 0 Z"
+            fill="url(#leafGrad)" stroke="#0a2a1c" stroke-width="0.6"/>
+      <!-- leaf vein -->
+      <path d="M -2 -2 C -4 -20, -8 -42, -14 -68" stroke="#3a8a5a" stroke-width="0.6" fill="none" opacity="0.7"/>
+      <!-- vein ribs -->
+      <path d="M -6 -20 q -4 -2 -8 -2 M -10 -36 q -5 -2 -10 -1 M -12 -52 q -6 -1 -10 1" stroke="#3a8a5a" stroke-width="0.4" fill="none" opacity="0.55"/>
     </symbol>
 
-    <!-- an eighth note pair (beamed) -->
-    <symbol id="beamed" overflow="visible">
-      <ellipse cx="0"  cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#fff5c8"/>
-      <ellipse cx="14" cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#fff5c8"/>
-      <rect x="4.2"  y="-22" width="1.6" height="22" fill="#fff5c8"/>
-      <rect x="18.2" y="-22" width="1.6" height="22" fill="#fff5c8"/>
-      <rect x="4.2" y="-22" width="15.6" height="2.6" fill="#fff5c8"/>
+    <symbol id="leafLight" overflow="visible">
+      <path d="M 0 0
+               C -8 -6, -18 -18, -22 -34
+               C -25 -46, -22 -58, -12 -62
+               C -2 -64, 8 -60, 14 -50
+               C 20 -38, 20 -24, 14 -12
+               C 9 -4, 3 0, 0 0 Z"
+            fill="url(#leafGrad2)" stroke="#0a2a1c" stroke-width="0.5"/>
+      <path d="M -2 -2 C -4 -16, -6 -34, -10 -54" stroke="#5aa874" stroke-width="0.5" fill="none" opacity="0.7"/>
     </symbol>
 
-    <!-- a single eighth note with flag -->
-    <symbol id="eighth" overflow="visible">
-      <ellipse cx="0" cy="0" rx="5.2" ry="3.8" transform="rotate(-22)" fill="#f3c969"/>
-      <rect x="4.2" y="-22" width="1.6" height="22" fill="#f3c969"/>
-      <path d="M 5.8 -22 Q 14 -18 11 -8" stroke="#f3c969" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <!-- bird silhouette: simple "M" arc -->
+    <symbol id="bird" overflow="visible">
+      <path d="M 0 0 q 5 -5 10 0 q 5 -5 10 0" stroke="#cfe6d4" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- butterfly: two rounded triangles -->
+    <symbol id="butterfly" overflow="visible">
+      <g>
+        <path d="M 0 0 q -7 -10 -14 -8 q -8 2 -10 12 q 0 8 8 8 q 9 0 16 -12 Z" fill="#e3b85a" opacity="0.85"/>
+        <path d="M 0 0 q -8 8 -14 8 q -8 0 -8 -10 q 2 -8 10 -8 q 6 0 12 10 Z" fill="#a85a2c" opacity="0.85"/>
+        <path d="M 0 0 q 7 -10 14 -8 q 8 2 10 12 q 0 8 -8 8 q -9 0 -16 -12 Z" fill="#e3b85a" opacity="0.85"/>
+        <path d="M 0 0 q 8 8 14 8 q 8 0 8 -10 q -2 -8 -10 -8 q -6 0 -12 10 Z" fill="#a85a2c" opacity="0.85"/>
+        <rect x="-0.6" y="-10" width="1.2" height="20" fill="#1a1208"/>
+      </g>
+    </symbol>
+
+    <!-- whale fluke breaching from bottom -->
+    <symbol id="fluke" overflow="visible">
+      <path d="M 0 30
+               C -2 10, -8 -4, -22 -14
+               C -16 -8, -10 0, -8 6
+               C -10 8, -16 10, -22 8
+               C -10 14, -2 18, 0 30 Z" fill="#1a3a48" opacity="0.92"/>
+      <path d="M 0 30
+               C 2 10, 8 -4, 22 -14
+               C 16 -8, 10 0, 8 6
+               C 10 8, 16 10, 22 8
+               C 10 14, 2 18, 0 30 Z" fill="#1a3a48" opacity="0.92"/>
+      <path d="M -3 22 L 3 22" stroke="#0a1a22" stroke-width="0.6"/>
+    </symbol>
+
+    <!-- pollen / spore particle -->
+    <symbol id="spore" overflow="visible">
+      <circle r="1.4" fill="#fff5cc" opacity="0.85"/>
     </symbol>
   </defs>
 
   <!-- ============= BACKDROP ============= -->
   <rect width="800" height="200" fill="url(#bg)"/>
+  <rect width="800" height="200" fill="url(#sun)"/>
 
-  <!-- soft candle-light halo behind the title -->
-  <ellipse cx="400" cy="100" rx="260" ry="80" fill="#3a2418" opacity="0.55"/>
-  <ellipse cx="400" cy="100" rx="180" ry="50" fill="#5a3a1c" opacity="0.35"/>
+  <!-- distant ocean band suggesting horizon -->
+  <rect x="0" y="150" width="800" height="50" fill="url(#oceanGrad)" opacity="0.7"/>
 
-  <!-- ============= STAFF LINES (full width, the visual spine) ============= -->
-  <g stroke="url(#staffGrad)" stroke-width="0.9" opacity="0.7">
-    <line x1="0" y1="148" x2="800" y2="148"/>
-    <line x1="0" y1="158" x2="800" y2="158"/>
-    <line x1="0" y1="168" x2="800" y2="168"/>
-    <line x1="0" y1="178" x2="800" y2="178"/>
-    <line x1="0" y1="188" x2="800" y2="188"/>
+  <!-- subtle horizon line -->
+  <line x1="0" y1="148" x2="800" y2="148" stroke="#3a6a72" stroke-width="0.4" opacity="0.4"/>
+
+  <!-- ============= LEFT FLORA CLUSTER ============= -->
+  <g transform="translate(70,200)" filter="url(#leafBlur)">
+    <g>
+      <use href="#leaf" transform="rotate(-18)"/>
+      <animateTransform attributeName="transform" type="rotate" values="-3;3;-3" dur="11s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(-30,-10)">
+      <g>
+        <use href="#leafLight" transform="rotate(20)"/>
+        <animateTransform attributeName="transform" type="rotate" values="2;-4;2" dur="13s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(35,-6)">
+      <g>
+        <use href="#leafLight" transform="rotate(-32)"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;5;-2" dur="17s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(10,-30)">
+      <g>
+        <use href="#leaf" transform="rotate(8) scale(0.7)"/>
+        <animateTransform attributeName="transform" type="rotate" values="4;-4;4" dur="13s" repeatCount="indefinite"/>
+      </g>
+    </g>
   </g>
 
-  <!-- treble clef on the left of the staff -->
-  <g transform="translate(40,168)" fill="none" stroke="#f3c969" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
-    <path d="M 0 24
-             C -10 18, -10 6, -2 2
-             C 6 -2, 12 6, 8 14
-             C 4 22, -6 22, -8 14
-             C -10 4, 2 -10, 4 -22
-             C 6 -32, -2 -38, -6 -34
-             C -10 -30, -8 -22, 0 -18"/>
-    <line x1="0" y1="-18" x2="0" y2="34"/>
-    <circle cx="0" cy="34" r="2.2" fill="#f3c969" stroke="none"/>
+  <!-- ============= RIGHT FLORA CLUSTER ============= -->
+  <g transform="translate(740,200)" filter="url(#leafBlur)">
+    <g>
+      <use href="#leaf" transform="scale(-1,1) rotate(-22)"/>
+      <animateTransform attributeName="transform" type="rotate" values="-3;4;-3" dur="13s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(28,-8)">
+      <g>
+        <use href="#leafLight" transform="scale(-1,1) rotate(28)"/>
+        <animateTransform attributeName="transform" type="rotate" values="3;-4;3" dur="11s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(-26,-12)">
+      <g>
+        <use href="#leafLight" transform="scale(-1,1) rotate(-30) scale(0.85)"/>
+        <animateTransform attributeName="transform" type="rotate" values="-2;5;-2" dur="17s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(0,-30)">
+      <g>
+        <use href="#leaf" transform="scale(-1,1) rotate(-8) scale(0.7)"/>
+        <animateTransform attributeName="transform" type="rotate" values="-4;4;-4" dur="13s" repeatCount="indefinite"/>
+      </g>
+    </g>
   </g>
 
-  <!-- time signature -->
-  <g font-family="Georgia, 'Times New Roman', serif" fill="#f3c969" font-weight="900" opacity="0.9">
-    <text x="64" y="162" font-size="16" text-anchor="middle">4</text>
-    <text x="64" y="184" font-size="16" text-anchor="middle">4</text>
+  <!-- ============= WHALE FLUKE breaching at bottom-right ============= -->
+  <g transform="translate(640,180)">
+    <g>
+      <use href="#fluke" transform="scale(0.95)"/>
+      <animateTransform attributeName="transform" type="translate" values="0,8; 0,-2; 0,8" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" repeatCount="indefinite"/>
+    </g>
+    <!-- splash droplets -->
+    <g fill="#cfe6e0" opacity="0.7">
+      <circle cx="-18" cy="-6" r="1.2"><animate attributeName="cy" values="-6;-14;-6" dur="11s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="11s" repeatCount="indefinite"/></circle>
+      <circle cx="20"  cy="-4" r="1.1"><animate attributeName="cy" values="-4;-12;-4" dur="11s" begin="-2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
+      <circle cx="-6"  cy="-10" r="0.9"><animate attributeName="cy" values="-10;-20;-10" dur="11s" begin="-4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="-4s" repeatCount="indefinite"/></circle>
+    </g>
   </g>
 
-  <!-- ============= ODE TO JOY MOTIF on the staff (E E F G G F E D C C D E E D D) -->
-  <!-- pitch on staff: roughly E line at y=178, F space y=173, G line y=168, D space y=183, C below y=188 -->
+  <!-- ============= BIRDS soaring across upper sky ============= -->
+  <g opacity="0.8">
+    <use href="#bird" x="120" y="38">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 540,8; 540,8" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.1;0.85;1" dur="29s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bird" x="100" y="58" transform="scale(0.7)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 600,-6; 600,-6" dur="37s" begin="-12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.85;1" dur="37s" begin="-12s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bird" x="140" y="28" transform="scale(0.5)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 700,12; 700,12" dur="41s" begin="-23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.85;1" dur="41s" begin="-23s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ============= BUTTERFLY drifting low-right, away from title ============= -->
+  <g transform="translate(620,158)">
+    <g>
+      <use href="#butterfly" transform="scale(0.45)">
+        <animateTransform attributeName="transform" type="scale" values="0.45,0.45; 0.45,0.18; 0.45,0.45; 0.45,0.18; 0.45,0.45" keyTimes="0;0.25;0.5;0.75;1" dur="0.6s" repeatCount="indefinite"/>
+      </use>
+      <animateTransform attributeName="transform" type="translate" values="0,0; -14,-10; 8,-4; -6,-14; 0,0" dur="17s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ============= DRIFTING SPORES / POLLEN ============= -->
   <g>
-    <!-- E E F G -->
-    <use href="#quarter" x="92"  y="178">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="116" y="178">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.15s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="140" y="173">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.3s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="164" y="168">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.45s" fill="freeze"/>
-    </use>
-    <!-- bar line -->
-    <line x1="186" y1="148" x2="186" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
-    <!-- G F E D -->
-    <use href="#quarter" x="200" y="168">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.6s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="224" y="173">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.75s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="248" y="178">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.9s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="272" y="183">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.05s" fill="freeze"/>
-    </use>
-    <line x1="294" y1="148" x2="294" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
-    <!-- C C D E -->
-    <use href="#quarter" x="308" y="188">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.2s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="332" y="188">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.35s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="356" y="183">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.5s" fill="freeze"/>
-    </use>
-    <use href="#quarter" x="380" y="178">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.65s" fill="freeze"/>
-    </use>
-    <line x1="402" y1="148" x2="402" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
-    <!-- E D D (last bar) -->
-    <use href="#quarter" x="418" y="178">
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.8s" fill="freeze"/>
-    </use>
-    <!-- dotted half D (half-note open + dot) -->
-    <g>
-      <ellipse cx="448" cy="183" rx="5.2" ry="3.8" transform="rotate(-22 448 183)" fill="none" stroke="#f3c969" stroke-width="1.6"/>
-      <rect x="452" y="161" width="1.6" height="22" fill="#f3c969"/>
-      <circle cx="460" cy="183" r="1.6" fill="#f3c969"/>
-      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.95s" fill="freeze"/>
+    <use href="#spore" x="180" y="120"><animate attributeName="y" values="120;30" dur="13s" repeatCount="indefinite"/><animate attributeName="x" values="180;200;180" dur="13s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#spore" x="240" y="140"><animate attributeName="y" values="140;20" dur="17s" begin="-3s" repeatCount="indefinite"/><animate attributeName="x" values="240;220;240" dur="17s" begin="-3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="17s" begin="-3s" repeatCount="indefinite"/></use>
+    <use href="#spore" x="540" y="150"><animate attributeName="y" values="150;30" dur="11s" begin="-5s" repeatCount="indefinite"/><animate attributeName="x" values="540;560;540" dur="11s" begin="-5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="11s" begin="-5s" repeatCount="indefinite"/></use>
+    <use href="#spore" x="660" y="120"><animate attributeName="y" values="120;25" dur="19s" begin="-7s" repeatCount="indefinite"/><animate attributeName="x" values="660;640;660" dur="19s" begin="-7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="19s" begin="-7s" repeatCount="indefinite"/></use>
+    <use href="#spore" x="380" y="160"><animate attributeName="y" values="160;40" dur="23s" begin="-9s" repeatCount="indefinite"/><animate attributeName="x" values="380;400;380" dur="23s" begin="-9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="23s" begin="-9s" repeatCount="indefinite"/></use>
+    <use href="#spore" x="460" y="170"><animate attributeName="y" values="170;30" dur="29s" begin="-13s" repeatCount="indefinite"/><animate attributeName="x" values="460;440;460" dur="29s" begin="-13s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="29s" begin="-13s" repeatCount="indefinite"/></use>
+  </g>
+
+  <!-- ============= LAUREL FLOURISHES flanking the subtitle ============= -->
+  <g transform="translate(400,121)" opacity="0.85">
+    <!-- left flourish -->
+    <g fill="#a78d4a" stroke="none">
+      <ellipse cx="-118" cy="0" rx="4.5" ry="1.8" transform="rotate(-12 -118 0)"/>
+      <ellipse cx="-110" cy="-3" rx="4.5" ry="1.8" transform="rotate(-22 -110 -3)"/>
+      <ellipse cx="-118" cy="3" rx="4.5" ry="1.8" transform="rotate(15 -118 3)"/>
+      <ellipse cx="-130" cy="0" rx="4.5" ry="1.8" transform="rotate(-2 -130 0)"/>
     </g>
-    <line x1="488" y1="148" x2="488" y2="188" stroke="#f3c969" stroke-width="0.8" opacity="0.5"/>
-
-    <!-- subtle pulse on whole motif synced to ~tempo -->
-    <animate attributeName="opacity" values="0.95;1;0.92;1" dur="7s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- floating notes drifting upward (independent of staff motif) -->
-  <g filter="url(#noteGlow)">
-    <use href="#beamed" x="540" y="120" opacity="0.85">
-      <animateTransform attributeName="transform" type="translate" values="0,0; -8,-50; -16,-100" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite"/>
-    </use>
-    <use href="#eighth" x="640" y="100" opacity="0.85">
-      <animateTransform attributeName="transform" type="translate" values="0,0; 6,-60; 12,-120" dur="11s" begin="-3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
-    </use>
-    <use href="#quarter" x="710" y="130" opacity="0.85">
-      <animateTransform attributeName="transform" type="translate" values="0,0; -4,-70; -10,-140" dur="17s" begin="-7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="17s" begin="-7s" repeatCount="indefinite"/>
-    </use>
-    <use href="#beamed" x="60" y="115" opacity="0.85">
-      <animateTransform attributeName="transform" type="translate" values="0,0; 4,-55; 10,-110" dur="13s" begin="-5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="13s" begin="-5s" repeatCount="indefinite"/>
-    </use>
-  </g>
-
-  <!-- ============= CONDUCTOR'S BATON (top right), waving in time ============= -->
-  <g transform="translate(700,55)">
-    <g>
-      <!-- baton: dark grip + tapering pale shaft -->
-      <rect x="-2" y="0" width="4" height="14" rx="1.6" fill="#2a1a10"/>
-      <line x1="0" y1="0" x2="-2" y2="-58" stroke="#fff5c8" stroke-width="2.6" stroke-linecap="round"/>
-      <circle cx="-2" cy="-58" r="2.4" fill="#fff5c8"/>
-      <animateTransform attributeName="transform" type="rotate"
-                        values="-22; 18; -22; 14; -22"
-                        keyTimes="0; 0.25; 0.5; 0.75; 1"
-                        dur="2.2s" repeatCount="indefinite"/>
+    <line x1="-100" y1="0" x2="-90" y2="0" stroke="#a78d4a" stroke-width="0.8" opacity="0.7"/>
+    <!-- right flourish (mirrored) -->
+    <g fill="#a78d4a" stroke="none">
+      <ellipse cx="118" cy="0" rx="4.5" ry="1.8" transform="rotate(12 118 0)"/>
+      <ellipse cx="110" cy="-3" rx="4.5" ry="1.8" transform="rotate(22 110 -3)"/>
+      <ellipse cx="118" cy="3" rx="4.5" ry="1.8" transform="rotate(-15 118 3)"/>
+      <ellipse cx="130" cy="0" rx="4.5" ry="1.8" transform="rotate(2 130 0)"/>
     </g>
+    <line x1="100" y1="0" x2="90" y2="0" stroke="#a78d4a" stroke-width="0.8" opacity="0.7"/>
+    <animate attributeName="opacity" values="0.75;0.95;0.75" dur="13s" repeatCount="indefinite"/>
   </g>
 
-  <!-- ============= TITLE BLOCK (center, dominant) ============= -->
+  <!-- ============= TITLE BLOCK ============= -->
   <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
-    <text x="400" y="48" font-size="11" letter-spacing="6" font-weight="700" fill="#c98a32" opacity="0.95">
-      KÄRNTNERTORTHEATER · VIENNA · 1824
+    <!-- top hairline label -->
+    <text x="400" y="46" font-size="10.5" letter-spacing="6" font-weight="700" fill="#a78d4a" opacity="0.95">
+      A CENTURY OF THE NATURAL WORLD
     </text>
 
-    <text x="400" y="100" font-size="58" font-weight="900" letter-spacing="2"
-          fill="url(#goldGrad)" filter="url(#glow)" stroke="#7a4914" stroke-width="0.4">
-      May 7, 2026
-      <animate attributeName="opacity" values="0.97;1;0.97" dur="7s" repeatCount="indefinite"/>
+    <!-- centerpiece date -->
+    <text x="400" y="98" font-size="56" font-weight="900" letter-spacing="2"
+          fill="url(#titleGrad)" filter="url(#softGlow)" stroke="#5a4a1c" stroke-width="0.4">
+      May 8, 2026
+      <animate attributeName="opacity" values="0.97;1;0.97" dur="11s" repeatCount="indefinite"/>
     </text>
 
-    <text x="400" y="128" font-size="13" font-weight="700" letter-spacing="5" fill="#f3c969" opacity="0.95">
-      ODE TO JOY · 202 YEARS
+    <!-- subtitle -->
+    <text x="400" y="126" font-size="13" font-weight="700" letter-spacing="5" fill="#cfe6d4" opacity="0.95">
+      ATTENBOROUGH · 100
     </text>
   </g>
 
-  <!-- ============= TEMPO PULSE INDICATOR (left, beneath stopwatch position) ============= -->
-  <!-- subtle breathing glow under the staff to imply tempo -->
-  <ellipse cx="400" cy="168" rx="380" ry="22" fill="#c98a32" opacity="0.06">
-    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="2.2s" repeatCount="indefinite"/>
+  <!-- gentle living-air vignette pulse -->
+  <ellipse cx="400" cy="100" rx="380" ry="80" fill="#1a5b3a" opacity="0.04">
+    <animate attributeName="opacity" values="0.03;0.08;0.03" dur="13s" repeatCount="indefinite"/>
   </ellipse>
 </svg>
