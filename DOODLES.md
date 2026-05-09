@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 9, 2026 — David Attenborough centenary (May 8, 1926) — lush leaves, wildlife silhouettes, ocean-and-emerald palette, a quiet "100" laurel
+
+<img src="./doodle-archive/2026/05/2026-05-09-063907.svg" width="800" alt="Daily doodle for May 9, 2026: David Attenborough centenary (May 8, 1926) — lush leaves, wildlife silhouettes, ocean-and-emerald palette, a quiet '100' laurel">
+
+---
+
 ## May 8, 2026 — Beethoven's 9th Symphony "Ode to Joy" 202nd anniversary (May 7, 1824) — staff lines, notes, conductor's baton
 
 <img src="./doodle-archive/2026/05/2026-05-08-063012.svg" width="800" alt="Daily doodle for May 8, 2026: Beethoven's 9th Symphony Ode to Joy 202nd anniversary (May 7, 1824) — staff lines, notes, conductor's baton">
