@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 11, 2026 — Mother's Day (US, 2nd Sunday of May = May 10, 2026) — bouquet, hearts, warm coral/rose palette
+
+<img src="./doodle-archive/2026/05/2026-05-11-070148.svg" width="800" alt="Daily doodle for May 11, 2026: Mother's Day (US, 2nd Sunday of May = May 10, 2026) — bouquet, hearts, warm coral/rose palette">
+
+---
+
 ## May 10, 2026 — First laser beam reflected from the Moon — 64th anniversary (May 9, 1962, MIT Lincoln Lab); ruby-laser red beam, lunar disc, observatory ground station
 
 <img src="./doodle-archive/2026/05/2026-05-10-065031.svg" width="800" alt="Daily doodle for May 10, 2026: First laser beam reflected from the Moon — 64th anniversary (May 9, 1962, MIT Lincoln Lab); ruby-laser red beam, lunar disc, observatory ground station">
