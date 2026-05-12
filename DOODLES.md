@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 12, 2026 — Deep Blue defeats Kasparov, 29th anniversary (May 11, 1997) — chessboard, fallen king, machine-blue glow
+
+<img src="./doodle-archive/2026/05/2026-05-12-065148.svg" width="800" alt="Daily doodle for May 12, 2026: Deep Blue defeats Kasparov, 29th anniversary (May 11, 1997) — chessboard, fallen king, machine-blue glow">
+
+---
+
 ## May 11, 2026 — Mother's Day (US, 2nd Sunday of May = May 10, 2026) — bouquet, hearts, warm coral/rose palette
 
 <img src="./doodle-archive/2026/05/2026-05-11-070148.svg" width="800" alt="Daily doodle for May 11, 2026: Mother's Day (US, 2nd Sunday of May = May 10, 2026) — bouquet, hearts, warm coral/rose palette">
