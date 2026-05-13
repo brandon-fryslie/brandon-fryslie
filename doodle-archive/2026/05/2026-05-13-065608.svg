@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: International Nurses Day / Florence Nightingale 206th birthday (May 12, 1820) — Lady with the Lamp, nightingale in flight, heartbeat, warm lamplight against night-ward teal -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 12, 2026 — International Nurses Day, Florence Nightingale's 206th birthday">
+  <defs>
+    <!-- night ward gradient: deep teal to warm ember -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#0d1117"/>
+      <stop offset="45%" stop-color="#0e2230"/>
+      <stop offset="100%" stop-color="#1b1410"/>
+    </linearGradient>
+
+    <!-- warm halo from the oil lamp -->
+    <radialGradient id="lampHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#ffe8a8" stop-opacity="0.95"/>
+      <stop offset="35%"  stop-color="#ffb061" stop-opacity="0.55"/>
+      <stop offset="70%"  stop-color="#a5562a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="flameGrad" cx="50%" cy="60%" r="55%">
+      <stop offset="0%"   stop-color="#fff7d6"/>
+      <stop offset="45%"  stop-color="#ffd680"/>
+      <stop offset="100%" stop-color="#ff7a2a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- title gradients -->
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff5dd"/>
+      <stop offset="55%" stop-color="#ffd089"/>
+      <stop offset="100%" stop-color="#e08740"/>
+    </linearGradient>
+
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#7adfc7" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7adfc7" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7adfc7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- text glow -->
+    <filter id="textGlow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+
+    <!-- nightingale silhouette in flight -->
+    <symbol id="nightingale" overflow="visible">
+      <!-- body -->
+      <path d="M -10 0
+               Q -4 -3 4 -2
+               Q 12 -1 14 2
+               Q 12 4 4 4
+               Q -2 5 -10 2 Z"
+            fill="#f4d29a"/>
+      <!-- head -->
+      <circle cx="12" cy="-1" r="3" fill="#f4d29a"/>
+      <!-- beak -->
+      <path d="M 15 -1 L 19 0 L 15 1 Z" fill="#a06a2c"/>
+      <!-- eye -->
+      <circle cx="13" cy="-1.4" r="0.5" fill="#1b1410"/>
+      <!-- wing upstroke (animated) -->
+      <path d="M -2 -2 Q -6 -14 -18 -10 Q -10 -4 -2 -1 Z" fill="#e0b677">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-20 -2 -2; 20 -2 -2; -20 -2 -2"
+                          dur="0.7s" repeatCount="indefinite"/>
+      </path>
+      <!-- tail -->
+      <path d="M -10 0 L -16 -3 L -16 3 Z" fill="#c89954"/>
+    </symbol>
+
+    <!-- a small medical cross -->
+    <symbol id="cross" overflow="visible">
+      <rect x="-1.4" y="-5" width="2.8" height="10" rx="0.6" fill="#7adfc7"/>
+      <rect x="-5" y="-1.4" width="10" height="2.8" rx="0.6" fill="#7adfc7"/>
+    </symbol>
+  </defs>
+
+  <!-- ============= BACKDROP ============= -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- distant ward windows / stars -->
+  <g fill="#9fc7d8" opacity="0.45">
+    <circle cx="60"  cy="22" r="0.9"/>
+    <circle cx="140" cy="14" r="0.7"/>
+    <circle cx="220" cy="28" r="0.8"/>
+    <circle cx="380" cy="12" r="0.6"/>
+    <circle cx="500" cy="26" r="0.9"/>
+    <circle cx="640" cy="18" r="0.7"/>
+    <circle cx="720" cy="30" r="0.8"/>
+    <circle cx="780" cy="14" r="0.6"/>
+  </g>
+  <g fill="#fff" opacity="0.35">
+    <circle cx="100" cy="36" r="0.4"><animate attributeName="opacity" values="0.1;0.6;0.1" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="20" r="0.4"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="40" r="0.4"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="48" r="0.4"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="6s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- ============= LEFT: LADY WITH THE LAMP ============= -->
+  <!-- the warm halo, breathing -->
+  <g transform="translate(118,108)">
+    <circle cx="0" cy="0" r="92" fill="url(#lampHalo)">
+      <animate attributeName="r" values="86;100;86" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- silhouette of Florence Nightingale: cape, bonnet, profile holding the lamp -->
+  <g transform="translate(80,72)" fill="#0a1620" filter="url(#softShadow)">
+    <!-- body / cape (long flowing garment) -->
+    <path d="M 30 24
+             Q 16 38 14 70
+             Q 12 110 22 128
+             L 78 128
+             Q 86 110 84 70
+             Q 80 38 66 24
+             Q 56 18 48 18
+             Q 40 18 30 24 Z"/>
+    <!-- shoulders / collar -->
+    <path d="M 28 28 Q 48 22 70 30 L 70 38 Q 48 32 28 36 Z" fill="#142634"/>
+    <!-- head -->
+    <ellipse cx="50" cy="14" rx="10" ry="11"/>
+    <!-- bonnet / nurse cap -->
+    <path d="M 38 8 Q 50 -2 62 8 Q 62 14 50 14 Q 38 14 38 8 Z" fill="#f4f7fb"/>
+    <path d="M 42 7 Q 50 1 58 7 L 58 11 L 42 11 Z" fill="#e8ecf2"/>
+    <!-- subtle face profile hint -->
+    <path d="M 58 14 Q 62 18 60 22" stroke="#c79a6a" stroke-width="0.6" fill="none" opacity="0.7"/>
+    <!-- the lamp arm extending forward -->
+    <path d="M 64 50 Q 84 48 100 56" stroke="#0a1620" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 64 50 Q 84 48 100 56" stroke="#142634" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- the oil lamp -->
+  <g transform="translate(178,128)">
+    <!-- handle -->
+    <path d="M -10 -8 Q 0 -16 10 -8" stroke="#caa15c" stroke-width="1.4" fill="none"/>
+    <!-- lamp basin -->
+    <ellipse cx="0" cy="0" rx="11" ry="6" fill="#a07028"/>
+    <ellipse cx="0" cy="-1" rx="11" ry="3" fill="#caa15c"/>
+    <!-- spout -->
+    <path d="M 9 -1 L 16 -3 L 16 1 L 9 2 Z" fill="#a07028"/>
+    <!-- chimney / glass -->
+    <path d="M -6 -2 Q -7 -14 -3 -18 L 3 -18 Q 7 -14 6 -2 Z" fill="#fff3c8" opacity="0.35" stroke="#caa15c" stroke-width="0.5"/>
+    <!-- flame -->
+    <ellipse cx="0" cy="-12" rx="6" ry="10" fill="url(#flameGrad)" filter="url(#bloom)">
+      <animate attributeName="ry" values="9;12;9" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="5;6.5;5" dur="1.7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="0" cy="-10" rx="2" ry="4" fill="#fff7d6">
+      <animate attributeName="ry" values="3;5;3" dur="1.1s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- tiny ember sparks rising -->
+    <g fill="#ffd680">
+      <circle cx="0" cy="-22" r="0.8">
+        <animate attributeName="cy" values="-20;-58" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="3" cy="-22" r="0.6">
+        <animate attributeName="cy" values="-20;-60" dur="4s" begin="-1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="4s" begin="-1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-3" cy="-22" r="0.7">
+        <animate attributeName="cy" values="-20;-56" dur="3.7s" begin="-2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="3.7s" begin="-2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- ============= HEARTBEAT ECG LINE across the bottom ============= -->
+  <g stroke="#7adfc7" stroke-width="1.6" fill="none" filter="url(#textGlow)">
+    <path d="M 0 178
+             L 80 178
+             L 92 178
+             L 96 168 L 100 188 L 104 158 L 108 188 L 112 178
+             L 200 178
+             L 220 178
+             L 224 170 L 228 188 L 232 156 L 236 188 L 240 178
+             L 360 178
+             L 380 178
+             L 384 168 L 388 188 L 392 158 L 396 188 L 400 178
+             L 520 178
+             L 540 178
+             L 544 170 L 548 188 L 552 156 L 556 188 L 560 178
+             L 680 178
+             L 700 178
+             L 704 168 L 708 188 L 712 158 L 716 188 L 720 178
+             L 800 178"/>
+    <!-- traveling pulse highlight -->
+    <circle r="3" fill="#aef0e0">
+      <animateMotion dur="11s" repeatCount="indefinite"
+                     path="M 0 178 L 80 178 L 92 178 L 96 168 L 100 188 L 104 158 L 108 188 L 112 178 L 200 178 L 220 178 L 224 170 L 228 188 L 232 156 L 236 188 L 240 178 L 360 178 L 380 178 L 384 168 L 388 188 L 392 158 L 396 188 L 400 178 L 520 178 L 540 178 L 544 170 L 548 188 L 552 156 L 556 188 L 560 178 L 680 178 L 700 178 L 704 168 L 708 188 L 712 158 L 716 188 L 720 178 L 800 178"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ribbon of teal under heartbeat -->
+  <rect x="0" y="190" width="800" height="2" fill="url(#ribbon)" opacity="0.6"/>
+
+  <!-- ============= NIGHTINGALES IN FLIGHT (right side) ============= -->
+  <g>
+    <use href="#nightingale" transform="translate(560,70) scale(0.9)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="540,72; 580,64; 540,72" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#nightingale" transform="translate(640,98) scale(0.7)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="630,98; 660,86; 630,98" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#nightingale" transform="translate(720,52) scale(0.55)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="710,54; 730,44; 710,54" dur="7s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- subtle floating crosses near right -->
+  <g opacity="0.55">
+    <use href="#cross" transform="translate(610,42)">
+      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#cross" transform="translate(770,98)">
+      <animate attributeName="opacity" values="0.6;0.15;0.6" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#cross" transform="translate(700,140)">
+      <animate attributeName="opacity" values="0.2;0.65;0.2" dur="6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ============= CENTER TITLE BLOCK ============= -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- legibility plaque -->
+    <rect x="248" y="38" width="356" height="118" rx="10" ry="10" fill="#0a1620" opacity="0.78"/>
+    <rect x="248" y="38" width="356" height="118" rx="10" ry="10" fill="none" stroke="#7adfc7" stroke-width="0.7" opacity="0.55"/>
+    <rect x="248" y="38" width="356" height="118" rx="10" ry="10" fill="url(#lampHalo)" opacity="0.18"/>
+
+    <!-- eyebrow -->
+    <text x="426" y="64" font-size="10" letter-spacing="5" font-weight="700"
+          fill="#7adfc7" filter="url(#textGlow)">
+      INTERNATIONAL NURSES DAY · FLORENCE NIGHTINGALE 206
+    </text>
+
+    <!-- giant date -->
+    <text x="426" y="112" font-size="42" font-weight="900" letter-spacing="2"
+          fill="url(#titleGrad)" filter="url(#textGlow)">
+      May 12, 2026
+    </text>
+
+    <!-- subtitle -->
+    <text x="426" y="138" font-size="10" font-weight="700" letter-spacing="4"
+          fill="#f4d29a" opacity="0.95">
+      THE LADY WITH THE LAMP · BORN 1820
+    </text>
+
+    <!-- flanking medical crosses -->
+    <use href="#cross" transform="translate(280,98) scale(1.4)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </use>
+    <use href="#cross" transform="translate(572,98) scale(1.4)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </use>
+
+    <!-- thin progress bar under subtitle -->
+    <rect x="320" y="146" width="212" height="2" rx="1" fill="#7adfc7" opacity="0.3"/>
+    <rect x="320" y="146" width="50" height="2" rx="1" fill="#fff3c8">
+      <animate attributeName="x" values="320;482;320" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
