@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 14, 2026 — Formula One World Championship 76th anniversary (May 13, 1950, Silverstone British GP, won by Giuseppe Farina in Alfa Romeo 158) — race car, checkered flag, speed lines, asphalt and racing red
+
+<img src="./doodle-archive/2026/05/2026-05-14-065448.svg" width="800" alt="Daily doodle for May 14, 2026: Formula One World Championship 76th anniversary (May 13, 1950, Silverstone British GP, won by Giuseppe Farina in Alfa Romeo 158) — race car, checkered flag, speed lines, asphalt and racing red">
+
+---
+
 ## May 13, 2026 — International Nurses Day / Florence Nightingale 206th birthday (May 12, 1820) — Lady with the Lamp, nightingale in flight, heartbeat, warm lamplight against night-ward teal
 
 <img src="./doodle-archive/2026/05/2026-05-13-065608.svg" width="800" alt="Daily doodle for May 13, 2026: International Nurses Day / Florence Nightingale 206th birthday (May 12, 1820) — Lady with the Lamp, nightingale in flight, heartbeat, warm lamplight against night-ward teal">
