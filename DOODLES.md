@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 16, 2026 — L. Frank Baum 170th birthday (May 15, 1856) — Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies
+
+<img src="./doodle-archive/2026/05/2026-05-16-064230.svg" width="800" alt="Daily doodle for May 16, 2026: L. Frank Baum 170th birthday (May 15, 1856) — Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies">
+
+---
+
 ## May 15, 2026 — Skylab launch 53rd anniversary (May 14, 1973) — America's first space station, orbital workshop with Apollo Telescope Mount, Earth limb, stars, vacuum blue
 
 <img src="./doodle-archive/2026/05/2026-05-15-065953.svg" width="800" alt="Daily doodle for May 15, 2026: Skylab launch 53rd anniversary (May 14, 1973) — America's first space station, orbital workshop with Apollo Telescope Mount, Earth limb, stars, vacuum blue">

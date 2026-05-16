@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: L. Frank Baum 170th birthday (May 15, 1856) — Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 15, 2026 — L. Frank Baum 170th birthday, Wizard of Oz">
+  <defs>
+    <radialGradient id="skybg" cx="50%" cy="35%" r="85%">
+      <stop offset="0%" stop-color="#1d2a44"/>
+      <stop offset="55%" stop-color="#121a2a"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <linearGradient id="emerald" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8f5cf"/>
+      <stop offset="55%" stop-color="#34e29b"/>
+      <stop offset="100%" stop-color="#0b9d63"/>
+    </linearGradient>
+
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a5a"/>
+      <stop offset="20%" stop-color="#ffa733"/>
+      <stop offset="40%" stop-color="#ffe24d"/>
+      <stop offset="60%" stop-color="#5ddf6a"/>
+      <stop offset="80%" stop-color="#4fb3ff"/>
+      <stop offset="100%" stop-color="#b07cff"/>
+    </linearGradient>
+
+    <linearGradient id="brick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6e4d12"/>
+      <stop offset="30%" stop-color="#d9a830"/>
+      <stop offset="65%" stop-color="#f7d35a"/>
+      <stop offset="100%" stop-color="#7a5a1a"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- sky background -->
+  <rect width="800" height="200" fill="url(#skybg)"/>
+
+  <!-- distant stars -->
+  <g fill="#ffffff">
+    <circle cx="60" cy="28" r="0.8"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="170" cy="18" r="1.1"><animate attributeName="opacity" values="1;0.3;1" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="310" cy="42" r="0.6"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="470" cy="22" r="0.9"><animate attributeName="opacity" values="1;0.2;1" dur="7s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="585" cy="38" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="14" r="1.0"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="55" r="0.6"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="395" cy="12" r="0.7"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" begin="2.5s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- rainbow arc above the scene -->
+  <g transform="translate(400,215)" opacity="0.55">
+    <path d="M -360,0 A 360,180 0 0 1 360,0" fill="none" stroke="url(#rainbow)" stroke-width="12" stroke-linecap="round" opacity="0.35"/>
+    <path d="M -340,0 A 340,168 0 0 1 340,0" fill="none" stroke="url(#rainbow)" stroke-width="3">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="11s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- horizon ground band -->
+  <path d="M 0,178 Q 400,168 800,176 L 800,200 L 0,200 Z" fill="#161e16"/>
+
+  <!-- tornado (left) -->
+  <g transform="translate(115,118)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 5,-2; -4,2; 0,0" dur="7s" repeatCount="indefinite"/>
+      <g opacity="0.9" stroke-linecap="round" fill="none">
+        <ellipse cx="0" cy="-72" rx="22" ry="6" stroke="#b0bcd6" stroke-width="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="0" cy="-48" rx="28" ry="7" stroke="#c0ccea" stroke-width="2">
+          <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="0" cy="-22" rx="25" ry="6" stroke="#b0bcd6" stroke-width="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="0" cy="4" rx="19" ry="5" stroke="#c0ccea" stroke-width="2">
+          <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="7s" begin="0.5s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="0" cy="26" rx="12" ry="4" stroke="#b0bcd6" stroke-width="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="11s" begin="1s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="0" cy="44" rx="6" ry="3" stroke="#c0ccea" stroke-width="1.5">
+          <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="13s" begin="0.3s" repeatCount="indefinite"/>
+        </ellipse>
+      </g>
+      <!-- debris specks orbiting -->
+      <g fill="#dfe6f4">
+        <circle cx="0" cy="-55" r="1.3">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0" cy="-30" r="1" >
+          <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0" cy="10" r="1.1">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+  </g>
+
+  <!-- Emerald City silhouette (right) -->
+  <g transform="translate(640,178)">
+    <g fill="url(#emerald)" filter="url(#softglow)">
+      <polygon points="-50,0 -50,-46 -43,-56 -36,-46 -36,0"/>
+      <polygon points="-30,0 -30,-66 -22,-78 -14,-66 -14,0"/>
+      <polygon points="-10,0 -10,-92 0,-106 10,-92 10,0"/>
+      <polygon points="14,0 14,-58 22,-68 30,-58 30,0"/>
+      <polygon points="34,0 34,-78 42,-90 50,-78 50,0"/>
+      <polygon points="54,0 54,-50 60,-60 66,-50 66,0"/>
+    </g>
+    <!-- a flag-spike on the tallest tower -->
+    <line x1="0" y1="-106" x2="0" y2="-118" stroke="#a8f5cf" stroke-width="1.2"/>
+    <circle cx="0" cy="-120" r="1.8" fill="#fffacf">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- window twinkles -->
+    <g fill="#fffacf">
+      <rect x="-44" y="-32" width="2" height="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite"/></rect>
+      <rect x="-25" y="-52" width="2" height="2"><animate attributeName="opacity" values="1;0.3;1" dur="11s" repeatCount="indefinite"/></rect>
+      <rect x="-3" y="-80" width="2" height="2"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/></rect>
+      <rect x="-3" y="-60" width="2" height="2"><animate attributeName="opacity" values="1;0.4;1" dur="7s" begin="1.5s" repeatCount="indefinite"/></rect>
+      <rect x="18" y="-46" width="2" height="2"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="1s" repeatCount="indefinite"/></rect>
+      <rect x="40" y="-66" width="2" height="2"><animate attributeName="opacity" values="1;0.4;1" dur="13s" begin="2s" repeatCount="indefinite"/></rect>
+      <rect x="58" y="-38" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="2.5s" repeatCount="indefinite"/></rect>
+    </g>
+  </g>
+
+  <!-- yellow brick road, foreground -->
+  <g>
+    <path d="M 215,201 Q 380,188 545,178 Q 605,176 665,178 L 665,182 Q 605,180 545,182 Q 380,192 215,201 Z" fill="url(#brick)" opacity="0.95"/>
+    <!-- brick separators -->
+    <g stroke="#5b3f0d" stroke-width="0.7" opacity="0.65" fill="none">
+      <path d="M 250,198 L 262,196"/>
+      <path d="M 285,196 L 297,193"/>
+      <path d="M 322,193 L 334,191"/>
+      <path d="M 362,190 L 374,188"/>
+      <path d="M 405,187 L 417,185"/>
+      <path d="M 452,184 L 464,183"/>
+      <path d="M 502,181 L 514,180"/>
+      <path d="M 552,179 L 564,179"/>
+      <path d="M 605,179 L 617,179"/>
+    </g>
+    <!-- highlight sheen sweep -->
+    <path d="M 215,201 Q 380,188 545,178 Q 605,176 665,178" fill="none" stroke="#fff2a8" stroke-width="0.9" opacity="0.5"/>
+  </g>
+
+  <!-- ruby slippers at the road's start -->
+  <g transform="translate(238,199)">
+    <ellipse cx="-3.2" cy="0" rx="3.2" ry="1.6" fill="#e6203e"/>
+    <ellipse cx="3.2" cy="0" rx="3.2" ry="1.6" fill="#e6203e"/>
+    <circle cx="-3.2" cy="-0.4" r="0.6" fill="#fff5a8"/>
+    <circle cx="3.2" cy="-0.4" r="0.6" fill="#fff5a8"/>
+    <animate attributeName="opacity" values="1;0.55;1" dur="13s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- poppies scattered -->
+  <g>
+    <g transform="translate(180,189)">
+      <circle r="2.8" fill="#d72a36"/>
+      <circle r="0.9" fill="#1a0a0a"/>
+    </g>
+    <g transform="translate(275,193)">
+      <circle r="3" fill="#e63c44"/>
+      <circle r="1" fill="#1a0a0a"/>
+    </g>
+    <g transform="translate(700,188)">
+      <circle r="2.9" fill="#d72a36"/>
+      <circle r="0.9" fill="#1a0a0a"/>
+    </g>
+    <g transform="translate(750,193)">
+      <circle r="3.1" fill="#e63c44"/>
+      <circle r="1" fill="#1a0a0a"/>
+    </g>
+    <g transform="translate(40,191)">
+      <circle r="2.6" fill="#d72a36"/>
+      <circle r="0.8" fill="#1a0a0a"/>
+    </g>
+  </g>
+
+  <!-- DATE — primary headline -->
+  <g text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- soft dark backing for legibility -->
+    <ellipse cx="400" cy="92" rx="245" ry="36" fill="#0d1117" opacity="0.55"/>
+    <text x="400" y="98" font-size="48" font-weight="800" fill="url(#emerald)" filter="url(#glow)" letter-spacing="3">
+      MAY 15, 2026
+    </text>
+    <text x="400" y="124" font-size="12" font-weight="600" fill="#f4dc7a" letter-spacing="4">
+      L. FRANK BAUM &#183; 170 YEARS
+    </text>
+    <text x="400" y="142" font-size="9.5" font-weight="500" fill="#9bb8d6" letter-spacing="5" opacity="0.85">
+      THERE'S NO PLACE LIKE HOME
+    </text>
+  </g>
+</svg>
