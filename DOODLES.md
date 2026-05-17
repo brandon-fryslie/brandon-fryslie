@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 17, 2026 — First Academy Awards 97th anniversary (May 16, 1929) — Oscar statuette, art deco sunburst, spotlights, red carpet, golden age cinema
+
+<img src="./doodle-archive/2026/05/2026-05-17-065210.svg" width="800" alt="Daily doodle for May 17, 2026: First Academy Awards 97th anniversary (May 16, 1929) — Oscar statuette, art deco sunburst, spotlights, red carpet, golden age cinema">
+
+---
+
 ## May 16, 2026 — L. Frank Baum 170th birthday (May 15, 1856) — Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies
 
 <img src="./doodle-archive/2026/05/2026-05-16-064230.svg" width="800" alt="Daily doodle for May 16, 2026: L. Frank Baum 170th birthday (May 15, 1856) — Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies">
