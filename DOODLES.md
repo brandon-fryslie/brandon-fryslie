@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 18, 2026 — World Telecommunication and Information Society Day / ITU founded May 17, 1865 (161st anniversary) — signal towers, radio waves, Morse code dots and dashes, networked nodes
+
+<img src="./doodle-archive/2026/05/2026-05-18-071242.svg" width="800" alt="Daily doodle for May 18, 2026: World Telecommunication and Information Society Day / ITU founded May 17, 1865 (161st anniversary) — signal towers, radio waves, Morse code dots and dashes, networked nodes">
+
+---
+
 ## May 17, 2026 — First Academy Awards 97th anniversary (May 16, 1929) — Oscar statuette, art deco sunburst, spotlights, red carpet, golden age cinema
 
 <img src="./doodle-archive/2026/05/2026-05-17-065210.svg" width="800" alt="Daily doodle for May 17, 2026: First Academy Awards 97th anniversary (May 16, 1929) — Oscar statuette, art deco sunburst, spotlights, red carpet, golden age cinema">
