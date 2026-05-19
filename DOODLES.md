@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 19, 2026 — Mount St. Helens eruption 46th anniversary (May 18, 1980) — volcano silhouette, ash plume, pyroclastic cloud, lava glow, embers
+
+<img src="./doodle-archive/2026/05/2026-05-19-070458.svg" width="800" alt="Daily doodle for May 19, 2026: Mount St. Helens eruption 46th anniversary (May 18, 1980) — volcano silhouette, ash plume, pyroclastic cloud, lava glow, embers">
+
+---
+
 ## May 18, 2026 — World Telecommunication and Information Society Day / ITU founded May 17, 1865 (161st anniversary) — signal towers, radio waves, Morse code dots and dashes, networked nodes
 
 <img src="./doodle-archive/2026/05/2026-05-18-071242.svg" width="800" alt="Daily doodle for May 18, 2026: World Telecommunication and Information Society Day / ITU founded May 17, 1865 (161st anniversary) — signal towers, radio waves, Morse code dots and dashes, networked nodes">
