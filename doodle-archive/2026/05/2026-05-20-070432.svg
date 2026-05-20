@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Halley's Comet — Earth passes through the tail (May 19, 1910), 116th anniversary; great comet, ion & dust tail, starfield, Earth in the tail -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 19, 2026 — Halley's Comet, 116 years since Earth passed through the tail">
+  <defs>
+    <!-- Deep space sky -->
+    <radialGradient id="space" cx="78%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#1b2548"/>
+      <stop offset="40%" stop-color="#0e1a36"/>
+      <stop offset="100%" stop-color="#06081a"/>
+    </radialGradient>
+
+    <!-- Faint Milky Way wash across the upper third -->
+    <linearGradient id="milky" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0%" stop-color="#1f2a55" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#3a4a8c" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#5a4a8c" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#1f2a55" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Comet head (coma) glow -->
+    <radialGradient id="coma" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="18%" stop-color="#d8f0ff"/>
+      <stop offset="45%" stop-color="#5fb8ff" stop-opacity="0.85"/>
+      <stop offset="75%" stop-color="#3a78d8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1a3a78" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Hot nucleus core -->
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fff7d8"/>
+      <stop offset="100%" stop-color="#ffb96a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ion tail: straight, bluish -->
+    <linearGradient id="ion" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cfeaff" stop-opacity="0.0"/>
+      <stop offset="8%" stop-color="#7fd3ff" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#3aa0ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#1a4ab0" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Dust tail: curved, warmer/whiter -->
+    <linearGradient id="dust" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0%" stop-color="#fff5d0" stop-opacity="0"/>
+      <stop offset="10%" stop-color="#ffe9b0" stop-opacity="0.75"/>
+      <stop offset="55%" stop-color="#f0c878" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a07840" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Earth body -->
+    <radialGradient id="earth" cx="40%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#7ec0ff"/>
+      <stop offset="45%" stop-color="#2a6acc"/>
+      <stop offset="100%" stop-color="#0a1a44"/>
+    </radialGradient>
+
+    <!-- Earth atmosphere ring -->
+    <radialGradient id="atmos" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#7fc0ff" stop-opacity="0"/>
+      <stop offset="92%" stop-color="#7fc0ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7fc0ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Tail turbulence -->
+    <filter id="tailFx" x="-10%" y="-30%" width="120%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018 0.04" numOctaves="2" seed="11">
+        <animate attributeName="baseFrequency" dur="29s" values="0.018 0.04;0.024 0.03;0.018 0.04" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="8"/>
+    </filter>
+
+    <!-- Soft blur for the coma halo -->
+    <filter id="soften" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+
+    <!-- Star pattern -->
+    <symbol id="star" overflow="visible">
+      <circle r="0.9" fill="#ffffff"/>
+    </symbol>
+    <symbol id="starBig" overflow="visible">
+      <circle r="1.6" fill="#ffffff"/>
+      <circle r="3.2" fill="#ffffff" opacity="0.15"/>
+    </symbol>
+  </defs>
+
+  <!-- Space backdrop -->
+  <rect width="800" height="200" fill="url(#space)"/>
+  <rect width="800" height="200" fill="url(#milky)"/>
+
+  <!-- Static starfield -->
+  <g>
+    <use href="#star" x="40" y="22"/>
+    <use href="#star" x="78" y="48"/>
+    <use href="#star" x="112" y="14"/>
+    <use href="#star" x="148" y="36"/>
+    <use href="#star" x="182" y="62"/>
+    <use href="#star" x="218" y="20"/>
+    <use href="#star" x="260" y="44"/>
+    <use href="#star" x="296" y="12"/>
+    <use href="#star" x="332" y="56"/>
+    <use href="#star" x="368" y="28"/>
+    <use href="#star" x="404" y="48"/>
+    <use href="#star" x="442" y="18"/>
+    <use href="#star" x="478" y="68"/>
+    <use href="#star" x="514" y="30"/>
+    <use href="#star" x="552" y="50"/>
+    <use href="#star" x="588" y="22"/>
+    <use href="#star" x="624" y="56"/>
+    <use href="#star" x="660" y="38"/>
+    <use href="#star" x="696" y="14"/>
+    <use href="#star" x="732" y="46"/>
+    <use href="#star" x="768" y="28"/>
+    <use href="#star" x="56" y="92"/>
+    <use href="#star" x="120" y="108"/>
+    <use href="#star" x="200" y="140"/>
+    <use href="#star" x="276" y="172"/>
+    <use href="#star" x="352" y="156"/>
+    <use href="#star" x="420" y="180"/>
+    <use href="#star" x="500" y="170"/>
+    <use href="#star" x="580" y="156"/>
+    <use href="#star" x="660" y="182"/>
+    <use href="#star" x="740" y="160"/>
+  </g>
+
+  <!-- Twinkling stars (a few brighter ones) -->
+  <g>
+    <use href="#starBig" x="92" y="30">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#starBig" x="312" y="40">
+      <animate attributeName="opacity" values="1;0.5;1" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#starBig" x="538" y="20">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#starBig" x="716" y="58">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="7s" begin="-3s" repeatCount="indefinite"/>
+    </use>
+    <use href="#starBig" x="158" y="118">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="11s" begin="-5s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- COMET — head at upper-left, tail sweeping right-and-up across the sky -->
+  <!-- The comet is moving from right to left; tails point away from the (off-frame) sun, sweeping rightward -->
+
+  <!-- Dust tail (curved, broader, warmer) -->
+  <g filter="url(#tailFx)" opacity="0.95">
+    <path d="M 110,86
+             C 220,72 340,60 460,58
+             C 580,57 680,66 790,82
+             L 790,108
+             C 680,98 560,96 440,100
+             C 320,104 220,112 110,118 Z"
+          fill="url(#dust)"/>
+  </g>
+
+  <!-- Ion tail (straighter, bluer, narrower, slightly above) -->
+  <g filter="url(#tailFx)" opacity="0.95">
+    <path d="M 112,82
+             C 240,70 380,58 520,52
+             C 640,48 730,49 798,52
+             L 798,68
+             C 720,68 620,72 500,78
+             C 360,86 240,92 112,98 Z"
+          fill="url(#ion)"/>
+  </g>
+
+  <!-- Subtle streamers within ion tail -->
+  <g opacity="0.55" stroke="#9fdcff" fill="none" stroke-width="0.6">
+    <path d="M 130,80 C 280,68 460,58 720,54"/>
+    <path d="M 140,90 C 300,80 480,72 740,68"/>
+    <path d="M 150,98 C 320,90 500,86 760,82"/>
+  </g>
+
+  <!-- Coma halo (soft outer glow) -->
+  <circle cx="108" cy="92" r="40" fill="url(#coma)" filter="url(#soften)" opacity="0.85">
+    <animate attributeName="r" values="38;44;38" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Coma inner -->
+  <circle cx="108" cy="92" r="22" fill="url(#coma)" opacity="0.95"/>
+
+  <!-- Nucleus core -->
+  <circle cx="108" cy="92" r="7" fill="url(#core)">
+    <animate attributeName="r" values="6;8.5;6" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="108" cy="92" r="2.2" fill="#ffffff"/>
+
+  <!-- Coma jets (forward jets a comet would show) -->
+  <g stroke="#cfeaff" stroke-width="0.7" fill="none" opacity="0.7">
+    <path d="M 108,92 L 80,72">
+      <animate attributeName="opacity" values="0.3;0.85;0.3" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 108,92 L 76,98">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="11s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 108,92 L 82,110">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="13s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Tiny Earth embedded *in* the tail — the historical hook -->
+  <g transform="translate(360,84)">
+    <!-- Atmosphere halo -->
+    <circle r="14" fill="url(#atmos)">
+      <animate attributeName="r" values="13;15;13" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Earth disc -->
+    <circle r="9" fill="url(#earth)"/>
+    <!-- Continents (suggestive blobs) -->
+    <g fill="#3a8a4a" opacity="0.85">
+      <path d="M -6,-3 Q -3,-5 -1,-3 Q -2,0 -5,1 Z"/>
+      <path d="M 1,2 Q 4,1 5,4 Q 3,6 0,5 Z"/>
+      <path d="M -3,4 Q -1,5 -1,7 Q -3,7 -4,5 Z"/>
+    </g>
+    <!-- Slow rotation marker: a passing terminator shimmer -->
+    <circle r="9" fill="none" stroke="#9fdcff" stroke-width="0.4" opacity="0.5"/>
+    <!-- Slow gentle bob to feel alive -->
+    <animateTransform attributeName="transform" type="translate" values="360,84; 360,82; 360,84; 360,86; 360,84" dur="23s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Earth label hairline + tick -->
+  <g stroke="#7fc0ff" stroke-width="0.5" fill="none" opacity="0.7">
+    <line x1="360" y1="100" x2="360" y2="124"/>
+    <line x1="356" y1="124" x2="364" y2="124"/>
+  </g>
+  <text x="360" y="138" text-anchor="middle" font-size="8" fill="#7fc0ff" letter-spacing="2"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    EARTH · IN THE TAIL
+  </text>
+
+  <!-- A few drifting tail particles -->
+  <g fill="#cfeaff">
+    <circle cx="0" cy="0" r="0.9" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="180,78; 800,70" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="0.7" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="220,92; 800,86" dur="17s" begin="-4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="17s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="1.0" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="160,104; 800,98" dur="19s" begin="-8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="19s" begin="-8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="0.8" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="240,66; 800,58" dur="23s" begin="-11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="23s" begin="-11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- DATE — large, integrated lower-right where the tail thins -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Soft dark backing strip -->
+    <rect x="430" y="142" width="356" height="46" rx="2" fill="#06081a" opacity="0.55"/>
+    <text x="446" y="175" font-size="38" font-weight="800" fill="#e9f4ff" letter-spacing="2">
+      MAY 19 · 2026
+    </text>
+    <text x="448" y="186" font-size="9" font-weight="600" fill="#7fc0ff" letter-spacing="2.4">
+      HALLEY'S COMET · EARTH IN THE TAIL · 116 YRS
+    </text>
+  </g>
+
+  <!-- Small "1910" tick mark near the comet head, period-style -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="74" y="160" font-size="11" fill="#9fdcff" letter-spacing="3" opacity="0.85">
+      MAY 19, 1910
+    </text>
+    <line x1="74" y1="165" x2="160" y2="165" stroke="#9fdcff" stroke-width="0.4" opacity="0.6"/>
+  </g>
+
+  <!-- Subtle outer vignette -->
+  <rect width="800" height="200" fill="none" stroke="#000" stroke-width="1" opacity="0.4"/>
+</svg>
