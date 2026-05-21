@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 21, 2026 — World Bee Day (May 20, UN observance) — honeycomb, bees, pollen, flowers, amber/gold palette
+
+<img src="./doodle-archive/2026/05/2026-05-21-070916.svg" width="800" alt="Daily doodle for May 21, 2026: World Bee Day (May 20, UN observance) — honeycomb, bees, pollen, flowers, amber/gold palette">
+
+---
+
 ## May 20, 2026 — Halley's Comet — Earth passes through the tail (May 19, 1910), 116th anniversary; great comet, ion & dust tail, starfield, Earth in the tail
 
 <img src="./doodle-archive/2026/05/2026-05-20-070432.svg" width="800" alt="Daily doodle for May 20, 2026: Halley's Comet — Earth passes through the tail (May 19, 1910), 116th anniversary; great comet, ion & dust tail, starfield, Earth in the tail">
