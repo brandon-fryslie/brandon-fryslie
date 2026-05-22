@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 22, 2026 — Lindbergh lands at Paris — 99th anniversary (May 21, 1927); Spirit of St. Louis, first solo nonstop transatlantic flight; night-to-dawn sky, stars, moon, propeller plane, Eiffel Tower, Atlantic crossing
+
+<img src="./doodle-archive/2026/05/2026-05-22-070458.svg" width="800" alt="Daily doodle for May 22, 2026: Lindbergh lands at Paris — 99th anniversary (May 21, 1927); Spirit of St. Louis, first solo nonstop transatlantic flight">
+
+---
+
 ## May 21, 2026 — World Bee Day (May 20, UN observance) — honeycomb, bees, pollen, flowers, amber/gold palette
 
 <img src="./doodle-archive/2026/05/2026-05-21-070916.svg" width="800" alt="Daily doodle for May 21, 2026: World Bee Day (May 20, UN observance) — honeycomb, bees, pollen, flowers, amber/gold palette">

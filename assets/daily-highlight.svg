@@ -1,270 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Lindbergh lands at Paris — 99th anniversary (May 21, 1927); Spirit of St. Louis, first solo nonstop transatlantic flight; night-to-dawn sky, stars, moon, propeller plane, Eiffel Tower, Atlantic crossing -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 21, 2026 — Lindbergh transatlantic flight 99th anniversary">
+<!-- theme: Pac-Man 46th anniversary (May 22, 1980 — Namco arcade release); maze, pellets, Pac-Man chomping, four ghosts (Blinky, Pinky, Inky, Clyde), high-score arcade vibe -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 22, 2026 — Pac-Man 46th anniversary">
   <defs>
-    <!-- Night-to-dawn sky: deep midnight blue at left fading to Paris dawn gold/rose on right -->
-    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"  stop-color="#0d1117"/>
-      <stop offset="25%" stop-color="#0e1a3a"/>
-      <stop offset="55%" stop-color="#2a2e58"/>
-      <stop offset="78%" stop-color="#8a5a4a"/>
-      <stop offset="92%" stop-color="#e6a565"/>
-      <stop offset="100%" stop-color="#f6d28c"/>
+    <!-- Classic Pac-Man maze blue, deepened to read on GitHub dark -->
+    <linearGradient id="mazeBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#3b5cff"/>
+      <stop offset="100%" stop-color="#1e2db8"/>
     </linearGradient>
 
-    <!-- Ocean band gradient -->
-    <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"  stop-color="#050a1a"/>
-      <stop offset="60%" stop-color="#0a1530"/>
-      <stop offset="92%" stop-color="#5c3a2e"/>
-      <stop offset="100%" stop-color="#a06840"/>
-    </linearGradient>
+    <!-- Pac-Man yellow -->
+    <radialGradient id="pacYellow" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0%"  stop-color="#fff3a3"/>
+      <stop offset="55%" stop-color="#ffd23f"/>
+      <stop offset="100%" stop-color="#e6a800"/>
+    </radialGradient>
 
-    <!-- Plane fuselage: silver/aluminium Spirit of St. Louis -->
-    <linearGradient id="fuselage" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#e8edf2"/>
-      <stop offset="55%" stop-color="#b6bdc6"/>
-      <stop offset="100%" stop-color="#6f7682"/>
-    </linearGradient>
-
-    <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#dde2e8"/>
-      <stop offset="100%" stop-color="#8b929c"/>
-    </linearGradient>
-
-    <!-- Soft glow filter -->
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="1.6"/>
+    <!-- Pellet glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2"/>
     </filter>
 
-    <!-- Strong glow for moon and sun-rim -->
-    <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4"/>
+    <!-- Soft bloom for headline -->
+    <filter id="bloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.9"/>
     </filter>
 
-    <!-- Twinkling star (small) -->
-    <symbol id="star" overflow="visible">
-      <circle r="0.9" fill="#ffffff"/>
+    <!-- Pac-Man symbol: mouth opens/closes with SMIL by animating the wedge path -->
+    <symbol id="pacman" overflow="visible">
+      <!-- Body disc (fills behind the wedge for the chomp gap) -->
+      <circle r="16" fill="url(#pacYellow)" stroke="#7a5a00" stroke-width="0.8"/>
+      <!-- Mouth wedge: cut out a triangle using a black fill matching the bg.
+           Animate the wedge points to open/close. -->
+      <polygon fill="#0d1117" stroke="none">
+        <animate attributeName="points"
+                 values="16,0 30,-12 30,12;
+                         16,0 30,-2 30,2;
+                         16,0 30,-12 30,12"
+                 dur="0.45s" repeatCount="indefinite"/>
+      </polygon>
+      <!-- Eye -->
+      <circle cx="4" cy="-8" r="1.7" fill="#1a1a1a"/>
     </symbol>
 
-    <!-- Cloud puff -->
-    <symbol id="cloud" overflow="visible">
-      <g fill="#1d2640" opacity="0.78">
-        <ellipse cx="0"  cy="0" rx="22" ry="6"/>
-        <ellipse cx="-12" cy="-3" rx="12" ry="5"/>
-        <ellipse cx="14" cy="-2" rx="14" ry="6"/>
-        <ellipse cx="4"  cy="-5" rx="10" ry="4"/>
-      </g>
+    <!-- Ghost symbol: param via separate uses with different fills via CSS-less approach.
+         We define four ghost variants below directly. -->
+
+    <!-- Ghost body template (Blinky-red default; recolored per use via fill on outer g) -->
+    <symbol id="ghost" overflow="visible">
+      <!-- Body: half-circle top + skirt with three scallops -->
+      <path d="M -13,-2
+               C -13,-12 -7,-18 0,-18
+               C 7,-18 13,-12 13,-2
+               L 13,11
+               L 9,7  L 5,11  L 0,7  L -5,11 L -9,7 L -13,11 Z"
+            fill="currentColor"/>
+      <!-- Eye whites -->
+      <circle cx="-5" cy="-6" r="3.2" fill="#ffffff"/>
+      <circle cx="5"  cy="-6" r="3.2" fill="#ffffff"/>
+      <!-- Pupils (look forward / right) -->
+      <circle cx="-3.8" cy="-5" r="1.6" fill="#1a2dff"/>
+      <circle cx="6.2" cy="-5" r="1.6" fill="#1a2dff"/>
     </symbol>
 
-    <!-- Spirit of St. Louis — high-wing monoplane silhouette, facing right -->
-    <symbol id="plane" overflow="visible">
-      <!-- Tail fin -->
-      <polygon points="-40,-2 -52,-12 -52,-2" fill="url(#fuselage)" stroke="#2a2f38" stroke-width="0.6"/>
-      <!-- Horizontal stabilizer -->
-      <ellipse cx="-42" cy="0" rx="10" ry="2" fill="url(#wing)" stroke="#2a2f38" stroke-width="0.5"/>
-      <!-- Fuselage -->
-      <path d="M -50,0 L -30,-4 L 15,-5 L 28,-3 L 32,0 L 28,3 L 15,5 L -30,4 Z"
-            fill="url(#fuselage)" stroke="#2a2f38" stroke-width="0.7"/>
-      <!-- Wing strut shadows under wing -->
-      <line x1="-8" y1="-5" x2="-8" y2="-15" stroke="#4a5260" stroke-width="0.7"/>
-      <line x1="8"  y1="-5" x2="8"  y2="-15" stroke="#4a5260" stroke-width="0.7"/>
-      <!-- High wing (large flat slab above fuselage) -->
-      <rect x="-32" y="-19" width="64" height="6" rx="2.5" fill="url(#wing)" stroke="#2a2f38" stroke-width="0.7"/>
-      <!-- Wing top highlight -->
-      <rect x="-32" y="-19" width="64" height="1.6" fill="#f4f7fa" opacity="0.6"/>
-      <!-- Cockpit window (small dark slit) -->
-      <rect x="-2" y="-3.2" width="9" height="2.4" rx="0.8" fill="#0c1018"/>
-      <!-- Registration stripe -->
-      <rect x="-22" y="0.6" width="36" height="1.2" fill="#2a2f38" opacity="0.55"/>
-      <!-- Nose / engine cowl -->
-      <path d="M 28,-3 L 33,-2.4 L 34,0 L 33,2.4 L 28,3 Z" fill="#9aa1ab" stroke="#2a2f38" stroke-width="0.5"/>
-      <!-- Propeller hub -->
-      <circle cx="35" cy="0" r="1.6" fill="#2a2f38"/>
-      <!-- Spinning propeller — translucent disc with a blade hint -->
-      <g>
-        <ellipse cx="35" cy="0" rx="1.6" ry="9" fill="#cfd6df" opacity="0.55">
-          <animateTransform attributeName="transform" type="rotate" from="0 35 0" to="360 35 0"
-                            dur="0.18s" repeatCount="indefinite"/>
-        </ellipse>
-        <ellipse cx="35" cy="0" rx="0.8" ry="9" fill="#ffffff" opacity="0.35">
-          <animateTransform attributeName="transform" type="rotate" from="60 35 0" to="420 35 0"
-                            dur="0.18s" repeatCount="indefinite"/>
-        </ellipse>
-      </g>
-      <!-- Subtle motion trail behind plane -->
-      <g opacity="0.35">
-        <line x1="-54" y1="-1" x2="-92" y2="-1" stroke="#ffffff" stroke-width="0.7" stroke-dasharray="2 3"/>
-        <line x1="-54" y1="1"  x2="-86" y2="1"  stroke="#ffffff" stroke-width="0.6" stroke-dasharray="2 4"/>
-      </g>
+    <!-- Big pellet (power pellet) -->
+    <symbol id="powerPellet" overflow="visible">
+      <circle r="5" fill="#ffd9b8">
+        <animate attributeName="opacity" values="0.25;1;0.25" dur="0.5s" repeatCount="indefinite"/>
+      </circle>
     </symbol>
-
-    <!-- Plane flight path: gently rising arc across the frame -->
-    <path id="flightPath" d="M -120,160 C 120,140 320,108 540,96 C 640,90 720,84 760,80" fill="none"/>
   </defs>
 
-  <!-- ===== SKY ===== -->
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="800" height="200" fill="#0d1117"/>
 
-  <!-- Distant sun-glow rising on right (Paris dawn) -->
-  <circle cx="720" cy="120" r="60" fill="#ffcf78" opacity="0.35" filter="url(#bloom)"/>
-  <circle cx="730" cy="118" r="28" fill="#fff0c2" opacity="0.55" filter="url(#bloom)"/>
-
-  <!-- Stars (left/center, fading toward dawn) -->
-  <g>
-    <use href="#star" x="40"  y="22"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  repeatCount="indefinite"/></use>
-    <use href="#star" x="78"  y="48"><animate attributeName="opacity" values="0.4;0.95;0.4" dur="11s" begin="-2s" repeatCount="indefinite"/></use>
-    <use href="#star" x="120" y="18"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="-3s" repeatCount="indefinite"/></use>
-    <use href="#star" x="156" y="36"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s"  begin="-1s" repeatCount="indefinite"/></use>
-    <use href="#star" x="188" y="60"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="-5s" repeatCount="indefinite"/></use>
-    <use href="#star" x="220" y="14"><animate attributeName="opacity" values="0.3;0.95;0.3" dur="13s" begin="-7s" repeatCount="indefinite"/></use>
-    <use href="#star" x="262" y="42"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  begin="-4s" repeatCount="indefinite"/></use>
-    <use href="#star" x="300" y="26"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="11s" begin="-6s" repeatCount="indefinite"/></use>
-    <use href="#star" x="340" y="54"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="-9s" repeatCount="indefinite"/></use>
-    <use href="#star" x="382" y="20"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="7s" begin="-2s" repeatCount="indefinite"/></use>
-    <use href="#star" x="430" y="40" opacity="0.7"><animate attributeName="opacity" values="0.2;0.85;0.2" dur="11s" begin="-3s" repeatCount="indefinite"/></use>
-    <use href="#star" x="476" y="58" opacity="0.55"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="13s" begin="-5s" repeatCount="indefinite"/></use>
-    <use href="#star" x="64"  y="78"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="-8s" repeatCount="indefinite"/></use>
-    <use href="#star" x="200" y="84"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s" begin="-5s" repeatCount="indefinite"/></use>
-    <use href="#star" x="354" y="76" opacity="0.7"><animate attributeName="opacity" values="0.2;0.85;0.2" dur="13s" begin="-2s" repeatCount="indefinite"/></use>
+  <!-- ===== MAZE FRAME (top + bottom rails) ===== -->
+  <g fill="none" stroke="url(#mazeBlue)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer top rail with rounded corners -->
+    <path d="M 14,14 L 786,14 M 14,14 Q 6,14 6,22 L 6,40 M 786,14 Q 794,14 794,22 L 794,40"/>
+    <!-- Inner top rail -->
+    <path d="M 22,28 L 778,28" opacity="0.55"/>
+    <!-- Outer bottom rail -->
+    <path d="M 14,186 L 786,186 M 14,186 Q 6,186 6,178 L 6,160 M 786,186 Q 794,186 794,178 L 794,160"/>
+    <path d="M 22,172 L 778,172" opacity="0.55"/>
+    <!-- Side wall tabs -->
+    <path d="M 6,80 L 6,120 M 794,80 L 794,120"/>
   </g>
 
-  <!-- Crescent moon (upper left) -->
+  <!-- Decorative maze pillars (top + bottom) -->
+  <g fill="none" stroke="url(#mazeBlue)" stroke-width="2.6" stroke-linecap="round" opacity="0.85">
+    <!-- Top pillars -->
+    <rect x="76"  y="44" width="44" height="14" rx="4"/>
+    <rect x="156" y="44" width="44" height="14" rx="4"/>
+    <rect x="236" y="44" width="44" height="14" rx="4"/>
+    <rect x="520" y="44" width="44" height="14" rx="4"/>
+    <rect x="600" y="44" width="44" height="14" rx="4"/>
+    <rect x="680" y="44" width="44" height="14" rx="4"/>
+    <!-- Bottom pillars -->
+    <rect x="76"  y="142" width="44" height="14" rx="4"/>
+    <rect x="156" y="142" width="44" height="14" rx="4"/>
+    <rect x="236" y="142" width="44" height="14" rx="4"/>
+    <rect x="520" y="142" width="44" height="14" rx="4"/>
+    <rect x="600" y="142" width="44" height="14" rx="4"/>
+    <rect x="680" y="142" width="44" height="14" rx="4"/>
+  </g>
+
+  <!-- ===== PELLET TRAIL (the dotted "path" along which Pac-Man runs) =====
+       Row Y = 108. Dots get "eaten" by fading in sequence as Pac-Man passes. -->
+  <g fill="#ffd9b8">
+    <!-- Static row of small pellets ahead of Pac-Man -->
+    <circle cx="40"  cy="108" r="2.2" opacity="0.95"/>
+    <circle cx="68"  cy="108" r="2.2"/>
+    <circle cx="96"  cy="108" r="2.2"/>
+    <circle cx="124" cy="108" r="2.2"/>
+    <circle cx="152" cy="108" r="2.2"/>
+    <circle cx="180" cy="108" r="2.2"/>
+    <circle cx="208" cy="108" r="2.2"/>
+    <circle cx="236" cy="108" r="2.2"/>
+    <!-- Gap where the central date plate sits (236 .. 564) -->
+    <circle cx="572" cy="108" r="2.2"/>
+    <circle cx="600" cy="108" r="2.2"/>
+    <circle cx="628" cy="108" r="2.2"/>
+    <circle cx="656" cy="108" r="2.2"/>
+    <circle cx="684" cy="108" r="2.2"/>
+    <circle cx="712" cy="108" r="2.2"/>
+    <circle cx="740" cy="108" r="2.2"/>
+    <circle cx="764" cy="108" r="2.2"/>
+  </g>
+
+  <!-- Power pellets at the ends -->
   <g>
-    <circle cx="78" cy="42" r="22" fill="#fff4cc" opacity="0.25" filter="url(#bloom)"/>
-    <circle cx="78" cy="42" r="14" fill="#fffbe5"/>
-    <circle cx="84" cy="38" r="13" fill="#0e1a3a"/>
-    <!-- subtle slow glow pulse -->
-    <circle cx="78" cy="42" r="14" fill="#fffbe5" opacity="0.35">
-      <animate attributeName="opacity" values="0.15;0.4;0.15" dur="13s" repeatCount="indefinite"/>
+    <use href="#powerPellet" x="22" y="108"/>
+    <use href="#powerPellet" x="780" y="108"/>
+  </g>
+
+  <!-- Pellets being chomped: a "wave" of fading dots moving across to suggest eating motion -->
+  <g fill="#ffd9b8" opacity="0.9">
+    <circle cx="280" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.2;0.22;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="312" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.28;0.30;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="344" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.36;0.38;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="378" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.44;0.46;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="412" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.52;0.54;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="446" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.60;0.62;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.68;0.70;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="514" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.76;0.78;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="548" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.84;0.86;0.95;1" dur="11s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Drifting clouds (slow parallax) -->
-  <g>
-    <use href="#cloud" x="0" y="0">
-      <animateTransform attributeName="transform" type="translate"
-                        values="-60,150; 880,150" dur="61s" repeatCount="indefinite"/>
-    </use>
-    <use href="#cloud" x="0" y="0" opacity="0.7">
-      <animateTransform attributeName="transform" type="translate"
-                        values="-80,168; 880,168" dur="83s" begin="-20s" repeatCount="indefinite"/>
-    </use>
-    <use href="#cloud" x="0" y="0" opacity="0.55">
-      <animateTransform attributeName="transform" type="translate"
-                        values="-60,138; 880,138" dur="97s" begin="-44s" repeatCount="indefinite"/>
-    </use>
-  </g>
-
-  <!-- ===== EIFFEL TOWER silhouette (right side, Paris) ===== -->
-  <g transform="translate(688,0)" opacity="0.92">
-    <!-- Tower (stylized) -->
-    <g fill="#1b1d28" stroke="#3a3a48" stroke-width="0.5">
-      <!-- Legs/base curves -->
-      <path d="M -28,180 L -10,120 L -6,120 L -8,180 Z"/>
-      <path d="M 28,180 L 10,120 L 6,120 L 8,180 Z"/>
-      <!-- Second tier -->
-      <path d="M -10,120 L 10,120 L 8,108 L -8,108 Z"/>
-      <!-- Lattice middle -->
-      <path d="M -8,108 L 8,108 L 6,72 L -6,72 Z"/>
-      <!-- Second platform -->
-      <path d="M -9,72 L 9,72 L 7,66 L -7,66 Z"/>
-      <!-- Upper spire -->
-      <path d="M -5,66 L 5,66 L 3,40 L -3,40 Z"/>
-      <!-- Antenna tip -->
-      <path d="M -1.4,40 L 1.4,40 L 0.9,22 L -0.9,22 Z"/>
-      <line x1="0" y1="22" x2="0" y2="12" stroke="#3a3a48" stroke-width="1"/>
-    </g>
-    <!-- Cross-bracing lines for lattice feel -->
-    <g stroke="#3a3a48" stroke-width="0.4" fill="none" opacity="0.85">
-      <line x1="-8" y1="180" x2="8" y2="120"/>
-      <line x1="8"  y1="180" x2="-8" y2="120"/>
-      <line x1="-7" y1="108" x2="7" y2="72"/>
-      <line x1="7"  y1="108" x2="-7" y2="72"/>
-    </g>
-    <!-- Tip beacon -->
-    <circle cx="0" cy="12" r="1.6" fill="#ffd56a">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- ===== OCEAN at bottom ===== -->
-  <rect x="0" y="172" width="800" height="28" fill="url(#ocean)"/>
-  <!-- Ocean wave glints -->
-  <g stroke="#7a93b8" stroke-width="0.7" fill="none" opacity="0.55">
-    <path d="M 0,178 Q 20,176 40,178 T 80,178 T 120,178 T 160,178 T 200,178 T 240,178 T 280,178 T 320,178 T 360,178 T 400,178"/>
-    <path d="M 0,186 Q 24,184 48,186 T 96,186 T 144,186 T 192,186 T 240,186 T 288,186 T 336,186 T 384,186"/>
-    <path d="M 420,178 Q 440,176 460,178 T 500,178 T 540,178" stroke="#caa078"/>
-    <path d="M 420,186 Q 444,184 468,186 T 516,186 T 564,186" stroke="#caa078"/>
-  </g>
-  <!-- Dawn shimmer on ocean (right side) -->
-  <g opacity="0.7">
-    <path d="M 600,182 Q 620,180 640,182 T 680,182 T 720,182 T 760,182 T 800,182" stroke="#ffd28a" stroke-width="0.9" fill="none">
-      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 600,190 Q 624,188 648,190 T 696,190 T 744,190 T 792,190" stroke="#ffb56a" stroke-width="0.7" fill="none">
-      <animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" begin="-2s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- ===== PLANE flying along path ===== -->
-  <g>
-    <use href="#plane">
-      <animateMotion dur="29s" repeatCount="indefinite" rotate="auto">
-        <mpath href="#flightPath"/>
-      </animateMotion>
-      <!-- Gentle vertical bobbing for "flight" feel -->
-      <animateTransform attributeName="transform" type="translate"
-                        values="0,0; 0,-1.2; 0,0; 0,1.2; 0,0" dur="7s" repeatCount="indefinite" additive="sum"/>
-    </use>
-  </g>
-
-  <!-- ===== CENTER DATE PLATE ===== -->
+  <!-- ===== CENTER DATE PLATE (arcade marquee) ===== -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <!-- Boarding-pass / cockpit plate -->
-    <rect x="190" y="62" width="420" height="76" rx="6"
-          fill="#0a1018" opacity="0.86" stroke="#d9b266" stroke-width="1.4"/>
-    <!-- Inner thin frame -->
-    <rect x="196" y="68" width="408" height="64" rx="4"
-          fill="none" stroke="#7a5a2a" stroke-width="0.6" opacity="0.9"/>
-    <!-- Compass rose accent left -->
-    <g transform="translate(216,100)" stroke="#d9b266" stroke-width="0.9" fill="none" opacity="0.9">
-      <circle r="10"/>
-      <line x1="0" y1="-10" x2="0" y2="10"/>
-      <line x1="-10" y1="0" x2="10" y2="0"/>
-      <polygon points="0,-10 2,-3 0,-1 -2,-3" fill="#ffd683" stroke="none"/>
-      <text x="0" y="-12" text-anchor="middle" font-size="6" fill="#d9b266" stroke="none">N</text>
+    <!-- Marquee plate -->
+    <rect x="240" y="60" width="320" height="80" rx="8"
+          fill="#0a0e18" opacity="0.92"
+          stroke="#3b5cff" stroke-width="2"/>
+    <!-- Inner glow frame -->
+    <rect x="246" y="66" width="308" height="68" rx="6"
+          fill="none" stroke="#ffd23f" stroke-width="0.7" opacity="0.9"/>
+
+    <!-- Tiny side dots like score board indicator -->
+    <g fill="#ffd23f">
+      <circle cx="258" cy="100" r="1.6"/>
+      <circle cx="266" cy="100" r="1.6"/>
+      <circle cx="274" cy="100" r="1.6"/>
+      <circle cx="534" cy="100" r="1.6"/>
+      <circle cx="542" cy="100" r="1.6"/>
+      <circle cx="526" cy="100" r="1.6"/>
     </g>
-    <!-- Wing badge accent right -->
-    <g transform="translate(584,100)" fill="#d9b266" opacity="0.9">
-      <path d="M -12,0 Q -6,-3 0,-2 Q 6,-3 12,0 Q 6,2 0,2 Q -6,2 -12,0 Z"/>
-      <circle r="2" fill="#0a1018" stroke="#d9b266" stroke-width="0.8"/>
-    </g>
+
+    <!-- HIGH SCORE label above headline -->
+    <text x="400" y="82" text-anchor="middle"
+          font-size="9" font-weight="700" letter-spacing="6"
+          fill="#ff5a5a">HIGH SCORE · 1UP</text>
 
     <!-- Headline date -->
-    <text x="400" y="100" text-anchor="middle"
-          font-size="34" font-weight="800" fill="#ffe7a8" letter-spacing="3">
-      MAY 21 · 2026
+    <text x="400" y="112" text-anchor="middle"
+          font-size="32" font-weight="800" fill="#ffd23f" letter-spacing="4"
+          filter="url(#bloom)">
+      MAY 22 · 2026
     </text>
+
     <!-- Subline -->
-    <text x="400" y="122" text-anchor="middle"
-          font-size="10.5" font-weight="700" fill="#d9b266" letter-spacing="5">
-      LINDBERGH AT PARIS · 99 YEARS
+    <text x="400" y="130" text-anchor="middle"
+          font-size="9" font-weight="700" fill="#ffaaff" letter-spacing="5">
+      PAC-MAN · 46 YEARS
     </text>
   </g>
 
-  <!-- Subtle blinking nav light cue (radio dot near plate corner) -->
-  <circle cx="604" cy="68" r="1.8" fill="#ff5a5a">
-    <animate attributeName="opacity" values="0.2;1;0.2" dur="1.7s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="196" cy="132" r="1.8" fill="#5affa8">
-    <animate attributeName="opacity" values="0.2;1;0.2" dur="2.1s" repeatCount="indefinite"/>
-  </circle>
+  <!-- ===== PAC-MAN moving along the pellet row ===== -->
+  <g>
+    <use href="#pacman" x="0" y="0">
+      <!-- Travel: enter from left, pass through, exit right. Pause-snap timing aligns
+           with the fading dot wave above (also 11s). -->
+      <animateTransform attributeName="transform" type="translate"
+                        values="-30,108; 836,108"
+                        keyTimes="0;1"
+                        dur="11s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ===== GHOSTS in pursuit ===== -->
+  <!-- All four ghosts ride along with Pac-Man, staggered behind. Each has its own bob. -->
+  <g>
+    <!-- Blinky (red) -->
+    <g color="#ff2d2d">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-90,108; 776,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,-2; 0,0; 0,2; 0,0"
+                          dur="0.7s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <!-- Pinky (pink) -->
+    <g color="#ffb8de">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-126,108; 740,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,2; 0,0; 0,-2; 0,0"
+                          dur="0.7s" begin="-0.2s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <!-- Inky (cyan) -->
+    <g color="#4ad9ff">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-162,108; 704,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,-2; 0,0; 0,2; 0,0"
+                          dur="0.7s" begin="-0.35s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <!-- Clyde (orange) -->
+    <g color="#ffaa3a">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-198,108; 668,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,2; 0,0; 0,-2; 0,0"
+                          dur="0.7s" begin="-0.5s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+  </g>
+
+  <!-- Corner arcade flourish: cherry icon bottom-left -->
+  <g transform="translate(36,170)">
+    <path d="M -4,-12 Q 4,-18 12,-14" stroke="#3aff7a" stroke-width="1.6" fill="none"/>
+    <circle cx="-4" cy="-4" r="5" fill="#ff2d2d" stroke="#7a0000" stroke-width="0.7"/>
+    <circle cx="6"  cy="-2" r="5" fill="#ff2d2d" stroke="#7a0000" stroke-width="0.7"/>
+    <circle cx="-5.6" cy="-5.6" r="1.4" fill="#ffd9c4"/>
+  </g>
 
   <!-- Footer mark -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="400" y="160" text-anchor="middle" font-size="8" fill="#9c8556" letter-spacing="4" opacity="0.95">
-      SPIRIT OF ST. LOUIS · NEW YORK → PARIS · MAY 20–21, 1927
+    <text x="400" y="184" text-anchor="middle" font-size="7" fill="#7a8bc4" letter-spacing="4" opacity="0.95">
+      NAMCO · MAY 22, 1980 · WAKA WAKA WAKA
     </text>
   </g>
 </svg>
