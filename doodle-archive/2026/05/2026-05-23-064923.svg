@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Pac-Man 46th anniversary (May 22, 1980 — Namco arcade release); maze, pellets, Pac-Man chomping, four ghosts (Blinky, Pinky, Inky, Clyde), high-score arcade vibe -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 22, 2026 — Pac-Man 46th anniversary">
+  <defs>
+    <!-- Classic Pac-Man maze blue, deepened to read on GitHub dark -->
+    <linearGradient id="mazeBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#3b5cff"/>
+      <stop offset="100%" stop-color="#1e2db8"/>
+    </linearGradient>
+
+    <!-- Pac-Man yellow -->
+    <radialGradient id="pacYellow" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0%"  stop-color="#fff3a3"/>
+      <stop offset="55%" stop-color="#ffd23f"/>
+      <stop offset="100%" stop-color="#e6a800"/>
+    </radialGradient>
+
+    <!-- Pellet glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+
+    <!-- Soft bloom for headline -->
+    <filter id="bloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.9"/>
+    </filter>
+
+    <!-- Pac-Man symbol: mouth opens/closes with SMIL by animating the wedge path -->
+    <symbol id="pacman" overflow="visible">
+      <!-- Body disc (fills behind the wedge for the chomp gap) -->
+      <circle r="16" fill="url(#pacYellow)" stroke="#7a5a00" stroke-width="0.8"/>
+      <!-- Mouth wedge: cut out a triangle using a black fill matching the bg.
+           Animate the wedge points to open/close. -->
+      <polygon fill="#0d1117" stroke="none">
+        <animate attributeName="points"
+                 values="16,0 30,-12 30,12;
+                         16,0 30,-2 30,2;
+                         16,0 30,-12 30,12"
+                 dur="0.45s" repeatCount="indefinite"/>
+      </polygon>
+      <!-- Eye -->
+      <circle cx="4" cy="-8" r="1.7" fill="#1a1a1a"/>
+    </symbol>
+
+    <!-- Ghost symbol: param via separate uses with different fills via CSS-less approach.
+         We define four ghost variants below directly. -->
+
+    <!-- Ghost body template (Blinky-red default; recolored per use via fill on outer g) -->
+    <symbol id="ghost" overflow="visible">
+      <!-- Body: half-circle top + skirt with three scallops -->
+      <path d="M -13,-2
+               C -13,-12 -7,-18 0,-18
+               C 7,-18 13,-12 13,-2
+               L 13,11
+               L 9,7  L 5,11  L 0,7  L -5,11 L -9,7 L -13,11 Z"
+            fill="currentColor"/>
+      <!-- Eye whites -->
+      <circle cx="-5" cy="-6" r="3.2" fill="#ffffff"/>
+      <circle cx="5"  cy="-6" r="3.2" fill="#ffffff"/>
+      <!-- Pupils (look forward / right) -->
+      <circle cx="-3.8" cy="-5" r="1.6" fill="#1a2dff"/>
+      <circle cx="6.2" cy="-5" r="1.6" fill="#1a2dff"/>
+    </symbol>
+
+    <!-- Big pellet (power pellet) -->
+    <symbol id="powerPellet" overflow="visible">
+      <circle r="5" fill="#ffd9b8">
+        <animate attributeName="opacity" values="0.25;1;0.25" dur="0.5s" repeatCount="indefinite"/>
+      </circle>
+    </symbol>
+  </defs>
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="800" height="200" fill="#0d1117"/>
+
+  <!-- ===== MAZE FRAME (top + bottom rails) ===== -->
+  <g fill="none" stroke="url(#mazeBlue)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer top rail with rounded corners -->
+    <path d="M 14,14 L 786,14 M 14,14 Q 6,14 6,22 L 6,40 M 786,14 Q 794,14 794,22 L 794,40"/>
+    <!-- Inner top rail -->
+    <path d="M 22,28 L 778,28" opacity="0.55"/>
+    <!-- Outer bottom rail -->
+    <path d="M 14,186 L 786,186 M 14,186 Q 6,186 6,178 L 6,160 M 786,186 Q 794,186 794,178 L 794,160"/>
+    <path d="M 22,172 L 778,172" opacity="0.55"/>
+    <!-- Side wall tabs -->
+    <path d="M 6,80 L 6,120 M 794,80 L 794,120"/>
+  </g>
+
+  <!-- Decorative maze pillars (top + bottom) -->
+  <g fill="none" stroke="url(#mazeBlue)" stroke-width="2.6" stroke-linecap="round" opacity="0.85">
+    <!-- Top pillars -->
+    <rect x="76"  y="44" width="44" height="14" rx="4"/>
+    <rect x="156" y="44" width="44" height="14" rx="4"/>
+    <rect x="236" y="44" width="44" height="14" rx="4"/>
+    <rect x="520" y="44" width="44" height="14" rx="4"/>
+    <rect x="600" y="44" width="44" height="14" rx="4"/>
+    <rect x="680" y="44" width="44" height="14" rx="4"/>
+    <!-- Bottom pillars -->
+    <rect x="76"  y="142" width="44" height="14" rx="4"/>
+    <rect x="156" y="142" width="44" height="14" rx="4"/>
+    <rect x="236" y="142" width="44" height="14" rx="4"/>
+    <rect x="520" y="142" width="44" height="14" rx="4"/>
+    <rect x="600" y="142" width="44" height="14" rx="4"/>
+    <rect x="680" y="142" width="44" height="14" rx="4"/>
+  </g>
+
+  <!-- ===== PELLET TRAIL (the dotted "path" along which Pac-Man runs) =====
+       Row Y = 108. Dots get "eaten" by fading in sequence as Pac-Man passes. -->
+  <g fill="#ffd9b8">
+    <!-- Static row of small pellets ahead of Pac-Man -->
+    <circle cx="40"  cy="108" r="2.2" opacity="0.95"/>
+    <circle cx="68"  cy="108" r="2.2"/>
+    <circle cx="96"  cy="108" r="2.2"/>
+    <circle cx="124" cy="108" r="2.2"/>
+    <circle cx="152" cy="108" r="2.2"/>
+    <circle cx="180" cy="108" r="2.2"/>
+    <circle cx="208" cy="108" r="2.2"/>
+    <circle cx="236" cy="108" r="2.2"/>
+    <!-- Gap where the central date plate sits (236 .. 564) -->
+    <circle cx="572" cy="108" r="2.2"/>
+    <circle cx="600" cy="108" r="2.2"/>
+    <circle cx="628" cy="108" r="2.2"/>
+    <circle cx="656" cy="108" r="2.2"/>
+    <circle cx="684" cy="108" r="2.2"/>
+    <circle cx="712" cy="108" r="2.2"/>
+    <circle cx="740" cy="108" r="2.2"/>
+    <circle cx="764" cy="108" r="2.2"/>
+  </g>
+
+  <!-- Power pellets at the ends -->
+  <g>
+    <use href="#powerPellet" x="22" y="108"/>
+    <use href="#powerPellet" x="780" y="108"/>
+  </g>
+
+  <!-- Pellets being chomped: a "wave" of fading dots moving across to suggest eating motion -->
+  <g fill="#ffd9b8" opacity="0.9">
+    <circle cx="280" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.2;0.22;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="312" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.28;0.30;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="344" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.36;0.38;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="378" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.44;0.46;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="412" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.52;0.54;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="446" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.60;0.62;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.68;0.70;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="514" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.76;0.78;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="548" cy="108" r="2.2">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.84;0.86;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ===== CENTER DATE PLATE (arcade marquee) ===== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Marquee plate -->
+    <rect x="240" y="60" width="320" height="80" rx="8"
+          fill="#0a0e18" opacity="0.92"
+          stroke="#3b5cff" stroke-width="2"/>
+    <!-- Inner glow frame -->
+    <rect x="246" y="66" width="308" height="68" rx="6"
+          fill="none" stroke="#ffd23f" stroke-width="0.7" opacity="0.9"/>
+
+    <!-- Tiny side dots like score board indicator -->
+    <g fill="#ffd23f">
+      <circle cx="258" cy="100" r="1.6"/>
+      <circle cx="266" cy="100" r="1.6"/>
+      <circle cx="274" cy="100" r="1.6"/>
+      <circle cx="534" cy="100" r="1.6"/>
+      <circle cx="542" cy="100" r="1.6"/>
+      <circle cx="526" cy="100" r="1.6"/>
+    </g>
+
+    <!-- HIGH SCORE label above headline -->
+    <text x="400" y="82" text-anchor="middle"
+          font-size="9" font-weight="700" letter-spacing="6"
+          fill="#ff5a5a">HIGH SCORE · 1UP</text>
+
+    <!-- Headline date -->
+    <text x="400" y="112" text-anchor="middle"
+          font-size="32" font-weight="800" fill="#ffd23f" letter-spacing="4"
+          filter="url(#bloom)">
+      MAY 22 · 2026
+    </text>
+
+    <!-- Subline -->
+    <text x="400" y="130" text-anchor="middle"
+          font-size="9" font-weight="700" fill="#ffaaff" letter-spacing="5">
+      PAC-MAN · 46 YEARS
+    </text>
+  </g>
+
+  <!-- ===== PAC-MAN moving along the pellet row ===== -->
+  <g>
+    <use href="#pacman" x="0" y="0">
+      <!-- Travel: enter from left, pass through, exit right. Pause-snap timing aligns
+           with the fading dot wave above (also 11s). -->
+      <animateTransform attributeName="transform" type="translate"
+                        values="-30,108; 836,108"
+                        keyTimes="0;1"
+                        dur="11s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ===== GHOSTS in pursuit ===== -->
+  <!-- All four ghosts ride along with Pac-Man, staggered behind. Each has its own bob. -->
+  <g>
+    <!-- Blinky (red) -->
+    <g color="#ff2d2d">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-90,108; 776,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,-2; 0,0; 0,2; 0,0"
+                          dur="0.7s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <!-- Pinky (pink) -->
+    <g color="#ffb8de">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-126,108; 740,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,2; 0,0; 0,-2; 0,0"
+                          dur="0.7s" begin="-0.2s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <!-- Inky (cyan) -->
+    <g color="#4ad9ff">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-162,108; 704,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,-2; 0,0; 0,2; 0,0"
+                          dur="0.7s" begin="-0.35s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <!-- Clyde (orange) -->
+    <g color="#ffaa3a">
+      <use href="#ghost" x="0" y="0">
+        <animateTransform attributeName="transform" type="translate"
+                          values="-198,108; 668,108"
+                          keyTimes="0;1"
+                          dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,2; 0,0; 0,-2; 0,0"
+                          dur="0.7s" begin="-0.5s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+  </g>
+
+  <!-- Corner arcade flourish: cherry icon bottom-left -->
+  <g transform="translate(36,170)">
+    <path d="M -4,-12 Q 4,-18 12,-14" stroke="#3aff7a" stroke-width="1.6" fill="none"/>
+    <circle cx="-4" cy="-4" r="5" fill="#ff2d2d" stroke="#7a0000" stroke-width="0.7"/>
+    <circle cx="6"  cy="-2" r="5" fill="#ff2d2d" stroke="#7a0000" stroke-width="0.7"/>
+    <circle cx="-5.6" cy="-5.6" r="1.4" fill="#ffd9c4"/>
+  </g>
+
+  <!-- Footer mark -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="400" y="184" text-anchor="middle" font-size="7" fill="#7a8bc4" letter-spacing="4" opacity="0.95">
+      NAMCO · MAY 22, 1980 · WAKA WAKA WAKA
+    </text>
+  </g>
+</svg>
