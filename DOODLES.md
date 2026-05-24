@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 24, 2026 — Java programming language 31st anniversary (May 23, 1995 — Sun Microsystems announced Java at SunWorld); steaming coffee cup, Duke-orange palette, JVM code drift, Write once run anywhere
+
+<img src="./doodle-archive/2026/05/2026-05-24-070031.svg" width="800" alt="Daily doodle for May 24, 2026: Java programming language 31st anniversary (May 23, 1995 — Sun Microsystems announced Java at SunWorld); steaming coffee cup, Duke-orange palette, JVM code drift, Write once run anywhere">
+
+---
+
 ## May 23, 2026 — Pac-Man 46th anniversary (May 22, 1980 — Namco arcade release); maze, pellets, Pac-Man chomping, four ghosts (Blinky, Pinky, Inky, Clyde), high-score arcade vibe
 
 <img src="./doodle-archive/2026/05/2026-05-23-064923.svg" width="800" alt="Daily doodle for May 23, 2026: Pac-Man 46th anniversary (May 22, 1980 — Namco arcade release); maze, pellets, Pac-Man chomping, four ghosts (Blinky, Pinky, Inky, Clyde), high-score arcade vibe">
