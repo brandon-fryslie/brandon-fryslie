@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 25, 2026 — First Morse telegraph message 182nd anniversary (May 24, 1844 — "WHAT HATH GOD WROUGHT" sent Washington to Baltimore); brass telegraph key, sparking signal, dot-dash code waves, sepia paper
+
+<img src="./doodle-archive/2026/05/2026-05-25-072352.svg" width="800" alt="Daily doodle for May 25, 2026: First Morse telegraph message 182nd anniversary (May 24, 1844 — 'WHAT HATH GOD WROUGHT' sent Washington to Baltimore); brass telegraph key, sparking signal, dot-dash code waves, sepia paper">
+
+---
+
 ## May 24, 2026 — Java programming language 31st anniversary (May 23, 1995 — Sun Microsystems announced Java at SunWorld); steaming coffee cup, Duke-orange palette, JVM code drift, Write once run anywhere
 
 <img src="./doodle-archive/2026/05/2026-05-24-070031.svg" width="800" alt="Daily doodle for May 24, 2026: Java programming language 31st anniversary (May 23, 1995 — Sun Microsystems announced Java at SunWorld); steaming coffee cup, Duke-orange palette, JVM code drift, Write once run anywhere">
