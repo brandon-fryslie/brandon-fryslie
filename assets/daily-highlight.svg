@@ -1,387 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Memorial Day (US, last Monday of May = May 25, 2026); field of red poppies, waving flag, eternal flame, dignified typography, In Honor of Those Who Served -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 25, 2026 — Memorial Day">
+<!-- theme: Dow Jones Industrial Average 130th anniversary (May 26, 1896 — Charles Dow first publishes the index of 12 industrial stocks at 40.94); ticker tape, candlestick chart, bull silhouette, gilded financial broadsheet typography -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 26, 2026 — Dow Jones 130th anniversary">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.45" stop-color="#10183a"/>
-      <stop offset="1" stop-color="#1a1410"/>
+      <stop offset="0.5" stop-color="#10160f"/>
+      <stop offset="1" stop-color="#0a0d08"/>
     </linearGradient>
 
-    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="goldText" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff2b8"/>
+      <stop offset="0.5" stop-color="#e4c75a"/>
+      <stop offset="1" stop-color="#8a6a1c"/>
+    </linearGradient>
+
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0e3c0"/>
+      <stop offset="1" stop-color="#c9b986"/>
+    </linearGradient>
+
+    <linearGradient id="paperEdge" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#0d1117" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#0a0a06" stop-opacity="0.7"/>
-      <stop offset="1" stop-color="#050402"/>
+      <stop offset="0.06" stop-color="#0d1117" stop-opacity="0.85"/>
+      <stop offset="0.94" stop-color="#0d1117" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
 
-    <radialGradient id="petal" cx="0.5" cy="0.45" r="0.55">
-      <stop offset="0" stop-color="#ff6f4a"/>
-      <stop offset="0.55" stop-color="#d62f2f"/>
-      <stop offset="1" stop-color="#6a0e0e"/>
-    </radialGradient>
-
-    <radialGradient id="petalGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffb088" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#ffb088" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="flame" cx="0.5" cy="0.55" r="0.5">
-      <stop offset="0" stop-color="#fff6c0"/>
-      <stop offset="0.35" stop-color="#ffce5a"/>
-      <stop offset="0.7" stop-color="#ff7028" stop-opacity="0.85"/>
-      <stop offset="1" stop-color="#ff3030" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="flameInner" cx="0.5" cy="0.55" r="0.45">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.4" stop-color="#fff080"/>
-      <stop offset="1" stop-color="#ffae3a" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="goldStar" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#fff6c0"/>
-      <stop offset="0.45" stop-color="#ffd860"/>
-      <stop offset="1" stop-color="#b6831a"/>
-    </radialGradient>
-
-    <linearGradient id="flagStripe" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#c1272d"/>
-      <stop offset="1" stop-color="#7a1418"/>
+    <linearGradient id="upCandle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4ee08a"/>
+      <stop offset="1" stop-color="#1b7a3e"/>
     </linearGradient>
 
-    <linearGradient id="flagWhite" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#f1ebd9"/>
-      <stop offset="1" stop-color="#b3a98c"/>
+    <linearGradient id="downCandle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7a72"/>
+      <stop offset="1" stop-color="#9a2a22"/>
     </linearGradient>
 
-    <linearGradient id="flagBlue" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#1a2a6c"/>
-      <stop offset="1" stop-color="#0a1340"/>
+    <linearGradient id="bullGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9c45a"/>
+      <stop offset="1" stop-color="#7a5a18"/>
     </linearGradient>
+
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe98a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffe98a" stop-opacity="0"/>
+    </radialGradient>
 
     <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="1.2"/>
+      <feGaussianBlur stdDeviation="0.6"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
     <filter id="bigGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3"/>
+      <feGaussianBlur stdDeviation="2.4"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <filter id="flameBlur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.8"/>
+    <filter id="paperGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.2  0 0 0 0 0.15  0 0 0 0 0.05  0 0 0 0.18 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode/></feMerge>
     </filter>
 
-    <!-- single poppy used by <use> -->
-    <g id="poppy">
-      <!-- petals (4 overlapping) -->
-      <ellipse cx="0" cy="-6" rx="9" ry="10" fill="url(#petal)" opacity="0.95"/>
-      <ellipse cx="-7" cy="0" rx="9" ry="10" fill="url(#petal)" opacity="0.92"/>
-      <ellipse cx="7" cy="0" rx="9" ry="10" fill="url(#petal)" opacity="0.92"/>
-      <ellipse cx="0" cy="3" rx="10" ry="9" fill="url(#petal)" opacity="0.95"/>
-      <!-- subtle bloom glow -->
-      <circle cx="0" cy="-1" r="13" fill="url(#petalGlow)"/>
-      <!-- dark center -->
-      <circle cx="0" cy="-1" r="3.2" fill="#1a0606"/>
-      <circle cx="0" cy="-1" r="2" fill="#050202"/>
-      <!-- tiny stamen dots -->
-      <circle cx="-1.3" cy="-2.4" r="0.5" fill="#ffd86a"/>
-      <circle cx="1.4" cy="-1.6" r="0.5" fill="#ffd86a"/>
-      <circle cx="0" cy="0.4" r="0.5" fill="#ffd86a"/>
+    <!-- repeating ticker tape glyph group -->
+    <g id="tickerRow">
+      <text x="0" y="0" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="700" fill="#e4c75a" letter-spacing="1">
+        DJI 40.94 +0.00  ▲ GE 108  ▲ AT&amp;T 12¾  ▼ USX 28½  ▲ DIS 174  ▼ XOM 96⅛  ▲ MSFT 472  ▲ NKE 88¾  ▼ JPM 217  ▲ KO 67⅝  ▼ HD 392  ▲ MCD 312⅜  ▲ IBM 244½  ▼ BA 198⅛  ▲ CAT 366  ▼ PG 168¾  ▲ DJI 40.94 +0.00
+      </text>
     </g>
 
-    <!-- a small white twinkle star -->
-    <g id="twinkle">
-      <circle r="0.9" fill="#ffffff"/>
-    </g>
+    <clipPath id="paperClip">
+      <rect x="20" y="36" width="760" height="128" rx="3"/>
+    </clipPath>
   </defs>
 
-  <!-- SKY -->
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- BACKGROUND -->
+  <rect width="800" height="200" fill="url(#bg)"/>
 
-  <!-- Faint horizontal stripes echo (very subtle flag-stripe texture across whole canvas) -->
-  <g opacity="0.06">
-    <rect x="0" y="0" width="800" height="14" fill="#c1272d"/>
-    <rect x="0" y="28" width="800" height="14" fill="#c1272d"/>
-    <rect x="0" y="56" width="800" height="14" fill="#c1272d"/>
-    <rect x="0" y="84" width="800" height="14" fill="#c1272d"/>
-    <rect x="0" y="112" width="800" height="14" fill="#c1272d"/>
-    <rect x="0" y="140" width="800" height="14" fill="#c1272d"/>
+  <!-- subtle grid like ledger paper -->
+  <g opacity="0.06" stroke="#a89a6a" stroke-width="0.4">
+    <path d="M0,20 H800 M0,40 H800 M0,60 H800 M0,80 H800 M0,100 H800 M0,120 H800 M0,140 H800 M0,160 H800 M0,180 H800"/>
+    <path d="M40,0 V200 M80,0 V200 M120,0 V200 M160,0 V200 M200,0 V200 M240,0 V200 M280,0 V200 M320,0 V200 M360,0 V200 M400,0 V200 M440,0 V200 M480,0 V200 M520,0 V200 M560,0 V200 M600,0 V200 M640,0 V200 M680,0 V200 M720,0 V200 M760,0 V200"/>
   </g>
 
-  <!-- STARS -->
+  <!-- TICKER TAPE TOP — scrolling -->
   <g>
-    <g><use href="#twinkle" x="40" y="22"/><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="92" y="14"/><animate attributeName="opacity" values="1;0.4;1" dur="11s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="138" y="40"/><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="182" y="22"/><animate attributeName="opacity" values="0.8;0.2;0.8" dur="7s" begin="1s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="226" y="46"/><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="2s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="278" y="16"/><animate attributeName="opacity" values="1;0.5;1" dur="13s" begin="3s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="322" y="34"/><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="2s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="372" y="18"/><animate attributeName="opacity" values="0.6;1;0.6" dur="11s" begin="4s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="418" y="42"/><animate attributeName="opacity" values="1;0.3;1" dur="13s" begin="1s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="468" y="22"/><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="3s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="512" y="36"/><animate attributeName="opacity" values="0.7;1;0.7" dur="11s" begin="5s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="568" y="16"/><animate attributeName="opacity" values="1;0.4;1" dur="13s" begin="2s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="612" y="44"/><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="1.5s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="666" y="20"/><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="3.5s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="712" y="38"/><animate attributeName="opacity" values="0.8;0.3;0.8" dur="13s" begin="4s" repeatCount="indefinite"/></g>
-    <g><use href="#twinkle" x="758" y="24"/><animate attributeName="opacity" values="0.6;1;0.6" dur="7s" begin="2.5s" repeatCount="indefinite"/></g>
-  </g>
-
-  <!-- WAVING FLAG (left) -->
-  <g transform="translate(40, 60)">
-    <!-- pole -->
-    <rect x="0" y="0" width="2" height="125" fill="#8a8a8a"/>
-    <circle cx="1" cy="-2" r="3" fill="#d8c878"/>
-    <!-- flag, with smooth waving via clipping/skew -->
-    <g>
+    <rect x="0" y="6" width="800" height="22" fill="#1a1306" stroke="#5a4818" stroke-width="0.5"/>
+    <g clip-path="url(#tickerTopClip)">
       <g>
-        <!-- stripes 7 red + 6 white = 13 total; height 56, each ~4.3 -->
-        <path d="M 2,2 Q 30,0 58,4 Q 86,8 114,4 L 114,8 Q 86,12 58,8 Q 30,4 2,6 Z" fill="url(#flagStripe)"/>
-        <path d="M 2,8 Q 30,6 58,10 Q 86,14 114,10 L 114,14 Q 86,18 58,14 Q 30,10 2,12 Z" fill="url(#flagWhite)"/>
-        <path d="M 2,14 Q 30,12 58,16 Q 86,20 114,16 L 114,20 Q 86,24 58,20 Q 30,16 2,18 Z" fill="url(#flagStripe)"/>
-        <path d="M 2,20 Q 30,18 58,22 Q 86,26 114,22 L 114,26 Q 86,30 58,26 Q 30,22 2,24 Z" fill="url(#flagWhite)"/>
-        <path d="M 2,26 Q 30,24 58,28 Q 86,32 114,28 L 114,32 Q 86,36 58,32 Q 30,28 2,30 Z" fill="url(#flagStripe)"/>
-        <path d="M 2,32 Q 30,30 58,34 Q 86,38 114,34 L 114,38 Q 86,42 58,38 Q 30,34 2,36 Z" fill="url(#flagWhite)"/>
-        <path d="M 2,38 Q 30,36 58,40 Q 86,44 114,40 L 114,44 Q 86,48 58,44 Q 30,40 2,42 Z" fill="url(#flagStripe)"/>
-        <path d="M 2,44 Q 30,42 58,46 Q 86,50 114,46 L 114,50 Q 86,54 58,50 Q 30,46 2,48 Z" fill="url(#flagWhite)"/>
-        <path d="M 2,50 Q 30,48 58,52 Q 86,56 114,52 L 114,56 Q 86,60 58,56 Q 30,52 2,54 Z" fill="url(#flagStripe)"/>
-        <!-- blue canton over top 7 stripes width 48 -->
-        <path d="M 2,2 Q 26,0 50,4 L 50,34 Q 26,30 2,32 Z" fill="url(#flagBlue)"/>
-        <!-- stars on canton -->
-        <g fill="#ffffff">
-          <circle cx="9" cy="6" r="0.9"/><circle cx="18" cy="7" r="0.9"/><circle cx="27" cy="8" r="0.9"/><circle cx="36" cy="9" r="0.9"/><circle cx="45" cy="10" r="0.9"/>
-          <circle cx="13" cy="11" r="0.9"/><circle cx="22" cy="12" r="0.9"/><circle cx="31" cy="13" r="0.9"/><circle cx="40" cy="14" r="0.9"/>
-          <circle cx="9" cy="16" r="0.9"/><circle cx="18" cy="17" r="0.9"/><circle cx="27" cy="18" r="0.9"/><circle cx="36" cy="19" r="0.9"/><circle cx="45" cy="20" r="0.9"/>
-          <circle cx="13" cy="21" r="0.9"/><circle cx="22" cy="22" r="0.9"/><circle cx="31" cy="23" r="0.9"/><circle cx="40" cy="24" r="0.9"/>
-          <circle cx="9" cy="26" r="0.9"/><circle cx="18" cy="27" r="0.9"/><circle cx="27" cy="28" r="0.9"/><circle cx="36" cy="29" r="0.9"/><circle cx="45" cy="30" r="0.9"/>
-        </g>
-        <animateTransform attributeName="transform" type="translate"
-                          values="0,0; 0,-1; 0,1; 0,0"
-                          dur="11s" repeatCount="indefinite"/>
+        <use href="#tickerRow" x="0" y="22"/>
+        <use href="#tickerRow" x="900" y="22"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="37s" repeatCount="indefinite"/>
       </g>
-      <animateTransform attributeName="transform" type="skewY"
-                        values="-1.5;1.5;-1.5" dur="7s" repeatCount="indefinite" additive="sum"/>
     </g>
+    <clipPath id="tickerTopClip">
+      <rect x="0" y="6" width="800" height="22"/>
+    </clipPath>
   </g>
 
-  <!-- TYPOGRAPHY: MEMORIAL DAY + DATE (centered) -->
-  <g transform="translate(400, 0)">
-    <!-- top hairline ornament -->
-    <line x1="-180" y1="42" x2="-30" y2="42" stroke="#7a6a3a" stroke-width="0.6" opacity="0.7"/>
-    <line x1="30" y1="42" x2="180" y2="42" stroke="#7a6a3a" stroke-width="0.6" opacity="0.7"/>
-    <g transform="translate(0,42)">
-      <circle r="2.5" fill="none" stroke="#d8c878" stroke-width="0.7"/>
-      <circle r="0.8" fill="#d8c878"/>
-    </g>
-
-    <!-- MEMORIAL DAY -->
-    <text x="0" y="78" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="38" font-weight="900" letter-spacing="6"
-          fill="#f4ead0" filter="url(#bigGlow)">
-      MEMORIAL DAY
-    </text>
-
-    <!-- subtitle -->
-    <text x="0" y="100" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="11" font-style="italic" letter-spacing="3.5"
-          fill="#c4a86a" opacity="0.95">
-      In Honor of Those Who Served
-    </text>
-
-    <!-- divider rule -->
-    <line x1="-130" y1="116" x2="130" y2="116" stroke="#7a6a3a" stroke-width="0.5" opacity="0.7"/>
-
-    <!-- DATE block -->
-    <text x="0" y="142" text-anchor="middle"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="22" font-weight="800" letter-spacing="6"
-          fill="#ffffff">
-      MAY 25 · 2026
-    </text>
-    <text x="0" y="156" text-anchor="middle"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="9" letter-spacing="4"
-          fill="#9a8a5a">
-      MONDAY · LAST MONDAY OF MAY
-    </text>
-  </g>
-
-  <!-- ETERNAL FLAME (right side) -->
-  <g transform="translate(700, 110)">
-    <!-- urn base -->
-    <path d="M -22,40 L 22,40 L 18,52 L -18,52 Z" fill="#2a2218" stroke="#5a4a28" stroke-width="0.6"/>
-    <rect x="-26" y="36" width="52" height="6" rx="1" fill="#3a3020" stroke="#5a4a28" stroke-width="0.6"/>
-    <ellipse cx="0" cy="36" rx="20" ry="3.5" fill="#1a1408" stroke="#5a4a28" stroke-width="0.5"/>
-    <!-- pedestal -->
-    <rect x="-32" y="52" width="64" height="6" rx="1" fill="#2a2218" stroke="#5a4a28" stroke-width="0.5"/>
-    <rect x="-36" y="58" width="72" height="6" rx="1" fill="#1a1408" stroke="#3a3020" stroke-width="0.5"/>
-
-    <!-- outer flame glow -->
-    <ellipse cx="0" cy="14" rx="34" ry="42" fill="url(#flame)" opacity="0.55" filter="url(#flameBlur)">
-      <animate attributeName="rx" values="34;38;32;36;34" dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="42;46;40;44;42" dur="7s" repeatCount="indefinite"/>
-    </ellipse>
-
-    <!-- main flame body -->
-    <path d="M 0,40 C -16,28 -18,10 -8,-6 C -4,-14 -2,-20 -4,-28 C 4,-20 10,-12 12,-2 C 14,8 10,22 6,30 C 4,34 2,38 0,40 Z"
-          fill="url(#flame)" opacity="0.9">
-      <animate attributeName="d"
-               values="M 0,40 C -16,28 -18,10 -8,-6 C -4,-14 -2,-20 -4,-28 C 4,-20 10,-12 12,-2 C 14,8 10,22 6,30 C 4,34 2,38 0,40 Z;
-                       M 0,40 C -14,30 -20,12 -6,-4 C -2,-12 -4,-22 -2,-30 C 6,-22 8,-10 14,0 C 16,10 8,24 4,32 C 2,36 0,38 0,40 Z;
-                       M 0,40 C -16,28 -18,10 -8,-6 C -4,-14 -2,-20 -4,-28 C 4,-20 10,-12 12,-2 C 14,8 10,22 6,30 C 4,34 2,38 0,40 Z"
-               dur="3.7s" repeatCount="indefinite"/>
-    </path>
-
-    <!-- inner bright core -->
-    <path d="M 0,32 C -8,24 -8,10 -2,0 C 0,-6 2,-14 0,-22 C 4,-14 6,-6 6,2 C 6,12 2,22 0,32 Z"
-          fill="url(#flameInner)" opacity="0.95">
-      <animate attributeName="d"
-               values="M 0,32 C -8,24 -8,10 -2,0 C 0,-6 2,-14 0,-22 C 4,-14 6,-6 6,2 C 6,12 2,22 0,32 Z;
-                       M 0,32 C -6,26 -10,10 0,2 C 2,-4 0,-16 2,-22 C 4,-12 8,-4 4,4 C 4,14 2,24 0,32 Z;
-                       M 0,32 C -8,24 -8,10 -2,0 C 0,-6 2,-14 0,-22 C 4,-14 6,-6 6,2 C 6,12 2,22 0,32 Z"
-               dur="2.3s" repeatCount="indefinite"/>
-    </path>
-
-    <!-- embers floating up -->
-    <g fill="#ffd86a" opacity="0.85">
-      <circle cx="-6" cy="0" r="0.8">
-        <animate attributeName="cy" values="10;-50" dur="3.7s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0" dur="3.7s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="4" cy="5" r="0.7">
-        <animate attributeName="cy" values="10;-50" dur="4.3s" begin="0.8s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0" dur="4.3s" begin="0.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="-2" cy="8" r="0.6">
-        <animate attributeName="cy" values="10;-50" dur="5.1s" begin="1.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0" dur="5.1s" begin="1.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="8" cy="3" r="0.5">
-        <animate attributeName="cy" values="10;-50" dur="4.7s" begin="2.3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0" dur="4.7s" begin="2.3s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-  </g>
-
-  <!-- POPPY FIELD (foreground band along the bottom) -->
-  <rect x="0" y="148" width="800" height="52" fill="url(#field)" opacity="0.55"/>
-
-  <!-- subtle grass strokes -->
-  <g stroke="#1a2210" stroke-width="0.6" opacity="0.45">
-    <path d="M 0,200 Q 20,182 18,170"/>
-    <path d="M 50,200 Q 60,184 56,172"/>
-    <path d="M 120,200 Q 130,184 124,170"/>
-    <path d="M 190,200 Q 196,184 188,172"/>
-    <path d="M 260,200 Q 270,182 262,168"/>
-    <path d="M 340,200 Q 348,184 340,172"/>
-    <path d="M 420,200 Q 432,184 422,170"/>
-    <path d="M 500,200 Q 508,184 498,172"/>
-    <path d="M 580,200 Q 590,184 580,170"/>
-    <path d="M 660,200 Q 670,184 660,170"/>
-    <path d="M 740,200 Q 748,184 738,172"/>
-    <path d="M 790,200 Q 798,184 790,172"/>
-  </g>
-
-  <!-- Poppies — each sways with a tiny rotate -->
+  <!-- TICKER TAPE BOTTOM — scrolling other direction -->
   <g>
-    <g transform="translate(60, 182)">
-      <line x1="0" y1="0" x2="0" y2="14" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy"/>
-        <animateTransform attributeName="transform" type="rotate" values="-4;4;-4" dur="7s" repeatCount="indefinite"/>
+    <rect x="0" y="172" width="800" height="22" fill="#1a1306" stroke="#5a4818" stroke-width="0.5"/>
+    <g clip-path="url(#tickerBotClip)">
+      <g>
+        <use href="#tickerRow" x="-900" y="188"/>
+        <use href="#tickerRow" x="0" y="188"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="900,0" dur="43s" repeatCount="indefinite"/>
       </g>
     </g>
-    <g transform="translate(115, 188)">
-      <line x1="0" y1="0" x2="0" y2="11" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.8)"/>
-        <animateTransform attributeName="transform" type="rotate" values="3;-3;3" dur="11s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(170, 184)">
-      <line x1="0" y1="0" x2="0" y2="13" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.95)"/>
-        <animateTransform attributeName="transform" type="rotate" values="-5;3;-5" dur="13s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(225, 190)">
-      <line x1="0" y1="0" x2="0" y2="10" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.7)"/>
-        <animateTransform attributeName="transform" type="rotate" values="4;-4;4" dur="7s" begin="1s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(280, 183)">
-      <line x1="0" y1="0" x2="0" y2="14" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy"/>
-        <animateTransform attributeName="transform" type="rotate" values="-3;5;-3" dur="11s" begin="2s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(335, 188)">
-      <line x1="0" y1="0" x2="0" y2="11" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.8)"/>
-        <animateTransform attributeName="transform" type="rotate" values="4;-3;4" dur="13s" begin="1.5s" repeatCount="indefinite"/>
-      </g>
-    </g>
+    <clipPath id="tickerBotClip">
+      <rect x="0" y="172" width="800" height="22"/>
+    </clipPath>
+  </g>
 
-    <!-- Poppies far right under flame -->
-    <g transform="translate(465, 188)">
-      <line x1="0" y1="0" x2="0" y2="11" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.8)"/>
-        <animateTransform attributeName="transform" type="rotate" values="-3;4;-3" dur="11s" begin="0.5s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(520, 183)">
-      <line x1="0" y1="0" x2="0" y2="14" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy"/>
-        <animateTransform attributeName="transform" type="rotate" values="3;-5;3" dur="7s" begin="2s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(575, 190)">
-      <line x1="0" y1="0" x2="0" y2="10" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.7)"/>
-        <animateTransform attributeName="transform" type="rotate" values="-4;4;-4" dur="13s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(625, 187)">
-      <line x1="0" y1="0" x2="0" y2="12" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.9)"/>
-        <animateTransform attributeName="transform" type="rotate" values="4;-4;4" dur="11s" begin="1s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(740, 184)">
-      <line x1="0" y1="0" x2="0" y2="13" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.95)"/>
-        <animateTransform attributeName="transform" type="rotate" values="-3;5;-3" dur="7s" begin="3s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(770, 189)">
-      <line x1="0" y1="0" x2="0" y2="10" stroke="#1c2810" stroke-width="1.2"/>
-      <g transform-origin="0 0">
-        <use href="#poppy" transform="scale(0.75)"/>
-        <animateTransform attributeName="transform" type="rotate" values="5;-3;5" dur="13s" begin="2s" repeatCount="indefinite"/>
-      </g>
+  <!-- CANDLESTICK CHART (background, low-prominence) -->
+  <g transform="translate(0, 38)" opacity="0.55">
+    <!-- chart baseline -->
+    <line x1="20" y1="110" x2="780" y2="110" stroke="#3a3220" stroke-width="0.5" stroke-dasharray="2,3"/>
+    <line x1="20" y1="76" x2="780" y2="76" stroke="#3a3220" stroke-width="0.4" stroke-dasharray="2,3"/>
+    <line x1="20" y1="42" x2="780" y2="42" stroke="#3a3220" stroke-width="0.4" stroke-dasharray="2,3"/>
+
+    <!-- climbing line behind candles -->
+    <path d="M 30,108 L 70,100 L 110,104 L 150,92 L 190,96 L 230,82 L 270,86 L 310,72 L 350,76 L 390,60 L 430,64 L 470,50 L 510,54 L 550,40 L 590,46 L 630,32 L 670,38 L 710,24 L 750,28 L 780,18"
+          fill="none" stroke="#e4c75a" stroke-width="1" opacity="0.5" filter="url(#soft)">
+      <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="13s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- candles: structured ascent over the strip -->
+    <g>
+      <!-- candle template: wick line + body rect -->
+      <g transform="translate(40,0)"><line x1="0" y1="92" x2="0" y2="116" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="100" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(72,0)"><line x1="0" y1="86" x2="0" y2="110" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="94" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(104,0)"><line x1="0" y1="88" x2="0" y2="106" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="92" width="6" height="10" fill="url(#downCandle)"/></g>
+      <g transform="translate(136,0)"><line x1="0" y1="80" x2="0" y2="102" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="86" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(168,0)"><line x1="0" y1="78" x2="0" y2="100" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="84" width="6" height="12" fill="url(#upCandle)"/></g>
+      <g transform="translate(200,0)"><line x1="0" y1="72" x2="0" y2="96" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="78" width="6" height="12" fill="url(#downCandle)"/></g>
+      <g transform="translate(232,0)"><line x1="0" y1="68" x2="0" y2="90" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="74" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(264,0)"><line x1="0" y1="62" x2="0" y2="86" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="68" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(296,0)"><line x1="0" y1="64" x2="0" y2="82" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="68" width="6" height="10" fill="url(#downCandle)"/></g>
+      <g transform="translate(328,0)"><line x1="0" y1="56" x2="0" y2="78" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="62" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(360,0)"><line x1="0" y1="50" x2="0" y2="74" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="56" width="6" height="14" fill="url(#upCandle)"/></g>
+
+      <g transform="translate(440,0)"><line x1="0" y1="52" x2="0" y2="70" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="56" width="6" height="10" fill="url(#downCandle)"/></g>
+      <g transform="translate(472,0)"><line x1="0" y1="44" x2="0" y2="66" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="50" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(504,0)"><line x1="0" y1="38" x2="0" y2="60" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="44" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(536,0)"><line x1="0" y1="40" x2="0" y2="58" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="44" width="6" height="10" fill="url(#downCandle)"/></g>
+      <g transform="translate(568,0)"><line x1="0" y1="32" x2="0" y2="54" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="38" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(600,0)"><line x1="0" y1="26" x2="0" y2="48" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="32" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(632,0)"><line x1="0" y1="28" x2="0" y2="44" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="32" width="6" height="10" fill="url(#downCandle)"/></g>
+      <g transform="translate(664,0)"><line x1="0" y1="20" x2="0" y2="42" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="26" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(696,0)"><line x1="0" y1="14" x2="0" y2="38" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="20" width="6" height="14" fill="url(#upCandle)"/></g>
+      <g transform="translate(728,0)"><line x1="0" y1="16" x2="0" y2="34" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="20" width="6" height="10" fill="url(#downCandle)"/></g>
+      <g transform="translate(760,0)"><line x1="0" y1="8" x2="0" y2="30" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="14" width="6" height="14" fill="url(#upCandle)"/></g>
+
+      <!-- subtle vertical breathe -->
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-1.2; 0,0.6; 0,0" dur="11s" repeatCount="indefinite"/>
     </g>
   </g>
 
-  <!-- GOLD STAR ribbon (small, lower-left near typography corner) -->
-  <g transform="translate(400, 178)">
-    <g filter="url(#soft)">
-      <polygon points="0,-7 1.8,-2.2 7,-2.2 2.8,1 4.4,6 0,3 -4.4,6 -2.8,1 -7,-2.2 -1.8,-2.2"
-               fill="url(#goldStar)"/>
+  <!-- BULL silhouette (gilded, left-of-center, charging right) -->
+  <g transform="translate(150, 152)" opacity="0.92">
+    <g filter="url(#bigGlow)">
+      <!-- body -->
+      <path d="M -56,-22
+               C -58,-30 -50,-36 -42,-34
+               C -36,-36 -28,-34 -22,-30
+               C -10,-32 4,-34 16,-30
+               C 28,-26 36,-22 40,-14
+               C 44,-6 42,2 36,6
+               L 40,16 L 32,14 L 28,8
+               L 12,10 L 8,18 L 0,16 L 2,10
+               L -16,12 L -20,20 L -28,18 L -26,10
+               L -42,8 L -46,16 L -54,14 L -52,4
+               C -58,-2 -60,-12 -56,-22 Z"
+            fill="url(#bullGrad)" stroke="#3a2a08" stroke-width="0.6"/>
+      <!-- head -->
+      <path d="M -56,-22
+               C -64,-26 -70,-22 -72,-14
+               C -74,-8 -70,-2 -64,-2
+               L -60,-2
+               C -58,-6 -58,-16 -56,-22 Z"
+            fill="url(#bullGrad)" stroke="#3a2a08" stroke-width="0.6"/>
+      <!-- horn -->
+      <path d="M -68,-22 C -74,-30 -76,-34 -70,-36 C -68,-32 -66,-28 -64,-24 Z" fill="#fff2b8" stroke="#7a5a18" stroke-width="0.4"/>
+      <!-- eye -->
+      <circle cx="-66" cy="-12" r="0.9" fill="#0d1117"/>
+      <!-- tail -->
+      <path d="M 40,-14 C 50,-16 56,-10 54,-2 C 52,4 48,2 46,-4" fill="none" stroke="#7a5a18" stroke-width="1.2"/>
     </g>
+    <!-- hooves stomp animation -->
+    <animateTransform attributeName="transform" type="translate" values="150,152; 152,150.5; 150,152; 149,152.5; 150,152" dur="2.6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- BROADSHEET CARD: where the date and headline live -->
+  <g>
+    <rect x="280" y="50" width="420" height="100" rx="2" fill="url(#paper)" filter="url(#paperGrain)"/>
+    <rect x="280" y="50" width="420" height="100" rx="2" fill="none" stroke="#5a4818" stroke-width="0.8"/>
+    <!-- inner rule -->
+    <rect x="285" y="55" width="410" height="90" rx="1" fill="none" stroke="#7a6422" stroke-width="0.4"/>
+
+    <!-- tiny eagle-ish ornament left and right -->
+    <g transform="translate(296,68)" fill="#2a1f08">
+      <path d="M 0,0 L 6,-4 L 12,0 L 18,-4 L 24,0 L 24,2 L 18,-2 L 12,2 L 6,-2 L 0,2 Z"/>
+    </g>
+    <g transform="translate(660,68)" fill="#2a1f08">
+      <path d="M 0,0 L 6,-4 L 12,0 L 18,-4 L 24,0 L 24,2 L 18,-2 L 12,2 L 6,-2 L 0,2 Z"/>
+    </g>
+
+    <!-- TOP eyebrow -->
+    <text x="490" y="74" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="9" letter-spacing="6" fill="#3a2a08">
+      EST. MAY 26, 1896 · CHARLES H. DOW
+    </text>
+
+    <!-- Headline -->
+    <text x="490" y="104" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="30" font-weight="900" letter-spacing="3"
+          fill="#1a1306">
+      DOW JONES · 130
+    </text>
+
+    <!-- thin divider -->
+    <line x1="340" y1="113" x2="640" y2="113" stroke="#5a4818" stroke-width="0.5"/>
+
+    <!-- Big readable DATE -->
+    <text x="490" y="135" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="20" font-weight="800" letter-spacing="5"
+          fill="#2a1f08">
+      MAY 26 · 2026
+    </text>
+
+    <!-- subtle gold underline that pulses -->
+    <line x1="420" y1="142" x2="560" y2="142" stroke="#a8821c" stroke-width="0.9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- glowing index number floating up like a quote -->
+  <g transform="translate(630, 138)" opacity="0.92">
+    <circle r="22" fill="url(#glow)"/>
+    <text x="0" y="4" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="14" font-weight="700" fill="url(#goldText)">
+      40.94
+    </text>
+    <text x="0" y="16" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="6" letter-spacing="2" fill="#a8821c">
+      OPENING PRINT
+    </text>
+    <animateTransform attributeName="transform" type="translate" values="630,138; 630,135; 630,138" dur="11s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- left edge fade to focus the card -->
+  <rect x="0" y="36" width="800" height="128" fill="url(#paperEdge)" opacity="0.0" pointer-events="none"/>
+
+  <!-- subtle ascending arrow accent from bull toward card -->
+  <g opacity="0.85">
+    <path d="M 130,80 Q 200,60 270,68" fill="none" stroke="#e4c75a" stroke-width="1.2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;-14" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="270,68 264,64 264,72" fill="#e4c75a"/>
+  </g>
+
+  <!-- coin sparks rising near the bull -->
+  <g fill="#e4c75a">
+    <circle cx="100" cy="148" r="1.3">
+      <animate attributeName="cy" values="150;110" dur="3.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="118" cy="152" r="1.1">
+      <animate attributeName="cy" values="150;108" dur="4.3s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="4.3s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="82" cy="150" r="1">
+      <animate attributeName="cy" values="150;120" dur="5.1s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="5.1s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
