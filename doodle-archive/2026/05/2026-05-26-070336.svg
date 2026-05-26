@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Memorial Day (US, last Monday of May = May 25, 2026); field of red poppies, waving flag, eternal flame, dignified typography, In Honor of Those Who Served -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 25, 2026 — Memorial Day">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.45" stop-color="#10183a"/>
+      <stop offset="1" stop-color="#1a1410"/>
+    </linearGradient>
+
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#0a0a06" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#050402"/>
+    </linearGradient>
+
+    <radialGradient id="petal" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#ff6f4a"/>
+      <stop offset="0.55" stop-color="#d62f2f"/>
+      <stop offset="1" stop-color="#6a0e0e"/>
+    </radialGradient>
+
+    <radialGradient id="petalGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb088" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffb088" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="flame" cx="0.5" cy="0.55" r="0.5">
+      <stop offset="0" stop-color="#fff6c0"/>
+      <stop offset="0.35" stop-color="#ffce5a"/>
+      <stop offset="0.7" stop-color="#ff7028" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ff3030" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="flameInner" cx="0.5" cy="0.55" r="0.45">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.4" stop-color="#fff080"/>
+      <stop offset="1" stop-color="#ffae3a" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="goldStar" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff6c0"/>
+      <stop offset="0.45" stop-color="#ffd860"/>
+      <stop offset="1" stop-color="#b6831a"/>
+    </radialGradient>
+
+    <linearGradient id="flagStripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c1272d"/>
+      <stop offset="1" stop-color="#7a1418"/>
+    </linearGradient>
+
+    <linearGradient id="flagWhite" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f1ebd9"/>
+      <stop offset="1" stop-color="#b3a98c"/>
+    </linearGradient>
+
+    <linearGradient id="flagBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a2a6c"/>
+      <stop offset="1" stop-color="#0a1340"/>
+    </linearGradient>
+
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="bigGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="flameBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8"/>
+    </filter>
+
+    <!-- single poppy used by <use> -->
+    <g id="poppy">
+      <!-- petals (4 overlapping) -->
+      <ellipse cx="0" cy="-6" rx="9" ry="10" fill="url(#petal)" opacity="0.95"/>
+      <ellipse cx="-7" cy="0" rx="9" ry="10" fill="url(#petal)" opacity="0.92"/>
+      <ellipse cx="7" cy="0" rx="9" ry="10" fill="url(#petal)" opacity="0.92"/>
+      <ellipse cx="0" cy="3" rx="10" ry="9" fill="url(#petal)" opacity="0.95"/>
+      <!-- subtle bloom glow -->
+      <circle cx="0" cy="-1" r="13" fill="url(#petalGlow)"/>
+      <!-- dark center -->
+      <circle cx="0" cy="-1" r="3.2" fill="#1a0606"/>
+      <circle cx="0" cy="-1" r="2" fill="#050202"/>
+      <!-- tiny stamen dots -->
+      <circle cx="-1.3" cy="-2.4" r="0.5" fill="#ffd86a"/>
+      <circle cx="1.4" cy="-1.6" r="0.5" fill="#ffd86a"/>
+      <circle cx="0" cy="0.4" r="0.5" fill="#ffd86a"/>
+    </g>
+
+    <!-- a small white twinkle star -->
+    <g id="twinkle">
+      <circle r="0.9" fill="#ffffff"/>
+    </g>
+  </defs>
+
+  <!-- SKY -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Faint horizontal stripes echo (very subtle flag-stripe texture across whole canvas) -->
+  <g opacity="0.06">
+    <rect x="0" y="0" width="800" height="14" fill="#c1272d"/>
+    <rect x="0" y="28" width="800" height="14" fill="#c1272d"/>
+    <rect x="0" y="56" width="800" height="14" fill="#c1272d"/>
+    <rect x="0" y="84" width="800" height="14" fill="#c1272d"/>
+    <rect x="0" y="112" width="800" height="14" fill="#c1272d"/>
+    <rect x="0" y="140" width="800" height="14" fill="#c1272d"/>
+  </g>
+
+  <!-- STARS -->
+  <g>
+    <g><use href="#twinkle" x="40" y="22"/><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="92" y="14"/><animate attributeName="opacity" values="1;0.4;1" dur="11s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="138" y="40"/><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="182" y="22"/><animate attributeName="opacity" values="0.8;0.2;0.8" dur="7s" begin="1s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="226" y="46"/><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="2s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="278" y="16"/><animate attributeName="opacity" values="1;0.5;1" dur="13s" begin="3s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="322" y="34"/><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="2s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="372" y="18"/><animate attributeName="opacity" values="0.6;1;0.6" dur="11s" begin="4s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="418" y="42"/><animate attributeName="opacity" values="1;0.3;1" dur="13s" begin="1s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="468" y="22"/><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="3s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="512" y="36"/><animate attributeName="opacity" values="0.7;1;0.7" dur="11s" begin="5s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="568" y="16"/><animate attributeName="opacity" values="1;0.4;1" dur="13s" begin="2s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="612" y="44"/><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="1.5s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="666" y="20"/><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="3.5s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="712" y="38"/><animate attributeName="opacity" values="0.8;0.3;0.8" dur="13s" begin="4s" repeatCount="indefinite"/></g>
+    <g><use href="#twinkle" x="758" y="24"/><animate attributeName="opacity" values="0.6;1;0.6" dur="7s" begin="2.5s" repeatCount="indefinite"/></g>
+  </g>
+
+  <!-- WAVING FLAG (left) -->
+  <g transform="translate(40, 60)">
+    <!-- pole -->
+    <rect x="0" y="0" width="2" height="125" fill="#8a8a8a"/>
+    <circle cx="1" cy="-2" r="3" fill="#d8c878"/>
+    <!-- flag, with smooth waving via clipping/skew -->
+    <g>
+      <g>
+        <!-- stripes 7 red + 6 white = 13 total; height 56, each ~4.3 -->
+        <path d="M 2,2 Q 30,0 58,4 Q 86,8 114,4 L 114,8 Q 86,12 58,8 Q 30,4 2,6 Z" fill="url(#flagStripe)"/>
+        <path d="M 2,8 Q 30,6 58,10 Q 86,14 114,10 L 114,14 Q 86,18 58,14 Q 30,10 2,12 Z" fill="url(#flagWhite)"/>
+        <path d="M 2,14 Q 30,12 58,16 Q 86,20 114,16 L 114,20 Q 86,24 58,20 Q 30,16 2,18 Z" fill="url(#flagStripe)"/>
+        <path d="M 2,20 Q 30,18 58,22 Q 86,26 114,22 L 114,26 Q 86,30 58,26 Q 30,22 2,24 Z" fill="url(#flagWhite)"/>
+        <path d="M 2,26 Q 30,24 58,28 Q 86,32 114,28 L 114,32 Q 86,36 58,32 Q 30,28 2,30 Z" fill="url(#flagStripe)"/>
+        <path d="M 2,32 Q 30,30 58,34 Q 86,38 114,34 L 114,38 Q 86,42 58,38 Q 30,34 2,36 Z" fill="url(#flagWhite)"/>
+        <path d="M 2,38 Q 30,36 58,40 Q 86,44 114,40 L 114,44 Q 86,48 58,44 Q 30,40 2,42 Z" fill="url(#flagStripe)"/>
+        <path d="M 2,44 Q 30,42 58,46 Q 86,50 114,46 L 114,50 Q 86,54 58,50 Q 30,46 2,48 Z" fill="url(#flagWhite)"/>
+        <path d="M 2,50 Q 30,48 58,52 Q 86,56 114,52 L 114,56 Q 86,60 58,56 Q 30,52 2,54 Z" fill="url(#flagStripe)"/>
+        <!-- blue canton over top 7 stripes width 48 -->
+        <path d="M 2,2 Q 26,0 50,4 L 50,34 Q 26,30 2,32 Z" fill="url(#flagBlue)"/>
+        <!-- stars on canton -->
+        <g fill="#ffffff">
+          <circle cx="9" cy="6" r="0.9"/><circle cx="18" cy="7" r="0.9"/><circle cx="27" cy="8" r="0.9"/><circle cx="36" cy="9" r="0.9"/><circle cx="45" cy="10" r="0.9"/>
+          <circle cx="13" cy="11" r="0.9"/><circle cx="22" cy="12" r="0.9"/><circle cx="31" cy="13" r="0.9"/><circle cx="40" cy="14" r="0.9"/>
+          <circle cx="9" cy="16" r="0.9"/><circle cx="18" cy="17" r="0.9"/><circle cx="27" cy="18" r="0.9"/><circle cx="36" cy="19" r="0.9"/><circle cx="45" cy="20" r="0.9"/>
+          <circle cx="13" cy="21" r="0.9"/><circle cx="22" cy="22" r="0.9"/><circle cx="31" cy="23" r="0.9"/><circle cx="40" cy="24" r="0.9"/>
+          <circle cx="9" cy="26" r="0.9"/><circle cx="18" cy="27" r="0.9"/><circle cx="27" cy="28" r="0.9"/><circle cx="36" cy="29" r="0.9"/><circle cx="45" cy="30" r="0.9"/>
+        </g>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,-1; 0,1; 0,0"
+                          dur="11s" repeatCount="indefinite"/>
+      </g>
+      <animateTransform attributeName="transform" type="skewY"
+                        values="-1.5;1.5;-1.5" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+
+  <!-- TYPOGRAPHY: MEMORIAL DAY + DATE (centered) -->
+  <g transform="translate(400, 0)">
+    <!-- top hairline ornament -->
+    <line x1="-180" y1="42" x2="-30" y2="42" stroke="#7a6a3a" stroke-width="0.6" opacity="0.7"/>
+    <line x1="30" y1="42" x2="180" y2="42" stroke="#7a6a3a" stroke-width="0.6" opacity="0.7"/>
+    <g transform="translate(0,42)">
+      <circle r="2.5" fill="none" stroke="#d8c878" stroke-width="0.7"/>
+      <circle r="0.8" fill="#d8c878"/>
+    </g>
+
+    <!-- MEMORIAL DAY -->
+    <text x="0" y="78" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="38" font-weight="900" letter-spacing="6"
+          fill="#f4ead0" filter="url(#bigGlow)">
+      MEMORIAL DAY
+    </text>
+
+    <!-- subtitle -->
+    <text x="0" y="100" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="11" font-style="italic" letter-spacing="3.5"
+          fill="#c4a86a" opacity="0.95">
+      In Honor of Those Who Served
+    </text>
+
+    <!-- divider rule -->
+    <line x1="-130" y1="116" x2="130" y2="116" stroke="#7a6a3a" stroke-width="0.5" opacity="0.7"/>
+
+    <!-- DATE block -->
+    <text x="0" y="142" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="22" font-weight="800" letter-spacing="6"
+          fill="#ffffff">
+      MAY 25 · 2026
+    </text>
+    <text x="0" y="156" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9" letter-spacing="4"
+          fill="#9a8a5a">
+      MONDAY · LAST MONDAY OF MAY
+    </text>
+  </g>
+
+  <!-- ETERNAL FLAME (right side) -->
+  <g transform="translate(700, 110)">
+    <!-- urn base -->
+    <path d="M -22,40 L 22,40 L 18,52 L -18,52 Z" fill="#2a2218" stroke="#5a4a28" stroke-width="0.6"/>
+    <rect x="-26" y="36" width="52" height="6" rx="1" fill="#3a3020" stroke="#5a4a28" stroke-width="0.6"/>
+    <ellipse cx="0" cy="36" rx="20" ry="3.5" fill="#1a1408" stroke="#5a4a28" stroke-width="0.5"/>
+    <!-- pedestal -->
+    <rect x="-32" y="52" width="64" height="6" rx="1" fill="#2a2218" stroke="#5a4a28" stroke-width="0.5"/>
+    <rect x="-36" y="58" width="72" height="6" rx="1" fill="#1a1408" stroke="#3a3020" stroke-width="0.5"/>
+
+    <!-- outer flame glow -->
+    <ellipse cx="0" cy="14" rx="34" ry="42" fill="url(#flame)" opacity="0.55" filter="url(#flameBlur)">
+      <animate attributeName="rx" values="34;38;32;36;34" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="42;46;40;44;42" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- main flame body -->
+    <path d="M 0,40 C -16,28 -18,10 -8,-6 C -4,-14 -2,-20 -4,-28 C 4,-20 10,-12 12,-2 C 14,8 10,22 6,30 C 4,34 2,38 0,40 Z"
+          fill="url(#flame)" opacity="0.9">
+      <animate attributeName="d"
+               values="M 0,40 C -16,28 -18,10 -8,-6 C -4,-14 -2,-20 -4,-28 C 4,-20 10,-12 12,-2 C 14,8 10,22 6,30 C 4,34 2,38 0,40 Z;
+                       M 0,40 C -14,30 -20,12 -6,-4 C -2,-12 -4,-22 -2,-30 C 6,-22 8,-10 14,0 C 16,10 8,24 4,32 C 2,36 0,38 0,40 Z;
+                       M 0,40 C -16,28 -18,10 -8,-6 C -4,-14 -2,-20 -4,-28 C 4,-20 10,-12 12,-2 C 14,8 10,22 6,30 C 4,34 2,38 0,40 Z"
+               dur="3.7s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- inner bright core -->
+    <path d="M 0,32 C -8,24 -8,10 -2,0 C 0,-6 2,-14 0,-22 C 4,-14 6,-6 6,2 C 6,12 2,22 0,32 Z"
+          fill="url(#flameInner)" opacity="0.95">
+      <animate attributeName="d"
+               values="M 0,32 C -8,24 -8,10 -2,0 C 0,-6 2,-14 0,-22 C 4,-14 6,-6 6,2 C 6,12 2,22 0,32 Z;
+                       M 0,32 C -6,26 -10,10 0,2 C 2,-4 0,-16 2,-22 C 4,-12 8,-4 4,4 C 4,14 2,24 0,32 Z;
+                       M 0,32 C -8,24 -8,10 -2,0 C 0,-6 2,-14 0,-22 C 4,-14 6,-6 6,2 C 6,12 2,22 0,32 Z"
+               dur="2.3s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- embers floating up -->
+    <g fill="#ffd86a" opacity="0.85">
+      <circle cx="-6" cy="0" r="0.8">
+        <animate attributeName="cy" values="10;-50" dur="3.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="3.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="4" cy="5" r="0.7">
+        <animate attributeName="cy" values="10;-50" dur="4.3s" begin="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="4.3s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-2" cy="8" r="0.6">
+        <animate attributeName="cy" values="10;-50" dur="5.1s" begin="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="5.1s" begin="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="8" cy="3" r="0.5">
+        <animate attributeName="cy" values="10;-50" dur="4.7s" begin="2.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="4.7s" begin="2.3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- POPPY FIELD (foreground band along the bottom) -->
+  <rect x="0" y="148" width="800" height="52" fill="url(#field)" opacity="0.55"/>
+
+  <!-- subtle grass strokes -->
+  <g stroke="#1a2210" stroke-width="0.6" opacity="0.45">
+    <path d="M 0,200 Q 20,182 18,170"/>
+    <path d="M 50,200 Q 60,184 56,172"/>
+    <path d="M 120,200 Q 130,184 124,170"/>
+    <path d="M 190,200 Q 196,184 188,172"/>
+    <path d="M 260,200 Q 270,182 262,168"/>
+    <path d="M 340,200 Q 348,184 340,172"/>
+    <path d="M 420,200 Q 432,184 422,170"/>
+    <path d="M 500,200 Q 508,184 498,172"/>
+    <path d="M 580,200 Q 590,184 580,170"/>
+    <path d="M 660,200 Q 670,184 660,170"/>
+    <path d="M 740,200 Q 748,184 738,172"/>
+    <path d="M 790,200 Q 798,184 790,172"/>
+  </g>
+
+  <!-- Poppies — each sways with a tiny rotate -->
+  <g>
+    <g transform="translate(60, 182)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy"/>
+        <animateTransform attributeName="transform" type="rotate" values="-4;4;-4" dur="7s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(115, 188)">
+      <line x1="0" y1="0" x2="0" y2="11" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.8)"/>
+        <animateTransform attributeName="transform" type="rotate" values="3;-3;3" dur="11s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(170, 184)">
+      <line x1="0" y1="0" x2="0" y2="13" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.95)"/>
+        <animateTransform attributeName="transform" type="rotate" values="-5;3;-5" dur="13s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(225, 190)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.7)"/>
+        <animateTransform attributeName="transform" type="rotate" values="4;-4;4" dur="7s" begin="1s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(280, 183)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy"/>
+        <animateTransform attributeName="transform" type="rotate" values="-3;5;-3" dur="11s" begin="2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(335, 188)">
+      <line x1="0" y1="0" x2="0" y2="11" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.8)"/>
+        <animateTransform attributeName="transform" type="rotate" values="4;-3;4" dur="13s" begin="1.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- Poppies far right under flame -->
+    <g transform="translate(465, 188)">
+      <line x1="0" y1="0" x2="0" y2="11" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.8)"/>
+        <animateTransform attributeName="transform" type="rotate" values="-3;4;-3" dur="11s" begin="0.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(520, 183)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy"/>
+        <animateTransform attributeName="transform" type="rotate" values="3;-5;3" dur="7s" begin="2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(575, 190)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.7)"/>
+        <animateTransform attributeName="transform" type="rotate" values="-4;4;-4" dur="13s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(625, 187)">
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.9)"/>
+        <animateTransform attributeName="transform" type="rotate" values="4;-4;4" dur="11s" begin="1s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(740, 184)">
+      <line x1="0" y1="0" x2="0" y2="13" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.95)"/>
+        <animateTransform attributeName="transform" type="rotate" values="-3;5;-3" dur="7s" begin="3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <g transform="translate(770, 189)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#1c2810" stroke-width="1.2"/>
+      <g transform-origin="0 0">
+        <use href="#poppy" transform="scale(0.75)"/>
+        <animateTransform attributeName="transform" type="rotate" values="5;-3;5" dur="13s" begin="2s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- GOLD STAR ribbon (small, lower-left near typography corner) -->
+  <g transform="translate(400, 178)">
+    <g filter="url(#soft)">
+      <polygon points="0,-7 1.8,-2.2 7,-2.2 2.8,1 4.4,6 0,3 -4.4,6 -2.8,1 -7,-2.2 -1.8,-2.2"
+               fill="url(#goldStar)"/>
+    </g>
+  </g>
+</svg>
