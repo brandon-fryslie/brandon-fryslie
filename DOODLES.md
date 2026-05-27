@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 27, 2026 — Dow Jones Industrial Average 130th anniversary (May 26, 1896 — Charles Dow first publishes the index of 12 industrial stocks at 40.94); ticker tape, candlestick chart, bull silhouette, gilded financial broadsheet typography
+
+<img src="./doodle-archive/2026/05/2026-05-27-071742.svg" width="800" alt="Daily doodle for May 27, 2026: Dow Jones Industrial Average 130th anniversary (May 26, 1896 — Charles Dow first publishes the index of 12 industrial stocks at 40.94); ticker tape, candlestick chart, bull silhouette, gilded financial broadsheet typography">
+
+---
+
 ## May 26, 2026 — Memorial Day (US, last Monday of May = May 25, 2026); field of red poppies, waving flag, eternal flame, dignified typography, In Honor of Those Who Served
 
 <img src="./doodle-archive/2026/05/2026-05-26-070336.svg" width="800" alt="Daily doodle for May 26, 2026: Memorial Day (US, last Monday of May = May 25, 2026); field of red poppies, waving flag, eternal flame, dignified typography, In Honor of Those Who Served">

@@ -1,285 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Dow Jones Industrial Average 130th anniversary (May 26, 1896 — Charles Dow first publishes the index of 12 industrial stocks at 40.94); ticker tape, candlestick chart, bull silhouette, gilded financial broadsheet typography -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 26, 2026 — Dow Jones 130th anniversary">
+<!-- theme: Golden Gate Bridge 89th anniversary (opened May 27, 1937 — Joseph Strauss, San Francisco); two International-Orange towers, sweeping main cables, fog drifting in from the Pacific, dawn sky, boat passing beneath -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 27, 2026 — Golden Gate Bridge 89th anniversary">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.5" stop-color="#10160f"/>
-      <stop offset="1" stop-color="#0a0d08"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2438"/>
+      <stop offset="0.45" stop-color="#3a3050"/>
+      <stop offset="0.78" stop-color="#a35c3a"/>
+      <stop offset="1" stop-color="#d99464"/>
     </linearGradient>
-
-    <linearGradient id="goldText" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff2b8"/>
-      <stop offset="0.5" stop-color="#e4c75a"/>
-      <stop offset="1" stop-color="#8a6a1c"/>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3a52"/>
+      <stop offset="1" stop-color="#0d1a2a"/>
     </linearGradient>
-
-    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f0e3c0"/>
-      <stop offset="1" stop-color="#c9b986"/>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e85a2a"/>
+      <stop offset="0.5" stop-color="#c0362c"/>
+      <stop offset="1" stop-color="#7a1f17"/>
     </linearGradient>
-
-    <linearGradient id="paperEdge" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#0d1117" stop-opacity="0"/>
-      <stop offset="0.06" stop-color="#0d1117" stop-opacity="0.85"/>
-      <stop offset="0.94" stop-color="#0d1117" stop-opacity="0.85"/>
-      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="upCandle" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4ee08a"/>
-      <stop offset="1" stop-color="#1b7a3e"/>
-    </linearGradient>
-
-    <linearGradient id="downCandle" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ff7a72"/>
-      <stop offset="1" stop-color="#9a2a22"/>
-    </linearGradient>
-
-    <linearGradient id="bullGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e9c45a"/>
-      <stop offset="1" stop-color="#7a5a18"/>
-    </linearGradient>
-
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffe98a" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#ffe98a" stop-opacity="0"/>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe2b0" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#ffaa55" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ff7a30" stop-opacity="0"/>
     </radialGradient>
-
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="0.6"/>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="fogBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <filter id="bigGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.4"/>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <!-- Reusable fog bank -->
+    <symbol id="fogBank" overflow="visible">
+      <ellipse cx="0" cy="0" rx="180" ry="22" fill="#e8dccc" opacity="0.18" filter="url(#fogBlur)"/>
+      <ellipse cx="60" cy="-6" rx="120" ry="14" fill="#f4ead8" opacity="0.22" filter="url(#fogBlur)"/>
+      <ellipse cx="-80" cy="4" rx="140" ry="18" fill="#d8c8b4" opacity="0.16" filter="url(#fogBlur)"/>
+    </symbol>
 
-    <filter id="paperGrain" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
-      <feColorMatrix values="0 0 0 0 0.2  0 0 0 0 0.15  0 0 0 0 0.05  0 0 0 0.18 0"/>
-      <feComposite in2="SourceGraphic" operator="in"/>
-      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode/></feMerge>
-    </filter>
-
-    <!-- repeating ticker tape glyph group -->
-    <g id="tickerRow">
-      <text x="0" y="0" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="700" fill="#e4c75a" letter-spacing="1">
-        DJI 40.94 +0.00  ▲ GE 108  ▲ AT&amp;T 12¾  ▼ USX 28½  ▲ DIS 174  ▼ XOM 96⅛  ▲ MSFT 472  ▲ NKE 88¾  ▼ JPM 217  ▲ KO 67⅝  ▼ HD 392  ▲ MCD 312⅜  ▲ IBM 244½  ▼ BA 198⅛  ▲ CAT 366  ▼ PG 168¾  ▲ DJI 40.94 +0.00
-      </text>
-    </g>
-
-    <clipPath id="paperClip">
-      <rect x="20" y="36" width="760" height="128" rx="3"/>
-    </clipPath>
+    <!-- Reusable bird -->
+    <symbol id="bird" overflow="visible">
+      <path d="M -6 0 Q -3 -3 0 0 Q 3 -3 6 0" fill="none" stroke="#1a1a22" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
   </defs>
 
-  <!-- BACKGROUND -->
-  <rect width="800" height="200" fill="url(#bg)"/>
+  <!-- Sky -->
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- subtle grid like ledger paper -->
-  <g opacity="0.06" stroke="#a89a6a" stroke-width="0.4">
-    <path d="M0,20 H800 M0,40 H800 M0,60 H800 M0,80 H800 M0,100 H800 M0,120 H800 M0,140 H800 M0,160 H800 M0,180 H800"/>
-    <path d="M40,0 V200 M80,0 V200 M120,0 V200 M160,0 V200 M200,0 V200 M240,0 V200 M280,0 V200 M320,0 V200 M360,0 V200 M400,0 V200 M440,0 V200 M480,0 V200 M520,0 V200 M560,0 V200 M600,0 V200 M640,0 V200 M680,0 V200 M720,0 V200 M760,0 V200"/>
-  </g>
+  <!-- Sun rising -->
+  <circle cx="640" cy="138" r="48" fill="url(#sun)">
+    <animate attributeName="cy" values="142;136;142" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="640" cy="138" r="14" fill="#fff2cc" opacity="0.9" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- TICKER TAPE TOP — scrolling -->
-  <g>
-    <rect x="0" y="6" width="800" height="22" fill="#1a1306" stroke="#5a4818" stroke-width="0.5"/>
-    <g clip-path="url(#tickerTopClip)">
-      <g>
-        <use href="#tickerRow" x="0" y="22"/>
-        <use href="#tickerRow" x="900" y="22"/>
-        <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="37s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <clipPath id="tickerTopClip">
-      <rect x="0" y="6" width="800" height="22"/>
-    </clipPath>
-  </g>
+  <!-- Distant headlands silhouette -->
+  <path d="M 0 165 L 80 138 L 160 152 L 240 130 L 320 150 L 400 142 L 480 156 L 560 134 L 640 150 L 720 140 L 800 158 L 800 200 L 0 200 Z" fill="#1a1620" opacity="0.85"/>
 
-  <!-- TICKER TAPE BOTTOM — scrolling other direction -->
-  <g>
-    <rect x="0" y="172" width="800" height="22" fill="#1a1306" stroke="#5a4818" stroke-width="0.5"/>
-    <g clip-path="url(#tickerBotClip)">
-      <g>
-        <use href="#tickerRow" x="-900" y="188"/>
-        <use href="#tickerRow" x="0" y="188"/>
-        <animateTransform attributeName="transform" type="translate" from="0,0" to="900,0" dur="43s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <clipPath id="tickerBotClip">
-      <rect x="0" y="172" width="800" height="22"/>
-    </clipPath>
-  </g>
+  <!-- Water -->
+  <rect y="168" width="800" height="32" fill="url(#water)"/>
 
-  <!-- CANDLESTICK CHART (background, low-prominence) -->
-  <g transform="translate(0, 38)" opacity="0.55">
-    <!-- chart baseline -->
-    <line x1="20" y1="110" x2="780" y2="110" stroke="#3a3220" stroke-width="0.5" stroke-dasharray="2,3"/>
-    <line x1="20" y1="76" x2="780" y2="76" stroke="#3a3220" stroke-width="0.4" stroke-dasharray="2,3"/>
-    <line x1="20" y1="42" x2="780" y2="42" stroke="#3a3220" stroke-width="0.4" stroke-dasharray="2,3"/>
-
-    <!-- climbing line behind candles -->
-    <path d="M 30,108 L 70,100 L 110,104 L 150,92 L 190,96 L 230,82 L 270,86 L 310,72 L 350,76 L 390,60 L 430,64 L 470,50 L 510,54 L 550,40 L 590,46 L 630,32 L 670,38 L 710,24 L 750,28 L 780,18"
-          fill="none" stroke="#e4c75a" stroke-width="1" opacity="0.5" filter="url(#soft)">
-      <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="13s" repeatCount="indefinite"/>
+  <!-- Water ripples -->
+  <g opacity="0.45" stroke="#7a96b8" stroke-width="0.6" fill="none">
+    <path d="M 0 178 Q 50 176 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178">
+      <animate attributeName="d" values="M 0 178 Q 50 176 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178;M 0 178 Q 50 180 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178;M 0 178 Q 50 176 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178" dur="11s" repeatCount="indefinite"/>
     </path>
+    <path d="M 0 186 Q 60 184 120 186 T 240 186 T 360 186 T 480 186 T 600 186 T 720 186 T 800 186" opacity="0.7"/>
+    <path d="M 0 192 Q 70 190 140 192 T 280 192 T 420 192 T 560 192 T 700 192 T 800 192" opacity="0.5"/>
+  </g>
 
-    <!-- candles: structured ascent over the strip -->
+  <!-- Boat passing beneath -->
+  <g>
     <g>
-      <!-- candle template: wick line + body rect -->
-      <g transform="translate(40,0)"><line x1="0" y1="92" x2="0" y2="116" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="100" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(72,0)"><line x1="0" y1="86" x2="0" y2="110" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="94" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(104,0)"><line x1="0" y1="88" x2="0" y2="106" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="92" width="6" height="10" fill="url(#downCandle)"/></g>
-      <g transform="translate(136,0)"><line x1="0" y1="80" x2="0" y2="102" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="86" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(168,0)"><line x1="0" y1="78" x2="0" y2="100" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="84" width="6" height="12" fill="url(#upCandle)"/></g>
-      <g transform="translate(200,0)"><line x1="0" y1="72" x2="0" y2="96" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="78" width="6" height="12" fill="url(#downCandle)"/></g>
-      <g transform="translate(232,0)"><line x1="0" y1="68" x2="0" y2="90" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="74" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(264,0)"><line x1="0" y1="62" x2="0" y2="86" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="68" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(296,0)"><line x1="0" y1="64" x2="0" y2="82" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="68" width="6" height="10" fill="url(#downCandle)"/></g>
-      <g transform="translate(328,0)"><line x1="0" y1="56" x2="0" y2="78" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="62" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(360,0)"><line x1="0" y1="50" x2="0" y2="74" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="56" width="6" height="14" fill="url(#upCandle)"/></g>
-
-      <g transform="translate(440,0)"><line x1="0" y1="52" x2="0" y2="70" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="56" width="6" height="10" fill="url(#downCandle)"/></g>
-      <g transform="translate(472,0)"><line x1="0" y1="44" x2="0" y2="66" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="50" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(504,0)"><line x1="0" y1="38" x2="0" y2="60" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="44" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(536,0)"><line x1="0" y1="40" x2="0" y2="58" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="44" width="6" height="10" fill="url(#downCandle)"/></g>
-      <g transform="translate(568,0)"><line x1="0" y1="32" x2="0" y2="54" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="38" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(600,0)"><line x1="0" y1="26" x2="0" y2="48" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="32" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(632,0)"><line x1="0" y1="28" x2="0" y2="44" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="32" width="6" height="10" fill="url(#downCandle)"/></g>
-      <g transform="translate(664,0)"><line x1="0" y1="20" x2="0" y2="42" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="26" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(696,0)"><line x1="0" y1="14" x2="0" y2="38" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="20" width="6" height="14" fill="url(#upCandle)"/></g>
-      <g transform="translate(728,0)"><line x1="0" y1="16" x2="0" y2="34" stroke="#9a2a22" stroke-width="0.8"/><rect x="-3" y="20" width="6" height="10" fill="url(#downCandle)"/></g>
-      <g transform="translate(760,0)"><line x1="0" y1="8" x2="0" y2="30" stroke="#1b7a3e" stroke-width="0.8"/><rect x="-3" y="14" width="6" height="14" fill="url(#upCandle)"/></g>
-
-      <!-- subtle vertical breathe -->
-      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-1.2; 0,0.6; 0,0" dur="11s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="-60 0;860 0" dur="47s" repeatCount="indefinite"/>
+      <!-- hull -->
+      <path d="M 0 174 L 26 174 L 22 180 L 4 180 Z" fill="#0a0a10"/>
+      <!-- cabin -->
+      <rect x="9" y="169" width="9" height="5" fill="#0a0a10"/>
+      <!-- mast light -->
+      <circle cx="13" cy="167" r="1" fill="#ffd97a">
+        <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
     </g>
   </g>
 
-  <!-- BULL silhouette (gilded, left-of-center, charging right) -->
-  <g transform="translate(150, 152)" opacity="0.92">
-    <g filter="url(#bigGlow)">
-      <!-- body -->
-      <path d="M -56,-22
-               C -58,-30 -50,-36 -42,-34
-               C -36,-36 -28,-34 -22,-30
-               C -10,-32 4,-34 16,-30
-               C 28,-26 36,-22 40,-14
-               C 44,-6 42,2 36,6
-               L 40,16 L 32,14 L 28,8
-               L 12,10 L 8,18 L 0,16 L 2,10
-               L -16,12 L -20,20 L -28,18 L -26,10
-               L -42,8 L -46,16 L -54,14 L -52,4
-               C -58,-2 -60,-12 -56,-22 Z"
-            fill="url(#bullGrad)" stroke="#3a2a08" stroke-width="0.6"/>
-      <!-- head -->
-      <path d="M -56,-22
-               C -64,-26 -70,-22 -72,-14
-               C -74,-8 -70,-2 -64,-2
-               L -60,-2
-               C -58,-6 -58,-16 -56,-22 Z"
-            fill="url(#bullGrad)" stroke="#3a2a08" stroke-width="0.6"/>
-      <!-- horn -->
-      <path d="M -68,-22 C -74,-30 -76,-34 -70,-36 C -68,-32 -66,-28 -64,-24 Z" fill="#fff2b8" stroke="#7a5a18" stroke-width="0.4"/>
-      <!-- eye -->
-      <circle cx="-66" cy="-12" r="0.9" fill="#0d1117"/>
-      <!-- tail -->
-      <path d="M 40,-14 C 50,-16 56,-10 54,-2 C 52,4 48,2 46,-4" fill="none" stroke="#7a5a18" stroke-width="1.2"/>
-    </g>
-    <!-- hooves stomp animation -->
-    <animateTransform attributeName="transform" type="translate" values="150,152; 152,150.5; 150,152; 149,152.5; 150,152" dur="2.6s" repeatCount="indefinite"/>
+  <!-- ===== Bridge ===== -->
+  <!-- Main cables (catenary), sweeping arches between towers and to the shore -->
+  <g stroke="url(#orange)" stroke-width="2.4" fill="none" stroke-linecap="round" filter="url(#soft)">
+    <!-- left shore to left tower -->
+    <path d="M 0 110 Q 100 125 200 50"/>
+    <!-- left tower to right tower (main span) -->
+    <path d="M 200 50 Q 400 175 600 50"/>
+    <!-- right tower to right shore -->
+    <path d="M 600 50 Q 700 125 800 110"/>
   </g>
 
-  <!-- BROADSHEET CARD: where the date and headline live -->
+  <!-- Suspender cables (vertical hangers from main cable to deck) -->
+  <g stroke="#8a2818" stroke-width="0.7" opacity="0.85">
+    <!-- left span -->
+    <line x1="40" y1="118" x2="40" y2="158"/>
+    <line x1="80" y1="110" x2="80" y2="158"/>
+    <line x1="120" y1="98" x2="120" y2="158"/>
+    <line x1="160" y1="78" x2="160" y2="158"/>
+    <!-- main span -->
+    <line x1="230" y1="74" x2="230" y2="158"/>
+    <line x1="260" y1="96" x2="260" y2="158"/>
+    <line x1="290" y1="115" x2="290" y2="158"/>
+    <line x1="320" y1="132" x2="320" y2="158"/>
+    <line x1="350" y1="146" x2="350" y2="158"/>
+    <line x1="380" y1="154" x2="380" y2="158"/>
+    <line x1="400" y1="156" x2="400" y2="158"/>
+    <line x1="420" y1="154" x2="420" y2="158"/>
+    <line x1="450" y1="146" x2="450" y2="158"/>
+    <line x1="480" y1="132" x2="480" y2="158"/>
+    <line x1="510" y1="115" x2="510" y2="158"/>
+    <line x1="540" y1="96" x2="540" y2="158"/>
+    <line x1="570" y1="74" x2="570" y2="158"/>
+    <!-- right span -->
+    <line x1="640" y1="78" x2="640" y2="158"/>
+    <line x1="680" y1="98" x2="680" y2="158"/>
+    <line x1="720" y1="110" x2="720" y2="158"/>
+    <line x1="760" y1="118" x2="760" y2="158"/>
+  </g>
+
+  <!-- Bridge deck (roadway) -->
+  <rect x="0" y="156" width="800" height="4" fill="#3a1a14"/>
+  <rect x="0" y="158" width="800" height="2" fill="url(#orange)" opacity="0.9"/>
+
+  <!-- Left tower -->
+  <g fill="url(#orange)">
+    <!-- two legs -->
+    <polygon points="192,160 196,46 200,46 204,160"/>
+    <polygon points="196,160 200,46 204,46 208,160"/>
+    <!-- crossbeams -->
+    <rect x="190" y="64" width="20" height="3"/>
+    <rect x="190" y="92" width="20" height="3"/>
+    <rect x="190" y="124" width="20" height="3"/>
+    <!-- top cap -->
+    <rect x="188" y="44" width="24" height="4"/>
+  </g>
+
+  <!-- Right tower -->
+  <g fill="url(#orange)">
+    <polygon points="592,160 596,46 600,46 604,160"/>
+    <polygon points="596,160 600,46 604,46 608,160"/>
+    <rect x="590" y="64" width="20" height="3"/>
+    <rect x="590" y="92" width="20" height="3"/>
+    <rect x="590" y="124" width="20" height="3"/>
+    <rect x="588" y="44" width="24" height="4"/>
+  </g>
+
+  <!-- Aviation warning lights on towers -->
+  <circle cx="200" cy="46" r="1.6" fill="#ff5a3a">
+    <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="46" r="1.6" fill="#ff5a3a">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Drifting fog banks (animated across) -->
   <g>
-    <rect x="280" y="50" width="420" height="100" rx="2" fill="url(#paper)" filter="url(#paperGrain)"/>
-    <rect x="280" y="50" width="420" height="100" rx="2" fill="none" stroke="#5a4818" stroke-width="0.8"/>
-    <!-- inner rule -->
-    <rect x="285" y="55" width="410" height="90" rx="1" fill="none" stroke="#7a6422" stroke-width="0.4"/>
-
-    <!-- tiny eagle-ish ornament left and right -->
-    <g transform="translate(296,68)" fill="#2a1f08">
-      <path d="M 0,0 L 6,-4 L 12,0 L 18,-4 L 24,0 L 24,2 L 18,-2 L 12,2 L 6,-2 L 0,2 Z"/>
-    </g>
-    <g transform="translate(660,68)" fill="#2a1f08">
-      <path d="M 0,0 L 6,-4 L 12,0 L 18,-4 L 24,0 L 24,2 L 18,-2 L 12,2 L 6,-2 L 0,2 Z"/>
-    </g>
-
-    <!-- TOP eyebrow -->
-    <text x="490" y="74" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="9" letter-spacing="6" fill="#3a2a08">
-      EST. MAY 26, 1896 · CHARLES H. DOW
-    </text>
-
-    <!-- Headline -->
-    <text x="490" y="104" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="30" font-weight="900" letter-spacing="3"
-          fill="#1a1306">
-      DOW JONES · 130
-    </text>
-
-    <!-- thin divider -->
-    <line x1="340" y1="113" x2="640" y2="113" stroke="#5a4818" stroke-width="0.5"/>
-
-    <!-- Big readable DATE -->
-    <text x="490" y="135" text-anchor="middle"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="20" font-weight="800" letter-spacing="5"
-          fill="#2a1f08">
-      MAY 26 · 2026
-    </text>
-
-    <!-- subtle gold underline that pulses -->
-    <line x1="420" y1="142" x2="560" y2="142" stroke="#a8821c" stroke-width="0.9">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
-    </line>
+    <use href="#fogBank" x="0" y="150">
+      <animateTransform attributeName="transform" type="translate" values="-220 0;1020 0" dur="59s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  <g>
+    <use href="#fogBank" x="0" y="172">
+      <animateTransform attributeName="transform" type="translate" values="-260 0;1060 0" dur="41s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  <g>
+    <use href="#fogBank" x="0" y="140">
+      <animateTransform attributeName="transform" type="translate" values="-300 0;1080 0" dur="73s" repeatCount="indefinite"/>
+    </use>
   </g>
 
-  <!-- glowing index number floating up like a quote -->
-  <g transform="translate(630, 138)" opacity="0.92">
-    <circle r="22" fill="url(#glow)"/>
-    <text x="0" y="4" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="14" font-weight="700" fill="url(#goldText)">
-      40.94
+  <!-- Birds -->
+  <g opacity="0.7">
+    <use href="#bird" x="0" y="0">
+      <animateTransform attributeName="transform" type="translate" values="100 60;760 50" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.1;0.9;1" dur="29s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bird" x="0" y="0">
+      <animateTransform attributeName="transform" type="translate" values="60 80;780 70" dur="37s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.9;1" dur="37s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bird" x="0" y="0">
+      <animateTransform attributeName="transform" type="translate" values="40 95;800 88" dur="43s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.9;1" dur="43s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ===== Typography ===== -->
+  <!-- Date plaque, anchored upper-left over sky, high contrast -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Date — primary -->
+    <text x="24" y="36" font-size="22" font-weight="800" fill="#fff2dd" letter-spacing="1.5">
+      MAY 27 · 2026
     </text>
-    <text x="0" y="16" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="6" letter-spacing="2" fill="#a8821c">
-      OPENING PRINT
+    <!-- Backdrop tint under text for readability -->
+    <rect x="20" y="44" width="240" height="14" fill="#0d1117" opacity="0.35" rx="2"/>
+    <text x="24" y="55" font-size="10" font-weight="600" fill="#ffd9a8" letter-spacing="2.6">
+      GOLDEN GATE BRIDGE · 89 YEARS
     </text>
-    <animateTransform attributeName="transform" type="translate" values="630,138; 630,135; 630,138" dur="11s" repeatCount="indefinite"/>
+    <text x="24" y="68" font-size="8" fill="#e8c8a4" letter-spacing="2" opacity="0.85">
+      OPENED MAY 27, 1937 — SAN FRANCISCO
+    </text>
   </g>
 
-  <!-- left edge fade to focus the card -->
-  <rect x="0" y="36" width="800" height="128" fill="url(#paperEdge)" opacity="0.0" pointer-events="none"/>
+  <!-- Quiet maker's mark, bottom right -->
+  <text x="780" y="196" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="6.5" fill="#7a6a5a" opacity="0.7" letter-spacing="1">
+    JOSEPH STRAUSS · IRVING MORROW · CHARLES ELLIS
+  </text>
 
-  <!-- subtle ascending arrow accent from bull toward card -->
-  <g opacity="0.85">
-    <path d="M 130,80 Q 200,60 270,68" fill="none" stroke="#e4c75a" stroke-width="1.2" stroke-dasharray="4,3">
-      <animate attributeName="stroke-dashoffset" values="0;-14" dur="2.6s" repeatCount="indefinite"/>
-    </path>
-    <polygon points="270,68 264,64 264,72" fill="#e4c75a"/>
-  </g>
-
-  <!-- coin sparks rising near the bull -->
-  <g fill="#e4c75a">
-    <circle cx="100" cy="148" r="1.3">
-      <animate attributeName="cy" values="150;110" dur="3.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="3.7s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="118" cy="152" r="1.1">
-      <animate attributeName="cy" values="150;108" dur="4.3s" begin="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="4.3s" begin="0.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="82" cy="150" r="1">
-      <animate attributeName="cy" values="150;120" dur="5.1s" begin="1.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="5.1s" begin="1.2s" repeatCount="indefinite"/>
-    </circle>
-  </g>
+  <!-- Subtle vignette -->
+  <rect width="800" height="200" fill="url(#vignette)" opacity="0"/>
 </svg>
