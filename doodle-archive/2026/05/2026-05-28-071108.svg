@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Golden Gate Bridge 89th anniversary (opened May 27, 1937 — Joseph Strauss, San Francisco); two International-Orange towers, sweeping main cables, fog drifting in from the Pacific, dawn sky, boat passing beneath -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 27, 2026 — Golden Gate Bridge 89th anniversary">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2438"/>
+      <stop offset="0.45" stop-color="#3a3050"/>
+      <stop offset="0.78" stop-color="#a35c3a"/>
+      <stop offset="1" stop-color="#d99464"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3a52"/>
+      <stop offset="1" stop-color="#0d1a2a"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e85a2a"/>
+      <stop offset="0.5" stop-color="#c0362c"/>
+      <stop offset="1" stop-color="#7a1f17"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe2b0" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#ffaa55" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ff7a30" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="fogBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Reusable fog bank -->
+    <symbol id="fogBank" overflow="visible">
+      <ellipse cx="0" cy="0" rx="180" ry="22" fill="#e8dccc" opacity="0.18" filter="url(#fogBlur)"/>
+      <ellipse cx="60" cy="-6" rx="120" ry="14" fill="#f4ead8" opacity="0.22" filter="url(#fogBlur)"/>
+      <ellipse cx="-80" cy="4" rx="140" ry="18" fill="#d8c8b4" opacity="0.16" filter="url(#fogBlur)"/>
+    </symbol>
+
+    <!-- Reusable bird -->
+    <symbol id="bird" overflow="visible">
+      <path d="M -6 0 Q -3 -3 0 0 Q 3 -3 6 0" fill="none" stroke="#1a1a22" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Sun rising -->
+  <circle cx="640" cy="138" r="48" fill="url(#sun)">
+    <animate attributeName="cy" values="142;136;142" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="640" cy="138" r="14" fill="#fff2cc" opacity="0.9" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Distant headlands silhouette -->
+  <path d="M 0 165 L 80 138 L 160 152 L 240 130 L 320 150 L 400 142 L 480 156 L 560 134 L 640 150 L 720 140 L 800 158 L 800 200 L 0 200 Z" fill="#1a1620" opacity="0.85"/>
+
+  <!-- Water -->
+  <rect y="168" width="800" height="32" fill="url(#water)"/>
+
+  <!-- Water ripples -->
+  <g opacity="0.45" stroke="#7a96b8" stroke-width="0.6" fill="none">
+    <path d="M 0 178 Q 50 176 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178">
+      <animate attributeName="d" values="M 0 178 Q 50 176 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178;M 0 178 Q 50 180 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178;M 0 178 Q 50 176 100 178 T 200 178 T 300 178 T 400 178 T 500 178 T 600 178 T 700 178 T 800 178" dur="11s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0 186 Q 60 184 120 186 T 240 186 T 360 186 T 480 186 T 600 186 T 720 186 T 800 186" opacity="0.7"/>
+    <path d="M 0 192 Q 70 190 140 192 T 280 192 T 420 192 T 560 192 T 700 192 T 800 192" opacity="0.5"/>
+  </g>
+
+  <!-- Boat passing beneath -->
+  <g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="-60 0;860 0" dur="47s" repeatCount="indefinite"/>
+      <!-- hull -->
+      <path d="M 0 174 L 26 174 L 22 180 L 4 180 Z" fill="#0a0a10"/>
+      <!-- cabin -->
+      <rect x="9" y="169" width="9" height="5" fill="#0a0a10"/>
+      <!-- mast light -->
+      <circle cx="13" cy="167" r="1" fill="#ffd97a">
+        <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- ===== Bridge ===== -->
+  <!-- Main cables (catenary), sweeping arches between towers and to the shore -->
+  <g stroke="url(#orange)" stroke-width="2.4" fill="none" stroke-linecap="round" filter="url(#soft)">
+    <!-- left shore to left tower -->
+    <path d="M 0 110 Q 100 125 200 50"/>
+    <!-- left tower to right tower (main span) -->
+    <path d="M 200 50 Q 400 175 600 50"/>
+    <!-- right tower to right shore -->
+    <path d="M 600 50 Q 700 125 800 110"/>
+  </g>
+
+  <!-- Suspender cables (vertical hangers from main cable to deck) -->
+  <g stroke="#8a2818" stroke-width="0.7" opacity="0.85">
+    <!-- left span -->
+    <line x1="40" y1="118" x2="40" y2="158"/>
+    <line x1="80" y1="110" x2="80" y2="158"/>
+    <line x1="120" y1="98" x2="120" y2="158"/>
+    <line x1="160" y1="78" x2="160" y2="158"/>
+    <!-- main span -->
+    <line x1="230" y1="74" x2="230" y2="158"/>
+    <line x1="260" y1="96" x2="260" y2="158"/>
+    <line x1="290" y1="115" x2="290" y2="158"/>
+    <line x1="320" y1="132" x2="320" y2="158"/>
+    <line x1="350" y1="146" x2="350" y2="158"/>
+    <line x1="380" y1="154" x2="380" y2="158"/>
+    <line x1="400" y1="156" x2="400" y2="158"/>
+    <line x1="420" y1="154" x2="420" y2="158"/>
+    <line x1="450" y1="146" x2="450" y2="158"/>
+    <line x1="480" y1="132" x2="480" y2="158"/>
+    <line x1="510" y1="115" x2="510" y2="158"/>
+    <line x1="540" y1="96" x2="540" y2="158"/>
+    <line x1="570" y1="74" x2="570" y2="158"/>
+    <!-- right span -->
+    <line x1="640" y1="78" x2="640" y2="158"/>
+    <line x1="680" y1="98" x2="680" y2="158"/>
+    <line x1="720" y1="110" x2="720" y2="158"/>
+    <line x1="760" y1="118" x2="760" y2="158"/>
+  </g>
+
+  <!-- Bridge deck (roadway) -->
+  <rect x="0" y="156" width="800" height="4" fill="#3a1a14"/>
+  <rect x="0" y="158" width="800" height="2" fill="url(#orange)" opacity="0.9"/>
+
+  <!-- Left tower -->
+  <g fill="url(#orange)">
+    <!-- two legs -->
+    <polygon points="192,160 196,46 200,46 204,160"/>
+    <polygon points="196,160 200,46 204,46 208,160"/>
+    <!-- crossbeams -->
+    <rect x="190" y="64" width="20" height="3"/>
+    <rect x="190" y="92" width="20" height="3"/>
+    <rect x="190" y="124" width="20" height="3"/>
+    <!-- top cap -->
+    <rect x="188" y="44" width="24" height="4"/>
+  </g>
+
+  <!-- Right tower -->
+  <g fill="url(#orange)">
+    <polygon points="592,160 596,46 600,46 604,160"/>
+    <polygon points="596,160 600,46 604,46 608,160"/>
+    <rect x="590" y="64" width="20" height="3"/>
+    <rect x="590" y="92" width="20" height="3"/>
+    <rect x="590" y="124" width="20" height="3"/>
+    <rect x="588" y="44" width="24" height="4"/>
+  </g>
+
+  <!-- Aviation warning lights on towers -->
+  <circle cx="200" cy="46" r="1.6" fill="#ff5a3a">
+    <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="46" r="1.6" fill="#ff5a3a">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Drifting fog banks (animated across) -->
+  <g>
+    <use href="#fogBank" x="0" y="150">
+      <animateTransform attributeName="transform" type="translate" values="-220 0;1020 0" dur="59s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  <g>
+    <use href="#fogBank" x="0" y="172">
+      <animateTransform attributeName="transform" type="translate" values="-260 0;1060 0" dur="41s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  <g>
+    <use href="#fogBank" x="0" y="140">
+      <animateTransform attributeName="transform" type="translate" values="-300 0;1080 0" dur="73s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Birds -->
+  <g opacity="0.7">
+    <use href="#bird" x="0" y="0">
+      <animateTransform attributeName="transform" type="translate" values="100 60;760 50" dur="29s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.1;0.9;1" dur="29s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bird" x="0" y="0">
+      <animateTransform attributeName="transform" type="translate" values="60 80;780 70" dur="37s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.9;1" dur="37s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bird" x="0" y="0">
+      <animateTransform attributeName="transform" type="translate" values="40 95;800 88" dur="43s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.9;1" dur="43s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ===== Typography ===== -->
+  <!-- Date plaque, anchored upper-left over sky, high contrast -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Date — primary -->
+    <text x="24" y="36" font-size="22" font-weight="800" fill="#fff2dd" letter-spacing="1.5">
+      MAY 27 · 2026
+    </text>
+    <!-- Backdrop tint under text for readability -->
+    <rect x="20" y="44" width="240" height="14" fill="#0d1117" opacity="0.35" rx="2"/>
+    <text x="24" y="55" font-size="10" font-weight="600" fill="#ffd9a8" letter-spacing="2.6">
+      GOLDEN GATE BRIDGE · 89 YEARS
+    </text>
+    <text x="24" y="68" font-size="8" fill="#e8c8a4" letter-spacing="2" opacity="0.85">
+      OPENED MAY 27, 1937 — SAN FRANCISCO
+    </text>
+  </g>
+
+  <!-- Quiet maker's mark, bottom right -->
+  <text x="780" y="196" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="6.5" fill="#7a6a5a" opacity="0.7" letter-spacing="1">
+    JOSEPH STRAUSS · IRVING MORROW · CHARLES ELLIS
+  </text>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="200" fill="url(#vignette)" opacity="0"/>
+</svg>
