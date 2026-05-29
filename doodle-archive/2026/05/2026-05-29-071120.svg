@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Able and Baker — first primates to survive spaceflight, 67th anniversary (May 28, 1959, Jupiter AM-18, NASA); rhesus monkey + squirrel monkey portraits in helmets, rocket trajectory arc, Earth limb, deep starfield, retro NASA-era palette -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 28, 2026 — Able and Baker, first primates to survive spaceflight, 67th anniversary">
+  <defs>
+    <radialGradient id="space" cx="0.35" cy="0.55" r="0.95">
+      <stop offset="0" stop-color="#1a2a4a"/>
+      <stop offset="0.5" stop-color="#0a0f24"/>
+      <stop offset="1" stop-color="#04060f"/>
+    </radialGradient>
+    <radialGradient id="earth" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3b6fc4"/>
+      <stop offset="0.55" stop-color="#1f4a8a"/>
+      <stop offset="1" stop-color="#0b1f3e"/>
+    </radialGradient>
+    <radialGradient id="earthGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0.6" stop-color="#5fa8ff" stop-opacity="0"/>
+      <stop offset="0.85" stop-color="#5fa8ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#5fa8ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd97a" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ff8a2a" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#c0362c" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rocketBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfd6df"/>
+      <stop offset="0.5" stop-color="#f4f6f8"/>
+      <stop offset="1" stop-color="#8e96a3"/>
+    </linearGradient>
+    <linearGradient id="helmetGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8d4ff" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#3a5a90" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0f1f3a" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="visorSheen" cx="0.35" cy="0.3" r="0.4">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Star symbol -->
+    <symbol id="star" overflow="visible">
+      <circle r="0.8" fill="#ffffff"/>
+    </symbol>
+
+    <!-- Helmet with monkey silhouette inside -->
+    <symbol id="helmet" overflow="visible">
+      <!-- outer helmet ring -->
+      <circle r="26" fill="#e6ebf2" stroke="#7a8290" stroke-width="1.2"/>
+      <circle r="24" fill="#1a2030"/>
+      <!-- visor -->
+      <circle r="22" fill="url(#helmetGlass)"/>
+      <!-- visor sheen -->
+      <ellipse cx="-7" cy="-8" rx="9" ry="6" fill="url(#visorSheen)"/>
+      <!-- inner ring lip -->
+      <circle r="22" fill="none" stroke="#0a0f1c" stroke-width="0.8" opacity="0.6"/>
+    </symbol>
+
+    <!-- Rhesus monkey silhouette (face) -->
+    <symbol id="rhesus" overflow="visible">
+      <!-- ears -->
+      <ellipse cx="-13" cy="-2" rx="3.5" ry="4.5" fill="#7a4a2a"/>
+      <ellipse cx="13" cy="-2" rx="3.5" ry="4.5" fill="#7a4a2a"/>
+      <ellipse cx="-13" cy="-2" rx="2" ry="2.8" fill="#3a2010"/>
+      <ellipse cx="13" cy="-2" rx="2" ry="2.8" fill="#3a2010"/>
+      <!-- head -->
+      <ellipse cx="0" cy="0" rx="11" ry="13" fill="#8a5a36"/>
+      <!-- face mask (lighter) -->
+      <ellipse cx="0" cy="3" rx="8" ry="9" fill="#d6a878"/>
+      <!-- brow ridge -->
+      <path d="M -7 -3 Q 0 -6 7 -3" stroke="#5a3520" stroke-width="0.8" fill="none"/>
+      <!-- eyes -->
+      <circle cx="-3.2" cy="-1.5" r="1.3" fill="#1a0f08"/>
+      <circle cx="3.2" cy="-1.5" r="1.3" fill="#1a0f08"/>
+      <circle cx="-2.8" cy="-1.8" r="0.4" fill="#ffffff"/>
+      <circle cx="3.6" cy="-1.8" r="0.4" fill="#ffffff"/>
+      <!-- nose / muzzle -->
+      <ellipse cx="0" cy="4" rx="3" ry="3.2" fill="#b88a5a"/>
+      <ellipse cx="-1" cy="3.5" rx="0.5" ry="0.7" fill="#3a2010"/>
+      <ellipse cx="1" cy="3.5" rx="0.5" ry="0.7" fill="#3a2010"/>
+      <!-- mouth -->
+      <path d="M -2 7 Q 0 8.2 2 7" stroke="#3a2010" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Squirrel monkey silhouette (face) -->
+    <symbol id="squirrel" overflow="visible">
+      <!-- ears (smaller, hidden in fur) -->
+      <ellipse cx="-12" cy="-3" rx="2.5" ry="3.5" fill="#6a5030"/>
+      <ellipse cx="12" cy="-3" rx="2.5" ry="3.5" fill="#6a5030"/>
+      <!-- head -->
+      <ellipse cx="0" cy="0" rx="11" ry="12.5" fill="#b59758"/>
+      <!-- white facemask (signature squirrel monkey) -->
+      <path d="M -9 -2 Q -10 6 -7 10 Q 0 12 7 10 Q 10 6 9 -2 Q 4 -4 0 -4 Q -4 -4 -9 -2 Z" fill="#f0e4cc"/>
+      <!-- dark cap over crown -->
+      <path d="M -10 -3 Q -8 -10 0 -11 Q 8 -10 10 -3 Q 6 -6 0 -6 Q -6 -6 -10 -3 Z" fill="#3a2818"/>
+      <!-- eyes -->
+      <circle cx="-3.5" cy="-1" r="1.4" fill="#1a0f08"/>
+      <circle cx="3.5" cy="-1" r="1.4" fill="#1a0f08"/>
+      <circle cx="-3.0" cy="-1.3" r="0.4" fill="#ffffff"/>
+      <circle cx="4.0" cy="-1.3" r="0.4" fill="#ffffff"/>
+      <!-- muzzle -->
+      <ellipse cx="0" cy="4.5" rx="3.5" ry="2.8" fill="#d8c4a0"/>
+      <ellipse cx="-1" cy="3.8" rx="0.4" ry="0.6" fill="#3a2010"/>
+      <ellipse cx="1" cy="3.8" rx="0.4" ry="0.6" fill="#3a2010"/>
+      <!-- mouth -->
+      <path d="M -2 7 Q 0 8.4 2 7" stroke="#3a2010" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <!-- Space background -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#space)"/>
+
+  <!-- Starfield (twinkling) -->
+  <g>
+    <use href="#star" x="40" y="28"/>
+    <use href="#star" x="92" y="64"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/></use>
+    <use href="#star" x="145" y="14"/>
+    <use href="#star" x="180" y="92"><animate attributeName="opacity" values="1;0.3;1" dur="11s" repeatCount="indefinite"/></use>
+    <use href="#star" x="222" y="42"/>
+    <use href="#star" x="270" y="20"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#star" x="300" y="100"/>
+    <use href="#star" x="340" y="50"><animate attributeName="opacity" values="1;0.4;1" dur="7s" repeatCount="indefinite"/></use>
+    <use href="#star" x="380" y="120"/>
+    <use href="#star" x="420" y="38"/>
+    <use href="#star" x="470" y="14"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" repeatCount="indefinite"/></use>
+    <use href="#star" x="510" y="78"/>
+    <use href="#star" x="558" y="44"/>
+    <use href="#star" x="606" y="120"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#star" x="650" y="22"/>
+    <use href="#star" x="690" y="156"/>
+    <use href="#star" x="720" y="60"><animate attributeName="opacity" values="1;0.4;1" dur="7s" repeatCount="indefinite"/></use>
+    <use href="#star" x="752" y="100"/>
+    <use href="#star" x="120" y="140"/>
+    <use href="#star" x="58" y="170"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#star" x="248" y="174"/>
+    <use href="#star" x="408" y="170"/>
+    <use href="#star" x="780" y="32"/>
+    <use href="#star" x="16" y="118"/>
+  </g>
+
+  <!-- Bright twinkling stars (larger) -->
+  <g>
+    <circle cx="72" cy="46" r="1.6" fill="#fff8dc">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="248" cy="78" r="1.4" fill="#fff8dc">
+      <animate attributeName="opacity" values="1;0.5;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="498" cy="32" r="1.5" fill="#fff8dc">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="670" cy="88" r="1.4" fill="#fff8dc">
+      <animate attributeName="opacity" values="1;0.4;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Earth limb (bottom-left corner) -->
+  <g>
+    <circle cx="-30" cy="280" r="240" fill="url(#earthGlow)" opacity="0.7"/>
+    <circle cx="-30" cy="280" r="220" fill="url(#earth)"/>
+    <!-- continent shapes -->
+    <g fill="#2e6238" opacity="0.85">
+      <path d="M 60 90 Q 90 85 110 100 Q 130 115 115 130 Q 95 138 78 128 Q 60 118 60 90 Z"/>
+      <path d="M 150 130 Q 175 125 185 145 Q 180 162 165 165 Q 150 158 150 130 Z"/>
+      <path d="M 30 150 Q 55 148 65 165 Q 55 178 35 175 Q 22 168 30 150 Z"/>
+    </g>
+    <!-- cloud swirls -->
+    <g fill="#f4f8ff" opacity="0.35">
+      <ellipse cx="50" cy="80" rx="35" ry="8"/>
+      <ellipse cx="120" cy="115" rx="22" ry="5"/>
+      <ellipse cx="170" cy="155" rx="28" ry="6"/>
+    </g>
+    <!-- terminator/shadow on right side of earth -->
+    <ellipse cx="220" cy="280" rx="80" ry="220" fill="#000000" opacity="0.4"/>
+  </g>
+
+  <!-- Trajectory arc (parabolic flight path) -->
+  <path d="M 130 175 Q 360 -10 700 80" stroke="#ffd97a" stroke-width="1" fill="none" stroke-dasharray="3,4" opacity="0.55" filter="url(#glow)"/>
+  <path d="M 130 175 Q 360 -10 700 80" stroke="#ffaa55" stroke-width="0.5" fill="none" opacity="0.7"/>
+
+  <!-- Rocket traveling along trajectory -->
+  <g>
+    <animateMotion dur="11s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#trajPath"/>
+    </animateMotion>
+    <!-- flame trail -->
+    <path d="M -18 -3 L -4 -2 L -4 2 L -18 3 Q -22 0 -18 -3 Z" fill="url(#flame)" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="0.4s" repeatCount="indefinite"/>
+    </path>
+    <!-- rocket body -->
+    <rect x="-4" y="-3" width="14" height="6" fill="url(#rocketBody)"/>
+    <!-- nosecone -->
+    <path d="M 10 -3 L 16 0 L 10 3 Z" fill="#c8252a"/>
+    <!-- fin -->
+    <path d="M -4 -3 L -7 -5 L -4 -1 Z" fill="#c8252a"/>
+    <path d="M -4 3 L -7 5 L -4 1 Z" fill="#c8252a"/>
+    <!-- USA stripe -->
+    <rect x="-1" y="-1.2" width="6" height="2.4" fill="#1a3a7a"/>
+    <circle cx="2" cy="0" r="0.6" fill="#ffffff"/>
+  </g>
+  <!-- Hidden path used by animateMotion -->
+  <path id="trajPath" d="M 130 175 Q 360 -10 700 80" fill="none" stroke="none"/>
+
+  <!-- Two helmet portraits, right side, slightly bobbing -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="7s" repeatCount="indefinite"/>
+    <g transform="translate(540 110)">
+      <use href="#helmet"/>
+      <g transform="translate(0 2)">
+        <use href="#rhesus"/>
+      </g>
+      <!-- name tag -->
+      <rect x="-22" y="29" width="44" height="9" rx="1.2" fill="#1a2030" stroke="#7a8290" stroke-width="0.5"/>
+      <text x="0" y="35.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="6.5" font-weight="800" fill="#ffd97a" letter-spacing="1.5">ABLE</text>
+    </g>
+  </g>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="7s" begin="-3.5s" repeatCount="indefinite"/>
+    <g transform="translate(630 110)">
+      <use href="#helmet"/>
+      <g transform="translate(0 2)">
+        <use href="#squirrel"/>
+      </g>
+      <rect x="-22" y="29" width="44" height="9" rx="1.2" fill="#1a2030" stroke="#7a8290" stroke-width="0.5"/>
+      <text x="0" y="35.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="6.5" font-weight="800" fill="#ffd97a" letter-spacing="1.5">BAKER</text>
+    </g>
+  </g>
+
+  <!-- Connecting line between portraits -->
+  <line x1="566" y1="110" x2="604" y2="110" stroke="#ffd97a" stroke-width="0.6" opacity="0.5" stroke-dasharray="2,2"/>
+  <text x="585" y="108" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="5" fill="#ffd97a" opacity="0.85" letter-spacing="0.5">&amp;</text>
+
+  <!-- ===== Typography ===== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Backdrop tint for primary date -->
+    <rect x="244" y="18" width="280" height="42" fill="#04060f" opacity="0.55" rx="3"/>
+    <!-- Date — primary, large -->
+    <text x="384" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="3">
+      MAY 28 · 2026
+    </text>
+    <!-- Subtitle -->
+    <text x="384" y="74" text-anchor="middle" font-size="10" font-weight="700" fill="#ffd97a" letter-spacing="3.4">
+      ABLE &amp; BAKER · 67 YEARS IN ORBIT'S MEMORY
+    </text>
+    <!-- Tertiary explanatory -->
+    <text x="384" y="90" text-anchor="middle" font-size="7.5" fill="#a8c2e8" letter-spacing="2.2" opacity="0.92">
+      FIRST PRIMATES TO SURVIVE SPACEFLIGHT · JUPITER AM-18 · MAY 28, 1959
+    </text>
+  </g>
+
+  <!-- NASA-style chevron / mission patch hint, bottom-left -->
+  <g transform="translate(60 175)" opacity="0.85">
+    <circle r="14" fill="none" stroke="#c8252a" stroke-width="1.4"/>
+    <text x="0" y="2" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="6" font-weight="800" fill="#ffd97a" letter-spacing="1">AM-18</text>
+    <path d="M -12 4 Q 0 9 12 4" stroke="#1a3a7a" stroke-width="1.4" fill="none"/>
+  </g>
+
+  <!-- Maker's mark / mission detail, bottom-right -->
+  <text x="784" y="194" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="6.5" fill="#7a8aa8" opacity="0.75" letter-spacing="1.5">
+    CAPE CANAVERAL · 360 MI APOGEE · 9 G PEAK · SPLASHDOWN ATLANTIC
+  </text>
+</svg>
