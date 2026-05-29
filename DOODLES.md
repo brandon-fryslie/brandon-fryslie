@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 29, 2026 — Able and Baker, first primates to survive spaceflight, 67th anniversary (May 28, 1959, Jupiter AM-18, NASA); rhesus monkey + squirrel monkey portraits in helmets, rocket trajectory arc, Earth limb, deep starfield, retro NASA-era palette
+
+<img src="./doodle-archive/2026/05/2026-05-29-071120.svg" width="800" alt="Daily doodle for May 29, 2026: Able and Baker, first primates to survive spaceflight, 67th anniversary (May 28, 1959, Jupiter AM-18, NASA); rhesus monkey + squirrel monkey portraits in helmets, rocket trajectory arc, Earth limb, deep starfield, retro NASA-era palette">
+
+---
+
 ## May 28, 2026 — Golden Gate Bridge 89th anniversary (opened May 27, 1937 — Joseph Strauss, San Francisco); two International-Orange towers, sweeping main cables, fog drifting in from the Pacific, dawn sky, boat passing beneath
 
 <img src="./doodle-archive/2026/05/2026-05-28-071108.svg" width="800" alt="Daily doodle for May 28, 2026: Golden Gate Bridge 89th anniversary (opened May 27, 1937 — Joseph Strauss, San Francisco); two International-Orange towers, sweeping main cables, fog drifting in from the Pacific, dawn sky, boat passing beneath">
