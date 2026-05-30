@@ -1,291 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Mount Everest first summit 73rd anniversary (May 29, 1953 — Edmund Hillary & Tenzing Norgay reach 8,848 m on the British Mount Everest Expedition); dawn over the Himalayas, layered ridgelines, two climber silhouettes on the summit, prayer flags fluttering, drifting snow -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 29, 2026 — Mount Everest first summit 73rd anniversary, Hillary and Tenzing">
+<!-- theme: Inaugural Indianapolis 500 — 115th anniversary (May 30, 1911 — Ray Harroun wins the first Indianapolis 500 in the Marmon Wasp #32 at an average 74.6 mph, Indianapolis Motor Speedway); vintage yellow racer profile speeding past the brick yard, spinning wheels, dust + exhaust trail, checkered flag waving, dusk-gold banner over the speedway -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 30, 2026 — Inaugural Indianapolis 500 115th anniversary, Marmon Wasp #32, Ray Harroun">
   <defs>
-    <!-- Sky: pre-dawn blue at top into rose / amber at the ridge horizon -->
+    <!-- Sky: dusty amber dusk over the Brickyard -->
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"    stop-color="#0d1117"/>
-      <stop offset="0.35" stop-color="#152042"/>
-      <stop offset="0.65" stop-color="#3a3a6a"/>
-      <stop offset="0.82" stop-color="#c66a55"/>
-      <stop offset="0.92" stop-color="#f0a868"/>
-      <stop offset="1"    stop-color="#ffd49a"/>
+      <stop offset="0"    stop-color="#1a1208"/>
+      <stop offset="0.35" stop-color="#5a3018"/>
+      <stop offset="0.65" stop-color="#c66820"/>
+      <stop offset="0.85" stop-color="#f0a040"/>
+      <stop offset="1"    stop-color="#f8c468"/>
     </linearGradient>
 
-    <!-- Sun glow halo behind the summit -->
-    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0"   stop-color="#fff4d0" stop-opacity="0.95"/>
-      <stop offset="0.35" stop-color="#ffc070" stop-opacity="0.55"/>
-      <stop offset="1"   stop-color="#ffc070" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Far range: hazy purple-blue -->
-    <linearGradient id="rangeFar" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6a6e96"/>
-      <stop offset="1" stop-color="#2a2e54"/>
+    <!-- Brickyard surface gradient -->
+    <linearGradient id="track" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#8a3018"/>
+      <stop offset="0.5" stop-color="#6a2410"/>
+      <stop offset="1"   stop-color="#3a1208"/>
     </linearGradient>
 
-    <!-- Mid range: cooler, slightly bluer -->
-    <linearGradient id="rangeMid" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3e4773"/>
-      <stop offset="1" stop-color="#1a1e3a"/>
+    <!-- Yellow Marmon Wasp body gradient -->
+    <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#fff0a0"/>
+      <stop offset="0.4" stop-color="#f0c030"/>
+      <stop offset="1"   stop-color="#a07010"/>
     </linearGradient>
 
-    <!-- Foreground Everest -->
-    <linearGradient id="everest" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0"   stop-color="#1a1e34"/>
-      <stop offset="0.45" stop-color="#272c4a"/>
-      <stop offset="0.55" stop-color="#3a4068"/>
-      <stop offset="1"   stop-color="#10142a"/>
+    <!-- Dust / exhaust plume gradient -->
+    <linearGradient id="dust" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0"   stop-color="#f0d8a0" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#c89860" stop-opacity="0.45"/>
+      <stop offset="1"   stop-color="#c89860" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Snow / lit western face -->
-    <linearGradient id="snowFace" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0"   stop-color="#ffd6a8"/>
-      <stop offset="0.5" stop-color="#f4b078"/>
-      <stop offset="1"   stop-color="#a87060"/>
-    </linearGradient>
+    <!-- Checkered flag pattern (8x8 squares) -->
+    <pattern id="checker" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#ffffff"/>
+      <rect x="0" y="0" width="7" height="7" fill="#0a0a0a"/>
+      <rect x="7" y="7" width="7" height="7" fill="#0a0a0a"/>
+    </pattern>
 
-    <!-- Snow plume off the summit (Everest's signature banner cloud) -->
-    <linearGradient id="plume" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0"   stop-color="#ffffff" stop-opacity="0.75"/>
-      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0.3"/>
-      <stop offset="1"   stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- A single drifting snowflake -->
-    <symbol id="flake" overflow="visible">
-      <circle r="0.9" fill="#ffffff" opacity="0.85"/>
-    </symbol>
-
-    <!-- Prayer-flag bunting symbol: 5 small rectangles in the Tibetan order
-         (blue, white, red, green, yellow) — used along strings between peaks -->
-    <symbol id="flag5" overflow="visible">
-      <rect x="0"  y="0" width="10" height="13" fill="#3a7bd4"/>
-      <rect x="12" y="0" width="10" height="13" fill="#f0f0f0"/>
-      <rect x="24" y="0" width="10" height="13" fill="#d04030"/>
-      <rect x="36" y="0" width="10" height="13" fill="#3aa05a"/>
-      <rect x="48" y="0" width="10" height="13" fill="#f0c040"/>
-    </symbol>
+    <!-- Brick pattern for the Yard of Bricks -->
+    <pattern id="bricks" x="0" y="0" width="22" height="10" patternUnits="userSpaceOnUse">
+      <rect width="22" height="10" fill="#7a2812"/>
+      <rect x="0"  y="0" width="20" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
+      <rect x="-10" y="5" width="10" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
+      <rect x="11"  y="5" width="20" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
+    </pattern>
 
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <filter id="snowBlur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="0.6"/>
+    <filter id="dustBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2"/>
     </filter>
+
+    <!-- Single dust puff -->
+    <symbol id="puff" overflow="visible">
+      <circle r="6" fill="#e8c890" opacity="0.55"/>
+      <circle r="3" cx="3" cy="-2" fill="#f0d8a0" opacity="0.45"/>
+    </symbol>
+
+    <!-- Vintage racer #32 (Marmon Wasp profile) — origin at front bumper, faces right -->
+    <symbol id="racer" overflow="visible">
+      <!-- chassis main body -->
+      <path d="M -150 -2
+               L -148 -10
+               L -130 -16
+               L -100 -20
+               L -70  -28
+               L -38  -30
+               L -10  -24
+               L 6    -18
+               L 14   -8
+               L 14   2
+               L -150 2 Z"
+            fill="url(#carBody)" stroke="#3a2008" stroke-width="0.8"/>
+      <!-- engine hood louvers -->
+      <g stroke="#7a4010" stroke-width="0.5" opacity="0.7">
+        <line x1="-6"  y1="-14" x2="-6"  y2="-4"/>
+        <line x1="-2"  y1="-16" x2="-2"  y2="-4"/>
+        <line x1="2"   y1="-16" x2="2"   y2="-4"/>
+        <line x1="6"   y1="-14" x2="6"   y2="-4"/>
+        <line x1="10"  y1="-12" x2="10"  y2="-4"/>
+      </g>
+      <!-- driver's cockpit cowl -->
+      <path d="M -78 -28 Q -64 -36 -48 -34 L -34 -32 L -34 -26 Z" fill="#5a3812" stroke="#2a1408" stroke-width="0.6"/>
+      <!-- driver's head + goggles -->
+      <circle cx="-58" cy="-38" r="5" fill="#d8b890"/>
+      <rect x="-63" y="-40" width="10" height="3" rx="1" fill="#1a1008"/>
+      <!-- leather cap -->
+      <path d="M -64 -40 Q -58 -46 -52 -40 L -52 -38 L -64 -38 Z" fill="#3a2008"/>
+      <!-- rear-view mirror (Harroun's famous innovation!) -->
+      <line x1="-44" y1="-32" x2="-44" y2="-44" stroke="#3a2008" stroke-width="0.8"/>
+      <rect x="-48" y="-49" width="8" height="5" fill="#c0c0c0" stroke="#3a2008" stroke-width="0.5"/>
+      <!-- tail "stinger" of the Wasp -->
+      <path d="M -150 -2 L -168 -4 L -172 0 L -150 2 Z" fill="url(#carBody)" stroke="#3a2008" stroke-width="0.6"/>
+      <!-- racing number 32 roundel on cowl -->
+      <circle cx="-50" cy="-20" r="7" fill="#ffffff" stroke="#3a2008" stroke-width="0.7"/>
+      <text x="-50" y="-17" text-anchor="middle" font-family="Georgia, serif"
+            font-size="9" font-weight="900" fill="#3a1208">32</text>
+
+      <!-- rear wheel -->
+      <g transform="translate(-120 4)">
+        <circle r="14" fill="#1a1008" stroke="#5a3018" stroke-width="1.2"/>
+        <circle r="6"  fill="#3a2008"/>
+        <g stroke="#a07030" stroke-width="0.8">
+          <line x1="-12" y1="0"  x2="12"  y2="0">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="0" to="360" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="0"   y1="-12" x2="0"   y2="12">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="45" to="405" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="-8"  y1="-8"  x2="8"   y2="8">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="90" to="450" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+        </g>
+      </g>
+      <!-- front wheel -->
+      <g transform="translate(-12 4)">
+        <circle r="14" fill="#1a1008" stroke="#5a3018" stroke-width="1.2"/>
+        <circle r="6"  fill="#3a2008"/>
+        <g stroke="#a07030" stroke-width="0.8">
+          <line x1="-12" y1="0"  x2="12"  y2="0">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="0" to="360" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="0"   y1="-12" x2="0"   y2="12">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="45" to="405" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="-8"  y1="-8"  x2="8"   y2="8">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="90" to="450" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+        </g>
+      </g>
+      <!-- exhaust pipe -->
+      <rect x="14" y="-6" width="6" height="2" fill="#3a2008"/>
+    </symbol>
   </defs>
 
-  <!-- ===== Background ===== -->
+  <!-- ===== Sky / background ===== -->
   <rect width="800" height="200" fill="#0d1117"/>
   <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- Sun halo behind Everest's summit -->
-  <ellipse cx="400" cy="138" rx="220" ry="90" fill="url(#sunGlow)" filter="url(#softGlow)">
-    <animate attributeName="opacity" values="0.85;1;0.85" dur="13s" repeatCount="indefinite"/>
+  <!-- Setting-sun haze over the back straight -->
+  <ellipse cx="640" cy="148" rx="220" ry="60" fill="#ffd070" opacity="0.35" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.30;0.45;0.30" dur="13s" repeatCount="indefinite"/>
   </ellipse>
 
-  <!-- Faint distant stars (only top quarter where the sky is still dark) -->
-  <g fill="#ffffff">
-    <circle cx="60"  cy="18" r="0.8" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s"  repeatCount="indefinite"/></circle>
-    <circle cx="130" cy="30" r="0.6" opacity="0.6"/>
-    <circle cx="210" cy="14" r="0.7" opacity="0.8"><animate attributeName="opacity" values="0.9;0.4;0.9" dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="300" cy="36" r="0.5" opacity="0.55"/>
-    <circle cx="520" cy="22" r="0.8" opacity="0.7"><animate attributeName="opacity" values="0.4;1;0.4"   dur="13s" repeatCount="indefinite"/></circle>
-    <circle cx="630" cy="12" r="0.6" opacity="0.6"/>
-    <circle cx="720" cy="34" r="0.7" opacity="0.65"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s"  repeatCount="indefinite"/></circle>
-    <circle cx="770" cy="20" r="0.5" opacity="0.55"/>
+  <!-- Distant grandstand silhouette -->
+  <g fill="#1a0a04" opacity="0.85">
+    <path d="M 0 140 L 0 122 L 30 122 L 30 116 L 80 116 L 80 110 L 140 110 L 140 116 L 200 116 L 200 122 L 260 122 L 260 116 L 330 116 L 330 122 L 400 122 L 400 118 L 470 118 L 470 124 L 540 124 L 540 118 L 610 118 L 610 124 L 680 124 L 680 120 L 740 120 L 740 124 L 800 124 L 800 140 Z"/>
+  </g>
+  <!-- grandstand vertical supports -->
+  <g stroke="#2a1408" stroke-width="0.6" opacity="0.7">
+    <line x1="40"  y1="124" x2="40"  y2="140"/>
+    <line x1="110" y1="118" x2="110" y2="140"/>
+    <line x1="180" y1="120" x2="180" y2="140"/>
+    <line x1="250" y1="120" x2="250" y2="140"/>
+    <line x1="320" y1="120" x2="320" y2="140"/>
+    <line x1="390" y1="124" x2="390" y2="140"/>
+    <line x1="460" y1="122" x2="460" y2="140"/>
+    <line x1="530" y1="126" x2="530" y2="140"/>
+    <line x1="600" y1="122" x2="600" y2="140"/>
+    <line x1="670" y1="126" x2="670" y2="140"/>
+    <line x1="740" y1="124" x2="740" y2="140"/>
   </g>
 
-  <!-- ===== Far range (most distant, hazy) ===== -->
-  <path d="M 0 150
-           L 40 120  L 75 134  L 105 110 L 135 128 L 170 105
-           L 200 122 L 235 100 L 268 118 L 300 96  L 332 116
-           L 365 100 L 398 84  L 432 102 L 468 92  L 502 110
-           L 538 96  L 572 112 L 608 100 L 644 118 L 678 104
-           L 712 120 L 748 108 L 800 124 L 800 200 L 0 200 Z"
-        fill="url(#rangeFar)" opacity="0.85"/>
-
-  <!-- ===== Mid range ===== -->
-  <path d="M 0 168
-           L 30 150  L 70 158  L 110 138 L 150 152 L 195 130
-           L 240 148 L 282 128 L 320 142 L 360 118 L 398 132
-           L 438 116 L 478 138 L 518 122 L 560 144 L 600 128
-           L 642 150 L 686 132 L 728 148 L 768 138 L 800 152
-           L 800 200 L 0 200 Z"
-        fill="url(#rangeMid)"/>
-
-  <!-- ===== Everest — center, foreground ===== -->
-  <!-- shadow side (east face) -->
-  <path d="M 240 200
-           L 290 178 L 340 152 L 380 122 L 400 100
-           L 400 200 Z"
-        fill="url(#everest)"/>
-  <!-- lit side (west / dawn-lit) -->
-  <path d="M 400 100 L 422 118 L 450 138 L 490 158 L 530 174 L 580 188 L 800 200 L 400 200 Z"
-        fill="url(#snowFace)"/>
-  <!-- subtle snow ridge highlight running down the lit face -->
-  <path d="M 400 100 L 408 116 L 432 132 L 470 152 L 510 168 L 560 182"
-        stroke="#fff0d8" stroke-width="0.8" fill="none" opacity="0.65"/>
-  <!-- shadow rocks / striations on dark face -->
-  <g stroke="#0a0d1c" stroke-width="0.6" opacity="0.5" fill="none">
-    <path d="M 290 178 L 330 162"/>
-    <path d="M 310 188 L 360 168"/>
-    <path d="M 345 184 L 380 162"/>
-    <path d="M 365 178 L 395 142"/>
-  </g>
-  <!-- snow cap accents on the dark side near summit -->
-  <path d="M 380 122 L 388 116 L 395 122 L 400 100 L 405 118 L 412 112 L 420 122 L 412 128 L 400 122 L 388 128 Z"
-        fill="#f0e6d4" opacity="0.9"/>
-
-  <!-- ===== Iconic Everest summit plume (banner cloud) ===== -->
-  <g transform="translate(400 100)">
-    <path d="M 0 0 Q 30 -8 60 -4 Q 100 0 140 6 Q 175 12 200 18 Q 175 22 150 22 Q 110 22 70 16 Q 30 10 0 8 Z"
-          fill="url(#plume)" filter="url(#snowBlur)">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0;6 -2;0 0;-3 1;0 0" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.85;1;0.8;0.95;0.85" dur="11s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 0 -2 Q 40 -10 90 -8 Q 130 -4 170 4 Q 140 8 100 6 Q 50 2 0 4 Z"
-          fill="url(#plume)" opacity="0.55" filter="url(#snowBlur)">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0;10 -3;4 -1;0 0" dur="11s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- ===== Two climber silhouettes on the summit ===== -->
-  <!-- climber 1 (Hillary) -->
-  <g transform="translate(394 100)">
-    <!-- pack + body -->
-    <path d="M -2 0 L -1 -8 L 1 -10 L 3 -8 L 3 0 Z" fill="#0a0d1c"/>
-    <!-- head -->
-    <circle cx="1" cy="-11" r="1.6" fill="#0a0d1c"/>
-    <!-- ice axe -->
-    <line x1="3" y1="-4" x2="8" y2="-13" stroke="#0a0d1c" stroke-width="0.7"/>
-    <path d="M 7 -13 L 10 -14 L 9 -12 Z" fill="#0a0d1c"/>
-  </g>
-
-  <!-- climber 2 (Tenzing) — slightly behind & to the right, raising the rope/flag staff -->
-  <g transform="translate(404 102)">
-    <!-- legs / body -->
-    <path d="M -2 0 L -1 -9 L 1 -11 L 3 -9 L 3 0 Z" fill="#0a0d1c"/>
-    <!-- head -->
-    <circle cx="1" cy="-12" r="1.6" fill="#0a0d1c"/>
-    <!-- raised arm holding flagstaff -->
-    <line x1="2" y1="-10" x2="6" y2="-22" stroke="#0a0d1c" stroke-width="0.7"/>
-    <!-- flagstaff -->
-    <line x1="6" y1="-22" x2="6" y2="-2" stroke="#0a0d1c" stroke-width="0.6"/>
-    <!-- small UN-era expedition pennant fluttering -->
-    <path d="M 6 -22 L 14 -20 L 6 -18 Z" fill="#d04030">
-      <animate attributeName="d"
-               values="M 6 -22 L 14 -20 L 6 -18 Z;
-                       M 6 -22 L 15 -21 L 6 -18 Z;
-                       M 6 -22 L 13 -19 L 6 -18 Z;
-                       M 6 -22 L 14 -20 L 6 -18 Z"
-               dur="2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 6 -18 L 14 -16 L 6 -14 Z" fill="#3a7bd4">
-      <animate attributeName="d"
-               values="M 6 -18 L 14 -16 L 6 -14 Z;
-                       M 6 -18 L 15 -17 L 6 -14 Z;
-                       M 6 -18 L 13 -15 L 6 -14 Z;
-                       M 6 -18 L 14 -16 L 6 -14 Z"
-               dur="2s" begin="-1s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- ===== Prayer-flag bunting between mid-range peaks (left side) ===== -->
+  <!-- Pace flags strung above grandstand -->
   <g>
-    <!-- catenary string -->
-    <path d="M 60 90 Q 130 120 200 95" stroke="#5a6080" stroke-width="0.5" fill="none" opacity="0.7"/>
-    <!-- bunting hung along approx midpoint, with gentle sway -->
-    <g transform="translate(96 108)">
-      <animateTransform attributeName="transform" type="rotate"
-                        values="-2 30 6;3 30 6;-2 30 6" dur="7s" repeatCount="indefinite" additive="sum"/>
-      <use href="#flag5"/>
-    </g>
-    <g transform="translate(152 110)">
-      <animateTransform attributeName="transform" type="rotate"
-                        values="3 30 6;-3 30 6;3 30 6" dur="7s" begin="-2s" repeatCount="indefinite" additive="sum"/>
-      <use href="#flag5"/>
+    <path d="M 100 100 Q 250 90 400 100 Q 550 110 700 96"
+          stroke="#5a3018" stroke-width="0.4" fill="none" opacity="0.6"/>
+    <g fill="#d83020">
+      <rect x="130" y="98"  width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="7s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="180" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="7s" begin="-1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="230" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="7s" begin="-2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="280" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="7s" begin="-3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="330" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="7s" begin="-4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="380" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="7s" begin="-5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="540" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="11s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="590" y="102" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="640" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="11s" begin="-4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="690" y="98"  width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="11s" begin="-6s" repeatCount="indefinite"/>
+      </rect>
     </g>
   </g>
 
-  <!-- ===== Prayer-flag bunting (right side) ===== -->
+  <!-- ===== Brickyard track surface ===== -->
+  <rect x="0" y="140" width="800" height="60" fill="url(#track)"/>
+  <!-- Yard of Bricks band -->
+  <rect x="0" y="142" width="800" height="14" fill="url(#bricks)" opacity="0.95"/>
+  <!-- White start/finish stripe -->
+  <rect x="280" y="142" width="6" height="14" fill="#f4f0e0" opacity="0.95"/>
+  <rect x="288" y="142" width="6" height="14" fill="#f4f0e0" opacity="0.95"/>
+  <!-- Track lower asphalt grain -->
+  <g stroke="#2a1408" stroke-width="0.4" opacity="0.5">
+    <line x1="0"   y1="170" x2="800" y2="170"/>
+    <line x1="0"   y1="180" x2="800" y2="180"/>
+    <line x1="0"   y1="190" x2="800" y2="190"/>
+  </g>
+
+  <!-- ===== Dust trail and racing car (animated across the track) ===== -->
   <g>
-    <path d="M 600 100 Q 670 130 750 108" stroke="#5a6080" stroke-width="0.5" fill="none" opacity="0.7"/>
-    <g transform="translate(636 118)">
-      <animateTransform attributeName="transform" type="rotate"
-                        values="-3 30 6;2 30 6;-3 30 6" dur="11s" repeatCount="indefinite" additive="sum"/>
-      <use href="#flag5"/>
+    <!-- Dust plume trailing the car (offset right of car group origin) -->
+    <g filter="url(#dustBlur)">
+      <ellipse cx="0" cy="0" rx="120" ry="14" fill="url(#dust)" opacity="0.7">
+        <animateTransform attributeName="transform" type="translate"
+                          values="320 162; 340 162; 320 162" dur="11s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="0" cy="0" rx="80" ry="10" fill="url(#dust)" opacity="0.55">
+        <animateTransform attributeName="transform" type="translate"
+                          values="300 158; 318 158; 300 158" dur="7s" repeatCount="indefinite"/>
+      </ellipse>
     </g>
-    <g transform="translate(696 120)">
-      <animateTransform attributeName="transform" type="rotate"
-                        values="2 30 6;-3 30 6;2 30 6" dur="11s" begin="-4s" repeatCount="indefinite" additive="sum"/>
-      <use href="#flag5"/>
+
+    <!-- Dust puffs trailing -->
+    <g>
+      <use href="#puff" x="280" y="166">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; -40 -12; -80 -22" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0" dur="2.2s" repeatCount="indefinite"/>
+      </use>
+      <use href="#puff" x="270" y="170">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; -50 -16; -100 -28" dur="2.6s" begin="-0.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.3;0" dur="2.6s" begin="-0.6s" repeatCount="indefinite"/>
+      </use>
+      <use href="#puff" x="290" y="168">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; -45 -10; -90 -20" dur="2.0s" begin="-1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0" dur="2.0s" begin="-1.2s" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- The car itself — bobbing slightly along the straight -->
+    <g>
+      <use href="#racer" x="460" y="160">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; 0 -0.6; 0 0; 0 0.4; 0 0" dur="0.5s" repeatCount="indefinite"/>
+      </use>
     </g>
   </g>
 
-  <!-- ===== Drifting snow / spindrift ===== -->
-  <g>
-    <use href="#flake" x="100" y="60">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 40 30; 90 70" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
-    </use>
-    <use href="#flake" x="250" y="40">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 30 50; 70 110" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite"/>
-    </use>
-    <use href="#flake" x="430" y="30">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 50 60; 110 130" dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="7s" repeatCount="indefinite"/>
-    </use>
-    <use href="#flake" x="580" y="50">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 35 45; 80 100" dur="13s" begin="-4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="13s" begin="-4s" repeatCount="indefinite"/>
-    </use>
-    <use href="#flake" x="680" y="40">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 30 60; 70 130" dur="11s" begin="-6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="11s" begin="-6s" repeatCount="indefinite"/>
-    </use>
-    <use href="#flake" x="370" y="80">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 25 40; 60 100" dur="7s" begin="-3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="7s" begin="-3s" repeatCount="indefinite"/>
-    </use>
+  <!-- ===== Checkered flag on the right ===== -->
+  <g transform="translate(700 60)">
+    <!-- pole -->
+    <line x1="0" y1="0" x2="0" y2="92" stroke="#2a1408" stroke-width="1.4"/>
+    <circle cx="0" cy="0" r="2" fill="#d8a040"/>
+    <!-- flag (waves via skew animation) -->
+    <g>
+      <path d="M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z" fill="url(#checker)" stroke="#1a1008" stroke-width="0.6">
+        <animate attributeName="d"
+                 values="M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z;
+                         M 0 4 L 78 2 L 86 28 L 82 54 L 0 56 Z;
+                         M 0 4 L 82 10 L 80 30 L 84 50 L 0 56 Z;
+                         M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z"
+                 dur="2.6s" repeatCount="indefinite"/>
+      </path>
+    </g>
   </g>
 
   <!-- ===== Typography ===== -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <!-- date backdrop tint for legibility against gradient sky -->
-    <rect x="38" y="36" width="320" height="48" rx="4" fill="#0a0d1c" opacity="0.55"/>
-    <!-- date -->
-    <text x="198" y="68" text-anchor="middle"
-          font-size="30" font-weight="800" fill="#ffffff" letter-spacing="3">
-      MAY 29 · 2026
-    </text>
-    <!-- subtitle -->
-    <rect x="38" y="92" width="320" height="22" rx="3" fill="#0a0d1c" opacity="0.45"/>
-    <text x="198" y="108" text-anchor="middle"
-          font-size="10.5" font-weight="700" fill="#ffd49a" letter-spacing="2.6">
-      EVEREST · 73 YEARS · HILLARY &amp; TENZING
+    <!-- Top vintage banner -->
+    <rect x="20" y="14" width="540" height="26" rx="3" fill="#1a0a04" opacity="0.8"/>
+    <rect x="20" y="14" width="540" height="26" rx="3" fill="none" stroke="#f0c060" stroke-width="0.8" opacity="0.7"/>
+    <text x="290" y="33" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="16" font-weight="900" fill="#ffe49a" letter-spacing="4.5">
+      INDIANAPOLIS 500 · 115 YEARS
     </text>
 
-    <!-- right-side mission line -->
-    <text x="784" y="174" text-anchor="end"
-          font-size="8.5" font-weight="700" fill="#ffd49a" letter-spacing="2" opacity="0.95">
-      29 MAY 1953 · 11:30 AM NPT
+    <!-- Big date block -->
+    <rect x="20" y="50" width="340" height="58" rx="4" fill="#0a0d1c" opacity="0.78"/>
+    <rect x="20" y="50" width="340" height="58" rx="4" fill="none" stroke="#f0c060" stroke-width="0.7" opacity="0.6"/>
+    <text x="190" y="86" text-anchor="middle"
+          font-size="30" font-weight="800" fill="#ffffff" letter-spacing="4">
+      MAY 30 · 2026
     </text>
-    <text x="784" y="188" text-anchor="end"
-          font-size="7.5" fill="#e8d6b8" letter-spacing="1.6" opacity="0.85">
-      SAGARMATHA · CHOMOLUNGMA · 8,848 M
+    <text x="190" y="102" text-anchor="middle"
+          font-size="9.5" font-weight="700" fill="#f0c060" letter-spacing="2.2">
+      RAY HARROUN · MARMON WASP No. 32
+    </text>
+
+    <!-- Right-corner date line -->
+    <text x="784" y="178" text-anchor="end"
+          font-size="8.5" font-weight="700" fill="#ffe49a" letter-spacing="2" opacity="0.95">
+      30 MAY 1911 · 74.6 MPH AVG
+    </text>
+    <text x="784" y="192" text-anchor="end"
+          font-size="7.5" fill="#f0c890" letter-spacing="1.7" opacity="0.85">
+      THE BRICKYARD · 200 LAPS · 500 MILES
     </text>
   </g>
 </svg>
