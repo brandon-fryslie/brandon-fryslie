@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## May 31, 2026 — Inaugural Indianapolis 500 — 115th anniversary (May 30, 1911 — Ray Harroun wins the first Indianapolis 500 in the Marmon Wasp #32 at an average 74.6 mph, Indianapolis Motor Speedway); vintage yellow racer profile speeding past the brick yard, spinning wheels, dust + exhaust trail, checkered flag waving, dusk-gold banner over the speedway
+
+<img src="./doodle-archive/2026/05/2026-05-31-071204.svg" width="800" alt="Daily doodle for May 31, 2026: Inaugural Indianapolis 500 — 115th anniversary (May 30, 1911 — Ray Harroun wins the first Indianapolis 500 in the Marmon Wasp #32 at an average 74.6 mph, Indianapolis Motor Speedway); vintage yellow racer profile speeding past the brick yard, spinning wheels, dust + exhaust trail, checkered flag waving, dusk-gold banner over the speedway">
+
+---
+
 ## May 30, 2026 — Mount Everest first summit 73rd anniversary (May 29, 1953 — Edmund Hillary & Tenzing Norgay reach 8,848 m on the British Mount Everest Expedition); dawn over the Himalayas, layered ridgelines, two climber silhouettes on the summit, prayer flags fluttering, drifting snow
 
 <img src="./doodle-archive/2026/05/2026-05-30-065428.svg" width="800" alt="Daily doodle for May 30, 2026: Mount Everest first summit 73rd anniversary (May 29, 1953 — Edmund Hillary & Tenzing Norgay reach 8,848 m on the British Mount Everest Expedition); dawn over the Himalayas, layered ridgelines, two climber silhouettes on the summit, prayer flags fluttering, drifting snow">

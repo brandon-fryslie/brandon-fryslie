@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Inaugural Indianapolis 500 — 115th anniversary (May 30, 1911 — Ray Harroun wins the first Indianapolis 500 in the Marmon Wasp #32 at an average 74.6 mph, Indianapolis Motor Speedway); vintage yellow racer profile speeding past the brick yard, spinning wheels, dust + exhaust trail, checkered flag waving, dusk-gold banner over the speedway -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 30, 2026 — Inaugural Indianapolis 500 115th anniversary, Marmon Wasp #32, Ray Harroun">
+  <defs>
+    <!-- Sky: dusty amber dusk over the Brickyard -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#1a1208"/>
+      <stop offset="0.35" stop-color="#5a3018"/>
+      <stop offset="0.65" stop-color="#c66820"/>
+      <stop offset="0.85" stop-color="#f0a040"/>
+      <stop offset="1"    stop-color="#f8c468"/>
+    </linearGradient>
+
+    <!-- Brickyard surface gradient -->
+    <linearGradient id="track" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#8a3018"/>
+      <stop offset="0.5" stop-color="#6a2410"/>
+      <stop offset="1"   stop-color="#3a1208"/>
+    </linearGradient>
+
+    <!-- Yellow Marmon Wasp body gradient -->
+    <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#fff0a0"/>
+      <stop offset="0.4" stop-color="#f0c030"/>
+      <stop offset="1"   stop-color="#a07010"/>
+    </linearGradient>
+
+    <!-- Dust / exhaust plume gradient -->
+    <linearGradient id="dust" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0"   stop-color="#f0d8a0" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#c89860" stop-opacity="0.45"/>
+      <stop offset="1"   stop-color="#c89860" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Checkered flag pattern (8x8 squares) -->
+    <pattern id="checker" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#ffffff"/>
+      <rect x="0" y="0" width="7" height="7" fill="#0a0a0a"/>
+      <rect x="7" y="7" width="7" height="7" fill="#0a0a0a"/>
+    </pattern>
+
+    <!-- Brick pattern for the Yard of Bricks -->
+    <pattern id="bricks" x="0" y="0" width="22" height="10" patternUnits="userSpaceOnUse">
+      <rect width="22" height="10" fill="#7a2812"/>
+      <rect x="0"  y="0" width="20" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
+      <rect x="-10" y="5" width="10" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
+      <rect x="11"  y="5" width="20" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
+    </pattern>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="dustBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+
+    <!-- Single dust puff -->
+    <symbol id="puff" overflow="visible">
+      <circle r="6" fill="#e8c890" opacity="0.55"/>
+      <circle r="3" cx="3" cy="-2" fill="#f0d8a0" opacity="0.45"/>
+    </symbol>
+
+    <!-- Vintage racer #32 (Marmon Wasp profile) — origin at front bumper, faces right -->
+    <symbol id="racer" overflow="visible">
+      <!-- chassis main body -->
+      <path d="M -150 -2
+               L -148 -10
+               L -130 -16
+               L -100 -20
+               L -70  -28
+               L -38  -30
+               L -10  -24
+               L 6    -18
+               L 14   -8
+               L 14   2
+               L -150 2 Z"
+            fill="url(#carBody)" stroke="#3a2008" stroke-width="0.8"/>
+      <!-- engine hood louvers -->
+      <g stroke="#7a4010" stroke-width="0.5" opacity="0.7">
+        <line x1="-6"  y1="-14" x2="-6"  y2="-4"/>
+        <line x1="-2"  y1="-16" x2="-2"  y2="-4"/>
+        <line x1="2"   y1="-16" x2="2"   y2="-4"/>
+        <line x1="6"   y1="-14" x2="6"   y2="-4"/>
+        <line x1="10"  y1="-12" x2="10"  y2="-4"/>
+      </g>
+      <!-- driver's cockpit cowl -->
+      <path d="M -78 -28 Q -64 -36 -48 -34 L -34 -32 L -34 -26 Z" fill="#5a3812" stroke="#2a1408" stroke-width="0.6"/>
+      <!-- driver's head + goggles -->
+      <circle cx="-58" cy="-38" r="5" fill="#d8b890"/>
+      <rect x="-63" y="-40" width="10" height="3" rx="1" fill="#1a1008"/>
+      <!-- leather cap -->
+      <path d="M -64 -40 Q -58 -46 -52 -40 L -52 -38 L -64 -38 Z" fill="#3a2008"/>
+      <!-- rear-view mirror (Harroun's famous innovation!) -->
+      <line x1="-44" y1="-32" x2="-44" y2="-44" stroke="#3a2008" stroke-width="0.8"/>
+      <rect x="-48" y="-49" width="8" height="5" fill="#c0c0c0" stroke="#3a2008" stroke-width="0.5"/>
+      <!-- tail "stinger" of the Wasp -->
+      <path d="M -150 -2 L -168 -4 L -172 0 L -150 2 Z" fill="url(#carBody)" stroke="#3a2008" stroke-width="0.6"/>
+      <!-- racing number 32 roundel on cowl -->
+      <circle cx="-50" cy="-20" r="7" fill="#ffffff" stroke="#3a2008" stroke-width="0.7"/>
+      <text x="-50" y="-17" text-anchor="middle" font-family="Georgia, serif"
+            font-size="9" font-weight="900" fill="#3a1208">32</text>
+
+      <!-- rear wheel -->
+      <g transform="translate(-120 4)">
+        <circle r="14" fill="#1a1008" stroke="#5a3018" stroke-width="1.2"/>
+        <circle r="6"  fill="#3a2008"/>
+        <g stroke="#a07030" stroke-width="0.8">
+          <line x1="-12" y1="0"  x2="12"  y2="0">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="0" to="360" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="0"   y1="-12" x2="0"   y2="12">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="45" to="405" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="-8"  y1="-8"  x2="8"   y2="8">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="90" to="450" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+        </g>
+      </g>
+      <!-- front wheel -->
+      <g transform="translate(-12 4)">
+        <circle r="14" fill="#1a1008" stroke="#5a3018" stroke-width="1.2"/>
+        <circle r="6"  fill="#3a2008"/>
+        <g stroke="#a07030" stroke-width="0.8">
+          <line x1="-12" y1="0"  x2="12"  y2="0">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="0" to="360" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="0"   y1="-12" x2="0"   y2="12">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="45" to="405" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="-8"  y1="-8"  x2="8"   y2="8">
+            <animateTransform attributeName="transform" type="rotate"
+                              from="90" to="450" dur="0.4s" repeatCount="indefinite"/>
+          </line>
+        </g>
+      </g>
+      <!-- exhaust pipe -->
+      <rect x="14" y="-6" width="6" height="2" fill="#3a2008"/>
+    </symbol>
+  </defs>
+
+  <!-- ===== Sky / background ===== -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Setting-sun haze over the back straight -->
+  <ellipse cx="640" cy="148" rx="220" ry="60" fill="#ffd070" opacity="0.35" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.30;0.45;0.30" dur="13s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Distant grandstand silhouette -->
+  <g fill="#1a0a04" opacity="0.85">
+    <path d="M 0 140 L 0 122 L 30 122 L 30 116 L 80 116 L 80 110 L 140 110 L 140 116 L 200 116 L 200 122 L 260 122 L 260 116 L 330 116 L 330 122 L 400 122 L 400 118 L 470 118 L 470 124 L 540 124 L 540 118 L 610 118 L 610 124 L 680 124 L 680 120 L 740 120 L 740 124 L 800 124 L 800 140 Z"/>
+  </g>
+  <!-- grandstand vertical supports -->
+  <g stroke="#2a1408" stroke-width="0.6" opacity="0.7">
+    <line x1="40"  y1="124" x2="40"  y2="140"/>
+    <line x1="110" y1="118" x2="110" y2="140"/>
+    <line x1="180" y1="120" x2="180" y2="140"/>
+    <line x1="250" y1="120" x2="250" y2="140"/>
+    <line x1="320" y1="120" x2="320" y2="140"/>
+    <line x1="390" y1="124" x2="390" y2="140"/>
+    <line x1="460" y1="122" x2="460" y2="140"/>
+    <line x1="530" y1="126" x2="530" y2="140"/>
+    <line x1="600" y1="122" x2="600" y2="140"/>
+    <line x1="670" y1="126" x2="670" y2="140"/>
+    <line x1="740" y1="124" x2="740" y2="140"/>
+  </g>
+
+  <!-- Pace flags strung above grandstand -->
+  <g>
+    <path d="M 100 100 Q 250 90 400 100 Q 550 110 700 96"
+          stroke="#5a3018" stroke-width="0.4" fill="none" opacity="0.6"/>
+    <g fill="#d83020">
+      <rect x="130" y="98"  width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="7s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="180" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="7s" begin="-1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="230" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="7s" begin="-2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="280" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="7s" begin="-3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="330" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="7s" begin="-4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="380" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="7s" begin="-5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="540" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="11s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="590" y="102" width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="640" y="100" width="6" height="9">
+        <animate attributeName="height" values="9;6;9" dur="11s" begin="-4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="690" y="98"  width="6" height="9">
+        <animate attributeName="height" values="9;7;9" dur="11s" begin="-6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- ===== Brickyard track surface ===== -->
+  <rect x="0" y="140" width="800" height="60" fill="url(#track)"/>
+  <!-- Yard of Bricks band -->
+  <rect x="0" y="142" width="800" height="14" fill="url(#bricks)" opacity="0.95"/>
+  <!-- White start/finish stripe -->
+  <rect x="280" y="142" width="6" height="14" fill="#f4f0e0" opacity="0.95"/>
+  <rect x="288" y="142" width="6" height="14" fill="#f4f0e0" opacity="0.95"/>
+  <!-- Track lower asphalt grain -->
+  <g stroke="#2a1408" stroke-width="0.4" opacity="0.5">
+    <line x1="0"   y1="170" x2="800" y2="170"/>
+    <line x1="0"   y1="180" x2="800" y2="180"/>
+    <line x1="0"   y1="190" x2="800" y2="190"/>
+  </g>
+
+  <!-- ===== Dust trail and racing car (animated across the track) ===== -->
+  <g>
+    <!-- Dust plume trailing the car (offset right of car group origin) -->
+    <g filter="url(#dustBlur)">
+      <ellipse cx="0" cy="0" rx="120" ry="14" fill="url(#dust)" opacity="0.7">
+        <animateTransform attributeName="transform" type="translate"
+                          values="320 162; 340 162; 320 162" dur="11s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="0" cy="0" rx="80" ry="10" fill="url(#dust)" opacity="0.55">
+        <animateTransform attributeName="transform" type="translate"
+                          values="300 158; 318 158; 300 158" dur="7s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Dust puffs trailing -->
+    <g>
+      <use href="#puff" x="280" y="166">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; -40 -12; -80 -22" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0" dur="2.2s" repeatCount="indefinite"/>
+      </use>
+      <use href="#puff" x="270" y="170">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; -50 -16; -100 -28" dur="2.6s" begin="-0.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.3;0" dur="2.6s" begin="-0.6s" repeatCount="indefinite"/>
+      </use>
+      <use href="#puff" x="290" y="168">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; -45 -10; -90 -20" dur="2.0s" begin="-1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0.3;0" dur="2.0s" begin="-1.2s" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- The car itself — bobbing slightly along the straight -->
+    <g>
+      <use href="#racer" x="460" y="160">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; 0 -0.6; 0 0; 0 0.4; 0 0" dur="0.5s" repeatCount="indefinite"/>
+      </use>
+    </g>
+  </g>
+
+  <!-- ===== Checkered flag on the right ===== -->
+  <g transform="translate(700 60)">
+    <!-- pole -->
+    <line x1="0" y1="0" x2="0" y2="92" stroke="#2a1408" stroke-width="1.4"/>
+    <circle cx="0" cy="0" r="2" fill="#d8a040"/>
+    <!-- flag (waves via skew animation) -->
+    <g>
+      <path d="M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z" fill="url(#checker)" stroke="#1a1008" stroke-width="0.6">
+        <animate attributeName="d"
+                 values="M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z;
+                         M 0 4 L 78 2 L 86 28 L 82 54 L 0 56 Z;
+                         M 0 4 L 82 10 L 80 30 L 84 50 L 0 56 Z;
+                         M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z"
+                 dur="2.6s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- ===== Typography ===== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Top vintage banner -->
+    <rect x="20" y="14" width="540" height="26" rx="3" fill="#1a0a04" opacity="0.8"/>
+    <rect x="20" y="14" width="540" height="26" rx="3" fill="none" stroke="#f0c060" stroke-width="0.8" opacity="0.7"/>
+    <text x="290" y="33" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="16" font-weight="900" fill="#ffe49a" letter-spacing="4.5">
+      INDIANAPOLIS 500 · 115 YEARS
+    </text>
+
+    <!-- Big date block -->
+    <rect x="20" y="50" width="340" height="58" rx="4" fill="#0a0d1c" opacity="0.78"/>
+    <rect x="20" y="50" width="340" height="58" rx="4" fill="none" stroke="#f0c060" stroke-width="0.7" opacity="0.6"/>
+    <text x="190" y="86" text-anchor="middle"
+          font-size="30" font-weight="800" fill="#ffffff" letter-spacing="4">
+      MAY 30 · 2026
+    </text>
+    <text x="190" y="102" text-anchor="middle"
+          font-size="9.5" font-weight="700" fill="#f0c060" letter-spacing="2.2">
+      RAY HARROUN · MARMON WASP No. 32
+    </text>
+
+    <!-- Right-corner date line -->
+    <text x="784" y="178" text-anchor="end"
+          font-size="8.5" font-weight="700" fill="#ffe49a" letter-spacing="2" opacity="0.95">
+      30 MAY 1911 · 74.6 MPH AVG
+    </text>
+    <text x="784" y="192" text-anchor="end"
+          font-size="7.5" fill="#f0c890" letter-spacing="1.7" opacity="0.85">
+      THE BRICKYARD · 200 LAPS · 500 MILES
+    </text>
+  </g>
+</svg>

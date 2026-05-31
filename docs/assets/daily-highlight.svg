@@ -1,321 +1,352 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Inaugural Indianapolis 500 — 115th anniversary (May 30, 1911 — Ray Harroun wins the first Indianapolis 500 in the Marmon Wasp #32 at an average 74.6 mph, Indianapolis Motor Speedway); vintage yellow racer profile speeding past the brick yard, spinning wheels, dust + exhaust trail, checkered flag waving, dusk-gold banner over the speedway -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 30, 2026 — Inaugural Indianapolis 500 115th anniversary, Marmon Wasp #32, Ray Harroun">
+<!-- theme: The Great Clock at Westminster (Big Ben) — 167th anniversary of keeping time (May 31, 1859 — clock movement at the Palace of Westminster, London, first kept time; mechanism by Edward John Dent / Edmund Beckett Denison); gothic clocktower silhouette over a foggy London night, illuminated clock face with moving hands and swinging pendulum, gaslight gold + Westminster blue palette -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="May 31, 2026 — Great Clock at the Palace of Westminster (Big Ben) 167th anniversary of keeping time">
   <defs>
-    <!-- Sky: dusty amber dusk over the Brickyard -->
+    <!-- Night London sky -->
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"    stop-color="#1a1208"/>
-      <stop offset="0.35" stop-color="#5a3018"/>
-      <stop offset="0.65" stop-color="#c66820"/>
-      <stop offset="0.85" stop-color="#f0a040"/>
-      <stop offset="1"    stop-color="#f8c468"/>
+      <stop offset="0"    stop-color="#070a18"/>
+      <stop offset="0.45" stop-color="#0e1428"/>
+      <stop offset="0.75" stop-color="#1a2240"/>
+      <stop offset="1"    stop-color="#2a2a3c"/>
     </linearGradient>
 
-    <!-- Brickyard surface gradient -->
-    <linearGradient id="track" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"   stop-color="#8a3018"/>
-      <stop offset="0.5" stop-color="#6a2410"/>
-      <stop offset="1"   stop-color="#3a1208"/>
+    <!-- Soft moon glow halo -->
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#f5ecc0" stop-opacity="0.55"/>
+      <stop offset="0.4" stop-color="#f5ecc0" stop-opacity="0.18"/>
+      <stop offset="1"   stop-color="#f5ecc0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Fog over the Thames -->
+    <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#3a4060" stop-opacity="0"/>
+      <stop offset="0.4" stop-color="#5a607a" stop-opacity="0.45"/>
+      <stop offset="1"   stop-color="#80869c" stop-opacity="0.75"/>
     </linearGradient>
 
-    <!-- Yellow Marmon Wasp body gradient -->
-    <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"   stop-color="#fff0a0"/>
-      <stop offset="0.4" stop-color="#f0c030"/>
-      <stop offset="1"   stop-color="#a07010"/>
+    <!-- Stone of tower (cool gothic) -->
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#1c2238"/>
+      <stop offset="0.5" stop-color="#252c44"/>
+      <stop offset="1"   stop-color="#141a2e"/>
     </linearGradient>
 
-    <!-- Dust / exhaust plume gradient -->
-    <linearGradient id="dust" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0"   stop-color="#f0d8a0" stop-opacity="0.85"/>
-      <stop offset="0.5" stop-color="#c89860" stop-opacity="0.45"/>
-      <stop offset="1"   stop-color="#c89860" stop-opacity="0"/>
+    <!-- Brass / illuminated dial -->
+    <radialGradient id="dialFace" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"    stop-color="#fff6c8"/>
+      <stop offset="0.55" stop-color="#f5d878"/>
+      <stop offset="0.85" stop-color="#c89030"/>
+      <stop offset="1"    stop-color="#704818"/>
+    </radialGradient>
+
+    <radialGradient id="dialGlow" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0"   stop-color="#fff0b8" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#f0c860" stop-opacity="0.18"/>
+      <stop offset="1"   stop-color="#704818" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Pendulum brass bob -->
+    <radialGradient id="brass" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0"   stop-color="#fff0b0"/>
+      <stop offset="0.5" stop-color="#d8a040"/>
+      <stop offset="1"   stop-color="#5a3008"/>
+    </radialGradient>
+
+    <!-- Date plaque gilt -->
+    <linearGradient id="plaque" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#0a0d1e"/>
+      <stop offset="1"   stop-color="#070918"/>
     </linearGradient>
 
-    <!-- Checkered flag pattern (8x8 squares) -->
-    <pattern id="checker" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-      <rect width="14" height="14" fill="#ffffff"/>
-      <rect x="0" y="0" width="7" height="7" fill="#0a0a0a"/>
-      <rect x="7" y="7" width="7" height="7" fill="#0a0a0a"/>
-    </pattern>
-
-    <!-- Brick pattern for the Yard of Bricks -->
-    <pattern id="bricks" x="0" y="0" width="22" height="10" patternUnits="userSpaceOnUse">
-      <rect width="22" height="10" fill="#7a2812"/>
-      <rect x="0"  y="0" width="20" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
-      <rect x="-10" y="5" width="10" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
-      <rect x="11"  y="5" width="20" height="4" fill="#a04020" stroke="#3a1208" stroke-width="0.5"/>
-    </pattern>
+    <linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#fff0b8"/>
+      <stop offset="0.5" stop-color="#e8c060"/>
+      <stop offset="1"   stop-color="#a07820"/>
+    </linearGradient>
 
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <filter id="dustBlur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.2"/>
+    <filter id="bigGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
     </filter>
 
-    <!-- Single dust puff -->
-    <symbol id="puff" overflow="visible">
-      <circle r="6" fill="#e8c890" opacity="0.55"/>
-      <circle r="3" cx="3" cy="-2" fill="#f0d8a0" opacity="0.45"/>
-    </symbol>
-
-    <!-- Vintage racer #32 (Marmon Wasp profile) — origin at front bumper, faces right -->
-    <symbol id="racer" overflow="visible">
-      <!-- chassis main body -->
-      <path d="M -150 -2
-               L -148 -10
-               L -130 -16
-               L -100 -20
-               L -70  -28
-               L -38  -30
-               L -10  -24
-               L 6    -18
-               L 14   -8
-               L 14   2
-               L -150 2 Z"
-            fill="url(#carBody)" stroke="#3a2008" stroke-width="0.8"/>
-      <!-- engine hood louvers -->
-      <g stroke="#7a4010" stroke-width="0.5" opacity="0.7">
-        <line x1="-6"  y1="-14" x2="-6"  y2="-4"/>
-        <line x1="-2"  y1="-16" x2="-2"  y2="-4"/>
-        <line x1="2"   y1="-16" x2="2"   y2="-4"/>
-        <line x1="6"   y1="-14" x2="6"   y2="-4"/>
-        <line x1="10"  y1="-12" x2="10"  y2="-4"/>
-      </g>
-      <!-- driver's cockpit cowl -->
-      <path d="M -78 -28 Q -64 -36 -48 -34 L -34 -32 L -34 -26 Z" fill="#5a3812" stroke="#2a1408" stroke-width="0.6"/>
-      <!-- driver's head + goggles -->
-      <circle cx="-58" cy="-38" r="5" fill="#d8b890"/>
-      <rect x="-63" y="-40" width="10" height="3" rx="1" fill="#1a1008"/>
-      <!-- leather cap -->
-      <path d="M -64 -40 Q -58 -46 -52 -40 L -52 -38 L -64 -38 Z" fill="#3a2008"/>
-      <!-- rear-view mirror (Harroun's famous innovation!) -->
-      <line x1="-44" y1="-32" x2="-44" y2="-44" stroke="#3a2008" stroke-width="0.8"/>
-      <rect x="-48" y="-49" width="8" height="5" fill="#c0c0c0" stroke="#3a2008" stroke-width="0.5"/>
-      <!-- tail "stinger" of the Wasp -->
-      <path d="M -150 -2 L -168 -4 L -172 0 L -150 2 Z" fill="url(#carBody)" stroke="#3a2008" stroke-width="0.6"/>
-      <!-- racing number 32 roundel on cowl -->
-      <circle cx="-50" cy="-20" r="7" fill="#ffffff" stroke="#3a2008" stroke-width="0.7"/>
-      <text x="-50" y="-17" text-anchor="middle" font-family="Georgia, serif"
-            font-size="9" font-weight="900" fill="#3a1208">32</text>
-
-      <!-- rear wheel -->
-      <g transform="translate(-120 4)">
-        <circle r="14" fill="#1a1008" stroke="#5a3018" stroke-width="1.2"/>
-        <circle r="6"  fill="#3a2008"/>
-        <g stroke="#a07030" stroke-width="0.8">
-          <line x1="-12" y1="0"  x2="12"  y2="0">
-            <animateTransform attributeName="transform" type="rotate"
-                              from="0" to="360" dur="0.4s" repeatCount="indefinite"/>
-          </line>
-          <line x1="0"   y1="-12" x2="0"   y2="12">
-            <animateTransform attributeName="transform" type="rotate"
-                              from="45" to="405" dur="0.4s" repeatCount="indefinite"/>
-          </line>
-          <line x1="-8"  y1="-8"  x2="8"   y2="8">
-            <animateTransform attributeName="transform" type="rotate"
-                              from="90" to="450" dur="0.4s" repeatCount="indefinite"/>
-          </line>
-        </g>
-      </g>
-      <!-- front wheel -->
-      <g transform="translate(-12 4)">
-        <circle r="14" fill="#1a1008" stroke="#5a3018" stroke-width="1.2"/>
-        <circle r="6"  fill="#3a2008"/>
-        <g stroke="#a07030" stroke-width="0.8">
-          <line x1="-12" y1="0"  x2="12"  y2="0">
-            <animateTransform attributeName="transform" type="rotate"
-                              from="0" to="360" dur="0.4s" repeatCount="indefinite"/>
-          </line>
-          <line x1="0"   y1="-12" x2="0"   y2="12">
-            <animateTransform attributeName="transform" type="rotate"
-                              from="45" to="405" dur="0.4s" repeatCount="indefinite"/>
-          </line>
-          <line x1="-8"  y1="-8"  x2="8"   y2="8">
-            <animateTransform attributeName="transform" type="rotate"
-                              from="90" to="450" dur="0.4s" repeatCount="indefinite"/>
-          </line>
-        </g>
-      </g>
-      <!-- exhaust pipe -->
-      <rect x="14" y="-6" width="6" height="2" fill="#3a2008"/>
+    <!-- A single twinkling star -->
+    <symbol id="star" overflow="visible">
+      <circle r="0.9" fill="#f5ecc0"/>
     </symbol>
   </defs>
 
-  <!-- ===== Sky / background ===== -->
+  <!-- ===== Sky ===== -->
   <rect width="800" height="200" fill="#0d1117"/>
   <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- Setting-sun haze over the back straight -->
-  <ellipse cx="640" cy="148" rx="220" ry="60" fill="#ffd070" opacity="0.35" filter="url(#softGlow)">
-    <animate attributeName="opacity" values="0.30;0.45;0.30" dur="13s" repeatCount="indefinite"/>
+  <!-- Moon -->
+  <g transform="translate(120 48)">
+    <circle r="44" fill="url(#moonGlow)" filter="url(#bigGlow)"/>
+    <circle r="14" fill="#f3eac0" opacity="0.92"/>
+    <circle r="14" cx="3.5" cy="-2" fill="#0e1428" opacity="0.55"/>
+  </g>
+
+  <!-- Stars (twinkle) -->
+  <g>
+    <use href="#star" x="40"  y="22"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  repeatCount="indefinite"/></use>
+    <use href="#star" x="70"  y="60"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="-2s" repeatCount="indefinite"/></use>
+    <use href="#star" x="190" y="14"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="-4s" repeatCount="indefinite"/></use>
+    <use href="#star" x="232" y="40"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="7s"  begin="-1s" repeatCount="indefinite"/></use>
+    <use href="#star" x="306" y="22"><animate attributeName="opacity" values="0.2;1;0.2" dur="11s" begin="-3s" repeatCount="indefinite"/></use>
+    <use href="#star" x="362" y="52"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" begin="-5s" repeatCount="indefinite"/></use>
+    <use href="#star" x="430" y="18"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  begin="-2s" repeatCount="indefinite"/></use>
+    <use href="#star" x="478" y="58"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" begin="-4s" repeatCount="indefinite"/></use>
+    <use href="#star" x="528" y="22"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="-1s" repeatCount="indefinite"/></use>
+    <use href="#star" x="752" y="14"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s"  begin="-3s" repeatCount="indefinite"/></use>
+    <use href="#star" x="780" y="48"><animate attributeName="opacity" values="0.2;1;0.2" dur="11s" begin="-5s" repeatCount="indefinite"/></use>
+  </g>
+
+  <!-- Distant skyline silhouette (Westminster + Parliament rooflines, low) -->
+  <g fill="#0a0e1e" opacity="0.95">
+    <path d="M 0 175 L 0 160 L 22 160 L 22 155 L 38 155 L 38 150 L 54 150 L 54 158 L 76 158 L 76 152 L 94 152 L 94 156 L 116 156 L 116 150 L 140 150 L 140 145 L 156 145 L 156 138 L 162 138 L 162 145 L 180 145 L 180 152 L 210 152 L 210 148 L 244 148 L 244 144 L 262 144 L 262 138 L 268 138 L 268 144 L 290 144 L 290 150 L 320 150 L 320 154 L 360 154 L 360 158 L 410 158 L 410 152 L 458 152 L 458 156 L 510 156 L 510 175 Z"/>
+    <!-- right side, parliament-ish -->
+    <path d="M 510 175 L 510 158 L 540 158 L 540 152 L 554 152 L 554 145 L 562 145 L 562 152 L 576 152 L 576 158 L 596 158 L 596 175 Z"/>
+    <path d="M 720 175 L 720 162 L 744 162 L 744 156 L 762 156 L 762 162 L 786 162 L 786 158 L 800 158 L 800 175 Z"/>
+  </g>
+
+  <!-- Gentle window lights in the skyline -->
+  <g fill="#f0c060" opacity="0.85">
+    <rect x="46"  y="160" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/></rect>
+    <rect x="86"  y="157" width="2" height="2"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="13s" begin="-3s" repeatCount="indefinite"/></rect>
+    <rect x="148" y="152" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s"  begin="-1s" repeatCount="indefinite"/></rect>
+    <rect x="218" y="156" width="2" height="2"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="11s" begin="-2s" repeatCount="indefinite"/></rect>
+    <rect x="278" y="148" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="-5s" repeatCount="indefinite"/></rect>
+    <rect x="372" y="160" width="2" height="2"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="7s"  begin="-2s" repeatCount="indefinite"/></rect>
+    <rect x="430" y="158" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="-4s" repeatCount="indefinite"/></rect>
+    <rect x="478" y="160" width="2" height="2"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="13s" begin="-1s" repeatCount="indefinite"/></rect>
+    <rect x="740" y="166" width="2" height="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s"  begin="-3s" repeatCount="indefinite"/></rect>
+    <rect x="770" y="164" width="2" height="2"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="11s" begin="-5s" repeatCount="indefinite"/></rect>
+  </g>
+
+  <!-- ===== The Elizabeth Tower (Big Ben) on the right ===== -->
+  <g transform="translate(640 0)">
+    <!-- aura behind tower from clock face -->
+    <ellipse cx="0" cy="90" rx="120" ry="100" fill="url(#dialGlow)" opacity="0.55"/>
+
+    <!-- Spire pinnacle + cross at the top -->
+    <g fill="url(#stone)" stroke="#070918" stroke-width="0.5">
+      <!-- ornate spire (octagonal pyramid + tip) -->
+      <path d="M -22 26 L -10 8 L 0 0 L 10 8 L 22 26 Z"/>
+      <!-- small finial cross / orb -->
+      <rect x="-1.2" y="-8" width="2.4" height="10" fill="#d8a040"/>
+      <circle cx="0" cy="-9" r="2.2" fill="#d8a040"/>
+      <!-- crown band -->
+      <rect x="-26" y="26" width="52" height="6" fill="#1c2238" stroke="#0a0e1c" stroke-width="0.5"/>
+      <!-- four corner pinnacles -->
+      <g>
+        <path d="M -30 32 L -27 22 L -24 32 Z"/>
+        <path d="M -10 32 L -8  22 L -6  32 Z"/>
+        <path d="M  6  32 L  8  22 L  10 32 Z"/>
+        <path d="M  24 32 L 27  22 L 30  32 Z"/>
+      </g>
+    </g>
+
+    <!-- belfry (open arched gallery) -->
+    <g>
+      <rect x="-34" y="32" width="68" height="22" fill="url(#stone)" stroke="#070918" stroke-width="0.5"/>
+      <g fill="#040612" opacity="0.95">
+        <path d="M -28 54 L -28 42 Q -22 36 -16 42 L -16 54 Z"/>
+        <path d="M -12 54 L -12 42 Q  -6 36   0 42 L  0 54 Z"/>
+        <path d="M   4 54 L   4 42 Q  10 36  16 42 L 16 54 Z"/>
+        <path d="M  20 54 L  20 42 Q  24 36  28 42 L 28 54 Z"/>
+      </g>
+      <!-- soft warm bell-light inside belfry -->
+      <ellipse cx="0" cy="46" rx="22" ry="6" fill="#f0c060" opacity="0.25" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="0.18;0.32;0.18" dur="11s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Clock stage (broader stone block holding the dial) -->
+    <rect x="-58" y="54" width="116" height="86" fill="url(#stone)" stroke="#070918" stroke-width="0.6"/>
+
+    <!-- decorative ribs at top + bottom of clock stage -->
+    <g stroke="#080a18" stroke-width="0.7" opacity="0.9">
+      <line x1="-58" y1="58" x2="58" y2="58"/>
+      <line x1="-58" y1="62" x2="58" y2="62"/>
+      <line x1="-58" y1="134" x2="58" y2="134"/>
+      <line x1="-58" y1="138" x2="58" y2="138"/>
+    </g>
+
+    <!-- ===== ILLUMINATED CLOCK DIAL ===== -->
+    <g transform="translate(0 96)">
+      <!-- outer brass rim glow -->
+      <circle r="44" fill="url(#dialGlow)" opacity="0.85" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="0.70;0.95;0.70" dur="13s" repeatCount="indefinite"/>
+      </circle>
+      <!-- outer rim -->
+      <circle r="38" fill="#3a2810" stroke="#1a0e04" stroke-width="1.4"/>
+      <!-- dial face -->
+      <circle r="34" fill="url(#dialFace)" stroke="#704818" stroke-width="0.8"/>
+
+      <!-- inner ornament band -->
+      <circle r="29" fill="none" stroke="#704818" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.55"/>
+
+      <!-- minute ticks -->
+      <g stroke="#3a2008" stroke-width="0.6">
+        <line x1="0" y1="-33" x2="0" y2="-29"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(30)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(60)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(90)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(120)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(150)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(180)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(210)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(240)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(270)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(300)"/>
+        <line x1="0" y1="-33" x2="0" y2="-29" transform="rotate(330)"/>
+      </g>
+
+      <!-- Roman numerals (IIII per horological tradition) -->
+      <g font-family="Georgia, 'Times New Roman', serif" font-size="7.6" font-weight="900"
+         fill="#2a1408" text-anchor="middle">
+        <text x="0"    y="-22">XII</text>
+        <text x="11.5" y="-19.5">I</text>
+        <text x="20"   y="-12">II</text>
+        <text x="24"   y="-1">III</text>
+        <text x="20.5" y="9.5">IIII</text>
+        <text x="11.5" y="17">V</text>
+        <text x="0"    y="23">VI</text>
+        <text x="-11.5" y="17">VII</text>
+        <text x="-20"  y="9.5">VIII</text>
+        <text x="-25"  y="-1">IX</text>
+        <text x="-20"  y="-12">X</text>
+        <text x="-12"  y="-19.5">XI</text>
+      </g>
+
+      <!-- HOUR hand (sweeps a full revolution in 13s - decorative not real time) -->
+      <g>
+        <line x1="0" y1="0" x2="0" y2="-16" stroke="#1a0a04" stroke-width="2.4" stroke-linecap="round"/>
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0" to="360" dur="89s" repeatCount="indefinite"/>
+      </g>
+      <!-- MINUTE hand -->
+      <g>
+        <line x1="0" y1="0" x2="0" y2="-26" stroke="#1a0a04" stroke-width="1.6" stroke-linecap="round"/>
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0" to="360" dur="13s" repeatCount="indefinite"/>
+      </g>
+      <!-- SECOND hand (gold) -->
+      <g>
+        <line x1="0" y1="3" x2="0" y2="-28" stroke="#d83020" stroke-width="0.8" stroke-linecap="round"/>
+        <circle cx="0" cy="-22" r="1.4" fill="#d83020"/>
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0" to="360" dur="3s" repeatCount="indefinite"/>
+      </g>
+      <!-- center cap -->
+      <circle r="2.4" fill="#1a0a04"/>
+      <circle r="1.2" fill="#d8a040"/>
+    </g>
+
+    <!-- "1859" tablet beneath the dial -->
+    <g transform="translate(0 152)">
+      <rect x="-22" y="-7" width="44" height="14" rx="1.5" fill="#0a0d1c" stroke="#d8a040" stroke-width="0.6"/>
+      <text x="0" y="3.5" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="9" font-weight="900" fill="#f0c060" letter-spacing="2.5">EST · 1859</text>
+    </g>
+
+    <!-- Tower shaft (continues below to bottom of canvas) -->
+    <rect x="-48" y="166" width="96" height="34" fill="url(#stone)" stroke="#070918" stroke-width="0.5"/>
+    <!-- vertical mullions on shaft -->
+    <g stroke="#080a18" stroke-width="0.5" opacity="0.9">
+      <line x1="-36" y1="166" x2="-36" y2="200"/>
+      <line x1="-18" y1="166" x2="-18" y2="200"/>
+      <line x1="0"   y1="166" x2="0"   y2="200"/>
+      <line x1="18"  y1="166" x2="18"  y2="200"/>
+      <line x1="36"  y1="166" x2="36"  y2="200"/>
+    </g>
+  </g>
+
+  <!-- ===== Swinging pendulum (on the left, in front of the date area) ===== -->
+  <g transform="translate(390 30)">
+    <!-- pivot -->
+    <circle r="2" fill="#d8a040"/>
+    <!-- pendulum: a group that rotates around (0,0) -->
+    <g>
+      <line x1="0" y1="0" x2="0" y2="118" stroke="#7a5018" stroke-width="1.2"/>
+      <circle cx="0" cy="120" r="9" fill="url(#brass)" stroke="#3a2008" stroke-width="0.6"/>
+      <!-- adjustment nut on bob -->
+      <rect x="-1.4" y="126" width="2.8" height="4" fill="#3a2008"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-14;14;-14" dur="2.4s" repeatCount="indefinite"
+                        calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+    </g>
+    <!-- decorative gear (small, behind pivot) -->
+    <g opacity="0.5" stroke="#7a5018" stroke-width="0.6" fill="none">
+      <circle cx="0" cy="-12" r="6"/>
+      <g>
+        <line x1="0"  y1="-19" x2="0"  y2="-17"/>
+        <line x1="5"  y1="-15" x2="3.6" y2="-13.6"/>
+        <line x1="7"  y1="-12" x2="5"   y2="-12"/>
+        <line x1="5"  y1="-9"  x2="3.6" y2="-10.4"/>
+        <line x1="0"  y1="-7"  x2="0"   y2="-5"/>
+        <line x1="-5" y1="-9"  x2="-3.6" y2="-10.4"/>
+        <line x1="-7" y1="-12" x2="-5"   y2="-12"/>
+        <line x1="-5" y1="-15" x2="-3.6" y2="-13.6"/>
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0" to="360" dur="29s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== Thames fog band ===== -->
+  <rect x="0" y="160" width="800" height="40" fill="url(#fog)" opacity="0.85"/>
+  <ellipse cx="200" cy="180" rx="280" ry="14" fill="#9aa0b4" opacity="0.35">
+    <animate attributeName="cx" values="180;240;180" dur="29s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="540" cy="186" rx="240" ry="10" fill="#9aa0b4" opacity="0.3">
+    <animate attributeName="cx" values="560;500;560" dur="31s" repeatCount="indefinite"/>
   </ellipse>
 
-  <!-- Distant grandstand silhouette -->
-  <g fill="#1a0a04" opacity="0.85">
-    <path d="M 0 140 L 0 122 L 30 122 L 30 116 L 80 116 L 80 110 L 140 110 L 140 116 L 200 116 L 200 122 L 260 122 L 260 116 L 330 116 L 330 122 L 400 122 L 400 118 L 470 118 L 470 124 L 540 124 L 540 118 L 610 118 L 610 124 L 680 124 L 680 120 L 740 120 L 740 124 L 800 124 L 800 140 Z"/>
-  </g>
-  <!-- grandstand vertical supports -->
-  <g stroke="#2a1408" stroke-width="0.6" opacity="0.7">
-    <line x1="40"  y1="124" x2="40"  y2="140"/>
-    <line x1="110" y1="118" x2="110" y2="140"/>
-    <line x1="180" y1="120" x2="180" y2="140"/>
-    <line x1="250" y1="120" x2="250" y2="140"/>
-    <line x1="320" y1="120" x2="320" y2="140"/>
-    <line x1="390" y1="124" x2="390" y2="140"/>
-    <line x1="460" y1="122" x2="460" y2="140"/>
-    <line x1="530" y1="126" x2="530" y2="140"/>
-    <line x1="600" y1="122" x2="600" y2="140"/>
-    <line x1="670" y1="126" x2="670" y2="140"/>
-    <line x1="740" y1="124" x2="740" y2="140"/>
-  </g>
-
-  <!-- Pace flags strung above grandstand -->
-  <g>
-    <path d="M 100 100 Q 250 90 400 100 Q 550 110 700 96"
-          stroke="#5a3018" stroke-width="0.4" fill="none" opacity="0.6"/>
-    <g fill="#d83020">
-      <rect x="130" y="98"  width="6" height="9">
-        <animate attributeName="height" values="9;6;9" dur="7s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="180" y="100" width="6" height="9">
-        <animate attributeName="height" values="9;7;9" dur="7s" begin="-1s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="230" y="100" width="6" height="9">
-        <animate attributeName="height" values="9;6;9" dur="7s" begin="-2s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="280" y="100" width="6" height="9">
-        <animate attributeName="height" values="9;7;9" dur="7s" begin="-3s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="330" y="100" width="6" height="9">
-        <animate attributeName="height" values="9;6;9" dur="7s" begin="-4s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="380" y="100" width="6" height="9">
-        <animate attributeName="height" values="9;7;9" dur="7s" begin="-5s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="540" y="100" width="6" height="9">
-        <animate attributeName="height" values="9;6;9" dur="11s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="590" y="102" width="6" height="9">
-        <animate attributeName="height" values="9;7;9" dur="11s" begin="-2s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="640" y="100" width="6" height="9">
-        <animate attributeName="height" values="9;6;9" dur="11s" begin="-4s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="690" y="98"  width="6" height="9">
-        <animate attributeName="height" values="9;7;9" dur="11s" begin="-6s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-  </g>
-
-  <!-- ===== Brickyard track surface ===== -->
-  <rect x="0" y="140" width="800" height="60" fill="url(#track)"/>
-  <!-- Yard of Bricks band -->
-  <rect x="0" y="142" width="800" height="14" fill="url(#bricks)" opacity="0.95"/>
-  <!-- White start/finish stripe -->
-  <rect x="280" y="142" width="6" height="14" fill="#f4f0e0" opacity="0.95"/>
-  <rect x="288" y="142" width="6" height="14" fill="#f4f0e0" opacity="0.95"/>
-  <!-- Track lower asphalt grain -->
-  <g stroke="#2a1408" stroke-width="0.4" opacity="0.5">
-    <line x1="0"   y1="170" x2="800" y2="170"/>
-    <line x1="0"   y1="180" x2="800" y2="180"/>
-    <line x1="0"   y1="190" x2="800" y2="190"/>
-  </g>
-
-  <!-- ===== Dust trail and racing car (animated across the track) ===== -->
-  <g>
-    <!-- Dust plume trailing the car (offset right of car group origin) -->
-    <g filter="url(#dustBlur)">
-      <ellipse cx="0" cy="0" rx="120" ry="14" fill="url(#dust)" opacity="0.7">
-        <animateTransform attributeName="transform" type="translate"
-                          values="320 162; 340 162; 320 162" dur="11s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="0" cy="0" rx="80" ry="10" fill="url(#dust)" opacity="0.55">
-        <animateTransform attributeName="transform" type="translate"
-                          values="300 158; 318 158; 300 158" dur="7s" repeatCount="indefinite"/>
-      </ellipse>
-    </g>
-
-    <!-- Dust puffs trailing -->
-    <g>
-      <use href="#puff" x="280" y="166">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0; -40 -12; -80 -22" dur="2.2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.7;0.3;0" dur="2.2s" repeatCount="indefinite"/>
-      </use>
-      <use href="#puff" x="270" y="170">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0; -50 -16; -100 -28" dur="2.6s" begin="-0.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.6;0.3;0" dur="2.6s" begin="-0.6s" repeatCount="indefinite"/>
-      </use>
-      <use href="#puff" x="290" y="168">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0; -45 -10; -90 -20" dur="2.0s" begin="-1.2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.7;0.3;0" dur="2.0s" begin="-1.2s" repeatCount="indefinite"/>
-      </use>
-    </g>
-
-    <!-- The car itself — bobbing slightly along the straight -->
-    <g>
-      <use href="#racer" x="460" y="160">
-        <animateTransform attributeName="transform" type="translate"
-                          values="0 0; 0 -0.6; 0 0; 0 0.4; 0 0" dur="0.5s" repeatCount="indefinite"/>
-      </use>
-    </g>
-  </g>
-
-  <!-- ===== Checkered flag on the right ===== -->
-  <g transform="translate(700 60)">
-    <!-- pole -->
-    <line x1="0" y1="0" x2="0" y2="92" stroke="#2a1408" stroke-width="1.4"/>
-    <circle cx="0" cy="0" r="2" fill="#d8a040"/>
-    <!-- flag (waves via skew animation) -->
-    <g>
-      <path d="M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z" fill="url(#checker)" stroke="#1a1008" stroke-width="0.6">
-        <animate attributeName="d"
-                 values="M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z;
-                         M 0 4 L 78 2 L 86 28 L 82 54 L 0 56 Z;
-                         M 0 4 L 82 10 L 80 30 L 84 50 L 0 56 Z;
-                         M 0 4 L 80 8 L 84 30 L 80 52 L 0 56 Z"
-                 dur="2.6s" repeatCount="indefinite"/>
-      </path>
-    </g>
-  </g>
-
-  <!-- ===== Typography ===== -->
+  <!-- ===== Typography: date + commemorative line ===== -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <!-- Top vintage banner -->
-    <rect x="20" y="14" width="540" height="26" rx="3" fill="#1a0a04" opacity="0.8"/>
-    <rect x="20" y="14" width="540" height="26" rx="3" fill="none" stroke="#f0c060" stroke-width="0.8" opacity="0.7"/>
-    <text x="290" y="33" text-anchor="middle"
+    <!-- Big date plaque -->
+    <rect x="22" y="60" width="356" height="64" rx="3" fill="url(#plaque)" opacity="0.92"/>
+    <rect x="22" y="60" width="356" height="64" rx="3" fill="none" stroke="url(#gilt)" stroke-width="1.1" opacity="0.85"/>
+    <!-- gilded corners (decorative L-marks) -->
+    <g stroke="#e8c060" stroke-width="0.9" fill="none" opacity="0.85">
+      <path d="M 30 66 L 30 74 M 30 66 L 38 66"/>
+      <path d="M 370 66 L 370 74 M 370 66 L 362 66"/>
+      <path d="M 30 118 L 30 110 M 30 118 L 38 118"/>
+      <path d="M 370 118 L 370 110 M 370 118 L 362 118"/>
+    </g>
+
+    <text x="200" y="96" text-anchor="middle"
           font-family="Georgia, 'Times New Roman', serif"
-          font-size="16" font-weight="900" fill="#ffe49a" letter-spacing="4.5">
-      INDIANAPOLIS 500 · 115 YEARS
+          font-size="30" font-weight="900" fill="#fff6c8" letter-spacing="4.5">
+      MAY 31 · 2026
+    </text>
+    <text x="200" y="114" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="9.5" font-weight="700" fill="#e8c060" letter-spacing="3.2">
+      THE GREAT CLOCK · 167 YEARS
     </text>
 
-    <!-- Big date block -->
-    <rect x="20" y="50" width="340" height="58" rx="4" fill="#0a0d1c" opacity="0.78"/>
-    <rect x="20" y="50" width="340" height="58" rx="4" fill="none" stroke="#f0c060" stroke-width="0.7" opacity="0.6"/>
-    <text x="190" y="86" text-anchor="middle"
-          font-size="30" font-weight="800" fill="#ffffff" letter-spacing="4">
-      MAY 30 · 2026
-    </text>
-    <text x="190" y="102" text-anchor="middle"
-          font-size="9.5" font-weight="700" fill="#f0c060" letter-spacing="2.2">
-      RAY HARROUN · MARMON WASP No. 32
+    <!-- Top banner subtitle -->
+    <text x="200" y="38" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="11" font-weight="700" fill="#c8b078" letter-spacing="5" opacity="0.95">
+      WESTMINSTER · LONDON
     </text>
 
-    <!-- Right-corner date line -->
-    <text x="784" y="178" text-anchor="end"
-          font-size="8.5" font-weight="700" fill="#ffe49a" letter-spacing="2" opacity="0.95">
-      30 MAY 1911 · 74.6 MPH AVG
+    <!-- bottom commemorative line -->
+    <text x="200" y="146" text-anchor="middle"
+          font-size="8.5" fill="#a8b0c8" letter-spacing="2.2" opacity="0.9">
+      31 MAY 1859 — THE MOVEMENT FIRST KEEPS TIME
     </text>
-    <text x="784" y="192" text-anchor="end"
-          font-size="7.5" fill="#f0c890" letter-spacing="1.7" opacity="0.85">
-      THE BRICKYARD · 200 LAPS · 500 MILES
+    <text x="200" y="160" text-anchor="middle"
+          font-size="7.2" fill="#7a8298" letter-spacing="1.5" opacity="0.8" font-style="italic">
+      Dent · Denison · Palace of Westminster
     </text>
   </g>
 </svg>
