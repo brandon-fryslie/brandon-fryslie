@@ -1,306 +1,401 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: CNN launches as the first 24-hour news network — 46th anniversary (June 1, 1980, Cable News Network, Atlanta; founded by Ted Turner); retro CRT studio aesthetic with broadcast satellite, scan lines, "ON AIR" badge, scrolling red ticker tape, 1980s broadcast palette of red/white/black with cool monitor glow -->
+<!-- theme: Surveyor 1 — 60th anniversary of the first US soft landing on the Moon (June 2, 1966, Oceanus Procellarum; NASA / JPL / Hughes Aircraft); lunar surface with cratered horizon, the spider-like tripod lander beneath a starfield, Earth-rise in the deep sky, dusted regolith, mid-century NASA palette of bone-white, regolith-tan, and deep space blue -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="June 1, 2026 — CNN 46th anniversary; the first 24-hour news network launches June 1, 1980">
+     aria-label="June 2, 2026 — Surveyor 1, 60th anniversary of the first US soft landing on the Moon (June 2, 1966)">
   <defs>
-    <!-- Studio background gradient -->
-    <linearGradient id="studio" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"    stop-color="#0a0e16"/>
-      <stop offset="0.5"  stop-color="#10151f"/>
-      <stop offset="1"    stop-color="#080b12"/>
+    <!-- Deep-space sky -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#02050d"/>
+      <stop offset="0.55" stop-color="#070a18"/>
+      <stop offset="1"    stop-color="#0b0f1c"/>
     </linearGradient>
 
-    <!-- CRT bezel -->
-    <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"   stop-color="#3a3a3e"/>
-      <stop offset="0.5" stop-color="#1a1a1c"/>
-      <stop offset="1"   stop-color="#28282c"/>
+    <!-- Lunar surface -->
+    <linearGradient id="regolith" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#7a6f5e"/>
+      <stop offset="0.35" stop-color="#5a5141"/>
+      <stop offset="1"   stop-color="#1d1813"/>
     </linearGradient>
 
-    <!-- CRT screen with phosphor glow -->
-    <radialGradient id="screen" cx="0.5" cy="0.5" r="0.7">
-      <stop offset="0"   stop-color="#143055"/>
-      <stop offset="0.5" stop-color="#0b1830"/>
-      <stop offset="1"   stop-color="#04081a"/>
+    <!-- Earth surface -->
+    <radialGradient id="earthBody" cx="0.35" cy="0.35" r="0.85">
+      <stop offset="0"    stop-color="#7fd2ff"/>
+      <stop offset="0.45" stop-color="#2a78c4"/>
+      <stop offset="0.9"  stop-color="#0a2148"/>
+      <stop offset="1"    stop-color="#03060f"/>
     </radialGradient>
 
-    <!-- Broadcast red -->
-    <linearGradient id="newsRed" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"   stop-color="#dc1a3a"/>
-      <stop offset="1"   stop-color="#8a0a1c"/>
-    </linearGradient>
-
-    <!-- Satellite dish metal -->
-    <radialGradient id="dish" cx="0.45" cy="0.4" r="0.7">
-      <stop offset="0"   stop-color="#e6e6ea"/>
-      <stop offset="0.5" stop-color="#8a8a92"/>
-      <stop offset="1"   stop-color="#2a2a2e"/>
+    <!-- Earth atmosphere glow -->
+    <radialGradient id="earthHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0.78" stop-color="#5aa8ff" stop-opacity="0"/>
+      <stop offset="0.92" stop-color="#5aa8ff" stop-opacity="0.45"/>
+      <stop offset="1"    stop-color="#5aa8ff" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Scanline pattern -->
-    <pattern id="scanlines" x="0" y="0" width="2" height="3" patternUnits="userSpaceOnUse">
-      <rect width="2" height="3" fill="#0b1830"/>
-      <rect width="2" height="1" fill="#000" opacity="0.35"/>
-    </pattern>
+    <!-- Lander metal -->
+    <linearGradient id="strut" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6e3da"/>
+      <stop offset="1" stop-color="#5a574e"/>
+    </linearGradient>
 
-    <!-- TV static (subtle) -->
-    <filter id="static" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="2.4" numOctaves="2" seed="3" result="n">
-        <animate attributeName="seed" values="1;9;3;7;2" dur="0.6s" repeatCount="indefinite"/>
-      </feTurbulence>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.4
-                                                  0 0 0 0 0.6
-                                                  0 0 0 0 0.9
-                                                  0 0 0 0.18 0"/>
+    <linearGradient id="solar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3e5f8a"/>
+      <stop offset="1" stop-color="#142544"/>
+    </linearGradient>
+
+    <radialGradient id="dishMetal" cx="0.5" cy="0.45" r="0.7">
+      <stop offset="0"   stop-color="#f3efe2"/>
+      <stop offset="0.55" stop-color="#9a9282"/>
+      <stop offset="1"   stop-color="#2a261f"/>
+    </radialGradient>
+
+    <!-- Regolith dust pattern (filter) -->
+    <filter id="dust" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="t"/>
+      <feColorMatrix in="t" type="matrix" values="0 0 0 0 0.55
+                                                  0 0 0 0 0.48
+                                                  0 0 0 0 0.36
+                                                  0 0 0 0.22 0"/>
     </filter>
 
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.2"/>
-      <feComponentTransfer><feA type="linear" slope="1.4"/></feComponentTransfer>
+    <!-- Subtle starfield noise filter -->
+    <filter id="starnoise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="3.4" numOctaves="1" seed="11" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1
+                                                  0 0 0 0 1
+                                                  0 0 0 0 1
+                                                  0 0 0 1.4 -1.05"/>
     </filter>
 
-    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <!-- Glow filters -->
+    <filter id="warmGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+
+    <filter id="earthGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="3"/>
     </filter>
 
-    <!-- Clip for TV screen so static doesn't bleed -->
-    <clipPath id="screenClip">
-      <rect x="46" y="46" width="178" height="108" rx="8"/>
-    </clipPath>
+    <filter id="typeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.7"/>
+    </filter>
 
-    <!-- Clip for the ticker -->
-    <clipPath id="tickerClip">
-      <rect x="0" y="174" width="800" height="26"/>
+    <!-- Clip for regolith so anything beyond the horizon hides -->
+    <clipPath id="moonClip">
+      <path d="M 0 132 C 110 118, 220 138, 360 128 C 500 118, 620 142, 800 130 L 800 200 L 0 200 Z"/>
     </clipPath>
   </defs>
 
-  <!-- ===== Studio background ===== -->
+  <!-- ===== Sky ===== -->
   <rect width="800" height="200" fill="#0d1117"/>
-  <rect width="800" height="200" fill="url(#studio)"/>
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- subtle global scanlines -->
-  <rect width="800" height="174" fill="url(#scanlines)" opacity="0.08"/>
+  <!-- Starfield (turbulence-based fine stars) -->
+  <rect width="800" height="140" fill="#ffffff" opacity="0.55" filter="url(#starnoise)"/>
 
-  <!-- ===== Satellite dish (upper right) emitting broadcast waves ===== -->
-  <g transform="translate(680 70)">
-    <!-- Broadcast wave rings (expand and fade) -->
-    <g fill="none" stroke="#dc1a3a" stroke-width="1.4" opacity="0.85">
-      <circle r="14">
-        <animate attributeName="r"       values="14;72;14" dur="7s"  repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.9;0;0.9" dur="7s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="14" stroke="#ffffff">
-        <animate attributeName="r"       values="14;72;14" dur="7s"  begin="-2.3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.7;0;0.7" dur="7s" begin="-2.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="14" stroke="#4488dd">
-        <animate attributeName="r"       values="14;72;14" dur="7s"  begin="-4.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.6;0;0.6" dur="7s" begin="-4.6s" repeatCount="indefinite"/>
-      </circle>
-    </g>
+  <!-- Twinkling named stars -->
+  <g fill="#ffffff">
+    <circle cx="60"  cy="22"  r="0.9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  repeatCount="indefinite"/>
+    </circle>
+    <circle cx="138" cy="48"  r="1.1">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="92"  cy="76"  r="0.7">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="5s" begin="-1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="246" cy="30"  r="1.3">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="368" cy="62"  r="0.9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="538" cy="20"  r="1.1">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="710" cy="74"  r="0.8">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="772" cy="42"  r="1.0">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="612" cy="96"  r="0.7">
+      <animate attributeName="opacity" values="0.25;0.95;0.25" dur="11s" begin="-7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="448" cy="104" r="0.6">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="5s"  begin="-2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="110" r="0.6">
+      <animate attributeName="opacity" values="0.25;0.9;0.25" dur="7s" begin="-1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 
-    <!-- Dish (parabolic) -->
+  <!-- ===== Earth-rise (upper right) ===== -->
+  <g transform="translate(708 50)">
+    <!-- Atmosphere halo -->
+    <circle r="38" fill="url(#earthHalo)" filter="url(#earthGlow)"/>
+    <!-- Rotating Earth (subtle rotation via group) -->
     <g>
-      <!-- Mounting pole + base -->
-      <rect x="-2" y="14" width="4" height="36" fill="#3a3a3e"/>
-      <rect x="-12" y="50" width="24" height="6" fill="#2a2a2e"/>
-      <!-- Parabolic dish (ellipse for foreshortened look) -->
-      <ellipse cx="0" cy="0" rx="34" ry="22" fill="url(#dish)" stroke="#1a1a1e" stroke-width="0.8"/>
-      <ellipse cx="0" cy="-1" rx="28" ry="17" fill="none" stroke="#5a5a62" stroke-width="0.5" opacity="0.7"/>
-      <ellipse cx="0" cy="-2" rx="20" ry="12" fill="none" stroke="#5a5a62" stroke-width="0.4" opacity="0.5"/>
-      <!-- LNB/feed horn on tripod arm -->
-      <path d="M 0 0 L 14 -14" stroke="#3a3a3e" stroke-width="1.4"/>
-      <path d="M 0 0 L -14 -14" stroke="#3a3a3e" stroke-width="1.4"/>
-      <circle cx="0" cy="-14" r="3.4" fill="#dc1a3a" filter="url(#redGlow)"/>
-      <circle cx="0" cy="-14" r="2" fill="#ff5070"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        from="0" to="-360" dur="113s" repeatCount="indefinite"/>
+      <circle r="28" fill="url(#earthBody)"/>
+      <!-- Continents (abstract) -->
+      <g fill="#3aa45a" opacity="0.85">
+        <path d="M -16 -10 Q -8 -16 0 -12 Q 6 -8 4 -2 Q -2 2 -10 0 Q -18 -2 -16 -10 Z"/>
+        <path d="M 6 6 Q 14 4 18 10 Q 16 16 8 16 Q 2 12 6 6 Z"/>
+        <path d="M -14 8 Q -10 6 -6 10 Q -8 16 -14 14 Z"/>
+        <path d="M 14 -14 Q 20 -10 18 -4 Q 12 -6 14 -14 Z"/>
+      </g>
+      <!-- Cloud wisps -->
+      <g fill="#ffffff" opacity="0.55">
+        <ellipse cx="-4" cy="-6" rx="10" ry="2.4"/>
+        <ellipse cx="10" cy="2"  rx="7"  ry="1.8"/>
+        <ellipse cx="-8" cy="14" rx="9"  ry="2"/>
+      </g>
     </g>
-
-    <!-- Subtle label "UPLINK" -->
-    <text x="0" y="68" text-anchor="middle"
+    <!-- Specular highlight (does not rotate) -->
+    <ellipse cx="-9" cy="-9" rx="6" ry="3" fill="#ffffff" opacity="0.35"/>
+    <!-- "EARTH" tiny label -->
+    <text x="0" y="56" text-anchor="middle"
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="6" letter-spacing="2.6" fill="#7a8aa0" opacity="0.85">UPLINK · LIVE</text>
+          font-size="6.5" letter-spacing="3" fill="#88a8d0" opacity="0.85">EARTHRISE</text>
   </g>
 
-  <!-- ===== CRT Television (left) ===== -->
-  <g>
-    <!-- Outer cabinet -->
-    <rect x="30" y="30" width="210" height="140" rx="14" fill="url(#bezel)" stroke="#000" stroke-width="1"/>
-    <!-- Inner bezel inset -->
-    <rect x="40" y="40" width="190" height="120" rx="10" fill="#0a0a0c" stroke="#48484c" stroke-width="0.8"/>
-    <!-- Screen (clipped) -->
-    <g clip-path="url(#screenClip)">
-      <rect x="46" y="46" width="178" height="108" rx="8" fill="url(#screen)"/>
-      <!-- Static noise overlay (animated) -->
-      <rect x="46" y="46" width="178" height="108" filter="url(#static)" opacity="0.55"/>
-      <!-- Screen scanlines -->
-      <rect x="46" y="46" width="178" height="108" fill="url(#scanlines)" opacity="0.45"/>
+  <!-- ===== Lunar surface ===== -->
+  <g clip-path="url(#moonClip)">
+    <!-- base regolith -->
+    <rect x="0" y="120" width="800" height="80" fill="url(#regolith)"/>
+    <!-- dust texture overlay -->
+    <rect x="0" y="120" width="800" height="80" filter="url(#dust)" opacity="0.55"/>
 
-      <!-- Drifting horizontal "tracking" line -->
-      <rect x="46" y="60" width="178" height="1.4" fill="#ffffff" opacity="0.18">
-        <animate attributeName="y" values="46;154;46" dur="11s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.05;0.28;0.05" dur="11s" repeatCount="indefinite"/>
-      </rect>
-
-      <!-- "News studio" abstract content INSIDE the screen -->
-      <!-- silhouetted anchor desk in front of a blue horizon -->
-      <rect x="46" y="118" width="178" height="36" fill="#040810" opacity="0.95"/>
-      <!-- anchor head silhouette -->
-      <g fill="#04081a" opacity="0.95">
-        <ellipse cx="135" cy="116" rx="14" ry="16"/>
-        <path d="M 110 132 Q 135 122 160 132 L 160 144 L 110 144 Z"/>
-      </g>
-      <!-- desk -->
-      <rect x="58" y="132" width="154" height="14" fill="#1a2a48" opacity="0.9"/>
-      <!-- glowing horizon line behind anchor -->
-      <rect x="46" y="116" width="178" height="1" fill="#4488dd" opacity="0.75" filter="url(#softGlow)"/>
-
-      <!-- Lower-third graphic bar (red) -->
-      <rect x="46" y="140" width="178" height="10" fill="url(#newsRed)"/>
-      <text x="56" y="147.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="6.4" font-weight="800" fill="#ffffff" letter-spacing="1.4">BREAKING NEWS</text>
-      <rect x="156" y="142.4" width="60" height="5.6" fill="#ffffff" opacity="0.92"/>
-      <text x="186" y="147"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="5" font-weight="700" text-anchor="middle" fill="#8a0a1c" letter-spacing="0.6">CABLE NEWS NETWORK</text>
-
-      <!-- "Channel" digits in upper-left corner of screen -->
-      <text x="54" y="62" font-family="Courier New, monospace" font-size="7"
-            font-weight="700" fill="#4488dd" opacity="0.85" letter-spacing="0.8">CH · 06</text>
-
-      <!-- Time digit in upper-right -->
-      <text x="216" y="62" text-anchor="end" font-family="Courier New, monospace"
-            font-size="7" font-weight="700" fill="#dc1a3a" opacity="0.95" letter-spacing="0.8">
-        LIVE
-        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
-      </text>
-
-      <!-- Stylized CNN-esque big monogram in screen-center, muted -->
-      <text x="135" y="100" text-anchor="middle"
-            font-family="Georgia, 'Times New Roman', serif"
-            font-size="34" font-weight="900" fill="#ffffff" opacity="0.92" letter-spacing="2"
-            filter="url(#softGlow)">CNN</text>
-      <text x="135" y="106" text-anchor="middle"
-            font-family="Georgia, 'Times New Roman', serif"
-            font-size="6.5" font-weight="700" fill="#8aa0c8" opacity="0.75" letter-spacing="2.4">CABLE NEWS NETWORK</text>
-
-      <!-- vertical color bars (flash briefly to suggest signal test) -->
-      <g opacity="0">
-        <rect x="46"  y="46" width="29" height="108" fill="#ffffff"/>
-        <rect x="76"  y="46" width="29" height="108" fill="#e8c060"/>
-        <rect x="106" y="46" width="29" height="108" fill="#4dc8c8"/>
-        <rect x="136" y="46" width="29" height="108" fill="#48c060"/>
-        <rect x="166" y="46" width="29" height="108" fill="#c848c8"/>
-        <rect x="196" y="46" width="28" height="108" fill="#dc1a3a"/>
-        <animate attributeName="opacity" values="0;0;0;0.55;0;0;0;0;0;0;0" dur="13s" repeatCount="indefinite"/>
-      </g>
+    <!-- Distant craters / hills -->
+    <g fill="#3d3528" opacity="0.85">
+      <ellipse cx="92"  cy="148" rx="42" ry="4"/>
+      <ellipse cx="260" cy="156" rx="62" ry="5"/>
+      <ellipse cx="540" cy="148" rx="56" ry="4"/>
+      <ellipse cx="690" cy="160" rx="58" ry="5"/>
     </g>
-
-    <!-- TV bezel chrome trim under the screen -->
-    <rect x="40" y="160" width="190" height="6" rx="2" fill="#1a1a1c"/>
-    <!-- Speakers / vents -->
-    <g fill="#0a0a0c" stroke="#3a3a3e" stroke-width="0.4">
-      <circle cx="56"  cy="166" r="1.6"/>
-      <circle cx="64"  cy="166" r="1.6"/>
-      <circle cx="72"  cy="166" r="1.6"/>
+    <!-- Crater rims (lit edge facing right, light source upper right) -->
+    <g fill="none" stroke="#bdb19a" stroke-width="0.9" opacity="0.85">
+      <path d="M 60 168 Q 95 162 124 168"/>
+      <path d="M 200 178 Q 255 170 308 178"/>
+      <path d="M 500 168 Q 555 162 596 168"/>
+      <path d="M 640 184 Q 695 176 742 184"/>
     </g>
-    <!-- Channel knobs -->
+    <!-- Small foreground crater near lander -->
     <g>
-      <circle cx="208" cy="166" r="3.4" fill="#2a2a2e" stroke="#48484c" stroke-width="0.6"/>
-      <line x1="208" y1="163.5" x2="208" y2="166" stroke="#e8c060" stroke-width="0.9"/>
-      <circle cx="220" cy="166" r="3.4" fill="#2a2a2e" stroke="#48484c" stroke-width="0.6"/>
-      <line x1="220" y1="163.5" x2="220" y2="166" stroke="#e8c060" stroke-width="0.9"/>
+      <ellipse cx="190" cy="186" rx="36" ry="4.4" fill="#28221a"/>
+      <path d="M 156 184 Q 190 180 224 184" stroke="#cdc1a8" stroke-width="0.9" fill="none" opacity="0.9"/>
     </g>
 
-    <!-- ON AIR badge on top of cabinet -->
-    <g transform="translate(135 24)">
-      <rect x="-26" y="-9" width="52" height="14" rx="2" fill="url(#newsRed)" stroke="#3a0010" stroke-width="0.6"/>
-      <rect x="-26" y="-9" width="52" height="14" rx="2" fill="url(#newsRed)" opacity="0.5" filter="url(#redGlow)">
-        <animate attributeName="opacity" values="0.2;0.9;0.2" dur="2s" repeatCount="indefinite"/>
-      </rect>
-      <text x="0" y="-1" text-anchor="middle"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="8" font-weight="900" fill="#ffffff" letter-spacing="2.2">ON AIR</text>
-      <circle cx="-19" cy="-2" r="1.6" fill="#ffffff">
-        <animate attributeName="opacity" values="0.2;1;0.2" dur="1.6s" repeatCount="indefinite"/>
+    <!-- pebbles -->
+    <g fill="#bdb19a" opacity="0.75">
+      <circle cx="320" cy="178" r="0.9"/>
+      <circle cx="408" cy="186" r="0.7"/>
+      <circle cx="468" cy="180" r="0.8"/>
+      <circle cx="612" cy="184" r="0.7"/>
+      <circle cx="708" cy="190" r="1"/>
+      <circle cx="42"  cy="190" r="0.9"/>
+    </g>
+
+    <!-- Lander cast shadow -->
+    <ellipse cx="146" cy="186" rx="42" ry="3.4" fill="#0a0805" opacity="0.7"/>
+  </g>
+
+  <!-- Sharp horizon highlight line -->
+  <path d="M 0 132 C 110 118, 220 138, 360 128 C 500 118, 620 142, 800 130"
+        stroke="#9a907b" stroke-width="0.8" fill="none" opacity="0.7"/>
+
+  <!-- ===== Surveyor 1 lander (left of center) ===== -->
+  <g transform="translate(118 138)">
+    <!-- Tripod legs (three, foreshortened) -->
+    <g stroke="url(#strut)" stroke-width="1.8" fill="none" stroke-linecap="round">
+      <line x1="0"   y1="-2"  x2="-26" y2="44"/>
+      <line x1="0"   y1="-2"  x2="26"  y2="44"/>
+      <line x1="0"   y1="-2"  x2="2"   y2="46"/>
+    </g>
+    <!-- Footpads -->
+    <g fill="#cdc1a8" stroke="#2a261f" stroke-width="0.4">
+      <ellipse cx="-26" cy="44" rx="5" ry="1.6"/>
+      <ellipse cx="26"  cy="44" rx="5" ry="1.6"/>
+      <ellipse cx="2"   cy="46" rx="5" ry="1.6"/>
+    </g>
+
+    <!-- Lower equipment bay (triangular truss frame) -->
+    <g stroke="url(#strut)" stroke-width="1.2" fill="none">
+      <path d="M -22 -2 L 0 -22 L 22 -2 Z"/>
+      <path d="M -18 -4 L 18 -4"/>
+      <path d="M -10 -16 L 10 -16"/>
+    </g>
+
+    <!-- Central body / instrument package -->
+    <rect x="-12" y="-22" width="24" height="14" fill="#d6cfb8" stroke="#2a261f" stroke-width="0.5"/>
+    <rect x="-12" y="-22" width="24" height="3"  fill="#9a9080"/>
+    <!-- Thermal foil ribbing -->
+    <g stroke="#7a7060" stroke-width="0.35" opacity="0.85">
+      <line x1="-10" y1="-19" x2="10" y2="-19"/>
+      <line x1="-10" y1="-16" x2="10" y2="-16"/>
+      <line x1="-10" y1="-13" x2="10" y2="-13"/>
+      <line x1="-10" y1="-10" x2="10" y2="-10"/>
+    </g>
+
+    <!-- Survey camera (top, with hood) -->
+    <g>
+      <rect x="-3" y="-32" width="6" height="10" fill="#2a261f" stroke="#9a9080" stroke-width="0.4"/>
+      <rect x="-4" y="-34" width="8" height="2.4" fill="#0a0805"/>
+      <!-- Camera "scan" tick -->
+      <line x1="0" y1="-32" x2="0" y2="-44" stroke="#cdc1a8" stroke-width="0.6"/>
+      <circle cx="0" cy="-44" r="1.2" fill="#dc4a3a">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2.6s" repeatCount="indefinite"/>
       </circle>
     </g>
+
+    <!-- Solar panel mast (angled up-right) -->
+    <g>
+      <line x1="6" y1="-26" x2="38" y2="-58" stroke="url(#strut)" stroke-width="1.4"/>
+      <g transform="translate(38 -58) rotate(-32)">
+        <!-- panel back -->
+        <rect x="-14" y="-9" width="28" height="18" rx="0.6" fill="url(#solar)" stroke="#0a1428" stroke-width="0.5"/>
+        <!-- cell grid -->
+        <g stroke="#76a8e0" stroke-width="0.3" opacity="0.85">
+          <line x1="-14" y1="-4.5" x2="14" y2="-4.5"/>
+          <line x1="-14" y1="0"    x2="14" y2="0"/>
+          <line x1="-14" y1="4.5"  x2="14" y2="4.5"/>
+          <line x1="-7"  y1="-9"   x2="-7" y2="9"/>
+          <line x1="0"   y1="-9"   x2="0"  y2="9"/>
+          <line x1="7"   y1="-9"   x2="7"  y2="9"/>
+        </g>
+        <!-- glint -->
+        <rect x="-12" y="-7" width="6" height="1.4" fill="#cfe6ff" opacity="0.8">
+          <animate attributeName="opacity" values="0.2;0.9;0.2" dur="5s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <!-- High-gain antenna (planar array, top-left) -->
+    <g>
+      <line x1="-6" y1="-26" x2="-30" y2="-50" stroke="url(#strut)" stroke-width="1.2"/>
+      <g transform="translate(-30 -50) rotate(28)">
+        <rect x="-12" y="-7" width="24" height="14" fill="url(#dishMetal)" stroke="#2a261f" stroke-width="0.4"/>
+        <!-- antenna mesh lines -->
+        <g stroke="#5a5141" stroke-width="0.3" opacity="0.7">
+          <line x1="-12" y1="-3.5" x2="12" y2="-3.5"/>
+          <line x1="-12" y1="0"    x2="12" y2="0"/>
+          <line x1="-12" y1="3.5"  x2="12" y2="3.5"/>
+        </g>
+        <!-- feed horn -->
+        <rect x="-1.4" y="6" width="2.8" height="4" fill="#7a7060"/>
+      </g>
+      <!-- transmit pulse (expanding arc) -->
+      <g fill="none" stroke="#7fd2ff" stroke-width="0.7" opacity="0.85" transform="translate(-30 -50)">
+        <circle r="6">
+          <animate attributeName="r"       values="6;30;6"   dur="7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.9;0;0.9" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="6">
+          <animate attributeName="r"       values="6;30;6"   dur="7s" begin="-2.3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0;0.6" dur="7s" begin="-2.3s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+
+    <!-- US flag decal on body -->
+    <g transform="translate(-9 -19)">
+      <rect width="6" height="3.6" fill="#ffffff" stroke="#0a0805" stroke-width="0.2"/>
+      <rect width="2.4" height="1.6" fill="#1a3a78"/>
+      <line x1="0" y1="0.8" x2="6" y2="0.8" stroke="#c81a2a" stroke-width="0.3"/>
+      <line x1="0" y1="2"   x2="6" y2="2"   stroke="#c81a2a" stroke-width="0.3"/>
+      <line x1="0" y1="3.2" x2="6" y2="3.2" stroke="#c81a2a" stroke-width="0.3"/>
+    </g>
+
+    <!-- Tiny "SURVEYOR 1" label -->
+    <text x="0" y="-2" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="3.6" letter-spacing="0.7" fill="#2a261f" font-weight="700">SURVEYOR 1</text>
   </g>
 
-  <!-- ===== Central typography zone ===== -->
+  <!-- Drifting dust puff near footpad (slowly fades) -->
+  <g transform="translate(140 184)" opacity="0.55">
+    <ellipse cx="0" cy="0" rx="14" ry="2" fill="#bdb19a" opacity="0.4">
+      <animate attributeName="opacity" values="0.55;0.05;0.55" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="rx"      values="10;22;10"        dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ===== Typography block (right of lander) ===== -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <!-- Top thin red banner with all-caps subhead -->
-    <rect x="270" y="34" width="376" height="14" fill="url(#newsRed)"/>
-    <text x="458" y="44" text-anchor="middle"
-          font-size="8.5" font-weight="800" fill="#ffffff" letter-spacing="3.6">
-      LIVE FROM ATLANTA · CABLE NEWS NETWORK · 24 HOURS
-    </text>
-
-    <!-- Big date -->
-    <text x="458" y="98" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="40" font-weight="900" fill="#ffffff" letter-spacing="3.5"
-          filter="url(#softGlow)">
-      JUNE 1 · 2026
-    </text>
-
-    <!-- Italic kicker -->
-    <text x="458" y="118" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="11" font-style="italic" fill="#e8c060" letter-spacing="1.4">
-      The Cable News Network — 46 years on the air
-    </text>
-
-    <!-- Bottom commemorative line -->
-    <text x="458" y="138" text-anchor="middle"
-          font-size="9" fill="#a8b8d0" letter-spacing="3"
-          font-weight="600">
-      JUNE 1, 1980 — TED TURNER FLIPS THE SWITCH
-    </text>
-
-    <!-- Tiny attribution under that -->
-    <text x="458" y="152" text-anchor="middle"
-          font-size="7" fill="#6a7890" letter-spacing="2.2" font-style="italic">
-      Atlanta · 1 CNN Center · channel 24/7
-    </text>
-  </g>
-
-  <!-- Decorative corner brackets on the typography block -->
-  <g stroke="#dc1a3a" stroke-width="1.2" fill="none" opacity="0.9">
-    <path d="M 274 56 L 274 64 M 274 56 L 282 56"/>
-    <path d="M 642 56 L 642 64 M 642 56 L 634 56"/>
-    <path d="M 274 156 L 274 148 M 274 156 L 282 156"/>
-    <path d="M 642 156 L 642 148 M 642 156 L 634 156"/>
-  </g>
-
-  <!-- ===== Scrolling ticker tape at bottom ===== -->
-  <g clip-path="url(#tickerClip)">
-    <rect x="0" y="174" width="800" height="26" fill="url(#newsRed)"/>
-    <!-- 'BREAKING' tab on the left -->
-    <rect x="0" y="174" width="92" height="26" fill="#0a0a0c"/>
-    <text x="46" y="191" text-anchor="middle"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="9" font-weight="900" fill="#ffffff" letter-spacing="1.6">BREAKING</text>
-    <!-- skewed separator -->
-    <polygon points="92,174 102,174 92,200 82,200" fill="#0a0a0c"/>
-
-    <!-- ticker text content (duplicated, animated horizontally) -->
-    <g>
-      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="11" font-weight="700" fill="#ffffff" letter-spacing="1.4" y="191">
-        <tspan x="105">★ JUNE 1, 1980 · CNN BECOMES THE FIRST 24-HOUR NEWS NETWORK · ATLANTA · FOUNDED BY TED TURNER · ★ ON THE AIR FOR 46 YEARS · LIVE · LIVE · LIVE · ★ </tspan>
-        <tspan x="1380">★ JUNE 1, 1980 · CNN BECOMES THE FIRST 24-HOUR NEWS NETWORK · ATLANTA · FOUNDED BY TED TURNER · ★ ON THE AIR FOR 46 YEARS · LIVE · LIVE · LIVE · ★ </tspan>
-        <animate attributeName="x" from="0" to="-1275" dur="29s" repeatCount="indefinite"/>
+    <!-- Mission tag -->
+    <g transform="translate(296 36)">
+      <rect x="0" y="0" width="172" height="14" fill="#cdc1a8"/>
+      <text x="86" y="10" text-anchor="middle"
+            font-size="8.4" font-weight="800" fill="#0a0805" letter-spacing="3.2">
+        NASA · MISSION A-21A
+      </text>
+    </g>
+    <!-- Right co-tag -->
+    <g transform="translate(484 36)">
+      <rect x="0" y="0" width="216" height="14" fill="none" stroke="#cdc1a8" stroke-width="1"/>
+      <text x="108" y="10" text-anchor="middle"
+            font-size="8.4" font-weight="700" fill="#cdc1a8" letter-spacing="3">
+        OCEANUS PROCELLARUM
       </text>
     </g>
 
-    <!-- subtle top edge highlight on ticker -->
-    <rect x="0" y="174" width="800" height="1.4" fill="#ffffff" opacity="0.55"/>
+    <!-- BIG DATE -->
+    <text x="498" y="92" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="42" font-weight="900" fill="#ffffff" letter-spacing="3.6"
+          filter="url(#typeGlow)">
+      JUNE 2 · 2026
+    </text>
+
+    <!-- Underline rule with date markers -->
+    <g stroke="#cdc1a8" stroke-width="1" opacity="0.85">
+      <line x1="304" y1="102" x2="692" y2="102"/>
+      <circle cx="304" cy="102" r="1.8" fill="#cdc1a8"/>
+      <circle cx="692" cy="102" r="1.8" fill="#cdc1a8"/>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="498" y="120" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="12.5" font-style="italic" fill="#f3d27a" letter-spacing="1.2">
+      Surveyor 1 — 60 years of soft landings
+    </text>
+
+    <!-- Citation line -->
+    <text x="498" y="140" text-anchor="middle"
+          font-size="9" font-weight="600" fill="#a8b8d0" letter-spacing="3.4">
+      JUNE 2, 1966 · FIRST US SOFT LANDING ON THE MOON
+    </text>
+
+    <!-- Footnote -->
+    <text x="498" y="156" text-anchor="middle"
+          font-size="7" fill="#6a7890" letter-spacing="2.4" font-style="italic">
+      Hughes Aircraft · JPL · 63 hours 30 minutes Earth to Moon
+    </text>
   </g>
 
-  <!-- ===== Vignette ===== -->
-  <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
-    <stop offset="0.6" stop-color="#000" stop-opacity="0"/>
-    <stop offset="1"   stop-color="#000" stop-opacity="0.6"/>
+  <!-- Corner ticks framing the type block -->
+  <g stroke="#f3d27a" stroke-width="1.1" fill="none" opacity="0.9">
+    <path d="M 290 58 L 290 66 M 290 58 L 298 58"/>
+    <path d="M 706 58 L 706 66 M 706 58 L 698 58"/>
+    <path d="M 290 158 L 290 150 M 290 158 L 298 158"/>
+    <path d="M 706 158 L 706 150 M 706 158 L 698 158"/>
+  </g>
+
+  <!-- Telemetry tick along bottom (very subtle), animated to suggest data return -->
+  <g transform="translate(0 174)" font-family="Courier New, monospace" font-size="6"
+     fill="#7a8aa0" letter-spacing="1.8" opacity="0.6">
+    <text x="14" y="8">T+ 0000:00 · DSN GOLDSTONE · CMD 04 · TM NOMINAL · LAT  -02.4°  LON  -43.3°  ·
+      <animate attributeName="opacity" values="0.25;0.7;0.25" dur="13s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Vignette -->
+  <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.85">
+    <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+    <stop offset="1"    stop-color="#000" stop-opacity="0.55"/>
   </radialGradient>
   <rect width="800" height="200" fill="url(#vignette)" pointer-events="none"/>
 </svg>
