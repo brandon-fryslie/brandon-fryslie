@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 2, 2026 — CNN launches as the first 24-hour news network — 46th anniversary (June 1, 1980, Cable News Network, Atlanta; founded by Ted Turner); retro CRT studio aesthetic with broadcast satellite, scan lines, "ON AIR" badge, scrolling red ticker tape, 1980s broadcast palette of red/white/black with cool monitor glow
+
+<img src="./doodle-archive/2026/06/2026-06-02-072854.svg" width="800" alt="Daily doodle for June 2, 2026: CNN launches as the first 24-hour news network — 46th anniversary (June 1, 1980, Cable News Network, Atlanta; founded by Ted Turner); retro CRT studio aesthetic with broadcast satellite, scan lines, ON AIR badge, scrolling red ticker tape, 1980s broadcast palette of red/white/black with cool monitor glow">
+
+---
+
 ## June 1, 2026 — The Great Clock at Westminster (Big Ben) — 167th anniversary of keeping time (May 31, 1859 — clock movement at the Palace of Westminster, London, first kept time; mechanism by Edward John Dent / Edmund Beckett Denison); gothic clocktower silhouette over a foggy London night, illuminated clock face with moving hands and swinging pendulum, gaslight gold + Westminster blue palette
 
 <img src="./doodle-archive/2026/06/2026-06-01-073448.svg" width="800" alt="Daily doodle for June 1, 2026: The Great Clock at Westminster (Big Ben) — 167th anniversary of keeping time (May 31, 1859 — clock movement at the Palace of Westminster, London, first kept time; mechanism by Edward John Dent / Edmund Beckett Denison); gothic clocktower silhouette over a foggy London night, illuminated clock face with moving hands and swinging pendulum, gaslight gold + Westminster blue palette">
