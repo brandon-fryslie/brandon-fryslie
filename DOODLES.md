@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 4, 2026 — World Bicycle Day (June 3, UN observance — established April 2018, A/RES/72/272); sunrise commute over an open road, classic diamond-frame bicycle with spinning spoked wheels, rider in motion, warm horizon and cool sky palette, road dashes streaming past
+
+<img src="./doodle-archive/2026/06/2026-06-04-072914.svg" width="800" alt="Daily doodle archived for June 4, 2026: World Bicycle Day (June 3, UN observance — established April 2018, A/RES/72/272); sunrise commute over an open road, classic diamond-frame bicycle with spinning spoked wheels, rider in motion, warm horizon and cool sky palette, road dashes streaming past">
+
+---
+
 ## June 3, 2026 — Surveyor 1 — 60th anniversary of the first US soft landing on the Moon (June 2, 1966, Oceanus Procellarum; NASA / JPL / Hughes Aircraft); lunar surface with cratered horizon, the spider-like tripod lander beneath a starfield, Earth-rise in the deep sky, dusted regolith, mid-century NASA palette of bone-white, regolith-tan, and deep space blue
 
 <img src="./doodle-archive/2026/06/2026-06-03-073213.svg" width="800" alt="Daily doodle for June 3, 2026: Surveyor 1 — 60th anniversary of the first US soft landing on the Moon (June 2, 1966, Oceanus Procellarum; NASA / JPL / Hughes Aircraft); lunar surface with cratered horizon, the spider-like tripod lander beneath a starfield, Earth-rise in the deep sky, dusted regolith, mid-century NASA palette of bone-white, regolith-tan, and deep space blue">
