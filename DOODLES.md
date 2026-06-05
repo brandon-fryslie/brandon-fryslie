@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 5, 2026 — Montgolfier brothers' first public hot air balloon demonstration (June 4, 1783, Annonay, France) — 243rd anniversary; ornate royal-blue and gold balloon ascending over French countryside at dawn, wicker basket with brazier glow, swaying ropes, drifting cloud layer, distant birds
+
+<img src="./doodle-archive/2026/06/2026-06-05-072104.svg" width="800" alt="Daily doodle archived for June 5, 2026: Montgolfier brothers' first public hot air balloon demonstration (June 4, 1783, Annonay, France) — 243rd anniversary; ornate royal-blue and gold balloon ascending over French countryside at dawn, wicker basket with brazier glow, swaying ropes, drifting cloud layer, distant birds">
+
+---
+
 ## June 4, 2026 — World Bicycle Day (June 3, UN observance — established April 2018, A/RES/72/272); sunrise commute over an open road, classic diamond-frame bicycle with spinning spoked wheels, rider in motion, warm horizon and cool sky palette, road dashes streaming past
 
 <img src="./doodle-archive/2026/06/2026-06-04-072914.svg" width="800" alt="Daily doodle archived for June 4, 2026: World Bicycle Day (June 3, UN observance — established April 2018, A/RES/72/272); sunrise commute over an open road, classic diamond-frame bicycle with spinning spoked wheels, rider in motion, warm horizon and cool sky palette, road dashes streaming past">
