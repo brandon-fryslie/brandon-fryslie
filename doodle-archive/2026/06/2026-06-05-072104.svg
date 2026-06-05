@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Montgolfier brothers' first public hot air balloon demonstration (June 4, 1783, Annonay, France) — 243rd anniversary; ornate royal-blue and gold balloon ascending over French countryside at dawn, wicker basket with brazier glow, swaying ropes, drifting cloud layer, distant birds -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="June 4, 2026 — Montgolfier brothers first public hot air balloon ascent, 243rd anniversary; ornate royal-blue and gold balloon rising over French countryside at dawn">
+  <defs>
+    <!-- Dawn sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#0d1117"/>
+      <stop offset="0.18" stop-color="#1a2b4a"/>
+      <stop offset="0.55" stop-color="#3a5a86"/>
+      <stop offset="0.82" stop-color="#d4986a"/>
+      <stop offset="1"    stop-color="#f3cf86"/>
+    </linearGradient>
+
+    <!-- Balloon main vertical gores: deep royal blue with subtle sheen -->
+    <radialGradient id="balloonBlue" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0"   stop-color="#3d6fb3"/>
+      <stop offset="0.45" stop-color="#1f3a78"/>
+      <stop offset="1"   stop-color="#0e1d44"/>
+    </radialGradient>
+
+    <!-- Balloon gold gores -->
+    <radialGradient id="balloonGold" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0"   stop-color="#fde18b"/>
+      <stop offset="0.5" stop-color="#e2b145"/>
+      <stop offset="1"   stop-color="#8a5e1c"/>
+    </radialGradient>
+
+    <!-- Brazier flame -->
+    <radialGradient id="flame" cx="0.5" cy="0.7" r="0.6">
+      <stop offset="0"   stop-color="#fff5c2"/>
+      <stop offset="0.45" stop-color="#ffb84a"/>
+      <stop offset="0.85" stop-color="#d23a1a"/>
+      <stop offset="1"   stop-color="#d23a1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ground hills -->
+    <linearGradient id="hills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26344f"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- Soft cloud noise -->
+    <filter id="clouds" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.05" numOctaves="2" seed="11" result="t"/>
+      <feColorMatrix in="t" type="matrix" values="0 0 0 0 1
+                                                  0 0 0 0 0.92
+                                                  0 0 0 0 0.82
+                                                  0 0 0 0.5 -0.18"/>
+    </filter>
+
+    <!-- Type glow -->
+    <filter id="typeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+
+    <!-- Warm flame glow -->
+    <filter id="warmGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.6"/>
+    </filter>
+
+    <!-- Balloon clip: a tall ovoid teardrop, anchored so (0,0) sits at the top center -->
+    <clipPath id="balloonShape">
+      <path d="M 0 0
+               C 56 0  72 30  72 65
+               C 72 100 52 120 36 124
+               L -36 124
+               C -52 120 -72 100 -72 65
+               C -72 30  -56 0  0 0 Z"/>
+    </clipPath>
+
+    <!-- Single decorative sunburst (Louis XVI / Bourbon sun motif) -->
+    <g id="sunburst">
+      <circle r="6" fill="#fde18b"/>
+      <circle r="2.5" fill="#8a5e1c"/>
+      <g stroke="#fde18b" stroke-width="0.8" stroke-linecap="round">
+        <line x1="0" y1="-8"  x2="0" y2="-13"/>
+        <line x1="0" y1="8"   x2="0" y2="13"/>
+        <line x1="-8" y1="0"  x2="-13" y2="0"/>
+        <line x1="8"  y1="0"  x2="13"  y2="0"/>
+        <line x1="-5.7" y1="-5.7" x2="-9.2" y2="-9.2"/>
+        <line x1="5.7"  y1="-5.7" x2="9.2"  y2="-9.2"/>
+        <line x1="-5.7" y1="5.7"  x2="-9.2" y2="9.2"/>
+        <line x1="5.7"  y1="5.7"  x2="9.2"  y2="9.2"/>
+      </g>
+    </g>
+
+    <!-- Fleur-de-lis emblem -->
+    <g id="fleur">
+      <path d="M 0 -6 C 2 -3 5 -1 3 3 L -3 3 C -5 -1 -2 -3 0 -6 Z" fill="#fde18b"/>
+      <path d="M 0 -3 L 0 5" stroke="#fde18b" stroke-width="0.9" stroke-linecap="round"/>
+      <path d="M -4 1 Q -2 3 0 1 Q 2 3 4 1" stroke="#fde18b" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- ===== Sky ===== -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="172" fill="url(#sky)"/>
+
+  <!-- Drifting cloud band (low, slow) -->
+  <g opacity="0.45">
+    <g filter="url(#clouds)">
+      <rect x="-200" y="50" width="1200" height="50">
+        <animate attributeName="x" values="-200;-100;-200" dur="113s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Distant stars (fading at dawn) -->
+  <g fill="#ffffff">
+    <circle cx="78"  cy="18" r="0.8">
+      <animate attributeName="opacity" values="0.25;0.9;0.25" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="148" cy="32" r="0.6">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="676" cy="14" r="0.9">
+      <animate attributeName="opacity" values="0.3;0.95;0.3" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="744" cy="42" r="0.7">
+      <animate attributeName="opacity" values="0.2;0.85;0.2" dur="7s" begin="-1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Distant rolling hills -->
+  <g fill="#2c3d5b" opacity="0.9">
+    <path d="M 0 152 Q 80 130 160 142 Q 240 156 320 138 Q 400 122 480 138 Q 560 152 640 134 Q 720 118 800 138 L 800 172 L 0 172 Z"/>
+  </g>
+  <g fill="url(#hills)">
+    <path d="M 0 162 Q 100 150 200 158 Q 300 168 410 154 Q 510 144 620 160 Q 720 172 800 158 L 800 172 L 0 172 Z"/>
+  </g>
+
+  <!-- Ground line -->
+  <rect x="0" y="172" width="800" height="28" fill="#080a0e"/>
+  <line x1="0" y1="172" x2="800" y2="172" stroke="#3a2a18" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- ===== Distant birds (silhouettes) ===== -->
+  <g stroke="#0d1117" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M 0 0 q 3 -3 6 0 q 3 -3 6 0" transform="translate(440 70)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="540 60; 360 80; 200 70" dur="59s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0 0 q 2.5 -2.5 5 0 q 2.5 -2.5 5 0" transform="translate(460 90)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="560 78; 380 96; 220 86" dur="71s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ===== Balloon assembly ===== -->
+  <!-- The whole balloon bobs gently up & down -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 0 -5; 0 0" dur="11s" repeatCount="indefinite"/>
+
+    <!-- Balloon shadow on ground -->
+    <ellipse cx="200" cy="170" rx="46" ry="3.4" fill="#000" opacity="0.45">
+      <animate attributeName="rx" values="46;52;46" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0.32;0.45" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Balloon envelope, anchored at (200, 18) — top of balloon -->
+    <g transform="translate(200 18)">
+      <!-- Subtle horizontal sway -->
+      <animateTransform attributeName="transform" type="translate"
+                        values="200 18; 198 18; 202 18; 200 18" dur="13s" repeatCount="indefinite" additive="sum"/>
+
+      <!-- Balloon background fill (base coat) -->
+      <g clip-path="url(#balloonShape)">
+        <!-- Gore stripes: alternating blue and gold vertical wedges -->
+        <rect x="-72" y="0" width="144" height="125" fill="url(#balloonBlue)"/>
+        <!-- Gold vertical gores: 4 wide stripes -->
+        <g fill="url(#balloonGold)">
+          <path d="M -60 0 C -54 30 -54 100 -36 124 L -28 124 C -44 100 -46 30 -52 0 Z"/>
+          <path d="M -16 0 C -12 30 -12 100 -8 124 L 0 124 C 0 100 -4 30 -8 0 Z"/>
+          <path d="M 24 0 C 22 30 22 100 16 124 L 24 124 C 32 100 30 30 32 0 Z"/>
+          <path d="M 56 0 C 54 30 54 100 36 124 L 28 124 C 46 100 50 30 48 0 Z"/>
+        </g>
+        <!-- Decorative emblems on the blue gores -->
+        <g>
+          <use href="#sunburst" transform="translate(-32 38)"/>
+          <use href="#fleur"    transform="translate(8 40) scale(1.4)"/>
+          <use href="#sunburst" transform="translate(44 38)"/>
+          <use href="#fleur"    transform="translate(-30 88) scale(1.2)"/>
+          <use href="#fleur"    transform="translate(40 88) scale(1.2)"/>
+          <use href="#sunburst" transform="translate(8 90)"/>
+        </g>
+        <!-- Subtle highlight band on the upper-left -->
+        <ellipse cx="-22" cy="34" rx="22" ry="36" fill="#ffffff" opacity="0.10"/>
+      </g>
+
+      <!-- Balloon outline -->
+      <path d="M 0 0
+               C 56 0  72 30  72 65
+               C 72 100 52 120 36 124
+               L -36 124
+               C -52 120 -72 100 -72 65
+               C -72 30  -56 0  0 0 Z"
+            fill="none" stroke="#fde18b" stroke-width="1.4" opacity="0.9"/>
+
+      <!-- Vertical seam lines suggesting gores -->
+      <g stroke="#fde18b" stroke-width="0.6" fill="none" opacity="0.55">
+        <path d="M 0 0 C 0 60 0 100 0 124"/>
+        <path d="M -36 1 C -36 60 -34 110 -28 124"/>
+        <path d="M 36 1  C 36 60  34 110  28 124"/>
+        <path d="M -60 6 C -56 60 -50 110 -36 124"/>
+        <path d="M 60 6  C 56 60  50 110  36 124"/>
+      </g>
+
+      <!-- Decorative crown at the top -->
+      <g stroke="#fde18b" stroke-width="1.2" fill="#fde18b" opacity="0.95">
+        <circle r="3" cx="0" cy="0"/>
+        <line x1="-6" y1="-2" x2="-12" y2="-6"/>
+        <line x1="6"  y1="-2" x2="12"  y2="-6"/>
+        <line x1="0"  y1="-3" x2="0"   y2="-9"/>
+      </g>
+
+      <!-- Decorative skirt band at balloon bottom -->
+      <g>
+        <rect x="-37" y="120" width="74" height="5" fill="#0e1d44" stroke="#fde18b" stroke-width="0.5"/>
+        <g fill="#fde18b" opacity="0.95">
+          <circle cx="-30" cy="122.5" r="0.9"/>
+          <circle cx="-18" cy="122.5" r="0.9"/>
+          <circle cx="-6"  cy="122.5" r="0.9"/>
+          <circle cx="6"   cy="122.5" r="0.9"/>
+          <circle cx="18"  cy="122.5" r="0.9"/>
+          <circle cx="30"  cy="122.5" r="0.9"/>
+        </g>
+      </g>
+
+      <!-- Ropes from skirt to basket -->
+      <g stroke="#c89a52" stroke-width="0.8" fill="none" opacity="0.95">
+        <line x1="-34" y1="125" x2="-22" y2="152"/>
+        <line x1="-18" y1="125" x2="-14" y2="152"/>
+        <line x1="0"   y1="125" x2="0"   y2="152"/>
+        <line x1="18"  y1="125" x2="14"  y2="152"/>
+        <line x1="34"  y1="125" x2="22"  y2="152"/>
+      </g>
+
+      <!-- Wicker basket -->
+      <g>
+        <rect x="-23" y="152" width="46" height="12" fill="#8a5e1c" stroke="#3a2a18" stroke-width="0.8"/>
+        <!-- Wicker weave hatching -->
+        <g stroke="#3a2a18" stroke-width="0.4" opacity="0.65">
+          <line x1="-23" y1="155" x2="23" y2="155"/>
+          <line x1="-23" y1="158" x2="23" y2="158"/>
+          <line x1="-23" y1="161" x2="23" y2="161"/>
+          <line x1="-18" y1="152" x2="-18" y2="164"/>
+          <line x1="-12" y1="152" x2="-12" y2="164"/>
+          <line x1="-6"  y1="152" x2="-6"  y2="164"/>
+          <line x1="0"   y1="152" x2="0"   y2="164"/>
+          <line x1="6"   y1="152" x2="6"   y2="164"/>
+          <line x1="12"  y1="152" x2="12"  y2="164"/>
+          <line x1="18"  y1="152" x2="18"  y2="164"/>
+        </g>
+        <!-- Top rim -->
+        <line x1="-23" y1="152" x2="23" y2="152" stroke="#fde18b" stroke-width="0.9"/>
+      </g>
+
+      <!-- Brazier flame inside basket (flicker) -->
+      <g filter="url(#warmGlow)">
+        <ellipse cx="0" cy="146" rx="9" ry="10" fill="url(#flame)">
+          <animate attributeName="rx" values="9;11;8;10;9" dur="0.7s" repeatCount="indefinite"/>
+          <animate attributeName="ry" values="10;13;9;12;10" dur="0.7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.85;1;0.8;0.95;0.85" dur="0.7s" repeatCount="indefinite"/>
+        </ellipse>
+      </g>
+      <!-- Inner brighter flame core -->
+      <ellipse cx="0" cy="148" rx="3.5" ry="5" fill="#fff5c2">
+        <animate attributeName="ry" values="5;6;4;5" dur="0.7s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+  </g>
+
+  <!-- ===== Typography block (right side) ===== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Top chip -->
+    <g transform="translate(460 22)">
+      <rect x="0" y="0" width="260" height="16" fill="#fde18b"/>
+      <text x="130" y="11.5" text-anchor="middle"
+            font-size="9" font-weight="800" fill="#0d1117" letter-spacing="2.6">
+        ANNONAY · FRANCE · 1783
+      </text>
+    </g>
+
+    <!-- BIG DATE -->
+    <text x="590" y="78" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="36" font-weight="900" fill="#ffffff" letter-spacing="2.8"
+          filter="url(#typeGlow)">
+      JUNE 4 · 2026
+    </text>
+
+    <!-- Underline rule with cap dots -->
+    <g stroke="#fde18b" stroke-width="1" opacity="0.95">
+      <line x1="468" y1="90" x2="712" y2="90"/>
+      <circle cx="468" cy="90" r="2" fill="#fde18b"/>
+      <circle cx="712" cy="90" r="2" fill="#fde18b"/>
+    </g>
+
+    <!-- Subtitle: theme name -->
+    <text x="590" y="112" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="16" font-style="italic" fill="#fde18b" letter-spacing="2">
+      Montgolfier · First Ascent
+    </text>
+
+    <!-- Anniversary tag -->
+    <text x="590" y="132" text-anchor="middle"
+          font-size="9.5" font-weight="700" fill="#e6c98a" letter-spacing="3" opacity="0.95">
+      243RD ANNIVERSARY
+    </text>
+  </g>
+
+  <!-- Corner ticks around the typography block -->
+  <g stroke="#fde18b" stroke-width="1.2" fill="none" opacity="0.9">
+    <path d="M 460 14 L 460 24 M 460 14 L 470 14"/>
+    <path d="M 720 14 L 720 24 M 720 14 L 710 14"/>
+    <path d="M 460 140 L 460 130 M 460 140 L 470 140"/>
+    <path d="M 720 140 L 720 130 M 720 140 L 710 140"/>
+  </g>
+
+  <!-- Bottom footer telemetry -->
+  <g font-family="Courier New, monospace">
+    <text x="400" y="194" text-anchor="middle"
+          font-size="7.4" fill="#e6c98a" letter-spacing="2.6" opacity="0.85">
+      JOSEPH-MICHEL &amp; JACQUES-ÉTIENNE MONTGOLFIER · HOT AIR · UNTETHERED · NO PASSENGERS
+    </text>
+  </g>
+
+  <!-- Vignette -->
+  <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.85">
+    <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+    <stop offset="1"    stop-color="#000" stop-opacity="0.55"/>
+  </radialGradient>
+  <rect width="800" height="200" fill="url(#vignette)" pointer-events="none"/>
+</svg>
