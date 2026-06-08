@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 8, 2026 — World Environment Day (June 5, UN observance — established 1972, 54th annual) — living planet with a tree growing from a verdant Earth hemisphere, drifting leaves, rising spores of light, sunrise palette over deep forest greens
+
+<img src="./doodle-archive/2026/06/2026-06-08-101037.svg" width="800" alt="Daily doodle archived for June 8, 2026: World Environment Day (June 5, UN observance — established 1972, 54th annual) — living planet with a tree growing from a verdant Earth hemisphere, drifting leaves, rising spores of light, sunrise palette over deep forest greens">
+
+---
+
 ## June 5, 2026 — Montgolfier brothers' first public hot air balloon demonstration (June 4, 1783, Annonay, France) — 243rd anniversary; ornate royal-blue and gold balloon ascending over French countryside at dawn, wicker basket with brazier glow, swaying ropes, drifting cloud layer, distant birds
 
 <img src="./doodle-archive/2026/06/2026-06-05-072104.svg" width="800" alt="Daily doodle archived for June 5, 2026: Montgolfier brothers' first public hot air balloon demonstration (June 4, 1783, Annonay, France) — 243rd anniversary; ornate royal-blue and gold balloon ascending over French countryside at dawn, wicker basket with brazier glow, swaying ropes, drifting cloud layer, distant birds">
