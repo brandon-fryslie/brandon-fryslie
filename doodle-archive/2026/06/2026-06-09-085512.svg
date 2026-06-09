@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: World Oceans Day (June 8, UN observance — established 2008 by UN General Assembly resolution 63/111) — twilight underwater scene with sunbeam god-rays slicing through the surface, a blue whale gliding across, pulsing jellyfish drifting up, schooling fish, swaying kelp, rising bubbles, bioluminescent particles, deep ocean palette of midnight blue → teal → bioluminescent cyan -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="June 8, 2026 — World Oceans Day, UN observance established 2008; underwater scene with a blue whale, jellyfish, schooling fish, god-rays, swaying kelp and bioluminescent particles">
+  <defs>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="12%" stop-color="#0b2a48"/>
+      <stop offset="45%" stop-color="#0a3a5e"/>
+      <stop offset="80%" stop-color="#073047"/>
+      <stop offset="100%" stop-color="#031a26"/>
+    </linearGradient>
+
+    <linearGradient id="ray" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aef0ff" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#5fd0ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#5fd0ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="whaleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a4d70"/>
+      <stop offset="55%" stop-color="#0f3550"/>
+      <stop offset="100%" stop-color="#08222f"/>
+    </linearGradient>
+
+    <radialGradient id="jellyGrad" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#ffd7f6" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#c98bff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5e2bb5" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#9ff5ff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#3aa9d6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#3aa9d6" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="caustic" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="2" seed="7">
+        <animate attributeName="baseFrequency" values="0.012 0.04;0.018 0.05;0.012 0.04" dur="13s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix values="0 0 0 0 0.6  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.35 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <filter id="softBlur"><feGaussianBlur stdDeviation="1.2"/></filter>
+
+    <symbol id="bubble" overflow="visible">
+      <circle r="3" fill="none" stroke="#cdeefb" stroke-opacity="0.65" stroke-width="0.7"/>
+      <circle r="0.9" cx="-1" cy="-1" fill="#ffffff" fill-opacity="0.7"/>
+    </symbol>
+
+    <symbol id="fish" overflow="visible">
+      <path d="M0,0 Q5,-3 12,0 Q5,3 0,0 Z M12,0 L17,-3 L17,3 Z" fill="#7ce0d4" opacity="0.85"/>
+      <circle cx="3" cy="-0.5" r="0.6" fill="#031a26"/>
+    </symbol>
+
+    <symbol id="jelly" overflow="visible">
+      <!-- bell -->
+      <ellipse cx="0" cy="0" rx="14" ry="9" fill="url(#jellyGrad)"/>
+      <ellipse cx="0" cy="-2" rx="11" ry="6" fill="#fff0ff" fill-opacity="0.18"/>
+      <!-- tentacles -->
+      <g stroke="#e3b3ff" stroke-opacity="0.55" stroke-width="0.9" fill="none" stroke-linecap="round">
+        <path d="M-8,6 Q-9,14 -7,22 Q-9,30 -7,38">
+          <animate attributeName="d" values="M-8,6 Q-9,14 -7,22 Q-9,30 -7,38;M-8,6 Q-7,14 -9,22 Q-7,30 -9,38;M-8,6 Q-9,14 -7,22 Q-9,30 -7,38" dur="7s" repeatCount="indefinite"/>
+        </path>
+        <path d="M-3,7 Q-4,17 -2,27 Q-4,35 -2,42">
+          <animate attributeName="d" values="M-3,7 Q-4,17 -2,27 Q-4,35 -2,42;M-3,7 Q-2,17 -4,27 Q-2,35 -4,42;M-3,7 Q-4,17 -2,27 Q-4,35 -2,42" dur="11s" repeatCount="indefinite"/>
+        </path>
+        <path d="M3,7 Q4,17 2,27 Q4,35 2,42">
+          <animate attributeName="d" values="M3,7 Q4,17 2,27 Q4,35 2,42;M3,7 Q2,17 4,27 Q2,35 4,42;M3,7 Q4,17 2,27 Q4,35 2,42" dur="9s" repeatCount="indefinite"/>
+        </path>
+        <path d="M8,6 Q9,14 7,22 Q9,30 7,38">
+          <animate attributeName="d" values="M8,6 Q9,14 7,22 Q9,30 7,38;M8,6 Q7,14 9,22 Q7,30 9,38;M8,6 Q9,14 7,22 Q9,30 7,38" dur="13s" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </symbol>
+
+    <clipPath id="frame"><rect x="0" y="0" width="800" height="200" rx="6"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <!-- water -->
+    <rect width="800" height="200" fill="url(#ocean)"/>
+
+    <!-- moving caustic shimmer near the surface -->
+    <rect x="0" y="0" width="800" height="60" filter="url(#caustic)" opacity="0.6"/>
+
+    <!-- surface waveline -->
+    <path d="M0,18 Q100,10 200,18 T400,18 T600,18 T800,18 L800,0 L0,0 Z" fill="#0a1f33" opacity="0.85"/>
+    <path d="M0,18 Q100,10 200,18 T400,18 T600,18 T800,18" fill="none" stroke="#6fd6ff" stroke-opacity="0.5" stroke-width="0.8">
+      <animate attributeName="d" values="M0,18 Q100,10 200,18 T400,18 T600,18 T800,18;M0,16 Q100,22 200,16 T400,16 T600,16 T800,16;M0,18 Q100,10 200,18 T400,18 T600,18 T800,18" dur="7s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- god-rays from surface -->
+    <g opacity="0.85">
+      <polygon points="80,0 100,0 180,200 60,200" fill="url(#ray)">
+        <animate attributeName="opacity" values="0.55;0.95;0.55" dur="11s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="260,0 290,0 360,200 230,200" fill="url(#ray)" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;0.75;0.3" dur="13s" begin="-3s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="480,0 510,0 570,200 450,200" fill="url(#ray)" opacity="0.5">
+        <animate attributeName="opacity" values="0.25;0.7;0.25" dur="7s" begin="-2s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="650,0 680,0 740,200 620,200" fill="url(#ray)" opacity="0.55">
+        <animate attributeName="opacity" values="0.4;0.85;0.4" dur="11s" begin="-5s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+
+    <!-- distant whale silhouette gliding across -->
+    <g opacity="0.95">
+      <g transform="translate(-260,118)">
+        <animateTransform attributeName="transform" type="translate"
+          values="-260,118; 880,108; -260,118" dur="47s" repeatCount="indefinite"/>
+        <!-- whale body -->
+        <path d="M0,0
+                 C 40,-22 120,-30 200,-22
+                 C 250,-18 280,-10 300,0
+                 C 290,4 270,8 240,10
+                 L 250,2
+                 L 268,-2
+                 L 252,-6
+                 C 220,-2 180,0 140,2
+                 C 80,6 30,8 0,4 Z"
+              fill="url(#whaleGrad)"/>
+        <!-- belly band -->
+        <path d="M30,2 C 90,8 170,8 240,4 C 200,12 100,14 30,8 Z" fill="#0a2233" opacity="0.6"/>
+        <!-- tail fluke -->
+        <path d="M0,0 L-22,-14 L-10,-2 L-22,12 Z" fill="url(#whaleGrad)"/>
+        <!-- pectoral fin -->
+        <path d="M130,4 Q150,22 175,18 Q160,8 145,4 Z" fill="#0a2233" opacity="0.9"/>
+        <!-- eye -->
+        <circle cx="252" cy="-6" r="1.2" fill="#9ff5ff"/>
+        <!-- blowhole spout (gentle) -->
+        <g opacity="0.55">
+          <ellipse cx="200" cy="-30" rx="3" ry="2" fill="#cdeefb">
+            <animate attributeName="ry" values="1;5;1" dur="11s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;0.7;0" dur="11s" repeatCount="indefinite"/>
+          </ellipse>
+        </g>
+      </g>
+    </g>
+
+    <!-- swaying kelp on the floor -->
+    <g stroke="#1f5a3a" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.85">
+      <path d="M70,200 C 68,180 78,170 72,150 C 64,130 78,118 72,100">
+        <animate attributeName="d" values="M70,200 C 68,180 78,170 72,150 C 64,130 78,118 72,100;M70,200 C 76,180 66,170 74,150 C 80,130 66,118 76,100;M70,200 C 68,180 78,170 72,150 C 64,130 78,118 72,100" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M120,200 C 124,180 114,168 122,148 C 130,128 114,118 124,98">
+        <animate attributeName="d" values="M120,200 C 124,180 114,168 122,148 C 130,128 114,118 124,98;M120,200 C 116,180 126,168 114,148 C 108,128 124,118 110,98;M120,200 C 124,180 114,168 122,148 C 130,128 114,118 124,98" dur="13s" repeatCount="indefinite"/>
+      </path>
+      <path d="M720,200 C 724,180 714,168 722,148 C 728,130 716,120 722,102">
+        <animate attributeName="d" values="M720,200 C 724,180 714,168 722,148 C 728,130 716,120 722,102;M720,200 C 716,180 728,168 718,148 C 710,130 728,120 714,102;M720,200 C 724,180 714,168 722,148 C 728,130 716,120 722,102" dur="9s" repeatCount="indefinite"/>
+      </path>
+      <path d="M770,200 C 768,180 778,170 770,150 C 762,132 776,120 768,102">
+        <animate attributeName="d" values="M770,200 C 768,180 778,170 770,150 C 762,132 776,120 768,102;M770,200 C 776,180 766,170 776,150 C 786,132 770,120 776,102;M770,200 C 768,180 778,170 770,150 C 762,132 776,120 768,102" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- school of small fish drifting right -->
+    <g>
+      <g transform="translate(-50,80)">
+        <animateTransform attributeName="transform" type="translate" values="-50,80;860,72;-50,80" dur="29s" repeatCount="indefinite"/>
+        <use href="#fish" x="0" y="0"/>
+        <use href="#fish" x="22" y="-4"/>
+        <use href="#fish" x="14" y="8"/>
+        <use href="#fish" x="36" y="2"/>
+        <use href="#fish" x="48" y="-6"/>
+        <use href="#fish" x="58" y="6"/>
+      </g>
+      <g transform="translate(-100,160)">
+        <animateTransform attributeName="transform" type="translate" values="-100,160;880,150;-100,160" dur="37s" repeatCount="indefinite"/>
+        <use href="#fish" x="0" y="0" transform="scale(0.8)"/>
+        <use href="#fish" x="22" y="-3" transform="scale(0.8)"/>
+        <use href="#fish" x="40" y="3" transform="scale(0.8)"/>
+        <use href="#fish" x="58" y="-2" transform="scale(0.8)"/>
+      </g>
+    </g>
+
+    <!-- jellyfish drifting upward -->
+    <g>
+      <g>
+        <use href="#jelly" x="600" y="160">
+          <animateTransform attributeName="transform" type="translate" values="0,40; 8,-30; 0,40" dur="17s" repeatCount="indefinite"/>
+        </use>
+      </g>
+      <g>
+        <use href="#jelly" x="420" y="180" transform="scale(0.7) translate(180,40)">
+          <animateTransform attributeName="transform" type="translate" values="180,60; 170,-20; 180,60" dur="23s" repeatCount="indefinite" additive="sum"/>
+        </use>
+      </g>
+    </g>
+
+    <!-- rising bubbles -->
+    <g>
+      <use href="#bubble" x="160" y="200">
+        <animate attributeName="y" values="200;-20" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="x" values="160;156;164;160" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" dur="11s" repeatCount="indefinite"/>
+      </use>
+      <use href="#bubble" x="700" y="200" transform="scale(0.7)">
+        <animate attributeName="y" values="285;-30" dur="13s" begin="-3s" repeatCount="indefinite"/>
+      </use>
+      <use href="#bubble" x="540" y="200" transform="scale(1.3)">
+        <animate attributeName="y" values="155;-15" dur="17s" begin="-5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.8;0" dur="17s" begin="-5s" repeatCount="indefinite"/>
+      </use>
+      <use href="#bubble" x="80" y="200" transform="scale(0.5)">
+        <animate attributeName="y" values="400;-30" dur="9s" begin="-1s" repeatCount="indefinite"/>
+      </use>
+      <use href="#bubble" x="380" y="200" transform="scale(0.9)">
+        <animate attributeName="y" values="220;-20" dur="13s" begin="-7s" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- bioluminescent particles -->
+    <g fill="#9ff5ff">
+      <circle cx="220" cy="60" r="1.2"><animate attributeName="opacity" values="0.1;1;0.1" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="330" cy="120" r="1"><animate attributeName="opacity" values="0.1;1;0.1" dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
+      <circle cx="500" cy="40" r="1.4"><animate attributeName="opacity" values="0.1;1;0.1" dur="13s" begin="-4s" repeatCount="indefinite"/></circle>
+      <circle cx="660" cy="90" r="1"><animate attributeName="opacity" values="0.1;1;0.1" dur="9s" begin="-1s" repeatCount="indefinite"/></circle>
+      <circle cx="270" cy="150" r="0.9"><animate attributeName="opacity" values="0.1;1;0.1" dur="7s" begin="-3s" repeatCount="indefinite"/></circle>
+      <circle cx="440" cy="170" r="1.1"><animate attributeName="opacity" values="0.1;1;0.1" dur="11s" begin="-5s" repeatCount="indefinite"/></circle>
+      <circle cx="610" cy="130" r="0.8"><animate attributeName="opacity" values="0.1;1;0.1" dur="13s" begin="-6s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="100" r="1"><animate attributeName="opacity" values="0.1;1;0.1" dur="11s" begin="-4s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- soft glow behind title -->
+    <ellipse cx="220" cy="98" rx="180" ry="46" fill="url(#glow)" opacity="0.75"/>
+
+    <!-- TITLE + DATE -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+      <!-- top eyebrow line -->
+      <text x="220" y="62" font-size="11" letter-spacing="6" fill="#9ff5ff" opacity="0.85">UN OBSERVANCE · SINCE 2008</text>
+
+      <!-- main title -->
+      <text x="220" y="106" font-size="40" font-weight="800" letter-spacing="1" fill="#ffffff">
+        World Oceans Day
+        <animate attributeName="fill" values="#ffffff;#cdeefb;#ffffff" dur="11s" repeatCount="indefinite"/>
+      </text>
+
+      <!-- subtle stroke pass to lift contrast against rays -->
+      <text x="220" y="106" font-size="40" font-weight="800" letter-spacing="1" fill="none" stroke="#072a3d" stroke-width="0.5" opacity="0.7">World Oceans Day</text>
+
+      <!-- date band -->
+      <g>
+        <rect x="120" y="124" width="200" height="30" rx="15" fill="#031a26" opacity="0.65" stroke="#6fd6ff" stroke-opacity="0.55"/>
+        <text x="220" y="145" font-size="18" font-weight="700" letter-spacing="3" fill="#aef0ff">JUNE 8 · 2026</text>
+      </g>
+    </g>
+
+    <!-- right-side tagline anchored low -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <text x="788" y="190" text-anchor="end" font-size="9" letter-spacing="3" fill="#7fd6ec" opacity="0.7">ONE OCEAN · ONE CLIMATE · ONE FUTURE</text>
+    </g>
+
+    <!-- vignette -->
+    <rect width="800" height="200" fill="url(#vignette)" pointer-events="none"/>
+  </g>
+
+  <defs>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.8">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+</svg>
