@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 9, 2026 — World Oceans Day (June 8, UN observance — established 2008 by UN General Assembly resolution 63/111) — twilight underwater scene with sunbeam god-rays slicing through the surface, a blue whale gliding across, pulsing jellyfish drifting up, schooling fish, swaying kelp, rising bubbles, bioluminescent particles, deep ocean palette of midnight blue → teal → bioluminescent cyan
+
+<img src="./doodle-archive/2026/06/2026-06-09-085512.svg" width="800" alt="Daily doodle archived for June 9, 2026: World Oceans Day (June 8, UN observance — established 2008 by UN General Assembly resolution 63/111) — twilight underwater scene with sunbeam god-rays slicing through the surface, a blue whale gliding across, pulsing jellyfish drifting up, schooling fish, swaying kelp, rising bubbles, bioluminescent particles, deep ocean palette of midnight blue → teal → bioluminescent cyan">
+
+---
+
 ## June 8, 2026 — World Environment Day (June 5, UN observance — established 1972, 54th annual) — living planet with a tree growing from a verdant Earth hemisphere, drifting leaves, rising spores of light, sunrise palette over deep forest greens
 
 <img src="./doodle-archive/2026/06/2026-06-08-101037.svg" width="800" alt="Daily doodle archived for June 8, 2026: World Environment Day (June 5, UN observance — established 1972, 54th annual) — living planet with a tree growing from a verdant Earth hemisphere, drifting leaves, rising spores of light, sunrise palette over deep forest greens">

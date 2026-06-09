@@ -1,78 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: World Oceans Day (June 8, UN observance — established 2008 by UN General Assembly resolution 63/111) — twilight underwater scene with sunbeam god-rays slicing through the surface, a blue whale gliding across, pulsing jellyfish drifting up, schooling fish, swaying kelp, rising bubbles, bioluminescent particles, deep ocean palette of midnight blue → teal → bioluminescent cyan -->
+<!-- theme: Secretariat's Belmont Stakes victory by 31 lengths — 53rd anniversary (June 9, 1973, Belmont Park, NY; Ron Turcotte aboard; Meadow Stable blue-and-white silks); galloping racehorse silhouette streaking across a sun-drenched track at golden hour, dust kicking up, distant grandstand, motion lines, finish-line pole -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="June 8, 2026 — World Oceans Day, UN observance established 2008; underwater scene with a blue whale, jellyfish, schooling fish, god-rays, swaying kelp and bioluminescent particles">
+     aria-label="June 9, 2026 — 53rd anniversary of Secretariat winning the Belmont Stakes by 31 lengths on June 9, 1973">
   <defs>
-    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="12%" stop-color="#0b2a48"/>
-      <stop offset="45%" stop-color="#0a3a5e"/>
-      <stop offset="80%" stop-color="#073047"/>
-      <stop offset="100%" stop-color="#031a26"/>
+      <stop offset="22%" stop-color="#1a2244"/>
+      <stop offset="55%" stop-color="#5a3a4a"/>
+      <stop offset="78%" stop-color="#c87038"/>
+      <stop offset="100%" stop-color="#f3b86a"/>
     </linearGradient>
 
-    <linearGradient id="ray" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#aef0ff" stop-opacity="0.55"/>
-      <stop offset="60%" stop-color="#5fd0ff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#5fd0ff" stop-opacity="0"/>
+    <linearGradient id="track" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7d3f1c"/>
+      <stop offset="50%" stop-color="#5a2a14"/>
+      <stop offset="100%" stop-color="#2e1408"/>
     </linearGradient>
 
-    <linearGradient id="whaleGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a4d70"/>
-      <stop offset="55%" stop-color="#0f3550"/>
-      <stop offset="100%" stop-color="#08222f"/>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe4a8"/>
+      <stop offset="100%" stop-color="#ffb04a"/>
     </linearGradient>
 
-    <radialGradient id="jellyGrad" cx="0.5" cy="0.4" r="0.6">
-      <stop offset="0%" stop-color="#ffd7f6" stop-opacity="0.95"/>
-      <stop offset="55%" stop-color="#c98bff" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#5e2bb5" stop-opacity="0"/>
+    <radialGradient id="sunglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffe7a3" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffa544" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffa544" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#9ff5ff" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#3aa9d6" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#3aa9d6" stop-opacity="0"/>
+    <radialGradient id="dust" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#e7c79a" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#a87a4a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#5c3c20" stop-opacity="0"/>
     </radialGradient>
 
-    <filter id="caustic" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="2" seed="7">
-        <animate attributeName="baseFrequency" values="0.012 0.04;0.018 0.05;0.012 0.04" dur="13s" repeatCount="indefinite"/>
-      </feTurbulence>
-      <feColorMatrix values="0 0 0 0 0.6  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.35 0"/>
-      <feComposite in2="SourceGraphic" operator="in"/>
+    <linearGradient id="goldText" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff4c8"/>
+      <stop offset="55%" stop-color="#f7c860"/>
+      <stop offset="100%" stop-color="#b8842a"/>
+    </linearGradient>
+
+    <filter id="dustblur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2"/>
     </filter>
 
-    <filter id="softBlur"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <filter id="textshadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.6" in="SourceAlpha"/>
+      <feOffset dx="0" dy="1"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.85"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 
-    <symbol id="bubble" overflow="visible">
-      <circle r="3" fill="none" stroke="#cdeefb" stroke-opacity="0.65" stroke-width="0.7"/>
-      <circle r="0.9" cx="-1" cy="-1" fill="#ffffff" fill-opacity="0.7"/>
-    </symbol>
-
-    <symbol id="fish" overflow="visible">
-      <path d="M0,0 Q5,-3 12,0 Q5,3 0,0 Z M12,0 L17,-3 L17,3 Z" fill="#7ce0d4" opacity="0.85"/>
-      <circle cx="3" cy="-0.5" r="0.6" fill="#031a26"/>
-    </symbol>
-
-    <symbol id="jelly" overflow="visible">
-      <!-- bell -->
-      <ellipse cx="0" cy="0" rx="14" ry="9" fill="url(#jellyGrad)"/>
-      <ellipse cx="0" cy="-2" rx="11" ry="6" fill="#fff0ff" fill-opacity="0.18"/>
-      <!-- tentacles -->
-      <g stroke="#e3b3ff" stroke-opacity="0.55" stroke-width="0.9" fill="none" stroke-linecap="round">
-        <path d="M-8,6 Q-9,14 -7,22 Q-9,30 -7,38">
-          <animate attributeName="d" values="M-8,6 Q-9,14 -7,22 Q-9,30 -7,38;M-8,6 Q-7,14 -9,22 Q-7,30 -9,38;M-8,6 Q-9,14 -7,22 Q-9,30 -7,38" dur="7s" repeatCount="indefinite"/>
-        </path>
-        <path d="M-3,7 Q-4,17 -2,27 Q-4,35 -2,42">
-          <animate attributeName="d" values="M-3,7 Q-4,17 -2,27 Q-4,35 -2,42;M-3,7 Q-2,17 -4,27 Q-2,35 -4,42;M-3,7 Q-4,17 -2,27 Q-4,35 -2,42" dur="11s" repeatCount="indefinite"/>
-        </path>
-        <path d="M3,7 Q4,17 2,27 Q4,35 2,42">
-          <animate attributeName="d" values="M3,7 Q4,17 2,27 Q4,35 2,42;M3,7 Q2,17 4,27 Q2,35 4,42;M3,7 Q4,17 2,27 Q4,35 2,42" dur="9s" repeatCount="indefinite"/>
-        </path>
-        <path d="M8,6 Q9,14 7,22 Q9,30 7,38">
-          <animate attributeName="d" values="M8,6 Q9,14 7,22 Q9,30 7,38;M8,6 Q7,14 9,22 Q7,30 9,38;M8,6 Q9,14 7,22 Q9,30 7,38" dur="13s" repeatCount="indefinite"/>
-        </path>
+    <!-- Stylized galloping racehorse silhouette (faces right) -->
+    <symbol id="horse" overflow="visible">
+      <g fill="#120808">
+        <!-- tail streaming back -->
+        <path d="M-2,-4 Q-22,-2 -36,4 Q-28,-2 -22,-6 Q-12,-8 -2,-7 Z"/>
+        <!-- body -->
+        <path d="M0,-2
+                 C 14,-16 44,-20 70,-16
+                 C 86,-14 96,-10 104,-4
+                 L 100,4
+                 C 80,8 50,10 20,8
+                 C 8,7 -2,4 -2,-1 Z"/>
+        <!-- haunches lift -->
+        <path d="M-4,-6 Q4,-18 22,-18 Q26,-12 18,-6 Z"/>
+        <!-- neck + head reaching forward -->
+        <path d="M96,-8
+                 C 110,-22 122,-30 132,-28
+                 L 138,-22
+                 L 134,-14
+                 L 124,-10
+                 C 118,-6 110,-4 104,-3 Z"/>
+        <!-- ears -->
+        <path d="M124,-26 L122,-32 L127,-28 Z"/>
+        <path d="M128,-26 L128,-32 L132,-28 Z"/>
+        <!-- jockey body in blue silks -->
+        <path fill="#1f4ea8" d="M40,-28
+                 C 50,-36 66,-36 74,-30
+                 L 76,-22
+                 C 68,-18 56,-18 46,-22 Z"/>
+        <!-- jockey white blocks (Meadow Stable colors) -->
+        <path fill="#f5f5f5" d="M52,-32 L62,-32 L62,-22 L52,-22 Z"/>
+        <path fill="#f5f5f5" d="M48,-26 L72,-26 L72,-23 L48,-23 Z"/>
+        <!-- jockey helmet -->
+        <path fill="#1f4ea8" d="M62,-38 C 70,-40 78,-34 76,-28 L 64,-28 Z"/>
+        <!-- jockey arm holding reins -->
+        <path fill="#1f4ea8" d="M70,-22 L96,-12 L94,-8 L66,-18 Z"/>
+        <!-- reins -->
+        <path stroke="#2a1606" stroke-width="0.9" fill="none" d="M94,-10 Q108,-14 124,-14"/>
+        <!-- mane streaming -->
+        <path fill="#0a0404" d="M96,-12 L80,-22 L88,-18 L74,-26 L86,-22 L78,-30 L92,-22 L84,-30 L98,-22 Z"/>
+        <!-- legs: galloping mid-stride -->
+        <!-- front-left extended forward -->
+        <path d="M118,-2 L138,30 L142,30 L124,-4 Z"/>
+        <!-- front-right tucked -->
+        <path d="M108,2 L116,18 L120,16 L114,0 Z"/>
+        <!-- back-left extended back -->
+        <path d="M14,4 L-10,30 L-4,30 L20,4 Z"/>
+        <!-- back-right tucked under -->
+        <path d="M28,6 L32,22 L36,20 L34,4 Z"/>
+        <!-- hooves -->
+        <ellipse cx="140" cy="30" rx="3.5" ry="1.5" fill="#0a0404"/>
+        <ellipse cx="118" cy="17" rx="3" ry="1.3" fill="#0a0404"/>
+        <ellipse cx="-7" cy="30" rx="3.5" ry="1.5" fill="#0a0404"/>
+        <ellipse cx="34" cy="22" rx="3" ry="1.3" fill="#0a0404"/>
       </g>
     </symbol>
 
@@ -80,188 +112,165 @@
   </defs>
 
   <g clip-path="url(#frame)">
-    <!-- water -->
-    <rect width="800" height="200" fill="url(#ocean)"/>
+    <!-- sky -->
+    <rect width="800" height="200" fill="url(#sky)"/>
 
-    <!-- moving caustic shimmer near the surface -->
-    <rect x="0" y="0" width="800" height="60" filter="url(#caustic)" opacity="0.6"/>
+    <!-- sun glow -->
+    <ellipse cx="640" cy="118" rx="220" ry="80" fill="url(#sunglow)" opacity="0.85"/>
 
-    <!-- surface waveline -->
-    <path d="M0,18 Q100,10 200,18 T400,18 T600,18 T800,18 L800,0 L0,0 Z" fill="#0a1f33" opacity="0.85"/>
-    <path d="M0,18 Q100,10 200,18 T400,18 T600,18 T800,18" fill="none" stroke="#6fd6ff" stroke-opacity="0.5" stroke-width="0.8">
-      <animate attributeName="d" values="M0,18 Q100,10 200,18 T400,18 T600,18 T800,18;M0,16 Q100,22 200,16 T400,16 T600,16 T800,16;M0,18 Q100,10 200,18 T400,18 T600,18 T800,18" dur="7s" repeatCount="indefinite"/>
-    </path>
+    <!-- low sun disc -->
+    <circle cx="640" cy="120" r="26" fill="url(#sun)">
+      <animate attributeName="r" values="26;28;26" dur="13s" repeatCount="indefinite"/>
+    </circle>
 
-    <!-- god-rays from surface -->
-    <g opacity="0.85">
-      <polygon points="80,0 100,0 180,200 60,200" fill="url(#ray)">
-        <animate attributeName="opacity" values="0.55;0.95;0.55" dur="11s" repeatCount="indefinite"/>
-      </polygon>
-      <polygon points="260,0 290,0 360,200 230,200" fill="url(#ray)" opacity="0.6">
-        <animate attributeName="opacity" values="0.3;0.75;0.3" dur="13s" begin="-3s" repeatCount="indefinite"/>
-      </polygon>
-      <polygon points="480,0 510,0 570,200 450,200" fill="url(#ray)" opacity="0.5">
-        <animate attributeName="opacity" values="0.25;0.7;0.25" dur="7s" begin="-2s" repeatCount="indefinite"/>
-      </polygon>
-      <polygon points="650,0 680,0 740,200 620,200" fill="url(#ray)" opacity="0.55">
-        <animate attributeName="opacity" values="0.4;0.85;0.4" dur="11s" begin="-5s" repeatCount="indefinite"/>
-      </polygon>
+    <!-- distant grandstand silhouette -->
+    <g fill="#1a1a2a" opacity="0.92">
+      <path d="M0,130 L40,130 L40,118 L60,118 L60,124 L120,124 L120,112 L160,112 L160,120 L210,120 L210,108 L260,108 L260,120 L300,120 L300,116 L360,116 L360,124 L420,124 L420,114 L470,114 L470,122 L520,122 L520,118 L580,118 L580,126 L640,126 L640,118 L700,118 L700,124 L760,124 L760,116 L800,116 L800,140 L0,140 Z"/>
+      <!-- flagpoles -->
+      <rect x="105" y="92" width="1.4" height="20" fill="#2a2a3c"/>
+      <rect x="216" y="84" width="1.4" height="24" fill="#2a2a3c"/>
+      <rect x="464" y="92" width="1.4" height="22" fill="#2a2a3c"/>
+      <!-- pennants -->
+      <path d="M106.4,92 L116,95 L106.4,98 Z" fill="#c8483a">
+        <animate attributeName="d" values="M106.4,92 L116,95 L106.4,98 Z;M106.4,92 L114,96 L106.4,98 Z;M106.4,92 L116,95 L106.4,98 Z" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <path d="M217.4,84 L227,87 L217.4,90 Z" fill="#c8483a">
+        <animate attributeName="d" values="M217.4,84 L227,87 L217.4,90 Z;M217.4,84 L225,88 L217.4,90 Z;M217.4,84 L227,87 L217.4,90 Z" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M465.4,92 L475,95 L465.4,98 Z" fill="#c8483a">
+        <animate attributeName="d" values="M465.4,92 L475,95 L465.4,98 Z;M465.4,92 L473,96 L465.4,98 Z;M465.4,92 L475,95 L465.4,98 Z" dur="13s" repeatCount="indefinite"/>
+      </path>
     </g>
 
-    <!-- distant whale silhouette gliding across -->
-    <g opacity="0.95">
-      <g transform="translate(-260,118)">
+    <!-- inner rail (white) along the track -->
+    <line x1="0" y1="142" x2="800" y2="142" stroke="#f3eddc" stroke-width="1.2" opacity="0.95"/>
+    <!-- rail posts -->
+    <g fill="#f3eddc" opacity="0.85">
+      <rect x="40" y="142" width="1.2" height="6"/>
+      <rect x="100" y="142" width="1.2" height="6"/>
+      <rect x="160" y="142" width="1.2" height="6"/>
+      <rect x="220" y="142" width="1.2" height="6"/>
+      <rect x="280" y="142" width="1.2" height="6"/>
+      <rect x="340" y="142" width="1.2" height="6"/>
+      <rect x="400" y="142" width="1.2" height="6"/>
+      <rect x="460" y="142" width="1.2" height="6"/>
+      <rect x="520" y="142" width="1.2" height="6"/>
+      <rect x="580" y="142" width="1.2" height="6"/>
+      <rect x="640" y="142" width="1.2" height="6"/>
+      <rect x="700" y="142" width="1.2" height="6"/>
+      <rect x="760" y="142" width="1.2" height="6"/>
+    </g>
+
+    <!-- finish-line pole (right side) -->
+    <g>
+      <rect x="730" y="92" width="2.5" height="56" fill="#f3eddc"/>
+      <rect x="725" y="92" width="13" height="5" fill="#c8483a"/>
+      <circle cx="731" cy="89" r="2" fill="#f3c860"/>
+    </g>
+
+    <!-- track surface -->
+    <rect x="0" y="143" width="800" height="57" fill="url(#track)"/>
+
+    <!-- track speckles -->
+    <g fill="#9a6438" opacity="0.55">
+      <circle cx="50" cy="168" r="1"/>
+      <circle cx="120" cy="180" r="1.2"/>
+      <circle cx="200" cy="172" r="0.8"/>
+      <circle cx="270" cy="186" r="1.1"/>
+      <circle cx="340" cy="176" r="0.9"/>
+      <circle cx="420" cy="184" r="1"/>
+      <circle cx="500" cy="170" r="1.1"/>
+      <circle cx="580" cy="180" r="0.9"/>
+      <circle cx="660" cy="188" r="1.2"/>
+      <circle cx="740" cy="174" r="1"/>
+    </g>
+
+    <!-- speed motion lines streaking horizontally across track -->
+    <g stroke="#e7c79a" stroke-linecap="round" opacity="0.6">
+      <line x1="40" y1="158" x2="120" y2="158" stroke-width="1">
+        <animate attributeName="x1" values="-80;760" dur="1.7s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="0;840" dur="1.7s" repeatCount="indefinite"/>
+      </line>
+      <line x1="200" y1="174" x2="270" y2="174" stroke-width="0.9">
+        <animate attributeName="x1" values="-120;760" dur="2.3s" begin="-0.5s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="-50;830" dur="2.3s" begin="-0.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="360" y1="166" x2="450" y2="166" stroke-width="0.8">
+        <animate attributeName="x1" values="-160;760" dur="1.9s" begin="-1.1s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="-70;850" dur="1.9s" begin="-1.1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="520" y1="184" x2="610" y2="184" stroke-width="1.1">
+        <animate attributeName="x1" values="-100;760" dur="2.1s" begin="-0.3s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="-10;850" dur="2.1s" begin="-0.3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="80" y1="190" x2="170" y2="190" stroke-width="0.9">
+        <animate attributeName="x1" values="-140;760" dur="2.5s" begin="-1.4s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="-50;850" dur="2.5s" begin="-1.4s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- dust trail puffs behind horse -->
+    <g filter="url(#dustblur)">
+      <ellipse cx="120" cy="172" rx="50" ry="14" fill="url(#dust)" opacity="0.7">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3.1s" repeatCount="indefinite"/>
+        <animate attributeName="rx" values="40;58;40" dur="3.1s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="210" cy="176" rx="40" ry="12" fill="url(#dust)" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.7s" begin="-0.6s" repeatCount="indefinite"/>
+        <animate attributeName="rx" values="30;48;30" dur="2.7s" begin="-0.6s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="300" cy="172" rx="34" ry="10" fill="url(#dust)" opacity="0.5">
+        <animate attributeName="opacity" values="0.25;0.6;0.25" dur="2.3s" begin="-1.1s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="60" cy="178" rx="34" ry="10" fill="url(#dust)" opacity="0.55">
+        <animate attributeName="opacity" values="0.4;0.75;0.4" dur="3.7s" begin="-0.4s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- The horse, galloping forward — large hero element -->
+    <g>
+      <use href="#horse" x="430" y="148">
         <animateTransform attributeName="transform" type="translate"
-          values="-260,118; 880,108; -260,118" dur="47s" repeatCount="indefinite"/>
-        <!-- whale body -->
-        <path d="M0,0
-                 C 40,-22 120,-30 200,-22
-                 C 250,-18 280,-10 300,0
-                 C 290,4 270,8 240,10
-                 L 250,2
-                 L 268,-2
-                 L 252,-6
-                 C 220,-2 180,0 140,2
-                 C 80,6 30,8 0,4 Z"
-              fill="url(#whaleGrad)"/>
-        <!-- belly band -->
-        <path d="M30,2 C 90,8 170,8 240,4 C 200,12 100,14 30,8 Z" fill="#0a2233" opacity="0.6"/>
-        <!-- tail fluke -->
-        <path d="M0,0 L-22,-14 L-10,-2 L-22,12 Z" fill="url(#whaleGrad)"/>
-        <!-- pectoral fin -->
-        <path d="M130,4 Q150,22 175,18 Q160,8 145,4 Z" fill="#0a2233" opacity="0.9"/>
-        <!-- eye -->
-        <circle cx="252" cy="-6" r="1.2" fill="#9ff5ff"/>
-        <!-- blowhole spout (gentle) -->
-        <g opacity="0.55">
-          <ellipse cx="200" cy="-30" rx="3" ry="2" fill="#cdeefb">
-            <animate attributeName="ry" values="1;5;1" dur="11s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0;0.7;0" dur="11s" repeatCount="indefinite"/>
-          </ellipse>
-        </g>
-      </g>
-    </g>
-
-    <!-- swaying kelp on the floor -->
-    <g stroke="#1f5a3a" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.85">
-      <path d="M70,200 C 68,180 78,170 72,150 C 64,130 78,118 72,100">
-        <animate attributeName="d" values="M70,200 C 68,180 78,170 72,150 C 64,130 78,118 72,100;M70,200 C 76,180 66,170 74,150 C 80,130 66,118 76,100;M70,200 C 68,180 78,170 72,150 C 64,130 78,118 72,100" dur="11s" repeatCount="indefinite"/>
-      </path>
-      <path d="M120,200 C 124,180 114,168 122,148 C 130,128 114,118 124,98">
-        <animate attributeName="d" values="M120,200 C 124,180 114,168 122,148 C 130,128 114,118 124,98;M120,200 C 116,180 126,168 114,148 C 108,128 124,118 110,98;M120,200 C 124,180 114,168 122,148 C 130,128 114,118 124,98" dur="13s" repeatCount="indefinite"/>
-      </path>
-      <path d="M720,200 C 724,180 714,168 722,148 C 728,130 716,120 722,102">
-        <animate attributeName="d" values="M720,200 C 724,180 714,168 722,148 C 728,130 716,120 722,102;M720,200 C 716,180 728,168 718,148 C 710,130 728,120 714,102;M720,200 C 724,180 714,168 722,148 C 728,130 716,120 722,102" dur="9s" repeatCount="indefinite"/>
-      </path>
-      <path d="M770,200 C 768,180 778,170 770,150 C 762,132 776,120 768,102">
-        <animate attributeName="d" values="M770,200 C 768,180 778,170 770,150 C 762,132 776,120 768,102;M770,200 C 776,180 766,170 776,150 C 786,132 770,120 776,102;M770,200 C 768,180 778,170 770,150 C 762,132 776,120 768,102" dur="11s" begin="-2s" repeatCount="indefinite"/>
-      </path>
-    </g>
-
-    <!-- school of small fish drifting right -->
-    <g>
-      <g transform="translate(-50,80)">
-        <animateTransform attributeName="transform" type="translate" values="-50,80;860,72;-50,80" dur="29s" repeatCount="indefinite"/>
-        <use href="#fish" x="0" y="0"/>
-        <use href="#fish" x="22" y="-4"/>
-        <use href="#fish" x="14" y="8"/>
-        <use href="#fish" x="36" y="2"/>
-        <use href="#fish" x="48" y="-6"/>
-        <use href="#fish" x="58" y="6"/>
-      </g>
-      <g transform="translate(-100,160)">
-        <animateTransform attributeName="transform" type="translate" values="-100,160;880,150;-100,160" dur="37s" repeatCount="indefinite"/>
-        <use href="#fish" x="0" y="0" transform="scale(0.8)"/>
-        <use href="#fish" x="22" y="-3" transform="scale(0.8)"/>
-        <use href="#fish" x="40" y="3" transform="scale(0.8)"/>
-        <use href="#fish" x="58" y="-2" transform="scale(0.8)"/>
-      </g>
-    </g>
-
-    <!-- jellyfish drifting upward -->
-    <g>
-      <g>
-        <use href="#jelly" x="600" y="160">
-          <animateTransform attributeName="transform" type="translate" values="0,40; 8,-30; 0,40" dur="17s" repeatCount="indefinite"/>
-        </use>
-      </g>
-      <g>
-        <use href="#jelly" x="420" y="180" transform="scale(0.7) translate(180,40)">
-          <animateTransform attributeName="transform" type="translate" values="180,60; 170,-20; 180,60" dur="23s" repeatCount="indefinite" additive="sum"/>
-        </use>
-      </g>
-    </g>
-
-    <!-- rising bubbles -->
-    <g>
-      <use href="#bubble" x="160" y="200">
-        <animate attributeName="y" values="200;-20" dur="11s" repeatCount="indefinite"/>
-        <animate attributeName="x" values="160;156;164;160" dur="11s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0.8;0" dur="11s" repeatCount="indefinite"/>
-      </use>
-      <use href="#bubble" x="700" y="200" transform="scale(0.7)">
-        <animate attributeName="y" values="285;-30" dur="13s" begin="-3s" repeatCount="indefinite"/>
-      </use>
-      <use href="#bubble" x="540" y="200" transform="scale(1.3)">
-        <animate attributeName="y" values="155;-15" dur="17s" begin="-5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.8;0" dur="17s" begin="-5s" repeatCount="indefinite"/>
-      </use>
-      <use href="#bubble" x="80" y="200" transform="scale(0.5)">
-        <animate attributeName="y" values="400;-30" dur="9s" begin="-1s" repeatCount="indefinite"/>
-      </use>
-      <use href="#bubble" x="380" y="200" transform="scale(0.9)">
-        <animate attributeName="y" values="220;-20" dur="13s" begin="-7s" repeatCount="indefinite"/>
+          values="0,0; 0,-1.2; 0,0" dur="0.45s" repeatCount="indefinite"/>
       </use>
     </g>
 
-    <!-- bioluminescent particles -->
-    <g fill="#9ff5ff">
-      <circle cx="220" cy="60" r="1.2"><animate attributeName="opacity" values="0.1;1;0.1" dur="7s" repeatCount="indefinite"/></circle>
-      <circle cx="330" cy="120" r="1"><animate attributeName="opacity" values="0.1;1;0.1" dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
-      <circle cx="500" cy="40" r="1.4"><animate attributeName="opacity" values="0.1;1;0.1" dur="13s" begin="-4s" repeatCount="indefinite"/></circle>
-      <circle cx="660" cy="90" r="1"><animate attributeName="opacity" values="0.1;1;0.1" dur="9s" begin="-1s" repeatCount="indefinite"/></circle>
-      <circle cx="270" cy="150" r="0.9"><animate attributeName="opacity" values="0.1;1;0.1" dur="7s" begin="-3s" repeatCount="indefinite"/></circle>
-      <circle cx="440" cy="170" r="1.1"><animate attributeName="opacity" values="0.1;1;0.1" dur="11s" begin="-5s" repeatCount="indefinite"/></circle>
-      <circle cx="610" cy="130" r="0.8"><animate attributeName="opacity" values="0.1;1;0.1" dur="13s" begin="-6s" repeatCount="indefinite"/></circle>
-      <circle cx="140" cy="100" r="1"><animate attributeName="opacity" values="0.1;1;0.1" dur="11s" begin="-4s" repeatCount="indefinite"/></circle>
-    </g>
-
-    <!-- soft glow behind title -->
-    <ellipse cx="220" cy="98" rx="180" ry="46" fill="url(#glow)" opacity="0.75"/>
-
-    <!-- TITLE + DATE -->
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
-      <!-- top eyebrow line -->
-      <text x="220" y="62" font-size="11" letter-spacing="6" fill="#9ff5ff" opacity="0.85">UN OBSERVANCE · SINCE 2008</text>
+    <!-- TITLE + DATE block, integrated into the sky on the left -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <!-- eyebrow -->
+      <text x="32" y="38" font-size="10" letter-spacing="5" fill="#f7c860" opacity="0.95">BELMONT PARK · JUNE 9, 1973</text>
 
       <!-- main title -->
-      <text x="220" y="106" font-size="40" font-weight="800" letter-spacing="1" fill="#ffffff">
-        World Oceans Day
-        <animate attributeName="fill" values="#ffffff;#cdeefb;#ffffff" dur="11s" repeatCount="indefinite"/>
-      </text>
+      <text x="32" y="82" font-size="44" font-weight="900" letter-spacing="1.5" fill="url(#goldText)" filter="url(#textshadow)">SECRETARIAT</text>
+      <!-- contrast outline -->
+      <text x="32" y="82" font-size="44" font-weight="900" letter-spacing="1.5" fill="none" stroke="#3a1a08" stroke-width="0.6" opacity="0.75">SECRETARIAT</text>
 
-      <!-- subtle stroke pass to lift contrast against rays -->
-      <text x="220" y="106" font-size="40" font-weight="800" letter-spacing="1" fill="none" stroke="#072a3d" stroke-width="0.5" opacity="0.7">World Oceans Day</text>
-
-      <!-- date band -->
+      <!-- "31 LENGTHS" tagline -->
       <g>
-        <rect x="120" y="124" width="200" height="30" rx="15" fill="#031a26" opacity="0.65" stroke="#6fd6ff" stroke-opacity="0.55"/>
-        <text x="220" y="145" font-size="18" font-weight="700" letter-spacing="3" fill="#aef0ff">JUNE 8 · 2026</text>
+        <text x="32" y="108" font-size="14" font-weight="700" letter-spacing="3" fill="#f5e8c4">WON BY <tspan fill="#ffd66a" font-size="18" font-weight="900">31</tspan> LENGTHS</text>
       </g>
+
+      <!-- date pill -->
+      <g transform="translate(32,124)">
+        <rect x="0" y="0" width="220" height="32" rx="16" fill="#0d1117" opacity="0.7" stroke="#f7c860" stroke-opacity="0.85" stroke-width="1.1"/>
+        <text x="110" y="22" font-size="18" font-weight="800" letter-spacing="4" text-anchor="middle" fill="#ffe7a3">JUNE 9 · 2026</text>
+      </g>
+
+      <!-- subtitle anniversary -->
+      <text x="32" y="174" font-size="10" letter-spacing="4" fill="#f5b878" opacity="0.9">53rd ANNIVERSARY · TRIPLE CROWN</text>
     </g>
 
-    <!-- right-side tagline anchored low -->
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-      <text x="788" y="190" text-anchor="end" font-size="9" letter-spacing="3" fill="#7fd6ec" opacity="0.7">ONE OCEAN · ONE CLIMATE · ONE FUTURE</text>
-    </g>
+    <!-- subtle sun-shaft overlay above horse for drama -->
+    <polygon points="540,0 600,0 760,200 580,200" fill="#ffd28a" opacity="0.06"/>
+    <polygon points="660,0 720,0 800,200 700,200" fill="#ffd28a" opacity="0.05"/>
 
     <!-- vignette -->
     <rect width="800" height="200" fill="url(#vignette)" pointer-events="none"/>
   </g>
 
   <defs>
-    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.8">
-      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+    <radialGradient id="vignette" cx="0.5" cy="0.55" r="0.85">
+      <stop offset="65%" stop-color="#000000" stop-opacity="0"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
     </radialGradient>
   </defs>
