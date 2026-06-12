@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 12, 2026 — E.T. the Extra-Terrestrial — 44th anniversary of theatrical release (June 11, 1982, Universal Pictures, directed by Steven Spielberg, score by John Williams); iconic silhouette of Elliott and E.T. flying past a giant full moon on a BMX bicycle, starry summer-night sky, drifting cloud layer, glowing fingertip motif, deep navy → moonlight palette
+
+<img src="./doodle-archive/2026/06/2026-06-12-095000.svg" width="800" alt="Daily doodle archived for June 12, 2026: E.T. the Extra-Terrestrial — 44th anniversary of theatrical release (June 11, 1982, Universal Pictures, directed by Steven Spielberg, score by John Williams); iconic silhouette of Elliott and E.T. flying past a giant full moon on a BMX bicycle, starry summer-night sky, drifting cloud layer, glowing fingertip motif, deep navy → moonlight palette">
+
+---
+
 ## June 11, 2026 — Secretariat's Belmont Stakes victory by 31 lengths — 53rd anniversary (June 9, 1973, Belmont Park, NY; Ron Turcotte aboard; Meadow Stable blue-and-white silks); galloping racehorse silhouette streaking across a sun-drenched track at golden hour, dust kicking up, distant grandstand, motion lines, finish-line pole
 
 <img src="./doodle-archive/2026/06/2026-06-11-095846.svg" width="800" alt="Daily doodle archived for June 11, 2026: Secretariat's Belmont Stakes victory by 31 lengths — 53rd anniversary (June 9, 1973, Belmont Park, NY; Ron Turcotte aboard; Meadow Stable blue-and-white silks); galloping racehorse silhouette streaking across a sun-drenched track at golden hour, dust kicking up, distant grandstand, motion lines, finish-line pole">
