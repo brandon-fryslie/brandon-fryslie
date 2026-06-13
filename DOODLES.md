@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 13, 2026 — Anne Frank's 97th birthday (born June 12, 1929, Frankfurt am Main; author of the Diary); open diary at center with butterflies rising from the pages (a long-standing memorial motif), a flickering candle at left, warm sepia + candlelight palette over the GitHub dark background, the date set on the right-hand page in serif type
+
+<img src="./doodle-archive/2026/06/2026-06-13-084248.svg" width="800" alt="Daily doodle archived for June 13, 2026: Anne Frank's 97th birthday (born June 12, 1929, Frankfurt am Main; author of the Diary); open diary at center with butterflies rising from the pages, a flickering candle at left, warm sepia + candlelight palette over the GitHub dark background, the date set on the right-hand page in serif type">
+
+---
+
 ## June 12, 2026 — E.T. the Extra-Terrestrial — 44th anniversary of theatrical release (June 11, 1982, Universal Pictures, directed by Steven Spielberg, score by John Williams); iconic silhouette of Elliott and E.T. flying past a giant full moon on a BMX bicycle, starry summer-night sky, drifting cloud layer, glowing fingertip motif, deep navy → moonlight palette
 
 <img src="./doodle-archive/2026/06/2026-06-12-095000.svg" width="800" alt="Daily doodle archived for June 12, 2026: E.T. the Extra-Terrestrial — 44th anniversary of theatrical release (June 11, 1982, Universal Pictures, directed by Steven Spielberg, score by John Williams); iconic silhouette of Elliott and E.T. flying past a giant full moon on a BMX bicycle, starry summer-night sky, drifting cloud layer, glowing fingertip motif, deep navy → moonlight palette">
