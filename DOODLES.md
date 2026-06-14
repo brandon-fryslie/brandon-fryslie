@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 14, 2026 — W. B. Yeats's 161st birthday (born June 13, 1865, Dublin); two slow widening gyres from "The Second Coming" turning opposite directions on a twilight sky, a flight of swans (nod to "The Wild Swans at Coole") crossing the horizon over rippling water, date set large in serif type right of center, indigo night → amber horizon glow palette
+
+<img src="./doodle-archive/2026/06/2026-06-14-090217.svg" width="800" alt="Daily doodle archived for June 14, 2026: W. B. Yeats's 161st birthday (born June 13, 1865, Dublin); two slow widening gyres from 'The Second Coming' turning opposite directions on a twilight sky, a flight of swans (nod to 'The Wild Swans at Coole') crossing the horizon over rippling water, date set large in serif type right of center, indigo night → amber horizon glow palette">
+
+---
+
 ## June 13, 2026 — Anne Frank's 97th birthday (born June 12, 1929, Frankfurt am Main; author of the Diary); open diary at center with butterflies rising from the pages (a long-standing memorial motif), a flickering candle at left, warm sepia + candlelight palette over the GitHub dark background, the date set on the right-hand page in serif type
 
 <img src="./doodle-archive/2026/06/2026-06-13-084248.svg" width="800" alt="Daily doodle archived for June 13, 2026: Anne Frank's 97th birthday (born June 12, 1929, Frankfurt am Main; author of the Diary); open diary at center with butterflies rising from the pages, a flickering candle at left, warm sepia + candlelight palette over the GitHub dark background, the date set on the right-hand page in serif type">

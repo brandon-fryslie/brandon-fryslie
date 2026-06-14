@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: W. B. Yeats's 161st birthday (born June 13, 1865, Dublin). Two slow widening gyres from "The Second Coming" turn opposite directions on a twilight sky; a flight of swans (nod to "The Wild Swans at Coole") crosses the horizon over rippling water. Date set large in serif type, right of center. Palette: indigo night → amber horizon glow. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="June 13, 2026 — W. B. Yeats's 161st birthday (born June 13, 1865)">
+  <defs>
+    <radialGradient id="sky" cx="62%" cy="110%" r="95%">
+      <stop offset="0%"  stop-color="#f7c873" stop-opacity="0.55"/>
+      <stop offset="28%" stop-color="#b96b3a" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#2a2858" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#1c2547"/>
+      <stop offset="55%" stop-color="#0f1530"/>
+      <stop offset="100%" stop-color="#080a18"/>
+    </linearGradient>
+    <linearGradient id="horizonGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0a85a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f0a85a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fff1c5" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#f3c97a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <!-- One gyre: a slowly rotating widening spiral of short ticks.
+         Stylized as nested arcs with thin strokes, so it reads as a spiral. -->
+    <g id="gyre">
+      <g fill="none" stroke="#e7c987" stroke-linecap="round">
+        <circle r="6"  stroke-width="0.9" opacity="0.85"/>
+        <circle r="14" stroke-width="0.8" opacity="0.7" stroke-dasharray="2 6"/>
+        <circle r="24" stroke-width="0.8" opacity="0.6" stroke-dasharray="3 10"/>
+        <circle r="36" stroke-width="0.8" opacity="0.5" stroke-dasharray="4 14"/>
+        <circle r="50" stroke-width="0.7" opacity="0.42" stroke-dasharray="5 18"/>
+        <circle r="66" stroke-width="0.7" opacity="0.34" stroke-dasharray="6 22"/>
+        <circle r="84" stroke-width="0.6" opacity="0.26" stroke-dasharray="7 26"/>
+        <circle r="104" stroke-width="0.6" opacity="0.18" stroke-dasharray="8 30"/>
+      </g>
+      <!-- a diagonal arm so rotation is visible -->
+      <path d="M0,0 L6,0 M0,0 L9.9,9.9 M0,0 L0,14 M0,0 L-17,17 M0,0 L-24,0 M0,0 L-26,26 M0,0 L0,36 M0,0 L25.5,25.5 M0,0 L50,0 M0,0 L46.7,46.7 M0,0 L0,66"
+            stroke="#e7c987" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.35"/>
+    </g>
+
+    <!-- Swan in flight: simple silhouette, wing-flap baked in via animateTransform -->
+    <g id="swan">
+      <!-- body + neck -->
+      <path d="M-12,0 C-7,-1.5 0,-2 6,-1 C9,-0.6 11,0.4 12,1.4 C9,1.6 4,1.6 -2,1.4 C-7,1.3 -10,0.8 -12,0 Z" fill="#f4ecd6"/>
+      <path d="M5,-1 C9,-3 11,-6 12,-9 C12.5,-9.7 12.2,-10.2 11.5,-9.8 C10.5,-9.2 9,-7 7.5,-5 C6.5,-3.6 5.6,-2.4 5,-1 Z" fill="#f4ecd6"/>
+      <circle cx="12.2" cy="-9.6" r="0.7" fill="#1a1308"/>
+      <path d="M12.7,-9.4 L14,-9.1 L12.7,-8.7 Z" fill="#e69423"/>
+      <!-- wings -->
+      <g>
+        <path d="M-2,-0.5 C-2,-6 4,-9 9,-9 C5,-5 1,-2 -2,-0.5 Z" fill="#eadfba">
+          <animateTransform attributeName="transform" type="rotate"
+                            values="-18 0 0; 22 0 0; -18 0 0" dur="0.9s" repeatCount="indefinite"/>
+        </path>
+      </g>
+      <g>
+        <path d="M-4,0 C-4,4 -10,7 -14,7 C-11,4 -8,2 -4,0 Z" fill="#d9caa0">
+          <animateTransform attributeName="transform" type="rotate"
+                            values="14 0 0; -22 0 0; 14 0 0" dur="0.9s" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- distant stars -->
+  <g fill="#f4ecd6">
+    <circle cx="60"  cy="28" r="0.9" opacity="0.85"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="42" r="0.7" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.3s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="18" r="1.0" opacity="0.85"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.7s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="50" r="0.6" opacity="0.6"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.9s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="22" r="0.8" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" repeatCount="indefinite"/></circle>
+    <circle cx="420" cy="34" r="0.7" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="500" cy="14" r="1.0" opacity="0.9"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.3s" repeatCount="indefinite"/></circle>
+    <circle cx="580" cy="46" r="0.6" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="660" cy="22" r="0.8" opacity="0.75"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="40" r="0.7" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.8s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- the two widening gyres, opposite rotations -->
+  <g transform="translate(170 95)" opacity="0.9">
+    <circle r="120" fill="url(#moonGlow)" opacity="0.35"/>
+    <g>
+      <use href="#gyre"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        from="0" to="360" dur="73s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <g transform="translate(640 100)" opacity="0.9">
+    <circle r="120" fill="url(#moonGlow)" opacity="0.25"/>
+    <g>
+      <use href="#gyre"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        from="360" to="0" dur="89s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- horizon glow line over water -->
+  <rect x="0" y="138" width="800" height="14" fill="url(#horizonGlow)" opacity="0.85"/>
+
+  <!-- water -->
+  <rect x="0" y="150" width="800" height="50" fill="url(#water)"/>
+
+  <!-- distant shoreline silhouette (Sligo / Coole) -->
+  <path d="M0,150 L60,148 L110,150 L170,146 L230,150 L290,147 L360,150 L430,147 L500,149 L570,146 L640,150 L710,148 L800,150 L800,156 L0,156 Z"
+        fill="#0a0e22" opacity="0.95"/>
+
+  <!-- bulrushes along the right shoreline -->
+  <g stroke="#1b1e2c" stroke-width="1.2" fill="none" opacity="0.9">
+    <path d="M715,156 L715,140"/>
+    <path d="M730,156 L730,134"/>
+    <path d="M745,156 L745,138"/>
+    <path d="M760,156 L760,132"/>
+    <path d="M775,156 L775,138"/>
+    <path d="M790,156 L790,134"/>
+  </g>
+  <g fill="#3a2614">
+    <ellipse cx="715" cy="140" rx="1.4" ry="3.4"/>
+    <ellipse cx="730" cy="134" rx="1.4" ry="3.6"/>
+    <ellipse cx="745" cy="138" rx="1.4" ry="3.2"/>
+    <ellipse cx="760" cy="132" rx="1.4" ry="3.8"/>
+    <ellipse cx="775" cy="138" rx="1.4" ry="3.2"/>
+    <ellipse cx="790" cy="134" rx="1.4" ry="3.6"/>
+  </g>
+
+  <!-- water ripples -->
+  <g stroke="#a98756" stroke-width="0.7" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M40,168 q14,-3 28,0 t28,0 t28,0 t28,0">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="5.1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M220,178 q16,-3 32,0 t32,0 t32,0 t32,0">
+      <animate attributeName="opacity" values="0.25;0.6;0.25" dur="6.7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M460,172 q14,-3 28,0 t28,0 t28,0 t28,0">
+      <animate attributeName="opacity" values="0.3;0.65;0.3" dur="4.7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M30,188 q18,-3 36,0 t36,0 t36,0 t36,0 t36,0">
+      <animate attributeName="opacity" values="0.2;0.55;0.2" dur="7.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- a flight of swans crossing right-to-left -->
+  <g>
+    <g transform="translate(0 0)">
+      <use href="#swan"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="860,70; 600,62; 340,72; 80,64; -80,70"
+                        dur="29s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <g transform="scale(0.85)"><use href="#swan"/></g>
+      <animateTransform attributeName="transform" type="translate"
+                        values="900,90; 640,80; 380,92; 120,82; -60,90"
+                        dur="29s" begin="-3s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <g transform="scale(0.75)"><use href="#swan"/></g>
+      <animateTransform attributeName="transform" type="translate"
+                        values="920,108; 660,100; 400,110; 140,102; -40,108"
+                        dur="29s" begin="-6s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <g transform="scale(0.7)"><use href="#swan"/></g>
+      <animateTransform attributeName="transform" type="translate"
+                        values="940,54; 680,46; 420,56; 160,48; -40,54"
+                        dur="29s" begin="-10s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <g transform="scale(0.65)"><use href="#swan"/></g>
+      <animateTransform attributeName="transform" type="translate"
+                        values="960,122; 700,114; 440,124; 180,116; -40,122"
+                        dur="29s" begin="-13s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- attribution: poet name above the date -->
+  <text x="400" y="62" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="13" font-style="italic" fill="#f4ecd6" opacity="0.85"
+        letter-spacing="3">W. B. YEATS · 1865</text>
+
+  <!-- the date — primary visual -->
+  <text x="400" y="108" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="44" font-weight="700" fill="#fff4d2"
+        letter-spacing="1.5"
+        style="paint-order:stroke; stroke:#1a1308; stroke-width:2.5">June 13, 2026</text>
+
+  <!-- a slim divider with a small ornament -->
+  <g transform="translate(400 124)">
+    <line x1="-130" y1="0" x2="-14" y2="0" stroke="#e7c987" stroke-width="0.8" opacity="0.85"/>
+    <line x1="14"   y1="0" x2="130"  y2="0" stroke="#e7c987" stroke-width="0.8" opacity="0.85"/>
+    <circle cx="0" cy="0" r="2.2" fill="#e7c987" opacity="0.95"/>
+  </g>
+
+  <!-- a small italic line — a fragment, not a full quote -->
+  <text x="400" y="140" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="11" font-style="italic" fill="#f4ecd6" opacity="0.9"
+        letter-spacing="1">turning and turning in the widening gyre</text>
+</svg>
