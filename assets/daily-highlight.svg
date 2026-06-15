@@ -1,254 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: UNIVAC I 75th anniversary (June 14, 1951 — Remington Rand delivers the first UNIVAC I to the US Census Bureau; the first commercial computer in the United States). Mid-century mainframe console with a row of glowing vacuum tubes, a phosphor-green CRT showing the date, blinking patch-panel indicator lights, two flanking UNISERVO reel-to-reel tape drives spinning in opposite directions, and a punched paper tape drifting across the top. Palette: vacuum-tube amber, brushed-steel blue-grey, phosphor green, over #0d1117. -->
+<!-- theme: Magna Carta 811th anniversary (June 15, 1215 — King John seals the Great Charter at Runnymede, on the south bank of the River Thames, Surrey, England). Unrolled illuminated parchment with the date set in blackletter calligraphy, a hanging crimson royal wax seal on a braided cord, a quill in an inkpot at left, and the silhouette of Runnymede meadow with the great oak under a starry medieval-night sky. Palette: royal blue, gold leaf, crimson seal, parchment cream, over #0d1117. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="June 14, 2026 — UNIVAC I 75th anniversary: first commercial computer delivered to the US Census Bureau on June 14, 1951">
+     aria-label="June 15, 2026 — Magna Carta 811th anniversary: King John seals the Great Charter at Runnymede on June 15, 1215">
   <defs>
-    <radialGradient id="tubeGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#fff1ad"/>
-      <stop offset="35%" stop-color="#ffb155" stop-opacity="0.85"/>
-      <stop offset="75%" stop-color="#a64a18" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#2a1408" stop-opacity="0"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#101a3a"/>
+      <stop offset="100%" stop-color="#1a2a55"/>
+    </linearGradient>
+    <linearGradient id="parchment" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f5e7c1"/>
+      <stop offset="55%" stop-color="#e9d49a"/>
+      <stop offset="100%" stop-color="#caa86b"/>
+    </linearGradient>
+    <linearGradient id="parchEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#a68146"/>
+      <stop offset="100%" stop-color="#6f4f24"/>
+    </linearGradient>
+    <radialGradient id="wax" cx="50%" cy="45%" r="55%">
+      <stop offset="0%"  stop-color="#ff7a6a"/>
+      <stop offset="45%" stop-color="#c8261c"/>
+      <stop offset="100%" stop-color="#5a0a06"/>
     </radialGradient>
-    <linearGradient id="console" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#3a4153"/>
-      <stop offset="55%" stop-color="#262d3c"/>
-      <stop offset="100%" stop-color="#161b28"/>
+    <radialGradient id="waxRing" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#ffd2b0" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#7a1410" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3a0805" stop-opacity="0.7"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff3b0"/>
+      <stop offset="50%" stop-color="#e6c14a"/>
+      <stop offset="100%" stop-color="#a07a16"/>
     </linearGradient>
-    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#0e2418"/>
-      <stop offset="100%" stop-color="#06140c"/>
+    <linearGradient id="quillFeather" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0%"  stop-color="#f4ead2"/>
+      <stop offset="60%" stop-color="#cdb886"/>
+      <stop offset="100%" stop-color="#7a6537"/>
     </linearGradient>
-    <radialGradient id="screenGlow" cx="50%" cy="55%" r="62%">
-      <stop offset="0%"  stop-color="#7dffb6" stop-opacity="0.55"/>
-      <stop offset="55%" stop-color="#1e6b3b" stop-opacity="0.18"/>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fff4b8"/>
+      <stop offset="60%" stop-color="#e6c14a" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="reelHub" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#dde3ec"/>
-      <stop offset="60%" stop-color="#7a8190"/>
-      <stop offset="100%" stop-color="#2c3140"/>
-    </radialGradient>
-    <linearGradient id="tape" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#e3cda3"/>
-      <stop offset="100%" stop-color="#b89968"/>
-    </linearGradient>
 
-    <g id="reel">
-      <circle r="22" fill="#1a1f2c" stroke="#aab2c1" stroke-width="1.1"/>
-      <circle r="17" fill="#3a2b18"/>
-      <circle r="17" fill="none" stroke="#c79c5e" stroke-width="0.35" opacity="0.65"/>
-      <g stroke="#cdd4dd" stroke-width="1.3" stroke-linecap="round" opacity="0.92">
-        <line x1="0" y1="-5" x2="0" y2="-15"/>
-        <line x1="0" y1="5"  x2="0" y2="15"/>
-        <line x1="-5" y1="0" x2="-15" y2="0"/>
-        <line x1="5"  y1="0" x2="15"  y2="0"/>
-        <line x1="-3.5" y1="-3.5" x2="-10.5" y2="-10.5"/>
-        <line x1="3.5"  y1="3.5"  x2="10.5"  y2="10.5"/>
-        <line x1="-3.5" y1="3.5"  x2="-10.5" y2="10.5"/>
-        <line x1="3.5"  y1="-3.5" x2="10.5"  y2="-10.5"/>
-      </g>
-      <circle r="6" fill="url(#reelHub)"/>
-      <circle r="1.8" fill="#10141c"/>
-    </g>
-
-    <g id="tube">
-      <circle r="13" fill="url(#tubeGlow)"/>
-      <ellipse cx="0" cy="-1" rx="5.5" ry="8.5" fill="#150c06" stroke="#9aa1ae" stroke-width="0.45" opacity="0.95"/>
-      <path d="M-2.4,-4.5 Q0,-0.6 2.4,-4.5 M-2.4,2 Q0,-1 2.4,2" stroke="#ffd07a" stroke-width="0.55" fill="none" opacity="0.95"/>
-      <circle cx="0" cy="-8.5" r="1.2" fill="#5a4020"/>
-      <rect x="-5" y="6.5" width="10" height="2.5" fill="#2a3140" stroke="#7a8392" stroke-width="0.3"/>
-    </g>
-
-    <!-- 200px-wide punched paper tape segment, tiled by translate -->
-    <g id="tape-segment">
-      <rect x="0" y="0" width="200" height="14" fill="url(#tape)"/>
-      <rect x="0" y="0" width="200" height="14" fill="none" stroke="#7a6b4a" stroke-width="0.35"/>
-      <g fill="#0d1117">
-        <circle cx="8"   cy="7" r="0.7"/><circle cx="18"  cy="7" r="0.7"/>
-        <circle cx="28"  cy="7" r="0.7"/><circle cx="38"  cy="7" r="0.7"/>
-        <circle cx="48"  cy="7" r="0.7"/><circle cx="58"  cy="7" r="0.7"/>
-        <circle cx="68"  cy="7" r="0.7"/><circle cx="78"  cy="7" r="0.7"/>
-        <circle cx="88"  cy="7" r="0.7"/><circle cx="98"  cy="7" r="0.7"/>
-        <circle cx="108" cy="7" r="0.7"/><circle cx="118" cy="7" r="0.7"/>
-        <circle cx="128" cy="7" r="0.7"/><circle cx="138" cy="7" r="0.7"/>
-        <circle cx="148" cy="7" r="0.7"/><circle cx="158" cy="7" r="0.7"/>
-        <circle cx="168" cy="7" r="0.7"/><circle cx="178" cy="7" r="0.7"/>
-        <circle cx="188" cy="7" r="0.7"/><circle cx="198" cy="7" r="0.7"/>
-      </g>
-      <g fill="#0d1117">
-        <circle cx="13" cy="3" r="1.1"/><circle cx="33" cy="3" r="1.1"/>
-        <circle cx="43" cy="3" r="1.1"/><circle cx="73" cy="3" r="1.1"/>
-        <circle cx="93" cy="3" r="1.1"/><circle cx="103" cy="3" r="1.1"/>
-        <circle cx="123" cy="3" r="1.1"/><circle cx="153" cy="3" r="1.1"/>
-        <circle cx="163" cy="3" r="1.1"/><circle cx="183" cy="3" r="1.1"/>
-      </g>
-      <g fill="#0d1117">
-        <circle cx="23" cy="11" r="1.1"/><circle cx="53" cy="11" r="1.1"/>
-        <circle cx="63" cy="11" r="1.1"/><circle cx="83" cy="11" r="1.1"/>
-        <circle cx="113" cy="11" r="1.1"/><circle cx="143" cy="11" r="1.1"/>
-        <circle cx="173" cy="11" r="1.1"/><circle cx="193" cy="11" r="1.1"/>
-      </g>
+    <!-- Trefoil flourish used as a corner decoration -->
+    <g id="trefoil">
+      <path d="M0,-5 C3,-5 5,-3 5,0 C5,3 3,5 0,5 C-3,5 -5,3 -5,0 C-5,-3 -3,-5 0,-5 Z"
+            fill="url(#gold)" opacity="0.85"/>
+      <circle r="1.6" fill="#5a3a0a"/>
     </g>
   </defs>
 
-  <rect width="800" height="200" fill="#0d1117"/>
+  <!-- Night sky -->
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- ambient warm wash from below -->
-  <ellipse cx="400" cy="230" rx="540" ry="100" fill="url(#tubeGlow)" opacity="0.10"/>
-
-  <!-- floor grid -->
-  <g stroke="#1a2435" stroke-width="0.4" opacity="0.5">
-    <line x1="0" y1="182" x2="800" y2="182"/>
-    <line x1="0" y1="194" x2="800" y2="194"/>
-    <line x1="60"  y1="182" x2="20"  y2="200"/>
-    <line x1="200" y1="182" x2="180" y2="200"/>
-    <line x1="340" y1="182" x2="340" y2="200"/>
-    <line x1="460" y1="182" x2="480" y2="200"/>
-    <line x1="600" y1="182" x2="620" y2="200"/>
-    <line x1="740" y1="182" x2="780" y2="200"/>
+  <!-- Stars (medieval night) -->
+  <g fill="#fff4b8">
+    <circle cx="55"  cy="22" r="0.9"><animate attributeName="opacity" values="0.25;1;0.25" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="105" cy="38" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4"  dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="155" cy="18" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3"  dur="13s" begin="-5s" repeatCount="indefinite"/></circle>
+    <circle cx="210" cy="30" r="0.6"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s"  begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="44" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4"  dur="11s" begin="-6s" repeatCount="indefinite"/></circle>
+    <circle cx="540" cy="28" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3"  dur="13s" begin="-4s" repeatCount="indefinite"/></circle>
+    <circle cx="595" cy="44" r="0.6"><animate attributeName="opacity" values="0.4;1;0.4"  dur="7s"  begin="-1s" repeatCount="indefinite"/></circle>
+    <circle cx="650" cy="20" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3"  dur="11s" begin="-7s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="36" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4"  dur="13s" begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="22" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3"  dur="7s"  begin="-5s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- drifting paper tape across the top -->
+  <!-- Crescent moon, upper left of center -->
+  <g transform="translate(135 46)">
+    <circle r="14" fill="url(#starGlow)" opacity="0.35"/>
+    <path d="M-7,-9 a11,11 0 1 0 0,18 a8,8 0 1 1 0,-18 z" fill="#f3e2a4" opacity="0.85"/>
+  </g>
+
+  <!-- Distant Gothic arch silhouette pattern (faint architecture motif) -->
+  <g opacity="0.18" fill="#1a2a55" stroke="#3a4a7a" stroke-width="0.5">
+    <path d="M30,170 L30,90 Q30,60 50,60 Q70,60 70,90 L70,170 Z"/>
+    <path d="M80,170 L80,75 Q80,42 105,42 Q130,42 130,75 L130,170 Z"/>
+    <path d="M140,170 L140,90 Q140,60 160,60 Q180,60 180,90 L180,170 Z"/>
+    <path d="M620,170 L620,90 Q620,60 640,60 Q660,60 660,90 L660,170 Z"/>
+    <path d="M670,170 L670,75 Q670,42 695,42 Q720,42 720,75 L720,170 Z"/>
+    <path d="M730,170 L730,90 Q730,60 750,60 Q770,60 770,90 L770,170 Z"/>
+  </g>
+
+  <!-- Runnymede meadow horizon: rolling hills + the great oak silhouette -->
   <g>
+    <path d="M0,168 Q120,150 250,162 Q400,176 560,156 Q700,140 800,162 L800,200 L0,200 Z"
+          fill="#0a1430"/>
+    <path d="M0,178 Q150,168 320,176 Q500,186 700,170 Q760,164 800,172 L800,200 L0,200 Z"
+          fill="#060c1c"/>
+    <!-- Distant Thames river glint -->
+    <path d="M0,182 Q200,177 400,182 Q600,187 800,180" stroke="#2a4a7a" stroke-width="0.6" fill="none" opacity="0.65"/>
+    <path d="M0,186 Q200,182 400,186 Q600,190 800,184" stroke="#2a4a7a" stroke-width="0.4" fill="none" opacity="0.45"/>
+  </g>
+
+  <!-- Great oak of Runnymede (left), small castle (right) -->
+  <g transform="translate(80 168)">
+    <rect x="-1.8" y="-26" width="3.6" height="26" fill="#0a0a0a"/>
+    <ellipse cx="0" cy="-32" rx="22" ry="14" fill="#0a0a0a"/>
+    <ellipse cx="-10" cy="-36" rx="11" ry="8" fill="#0a0a0a"/>
+    <ellipse cx="10"  cy="-36" rx="11" ry="8" fill="#0a0a0a"/>
+    <ellipse cx="0"   cy="-42" rx="12" ry="8" fill="#0a0a0a"/>
+  </g>
+  <g transform="translate(720 162)" fill="#0a0a0a">
+    <rect x="-22" y="-18" width="44" height="18"/>
+    <rect x="-22" y="-26" width="6" height="8"/>
+    <rect x="-12" y="-26" width="6" height="8"/>
+    <rect x="-2"  y="-26" width="6" height="8"/>
+    <rect x="8"   y="-26" width="6" height="8"/>
+    <rect x="18"  y="-26" width="6" height="8"/>
+    <rect x="-4" y="-34" width="8" height="10"/>
+    <polygon points="-4,-34 0,-40 4,-34"/>
+    <line x1="0" y1="-40" x2="0" y2="-44" stroke="#0a0a0a" stroke-width="1"/>
+    <path d="M0,-44 L5,-43 L5,-41 L0,-41 Z" fill="#c8261c" opacity="0.85"/>
+  </g>
+
+  <!-- ============ MAIN PARCHMENT ============ -->
+  <g transform="translate(400 100)">
+    <!-- Soft warm glow behind parchment -->
+    <ellipse cx="0" cy="0" rx="320" ry="90" fill="url(#starGlow)" opacity="0.18"/>
+
+    <!-- Left roll -->
+    <g transform="translate(-256 0)">
+      <ellipse cx="0" cy="0" rx="10" ry="62" fill="url(#parchEdge)"/>
+      <ellipse cx="-3" cy="0" rx="6" ry="58" fill="#d6b67a"/>
+      <ellipse cx="-5" cy="0" rx="3" ry="55" fill="#a07a3a"/>
+    </g>
+
+    <!-- Right roll -->
+    <g transform="translate(256 0)">
+      <ellipse cx="0" cy="0" rx="10" ry="62" fill="url(#parchEdge)"/>
+      <ellipse cx="3" cy="0" rx="6" ry="58" fill="#d6b67a"/>
+      <ellipse cx="5" cy="0" rx="3" ry="55" fill="#a07a3a"/>
+    </g>
+
+    <!-- Parchment body with slightly wavy top/bottom (drapes between rolls) -->
+    <path d="M-256,-58
+             Q-128,-66 0,-60
+             Q128,-54 256,-58
+             L256,58
+             Q128,66 0,60
+             Q-128,54 -256,58 Z"
+          fill="url(#parchment)" stroke="#8a6a32" stroke-width="0.8"/>
+
+    <!-- Subtle horizontal scribe lines on parchment -->
+    <g stroke="#a07a3a" stroke-width="0.25" opacity="0.5">
+      <path d="M-230,-40 Q0,-44 230,-40"/>
+      <path d="M-230,-28 Q0,-32 230,-28"/>
+      <path d="M-230,32 Q0,36 230,32"/>
+      <path d="M-230,42 Q0,46 230,42"/>
+    </g>
+
+    <!-- Gold double border -->
+    <path d="M-244,-50 Q-122,-58 0,-52 Q122,-46 244,-50
+             L244,50 Q122,58 0,52 Q-122,46 -244,50 Z"
+          fill="none" stroke="url(#gold)" stroke-width="0.9" opacity="0.95"/>
+    <path d="M-238,-46 Q-120,-54 0,-48 Q120,-42 238,-46
+             L238,46 Q120,54 0,48 Q-120,42 -238,46 Z"
+          fill="none" stroke="url(#gold)" stroke-width="0.4" opacity="0.85"/>
+
+    <!-- Gold corner flourishes -->
+    <g transform="translate(-228 -38)"><use href="#trefoil"/></g>
+    <g transform="translate(228 -38)"><use href="#trefoil"/></g>
+    <g transform="translate(-228 38)"><use href="#trefoil"/></g>
+    <g transform="translate(228 38)"><use href="#trefoil"/></g>
+
+    <!-- Header: Latin / charter title -->
+    <text x="0" y="-22" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+          font-size="11" fill="#7a5418" letter-spacing="5" opacity="0.92">
+      MAGNA  CARTA  LIBERTATUM
+    </text>
+
+    <!-- Illuminated drop-cap "I" on left -->
+    <g transform="translate(-200 8)">
+      <rect x="-10" y="-16" width="22" height="32" fill="#1e3a8a" stroke="url(#gold)" stroke-width="0.8"/>
+      <text x="1" y="9" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="26" font-weight="700" fill="url(#gold)">I</text>
+    </g>
+
+    <!-- THE DATE — primary visual -->
+    <text x="20" y="14" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="34" font-weight="700"
+          fill="#1a1208"
+          style="paint-order:stroke; stroke:#e8c970; stroke-width:0.6"
+          letter-spacing="2">JUNE 15, 2026</text>
+
+    <!-- Anniversary subline -->
+    <text x="20" y="34" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+          font-size="9" fill="#5a3e14" letter-spacing="3">
+      Runnymede · 811 years sealed
+    </text>
+
+  </g>
+
+  <!-- ============ HANGING ROYAL WAX SEAL ============ -->
+  <g transform="translate(560 160)">
+    <!-- braided cord from parchment down to seal -->
     <g>
-      <use href="#tape-segment" x="0"   y="4"/>
-      <use href="#tape-segment" x="200" y="4"/>
-      <use href="#tape-segment" x="400" y="4"/>
-      <use href="#tape-segment" x="600" y="4"/>
-      <use href="#tape-segment" x="800" y="4"/>
-      <animateTransform attributeName="transform" type="translate"
-                        values="0,0; -200,0" dur="23s" repeatCount="indefinite"/>
+      <path d="M0,-58 Q1,-40 -1,-22 Q1,-10 0,0" stroke="#7a1410" stroke-width="2.2" fill="none"/>
+      <path d="M0,-58 Q-1,-40 1,-22 Q-1,-10 0,0" stroke="#c8261c" stroke-width="1.2" fill="none" opacity="0.85"/>
     </g>
-  </g>
-
-  <!-- LEFT TAPE DRIVE -->
-  <g transform="translate(95 112)">
-    <rect x="-58" y="-72" width="116" height="144" rx="6" fill="url(#console)" stroke="#5a6275" stroke-width="1"/>
-    <rect x="-50" y="-64" width="100" height="128" rx="4" fill="none" stroke="#7a8392" stroke-width="0.5" opacity="0.7"/>
-    <g transform="translate(0 -34)">
-      <circle r="28" fill="#0a0e18" stroke="#5a6275" stroke-width="0.9"/>
-      <g><use href="#reel"/>
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(0 34)">
-      <circle r="28" fill="#0a0e18" stroke="#5a6275" stroke-width="0.9"/>
-      <g><use href="#reel"/>
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="7s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <path d="M-20,-34 Q-30,0 -20,34 M20,-34 Q30,0 20,34" stroke="#c79c5e" stroke-width="0.8" fill="none" opacity="0.75"/>
-    <rect x="-32" y="56" width="64" height="9" fill="#0a0e18" stroke="#7a8392" stroke-width="0.4"/>
-    <text x="0" y="63" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.5" fill="#c6cdd8" letter-spacing="2.5">UNISERVO</text>
-  </g>
-
-  <!-- RIGHT TAPE DRIVE -->
-  <g transform="translate(705 112)">
-    <rect x="-58" y="-72" width="116" height="144" rx="6" fill="url(#console)" stroke="#5a6275" stroke-width="1"/>
-    <rect x="-50" y="-64" width="100" height="128" rx="4" fill="none" stroke="#7a8392" stroke-width="0.5" opacity="0.7"/>
-    <g transform="translate(0 -34)">
-      <circle r="28" fill="#0a0e18" stroke="#5a6275" stroke-width="0.9"/>
-      <g><use href="#reel"/>
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="11s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <g transform="translate(0 34)">
-      <circle r="28" fill="#0a0e18" stroke="#5a6275" stroke-width="0.9"/>
-      <g><use href="#reel"/>
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <path d="M-20,-34 Q-30,0 -20,34 M20,-34 Q30,0 20,34" stroke="#c79c5e" stroke-width="0.8" fill="none" opacity="0.75"/>
-    <rect x="-32" y="56" width="64" height="9" fill="#0a0e18" stroke="#7a8392" stroke-width="0.4"/>
-    <text x="0" y="63" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.5" fill="#c6cdd8" letter-spacing="2.5">UNISERVO</text>
-  </g>
-
-  <!-- CENTER MAINFRAME CONSOLE -->
-  <g transform="translate(400 110)">
-    <!-- cabinet -->
-    <rect x="-204" y="-82" width="408" height="166" rx="9" fill="url(#console)" stroke="#7a8392" stroke-width="1"/>
-    <!-- top dark bay where tubes mount -->
-    <rect x="-196" y="-76" width="392" height="32" rx="3" fill="#0a0e18" stroke="#7a8392" stroke-width="0.5"/>
-
-    <!-- row of vacuum tubes -->
-    <g transform="translate(0 -60)">
-      <g transform="translate(-175 0)"><use href="#tube"/></g>
-      <g transform="translate(-140 0)"><use href="#tube"/></g>
-      <g transform="translate(-105 0)"><use href="#tube"/></g>
-      <g transform="translate(-70 0)"><use href="#tube"/></g>
-      <g transform="translate(-35 0)"><use href="#tube"/></g>
-      <g transform="translate(0 0)"><use href="#tube"/></g>
-      <g transform="translate(35 0)"><use href="#tube"/></g>
-      <g transform="translate(70 0)"><use href="#tube"/></g>
-      <g transform="translate(105 0)"><use href="#tube"/></g>
-      <g transform="translate(140 0)"><use href="#tube"/></g>
-      <g transform="translate(175 0)"><use href="#tube"/></g>
-      <!-- staggered flicker pulses to make the row feel alive -->
-      <circle cx="-140" cy="0" r="13" fill="url(#tubeGlow)"><animate attributeName="opacity" values="0;0.55;0" dur="3.7s" repeatCount="indefinite"/></circle>
-      <circle cx="-35"  cy="0" r="13" fill="url(#tubeGlow)"><animate attributeName="opacity" values="0;0.5;0"  dur="4.3s" begin="-1.1s" repeatCount="indefinite"/></circle>
-      <circle cx="70"   cy="0" r="13" fill="url(#tubeGlow)"><animate attributeName="opacity" values="0;0.55;0" dur="5.1s" begin="-2.5s" repeatCount="indefinite"/></circle>
-      <circle cx="175"  cy="0" r="13" fill="url(#tubeGlow)"><animate attributeName="opacity" values="0;0.5;0"  dur="6.7s" begin="-3.3s" repeatCount="indefinite"/></circle>
-    </g>
-
-    <!-- CRT screen -->
+    <!-- the seal swings as a group -->
     <g>
-      <rect x="-172" y="-40" width="344" height="64" rx="16" fill="#0a0e18" stroke="#7a8392" stroke-width="1.2"/>
-      <rect x="-164" y="-34" width="328" height="52" rx="12" fill="url(#screen)" stroke="#1f6b3b" stroke-width="0.9"/>
-      <rect x="-164" y="-34" width="328" height="52" rx="12" fill="url(#screenGlow)"/>
-
-      <!-- scan lines -->
-      <g stroke="#7dffb6" stroke-width="0.3" opacity="0.16">
-        <line x1="-164" y1="-26" x2="164" y2="-26"/>
-        <line x1="-164" y1="-20" x2="164" y2="-20"/>
-        <line x1="-164" y1="-14" x2="164" y2="-14"/>
-        <line x1="-164" y1="-8"  x2="164" y2="-8"/>
-        <line x1="-164" y1="-2"  x2="164" y2="-2"/>
-        <line x1="-164" y1="4"   x2="164" y2="4"/>
-        <line x1="-164" y1="10"  x2="164" y2="10"/>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-2.5;2.5;-2.5" dur="11s" repeatCount="indefinite"/>
+      <!-- shadow on parchment behind -->
+      <ellipse cx="2" cy="22" rx="20" ry="3" fill="#000" opacity="0.35"/>
+      <!-- wax disc -->
+      <circle r="22" fill="url(#wax)" stroke="#5a0a06" stroke-width="0.8"/>
+      <circle r="22" fill="url(#waxRing)"/>
+      <!-- impressed circular Latin legend -->
+      <circle r="18" fill="none" stroke="#3a0805" stroke-width="0.5" opacity="0.7"/>
+      <circle r="14" fill="none" stroke="#3a0805" stroke-width="0.3" opacity="0.55"/>
+      <!-- King-on-throne emblem: simplified -->
+      <g fill="#3a0805" opacity="0.85">
+        <!-- throne -->
+        <rect x="-7" y="-2" width="14" height="9" rx="1"/>
+        <rect x="-9" y="-4" width="2" height="11"/>
+        <rect x="7"  y="-4" width="2" height="11"/>
+        <!-- king body -->
+        <path d="M-5,-2 L-5,-9 L5,-9 L5,-2 Z"/>
+        <!-- head -->
+        <circle cx="0" cy="-12" r="3"/>
+        <!-- crown -->
+        <path d="M-4,-14 L-4,-16 L-2,-15 L0,-17 L2,-15 L4,-16 L4,-14 Z"/>
+        <!-- orb & sceptre arms -->
+        <rect x="-9" y="-9" width="3" height="1.5"/>
+        <rect x="6"  y="-9" width="3" height="1.5"/>
       </g>
-
-      <!-- header on screen -->
-      <text x="0" y="-19" text-anchor="middle"
-            font-family="'Courier New', monospace" font-size="8.5"
-            fill="#7dffb6" opacity="0.9" letter-spacing="3.5">REMINGTON RAND · UNIVAC I</text>
-
-      <!-- THE DATE — primary visual -->
-      <text x="0" y="9" text-anchor="middle"
-            font-family="'Courier New', monospace" font-size="24" font-weight="700"
-            fill="#bdffd6" letter-spacing="2.5"
-            style="paint-order:stroke; stroke:#0e2418; stroke-width:0.6">JUNE 14, 2026</text>
+      <!-- specular highlight -->
+      <ellipse cx="-8" cy="-10" rx="6" ry="3" fill="#ffb4a0" opacity="0.45"/>
     </g>
+  </g>
 
-    <!-- panel below screen: indicator lamps row, then attribution -->
-    <g transform="translate(0 50)">
-      <rect x="-172" y="-14" width="344" height="34" rx="4" fill="#1a2030" stroke="#7a8392" stroke-width="0.5"/>
-      <!-- indicator lamps span the full width on a single row -->
-      <g>
-        <circle cx="-160" cy="-7" r="2.4" fill="#ff5454"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.7s" repeatCount="indefinite"/></circle>
-        <circle cx="-140" cy="-7" r="2.4" fill="#ffb74d"><animate attributeName="opacity" values="1;0.4;1"   dur="2.3s" repeatCount="indefinite"/></circle>
-        <circle cx="-120" cy="-7" r="2.4" fill="#7dffb6"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.3s" repeatCount="indefinite"/></circle>
-        <circle cx="-100" cy="-7" r="2.4" fill="#7dffb6"><animate attributeName="opacity" values="1;0.5;1"   dur="2.9s" repeatCount="indefinite"/></circle>
-        <circle cx="-80"  cy="-7" r="2.4" fill="#ffb74d"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.9s" repeatCount="indefinite"/></circle>
-        <circle cx="-60"  cy="-7" r="2.4" fill="#ff5454"><animate attributeName="opacity" values="0.5;0.95;0.5" dur="2.7s" repeatCount="indefinite"/></circle>
-        <circle cx="-40"  cy="-7" r="2.4" fill="#7dffb6"><animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/></circle>
-        <circle cx="-20"  cy="-7" r="2.4" fill="#ffb74d"><animate attributeName="opacity" values="0.6;1;0.6" dur="3.1s" repeatCount="indefinite"/></circle>
-        <circle cx="0"    cy="-7" r="2.4" fill="#7dffb6"><animate attributeName="opacity" values="1;0.5;1"   dur="1.1s" repeatCount="indefinite"/></circle>
-        <circle cx="20"   cy="-7" r="2.4" fill="#ffb74d"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/></circle>
-        <circle cx="40"   cy="-7" r="2.4" fill="#ff5454"><animate attributeName="opacity" values="0.5;0.95;0.5" dur="1.9s" repeatCount="indefinite"/></circle>
-        <circle cx="60"   cy="-7" r="2.4" fill="#7dffb6"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.1s" repeatCount="indefinite"/></circle>
-        <circle cx="80"   cy="-7" r="2.4" fill="#ffb74d"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.7s" repeatCount="indefinite"/></circle>
-        <circle cx="100"  cy="-7" r="2.4" fill="#7dffb6"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.9s" repeatCount="indefinite"/></circle>
-        <circle cx="120"  cy="-7" r="2.4" fill="#7dffb6"><animate attributeName="opacity" values="1;0.5;1"   dur="1.3s" repeatCount="indefinite"/></circle>
-        <circle cx="140"  cy="-7" r="2.4" fill="#ffb74d"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.3s" repeatCount="indefinite"/></circle>
-        <circle cx="160"  cy="-7" r="2.4" fill="#ff5454"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></circle>
+  <!-- ============ QUILL + INKPOT (left) ============ -->
+  <g transform="translate(220 158)">
+    <!-- inkpot -->
+    <ellipse cx="0" cy="6" rx="14" ry="3.5" fill="#0a0a14" opacity="0.6"/>
+    <path d="M-11,-2 L-13,8 Q-13,12 0,12 Q13,12 13,8 L11,-2 Z" fill="#1a1a28" stroke="#3a3a55" stroke-width="0.5"/>
+    <ellipse cx="0" cy="-2" rx="11" ry="3" fill="#05050a" stroke="#3a3a55" stroke-width="0.5"/>
+    <ellipse cx="0" cy="-2.5" rx="9" ry="2.2" fill="#0a0a14"/>
+    <!-- ink shimmer -->
+    <ellipse cx="-2" cy="-2.8" rx="3" ry="0.7" fill="#5a5a8a" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- quill: feather curving up to the right -->
+    <g transform="translate(2 -2) rotate(-58)">
+      <animateTransform attributeName="transform" type="rotate"
+                        additive="sum" values="0;1.2;0;-1;0" dur="11s" repeatCount="indefinite"/>
+      <!-- nib -->
+      <path d="M0,0 L-2,4 L2,4 Z" fill="#1a1208"/>
+      <!-- shaft -->
+      <path d="M-1.2,0 L-3,-58 L3,-58 L1.2,0 Z" fill="url(#quillFeather)" stroke="#5a4a20" stroke-width="0.3"/>
+      <!-- feather barbs -->
+      <g stroke="#7a6537" stroke-width="0.4" opacity="0.7">
+        <path d="M-2,-10 Q-9,-12 -12,-8"/>
+        <path d="M2,-12 Q9,-14 12,-10"/>
+        <path d="M-2.5,-22 Q-11,-25 -15,-21"/>
+        <path d="M2.5,-24 Q11,-27 15,-23"/>
+        <path d="M-3,-34 Q-12,-38 -16,-34"/>
+        <path d="M3,-36 Q12,-40 16,-36"/>
+        <path d="M-3.2,-46 Q-10,-50 -13,-47"/>
+        <path d="M3.2,-48 Q10,-52 13,-49"/>
       </g>
-      <!-- attribution labels -->
-      <text x="0" y="5" text-anchor="middle"
-            font-family="Helvetica, Arial, sans-serif" font-size="9.5"
-            fill="#dfe5ee" letter-spacing="6" font-weight="600">UNIVAC I · 75 YEARS</text>
-      <text x="0" y="16" text-anchor="middle"
-            font-family="Helvetica, Arial, sans-serif" font-size="6.5"
-            fill="#8a93a3" letter-spacing="2.5">DELIVERED JUNE 14, 1951 · US CENSUS BUREAU</text>
+      <!-- soft feather body wash -->
+      <path d="M-3,-58 Q-14,-40 -5,-12 Q-1,-4 -1.2,0 L1.2,0 Q1,-4 5,-12 Q14,-40 3,-58 Z"
+            fill="url(#quillFeather)" opacity="0.45"/>
     </g>
+    <!-- ink drip from nib -->
+    <circle cx="2" cy="2" r="0.9" fill="#05050a">
+      <animate attributeName="cy" values="2;14;14" keyTimes="0;0.5;1" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.45;0.55" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- floating gold motes (illuminated dust) -->
+  <g fill="url(#gold)" opacity="0.7">
+    <circle cx="320" cy="40" r="0.8">
+      <animate attributeName="cy" values="40;25;40" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="50" r="0.7">
+      <animate attributeName="cy" values="50;32;50" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="30" r="0.6">
+      <animate attributeName="cy" values="30;15;30" dur="7s" begin="-1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s" begin="-1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="440" cy="60" r="0.6">
+      <animate attributeName="cy" values="60;40;60" dur="13s" begin="-5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
