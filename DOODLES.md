@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 16, 2026 — Magna Carta 811th anniversary (June 15, 1215 — King John seals the Great Charter at Runnymede, on the south bank of the River Thames, Surrey, England). Unrolled illuminated parchment with the date set in blackletter calligraphy, a hanging crimson royal wax seal on a braided cord, a quill in an inkpot at left, and the silhouette of Runnymede meadow with the great oak under a starry medieval-night sky. Palette: royal blue, gold leaf, crimson seal, parchment cream, over #0d1117.
+
+<img src="./doodle-archive/2026/06/2026-06-16-104750.svg" width="800" alt="Daily doodle archived for June 16, 2026: Magna Carta 811th anniversary — unrolled illuminated parchment with the date in blackletter, a hanging crimson royal wax seal, a quill in an inkpot, and the Runnymede meadow with the great oak under a medieval-night sky">
+
+---
+
 ## June 15, 2026 — UNIVAC I 75th anniversary (June 14, 1951 — Remington Rand delivers the first UNIVAC I to the US Census Bureau; the first commercial computer in the United States). Mid-century mainframe console with a row of glowing vacuum tubes, a phosphor-green CRT showing the date, blinking patch-panel indicator lights, two flanking UNISERVO reel-to-reel tape drives spinning in opposite directions, and a punched paper tape drifting across the top. Palette: vacuum-tube amber, brushed-steel blue-grey, phosphor green, over #0d1117.
 
 <img src="./doodle-archive/2026/06/2026-06-15-113837.svg" width="800" alt="Daily doodle archived for June 15, 2026: UNIVAC I 75th anniversary — mid-century mainframe console with vacuum tubes, phosphor-green CRT showing the date, indicator lamps, twin UNISERVO reel-to-reel tape drives, and drifting punched paper tape">
