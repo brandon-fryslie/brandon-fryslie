@@ -1,301 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Magna Carta 811th anniversary (June 15, 1215 — King John seals the Great Charter at Runnymede, on the south bank of the River Thames, Surrey, England). Unrolled illuminated parchment with the date set in blackletter calligraphy, a hanging crimson royal wax seal on a braided cord, a quill in an inkpot at left, and the silhouette of Runnymede meadow with the great oak under a starry medieval-night sky. Palette: royal blue, gold leaf, crimson seal, parchment cream, over #0d1117. -->
+<!-- theme: Bloomsday (June 16) — the single day on which James Joyce's Ulysses (1904) takes place in Dublin, annually celebrated since 1954. Composition: Edwardian Dublin streetscape at dawn — Martello tower at left ("Stately, plump Buck Mulligan came from the stairhead..."), Dublin rooftops with chimneys at right, gulls wheeling over the Liffey, a floating straw boater hat (Leopold Bloom's), gentleman's spectacles, and the date set in tall serif type as if hand-lettered on a sky-blue Joyce-book spine. Palette: Joyce-book sky blue (#3a6fb0), cream paper, dawn rose, dark Dublin slate, over #0d1117. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="June 15, 2026 — Magna Carta 811th anniversary: King John seals the Great Charter at Runnymede on June 15, 1215">
+     aria-label="June 16, 2026 — Bloomsday: the single day of James Joyce's Ulysses, set in Dublin on June 16, 1904">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bgsky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"  stop-color="#0d1117"/>
-      <stop offset="55%" stop-color="#101a3a"/>
-      <stop offset="100%" stop-color="#1a2a55"/>
+      <stop offset="35%" stop-color="#15233f"/>
+      <stop offset="70%" stop-color="#5a4b6e"/>
+      <stop offset="100%" stop-color="#d68a6a"/>
     </linearGradient>
-    <linearGradient id="parchment" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#f5e7c1"/>
-      <stop offset="55%" stop-color="#e9d49a"/>
-      <stop offset="100%" stop-color="#caa86b"/>
+    <linearGradient id="joyceSpine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#5a8dd1"/>
+      <stop offset="50%" stop-color="#3a6fb0"/>
+      <stop offset="100%" stop-color="#234a82"/>
     </linearGradient>
-    <linearGradient id="parchEdge" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#a68146"/>
-      <stop offset="100%" stop-color="#6f4f24"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fbf3dc"/>
+      <stop offset="100%" stop-color="#e7d6a8"/>
     </linearGradient>
-    <radialGradient id="wax" cx="50%" cy="45%" r="55%">
-      <stop offset="0%"  stop-color="#ff7a6a"/>
-      <stop offset="45%" stop-color="#c8261c"/>
-      <stop offset="100%" stop-color="#5a0a06"/>
+    <linearGradient id="straw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f0d27a"/>
+      <stop offset="100%" stop-color="#a07a2a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#ffd9a8"/>
+      <stop offset="50%" stop-color="#e08a52" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#3a1810" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="waxRing" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#ffd2b0" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#7a1410" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#3a0805" stop-opacity="0.7"/>
-    </radialGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#fff3b0"/>
-      <stop offset="50%" stop-color="#e6c14a"/>
-      <stop offset="100%" stop-color="#a07a16"/>
+    <linearGradient id="liffey" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#6a7a90"/>
+      <stop offset="100%" stop-color="#2a3a52"/>
     </linearGradient>
-    <linearGradient id="quillFeather" x1="0" y1="0" x2="1" y2="0.5">
-      <stop offset="0%"  stop-color="#f4ead2"/>
-      <stop offset="60%" stop-color="#cdb886"/>
-      <stop offset="100%" stop-color="#7a6537"/>
+    <linearGradient id="towerStone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#4a4035"/>
+      <stop offset="100%" stop-color="#1a1410"/>
     </linearGradient>
-    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#fff4b8"/>
-      <stop offset="60%" stop-color="#e6c14a" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="rooftop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#2a2a36"/>
+      <stop offset="100%" stop-color="#0e0e16"/>
+    </linearGradient>
 
-    <!-- Trefoil flourish used as a corner decoration -->
-    <g id="trefoil">
-      <path d="M0,-5 C3,-5 5,-3 5,0 C5,3 3,5 0,5 C-3,5 -5,3 -5,0 C-5,-3 -3,-5 0,-5 Z"
-            fill="url(#gold)" opacity="0.85"/>
-      <circle r="1.6" fill="#5a3a0a"/>
-    </g>
+    <!-- Gull silhouette used twice -->
+    <symbol id="gull" viewBox="-10 -4 20 8">
+      <path d="M-10,0 Q-6,-4 -3,-1 Q0,-3 3,-1 Q6,-4 10,0" stroke="#f3e2c8" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
   </defs>
 
-  <!-- Night sky -->
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- Dawn sky -->
+  <rect width="800" height="200" fill="url(#bgsky)"/>
 
-  <!-- Stars (medieval night) -->
-  <g fill="#fff4b8">
-    <circle cx="55"  cy="22" r="0.9"><animate attributeName="opacity" values="0.25;1;0.25" dur="7s"  repeatCount="indefinite"/></circle>
-    <circle cx="105" cy="38" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4"  dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
-    <circle cx="155" cy="18" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3"  dur="13s" begin="-5s" repeatCount="indefinite"/></circle>
-    <circle cx="210" cy="30" r="0.6"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s"  begin="-3s" repeatCount="indefinite"/></circle>
-    <circle cx="260" cy="44" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4"  dur="11s" begin="-6s" repeatCount="indefinite"/></circle>
-    <circle cx="540" cy="28" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3"  dur="13s" begin="-4s" repeatCount="indefinite"/></circle>
-    <circle cx="595" cy="44" r="0.6"><animate attributeName="opacity" values="0.4;1;0.4"  dur="7s"  begin="-1s" repeatCount="indefinite"/></circle>
-    <circle cx="650" cy="20" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3"  dur="11s" begin="-7s" repeatCount="indefinite"/></circle>
-    <circle cx="710" cy="36" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4"  dur="13s" begin="-3s" repeatCount="indefinite"/></circle>
-    <circle cx="760" cy="22" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3"  dur="7s"  begin="-5s" repeatCount="indefinite"/></circle>
-  </g>
-
-  <!-- Crescent moon, upper left of center -->
-  <g transform="translate(135 46)">
-    <circle r="14" fill="url(#starGlow)" opacity="0.35"/>
-    <path d="M-7,-9 a11,11 0 1 0 0,18 a8,8 0 1 1 0,-18 z" fill="#f3e2a4" opacity="0.85"/>
-  </g>
-
-  <!-- Distant Gothic arch silhouette pattern (faint architecture motif) -->
-  <g opacity="0.18" fill="#1a2a55" stroke="#3a4a7a" stroke-width="0.5">
-    <path d="M30,170 L30,90 Q30,60 50,60 Q70,60 70,90 L70,170 Z"/>
-    <path d="M80,170 L80,75 Q80,42 105,42 Q130,42 130,75 L130,170 Z"/>
-    <path d="M140,170 L140,90 Q140,60 160,60 Q180,60 180,90 L180,170 Z"/>
-    <path d="M620,170 L620,90 Q620,60 640,60 Q660,60 660,90 L660,170 Z"/>
-    <path d="M670,170 L670,75 Q670,42 695,42 Q720,42 720,75 L720,170 Z"/>
-    <path d="M730,170 L730,90 Q730,60 750,60 Q770,60 770,90 L770,170 Z"/>
-  </g>
-
-  <!-- Runnymede meadow horizon: rolling hills + the great oak silhouette -->
+  <!-- Dawn sun rising over the Liffey -->
   <g>
-    <path d="M0,168 Q120,150 250,162 Q400,176 560,156 Q700,140 800,162 L800,200 L0,200 Z"
-          fill="#0a1430"/>
-    <path d="M0,178 Q150,168 320,176 Q500,186 700,170 Q760,164 800,172 L800,200 L0,200 Z"
-          fill="#060c1c"/>
-    <!-- Distant Thames river glint -->
-    <path d="M0,182 Q200,177 400,182 Q600,187 800,180" stroke="#2a4a7a" stroke-width="0.6" fill="none" opacity="0.65"/>
-    <path d="M0,186 Q200,182 400,186 Q600,190 800,184" stroke="#2a4a7a" stroke-width="0.4" fill="none" opacity="0.45"/>
+    <circle cx="430" cy="148" r="58" fill="url(#sun)" opacity="0.85">
+      <animate attributeName="r" values="56;62;56" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="430" cy="148" r="14" fill="#ffe6c2" opacity="0.85"/>
   </g>
 
-  <!-- Great oak of Runnymede (left), small castle (right) -->
-  <g transform="translate(80 168)">
-    <rect x="-1.8" y="-26" width="3.6" height="26" fill="#0a0a0a"/>
-    <ellipse cx="0" cy="-32" rx="22" ry="14" fill="#0a0a0a"/>
-    <ellipse cx="-10" cy="-36" rx="11" ry="8" fill="#0a0a0a"/>
-    <ellipse cx="10"  cy="-36" rx="11" ry="8" fill="#0a0a0a"/>
-    <ellipse cx="0"   cy="-42" rx="12" ry="8" fill="#0a0a0a"/>
-  </g>
-  <g transform="translate(720 162)" fill="#0a0a0a">
-    <rect x="-22" y="-18" width="44" height="18"/>
-    <rect x="-22" y="-26" width="6" height="8"/>
-    <rect x="-12" y="-26" width="6" height="8"/>
-    <rect x="-2"  y="-26" width="6" height="8"/>
-    <rect x="8"   y="-26" width="6" height="8"/>
-    <rect x="18"  y="-26" width="6" height="8"/>
-    <rect x="-4" y="-34" width="8" height="10"/>
-    <polygon points="-4,-34 0,-40 4,-34"/>
-    <line x1="0" y1="-40" x2="0" y2="-44" stroke="#0a0a0a" stroke-width="1"/>
-    <path d="M0,-44 L5,-43 L5,-41 L0,-41 Z" fill="#c8261c" opacity="0.85"/>
+  <!-- Faint stars, fading with the dawn -->
+  <g fill="#fbf3dc">
+    <circle cx="70"  cy="22" r="0.7"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="160" cy="14" r="0.6"><animate attributeName="opacity" values="0.5;0.1;0.5"  dur="13s" begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="240" cy="28" r="0.5"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="7s"  begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="610" cy="20" r="0.6"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="11s" begin="-5s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="32" r="0.7"><animate attributeName="opacity" values="0.5;0.1;0.5"  dur="13s" begin="-7s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="18" r="0.5"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="7s"  begin="-4s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- ============ MAIN PARCHMENT ============ -->
+  <!-- Distant Dublin Bay / Liffey water -->
+  <g>
+    <rect x="0" y="170" width="800" height="30" fill="url(#liffey)" opacity="0.85"/>
+    <!-- water glints -->
+    <g stroke="#c2c9d6" stroke-width="0.5" opacity="0.55" fill="none">
+      <path d="M40,178 Q80,176 120,178 T200,178"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="7s" repeatCount="indefinite"/></path>
+      <path d="M260,184 Q300,182 340,184 T420,184"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="11s" begin="-2s" repeatCount="indefinite"/></path>
+      <path d="M460,180 Q500,178 540,180 T620,180"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="13s" begin="-4s" repeatCount="indefinite"/></path>
+      <path d="M620,188 Q660,186 700,188 T780,188"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="7s"  begin="-1s" repeatCount="indefinite"/></path>
+      <path d="M20,192 Q60,190 100,192 T180,192"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="11s" begin="-6s" repeatCount="indefinite"/></path>
+    </g>
+    <!-- Sun reflection on water -->
+    <ellipse cx="430" cy="178" rx="50" ry="2" fill="#ffd9a8" opacity="0.55"/>
+    <ellipse cx="430" cy="184" rx="34" ry="1.4" fill="#ffd9a8" opacity="0.4"/>
+    <ellipse cx="430" cy="190" rx="22" ry="1" fill="#ffd9a8" opacity="0.3"/>
+  </g>
+
+  <!-- Distant low Dublin shoreline behind water -->
+  <path d="M0,168 Q120,164 250,166 Q360,168 430,164 Q510,168 620,165 Q720,162 800,166 L800,172 L0,172 Z"
+        fill="#1a1820" opacity="0.95"/>
+
+  <!-- ============ MARTELLO TOWER (Sandycove) at left ============ -->
+  <g transform="translate(110 168)">
+    <!-- tower body (squat cylinder) -->
+    <path d="M-30,0 L-30,-72 Q-30,-78 -22,-80 L22,-80 Q30,-78 30,-72 L30,0 Z"
+          fill="url(#towerStone)" stroke="#0a0808" stroke-width="0.6"/>
+    <!-- crenellated top -->
+    <g fill="#1a1410">
+      <rect x="-32" y="-86" width="64" height="8"/>
+      <rect x="-32" y="-92" width="6" height="6"/>
+      <rect x="-20" y="-92" width="6" height="6"/>
+      <rect x="-8"  y="-92" width="6" height="6"/>
+      <rect x="4"   y="-92" width="6" height="6"/>
+      <rect x="16"  y="-92" width="6" height="6"/>
+      <rect x="26"  y="-92" width="6" height="6"/>
+    </g>
+    <!-- stone courses -->
+    <g stroke="#6a5a48" stroke-width="0.3" opacity="0.5" fill="none">
+      <path d="M-30,-20 L30,-20"/>
+      <path d="M-30,-40 L30,-40"/>
+      <path d="M-30,-60 L30,-60"/>
+    </g>
+    <!-- narrow window slit -->
+    <rect x="-2" y="-50" width="4" height="10" fill="#0d1117"/>
+    <rect x="-2" y="-50" width="4" height="10" fill="#ffd9a8" opacity="0.35">
+      <animate attributeName="opacity" values="0.2;0.55;0.2" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <!-- low rocky base -->
+    <path d="M-50,0 Q-30,-4 -10,-2 Q10,0 30,-3 Q50,-1 60,2 L60,8 L-50,8 Z" fill="#0e0c14"/>
+  </g>
+
+  <!-- ============ DUBLIN ROOFTOPS at right ============ -->
+  <g transform="translate(680 168)">
+    <!-- back row houses -->
+    <g fill="url(#rooftop)">
+      <polygon points="-90,0 -90,-50 -72,-58 -54,-50 -54,0"/>
+      <polygon points="-54,0 -54,-46 -36,-54 -18,-46 -18,0"/>
+      <polygon points="-18,0 -18,-54 0,-62 18,-54 18,0"/>
+      <polygon points="18,0 18,-48 36,-56 54,-48 54,0"/>
+      <polygon points="54,0 54,-52 72,-60 90,-52 90,0"/>
+      <polygon points="90,0 90,-44 100,-50 100,0"/>
+    </g>
+    <!-- chimneys -->
+    <g fill="#2a242e">
+      <rect x="-78" y="-66" width="6" height="14"/>
+      <rect x="-40" y="-62" width="6" height="14"/>
+      <rect x="-4"  y="-70" width="6" height="14"/>
+      <rect x="38"  y="-64" width="6" height="14"/>
+      <rect x="74"  y="-68" width="6" height="14"/>
+    </g>
+    <!-- chimney smoke (slow rise) -->
+    <g fill="#c2c2cc" opacity="0.45">
+      <circle cx="-75" cy="-72" r="2">
+        <animate attributeName="cy" values="-72;-100;-72" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;0;0.55" dur="13s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-1" cy="-76" r="2.2">
+        <animate attributeName="cy" values="-76;-108;-76" dur="11s" begin="-2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="77" cy="-74" r="1.8">
+        <animate attributeName="cy" values="-74;-104;-74" dur="13s" begin="-5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="13s" begin="-5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- a few warm windows -->
+    <g fill="#ffd28a" opacity="0.85">
+      <rect x="-68" y="-30" width="4" height="5"/>
+      <rect x="-46" y="-26" width="4" height="5"><animate attributeName="opacity" values="0.4;0.95;0.4" dur="7s" repeatCount="indefinite"/></rect>
+      <rect x="-26" y="-32" width="4" height="5"/>
+      <rect x="-6" y="-40" width="4" height="5"><animate attributeName="opacity" values="0.5;0.95;0.5" dur="11s" begin="-2s" repeatCount="indefinite"/></rect>
+      <rect x="22" y="-28" width="4" height="5"/>
+      <rect x="44" y="-34" width="4" height="5"><animate attributeName="opacity" values="0.4;0.95;0.4" dur="13s" begin="-3s" repeatCount="indefinite"/></rect>
+      <rect x="66" y="-26" width="4" height="5"/>
+    </g>
+  </g>
+
+  <!-- ============ CENTRAL JOYCE-BOOK SPINE with THE DATE ============ -->
   <g transform="translate(400 100)">
-    <!-- Soft warm glow behind parchment -->
-    <ellipse cx="0" cy="0" rx="320" ry="90" fill="url(#starGlow)" opacity="0.18"/>
+    <!-- subtle book glow -->
+    <ellipse cx="0" cy="0" rx="180" ry="60" fill="#ffd9a8" opacity="0.08"/>
 
-    <!-- Left roll -->
-    <g transform="translate(-256 0)">
-      <ellipse cx="0" cy="0" rx="10" ry="62" fill="url(#parchEdge)"/>
-      <ellipse cx="-3" cy="0" rx="6" ry="58" fill="#d6b67a"/>
-      <ellipse cx="-5" cy="0" rx="3" ry="55" fill="#a07a3a"/>
-    </g>
+    <!-- book spine -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-0.6;0.6;-0.6" dur="13s" repeatCount="indefinite"/>
+      <!-- shadow under spine -->
+      <ellipse cx="4" cy="68" rx="150" ry="5" fill="#000" opacity="0.5"/>
+      <!-- spine body -->
+      <rect x="-150" y="-66" width="300" height="132" rx="2" fill="url(#joyceSpine)" stroke="#0a1830" stroke-width="0.8"/>
+      <!-- gold rule lines top & bottom (typical Joyce trade-paperback styling) -->
+      <line x1="-140" y1="-56" x2="140" y2="-56" stroke="#e6c14a" stroke-width="0.6" opacity="0.9"/>
+      <line x1="-140" y1="-52" x2="140" y2="-52" stroke="#e6c14a" stroke-width="0.3" opacity="0.7"/>
+      <line x1="-140" y1="52"  x2="140" y2="52"  stroke="#e6c14a" stroke-width="0.3" opacity="0.7"/>
+      <line x1="-140" y1="56"  x2="140" y2="56"  stroke="#e6c14a" stroke-width="0.6" opacity="0.9"/>
 
-    <!-- Right roll -->
-    <g transform="translate(256 0)">
-      <ellipse cx="0" cy="0" rx="10" ry="62" fill="url(#parchEdge)"/>
-      <ellipse cx="3" cy="0" rx="6" ry="58" fill="#d6b67a"/>
-      <ellipse cx="5" cy="0" rx="3" ry="55" fill="#a07a3a"/>
-    </g>
-
-    <!-- Parchment body with slightly wavy top/bottom (drapes between rolls) -->
-    <path d="M-256,-58
-             Q-128,-66 0,-60
-             Q128,-54 256,-58
-             L256,58
-             Q128,66 0,60
-             Q-128,54 -256,58 Z"
-          fill="url(#parchment)" stroke="#8a6a32" stroke-width="0.8"/>
-
-    <!-- Subtle horizontal scribe lines on parchment -->
-    <g stroke="#a07a3a" stroke-width="0.25" opacity="0.5">
-      <path d="M-230,-40 Q0,-44 230,-40"/>
-      <path d="M-230,-28 Q0,-32 230,-28"/>
-      <path d="M-230,32 Q0,36 230,32"/>
-      <path d="M-230,42 Q0,46 230,42"/>
-    </g>
-
-    <!-- Gold double border -->
-    <path d="M-244,-50 Q-122,-58 0,-52 Q122,-46 244,-50
-             L244,50 Q122,58 0,52 Q-122,46 -244,50 Z"
-          fill="none" stroke="url(#gold)" stroke-width="0.9" opacity="0.95"/>
-    <path d="M-238,-46 Q-120,-54 0,-48 Q120,-42 238,-46
-             L238,46 Q120,54 0,48 Q-120,42 -238,46 Z"
-          fill="none" stroke="url(#gold)" stroke-width="0.4" opacity="0.85"/>
-
-    <!-- Gold corner flourishes -->
-    <g transform="translate(-228 -38)"><use href="#trefoil"/></g>
-    <g transform="translate(228 -38)"><use href="#trefoil"/></g>
-    <g transform="translate(-228 38)"><use href="#trefoil"/></g>
-    <g transform="translate(228 38)"><use href="#trefoil"/></g>
-
-    <!-- Header: Latin / charter title -->
-    <text x="0" y="-22" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif" font-style="italic"
-          font-size="11" fill="#7a5418" letter-spacing="5" opacity="0.92">
-      MAGNA  CARTA  LIBERTATUM
-    </text>
-
-    <!-- Illuminated drop-cap "I" on left -->
-    <g transform="translate(-200 8)">
-      <rect x="-10" y="-16" width="22" height="32" fill="#1e3a8a" stroke="url(#gold)" stroke-width="0.8"/>
-      <text x="1" y="9" text-anchor="middle"
+      <!-- author line at top -->
+      <text x="0" y="-30" text-anchor="middle"
             font-family="Georgia, 'Times New Roman', serif"
-            font-size="26" font-weight="700" fill="url(#gold)">I</text>
+            font-size="11" fill="#fbf3dc" letter-spacing="6" opacity="0.95">
+        J A M E S   J O Y C E
+      </text>
+
+      <!-- title -->
+      <text x="0" y="-8" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+            font-size="16" fill="#fbf3dc" letter-spacing="4" opacity="0.95">
+        Ulysses
+      </text>
+
+      <!-- THE DATE — primary visual element -->
+      <text x="0" y="28" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="34" font-weight="700"
+            fill="#fbf3dc"
+            style="paint-order:stroke; stroke:#0a1830; stroke-width:0.6"
+            letter-spacing="3">JUNE 16, 2026</text>
+
+      <!-- subline: Bloomsday -->
+      <text x="0" y="50" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+            font-size="10" fill="#e6c14a" letter-spacing="6" opacity="0.95">
+        B L O O M S D A Y · D U B L I N
+      </text>
     </g>
+  </g>
 
-    <!-- THE DATE — primary visual -->
-    <text x="20" y="14" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="34" font-weight="700"
-          fill="#1a1208"
-          style="paint-order:stroke; stroke:#e8c970; stroke-width:0.6"
-          letter-spacing="2">JUNE 15, 2026</text>
+  <!-- ============ STRAW BOATER HAT (drifting above the book) ============ -->
+  <g transform="translate(250 60)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="250,60; 252,56; 250,60; 248,64; 250,60" dur="11s" repeatCount="indefinite"/>
+    <!-- shadow -->
+    <ellipse cx="2" cy="14" rx="22" ry="2" fill="#000" opacity="0.35"/>
+    <!-- brim -->
+    <ellipse cx="0" cy="6" rx="22" ry="5" fill="url(#straw)" stroke="#5a4018" stroke-width="0.5"/>
+    <!-- crown -->
+    <path d="M-14,6 Q-14,-8 0,-8 Q14,-8 14,6 Z" fill="url(#straw)" stroke="#5a4018" stroke-width="0.5"/>
+    <!-- crown highlight strands -->
+    <g stroke="#5a4018" stroke-width="0.25" opacity="0.55" fill="none">
+      <path d="M-12,-2 Q0,-4 12,-2"/>
+      <path d="M-12,2 Q0,0 12,2"/>
+      <path d="M-12,5 Q0,3 12,5"/>
+    </g>
+    <!-- black hatband -->
+    <path d="M-14,6 Q-14,2 0,2 Q14,2 14,6 L14,7 Q14,3 0,3 Q-14,3 -14,7 Z" fill="#1a1208"/>
+  </g>
 
-    <!-- Anniversary subline -->
-    <text x="20" y="34" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif" font-style="italic"
-          font-size="9" fill="#5a3e14" letter-spacing="3">
-      Runnymede · 811 years sealed
+  <!-- ============ PINCE-NEZ SPECTACLES (drifting right of center) ============ -->
+  <g transform="translate(560 70)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="560,70; 558,66; 560,70; 562,74; 560,70" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    <!-- bridge -->
+    <path d="M-9,0 Q0,-4 9,0" stroke="#e6c14a" stroke-width="1.1" fill="none"/>
+    <!-- left lens -->
+    <circle cx="-15" cy="2" r="8" fill="#0d1117" fill-opacity="0.3" stroke="#e6c14a" stroke-width="1.2"/>
+    <circle cx="-17" cy="0" r="2" fill="#ffd9a8" opacity="0.55"/>
+    <!-- right lens -->
+    <circle cx="15"  cy="2" r="8" fill="#0d1117" fill-opacity="0.3" stroke="#e6c14a" stroke-width="1.2"/>
+    <circle cx="13"  cy="0" r="2" fill="#ffd9a8" opacity="0.55"/>
+    <!-- dangling ribbon -->
+    <path d="M23,8 Q26,16 24,24 Q22,32 25,40" stroke="#1a1208" stroke-width="0.8" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- ============ GULLS wheeling over the Liffey ============ -->
+  <g>
+    <use href="#gull" x="180" y="38" width="20" height="8">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 30,-6; 60,0; 90,6; 120,0" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#gull" x="320" y="22" width="16" height="6">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -25,6; -50,0; -75,-6; -100,0" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </use>
+    <use href="#gull" x="500" y="46" width="18" height="7">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 25,-4; 50,0; 75,4; 100,0" dur="13s" begin="-5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#gull" x="600" y="30" width="14" height="6">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -20,4; -40,0; -60,-4; -80,0" dur="7s" begin="-1s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Floating ink-colored Joycean words (very faint, "stream of consciousness") -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-style="italic" fill="#fbf3dc" opacity="0.18">
+    <text x="40" y="100" font-size="8">
+      yes
+      <animate attributeName="opacity" values="0.05;0.35;0.05" dur="11s" repeatCount="indefinite"/>
     </text>
-
-  </g>
-
-  <!-- ============ HANGING ROYAL WAX SEAL ============ -->
-  <g transform="translate(560 160)">
-    <!-- braided cord from parchment down to seal -->
-    <g>
-      <path d="M0,-58 Q1,-40 -1,-22 Q1,-10 0,0" stroke="#7a1410" stroke-width="2.2" fill="none"/>
-      <path d="M0,-58 Q-1,-40 1,-22 Q-1,-10 0,0" stroke="#c8261c" stroke-width="1.2" fill="none" opacity="0.85"/>
-    </g>
-    <!-- the seal swings as a group -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate"
-                        values="-2.5;2.5;-2.5" dur="11s" repeatCount="indefinite"/>
-      <!-- shadow on parchment behind -->
-      <ellipse cx="2" cy="22" rx="20" ry="3" fill="#000" opacity="0.35"/>
-      <!-- wax disc -->
-      <circle r="22" fill="url(#wax)" stroke="#5a0a06" stroke-width="0.8"/>
-      <circle r="22" fill="url(#waxRing)"/>
-      <!-- impressed circular Latin legend -->
-      <circle r="18" fill="none" stroke="#3a0805" stroke-width="0.5" opacity="0.7"/>
-      <circle r="14" fill="none" stroke="#3a0805" stroke-width="0.3" opacity="0.55"/>
-      <!-- King-on-throne emblem: simplified -->
-      <g fill="#3a0805" opacity="0.85">
-        <!-- throne -->
-        <rect x="-7" y="-2" width="14" height="9" rx="1"/>
-        <rect x="-9" y="-4" width="2" height="11"/>
-        <rect x="7"  y="-4" width="2" height="11"/>
-        <!-- king body -->
-        <path d="M-5,-2 L-5,-9 L5,-9 L5,-2 Z"/>
-        <!-- head -->
-        <circle cx="0" cy="-12" r="3"/>
-        <!-- crown -->
-        <path d="M-4,-14 L-4,-16 L-2,-15 L0,-17 L2,-15 L4,-16 L4,-14 Z"/>
-        <!-- orb & sceptre arms -->
-        <rect x="-9" y="-9" width="3" height="1.5"/>
-        <rect x="6"  y="-9" width="3" height="1.5"/>
-      </g>
-      <!-- specular highlight -->
-      <ellipse cx="-8" cy="-10" rx="6" ry="3" fill="#ffb4a0" opacity="0.45"/>
-    </g>
-  </g>
-
-  <!-- ============ QUILL + INKPOT (left) ============ -->
-  <g transform="translate(220 158)">
-    <!-- inkpot -->
-    <ellipse cx="0" cy="6" rx="14" ry="3.5" fill="#0a0a14" opacity="0.6"/>
-    <path d="M-11,-2 L-13,8 Q-13,12 0,12 Q13,12 13,8 L11,-2 Z" fill="#1a1a28" stroke="#3a3a55" stroke-width="0.5"/>
-    <ellipse cx="0" cy="-2" rx="11" ry="3" fill="#05050a" stroke="#3a3a55" stroke-width="0.5"/>
-    <ellipse cx="0" cy="-2.5" rx="9" ry="2.2" fill="#0a0a14"/>
-    <!-- ink shimmer -->
-    <ellipse cx="-2" cy="-2.8" rx="3" ry="0.7" fill="#5a5a8a" opacity="0.6">
-      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="13s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- quill: feather curving up to the right -->
-    <g transform="translate(2 -2) rotate(-58)">
-      <animateTransform attributeName="transform" type="rotate"
-                        additive="sum" values="0;1.2;0;-1;0" dur="11s" repeatCount="indefinite"/>
-      <!-- nib -->
-      <path d="M0,0 L-2,4 L2,4 Z" fill="#1a1208"/>
-      <!-- shaft -->
-      <path d="M-1.2,0 L-3,-58 L3,-58 L1.2,0 Z" fill="url(#quillFeather)" stroke="#5a4a20" stroke-width="0.3"/>
-      <!-- feather barbs -->
-      <g stroke="#7a6537" stroke-width="0.4" opacity="0.7">
-        <path d="M-2,-10 Q-9,-12 -12,-8"/>
-        <path d="M2,-12 Q9,-14 12,-10"/>
-        <path d="M-2.5,-22 Q-11,-25 -15,-21"/>
-        <path d="M2.5,-24 Q11,-27 15,-23"/>
-        <path d="M-3,-34 Q-12,-38 -16,-34"/>
-        <path d="M3,-36 Q12,-40 16,-36"/>
-        <path d="M-3.2,-46 Q-10,-50 -13,-47"/>
-        <path d="M3.2,-48 Q10,-52 13,-49"/>
-      </g>
-      <!-- soft feather body wash -->
-      <path d="M-3,-58 Q-14,-40 -5,-12 Q-1,-4 -1.2,0 L1.2,0 Q1,-4 5,-12 Q14,-40 3,-58 Z"
-            fill="url(#quillFeather)" opacity="0.45"/>
-    </g>
-    <!-- ink drip from nib -->
-    <circle cx="2" cy="2" r="0.9" fill="#05050a">
-      <animate attributeName="cy" values="2;14;14" keyTimes="0;0.5;1" dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.45;0.55" dur="7s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- floating gold motes (illuminated dust) -->
-  <g fill="url(#gold)" opacity="0.7">
-    <circle cx="320" cy="40" r="0.8">
-      <animate attributeName="cy" values="40;25;40" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="480" cy="50" r="0.7">
-      <animate attributeName="cy" values="50;32;50" dur="11s" begin="-2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="-2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="380" cy="30" r="0.6">
-      <animate attributeName="cy" values="30;15;30" dur="7s" begin="-1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s" begin="-1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="440" cy="60" r="0.6">
-      <animate attributeName="cy" values="60;40;60" dur="13s" begin="-5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" begin="-5s" repeatCount="indefinite"/>
-    </circle>
+    <text x="120" y="140" font-size="7">
+      ineluctable
+      <animate attributeName="opacity" values="0.05;0.3;0.05" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </text>
+    <text x="720" y="100" font-size="8">
+      yes I said yes
+      <animate attributeName="opacity" values="0.05;0.35;0.05" dur="11s" begin="-5s" repeatCount="indefinite"/>
+    </text>
+    <text x="660" y="150" font-size="7">
+      snotgreen sea
+      <animate attributeName="opacity" values="0.05;0.3;0.05" dur="13s" begin="-7s" repeatCount="indefinite"/>
+    </text>
   </g>
 </svg>
