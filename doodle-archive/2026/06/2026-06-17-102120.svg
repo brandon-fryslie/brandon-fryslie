@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Bloomsday (June 16) — the single day on which James Joyce's Ulysses (1904) takes place in Dublin, annually celebrated since 1954. Composition: Edwardian Dublin streetscape at dawn — Martello tower at left ("Stately, plump Buck Mulligan came from the stairhead..."), Dublin rooftops with chimneys at right, gulls wheeling over the Liffey, a floating straw boater hat (Leopold Bloom's), gentleman's spectacles, and the date set in tall serif type as if hand-lettered on a sky-blue Joyce-book spine. Palette: Joyce-book sky blue (#3a6fb0), cream paper, dawn rose, dark Dublin slate, over #0d1117. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="June 16, 2026 — Bloomsday: the single day of James Joyce's Ulysses, set in Dublin on June 16, 1904">
+  <defs>
+    <linearGradient id="bgsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0d1117"/>
+      <stop offset="35%" stop-color="#15233f"/>
+      <stop offset="70%" stop-color="#5a4b6e"/>
+      <stop offset="100%" stop-color="#d68a6a"/>
+    </linearGradient>
+    <linearGradient id="joyceSpine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#5a8dd1"/>
+      <stop offset="50%" stop-color="#3a6fb0"/>
+      <stop offset="100%" stop-color="#234a82"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fbf3dc"/>
+      <stop offset="100%" stop-color="#e7d6a8"/>
+    </linearGradient>
+    <linearGradient id="straw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f0d27a"/>
+      <stop offset="100%" stop-color="#a07a2a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#ffd9a8"/>
+      <stop offset="50%" stop-color="#e08a52" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#3a1810" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="liffey" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#6a7a90"/>
+      <stop offset="100%" stop-color="#2a3a52"/>
+    </linearGradient>
+    <linearGradient id="towerStone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#4a4035"/>
+      <stop offset="100%" stop-color="#1a1410"/>
+    </linearGradient>
+    <linearGradient id="rooftop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#2a2a36"/>
+      <stop offset="100%" stop-color="#0e0e16"/>
+    </linearGradient>
+
+    <!-- Gull silhouette used twice -->
+    <symbol id="gull" viewBox="-10 -4 20 8">
+      <path d="M-10,0 Q-6,-4 -3,-1 Q0,-3 3,-1 Q6,-4 10,0" stroke="#f3e2c8" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+
+  <!-- Dawn sky -->
+  <rect width="800" height="200" fill="url(#bgsky)"/>
+
+  <!-- Dawn sun rising over the Liffey -->
+  <g>
+    <circle cx="430" cy="148" r="58" fill="url(#sun)" opacity="0.85">
+      <animate attributeName="r" values="56;62;56" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="430" cy="148" r="14" fill="#ffe6c2" opacity="0.85"/>
+  </g>
+
+  <!-- Faint stars, fading with the dawn -->
+  <g fill="#fbf3dc">
+    <circle cx="70"  cy="22" r="0.7"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="160" cy="14" r="0.6"><animate attributeName="opacity" values="0.5;0.1;0.5"  dur="13s" begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="240" cy="28" r="0.5"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="7s"  begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="610" cy="20" r="0.6"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="11s" begin="-5s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="32" r="0.7"><animate attributeName="opacity" values="0.5;0.1;0.5"  dur="13s" begin="-7s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="18" r="0.5"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="7s"  begin="-4s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Distant Dublin Bay / Liffey water -->
+  <g>
+    <rect x="0" y="170" width="800" height="30" fill="url(#liffey)" opacity="0.85"/>
+    <!-- water glints -->
+    <g stroke="#c2c9d6" stroke-width="0.5" opacity="0.55" fill="none">
+      <path d="M40,178 Q80,176 120,178 T200,178"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="7s" repeatCount="indefinite"/></path>
+      <path d="M260,184 Q300,182 340,184 T420,184"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="11s" begin="-2s" repeatCount="indefinite"/></path>
+      <path d="M460,180 Q500,178 540,180 T620,180"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="13s" begin="-4s" repeatCount="indefinite"/></path>
+      <path d="M620,188 Q660,186 700,188 T780,188"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="7s"  begin="-1s" repeatCount="indefinite"/></path>
+      <path d="M20,192 Q60,190 100,192 T180,192"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="11s" begin="-6s" repeatCount="indefinite"/></path>
+    </g>
+    <!-- Sun reflection on water -->
+    <ellipse cx="430" cy="178" rx="50" ry="2" fill="#ffd9a8" opacity="0.55"/>
+    <ellipse cx="430" cy="184" rx="34" ry="1.4" fill="#ffd9a8" opacity="0.4"/>
+    <ellipse cx="430" cy="190" rx="22" ry="1" fill="#ffd9a8" opacity="0.3"/>
+  </g>
+
+  <!-- Distant low Dublin shoreline behind water -->
+  <path d="M0,168 Q120,164 250,166 Q360,168 430,164 Q510,168 620,165 Q720,162 800,166 L800,172 L0,172 Z"
+        fill="#1a1820" opacity="0.95"/>
+
+  <!-- ============ MARTELLO TOWER (Sandycove) at left ============ -->
+  <g transform="translate(110 168)">
+    <!-- tower body (squat cylinder) -->
+    <path d="M-30,0 L-30,-72 Q-30,-78 -22,-80 L22,-80 Q30,-78 30,-72 L30,0 Z"
+          fill="url(#towerStone)" stroke="#0a0808" stroke-width="0.6"/>
+    <!-- crenellated top -->
+    <g fill="#1a1410">
+      <rect x="-32" y="-86" width="64" height="8"/>
+      <rect x="-32" y="-92" width="6" height="6"/>
+      <rect x="-20" y="-92" width="6" height="6"/>
+      <rect x="-8"  y="-92" width="6" height="6"/>
+      <rect x="4"   y="-92" width="6" height="6"/>
+      <rect x="16"  y="-92" width="6" height="6"/>
+      <rect x="26"  y="-92" width="6" height="6"/>
+    </g>
+    <!-- stone courses -->
+    <g stroke="#6a5a48" stroke-width="0.3" opacity="0.5" fill="none">
+      <path d="M-30,-20 L30,-20"/>
+      <path d="M-30,-40 L30,-40"/>
+      <path d="M-30,-60 L30,-60"/>
+    </g>
+    <!-- narrow window slit -->
+    <rect x="-2" y="-50" width="4" height="10" fill="#0d1117"/>
+    <rect x="-2" y="-50" width="4" height="10" fill="#ffd9a8" opacity="0.35">
+      <animate attributeName="opacity" values="0.2;0.55;0.2" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <!-- low rocky base -->
+    <path d="M-50,0 Q-30,-4 -10,-2 Q10,0 30,-3 Q50,-1 60,2 L60,8 L-50,8 Z" fill="#0e0c14"/>
+  </g>
+
+  <!-- ============ DUBLIN ROOFTOPS at right ============ -->
+  <g transform="translate(680 168)">
+    <!-- back row houses -->
+    <g fill="url(#rooftop)">
+      <polygon points="-90,0 -90,-50 -72,-58 -54,-50 -54,0"/>
+      <polygon points="-54,0 -54,-46 -36,-54 -18,-46 -18,0"/>
+      <polygon points="-18,0 -18,-54 0,-62 18,-54 18,0"/>
+      <polygon points="18,0 18,-48 36,-56 54,-48 54,0"/>
+      <polygon points="54,0 54,-52 72,-60 90,-52 90,0"/>
+      <polygon points="90,0 90,-44 100,-50 100,0"/>
+    </g>
+    <!-- chimneys -->
+    <g fill="#2a242e">
+      <rect x="-78" y="-66" width="6" height="14"/>
+      <rect x="-40" y="-62" width="6" height="14"/>
+      <rect x="-4"  y="-70" width="6" height="14"/>
+      <rect x="38"  y="-64" width="6" height="14"/>
+      <rect x="74"  y="-68" width="6" height="14"/>
+    </g>
+    <!-- chimney smoke (slow rise) -->
+    <g fill="#c2c2cc" opacity="0.45">
+      <circle cx="-75" cy="-72" r="2">
+        <animate attributeName="cy" values="-72;-100;-72" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;0;0.55" dur="13s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-1" cy="-76" r="2.2">
+        <animate attributeName="cy" values="-76;-108;-76" dur="11s" begin="-2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="77" cy="-74" r="1.8">
+        <animate attributeName="cy" values="-74;-104;-74" dur="13s" begin="-5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="13s" begin="-5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- a few warm windows -->
+    <g fill="#ffd28a" opacity="0.85">
+      <rect x="-68" y="-30" width="4" height="5"/>
+      <rect x="-46" y="-26" width="4" height="5"><animate attributeName="opacity" values="0.4;0.95;0.4" dur="7s" repeatCount="indefinite"/></rect>
+      <rect x="-26" y="-32" width="4" height="5"/>
+      <rect x="-6" y="-40" width="4" height="5"><animate attributeName="opacity" values="0.5;0.95;0.5" dur="11s" begin="-2s" repeatCount="indefinite"/></rect>
+      <rect x="22" y="-28" width="4" height="5"/>
+      <rect x="44" y="-34" width="4" height="5"><animate attributeName="opacity" values="0.4;0.95;0.4" dur="13s" begin="-3s" repeatCount="indefinite"/></rect>
+      <rect x="66" y="-26" width="4" height="5"/>
+    </g>
+  </g>
+
+  <!-- ============ CENTRAL JOYCE-BOOK SPINE with THE DATE ============ -->
+  <g transform="translate(400 100)">
+    <!-- subtle book glow -->
+    <ellipse cx="0" cy="0" rx="180" ry="60" fill="#ffd9a8" opacity="0.08"/>
+
+    <!-- book spine -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-0.6;0.6;-0.6" dur="13s" repeatCount="indefinite"/>
+      <!-- shadow under spine -->
+      <ellipse cx="4" cy="68" rx="150" ry="5" fill="#000" opacity="0.5"/>
+      <!-- spine body -->
+      <rect x="-150" y="-66" width="300" height="132" rx="2" fill="url(#joyceSpine)" stroke="#0a1830" stroke-width="0.8"/>
+      <!-- gold rule lines top & bottom (typical Joyce trade-paperback styling) -->
+      <line x1="-140" y1="-56" x2="140" y2="-56" stroke="#e6c14a" stroke-width="0.6" opacity="0.9"/>
+      <line x1="-140" y1="-52" x2="140" y2="-52" stroke="#e6c14a" stroke-width="0.3" opacity="0.7"/>
+      <line x1="-140" y1="52"  x2="140" y2="52"  stroke="#e6c14a" stroke-width="0.3" opacity="0.7"/>
+      <line x1="-140" y1="56"  x2="140" y2="56"  stroke="#e6c14a" stroke-width="0.6" opacity="0.9"/>
+
+      <!-- author line at top -->
+      <text x="0" y="-30" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="11" fill="#fbf3dc" letter-spacing="6" opacity="0.95">
+        J A M E S   J O Y C E
+      </text>
+
+      <!-- title -->
+      <text x="0" y="-8" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+            font-size="16" fill="#fbf3dc" letter-spacing="4" opacity="0.95">
+        Ulysses
+      </text>
+
+      <!-- THE DATE — primary visual element -->
+      <text x="0" y="28" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="34" font-weight="700"
+            fill="#fbf3dc"
+            style="paint-order:stroke; stroke:#0a1830; stroke-width:0.6"
+            letter-spacing="3">JUNE 16, 2026</text>
+
+      <!-- subline: Bloomsday -->
+      <text x="0" y="50" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+            font-size="10" fill="#e6c14a" letter-spacing="6" opacity="0.95">
+        B L O O M S D A Y · D U B L I N
+      </text>
+    </g>
+  </g>
+
+  <!-- ============ STRAW BOATER HAT (drifting above the book) ============ -->
+  <g transform="translate(250 60)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="250,60; 252,56; 250,60; 248,64; 250,60" dur="11s" repeatCount="indefinite"/>
+    <!-- shadow -->
+    <ellipse cx="2" cy="14" rx="22" ry="2" fill="#000" opacity="0.35"/>
+    <!-- brim -->
+    <ellipse cx="0" cy="6" rx="22" ry="5" fill="url(#straw)" stroke="#5a4018" stroke-width="0.5"/>
+    <!-- crown -->
+    <path d="M-14,6 Q-14,-8 0,-8 Q14,-8 14,6 Z" fill="url(#straw)" stroke="#5a4018" stroke-width="0.5"/>
+    <!-- crown highlight strands -->
+    <g stroke="#5a4018" stroke-width="0.25" opacity="0.55" fill="none">
+      <path d="M-12,-2 Q0,-4 12,-2"/>
+      <path d="M-12,2 Q0,0 12,2"/>
+      <path d="M-12,5 Q0,3 12,5"/>
+    </g>
+    <!-- black hatband -->
+    <path d="M-14,6 Q-14,2 0,2 Q14,2 14,6 L14,7 Q14,3 0,3 Q-14,3 -14,7 Z" fill="#1a1208"/>
+  </g>
+
+  <!-- ============ PINCE-NEZ SPECTACLES (drifting right of center) ============ -->
+  <g transform="translate(560 70)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="560,70; 558,66; 560,70; 562,74; 560,70" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    <!-- bridge -->
+    <path d="M-9,0 Q0,-4 9,0" stroke="#e6c14a" stroke-width="1.1" fill="none"/>
+    <!-- left lens -->
+    <circle cx="-15" cy="2" r="8" fill="#0d1117" fill-opacity="0.3" stroke="#e6c14a" stroke-width="1.2"/>
+    <circle cx="-17" cy="0" r="2" fill="#ffd9a8" opacity="0.55"/>
+    <!-- right lens -->
+    <circle cx="15"  cy="2" r="8" fill="#0d1117" fill-opacity="0.3" stroke="#e6c14a" stroke-width="1.2"/>
+    <circle cx="13"  cy="0" r="2" fill="#ffd9a8" opacity="0.55"/>
+    <!-- dangling ribbon -->
+    <path d="M23,8 Q26,16 24,24 Q22,32 25,40" stroke="#1a1208" stroke-width="0.8" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- ============ GULLS wheeling over the Liffey ============ -->
+  <g>
+    <use href="#gull" x="180" y="38" width="20" height="8">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 30,-6; 60,0; 90,6; 120,0" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#gull" x="320" y="22" width="16" height="6">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -25,6; -50,0; -75,-6; -100,0" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </use>
+    <use href="#gull" x="500" y="46" width="18" height="7">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 25,-4; 50,0; 75,4; 100,0" dur="13s" begin="-5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#gull" x="600" y="30" width="14" height="6">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -20,4; -40,0; -60,-4; -80,0" dur="7s" begin="-1s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Floating ink-colored Joycean words (very faint, "stream of consciousness") -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-style="italic" fill="#fbf3dc" opacity="0.18">
+    <text x="40" y="100" font-size="8">
+      yes
+      <animate attributeName="opacity" values="0.05;0.35;0.05" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <text x="120" y="140" font-size="7">
+      ineluctable
+      <animate attributeName="opacity" values="0.05;0.3;0.05" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </text>
+    <text x="720" y="100" font-size="8">
+      yes I said yes
+      <animate attributeName="opacity" values="0.05;0.35;0.05" dur="11s" begin="-5s" repeatCount="indefinite"/>
+    </text>
+    <text x="660" y="150" font-size="7">
+      snotgreen sea
+      <animate attributeName="opacity" values="0.05;0.3;0.05" dur="13s" begin="-7s" repeatCount="indefinite"/>
+    </text>
+  </g>
+</svg>

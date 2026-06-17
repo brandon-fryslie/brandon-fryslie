@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 17, 2026 — Bloomsday (June 16, 2026) — the single day on which James Joyce's Ulysses (1904) takes place in Dublin, annually celebrated since 1954. Edwardian Dublin streetscape at dawn — Martello tower at left, Dublin rooftops with chimneys at right, gulls wheeling over the Liffey, a floating straw boater hat (Leopold Bloom's), pince-nez spectacles, faint stream-of-consciousness words, and the date set in tall serif type on a Joyce-book sky-blue spine. Palette: Joyce-book sky blue, cream paper, dawn rose, dark Dublin slate, over #0d1117.
+
+<img src="./doodle-archive/2026/06/2026-06-17-102120.svg" width="800" alt="Daily doodle archived for June 17, 2026: Bloomsday — Edwardian Dublin streetscape at dawn with Martello tower, Dublin rooftops, gulls over the Liffey, floating straw boater hat, pince-nez spectacles, and the date set on a Joyce-book sky-blue spine">
+
+---
+
 ## June 16, 2026 — Magna Carta 811th anniversary (June 15, 1215 — King John seals the Great Charter at Runnymede, on the south bank of the River Thames, Surrey, England). Unrolled illuminated parchment with the date set in blackletter calligraphy, a hanging crimson royal wax seal on a braided cord, a quill in an inkpot at left, and the silhouette of Runnymede meadow with the great oak under a starry medieval-night sky. Palette: royal blue, gold leaf, crimson seal, parchment cream, over #0d1117.
 
 <img src="./doodle-archive/2026/06/2026-06-16-104750.svg" width="800" alt="Daily doodle archived for June 16, 2026: Magna Carta 811th anniversary — unrolled illuminated parchment with the date in blackletter, a hanging crimson royal wax seal, a quill in an inkpot, and the Runnymede meadow with the great oak under a medieval-night sky">
