@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## June 18, 2026 — Sally Ride becomes the first American woman in space — 43rd anniversary (June 18, 1983, aboard Space Shuttle Challenger mission STS-7, launched 7:33 AM EDT from Kennedy Space Center Pad 39A). Night-to-dawn launch scene — curved Earth limb with a thin teal atmosphere band at the bottom, twinkling starfield above, Challenger ascending at left on a pulsing amber exhaust column with turbulent solid-rocket smoke trailing below, mission-patch roundel at right inscribed "STS-7" and "06 · 18 · 1983" with a tiny shuttle tracing an orbit arc, large primary date headline set in clean sans across the top, "SALLY RIDE · STS-7 · 43 YEARS ALOFT" subhead beneath. Palette: deep space navy, Earth-limb cobalt and atmosphere teal, shuttle-exhaust amber, bone-white text, mission-patch USA red and blue, over #0d1117.
+
+<img src="./doodle-archive/2026/06/2026-06-18-100056.svg" width="800" alt="Daily doodle archived for June 18, 2026: Sally Ride 43rd anniversary — Space Shuttle Challenger ascending at left on a pulsing amber exhaust column with turbulent rocket smoke trailing over a curved Earth limb and atmosphere band, twinkling starfield above, mission-patch roundel at right with STS-7 and 06·18·1983, large date headline across the top, SALLY RIDE · STS-7 · 43 YEARS ALOFT subhead beneath">
+
+---
+
 ## June 17, 2026 — Bloomsday (June 16, 2026) — the single day on which James Joyce's Ulysses (1904) takes place in Dublin, annually celebrated since 1954. Edwardian Dublin streetscape at dawn — Martello tower at left, Dublin rooftops with chimneys at right, gulls wheeling over the Liffey, a floating straw boater hat (Leopold Bloom's), pince-nez spectacles, faint stream-of-consciousness words, and the date set in tall serif type on a Joyce-book sky-blue spine. Palette: Joyce-book sky blue, cream paper, dawn rose, dark Dublin slate, over #0d1117.
 
 <img src="./doodle-archive/2026/06/2026-06-17-102120.svg" width="800" alt="Daily doodle archived for June 17, 2026: Bloomsday — Edwardian Dublin streetscape at dawn with Martello tower, Dublin rooftops, gulls over the Liffey, floating straw boater hat, pince-nez spectacles, and the date set on a Joyce-book sky-blue spine">
