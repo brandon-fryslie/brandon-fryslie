@@ -1,408 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Statue of Liberty arrives in New York Harbor — 141st anniversary (June 17, 1885, aboard the French frigate Isère, in 214 crates, gift from France sculpted by Frédéric Auguste Bartholdi with internal iron framework by Gustave Eiffel; dedicated October 28, 1886). Composition: dawn over the harbor — Lady Liberty in 3/4 view at right (still copper-bright, pre-patina, since she was brand new), torch raised with animated flame, seven-point crown; the three-masted Isère sailing in from the left under a fluttering French tricolor; a wooden shipping crate front-and-center stenciled with the date as primary visual element; lower-band manifest in serif type. Palette: pre-patina copper (#c97f3a → #f6c982), French tricolor (#1e3a8a / #f5e9d4 / #d23045), harbor dawn rose → cobalt → deep navy, parchment cream, over #0d1117. -->
+<!-- theme: Sally Ride becomes the first American woman in space — 43rd anniversary (June 18, 1983, aboard Space Shuttle Challenger mission STS-7, launched 7:33 AM EDT from Kennedy Space Center Pad 39A; she operated the Canadarm and was 32 years old, the youngest American in space at the time). Composition: night-to-dawn launch scene — the Earth's curved limb glowing at the bottom with a thin teal atmosphere band, a starfield with twinkling stars, the Space Shuttle Challenger ascending at left on a column of pulsing orange-white exhaust with the cloud of solid-rocket smoke trailing below, mission-patch roundel at right with "STS-7" and the date inside, large primary date "JUNE 18, 2026" set centered in a clean sans across the upper band, secondary label "SALLY RIDE · STS-7 · 43 YEARS" beneath. Palette: deep space navy (#06101f → #0d1117), Earth-limb cobalt (#1d4fa3) and atmosphere teal (#7bd0ff), shuttle-exhaust amber (#ffb347 → #fff3c0), bone-white text, mission-patch USA red (#d23045) and blue (#1e3a8a). -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="June 17, 2026 — Statue of Liberty arrives in New York Harbor (June 17, 1885) — 141st anniversary; the French frigate Isère sails in at left under a tricolor, Lady Liberty stands at right in pre-patina copper holding her torch aloft, a shipping crate at center bears the date.">
+     aria-label="June 18, 2026 — 43rd anniversary of Sally Ride becoming the first American woman in space aboard STS-7 (June 18, 1983). Space Shuttle Challenger ascends on a pulsing exhaust column over a curved Earth limb with thin teal atmosphere band; starfield above; mission-patch roundel at right shows STS-7 and the date; large headline date set centered in a clean sans serif.">
   <defs>
-    <linearGradient id="bgDawn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#0d1117"/>
-      <stop offset="22%"  stop-color="#15203a"/>
-      <stop offset="55%"  stop-color="#3a3554"/>
-      <stop offset="80%"  stop-color="#a85a4a"/>
-      <stop offset="100%" stop-color="#e0a070"/>
-    </linearGradient>
-    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#ffe2a8"/>
-      <stop offset="45%" stop-color="#e88a4a" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#3a1810" stop-opacity="0"/>
+    <radialGradient id="earthGrad" cx="50%" cy="120%" r="80%">
+      <stop offset="0%" stop-color="#3a7bd5"/>
+      <stop offset="55%" stop-color="#1d4fa3"/>
+      <stop offset="100%" stop-color="#0a1f4a"/>
     </radialGradient>
-    <linearGradient id="copper" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#f6c982"/>
-      <stop offset="40%" stop-color="#d9914a"/>
-      <stop offset="100%" stop-color="#6e3a18"/>
+    <linearGradient id="atmGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7bd0ff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#7bd0ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#1d4fa3" stop-opacity="0.1"/>
     </linearGradient>
-    <linearGradient id="copperHi" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fff0c8" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#fff0c8" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#fff0c8" stop-opacity="0"/>
+    <linearGradient id="exhaustGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff3c0" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ffb347" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ff5a1f" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="flame" cx="50%" cy="60%" r="55%">
-      <stop offset="0%"  stop-color="#fff7d2"/>
-      <stop offset="40%" stop-color="#ffd06a"/>
-      <stop offset="80%" stop-color="#e25e22" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#7a1a08" stop-opacity="0"/>
+    <radialGradient id="flameGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#fff3c0" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ffb347" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff5a1f" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="harbor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#5a6a82"/>
-      <stop offset="100%" stop-color="#181c2a"/>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06101f"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
-    <linearGradient id="parchment" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#f7e6bf"/>
-      <stop offset="100%" stop-color="#c9a76a"/>
-    </linearGradient>
-    <linearGradient id="crateWood" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#8a5a30"/>
-      <stop offset="100%" stop-color="#3e2410"/>
-    </linearGradient>
-    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#3a2818"/>
-      <stop offset="100%" stop-color="#0e0806"/>
-    </linearGradient>
-    <linearGradient id="sail" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#f3e6c8"/>
-      <stop offset="100%" stop-color="#b8a172"/>
-    </linearGradient>
-
-    <symbol id="gull" viewBox="-10 -4 20 8">
-      <path d="M-10,0 Q-6,-4 -3,-1 Q0,-3 3,-1 Q6,-4 10,0"
-            stroke="#f3e2c8" stroke-width="1.1" fill="none"
-            stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-
-    <!-- Statue of Liberty body silhouette: 3/4 view, torch arm raised right, tablet held in left -->
-    <symbol id="liberty" viewBox="-60 -160 120 160">
-      <!-- robed body -->
-      <path d="M-22,0
-               L-30,-50
-               L-26,-70
-               L-30,-92
-               L-22,-104
-               L-16,-118
-               L-10,-126
-               L-2,-130
-               L8,-128
-               L16,-122
-               L22,-110
-               L26,-96
-               L24,-78
-               L28,-58
-               L26,-30
-               L30,-8
-               L30,0 Z"
-            fill="url(#copper)" stroke="#3a1808" stroke-width="0.6"/>
-      <!-- robe vertical folds -->
-      <g stroke="#5a2e10" stroke-width="0.45" opacity="0.55" fill="none">
-        <path d="M-18,-4 L-20,-44"/>
-        <path d="M-10,-2 L-12,-50"/>
-        <path d="M-2,-2 L-2,-52"/>
-        <path d="M8,-2 L10,-50"/>
-        <path d="M18,-4 L22,-48"/>
-        <path d="M-22,-58 L-24,-86"/>
-        <path d="M-12,-60 L-14,-90"/>
-        <path d="M0,-62 L0,-92"/>
-        <path d="M12,-60 L14,-90"/>
-        <path d="M22,-62 L24,-86"/>
-      </g>
-      <!-- copper highlight -->
-      <path d="M-12,-92 L-6,-126 L4,-128 L10,-100 Z" fill="url(#copperHi)"/>
-      <!-- tablet (left hand) — JULY IV MDCCLXXVI -->
-      <g transform="translate(-30 -72) rotate(-12)">
-        <rect x="-14" y="-18" width="22" height="28" rx="1"
-              fill="#e9b070" stroke="#5a2e10" stroke-width="0.6"/>
-        <g font-family="Georgia, 'Times New Roman', serif" fill="#3a1808"
-           font-size="3.6" text-anchor="middle">
-          <text x="-3" y="-12">JULY</text>
-          <text x="-3" y="-7.5">IV</text>
-          <text x="-3" y="-3">MDCCLXXVI</text>
-        </g>
-      </g>
-      <!-- raised right arm holding torch -->
-      <path d="M14,-118 L26,-138 L36,-150 L40,-150 L32,-138 L22,-120 Z"
-            fill="url(#copper)" stroke="#3a1808" stroke-width="0.5"/>
-      <!-- torch handle -->
-      <rect x="33" y="-156" width="6" height="10" fill="#7a4a1c" stroke="#3a1808" stroke-width="0.4"/>
-      <!-- torch base bowl -->
-      <path d="M30,-156 L42,-156 L40,-160 L32,-160 Z" fill="#d9a050" stroke="#3a1808" stroke-width="0.4"/>
-      <!-- head -->
-      <ellipse cx="-2" cy="-134" rx="9" ry="11" fill="url(#copper)" stroke="#3a1808" stroke-width="0.5"/>
-      <!-- face shadow -->
-      <path d="M-8,-134 Q-6,-128 -2,-126 Q2,-128 4,-134 Z" fill="#5a2e10" opacity="0.35"/>
-      <!-- 7-point crown -->
-      <g fill="url(#copper)" stroke="#3a1808" stroke-width="0.5">
-        <polygon points="-12,-142 -10,-152 -8,-142"/>
-        <polygon points="-8,-144 -6,-156 -4,-144"/>
-        <polygon points="-4,-145 -2,-158 0,-145"/>
-        <polygon points="0,-145 2,-158 4,-145"/>
-        <polygon points="4,-144 6,-156 8,-144"/>
-        <polygon points="8,-142 10,-152 12,-142"/>
-        <polygon points="-12,-141 -14,-148 -10,-141"/>
-      </g>
-      <!-- crown band -->
-      <path d="M-12,-140 Q-2,-138 12,-140 L12,-138 Q-2,-136 -12,-138 Z"
-            fill="#7a4a1c" stroke="#3a1808" stroke-width="0.3"/>
-      <!-- pedestal -->
-      <g>
-        <rect x="-34" y="-2" width="68" height="2" fill="#1a1410"/>
-      </g>
-    </symbol>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="smoke" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7">
+        <animate attributeName="baseFrequency" values="0.9;1.1;0.9" dur="11s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="6"/>
+    </filter>
   </defs>
 
-  <!-- ============ SKY ============ -->
-  <rect width="800" height="200" fill="url(#bgDawn)"/>
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
 
-  <!-- Sun rising at horizon -->
+  <!-- Starfield: twinkling stars -->
+  <g fill="#ffffff">
+    <circle cx="40"  cy="22"  r="1.1"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="92"  cy="48"  r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="138" cy="18"  r="1.4"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="186" cy="62"  r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="232" cy="30"  r="1.0"><animate attributeName="opacity" values="0.2;0.95;0.2" dur="11s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="280" cy="14"  r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="4s" repeatCount="indefinite"/></circle>
+    <circle cx="328" cy="56"  r="1.2"><animate attributeName="opacity" values="0.25;1;0.25" dur="7s"  begin="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="378" cy="24"  r="0.9"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="428" cy="46"  r="1.1"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="478" cy="12"  r="0.7"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s"  begin="5s" repeatCount="indefinite"/></circle>
+    <circle cx="528" cy="50"  r="1.0"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="578" cy="22"  r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="624" cy="60"  r="1.3"><animate attributeName="opacity" values="0.25;1;0.25" dur="7s"  begin="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="678" cy="30"  r="0.8"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" begin="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="752" cy="18"  r="1.0"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="788" cy="44"  r="0.9"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  begin="5.5s" repeatCount="indefinite"/></circle>
+    <!-- a couple "bright" stars with glow -->
+    <circle cx="60"  cy="80"  r="1.6" filter="url(#soft)"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="70"  r="1.6" filter="url(#soft)"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Earth limb at the bottom (curved horizon) -->
   <g>
-    <circle cx="380" cy="158" r="70" fill="url(#sunGlow)" opacity="0.85">
-      <animate attributeName="r" values="66;76;66" dur="13s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="380" cy="158" r="16" fill="#ffe8c2" opacity="0.92"/>
+    <!-- Earth body: large circle whose top arc forms the horizon -->
+    <ellipse cx="400" cy="540" rx="640" ry="380" fill="url(#earthGrad)"/>
+    <!-- Atmosphere glow band above the limb -->
+    <ellipse cx="400" cy="540" rx="640" ry="380" fill="none" stroke="url(#atmGrad)" stroke-width="10" opacity="0.85"/>
+    <ellipse cx="400" cy="540" rx="644" ry="384" fill="none" stroke="#7bd0ff" stroke-width="1.5" opacity="0.55"/>
+    <!-- Subtle cloud highlights along the limb -->
+    <g opacity="0.35" fill="#cfe4ff">
+      <ellipse cx="150" cy="172" rx="40" ry="2.5"/>
+      <ellipse cx="270" cy="178" rx="55" ry="2"/>
+      <ellipse cx="430" cy="174" rx="48" ry="2.4"/>
+      <ellipse cx="610" cy="180" rx="60" ry="2"/>
+    </g>
   </g>
 
-  <!-- Fading stars upper portion -->
-  <g fill="#fbf3dc">
-    <circle cx="60"  cy="18" r="0.7"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="140" cy="10" r="0.6"><animate attributeName="opacity" values="0.45;0.1;0.45" dur="13s" begin="-3s" repeatCount="indefinite"/></circle>
-    <circle cx="220" cy="24" r="0.55"><animate attributeName="opacity" values="0.4;0.05;0.4" dur="7s" begin="-2s" repeatCount="indefinite"/></circle>
-    <circle cx="560" cy="14" r="0.6"><animate attributeName="opacity" values="0.45;0.05;0.45" dur="11s" begin="-5s" repeatCount="indefinite"/></circle>
-    <circle cx="640" cy="26" r="0.7"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="13s" begin="-7s" repeatCount="indefinite"/></circle>
-    <circle cx="740" cy="16" r="0.5"><animate attributeName="opacity" values="0.55;0.05;0.55" dur="7s" begin="-4s" repeatCount="indefinite"/></circle>
+  <!-- Solid rocket smoke trail (turbulent) -->
+  <g opacity="0.55" filter="url(#smoke)">
+    <ellipse cx="148" cy="172" rx="38" ry="14" fill="#c9d3e0"/>
+    <ellipse cx="170" cy="165" rx="26" ry="10" fill="#e7ecf2"/>
+    <ellipse cx="128" cy="178" rx="22" ry="8" fill="#aab4c2"/>
+    <ellipse cx="155" cy="158" rx="20" ry="8" fill="#dde3ec"/>
   </g>
 
-  <!-- ============ DISTANT MANHATTAN SHORELINE ============ -->
-  <path d="M0,170 L40,170 L40,164 L60,164 L60,168 L120,168 L120,160 L138,160 L138,166 L200,166 L200,162 L220,162 L220,168 L300,168 L300,164 L800,164 L800,172 L0,172 Z"
-        fill="#0e1018" opacity="0.95"/>
-
-  <!-- ============ HARBOR WATER ============ -->
-  <rect x="0" y="170" width="800" height="30" fill="url(#harbor)"/>
-
-  <!-- Sun reflection on water -->
+  <!-- Exhaust plume column (under shuttle) -->
   <g>
-    <ellipse cx="380" cy="178" rx="60" ry="2.4" fill="#ffd9a8" opacity="0.55"/>
-    <ellipse cx="380" cy="184" rx="42" ry="1.6" fill="#ffd9a8" opacity="0.4"/>
-    <ellipse cx="380" cy="190" rx="28" ry="1.1" fill="#ffd9a8" opacity="0.3"/>
+    <!-- Outer glow -->
+    <ellipse cx="160" cy="150" rx="20" ry="36" fill="url(#flameGlow)" opacity="0.9">
+      <animate attributeName="rx" values="18;24;18" dur="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="34;40;34" dur="0.6s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Core flame -->
+    <path d="M 154 110 Q 160 100 166 110 L 172 165 Q 160 175 148 165 Z" fill="url(#exhaustGrad)">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="0.4s" repeatCount="indefinite"/>
+    </path>
+    <!-- Hot inner core -->
+    <path d="M 157 112 Q 160 106 163 112 L 167 152 Q 160 158 153 152 Z" fill="#fff7d6">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="0.3s" repeatCount="indefinite"/>
+    </path>
   </g>
 
-  <!-- Water glints -->
-  <g stroke="#c2c9d6" stroke-width="0.5" opacity="0.55" fill="none">
-    <path d="M30,180 Q70,178 110,180 T190,180"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="7s" repeatCount="indefinite"/></path>
-    <path d="M210,188 Q250,186 290,188 T370,188"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="11s" begin="-2s" repeatCount="indefinite"/></path>
-    <path d="M460,182 Q500,180 540,182 T620,182"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="13s" begin="-4s" repeatCount="indefinite"/></path>
-    <path d="M620,192 Q660,190 700,192 T780,192"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="7s" begin="-1s" repeatCount="indefinite"/></path>
-  </g>
-
-  <!-- ============ THE ISÈRE (French frigate) at LEFT ============ -->
-  <g transform="translate(140 168)">
-    <!-- gentle rocking -->
+  <!-- Space Shuttle Challenger (stylized, ascending slightly) -->
+  <g>
     <animateTransform attributeName="transform" type="translate"
-                      values="140,168; 140,170; 140,168; 140,166; 140,168"
-                      dur="11s" repeatCount="indefinite"/>
-    <!-- hull -->
-    <path d="M-58,0 Q-50,-12 -30,-14 L42,-14 Q56,-12 60,0 Q40,6 0,6 Q-40,6 -58,0 Z"
-          fill="url(#hull)" stroke="#000" stroke-width="0.6"/>
-    <!-- hull gold trim -->
-    <path d="M-52,-8 Q-30,-10 30,-10 Q50,-10 54,-6" stroke="#d9a050" stroke-width="0.6" fill="none" opacity="0.85"/>
-    <!-- gunports -->
-    <g fill="#d9a050" opacity="0.9">
-      <rect x="-38" y="-6" width="3" height="3"/>
-      <rect x="-26" y="-6" width="3" height="3"/>
-      <rect x="-14" y="-6" width="3" height="3"/>
-      <rect x="-2"  y="-6" width="3" height="3"/>
-      <rect x="10"  y="-6" width="3" height="3"/>
-      <rect x="22"  y="-6" width="3" height="3"/>
-      <rect x="34"  y="-6" width="3" height="3"/>
-    </g>
-    <!-- three masts -->
-    <line x1="-30" y1="-14" x2="-30" y2="-86" stroke="#2a1810" stroke-width="1.4"/>
-    <line x1="0"   y1="-14" x2="0"   y2="-94" stroke="#2a1810" stroke-width="1.6"/>
-    <line x1="30"  y1="-14" x2="30"  y2="-84" stroke="#2a1810" stroke-width="1.4"/>
-    <!-- yardarms -->
-    <line x1="-46" y1="-46" x2="-14" y2="-46" stroke="#2a1810" stroke-width="0.8"/>
-    <line x1="-46" y1="-64" x2="-14" y2="-64" stroke="#2a1810" stroke-width="0.8"/>
-    <line x1="-18" y1="-46" x2="18"  y2="-46" stroke="#2a1810" stroke-width="0.8"/>
-    <line x1="-18" y1="-66" x2="18"  y2="-66" stroke="#2a1810" stroke-width="0.8"/>
-    <line x1="-18" y1="-82" x2="18"  y2="-82" stroke="#2a1810" stroke-width="0.8"/>
-    <line x1="14"  y1="-44" x2="46"  y2="-44" stroke="#2a1810" stroke-width="0.8"/>
-    <line x1="14"  y1="-62" x2="46"  y2="-62" stroke="#2a1810" stroke-width="0.8"/>
+                      values="0 3; 0 -3; 0 3" dur="7s" repeatCount="indefinite"/>
+    <!-- External tank (orange) -->
+    <path d="M 156 40 Q 156 32 160 30 Q 164 32 164 40 L 164 108 L 156 108 Z" fill="#c97f3a"/>
+    <path d="M 158 40 L 158 105" stroke="#a86a30" stroke-width="0.6"/>
+    <!-- Solid Rocket Boosters -->
+    <path d="M 146 56 L 146 110 L 152 110 L 152 56 Q 152 50 149 48 Q 146 50 146 56 Z" fill="#e6e6ea"/>
+    <path d="M 168 56 L 168 110 L 174 110 L 174 56 Q 174 50 171 48 Q 168 50 168 56 Z" fill="#e6e6ea"/>
+    <!-- SRB nose caps -->
+    <circle cx="149" cy="50" r="2.5" fill="#bfbfc6"/>
+    <circle cx="171" cy="50" r="2.5" fill="#bfbfc6"/>
+    <!-- Orbiter body (white) on right side of stack -->
+    <path d="M 164 58 L 184 60 L 188 72 L 188 96 L 184 102 L 164 100 Z" fill="#f3f3f5"/>
+    <!-- Orbiter wing -->
+    <path d="M 168 92 L 196 104 L 188 104 L 168 102 Z" fill="#dcdce0"/>
+    <!-- Cockpit window -->
+    <path d="M 184 64 L 188 66 L 188 70 L 184 70 Z" fill="#3a5d8f"/>
+    <!-- Tail fin -->
+    <path d="M 178 56 L 182 50 L 184 56 L 184 64 L 178 64 Z" fill="#f3f3f5"/>
+    <!-- US flag stripe on orbiter -->
+    <rect x="170" y="78" width="14" height="2" fill="#d23045"/>
+    <rect x="170" y="82" width="14" height="2" fill="#1e3a8a"/>
+  </g>
 
-    <!-- sails (square-rigged) -->
-    <g fill="url(#sail)" stroke="#5a4218" stroke-width="0.4" opacity="0.95">
-      <!-- foremast sails -->
-      <path d="M-46,-46 L-14,-46 L-12,-62 L-48,-62 Z"/>
-      <path d="M-46,-64 L-14,-64 L-12,-80 L-48,-80 Z"/>
-      <!-- mainmast sails -->
-      <path d="M-18,-46 L18,-46 L20,-64 L-20,-64 Z"/>
-      <path d="M-18,-66 L18,-66 L20,-82 L-20,-82 Z"/>
-      <path d="M-18,-82 L18,-82 L16,-92 L-16,-92 Z"/>
-      <!-- mizzenmast sails -->
-      <path d="M14,-44 L46,-44 L48,-60 L12,-60 Z"/>
-      <path d="M14,-62 L46,-62 L48,-78 L12,-78 Z"/>
-    </g>
-    <!-- belly curve in sails (slow sway) -->
-    <g opacity="0.45" stroke="#5a4218" stroke-width="0.35" fill="none">
-      <path d="M-46,-54 Q-30,-50 -14,-54"/>
-      <path d="M-18,-55 Q0,-51 18,-55"/>
-      <path d="M14,-52 Q30,-48 46,-52"/>
-    </g>
-
-    <!-- French tricolor flag atop mainmast -->
-    <g transform="translate(0 -98)">
-      <line x1="0" y1="0" x2="0" y2="4" stroke="#2a1810" stroke-width="1"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale"
-                          values="1 1; 1.04 1; 1 1; 0.96 1; 1 1" dur="7s" repeatCount="indefinite" additive="sum"/>
-        <rect x="0" y="-2" width="8"  height="10" fill="#1e3a8a"/>
-        <rect x="8" y="-2" width="8"  height="10" fill="#f5e9d4"/>
-        <rect x="16" y="-2" width="8" height="10" fill="#d23045"/>
+  <!-- Mission patch roundel at right -->
+  <g transform="translate(680,108)">
+    <!-- Slow rotation of the outer ring -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="73s" repeatCount="indefinite"/>
+      <circle r="46" fill="none" stroke="#d23045" stroke-width="3"/>
+      <circle r="42" fill="none" stroke="#1e3a8a" stroke-width="1.5"/>
+      <!-- Tick marks around the ring -->
+      <g stroke="#f5e9d4" stroke-width="1">
+        <line x1="0" y1="-46" x2="0" y2="-40"/>
+        <line x1="32.5" y1="-32.5" x2="28.3" y2="-28.3"/>
+        <line x1="46" y1="0" x2="40" y2="0"/>
+        <line x1="32.5" y1="32.5" x2="28.3" y2="28.3"/>
+        <line x1="0" y1="46" x2="0" y2="40"/>
+        <line x1="-32.5" y1="32.5" x2="-28.3" y2="28.3"/>
+        <line x1="-46" y1="0" x2="-40" y2="0"/>
+        <line x1="-32.5" y1="-32.5" x2="-28.3" y2="-28.3"/>
       </g>
     </g>
-
-    <!-- water displaced at hull -->
-    <path d="M-66,4 Q-30,8 0,6 Q30,8 68,4 Q40,12 0,12 Q-40,12 -66,4 Z"
-          fill="#3a4a5e" opacity="0.7"/>
-
-    <!-- "ISÈRE" name on hull -->
-    <text x="-2" y="-2" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="4" fill="#d9a050" letter-spacing="0.8" opacity="0.95">ISÈRE</text>
-  </g>
-
-  <!-- ============ STATUE OF LIBERTY (right) ============ -->
-  <g transform="translate(640 188)">
-    <!-- subtle ground glow -->
-    <ellipse cx="0" cy="2" rx="56" ry="3" fill="#000" opacity="0.55"/>
-    <!-- statue (uses symbol scaled) -->
-    <use href="#liberty" x="-60" y="-180" width="120" height="180"/>
-    <!-- animated torch flame -->
-    <g transform="translate(0 -180)">
-      <!-- Place flame above torch bowl, which sits at roughly (36, -160) in symbol space; symbol used at x=-60,y=-180 width=120 height=180 — so flame world coords need calc. Simpler: re-position with translate. -->
-    </g>
-    <!-- Flame overlay positioned absolutely above torch -->
-  </g>
-
-  <!-- ABSOLUTE flame overlay above the statue's torch — placed in world coords so it animates cleanly -->
-  <g transform="translate(676 36)">
-    <!-- main flame -->
-    <ellipse cx="0" cy="0" rx="9" ry="14" fill="url(#flame)">
-      <animate attributeName="ry" values="13;16;13" dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="rx" values="9;7;9" dur="7s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- inner flame -->
-    <ellipse cx="0" cy="2" rx="4" ry="7" fill="#fff7d2" opacity="0.9">
-      <animate attributeName="ry" values="6;9;6" dur="7s" begin="-1s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- ember sparks -->
-    <g fill="#ffd06a">
-      <circle cx="-4" cy="-12" r="0.7">
-        <animate attributeName="cy" values="-12;-26;-12" dur="11s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.9;0;0.9" dur="11s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="5" cy="-10" r="0.6">
-        <animate attributeName="cy" values="-10;-24;-10" dur="13s" begin="-3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.9;0;0.9" dur="13s" begin="-3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="0" cy="-14" r="0.5">
-        <animate attributeName="cy" values="-14;-30;-14" dur="7s" begin="-2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.9;0;0.9" dur="7s" begin="-2s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-    <!-- aura -->
-    <circle cx="0" cy="0" r="22" fill="#ffd06a" opacity="0.15">
-      <animate attributeName="r" values="20;26;20" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.22;0.1" dur="13s" repeatCount="indefinite"/>
+    <!-- Patch interior (static) -->
+    <circle r="38" fill="#0a1f4a"/>
+    <!-- Tiny earth curve inside -->
+    <ellipse cx="0" cy="18" rx="40" ry="20" fill="#1d4fa3"/>
+    <ellipse cx="0" cy="18" rx="40" ry="20" fill="none" stroke="#7bd0ff" stroke-width="0.8" opacity="0.8"/>
+    <!-- Orbit arc with small shuttle dot -->
+    <path d="M -32 4 A 36 22 0 0 1 32 4" fill="none" stroke="#f5e9d4" stroke-width="1" stroke-dasharray="2 3" opacity="0.85"/>
+    <circle r="2.2" fill="#fff3c0">
+      <animateMotion dur="13s" repeatCount="indefinite"
+                     path="M -32 4 A 36 22 0 0 1 32 4"/>
     </circle>
+    <!-- Tiny stars inside patch -->
+    <g fill="#ffffff">
+      <circle cx="-18" cy="-14" r="0.9"/>
+      <circle cx="-4"  cy="-22" r="0.9"/>
+      <circle cx="14"  cy="-16" r="0.9"/>
+      <circle cx="22"  cy="-6"  r="0.9"/>
+    </g>
+    <!-- Patch lettering -->
+    <text x="0" y="-6" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9" font-weight="700" fill="#f5e9d4" letter-spacing="1.2">STS-7</text>
+    <text x="0" y="33" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="6.5" font-weight="600" fill="#f5e9d4" letter-spacing="0.6">06 · 18 · 1983</text>
   </g>
 
-  <!-- ============ CENTRAL SHIPPING CRATE WITH THE DATE ============ -->
-  <g transform="translate(380 122)">
-    <!-- gentle bob (as if floating in the foreground) -->
-    <animateTransform attributeName="transform" type="translate"
-                      values="380,122; 380,121; 380,122; 380,123; 380,122" dur="13s" repeatCount="indefinite"/>
-
-    <!-- shadow under crate -->
-    <ellipse cx="0" cy="58" rx="170" ry="6" fill="#000" opacity="0.55"/>
-
-    <!-- crate body -->
-    <rect x="-180" y="-48" width="360" height="106" rx="2"
-          fill="url(#crateWood)" stroke="#1a0e06" stroke-width="0.8"/>
-
-    <!-- wood plank lines -->
-    <g stroke="#1a0e06" stroke-width="0.6" opacity="0.7">
-      <line x1="-180" y1="-22" x2="180" y2="-22"/>
-      <line x1="-180" y1="4"   x2="180" y2="4"/>
-      <line x1="-180" y1="30"  x2="180" y2="30"/>
-    </g>
-    <!-- wood grain (subtle) -->
-    <g stroke="#3e2410" stroke-width="0.25" opacity="0.55" fill="none">
-      <path d="M-160,-40 Q-100,-36 -40,-40 T80,-38 T180,-40"/>
-      <path d="M-160,-12 Q-100,-8 -40,-12 T80,-10 T180,-12"/>
-      <path d="M-160,16  Q-100,20 -40,16  T80,18  T180,16"/>
-      <path d="M-160,44  Q-100,48 -40,44  T80,46  T180,44"/>
-    </g>
-
-    <!-- iron strap corners -->
-    <g fill="#1a0e06">
-      <rect x="-180" y="-48" width="6" height="106"/>
-      <rect x="174" y="-48" width="6" height="106"/>
-      <rect x="-180" y="-48" width="360" height="4"/>
-      <rect x="-180" y="54" width="360" height="4"/>
-    </g>
-    <!-- rivets -->
-    <g fill="#6e5840">
-      <circle cx="-176" cy="-44" r="1.1"/><circle cx="-176" cy="-22" r="1.1"/><circle cx="-176" cy="4" r="1.1"/><circle cx="-176" cy="30" r="1.1"/><circle cx="-176" cy="52" r="1.1"/>
-      <circle cx="176" cy="-44" r="1.1"/><circle cx="176" cy="-22" r="1.1"/><circle cx="176" cy="4" r="1.1"/><circle cx="176" cy="30" r="1.1"/><circle cx="176" cy="52" r="1.1"/>
-    </g>
-
-    <!-- stenciled manifest header -->
-    <text x="0" y="-30" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="9" fill="#f3e6c8" letter-spacing="5" opacity="0.9">
-      PARIS → NEW YORK · FRIGATE ISÈRE · 1885
-    </text>
-
-    <!-- THE DATE — primary visual element, stenciled in cream on crate -->
-    <text x="0" y="14" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="38" font-weight="700"
-          fill="#fbf3dc"
-          style="paint-order:stroke; stroke:#1a0e06; stroke-width:0.6"
-          letter-spacing="4">JUNE 17, 2026</text>
-
-    <!-- subline: anniversary -->
-    <text x="0" y="38" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif" font-style="italic"
-          font-size="10" fill="#f7e6bf" letter-spacing="3" opacity="0.95">
-      LIBERTY · ARRIVES · NEW · YORK · HARBOR · 141 · YEARS
-    </text>
-
-    <!-- crate corner stamps -->
-    <g font-family="Georgia, 'Times New Roman', serif"
-       font-size="7" fill="#f3e6c8" opacity="0.8" letter-spacing="1.5">
-      <text x="-170" y="-36">№ 1</text>
-      <text x="158" y="-36">/ 214</text>
-      <text x="-170" y="50">FRAGILE</text>
-      <text x="142" y="50">↑ THIS SIDE UP</text>
-    </g>
-
-    <!-- French tricolor stripe accent at top-left of crate -->
-    <g>
-      <rect x="-178" y="-46" width="14" height="2.4" fill="#1e3a8a"/>
-      <rect x="-164" y="-46" width="14" height="2.4" fill="#f5e9d4"/>
-      <rect x="-150" y="-46" width="14" height="2.4" fill="#d23045"/>
-    </g>
-    <!-- US flag stripe accent at top-right of crate -->
-    <g>
-      <rect x="136" y="-46" width="14" height="2.4" fill="#1e3a8a"/>
-      <rect x="150" y="-46" width="14" height="2.4" fill="#f5e9d4"/>
-      <rect x="164" y="-46" width="14" height="2.4" fill="#d23045"/>
-    </g>
-  </g>
-
-  <!-- ============ GULLS over the harbor ============ -->
+  <!-- Primary date headline -->
   <g>
-    <use href="#gull" x="220" y="48" width="20" height="8">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0,0; 30,-4; 60,0; 90,4; 120,0" dur="13s" repeatCount="indefinite"/>
-    </use>
-    <use href="#gull" x="500" y="36" width="16" height="6">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0,0; -28,4; -56,0; -84,-4; -112,0" dur="11s" begin="-2s" repeatCount="indefinite"/>
-    </use>
-    <use href="#gull" x="350" y="22" width="14" height="6">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0,0; 24,-3; 48,0; 72,3; 96,0" dur="7s" begin="-1s" repeatCount="indefinite"/>
-    </use>
-    <use href="#gull" x="580" y="56" width="18" height="7">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0,0; -22,-4; -44,0; -66,4; -88,0" dur="13s" begin="-5s" repeatCount="indefinite"/>
-    </use>
+    <text x="370" y="58" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="42" font-weight="800" fill="#ffffff" letter-spacing="3">
+      JUNE 18, 2026
+      <animate attributeName="opacity" values="0.92;1;0.92" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <!-- Underline accent -->
+    <line x1="246" y1="70" x2="494" y2="70" stroke="#ffb347" stroke-width="1.2" opacity="0.85">
+      <animate attributeName="stroke-dashoffset" values="0;-20;0" dur="13s" repeatCount="indefinite"/>
+    </line>
+    <!-- Subhead -->
+    <text x="408" y="92" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="12" font-weight="600" fill="#cfe4ff" letter-spacing="5">
+      SALLY RIDE  ·  STS-7  ·  43 YEARS ALOFT
+    </text>
+    <!-- Tertiary note -->
+    <text x="408" y="112" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9" font-weight="500" fill="#9bb3d1" letter-spacing="2.5" font-style="italic">
+      first American woman in space — Challenger, 18 June 1983
+    </text>
   </g>
 </svg>
