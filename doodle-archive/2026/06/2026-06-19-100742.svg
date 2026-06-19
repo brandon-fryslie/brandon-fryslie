@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Sally Ride becomes the first American woman in space — 43rd anniversary (June 18, 1983, aboard Space Shuttle Challenger mission STS-7, launched 7:33 AM EDT from Kennedy Space Center Pad 39A; she operated the Canadarm and was 32 years old, the youngest American in space at the time). Composition: night-to-dawn launch scene — the Earth's curved limb glowing at the bottom with a thin teal atmosphere band, a starfield with twinkling stars, the Space Shuttle Challenger ascending at left on a column of pulsing orange-white exhaust with the cloud of solid-rocket smoke trailing below, mission-patch roundel at right with "STS-7" and the date inside, large primary date "JUNE 18, 2026" set centered in a clean sans across the upper band, secondary label "SALLY RIDE · STS-7 · 43 YEARS" beneath. Palette: deep space navy (#06101f → #0d1117), Earth-limb cobalt (#1d4fa3) and atmosphere teal (#7bd0ff), shuttle-exhaust amber (#ffb347 → #fff3c0), bone-white text, mission-patch USA red (#d23045) and blue (#1e3a8a). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="June 18, 2026 — 43rd anniversary of Sally Ride becoming the first American woman in space aboard STS-7 (June 18, 1983). Space Shuttle Challenger ascends on a pulsing exhaust column over a curved Earth limb with thin teal atmosphere band; starfield above; mission-patch roundel at right shows STS-7 and the date; large headline date set centered in a clean sans serif.">
+  <defs>
+    <radialGradient id="earthGrad" cx="50%" cy="120%" r="80%">
+      <stop offset="0%" stop-color="#3a7bd5"/>
+      <stop offset="55%" stop-color="#1d4fa3"/>
+      <stop offset="100%" stop-color="#0a1f4a"/>
+    </radialGradient>
+    <linearGradient id="atmGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7bd0ff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#7bd0ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#1d4fa3" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="exhaustGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff3c0" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ffb347" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ff5a1f" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="flameGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#fff3c0" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ffb347" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff5a1f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06101f"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="smoke" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7">
+        <animate attributeName="baseFrequency" values="0.9;1.1;0.9" dur="11s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Starfield: twinkling stars -->
+  <g fill="#ffffff">
+    <circle cx="40"  cy="22"  r="1.1"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="92"  cy="48"  r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="138" cy="18"  r="1.4"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="186" cy="62"  r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="232" cy="30"  r="1.0"><animate attributeName="opacity" values="0.2;0.95;0.2" dur="11s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="280" cy="14"  r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="4s" repeatCount="indefinite"/></circle>
+    <circle cx="328" cy="56"  r="1.2"><animate attributeName="opacity" values="0.25;1;0.25" dur="7s"  begin="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="378" cy="24"  r="0.9"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="428" cy="46"  r="1.1"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="478" cy="12"  r="0.7"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s"  begin="5s" repeatCount="indefinite"/></circle>
+    <circle cx="528" cy="50"  r="1.0"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="578" cy="22"  r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="624" cy="60"  r="1.3"><animate attributeName="opacity" values="0.25;1;0.25" dur="7s"  begin="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="678" cy="30"  r="0.8"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" begin="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="752" cy="18"  r="1.0"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="788" cy="44"  r="0.9"><animate attributeName="opacity" values="0.2;1;0.2" dur="7s"  begin="5.5s" repeatCount="indefinite"/></circle>
+    <!-- a couple "bright" stars with glow -->
+    <circle cx="60"  cy="80"  r="1.6" filter="url(#soft)"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="70"  r="1.6" filter="url(#soft)"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Earth limb at the bottom (curved horizon) -->
+  <g>
+    <!-- Earth body: large circle whose top arc forms the horizon -->
+    <ellipse cx="400" cy="540" rx="640" ry="380" fill="url(#earthGrad)"/>
+    <!-- Atmosphere glow band above the limb -->
+    <ellipse cx="400" cy="540" rx="640" ry="380" fill="none" stroke="url(#atmGrad)" stroke-width="10" opacity="0.85"/>
+    <ellipse cx="400" cy="540" rx="644" ry="384" fill="none" stroke="#7bd0ff" stroke-width="1.5" opacity="0.55"/>
+    <!-- Subtle cloud highlights along the limb -->
+    <g opacity="0.35" fill="#cfe4ff">
+      <ellipse cx="150" cy="172" rx="40" ry="2.5"/>
+      <ellipse cx="270" cy="178" rx="55" ry="2"/>
+      <ellipse cx="430" cy="174" rx="48" ry="2.4"/>
+      <ellipse cx="610" cy="180" rx="60" ry="2"/>
+    </g>
+  </g>
+
+  <!-- Solid rocket smoke trail (turbulent) -->
+  <g opacity="0.55" filter="url(#smoke)">
+    <ellipse cx="148" cy="172" rx="38" ry="14" fill="#c9d3e0"/>
+    <ellipse cx="170" cy="165" rx="26" ry="10" fill="#e7ecf2"/>
+    <ellipse cx="128" cy="178" rx="22" ry="8" fill="#aab4c2"/>
+    <ellipse cx="155" cy="158" rx="20" ry="8" fill="#dde3ec"/>
+  </g>
+
+  <!-- Exhaust plume column (under shuttle) -->
+  <g>
+    <!-- Outer glow -->
+    <ellipse cx="160" cy="150" rx="20" ry="36" fill="url(#flameGlow)" opacity="0.9">
+      <animate attributeName="rx" values="18;24;18" dur="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="34;40;34" dur="0.6s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Core flame -->
+    <path d="M 154 110 Q 160 100 166 110 L 172 165 Q 160 175 148 165 Z" fill="url(#exhaustGrad)">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="0.4s" repeatCount="indefinite"/>
+    </path>
+    <!-- Hot inner core -->
+    <path d="M 157 112 Q 160 106 163 112 L 167 152 Q 160 158 153 152 Z" fill="#fff7d6">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="0.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Space Shuttle Challenger (stylized, ascending slightly) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 3; 0 -3; 0 3" dur="7s" repeatCount="indefinite"/>
+    <!-- External tank (orange) -->
+    <path d="M 156 40 Q 156 32 160 30 Q 164 32 164 40 L 164 108 L 156 108 Z" fill="#c97f3a"/>
+    <path d="M 158 40 L 158 105" stroke="#a86a30" stroke-width="0.6"/>
+    <!-- Solid Rocket Boosters -->
+    <path d="M 146 56 L 146 110 L 152 110 L 152 56 Q 152 50 149 48 Q 146 50 146 56 Z" fill="#e6e6ea"/>
+    <path d="M 168 56 L 168 110 L 174 110 L 174 56 Q 174 50 171 48 Q 168 50 168 56 Z" fill="#e6e6ea"/>
+    <!-- SRB nose caps -->
+    <circle cx="149" cy="50" r="2.5" fill="#bfbfc6"/>
+    <circle cx="171" cy="50" r="2.5" fill="#bfbfc6"/>
+    <!-- Orbiter body (white) on right side of stack -->
+    <path d="M 164 58 L 184 60 L 188 72 L 188 96 L 184 102 L 164 100 Z" fill="#f3f3f5"/>
+    <!-- Orbiter wing -->
+    <path d="M 168 92 L 196 104 L 188 104 L 168 102 Z" fill="#dcdce0"/>
+    <!-- Cockpit window -->
+    <path d="M 184 64 L 188 66 L 188 70 L 184 70 Z" fill="#3a5d8f"/>
+    <!-- Tail fin -->
+    <path d="M 178 56 L 182 50 L 184 56 L 184 64 L 178 64 Z" fill="#f3f3f5"/>
+    <!-- US flag stripe on orbiter -->
+    <rect x="170" y="78" width="14" height="2" fill="#d23045"/>
+    <rect x="170" y="82" width="14" height="2" fill="#1e3a8a"/>
+  </g>
+
+  <!-- Mission patch roundel at right -->
+  <g transform="translate(680,108)">
+    <!-- Slow rotation of the outer ring -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="73s" repeatCount="indefinite"/>
+      <circle r="46" fill="none" stroke="#d23045" stroke-width="3"/>
+      <circle r="42" fill="none" stroke="#1e3a8a" stroke-width="1.5"/>
+      <!-- Tick marks around the ring -->
+      <g stroke="#f5e9d4" stroke-width="1">
+        <line x1="0" y1="-46" x2="0" y2="-40"/>
+        <line x1="32.5" y1="-32.5" x2="28.3" y2="-28.3"/>
+        <line x1="46" y1="0" x2="40" y2="0"/>
+        <line x1="32.5" y1="32.5" x2="28.3" y2="28.3"/>
+        <line x1="0" y1="46" x2="0" y2="40"/>
+        <line x1="-32.5" y1="32.5" x2="-28.3" y2="28.3"/>
+        <line x1="-46" y1="0" x2="-40" y2="0"/>
+        <line x1="-32.5" y1="-32.5" x2="-28.3" y2="-28.3"/>
+      </g>
+    </g>
+    <!-- Patch interior (static) -->
+    <circle r="38" fill="#0a1f4a"/>
+    <!-- Tiny earth curve inside -->
+    <ellipse cx="0" cy="18" rx="40" ry="20" fill="#1d4fa3"/>
+    <ellipse cx="0" cy="18" rx="40" ry="20" fill="none" stroke="#7bd0ff" stroke-width="0.8" opacity="0.8"/>
+    <!-- Orbit arc with small shuttle dot -->
+    <path d="M -32 4 A 36 22 0 0 1 32 4" fill="none" stroke="#f5e9d4" stroke-width="1" stroke-dasharray="2 3" opacity="0.85"/>
+    <circle r="2.2" fill="#fff3c0">
+      <animateMotion dur="13s" repeatCount="indefinite"
+                     path="M -32 4 A 36 22 0 0 1 32 4"/>
+    </circle>
+    <!-- Tiny stars inside patch -->
+    <g fill="#ffffff">
+      <circle cx="-18" cy="-14" r="0.9"/>
+      <circle cx="-4"  cy="-22" r="0.9"/>
+      <circle cx="14"  cy="-16" r="0.9"/>
+      <circle cx="22"  cy="-6"  r="0.9"/>
+    </g>
+    <!-- Patch lettering -->
+    <text x="0" y="-6" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9" font-weight="700" fill="#f5e9d4" letter-spacing="1.2">STS-7</text>
+    <text x="0" y="33" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="6.5" font-weight="600" fill="#f5e9d4" letter-spacing="0.6">06 · 18 · 1983</text>
+  </g>
+
+  <!-- Primary date headline -->
+  <g>
+    <text x="370" y="58" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="42" font-weight="800" fill="#ffffff" letter-spacing="3">
+      JUNE 18, 2026
+      <animate attributeName="opacity" values="0.92;1;0.92" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <!-- Underline accent -->
+    <line x1="246" y1="70" x2="494" y2="70" stroke="#ffb347" stroke-width="1.2" opacity="0.85">
+      <animate attributeName="stroke-dashoffset" values="0;-20;0" dur="13s" repeatCount="indefinite"/>
+    </line>
+    <!-- Subhead -->
+    <text x="408" y="92" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="12" font-weight="600" fill="#cfe4ff" letter-spacing="5">
+      SALLY RIDE  ·  STS-7  ·  43 YEARS ALOFT
+    </text>
+    <!-- Tertiary note -->
+    <text x="408" y="112" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9" font-weight="500" fill="#9bb3d1" letter-spacing="2.5" font-style="italic">
+      first American woman in space — Challenger, 18 June 1983
+    </text>
+  </g>
+</svg>
