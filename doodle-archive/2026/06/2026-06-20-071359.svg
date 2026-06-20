@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Juneteenth (June 19, 2026) — 161st anniversary of General Order No. 3, read aloud by Union Major General Gordon Granger in Galveston, Texas on June 19, 1865, announcing freedom to the last enslaved people in the Confederacy. US federal holiday since 2021. Composition: dawn rising over a wide horizon — a Juneteenth-flag burst star at center (Ben Haith's 2000 design: a single white five-point star inside a twelve-point starburst arc), the arc representing the new horizon of freedom; the primary date "JUNE 19, 2026" set centered in large bone-white sans across the upper band, with subhead "JUNETEENTH · FREEDOM DAY · 161 YEARS" beneath and tertiary "General Order No. 3 — Galveston, Texas — June 19, 1865" italicized below; warm rising-sun rays radiate outward from the star in slow rotation; particles of gold light rise from the horizon. Palette: Juneteenth-flag red (#bf0a30), Juneteenth-flag blue (#002868) ground-to-arc gradient, bone-white star (#ffffff), gold sunrise (#ffb84d → #ffe9a6), over #0d1117. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="June 19, 2026 — Juneteenth, the 161st anniversary of General Order No. 3 read in Galveston, Texas on June 19, 1865. A bone-white five-point star inside a twelve-point starburst arc — the Juneteenth flag emblem — sits at the visual center over a horizon that splits red sky above and deep blue ground below. Sunrise rays radiate outward in slow rotation, gold particles rise from the horizon. The headline JUNE 19, 2026 is set centered in large bone-white sans serif across the upper band with JUNETEENTH · FREEDOM DAY · 161 YEARS as the subhead and General Order No. 3, Galveston, Texas, June 19, 1865 as italic tertiary line below.">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a0d14"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bf0a30" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#7a0a24" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#3d1020" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#002868" stop-opacity="0.0"/>
+      <stop offset="35%" stop-color="#002868" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#001540" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe9a6" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#ffb84d" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#ff8a1a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ff8a1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="horizonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe9a6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffe9a6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="starCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#fff7d6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff7d6" stop-opacity="0.3"/>
+    </radialGradient>
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="textGlow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="0.6"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Twelve-point starburst arc (Juneteenth flag emblem) drawn as one path; outer-spikes alternate -->
+    <symbol id="starburst" viewBox="-100 -100 200 200" overflow="visible">
+      <!-- 12-point burst ring -->
+      <path d="
+        M 0,-88
+        L 13,-30
+        L 62,-62
+        L 30,-13
+        L 88,0
+        L 30,13
+        L 62,62
+        L 13,30
+        L 0,88
+        L -13,30
+        L -62,62
+        L -30,13
+        L -88,0
+        L -30,-13
+        L -62,-62
+        L -13,-30 Z" fill="#ffffff" opacity="0.92"/>
+    </symbol>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Sky band (red) -->
+  <rect x="0" y="0" width="800" height="105" fill="url(#skyGrad)"/>
+  <!-- Ground band (blue) -->
+  <rect x="0" y="95" width="800" height="105" fill="url(#groundGrad)"/>
+
+  <!-- Horizon hairline glow -->
+  <ellipse cx="400" cy="103" rx="420" ry="14" fill="url(#horizonGlow)" opacity="0.7">
+    <animate attributeName="opacity" values="0.55;0.85;0.55" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+  <line x1="0" y1="103" x2="800" y2="103" stroke="#ffd066" stroke-width="0.6" opacity="0.55"/>
+
+  <!-- Twinkling stars in upper band -->
+  <g fill="#ffffff">
+    <circle cx="44"  cy="20" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="102" cy="38" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="156" cy="14" r="1.1"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="214" cy="48" r="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s"  begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="278" cy="22" r="0.9"><animate attributeName="opacity" values="0.25;0.95;0.25" dur="11s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="612" cy="20" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="4s" repeatCount="indefinite"/></circle>
+    <circle cx="664" cy="42" r="1.0"><animate attributeName="opacity" values="0.25;1;0.25" dur="7s"  begin="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="716" cy="18" r="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="762" cy="44" r="1.1"><animate attributeName="opacity" values="0.2;1;0.2" dur="13s" begin="3.4s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Rising gold particles from horizon -->
+  <g fill="#ffd066">
+    <circle cx="120" cy="160" r="1.4" opacity="0.0">
+      <animate attributeName="cy" values="160;70" dur="13s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="13s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="190" cy="170" r="1.1" opacity="0.0">
+      <animate attributeName="cy" values="170;65" dur="11s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="11s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="610" cy="165" r="1.2" opacity="0.0">
+      <animate attributeName="cy" values="165;60" dur="13s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="13s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="690" cy="175" r="1.3" opacity="0.0">
+      <animate attributeName="cy" values="175;65" dur="11s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80"  cy="178" r="1.0" opacity="0.0">
+      <animate attributeName="cy" values="178;80" dur="13s" begin="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="13s" begin="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="740" cy="172" r="1.0" opacity="0.0">
+      <animate attributeName="cy" values="172;75" dur="11s" begin="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.75;0" dur="11s" begin="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Central emblem group: anchored under headline -->
+  <g transform="translate(400,138)">
+    <!-- Outer sun glow halo -->
+    <circle r="78" fill="url(#sunGlow)" opacity="0.95">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="74;82;74" dur="13s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Slow rotating sunburst rays behind the star -->
+    <g opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="73s" repeatCount="indefinite"/>
+      <g stroke="#ffd066" stroke-linecap="round" opacity="0.6">
+        <line x1="0" y1="-72" x2="0" y2="-92" stroke-width="2"/>
+        <line x1="50.9" y1="-50.9" x2="65.1" y2="-65.1" stroke-width="2"/>
+        <line x1="72" y1="0" x2="92" y2="0" stroke-width="2"/>
+        <line x1="50.9" y1="50.9" x2="65.1" y2="65.1" stroke-width="2"/>
+        <line x1="0" y1="72" x2="0" y2="92" stroke-width="2"/>
+        <line x1="-50.9" y1="50.9" x2="-65.1" y2="65.1" stroke-width="2"/>
+        <line x1="-72" y1="0" x2="-92" y2="0" stroke-width="2"/>
+        <line x1="-50.9" y1="-50.9" x2="-65.1" y2="-65.1" stroke-width="2"/>
+      </g>
+      <g stroke="#ffb84d" stroke-linecap="round" opacity="0.45">
+        <line x1="36" y1="-62" x2="46" y2="-80" stroke-width="1.4"/>
+        <line x1="62" y1="-36" x2="80" y2="-46" stroke-width="1.4"/>
+        <line x1="62" y1="36" x2="80" y2="46" stroke-width="1.4"/>
+        <line x1="36" y1="62" x2="46" y2="80" stroke-width="1.4"/>
+        <line x1="-36" y1="62" x2="-46" y2="80" stroke-width="1.4"/>
+        <line x1="-62" y1="36" x2="-80" y2="46" stroke-width="1.4"/>
+        <line x1="-62" y1="-36" x2="-80" y2="-46" stroke-width="1.4"/>
+        <line x1="-36" y1="-62" x2="-46" y2="-80" stroke-width="1.4"/>
+      </g>
+    </g>
+
+    <!-- Juneteenth twelve-point starburst arc with subtle pulse -->
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.04;1" dur="13s" repeatCount="indefinite" additive="sum"/>
+      <use href="#starburst" width="160" height="160" x="-80" y="-80" filter="url(#softBlur)" opacity="0.35"/>
+      <use href="#starburst" width="160" height="160" x="-80" y="-80"/>
+    </g>
+
+    <!-- Inner navy ring to set off star -->
+    <circle r="34" fill="#002868" opacity="0.95"/>
+    <circle r="34" fill="none" stroke="#bf0a30" stroke-width="1.5" opacity="0.85"/>
+
+    <!-- Central five-point star (bone white) -->
+    <path d="M 0,-28 L 8.2,-8.7 L 28.5,-8.7 L 12.1,3.3 L 18.4,22.7 L 0,11.3 L -18.4,22.7 L -12.1,3.3 L -28.5,-8.7 L -8.2,-8.7 Z"
+          fill="url(#starCore)">
+      <animate attributeName="opacity" values="0.92;1;0.92" dur="7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Far-left and far-right ground silhouettes (gentle prairie horizon) -->
+  <g fill="#001025" opacity="0.85">
+    <path d="M 0 200 L 0 138 Q 80 130 160 138 Q 220 144 280 138 L 280 200 Z"/>
+    <path d="M 520 200 L 520 138 Q 600 132 680 140 Q 740 145 800 138 L 800 200 Z"/>
+  </g>
+
+  <!-- Primary date headline -->
+  <g>
+    <text x="400" y="54" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="40" font-weight="800" fill="#ffffff" letter-spacing="3"
+          filter="url(#textGlow)">
+      JUNE 19, 2026
+      <animate attributeName="opacity" values="0.95;1;0.95" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <!-- Underline accent -->
+    <line x1="244" y1="64" x2="556" y2="64" stroke="#ffb84d" stroke-width="1.2" opacity="0.9"/>
+    <!-- Subhead -->
+    <text x="400" y="82" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="12" font-weight="700" fill="#ffe9a6" letter-spacing="6">
+      JUNETEENTH  ·  FREEDOM DAY  ·  161 YEARS
+    </text>
+  </g>
+
+  <!-- Tertiary historical note at bottom -->
+  <text x="400" y="190" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10" font-weight="500" fill="#cfd8e8" letter-spacing="2.4" font-style="italic" opacity="0.92">
+    General Order No. 3 — Galveston, Texas — June 19, 1865
+  </text>
+</svg>
