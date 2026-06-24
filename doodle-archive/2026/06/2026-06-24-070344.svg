@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Alan Turing's Birthday (June 23, 1912) — 114 years — Father of Computer Science. Visualized as an infinite Turing-machine tape scrolling horizontally across the canvas: a parchment paper tape divided into cells, each containing a 0 or 1, with a glowing amber read/write head (probe arm + clamp + descending brackets + pulsing arrow tip) hovering over the central cell. State indicator beneath. Faint Enigma-rotor silhouettes flank both sides over a computational grid. Large bone-white "JUNE 23, 2026" headline across the top, "ALAN TURING · 114 YEARS" cyan subhead, italic "FATHER OF COMPUTER SCIENCE · JUNE 23, 1912 · MAIDA VALE, LONDON" tertiary. Palette: parchment cream, deep ink, amber read-head, cyan accents, bone-white text, over #0d1117. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="June 23, 2026 — Alan Turing's birthday, 114 years since June 23, 1912. A Turing-machine tape scrolls horizontally across the canvas with parchment cells containing binary 0 and 1 digits, while a glowing amber read/write head hovers over the centered cell. Faint Enigma rotor silhouettes flank both sides over a subtle computational grid. JUNE 23, 2026 headline across the top, ALAN TURING · 114 YEARS subhead, FATHER OF COMPUTER SCIENCE · JUNE 23, 1912 · MAIDA VALE, LONDON italic tertiary line at the bottom.">
+  <defs>
+    <!-- Tape paper gradient (vertical, cream parchment with subtle darkening at edges) -->
+    <linearGradient id="tape" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b8a880"/>
+      <stop offset="8%"   stop-color="#e6d9b0"/>
+      <stop offset="50%"  stop-color="#efe2bc"/>
+      <stop offset="92%"  stop-color="#d4c490"/>
+      <stop offset="100%" stop-color="#9c8c64"/>
+    </linearGradient>
+
+    <!-- Head probe gradient -->
+    <linearGradient id="probe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fde047"/>
+      <stop offset="60%"  stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <!-- Soft amber glow under the head -->
+    <radialGradient id="headglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#fbbf24" stop-opacity="0.75"/>
+      <stop offset="50%"  stop-color="#f59e0b" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Background computational grid -->
+    <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a2238" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- Edge shading on the tape (top + bottom darker) -->
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#000" stop-opacity="0.40"/>
+      <stop offset="18%"  stop-color="#000" stop-opacity="0"/>
+      <stop offset="82%"  stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.40"/>
+    </linearGradient>
+
+    <!-- Headline soft glow -->
+    <filter id="softglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong amber glow for the read head -->
+    <filter id="amberglow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- One tape cell containing a 0 -->
+    <symbol id="cell0" viewBox="0 0 25 38" overflow="visible">
+      <rect x="0.5" y="0.5" width="24" height="37" fill="url(#tape)" stroke="#7a6a48" stroke-width="0.7"/>
+      <text x="12.5" y="26" text-anchor="middle"
+            font-family="ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace"
+            font-size="18" font-weight="700" fill="#1a1a2e">0</text>
+    </symbol>
+    <!-- One tape cell containing a 1 -->
+    <symbol id="cell1" viewBox="0 0 25 38" overflow="visible">
+      <rect x="0.5" y="0.5" width="24" height="37" fill="url(#tape)" stroke="#7a6a48" stroke-width="0.7"/>
+      <text x="12.5" y="26" text-anchor="middle"
+            font-family="ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace"
+            font-size="18" font-weight="700" fill="#1a1a2e">1</text>
+    </symbol>
+
+    <!-- A 16-cell pattern block (400px wide). Pattern repeats seamlessly. -->
+    <g id="block">
+      <use href="#cell1" x="0"   y="0" width="25" height="38"/>
+      <use href="#cell0" x="25"  y="0" width="25" height="38"/>
+      <use href="#cell1" x="50"  y="0" width="25" height="38"/>
+      <use href="#cell1" x="75"  y="0" width="25" height="38"/>
+      <use href="#cell0" x="100" y="0" width="25" height="38"/>
+      <use href="#cell0" x="125" y="0" width="25" height="38"/>
+      <use href="#cell1" x="150" y="0" width="25" height="38"/>
+      <use href="#cell0" x="175" y="0" width="25" height="38"/>
+      <use href="#cell1" x="200" y="0" width="25" height="38"/>
+      <use href="#cell1" x="225" y="0" width="25" height="38"/>
+      <use href="#cell0" x="250" y="0" width="25" height="38"/>
+      <use href="#cell1" x="275" y="0" width="25" height="38"/>
+      <use href="#cell0" x="300" y="0" width="25" height="38"/>
+      <use href="#cell0" x="325" y="0" width="25" height="38"/>
+      <use href="#cell1" x="350" y="0" width="25" height="38"/>
+      <use href="#cell1" x="375" y="0" width="25" height="38"/>
+    </g>
+
+    <!-- Clip the tape to keep its band tidy -->
+    <clipPath id="tapeclip">
+      <rect x="0" y="95" width="800" height="38"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===== Canvas + background ===== -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#grid)" opacity="0.65"/>
+
+  <!-- Faint Enigma rotor silhouette at right -->
+  <g opacity="0.10" transform="translate(720 114)">
+    <circle r="58" fill="none" stroke="#7dd3fc" stroke-width="1.2"/>
+    <circle r="44" fill="none" stroke="#7dd3fc" stroke-width="0.9"/>
+    <circle r="28" fill="none" stroke="#7dd3fc" stroke-width="0.7"/>
+    <circle r="10" fill="none" stroke="#7dd3fc" stroke-width="0.5"/>
+    <g stroke="#7dd3fc" stroke-width="0.45">
+      <line x1="0"   y1="-58" x2="0"   y2="58"/>
+      <line x1="-58" y1="0"   x2="58"  y2="0"/>
+      <line x1="-41" y1="-41" x2="41"  y2="41"/>
+      <line x1="-41" y1="41"  x2="41"  y2="-41"/>
+    </g>
+    <!-- Rotor wheel inscriptions -->
+    <g fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="6" text-anchor="middle">
+      <text x="0"  y="-50">A</text>
+      <text x="35" y="-35">B</text>
+      <text x="50" y="0">C</text>
+      <text x="35" y="35">D</text>
+      <text x="0"  y="50">E</text>
+      <text x="-35" y="35">F</text>
+      <text x="-50" y="0">G</text>
+      <text x="-35" y="-35">H</text>
+    </g>
+    <!-- Slow rotation -->
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 0 0" to="360 0 0" dur="71s"
+                      additive="sum" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Faint Enigma rotor silhouette at left (smaller, counter-rotating) -->
+  <g opacity="0.08" transform="translate(80 114)">
+    <circle r="48" fill="none" stroke="#7dd3fc" stroke-width="1"/>
+    <circle r="34" fill="none" stroke="#7dd3fc" stroke-width="0.7"/>
+    <circle r="20" fill="none" stroke="#7dd3fc" stroke-width="0.6"/>
+    <g stroke="#7dd3fc" stroke-width="0.4">
+      <line x1="0"   y1="-48" x2="0"   y2="48"/>
+      <line x1="-48" y1="0"   x2="48"  y2="0"/>
+      <line x1="-34" y1="-34" x2="34"  y2="34"/>
+      <line x1="-34" y1="34"  x2="34"  y2="-34"/>
+    </g>
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 0 0" to="-360 0 0" dur="89s"
+                      additive="sum" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Soft amber glow pool under the tape's read position -->
+  <ellipse cx="400" cy="114" rx="80" ry="40" fill="url(#headglow)"/>
+
+  <!-- ===== TAPE ===== -->
+  <g clip-path="url(#tapeclip)">
+    <!-- Tape group: 3 copies of the 16-cell block laid side by side.
+         Translate from 0 to -400 over 23s for seamless leftward scroll. -->
+    <g transform="translate(0 95)">
+      <g>
+        <animateTransform attributeName="transform" type="translate"
+                          from="0 0" to="-400 0" dur="23s" repeatCount="indefinite"/>
+        <use href="#block" x="-400" y="0"/>
+        <use href="#block" x="0"    y="0"/>
+        <use href="#block" x="400"  y="0"/>
+        <use href="#block" x="800"  y="0"/>
+      </g>
+      <!-- Top/bottom edge shading over the tape -->
+      <rect x="0" y="0" width="800" height="38" fill="url(#edge)" pointer-events="none"/>
+    </g>
+  </g>
+
+  <!-- Highlight ring around the centered cell (gentle pulsing) -->
+  <rect x="387" y="93" width="26" height="42" rx="2"
+        fill="none" stroke="#fbbf24" stroke-width="1.4" opacity="0.85">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== Read/Write Head ===== -->
+  <g filter="url(#amberglow)">
+    <!-- Probe arm coming down from just below subhead -->
+    <rect x="397" y="70" width="6" height="20" fill="url(#probe)" rx="1"/>
+    <!-- Head body (square clamp) -->
+    <rect x="378" y="84" width="44" height="12" fill="#fbbf24" stroke="#7a3f00" stroke-width="1.1" rx="2"/>
+    <!-- Tiny rivets on the clamp -->
+    <circle cx="385" cy="90" r="1.2" fill="#7a3f00"/>
+    <circle cx="415" cy="90" r="1.2" fill="#7a3f00"/>
+    <!-- Two descending brackets that wrap the focal cell -->
+    <path d="M 386 96 L 386 138 M 414 96 L 414 138"
+          stroke="#fbbf24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- Downward-pointing arrow tip just above the focal cell -->
+    <path d="M 393 97 L 407 97 L 400 108 Z" fill="#fde047">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ===== Text Layer ===== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+    <!-- Dark band behind headline + subhead for guaranteed legibility -->
+    <rect x="0" y="2" width="800" height="62" fill="#040611" opacity="0.84"/>
+
+    <!-- Primary headline: today's date -->
+    <text x="400" y="34" text-anchor="middle"
+          font-size="32" font-weight="800" letter-spacing="7"
+          fill="#f5eed6" filter="url(#softglow)">
+      JUNE 23, 2026
+    </text>
+
+    <!-- Subhead: who and how many years -->
+    <text x="400" y="56" text-anchor="middle"
+          font-size="12" font-weight="700" letter-spacing="6"
+          fill="#7dd3fc">
+      ALAN TURING
+      <tspan fill="#fbbf24">  ·  </tspan>
+      <tspan>114 YEARS</tspan>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="11s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- State indicator below the head -->
+    <text x="400" y="154" text-anchor="middle"
+          font-family="ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace"
+          font-size="10" font-weight="700" letter-spacing="3"
+          fill="#fbbf24">
+      STATE  q₁  →  READ  →  q₂
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="13s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Dark band behind tertiary -->
+    <rect x="0" y="174" width="800" height="22" fill="#040611" opacity="0.86"/>
+
+    <!-- Tertiary italic -->
+    <text x="400" y="190" text-anchor="middle"
+          font-size="10" font-style="italic" font-weight="600" letter-spacing="4"
+          fill="#bcc8e0">
+      FATHER OF COMPUTER SCIENCE  ·  JUNE 23, 1912  ·  MAIDA VALE, LONDON
+    </text>
+  </g>
+
+  <!-- Subtle vignette -->
+  <radialGradient id="vignette" cx="0.5" cy="0.55" r="0.85">
+    <stop offset="60%"  stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+  </radialGradient>
+  <rect width="800" height="200" fill="url(#vignette)"/>
+</svg>

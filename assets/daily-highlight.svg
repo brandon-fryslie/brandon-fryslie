@@ -1,244 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Alan Turing's Birthday (June 23, 1912) — 114 years — Father of Computer Science. Visualized as an infinite Turing-machine tape scrolling horizontally across the canvas: a parchment paper tape divided into cells, each containing a 0 or 1, with a glowing amber read/write head (probe arm + clamp + descending brackets + pulsing arrow tip) hovering over the central cell. State indicator beneath. Faint Enigma-rotor silhouettes flank both sides over a computational grid. Large bone-white "JUNE 23, 2026" headline across the top, "ALAN TURING · 114 YEARS" cyan subhead, italic "FATHER OF COMPUTER SCIENCE · JUNE 23, 1912 · MAIDA VALE, LONDON" tertiary. Palette: parchment cream, deep ink, amber read-head, cyan accents, bone-white text, over #0d1117. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="June 23, 2026 — Alan Turing's birthday, 114 years since June 23, 1912. A Turing-machine tape scrolls horizontally across the canvas with parchment cells containing binary 0 and 1 digits, while a glowing amber read/write head hovers over the centered cell. Faint Enigma rotor silhouettes flank both sides over a subtle computational grid. JUNE 23, 2026 headline across the top, ALAN TURING · 114 YEARS subhead, FATHER OF COMPUTER SCIENCE · JUNE 23, 1912 · MAIDA VALE, LONDON italic tertiary line at the bottom.">
+<!-- theme: Kenneth Arnold's "Flying Saucer" Sighting (June 24, 1947) — 79th anniversary. Pilot Kenneth Arnold saw nine bright disc-shaped objects flying in formation past Mt. Rainier at ~1,200 mph; his "saucer skipping across water" description spawned the term "flying saucer" and birthed modern UFO culture. Visualized as nine chrome-silver discs in echelon formation gliding leftward across a golden-hour Pacific Northwest sky, Mt. Rainier's snow-capped triangular silhouette spanning the lower third, twinkling stars in the dusk-blue upper sky, soft amber beams pulsing from saucer undersides, faint heat-shimmer haze on the horizon. Large bone-white "JUNE 24, 2026" headline at top, cyan "FLYING SAUCERS · 79 YEARS" subhead, italic "KENNETH ARNOLD · MT. RAINIER · JUNE 24, 1947" tertiary. Palette: dusk navy, golden-hour rose-orange, slate-blue mountain, snow bone-white, chrome silver, amber beams, cyan accents, over #0d1117. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle: Kenneth Arnold's flying saucer sighting 79th anniversary, June 24, 1947 — nine chrome discs in echelon formation gliding past Mt. Rainier under a golden-hour dusk sky">
   <defs>
-    <!-- Tape paper gradient (vertical, cream parchment with subtle darkening at edges) -->
-    <linearGradient id="tape" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#b8a880"/>
-      <stop offset="8%"   stop-color="#e6d9b0"/>
-      <stop offset="50%"  stop-color="#efe2bc"/>
-      <stop offset="92%"  stop-color="#d4c490"/>
-      <stop offset="100%" stop-color="#9c8c64"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="35%" stop-color="#1a2640"/>
+      <stop offset="70%" stop-color="#54324a"/>
+      <stop offset="95%" stop-color="#c2693a"/>
+      <stop offset="100%" stop-color="#e0915a"/>
     </linearGradient>
-
-    <!-- Head probe gradient -->
-    <linearGradient id="probe" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#fde047"/>
-      <stop offset="60%"  stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#b45309"/>
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4f6fb"/>
+      <stop offset="22%" stop-color="#c9d2e3"/>
+      <stop offset="45%" stop-color="#4a5a78"/>
+      <stop offset="100%" stop-color="#1c2438"/>
     </linearGradient>
-
-    <!-- Soft amber glow under the head -->
-    <radialGradient id="headglow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%"   stop-color="#fbbf24" stop-opacity="0.75"/>
-      <stop offset="50%"  stop-color="#f59e0b" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    <radialGradient id="haze" cx="0.5" cy="1" r="0.6">
+      <stop offset="0%" stop-color="#e0915a" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#c2693a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- Background computational grid -->
-    <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a2238" stroke-width="0.5"/>
-    </pattern>
-
-    <!-- Edge shading on the tape (top + bottom darker) -->
-    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#000" stop-opacity="0.40"/>
-      <stop offset="18%"  stop-color="#000" stop-opacity="0"/>
-      <stop offset="82%"  stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.40"/>
+    <linearGradient id="disc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4f6fb"/>
+      <stop offset="40%" stop-color="#bfc8da"/>
+      <stop offset="55%" stop-color="#5a6680"/>
+      <stop offset="100%" stop-color="#2a3450"/>
     </linearGradient>
-
-    <!-- Headline soft glow -->
-    <filter id="softglow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="1.2" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8e8ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#3a6080" stop-opacity="0.75"/>
+    </linearGradient>
+    <radialGradient id="beam" cx="0.5" cy="0" r="0.6">
+      <stop offset="0%" stop-color="#ffc266" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#ffa040" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffa040" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <!-- Strong amber glow for the read head -->
-    <filter id="amberglow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="2.6" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- One tape cell containing a 0 -->
-    <symbol id="cell0" viewBox="0 0 25 38" overflow="visible">
-      <rect x="0.5" y="0.5" width="24" height="37" fill="url(#tape)" stroke="#7a6a48" stroke-width="0.7"/>
-      <text x="12.5" y="26" text-anchor="middle"
-            font-family="ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace"
-            font-size="18" font-weight="700" fill="#1a1a2e">0</text>
-    </symbol>
-    <!-- One tape cell containing a 1 -->
-    <symbol id="cell1" viewBox="0 0 25 38" overflow="visible">
-      <rect x="0.5" y="0.5" width="24" height="37" fill="url(#tape)" stroke="#7a6a48" stroke-width="0.7"/>
-      <text x="12.5" y="26" text-anchor="middle"
-            font-family="ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace"
-            font-size="18" font-weight="700" fill="#1a1a2e">1</text>
-    </symbol>
-
-    <!-- A 16-cell pattern block (400px wide). Pattern repeats seamlessly. -->
-    <g id="block">
-      <use href="#cell1" x="0"   y="0" width="25" height="38"/>
-      <use href="#cell0" x="25"  y="0" width="25" height="38"/>
-      <use href="#cell1" x="50"  y="0" width="25" height="38"/>
-      <use href="#cell1" x="75"  y="0" width="25" height="38"/>
-      <use href="#cell0" x="100" y="0" width="25" height="38"/>
-      <use href="#cell0" x="125" y="0" width="25" height="38"/>
-      <use href="#cell1" x="150" y="0" width="25" height="38"/>
-      <use href="#cell0" x="175" y="0" width="25" height="38"/>
-      <use href="#cell1" x="200" y="0" width="25" height="38"/>
-      <use href="#cell1" x="225" y="0" width="25" height="38"/>
-      <use href="#cell0" x="250" y="0" width="25" height="38"/>
-      <use href="#cell1" x="275" y="0" width="25" height="38"/>
-      <use href="#cell0" x="300" y="0" width="25" height="38"/>
-      <use href="#cell0" x="325" y="0" width="25" height="38"/>
-      <use href="#cell1" x="350" y="0" width="25" height="38"/>
-      <use href="#cell1" x="375" y="0" width="25" height="38"/>
+    <!-- One flying saucer: drop beam + disc + dome + amber underside lights -->
+    <g id="saucer">
+      <!-- pulsing amber beam below -->
+      <ellipse cx="0" cy="14" rx="22" ry="18" fill="url(#beam)" opacity="0.9">
+        <animate attributeName="opacity" values="0.55;0.95;0.55" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="16;22;16" dur="7s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- disc body -->
+      <ellipse cx="0" cy="0" rx="22" ry="5" fill="url(#disc)" filter="url(#glow)"/>
+      <!-- dome -->
+      <path d="M -10 -1 Q -10 -9 0 -9 Q 10 -9 10 -1 Z" fill="url(#dome)"/>
+      <!-- highlight rim -->
+      <ellipse cx="0" cy="-2" rx="22" ry="1.4" fill="#ffffff" opacity="0.55"/>
+      <!-- amber underside lights -->
+      <circle cx="-14" cy="3" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-7" cy="4" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="0.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="4" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="7" cy="4" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="14" cy="3" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="1.6s" repeatCount="indefinite"/>
+      </circle>
     </g>
-
-    <!-- Clip the tape to keep its band tidy -->
-    <clipPath id="tapeclip">
-      <rect x="0" y="95" width="800" height="38"/>
-    </clipPath>
   </defs>
 
-  <!-- ===== Canvas + background ===== -->
-  <rect width="800" height="200" fill="#0d1117"/>
-  <rect width="800" height="200" fill="url(#grid)" opacity="0.65"/>
+  <!-- Sky background -->
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- Faint Enigma rotor silhouette at right -->
-  <g opacity="0.10" transform="translate(720 114)">
-    <circle r="58" fill="none" stroke="#7dd3fc" stroke-width="1.2"/>
-    <circle r="44" fill="none" stroke="#7dd3fc" stroke-width="0.9"/>
-    <circle r="28" fill="none" stroke="#7dd3fc" stroke-width="0.7"/>
-    <circle r="10" fill="none" stroke="#7dd3fc" stroke-width="0.5"/>
-    <g stroke="#7dd3fc" stroke-width="0.45">
-      <line x1="0"   y1="-58" x2="0"   y2="58"/>
-      <line x1="-58" y1="0"   x2="58"  y2="0"/>
-      <line x1="-41" y1="-41" x2="41"  y2="41"/>
-      <line x1="-41" y1="41"  x2="41"  y2="-41"/>
-    </g>
-    <!-- Rotor wheel inscriptions -->
-    <g fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="6" text-anchor="middle">
-      <text x="0"  y="-50">A</text>
-      <text x="35" y="-35">B</text>
-      <text x="50" y="0">C</text>
-      <text x="35" y="35">D</text>
-      <text x="0"  y="50">E</text>
-      <text x="-35" y="35">F</text>
-      <text x="-50" y="0">G</text>
-      <text x="-35" y="-35">H</text>
-    </g>
-    <!-- Slow rotation -->
-    <animateTransform attributeName="transform" type="rotate"
-                      from="0 0 0" to="360 0 0" dur="71s"
-                      additive="sum" repeatCount="indefinite"/>
+  <!-- Stars in upper sky -->
+  <g fill="#f4f6fb">
+    <circle cx="60" cy="22" r="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="130" cy="38" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.7s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="210" cy="18" r="1.1"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.9s" begin="1.1s" repeatCount="indefinite"/></circle>
+    <circle cx="295" cy="42" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.3s" begin="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="24" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.1s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="470" cy="48" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="1.7s" repeatCount="indefinite"/></circle>
+    <circle cx="555" cy="28" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.7s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="640" cy="44" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="22" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.3s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="46" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.9s" begin="2.0s" repeatCount="indefinite"/></circle>
+    <circle cx="95" cy="58" r="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="5s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="345" cy="62" r="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="0.9s" repeatCount="indefinite"/></circle>
+    <circle cx="600" cy="60" r="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" begin="2.2s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- Faint Enigma rotor silhouette at left (smaller, counter-rotating) -->
-  <g opacity="0.08" transform="translate(80 114)">
-    <circle r="48" fill="none" stroke="#7dd3fc" stroke-width="1"/>
-    <circle r="34" fill="none" stroke="#7dd3fc" stroke-width="0.7"/>
-    <circle r="20" fill="none" stroke="#7dd3fc" stroke-width="0.6"/>
-    <g stroke="#7dd3fc" stroke-width="0.4">
-      <line x1="0"   y1="-48" x2="0"   y2="48"/>
-      <line x1="-48" y1="0"   x2="48"  y2="0"/>
-      <line x1="-34" y1="-34" x2="34"  y2="34"/>
-      <line x1="-34" y1="34"  x2="34"  y2="-34"/>
+  <!-- Horizon haze -->
+  <rect x="0" y="120" width="800" height="80" fill="url(#haze)" opacity="0.6"/>
+
+  <!-- Distant ridge silhouette behind Rainier -->
+  <path d="M 0 175 L 80 162 L 160 168 L 240 158 L 320 170 L 400 156 L 480 168 L 560 158 L 640 166 L 720 158 L 800 168 L 800 200 L 0 200 Z" fill="#1c2438" opacity="0.85"/>
+
+  <!-- Mt. Rainier — broad volcanic cone, snow-capped, centered lower third -->
+  <g>
+    <path d="M 250 200 L 320 170 L 360 140 L 380 122 L 400 110 L 420 122 L 440 140 L 480 170 L 550 200 Z" fill="url(#mountain)"/>
+    <!-- Snow cap with jagged lower edge -->
+    <path d="M 360 140 L 380 145 L 400 138 L 420 145 L 440 140 L 450 152 L 425 156 L 395 150 L 370 155 L 355 150 Z" fill="#f4f6fb" opacity="0.95"/>
+    <!-- Crevasse shadows -->
+    <path d="M 380 122 L 388 145 L 396 168 L 400 200 L 392 200 L 386 175 L 378 150 Z" fill="#2a3450" opacity="0.55"/>
+    <path d="M 420 122 L 414 145 L 408 168 L 405 200 L 412 200 L 418 175 L 425 150 Z" fill="#2a3450" opacity="0.35"/>
+    <!-- Peak highlight -->
+    <path d="M 395 113 L 400 110 L 405 113 L 402 122 L 398 122 Z" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- Foreground pine silhouettes -->
+  <g fill="#0d1117">
+    <polygon points="20,200 30,178 40,200"/>
+    <polygon points="55,200 65,182 75,200"/>
+    <polygon points="105,200 115,180 125,200"/>
+    <polygon points="170,200 178,185 186,200"/>
+    <polygon points="570,200 578,184 586,200"/>
+    <polygon points="615,200 625,180 635,200"/>
+    <polygon points="670,200 680,182 690,200"/>
+    <polygon points="730,200 740,178 750,200"/>
+    <polygon points="775,200 785,184 795,200"/>
+  </g>
+
+  <!-- Nine saucers in echelon formation, gliding leftward with subtle bobbing.
+       Each <g> wraps a <use> of #saucer; outer animateTransform handles the cross-screen drift,
+       inner animateTransform on the <use> handles the bob. Staggered 'begin' negatives make the
+       formation visible at frame 0 rather than empty. -->
+  <g>
+    <g transform="translate(720 95)">
+      <animateTransform attributeName="transform" type="translate" values="880 95; -80 95" dur="29s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0; 0 2; 0 0" dur="7s" repeatCount="indefinite"/>
+      </use>
     </g>
-    <animateTransform attributeName="transform" type="rotate"
-                      from="0 0 0" to="-360 0 0" dur="89s"
-                      additive="sum" repeatCount="indefinite"/>
-  </g>
-
-  <!-- Soft amber glow pool under the tape's read position -->
-  <ellipse cx="400" cy="114" rx="80" ry="40" fill="url(#headglow)"/>
-
-  <!-- ===== TAPE ===== -->
-  <g clip-path="url(#tapeclip)">
-    <!-- Tape group: 3 copies of the 16-cell block laid side by side.
-         Translate from 0 to -400 over 23s for seamless leftward scroll. -->
-    <g transform="translate(0 95)">
-      <g>
-        <animateTransform attributeName="transform" type="translate"
-                          from="0 0" to="-400 0" dur="23s" repeatCount="indefinite"/>
-        <use href="#block" x="-400" y="0"/>
-        <use href="#block" x="0"    y="0"/>
-        <use href="#block" x="400"  y="0"/>
-        <use href="#block" x="800"  y="0"/>
-      </g>
-      <!-- Top/bottom edge shading over the tape -->
-      <rect x="0" y="0" width="800" height="38" fill="url(#edge)" pointer-events="none"/>
+    <g transform="translate(640 78)">
+      <animateTransform attributeName="transform" type="translate" values="900 78; -60 78" dur="29s" begin="-3s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0; 0 -2; 0 0" dur="7s" begin="0.4s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g transform="translate(560 92)">
+      <animateTransform attributeName="transform" type="translate" values="920 92; -40 92" dur="29s" begin="-6s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0; 0 2; 0 0" dur="7s" begin="0.8s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g transform="translate(180 88)">
+      <animateTransform attributeName="transform" type="translate" values="940 88; -20 88" dur="29s" begin="-9s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0; 0 -2; 0 0" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g transform="translate(115 75)">
+      <animateTransform attributeName="transform" type="translate" values="960 75; 0 75" dur="29s" begin="-12s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0; 0 2; 0 0" dur="7s" begin="1.6s" repeatCount="indefinite"/>
+      </use>
     </g>
   </g>
 
-  <!-- Highlight ring around the centered cell (gentle pulsing) -->
-  <rect x="387" y="93" width="26" height="42" rx="2"
-        fill="none" stroke="#fbbf24" stroke-width="1.4" opacity="0.85">
-    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- ===== Read/Write Head ===== -->
-  <g filter="url(#amberglow)">
-    <!-- Probe arm coming down from just below subhead -->
-    <rect x="397" y="70" width="6" height="20" fill="url(#probe)" rx="1"/>
-    <!-- Head body (square clamp) -->
-    <rect x="378" y="84" width="44" height="12" fill="#fbbf24" stroke="#7a3f00" stroke-width="1.1" rx="2"/>
-    <!-- Tiny rivets on the clamp -->
-    <circle cx="385" cy="90" r="1.2" fill="#7a3f00"/>
-    <circle cx="415" cy="90" r="1.2" fill="#7a3f00"/>
-    <!-- Two descending brackets that wrap the focal cell -->
-    <path d="M 386 96 L 386 138 M 414 96 L 414 138"
-          stroke="#fbbf24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-    <!-- Downward-pointing arrow tip just above the focal cell -->
-    <path d="M 393 97 L 407 97 L 400 108 Z" fill="#fde047">
-      <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- ===== Text Layer ===== -->
+  <!-- TYPOGRAPHY -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Dark backing for legibility -->
+    <text x="400" y="42" text-anchor="middle" font-size="34" font-weight="900" letter-spacing="6" fill="#0d1117" opacity="0.9">JUNE 24, 2026</text>
+    <text x="400" y="42" text-anchor="middle" font-size="34" font-weight="900" letter-spacing="6" fill="#f4f6fb" filter="url(#bigglow)">JUNE 24, 2026</text>
 
-    <!-- Dark band behind headline + subhead for guaranteed legibility -->
-    <rect x="0" y="2" width="800" height="62" fill="#040611" opacity="0.84"/>
+    <!-- Cyan subhead -->
+    <text x="400" y="65" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="5" fill="#a8e8ff">FLYING SAUCERS · 79 YEARS</text>
 
-    <!-- Primary headline: today's date -->
-    <text x="400" y="34" text-anchor="middle"
-          font-size="32" font-weight="800" letter-spacing="7"
-          fill="#f5eed6" filter="url(#softglow)">
-      JUNE 23, 2026
-    </text>
-
-    <!-- Subhead: who and how many years -->
-    <text x="400" y="56" text-anchor="middle"
-          font-size="12" font-weight="700" letter-spacing="6"
-          fill="#7dd3fc">
-      ALAN TURING
-      <tspan fill="#fbbf24">  ·  </tspan>
-      <tspan>114 YEARS</tspan>
-      <animate attributeName="opacity" values="0.8;1;0.8" dur="11s" repeatCount="indefinite"/>
-    </text>
-
-    <!-- State indicator below the head -->
-    <text x="400" y="154" text-anchor="middle"
-          font-family="ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace"
-          font-size="10" font-weight="700" letter-spacing="3"
-          fill="#fbbf24">
-      STATE  q₁  →  READ  →  q₂
-      <animate attributeName="opacity" values="0.55;1;0.55" dur="13s" repeatCount="indefinite"/>
-    </text>
-
-    <!-- Dark band behind tertiary -->
-    <rect x="0" y="174" width="800" height="22" fill="#040611" opacity="0.86"/>
-
-    <!-- Tertiary italic -->
-    <text x="400" y="190" text-anchor="middle"
-          font-size="10" font-style="italic" font-weight="600" letter-spacing="4"
-          fill="#bcc8e0">
-      FATHER OF COMPUTER SCIENCE  ·  JUNE 23, 1912  ·  MAIDA VALE, LONDON
-    </text>
+    <!-- Italic tertiary line -->
+    <text x="400" y="191" text-anchor="middle" font-size="9.5" font-style="italic" letter-spacing="3.5" fill="#f0d6b0" opacity="0.95">KENNETH ARNOLD · MT. RAINIER · JUNE 24, 1947</text>
   </g>
-
-  <!-- Subtle vignette -->
-  <radialGradient id="vignette" cx="0.5" cy="0.55" r="0.85">
-    <stop offset="60%"  stop-color="#000" stop-opacity="0"/>
-    <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
-  </radialGradient>
-  <rect width="800" height="200" fill="url(#vignette)"/>
 </svg>
