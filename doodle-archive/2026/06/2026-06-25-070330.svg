@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Kenneth Arnold's "Flying Saucer" Sighting (June 24, 1947) — 79th anniversary. Pilot Kenneth Arnold saw nine bright disc-shaped objects flying in formation past Mt. Rainier at ~1,200 mph; his "saucer skipping across water" description spawned the term "flying saucer" and birthed modern UFO culture. Visualized as nine chrome-silver discs in echelon formation gliding leftward across a golden-hour Pacific Northwest sky, Mt. Rainier's snow-capped triangular silhouette spanning the lower third, twinkling stars in the dusk-blue upper sky, soft amber beams pulsing from saucer undersides, faint heat-shimmer haze on the horizon. Large bone-white "JUNE 24, 2026" headline at top, cyan "FLYING SAUCERS · 79 YEARS" subhead, italic "KENNETH ARNOLD · MT. RAINIER · JUNE 24, 1947" tertiary. Palette: dusk navy, golden-hour rose-orange, slate-blue mountain, snow bone-white, chrome silver, amber beams, cyan accents, over #0d1117. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle: Kenneth Arnold's flying saucer sighting 79th anniversary, June 24, 1947 — nine chrome discs in echelon formation gliding past Mt. Rainier under a golden-hour dusk sky">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="35%" stop-color="#1a2640"/>
+      <stop offset="70%" stop-color="#54324a"/>
+      <stop offset="95%" stop-color="#c2693a"/>
+      <stop offset="100%" stop-color="#e0915a"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4f6fb"/>
+      <stop offset="22%" stop-color="#c9d2e3"/>
+      <stop offset="45%" stop-color="#4a5a78"/>
+      <stop offset="100%" stop-color="#1c2438"/>
+    </linearGradient>
+    <radialGradient id="haze" cx="0.5" cy="1" r="0.6">
+      <stop offset="0%" stop-color="#e0915a" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#c2693a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="disc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4f6fb"/>
+      <stop offset="40%" stop-color="#bfc8da"/>
+      <stop offset="55%" stop-color="#5a6680"/>
+      <stop offset="100%" stop-color="#2a3450"/>
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8e8ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#3a6080" stop-opacity="0.75"/>
+    </linearGradient>
+    <radialGradient id="beam" cx="0.5" cy="0" r="0.6">
+      <stop offset="0%" stop-color="#ffc266" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#ffa040" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffa040" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- One flying saucer: drop beam + disc + dome + amber underside lights -->
+    <g id="saucer">
+      <!-- pulsing amber beam below -->
+      <ellipse cx="0" cy="14" rx="22" ry="18" fill="url(#beam)" opacity="0.9">
+        <animate attributeName="opacity" values="0.55;0.95;0.55" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="16;22;16" dur="7s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- disc body -->
+      <ellipse cx="0" cy="0" rx="22" ry="5" fill="url(#disc)" filter="url(#glow)"/>
+      <!-- dome -->
+      <path d="M -10 -1 Q -10 -9 0 -9 Q 10 -9 10 -1 Z" fill="url(#dome)"/>
+      <!-- highlight rim -->
+      <ellipse cx="0" cy="-2" rx="22" ry="1.4" fill="#ffffff" opacity="0.55"/>
+      <!-- amber underside lights -->
+      <circle cx="-14" cy="3" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-7" cy="4" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="0.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="4" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="7" cy="4" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="14" cy="3" r="1.3" fill="#ffc266">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" begin="1.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Stars in upper sky -->
+  <g fill="#f4f6fb">
+    <circle cx="60" cy="22" r="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="130" cy="38" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.7s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="210" cy="18" r="1.1"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.9s" begin="1.1s" repeatCount="indefinite"/></circle>
+    <circle cx="295" cy="42" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.3s" begin="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="24" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.1s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="470" cy="48" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="1.7s" repeatCount="indefinite"/></circle>
+    <circle cx="555" cy="28" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.7s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="640" cy="44" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="22" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.3s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="46" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.9s" begin="2.0s" repeatCount="indefinite"/></circle>
+    <circle cx="95" cy="58" r="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="5s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="345" cy="62" r="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="0.9s" repeatCount="indefinite"/></circle>
+    <circle cx="600" cy="60" r="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" begin="2.2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Horizon haze -->
+  <rect x="0" y="120" width="800" height="80" fill="url(#haze)" opacity="0.6"/>
+
+  <!-- Distant ridge silhouette behind Rainier -->
+  <path d="M 0 175 L 80 162 L 160 168 L 240 158 L 320 170 L 400 156 L 480 168 L 560 158 L 640 166 L 720 158 L 800 168 L 800 200 L 0 200 Z" fill="#1c2438" opacity="0.85"/>
+
+  <!-- Mt. Rainier — broad volcanic cone, snow-capped, centered lower third -->
+  <g>
+    <path d="M 250 200 L 320 170 L 360 140 L 380 122 L 400 110 L 420 122 L 440 140 L 480 170 L 550 200 Z" fill="url(#mountain)"/>
+    <!-- Snow cap with jagged lower edge -->
+    <path d="M 360 140 L 380 145 L 400 138 L 420 145 L 440 140 L 450 152 L 425 156 L 395 150 L 370 155 L 355 150 Z" fill="#f4f6fb" opacity="0.95"/>
+    <!-- Crevasse shadows -->
+    <path d="M 380 122 L 388 145 L 396 168 L 400 200 L 392 200 L 386 175 L 378 150 Z" fill="#2a3450" opacity="0.55"/>
+    <path d="M 420 122 L 414 145 L 408 168 L 405 200 L 412 200 L 418 175 L 425 150 Z" fill="#2a3450" opacity="0.35"/>
+    <!-- Peak highlight -->
+    <path d="M 395 113 L 400 110 L 405 113 L 402 122 L 398 122 Z" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- Foreground pine silhouettes -->
+  <g fill="#0d1117">
+    <polygon points="20,200 30,178 40,200"/>
+    <polygon points="55,200 65,182 75,200"/>
+    <polygon points="105,200 115,180 125,200"/>
+    <polygon points="170,200 178,185 186,200"/>
+    <polygon points="570,200 578,184 586,200"/>
+    <polygon points="615,200 625,180 635,200"/>
+    <polygon points="670,200 680,182 690,200"/>
+    <polygon points="730,200 740,178 750,200"/>
+    <polygon points="775,200 785,184 795,200"/>
+  </g>
+
+  <!-- Nine saucers in echelon formation, gliding leftward with subtle bobbing.
+       Each <g> wraps a <use> of #saucer; outer animateTransform handles the cross-screen drift,
+       inner animateTransform on the <use> handles the bob. Staggered 'begin' negatives make the
+       formation visible at frame 0 rather than empty. -->
+  <g>
+    <g transform="translate(720 95)">
+      <animateTransform attributeName="transform" type="translate" values="880 95; -80 95" dur="29s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0; 0 2; 0 0" dur="7s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g transform="translate(640 78)">
+      <animateTransform attributeName="transform" type="translate" values="900 78; -60 78" dur="29s" begin="-3s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0; 0 -2; 0 0" dur="7s" begin="0.4s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g transform="translate(560 92)">
+      <animateTransform attributeName="transform" type="translate" values="920 92; -40 92" dur="29s" begin="-6s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0; 0 2; 0 0" dur="7s" begin="0.8s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g transform="translate(180 88)">
+      <animateTransform attributeName="transform" type="translate" values="940 88; -20 88" dur="29s" begin="-9s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0; 0 -2; 0 0" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g transform="translate(115 75)">
+      <animateTransform attributeName="transform" type="translate" values="960 75; 0 75" dur="29s" begin="-12s" repeatCount="indefinite"/>
+      <use href="#saucer">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0; 0 2; 0 0" dur="7s" begin="1.6s" repeatCount="indefinite"/>
+      </use>
+    </g>
+  </g>
+
+  <!-- TYPOGRAPHY -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Dark backing for legibility -->
+    <text x="400" y="42" text-anchor="middle" font-size="34" font-weight="900" letter-spacing="6" fill="#0d1117" opacity="0.9">JUNE 24, 2026</text>
+    <text x="400" y="42" text-anchor="middle" font-size="34" font-weight="900" letter-spacing="6" fill="#f4f6fb" filter="url(#bigglow)">JUNE 24, 2026</text>
+
+    <!-- Cyan subhead -->
+    <text x="400" y="65" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="5" fill="#a8e8ff">FLYING SAUCERS · 79 YEARS</text>
+
+    <!-- Italic tertiary line -->
+    <text x="400" y="191" text-anchor="middle" font-size="9.5" font-style="italic" letter-spacing="3.5" fill="#f0d6b0" opacity="0.95">KENNETH ARNOLD · MT. RAINIER · JUNE 24, 1947</text>
+  </g>
+</svg>
