@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: International Asteroid Day (June 30) — UN-recognized observance commemorating the Tunguska event of June 30, 1908, when a ~50-60m airburst over the Podkamennaya Tunguska River, Krasnoyarsk Krai, Siberia, flattened an estimated 2,000 km² of taiga (about 80 million trees) without leaving an impact crater. 118 years on. Visualized as a wide cosmic-to-ground composition: a deep starfield gradient across the top half, a glowing rough-textured asteroid blazes down-right on a long fiery trail toward a low silhouetted Siberian taiga horizon where charred radial tree-fall pattern fans out from a ground-zero point, faint shockwave rings expand outward from the same point in slow pulses, particles of ember drift off the asteroid's trail. Large bone-white "JUNE 30, 2026" headline arcs prominently across the top of the starfield, with cyan "ASTEROID DAY · TUNGUSKA · 118 YEARS" subhead beneath; italic "PODKAMENNAYA TUNGUSKA RIVER · SIBERIA · JUNE 30, 1908" tertiary along the bottom. Palette: deep cosmos navy, starlight bone-white, asteroid umber and ember-orange, trail amber gradient, taiga charcoal, shockwave cyan-pale rings, over #0d1117. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle: International Asteroid Day, 118th anniversary of the 1908 Tunguska event">
+  <defs>
+    <radialGradient id="sky" cx="0.6" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#1a2238"/>
+      <stop offset="0.55" stop-color="#0e1424"/>
+      <stop offset="1" stop-color="#0a0d12"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171c1f"/>
+      <stop offset="1" stop-color="#0a0d12"/>
+    </linearGradient>
+    <radialGradient id="rock" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#ffd47a"/>
+      <stop offset="0.25" stop-color="#e87a2c"/>
+      <stop offset="0.65" stop-color="#7a3618"/>
+      <stop offset="1" stop-color="#241008"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb060" stop-opacity="0.85"/>
+      <stop offset="0.4" stop-color="#ff6818" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ff3008" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffe48a" stop-opacity="0.85"/>
+      <stop offset="0.35" stop-color="#ff8838" stop-opacity="0.6"/>
+      <stop offset="0.75" stop-color="#c0421a" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#400a04" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="impactGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd680" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#ff7028" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ff4010" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="rockTex" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="3"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <symbol id="star" viewBox="-1 -1 2 2">
+      <circle r="0.6" fill="#f4f6fb"/>
+    </symbol>
+  </defs>
+
+  <!-- background sky -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- starfield -->
+  <g>
+    <g fill="#e8edf5">
+      <circle cx="30" cy="20" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="70" cy="50" r="0.5"><animate attributeName="opacity" values="0.6;1;0.6" dur="11s" repeatCount="indefinite"/></circle>
+      <circle cx="110" cy="15" r="0.9"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" repeatCount="indefinite"/></circle>
+      <circle cx="155" cy="70" r="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="200" cy="35" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
+      <circle cx="240" cy="90" r="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="290" cy="60" r="0.8"><animate attributeName="opacity" values="0.6;1;0.6" dur="7s" begin="3s" repeatCount="indefinite"/></circle>
+      <circle cx="330" cy="22" r="0.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="1.4s" repeatCount="indefinite"/></circle>
+      <circle cx="380" cy="85" r="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="2.5s" repeatCount="indefinite"/></circle>
+      <circle cx="430" cy="45" r="0.7"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="4s" repeatCount="indefinite"/></circle>
+      <circle cx="480" cy="18" r="0.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="0.8s" repeatCount="indefinite"/></circle>
+      <circle cx="525" cy="105" r="0.5"><animate attributeName="opacity" values="0.6;1;0.6" dur="13s" begin="3.5s" repeatCount="indefinite"/></circle>
+      <circle cx="575" cy="55" r="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" begin="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="620" cy="25" r="0.6"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="2.2s" repeatCount="indefinite"/></circle>
+      <circle cx="665" cy="80" r="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" begin="3.1s" repeatCount="indefinite"/></circle>
+      <circle cx="720" cy="40" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="770" cy="95" r="0.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="2.7s" repeatCount="indefinite"/></circle>
+      <circle cx="50" cy="120" r="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="1.1s" repeatCount="indefinite"/></circle>
+      <circle cx="170" cy="115" r="0.4"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s" begin="2.9s" repeatCount="indefinite"/></circle>
+      <circle cx="600" cy="120" r="0.4"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="750" cy="125" r="0.5"><animate attributeName="opacity" values="0.6;1;0.6" dur="13s" begin="2.1s" repeatCount="indefinite"/></circle>
+    </g>
+    <!-- faint Milky Way smear -->
+    <ellipse cx="500" cy="55" rx="240" ry="38" fill="#1e2a44" opacity="0.18"/>
+  </g>
+
+  <!-- HEADLINE -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" filter="url(#textGlow)">
+    <text x="400" y="38" font-size="28" font-weight="800" fill="#f3f6fb" text-anchor="middle" letter-spacing="3.2">JUNE 30, 2026</text>
+    <text x="400" y="57" font-size="10.5" font-weight="700" fill="#6fd7f0" text-anchor="middle" letter-spacing="4.5">ASTEROID DAY · TUNGUSKA · 118 YEARS</text>
+  </g>
+
+  <!-- ground / taiga silhouette -->
+  <g>
+    <rect x="0" y="138" width="800" height="62" fill="url(#ground)"/>
+    <!-- taiga silhouette ridges -->
+    <path d="M 0 142 L 30 138 L 55 141 L 80 137 L 115 140 L 145 136 L 175 141 L 210 138 L 240 142 L 275 137 L 310 141 L 340 138 L 375 142 L 410 137 L 445 140 L 480 138 L 515 142 L 545 137 L 580 141 L 615 138 L 650 142 L 685 137 L 720 140 L 755 138 L 790 142 L 800 140 L 800 200 L 0 200 Z" fill="#10141a"/>
+    <!-- radial tree-fall pattern from ground zero -->
+    <g transform="translate(560, 148)" stroke="#2a2218" stroke-width="0.7" stroke-linecap="round" opacity="0.85">
+      <line x1="0" y1="0" x2="-110" y2="-2"/>
+      <line x1="0" y1="0" x2="-95" y2="-10"/>
+      <line x1="0" y1="0" x2="-85" y2="-18"/>
+      <line x1="0" y1="0" x2="-70" y2="-22"/>
+      <line x1="0" y1="0" x2="-55" y2="-26"/>
+      <line x1="0" y1="0" x2="-35" y2="-28"/>
+      <line x1="0" y1="0" x2="-15" y2="-26"/>
+      <line x1="0" y1="0" x2="15" y2="-26"/>
+      <line x1="0" y1="0" x2="35" y2="-28"/>
+      <line x1="0" y1="0" x2="55" y2="-26"/>
+      <line x1="0" y1="0" x2="75" y2="-22"/>
+      <line x1="0" y1="0" x2="95" y2="-14"/>
+      <line x1="0" y1="0" x2="115" y2="-4"/>
+      <line x1="0" y1="0" x2="-118" y2="6"/>
+      <line x1="0" y1="0" x2="120" y2="6"/>
+      <line x1="0" y1="0" x2="-105" y2="14"/>
+      <line x1="0" y1="0" x2="105" y2="14"/>
+    </g>
+    <!-- charred fallen-tree dashes layered on top of radial lines -->
+    <g transform="translate(560, 148)" stroke="#0a0d12" stroke-width="1.2" stroke-linecap="round" opacity="0.6">
+      <line x1="-80" y1="-15" x2="-92" y2="-18"/>
+      <line x1="-55" y1="-22" x2="-66" y2="-25"/>
+      <line x1="-25" y1="-25" x2="-34" y2="-27"/>
+      <line x1="25" y1="-25" x2="34" y2="-27"/>
+      <line x1="55" y1="-22" x2="66" y2="-25"/>
+      <line x1="80" y1="-15" x2="92" y2="-18"/>
+    </g>
+    <!-- ground zero impact glow -->
+    <ellipse cx="560" cy="148" rx="36" ry="9" fill="url(#impactGlow)">
+      <animate attributeName="rx" values="32;42;32" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- shockwave rings -->
+    <g fill="none" stroke="#6fd7f0" stroke-width="0.7" opacity="0.5">
+      <ellipse cx="560" cy="148" rx="40" ry="6">
+        <animate attributeName="rx" values="20;200;200" keyTimes="0;0.85;1" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="3;30;30" keyTimes="0;0.85;1" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.65;0;0" keyTimes="0;0.85;1" dur="11s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="560" cy="148" rx="40" ry="6">
+        <animate attributeName="rx" values="20;200;200" keyTimes="0;0.85;1" dur="13s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="3;30;30" keyTimes="0;0.85;1" dur="13s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;0;0" keyTimes="0;0.85;1" dur="13s" begin="3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="560" cy="148" rx="40" ry="6">
+        <animate attributeName="rx" values="20;200;200" keyTimes="0;0.85;1" dur="17s" begin="6s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="3;30;30" keyTimes="0;0.85;1" dur="17s" begin="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.45;0;0" keyTimes="0;0.85;1" dur="17s" begin="6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+  </g>
+
+  <!-- asteroid trail + asteroid (drawn after ground so it sits in front) -->
+  <g>
+    <!-- long fiery trail going from upper-left to impact point -->
+    <g opacity="0.95">
+      <path d="M 90 70 Q 280 95 540 140" stroke="url(#trail)" stroke-width="16" fill="none" stroke-linecap="round" opacity="0.55"/>
+      <path d="M 110 75 Q 290 98 540 142" stroke="url(#trail)" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M 130 80 Q 300 100 540 144" stroke="#fff2c0" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.85"/>
+    </g>
+
+    <!-- ember particles trailing -->
+    <g fill="#ffb060" filter="url(#softGlow)">
+      <circle cx="0" cy="0" r="1.4">
+        <animateMotion path="M 90 70 Q 280 95 540 140" dur="2.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="2.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="1.1" fill="#ffd680">
+        <animateMotion path="M 90 70 Q 280 95 540 140" dur="2.9s" begin="0.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="2.9s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="0.9" fill="#ff8838">
+        <animateMotion path="M 90 70 Q 280 95 540 140" dur="3.1s" begin="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="3.1s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="1.2" fill="#ffb060">
+        <animateMotion path="M 90 70 Q 280 95 540 140" dur="3.7s" begin="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="3.7s" begin="1.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- asteroid: glowing halo + rough rocky body, leading the trail near upper-left -->
+    <g transform="translate(118, 76)">
+      <!-- soft halo -->
+      <circle r="28" fill="url(#halo)">
+        <animate attributeName="r" values="26;32;26" dur="2.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="18" fill="url(#halo)" opacity="0.8">
+        <animate attributeName="r" values="16;22;16" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+      <!-- rocky body with displacement -->
+      <g filter="url(#rockTex)">
+        <circle r="11" fill="url(#rock)"/>
+      </g>
+      <!-- bright leading edge -->
+      <circle cx="-3" cy="-3" r="4" fill="#fff4c0" opacity="0.7">
+        <animate attributeName="opacity" values="0.5;0.95;0.5" dur="1.3s" repeatCount="indefinite"/>
+      </circle>
+      <!-- subtle rotation flicker via dimmed crater dots -->
+      <g fill="#3a1a08" opacity="0.7">
+        <circle cx="3" cy="2" r="1.6"/>
+        <circle cx="-1" cy="4" r="1.2"/>
+        <circle cx="4" cy="-3" r="1"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- tertiary -->
+  <text x="400" y="192" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8" font-style="italic" fill="#8fa0b8" text-anchor="middle" letter-spacing="2">PODKAMENNAYA TUNGUSKA RIVER · SIBERIA · JUNE 30, 1908</text>
+</svg>
