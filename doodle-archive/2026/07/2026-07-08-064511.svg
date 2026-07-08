@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: World Chocolate Day (July 7) — a warm cocoa-brown tableau celebrating global chocolate day: a tilted rich dark-chocolate bar in the lower left with individual squares breaking off, a molten chocolate river pouring in a slow gooey drizzle across the middle, three cocoa beans in husks scattered on the right, drifting steam rising from a hot-cocoa mug, floating cacao-pod silhouettes and confection sprinkles rising like bubbles, a big cream-and-caramel "JULY 7, 2026" headline anchoring the upper center. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 7, 2026 — World Chocolate Day. A warm cocoa-toned tableau: a tilted glossy dark-chocolate bar in the lower left with several broken-off squares tumbling near it, a molten chocolate river drizzling in a slow gooey ribbon across the middle band, three cocoa beans in cracked husks scattered on the right, a steaming hot-cocoa mug with drifting steam curls at the far right, floating cacao-pod silhouettes and tiny confection sprinkles rising like bubbles across the sky, a large cream-and-caramel JULY 7, 2026 headline dominating the upper center, a red-brown WORLD CHOCOLATE DAY · COCOA · CACAO · CONFECTION subhead beneath, and italic milk-cream A CELEBRATION OF CHOCOLATE · SINCE 2009 tertiary along the very bottom edge.">
+  <defs>
+    <linearGradient id="skyCocoa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0d08"/>
+      <stop offset="0.4" stop-color="#3a1e10"/>
+      <stop offset="0.85" stop-color="#6b3a1e"/>
+      <stop offset="1" stop-color="#8b5a2b"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6b3a1e"/>
+      <stop offset="0.4" stop-color="#4a2410"/>
+      <stop offset="1" stop-color="#2a1408"/>
+    </linearGradient>
+    <linearGradient id="barShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c48a52" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#e8b76c" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#c48a52" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="moltenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8b4a20"/>
+      <stop offset="0.5" stop-color="#5a2810"/>
+      <stop offset="1" stop-color="#2a1408"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff2d8"/>
+      <stop offset="0.5" stop-color="#f4c96b"/>
+      <stop offset="1" stop-color="#c48a3a"/>
+    </linearGradient>
+    <linearGradient id="beanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a06a3a"/>
+      <stop offset="1" stop-color="#4a2410"/>
+    </linearGradient>
+    <linearGradient id="huskGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c99a5c"/>
+      <stop offset="1" stop-color="#6a4222"/>
+    </linearGradient>
+    <linearGradient id="mugGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5e6c8"/>
+      <stop offset="1" stop-color="#c9a878"/>
+    </linearGradient>
+    <radialGradient id="cocoaSurface" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#8b4a20"/>
+      <stop offset="1" stop-color="#3a1a08"/>
+    </radialGradient>
+    <radialGradient id="warmGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f4c96b" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f4c96b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="titleGlow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="drop" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.6"/>
+      <feOffset dx="1" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Reusable chocolate square (glossy) -->
+    <symbol id="choSq" overflow="visible">
+      <rect x="-11" y="-11" width="22" height="22" rx="2" fill="url(#barGrad)"/>
+      <rect x="-11" y="-11" width="22" height="4" rx="1" fill="#8b5a2b" opacity="0.55"/>
+      <rect x="-11" y="-11" width="4" height="22" rx="1" fill="#8b5a2b" opacity="0.4"/>
+      <rect x="7" y="-11" width="4" height="22" rx="1" fill="#1a0808" opacity="0.5"/>
+      <rect x="-11" y="7" width="22" height="4" rx="1" fill="#1a0808" opacity="0.55"/>
+      <rect x="-8" y="-9" width="16" height="2" rx="1" fill="url(#barShine)"/>
+    </symbol>
+
+    <!-- Cocoa bean symbol -->
+    <symbol id="bean" overflow="visible">
+      <ellipse cx="0" cy="0" rx="9" ry="6" fill="url(#beanGrad)"/>
+      <path d="M -9 0 Q 0 -2 9 0" stroke="#2a1408" stroke-width="0.8" fill="none"/>
+      <ellipse cx="-2" cy="-2" rx="3" ry="1.4" fill="#c48a52" opacity="0.5"/>
+    </symbol>
+
+    <!-- Confection sprinkle -->
+    <symbol id="sprk" overflow="visible">
+      <rect x="-2.5" y="-0.7" width="5" height="1.4" rx="0.7" fill="#f5b8c8"/>
+    </symbol>
+    <symbol id="sprk2" overflow="visible">
+      <rect x="-2.5" y="-0.7" width="5" height="1.4" rx="0.7" fill="#f4c96b"/>
+    </symbol>
+    <symbol id="sprk3" overflow="visible">
+      <rect x="-2.5" y="-0.7" width="5" height="1.4" rx="0.7" fill="#a4d4a4"/>
+    </symbol>
+
+    <!-- Cacao pod silhouette -->
+    <symbol id="pod" overflow="visible">
+      <ellipse cx="0" cy="0" rx="6" ry="10" fill="#5a2810" opacity="0.45"/>
+      <line x1="-3" y1="-8" x2="-3" y2="8" stroke="#3a1408" stroke-width="0.4" opacity="0.5"/>
+      <line x1="0" y1="-9" x2="0" y2="9" stroke="#3a1408" stroke-width="0.4" opacity="0.5"/>
+      <line x1="3" y1="-8" x2="3" y2="8" stroke="#3a1408" stroke-width="0.4" opacity="0.5"/>
+    </symbol>
+  </defs>
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#skyCocoa)" opacity="0.85"/>
+
+  <!-- Warm ambient glow (upper center) -->
+  <ellipse cx="400" cy="80" rx="360" ry="90" fill="url(#warmGlow)"/>
+
+  <!-- ===== FLOATING CACAO PODS (background layer) ===== -->
+  <g opacity="0.65">
+    <g>
+      <use href="#pod" x="90" y="150"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-6,-90;-3,-160" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="17s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#pod" x="220" y="170"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;8,-110;4,-170" dur="19s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="19s" begin="3s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#pod" x="640" y="160"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-8,-120;-2,-170" dur="23s" begin="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="23s" begin="6s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ===== SPRINKLES rising like bubbles ===== -->
+  <g>
+    <g>
+      <use href="#sprk" x="150" y="170"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;10,-100;-6,-170" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="11s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#sprk2" x="260" y="180"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-8,-110;6,-180" dur="13s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="13s" begin="1.5s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#sprk3" x="380" y="185"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;10,-130;-4,-190" dur="7s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="3s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#sprk" x="470" y="180"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-12,-140;4,-185" dur="13s" begin="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="13s" begin="4.5s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#sprk2" x="560" y="175"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;8,-120;-6,-175" dur="11s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="11s" begin="2s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#sprk3" x="680" y="180"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-8,-130;5,-185" dur="7s" begin="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ===== MOLTEN CHOCOLATE POURING RIBBON (across middle) ===== -->
+  <g opacity="0.85" filter="url(#drop)">
+    <!-- Ribbon body -->
+    <path d="M 30 148 Q 180 130 340 145 T 700 140 L 720 156 Q 560 168 380 158 T 30 165 Z" fill="url(#moltenGrad)"/>
+    <!-- Molten glossy highlight -->
+    <path d="M 60 146 Q 200 132 340 144 T 690 142" stroke="#a4622a" stroke-width="1.6" fill="none" opacity="0.75">
+      <animate attributeName="stroke-dashoffset" values="0;24" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dasharray" values="12 8;12 8" dur="11s" repeatCount="indefinite"/>
+    </path>
+    <!-- Slow drizzle drip -->
+    <g>
+      <ellipse cx="500" cy="168" rx="3.5" ry="6" fill="url(#moltenGrad)">
+        <animate attributeName="cy" values="150;178;150" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="13s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="260" cy="168" rx="3" ry="5" fill="url(#moltenGrad)">
+        <animate attributeName="cy" values="148;180;148" dur="17s" begin="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="17s" begin="2s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+  </g>
+
+  <!-- ===== CHOCOLATE BAR — lower left, tilted ===== -->
+  <g transform="translate(120,168) rotate(-11)" filter="url(#drop)">
+    <!-- Bar base -->
+    <rect x="-70" y="-14" width="140" height="28" rx="3" fill="url(#barGrad)"/>
+    <!-- Grid lines between squares -->
+    <g stroke="#1a0808" stroke-width="1.2" opacity="0.85">
+      <line x1="-70" y1="0" x2="70" y2="0"/>
+      <line x1="-46.7" y1="-14" x2="-46.7" y2="14"/>
+      <line x1="-23.3" y1="-14" x2="-23.3" y2="14"/>
+      <line x1="0" y1="-14" x2="0" y2="14"/>
+      <line x1="23.3" y1="-14" x2="23.3" y2="14"/>
+      <line x1="46.7" y1="-14" x2="46.7" y2="14"/>
+    </g>
+    <!-- Top edge highlight -->
+    <rect x="-70" y="-14" width="140" height="3" rx="1.5" fill="url(#barShine)" opacity="0.85"/>
+    <!-- Side shadow -->
+    <rect x="-70" y="11" width="140" height="3" rx="1.5" fill="#1a0808" opacity="0.75"/>
+    <!-- Embossed "COCOA" text on center-right squares -->
+    <text x="0" y="4" font-family="'Georgia', 'Times New Roman', serif" font-size="10" font-weight="900" text-anchor="middle" fill="#3a1808" opacity="0.65" letter-spacing="1.5">COCOA</text>
+  </g>
+
+  <!-- Broken-off chocolate squares tumbling near the bar -->
+  <g filter="url(#drop)">
+    <g transform="translate(210,158)">
+      <use href="#choSq"/>
+      <animateTransform attributeName="transform" type="rotate" values="-8;8;-8" dur="13s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(230,182) rotate(24)">
+      <use href="#choSq"/>
+    </g>
+    <g transform="translate(60,180) rotate(-18)">
+      <use href="#choSq"/>
+    </g>
+  </g>
+
+  <!-- ===== COCOA BEANS scattered on right ===== -->
+  <g filter="url(#drop)">
+    <g transform="translate(580,168) rotate(-24)">
+      <use href="#bean"/>
+      <!-- Cracked husk -->
+      <path d="M -12 -4 Q -14 0 -10 6" stroke="#8b5a2b" stroke-width="1.2" fill="none" opacity="0.7"/>
+    </g>
+    <g transform="translate(608,182) rotate(16)">
+      <use href="#bean"/>
+    </g>
+    <g transform="translate(556,184) rotate(48)">
+      <use href="#bean"/>
+    </g>
+  </g>
+
+  <!-- ===== STEAMING HOT-COCOA MUG (far right) ===== -->
+  <g transform="translate(720,158)" filter="url(#drop)">
+    <!-- Mug body -->
+    <path d="M -20 -6 L -20 20 Q -20 26 -14 26 L 14 26 Q 20 26 20 20 L 20 -6 Z" fill="url(#mugGrad)"/>
+    <!-- Rim -->
+    <ellipse cx="0" cy="-6" rx="20" ry="4" fill="#e8d4a8"/>
+    <!-- Cocoa surface -->
+    <ellipse cx="0" cy="-6" rx="17" ry="3" fill="url(#cocoaSurface)"/>
+    <!-- Handle -->
+    <path d="M 20 0 Q 32 4 32 10 Q 32 16 20 18" stroke="#c9a878" stroke-width="3" fill="none"/>
+    <!-- Marshmallow -->
+    <circle cx="-5" cy="-7" r="2.6" fill="#f5efd8"/>
+    <circle cx="3" cy="-8" r="2.2" fill="#f5efd8"/>
+    <!-- Steam -->
+    <g stroke="#f5e6c8" stroke-width="1.4" fill="none" opacity="0.8" stroke-linecap="round">
+      <path d="M -6 -10 Q -3 -18 -6 -26 Q -9 -34 -6 -42">
+        <animate attributeName="opacity" values="0;0.85;0" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 4 -10 Q 7 -18 4 -26 Q 1 -34 4 -42">
+        <animate attributeName="opacity" values="0;0.85;0" dur="11s" begin="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M -1 -10 Q 2 -20 -1 -30 Q -4 -40 -1 -48">
+        <animate attributeName="opacity" values="0;0.7;0" dur="13s" begin="4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- ===== HEADLINE — dark plate behind for contrast ===== -->
+  <ellipse cx="400" cy="72" rx="280" ry="30" fill="#0d1117" opacity="0.55"/>
+  <text x="400" y="86" font-family="'Georgia', 'Times New Roman', serif" font-size="46" font-weight="900" letter-spacing="6" text-anchor="middle" fill="url(#titleGrad)" filter="url(#titleGlow)">JULY 7, 2026</text>
+
+  <!-- Deco flourish under headline -->
+  <g stroke="#f4c96b" stroke-width="1" fill="none" opacity="0.75">
+    <line x1="260" y1="102" x2="360" y2="102"/>
+    <line x1="440" y1="102" x2="540" y2="102"/>
+    <circle cx="400" cy="102" r="2.4" fill="#f4c96b" stroke="none">
+      <animate attributeName="r" values="2.4;3.4;2.4" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Subhead -->
+  <text x="400" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="4" text-anchor="middle" fill="#e8b76c">WORLD  CHOCOLATE  DAY  ·  COCOA  ·  CACAO  ·  CONFECTION</text>
+
+  <!-- Tertiary italic line -->
+  <text x="400" y="198" font-family="'Georgia', 'Times New Roman', serif" font-size="8.5" font-style="italic" letter-spacing="2.4" text-anchor="middle" fill="#f5e6c8" opacity="0.85">A CELEBRATION OF CHOCOLATE  ·  OBSERVED WORLDWIDE  ·  JULY 7</text>
+
+</svg>
