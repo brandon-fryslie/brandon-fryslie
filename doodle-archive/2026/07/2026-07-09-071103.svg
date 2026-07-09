@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Roswell UFO Incident 79th Anniversary (July 8, 1947) — night desert tableau of a glowing green flying saucer hovering over New Mexico high-desert with abduction beam, cacti and mesa silhouettes, twinkling stars, drifting alien-glyph particles, and a big teal-green "JULY 8, 2026" headline anchored in the sky. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 8, 2026 — 79th anniversary of the Roswell UFO incident. A night desert tableau over the New Mexico high desert: a deep indigo-to-teal starfield sky, a classic domed silver flying saucer hovering slightly right of center with a pulsing green tractor beam projecting down to the ground, four rotating porthole lights around its rim, a small green alien silhouette peering out of the dome, saguaro cacti and low mesa silhouettes grounding the base, drifting sci-fi glyph particles floating up, a rippled radio-signal arc emanating from the saucer, twinkling stars, and a large teal-green JULY 8, 2026 headline dominating the upper center with a red ROSWELL INCIDENT · 79 YEARS · THE FLYING DISC subhead beneath, and italic RAAF PRESS RELEASE · ROSWELL, NEW MEXICO · JULY 8, 1947 tertiary along the very bottom edge.">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#050818"/>
+      <stop offset="0.45" stop-color="#0a1830"/>
+      <stop offset="0.85" stop-color="#123650"/>
+      <stop offset="1" stop-color="#1a4a4a"/>
+    </linearGradient>
+    <linearGradient id="saucerBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0e8f0"/>
+      <stop offset="0.4" stop-color="#a8b4c4"/>
+      <stop offset="0.7" stop-color="#5a6674"/>
+      <stop offset="1" stop-color="#2a3240"/>
+    </linearGradient>
+    <linearGradient id="saucerRim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a5866"/>
+      <stop offset="0.5" stop-color="#8a97a8"/>
+      <stop offset="1" stop-color="#2a3240"/>
+    </linearGradient>
+    <radialGradient id="dome" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#7effc8" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#2a9a6a" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0d3a2a" stop-opacity="0.9"/>
+    </radialGradient>
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7effc8" stop-opacity="0.75"/>
+      <stop offset="0.6" stop-color="#4ee094" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2ac878" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8ffe0"/>
+      <stop offset="0.5" stop-color="#5eefaa"/>
+      <stop offset="1" stop-color="#1ea86a"/>
+    </linearGradient>
+    <radialGradient id="ufoGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5eefaa" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#2a9a6a" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#2a9a6a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="portLight" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff8b0"/>
+      <stop offset="0.4" stop-color="#f4c96b"/>
+      <stop offset="1" stop-color="#8a5a10" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="desertGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2818"/>
+      <stop offset="1" stop-color="#0d0a08"/>
+    </linearGradient>
+    <filter id="titleGlow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="drop" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.6"/>
+      <feOffset dx="1" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Alien glyph symbol (little rune) -->
+    <symbol id="glyph1" overflow="visible">
+      <g stroke="#7effc8" stroke-width="1" fill="none" opacity="0.9">
+        <circle cx="0" cy="0" r="3"/>
+        <line x1="-4" y1="0" x2="4" y2="0"/>
+        <line x1="0" y1="-4" x2="0" y2="4"/>
+      </g>
+    </symbol>
+    <symbol id="glyph2" overflow="visible">
+      <g stroke="#7effc8" stroke-width="1" fill="none" opacity="0.9">
+        <polygon points="0,-4 3.5,2 -3.5,2"/>
+        <circle cx="0" cy="0" r="1" fill="#7effc8"/>
+      </g>
+    </symbol>
+    <symbol id="glyph3" overflow="visible">
+      <g stroke="#7effc8" stroke-width="1" fill="none" opacity="0.9">
+        <path d="M -4 -2 Q 0 -6 4 -2 Q 0 2 -4 -2 Z"/>
+        <line x1="0" y1="-2" x2="0" y2="4"/>
+      </g>
+    </symbol>
+
+    <!-- Saguaro cactus -->
+    <symbol id="saguaro" overflow="visible">
+      <path d="M -3 0 L -3 -32 Q -3 -36 0 -36 Q 3 -36 3 -32 L 3 0 Z" fill="#0d1408"/>
+      <path d="M -3 -22 L -8 -22 Q -10 -22 -10 -20 L -10 -12" stroke="#0d1408" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M 3 -18 L 8 -18 Q 10 -18 10 -16 L 10 -6" stroke="#0d1408" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <!-- ===== BACKGROUND SKY ===== -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
+
+  <!-- ===== STARS (twinkling) ===== -->
+  <g fill="#f5efe0">
+    <circle cx="50" cy="30" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="110" cy="55" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="180" cy="22" r="1.1"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="42" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="18" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="28" r="1.0"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="4s" repeatCount="indefinite"/></circle>
+    <circle cx="750" cy="48" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="620" cy="35" r="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="11s" begin="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="80" cy="98" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="115" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="30" cy="140" r="0.6"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
+    <!-- Brighter guide stars -->
+    <circle cx="140" cy="80" r="1.4" opacity="0.9"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="680" cy="72" r="1.3" opacity="0.9"><animate attributeName="opacity" values="0.5;1;0.5" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Streaking meteor -->
+  <g opacity="0.8">
+    <line x1="60" y1="15" x2="130" y2="45" stroke="#f5efe0" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="13s" begin="5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- ===== MESA / HORIZON SILHOUETTE ===== -->
+  <g>
+    <!-- Distant mesa layer -->
+    <path d="M 0 180 L 0 158 L 60 158 L 90 148 L 160 148 L 190 156 L 260 156 L 300 150 L 370 150 L 400 158 L 480 158 L 520 152 L 600 152 L 640 158 L 720 158 L 760 152 L 800 152 L 800 200 L 0 200 Z" fill="#1a1a26" opacity="0.85"/>
+    <!-- Foreground desert floor -->
+    <path d="M 0 200 L 0 172 Q 200 168 400 172 T 800 170 L 800 200 Z" fill="url(#desertGrad)"/>
+    <!-- Ground detail dashes -->
+    <g stroke="#3a2818" stroke-width="0.6" opacity="0.6">
+      <line x1="40" y1="184" x2="60" y2="184"/>
+      <line x1="120" y1="188" x2="140" y2="188"/>
+      <line x1="220" y1="182" x2="240" y2="182"/>
+      <line x1="500" y1="186" x2="520" y2="186"/>
+      <line x1="600" y1="180" x2="620" y2="180"/>
+      <line x1="700" y1="184" x2="720" y2="184"/>
+    </g>
+  </g>
+
+  <!-- Saguaro cacti -->
+  <g>
+    <g transform="translate(80,178)"><use href="#saguaro"/></g>
+    <g transform="translate(710,176) scale(0.85)"><use href="#saguaro"/></g>
+    <g transform="translate(150,178) scale(0.6)"><use href="#saguaro"/></g>
+  </g>
+
+  <!-- Rocky tumbleweed suggestion -->
+  <g fill="#2a1a10" opacity="0.7">
+    <circle cx="580" cy="188" r="3"/>
+    <circle cx="360" cy="192" r="2"/>
+  </g>
+
+  <!-- ===== UFO GROUP (hovering, slight bob) ===== -->
+  <g transform="translate(420,90)">
+    <animateTransform attributeName="transform" type="translate" values="420,90;420,84;420,90" dur="7s" repeatCount="indefinite" additive="replace"/>
+
+    <!-- Ambient glow behind saucer -->
+    <ellipse cx="0" cy="8" rx="150" ry="42" fill="url(#ufoGlow)"/>
+
+    <!-- Tractor beam -->
+    <g opacity="0.85">
+      <path d="M -32 12 L -70 88 L 70 88 L 32 12 Z" fill="url(#beamGrad)">
+        <animate attributeName="opacity" values="0.55;0.95;0.55" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <!-- Beam scan lines -->
+      <g stroke="#7effc8" stroke-width="0.5" fill="none" opacity="0.55">
+        <line x1="-40" y1="28" x2="40" y2="28">
+          <animate attributeName="opacity" values="0;0.7;0" dur="7s" repeatCount="indefinite"/>
+        </line>
+        <line x1="-50" y1="48" x2="50" y2="48">
+          <animate attributeName="opacity" values="0;0.7;0" dur="7s" begin="2.3s" repeatCount="indefinite"/>
+        </line>
+        <line x1="-60" y1="68" x2="60" y2="68">
+          <animate attributeName="opacity" values="0;0.7;0" dur="7s" begin="4.6s" repeatCount="indefinite"/>
+        </line>
+      </g>
+    </g>
+
+    <!-- Radio-signal arcs emanating from saucer -->
+    <g fill="none" stroke="#7effc8" stroke-width="0.8" opacity="0.5">
+      <path d="M -55 -10 Q -70 -20 -60 -35">
+        <animate attributeName="opacity" values="0;0.7;0" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M -65 -6 Q -85 -18 -75 -40">
+        <animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="1.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 55 -10 Q 70 -20 60 -35">
+        <animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="0.7s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 65 -6 Q 85 -18 75 -40">
+        <animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="2.2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Saucer disc body -->
+    <g filter="url(#drop)">
+      <!-- Bottom rim (dark) -->
+      <ellipse cx="0" cy="14" rx="52" ry="8" fill="url(#saucerRim)"/>
+      <!-- Main disc -->
+      <ellipse cx="0" cy="8" rx="60" ry="12" fill="url(#saucerBody)"/>
+      <!-- Top ridge -->
+      <ellipse cx="0" cy="4" rx="42" ry="6" fill="#c0ccd8" opacity="0.85"/>
+
+      <!-- Rim porthole lights (blinking sequentially) -->
+      <circle cx="-38" cy="10" r="3" fill="url(#portLight)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-16" cy="12" r="3" fill="url(#portLight)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="8" cy="12" r="3" fill="url(#portLight)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="32" cy="10" r="3" fill="url(#portLight)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Glossy dome -->
+      <path d="M -22 4 Q -22 -20 0 -20 Q 22 -20 22 4 Z" fill="url(#dome)"/>
+      <!-- Dome shine -->
+      <ellipse cx="-8" cy="-10" rx="7" ry="3" fill="#f0fff2" opacity="0.75"/>
+      <!-- Dome rim ring -->
+      <path d="M -22 4 Q -22 2 0 2 Q 22 2 22 4" stroke="#3a4a4a" stroke-width="0.8" fill="none" opacity="0.85"/>
+
+      <!-- Little alien silhouette peering out of dome -->
+      <g>
+        <ellipse cx="0" cy="-8" rx="4.5" ry="5.5" fill="#0a2a1a"/>
+        <ellipse cx="-1.6" cy="-9" rx="1.4" ry="2.2" fill="#000"/>
+        <ellipse cx="1.6" cy="-9" rx="1.4" ry="2.2" fill="#000"/>
+        <ellipse cx="-1.6" cy="-9.2" rx="0.5" ry="0.8" fill="#7effc8"/>
+        <ellipse cx="1.6" cy="-9.2" rx="0.5" ry="0.8" fill="#7effc8"/>
+        <!-- Body hint -->
+        <path d="M -2 -3 L -3 0 L 3 0 L 2 -3 Z" fill="#0a2a1a"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== FLOATING ALIEN GLYPHS ===== -->
+  <g>
+    <g>
+      <use href="#glyph1" x="180" y="140"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;10,-40;-4,-90" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="13s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#glyph2" x="240" y="150"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-8,-50;6,-100" dur="17s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="17s" begin="2s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#glyph3" x="300" y="140"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;10,-45;-6,-95" dur="11s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="11s" begin="4s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#glyph1" x="500" y="150"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-10,-50;5,-100" dur="17s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="17s" begin="1.5s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#glyph2" x="560" y="145"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;8,-40;-4,-90" dur="13s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="13s" begin="3s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#glyph3" x="620" y="150"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-6,-50;5,-100" dur="11s" begin="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="11s" begin="5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ===== HEADLINE plate for contrast ===== -->
+  <ellipse cx="215" cy="52" rx="200" ry="28" fill="#0d1117" opacity="0.55"/>
+  <text x="215" y="64" font-family="'Georgia', 'Times New Roman', serif" font-size="42" font-weight="900" letter-spacing="4" text-anchor="middle" fill="url(#titleGrad)" filter="url(#titleGlow)">JULY 8, 2026</text>
+
+  <!-- Deco line under headline -->
+  <g stroke="#5eefaa" stroke-width="0.8" fill="none" opacity="0.75">
+    <line x1="120" y1="80" x2="180" y2="80"/>
+    <line x1="250" y1="80" x2="310" y2="80"/>
+    <circle cx="215" cy="80" r="2" fill="#5eefaa" stroke="none">
+      <animate attributeName="r" values="1.6;3;1.6" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Subhead -->
+  <text x="215" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="800" letter-spacing="3" text-anchor="middle" fill="#ff6a5e">ROSWELL  INCIDENT  ·  79  YEARS  ·  THE  FLYING  DISC</text>
+
+  <!-- Tertiary italic line -->
+  <text x="400" y="198" font-family="'Georgia', 'Times New Roman', serif" font-size="8.5" font-style="italic" letter-spacing="2.4" text-anchor="middle" fill="#c8ffe0" opacity="0.9">RAAF  PRESS  RELEASE  ·  ROSWELL,  NEW  MEXICO  ·  JULY  8,  1947</text>
+
+</svg>

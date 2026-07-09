@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## July 9, 2026 — Roswell UFO Incident 79th Anniversary (July 8, 1947)
+
+<img src="./doodle-archive/2026/07/2026-07-09-071103.svg" width="800" alt="Daily doodle archived for July 8, 2026: 79th anniversary of the Roswell UFO incident — a night desert tableau over the New Mexico high desert with a deep indigo-to-teal starfield sky, a classic domed silver flying saucer hovering slightly right of center with a pulsing green tractor beam projecting down to the ground, four rotating porthole lights around its rim, a small green alien silhouette peering out of the dome, saguaro cacti and low mesa silhouettes grounding the base, drifting sci-fi glyph particles floating up, a rippled radio-signal arc emanating from the saucer, twinkling stars, and a large teal-green JULY 8, 2026 headline dominating the upper center with a red ROSWELL INCIDENT · 79 YEARS · THE FLYING DISC subhead beneath, and italic RAAF PRESS RELEASE · ROSWELL, NEW MEXICO · JULY 8, 1947 tertiary along the very bottom edge">
+
+---
+
 ## July 8, 2026 — World Chocolate Day (July 7)
 
 <img src="./doodle-archive/2026/07/2026-07-08-064511.svg" width="800" alt="Daily doodle archived for July 7, 2026: World Chocolate Day — a warm cocoa-toned tableau with a tilted glossy dark-chocolate bar in the lower left, broken squares tumbling nearby, a molten chocolate river drizzling in a slow gooey ribbon across the middle, three cocoa beans in cracked husks scattered on the right, a steaming hot-cocoa mug at the far right, floating cacao-pod silhouettes and confection sprinkles rising like bubbles across the sky, a large cream-and-caramel JULY 7 2026 headline dominating the upper center, WORLD CHOCOLATE DAY subhead, and A CELEBRATION OF CHOCOLATE italic tertiary line">
