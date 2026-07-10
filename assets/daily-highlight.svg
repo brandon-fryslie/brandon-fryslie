@@ -1,312 +1,295 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: The Championships, Wimbledon — 149 years since the very first Wimbledon championship (July 9, 1877, All England Croquet & Lawn Tennis Club, SW19). Centre-court tableau on a summer afternoon: emerald grass court in gentle perspective, white court lines converging toward the baseline, silvery Gentlemen's Singles Trophy on a plinth at right, silhouetted player mid-serve at left with racket raised, neon-yellow tennis ball arcing across the court with a dashed motion trail, purple-and-green Wimbledon ribbon along the bottom edge, and a big serif JULY 9, 2026 headline anchored in a warm afternoon sky. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 9, 2026 — 149th anniversary of the first Wimbledon championship. A Centre Court tableau at the All England Club: a soft warm-afternoon sky gradient, an emerald grass court in gentle perspective with white court lines and a bright net across the middle, a silhouetted player at left mid-serve with racket raised, a neon-yellow tennis ball arcing across the court leaving a dashed motion trail, the silvery Gentlemen's Singles Trophy standing on a plinth at right with a pineapple finial and warm-gold highlights, purple-and-green Wimbledon ribbon strip along the bottom edge, a large deep-purple JULY 9, 2026 headline dominating the upper center with a green THE CHAMPIONSHIPS · WIMBLEDON · 149 YEARS subhead beneath, and italic ALL ENGLAND CLUB · CENTRE COURT · JULY 9, 1877 tertiary along the very bottom edge.">
+<!-- theme: Nikola Tesla's 170th birthday (July 10, 1856, Smiljan, Austrian Empire — modern-day Croatia). Inventor, electrical engineer, futurist; alternating current, induction motor, Tesla coil, wireless power dreams. Visualized as a high-voltage laboratory tableau: a towering copper-and-brass Tesla coil dominates the center-right with a bright toroidal top electrode from which crackling violet lightning arcs branch outward across a deep-indigo laboratory sky, an oscilloscope-style AC sine wave sweeps across the base, a slow-spinning induction rotor disc glows on the left, floating glass Geissler tubes drift around the frame casting a soft magenta glow, twinkling ozone particles, and a large bone-white JULY 10, 2026 headline dominating the upper center with a violet-cyan NIKOLA TESLA · 170 YEARS · BORN JULY 10, 1856 subhead beneath, and italic SMILJAN · AUSTRIAN EMPIRE · WIZARD OF THE WEST tertiary line along the very bottom edge. Palette: coil copper #b87333 and brass #d4a24a, toroid silver #e8ecf2, arc violet #b26cff and electric cyan #7fefff, sine-wave lime #a3ff9d, Geissler magenta #ff5cb2, ozone bone-white #f5efe6, deep indigo lab #0e1330 and #141a3a, over #0d1117. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 10, 2026 — 170th birthday of Nikola Tesla, born July 10, 1856 in Smiljan. A high-voltage laboratory tableau: a towering copper-and-brass Tesla coil at center-right with a bright silver toroidal top electrode from which crackling violet lightning arcs branch outward across a deep-indigo laboratory sky, an animated lime-green AC sine wave sweeps across the base, a slow-spinning induction rotor disc glows on the left, floating magenta Geissler tubes drift around the frame casting a soft glow, twinkling ozone particles, a large bone-white JULY 10, 2026 headline dominating the upper center, a violet-cyan NIKOLA TESLA · 170 YEARS · BORN JULY 10, 1856 subhead beneath, and italic SMILJAN · AUSTRIAN EMPIRE · WIZARD OF THE WEST tertiary along the bottom edge.">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.35" stop-color="#1e2a3a"/>
-      <stop offset="0.7" stop-color="#c9a68a"/>
-      <stop offset="1" stop-color="#e6c8a4"/>
+    <!-- Deep indigo lab sky -->
+    <linearGradient id="labSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="45%" stop-color="#141a3a"/>
+      <stop offset="100%" stop-color="#0e1330"/>
     </linearGradient>
-    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2e7a2a"/>
-      <stop offset="0.4" stop-color="#3a9a34"/>
-      <stop offset="1" stop-color="#1c5218"/>
+
+    <!-- Copper coil body gradient -->
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6b3d1a"/>
+      <stop offset="45%" stop-color="#b87333"/>
+      <stop offset="55%" stop-color="#e6a668"/>
+      <stop offset="100%" stop-color="#6b3d1a"/>
     </linearGradient>
-    <linearGradient id="stripe" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3fa838" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#2e7a2a" stop-opacity="0"/>
+
+    <!-- Brass base -->
+    <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a24a"/>
+      <stop offset="100%" stop-color="#6b4a1a"/>
     </linearGradient>
-    <linearGradient id="titleGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5b1e5b"/>
-      <stop offset="0.5" stop-color="#3d0d3d"/>
-      <stop offset="1" stop-color="#280028"/>
-    </linearGradient>
-    <linearGradient id="ribbonPurple" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5a1a5a"/>
-      <stop offset="1" stop-color="#3a0d3a"/>
-    </linearGradient>
-    <linearGradient id="ribbonGreen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1e6a1e"/>
-      <stop offset="1" stop-color="#0d3a0d"/>
-    </linearGradient>
-    <linearGradient id="trophyBody" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f4e8b4"/>
-      <stop offset="0.25" stop-color="#e0c878"/>
-      <stop offset="0.6" stop-color="#a88a3a"/>
-      <stop offset="1" stop-color="#5a4418"/>
-    </linearGradient>
-    <linearGradient id="trophyShine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#fff9d8" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#fff9d8" stop-opacity="0.85"/>
-      <stop offset="1" stop-color="#fff9d8" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="ballGrad" cx="0.35" cy="0.35" r="0.7">
-      <stop offset="0" stop-color="#f4ff8a"/>
-      <stop offset="0.6" stop-color="#c9dc3a"/>
-      <stop offset="1" stop-color="#7a8a1e"/>
+
+    <!-- Silver toroid -->
+    <radialGradient id="toroid" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#e8ecf2"/>
+      <stop offset="100%" stop-color="#7a8a99"/>
     </radialGradient>
-    <radialGradient id="ballGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#e6f27a" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#e6f27a" stop-opacity="0"/>
+
+    <!-- Toroid inner ring (darker) -->
+    <radialGradient id="toroidInner" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#141a3a"/>
+      <stop offset="100%" stop-color="#3a4a66"/>
     </radialGradient>
-    <filter id="titleGlow" x="-20%" y="-40%" width="140%" height="180%">
-      <feGaussianBlur stdDeviation="0.9" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+
+    <!-- Arc glow -->
+    <radialGradient id="arcGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#e6d0ff" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#b26cff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#b26cff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Geissler tube glow -->
+    <radialGradient id="geissler" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffb8de"/>
+      <stop offset="60%" stop-color="#ff5cb2" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ff5cb2" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Rotor disc -->
+    <radialGradient id="rotor" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#7fefff"/>
+      <stop offset="55%" stop-color="#2a6a8a"/>
+      <stop offset="100%" stop-color="#0e1330"/>
+    </radialGradient>
+
+    <!-- Text glow filter -->
     <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.4" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-    <filter id="drop" x="-15%" y="-15%" width="130%" height="130%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="1.4"/>
-      <feOffset dx="1" dy="2"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+
+    <filter id="arcBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.6"/>
     </filter>
+
+    <!-- Sine wave path -->
+    <path id="sineWave" d="M 0 172 Q 25 152 50 172 T 100 172 T 150 172 T 200 172 T 250 172 T 300 172 T 350 172 T 400 172 T 450 172 T 500 172 T 550 172 T 600 172 T 650 172 T 700 172 T 750 172 T 800 172"/>
   </defs>
 
-  <!-- ===== BACKGROUND SKY ===== -->
-  <rect width="800" height="200" fill="#0d1117"/>
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- Background sky -->
+  <rect width="800" height="200" fill="url(#labSky)"/>
 
-  <!-- Warm afternoon sun haze low on the horizon, out of the headline zone -->
-  <circle cx="90" cy="112" r="38" fill="#f0d8b0" opacity="0.32" filter="url(#softGlow)"/>
-  <circle cx="90" cy="112" r="14" fill="#fff2d8" opacity="0.55"/>
-
-  <!-- Distant crowd/stand suggestion behind the court -->
-  <rect x="0" y="118" width="800" height="12" fill="#2a2018" opacity="0.7"/>
-  <g fill="#3a2a20" opacity="0.85">
-    <rect x="0" y="112" width="800" height="8"/>
-  </g>
-  <!-- Tiny crowd flecks -->
-  <g fill="#d8c8b4" opacity="0.35">
-    <circle cx="60" cy="118" r="1"/>
-    <circle cx="90" cy="119" r="1"/>
-    <circle cx="130" cy="118" r="1"/>
-    <circle cx="170" cy="119" r="1"/>
-    <circle cx="210" cy="118" r="1"/>
-    <circle cx="260" cy="119" r="1"/>
-    <circle cx="310" cy="118" r="1"/>
-    <circle cx="360" cy="119" r="1"/>
-    <circle cx="420" cy="118" r="1"/>
-    <circle cx="480" cy="119" r="1"/>
-    <circle cx="540" cy="118" r="1"/>
-    <circle cx="740" cy="118" r="1"/>
-    <circle cx="770" cy="119" r="1"/>
-  </g>
-
-  <!-- ===== GRASS COURT (perspective trapezoid) ===== -->
-  <path d="M 0 128 L 800 128 L 800 200 L 0 200 Z" fill="url(#grass)"/>
-
-  <!-- Mown grass stripes (alternating shades) -->
-  <g opacity="0.5">
-    <rect x="0" y="128" width="800" height="6" fill="url(#stripe)"/>
-    <rect x="0" y="142" width="800" height="6" fill="url(#stripe)"/>
-    <rect x="0" y="158" width="800" height="7" fill="url(#stripe)"/>
-    <rect x="0" y="176" width="800" height="8" fill="url(#stripe)"/>
+  <!-- Distant ozone particles (twinkling stars) -->
+  <g fill="#f5efe6">
+    <circle cx="60" cy="40" r="0.9" opacity="0.7">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="130" cy="22" r="0.7" opacity="0.5">
+      <animate attributeName="opacity" values="0.9;0.2;0.9" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="210" cy="55" r="0.8" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="30" r="0.9" opacity="0.7">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="770" cy="70" r="0.7" opacity="0.5">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="7s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="18" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="13s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="470" cy="15" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="7s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="45" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="11s" begin="2.5s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <!-- Court lines in perspective — outer rectangle, service line, center line -->
-  <g stroke="#f5f5ea" stroke-width="1.6" fill="none" opacity="0.95">
-    <!-- Far baseline (small) -->
-    <line x1="230" y1="132" x2="570" y2="132"/>
-    <!-- Near baseline (wide) -->
-    <line x1="20" y1="196" x2="780" y2="196"/>
-    <!-- Left sideline -->
-    <line x1="230" y1="132" x2="20" y2="196"/>
-    <!-- Right sideline -->
-    <line x1="570" y1="132" x2="780" y2="196"/>
-    <!-- Doubles alley left -->
-    <line x1="248" y1="132" x2="52" y2="196"/>
-    <!-- Doubles alley right -->
-    <line x1="552" y1="132" x2="748" y2="196"/>
-    <!-- Service line far -->
-    <line x1="310" y1="150" x2="490" y2="150"/>
-    <!-- Service line near -->
-    <line x1="130" y1="176" x2="670" y2="176"/>
-    <!-- Center service line -->
-    <line x1="400" y1="150" x2="400" y2="176"/>
+  <!-- Floor line -->
+  <line x1="0" y1="185" x2="800" y2="185" stroke="#2a3454" stroke-width="1" opacity="0.6"/>
+
+  <!-- AC sine wave running along base (electric lime green) -->
+  <g opacity="0.85">
+    <use href="#sineWave" fill="none" stroke="#a3ff9d" stroke-width="1.4" opacity="0.9" filter="url(#softGlow)">
+      <animate attributeName="stroke-dasharray" values="0 1600;1600 0" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#sineWave" fill="none" stroke="#4bd648" stroke-width="0.6" opacity="0.5">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-50 0" dur="7s" repeatCount="indefinite"/>
+    </use>
   </g>
 
-  <!-- Net across the middle -->
-  <g>
-    <!-- Net posts -->
-    <rect x="20" y="150" width="3" height="18" fill="#2a2018"/>
-    <rect x="777" y="150" width="3" height="18" fill="#2a2018"/>
-    <!-- Net band (top white tape) -->
-    <path d="M 22 153 L 778 153 L 778 156 L 22 156 Z" fill="#f5f5ea"/>
-    <!-- Net mesh -->
-    <path d="M 22 156 L 778 156 L 778 168 L 22 168 Z" fill="#1a3a1a" opacity="0.6"/>
-    <g stroke="#0d1c0d" stroke-width="0.3" opacity="0.7">
-      <line x1="22" y1="158" x2="778" y2="158"/>
-      <line x1="22" y1="161" x2="778" y2="161"/>
-      <line x1="22" y1="164" x2="778" y2="164"/>
-      <line x1="22" y1="167" x2="778" y2="167"/>
-      <line x1="80" y1="156" x2="80" y2="168"/>
-      <line x1="140" y1="156" x2="140" y2="168"/>
-      <line x1="200" y1="156" x2="200" y2="168"/>
-      <line x1="260" y1="156" x2="260" y2="168"/>
-      <line x1="320" y1="156" x2="320" y2="168"/>
-      <line x1="380" y1="156" x2="380" y2="168"/>
-      <line x1="440" y1="156" x2="440" y2="168"/>
-      <line x1="500" y1="156" x2="500" y2="168"/>
-      <line x1="560" y1="156" x2="560" y2="168"/>
-      <line x1="620" y1="156" x2="620" y2="168"/>
-      <line x1="680" y1="156" x2="680" y2="168"/>
-      <line x1="740" y1="156" x2="740" y2="168"/>
-    </g>
-  </g>
-
-  <!-- ===== PLAYER (silhouette mid-serve, left side) ===== -->
-  <g transform="translate(120,180)" filter="url(#drop)">
-    <animateTransform attributeName="transform" type="translate" values="120,180;120,178;120,180" dur="11s" repeatCount="indefinite" additive="replace"/>
-    <!-- Body -->
-    <g fill="#f5f5ea">
-      <!-- Head -->
-      <circle cx="0" cy="-40" r="4.5"/>
-      <!-- Torso -->
-      <path d="M -4 -35 L -6 -18 L -3 -6 L 3 -6 L 6 -18 L 4 -35 Z"/>
-      <!-- Right arm raised holding racket -->
-      <path d="M 4 -34 L 12 -46 L 16 -52" stroke="#f5f5ea" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <!-- Left arm across body -->
-      <path d="M -4 -32 L -12 -22 L -14 -12" stroke="#f5f5ea" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-      <!-- Legs (mid-lunge) -->
-      <path d="M -3 -6 L -6 8 L -8 18" stroke="#f5f5ea" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-      <path d="M 3 -6 L 6 6 L 10 16" stroke="#f5f5ea" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-      <!-- Shorts hint -->
-      <path d="M -6 -10 L 6 -10 L 5 -3 L -5 -3 Z" fill="#d8d3c8"/>
-    </g>
-    <!-- Racket head (ellipse frame + strings) -->
-    <g transform="translate(16,-52)">
-      <animateTransform attributeName="transform" type="rotate" values="-8;6;-8" dur="7s" repeatCount="indefinite" additive="sum"/>
-      <ellipse cx="0" cy="0" rx="8" ry="10" fill="none" stroke="#e8e0c8" stroke-width="1.6"/>
-      <g stroke="#f5efd8" stroke-width="0.4" opacity="0.9">
-        <line x1="-6" y1="-8" x2="-6" y2="8"/>
-        <line x1="-3" y1="-9.5" x2="-3" y2="9.5"/>
-        <line x1="0" y1="-10" x2="0" y2="10"/>
-        <line x1="3" y1="-9.5" x2="3" y2="9.5"/>
-        <line x1="6" y1="-8" x2="6" y2="8"/>
-        <line x1="-8" y1="-5" x2="8" y2="-5"/>
-        <line x1="-8" y1="-2" x2="8" y2="-2"/>
-        <line x1="-8" y1="1" x2="8" y2="1"/>
-        <line x1="-8" y1="4" x2="8" y2="4"/>
-        <line x1="-8" y1="7" x2="8" y2="7"/>
-      </g>
-    </g>
-  </g>
-
-  <!-- ===== TENNIS BALL (arcing across the court) ===== -->
-  <!-- Motion trail -->
-  <g fill="none" stroke="#e6f27a" stroke-width="1.2" stroke-dasharray="3,4" opacity="0.7">
-    <path d="M 160 130 Q 320 60 480 105"/>
-  </g>
-  <g>
-    <!-- Ball body -->
+  <!-- Induction rotor disc, left side -->
+  <g transform="translate(115, 130)">
+    <!-- outer stator ring -->
+    <circle r="34" fill="none" stroke="#6b4a1a" stroke-width="3" opacity="0.8"/>
+    <circle r="34" fill="none" stroke="#d4a24a" stroke-width="1" opacity="0.7"/>
+    <!-- spinning rotor -->
     <g>
-      <animateMotion dur="7s" repeatCount="indefinite" path="M 160 130 Q 320 60 480 105 Q 340 150 160 130"/>
-      <circle cx="0" cy="0" r="12" fill="url(#ballGlow)" opacity="0.9"/>
-      <circle cx="0" cy="0" r="5.5" fill="url(#ballGrad)"/>
-      <!-- Signature Wilson-style curve -->
-      <path d="M -5 -1 Q 0 -4 5 -1" fill="none" stroke="#f8ffc0" stroke-width="0.7" opacity="0.9"/>
-      <path d="M -5 1 Q 0 4 5 1" fill="none" stroke="#f8ffc0" stroke-width="0.7" opacity="0.9"/>
-      <circle cx="-1.6" cy="-1.6" r="1.2" fill="#f8ffc0" opacity="0.8"/>
-    </g>
-  </g>
-
-  <!-- ===== TROPHY on plinth (right side) ===== -->
-  <g transform="translate(700,180)">
-    <animateTransform attributeName="transform" type="translate" values="700,180;700,178;700,180" dur="13s" repeatCount="indefinite" additive="replace"/>
-    <!-- Plinth -->
-    <rect x="-20" y="-4" width="40" height="12" fill="#3a2a20"/>
-    <rect x="-22" y="-8" width="44" height="6" fill="#5a4230"/>
-    <rect x="-24" y="-14" width="48" height="8" fill="#6a5240"/>
-    <!-- Trophy body (silver-gold cup) -->
-    <g filter="url(#drop)">
-      <!-- Foot -->
-      <ellipse cx="0" cy="-14" rx="12" ry="3" fill="#a88a3a"/>
-      <!-- Stem -->
-      <rect x="-3" y="-24" width="6" height="10" fill="url(#trophyBody)"/>
-      <!-- Bowl -->
-      <path d="M -20 -50 Q -22 -30 -14 -24 L 14 -24 Q 22 -30 20 -50 Z" fill="url(#trophyBody)"/>
-      <!-- Bowl rim -->
-      <ellipse cx="0" cy="-50" rx="20" ry="4" fill="#f4e8b4"/>
-      <ellipse cx="0" cy="-50" rx="20" ry="4" fill="none" stroke="#8a6a2a" stroke-width="0.6"/>
-      <!-- Handles -->
-      <path d="M -20 -44 Q -30 -42 -30 -34 Q -30 -28 -22 -30" fill="none" stroke="url(#trophyBody)" stroke-width="2.4"/>
-      <path d="M 20 -44 Q 30 -42 30 -34 Q 30 -28 22 -30" fill="none" stroke="url(#trophyBody)" stroke-width="2.4"/>
-      <!-- Pineapple finial -->
-      <ellipse cx="0" cy="-58" rx="4.5" ry="7" fill="url(#trophyBody)"/>
-      <g stroke="#7a5a20" stroke-width="0.4" opacity="0.8">
-        <line x1="-3" y1="-60" x2="3" y2="-56"/>
-        <line x1="-3" y1="-56" x2="3" y2="-60"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+      <circle r="28" fill="url(#rotor)"/>
+      <!-- rotor bars -->
+      <g stroke="#7fefff" stroke-width="1.6" opacity="0.85" fill="none">
+        <line x1="-24" y1="0" x2="24" y2="0"/>
+        <line x1="0" y1="-24" x2="0" y2="24"/>
+        <line x1="-17" y1="-17" x2="17" y2="17"/>
+        <line x1="-17" y1="17" x2="17" y2="-17"/>
       </g>
-      <!-- Pineapple leaves -->
-      <path d="M -3 -63 L -1 -68 L 0 -63 L 1 -68 L 3 -63" fill="none" stroke="#c8a848" stroke-width="0.8"/>
-      <!-- Body engraving band -->
-      <path d="M -14 -36 L 14 -36" stroke="#7a5a20" stroke-width="0.6" opacity="0.9"/>
-      <path d="M -14 -30 L 14 -30" stroke="#7a5a20" stroke-width="0.6" opacity="0.9"/>
+      <circle r="4" fill="#0e1330" stroke="#7fefff" stroke-width="1"/>
     </g>
-    <!-- Roving highlight/shine on bowl -->
-    <g clip-path="url(#trophyClip)">
-      <rect x="-24" y="-52" width="8" height="30" fill="url(#trophyShine)" opacity="0.9">
-        <animate attributeName="x" values="-24;22;-24" dur="11s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-    <clipPath id="trophyClip">
-      <path d="M -20 -50 Q -22 -30 -14 -24 L 14 -24 Q 22 -30 20 -50 Z"/>
-    </clipPath>
-    <!-- Sparkle -->
-    <g fill="#fff9d8">
-      <circle cx="-6" cy="-46" r="0.9">
-        <animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="10" cy="-40" r="0.7">
-        <animate attributeName="opacity" values="0;1;0" dur="7s" begin="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="0" cy="-56" r="0.8">
-        <animate attributeName="opacity" values="0;1;0" dur="11s" begin="4s" repeatCount="indefinite"/>
-      </circle>
-    </g>
+    <!-- pulsing halo -->
+    <circle r="40" fill="none" stroke="#7fefff" stroke-width="1" opacity="0.5">
+      <animate attributeName="r" values="38;46;38" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0.1;0.55" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <!-- base plinth -->
+    <rect x="-30" y="34" width="60" height="6" fill="url(#brass)"/>
   </g>
 
-  <!-- Grass blade flecks -->
-  <g fill="#1c5218" opacity="0.85">
-    <rect x="200" y="184" width="1" height="3"/>
-    <rect x="260" y="188" width="1" height="3"/>
-    <rect x="340" y="182" width="1" height="3"/>
-    <rect x="420" y="186" width="1" height="3"/>
-    <rect x="500" y="184" width="1" height="3"/>
-    <rect x="560" y="188" width="1" height="3"/>
-    <rect x="620" y="184" width="1" height="3"/>
-  </g>
-
-  <!-- ===== HEADLINE plate ===== -->
-  <!-- Softening plate behind title so it stays legible over the sky -->
-  <ellipse cx="380" cy="52" rx="260" ry="30" fill="#0d1117" opacity="0.45"/>
-
-  <!-- Headline JULY 9, 2026 -->
-  <text x="380" y="66" font-family="'Georgia', 'Times New Roman', serif" font-size="42" font-weight="900" letter-spacing="4" text-anchor="middle" fill="url(#titleGrad)" filter="url(#titleGlow)">JULY 9, 2026</text>
-
-  <!-- Deco laurel-like flourish -->
-  <g stroke="#5a1a5a" stroke-width="1" fill="none" opacity="0.85">
-    <path d="M 220 82 Q 250 74 280 82"/>
-    <path d="M 480 82 Q 510 74 540 82"/>
-    <circle cx="220" cy="82" r="1.4" fill="#5a1a5a" stroke="none"/>
-    <circle cx="540" cy="82" r="1.4" fill="#5a1a5a" stroke="none"/>
-  </g>
-
-  <!-- Subhead — sits on a small dark plate for consistent contrast across sky/horizon -->
-  <rect x="140" y="88" width="480" height="16" rx="2" fill="#0d1117" opacity="0.55"/>
-  <text x="380" y="99.5" font-family="'Georgia', 'Times New Roman', serif" font-size="11" font-weight="700" letter-spacing="3.4" text-anchor="middle" fill="#e8d8e8">THE  CHAMPIONSHIPS  ·  WIMBLEDON  ·  149  YEARS</text>
-
-  <!-- ===== BOTTOM RIBBON (Wimbledon purple/green) ===== -->
+  <!-- Geissler tubes drifting (magenta glow orbs with tube glint) -->
   <g>
-    <rect x="0" y="196" width="800" height="4" fill="url(#ribbonPurple)"/>
-    <rect x="0" y="192" width="800" height="4" fill="url(#ribbonGreen)"/>
+    <g transform="translate(50,90)">
+      <ellipse cx="0" cy="0" rx="14" ry="5" fill="url(#geissler)"/>
+      <ellipse cx="0" cy="0" rx="9" ry="2.4" fill="#ffb8de" opacity="0.9"/>
+      <animateTransform attributeName="transform" type="translate" values="50,90;60,80;50,90" dur="13s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(260,60)">
+      <ellipse cx="0" cy="0" rx="16" ry="5" fill="url(#geissler)" transform="rotate(20)"/>
+      <ellipse cx="0" cy="0" rx="10" ry="2.4" fill="#ffb8de" opacity="0.9" transform="rotate(20)"/>
+      <animateTransform attributeName="transform" type="translate" values="260,60;250,50;260,60" dur="11s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(720,110)">
+      <ellipse cx="0" cy="0" rx="12" ry="4" fill="url(#geissler)" transform="rotate(-15)"/>
+      <ellipse cx="0" cy="0" rx="7" ry="2" fill="#ffb8de" opacity="0.9" transform="rotate(-15)"/>
+      <animateTransform attributeName="transform" type="translate" values="720,110;730,120;720,110" dur="7s" repeatCount="indefinite"/>
+    </g>
   </g>
 
-  <!-- Tertiary italic line, on the purple ribbon -->
-  <text x="400" y="199.3" font-family="'Georgia', 'Times New Roman', serif" font-size="6.5" font-style="italic" letter-spacing="2.2" text-anchor="middle" fill="#e8d8e8" opacity="0.95">ALL  ENGLAND  CLUB  ·  CENTRE  COURT  ·  JULY  9,  1877</text>
+  <!-- Tesla Coil (center-right) -->
+  <g transform="translate(560,0)">
+    <!-- brass base plinth -->
+    <rect x="-45" y="170" width="90" height="15" fill="url(#brass)" stroke="#4a2e10" stroke-width="0.6"/>
+    <rect x="-52" y="180" width="104" height="5" fill="#3a2410"/>
+    <!-- lower secondary coil form (tall cylinder) -->
+    <rect x="-18" y="70" width="36" height="100" fill="#2a2018" stroke="#6b4a1a" stroke-width="0.6"/>
+    <!-- copper windings (many thin horizontal lines) -->
+    <g stroke="url(#copper)" stroke-width="1.2">
+      <line x1="-18" y1="72" x2="18" y2="72"/>
+      <line x1="-18" y1="76" x2="18" y2="76"/>
+      <line x1="-18" y1="80" x2="18" y2="80"/>
+      <line x1="-18" y1="84" x2="18" y2="84"/>
+      <line x1="-18" y1="88" x2="18" y2="88"/>
+      <line x1="-18" y1="92" x2="18" y2="92"/>
+      <line x1="-18" y1="96" x2="18" y2="96"/>
+      <line x1="-18" y1="100" x2="18" y2="100"/>
+      <line x1="-18" y1="104" x2="18" y2="104"/>
+      <line x1="-18" y1="108" x2="18" y2="108"/>
+      <line x1="-18" y1="112" x2="18" y2="112"/>
+      <line x1="-18" y1="116" x2="18" y2="116"/>
+      <line x1="-18" y1="120" x2="18" y2="120"/>
+      <line x1="-18" y1="124" x2="18" y2="124"/>
+      <line x1="-18" y1="128" x2="18" y2="128"/>
+      <line x1="-18" y1="132" x2="18" y2="132"/>
+      <line x1="-18" y1="136" x2="18" y2="136"/>
+      <line x1="-18" y1="140" x2="18" y2="140"/>
+      <line x1="-18" y1="144" x2="18" y2="144"/>
+      <line x1="-18" y1="148" x2="18" y2="148"/>
+      <line x1="-18" y1="152" x2="18" y2="152"/>
+      <line x1="-18" y1="156" x2="18" y2="156"/>
+      <line x1="-18" y1="160" x2="18" y2="160"/>
+      <line x1="-18" y1="164" x2="18" y2="164"/>
+      <line x1="-18" y1="168" x2="18" y2="168"/>
+    </g>
+    <!-- coil edges (curved suggestion of cylinder) -->
+    <ellipse cx="0" cy="170" rx="18" ry="4" fill="#4a2e10" opacity="0.85"/>
+    <ellipse cx="0" cy="70" rx="18" ry="4" fill="#8a5a25"/>
+
+    <!-- support neck between secondary and toroid -->
+    <rect x="-4" y="55" width="8" height="18" fill="#4a3620"/>
+
+    <!-- Toroid (top electrode) -->
+    <ellipse cx="0" cy="50" rx="52" ry="16" fill="url(#toroid)"/>
+    <ellipse cx="0" cy="48" rx="42" ry="9" fill="url(#toroidInner)" opacity="0.85"/>
+    <!-- highlight sheen on toroid -->
+    <ellipse cx="-14" cy="45" rx="20" ry="3" fill="#ffffff" opacity="0.5"/>
+
+    <!-- Corona glow around toroid -->
+    <ellipse cx="0" cy="50" rx="70" ry="24" fill="url(#arcGlow)" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.75;0.35" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Lightning arcs branching from toroid -->
+  <g stroke-linecap="round" fill="none" filter="url(#arcBlur)">
+    <!-- arc left-far -->
+    <path d="M 540 50 L 505 40 L 490 55 L 460 45 L 445 60 L 420 50" stroke="#b26cff" stroke-width="1.6" opacity="0.9">
+      <animate attributeName="opacity" values="1;0.1;0.85;0.2;1" dur="1.1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 540 50 L 505 40 L 490 55 L 460 45 L 445 60 L 420 50" stroke="#e6d0ff" stroke-width="0.7" opacity="0.9">
+      <animate attributeName="opacity" values="1;0;1;0;1" dur="1.1s" repeatCount="indefinite"/>
+    </path>
+    <!-- arc left-up -->
+    <path d="M 550 45 L 530 25 L 510 32 L 490 18 L 470 26" stroke="#7fefff" stroke-width="1.4" opacity="0.85">
+      <animate attributeName="opacity" values="0.1;1;0.2;0.9;0.1" dur="0.9s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 550 45 L 530 25 L 510 32 L 490 18 L 470 26" stroke="#ffffff" stroke-width="0.5" opacity="0.9">
+      <animate attributeName="opacity" values="0;1;0;1;0" dur="0.9s" repeatCount="indefinite"/>
+    </path>
+    <!-- arc right-far -->
+    <path d="M 580 48 L 615 38 L 630 55 L 660 42 L 685 58 L 715 48" stroke="#b26cff" stroke-width="1.6" opacity="0.85">
+      <animate attributeName="opacity" values="0.9;0.15;0.9;0.2;0.9" dur="1.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 580 48 L 615 38 L 630 55 L 660 42 L 685 58 L 715 48" stroke="#e6d0ff" stroke-width="0.7" opacity="0.9">
+      <animate attributeName="opacity" values="1;0;1;0;1" dur="1.3s" repeatCount="indefinite"/>
+    </path>
+    <!-- arc right-up short -->
+    <path d="M 572 42 L 590 22 L 610 30 L 630 20" stroke="#7fefff" stroke-width="1.4" opacity="0.9">
+      <animate attributeName="opacity" values="0.2;1;0.15;0.9;0.2" dur="0.7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 572 42 L 590 22 L 610 30 L 630 20" stroke="#ffffff" stroke-width="0.5" opacity="0.9">
+      <animate attributeName="opacity" values="0;1;0;1;0" dur="0.7s" repeatCount="indefinite"/>
+    </path>
+    <!-- top short crackle -->
+    <path d="M 560 40 L 555 20 L 565 12 L 558 4" stroke="#e6d0ff" stroke-width="1.2" opacity="0.9">
+      <animate attributeName="opacity" values="0.2;1;0.1;1;0.2" dur="1.1s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Little spark particles -->
+  <g fill="#e6d0ff">
+    <circle cx="470" cy="30" r="0.9">
+      <animate attributeName="opacity" values="0;1;0" dur="1.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="440" cy="55" r="1">
+      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="35" r="0.9">
+      <animate attributeName="opacity" values="0;1;0" dur="1.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="60" r="1">
+      <animate attributeName="opacity" values="1;0;1" dur="0.7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- HEADLINE: date -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- subtle backing plate behind headline for legibility -->
+    <rect x="120" y="30" width="360" height="60" rx="4" fill="#0d1117" opacity="0.55"/>
+
+    <text x="300" y="72" font-size="38" font-weight="800" letter-spacing="2" fill="#f5efe6" filter="url(#softGlow)">
+      JULY 10, 2026
+    </text>
+
+    <!-- subhead -->
+    <text x="300" y="98" font-size="12" font-weight="700" letter-spacing="3" fill="#b26cff">
+      NIKOLA TESLA
+      <tspan fill="#7fefff"> · 170 YEARS · </tspan>
+      <tspan fill="#b26cff">BORN JULY 10, 1856</tspan>
+    </text>
+
+    <!-- tertiary -->
+    <text x="400" y="196" font-size="8.5" font-style="italic" letter-spacing="2.5" fill="#a3b3c8" opacity="0.9">
+      SMILJAN · AUSTRIAN EMPIRE · WIZARD OF THE WEST
+    </text>
+  </g>
 
 </svg>
