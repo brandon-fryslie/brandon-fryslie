@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## July 10, 2026 — The Championships, Wimbledon — 149 years since the first Wimbledon championship (July 9, 1877, All England Croquet & Lawn Tennis Club, SW19)
+
+<img src="./doodle-archive/2026/07/2026-07-10-070513.svg" width="800" alt="Daily doodle archived for July 9, 2026: 149th anniversary of the first Wimbledon championship — a Centre Court tableau at the All England Club with a soft warm-afternoon sky, an emerald grass court in gentle perspective with white court lines and a bright net across the middle, a silhouetted player at left mid-serve with racket raised, a neon-yellow tennis ball arcing across the court leaving a dashed motion trail, the silvery Gentlemen's Singles Trophy on a plinth at right with pineapple finial and warm-gold highlights, a purple-and-green Wimbledon ribbon strip along the bottom edge, a large deep-purple JULY 9, 2026 headline dominating the upper center, a green THE CHAMPIONSHIPS · WIMBLEDON · 149 YEARS subhead, and italic ALL ENGLAND CLUB · CENTRE COURT · JULY 9, 1877 tertiary along the bottom edge">
+
+---
+
 ## July 9, 2026 — Roswell UFO Incident 79th Anniversary (July 8, 1947)
 
 <img src="./doodle-archive/2026/07/2026-07-09-071103.svg" width="800" alt="Daily doodle archived for July 8, 2026: 79th anniversary of the Roswell UFO incident — a night desert tableau over the New Mexico high desert with a deep indigo-to-teal starfield sky, a classic domed silver flying saucer hovering slightly right of center with a pulsing green tractor beam projecting down to the ground, four rotating porthole lights around its rim, a small green alien silhouette peering out of the dome, saguaro cacti and low mesa silhouettes grounding the base, drifting sci-fi glyph particles floating up, a rippled radio-signal arc emanating from the saucer, twinkling stars, and a large teal-green JULY 8, 2026 headline dominating the upper center with a red ROSWELL INCIDENT · 79 YEARS · THE FLYING DISC subhead beneath, and italic RAAF PRESS RELEASE · ROSWELL, NEW MEXICO · JULY 8, 1947 tertiary along the very bottom edge">
