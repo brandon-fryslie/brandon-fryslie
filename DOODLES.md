@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## July 11, 2026 — Nikola Tesla's 170th birthday (July 10, 1856, Smiljan, Austrian Empire — modern-day Croatia). Inventor, electrical engineer, futurist; alternating current, induction motor, Tesla coil, wireless power dreams.
+
+<img src="./doodle-archive/2026/07/2026-07-11-064114.svg" width="800" alt="Daily doodle archived for July 10, 2026: 170th birthday of Nikola Tesla. A high-voltage laboratory tableau: towering copper-and-brass Tesla coil with silver toroidal top electrode, crackling violet and cyan lightning arcs branching outward across a deep-indigo lab sky, a spinning induction rotor disc on the left, drifting magenta Geissler tubes, twinkling ozone particles, a large bone-white JULY 10, 2026 headline, a violet-cyan NIKOLA TESLA · 170 YEARS · BORN JULY 10, 1856 subhead, and italic SMILJAN · AUSTRIAN EMPIRE · WIZARD OF THE WEST tertiary along the bottom edge.">
+
+---
+
 ## July 10, 2026 — The Championships, Wimbledon — 149 years since the first Wimbledon championship (July 9, 1877, All England Croquet & Lawn Tennis Club, SW19)
 
 <img src="./doodle-archive/2026/07/2026-07-10-070513.svg" width="800" alt="Daily doodle archived for July 9, 2026: 149th anniversary of the first Wimbledon championship — a Centre Court tableau at the All England Club with a soft warm-afternoon sky, an emerald grass court in gentle perspective with white court lines and a bright net across the middle, a silhouetted player at left mid-serve with racket raised, a neon-yellow tennis ball arcing across the court leaving a dashed motion trail, the silvery Gentlemen's Singles Trophy on a plinth at right with pineapple finial and warm-gold highlights, a purple-and-green Wimbledon ribbon strip along the bottom edge, a large deep-purple JULY 9, 2026 headline dominating the upper center, a green THE CHAMPIONSHIPS · WIMBLEDON · 149 YEARS subhead, and italic ALL ENGLAND CLUB · CENTRE COURT · JULY 9, 1877 tertiary along the bottom edge">
