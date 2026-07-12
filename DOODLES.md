@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## July 12, 2026 — Skylab re-entry (July 11, 1979) — 47th anniversary of NASA's first space station breaking apart during atmospheric re-entry over the Indian Ocean and Western Australia, showering debris across the Shire of Esperance
+
+<img src="./doodle-archive/2026/07/2026-07-12-064909.svg" width="800" alt="Daily doodle archived for July 11, 2026: 47th anniversary of Skylab's atmospheric re-entry on July 11, 1979 over Western Australia. A dramatic pre-dawn upper-atmosphere tableau: deep navy space fading to a warm ember horizon glow, tumbling Skylab wrapped in orange plasma at mid-right, four fiery comet-tail debris streaks arcing down-left across the frame, sparks flickering, red-ochre Australian outback silhouette along the bottom, twinkling stars, a large cream JULY 11, 2026 headline, an orange-cyan SKYLAB · 47 YEARS · RE-ENTRY JULY 11, 1979 subhead, and italic SHIRE OF ESPERANCE · WESTERN AUSTRALIA · SKYLAB IS FALLING tertiary along the bottom edge.">
+
+---
+
 ## July 11, 2026 — Nikola Tesla's 170th birthday (July 10, 1856, Smiljan, Austrian Empire — modern-day Croatia). Inventor, electrical engineer, futurist; alternating current, induction motor, Tesla coil, wireless power dreams.
 
 <img src="./doodle-archive/2026/07/2026-07-11-064114.svg" width="800" alt="Daily doodle archived for July 10, 2026: 170th birthday of Nikola Tesla. A high-voltage laboratory tableau: towering copper-and-brass Tesla coil with silver toroidal top electrode, crackling violet and cyan lightning arcs branching outward across a deep-indigo lab sky, a spinning induction rotor disc on the left, drifting magenta Geissler tubes, twinkling ozone particles, a large bone-white JULY 10, 2026 headline, a violet-cyan NIKOLA TESLA · 170 YEARS · BORN JULY 10, 1856 subhead, and italic SMILJAN · AUSTRIAN EMPIRE · WIZARD OF THE WEST tertiary along the bottom edge.">
