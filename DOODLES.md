@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## July 13, 2026 — Rolling Stones first concert (July 12, 1962) — 64th anniversary of the band's debut gig at the Marquee Club, 165 Oxford Street, London
+
+<img src="./doodle-archive/2026/07/2026-07-13-065903.svg" width="800" alt="Daily doodle archived for July 12, 2026: 64th anniversary of the Rolling Stones' first concert at the Marquee Club in London on July 12, 1962. A smoky basement club tableau with sweeping amber and magenta stage lights, silhouetted band members with guitars at a low wooden stage, a flickering MARQUEE neon sign, cigarette smoke curls, a checkered dance floor, floating musical notes, a large cream JULY 12, 2026 headline, a crimson THE ROLLING STONES · 64 YEARS · FIRST SHOW subhead, and italic MARQUEE CLUB · 165 OXFORD STREET · LONDON · JULY 12, 1962 tertiary along the bottom.">
+
+---
+
 ## July 12, 2026 — Skylab re-entry (July 11, 1979) — 47th anniversary of NASA's first space station breaking apart during atmospheric re-entry over the Indian Ocean and Western Australia, showering debris across the Shire of Esperance
 
 <img src="./doodle-archive/2026/07/2026-07-12-064909.svg" width="800" alt="Daily doodle archived for July 11, 2026: 47th anniversary of Skylab's atmospheric re-entry on July 11, 1979 over Western Australia. A dramatic pre-dawn upper-atmosphere tableau: deep navy space fading to a warm ember horizon glow, tumbling Skylab wrapped in orange plasma at mid-right, four fiery comet-tail debris streaks arcing down-left across the frame, sparks flickering, red-ochre Australian outback silhouette along the bottom, twinkling stars, a large cream JULY 11, 2026 headline, an orange-cyan SKYLAB · 47 YEARS · RE-ENTRY JULY 11, 1979 subhead, and italic SHIRE OF ESPERANCE · WESTERN AUSTRALIA · SKYLAB IS FALLING tertiary along the bottom edge.">
