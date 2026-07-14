@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Frida Kahlo (died July 13, 1954) — 72nd anniversary of the Mexican painter's death in Coyoacán, Mexico City. A vibrant Mexican-folk-art tableau: left-side silhouetted profile portrait of Frida crowned with a lush floral corona of hot-pink hibiscus, marigolds, and dahlias, her signature braided coiffure trailing red ribbons; a monstera-leaf frame anchoring the lower left; a hummingbird darting near her crown (nod to "Self-Portrait with Thorn Necklace and Hummingbird"); a sun-warmed papel-picado bunting swagging across the top; scattered petals drifting up; a large cream JULY 13, 2026 headline dominating center-right; a hot-pink FRIDA KAHLO · 72 YEARS · DIED JULY 13, 1954 subhead beneath; italic COYOACÁN · MEXICO CITY · "VIVA LA VIDA" tertiary along the bottom edge. Palette: warm coral-to-magenta background gradient, hot pink #ff2d95, marigold orange #ff6b1a, sun yellow #ffcc00, tropical teal #1a9b8b, monstera green #2d7a3d, deep-blood red #8b1a2b, cream #fff5e1, indigo shadow #1a0d3d. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 13, 2026 — 72nd anniversary of the death of Mexican painter Frida Kahlo (July 13, 1954). A vibrant Mexican folk-art tableau with a silhouetted profile of Frida on the left crowned with a lush floral corona of hibiscus, marigolds, and dahlias with red ribbons, a monstera-leaf frame at lower left, a darting hummingbird near her crown, papel-picado bunting swagging across the top, drifting petals, a large cream JULY 13, 2026 headline center-right, a hot-pink FRIDA KAHLO · 72 YEARS · DIED JULY 13, 1954 subhead, and italic COYOACÁN · MEXICO CITY · VIVA LA VIDA tertiary along the bottom.">
+  <defs>
+    <!-- Warm background: coral / magenta / indigo -->
+    <linearGradient id="bg-warm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d0a2a"/>
+      <stop offset="45%" stop-color="#7a1440"/>
+      <stop offset="100%" stop-color="#1a0d3d"/>
+    </linearGradient>
+
+    <!-- Sun glow behind Frida's head -->
+    <radialGradient id="sun-halo" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffcc00" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#ff6b1a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff6b1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Hibiscus petal gradient -->
+    <radialGradient id="hibiscus" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffcc00"/>
+      <stop offset="35%" stop-color="#ff2d95"/>
+      <stop offset="100%" stop-color="#8b1a2b"/>
+    </radialGradient>
+
+    <!-- Marigold gradient -->
+    <radialGradient id="marigold" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffcc00"/>
+      <stop offset="60%" stop-color="#ff6b1a"/>
+      <stop offset="100%" stop-color="#8b3a0a"/>
+    </radialGradient>
+
+    <!-- Text glow -->
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Monstera leaf symbol -->
+    <symbol id="monstera" viewBox="0 0 60 60" overflow="visible">
+      <path d="M30 5 Q10 15 8 35 Q10 55 30 58 Q50 55 52 35 Q50 15 30 5 Z" fill="#2d7a3d"/>
+      <!-- signature splits -->
+      <path d="M30 12 L30 55" stroke="#1a4a22" stroke-width="1.4" fill="none"/>
+      <path d="M30 22 Q18 24 14 30 Q18 26 30 28" fill="#3d0a2a" opacity="0.9"/>
+      <path d="M30 22 Q42 24 46 30 Q42 26 30 28" fill="#3d0a2a" opacity="0.9"/>
+      <path d="M30 38 Q16 40 12 46 Q18 42 30 44" fill="#3d0a2a" opacity="0.9"/>
+      <path d="M30 38 Q44 40 48 46 Q42 42 30 44" fill="#3d0a2a" opacity="0.9"/>
+      <ellipse cx="18" cy="20" rx="3" ry="4" fill="#3d0a2a" opacity="0.75"/>
+      <ellipse cx="42" cy="20" rx="3" ry="4" fill="#3d0a2a" opacity="0.75"/>
+    </symbol>
+
+    <!-- Hibiscus flower symbol (5-petal) -->
+    <symbol id="hibiscus-flower" viewBox="-20 -20 40 40" overflow="visible">
+      <g>
+        <ellipse cx="0" cy="-12" rx="7" ry="12" fill="url(#hibiscus)"/>
+        <ellipse cx="11" cy="-4" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(72)"/>
+        <ellipse cx="7" cy="10" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(144)"/>
+        <ellipse cx="-7" cy="10" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(216)"/>
+        <ellipse cx="-11" cy="-4" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(288)"/>
+        <circle cx="0" cy="0" r="3.5" fill="#ffcc00"/>
+        <circle cx="0" cy="0" r="1.6" fill="#8b1a2b"/>
+      </g>
+    </symbol>
+
+    <!-- Marigold symbol (layered petals) -->
+    <symbol id="marigold-flower" viewBox="-15 -15 30 30" overflow="visible">
+      <circle r="12" fill="url(#marigold)"/>
+      <g fill="#ff6b1a">
+        <circle cx="0" cy="-10" r="4"/>
+        <circle cx="9.5" cy="-3" r="4"/>
+        <circle cx="6" cy="8" r="4"/>
+        <circle cx="-6" cy="8" r="4"/>
+        <circle cx="-9.5" cy="-3" r="4"/>
+      </g>
+      <g fill="#ffcc00" opacity="0.85">
+        <circle cx="0" cy="-6" r="2.6"/>
+        <circle cx="5.7" cy="-1.8" r="2.6"/>
+        <circle cx="3.5" cy="4.8" r="2.6"/>
+        <circle cx="-3.5" cy="4.8" r="2.6"/>
+        <circle cx="-5.7" cy="-1.8" r="2.6"/>
+      </g>
+      <circle r="2.2" fill="#8b1a2b"/>
+    </symbol>
+
+    <!-- Papel picado banner rectangle (with cut-out pattern) -->
+    <symbol id="papel" viewBox="0 0 40 26" overflow="visible">
+      <path d="M0 0 L40 0 L40 20 L20 26 L0 20 Z" fill="currentColor"/>
+      <circle cx="20" cy="10" r="3" fill="#3d0a2a"/>
+      <circle cx="10" cy="8" r="1.8" fill="#3d0a2a"/>
+      <circle cx="30" cy="8" r="1.8" fill="#3d0a2a"/>
+      <circle cx="14" cy="16" r="1.4" fill="#3d0a2a"/>
+      <circle cx="26" cy="16" r="1.4" fill="#3d0a2a"/>
+    </symbol>
+  </defs>
+
+  <!-- 1. Warm gradient background -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#bg-warm)"/>
+
+  <!-- 2. Sun halo behind Frida's head -->
+  <ellipse cx="150" cy="90" rx="140" ry="110" fill="url(#sun-halo)">
+    <animate attributeName="rx" values="140;155;140" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="110;120;110" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- 3. Papel picado bunting across the top -->
+  <g>
+    <path d="M20 12 Q400 30 780 12" stroke="#fff5e1" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <g color="#ff2d95"><use href="#papel" x="30" y="14" width="34" height="22"/></g>
+    <g color="#ffcc00"><use href="#papel" x="110" y="18" width="34" height="22"/></g>
+    <g color="#1a9b8b"><use href="#papel" x="190" y="22" width="34" height="22"/></g>
+    <g color="#ff6b1a"><use href="#papel" x="270" y="26" width="34" height="22"/></g>
+    <g color="#ff2d95"><use href="#papel" x="350" y="28" width="34" height="22"/></g>
+    <g color="#ffcc00"><use href="#papel" x="430" y="28" width="34" height="22"/></g>
+    <g color="#1a9b8b"><use href="#papel" x="510" y="26" width="34" height="22"/></g>
+    <g color="#ff6b1a"><use href="#papel" x="590" y="22" width="34" height="22"/></g>
+    <g color="#ff2d95"><use href="#papel" x="670" y="18" width="34" height="22"/></g>
+    <g color="#ffcc00"><use href="#papel" x="748" y="14" width="34" height="22"/></g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0; 0 -1; 0 0" dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- 4. Monstera leaves in the lower-left corner -->
+  <g>
+    <use href="#monstera" x="-20" y="130" width="90" height="90" transform="rotate(-25 25 175)">
+      <animateTransform attributeName="transform" type="rotate" values="-28 25 175; -22 25 175; -28 25 175" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#monstera" x="20" y="150" width="70" height="70" transform="rotate(15 55 185)">
+      <animateTransform attributeName="transform" type="rotate" values="12 55 185; 18 55 185; 12 55 185" dur="11s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- 5. Frida silhouette in profile (facing right) -->
+  <g transform="translate(150 190)">
+    <!-- Shoulders / rebozo shawl -->
+    <path d="M-70 0 Q-60 -30 -30 -35 L30 -30 Q55 -20 70 0 Z" fill="#8b1a2b"/>
+    <!-- Rebozo pattern stripes -->
+    <path d="M-60 -8 Q0 -18 60 -8" stroke="#ffcc00" stroke-width="1.4" fill="none" opacity="0.75"/>
+    <path d="M-55 -2 Q0 -12 55 -2" stroke="#1a9b8b" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <!-- Neck -->
+    <rect x="-9" y="-52" width="18" height="18" fill="#c68a5a"/>
+    <!-- Head in profile — facing right -->
+    <path d="M-18 -70
+             Q-18 -95 0 -100
+             Q22 -100 28 -80
+             Q30 -68 26 -60
+             Q30 -58 30 -54
+             Q28 -50 24 -52
+             Q22 -46 14 -44
+             L14 -38
+             Q10 -34 0 -34
+             Q-14 -36 -18 -52
+             Z" fill="#c68a5a"/>
+    <!-- Hair mass behind and above head -->
+    <path d="M-22 -95 Q-22 -110 0 -114 Q30 -116 40 -100 Q42 -80 34 -70
+             Q40 -78 42 -90 Q40 -108 20 -116 Q-10 -120 -26 -108 Q-30 -96 -22 -84 Z"
+          fill="#1a0508"/>
+    <!-- Signature single monobrow (thick, joining) -->
+    <path d="M4 -83 Q14 -86 22 -83 Q26 -83 28 -81" stroke="#1a0508" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <!-- Small eye -->
+    <ellipse cx="16" cy="-77" rx="2.2" ry="1.4" fill="#1a0508"/>
+    <!-- Lip -->
+    <path d="M20 -62 Q24 -60 20 -58" stroke="#8b1a2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Small earring -->
+    <circle cx="-14" cy="-58" r="2.4" fill="#ffcc00"/>
+    <!-- Braid trailing down back with red ribbon -->
+    <path d="M-20 -70 Q-32 -55 -34 -35 Q-36 -18 -30 -5"
+          stroke="#1a0508" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M-20 -70 Q-32 -55 -34 -35 Q-36 -18 -30 -5"
+          stroke="#ff2d95" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.9"
+          stroke-dasharray="4 3"/>
+    <!-- Ribbon bow at braid end -->
+    <path d="M-33 -6 L-25 -2 L-30 4 Z M-30 -6 L-38 -2 L-32 4 Z" fill="#ff2d95"/>
+  </g>
+
+  <!-- 6. Floral crown atop Frida's head — cluster of flowers -->
+  <g>
+    <!-- Big central hibiscus -->
+    <use href="#hibiscus-flower" x="150" y="82" width="46" height="46">
+      <animateTransform attributeName="transform" type="rotate" values="0 150 82; 6 150 82; 0 150 82; -4 150 82; 0 150 82" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <!-- Marigolds flanking -->
+    <use href="#marigold-flower" x="118" y="88" width="32" height="32">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#marigold-flower" x="182" y="96" width="30" height="30">
+      <animate attributeName="opacity" values="1;0.85;1" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <!-- Smaller hibiscus at edges -->
+    <use href="#hibiscus-flower" x="102" y="106" width="30" height="30">
+      <animateTransform attributeName="transform" type="rotate" values="-8 102 106; 4 102 106; -8 102 106" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#hibiscus-flower" x="198" y="112" width="26" height="26">
+      <animateTransform attributeName="transform" type="rotate" values="6 198 112; -6 198 112; 6 198 112" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <!-- Tiny marigold buds -->
+    <use href="#marigold-flower" x="90" y="120" width="20" height="20"/>
+    <use href="#marigold-flower" x="220" y="128" width="20" height="20"/>
+    <!-- Green leaves in crown -->
+    <ellipse cx="108" cy="128" rx="9" ry="4" fill="#2d7a3d" transform="rotate(-40 108 128)"/>
+    <ellipse cx="212" cy="132" rx="9" ry="4" fill="#2d7a3d" transform="rotate(35 212 132)"/>
+    <ellipse cx="140" cy="80" rx="6" ry="3" fill="#2d7a3d" transform="rotate(-15 140 80)"/>
+    <ellipse cx="196" cy="86" rx="6" ry="3" fill="#2d7a3d" transform="rotate(20 196 86)"/>
+  </g>
+
+  <!-- 7. Hummingbird darting near the crown -->
+  <g>
+    <g transform="translate(260 92)">
+      <!-- body -->
+      <ellipse cx="0" cy="0" rx="9" ry="4" fill="#1a9b8b"/>
+      <!-- head -->
+      <circle cx="8" cy="-1.5" r="3.5" fill="#1a9b8b"/>
+      <!-- beak -->
+      <path d="M11 -1.5 L20 -0.5 L11 0.5 Z" fill="#1a0508"/>
+      <!-- tiny eye -->
+      <circle cx="8.5" cy="-2.4" r="0.7" fill="#fff5e1"/>
+      <!-- tail -->
+      <path d="M-9 0 L-16 -2 L-14 0 L-16 2 Z" fill="#2d7a3d"/>
+      <!-- wing — flapping -->
+      <ellipse cx="-2" cy="-4" rx="8" ry="3" fill="#ff2d95" opacity="0.85">
+        <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.3; 1 1; 1 -0.9; 1 1" dur="0.35s" repeatCount="indefinite" additive="sum"/>
+      </ellipse>
+      <!-- gentle hover -->
+      <animateTransform attributeName="transform" type="translate" values="260 92; 265 88; 258 94; 262 90; 260 92" dur="7s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- 8. Drifting petals rising -->
+  <g>
+    <circle r="4" fill="#ff2d95">
+      <animateMotion path="M320 200 Q340 130 300 60 Q280 20 320 -10" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.95;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3" fill="#ffcc00">
+      <animateMotion path="M420 200 Q400 130 440 70 Q460 30 430 -10" dur="11s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.95;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3.5" fill="#ff6b1a">
+      <animateMotion path="M560 200 Q580 140 550 80 Q530 40 570 -10" dur="17s" begin="-6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="17s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3" fill="#ff2d95">
+      <animateMotion path="M680 200 Q670 130 700 70 Q720 30 690 -10" dur="11s" begin="-4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="11s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.5" fill="#ffcc00">
+      <animateMotion path="M760 200 Q740 130 770 70 Q790 30 750 -10" dur="7s" begin="-2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="7s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 9. Vine of small marigolds along the right edge -->
+  <g>
+    <use href="#marigold-flower" x="760" y="30" width="20" height="20"/>
+    <use href="#marigold-flower" x="745" y="62" width="16" height="16"/>
+    <use href="#marigold-flower" x="770" y="94" width="14" height="14"/>
+    <use href="#marigold-flower" x="740" y="130" width="18" height="18"/>
+    <use href="#marigold-flower" x="770" y="160" width="16" height="16"/>
+    <path d="M770 40 Q750 70 776 100 Q745 130 776 168" stroke="#2d7a3d" stroke-width="1.6" fill="none" opacity="0.75"/>
+  </g>
+
+  <!-- 10. Main date headline — dominant, cream on warm bg -->
+  <g filter="url(#soft-glow)">
+    <text x="500" y="105" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="46" font-weight="900" letter-spacing="3" fill="#fff5e1">
+      JULY 13, 2026
+    </text>
+  </g>
+
+  <!-- 11. Subhead — hot pink on cream halo -->
+  <text x="500" y="130" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="12" font-weight="800" letter-spacing="4.2" fill="#ffcc00">
+    FRIDA KAHLO · 72 YEARS · DIED JULY 13, 1954
+  </text>
+
+  <!-- 12. Tertiary italic caption along the bottom -->
+  <text x="500" y="188" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10" font-style="italic" font-weight="600" letter-spacing="2.2" fill="#fff5e1" opacity="0.92">
+    COYOACÁN · MEXICO CITY · &#8220;VIVA LA VIDA&#8221;
+  </text>
+</svg>

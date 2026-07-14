@@ -1,286 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Frida Kahlo (died July 13, 1954) — 72nd anniversary of the Mexican painter's death in Coyoacán, Mexico City. A vibrant Mexican-folk-art tableau: left-side silhouetted profile portrait of Frida crowned with a lush floral corona of hot-pink hibiscus, marigolds, and dahlias, her signature braided coiffure trailing red ribbons; a monstera-leaf frame anchoring the lower left; a hummingbird darting near her crown (nod to "Self-Portrait with Thorn Necklace and Hummingbird"); a sun-warmed papel-picado bunting swagging across the top; scattered petals drifting up; a large cream JULY 13, 2026 headline dominating center-right; a hot-pink FRIDA KAHLO · 72 YEARS · DIED JULY 13, 1954 subhead beneath; italic COYOACÁN · MEXICO CITY · "VIVA LA VIDA" tertiary along the bottom edge. Palette: warm coral-to-magenta background gradient, hot pink #ff2d95, marigold orange #ff6b1a, sun yellow #ffcc00, tropical teal #1a9b8b, monstera green #2d7a3d, deep-blood red #8b1a2b, cream #fff5e1, indigo shadow #1a0d3d. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 13, 2026 — 72nd anniversary of the death of Mexican painter Frida Kahlo (July 13, 1954). A vibrant Mexican folk-art tableau with a silhouetted profile of Frida on the left crowned with a lush floral corona of hibiscus, marigolds, and dahlias with red ribbons, a monstera-leaf frame at lower left, a darting hummingbird near her crown, papel-picado bunting swagging across the top, drifting petals, a large cream JULY 13, 2026 headline center-right, a hot-pink FRIDA KAHLO · 72 YEARS · DIED JULY 13, 1954 subhead, and italic COYOACÁN · MEXICO CITY · VIVA LA VIDA tertiary along the bottom.">
+<!-- theme: Bastille Day (July 14) — French national day, 237th anniversary of the Storming of the Bastille (July 14, 1789). A revolutionary tricolore tableau: silhouetted crumbling stone fortress on the left with a torch-bearing crowd surging toward it, a giant tricolore flag rippling across the right two-thirds (blue-white-red vertical bands), fireworks bursting overhead in bleu-blanc-rouge, a soaring Marianne-style Phrygian cap floating above the crowd, cobblestone foreground, drifting sparks, a large white JULY 14, 2026 headline dominating center-right, a red LIBERTÉ · ÉGALITÉ · FRATERNITÉ subhead, and italic PARIS · 14 JUILLET 1789 · LA BASTILLE · 237 YEARS tertiary along the bottom. Palette: France blue #0055a4, cream white #f5f5f5, France red #ef4135, torch amber #ffb020, deep night #0a0d2e, stone grey #5c5a58, warm ember #ff5722. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 14, 2026 — Bastille Day, 237th anniversary of the Storming of the Bastille (July 14, 1789). A revolutionary tricolore tableau with a silhouetted crumbling Bastille fortress and torch-bearing crowd on the left, a rippling blue-white-red tricolore flag filling the right, tricolore fireworks bursting overhead, a Phrygian liberty cap floating above, cobblestones in the foreground, drifting sparks, a large white JULY 14, 2026 headline center-right, a red LIBERTÉ · ÉGALITÉ · FRATERNITÉ subhead, and italic PARIS · 14 JUILLET 1789 · LA BASTILLE · 237 YEARS tertiary along the bottom.">
   <defs>
-    <!-- Warm background: coral / magenta / indigo -->
-    <linearGradient id="bg-warm" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3d0a2a"/>
-      <stop offset="45%" stop-color="#7a1440"/>
-      <stop offset="100%" stop-color="#1a0d3d"/>
+    <!-- Night sky gradient -->
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d2e"/>
+      <stop offset="55%" stop-color="#1a1f4a"/>
+      <stop offset="100%" stop-color="#2a1a1a"/>
     </linearGradient>
 
-    <!-- Sun glow behind Frida's head -->
-    <radialGradient id="sun-halo" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#ffcc00" stop-opacity="0.55"/>
-      <stop offset="55%" stop-color="#ff6b1a" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#ff6b1a" stop-opacity="0"/>
+    <!-- Ember glow behind torches -->
+    <radialGradient id="ember" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffb020" stop-opacity="0.7"/>
+      <stop offset="55%" stop-color="#ff5722" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff5722" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Hibiscus petal gradient -->
-    <radialGradient id="hibiscus" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#ffcc00"/>
-      <stop offset="35%" stop-color="#ff2d95"/>
-      <stop offset="100%" stop-color="#8b1a2b"/>
-    </radialGradient>
+    <!-- Tricolore vertical bands as a gradient reference -->
+    <linearGradient id="tricolore" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0055a4"/>
+      <stop offset="33.33%" stop-color="#0055a4"/>
+      <stop offset="33.34%" stop-color="#f5f5f5"/>
+      <stop offset="66.66%" stop-color="#f5f5f5"/>
+      <stop offset="66.67%" stop-color="#ef4135"/>
+      <stop offset="100%" stop-color="#ef4135"/>
+    </linearGradient>
 
-    <!-- Marigold gradient -->
-    <radialGradient id="marigold" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#ffcc00"/>
-      <stop offset="60%" stop-color="#ff6b1a"/>
-      <stop offset="100%" stop-color="#8b3a0a"/>
-    </radialGradient>
+    <!-- Cloth ripple filter -->
+    <filter id="ripple" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7">
+        <animate attributeName="baseFrequency" values="0.012 0.02;0.015 0.024;0.012 0.02" dur="11s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="8"/>
+    </filter>
 
     <!-- Text glow -->
-    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="1.4" result="b"/>
+    <filter id="text-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Monstera leaf symbol -->
-    <symbol id="monstera" viewBox="0 0 60 60" overflow="visible">
-      <path d="M30 5 Q10 15 8 35 Q10 55 30 58 Q50 55 52 35 Q50 15 30 5 Z" fill="#2d7a3d"/>
-      <!-- signature splits -->
-      <path d="M30 12 L30 55" stroke="#1a4a22" stroke-width="1.4" fill="none"/>
-      <path d="M30 22 Q18 24 14 30 Q18 26 30 28" fill="#3d0a2a" opacity="0.9"/>
-      <path d="M30 22 Q42 24 46 30 Q42 26 30 28" fill="#3d0a2a" opacity="0.9"/>
-      <path d="M30 38 Q16 40 12 46 Q18 42 30 44" fill="#3d0a2a" opacity="0.9"/>
-      <path d="M30 38 Q44 40 48 46 Q42 42 30 44" fill="#3d0a2a" opacity="0.9"/>
-      <ellipse cx="18" cy="20" rx="3" ry="4" fill="#3d0a2a" opacity="0.75"/>
-      <ellipse cx="42" cy="20" rx="3" ry="4" fill="#3d0a2a" opacity="0.75"/>
+    <!-- Firework burst symbol -->
+    <symbol id="burst" viewBox="-40 -40 80 80" overflow="visible">
+      <g stroke-width="1.4" stroke-linecap="round" fill="none">
+        <line x1="0" y1="0" x2="0" y2="-30"/>
+        <line x1="0" y1="0" x2="21" y2="-21"/>
+        <line x1="0" y1="0" x2="30" y2="0"/>
+        <line x1="0" y1="0" x2="21" y2="21"/>
+        <line x1="0" y1="0" x2="0" y2="30"/>
+        <line x1="0" y1="0" x2="-21" y2="21"/>
+        <line x1="0" y1="0" x2="-30" y2="0"/>
+        <line x1="0" y1="0" x2="-21" y2="-21"/>
+        <line x1="0" y1="0" x2="12" y2="-27"/>
+        <line x1="0" y1="0" x2="27" y2="-12"/>
+        <line x1="0" y1="0" x2="27" y2="12"/>
+        <line x1="0" y1="0" x2="12" y2="27"/>
+        <line x1="0" y1="0" x2="-12" y2="27"/>
+        <line x1="0" y1="0" x2="-27" y2="12"/>
+        <line x1="0" y1="0" x2="-27" y2="-12"/>
+        <line x1="0" y1="0" x2="-12" y2="-27"/>
+      </g>
+      <circle r="2.4" fill="currentColor"/>
     </symbol>
 
-    <!-- Hibiscus flower symbol (5-petal) -->
-    <symbol id="hibiscus-flower" viewBox="-20 -20 40 40" overflow="visible">
-      <g>
-        <ellipse cx="0" cy="-12" rx="7" ry="12" fill="url(#hibiscus)"/>
-        <ellipse cx="11" cy="-4" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(72)"/>
-        <ellipse cx="7" cy="10" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(144)"/>
-        <ellipse cx="-7" cy="10" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(216)"/>
-        <ellipse cx="-11" cy="-4" rx="7" ry="12" fill="url(#hibiscus)" transform="rotate(288)"/>
-        <circle cx="0" cy="0" r="3.5" fill="#ffcc00"/>
-        <circle cx="0" cy="0" r="1.6" fill="#8b1a2b"/>
-      </g>
+    <!-- Torch symbol -->
+    <symbol id="torch" viewBox="-6 -20 12 30" overflow="visible">
+      <!-- flame -->
+      <path d="M0 -18 Q4 -12 3 -6 Q1 -3 0 0 Q-1 -3 -3 -6 Q-4 -12 0 -18 Z" fill="#ffb020">
+        <animate attributeName="d" values="M0 -18 Q4 -12 3 -6 Q1 -3 0 0 Q-1 -3 -3 -6 Q-4 -12 0 -18 Z;M0 -20 Q5 -13 3 -6 Q1 -3 0 0 Q-1 -3 -3 -6 Q-5 -13 0 -20 Z;M0 -18 Q4 -12 3 -6 Q1 -3 0 0 Q-1 -3 -3 -6 Q-4 -12 0 -18 Z" dur="0.7s" repeatCount="indefinite"/>
+      </path>
+      <path d="M0 -14 Q2 -9 1.5 -5 Q0 -2 0 0 Q0 -2 -1.5 -5 Q-2 -9 0 -14 Z" fill="#ff5722"/>
+      <!-- handle -->
+      <rect x="-1" y="0" width="2" height="10" fill="#5c3a20"/>
     </symbol>
 
-    <!-- Marigold symbol (layered petals) -->
-    <symbol id="marigold-flower" viewBox="-15 -15 30 30" overflow="visible">
-      <circle r="12" fill="url(#marigold)"/>
-      <g fill="#ff6b1a">
-        <circle cx="0" cy="-10" r="4"/>
-        <circle cx="9.5" cy="-3" r="4"/>
-        <circle cx="6" cy="8" r="4"/>
-        <circle cx="-6" cy="8" r="4"/>
-        <circle cx="-9.5" cy="-3" r="4"/>
-      </g>
-      <g fill="#ffcc00" opacity="0.85">
-        <circle cx="0" cy="-6" r="2.6"/>
-        <circle cx="5.7" cy="-1.8" r="2.6"/>
-        <circle cx="3.5" cy="4.8" r="2.6"/>
-        <circle cx="-3.5" cy="4.8" r="2.6"/>
-        <circle cx="-5.7" cy="-1.8" r="2.6"/>
-      </g>
-      <circle r="2.2" fill="#8b1a2b"/>
+    <!-- Phrygian cap symbol -->
+    <symbol id="phrygian" viewBox="-20 -20 40 40" overflow="visible">
+      <!-- cap body -->
+      <path d="M-14 6 Q-16 -6 -10 -12 Q0 -18 12 -14 Q18 -8 12 4 Q14 8 -14 8 Z" fill="#ef4135"/>
+      <!-- cap fold -->
+      <path d="M-14 6 Q-6 4 12 4 Q10 8 -14 8 Z" fill="#c22a1e"/>
+      <!-- rosette / cockade -->
+      <circle cx="-4" cy="-4" r="3.2" fill="#0055a4"/>
+      <circle cx="-4" cy="-4" r="2" fill="#f5f5f5"/>
+      <circle cx="-4" cy="-4" r="0.9" fill="#ef4135"/>
     </symbol>
 
-    <!-- Papel picado banner rectangle (with cut-out pattern) -->
-    <symbol id="papel" viewBox="0 0 40 26" overflow="visible">
-      <path d="M0 0 L40 0 L40 20 L20 26 L0 20 Z" fill="currentColor"/>
-      <circle cx="20" cy="10" r="3" fill="#3d0a2a"/>
-      <circle cx="10" cy="8" r="1.8" fill="#3d0a2a"/>
-      <circle cx="30" cy="8" r="1.8" fill="#3d0a2a"/>
-      <circle cx="14" cy="16" r="1.4" fill="#3d0a2a"/>
-      <circle cx="26" cy="16" r="1.4" fill="#3d0a2a"/>
+    <!-- Crowd figure silhouette -->
+    <symbol id="figure" viewBox="-8 -22 16 24" overflow="visible">
+      <circle cx="0" cy="-18" r="3.2" fill="#0a0d2e"/>
+      <path d="M-6 2 Q-6 -12 0 -14 Q6 -12 6 2 Z" fill="#0a0d2e"/>
     </symbol>
   </defs>
 
-  <!-- 1. Warm gradient background -->
+  <!-- 1. Night sky background -->
   <rect width="800" height="200" fill="#0d1117"/>
-  <rect width="800" height="200" fill="url(#bg-warm)"/>
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- 2. Sun halo behind Frida's head -->
-  <ellipse cx="150" cy="90" rx="140" ry="110" fill="url(#sun-halo)">
-    <animate attributeName="rx" values="140;155;140" dur="11s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="110;120;110" dur="11s" repeatCount="indefinite"/>
+  <!-- 2. Rippling tricolore covering the right two-thirds -->
+  <g filter="url(#ripple)" opacity="0.88">
+    <rect x="230" y="8" width="560" height="184" fill="url(#tricolore)"/>
+    <!-- subtle cloth shading -->
+    <rect x="230" y="8" width="560" height="184" fill="#000" opacity="0.08"/>
+  </g>
+  <!-- Flag pole shadow suggestion at left edge of flag -->
+  <rect x="228" y="8" width="3" height="184" fill="#3a2a1a" opacity="0.6"/>
+
+  <!-- 3. Ember glow behind the fortress / crowd -->
+  <ellipse cx="130" cy="150" rx="180" ry="70" fill="url(#ember)">
+    <animate attributeName="rx" values="180;200;180" dur="7s" repeatCount="indefinite"/>
   </ellipse>
 
-  <!-- 3. Papel picado bunting across the top -->
-  <g>
-    <path d="M20 12 Q400 30 780 12" stroke="#fff5e1" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <g color="#ff2d95"><use href="#papel" x="30" y="14" width="34" height="22"/></g>
-    <g color="#ffcc00"><use href="#papel" x="110" y="18" width="34" height="22"/></g>
-    <g color="#1a9b8b"><use href="#papel" x="190" y="22" width="34" height="22"/></g>
-    <g color="#ff6b1a"><use href="#papel" x="270" y="26" width="34" height="22"/></g>
-    <g color="#ff2d95"><use href="#papel" x="350" y="28" width="34" height="22"/></g>
-    <g color="#ffcc00"><use href="#papel" x="430" y="28" width="34" height="22"/></g>
-    <g color="#1a9b8b"><use href="#papel" x="510" y="26" width="34" height="22"/></g>
-    <g color="#ff6b1a"><use href="#papel" x="590" y="22" width="34" height="22"/></g>
-    <g color="#ff2d95"><use href="#papel" x="670" y="18" width="34" height="22"/></g>
-    <g color="#ffcc00"><use href="#papel" x="748" y="14" width="34" height="22"/></g>
-    <animateTransform attributeName="transform" type="translate" values="0 0; 0 2; 0 0; 0 -1; 0 0" dur="7s" repeatCount="indefinite"/>
-  </g>
+  <!-- 4. Bastille fortress silhouette (crumbling) on the left -->
+  <g fill="#5c5a58">
+    <!-- main wall -->
+    <path d="M20 180 L20 90 L50 78 L60 90 L60 74 L92 70 L100 82 L100 66 L138 62 L148 78 L148 68 L180 74 L188 88 L200 180 Z" fill="#3a3835"/>
+    <!-- towers with crenellations -->
+    <rect x="30" y="74" width="18" height="24" fill="#4a4845"/>
+    <rect x="30" y="72" width="4" height="4"/>
+    <rect x="38" y="72" width="4" height="4"/>
+    <rect x="46" y="72" width="4" height="4"/>
 
-  <!-- 4. Monstera leaves in the lower-left corner -->
-  <g>
-    <use href="#monstera" x="-20" y="130" width="90" height="90" transform="rotate(-25 25 175)">
-      <animateTransform attributeName="transform" type="rotate" values="-28 25 175; -22 25 175; -28 25 175" dur="13s" repeatCount="indefinite"/>
-    </use>
-    <use href="#monstera" x="20" y="150" width="70" height="70" transform="rotate(15 55 185)">
-      <animateTransform attributeName="transform" type="rotate" values="12 55 185; 18 55 185; 12 55 185" dur="11s" repeatCount="indefinite"/>
-    </use>
-  </g>
+    <rect x="70" y="60" width="24" height="30" fill="#4a4845"/>
+    <rect x="70" y="58" width="4" height="4"/>
+    <rect x="78" y="58" width="4" height="4"/>
+    <rect x="86" y="58" width="4" height="4"/>
 
-  <!-- 5. Frida silhouette in profile (facing right) -->
-  <g transform="translate(150 190)">
-    <!-- Shoulders / rebozo shawl -->
-    <path d="M-70 0 Q-60 -30 -30 -35 L30 -30 Q55 -20 70 0 Z" fill="#8b1a2b"/>
-    <!-- Rebozo pattern stripes -->
-    <path d="M-60 -8 Q0 -18 60 -8" stroke="#ffcc00" stroke-width="1.4" fill="none" opacity="0.75"/>
-    <path d="M-55 -2 Q0 -12 55 -2" stroke="#1a9b8b" stroke-width="1.2" fill="none" opacity="0.6"/>
-    <!-- Neck -->
-    <rect x="-9" y="-52" width="18" height="18" fill="#c68a5a"/>
-    <!-- Head in profile — facing right -->
-    <path d="M-18 -70
-             Q-18 -95 0 -100
-             Q22 -100 28 -80
-             Q30 -68 26 -60
-             Q30 -58 30 -54
-             Q28 -50 24 -52
-             Q22 -46 14 -44
-             L14 -38
-             Q10 -34 0 -34
-             Q-14 -36 -18 -52
-             Z" fill="#c68a5a"/>
-    <!-- Hair mass behind and above head -->
-    <path d="M-22 -95 Q-22 -110 0 -114 Q30 -116 40 -100 Q42 -80 34 -70
-             Q40 -78 42 -90 Q40 -108 20 -116 Q-10 -120 -26 -108 Q-30 -96 -22 -84 Z"
-          fill="#1a0508"/>
-    <!-- Signature single monobrow (thick, joining) -->
-    <path d="M4 -83 Q14 -86 22 -83 Q26 -83 28 -81" stroke="#1a0508" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-    <!-- Small eye -->
-    <ellipse cx="16" cy="-77" rx="2.2" ry="1.4" fill="#1a0508"/>
-    <!-- Lip -->
-    <path d="M20 -62 Q24 -60 20 -58" stroke="#8b1a2b" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <!-- Small earring -->
-    <circle cx="-14" cy="-58" r="2.4" fill="#ffcc00"/>
-    <!-- Braid trailing down back with red ribbon -->
-    <path d="M-20 -70 Q-32 -55 -34 -35 Q-36 -18 -30 -5"
-          stroke="#1a0508" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <path d="M-20 -70 Q-32 -55 -34 -35 Q-36 -18 -30 -5"
-          stroke="#ff2d95" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.9"
-          stroke-dasharray="4 3"/>
-    <!-- Ribbon bow at braid end -->
-    <path d="M-33 -6 L-25 -2 L-30 4 Z M-30 -6 L-38 -2 L-32 4 Z" fill="#ff2d95"/>
-  </g>
+    <rect x="108" y="52" width="26" height="34" fill="#4a4845"/>
+    <rect x="108" y="50" width="4" height="4"/>
+    <rect x="116" y="50" width="4" height="4"/>
+    <rect x="124" y="50" width="4" height="4"/>
+    <rect x="132" y="50" width="4" height="4"/>
 
-  <!-- 6. Floral crown atop Frida's head — cluster of flowers -->
-  <g>
-    <!-- Big central hibiscus -->
-    <use href="#hibiscus-flower" x="150" y="82" width="46" height="46">
-      <animateTransform attributeName="transform" type="rotate" values="0 150 82; 6 150 82; 0 150 82; -4 150 82; 0 150 82" dur="13s" repeatCount="indefinite"/>
-    </use>
-    <!-- Marigolds flanking -->
-    <use href="#marigold-flower" x="118" y="88" width="32" height="32">
-      <animate attributeName="opacity" values="0.9;1;0.9" dur="7s" repeatCount="indefinite"/>
-    </use>
-    <use href="#marigold-flower" x="182" y="96" width="30" height="30">
-      <animate attributeName="opacity" values="1;0.85;1" dur="11s" repeatCount="indefinite"/>
-    </use>
-    <!-- Smaller hibiscus at edges -->
-    <use href="#hibiscus-flower" x="102" y="106" width="30" height="30">
-      <animateTransform attributeName="transform" type="rotate" values="-8 102 106; 4 102 106; -8 102 106" dur="11s" repeatCount="indefinite"/>
-    </use>
-    <use href="#hibiscus-flower" x="198" y="112" width="26" height="26">
-      <animateTransform attributeName="transform" type="rotate" values="6 198 112; -6 198 112; 6 198 112" dur="13s" repeatCount="indefinite"/>
-    </use>
-    <!-- Tiny marigold buds -->
-    <use href="#marigold-flower" x="90" y="120" width="20" height="20"/>
-    <use href="#marigold-flower" x="220" y="128" width="20" height="20"/>
-    <!-- Green leaves in crown -->
-    <ellipse cx="108" cy="128" rx="9" ry="4" fill="#2d7a3d" transform="rotate(-40 108 128)"/>
-    <ellipse cx="212" cy="132" rx="9" ry="4" fill="#2d7a3d" transform="rotate(35 212 132)"/>
-    <ellipse cx="140" cy="80" rx="6" ry="3" fill="#2d7a3d" transform="rotate(-15 140 80)"/>
-    <ellipse cx="196" cy="86" rx="6" ry="3" fill="#2d7a3d" transform="rotate(20 196 86)"/>
-  </g>
+    <rect x="152" y="66" width="22" height="26" fill="#4a4845"/>
+    <rect x="152" y="64" width="4" height="4"/>
+    <rect x="160" y="64" width="4" height="4"/>
+    <rect x="168" y="64" width="4" height="4"/>
 
-  <!-- 7. Hummingbird darting near the crown -->
-  <g>
-    <g transform="translate(260 92)">
-      <!-- body -->
-      <ellipse cx="0" cy="0" rx="9" ry="4" fill="#1a9b8b"/>
-      <!-- head -->
-      <circle cx="8" cy="-1.5" r="3.5" fill="#1a9b8b"/>
-      <!-- beak -->
-      <path d="M11 -1.5 L20 -0.5 L11 0.5 Z" fill="#1a0508"/>
-      <!-- tiny eye -->
-      <circle cx="8.5" cy="-2.4" r="0.7" fill="#fff5e1"/>
-      <!-- tail -->
-      <path d="M-9 0 L-16 -2 L-14 0 L-16 2 Z" fill="#2d7a3d"/>
-      <!-- wing — flapping -->
-      <ellipse cx="-2" cy="-4" rx="8" ry="3" fill="#ff2d95" opacity="0.85">
-        <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.3; 1 1; 1 -0.9; 1 1" dur="0.35s" repeatCount="indefinite" additive="sum"/>
-      </ellipse>
-      <!-- gentle hover -->
-      <animateTransform attributeName="transform" type="translate" values="260 92; 265 88; 258 94; 262 90; 260 92" dur="7s" repeatCount="indefinite"/>
+    <!-- windows -->
+    <rect x="36" y="86" width="4" height="8" fill="#ffb020" opacity="0.75">
+      <animate attributeName="opacity" values="0.55;0.9;0.55" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="80" y="74" width="4" height="8" fill="#ff5722" opacity="0.75">
+      <animate attributeName="opacity" values="0.6;0.95;0.6" dur="2.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="118" y="68" width="4" height="10" fill="#ffb020" opacity="0.75">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="160" y="78" width="4" height="8" fill="#ff5722" opacity="0.75">
+      <animate attributeName="opacity" values="0.55;0.85;0.55" dur="3.1s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- crumbling debris chunks (falling) -->
+    <g>
+      <rect x="102" y="46" width="6" height="6" fill="#4a4845">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 6 40; 6 40" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;1;0" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="126" y="48" width="5" height="5" fill="#5c5a58">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -4 44; -4 44" dur="5s" begin="-1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;1;0" dur="5s" begin="-1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="76" y="56" width="4" height="4" fill="#4a4845">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 3 46; 3 46" dur="3.5s" begin="-2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;1;0" dur="3.5s" begin="-2s" repeatCount="indefinite"/>
+      </rect>
     </g>
   </g>
 
-  <!-- 8. Drifting petals rising -->
+  <!-- 5. Cobblestone foreground band -->
+  <g opacity="0.85">
+    <rect x="0" y="180" width="230" height="20" fill="#2a2825"/>
+    <g fill="#3a3835" stroke="#1a1815" stroke-width="0.5">
+      <rect x="4" y="184" width="18" height="10" rx="2"/>
+      <rect x="26" y="184" width="20" height="10" rx="2"/>
+      <rect x="50" y="184" width="18" height="10" rx="2"/>
+      <rect x="72" y="184" width="22" height="10" rx="2"/>
+      <rect x="98" y="184" width="18" height="10" rx="2"/>
+      <rect x="120" y="184" width="22" height="10" rx="2"/>
+      <rect x="146" y="184" width="18" height="10" rx="2"/>
+      <rect x="168" y="184" width="20" height="10" rx="2"/>
+      <rect x="192" y="184" width="20" height="10" rx="2"/>
+    </g>
+  </g>
+
+  <!-- 6. Crowd of figures surging toward fortress with torches -->
   <g>
-    <circle r="4" fill="#ff2d95">
-      <animateMotion path="M320 200 Q340 130 300 60 Q280 20 320 -10" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.95;0" dur="13s" repeatCount="indefinite"/>
+    <use href="#figure" x="42" y="180" width="14" height="22"/>
+    <use href="#torch" x="52" y="164" width="10" height="20">
+      <animateTransform attributeName="transform" type="rotate" values="-3 52 164; 3 52 164; -3 52 164" dur="1.7s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#figure" x="68" y="180" width="14" height="22"/>
+    <use href="#torch" x="62" y="160" width="10" height="20">
+      <animateTransform attributeName="transform" type="rotate" values="4 62 160; -4 62 160; 4 62 160" dur="1.9s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#figure" x="92" y="180" width="14" height="22"/>
+    <use href="#torch" x="102" y="160" width="10" height="20">
+      <animateTransform attributeName="transform" type="rotate" values="-4 102 160; 4 102 160; -4 102 160" dur="2.1s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#figure" x="118" y="180" width="14" height="22"/>
+    <use href="#figure" x="140" y="180" width="14" height="22"/>
+    <use href="#torch" x="150" y="162" width="10" height="20">
+      <animateTransform attributeName="transform" type="rotate" values="3 150 162; -5 150 162; 3 150 162" dur="1.5s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#figure" x="166" y="180" width="14" height="22"/>
+    <use href="#figure" x="188" y="180" width="14" height="22"/>
+    <use href="#torch" x="196" y="160" width="10" height="20">
+      <animateTransform attributeName="transform" type="rotate" values="-3 196 160; 5 196 160; -3 196 160" dur="1.8s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- 7. Phrygian cap floating above the crowd (allegorical Marianne) -->
+  <g>
+    <use href="#phrygian" x="90" y="18" width="60" height="42">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -4; 0 0; 0 3; 0 0" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <!-- tiny stars around cap -->
+    <circle cx="86" cy="28" r="1.1" fill="#f5f5f5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.3s" repeatCount="indefinite"/>
     </circle>
-    <circle r="3" fill="#ffcc00">
-      <animateMotion path="M420 200 Q400 130 440 70 Q460 30 430 -10" dur="11s" begin="-3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.95;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
+    <circle cx="152" cy="32" r="1.1" fill="#f5f5f5">
+      <animate attributeName="opacity" values="1;0.3;1" dur="3.1s" repeatCount="indefinite"/>
     </circle>
-    <circle r="3.5" fill="#ff6b1a">
-      <animateMotion path="M560 200 Q580 140 550 80 Q530 40 570 -10" dur="17s" begin="-6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="17s" begin="-6s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="3" fill="#ff2d95">
-      <animateMotion path="M680 200 Q670 130 700 70 Q720 30 690 -10" dur="11s" begin="-4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="11s" begin="-4s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="2.5" fill="#ffcc00">
-      <animateMotion path="M760 200 Q740 130 770 70 Q790 30 750 -10" dur="7s" begin="-2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="7s" begin="-2s" repeatCount="indefinite"/>
+    <circle cx="120" cy="14" r="1.4" fill="#ffb020">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.7s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- 9. Vine of small marigolds along the right edge -->
+  <!-- 8. Fireworks over the flag -->
   <g>
-    <use href="#marigold-flower" x="760" y="30" width="20" height="20"/>
-    <use href="#marigold-flower" x="745" y="62" width="16" height="16"/>
-    <use href="#marigold-flower" x="770" y="94" width="14" height="14"/>
-    <use href="#marigold-flower" x="740" y="130" width="18" height="18"/>
-    <use href="#marigold-flower" x="770" y="160" width="16" height="16"/>
-    <path d="M770 40 Q750 70 776 100 Q745 130 776 168" stroke="#2d7a3d" stroke-width="1.6" fill="none" opacity="0.75"/>
+    <g color="#0055a4">
+      <use href="#burst" x="340" y="34" width="60" height="60">
+        <animateTransform attributeName="transform" type="scale" values="0.2;1.1;1.2" dur="2.2s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g color="#f5f5f5">
+      <use href="#burst" x="470" y="24" width="70" height="70">
+        <animateTransform attributeName="transform" type="scale" values="0.2;1.2;1.3" dur="2.6s" begin="-0.8s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="opacity" values="0;1;0" dur="2.6s" begin="-0.8s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g color="#ef4135">
+      <use href="#burst" x="600" y="30" width="66" height="66">
+        <animateTransform attributeName="transform" type="scale" values="0.2;1.1;1.2" dur="2.4s" begin="-1.6s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="-1.6s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g color="#ffb020">
+      <use href="#burst" x="720" y="42" width="48" height="48">
+        <animateTransform attributeName="transform" type="scale" values="0.2;1;1.1" dur="1.9s" begin="-0.4s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="1.9s" begin="-0.4s" repeatCount="indefinite"/>
+      </use>
+    </g>
+    <g color="#f5f5f5">
+      <use href="#burst" x="280" y="60" width="36" height="36">
+        <animateTransform attributeName="transform" type="scale" values="0.2;0.9;1" dur="1.7s" begin="-1.1s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="1.7s" begin="-1.1s" repeatCount="indefinite"/>
+      </use>
+    </g>
   </g>
 
-  <!-- 10. Main date headline — dominant, cream on warm bg -->
-  <g filter="url(#soft-glow)">
-    <text x="500" y="105" text-anchor="middle"
+  <!-- 9. Drifting sparks rising from the crowd -->
+  <g>
+    <circle r="1.6" fill="#ffb020">
+      <animateMotion path="M80 170 Q90 110 100 40" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.4" fill="#ff5722">
+      <animateMotion path="M130 170 Q140 100 150 30" dur="8s" begin="-2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="8s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.8" fill="#ffb020">
+      <animateMotion path="M170 170 Q180 110 195 30" dur="6s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="6s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.2" fill="#ffb020">
+      <animateMotion path="M60 170 Q68 120 80 60" dur="9s" begin="-4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="9s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.4" fill="#ff5722">
+      <animateMotion path="M110 170 Q118 115 125 55" dur="7.5s" begin="-1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="7.5s" begin="-1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 10. Main date headline — dominant, dark navy on the white band of the flag -->
+  <g filter="url(#text-glow)">
+    <text x="500" y="112" text-anchor="middle"
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="46" font-weight="900" letter-spacing="3" fill="#fff5e1">
-      JULY 13, 2026
+          font-size="48" font-weight="900" letter-spacing="3" fill="#0a0d2e">
+      JULY 14, 2026
     </text>
   </g>
 
-  <!-- 11. Subhead — hot pink on cream halo -->
-  <text x="500" y="130" text-anchor="middle"
+  <!-- 11. Subhead — red on white -->
+  <text x="500" y="138" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="12" font-weight="800" letter-spacing="4.2" fill="#ffcc00">
-    FRIDA KAHLO · 72 YEARS · DIED JULY 13, 1954
+        font-size="13" font-weight="800" letter-spacing="4" fill="#ef4135">
+    LIBERTÉ · ÉGALITÉ · FRATERNITÉ
   </text>
 
-  <!-- 12. Tertiary italic caption along the bottom -->
-  <text x="500" y="188" text-anchor="middle"
+  <!-- 12. Tertiary italic caption -->
+  <text x="500" y="182" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="10" font-style="italic" font-weight="600" letter-spacing="2.2" fill="#fff5e1" opacity="0.92">
-    COYOACÁN · MEXICO CITY · &#8220;VIVA LA VIDA&#8221;
+        font-size="10" font-style="italic" font-weight="700" letter-spacing="2.4" fill="#0a0d2e" opacity="0.85">
+    PARIS · 14 JUILLET 1789 · LA BASTILLE · 237 YEARS
   </text>
 </svg>
