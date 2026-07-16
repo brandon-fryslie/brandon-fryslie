@@ -1,241 +1,312 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Rembrandt van Rijn's 420th birthday (July 15, 1606, Leiden) — Dutch Golden Age master of chiaroscuro. A dark studio tableau built around a classic Rembrandt-lighting triangle: deep umber background with a golden key-light shaft from the upper right sculpting a rim-lit silhouette of Rembrandt on the left (beret, ruff collar, cloaked shoulder); a small easel behind him with a suggested self-portrait underpainting; a wooden painter's palette tucked into the lower-right corner with paint dabs; amber dust motes drifting up in the beam; craquelure varnish texture; a large ivory JULY 15, 2026 headline seated in the triangle of light; a gold REMBRANDT VAN RIJN · 420 YEARS subhead; italic LEIDEN · 15 JULY 1606 · MASTER OF CHIAROSCURO tertiary along the bottom. Palette: deep umber #1a0f08, warm sienna #6b3a1a, amber gold #c88a2c, bright gold #e6b04a, ivory #f0d9a4, cream highlight #f5e6c0, vermilion #a83820, bronze shadow #4a2f18. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 15, 2026 — the 420th birthday of Rembrandt van Rijn (born July 15, 1606, Leiden). A dark Dutch Golden Age studio tableau with a golden chiaroscuro spotlight from the upper right, a rim-lit silhouette of Rembrandt in beret and ruff collar on the left with a small easel behind him, a wooden painter's palette with paint dabs tucked into the lower-right corner, amber dust motes rising in the light beam, a cracked oil-varnish texture, a large ivory JULY 15, 2026 headline in the light triangle, a gold REMBRANDT VAN RIJN · 420 YEARS subhead, and italic LEIDEN · 15 JULY 1606 · MASTER OF CHIAROSCURO tertiary along the bottom.">
+<!-- theme: Apollo 11 launch — July 16, 1969 (57th anniversary of the Saturn V liftoff from Kennedy Space Center Launch Complex 39A that carried Armstrong, Aldrin, and Collins to the Moon). A dawn-sky launch tableau: predawn navy fading to warm horizon orange, a towering Saturn V rocket climbing on a brilliant orange-white flame column with a rolling exhaust plume, silhouetted launch umbilical tower on the left, palm-tree silhouettes on the horizon, a crescent Moon and stars in the upper right, contrail streamers, a large ivory JULY 16, 2026 headline dominating center-right, a bright APOLLO 11 · 57 YEARS · LIFTOFF JULY 16, 1969 subhead, and italic KENNEDY SPACE CENTER · LC-39A · WE CHOOSE TO GO tertiary along the bottom. Palette: deep navy #050a24, midnight blue #0d1b45, dawn violet #3d1f5c, dawn orange #ff6b1a, flame yellow #ffe066, flame white #fffbe0, rocket white #f4f4ef, rocket shadow #8a8f9a, moon cream #f5ecc9, star silver #dfe8ff, ember red #d8391a. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 16, 2026 — 57th anniversary of the Apollo 11 launch. A dawn Florida sky at Kennedy Space Center Launch Complex 39A with a Saturn V rocket ascending on a brilliant white-and-orange flame column, silhouetted launch tower on the left, palm silhouettes on the horizon, a crescent Moon and stars in the upper right, a large JULY 16, 2026 headline center-right, APOLLO 11 · 57 YEARS · LIFTOFF JULY 16, 1969 subhead, and KENNEDY SPACE CENTER · LC-39A · WE CHOOSE TO GO tertiary.">
   <defs>
-    <!-- Deep studio background gradient (dark) -->
-    <radialGradient id="studio" cx="65%" cy="20%" r="95%">
-      <stop offset="0%" stop-color="#3a2410"/>
-      <stop offset="18%" stop-color="#241606"/>
-      <stop offset="55%" stop-color="#120a04"/>
-      <stop offset="100%" stop-color="#080502"/>
-    </radialGradient>
-
-    <!-- Warm golden key-light glow -->
-    <radialGradient id="keylight" cx="60%" cy="30%" r="55%">
-      <stop offset="0%" stop-color="#f5e6c0" stop-opacity="0.6"/>
-      <stop offset="28%" stop-color="#e6b04a" stop-opacity="0.32"/>
-      <stop offset="60%" stop-color="#c88a2c" stop-opacity="0.10"/>
-      <stop offset="100%" stop-color="#c88a2c" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Volumetric beam gradient (angled shaft of light) -->
-    <linearGradient id="beam" x1="95%" y1="0%" x2="35%" y2="100%">
-      <stop offset="0%" stop-color="#f5e6c0" stop-opacity="0.28"/>
-      <stop offset="55%" stop-color="#c88a2c" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#c88a2c" stop-opacity="0"/>
+    <!-- Dawn sky: deep navy top-left, warmer orange near horizon-right -->
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a24"/>
+      <stop offset="35%" stop-color="#0d1b45"/>
+      <stop offset="70%" stop-color="#3d1f5c"/>
+      <stop offset="90%" stop-color="#a03a30"/>
+      <stop offset="100%" stop-color="#ff6b1a"/>
     </linearGradient>
 
-    <!-- Text metallic gold gradient -->
-    <linearGradient id="goldtext" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff5d6"/>
-      <stop offset="45%" stop-color="#f0d9a4"/>
-      <stop offset="70%" stop-color="#c88a2c"/>
-      <stop offset="100%" stop-color="#8b5a1a"/>
+    <!-- Horizon glow band -->
+    <linearGradient id="horizonGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b1a" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#ff8a3a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffb060" stop-opacity="0.9"/>
     </linearGradient>
 
-    <!-- Rim-light gradient on the figure -->
-    <linearGradient id="rim" x1="100%" y1="20%" x2="0%" y2="80%">
-      <stop offset="0%" stop-color="#f5e6c0" stop-opacity="1"/>
-      <stop offset="18%" stop-color="#c88a2c" stop-opacity="0.85"/>
-      <stop offset="45%" stop-color="#4a2f18" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#0a0603" stop-opacity="0"/>
+    <!-- Rocket body gradient -->
+    <linearGradient id="rocketBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a8f9a"/>
+      <stop offset="35%" stop-color="#f4f4ef"/>
+      <stop offset="70%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#6c7180"/>
     </linearGradient>
 
-    <!-- Palette wood gradient -->
-    <radialGradient id="wood" cx="35%" cy="35%" r="80%">
-      <stop offset="0%" stop-color="#a06a34"/>
-      <stop offset="60%" stop-color="#6b3a1a"/>
-      <stop offset="100%" stop-color="#3a1f0c"/>
+    <!-- Flame gradient -->
+    <radialGradient id="flame" cx="50%" cy="15%" r="85%">
+      <stop offset="0%" stop-color="#fffbe0"/>
+      <stop offset="18%" stop-color="#ffe066"/>
+      <stop offset="45%" stop-color="#ff9a2a"/>
+      <stop offset="75%" stop-color="#d8391a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#4a1208" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Cracked-varnish craquelure texture -->
-    <filter id="craquelure" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="17" result="noise"/>
-      <feColorMatrix in="noise" type="matrix"
-        values="0 0 0 0 0.05
-                0 0 0 0 0.03
-                0 0 0 0 0.02
-                0 0 0 1.3 -0.78"/>
+    <!-- Bright flame core -->
+    <radialGradient id="flameCore" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fffbe0"/>
+      <stop offset="100%" stop-color="#ffe066" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text metallic ivory gradient -->
+    <linearGradient id="ivoryText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f5ecc9"/>
+      <stop offset="100%" stop-color="#c9a870"/>
+    </linearGradient>
+
+    <!-- Moon crescent gradient -->
+    <radialGradient id="moon" cx="35%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#fffdf0"/>
+      <stop offset="55%" stop-color="#f5ecc9"/>
+      <stop offset="100%" stop-color="#c9b483"/>
+    </radialGradient>
+
+    <!-- Exhaust smoke turbulence -->
+    <filter id="smokeNoise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.03" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="6"/>
     </filter>
 
-    <!-- Soft glow around text -->
-    <filter id="softglow" x="-15%" y="-30%" width="130%" height="160%">
-      <feGaussianBlur stdDeviation="1.6" result="b"/>
+    <!-- Soft glow -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Blur for flicker glow -->
-    <filter id="flicker" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3"/>
+    <!-- Stronger flame glow -->
+    <filter id="flameGlow" x="-40%" y="-20%" width="180%" height="140%">
+      <feGaussianBlur stdDeviation="4"/>
     </filter>
 
-    <!-- Rembrandt silhouette symbol -->
-    <symbol id="rembrandt" viewBox="0 0 120 200" overflow="visible">
-      <!-- Beret (soft floppy cap) -->
-      <path d="M18 34 Q10 22 22 14 Q40 4 62 6 Q88 8 100 22 Q106 32 96 40 Q78 46 60 42 Q40 46 24 42 Q18 40 18 34 Z"
-            fill="#1a0f08"/>
-      <path d="M22 32 Q16 26 26 20 Q42 12 62 14 Q84 16 94 26 Q96 30 88 34 Q70 38 58 36 Q40 38 26 36 Q22 34 22 32 Z"
-            fill="#0a0603" opacity="0.6"/>
-      <!-- Head -->
-      <path d="M28 42 Q26 68 34 88 Q42 100 58 102 Q78 104 88 92 Q96 78 96 60 Q96 50 92 42 Q78 46 60 42 Q40 46 28 42 Z"
-            fill="#1a0f08"/>
-      <!-- Ruff collar -->
-      <ellipse cx="60" cy="118" rx="46" ry="12" fill="#0a0603"/>
-      <ellipse cx="60" cy="116" rx="44" ry="10" fill="#1a0f08"/>
-      <path d="M60 108 Q78 108 92 116 Q94 122 88 126 Q76 122 62 122 Q46 122 34 126 Q28 122 30 116 Q44 108 60 108 Z"
-            fill="none" stroke="#3a2410" stroke-width="0.8" opacity="0.7"/>
-      <!-- Cloak / shoulder mass -->
-      <path d="M4 200 L4 148 Q10 128 30 122 Q48 128 60 128 Q76 128 92 122 Q114 128 118 150 L118 200 Z"
-            fill="#0a0603"/>
-      <!-- Rim light on face edge and shoulder (right side, catching key light) -->
-      <path d="M92 44 Q98 60 96 78 Q94 92 86 100 Q80 106 74 108 L74 100 Q84 92 90 78 Q94 60 90 46 Z"
-            fill="url(#rim)"/>
-      <path d="M114 148 Q118 168 118 200 L108 200 Q106 180 108 156 Q110 148 114 148 Z"
-            fill="url(#rim)" opacity="0.75"/>
-      <!-- Classic Rembrandt cheek-triangle highlight -->
-      <path d="M78 68 L86 72 L84 82 L76 78 Z" fill="#e6b04a" opacity="0.6"/>
-      <ellipse cx="82" cy="76" rx="3.5" ry="2.5" fill="#f0d9a4" opacity="0.55"/>
-      <!-- Beret rim highlight -->
-      <path d="M90 20 Q102 26 98 36 Q94 40 88 38 Q92 30 88 22 Q89 20 90 20 Z" fill="#8b5a1a" opacity="0.65"/>
+    <!-- Star cluster symbol -->
+    <symbol id="star" viewBox="-2 -2 4 4">
+      <circle r="0.8" fill="#dfe8ff"/>
     </symbol>
 
-    <!-- Small easel symbol behind figure -->
-    <symbol id="easel" viewBox="0 0 100 140" overflow="visible">
-      <line x1="50" y1="6" x2="60" y2="138" stroke="#4a2f18" stroke-width="2"/>
-      <line x1="50" y1="6" x2="18" y2="138" stroke="#6b3a1a" stroke-width="2.4"/>
-      <line x1="50" y1="6" x2="82" y2="138" stroke="#6b3a1a" stroke-width="2.4"/>
-      <line x1="24" y1="104" x2="76" y2="104" stroke="#4a2f18" stroke-width="1.4"/>
-      <g transform="translate(22,28)">
-        <rect x="0" y="0" width="56" height="72" fill="#3a2818" stroke="#8b5a1a" stroke-width="1.2"/>
-        <ellipse cx="28" cy="30" rx="15" ry="20" fill="#5a3818" opacity="0.85"/>
-        <ellipse cx="34" cy="26" rx="6" ry="8" fill="#a06a34" opacity="0.7"/>
-        <ellipse cx="35" cy="22" rx="2.4" ry="3" fill="#e6b04a" opacity="0.55"/>
-        <path d="M6 58 Q22 52 50 58" stroke="#c88a2c" stroke-width="1" fill="none" opacity="0.45"/>
-      </g>
+    <!-- Saturn V rocket (stylized, tall) -->
+    <symbol id="saturnV" viewBox="0 0 40 200" overflow="visible">
+      <!-- Escape tower spike -->
+      <line x1="20" y1="0" x2="20" y2="12" stroke="#dfe8ff" stroke-width="0.8"/>
+      <!-- Command module cone -->
+      <path d="M14 24 L20 12 L26 24 Z" fill="url(#rocketBody)" stroke="#6c7180" stroke-width="0.4"/>
+      <!-- Service module -->
+      <rect x="14" y="24" width="12" height="10" fill="#c9d0da" stroke="#6c7180" stroke-width="0.3"/>
+      <!-- S-IVB (3rd stage) -->
+      <rect x="13" y="34" width="14" height="26" fill="url(#rocketBody)" stroke="#6c7180" stroke-width="0.3"/>
+      <rect x="13" y="36" width="14" height="1.6" fill="#0d1b45"/>
+      <text x="20" y="52" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="4.5" font-weight="900" fill="#0d1b45">USA</text>
+      <!-- Interstage ring -->
+      <rect x="12" y="60" width="16" height="2" fill="#6c7180"/>
+      <!-- S-II (2nd stage) -->
+      <rect x="12" y="62" width="16" height="40" fill="url(#rocketBody)" stroke="#6c7180" stroke-width="0.3"/>
+      <rect x="12" y="66" width="16" height="2" fill="#0d1b45"/>
+      <rect x="12" y="98" width="16" height="2" fill="#0d1b45"/>
+      <!-- Interstage ring -->
+      <rect x="11" y="102" width="18" height="2.5" fill="#6c7180"/>
+      <!-- S-IC (1st stage) - largest -->
+      <rect x="11" y="104.5" width="18" height="72" fill="url(#rocketBody)" stroke="#6c7180" stroke-width="0.3"/>
+      <!-- USA vertical block -->
+      <rect x="11" y="112" width="18" height="4" fill="#0d1b45"/>
+      <text x="20" y="115.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="3.6" font-weight="900" fill="#f4f4ef">UNITED STATES</text>
+      <!-- Roll pattern black stripes -->
+      <rect x="11" y="128" width="4" height="30" fill="#1a1f2a"/>
+      <rect x="25" y="128" width="4" height="30" fill="#1a1f2a"/>
+      <!-- APOLLO 11 badge -->
+      <circle cx="20" cy="146" r="4" fill="#f4f4ef" stroke="#0d1b45" stroke-width="0.4"/>
+      <text x="20" y="147.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="3" font-weight="900" fill="#0d1b45">11</text>
+      <!-- Fin fairings -->
+      <path d="M11 168 L6 176 L11 176 Z" fill="#6c7180"/>
+      <path d="M29 168 L34 176 L29 176 Z" fill="#6c7180"/>
+      <!-- F-1 engine skirt -->
+      <rect x="10" y="176" width="20" height="6" fill="#3a3f4a"/>
+      <!-- Engine bells -->
+      <path d="M11 182 L10 190 L14 190 L14 182 Z" fill="#2a2f3a"/>
+      <path d="M14 182 L14 190 L18 190 L18 182 Z" fill="#1a1f2a"/>
+      <path d="M18 182 L18 190 L22 190 L22 182 Z" fill="#2a2f3a"/>
+      <path d="M22 182 L22 190 L26 190 L26 182 Z" fill="#1a1f2a"/>
+      <path d="M26 182 L26 190 L30 190 L29 182 Z" fill="#2a2f3a"/>
     </symbol>
   </defs>
 
-  <!-- 1. Base -->
+  <!-- 1. Sky -->
   <rect width="800" height="200" fill="#0d1117"/>
-  <rect width="800" height="200" fill="url(#studio)"/>
+  <rect width="800" height="200" fill="url(#sky)"/>
 
-  <!-- 2. Volumetric light beam shaft from upper right (classic Rembrandt triangle) -->
-  <polygon points="800,0 800,120 240,200 460,0" fill="url(#beam)">
-    <animate attributeName="opacity" values="0.9;1;0.9" dur="11s" repeatCount="indefinite"/>
-  </polygon>
+  <!-- 2. Horizon glow band -->
+  <rect x="0" y="150" width="800" height="50" fill="url(#horizonGlow)"/>
 
-  <!-- 3. Golden key-light glow radial (source in upper right area) -->
-  <rect width="800" height="200" fill="url(#keylight)">
-    <animate attributeName="opacity" values="0.92;1;0.92" dur="7s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- 4. Distant secondary warm glow behind figure -->
-  <ellipse cx="200" cy="130" rx="80" ry="60" fill="#c88a2c" opacity="0.13" filter="url(#flicker)">
-    <animate attributeName="opacity" values="0.10;0.18;0.11;0.15;0.10" dur="4.3s" repeatCount="indefinite"/>
-  </ellipse>
-
-  <!-- 5. Small easel behind Rembrandt on the far left -->
-  <g transform="translate(6 40)" opacity="0.85">
-    <use href="#easel" width="100" height="140"/>
+  <!-- 3. Distant stars (upper left/right, sparse) -->
+  <g opacity="0.95">
+    <circle cx="60"  cy="22"  r="0.9" fill="#dfe8ff"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="40"  r="0.7" fill="#dfe8ff"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="16"  r="1.0" fill="#f5ecc9"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="280" cy="34"  r="0.7" fill="#dfe8ff"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="9s" repeatCount="indefinite"/></circle>
+    <circle cx="360" cy="18"  r="0.9" fill="#dfe8ff"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="640" cy="24"  r="0.7" fill="#dfe8ff"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="14"  r="1.1" fill="#f5ecc9"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" begin="-4s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="46"  r="0.8" fill="#dfe8ff"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="9s" begin="-1s" repeatCount="indefinite"/></circle>
+    <circle cx="580" cy="42"  r="0.6" fill="#dfe8ff"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="10s" repeatCount="indefinite"/></circle>
+    <circle cx="440" cy="28"  r="0.7" fill="#dfe8ff"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="8s" begin="-3s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- 6. Rembrandt silhouette, rim-lit -->
-  <g transform="translate(70 22)">
-    <use href="#rembrandt" width="145" height="200"/>
+  <!-- 4. Crescent Moon (upper right, the destination) -->
+  <g transform="translate(715 44)" filter="url(#glow)">
+    <circle r="17" fill="url(#moon)"/>
+    <circle r="17" cx="7" fill="#0d1b45"/>
+    <circle cx="-4" cy="-3" r="1.2" fill="#c9b483" opacity="0.7"/>
+    <circle cx="-6" cy="4"  r="0.8" fill="#c9b483" opacity="0.6"/>
+    <circle cx="-2" cy="7"  r="1.0" fill="#c9b483" opacity="0.55"/>
   </g>
 
-  <!-- 7. Floating gold dust motes rising in the beam -->
+  <!-- 5. Palm silhouettes on the horizon (Florida) -->
+  <g fill="#0a0d1a" opacity="0.95">
+    <!-- distant palm 1 -->
+    <g transform="translate(30 180)">
+      <rect x="-1" y="-22" width="2" height="22" fill="#0a0d1a"/>
+      <path d="M0 -22 Q-10 -26 -18 -22 M0 -22 Q10 -26 18 -22 M0 -22 Q-6 -30 -14 -32 M0 -22 Q6 -30 14 -32 M0 -22 Q0 -32 -2 -34"
+            stroke="#0a0d1a" stroke-width="1.6" fill="none"/>
+    </g>
+    <g transform="translate(430 184)">
+      <rect x="-1" y="-18" width="2" height="18" fill="#0a0d1a"/>
+      <path d="M0 -18 Q-8 -22 -14 -18 M0 -18 Q8 -22 14 -18 M0 -18 Q-5 -25 -12 -27 M0 -18 Q5 -25 12 -27 M0 -18 Q0 -27 -2 -29"
+            stroke="#0a0d1a" stroke-width="1.4" fill="none"/>
+    </g>
+    <g transform="translate(560 186)">
+      <rect x="-1" y="-14" width="2" height="14" fill="#0a0d1a"/>
+      <path d="M0 -14 Q-6 -17 -11 -14 M0 -14 Q6 -17 11 -14 M0 -14 Q-4 -20 -9 -22 M0 -14 Q4 -20 9 -22"
+            stroke="#0a0d1a" stroke-width="1.2" fill="none"/>
+    </g>
+  </g>
+
+  <!-- 6. Launch umbilical tower (left of rocket) -->
+  <g stroke="#1a1f2a" stroke-width="1.4" fill="none" opacity="0.95">
+    <!-- vertical mast -->
+    <line x1="98"  y1="30"  x2="98"  y2="190"/>
+    <line x1="108" y1="30"  x2="108" y2="190"/>
+    <!-- crossbraces -->
+    <line x1="98"  y1="46"  x2="108" y2="60"/>
+    <line x1="108" y1="46"  x2="98"  y2="60"/>
+    <line x1="98"  y1="70"  x2="108" y2="84"/>
+    <line x1="108" y1="70"  x2="98"  y2="84"/>
+    <line x1="98"  y1="94"  x2="108" y2="108"/>
+    <line x1="108" y1="94"  x2="98"  y2="108"/>
+    <line x1="98"  y1="118" x2="108" y2="132"/>
+    <line x1="108" y1="118" x2="98"  y2="132"/>
+    <line x1="98"  y1="142" x2="108" y2="156"/>
+    <line x1="108" y1="142" x2="98"  y2="156"/>
+    <line x1="98"  y1="166" x2="108" y2="180"/>
+    <line x1="108" y1="166" x2="98"  y2="180"/>
+    <!-- horizontal ties (swing arms) -->
+    <line x1="108" y1="60"  x2="140" y2="60"/>
+    <line x1="108" y1="90"  x2="140" y2="90"/>
+    <line x1="108" y1="120" x2="140" y2="120"/>
+    <line x1="108" y1="150" x2="140" y2="150"/>
+    <!-- top crown / lightning mast -->
+    <line x1="103" y1="30"  x2="103" y2="14"/>
+    <circle cx="103" cy="12" r="1.6" fill="#dfe8ff"/>
+  </g>
+
+  <!-- 7. Rolling exhaust smoke cloud at pad base (huge, textured) -->
+  <g opacity="0.85" filter="url(#smokeNoise)">
+    <ellipse cx="200" cy="196" rx="140" ry="20" fill="#e8dbb8"/>
+    <ellipse cx="140" cy="188" rx="55"  ry="18" fill="#f2e8c9"/>
+    <ellipse cx="260" cy="188" rx="65"  ry="20" fill="#f2e8c9"/>
+    <ellipse cx="330" cy="196" rx="55"  ry="14" fill="#d8c99a"/>
+    <ellipse cx="90"  cy="196" rx="45"  ry="12" fill="#c9b47f"/>
+  </g>
+
+  <!-- 8. Flame column beneath rocket (broad glow) -->
+  <g filter="url(#flameGlow)" opacity="0.9">
+    <ellipse cx="185" cy="188" rx="50" ry="42" fill="url(#flame)"/>
+  </g>
+
+  <!-- 9. Main flame plume -->
   <g>
-    <circle r="1.4" fill="#f0d9a4" opacity="0.85">
-      <animateMotion path="M340 200 Q360 130 400 20" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="13s" repeatCount="indefinite"/>
+    <path d="M170 130 Q160 160 152 190 Q168 196 185 194 Q202 196 218 190 Q210 160 200 130 Z"
+          fill="url(#flame)">
+      <animate attributeName="d"
+               values="M170 130 Q160 160 152 190 Q168 196 185 194 Q202 196 218 190 Q210 160 200 130 Z;
+                       M170 130 Q156 162 148 192 Q168 198 185 194 Q202 198 222 192 Q214 162 200 130 Z;
+                       M170 130 Q162 158 154 188 Q168 194 185 194 Q202 194 216 188 Q208 158 200 130 Z;
+                       M170 130 Q160 160 152 190 Q168 196 185 194 Q202 196 218 190 Q210 160 200 130 Z"
+               dur="0.7s" repeatCount="indefinite"/>
+    </path>
+    <!-- inner core -->
+    <path d="M176 132 Q170 158 165 186 Q175 190 185 190 Q195 190 205 186 Q200 158 194 132 Z"
+          fill="url(#flameCore)">
+      <animate attributeName="opacity" values="0.85;1;0.9;1;0.85" dur="0.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- flame flicker tongues -->
+    <path d="M182 190 Q185 200 188 190 Q186 196 182 190 Z" fill="#fffbe0" opacity="0.9">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="0.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- 10. Saturn V rocket -->
+  <g transform="translate(165 -46)">
+    <use href="#saturnV" width="40" height="200">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0; 0.6 -0.4; -0.4 0.5; 0 0"
+                        dur="0.35s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- 11. Contrail streamers curving up from where the rocket has already climbed -->
+  <g opacity="0.55" fill="none" stroke="#f4f4ef" stroke-linecap="round">
+    <path d="M186 194 Q182 130 178 60" stroke-width="6" opacity="0.35"/>
+    <path d="M186 194 Q184 130 181 40" stroke-width="3" opacity="0.55"/>
+  </g>
+
+  <!-- 12. Rising embers / sparks -->
+  <g>
+    <circle r="1.2" fill="#ffe066">
+      <animateMotion path="M185 190 Q195 150 220 100" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.8;0" dur="3s" repeatCount="indefinite"/>
     </circle>
-    <circle r="1.1" fill="#e6b04a" opacity="0.8">
-      <animateMotion path="M440 200 Q460 120 520 20" dur="11s" begin="-2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    <circle r="1.0" fill="#ff9a2a">
+      <animateMotion path="M180 190 Q160 140 130 90" dur="3.5s" begin="-1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.7;0" dur="3.5s" begin="-1s" repeatCount="indefinite"/>
     </circle>
-    <circle r="1.5" fill="#f5e6c0" opacity="0.75">
-      <animateMotion path="M560 200 Q580 120 640 20" dur="17s" begin="-5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;0" dur="17s" begin="-5s" repeatCount="indefinite"/>
+    <circle r="0.9" fill="#fffbe0">
+      <animateMotion path="M190 190 Q210 150 245 110" dur="2.8s" begin="-0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.85;0" dur="2.8s" begin="-0.6s" repeatCount="indefinite"/>
     </circle>
-    <circle r="0.9" fill="#c88a2c" opacity="0.7">
-      <animateMotion path="M680 200 Q700 130 740 30" dur="9s" begin="-3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="9s" begin="-3s" repeatCount="indefinite"/>
+    <circle r="1.1" fill="#ffb060">
+      <animateMotion path="M175 190 Q150 145 118 100" dur="3.2s" begin="-1.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.7;0" dur="3.2s" begin="-1.4s" repeatCount="indefinite"/>
     </circle>
-    <circle r="1.2" fill="#e6b04a" opacity="0.8">
-      <animateMotion path="M400 200 Q420 140 480 40" dur="14s" begin="-7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="14s" begin="-7s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="0.8" fill="#f0d9a4" opacity="0.7">
-      <animateMotion path="M620 200 Q635 140 670 50" dur="19s" begin="-9s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.75;0" dur="19s" begin="-9s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="1.0" fill="#f5e6c0" opacity="0.7">
-      <animateMotion path="M500 200 Q520 130 570 30" dur="12s" begin="-4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="12s" begin="-4s" repeatCount="indefinite"/>
+    <circle r="1.3" fill="#ffe066">
+      <animateMotion path="M195 190 Q225 145 265 90" dur="3.4s" begin="-2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.8;0" dur="3.4s" begin="-2s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- 8. Cracked varnish craquelure texture overlay -->
-  <rect width="800" height="200" fill="#000" filter="url(#craquelure)" opacity="0.42"/>
-
-  <!-- 9. Warm vignette darkening the far edges -->
-  <radialGradient id="vignette" cx="65%" cy="30%" r="95%">
-    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
-    <stop offset="100%" stop-color="#000" stop-opacity="0.72"/>
-  </radialGradient>
-  <rect width="800" height="200" fill="url(#vignette)"/>
-
-  <!-- 10. Painter's palette tucked into lower-right corner, small, warm-lit -->
-  <g transform="translate(700 158) rotate(-16) scale(0.68)">
-    <path d="M0 0 Q0 -22 24 -30 Q60 -38 100 -30 Q128 -22 128 4 Q128 26 100 32 Q78 34 60 32 Q56 24 46 26 Q34 30 30 34 Q10 34 4 22 Q0 12 0 0 Z"
-          fill="url(#wood)" stroke="#2a1608" stroke-width="1"/>
-    <ellipse cx="46" cy="22" rx="6" ry="4" fill="#0a0603"/>
-    <circle cx="26" cy="-14" r="5" fill="#a83820"/>
-    <circle cx="42" cy="-22" r="4.5" fill="#e6b04a"/>
-    <circle cx="60" cy="-24" r="5" fill="#f5e6c0"/>
-    <circle cx="78" cy="-22" r="4.5" fill="#6b3a1a"/>
-    <circle cx="96" cy="-16" r="5" fill="#8b5a1a"/>
-    <circle cx="108" cy="-4" r="4" fill="#4a2f18"/>
-    <circle cx="112" cy="12" r="4" fill="#1a0f08"/>
-    <circle cx="24" cy="-16" r="1.4" fill="#f5e6c0" opacity="0.7"/>
-    <circle cx="40" cy="-24" r="1.4" fill="#fff5d6" opacity="0.8"/>
-    <circle cx="58" cy="-26" r="1.6" fill="#fff5d6" opacity="0.9"/>
-    <circle cx="76" cy="-24" r="1.2" fill="#e6b04a" opacity="0.7"/>
-    <circle cx="94" cy="-18" r="1.4" fill="#f0d9a4" opacity="0.7"/>
-  </g>
-
-  <!-- 11. Main date headline — inside the triangle of light, dominant -->
-  <g filter="url(#softglow)">
-    <text x="470" y="98" text-anchor="middle"
+  <!-- 13. Main headline (JULY 16, 2026) — dominant, in the sky area -->
+  <g filter="url(#glow)">
+    <text x="530" y="98" text-anchor="middle"
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="52" font-weight="900" letter-spacing="4" fill="url(#goldtext)"
-          stroke="#4a2f18" stroke-width="0.6">
-      JULY 15, 2026
+          font-size="52" font-weight="900" letter-spacing="3.5" fill="url(#ivoryText)"
+          stroke="#3d1f5c" stroke-width="0.5">
+      JULY 16, 2026
     </text>
   </g>
 
-  <!-- 12. Subhead — bright gold, shorter to avoid crowding the palette -->
-  <text x="470" y="132" text-anchor="middle"
+  <!-- 14. Subhead -->
+  <text x="530" y="132" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="14" font-weight="800" letter-spacing="4.6" fill="#e6b04a">
-    REMBRANDT VAN RIJN · 420 YEARS
+        font-size="13.5" font-weight="800" letter-spacing="3.8" fill="#ffb060">
+    APOLLO 11 · 57 YEARS · LIFTOFF JULY 16, 1969
   </text>
 
-  <!-- 13. Tertiary italic caption -->
-  <text x="470" y="176" text-anchor="middle"
+  <!-- 15. Tertiary italic caption -->
+  <text x="530" y="172" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="10.5" font-style="italic" font-weight="700" letter-spacing="2.6" fill="#f0d9a4" opacity="0.92">
-    LEIDEN · 15 JULY 1606 · MASTER OF CHIAROSCURO
+        font-size="10" font-style="italic" font-weight="700" letter-spacing="2.4" fill="#f5ecc9" opacity="0.92">
+    KENNEDY SPACE CENTER · LC-39A · WE CHOOSE TO GO
   </text>
 
-  <!-- 14. Faint painter's signature "R." in lower left, mimicking a canvas signature -->
-  <text x="16" y="192"
-        font-family="Georgia, 'Times New Roman', serif"
-        font-size="14" font-style="italic" fill="#8b5a1a" opacity="0.75">
-    R.
+  <!-- 16. Subtle T+MET counter -->
+  <text x="784" y="192" text-anchor="end"
+        font-family="Menlo, Consolas, monospace"
+        font-size="9" font-weight="700" fill="#8a8f9a" opacity="0.7">
+    T+00:00:57
   </text>
 </svg>
