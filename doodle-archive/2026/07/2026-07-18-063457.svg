@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: World Emoji Day (July 17) — annual internet-culture celebration held on July 17 because the Apple iOS 📅 calendar emoji displays that date. A cheerful confetti tableau centered on a big classic yellow smiley face with blinking eyes, surrounded by floating emoji-inspired shapes (heart, star, sparkles, thumbs-up bubble), a warm dark-plum background, a large ivory JULY 17, 2026 headline dominating center-right, a bright WORLD EMOJI DAY subhead, and italic ☺ CELEBRATING THE LINGUA FRANCA OF THE INTERNET tertiary along the bottom. Palette: dark plum #0d1117, warm plum #241830, sunny yellow #ffcd1f, yellow shadow #e5a300, cheek pink #ff8fa3, heart red #ff4d6d, star gold #ffd93d, sky blue #4dc3ff, mint #5be7a9, cream #fff5dc. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 17, 2026 — World Emoji Day. A cheerful yellow smiley face on the left with blinking eyes, surrounded by floating hearts, stars, sparkles, and a thumbs-up bubble, with a large JULY 17, 2026 headline in the center-right, WORLD EMOJI DAY subhead, and CELEBRATING THE LINGUA FRANCA OF THE INTERNET tertiary along the bottom.">
+  <defs>
+    <!-- warm background: dark plum with a soft warm glow behind the smiley -->
+    <radialGradient id="bg" cx="18%" cy="55%" r="80%">
+      <stop offset="0%" stop-color="#3a2044"/>
+      <stop offset="55%" stop-color="#1a1224"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <!-- smiley face gradient: shaded sphere -->
+    <radialGradient id="face" cx="38%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#fff2a8"/>
+      <stop offset="45%" stop-color="#ffcd1f"/>
+      <stop offset="100%" stop-color="#c88600"/>
+    </radialGradient>
+
+    <!-- highlight sheen -->
+    <radialGradient id="sheen" cx="30%" cy="22%" r="30%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- heart gradient -->
+    <linearGradient id="heart" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff8fa3"/>
+      <stop offset="100%" stop-color="#ff2d55"/>
+    </linearGradient>
+
+    <!-- star gradient -->
+    <linearGradient id="star" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a0"/>
+      <stop offset="100%" stop-color="#ffb400"/>
+    </linearGradient>
+
+    <!-- thumbs-up bubble -->
+    <linearGradient id="thumb" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7fd7ff"/>
+      <stop offset="100%" stop-color="#2a95d1"/>
+    </linearGradient>
+
+    <!-- sparkle -->
+    <radialGradient id="spark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- reusable four-point sparkle -->
+    <symbol id="sparkle" viewBox="-10 -10 20 20" overflow="visible">
+      <path d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z" fill="url(#spark)"/>
+    </symbol>
+
+    <!-- reusable heart -->
+    <symbol id="heartShape" viewBox="-12 -10 24 22" overflow="visible">
+      <path d="M0 10 C-14 0 -12 -10 -6 -10 C-2 -10 0 -7 0 -5 C0 -7 2 -10 6 -10 C12 -10 14 0 0 10 Z" fill="url(#heart)" stroke="#a8112b" stroke-width="0.8"/>
+    </symbol>
+
+    <!-- reusable 5-point star -->
+    <symbol id="starShape" viewBox="-12 -12 24 24" overflow="visible">
+      <path d="M0 -11 L2.6 -3.4 L10.5 -3.4 L4.1 1.3 L6.5 8.9 L0 4.3 L-6.5 8.9 L-4.1 1.3 L-10.5 -3.4 L-2.6 -3.4 Z" fill="url(#star)" stroke="#c78500" stroke-width="0.6"/>
+    </symbol>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- subtle confetti dots in the background -->
+  <g opacity="0.35">
+    <circle cx="380" cy="30" r="2" fill="#ff4d6d"/>
+    <circle cx="430" cy="180" r="2.5" fill="#5be7a9"/>
+    <circle cx="620" cy="20" r="2" fill="#4dc3ff"/>
+    <circle cx="700" cy="180" r="2.5" fill="#ffcd1f"/>
+    <circle cx="770" cy="60" r="2" fill="#ff8fa3"/>
+    <circle cx="360" cy="170" r="1.8" fill="#ffd93d"/>
+    <circle cx="560" cy="185" r="2" fill="#4dc3ff"/>
+    <circle cx="480" cy="18" r="1.8" fill="#5be7a9"/>
+  </g>
+
+  <!-- ===== SMILEY FACE (left) ===== -->
+  <g transform="translate(115 100)">
+    <!-- gentle bob -->
+    <animateTransform attributeName="transform" type="translate"
+      values="115 100; 115 95; 115 100; 115 105; 115 100"
+      dur="7s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- outer glow -->
+    <circle r="82" fill="#ffcd1f" opacity="0.18">
+      <animate attributeName="r" values="80;88;80" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.28;0.15" dur="7s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- face body -->
+    <circle r="72" fill="url(#face)" stroke="#a86e00" stroke-width="2"/>
+
+    <!-- top-left sheen -->
+    <ellipse cx="-22" cy="-32" rx="22" ry="14" fill="url(#sheen)"/>
+
+    <!-- cheeks -->
+    <ellipse cx="-38" cy="18" rx="12" ry="7" fill="#ff8fa3" opacity="0.55"/>
+    <ellipse cx="38" cy="18" rx="12" ry="7" fill="#ff8fa3" opacity="0.55"/>
+
+    <!-- eyes: white sclera + dark iris; blink via scaleY -->
+    <g transform="translate(-22 -12)">
+      <ellipse rx="9" ry="11" fill="#241026">
+        <animate attributeName="ry" values="11;11;11;1;11" keyTimes="0;0.7;0.85;0.9;1" dur="7s" repeatCount="indefinite"/>
+      </ellipse>
+      <circle cx="2" cy="-3" r="3" fill="#ffffff"/>
+    </g>
+    <g transform="translate(22 -12)">
+      <ellipse rx="9" ry="11" fill="#241026">
+        <animate attributeName="ry" values="11;11;11;1;11" keyTimes="0;0.7;0.85;0.9;1" dur="7s" repeatCount="indefinite"/>
+      </ellipse>
+      <circle cx="2" cy="-3" r="3" fill="#ffffff"/>
+    </g>
+
+    <!-- smile -->
+    <path d="M -32 18 Q 0 52 32 18" stroke="#241026" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <!-- tongue hint -->
+    <path d="M -14 34 Q 0 44 14 34 Q 0 30 -14 34 Z" fill="#ff4d6d" opacity="0.85"/>
+  </g>
+
+  <!-- ===== FLOATING EMOJI-INSPIRED SHAPES ===== -->
+
+  <!-- heart, upper-mid -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="245 60; 245 40; 245 60" dur="11s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="-8; 8; -8" dur="7s" repeatCount="indefinite"/>
+      <use href="#heartShape" width="30" height="27" x="-15" y="-13"/>
+    </g>
+  </g>
+
+  <!-- star, lower-mid -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="260 155; 260 135; 260 155" dur="13s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0; 360" dur="17s" repeatCount="indefinite"/>
+      <use href="#starShape" width="30" height="30" x="-15" y="-15"/>
+    </g>
+  </g>
+
+  <!-- thumbs-up chat bubble, top-right of face -->
+  <g transform="translate(215 40)">
+    <animateTransform attributeName="transform" type="translate"
+      values="215 40; 215 32; 215 40" dur="11s" repeatCount="indefinite" begin="1s"/>
+    <g transform="scale(0.9)">
+      <!-- bubble -->
+      <path d="M-22 -14 h44 a8 8 0 0 1 8 8 v14 a8 8 0 0 1 -8 8 h-30 l-10 8 v-8 h-4 a8 8 0 0 1 -8 -8 v-14 a8 8 0 0 1 8 -8 z" fill="url(#thumb)" stroke="#0d2f4a" stroke-width="1.2"/>
+      <!-- thumbs up glyph inside -->
+      <g transform="translate(0 -2) scale(0.85)" fill="#fff5dc" stroke="#0d2f4a" stroke-width="0.8" stroke-linejoin="round">
+        <path d="M -8 4 L -8 12 L -3 12 L -3 4 Z"/>
+        <path d="M -3 4 L -3 12 L 9 12 C 12 12 13 10 12 8 L 13 8 C 15 8 15 5 13 5 L 13 4 C 15 4 15 1 13 1 L 12 1 C 14 1 14 -2 12 -2 L 4 -2 C 4 -6 6 -8 4 -10 C 2 -12 -1 -10 -1 -8 C -1 -4 -3 -1 -3 4 Z"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- sparkles scattered -->
+  <use href="#sparkle" x="200" y="105" width="14" height="14">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite" begin="0s"/>
+  </use>
+  <use href="#sparkle" x="290" y="30" width="10" height="10">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="11s" repeatCount="indefinite" begin="1.5s"/>
+  </use>
+  <use href="#sparkle" x="340" y="115" width="12" height="12">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="13s" repeatCount="indefinite" begin="3s"/>
+  </use>
+  <use href="#sparkle" x="740" y="150" width="14" height="14">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="11s" repeatCount="indefinite" begin="2s"/>
+  </use>
+  <use href="#sparkle" x="770" y="40" width="10" height="10">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite" begin="4s"/>
+  </use>
+  <use href="#sparkle" x="410" y="45" width="12" height="12">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="13s" repeatCount="indefinite" begin="0.5s"/>
+  </use>
+
+  <!-- tiny bonus heart, lower-right of face -->
+  <g transform="translate(300 90)">
+    <animateTransform attributeName="transform" type="translate"
+      values="300 90; 310 78; 300 90" dur="13s" repeatCount="indefinite" begin="2s"/>
+    <use href="#heartShape" width="16" height="14" x="-8" y="-7" opacity="0.85"/>
+  </g>
+
+  <!-- ===== TEXT BLOCK (right side) ===== -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+    <!-- Big date headline -->
+    <text x="560" y="98" text-anchor="middle" font-size="52" font-weight="800" fill="#fff5dc" letter-spacing="1">
+      JULY 17, 2026
+    </text>
+
+    <!-- subtle underline sparkle bar -->
+    <line x1="410" y1="112" x2="710" y2="112" stroke="#ffcd1f" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="410" cy="112" r="3" fill="#ffcd1f"/>
+    <circle cx="710" cy="112" r="3" fill="#ffcd1f"/>
+
+    <!-- subhead -->
+    <text x="560" y="140" text-anchor="middle" font-size="22" font-weight="700" fill="#ffcd1f" letter-spacing="6">
+      WORLD EMOJI DAY
+    </text>
+
+    <!-- tertiary -->
+    <text x="560" y="170" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#c9b8a8" letter-spacing="2">
+      ·  CELEBRATING THE LINGUA FRANCA OF THE INTERNET  ·
+    </text>
+
+    <!-- top-line micro nod: "JULY 17" is the date shown on the iOS calendar emoji -->
+    <text x="560" y="42" text-anchor="middle" font-size="10" font-weight="600" fill="#5be7a9" letter-spacing="3" opacity="0.9">
+      THE DATE SHOWN ON THE CALENDAR EMOJI
+    </text>
+  </g>
+
+  <!-- ===== A couple of decorative shapes framing the text ===== -->
+  <g opacity="0.85">
+    <!-- little heart pinned near top-right of date -->
+    <g transform="translate(690 55)">
+      <animateTransform attributeName="transform" type="translate"
+        values="690 55; 690 48; 690 55" dur="11s" repeatCount="indefinite" begin="3s"/>
+      <use href="#heartShape" width="20" height="18" x="-10" y="-9"/>
+    </g>
+    <!-- little star, lower-left of subhead -->
+    <g transform="translate(430 148)">
+      <animateTransform attributeName="transform" type="rotate"
+        values="0 430 148; 360 430 148" dur="19s" repeatCount="indefinite"/>
+      <use href="#starShape" width="18" height="18" x="-9" y="-9"/>
+    </g>
+  </g>
+</svg>
