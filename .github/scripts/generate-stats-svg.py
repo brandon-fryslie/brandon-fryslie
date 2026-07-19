@@ -27,6 +27,10 @@ except ImportError:
 # ─── Configuration ──────────────────────────────────────────
 
 USERNAME = "brandon-fryslie"
+# Orgs whose repos are Brandon's own work and should be attributed to him in
+# owner-scoped metrics (author-scoped metrics already span every org through
+# the commit/issue search API). promptctl is where the bulk of the work lives.
+ATTRIBUTED_ORGS = ["promptctl"]
 STATS_PATH = "assets/daily-stats.svg"
 API_TIMEOUT = 30  # seconds
 FONT = (
@@ -171,6 +175,8 @@ class GitHubData:
         self._repos = None
         self._commit_items = {}
         self._repo_language = {}
+        self._org_repos = {}
+        self._attributed_repos = None
 
     def user(self):
         """Canonical /users/{username} payload — has public_repos as a single field."""
@@ -196,6 +202,32 @@ class GitHubData:
                     file=sys.stderr,
                 )
         return self._repos
+
+    def org_repos(self, org):
+        """Paginated public repo list for an org (cached)."""
+        if org not in self._org_repos:
+            self._org_repos[org] = api_paginate_list(f"/orgs/{org}/repos", self.token)
+        return self._org_repos[org]
+
+    def attributed_repos(self):
+        """Every repo counted as Brandon's own work: his personal repos plus
+        the repos of each org in ATTRIBUTED_ORGS (promptctl). Deduped by
+        full_name. Owner-scoped metrics (repos_created, the languages all-time
+        fold-in) use this so they don't ignore the org work that dominates his
+        activity."""
+        if self._attributed_repos is None:
+            by_name = {r["full_name"]: r for r in self.repos()}
+            for org in ATTRIBUTED_ORGS:
+                try:
+                    for r in self.org_repos(org):
+                        by_name.setdefault(r["full_name"], r)
+                except GitHubAPIError as e:
+                    print(
+                        f"Warning: could not list repos for org {org}: {e}",
+                        file=sys.stderr,
+                    )
+            self._attributed_repos = list(by_name.values())
+        return self._attributed_repos
 
     def commit_items(self, period):
         """Fetch commit items for a period (cached). Needed for languages, active_repos, days_active."""
@@ -278,9 +310,12 @@ def compute_metric(name, period, data):
         langs = {data.repo_language(fn) for fn in repo_names}
         langs.discard(None)
         if period == "all":
-            # Also fold in owned repos with no commits in the search window,
-            # since the all-time commit search caps at 1000 results.
-            langs |= {r["language"] for r in data.repos() if r.get("language")}
+            # Also fold in attributed repos (personal + promptctl) with no
+            # commits in the search window, since the all-time commit search
+            # caps at 1000 results.
+            langs |= {
+                r["language"] for r in data.attributed_repos() if r.get("language")
+            }
         return len(langs)
 
     if name == "active_repos":
@@ -297,11 +332,13 @@ def compute_metric(name, period, data):
         return len(dates)
 
     if name == "repos_created":
-        # Repos Brandon actually *created* — owned and non-fork. public_repos
-        # (used before for all-time) counts forks and is a current-inventory
-        # count, not a creation count, so it badly overstated this metric.
+        # Repos Brandon actually *created* — non-fork, across his personal
+        # account and the promptctl org (all his work). public_repos (used
+        # before for all-time) counted forks, was personal-only, and was a
+        # current-inventory count rather than a creation count, so it both
+        # overstated forks and ignored the org work.
         since = cutoff_iso(period)
-        created = [r for r in data.repos() if not r.get("fork")]
+        created = [r for r in data.attributed_repos() if not r.get("fork")]
         if since is None:
             return len(created)
         return sum(1 for r in created if r["created_at"] > since)
