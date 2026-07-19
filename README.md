@@ -12,6 +12,8 @@
 **Vibe Coder**<br>
 Boulder, CO
 
+**[🌐 Live Sites & Deployed Pages →](https://brandon-fryslie.github.io/)**
+
 </div>
 
 ---
@@ -185,6 +187,15 @@ Brandon's personal dotfiles repository. 76 commits over the past 90 days across 
 - **[combine](https://github.com/brandon-fryslie/combine)** — PHP asset pipeline from the pre-npm era.
 
 </details>
+
+---
+
+## Live Sites & Deployed Pages
+
+A hand-curated index of everything I have live on GitHub Pages — experiments, tools, and playgrounds — is at **[brandon-fryslie.github.io](https://brandon-fryslie.github.io/)**. Each card links straight to the running site and its source.
+
+- **[Deployed-sites index →](https://brandon-fryslie.github.io/)** — the full grid of live sites
+- **[Elaborated profile →](https://brandon-fryslie.github.io/brandon-fryslie/)** — the unconstrained HTML/JS counterpart to this profile, from the same daily content engine
 
 ---
 

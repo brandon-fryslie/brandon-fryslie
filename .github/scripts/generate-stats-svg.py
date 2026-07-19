@@ -33,12 +33,15 @@ FONT = (
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
 )
 
-# GitHub Primer palette
-BG = "#fafbfc"
-TEXT = "#24292e"
-SECONDARY = "#586069"
-ACCENT = "#0366d6"
-BORDER = "#e1e4e8"
+# GitHub Primer dark palette — matches the #0d1117 profile chrome so the
+# stats card sits flush with the surrounding dark banners instead of
+# rendering as a light box on the dark profile.
+BG = "#0d1117"
+TEXT = "#e6edf3"
+SECONDARY = "#8b949e"
+ACCENT = "#58a6ff"
+BORDER = "#30363d"
+TERTIARY = "#6e7681"
 
 # ─── Time Periods ───────────────────────────────────────────
 
@@ -167,6 +170,7 @@ class GitHubData:
         self._user = None
         self._repos = None
         self._commit_items = {}
+        self._repo_language = {}
 
     def user(self):
         """Canonical /users/{username} payload — has public_repos as a single field."""
@@ -199,6 +203,28 @@ class GitHubData:
             q = f"author:{USERNAME}{date_qualifier(period)}"
             self._commit_items[period] = search_commit_items(q, self.token)
         return self._commit_items[period]
+
+    def repo_language(self, full_name):
+        """Primary language for any repo by full_name (cached).
+
+        Unlike repos(), which only lists repos Brandon *owns*, this resolves
+        the language of repos he merely commits to — org repos like
+        promptctl/* — so the Languages metric isn't blind to the org work
+        that dominates his activity. Missing/errored repos resolve to None
+        and are simply skipped by the caller.
+        """
+        if full_name not in self._repo_language:
+            try:
+                self._repo_language[full_name] = api_get(
+                    f"/repos/{full_name}", self.token
+                ).get("language")
+            except GitHubAPIError as e:
+                print(
+                    f"Warning: could not resolve language for {full_name}: {e}",
+                    file=sys.stderr,
+                )
+                self._repo_language[full_name] = None
+        return self._repo_language[full_name]
 
     def commit_count(self, period):
         q = f"author:{USERNAME}{date_qualifier(period)}"
@@ -243,16 +269,19 @@ def compute_metric(name, period, data):
         return data.issue_closed_count(period)
 
     if name == "languages":
-        if period == "all":
-            return len({r["language"] for r in data.repos() if r.get("language")})
+        # Distinct languages across every repo Brandon committed to in the
+        # period — org repos included, resolved via repo_language() rather
+        # than intersecting with the owned-repos list (which dropped all
+        # org contributions and undercounted the total).
         items = data.commit_items(period)
         repo_names = {it["repository"]["full_name"] for it in items}
-        repo_langs = {
-            r["language"]
-            for r in data.repos()
-            if r["full_name"] in repo_names and r.get("language")
-        }
-        return len(repo_langs)
+        langs = {data.repo_language(fn) for fn in repo_names}
+        langs.discard(None)
+        if period == "all":
+            # Also fold in owned repos with no commits in the search window,
+            # since the all-time commit search caps at 1000 results.
+            langs |= {r["language"] for r in data.repos() if r.get("language")}
+        return len(langs)
 
     if name == "active_repos":
         items = data.commit_items(period)
@@ -268,11 +297,14 @@ def compute_metric(name, period, data):
         return len(dates)
 
     if name == "repos_created":
+        # Repos Brandon actually *created* — owned and non-fork. public_repos
+        # (used before for all-time) counts forks and is a current-inventory
+        # count, not a creation count, so it badly overstated this metric.
         since = cutoff_iso(period)
+        created = [r for r in data.repos() if not r.get("fork")]
         if since is None:
-            # Use the canonical public_repos field instead of paginated list length.
-            return data.public_repo_count()
-        return sum(1 for r in data.repos() if r["created_at"] > since)
+            return len(created)
+        return sum(1 for r in created if r["created_at"] > since)
 
     return 0
 
@@ -314,7 +346,7 @@ def generate_stats_svg(stat_items):
         stat_cells += f'''
     <text x="{x}" y="76" font-family="{FONT}" font-size="28" fill="{ACCENT}" font-weight="600" text-anchor="middle">{value}</text>
     <text x="{x}" y="96" font-family="{FONT}" font-size="12" fill="{SECONDARY}" text-anchor="middle">{label}</text>
-    <text x="{x}" y="112" font-family="{FONT}" font-size="10" fill="#8b949e" text-anchor="middle">({period_label})</text>'''
+    <text x="{x}" y="112" font-family="{FONT}" font-size="10" fill="{TERTIARY}" text-anchor="middle">({period_label})</text>'''
 
     return f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
   <rect width="{width}" height="{height}" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
