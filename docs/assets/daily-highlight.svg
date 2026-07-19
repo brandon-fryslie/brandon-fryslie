@@ -1,212 +1,306 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Nadia Comăneci's Perfect 10 — 50th anniversary (July 18, 1976, Montreal Olympics). The 14-year-old Romanian gymnast scored the first perfect 10 in Olympic history on the uneven bars, but the scoreboard had been designed to only display up to 9.99 — so it read "1.00" instead. A late-70s stadium scoreboard tableau: deep navy stadium darkness with warm rim-light, five Olympic rings across the top, a silhouetted gymnast mid-release on the uneven bars at the left, a big amber-LED scoreboard on the right displaying 1.00 that occasionally glitches to 10.00, a large ivory JULY 18, 2026 headline center-right, a red-yellow-blue NADIA COMĂNECI · PERFECT 10 · 50 YEARS subhead (echoing the Romanian tricolor), and italic MONTREAL 1976 · UNEVEN BARS · "THE BOARD SHOWED 1.00" tertiary along the bottom. Palette: stadium navy #0a0e17, warm rim #1c2436, scoreboard black #050505, LED amber #ffb020, LED bright #ffe090, LED shadow #a04000, ivory #f5efd7, Romania blue #002b7f, Romania yellow #fcd116, Romania red #ce1126, ring blue #0081c8, ring yellow #fcb131, ring green #00a651, ring red #ee334e. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 18, 2026 — 50th anniversary of Nadia Comăneci's Perfect 10 at the Montreal Olympics, July 18, 1976. A silhouetted gymnast mid-release on the uneven bars on the left, five Olympic rings across the top, a late-70s amber-LED scoreboard on the right glitching between 1.00 and 10.00, a large JULY 18, 2026 headline, NADIA COMĂNECI · PERFECT 10 · 50 YEARS subhead in Romanian tricolor, and MONTREAL 1976 · UNEVEN BARS · THE BOARD SHOWED 1.00 tertiary along the bottom.">
+<!-- theme: Discovery of the Rosetta Stone — July 19, 1799 (227th anniversary). During Napoleon's Egyptian campaign, French soldier Pierre-François Bouchard uncovered the granodiorite stele at Fort Julien in Rashid (Rosetta), Egypt. The stone bears a single decree in three scripts — Egyptian hieroglyphs, Egyptian demotic, and ancient Greek — which allowed Champollion to decipher hieroglyphics in 1822. A museum-lit tableau: the dark granodiorite slab tilted center-left with three stacked bands of glowing script (hieroglyphs on top, demotic in the middle, Greek at the bottom), a warm sandstone-and-lamp-black background evoking a Napoleonic-era study, the large ivory JULY 19, 2026 headline in the light on the right, a gold ROSETTA STONE · 227 YEARS subhead, and italic RASHID · 19 JULY 1799 · THREE SCRIPTS, ONE DECREE tertiary along the bottom. Palette: lamp-black #0d1117, warm parchment shadow #221812, granodiorite #2d3138, granodiorite highlight #4a5058, chiseled cyan-glow #7ad7ff, deciphered gold #e8b84a, ivory #f0e6cc, sandstone #c9a566, verdigris #5aa896, ember #d9713a. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 19, 2026 — 227th anniversary of the discovery of the Rosetta Stone in Rashid, Egypt on July 19, 1799. A dark granodiorite stele tilted on the left with three glowing bands of script (hieroglyphs, demotic, ancient Greek), warm lamplight from the upper right, a large JULY 19, 2026 headline, ROSETTA STONE · 227 YEARS subhead in gold, and RASHID · 19 JULY 1799 · THREE SCRIPTS, ONE DECREE tertiary along the bottom.">
   <defs>
-    <!-- deep stadium darkness with a soft warm floor light -->
-    <radialGradient id="bg" cx="50%" cy="110%" r="90%">
-      <stop offset="0%" stop-color="#2a2438"/>
-      <stop offset="35%" stop-color="#141a2a"/>
-      <stop offset="100%" stop-color="#0a0e17"/>
+    <!-- Warm study background: lamp-black with a soft parchment glow from upper right -->
+    <radialGradient id="lampglow" cx="72%" cy="18%" r="80%">
+      <stop offset="0%" stop-color="#3a2a1a" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#1a130e" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
     </radialGradient>
 
-    <!-- scoreboard bezel gradient -->
-    <linearGradient id="bezel" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#2c2c2c"/>
-      <stop offset="100%" stop-color="#0a0a0a"/>
+    <!-- Stone face gradient: dark granodiorite, warmer near the light -->
+    <linearGradient id="stoneface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a4048"/>
+      <stop offset="55%" stop-color="#252a31"/>
+      <stop offset="100%" stop-color="#161a20"/>
     </linearGradient>
 
-    <!-- LED glow -->
-    <radialGradient id="ledGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffe090" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#ffb020" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- gymnast fill -->
-    <linearGradient id="gym" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f5efd7"/>
-      <stop offset="100%" stop-color="#c9a56b"/>
+    <!-- Stone edge highlight -->
+    <linearGradient id="stoneedge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#5a6270" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- seven-segment digit builder: use a symbol per digit -->
-    <!-- Each digit sits in a 30x50 viewbox. Segments a,b,c,d,e,f,g. -->
-    <!-- Rather than symbols per digit, we draw digits inline as grouped rects with opacity animations. -->
-
-    <!-- spotlight beam -->
-    <linearGradient id="beam" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffe090" stop-opacity="0.20"/>
-      <stop offset="100%" stop-color="#ffe090" stop-opacity="0"/>
+    <!-- Chiseled band tint: a subtle inset -->
+    <linearGradient id="bandinset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
     </linearGradient>
+
+    <!-- Rock speckle: turbulence for granodiorite grain -->
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.15  0 0 0 0 0.15  0 0 0 0 0.18  0 0 0 0.35 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Warm dust motes drifting up in the lamplight -->
+    <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.3"/>
+    </filter>
+
+    <!-- Cyan chisel glow for hieroglyphs — deciphered pulse -->
+    <filter id="cyanglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="0.9" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gold glow for the deciphered band -->
+    <filter id="goldglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="0.7" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Craquelure on the stone: subtle vein cracks -->
+    <pattern id="cracks" x="0" y="0" width="140" height="140" patternUnits="userSpaceOnUse">
+      <path d="M0,40 Q30,55 60,45 T140,60" stroke="#0a0d12" stroke-width="0.6" fill="none" opacity="0.35"/>
+      <path d="M20,0 Q35,50 55,90 T80,140" stroke="#0a0d12" stroke-width="0.4" fill="none" opacity="0.3"/>
+      <path d="M100,10 Q80,70 120,110" stroke="#0a0d12" stroke-width="0.35" fill="none" opacity="0.28"/>
+    </pattern>
+
+    <!-- Clip: irregular top edge (broken corner) of the stone -->
+    <clipPath id="stoneshape">
+      <path d="M 60,30 L 175,15 L 315,40 L 340,175 L 240,190 L 55,180 Z"/>
+    </clipPath>
+
+    <!-- Reusable hieroglyph tokens (stylized) -->
+    <g id="glyph-ankh">
+      <path d="M0,-6 A4,4 0 1 1 0.01,-6 Z M0,-2 L0,10 M-5,3 L5,3" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-eye">
+      <path d="M-7,0 Q0,-5 7,0 Q0,5 -7,0 Z" stroke="currentColor" stroke-width="1" fill="none"/>
+      <circle cx="0" cy="0" r="1.6" fill="currentColor"/>
+      <path d="M-4,3 L-6,6" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-bird">
+      <path d="M-6,3 Q-3,-4 2,-2 L7,-6 L6,-1 Q3,4 -6,3 Z M-2,0 L-2,6" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round"/>
+    </g>
+    <g id="glyph-wave">
+      <path d="M-7,0 Q-4,-3 -1,0 T5,0 T11,0" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-sun">
+      <circle cx="0" cy="0" r="3.5" stroke="currentColor" stroke-width="1" fill="none"/>
+      <circle cx="0" cy="0" r="1" fill="currentColor"/>
+    </g>
+    <g id="glyph-feather">
+      <path d="M0,-7 Q4,-2 3,7 Q0,4 -3,7 Q-4,-2 0,-7 Z M0,-4 L0,6" stroke="currentColor" stroke-width="0.9" fill="none"/>
+    </g>
+    <g id="glyph-serpent">
+      <path d="M-7,4 Q-3,-4 1,2 Q5,8 8,-2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-mouth">
+      <ellipse cx="0" cy="0" rx="6" ry="1.6" stroke="currentColor" stroke-width="1" fill="none"/>
+    </g>
+    <g id="glyph-jar">
+      <path d="M-3,-5 L3,-5 L4,-2 L3,6 L-3,6 L-4,-2 Z M-3,-5 L-4,-7 L4,-7 L3,-5" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round"/>
+    </g>
+    <g id="glyph-reed">
+      <path d="M0,-7 L0,7 M-2,-4 L2,-4 M-2,-1 L2,-1 M-2,2 L2,2" stroke="currentColor" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-hand">
+      <path d="M-4,4 L-4,-2 L-2,-4 L-2,-1 L0,-5 L0,-1 L2,-5 L2,-1 L4,-3 L4,4 Z" stroke="currentColor" stroke-width="0.9" fill="none" stroke-linejoin="round"/>
+    </g>
+
+    <style>
+      .h1 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: 0.5px; }
+      .h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 2.2px; }
+      .h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; letter-spacing: 1.6px; }
+      .demo { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; letter-spacing: 1px; }
+      .greek { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: 0.8px; }
+
+      /* Decipher cycle: cyan → gold as knowledge unlocks */
+      .decipher {
+        animation: decipher 13s ease-in-out infinite;
+      }
+      @keyframes decipher {
+        0%   { fill: #7ad7ff; opacity: 0.62; }
+        45%  { fill: #7ad7ff; opacity: 0.85; }
+        55%  { fill: #e8b84a; opacity: 0.95; }
+        95%  { fill: #e8b84a; opacity: 0.9;  }
+        100% { fill: #7ad7ff; opacity: 0.62; }
+      }
+      .decipher.d2 { animation-delay: -4.5s; }
+      .decipher.d3 { animation-delay: -8.5s; }
+
+      /* Dust motes drifting up */
+      .mote { animation: rise 11s linear infinite; }
+      @keyframes rise {
+        0%   { transform: translateY(0px);  opacity: 0; }
+        15%  { opacity: 0.55; }
+        85%  { opacity: 0.35; }
+        100% { transform: translateY(-140px); opacity: 0; }
+      }
+
+      /* Lamp flicker on background glow */
+      .lamp { animation: flicker 7s ease-in-out infinite; transform-origin: center; }
+      @keyframes flicker {
+        0%,100% { opacity: 1; }
+        30%     { opacity: 0.92; }
+        55%     { opacity: 0.98; }
+        75%     { opacity: 0.9;  }
+      }
+
+      /* Headline gentle breathe */
+      .breathe { animation: breathe 11s ease-in-out infinite; transform-origin: center; }
+      @keyframes breathe {
+        0%,100% { opacity: 0.96; }
+        50%     { opacity: 1; }
+      }
+    </style>
   </defs>
 
-  <!-- backdrop -->
-  <rect width="800" height="200" fill="url(#bg)"/>
+  <!-- Base warm study background -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect class="lamp" width="800" height="200" fill="url(#lampglow)"/>
 
-  <!-- soft spotlight beams -->
-  <polygon points="150,-10 250,-10 320,210 80,210" fill="url(#beam)" opacity="0.6"/>
-  <polygon points="560,-10 660,-10 720,210 500,210" fill="url(#beam)" opacity="0.35"/>
-
-  <!-- floor line -->
-  <line x1="20" y1="188" x2="780" y2="188" stroke="#3a4358" stroke-width="1" opacity="0.5"/>
-
-  <!-- ===== OLYMPIC RINGS (top) ===== -->
-  <g transform="translate(400 22)" opacity="0.95">
-    <g fill="none" stroke-width="3">
-      <circle cx="-48" cy="0" r="10" stroke="#0081c8"/>
-      <circle cx="-24" cy="0" r="10" stroke="#fcb131"/>
-      <circle cx="0"   cy="0" r="10" stroke="#e8e8e8"/>
-      <circle cx="24"  cy="0" r="10" stroke="#00a651"/>
-      <circle cx="48"  cy="0" r="10" stroke="#ee334e"/>
-    </g>
-    <!-- gentle glow pulse -->
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+  <!-- Faint distant parchment sheet on the far right -->
+  <g opacity="0.08">
+    <rect x="640" y="30" width="130" height="150" fill="#c9a566" transform="rotate(-3 705 105)"/>
   </g>
 
-  <!-- ===== GYMNAST + UNEVEN BARS (left) ===== -->
-  <!-- Two uneven bars: low bar and high bar -->
-  <g stroke="#e8dcc0" stroke-width="3" stroke-linecap="round">
-    <!-- high bar -->
-    <line x1="40" y1="70" x2="240" y2="70"/>
-    <!-- low bar -->
-    <line x1="40" y1="140" x2="240" y2="140"/>
-    <!-- uprights -->
-    <line x1="45" y1="30" x2="45" y2="185" stroke="#7a6a4a" stroke-width="4"/>
-    <line x1="235" y1="30" x2="235" y2="185" stroke="#7a6a4a" stroke-width="4"/>
+  <!-- Drifting dust motes in the lamplight -->
+  <g fill="#e8b84a" filter="url(#softglow)">
+    <circle class="mote" cx="470" cy="170" r="1.2" style="animation-delay: -1s;"/>
+    <circle class="mote" cx="510" cy="185" r="0.9" style="animation-delay: -3s;"/>
+    <circle class="mote" cx="380" cy="175" r="1"   style="animation-delay: -5s;"/>
+    <circle class="mote" cx="590" cy="180" r="1.1" style="animation-delay: -7s;"/>
+    <circle class="mote" cx="440" cy="180" r="0.8" style="animation-delay: -9s;"/>
+    <circle class="mote" cx="700" cy="180" r="0.9" style="animation-delay: -2s;"/>
+    <circle class="mote" cx="560" cy="180" r="0.7" style="animation-delay: -6s;"/>
   </g>
 
-  <!-- gymnast: stylized mid-release figure floating above the high bar -->
+  <!-- ================= ROSETTA STONE ================= -->
   <g>
-    <!-- slow drift up and settle -->
-    <animateTransform attributeName="transform" type="translate"
-      values="0 0; 0 -6; 0 0; 0 -3; 0 0" dur="11s" repeatCount="indefinite"/>
-    <g transform="translate(140 55)" fill="url(#gym)" stroke="#7a5c30" stroke-width="0.8">
-      <!-- gentle body sway -->
-      <animateTransform attributeName="transform" type="rotate"
-        values="-6 0 0; 6 0 0; -6 0 0" dur="13s" repeatCount="indefinite" additive="sum"/>
-      <!-- torso -->
-      <ellipse cx="0" cy="0" rx="9" ry="16"/>
-      <!-- leotard accent (Romanian tricolor stripe) -->
-      <rect x="-9" y="-4" width="18" height="3" fill="#002b7f"/>
-      <rect x="-9" y="-1" width="18" height="3" fill="#fcd116"/>
-      <rect x="-9" y="2"  width="18" height="3" fill="#ce1126"/>
-      <!-- head -->
-      <circle cx="0" cy="-22" r="7"/>
-      <!-- hair bun -->
-      <circle cx="6" cy="-27" r="3" fill="#3a2a18"/>
-      <!-- arms outstretched upward (release move) -->
-      <path d="M -6 -10 Q -22 -18 -30 -30" stroke="url(#gym)" stroke-width="5" fill="none" stroke-linecap="round"/>
-      <path d="M  6 -10 Q  22 -18  30 -30" stroke="url(#gym)" stroke-width="5" fill="none" stroke-linecap="round"/>
-      <!-- hands -->
-      <circle cx="-30" cy="-30" r="3"/>
-      <circle cx="30" cy="-30" r="3"/>
-      <!-- legs together, pointed toes -->
-      <path d="M -3 14 Q -6 30 -3 44" stroke="url(#gym)" stroke-width="6" fill="none" stroke-linecap="round"/>
-      <path d="M  3 14 Q  6 30  3 44" stroke="url(#gym)" stroke-width="6" fill="none" stroke-linecap="round"/>
-      <!-- feet -->
-      <ellipse cx="-3" cy="46" rx="3" ry="2"/>
-      <ellipse cx="3"  cy="46" rx="3" ry="2"/>
-    </g>
-  </g>
+    <!-- Cast shadow beneath the stone -->
+    <ellipse cx="200" cy="188" rx="150" ry="7" fill="#000" opacity="0.55"/>
 
-  <!-- little chalk-dust puffs floating up from the bars -->
-  <g fill="#f5efd7" opacity="0.7">
-    <circle cx="80" cy="140" r="1.6">
-      <animate attributeName="cy" values="140;110;80" dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.7;0.3;0" dur="7s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="120" cy="140" r="1.2">
-      <animate attributeName="cy" values="140;115;90" dur="11s" repeatCount="indefinite" begin="1s"/>
-      <animate attributeName="opacity" values="0.6;0.3;0" dur="11s" repeatCount="indefinite" begin="1s"/>
-    </circle>
-    <circle cx="200" cy="140" r="1.4">
-      <animate attributeName="cy" values="140;105;70" dur="13s" repeatCount="indefinite" begin="2s"/>
-      <animate attributeName="opacity" values="0.6;0.2;0" dur="13s" repeatCount="indefinite" begin="2s"/>
-    </circle>
-    <circle cx="60" cy="70" r="1.2">
-      <animate attributeName="cy" values="70;55;40" dur="11s" repeatCount="indefinite" begin="3s"/>
-      <animate attributeName="opacity" values="0.5;0.2;0" dur="11s" repeatCount="indefinite" begin="3s"/>
-    </circle>
-  </g>
+    <!-- Stone body (irregular broken shape) -->
+    <g clip-path="url(#stoneshape)">
+      <rect x="40" y="0" width="320" height="200" fill="url(#stoneface)"/>
+      <!-- Granodiorite grain -->
+      <rect x="40" y="0" width="320" height="200" filter="url(#grain)"/>
+      <!-- Craquelure -->
+      <rect x="40" y="0" width="320" height="200" fill="url(#cracks)"/>
 
-  <!-- ===== SCOREBOARD (upper-right) ===== -->
-  <g transform="translate(605 60)">
-    <!-- bezel -->
-    <rect x="-90" y="-32" width="180" height="64" rx="6" ry="6" fill="url(#bezel)" stroke="#3a3a3a" stroke-width="1.5"/>
-    <!-- inner panel -->
-    <rect x="-84" y="-26" width="168" height="52" rx="3" ry="3" fill="#050505" stroke="#1a1a1a" stroke-width="1"/>
+      <!-- Warm rim highlight along upper-right edge -->
+      <path d="M 175,15 L 315,40 L 320,80" stroke="#8a6a3a" stroke-width="1.4" fill="none" opacity="0.55"/>
+      <path d="M 175,15 L 315,40" stroke="#e8b84a" stroke-width="0.7" fill="none" opacity="0.45"/>
 
-    <!-- LED glow behind digits -->
-    <ellipse cx="0" cy="0" rx="70" ry="20" fill="url(#ledGlow)"/>
-
-    <!-- Score digits: alternate between "1.00" (~4s) and "10.00" (~1s) -->
-    <!-- We use two text groups toggled via opacity animation -->
-    <g font-family="'Courier New', Consolas, monospace" font-weight="700" text-anchor="middle" letter-spacing="2">
-      <!-- "1.00" reading (the bug) -->
-      <g fill="#ffb020">
-        <text x="0" y="12" font-size="42" style="text-shadow:0 0 6px #ff9500">1.00</text>
-        <animate attributeName="opacity" values="1;1;1;0;0;1" keyTimes="0;0.65;0.72;0.75;0.92;1" dur="7s" repeatCount="indefinite"/>
+      <!-- Three chiseled bands (inset) -->
+      <!-- Band 1: Hieroglyphs -->
+      <g>
+        <rect x="72" y="42" width="248" height="38" fill="url(#bandinset)" opacity="0.9"/>
+        <rect x="72" y="42" width="248" height="38" fill="none" stroke="#0a0d12" stroke-width="0.6" opacity="0.7"/>
+        <!-- 12 stylized hieroglyphs, cycling colors -->
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(90, 61)"><use href="#glyph-ankh"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(112, 61)"><use href="#glyph-eye"/></g>
+        <g class="decipher d3" filter="url(#cyanglow)" transform="translate(134, 61)"><use href="#glyph-bird"/></g>
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(156, 61)"><use href="#glyph-wave"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(178, 61)"><use href="#glyph-sun"/></g>
+        <g class="decipher d3" filter="url(#cyanglow)" transform="translate(200, 61)"><use href="#glyph-feather"/></g>
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(222, 61)"><use href="#glyph-serpent"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(244, 61)"><use href="#glyph-mouth"/></g>
+        <g class="decipher d3" filter="url(#cyanglow)" transform="translate(266, 61)"><use href="#glyph-jar"/></g>
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(288, 61)"><use href="#glyph-reed"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(308, 61)"><use href="#glyph-hand"/></g>
       </g>
-      <!-- "10.00" reveal (the truth) -->
-      <g fill="#ffe090">
-        <text x="0" y="12" font-size="34">10.00</text>
-        <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.65;0.72;0.75;0.92;1" dur="7s" repeatCount="indefinite"/>
+
+      <!-- Band 2: Demotic (flowing cursive dashes) -->
+      <g>
+        <rect x="72" y="90" width="248" height="32" fill="url(#bandinset)" opacity="0.9"/>
+        <rect x="72" y="90" width="248" height="32" fill="none" stroke="#0a0d12" stroke-width="0.6" opacity="0.7"/>
+        <g stroke="#7ad7ff" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.75" filter="url(#cyanglow)">
+          <path class="decipher d2" d="M84,107 q6,-4 12,0 t12,0 t12,-2 t14,2 t12,-1"/>
+          <path class="decipher"    d="M156,106 q4,-3 9,-1 t10,1 t11,-2 t10,2 t12,-1"/>
+          <path class="decipher d3" d="M224,107 q5,-3 10,0 t12,-1 t10,2 t12,-2 t14,1"/>
+          <!-- descenders -->
+          <path class="decipher d2" d="M92,109 l-2,4 M120,109 l1,4 M148,108 l-1,4 M180,108 l2,4 M208,109 l-2,4 M240,108 l1,4 M270,109 l-1,4 M300,108 l2,4"/>
+        </g>
+      </g>
+
+      <!-- Band 3: Ancient Greek -->
+      <g>
+        <rect x="72" y="130" width="248" height="34" fill="url(#bandinset)" opacity="0.9"/>
+        <rect x="72" y="130" width="248" height="34" fill="none" stroke="#0a0d12" stroke-width="0.6" opacity="0.7"/>
+        <g class="decipher d3" filter="url(#goldglow)">
+          <text x="196" y="150" class="greek" font-size="10" fill="currentColor" text-anchor="middle">ΒΑΣΙΛΕΥΟΝΤΟΣ ΤΟΥ ΝΕΟΥ</text>
+          <text x="196" y="161" class="greek" font-size="8"  fill="currentColor" text-anchor="middle">ΚΑΙ ΠΑΡΑΛΑΒΟΝΤΟΣ ΠΑΡΑ ΤΟΥ ΠΑΤΡΟΣ</text>
+        </g>
       </g>
     </g>
 
-    <!-- small "SCORE" label -->
-    <text x="-72" y="-14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#8a7a4a" letter-spacing="2">SCORE</text>
-    <!-- small "BARS" label -->
-    <text x="72" y="-14" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#8a7a4a" letter-spacing="2">BARS</text>
+    <!-- Stone silhouette outline (over clip) -->
+    <path d="M 60,30 L 175,15 L 315,40 L 340,175 L 240,190 L 55,180 Z"
+          fill="none" stroke="#0a0d12" stroke-width="1.2"/>
+    <path d="M 60,30 L 175,15 L 315,40" fill="none" stroke="url(#stoneedge)" stroke-width="1.4"/>
 
-    <!-- flicker line -->
-    <line x1="-84" y1="0" x2="84" y2="0" stroke="#000" stroke-width="0.5" opacity="0.15"/>
+    <!-- Broken chip corner top-left -->
+    <path d="M 60,30 L 90,45 L 78,60 Z" fill="#0d1117" opacity="0.55"/>
+  </g>
 
-    <!-- tiny caption under the scoreboard -->
-    <text x="0" y="46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8" font-weight="600" fill="#c9b280" letter-spacing="2" opacity="0.9">
-      THE BOARD WASN'T BUILT FOR A TEN
+  <!-- Divider strokes (three-script guides on the right, subtle) -->
+  <g opacity="0.15" stroke="#e8b84a" stroke-width="0.5" fill="none">
+    <line x1="380" y1="70" x2="410" y2="70"/>
+    <line x1="380" y1="105" x2="410" y2="105"/>
+    <line x1="380" y1="140" x2="410" y2="140"/>
+  </g>
+
+  <!-- ================= HEADLINE ================= -->
+  <g class="breathe">
+    <text x="415" y="82" class="h1" font-size="42" fill="#f0e6cc">JULY 19, 2026</text>
+    <!-- warm underline echoing lamplight -->
+    <rect x="416" y="90" width="330" height="2" fill="#e8b84a" opacity="0.85"/>
+  </g>
+
+  <!-- Subhead: gold, deciphered -->
+  <text x="415" y="118" class="h2" font-size="14" fill="#e8b84a">ROSETTA STONE
+    <animate attributeName="opacity" values="0.95;1;0.95" dur="7s" repeatCount="indefinite"/>
+  </text>
+  <text x="597" y="118" class="h2" font-size="14" fill="#f0e6cc" opacity="0.88">·  227 YEARS</text>
+
+  <!-- Tertiary line: italic caption -->
+  <text x="415" y="142" class="h3" font-size="10" fill="#c9a566" opacity="0.9">
+    RASHID  ·  19 JULY 1799  ·  THREE SCRIPTS, ONE DECREE
+  </text>
+
+  <!-- Small "decipher" annotation line: cyan glyph → gold letter, animating across -->
+  <g transform="translate(415,160)">
+    <g class="decipher" filter="url(#cyanglow)" transform="translate(8,8)"><use href="#glyph-ankh"/></g>
+    <text x="30" y="12" class="demo" font-size="10" fill="#7ad7ff" opacity="0.75">
+      <tspan>ⲣⲱⲙⲉ</tspan>
+      <animate attributeName="opacity" values="0.4;0.85;0.4" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <text x="82" y="12" class="h2" font-size="12" fill="#e8b84a" filter="url(#goldglow)">→</text>
+    <text x="100" y="12" class="greek" font-size="11" fill="#e8b84a">
+      <tspan>ΠΤΟΛΕΜΑΙΟΣ</tspan>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </text>
+    <text x="192" y="12" class="h2" font-size="12" fill="#e8b84a" filter="url(#goldglow)">→</text>
+    <text x="210" y="12" class="demo" font-size="10" fill="#f0e6cc" opacity="0.9">
+      <tspan>PTOLEMY</tspan>
     </text>
   </g>
 
-  <!-- ===== TEXT BLOCK ===== -->
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <!-- Big date headline -->
-    <text x="500" y="145" text-anchor="middle" font-size="38" font-weight="800" fill="#f5efd7" letter-spacing="2">
-      JULY 18, 2026
-    </text>
-
-    <!-- Romania tricolor accent bar under the date -->
-    <g>
-      <rect x="380" y="152" width="80" height="3" fill="#002b7f"/>
-      <rect x="460" y="152" width="80" height="3" fill="#fcd116"/>
-      <rect x="540" y="152" width="80" height="3" fill="#ce1126"/>
-    </g>
-
-    <!-- subhead -->
-    <text x="500" y="175" text-anchor="middle" font-size="13" font-weight="700" fill="#fcd116" letter-spacing="4">
-      NADIA COMĂNECI · PERFECT 10 · 50 YEARS
-    </text>
-
-    <!-- tertiary -->
-    <text x="500" y="192" text-anchor="middle" font-size="9" font-weight="500" font-style="italic" fill="#a89878" letter-spacing="2">
-      MONTREAL 1976 · UNEVEN BARS · "THE BOARD SHOWED 1.00"
-    </text>
+  <!-- Faint quill/pen and inkwell suggestion in the far lower right (Champollion's desk) -->
+  <g transform="translate(730,160)" opacity="0.5">
+    <!-- inkwell -->
+    <rect x="-6" y="8" width="12" height="10" fill="#221812" stroke="#4a3020" stroke-width="0.6"/>
+    <ellipse cx="0" cy="8" rx="6" ry="2" fill="#0d1117" stroke="#4a3020" stroke-width="0.5"/>
+    <!-- quill -->
+    <path d="M2,7 Q18,-14 30,-32" stroke="#c9a566" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M12,-8 Q18,-16 24,-24 L26,-22 Q20,-14 14,-6 Z" fill="#c9a566" opacity="0.7"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 0 8; -3 0 8; 0 0 8; 2 0 8; 0 0 8" dur="13s" repeatCount="indefinite"/>
   </g>
 
-  <!-- subtle stadium confetti/light specks -->
-  <g fill="#f5efd7" opacity="0.55">
-    <circle cx="330" cy="45" r="1">
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="750" cy="30" r="1.2">
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" repeatCount="indefinite" begin="2s"/>
-    </circle>
-    <circle cx="720" cy="180" r="1">
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s" repeatCount="indefinite" begin="1s"/>
-    </circle>
-    <circle cx="280" cy="180" r="1.2">
-      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="11s" repeatCount="indefinite" begin="3s"/>
-    </circle>
-    <circle cx="20" cy="100" r="1">
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="13s" repeatCount="indefinite" begin="4s"/>
-    </circle>
-  </g>
+  <!-- Rim vignette -->
+  <rect width="800" height="200" fill="none" stroke="#000" stroke-width="2" opacity="0.35"/>
 </svg>
