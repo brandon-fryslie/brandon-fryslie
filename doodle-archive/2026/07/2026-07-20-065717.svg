@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Discovery of the Rosetta Stone — July 19, 1799 (227th anniversary). During Napoleon's Egyptian campaign, French soldier Pierre-François Bouchard uncovered the granodiorite stele at Fort Julien in Rashid (Rosetta), Egypt. The stone bears a single decree in three scripts — Egyptian hieroglyphs, Egyptian demotic, and ancient Greek — which allowed Champollion to decipher hieroglyphics in 1822. A museum-lit tableau: the dark granodiorite slab tilted center-left with three stacked bands of glowing script (hieroglyphs on top, demotic in the middle, Greek at the bottom), a warm sandstone-and-lamp-black background evoking a Napoleonic-era study, the large ivory JULY 19, 2026 headline in the light on the right, a gold ROSETTA STONE · 227 YEARS subhead, and italic RASHID · 19 JULY 1799 · THREE SCRIPTS, ONE DECREE tertiary along the bottom. Palette: lamp-black #0d1117, warm parchment shadow #221812, granodiorite #2d3138, granodiorite highlight #4a5058, chiseled cyan-glow #7ad7ff, deciphered gold #e8b84a, ivory #f0e6cc, sandstone #c9a566, verdigris #5aa896, ember #d9713a. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 19, 2026 — 227th anniversary of the discovery of the Rosetta Stone in Rashid, Egypt on July 19, 1799. A dark granodiorite stele tilted on the left with three glowing bands of script (hieroglyphs, demotic, ancient Greek), warm lamplight from the upper right, a large JULY 19, 2026 headline, ROSETTA STONE · 227 YEARS subhead in gold, and RASHID · 19 JULY 1799 · THREE SCRIPTS, ONE DECREE tertiary along the bottom.">
+  <defs>
+    <!-- Warm study background: lamp-black with a soft parchment glow from upper right -->
+    <radialGradient id="lampglow" cx="72%" cy="18%" r="80%">
+      <stop offset="0%" stop-color="#3a2a1a" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#1a130e" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Stone face gradient: dark granodiorite, warmer near the light -->
+    <linearGradient id="stoneface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a4048"/>
+      <stop offset="55%" stop-color="#252a31"/>
+      <stop offset="100%" stop-color="#161a20"/>
+    </linearGradient>
+
+    <!-- Stone edge highlight -->
+    <linearGradient id="stoneedge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#5a6270" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Chiseled band tint: a subtle inset -->
+    <linearGradient id="bandinset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Rock speckle: turbulence for granodiorite grain -->
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.15  0 0 0 0 0.15  0 0 0 0 0.18  0 0 0 0.35 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Warm dust motes drifting up in the lamplight -->
+    <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.3"/>
+    </filter>
+
+    <!-- Cyan chisel glow for hieroglyphs — deciphered pulse -->
+    <filter id="cyanglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="0.9" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gold glow for the deciphered band -->
+    <filter id="goldglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="0.7" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Craquelure on the stone: subtle vein cracks -->
+    <pattern id="cracks" x="0" y="0" width="140" height="140" patternUnits="userSpaceOnUse">
+      <path d="M0,40 Q30,55 60,45 T140,60" stroke="#0a0d12" stroke-width="0.6" fill="none" opacity="0.35"/>
+      <path d="M20,0 Q35,50 55,90 T80,140" stroke="#0a0d12" stroke-width="0.4" fill="none" opacity="0.3"/>
+      <path d="M100,10 Q80,70 120,110" stroke="#0a0d12" stroke-width="0.35" fill="none" opacity="0.28"/>
+    </pattern>
+
+    <!-- Clip: irregular top edge (broken corner) of the stone -->
+    <clipPath id="stoneshape">
+      <path d="M 60,30 L 175,15 L 315,40 L 340,175 L 240,190 L 55,180 Z"/>
+    </clipPath>
+
+    <!-- Reusable hieroglyph tokens (stylized) -->
+    <g id="glyph-ankh">
+      <path d="M0,-6 A4,4 0 1 1 0.01,-6 Z M0,-2 L0,10 M-5,3 L5,3" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-eye">
+      <path d="M-7,0 Q0,-5 7,0 Q0,5 -7,0 Z" stroke="currentColor" stroke-width="1" fill="none"/>
+      <circle cx="0" cy="0" r="1.6" fill="currentColor"/>
+      <path d="M-4,3 L-6,6" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-bird">
+      <path d="M-6,3 Q-3,-4 2,-2 L7,-6 L6,-1 Q3,4 -6,3 Z M-2,0 L-2,6" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round"/>
+    </g>
+    <g id="glyph-wave">
+      <path d="M-7,0 Q-4,-3 -1,0 T5,0 T11,0" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-sun">
+      <circle cx="0" cy="0" r="3.5" stroke="currentColor" stroke-width="1" fill="none"/>
+      <circle cx="0" cy="0" r="1" fill="currentColor"/>
+    </g>
+    <g id="glyph-feather">
+      <path d="M0,-7 Q4,-2 3,7 Q0,4 -3,7 Q-4,-2 0,-7 Z M0,-4 L0,6" stroke="currentColor" stroke-width="0.9" fill="none"/>
+    </g>
+    <g id="glyph-serpent">
+      <path d="M-7,4 Q-3,-4 1,2 Q5,8 8,-2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-mouth">
+      <ellipse cx="0" cy="0" rx="6" ry="1.6" stroke="currentColor" stroke-width="1" fill="none"/>
+    </g>
+    <g id="glyph-jar">
+      <path d="M-3,-5 L3,-5 L4,-2 L3,6 L-3,6 L-4,-2 Z M-3,-5 L-4,-7 L4,-7 L3,-5" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round"/>
+    </g>
+    <g id="glyph-reed">
+      <path d="M0,-7 L0,7 M-2,-4 L2,-4 M-2,-1 L2,-1 M-2,2 L2,2" stroke="currentColor" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="glyph-hand">
+      <path d="M-4,4 L-4,-2 L-2,-4 L-2,-1 L0,-5 L0,-1 L2,-5 L2,-1 L4,-3 L4,4 Z" stroke="currentColor" stroke-width="0.9" fill="none" stroke-linejoin="round"/>
+    </g>
+
+    <style>
+      .h1 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: 0.5px; }
+      .h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 2.2px; }
+      .h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; letter-spacing: 1.6px; }
+      .demo { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; letter-spacing: 1px; }
+      .greek { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: 0.8px; }
+
+      /* Decipher cycle: cyan → gold as knowledge unlocks */
+      .decipher {
+        animation: decipher 13s ease-in-out infinite;
+      }
+      @keyframes decipher {
+        0%   { fill: #7ad7ff; opacity: 0.62; }
+        45%  { fill: #7ad7ff; opacity: 0.85; }
+        55%  { fill: #e8b84a; opacity: 0.95; }
+        95%  { fill: #e8b84a; opacity: 0.9;  }
+        100% { fill: #7ad7ff; opacity: 0.62; }
+      }
+      .decipher.d2 { animation-delay: -4.5s; }
+      .decipher.d3 { animation-delay: -8.5s; }
+
+      /* Dust motes drifting up */
+      .mote { animation: rise 11s linear infinite; }
+      @keyframes rise {
+        0%   { transform: translateY(0px);  opacity: 0; }
+        15%  { opacity: 0.55; }
+        85%  { opacity: 0.35; }
+        100% { transform: translateY(-140px); opacity: 0; }
+      }
+
+      /* Lamp flicker on background glow */
+      .lamp { animation: flicker 7s ease-in-out infinite; transform-origin: center; }
+      @keyframes flicker {
+        0%,100% { opacity: 1; }
+        30%     { opacity: 0.92; }
+        55%     { opacity: 0.98; }
+        75%     { opacity: 0.9;  }
+      }
+
+      /* Headline gentle breathe */
+      .breathe { animation: breathe 11s ease-in-out infinite; transform-origin: center; }
+      @keyframes breathe {
+        0%,100% { opacity: 0.96; }
+        50%     { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Base warm study background -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect class="lamp" width="800" height="200" fill="url(#lampglow)"/>
+
+  <!-- Faint distant parchment sheet on the far right -->
+  <g opacity="0.08">
+    <rect x="640" y="30" width="130" height="150" fill="#c9a566" transform="rotate(-3 705 105)"/>
+  </g>
+
+  <!-- Drifting dust motes in the lamplight -->
+  <g fill="#e8b84a" filter="url(#softglow)">
+    <circle class="mote" cx="470" cy="170" r="1.2" style="animation-delay: -1s;"/>
+    <circle class="mote" cx="510" cy="185" r="0.9" style="animation-delay: -3s;"/>
+    <circle class="mote" cx="380" cy="175" r="1"   style="animation-delay: -5s;"/>
+    <circle class="mote" cx="590" cy="180" r="1.1" style="animation-delay: -7s;"/>
+    <circle class="mote" cx="440" cy="180" r="0.8" style="animation-delay: -9s;"/>
+    <circle class="mote" cx="700" cy="180" r="0.9" style="animation-delay: -2s;"/>
+    <circle class="mote" cx="560" cy="180" r="0.7" style="animation-delay: -6s;"/>
+  </g>
+
+  <!-- ================= ROSETTA STONE ================= -->
+  <g>
+    <!-- Cast shadow beneath the stone -->
+    <ellipse cx="200" cy="188" rx="150" ry="7" fill="#000" opacity="0.55"/>
+
+    <!-- Stone body (irregular broken shape) -->
+    <g clip-path="url(#stoneshape)">
+      <rect x="40" y="0" width="320" height="200" fill="url(#stoneface)"/>
+      <!-- Granodiorite grain -->
+      <rect x="40" y="0" width="320" height="200" filter="url(#grain)"/>
+      <!-- Craquelure -->
+      <rect x="40" y="0" width="320" height="200" fill="url(#cracks)"/>
+
+      <!-- Warm rim highlight along upper-right edge -->
+      <path d="M 175,15 L 315,40 L 320,80" stroke="#8a6a3a" stroke-width="1.4" fill="none" opacity="0.55"/>
+      <path d="M 175,15 L 315,40" stroke="#e8b84a" stroke-width="0.7" fill="none" opacity="0.45"/>
+
+      <!-- Three chiseled bands (inset) -->
+      <!-- Band 1: Hieroglyphs -->
+      <g>
+        <rect x="72" y="42" width="248" height="38" fill="url(#bandinset)" opacity="0.9"/>
+        <rect x="72" y="42" width="248" height="38" fill="none" stroke="#0a0d12" stroke-width="0.6" opacity="0.7"/>
+        <!-- 12 stylized hieroglyphs, cycling colors -->
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(90, 61)"><use href="#glyph-ankh"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(112, 61)"><use href="#glyph-eye"/></g>
+        <g class="decipher d3" filter="url(#cyanglow)" transform="translate(134, 61)"><use href="#glyph-bird"/></g>
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(156, 61)"><use href="#glyph-wave"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(178, 61)"><use href="#glyph-sun"/></g>
+        <g class="decipher d3" filter="url(#cyanglow)" transform="translate(200, 61)"><use href="#glyph-feather"/></g>
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(222, 61)"><use href="#glyph-serpent"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(244, 61)"><use href="#glyph-mouth"/></g>
+        <g class="decipher d3" filter="url(#cyanglow)" transform="translate(266, 61)"><use href="#glyph-jar"/></g>
+        <g class="decipher" filter="url(#cyanglow)" transform="translate(288, 61)"><use href="#glyph-reed"/></g>
+        <g class="decipher d2" filter="url(#cyanglow)" transform="translate(308, 61)"><use href="#glyph-hand"/></g>
+      </g>
+
+      <!-- Band 2: Demotic (flowing cursive dashes) -->
+      <g>
+        <rect x="72" y="90" width="248" height="32" fill="url(#bandinset)" opacity="0.9"/>
+        <rect x="72" y="90" width="248" height="32" fill="none" stroke="#0a0d12" stroke-width="0.6" opacity="0.7"/>
+        <g stroke="#7ad7ff" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.75" filter="url(#cyanglow)">
+          <path class="decipher d2" d="M84,107 q6,-4 12,0 t12,0 t12,-2 t14,2 t12,-1"/>
+          <path class="decipher"    d="M156,106 q4,-3 9,-1 t10,1 t11,-2 t10,2 t12,-1"/>
+          <path class="decipher d3" d="M224,107 q5,-3 10,0 t12,-1 t10,2 t12,-2 t14,1"/>
+          <!-- descenders -->
+          <path class="decipher d2" d="M92,109 l-2,4 M120,109 l1,4 M148,108 l-1,4 M180,108 l2,4 M208,109 l-2,4 M240,108 l1,4 M270,109 l-1,4 M300,108 l2,4"/>
+        </g>
+      </g>
+
+      <!-- Band 3: Ancient Greek -->
+      <g>
+        <rect x="72" y="130" width="248" height="34" fill="url(#bandinset)" opacity="0.9"/>
+        <rect x="72" y="130" width="248" height="34" fill="none" stroke="#0a0d12" stroke-width="0.6" opacity="0.7"/>
+        <g class="decipher d3" filter="url(#goldglow)">
+          <text x="196" y="150" class="greek" font-size="10" fill="currentColor" text-anchor="middle">ΒΑΣΙΛΕΥΟΝΤΟΣ ΤΟΥ ΝΕΟΥ</text>
+          <text x="196" y="161" class="greek" font-size="8"  fill="currentColor" text-anchor="middle">ΚΑΙ ΠΑΡΑΛΑΒΟΝΤΟΣ ΠΑΡΑ ΤΟΥ ΠΑΤΡΟΣ</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Stone silhouette outline (over clip) -->
+    <path d="M 60,30 L 175,15 L 315,40 L 340,175 L 240,190 L 55,180 Z"
+          fill="none" stroke="#0a0d12" stroke-width="1.2"/>
+    <path d="M 60,30 L 175,15 L 315,40" fill="none" stroke="url(#stoneedge)" stroke-width="1.4"/>
+
+    <!-- Broken chip corner top-left -->
+    <path d="M 60,30 L 90,45 L 78,60 Z" fill="#0d1117" opacity="0.55"/>
+  </g>
+
+  <!-- Divider strokes (three-script guides on the right, subtle) -->
+  <g opacity="0.15" stroke="#e8b84a" stroke-width="0.5" fill="none">
+    <line x1="380" y1="70" x2="410" y2="70"/>
+    <line x1="380" y1="105" x2="410" y2="105"/>
+    <line x1="380" y1="140" x2="410" y2="140"/>
+  </g>
+
+  <!-- ================= HEADLINE ================= -->
+  <g class="breathe">
+    <text x="415" y="82" class="h1" font-size="42" fill="#f0e6cc">JULY 19, 2026</text>
+    <!-- warm underline echoing lamplight -->
+    <rect x="416" y="90" width="330" height="2" fill="#e8b84a" opacity="0.85"/>
+  </g>
+
+  <!-- Subhead: gold, deciphered -->
+  <text x="415" y="118" class="h2" font-size="14" fill="#e8b84a">ROSETTA STONE
+    <animate attributeName="opacity" values="0.95;1;0.95" dur="7s" repeatCount="indefinite"/>
+  </text>
+  <text x="597" y="118" class="h2" font-size="14" fill="#f0e6cc" opacity="0.88">·  227 YEARS</text>
+
+  <!-- Tertiary line: italic caption -->
+  <text x="415" y="142" class="h3" font-size="10" fill="#c9a566" opacity="0.9">
+    RASHID  ·  19 JULY 1799  ·  THREE SCRIPTS, ONE DECREE
+  </text>
+
+  <!-- Small "decipher" annotation line: cyan glyph → gold letter, animating across -->
+  <g transform="translate(415,160)">
+    <g class="decipher" filter="url(#cyanglow)" transform="translate(8,8)"><use href="#glyph-ankh"/></g>
+    <text x="30" y="12" class="demo" font-size="10" fill="#7ad7ff" opacity="0.75">
+      <tspan>ⲣⲱⲙⲉ</tspan>
+      <animate attributeName="opacity" values="0.4;0.85;0.4" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <text x="82" y="12" class="h2" font-size="12" fill="#e8b84a" filter="url(#goldglow)">→</text>
+    <text x="100" y="12" class="greek" font-size="11" fill="#e8b84a">
+      <tspan>ΠΤΟΛΕΜΑΙΟΣ</tspan>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </text>
+    <text x="192" y="12" class="h2" font-size="12" fill="#e8b84a" filter="url(#goldglow)">→</text>
+    <text x="210" y="12" class="demo" font-size="10" fill="#f0e6cc" opacity="0.9">
+      <tspan>PTOLEMY</tspan>
+    </text>
+  </g>
+
+  <!-- Faint quill/pen and inkwell suggestion in the far lower right (Champollion's desk) -->
+  <g transform="translate(730,160)" opacity="0.5">
+    <!-- inkwell -->
+    <rect x="-6" y="8" width="12" height="10" fill="#221812" stroke="#4a3020" stroke-width="0.6"/>
+    <ellipse cx="0" cy="8" rx="6" ry="2" fill="#0d1117" stroke="#4a3020" stroke-width="0.5"/>
+    <!-- quill -->
+    <path d="M2,7 Q18,-14 30,-32" stroke="#c9a566" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M12,-8 Q18,-16 24,-24 L26,-22 Q20,-14 14,-6 Z" fill="#c9a566" opacity="0.7"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 0 8; -3 0 8; 0 0 8; 2 0 8; 0 0 8" dur="13s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Rim vignette -->
+  <rect width="800" height="200" fill="none" stroke="#000" stroke-width="2" opacity="0.35"/>
+</svg>
