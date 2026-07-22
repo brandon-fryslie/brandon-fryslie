@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Ernest Hemingway's 127th birthday — July 21, 1899, Oak Park, Illinois. Nobel laureate (1954) and Pulitzer winner (1953, "The Old Man and the Sea"), architect of the iceberg-theory prose that reshaped 20th-century American fiction. A writer's-desk tableau in warm lamplight: a vintage black Corona portable typewriter on the left with a sheet of paper rising out of it bearing the freshly-typed line "The old man was thin and gaunt with deep wrinkles.", a tumbler of amber whiskey beside it, a stack of typed manuscript pages, a curl of cigar smoke drifting up, a small pewter compass, and — sun-caught through the window on the right — the silver silhouette of a leaping marlin arcing over the sea horizon. Large ivory JULY 21, 2026 headline sits in the light on the right; sepia HEMINGWAY · 127 YEARS subhead; italic OAK PARK · 21 JULY 1899 · THE ICEBERG BENEATH tertiary. Palette: deep umber #0d1117, walnut #1a1108, mahogany #2a1608, lamplight amber #d9a54a, warm cream ivory #f0e6cc, whiskey #c9761e, whiskey highlight #f5b866, sea slate #2a3f4a, sea foam #7ea7b4, marlin silver #d6dde5, paper white #f2ead8, ink black #0a0906, cigar ember #ff8a3b, ember smoke #b5a996, typewriter black #14100c, typewriter chrome #a4a4a0. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 21, 2026 — 127th birthday of Ernest Hemingway (born July 21, 1899, Oak Park, Illinois). A warm-lamplit writer's desk with a vintage Corona portable typewriter on the left, a sheet of paper rising from it with the typed line 'The old man was thin and gaunt with deep wrinkles.', a tumbler of amber whiskey and a stack of manuscript pages beside it, curls of cigar smoke drifting up, a pewter compass, and a silver marlin leaping over a distant sea horizon through a window on the right. A large ivory JULY 21, 2026 headline sits in the lamplight on the right, with a sepia HEMINGWAY · 127 YEARS subhead and italic OAK PARK · 21 JULY 1899 · THE ICEBERG BENEATH tertiary along the bottom.">
+  <defs>
+    <!-- Warm lamplight radial: brightest upper-right, falling into deep umber shadow at lower-left -->
+    <radialGradient id="lamp" cx="72%" cy="30%" r="85%">
+      <stop offset="0%"  stop-color="#3a2410"/>
+      <stop offset="35%" stop-color="#241608"/>
+      <stop offset="75%" stop-color="#150c05"/>
+      <stop offset="100%" stop-color="#0d0703"/>
+    </radialGradient>
+
+    <!-- Window pane: distant sea + sky through a lit window -->
+    <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#f5b866"/>
+      <stop offset="35%" stop-color="#d9a54a"/>
+      <stop offset="55%" stop-color="#5a6a70"/>
+      <stop offset="100%" stop-color="#2a3f4a"/>
+    </linearGradient>
+
+    <!-- Paper: warm cream with a whisper of tint -->
+    <linearGradient id="paper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#f4ecd8"/>
+      <stop offset="100%" stop-color="#d9c8a0"/>
+    </linearGradient>
+
+    <!-- Whiskey liquid -->
+    <linearGradient id="whiskey" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#f5b866"/>
+      <stop offset="60%" stop-color="#c9761e"/>
+      <stop offset="100%" stop-color="#7a3a08"/>
+    </linearGradient>
+
+    <!-- Typewriter body: matte black with chrome edge -->
+    <linearGradient id="tybody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#22190f"/>
+      <stop offset="55%" stop-color="#14100c"/>
+      <stop offset="100%" stop-color="#0a0705"/>
+    </linearGradient>
+
+    <!-- Desk wood: mahogany plane -->
+    <linearGradient id="desk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#4a2610"/>
+      <stop offset="100%" stop-color="#1a0d05"/>
+    </linearGradient>
+
+    <!-- Paper fiber grain -->
+    <filter id="fiber" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="9"/>
+      <feColorMatrix values="0 0 0 0 0.55  0 0 0 0 0.48  0 0 0 0 0.32  0 0 0 0.15 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Soft glow (lamp / ember / marlin sheen) -->
+    <filter id="soft" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+
+    <!-- Cigar ember glow -->
+    <filter id="ember" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Wood grain streaks -->
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.7" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.24  0 0 0 0 0.12  0 0 0 0 0.04  0 0 0 0.35 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <style>
+      .h1 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: 1px; }
+      .h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 2.4px; }
+      .h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; letter-spacing: 1.6px; }
+      .type { font-family: 'Courier New', ui-monospace, Menlo, monospace; letter-spacing: 0.5px; }
+
+      /* Headline breathe — like lamp warmth swelling */
+      .breathe { animation: breathe 11s ease-in-out infinite; transform-origin: center; }
+      @keyframes breathe {
+        0%,100% { opacity: 0.94; }
+        50%     { opacity: 1;    }
+      }
+
+      /* Typewriter subtle shake as key strikes */
+      .strike { animation: strike 7s ease-in-out infinite; transform-origin: 100px 130px; }
+      @keyframes strike {
+        0%, 8%, 100% { transform: translate(0,0); }
+        3%   { transform: translate(0.8px, 0.4px); }
+        5%   { transform: translate(-0.6px, 0.6px); }
+      }
+
+      /* Paper rises as it types */
+      .roll { animation: roll 13s ease-in-out infinite; transform-origin: 100px 90px; }
+      @keyframes roll {
+        0%,100% { transform: translate(0, 0); }
+        50%     { transform: translate(0, -1.2px); }
+      }
+
+      /* Smoke drift */
+      .drift1 { animation: drift1 11s ease-in-out infinite; }
+      .drift2 { animation: drift2 13s ease-in-out infinite; }
+      .drift3 { animation: drift3 7s  ease-in-out infinite; }
+      @keyframes drift1 { 0% { transform: translate(0,0) scale(1); opacity: 0.55; }
+                          100% { transform: translate(-6px, -20px) scale(1.6); opacity: 0; } }
+      @keyframes drift2 { 0% { transform: translate(0,0) scale(1); opacity: 0.45; }
+                          100% { transform: translate(4px, -26px) scale(1.8); opacity: 0; } }
+      @keyframes drift3 { 0% { transform: translate(0,0) scale(1); opacity: 0.5; }
+                          100% { transform: translate(-2px, -16px) scale(1.4); opacity: 0; } }
+
+      /* Whiskey slow swirl (rim gleam pulses) */
+      .gleam { animation: gleam 13s ease-in-out infinite; }
+      @keyframes gleam { 0%,100% { opacity: 0.5; } 50% { opacity: 0.95; } }
+
+      /* Dust motes in lamplight */
+      .mote { animation: mote 11s ease-in-out infinite; }
+      @keyframes mote { 0%,100% { opacity: 0.15; transform: translateY(0); }
+                        50%     { opacity: 0.7;  transform: translateY(-4px); } }
+
+      /* Ember flicker */
+      .flick { animation: flick 7s ease-in-out infinite; }
+      @keyframes flick { 0%,100% { opacity: 0.75; } 30% { opacity: 1; } 60% { opacity: 0.6; } }
+    </style>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#lamp)"/>
+
+  <!-- ================= WINDOW (upper right) ================= -->
+  <g>
+    <!-- Window frame -->
+    <rect x="540" y="20" width="240" height="72" fill="url(#sea)" opacity="0.95"/>
+    <!-- Sun disc low on horizon -->
+    <circle cx="700" cy="58" r="10" fill="#ffd88a" opacity="0.9" filter="url(#soft)"/>
+    <circle cx="700" cy="58" r="6"  fill="#fff2c8"/>
+    <!-- Sea swell lines -->
+    <g stroke="#3a5560" stroke-width="0.5" opacity="0.55">
+      <path d="M540,72 Q600,70 660,73 T780,72" fill="none"/>
+      <path d="M540,80 Q600,78 660,82 T780,80" fill="none"/>
+      <path d="M540,88 Q600,86 660,89 T780,88" fill="none"/>
+    </g>
+    <!-- Distant marlin silhouette leaping (silver arc) -->
+    <g transform="translate(600,55)" filter="url(#soft)">
+      <path d="M-18,10 Q-12,-8 4,-10 Q18,-6 24,6 L16,4 L18,10 L10,7 L6,12 L-2,7 L-8,12 L-14,7 Z"
+            fill="#d6dde5" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 0,-2; 0,0" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <!-- Bill (marlin's sword nose) -->
+      <line x1="24" y1="6" x2="34" y2="1" stroke="#e6ecf2" stroke-width="1.2"/>
+      <!-- Water splash beneath -->
+      <g fill="#e8eef4" opacity="0.85">
+        <ellipse cx="-4" cy="18" rx="10" ry="1.6"/>
+        <circle cx="-14" cy="16" r="1.2"/>
+        <circle cx="6"   cy="16" r="1"/>
+        <circle cx="12"  cy="18" r="0.8"/>
+      </g>
+    </g>
+    <!-- Window mullions -->
+    <g stroke="#3a2410" stroke-width="3">
+      <rect x="540" y="20" width="240" height="72" fill="none"/>
+      <line x1="660" y1="20" x2="660" y2="92"/>
+      <line x1="540" y1="56" x2="780" y2="56"/>
+    </g>
+    <!-- Window sill highlight -->
+    <rect x="538" y="90" width="244" height="3" fill="#c88a2c" opacity="0.55"/>
+  </g>
+
+  <!-- ================= DESK PLANE ================= -->
+  <g>
+    <rect x="0" y="150" width="800" height="50" fill="url(#desk)"/>
+    <rect x="0" y="150" width="800" height="50" fill="url(#desk)" filter="url(#grain)" opacity="0.85"/>
+    <!-- Desk front edge highlight -->
+    <rect x="0" y="150" width="800" height="1.5" fill="#c88a2c" opacity="0.35"/>
+    <!-- Lamp pool on desk (rightward warm wash) -->
+    <ellipse cx="560" cy="170" rx="280" ry="30" fill="#d9a54a" opacity="0.13" filter="url(#soft)"/>
+  </g>
+
+  <!-- Dust motes rising in the lamplight -->
+  <g fill="#f0e6cc">
+    <circle class="mote" cx="470" cy="80"  r="0.9" style="animation-delay: -1.3s"/>
+    <circle class="mote" cx="500" cy="95"  r="0.7" style="animation-delay: -2.7s"/>
+    <circle class="mote" cx="450" cy="110" r="0.8" style="animation-delay: -4.1s"/>
+    <circle class="mote" cx="520" cy="60"  r="0.6" style="animation-delay: -5.9s"/>
+    <circle class="mote" cx="430" cy="70"  r="0.7" style="animation-delay: -0.4s"/>
+    <circle class="mote" cx="490" cy="130" r="0.9" style="animation-delay: -3.2s"/>
+  </g>
+
+  <!-- ================= MANUSCRIPT STACK (left of typewriter, on desk) ================= -->
+  <g transform="translate(28,148)">
+    <!-- Stack of typed pages, slightly askew -->
+    <g>
+      <rect x="0" y="0" width="60" height="8" fill="#e2d4a8" transform="rotate(-3 30 4)"/>
+      <rect x="2" y="-3" width="60" height="8" fill="#ede0b8" transform="rotate(2 32 1)"/>
+      <rect x="0" y="-6" width="60" height="8" fill="url(#paper)" transform="rotate(-1 30 -2)"/>
+      <rect x="0" y="-6" width="60" height="8" filter="url(#fiber)" opacity="0.6" transform="rotate(-1 30 -2)"/>
+      <!-- Faint typed lines on top page -->
+      <g class="type" font-size="1.6" fill="#3a2410" transform="rotate(-1 30 -2)" opacity="0.65">
+        <text x="4" y="-3">— — — — — — — — — — — — —</text>
+        <text x="4" y="-1">— — — — — — — — — — — —</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= TYPEWRITER (left of center) ================= -->
+  <g class="strike" transform="translate(100,130)">
+    <!-- Ground shadow -->
+    <ellipse cx="0" cy="30" rx="80" ry="4" fill="#000" opacity="0.55"/>
+
+    <!-- Base plate -->
+    <path d="M-70,20 L-72,32 L72,32 L70,20 Z" fill="#14100c"/>
+    <path d="M-70,20 L-72,32 L72,32 L70,20 Z" fill="none" stroke="#3a2c1a" stroke-width="0.6"/>
+
+    <!-- Main body -->
+    <path d="M-64,-6 Q-64,-14 -56,-14 L56,-14 Q64,-14 64,-6 L64,20 L-64,20 Z" fill="url(#tybody)"/>
+    <!-- Body highlight edge -->
+    <path d="M-64,-6 Q-64,-14 -56,-14 L56,-14 Q64,-14 64,-6" fill="none" stroke="#a4a4a0" stroke-width="0.5" opacity="0.7"/>
+
+    <!-- CORONA lettering (nickel plate) -->
+    <text x="0" y="18" text-anchor="middle" class="h2" font-size="4" fill="#a4a4a0" opacity="0.9">CORONA</text>
+
+    <!-- Ribbon spools (two chrome disks visible up top) -->
+    <g>
+      <circle cx="-38" cy="-8" r="6" fill="#22190f" stroke="#a4a4a0" stroke-width="0.6"/>
+      <circle cx="-38" cy="-8" r="3" fill="#3a2c1a" stroke="#5a4a30" stroke-width="0.4"/>
+      <circle cx="38"  cy="-8" r="6" fill="#22190f" stroke="#a4a4a0" stroke-width="0.6"/>
+      <circle cx="38"  cy="-8" r="3" fill="#3a2c1a" stroke="#5a4a30" stroke-width="0.4"/>
+    </g>
+
+    <!-- Type bars (fan of thin lines rising from the segment, one striking up) -->
+    <g stroke="#a4a4a0" stroke-width="0.4" opacity="0.7">
+      <line x1="-14" y1="-4" x2="-10" y2="-18"/>
+      <line x1="-8"  y1="-4" x2="-6"  y2="-19"/>
+      <line x1="-2"  y1="-4" x2="-1"  y2="-20"/>
+      <line x1="4"   y1="-4" x2="3"   y2="-19"/>
+      <line x1="10"  y1="-4" x2="8"   y2="-18"/>
+    </g>
+    <!-- Striking bar (bolder, at platen) -->
+    <line x1="0" y1="-4" x2="0" y2="-24" stroke="#c8ccd4" stroke-width="0.9">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Platen (rubber roller behind the paper) -->
+    <rect x="-46" y="-26" width="92" height="6" rx="3" fill="#2a1608" stroke="#5a4a30" stroke-width="0.5"/>
+    <circle cx="-46" cy="-23" r="3.5" fill="#3a2c1a" stroke="#5a4a30" stroke-width="0.4"/>
+    <circle cx="46"  cy="-23" r="3.5" fill="#3a2c1a" stroke="#5a4a30" stroke-width="0.4"/>
+    <!-- Platen knob crank on right -->
+    <circle cx="52" cy="-23" r="1.8" fill="#a4a4a0"/>
+
+    <!-- Keyboard: three staggered rows of round keys -->
+    <g>
+      <!-- Row 1 (top) -->
+      <g fill="#f0e6cc" stroke="#3a2410" stroke-width="0.35">
+        <circle cx="-44" cy="4" r="2.4"/><circle cx="-36" cy="4" r="2.4"/><circle cx="-28" cy="4" r="2.4"/>
+        <circle cx="-20" cy="4" r="2.4"/><circle cx="-12" cy="4" r="2.4"/><circle cx="-4"  cy="4" r="2.4"/>
+        <circle cx="4"   cy="4" r="2.4"/><circle cx="12"  cy="4" r="2.4"/><circle cx="20"  cy="4" r="2.4"/>
+        <circle cx="28"  cy="4" r="2.4"/><circle cx="36"  cy="4" r="2.4"/><circle cx="44"  cy="4" r="2.4"/>
+      </g>
+      <!-- Row 2 -->
+      <g fill="#f0e6cc" stroke="#3a2410" stroke-width="0.35">
+        <circle cx="-40" cy="10" r="2.4"/><circle cx="-32" cy="10" r="2.4"/><circle cx="-24" cy="10" r="2.4"/>
+        <circle cx="-16" cy="10" r="2.4"/><circle cx="-8"  cy="10" r="2.4"/><circle cx="0"   cy="10" r="2.4"/>
+        <circle cx="8"   cy="10" r="2.4"/><circle cx="16"  cy="10" r="2.4"/><circle cx="24"  cy="10" r="2.4"/>
+        <circle cx="32"  cy="10" r="2.4"/><circle cx="40"  cy="10" r="2.4"/>
+      </g>
+      <!-- Row 3 -->
+      <g fill="#f0e6cc" stroke="#3a2410" stroke-width="0.35">
+        <circle cx="-36" cy="16" r="2.4"/><circle cx="-28" cy="16" r="2.4"/><circle cx="-20" cy="16" r="2.4"/>
+        <circle cx="-12" cy="16" r="2.4"/><circle cx="-4"  cy="16" r="2.4"/><circle cx="4"   cy="16" r="2.4"/>
+        <circle cx="12"  cy="16" r="2.4"/><circle cx="20"  cy="16" r="2.4"/><circle cx="28"  cy="16" r="2.4"/>
+        <circle cx="36"  cy="16" r="2.4"/>
+      </g>
+      <!-- Space bar -->
+      <rect x="-24" y="22" width="48" height="3" rx="1.2" fill="#e2d4a8" stroke="#3a2410" stroke-width="0.35"/>
+    </g>
+
+    <!-- Carriage return lever (right) -->
+    <line x1="60" y1="-10" x2="76" y2="-20" stroke="#a4a4a0" stroke-width="1.2"/>
+    <circle cx="76" cy="-20" r="1.4" fill="#c8ccd4"/>
+  </g>
+
+  <!-- ================= PAPER RISING FROM PLATEN ================= -->
+  <g class="roll" transform="translate(100,130)">
+    <!-- Paper sheet -->
+    <rect x="-40" y="-70" width="80" height="46" fill="url(#paper)" stroke="#a89060" stroke-width="0.4"/>
+    <rect x="-40" y="-70" width="80" height="46" filter="url(#fiber)" opacity="0.65"/>
+    <!-- Subtle top curl shadow -->
+    <path d="M-40,-70 Q0,-72 40,-70" fill="none" stroke="#8a7040" stroke-width="0.5" opacity="0.55"/>
+
+    <!-- Typed line (the freshly-hammered opening of a Hemingway-style sentence) -->
+    <text x="-36" y="-58" class="type" font-size="4.2" fill="#1a0d05">The old man was thin and gaunt</text>
+    <text x="-36" y="-50" class="type" font-size="4.2" fill="#1a0d05">with deep wrinkles<tspan class="type">.</tspan></text>
+    <!-- Cursor caret blinking after last word -->
+    <rect x="9" y="-53.5" width="1" height="4" fill="#1a0d05">
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Typed carbon smudges -->
+    <g fill="#3a2410" opacity="0.15">
+      <circle cx="-24" cy="-43" r="0.5"/>
+      <circle cx="8"   cy="-45" r="0.4"/>
+    </g>
+  </g>
+
+  <!-- ================= WHISKEY TUMBLER (right of typewriter) ================= -->
+  <g transform="translate(215,148)">
+    <!-- Coaster shadow -->
+    <ellipse cx="0" cy="8" rx="16" ry="2.4" fill="#000" opacity="0.55"/>
+    <!-- Glass body (short rocks tumbler, faceted look) -->
+    <path d="M-11,-22 L-13,4 L13,4 L11,-22 Z" fill="#1a0d05" opacity="0.35" stroke="#c88a2c" stroke-width="0.5"/>
+    <!-- Whiskey level -->
+    <path d="M-11.2,-10 L-13,4 L13,4 L11.2,-10 Z" fill="url(#whiskey)"/>
+    <!-- Meniscus / rim gleam -->
+    <ellipse cx="0" cy="-10" rx="11.2" ry="1.4" fill="#f5b866" opacity="0.85"/>
+    <ellipse cx="0" cy="-22" rx="11"   ry="1.4" fill="none" stroke="#f5cf6e" stroke-width="0.5" opacity="0.85"/>
+    <!-- Ice cube (single, faceted) -->
+    <path d="M-4,-8 L4,-6 L2,0 L-6,-2 Z" fill="#f5b866" opacity="0.55" stroke="#fff5dc" stroke-width="0.35"/>
+    <!-- Vertical gleam highlight -->
+    <line class="gleam" x1="-6" y1="-20" x2="-6" y2="2" stroke="#fff5dc" stroke-width="0.8" opacity="0.6"/>
+    <!-- Bottom refraction glow -->
+    <ellipse cx="0" cy="4" rx="10" ry="1" fill="#7a3a08" opacity="0.8"/>
+  </g>
+
+  <!-- ================= CIGAR + EMBER + SMOKE (between whiskey and window) ================= -->
+  <g transform="translate(260,146)">
+    <!-- Ash tray -->
+    <ellipse cx="0" cy="6" rx="20" ry="3" fill="#0a0705"/>
+    <ellipse cx="0" cy="5" rx="20" ry="3" fill="none" stroke="#a4a4a0" stroke-width="0.4" opacity="0.55"/>
+    <!-- Cigar body (angled) -->
+    <path d="M-14,4 L18,-8 L22,-6 L-12,6 Z" fill="#4a2610" stroke="#2a1608" stroke-width="0.4"/>
+    <!-- Cigar label band -->
+    <path d="M-6,1.2 L4,-2.6 L6,-1.6 L-4,2.2 Z" fill="#d9a54a"/>
+    <!-- Ember tip -->
+    <ellipse class="flick" cx="22" cy="-7" rx="2" ry="1.4" fill="#ff8a3b" filter="url(#ember)"/>
+    <ellipse class="flick" cx="22" cy="-7" rx="1" ry="0.7" fill="#ffe0a8" style="animation-delay: -1.5s"/>
+
+    <!-- Smoke puffs drifting upward -->
+    <g fill="#b5a996" filter="url(#soft)">
+      <ellipse class="drift1" cx="22" cy="-10" rx="3" ry="2"/>
+      <ellipse class="drift2" cx="22" cy="-10" rx="2.4" ry="1.7" style="animation-delay: -3.3s"/>
+      <ellipse class="drift3" cx="22" cy="-10" rx="2" ry="1.4"  style="animation-delay: -5.1s"/>
+      <ellipse class="drift1" cx="22" cy="-10" rx="2.8" ry="1.9" style="animation-delay: -7.4s"/>
+    </g>
+  </g>
+
+  <!-- ================= COMPASS (small, lower-left desk detail) ================= -->
+  <g transform="translate(180,175)">
+    <circle cx="0" cy="0" r="9" fill="#22190f" stroke="#a4a4a0" stroke-width="0.6"/>
+    <circle cx="0" cy="0" r="6.5" fill="#0d1117" stroke="#5a4a30" stroke-width="0.35"/>
+    <!-- Cardinal marks -->
+    <g stroke="#c8ccd4" stroke-width="0.4">
+      <line x1="0" y1="-6.5" x2="0" y2="-4.5"/>
+      <line x1="0" y1="4.5"  x2="0" y2="6.5"/>
+      <line x1="-6.5" y1="0" x2="-4.5" y2="0"/>
+      <line x1="4.5"  y1="0" x2="6.5"  y2="0"/>
+    </g>
+    <text x="0" y="-2.6" text-anchor="middle" class="h2" font-size="2.2" fill="#c8ccd4">N</text>
+    <!-- Needle -->
+    <g>
+      <path d="M0,-5 L1.4,0 L0,5 L-1.4,0 Z" fill="#cf1e2e">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-6;3;-2;5;-6" dur="13s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <circle cx="0" cy="0" r="0.9" fill="#a4a4a0"/>
+  </g>
+
+  <!-- ================= HEADLINE (in the lamplight, right side) ================= -->
+  <g class="breathe">
+    <text x="450" y="130" class="h1" font-size="42" fill="#f0e6cc">JULY 21, 2026</text>
+    <!-- Amber underline (like a typewriter ribbon strike) -->
+    <rect x="452" y="138" width="308" height="2.2" fill="#d9a54a" opacity="0.95"/>
+  </g>
+
+  <!-- Subhead -->
+  <text x="452" y="160" class="h2" font-size="12.5" fill="#d9a54a">
+    HEMINGWAY
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="7s" repeatCount="indefinite"/>
+  </text>
+  <text x="555" y="160" class="h2" font-size="12.5" fill="#f0e6cc" opacity="0.9">·  127 YEARS</text>
+
+  <!-- Tertiary line -->
+  <text x="452" y="178" class="h3" font-size="9.5" fill="#c8b898" opacity="0.94">
+    OAK PARK  ·  21 JULY 1899  ·  THE ICEBERG BENEATH
+  </text>
+
+  <!-- Rim vignette -->
+  <rect width="800" height="200" fill="none" stroke="#000" stroke-width="2" opacity="0.4"/>
+</svg>
