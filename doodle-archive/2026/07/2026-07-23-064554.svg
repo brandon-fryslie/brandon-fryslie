@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Pi Approximation Day — July 22 (22/7 ≈ 3.142857…), the rational approximation of π celebrated on the 22nd day of the 7th month. A blackboard-and-chalk tableau: a large green chalkboard fills most of the frame, hand-scrawled with the "22/7" fraction on the left as a giant piece of hand-drawn math, an equals sign and a long chalky expansion of π's digits (3.14159265358979323846…) marching across the middle, a big glowing pi symbol π anchoring the composition, a chalk-drawn circle with a diameter arrow labeled d and circumference labeled C=πd, floating chalk dust particles catching light, and a swirl of digits circling the pi like planets in an orbit. Large ivory JULY 22, 2026 headline in the upper right on the board; chalk-white PI APPROXIMATION DAY subhead; italic 22 / 7 ≈ 3.142857 · CLOSE ENOUGH FOR ENGINEERS tertiary. Palette: deep board green #0d1117 base bleeding into #16332a chalkboard, chalk white #f4efdc, chalk cream #ecd9a8, chalk dust #cfc9b0, pi glow gold #ffd66a, pi hot #ffb020, circle chalk blue #a8d5e8, wooden frame #6b4423, frame highlight #a56d3a, board scuff #1f4438. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 22, 2026 — Pi Approximation Day. A chalkboard scene with a large hand-drawn 22/7 fraction on the left, a big glowing pi symbol in the middle, an expansion of pi's digits, and a chalk-drawn circle with a diameter and circumference labels. A JULY 22, 2026 headline sits in the upper right with PI APPROXIMATION DAY subhead and italic 22 / 7 ≈ 3.142857 tertiary.">
+  <defs>
+    <!-- Chalkboard gradient: darker at edges, warmer green in the center -->
+    <radialGradient id="board" cx="50%" cy="50%" r="75%">
+      <stop offset="0%"  stop-color="#1f4a3a"/>
+      <stop offset="55%" stop-color="#16332a"/>
+      <stop offset="100%" stop-color="#0d1c17"/>
+    </radialGradient>
+
+    <!-- Wooden frame -->
+    <linearGradient id="wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#a56d3a"/>
+      <stop offset="50%" stop-color="#6b4423"/>
+      <stop offset="100%" stop-color="#3a2410"/>
+    </linearGradient>
+
+    <!-- Pi glow gradient -->
+    <radialGradient id="piGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"  stop-color="#fff2c0"/>
+      <stop offset="35%" stop-color="#ffd66a"/>
+      <stop offset="80%" stop-color="#c07800" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c07800" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Chalk streak filter — rough, dusty edges -->
+    <filter id="chalk" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2"/>
+    </filter>
+
+    <!-- Soft chalk dust glow -->
+    <filter id="dust" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0.9"/>
+    </filter>
+
+    <!-- Board scuff noise: eraser smudges over the chalkboard -->
+    <filter id="scuff" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" seed="4"/>
+      <feColorMatrix values="0 0 0 0 0.42  0 0 0 0 0.55  0 0 0 0 0.48  0 0 0 0.16 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Wood grain -->
+    <filter id="woodGrain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06 0.9" numOctaves="2" seed="2"/>
+      <feColorMatrix values="0 0 0 0 0.24  0 0 0 0 0.12  0 0 0 0 0.04  0 0 0 0.42 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Pi bloom -->
+    <filter id="bloom" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .h1 { font-family: 'Georgia', 'Times New Roman', serif; font-weight: 700; letter-spacing: 1px; }
+      .h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 2.2px; }
+      .h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; letter-spacing: 1.4px; }
+      .chalky { font-family: 'Georgia', 'Times New Roman', serif; font-weight: 400; }
+      .hand { font-family: 'Comic Sans MS', 'Chalkboard SE', 'Segoe Print', cursive; font-weight: 700; }
+
+      /* Pi symbol pulse (the star of the show) */
+      .pulse { animation: pulse 11s ease-in-out infinite; transform-origin: 400px 100px; transform-box: fill-box; }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.9;  transform: scale(1); }
+        50%      { opacity: 1;    transform: scale(1.04); }
+      }
+
+      /* Digit orbit — the digits of pi circle around */
+      .orbit { animation: orbit 41s linear infinite; transform-origin: 400px 100px; }
+      @keyframes orbit {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
+
+      /* Counter-rotation so digits themselves stay upright */
+      .counter { animation: counter 41s linear infinite; transform-origin: 400px 100px; }
+      @keyframes counter {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(-360deg); }
+      }
+
+      /* Chalk dust motes drifting */
+      .mote { animation: mote 13s ease-in-out infinite; }
+      @keyframes mote {
+        0%, 100% { opacity: 0.2; transform: translateY(0); }
+        50%      { opacity: 0.75; transform: translateY(-6px); }
+      }
+
+      /* Fraction bar shimmer */
+      .shimmer { animation: shimmer 7s ease-in-out infinite; }
+      @keyframes shimmer {
+        0%, 100% { opacity: 0.85; }
+        50%      { opacity: 1; }
+      }
+
+      /* Digit reveal — slowly writes the expansion */
+      .type1 { animation: type 13s ease-out infinite; }
+      @keyframes type {
+        0%, 100% { opacity: 0.95; }
+        50%      { opacity: 0.6; }
+      }
+    </style>
+  </defs>
+
+  <!-- ================= WOODEN FRAME ================= -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect x="4" y="4" width="792" height="192" fill="url(#wood)"/>
+  <rect x="4" y="4" width="792" height="192" fill="url(#wood)" filter="url(#woodGrain)" opacity="0.9"/>
+  <!-- Frame inner bevel -->
+  <rect x="14" y="14" width="772" height="172" fill="none" stroke="#2a1608" stroke-width="1.2"/>
+  <rect x="16" y="16" width="768" height="168" fill="none" stroke="#c48a4a" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- ================= CHALKBOARD ================= -->
+  <rect x="18" y="18" width="764" height="164" fill="url(#board)"/>
+  <!-- Eraser scuff smudges -->
+  <rect x="18" y="18" width="764" height="164" fill="url(#board)" filter="url(#scuff)" opacity="0.55"/>
+  <!-- Long horizontal eraser sweeps -->
+  <g opacity="0.09" fill="#dfe8dc">
+    <ellipse cx="220" cy="60"  rx="140" ry="6"/>
+    <ellipse cx="580" cy="150" rx="180" ry="7"/>
+    <ellipse cx="420" cy="35"  rx="110" ry="4"/>
+    <ellipse cx="130" cy="170" rx="90"  ry="5"/>
+  </g>
+
+  <!-- Small chalk tray at bottom -->
+  <rect x="18" y="176" width="764" height="6" fill="#3a2410"/>
+  <rect x="30" y="177" width="18" height="4" rx="2" fill="#f4efdc" opacity="0.9"/>
+  <rect x="56" y="178" width="12" height="3" rx="1.5" fill="#ffd66a" opacity="0.85"/>
+  <rect x="76" y="178" width="10" height="3" rx="1.5" fill="#a8d5e8" opacity="0.8"/>
+  <!-- Little eraser -->
+  <rect x="720" y="175" width="34" height="6" fill="#c78a45" stroke="#3a2410" stroke-width="0.5"/>
+  <rect x="720" y="175" width="34" height="3" fill="#e8b775"/>
+
+  <!-- ================= 22/7 FRACTION (left, big and hand-drawn) ================= -->
+  <g class="shimmer">
+    <!-- "22" numerator -->
+    <text x="82" y="86" class="hand" font-size="60" fill="#f4efdc" filter="url(#chalk)">22</text>
+    <!-- Chalky fraction bar -->
+    <path d="M60,102 Q100,99 140,102 T180,101" stroke="#f4efdc" stroke-width="4.5" fill="none" stroke-linecap="round" filter="url(#chalk)" opacity="0.95"/>
+    <path d="M60,102 Q100,99 140,102 T180,101" stroke="#ecd9a8" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <!-- "7" denominator -->
+    <text x="97" y="158" class="hand" font-size="60" fill="#f4efdc" filter="url(#chalk)">7</text>
+  </g>
+
+  <!-- Approx-equals to the right of the fraction -->
+  <g transform="translate(200,105)" opacity="0.95">
+    <path d="M0,-6 Q8,-11 16,-6 T32,-6" stroke="#ecd9a8" stroke-width="2.6" fill="none" stroke-linecap="round" filter="url(#chalk)"/>
+    <path d="M0,6  Q8,1  16,6  T32,6" stroke="#ecd9a8" stroke-width="2.6" fill="none" stroke-linecap="round" filter="url(#chalk)"/>
+  </g>
+
+  <!-- ================= EXPANSION DIGITS (across the middle-lower) ================= -->
+  <g class="type1">
+    <text x="248" y="112" class="chalky" font-size="17" fill="#ecd9a8" opacity="0.92" filter="url(#chalk)">3.14159265358979…</text>
+  </g>
+  <!-- Small subtitle under expansion -->
+  <text x="248" y="128" class="h3" font-size="8" fill="#a8d5e8" opacity="0.85">the never-repeating tail</text>
+
+  <!-- ================= PI SYMBOL (glowing centerpiece) ================= -->
+  <g transform="translate(400,100)">
+    <!-- Halo glow -->
+    <circle cx="0" cy="0" r="46" fill="url(#piGlow)" opacity="0.85"/>
+    <circle cx="0" cy="0" r="46" fill="url(#piGlow)" opacity="0.7">
+      <animate attributeName="r" values="42;50;42" dur="11s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Chalk-drawn circle around pi (with diameter arrow) -->
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#a8d5e8" stroke-width="1.2" stroke-dasharray="3 2.5" opacity="0.7" filter="url(#chalk)"/>
+    <!-- Diameter arrow -->
+    <line x1="-38" y1="0" x2="38" y2="0" stroke="#a8d5e8" stroke-width="0.8" opacity="0.7"/>
+    <polygon points="34,-2.4 40,0 34,2.4" fill="#a8d5e8" opacity="0.7"/>
+    <polygon points="-34,-2.4 -40,0 -34,2.4" fill="#a8d5e8" opacity="0.7"/>
+    <text x="0" y="-42" text-anchor="middle" class="h3" font-size="7" fill="#a8d5e8" opacity="0.85">C = πd</text>
+    <text x="0" y="48"  text-anchor="middle" class="h3" font-size="6.5" fill="#a8d5e8" opacity="0.75">d</text>
+
+    <!-- The pi symbol itself -->
+    <g class="pulse" filter="url(#bloom)">
+      <text x="0" y="18" text-anchor="middle" class="h1" font-size="72" fill="#ffd66a" font-style="italic">π</text>
+    </g>
+    <!-- Chalky pi outline overlay for texture -->
+    <text x="0" y="18" text-anchor="middle" class="h1" font-size="72" fill="none" stroke="#fff2c0" stroke-width="0.5" font-style="italic" opacity="0.75">π</text>
+  </g>
+
+  <!-- ================= DIGIT ORBIT (pi digits circling like planets) ================= -->
+  <g class="orbit">
+    <g class="chalky" font-size="10" fill="#ecd9a8" opacity="0.85">
+      <g transform="translate(470,100)"><text text-anchor="middle" class="counter">3</text></g>
+      <g transform="translate(455,143)"><text text-anchor="middle" class="counter">1</text></g>
+      <g transform="translate(400,158)"><text text-anchor="middle" class="counter">4</text></g>
+      <g transform="translate(345,143)"><text text-anchor="middle" class="counter">1</text></g>
+      <g transform="translate(330,100)"><text text-anchor="middle" class="counter">5</text></g>
+      <g transform="translate(345,57)"><text text-anchor="middle" class="counter">9</text></g>
+      <g transform="translate(400,42)"><text text-anchor="middle" class="counter">2</text></g>
+      <g transform="translate(455,57)"><text text-anchor="middle" class="counter">6</text></g>
+    </g>
+  </g>
+
+  <!-- ================= CHALK DUST MOTES ================= -->
+  <g fill="#f4efdc">
+    <circle class="mote" cx="240" cy="40"  r="0.9" style="animation-delay: -1.1s"/>
+    <circle class="mote" cx="290" cy="152" r="0.8" style="animation-delay: -2.4s"/>
+    <circle class="mote" cx="500" cy="52"  r="0.7" style="animation-delay: -3.7s"/>
+    <circle class="mote" cx="620" cy="72"  r="0.9" style="animation-delay: -5.1s"/>
+    <circle class="mote" cx="530" cy="160" r="0.8" style="animation-delay: -0.6s"/>
+    <circle class="mote" cx="180" cy="30"  r="0.6" style="animation-delay: -4.3s"/>
+    <circle class="mote" cx="420" cy="170" r="0.7" style="animation-delay: -6.7s"/>
+    <circle class="mote" cx="700" cy="145" r="0.6" style="animation-delay: -2.9s"/>
+  </g>
+
+  <!-- ================= HEADLINE ================= -->
+  <g transform="translate(510,60)">
+    <text x="0" y="0" class="h1" font-size="38" fill="#f4efdc" filter="url(#chalk)">JULY 22, 2026</text>
+    <!-- Chalky underline -->
+    <path d="M2,10 Q80,7 160,10 T262,9" stroke="#ffd66a" stroke-width="2.6" fill="none" stroke-linecap="round" filter="url(#chalk)" opacity="0.95">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Subhead -->
+  <text x="510" y="98" class="h2" font-size="13" fill="#ffd66a" opacity="0.95">PI APPROXIMATION DAY</text>
+
+  <!-- Tertiary line -->
+  <text x="510" y="120" class="h3" font-size="8.8" fill="#a8d5e8" opacity="0.94">22 / 7  ≈  3.142857  ·  CLOSE ENOUGH FOR ENGINEERS</text>
+
+  <!-- A tiny hand-drawn heart-in-a-circle for the "pi day is a mathematician's holiday" tone -->
+  <g transform="translate(750,50)" opacity="0.9">
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#ecd9a8" stroke-width="0.8" filter="url(#chalk)" opacity="0.7"/>
+    <text x="0" y="4" text-anchor="middle" class="chalky" font-size="10" fill="#ffd66a" font-style="italic">π</text>
+  </g>
+
+  <!-- Rim vignette -->
+  <rect width="800" height="200" fill="none" stroke="#000" stroke-width="2" opacity="0.4"/>
+</svg>
