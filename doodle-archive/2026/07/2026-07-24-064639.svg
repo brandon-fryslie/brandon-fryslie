@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Dog Days Begin — Heliacal Rising of Sirius, July 23. Around this date in mid-northern latitudes, Sirius (α Canis Majoris, the Dog Star, the brightest star in Earth's night sky) reappears in the pre-dawn sky after weeks lost in the Sun's glare. The ancient Egyptians timed the Nile flood to this event; the Romans coined "dies caniculares" ("dog days") from Sirius rising just before the Sun in the hottest weeks of summer. A pre-dawn tableau: deep indigo sky bleeding down into a warm sepia horizon glow, a scatter of stars overhead, the constellation Canis Major sketched in faint blue lines forming a dog silhouette, blazing Sirius as the dog's collar with a huge many-armed twinkle and radiating rays, a tiny black silhouette of desert dunes across the horizon (nodding to Egypt), heat shimmer distortion just above the horizon line, and the sun's first hint of light bleeding up from the lower right. Large ivory JULY 23, 2026 headline dominates upper right; gold DOG DAYS BEGIN subhead; italic HELIACAL RISING OF SIRIUS · α CANIS MAJORIS · DIES CANICULARES tertiary. Palette: deep sky #0a1636, twilight indigo #1a1f52, plum #3a1f4a, horizon warm #6d3a1e, dawn glow #d9863a, dawn hot #f2b060, Sirius core #ffffff, Sirius halo #cfe4ff, constellation blue #7fb0ff, star silver #d5dcf0, cream #f4efdc, gold #ffd66a. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 23, 2026 — Dog Days Begin: the heliacal rising of Sirius. A pre-dawn sky bleeds from deep indigo down to a warm sepia horizon glow, with a scatter of stars overhead and the constellation Canis Major sketched in faint blue lines forming a dog silhouette. Blazing Sirius pulses at the dog's collar. A JULY 23, 2026 headline dominates the upper right, with a gold DOG DAYS BEGIN subhead and italic HELIACAL RISING OF SIRIUS · α CANIS MAJORIS · DIES CANICULARES tertiary.">
+  <defs>
+    <!-- Pre-dawn sky gradient: deep indigo top, warm sepia horizon -->
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0a1636"/>
+      <stop offset="35%"  stop-color="#1a1f52"/>
+      <stop offset="65%"  stop-color="#3a1f4a"/>
+      <stop offset="85%"  stop-color="#6d3a1e"/>
+      <stop offset="100%" stop-color="#d9863a"/>
+    </linearGradient>
+
+    <!-- Dawn horizon warm bleed on the right -->
+    <radialGradient id="dawn" cx="88%" cy="105%" r="55%">
+      <stop offset="0%"   stop-color="#f2b060" stop-opacity="0.95"/>
+      <stop offset="40%"  stop-color="#d9863a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#d9863a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sirius core glow -->
+    <radialGradient id="siriusGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="20%"  stop-color="#e8f0ff" stop-opacity="0.95"/>
+      <stop offset="45%"  stop-color="#cfe4ff" stop-opacity="0.55"/>
+      <stop offset="80%"  stop-color="#7fb0ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7fb0ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Broad ambient halo around Sirius -->
+    <radialGradient id="siriusAmbient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#cfe4ff" stop-opacity="0.35"/>
+      <stop offset="60%"  stop-color="#7fb0ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7fb0ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Heat shimmer displacement -->
+    <filter id="shimmer" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.9" numOctaves="2" seed="5" result="n">
+        <animate attributeName="seed" values="5;13;5" dur="17s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/>
+    </filter>
+
+    <!-- Soft glow -->
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+
+    <!-- Star bloom -->
+    <filter id="bloom" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Sirius intense bloom -->
+    <filter id="siriusBloom" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3.5" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Sand grain texture for horizon -->
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="9"/>
+      <feColorMatrix values="0 0 0 0 0.85  0 0 0 0 0.65  0 0 0 0 0.38  0 0 0 0.14 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <style>
+      .h1 { font-family: 'Georgia', 'Times New Roman', serif; font-weight: 700; letter-spacing: 1.2px; }
+      .h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3.2px; }
+      .h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; letter-spacing: 1.6px; }
+      .lbl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; letter-spacing: 1.2px; }
+
+      /* Sirius twinkle */
+      .twinkle { animation: twinkle 7s ease-in-out infinite; transform-origin: 235px 92px; transform-box: fill-box; }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.92; transform: scale(1); }
+        45%      { opacity: 1;    transform: scale(1.12); }
+        70%      { opacity: 0.85; transform: scale(0.96); }
+      }
+
+      /* Radiating rays slow rotation */
+      .rays { animation: rays 41s linear infinite; transform-origin: 235px 92px; transform-box: fill-box; }
+      @keyframes rays {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
+
+      /* Counter rays (reverse) */
+      .rays2 { animation: rays2 61s linear infinite; transform-origin: 235px 92px; transform-box: fill-box; }
+      @keyframes rays2 {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(-360deg); }
+      }
+
+      /* Star flicker (background stars) */
+      .flicker { animation: flicker 11s ease-in-out infinite; }
+      @keyframes flicker {
+        0%, 100% { opacity: 0.55; }
+        50%      { opacity: 1; }
+      }
+      .flicker2 { animation: flicker 13s ease-in-out infinite; }
+      .flicker3 { animation: flicker 7s ease-in-out infinite; }
+
+      /* Constellation slow breath */
+      .breath { animation: breath 13s ease-in-out infinite; }
+      @keyframes breath {
+        0%, 100% { opacity: 0.55; }
+        50%      { opacity: 0.85; }
+      }
+
+      /* Underline shimmer */
+      .under { animation: under 7s ease-in-out infinite; }
+      @keyframes under {
+        0%, 100% { opacity: 0.8; }
+        50%      { opacity: 1; }
+      }
+
+      /* Dawn glow pulse */
+      .dawnPulse { animation: dawnPulse 17s ease-in-out infinite; }
+      @keyframes dawnPulse {
+        0%, 100% { opacity: 0.85; }
+        50%      { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- ================= SKY ================= -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- Dawn glow bleed from lower-right -->
+  <rect class="dawnPulse" width="800" height="200" fill="url(#dawn)"/>
+
+  <!-- ================= BACKGROUND STARS ================= -->
+  <g fill="#d5dcf0">
+    <!-- Bigger stars -->
+    <circle class="flicker"  cx="72"  cy="28"  r="1.3"/>
+    <circle class="flicker2" cx="128" cy="18"  r="1.1"/>
+    <circle class="flicker3" cx="180" cy="42"  r="0.9"/>
+    <circle class="flicker"  cx="340" cy="24"  r="1.2" style="animation-delay: -3s"/>
+    <circle class="flicker2" cx="420" cy="52"  r="0.8" style="animation-delay: -1s"/>
+    <circle class="flicker3" cx="510" cy="18"  r="1.1" style="animation-delay: -4s"/>
+    <circle class="flicker"  cx="580" cy="38"  r="0.9" style="animation-delay: -2s"/>
+    <circle class="flicker2" cx="660" cy="12"  r="1.0"/>
+    <circle class="flicker3" cx="720" cy="30"  r="0.8" style="animation-delay: -5s"/>
+    <circle class="flicker"  cx="770" cy="50"  r="0.9" style="animation-delay: -6s"/>
+    <!-- Smaller pinprick stars -->
+    <circle class="flicker2" cx="22"  cy="58"  r="0.6"/>
+    <circle class="flicker3" cx="48"  cy="82"  r="0.5"/>
+    <circle class="flicker"  cx="98"  cy="70"  r="0.6" style="animation-delay: -1.5s"/>
+    <circle class="flicker2" cx="152" cy="88"  r="0.5" style="animation-delay: -2.7s"/>
+    <circle class="flicker3" cx="278" cy="60"  r="0.55" style="animation-delay: -0.8s"/>
+    <circle class="flicker"  cx="308" cy="102" r="0.5" style="animation-delay: -3.4s"/>
+    <circle class="flicker2" cx="378" cy="82"  r="0.55" style="animation-delay: -4.6s"/>
+    <circle class="flicker3" cx="452" cy="24"  r="0.5"/>
+    <circle class="flicker"  cx="488" cy="72"  r="0.6" style="animation-delay: -5.9s"/>
+    <circle class="flicker2" cx="540" cy="60"  r="0.5" style="animation-delay: -1.3s"/>
+    <circle class="flicker3" cx="608" cy="72"  r="0.55" style="animation-delay: -2.1s"/>
+    <circle class="flicker"  cx="682" cy="58"  r="0.5" style="animation-delay: -3.9s"/>
+    <circle class="flicker2" cx="748" cy="90"  r="0.55" style="animation-delay: -4.2s"/>
+    <circle class="flicker3" cx="12"  cy="118" r="0.5"/>
+    <circle class="flicker"  cx="60"  cy="130" r="0.4" style="animation-delay: -0.4s"/>
+  </g>
+
+  <!-- ================= CONSTELLATION CANIS MAJOR (faint blue lines forming a dog) ================= -->
+  <!-- Positions chosen roughly around Sirius (235, 92) as the collar of the dog silhouette -->
+  <g class="breath" stroke="#7fb0ff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Constellation connecting lines (dog outline: nose, head, back, tail, legs) -->
+    <g stroke-width="0.9" opacity="0.9">
+      <!-- Sirius collar to Mirzam (nose/front paw) -->
+      <line x1="235" y1="92"  x2="180" y2="100"/>
+      <!-- Sirius to Muliphein (head/ear) -->
+      <line x1="235" y1="92"  x2="215" y2="66"/>
+      <!-- Muliphein to Furud (front paw down) -->
+      <line x1="215" y1="66"  x2="188" y2="140"/>
+      <!-- Sirius to Wezen (chest/back) -->
+      <line x1="235" y1="92"  x2="290" y2="118"/>
+      <!-- Wezen to Adhara (belly) -->
+      <line x1="290" y1="118" x2="268" y2="146"/>
+      <!-- Wezen to Aludra (tail up) -->
+      <line x1="290" y1="118" x2="352" y2="82"/>
+      <!-- Adhara to hind paw -->
+      <line x1="268" y1="146" x2="308" y2="152"/>
+      <!-- Aludra to tail tip -->
+      <line x1="352" y1="82"  x2="382" y2="72"/>
+    </g>
+    <!-- Constellation stars (small silver dots at joints) -->
+    <g fill="#d5dcf0" stroke="none">
+      <circle cx="180" cy="100" r="1.6"/>  <!-- Mirzam -->
+      <circle cx="215" cy="66"  r="1.4"/>  <!-- Muliphein -->
+      <circle cx="188" cy="140" r="1.2"/>  <!-- Furud -->
+      <circle cx="290" cy="118" r="1.9"/>  <!-- Wezen -->
+      <circle cx="268" cy="146" r="1.5"/>  <!-- Adhara -->
+      <circle cx="352" cy="82"  r="1.4"/>  <!-- Aludra -->
+      <circle cx="382" cy="72"  r="1.1"/>
+      <circle cx="308" cy="152" r="1.1"/>
+    </g>
+    <!-- Star labels (small, italic) -->
+    <g fill="#7fb0ff" stroke="none" class="h3" font-size="6.5" opacity="0.75">
+      <text x="176" y="112">Mirzam</text>
+      <text x="221" y="60">Muliphein</text>
+      <text x="296" y="128">Wezen</text>
+      <text x="272" y="158">Adhara</text>
+      <text x="356" y="76">Aludra</text>
+    </g>
+  </g>
+
+  <!-- ================= DESERT DUNES (horizon silhouette, Egypt nod) ================= -->
+  <g fill="#1a0e05" opacity="0.9">
+    <path d="M0,178 L0,168 Q80,148 160,164 T320,158 Q400,144 470,162 T620,156 Q700,146 800,166 L800,200 L0,200 Z"/>
+  </g>
+  <!-- Dune highlights catching dawn light -->
+  <g fill="#f2b060" opacity="0.5" filter="url(#grain)">
+    <path d="M320,158 Q400,144 470,162 L470,166 Q400,150 320,164 Z"/>
+    <path d="M620,156 Q700,146 800,166 L800,170 Q700,152 620,161 Z"/>
+  </g>
+
+  <!-- ================= HEAT SHIMMER at horizon line ================= -->
+  <g filter="url(#shimmer)" opacity="0.6">
+    <line x1="0" y1="176" x2="800" y2="176" stroke="#d9863a" stroke-width="0.6" opacity="0.6"/>
+    <line x1="0" y1="172" x2="800" y2="172" stroke="#f2b060" stroke-width="0.4" opacity="0.5"/>
+  </g>
+
+  <!-- ================= SIRIUS (blazing centerpiece, upper-left-of-center) ================= -->
+  <g transform="translate(235,92)">
+    <!-- Broad ambient halo -->
+    <circle cx="0" cy="0" r="60" fill="url(#siriusAmbient)"/>
+    <circle cx="0" cy="0" r="60" fill="url(#siriusAmbient)">
+      <animate attributeName="r" values="55;70;55" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="11s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Radiating rays (long, thin) -->
+    <g class="rays" opacity="0.7">
+      <g stroke="#cfe4ff" stroke-width="0.5" stroke-linecap="round" opacity="0.55">
+        <line x1="0" y1="-58" x2="0" y2="-88"/>
+        <line x1="0" y1="58"  x2="0" y2="88"/>
+        <line x1="-58" y1="0" x2="-88" y2="0"/>
+        <line x1="58"  y1="0" x2="88"  y2="0"/>
+        <line x1="-41" y1="-41" x2="-62" y2="-62"/>
+        <line x1="41"  y1="41"  x2="62"  y2="62"/>
+        <line x1="-41" y1="41"  x2="-62" y2="62"/>
+        <line x1="41"  y1="-41" x2="62"  y2="-62"/>
+      </g>
+    </g>
+    <g class="rays2" opacity="0.55">
+      <g stroke="#e8f0ff" stroke-width="0.35" stroke-linecap="round" opacity="0.6">
+        <line x1="0" y1="-65" x2="0" y2="-105"/>
+        <line x1="0" y1="65"  x2="0" y2="105"/>
+        <line x1="-65" y1="0" x2="-105" y2="0"/>
+        <line x1="65"  y1="0" x2="105"  y2="0"/>
+      </g>
+    </g>
+
+    <!-- Sirius glow disk -->
+    <circle cx="0" cy="0" r="30" fill="url(#siriusGlow)"/>
+
+    <!-- Twinkle: four-pointed diffraction spikes -->
+    <g class="twinkle" filter="url(#siriusBloom)">
+      <!-- Vertical spike -->
+      <polygon points="0,-38 1.6,0 0,38 -1.6,0" fill="#ffffff"/>
+      <!-- Horizontal spike -->
+      <polygon points="-38,0 0,1.6 38,0 0,-1.6" fill="#ffffff"/>
+      <!-- Small diagonal spikes -->
+      <polygon points="0,-20 0.8,0 0,20 -0.8,0" fill="#ffffff" transform="rotate(45)"/>
+      <polygon points="-20,0 0,0.8 20,0 0,-0.8" fill="#ffffff" transform="rotate(45)"/>
+      <!-- Hot core -->
+      <circle cx="0" cy="0" r="4.5" fill="#ffffff"/>
+      <circle cx="0" cy="0" r="2.2" fill="#ffffff"/>
+    </g>
+
+    <!-- Sirius label -->
+    <text x="14" y="-6" class="lbl" font-size="9" fill="#ffffff" opacity="0.95">SIRIUS</text>
+    <text x="14" y="4"  class="h3" font-size="6.5" fill="#cfe4ff" opacity="0.85">α Canis Majoris · −1.46 mag</text>
+  </g>
+
+  <!-- ================= HEADLINE ================= -->
+  <g transform="translate(438,72)">
+    <text x="0" y="0" class="h1" font-size="38" fill="#f4efdc" filter="url(#soft)" opacity="0.35">JULY 23, 2026</text>
+    <text x="0" y="0" class="h1" font-size="38" fill="#f4efdc">JULY 23, 2026</text>
+    <!-- Underline (rising sun line) -->
+    <path class="under" d="M2,10 Q90,7 180,10 T348,9" stroke="#ffd66a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.95"/>
+  </g>
+
+  <!-- ================= SUBHEAD ================= -->
+  <text x="440" y="110" class="h2" font-size="15" fill="#ffd66a" opacity="0.98">DOG DAYS BEGIN</text>
+
+  <!-- ================= TERTIARY ================= -->
+  <text x="440" y="132" class="h3" font-size="9" fill="#cfe4ff" opacity="0.9">HELIACAL RISING OF SIRIUS  ·  α CANIS MAJORIS</text>
+  <text x="440" y="146" class="h3" font-size="8.2" fill="#f2b060" opacity="0.85">DIES CANICULARES  ·  THE DOG STAR RETURNS</text>
+
+  <!-- ================= COMPASS / DAWN INDICATOR (lower right) ================= -->
+  <g transform="translate(760,168)" opacity="0.75">
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#ffd66a" stroke-width="0.6"/>
+    <text x="0" y="-12" text-anchor="middle" class="lbl" font-size="6" fill="#ffd66a">E</text>
+    <line x1="0" y1="-8" x2="0" y2="-4" stroke="#ffd66a" stroke-width="0.6"/>
+    <polygon points="0,3 -2.5,-3 2.5,-3" fill="#f2b060"/>
+  </g>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="200" fill="none" stroke="#000" stroke-width="2" opacity="0.4"/>
+</svg>

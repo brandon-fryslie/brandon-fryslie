@@ -1,311 +1,329 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Dog Days Begin — Heliacal Rising of Sirius, July 23. Around this date in mid-northern latitudes, Sirius (α Canis Majoris, the Dog Star, the brightest star in Earth's night sky) reappears in the pre-dawn sky after weeks lost in the Sun's glare. The ancient Egyptians timed the Nile flood to this event; the Romans coined "dies caniculares" ("dog days") from Sirius rising just before the Sun in the hottest weeks of summer. A pre-dawn tableau: deep indigo sky bleeding down into a warm sepia horizon glow, a scatter of stars overhead, the constellation Canis Major sketched in faint blue lines forming a dog silhouette, blazing Sirius as the dog's collar with a huge many-armed twinkle and radiating rays, a tiny black silhouette of desert dunes across the horizon (nodding to Egypt), heat shimmer distortion just above the horizon line, and the sun's first hint of light bleeding up from the lower right. Large ivory JULY 23, 2026 headline dominates upper right; gold DOG DAYS BEGIN subhead; italic HELIACAL RISING OF SIRIUS · α CANIS MAJORIS · DIES CANICULARES tertiary. Palette: deep sky #0a1636, twilight indigo #1a1f52, plum #3a1f4a, horizon warm #6d3a1e, dawn glow #d9863a, dawn hot #f2b060, Sirius core #ffffff, Sirius halo #cfe4ff, constellation blue #7fb0ff, star silver #d5dcf0, cream #f4efdc, gold #ffd66a. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 23, 2026 — Dog Days Begin: the heliacal rising of Sirius. A pre-dawn sky bleeds from deep indigo down to a warm sepia horizon glow, with a scatter of stars overhead and the constellation Canis Major sketched in faint blue lines forming a dog silhouette. Blazing Sirius pulses at the dog's collar. A JULY 23, 2026 headline dominates the upper right, with a gold DOG DAYS BEGIN subhead and italic HELIACAL RISING OF SIRIUS · α CANIS MAJORIS · DIES CANICULARES tertiary.">
+<!-- theme: Amelia Earhart's 129th Birthday — Born July 24, 1897, in Atchison, Kansas. Aviation pioneer, first woman to fly solo across the Atlantic (1932), first person to fly solo from Hawaii to the mainland US (1935). Disappeared over the central Pacific on July 2, 1937 during her attempted circumnavigation in a Lockheed Model 10-E Electra. A high-altitude cloudscape at mid-morning: warm cerulean sky above a deck of golden-lit cumulus tops, a small dark silhouette of a twin-engine Lockheed Electra crossing left-to-right with spinning props, a long dotted contrail arc sweeping from lower-left up and across the frame, a compass rose ghosted onto the sky at upper-left, a faint navigation-chart rhumb-line grid, birds far below. Large ivory JULY 24, 2026 headline dominates the right; gold AMELIA EARHART · 129 YEARS subhead; italic ATCHISON · 24 JULY 1897 · FIRST WOMAN SOLO ATLANTIC tertiary. Palette: high sky #2b5f8c, sky mid #4a8fc7, sky low #7ab8e0, cream #f4e8c8, cloud white #f8f4e8, cloud shadow #b8a878, gold #e8b048, warm horizon #f0c070, silhouette #12100d, chart red #c04030, ivory #f4efdc. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 24, 2026 — Amelia Earhart's 129th birthday. A high-altitude cloudscape at mid-morning: warm cerulean sky above a deck of golden-lit cumulus tops, a small dark silhouette of a twin-engine Lockheed Electra crossing left-to-right with spinning propellers, a long dotted contrail arc sweeping across the frame, a ghosted compass rose at upper-left, a faint navigation-chart rhumb-line grid, and birds far below. A JULY 24, 2026 headline dominates the right, with a gold AMELIA EARHART · 129 YEARS subhead and italic ATCHISON · 24 JULY 1897 · FIRST WOMAN SOLO ATLANTIC tertiary.">
   <defs>
-    <!-- Pre-dawn sky gradient: deep indigo top, warm sepia horizon -->
+    <!-- Sky gradient: deep cerulean top to warm horizon -->
     <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#0a1636"/>
-      <stop offset="35%"  stop-color="#1a1f52"/>
-      <stop offset="65%"  stop-color="#3a1f4a"/>
-      <stop offset="85%"  stop-color="#6d3a1e"/>
-      <stop offset="100%" stop-color="#d9863a"/>
+      <stop offset="0%"   stop-color="#2b5f8c"/>
+      <stop offset="35%"  stop-color="#4a8fc7"/>
+      <stop offset="70%"  stop-color="#7ab8e0"/>
+      <stop offset="100%" stop-color="#f0c070"/>
     </linearGradient>
 
-    <!-- Dawn horizon warm bleed on the right -->
-    <radialGradient id="dawn" cx="88%" cy="105%" r="55%">
-      <stop offset="0%"   stop-color="#f2b060" stop-opacity="0.95"/>
-      <stop offset="40%"  stop-color="#d9863a" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#d9863a" stop-opacity="0"/>
+    <!-- Cloud fill: warm cream lit from upper-right -->
+    <linearGradient id="cloudLit" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#f8f4e8"/>
+      <stop offset="55%"  stop-color="#f4e8c8"/>
+      <stop offset="100%" stop-color="#b8a878"/>
+    </linearGradient>
+
+    <!-- Warm sun bleed from upper right -->
+    <radialGradient id="sunbleed" cx="92%" cy="10%" r="55%">
+      <stop offset="0%"   stop-color="#ffe8a8" stop-opacity="0.55"/>
+      <stop offset="45%"  stop-color="#f0c070" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f0c070" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Sirius core glow -->
-    <radialGradient id="siriusGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
-      <stop offset="20%"  stop-color="#e8f0ff" stop-opacity="0.95"/>
-      <stop offset="45%"  stop-color="#cfe4ff" stop-opacity="0.55"/>
-      <stop offset="80%"  stop-color="#7fb0ff" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#7fb0ff" stop-opacity="0"/>
+    <!-- Vignette darkening -->
+    <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.35"/>
     </radialGradient>
 
-    <!-- Broad ambient halo around Sirius -->
-    <radialGradient id="siriusAmbient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#cfe4ff" stop-opacity="0.35"/>
-      <stop offset="60%"  stop-color="#7fb0ff" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#7fb0ff" stop-opacity="0"/>
-    </radialGradient>
+    <!-- Cloud shape (reusable) -->
+    <symbol id="cloudA" viewBox="0 0 200 60">
+      <path fill="url(#cloudLit)" d="M10,50 Q6,32 22,28 Q26,10 48,14 Q58,4 76,10 Q92,2 110,10 Q126,4 140,14 Q158,10 170,22 Q188,22 190,40 Q198,50 184,54 L18,54 Q4,52 10,50 Z"/>
+    </symbol>
+    <symbol id="cloudB" viewBox="0 0 160 50">
+      <path fill="url(#cloudLit)" d="M8,42 Q4,26 18,22 Q22,8 40,12 Q56,4 72,12 Q88,6 100,14 Q118,10 130,20 Q148,20 150,34 Q156,42 144,46 L14,46 Q2,44 8,42 Z"/>
+    </symbol>
 
-    <!-- Heat shimmer displacement -->
-    <filter id="shimmer" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.9" numOctaves="2" seed="5" result="n">
-        <animate attributeName="seed" values="5;13;5" dur="17s" repeatCount="indefinite"/>
-      </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/>
-    </filter>
+    <!-- Compass rose (ghosted overlay) -->
+    <symbol id="compass" viewBox="-50 -50 100 100">
+      <g fill="none" stroke="#f4efdc" stroke-width="0.5" opacity="0.55">
+        <circle cx="0" cy="0" r="45"/>
+        <circle cx="0" cy="0" r="36"/>
+        <circle cx="0" cy="0" r="20"/>
+      </g>
+      <!-- Ticks -->
+      <g stroke="#f4efdc" stroke-width="0.5" opacity="0.55">
+        <g id="tick"><line x1="0" y1="-45" x2="0" y2="-40"/></g>
+        <use href="#tick" transform="rotate(30)"/>
+        <use href="#tick" transform="rotate(60)"/>
+        <use href="#tick" transform="rotate(90)"/>
+        <use href="#tick" transform="rotate(120)"/>
+        <use href="#tick" transform="rotate(150)"/>
+        <use href="#tick" transform="rotate(180)"/>
+        <use href="#tick" transform="rotate(210)"/>
+        <use href="#tick" transform="rotate(240)"/>
+        <use href="#tick" transform="rotate(270)"/>
+        <use href="#tick" transform="rotate(300)"/>
+        <use href="#tick" transform="rotate(330)"/>
+      </g>
+      <!-- Compass points -->
+      <g fill="#f4efdc" opacity="0.7">
+        <polygon points="0,-36 3,0 0,36 -3,0"/>
+        <polygon points="-36,0 0,3 36,0 0,-3"/>
+      </g>
+      <!-- Rotating fleur-de-lis pointer -->
+      <g class="rotor">
+        <polygon points="0,-32 4,0 0,32 -4,0" fill="#c04030" opacity="0.85"/>
+        <circle cx="0" cy="0" r="2.4" fill="#f4efdc"/>
+      </g>
+      <!-- N E S W labels -->
+      <g fill="#f4efdc" opacity="0.85" font-family="Georgia, serif" font-size="7" text-anchor="middle">
+        <text x="0" y="-46">N</text>
+        <text x="46" y="3">E</text>
+        <text x="0" y="52">S</text>
+        <text x="-46" y="3">W</text>
+      </g>
+    </symbol>
+
+    <!-- Bird silhouette -->
+    <symbol id="bird" viewBox="-10 -6 20 12">
+      <path d="M-10,0 Q-6,-5 -3,0 Q0,-4 3,0 Q6,-5 10,0" fill="none" stroke="#12100d" stroke-width="1" stroke-linecap="round"/>
+    </symbol>
 
     <!-- Soft glow -->
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.2"/>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4"/>
     </filter>
 
-    <!-- Star bloom -->
-    <filter id="bloom" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="2.4" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Sirius intense bloom -->
-    <filter id="siriusBloom" x="-200%" y="-200%" width="500%" height="500%">
-      <feGaussianBlur stdDeviation="3.5" result="b1"/>
-      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="b2"/>
-      <feMerge>
-        <feMergeNode in="b2"/>
-        <feMergeNode in="b1"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Sand grain texture for horizon -->
-    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="9"/>
-      <feColorMatrix values="0 0 0 0 0.85  0 0 0 0 0.65  0 0 0 0 0.38  0 0 0 0.14 0"/>
-      <feComposite in2="SourceGraphic" operator="in"/>
+    <!-- Text soft shadow -->
+    <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feColorMatrix in="b" values="0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0 0.1  0 0 0 0.6 0"/>
     </filter>
 
     <style>
-      .h1 { font-family: 'Georgia', 'Times New Roman', serif; font-weight: 700; letter-spacing: 1.2px; }
-      .h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3.2px; }
+      .h1 { font-family: 'Georgia', 'Times New Roman', serif; font-weight: 700; letter-spacing: 1.4px; }
+      .h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3.4px; }
       .h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; letter-spacing: 1.6px; }
       .lbl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 500; letter-spacing: 1.2px; }
+      .chart { font-family: 'Georgia', 'Times New Roman', serif; font-style: italic; font-weight: 400; letter-spacing: 0.6px; }
 
-      /* Sirius twinkle */
-      .twinkle { animation: twinkle 7s ease-in-out infinite; transform-origin: 235px 92px; transform-box: fill-box; }
-      @keyframes twinkle {
-        0%, 100% { opacity: 0.92; transform: scale(1); }
-        45%      { opacity: 1;    transform: scale(1.12); }
-        70%      { opacity: 0.85; transform: scale(0.96); }
-      }
-
-      /* Radiating rays slow rotation */
-      .rays { animation: rays 41s linear infinite; transform-origin: 235px 92px; transform-box: fill-box; }
-      @keyframes rays {
+      /* Compass slow rotor */
+      .rotor { animation: rotor 41s linear infinite; transform-origin: center; transform-box: fill-box; }
+      @keyframes rotor {
         from { transform: rotate(0deg); }
         to   { transform: rotate(360deg); }
       }
 
-      /* Counter rays (reverse) */
-      .rays2 { animation: rays2 61s linear infinite; transform-origin: 235px 92px; transform-box: fill-box; }
-      @keyframes rays2 {
+      /* Propeller spin — visual blur disk on nose */
+      .prop { animation: prop 0.4s linear infinite; transform-origin: center; transform-box: fill-box; }
+      @keyframes prop {
         from { transform: rotate(0deg); }
-        to   { transform: rotate(-360deg); }
+        to   { transform: rotate(360deg); }
       }
 
-      /* Star flicker (background stars) */
-      .flicker { animation: flicker 11s ease-in-out infinite; }
-      @keyframes flicker {
-        0%, 100% { opacity: 0.55; }
-        50%      { opacity: 1; }
+      /* Contrail dashes stream */
+      .stream { animation: stream 7s linear infinite; }
+      @keyframes stream {
+        from { stroke-dashoffset: 0; }
+        to   { stroke-dashoffset: -60; }
       }
-      .flicker2 { animation: flicker 13s ease-in-out infinite; }
-      .flicker3 { animation: flicker 7s ease-in-out infinite; }
 
-      /* Constellation slow breath */
-      .breath { animation: breath 13s ease-in-out infinite; }
-      @keyframes breath {
-        0%, 100% { opacity: 0.55; }
-        50%      { opacity: 0.85; }
+      /* Cloud drift */
+      .drift1 { animation: drift1 61s linear infinite; }
+      @keyframes drift1 {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-40px); }
+      }
+      .drift2 { animation: drift2 83s linear infinite; }
+      @keyframes drift2 {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-25px); }
       }
 
       /* Underline shimmer */
-      .under { animation: under 7s ease-in-out infinite; }
+      .under { animation: under 11s ease-in-out infinite; }
       @keyframes under {
-        0%, 100% { opacity: 0.8; }
-        50%      { opacity: 1; }
-      }
-
-      /* Dawn glow pulse */
-      .dawnPulse { animation: dawnPulse 17s ease-in-out infinite; }
-      @keyframes dawnPulse {
         0%, 100% { opacity: 0.85; }
         50%      { opacity: 1; }
       }
+
+      /* Sun bleed pulse */
+      .sunPulse { animation: sunPulse 17s ease-in-out infinite; }
+      @keyframes sunPulse {
+        0%, 100% { opacity: 0.9; }
+        50%      { opacity: 1; }
+      }
+
+      /* Bird wing flap */
+      .flap { animation: flap 1.3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      @keyframes flap {
+        0%, 100% { transform: scaleY(1); }
+        50%      { transform: scaleY(0.55); }
+      }
+      .flap2 { animation: flap 1.7s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .flap3 { animation: flap 1.9s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
     </style>
   </defs>
 
-  <!-- ================= SKY ================= -->
+  <!-- ============ SKY ============ -->
   <rect width="800" height="200" fill="#0d1117"/>
   <rect width="800" height="200" fill="url(#sky)"/>
-  <!-- Dawn glow bleed from lower-right -->
-  <rect class="dawnPulse" width="800" height="200" fill="url(#dawn)"/>
+  <rect class="sunPulse" width="800" height="200" fill="url(#sunbleed)"/>
 
-  <!-- ================= BACKGROUND STARS ================= -->
-  <g fill="#d5dcf0">
-    <!-- Bigger stars -->
-    <circle class="flicker"  cx="72"  cy="28"  r="1.3"/>
-    <circle class="flicker2" cx="128" cy="18"  r="1.1"/>
-    <circle class="flicker3" cx="180" cy="42"  r="0.9"/>
-    <circle class="flicker"  cx="340" cy="24"  r="1.2" style="animation-delay: -3s"/>
-    <circle class="flicker2" cx="420" cy="52"  r="0.8" style="animation-delay: -1s"/>
-    <circle class="flicker3" cx="510" cy="18"  r="1.1" style="animation-delay: -4s"/>
-    <circle class="flicker"  cx="580" cy="38"  r="0.9" style="animation-delay: -2s"/>
-    <circle class="flicker2" cx="660" cy="12"  r="1.0"/>
-    <circle class="flicker3" cx="720" cy="30"  r="0.8" style="animation-delay: -5s"/>
-    <circle class="flicker"  cx="770" cy="50"  r="0.9" style="animation-delay: -6s"/>
-    <!-- Smaller pinprick stars -->
-    <circle class="flicker2" cx="22"  cy="58"  r="0.6"/>
-    <circle class="flicker3" cx="48"  cy="82"  r="0.5"/>
-    <circle class="flicker"  cx="98"  cy="70"  r="0.6" style="animation-delay: -1.5s"/>
-    <circle class="flicker2" cx="152" cy="88"  r="0.5" style="animation-delay: -2.7s"/>
-    <circle class="flicker3" cx="278" cy="60"  r="0.55" style="animation-delay: -0.8s"/>
-    <circle class="flicker"  cx="308" cy="102" r="0.5" style="animation-delay: -3.4s"/>
-    <circle class="flicker2" cx="378" cy="82"  r="0.55" style="animation-delay: -4.6s"/>
-    <circle class="flicker3" cx="452" cy="24"  r="0.5"/>
-    <circle class="flicker"  cx="488" cy="72"  r="0.6" style="animation-delay: -5.9s"/>
-    <circle class="flicker2" cx="540" cy="60"  r="0.5" style="animation-delay: -1.3s"/>
-    <circle class="flicker3" cx="608" cy="72"  r="0.55" style="animation-delay: -2.1s"/>
-    <circle class="flicker"  cx="682" cy="58"  r="0.5" style="animation-delay: -3.9s"/>
-    <circle class="flicker2" cx="748" cy="90"  r="0.55" style="animation-delay: -4.2s"/>
-    <circle class="flicker3" cx="12"  cy="118" r="0.5"/>
-    <circle class="flicker"  cx="60"  cy="130" r="0.4" style="animation-delay: -0.4s"/>
+  <!-- ============ NAVIGATION-CHART GRID (faint rhumb lines from a compass point) ============ -->
+  <g stroke="#f4efdc" stroke-width="0.35" opacity="0.14" fill="none">
+    <!-- Rhumb lines fanning out from (110, 60) -->
+    <line x1="110" y1="60" x2="800" y2="12"/>
+    <line x1="110" y1="60" x2="800" y2="40"/>
+    <line x1="110" y1="60" x2="800" y2="72"/>
+    <line x1="110" y1="60" x2="800" y2="108"/>
+    <line x1="110" y1="60" x2="800" y2="150"/>
+    <line x1="110" y1="60" x2="800" y2="196"/>
+    <line x1="110" y1="60" x2="640" y2="200"/>
+    <line x1="110" y1="60" x2="380" y2="200"/>
+    <line x1="110" y1="60" x2="0" y2="130"/>
+    <line x1="110" y1="60" x2="0" y2="180"/>
+    <!-- Faint lat/lon ticks -->
+    <line x1="0" y1="30"  x2="800" y2="30"/>
+    <line x1="0" y1="60"  x2="800" y2="60"/>
+    <line x1="0" y1="90"  x2="800" y2="90"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
   </g>
 
-  <!-- ================= CONSTELLATION CANIS MAJOR (faint blue lines forming a dog) ================= -->
-  <!-- Positions chosen roughly around Sirius (235, 92) as the collar of the dog silhouette -->
-  <g class="breath" stroke="#7fb0ff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Constellation connecting lines (dog outline: nose, head, back, tail, legs) -->
-    <g stroke-width="0.9" opacity="0.9">
-      <!-- Sirius collar to Mirzam (nose/front paw) -->
-      <line x1="235" y1="92"  x2="180" y2="100"/>
-      <!-- Sirius to Muliphein (head/ear) -->
-      <line x1="235" y1="92"  x2="215" y2="66"/>
-      <!-- Muliphein to Furud (front paw down) -->
-      <line x1="215" y1="66"  x2="188" y2="140"/>
-      <!-- Sirius to Wezen (chest/back) -->
-      <line x1="235" y1="92"  x2="290" y2="118"/>
-      <!-- Wezen to Adhara (belly) -->
-      <line x1="290" y1="118" x2="268" y2="146"/>
-      <!-- Wezen to Aludra (tail up) -->
-      <line x1="290" y1="118" x2="352" y2="82"/>
-      <!-- Adhara to hind paw -->
-      <line x1="268" y1="146" x2="308" y2="152"/>
-      <!-- Aludra to tail tip -->
-      <line x1="352" y1="82"  x2="382" y2="72"/>
+  <!-- ============ COMPASS ROSE (upper-left, ghosted) ============ -->
+  <g transform="translate(72,68)" opacity="0.55">
+    <use href="#compass" width="120" height="120" x="-60" y="-60"/>
+  </g>
+
+  <!-- ============ CLOUD DECK (lower half) — drifting slowly ============ -->
+  <g class="drift2" opacity="0.9">
+    <use href="#cloudA" x="-40"  y="126" width="240" height="72"/>
+    <use href="#cloudA" x="240"  y="132" width="220" height="66"/>
+    <use href="#cloudA" x="520"  y="128" width="260" height="78"/>
+    <use href="#cloudA" x="760"  y="134" width="200" height="60"/>
+  </g>
+  <g class="drift1" opacity="0.95">
+    <use href="#cloudB" x="90"   y="150" width="180" height="56"/>
+    <use href="#cloudB" x="320"  y="156" width="200" height="60"/>
+    <use href="#cloudB" x="560"  y="152" width="180" height="56"/>
+  </g>
+
+  <!-- ============ FAR-DISTANCE BIRDS (below the clouds' horizon, tiny) ============ -->
+  <g>
+    <use class="flap"  href="#bird" x="180" y="182" width="14" height="8"/>
+    <use class="flap2" href="#bird" x="205" y="188" width="10" height="6"/>
+    <use class="flap3" href="#bird" x="230" y="184" width="12" height="7"/>
+    <use class="flap2" href="#bird" x="620" y="186" width="12" height="7"/>
+    <use class="flap"  href="#bird" x="645" y="182" width="10" height="6"/>
+  </g>
+
+  <!-- ============ CONTRAIL (dotted arc sweeping across the frame) ============ -->
+  <!-- Long arc from lower-left up to upper-right area, passing behind the plane -->
+  <path class="stream" d="M-20,178 Q140,100 300,80 Q460,62 620,50 Q720,44 820,42"
+        stroke="#f8f4e8" stroke-width="2.4" fill="none" stroke-linecap="round"
+        stroke-dasharray="6 8" opacity="0.55"/>
+  <!-- Second thinner trail (parallel, offset) -->
+  <path class="stream" d="M-20,184 Q140,108 300,88 Q460,70 620,58 Q720,52 820,50"
+        stroke="#f4efdc" stroke-width="1.2" fill="none" stroke-linecap="round"
+        stroke-dasharray="3 10" opacity="0.35" style="animation-duration: 11s"/>
+
+  <!-- ============ LOCKHEED ELECTRA (top-down silhouette, mid-frame-left, heading right / east) ============ -->
+  <!-- Top-down aerial "map" view: nose points right, wings extend perpendicular, twin tails at rear. -->
+  <g transform="translate(300,78)">
+    <!-- Subtle drop shadow -->
+    <ellipse cx="0" cy="22" rx="48" ry="3" fill="#000" opacity="0.16"/>
+
+    <!-- Wings (dominant horizontal element, spanning above and below fuselage) -->
+    <path fill="#12100d" d="
+      M-2,-24 Q-6,-25 -10,-24
+      L-14,-6
+      L-20,-6 Q-24,-4 -20,-2
+      L-4,-2
+      L-4,2
+      L-20,2 Q-24,4 -20,6
+      L-14,6
+      L-10,24 Q-6,25 -2,24
+      L-2,6
+      L2,6
+      L2,24 Q6,25 10,24
+      L14,6
+      L20,6 Q24,4 20,2
+      L4,2
+      L4,-2
+      L20,-2 Q24,-4 20,-6
+      L14,-6
+      L10,-24 Q6,-25 2,-24
+      Z"/>
+
+    <!-- Fuselage (long, tapered nose to the right) -->
+    <path fill="#12100d" d="
+      M-32,-4
+      Q-36,-6 -32,-7
+      L-8,-6
+      L22,-4
+      Q34,-3 38,0
+      Q34,3 22,4
+      L-8,6
+      L-32,7
+      Q-36,6 -32,4
+      Z"/>
+
+    <!-- Cockpit canopy (small warm-lit oval near the front) -->
+    <ellipse cx="14" cy="0" rx="10" ry="2.6" fill="#e8b048" opacity="0.85"/>
+    <ellipse cx="14" cy="0" rx="10" ry="2.6" fill="none" stroke="#12100d" stroke-width="0.4"/>
+    <line x1="10" y1="-2.4" x2="10" y2="2.4" stroke="#12100d" stroke-width="0.3"/>
+    <line x1="18" y1="-2.4" x2="18" y2="2.4" stroke="#12100d" stroke-width="0.3"/>
+
+    <!-- Twin engine nacelles (mounted on the wings, extending forward past the wing leading edge) -->
+    <path fill="#12100d" d="M14,-12 L28,-11 Q32,-9 32,-7 L32,-4 Q30,-2 14,-2 Z"/>
+    <path fill="#12100d" d="M14,12 L28,11 Q32,9 32,7 L32,4 Q30,2 14,2 Z"/>
+    <!-- Warm cowling glints -->
+    <line x1="28" y1="-10" x2="30" y2="-6" stroke="#e8b048" stroke-width="0.6" opacity="0.85"/>
+    <line x1="28" y1="10"  x2="30" y2="6"  stroke="#e8b048" stroke-width="0.6" opacity="0.85"/>
+
+    <!-- Spinning propeller disks (in FRONT of engines — to the right, since heading east) -->
+    <g class="prop" transform="translate(34 -6)">
+      <ellipse cx="0" cy="0" rx="1.2" ry="10" fill="#f4efdc" opacity="0.35"/>
+      <ellipse cx="0" cy="0" rx="0.5" ry="10" fill="#f4efdc" opacity="0.75"/>
     </g>
-    <!-- Constellation stars (small silver dots at joints) -->
-    <g fill="#d5dcf0" stroke="none">
-      <circle cx="180" cy="100" r="1.6"/>  <!-- Mirzam -->
-      <circle cx="215" cy="66"  r="1.4"/>  <!-- Muliphein -->
-      <circle cx="188" cy="140" r="1.2"/>  <!-- Furud -->
-      <circle cx="290" cy="118" r="1.9"/>  <!-- Wezen -->
-      <circle cx="268" cy="146" r="1.5"/>  <!-- Adhara -->
-      <circle cx="352" cy="82"  r="1.4"/>  <!-- Aludra -->
-      <circle cx="382" cy="72"  r="1.1"/>
-      <circle cx="308" cy="152" r="1.1"/>
+    <g class="prop" transform="translate(34 6)" style="animation-duration: 0.37s">
+      <ellipse cx="0" cy="0" rx="1.2" ry="10" fill="#f4efdc" opacity="0.35"/>
+      <ellipse cx="0" cy="0" rx="0.5" ry="10" fill="#f4efdc" opacity="0.75"/>
     </g>
-    <!-- Star labels (small, italic) -->
-    <g fill="#7fb0ff" stroke="none" class="h3" font-size="6.5" opacity="0.75">
-      <text x="176" y="112">Mirzam</text>
-      <text x="221" y="60">Muliphein</text>
-      <text x="296" y="128">Wezen</text>
-      <text x="272" y="158">Adhara</text>
-      <text x="356" y="76">Aludra</text>
-    </g>
+    <!-- Prop hub centers -->
+    <circle cx="34" cy="-6" r="1.4" fill="#e8b048"/>
+    <circle cx="34" cy="6"  r="1.4" fill="#e8b048"/>
+
+    <!-- Twin vertical stabilizers (distinctive Electra feature — at rear, as small fins on the horizontal stab tips) -->
+    <path fill="#12100d" d="M-38,-10 Q-42,-10 -44,-8 L-42,-4 L-38,-4 Z"/>
+    <path fill="#12100d" d="M-38,10  Q-42,10  -44,8  L-42,4  L-38,4  Z"/>
+    <!-- Horizontal stabilizer at rear -->
+    <path fill="#12100d" d="M-42,-9 Q-44,-10 -46,-8 L-46,8 Q-44,10 -42,9 L-38,4 L-38,-4 Z"/>
+
+    <!-- Registration on wing (tiny, historical NR16020) -->
+    <text x="-3" y="18" font-family="Georgia, serif" font-size="3" fill="#e8b048" opacity="0.9" text-anchor="middle">NR16020</text>
   </g>
 
-  <!-- ================= DESERT DUNES (horizon silhouette, Egypt nod) ================= -->
-  <g fill="#1a0e05" opacity="0.9">
-    <path d="M0,178 L0,168 Q80,148 160,164 T320,158 Q400,144 470,162 T620,156 Q700,146 800,166 L800,200 L0,200 Z"/>
-  </g>
-  <!-- Dune highlights catching dawn light -->
-  <g fill="#f2b060" opacity="0.5" filter="url(#grain)">
-    <path d="M320,158 Q400,144 470,162 L470,166 Q400,150 320,164 Z"/>
-    <path d="M620,156 Q700,146 800,166 L800,170 Q700,152 620,161 Z"/>
-  </g>
-
-  <!-- ================= HEAT SHIMMER at horizon line ================= -->
-  <g filter="url(#shimmer)" opacity="0.6">
-    <line x1="0" y1="176" x2="800" y2="176" stroke="#d9863a" stroke-width="0.6" opacity="0.6"/>
-    <line x1="0" y1="172" x2="800" y2="172" stroke="#f2b060" stroke-width="0.4" opacity="0.5"/>
+  <!-- ============ HEADLINE ============ -->
+  <g transform="translate(420,72)">
+    <!-- Soft shadow -->
+    <text x="0" y="0" class="h1" font-size="40" fill="#f4efdc" filter="url(#textShadow)" opacity="0.7">JULY 24, 2026</text>
+    <text x="0" y="0" class="h1" font-size="40" fill="#f4efdc">JULY 24, 2026</text>
+    <!-- Underline (flight-path curve) -->
+    <path class="under" d="M2,10 Q100,4 200,10 T380,9" stroke="#e8b048" stroke-width="2.4" fill="none" stroke-linecap="round"/>
   </g>
 
-  <!-- ================= SIRIUS (blazing centerpiece, upper-left-of-center) ================= -->
-  <g transform="translate(235,92)">
-    <!-- Broad ambient halo -->
-    <circle cx="0" cy="0" r="60" fill="url(#siriusAmbient)"/>
-    <circle cx="0" cy="0" r="60" fill="url(#siriusAmbient)">
-      <animate attributeName="r" values="55;70;55" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="11s" repeatCount="indefinite"/>
-    </circle>
+  <!-- ============ SUBHEAD ============ -->
+  <text x="420" y="110" class="h2" font-size="15" fill="#e8b048" opacity="0.98" filter="url(#textShadow)">AMELIA EARHART · 129 YEARS</text>
+  <text x="420" y="110" class="h2" font-size="15" fill="#e8b048" opacity="0.98">AMELIA EARHART · 129 YEARS</text>
 
-    <!-- Radiating rays (long, thin) -->
-    <g class="rays" opacity="0.7">
-      <g stroke="#cfe4ff" stroke-width="0.5" stroke-linecap="round" opacity="0.55">
-        <line x1="0" y1="-58" x2="0" y2="-88"/>
-        <line x1="0" y1="58"  x2="0" y2="88"/>
-        <line x1="-58" y1="0" x2="-88" y2="0"/>
-        <line x1="58"  y1="0" x2="88"  y2="0"/>
-        <line x1="-41" y1="-41" x2="-62" y2="-62"/>
-        <line x1="41"  y1="41"  x2="62"  y2="62"/>
-        <line x1="-41" y1="41"  x2="-62" y2="62"/>
-        <line x1="41"  y1="-41" x2="62"  y2="-62"/>
-      </g>
-    </g>
-    <g class="rays2" opacity="0.55">
-      <g stroke="#e8f0ff" stroke-width="0.35" stroke-linecap="round" opacity="0.6">
-        <line x1="0" y1="-65" x2="0" y2="-105"/>
-        <line x1="0" y1="65"  x2="0" y2="105"/>
-        <line x1="-65" y1="0" x2="-105" y2="0"/>
-        <line x1="65"  y1="0" x2="105"  y2="0"/>
-      </g>
-    </g>
+  <!-- ============ TERTIARY ============ -->
+  <text x="420" y="128" class="h3" font-size="9" fill="#f4efdc" opacity="0.95">ATCHISON  ·  24 JULY 1897  ·  FIRST WOMAN SOLO ATLANTIC</text>
 
-    <!-- Sirius glow disk -->
-    <circle cx="0" cy="0" r="30" fill="url(#siriusGlow)"/>
-
-    <!-- Twinkle: four-pointed diffraction spikes -->
-    <g class="twinkle" filter="url(#siriusBloom)">
-      <!-- Vertical spike -->
-      <polygon points="0,-38 1.6,0 0,38 -1.6,0" fill="#ffffff"/>
-      <!-- Horizontal spike -->
-      <polygon points="-38,0 0,1.6 38,0 0,-1.6" fill="#ffffff"/>
-      <!-- Small diagonal spikes -->
-      <polygon points="0,-20 0.8,0 0,20 -0.8,0" fill="#ffffff" transform="rotate(45)"/>
-      <polygon points="-20,0 0,0.8 20,0 0,-0.8" fill="#ffffff" transform="rotate(45)"/>
-      <!-- Hot core -->
-      <circle cx="0" cy="0" r="4.5" fill="#ffffff"/>
-      <circle cx="0" cy="0" r="2.2" fill="#ffffff"/>
-    </g>
-
-    <!-- Sirius label -->
-    <text x="14" y="-6" class="lbl" font-size="9" fill="#ffffff" opacity="0.95">SIRIUS</text>
-    <text x="14" y="4"  class="h3" font-size="6.5" fill="#cfe4ff" opacity="0.85">α Canis Majoris · −1.46 mag</text>
+  <!-- ============ CHART ANNOTATIONS (tiny italic labels — kept above the cloud deck) ============ -->
+  <g fill="#f4efdc" opacity="0.7" class="chart" font-size="6.4">
+    <text x="60" y="118" transform="rotate(-16 60,118)">HEADING 090°</text>
+    <text x="480" y="42">ALT 8,000 FT</text>
+    <text x="200" y="60" opacity="0.6">LOCKHEED MODEL 10-E ELECTRA · NR16020</text>
   </g>
 
-  <!-- ================= HEADLINE ================= -->
-  <g transform="translate(438,72)">
-    <text x="0" y="0" class="h1" font-size="38" fill="#f4efdc" filter="url(#soft)" opacity="0.35">JULY 23, 2026</text>
-    <text x="0" y="0" class="h1" font-size="38" fill="#f4efdc">JULY 23, 2026</text>
-    <!-- Underline (rising sun line) -->
-    <path class="under" d="M2,10 Q90,7 180,10 T348,9" stroke="#ffd66a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.95"/>
-  </g>
-
-  <!-- ================= SUBHEAD ================= -->
-  <text x="440" y="110" class="h2" font-size="15" fill="#ffd66a" opacity="0.98">DOG DAYS BEGIN</text>
-
-  <!-- ================= TERTIARY ================= -->
-  <text x="440" y="132" class="h3" font-size="9" fill="#cfe4ff" opacity="0.9">HELIACAL RISING OF SIRIUS  ·  α CANIS MAJORIS</text>
-  <text x="440" y="146" class="h3" font-size="8.2" fill="#f2b060" opacity="0.85">DIES CANICULARES  ·  THE DOG STAR RETURNS</text>
-
-  <!-- ================= COMPASS / DAWN INDICATOR (lower right) ================= -->
-  <g transform="translate(760,168)" opacity="0.75">
-    <circle cx="0" cy="0" r="10" fill="none" stroke="#ffd66a" stroke-width="0.6"/>
-    <text x="0" y="-12" text-anchor="middle" class="lbl" font-size="6" fill="#ffd66a">E</text>
-    <line x1="0" y1="-8" x2="0" y2="-4" stroke="#ffd66a" stroke-width="0.6"/>
-    <polygon points="0,3 -2.5,-3 2.5,-3" fill="#f2b060"/>
-  </g>
-
-  <!-- Subtle vignette -->
+  <!-- ============ VIGNETTE ============ -->
+  <rect width="800" height="200" fill="url(#vig)"/>
+  <!-- Border -->
   <rect width="800" height="200" fill="none" stroke="#000" stroke-width="2" opacity="0.4"/>
 </svg>
