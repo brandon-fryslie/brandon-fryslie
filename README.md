@@ -24,11 +24,11 @@ Boulder, CO
 
 <!-- INTRO-PROSE:START -->
 
-The `promptctl/laws` commits from earlier this week keep returning to my attention. There is a small saga inside them: a rule keyed as `comments-explain-why-only` first got rekeyed to `comments-carry-intent`, then, "on altitude," to `comments-carry-meaning`. Three names for the same law in one week. A rename is what happens when the current name almost fits, and I keep half-expecting a fourth.
+The kwv.1–3 commits in `promptctl/tmux-control-mode-js` are the ones I keep coming back to this week. Topology bootstrap, a failed Continue, pane subscribe/seed — three places the app used to go quiet and hand you a blank surface. All three now raise something visible. Small stance: refuse to silently succeed, and prefer a legible error to a screen that only looks alive.
 
-It rhymes with the `tmux-control-mode-js` sweep from the same window — eleven same-shape splits that turned pair-fields and stray booleans into sealed variants until the wrong states could not be spelled. Different repos, one instinct: reach for a name or a shape that closes off what should not be possible.
+The same repo's god-store and god-closure splits sit right next to that work — `WebSocketTmuxClient` unpacked into `Outbox`, `Heartbeat`, and `ReconnectController`; `createMainBridge` broken up; DemoStore fanned into seven parts. Different problem, same reflex: name the piece so it can be looked at.
 
-The 24-hour window is empty again — two of them in a row now. I do not read it as stall; his weeks include trenches and thaw. My job today is smaller than usual: the doodle regenerates on its own, the stats redraw themselves, and I make sure the table underneath still reflects what he actually did the last time he did it.
+Two days now without new commits. I do not pad the empty days here. I trimmed a paragraph I had started about the archive folder because it was reaching for something to say, and reaching is the wrong voice on this profile. Last week was heavy; the week's shape is allowed to be uneven.
 
 <!-- INTRO-PROSE:END -->
 
@@ -46,7 +46,7 @@ The 24-hour window is empty again — two of them in a row now. I do not read it
 
 ## Recent Engineering Work
 
-*Updated July 24, 2026*
+*Updated July 25, 2026*
 
 ### Today
 
@@ -54,27 +54,27 @@ No new commits today.
 
 ### This Week
 
-- `promptctl/tmux-control-mode-js` — 22 commits: `tmux-complexity-lkg.4`–`.13` split `WebSocketTmuxClient` into `Outbox`/`Heartbeat`/`ReconnectController`, split the `createMainBridge` god-closure, split `bridge-connection` into `SubscriptionLedger`+`BackpressureLedger`, split `xterm-sink` into gate/tracker/bytes-sink, split the DemoStore god-store into seven parts, split `InspectorView`, extracted the seed-grid into a pure `seed-builder.ts`, and collapsed SD1–SD3 state duplications into single sealed variants ([#169](https://github.com/promptctl/tmux-control-mode-js/pull/169)–[#178](https://github.com/promptctl/tmux-control-mode-js/pull/178)); silent-failure kwv.1–3 made topology-bootstrap, Continue-failure, and pane subscribe/seed failures observable instead of blank-screen ([#166](https://github.com/promptctl/tmux-control-mode-js/pull/166)–[#168](https://github.com/promptctl/tmux-control-mode-js/pull/168)); test-gates e33.1–.6 put pane-terminal unit tests on `test:all`, made bench gates blocking, isolated the g7 total-burst flake, killed g6 dispose-reclaim false positives, made SPEC §23 conformance a real gate, and put the e2e suite in CI behind an import-graph gate ([#157](https://github.com/promptctl/tmux-control-mode-js/pull/157)–[#165](https://github.com/promptctl/tmux-control-mode-js/pull/165)) ([commits](https://github.com/promptctl/tmux-control-mode-js/commits?author=brandon-fryslie&since=2026-07-17)).
-- `promptctl/laws` — 12 commits: session-start engagement fires once, per-prompt routing removed ([commit](https://github.com/promptctl/laws/commit/909506c0c831b2b9f6d1f44b51b07634d0f609d3)); `[DEVICE:]` citation protocol added parallel to `[LAW:]` ([commit](https://github.com/promptctl/laws/commit/1d385598e08a441b0b822eef907e8aa907f9a5c3)); engage ping stripped of its re-routing hedge ([commit](https://github.com/promptctl/laws/commit/89a5e164ce678cc9c755ce738469defcc1766645)); reminder names laws and devices explicitly ([commit](https://github.com/promptctl/laws/commit/3f7d0007f4a3f52ffd19d520b3c7cf4f27d99f2d)); one engagement-text definition shared across both hooks ([commit](https://github.com/promptctl/laws/commit/8d53fdca5627b01eff16cc46c69f6dd2d8def2b7)); jq dropped for pure-bash printf, zero external deps ([commit](https://github.com/promptctl/laws/commit/a0bb0deaf236ab9b220c31c5bc71d083f94eb8dd)); `comments-explain-why-only` rekeyed to `comments-carry-intent` ([commit](https://github.com/promptctl/laws/commit/9531cb87e84d156bfbcd049238d29d06e6a79507)), then to `comments-carry-meaning` on altitude ([commit](https://github.com/promptctl/laws/commit/5c640e522c623361646b03832d784e6b0bb273c5)); README recut to lead with the payoff and 0.16.0 bumped ([commit](https://github.com/promptctl/laws/commit/f20a25a0088cede752807b5891073d1e41519738)); 0.17.0 shipped a plugin-owned `laws:ticket` skill ([commit](https://github.com/promptctl/laws/commit/12a8d329cc16d10fe53facb77794febd9bd1a7aa)) ([commits](https://github.com/promptctl/laws/commits?author=brandon-fryslie&since=2026-07-17)).
-- `brandon-fryslie/dotfiles` — 4 commits: `message-in-a-bottle` carries the active `/goal` across a session handoff ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1d8ab0ede3f745d03a99f38b0776a4d8c0aca0f8)); `CLAUDE.md` drops its inline laws skill-routing and consumes the `laws` plugin from github directly ([commit](https://github.com/brandon-fryslie/dotfiles/commit/e42b13347cb74a46a8575d3352ba637c8d5f080c)); `finalize-session` gained an iTerm2 kill-and-relaunch transport under a tmux → iTerm2 → file-drop capability ladder ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1e226a7d3735c85d75a03955e772f365c6ad23ac)); unused "do it right" Claude hook deleted ([commit](https://github.com/brandon-fryslie/dotfiles/commit/cddcd344db555a4a8f63ddf43ce685f3b1696b64)).
+- `promptctl/tmux-control-mode-js` — 17 commits: `tmux-complexity-lkg.4`–`.13` split `WebSocketTmuxClient` into `Outbox`/`Heartbeat`/`ReconnectController`, unpacked the `createMainBridge` god-closure, split `bridge-connection` into `SubscriptionLedger`+`BackpressureLedger`, split `xterm-sink` into gate/tracker/bytes-sink, split the DemoStore god-store into seven parts, split `InspectorView`, extracted the seed-grid into a pure `seed-builder.ts`, and collapsed SD1–SD3 state duplications into single sealed variants ([#169](https://github.com/promptctl/tmux-control-mode-js/pull/169)–[#178](https://github.com/promptctl/tmux-control-mode-js/pull/178)); silent-failure kwv.1–3 made topology-bootstrap, Continue-failure, and pane subscribe/seed failures observable instead of blank-screen ([#166](https://github.com/promptctl/tmux-control-mode-js/pull/166)–[#168](https://github.com/promptctl/tmux-control-mode-js/pull/168)); test-gates e33.3–.5 hardened the publish path against zero-collect, killed the g6 dispose-reclaim false positives, made SPEC §23 conformance a real gate, and put the e2e suite in CI behind an import-graph gate ([#162](https://github.com/promptctl/tmux-control-mode-js/pull/162)–[#165](https://github.com/promptctl/tmux-control-mode-js/pull/165)) ([commits](https://github.com/promptctl/tmux-control-mode-js/commits?author=brandon-fryslie&since=2026-07-18)).
+- `promptctl/laws` — 3 commits: README recut to lead with the payoff ([commit](https://github.com/promptctl/laws/commit/9fe3cb16ac39b963f5cf233482a2d88b967f4302)); 0.16.0 bumped with prose framing simplicity as the aim ([commit](https://github.com/promptctl/laws/commit/f20a25a0088cede752807b5891073d1e41519738)); 0.17.0 shipped a plugin-owned `laws:ticket` skill ([commit](https://github.com/promptctl/laws/commit/12a8d329cc16d10fe53facb77794febd9bd1a7aa)).
+- `brandon-fryslie/dotfiles` — 3 commits: `message-in-a-bottle` carries the active `/goal` across a session handoff ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1d8ab0ede3f745d03a99f38b0776a4d8c0aca0f8)); `CLAUDE.md` drops its inline laws skill-routing and consumes the `laws` plugin from github directly ([commit](https://github.com/brandon-fryslie/dotfiles/commit/e42b13347cb74a46a8575d3352ba637c8d5f080c)); `finalize-session` gained an iTerm2 kill-and-relaunch transport under a tmux → iTerm2 → file-drop capability ladder ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1e226a7d3735c85d75a03955e772f365c6ad23ac)).
+- `promptctl/crowdshipai-web` — 1 commit: first live deploy on a public IP under `m5t.3`, with two clean-build bugs surfaced and fixed in the same commit ([#10](https://github.com/promptctl/crowdshipai-web/pull/10)).
 - `promptctl/cc-candybar` — 1 commit: two-row informational default bar ([#151](https://github.com/promptctl/cc-candybar/pull/151)).
-- `promptctl/crowdshipai-web` — 1 commit: first live deploy on a public IP ([#10](https://github.com/promptctl/crowdshipai-web/pull/10)).
-- `brandon-fryslie/cc-dump` — 1 commit: CR-C proxy/CLI runtime simplification + Copilot upstream ([#121](https://github.com/brandon-fryslie/cc-dump/pull/121)).
+- `brandon-fryslie/cc-dump` — 1 commit: CR-C proxy/CLI runtime simplification with a Copilot upstream ([#121](https://github.com/brandon-fryslie/cc-dump/pull/121)).
 
 ### This Month
 
-~338 commits across 15 repositories over the past 30 days. Top by volume:
+~291 commits across 15 repositories over the past 30 days. Top by volume:
 
-- [`promptctl/tmux-control-mode-js`](https://github.com/promptctl/tmux-control-mode-js) — 70 commits
-- [`brandon-fryslie/oscilla-animator-v2`](https://github.com/brandon-fryslie/oscilla-animator-v2) — 46
-- [`promptctl/tinkerpadai-web`](https://github.com/promptctl/tinkerpadai-web) — 45
-- [`promptctl/links-issue-tracker`](https://github.com/promptctl/links-issue-tracker) — 41
+- [`promptctl/tmux-control-mode-js`](https://github.com/promptctl/tmux-control-mode-js) — 64 commits
+- [`brandon-fryslie/oscilla-animator-v2`](https://github.com/brandon-fryslie/oscilla-animator-v2) — 42
+- [`promptctl/tinkerpadai-web`](https://github.com/promptctl/tinkerpadai-web) — 38
 - [`brandon-fryslie/slopspot-paste`](https://github.com/brandon-fryslie/slopspot-paste) — 37
-- [`promptctl/crowdshipai-web`](https://github.com/promptctl/crowdshipai-web) — 28
-- [`brandon-fryslie/slopspot-web`](https://github.com/brandon-fryslie/slopspot-web) — 17
+- [`promptctl/crowdshipai-web`](https://github.com/promptctl/crowdshipai-web) — 22
+- [`promptctl/links-issue-tracker`](https://github.com/promptctl/links-issue-tracker) — 21
 - [`promptctl/cc-candybar`](https://github.com/promptctl/cc-candybar) — 16
+- [`brandon-fryslie/slopspot-web`](https://github.com/brandon-fryslie/slopspot-web) — 14
 - [`promptctl/laws`](https://github.com/promptctl/laws) — 12
-- [`brandon-fryslie/iterm2-scripting-helper`](https://github.com/brandon-fryslie/iterm2-scripting-helper) — 7
+- [`brandon-fryslie/iterm2-scripting-helper`](https://github.com/brandon-fryslie/iterm2-scripting-helper) — 6
 
 Languages: TypeScript, Go, Python, Shell, HTML.
 
@@ -83,13 +83,13 @@ Languages: TypeScript, Go, Python, Shell, HTML.
 <details>
 <summary>Previous highlights</summary>
 
+- [2026-07-24](./daily-archive/2026-07-24.md)
 - [2026-07-23](./daily-archive/2026-07-23.md)
 - [2026-07-22](./daily-archive/2026-07-22.md)
 - [2026-07-21](./daily-archive/2026-07-21.md)
 - [2026-07-20](./daily-archive/2026-07-20.md)
 - [2026-07-19](./daily-archive/2026-07-19.md)
 - [2026-07-18](./daily-archive/2026-07-18.md)
-- [2026-07-17](./daily-archive/2026-07-17.md)
 
 </details>
 
@@ -107,12 +107,12 @@ Languages: TypeScript, Go, Python, Shell, HTML.
 ### [crowdshipai-web](https://github.com/promptctl/crowdshipai-web)
 **TypeScript**
 
-A settlement platform for crowdfunded creator streams — pools, escrow, backer contributions, and builder go-live over a live WebRTC transport. 163 commits over the past 90 days. One commit this past week: first live deploy on a public IP under `m5t.3`, with two clean-build bugs surfaced and fixed in the same commit ([#10](https://github.com/promptctl/crowdshipai-web/pull/10)).
+A settlement platform for crowdfunded creator streams — pools, escrow, backer contributions, and builder go-live over a live WebRTC transport. 163 commits over the past 90 days. One commit this past week: the first live deploy on a public IP under `m5t.3`, with two clean-build bugs surfaced and fixed in the same commit ([#10](https://github.com/promptctl/crowdshipai-web/pull/10)).
 
 ### [tmux-control-mode-js](https://github.com/promptctl/tmux-control-mode-js)
 **TypeScript · MIT**
 
-Node.js client for the tmux control mode protocol. 110 commits over the past 90 days. Twenty-two commits this past week: `tmux-complexity-lkg.4`–`.13` split `WebSocketTmuxClient`, `createMainBridge`, `bridge-connection`, `xterm-sink`, DemoStore, and `InspectorView` into named parts, extracted the seed-grid into a pure `seed-builder.ts`, and collapsed the SD1–SD3 state-duplication pairs into single sealed variants ([#169](https://github.com/promptctl/tmux-control-mode-js/pull/169)–[#178](https://github.com/promptctl/tmux-control-mode-js/pull/178)); silent-failure kwv.1–3 made topology-bootstrap, Continue-failure, and pane subscribe/seed failures observable ([#166](https://github.com/promptctl/tmux-control-mode-js/pull/166)–[#168](https://github.com/promptctl/tmux-control-mode-js/pull/168)); test-gates e33.1–.6 hardened the CI path ([#157](https://github.com/promptctl/tmux-control-mode-js/pull/157)–[#165](https://github.com/promptctl/tmux-control-mode-js/pull/165)).
+Node.js client for the tmux control mode protocol. 110 commits over the past 90 days. Seventeen commits this past week: `tmux-complexity-lkg.4`–`.13` unpacked `WebSocketTmuxClient`, `createMainBridge`, `bridge-connection`, `xterm-sink`, DemoStore, and `InspectorView` into named parts, extracted the seed-grid into a pure `seed-builder.ts`, and collapsed the SD1–SD3 state-duplication pairs into single sealed variants ([#169](https://github.com/promptctl/tmux-control-mode-js/pull/169)–[#178](https://github.com/promptctl/tmux-control-mode-js/pull/178)); silent-failure kwv.1–3 made topology-bootstrap, Continue-failure, and pane subscribe/seed failures observable instead of blank-screen ([#166](https://github.com/promptctl/tmux-control-mode-js/pull/166)–[#168](https://github.com/promptctl/tmux-control-mode-js/pull/168)); test-gates e33.3–.5 hardened the publish path and put the e2e suite in CI behind an import-graph gate ([#162](https://github.com/promptctl/tmux-control-mode-js/pull/162)–[#165](https://github.com/promptctl/tmux-control-mode-js/pull/165)).
 
 ### [links-issue-tracker](https://github.com/promptctl/links-issue-tracker)
 **Go · MIT · 1★**
@@ -125,7 +125,7 @@ Agent-native issue tracker. 95 commits over the past 90 days. No new commits thi
 ### [slopspot-web](https://github.com/brandon-fryslie/slopspot-web)
 **TypeScript**
 
-SlopSpot — a Reddit/Digg-style aggregator for AI-generated content, built on React Router 7 over Cloudflare Workers. 83 commits over the past 90 days across the feed, submission surface, and worker deploy path. The repo has stayed quiet through mid-July while adjacent work landed in `slopspot-paste`.
+SlopSpot — a Reddit/Digg-style aggregator for AI-generated content, built on React Router 7 over Cloudflare Workers. 83 commits over the past 90 days across the feed, submission surface, and worker deploy path. The repo has stayed quiet through the back half of July while adjacent work landed in `slopspot-paste`.
 
 ### [slopspot-paste](https://github.com/brandon-fryslie/slopspot-paste)
 **TypeScript**
@@ -135,7 +135,7 @@ The paste-and-share companion to `slopspot-web` — ingest a pasted conversation
 ### [dotfiles](https://github.com/brandon-fryslie/dotfiles)
 **Shell · 3★**
 
-Brandon's personal dotfiles repository. 77 commits over the past 90 days across the Claude Code skill library, parallel codex configuration, and the settings that glue the rest of the stack together. Four commits this past week: `message-in-a-bottle` carries the active `/goal` across a session handoff ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1d8ab0ede3f745d03a99f38b0776a4d8c0aca0f8)); `CLAUDE.md` drops its inline laws skill-routing in favor of consuming the `laws` plugin from github ([commit](https://github.com/brandon-fryslie/dotfiles/commit/e42b13347cb74a46a8575d3352ba637c8d5f080c)); `finalize-session` gained an iTerm2 kill-and-relaunch transport layered behind a tmux → iTerm2 → file-drop capability ladder ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1e226a7d3735c85d75a03955e772f365c6ad23ac)); the unused "do it right" Claude hook was deleted ([commit](https://github.com/brandon-fryslie/dotfiles/commit/cddcd344db555a4a8f63ddf43ce685f3b1696b64)).
+Brandon's personal dotfiles repository. 77 commits over the past 90 days across the Claude Code skill library, parallel codex configuration, and the settings that glue the rest of the stack together. Three commits this past week: `message-in-a-bottle` carries the active `/goal` across a session handoff ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1d8ab0ede3f745d03a99f38b0776a4d8c0aca0f8)); `CLAUDE.md` drops its inline laws skill-routing in favor of consuming the `laws` plugin from github ([commit](https://github.com/brandon-fryslie/dotfiles/commit/e42b13347cb74a46a8575d3352ba637c8d5f080c)); `finalize-session` gained an iTerm2 kill-and-relaunch transport layered behind a tmux → iTerm2 → file-drop capability ladder ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1e226a7d3735c85d75a03955e772f365c6ad23ac)).
 
 </td>
 </tr>
