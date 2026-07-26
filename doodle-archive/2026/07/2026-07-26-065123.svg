@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Rosalind Franklin's 106th Birthday — Born July 25, 1920, in Notting Hill, London. British chemist and X-ray crystallographer whose Photo 51 (May 1952) provided the critical evidence for the double-helix structure of DNA. A laboratory-noir tableau: a dark plate-glass backdrop with a large glowing Photo 51 X-ray diffraction pattern on the left (the iconic X of dark spots), an animated DNA double helix in luminous cyan/magenta rotating slowly on the right, base-pair rungs pulsing between the strands, faint blueprint grid, scattered crystallographic reflections drifting up, a rack of glass slides in the lower-left. Large ivory JULY 25, 2026 headline dominates upper-right; magenta ROSALIND FRANKLIN · 106 YEARS subhead; italic NOTTING HILL · 25 JULY 1920 · PHOTO 51 · THE DOUBLE HELIX tertiary. Palette: near-black #0d1117, plate slate #131a26, ink navy #172236, X-ray teal #4fd6c8, X-ray glow #7ff2e6, helix magenta #ff5db1, helix cyan #6ad9ff, base-pair gold #f4d066, ivory #f4efdc, blueprint blue #2a4a78, chart red #c04030, cream white #fff5dc. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 25, 2026 — Rosalind Franklin's 106th birthday. A laboratory-noir tableau: a glowing Photo 51 X-ray diffraction X of dark spots on the left, a slowly rotating luminous DNA double helix in cyan and magenta on the right with base-pair rungs pulsing between the strands, a faint blueprint grid, scattered crystallographic reflections drifting upward, and a rack of glass slides in the lower-left. A large ivory JULY 25, 2026 headline dominates the upper-right, with a magenta ROSALIND FRANKLIN · 106 YEARS subhead and italic NOTTING HILL · 25 JULY 1920 · PHOTO 51 · THE DOUBLE HELIX tertiary along the bottom.">
+  <defs>
+    <!-- Deep lab-noir backdrop, subtle gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0d1117"/>
+      <stop offset="55%"  stop-color="#131a26"/>
+      <stop offset="100%" stop-color="#172236"/>
+    </linearGradient>
+
+    <!-- Blueprint grid pattern (very faint) -->
+    <pattern id="grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#2a4a78" stroke-width="0.4" stroke-opacity="0.35"/>
+    </pattern>
+
+    <!-- Photo 51 radial glow (behind the diffraction X) -->
+    <radialGradient id="p51glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#7ff2e6" stop-opacity="0.55"/>
+      <stop offset="45%"  stop-color="#4fd6c8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#4fd6c8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Diffraction spot -->
+    <radialGradient id="spot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#f4efdc" stop-opacity="0.95"/>
+      <stop offset="60%"  stop-color="#7ff2e6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4fd6c8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Helix strand gradients -->
+    <linearGradient id="strandA" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ff8fd1"/>
+      <stop offset="50%"  stop-color="#ff5db1"/>
+      <stop offset="100%" stop-color="#c73285"/>
+    </linearGradient>
+    <linearGradient id="strandB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#a5e8ff"/>
+      <stop offset="50%"  stop-color="#6ad9ff"/>
+      <stop offset="100%" stop-color="#2a9bd6"/>
+    </linearGradient>
+
+    <!-- Soft vignette -->
+    <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.4"/>
+    </radialGradient>
+
+    <!-- A single dark diffraction dot for the Photo 51 X -->
+    <radialGradient id="dot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#0a0d14" stop-opacity="0.98"/>
+      <stop offset="70%"  stop-color="#0a0d14" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0a0d14" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Rung pulse gradient -->
+    <linearGradient id="rung" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ff5db1"/>
+      <stop offset="50%"  stop-color="#f4d066"/>
+      <stop offset="100%" stop-color="#6ad9ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+  <rect width="800" height="200" fill="url(#grid)"/>
+
+  <!-- ============================================================= -->
+  <!-- LEFT: Photo 51 — the iconic X-ray diffraction X                -->
+  <!-- ============================================================= -->
+  <g transform="translate(120,100)">
+    <!-- soft glow disc -->
+    <circle r="88" fill="url(#p51glow)">
+      <animate attributeName="r" values="86;92;86" dur="11s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- outer film-plate ring -->
+    <circle r="82" fill="none" stroke="#2a4a78" stroke-width="1" stroke-opacity="0.6"/>
+    <circle r="72" fill="none" stroke="#2a4a78" stroke-width="0.6" stroke-opacity="0.35"/>
+
+    <!-- central beam-stop shadow -->
+    <circle r="10" fill="#0a0d14" opacity="0.9"/>
+    <circle r="14" fill="none" stroke="#4fd6c8" stroke-width="0.6" stroke-opacity="0.5"/>
+
+    <!-- The characteristic "X" of Photo 51 — two diagonals of dots.
+         Each arm has spots at increasing radii; opposite arms mirror. -->
+    <g>
+      <!-- arm NE-SW (positive diagonal) -->
+      <g>
+        <circle cx="14"  cy="-14" r="5"  fill="url(#dot)"/>
+        <circle cx="26"  cy="-26" r="6"  fill="url(#dot)"/>
+        <circle cx="38"  cy="-38" r="5"  fill="url(#dot)"/>
+        <circle cx="50"  cy="-50" r="4"  fill="url(#dot)"/>
+        <circle cx="-14" cy="14"  r="5"  fill="url(#dot)"/>
+        <circle cx="-26" cy="26"  r="6"  fill="url(#dot)"/>
+        <circle cx="-38" cy="38"  r="5"  fill="url(#dot)"/>
+        <circle cx="-50" cy="50"  r="4"  fill="url(#dot)"/>
+      </g>
+      <!-- arm NW-SE (negative diagonal) -->
+      <g>
+        <circle cx="-14" cy="-14" r="5"  fill="url(#dot)"/>
+        <circle cx="-26" cy="-26" r="6"  fill="url(#dot)"/>
+        <circle cx="-38" cy="-38" r="5"  fill="url(#dot)"/>
+        <circle cx="-50" cy="-50" r="4"  fill="url(#dot)"/>
+        <circle cx="14"  cy="14"  r="5"  fill="url(#dot)"/>
+        <circle cx="26"  cy="26"  r="6"  fill="url(#dot)"/>
+        <circle cx="38"  cy="38"  r="5"  fill="url(#dot)"/>
+        <circle cx="50"  cy="50"  r="4"  fill="url(#dot)"/>
+      </g>
+      <!-- pulse the whole diffraction cluster gently -->
+      <animateTransform attributeName="transform" type="scale" values="1;1.04;1" dur="7s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- highlight specks -->
+    <g fill="url(#spot)">
+      <circle cx="34" cy="-34" r="2.5">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="3.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-34" cy="34" r="2.5">
+        <animate attributeName="opacity" values="1;0.4;1" dur="3.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-34" cy="-34" r="2">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="4.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="34" cy="34" r="2">
+        <animate attributeName="opacity" values="1;0.5;1" dur="4.7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- label under plate -->
+    <text x="0" y="94" text-anchor="middle" fill="#7ff2e6" opacity="0.85"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9" letter-spacing="2.5">PHOTO 51 · MAY 1952</text>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- LEFT-LOW: slide rack (small crystallography detail)            -->
+  <!-- ============================================================= -->
+  <g transform="translate(28,168)" opacity="0.7">
+    <rect x="0" y="0" width="60" height="18" rx="1" fill="#1a2438" stroke="#2a4a78" stroke-width="0.6"/>
+    <line x1="8"  y1="2" x2="8"  y2="16" stroke="#6ad9ff" stroke-width="1" opacity="0.7"/>
+    <line x1="16" y1="2" x2="16" y2="16" stroke="#6ad9ff" stroke-width="1" opacity="0.7"/>
+    <line x1="24" y1="2" x2="24" y2="16" stroke="#6ad9ff" stroke-width="1" opacity="0.7"/>
+    <line x1="32" y1="2" x2="32" y2="16" stroke="#ff5db1" stroke-width="1" opacity="0.8"/>
+    <line x1="40" y1="2" x2="40" y2="16" stroke="#6ad9ff" stroke-width="1" opacity="0.7"/>
+    <line x1="48" y1="2" x2="48" y2="16" stroke="#6ad9ff" stroke-width="1" opacity="0.7"/>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- CENTER-RIGHT: DNA double helix                                 -->
+  <!-- Sweeping SMIL animation on strand phase creates rotation feel. -->
+  <!-- ============================================================= -->
+  <g transform="translate(340,100)">
+    <!-- outer subtle vertical glow -->
+    <ellipse cx="0" cy="0" rx="55" ry="88" fill="#6ad9ff" opacity="0.06">
+      <animate attributeName="opacity" values="0.04;0.11;0.04" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- The helix as a whole — subtle horizontal breathing to fake the twist rotation.
+         Static shape renders correctly in a still frame; SMIL scales x periodically. -->
+    <g>
+      <animateTransform attributeName="transform" type="scale"
+                        values="1 1; 0.65 1; 1 1; 0.65 1; 1 1"
+                        keyTimes="0; 0.25; 0.5; 0.75; 1"
+                        dur="11s" repeatCount="indefinite"/>
+
+      <!-- STRAND A (magenta) — static sinusoidal bezier, one full twist over the height -->
+      <path d="M -40,-90 C 40,-60 40,-30 -40,0 C -120,30 -120,60 -40,90"
+            stroke="url(#strandA)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+      <!-- STRAND B (cyan) — sinusoid 180° out of phase -->
+      <path d="M 40,-90 C -40,-60 -40,-30 40,0 C 120,30 120,60 40,90"
+            stroke="url(#strandB)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+      <!-- BASE-PAIR RUNGS — widths precomputed to trace the twist shape at t=0.
+           Alternating direction across y creates the ladder-twist illusion. -->
+      <g stroke="url(#rung)" stroke-linecap="round" stroke-width="2.4" opacity="0.92">
+        <line x1="-40" y1="-90" x2="40"  y2="-90"/>
+        <line x1="-22" y1="-75" x2="22"  y2="-75"/>
+        <line x1="-8"  y1="-60" x2="8"   y2="-60"/>
+        <line x1="10"  y1="-45" x2="-10" y2="-45"/>
+        <line x1="28"  y1="-30" x2="-28" y2="-30"/>
+        <line x1="38"  y1="-15" x2="-38" y2="-15"/>
+        <line x1="40"  y1="0"   x2="-40" y2="0"/>
+        <line x1="38"  y1="15"  x2="-38" y2="15"/>
+        <line x1="28"  y1="30"  x2="-28" y2="30"/>
+        <line x1="10"  y1="45"  x2="-10" y2="45"/>
+        <line x1="-8"  y1="60"  x2="8"   y2="60"/>
+        <line x1="-22" y1="75"  x2="22"  y2="75"/>
+        <line x1="-40" y1="90"  x2="40"  y2="90"/>
+      </g>
+
+      <!-- Gold base-pair anchors on strand endpoints -->
+      <g fill="#f4d066">
+        <circle cx="-40" cy="-90" r="2.4"/>
+        <circle cx="40"  cy="-90" r="2.4"/>
+        <circle cx="40"  cy="0"   r="2.4"/>
+        <circle cx="-40" cy="0"   r="2.4"/>
+        <circle cx="-40" cy="90"  r="2.4"/>
+        <circle cx="40"  cy="90"  r="2.4"/>
+      </g>
+
+      <!-- Base-letter dots (A/T/G/C flavor via colored specks on some rungs) -->
+      <g opacity="0.85">
+        <circle cx="0"  cy="-90" r="1.8" fill="#fff5dc"/>
+        <circle cx="0"  cy="-60" r="1.6" fill="#7ff2e6"/>
+        <circle cx="0"  cy="-30" r="1.8" fill="#ff8fd1"/>
+        <circle cx="0"  cy="0"   r="1.8" fill="#fff5dc">
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0"  cy="30"  r="1.8" fill="#ff8fd1"/>
+        <circle cx="0"  cy="60"  r="1.6" fill="#7ff2e6"/>
+        <circle cx="0"  cy="90"  r="1.8" fill="#fff5dc"/>
+      </g>
+    </g>
+
+    <!-- helix label — positioned above bottom edge (canvas is 200 tall; group is at y=100) -->
+    <text x="0" y="95" text-anchor="middle" fill="#6ad9ff" opacity="0.85"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9" letter-spacing="2.5">DNA · B-FORM</text>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- Drifting crystallographic reflections (upward motes)           -->
+  <!-- ============================================================= -->
+  <g opacity="0.7">
+    <circle cx="230" cy="180" r="1.6" fill="#7ff2e6">
+      <animate attributeName="cy" from="200" to="-10" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="180" r="1.2" fill="#f4d066">
+      <animate attributeName="cy" from="200" to="-10" dur="17s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="17s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="290" cy="180" r="1.4" fill="#ff5db1">
+      <animate attributeName="cy" from="200" to="-10" dur="19s" begin="-6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="19s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="440" cy="180" r="1.4" fill="#6ad9ff">
+      <animate attributeName="cy" from="200" to="-10" dur="15s" begin="-2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="15s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="470" cy="180" r="1.2" fill="#7ff2e6">
+      <animate attributeName="cy" from="200" to="-10" dur="21s" begin="-8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="21s" begin="-8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- RIGHT: text block                                              -->
+  <!-- ============================================================= -->
+  <!-- Subtle warm-ivory glow behind the headline for legibility -->
+  <ellipse cx="620" cy="70" rx="200" ry="42" fill="#0d1117" opacity="0.55"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Headline — the date, large and readable -->
+    <text x="785" y="72" text-anchor="end" fill="#f4efdc" font-size="34" font-weight="700" letter-spacing="1">
+      JULY 25, 2026
+    </text>
+
+    <!-- Subhead — magenta, the honoree -->
+    <text x="785" y="102" text-anchor="end" fill="#ff5db1" font-size="15" font-weight="700" letter-spacing="3">
+      ROSALIND FRANKLIN · 106 YEARS
+    </text>
+
+    <!-- Tertiary — italic, small caps flavor -->
+    <text x="785" y="122" text-anchor="end" fill="#a8c8e6" font-size="10" font-style="italic" letter-spacing="2">
+      NOTTING HILL · 25 JULY 1920 · PHOTO 51 · THE DOUBLE HELIX
+    </text>
+
+    <!-- crystallography stamp -->
+    <text x="785" y="152" text-anchor="end" fill="#7ff2e6" font-size="8" opacity="0.6" letter-spacing="3">
+      X-RAY DIFFRACTION · KING'S COLLEGE LONDON
+    </text>
+
+  </g>
+
+  <!-- Vignette on top -->
+  <rect width="800" height="200" fill="url(#vig)"/>
+</svg>
