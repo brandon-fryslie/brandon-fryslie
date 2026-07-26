@@ -291,7 +291,7 @@ jobs:
             Past 30 days (per-repo counts and total):
               gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '.items[].repository.full_name' | sort | uniq -c | sort -rn
 
-            Past 90 days (for project ranking — used in Task 5):
+            Past 90 days (for project ranking — used in Task 6):
               gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '90 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '.items[].repository.full_name' | sort | uniq -c | sort -rn
 
             Recent repo info (for languages and descriptions):
@@ -366,7 +366,48 @@ jobs:
 
             Tone for bullets: matter-of-fact, third-person past tense. Plain verbs ("Added", "Renamed", "Migrated", "Fixed"). Name concrete artifacts. No editorial adjectives. No promotional framing. No commit hashes or SHAs in the visible text — links carry that.
 
-            ## Task 5: Render SELECTED-PROJECTS
+            ## Task 5: Append Today's Day Section to the Weekly Archive
+
+            `previous-work/` is the durable, curated record of engineering work — one file per week, written as each week happens. `previous-work/README.md` is its contract. Your job here is narrow: on a day with commits, append today's day section to the current week's file, reusing the SAME bullets you rendered in the RECENT-ACTIVITY "today" section above. The day section is written once, with same-day context, and is never re-summarized later.
+
+            Do this ONLY if Task 2 found commits in the past 24h. On a no-commit day, do NOT create, open, or touch any file under `previous-work/` — skip this task entirely.
+
+            1. Compute the current week's Monday (UTC; Monday–Sunday weeks) and today's parts:
+               ```
+               DOW=$(date -u +%u)                              # 1=Mon .. 7=Sun
+               MON=$(date -u -d "-$((DOW-1)) days" +%Y-%m-%d)  # Monday of this week
+               PREV_MON=$(date -u -d "$MON -7 days" +%Y-%m-%d) # Monday of last week
+               YEAR=$(date -u -d "$MON" +%Y)
+               WEEK_TITLE=$(date -u -d "$MON" '+%B %-d, %Y')   # e.g. July 20, 2026
+               PREV_TITLE=$(date -u -d "$PREV_MON" '+%B %-d')  # e.g. July 13
+               TODAY_HEAD=$(date -u '+%A, %B %-d')             # e.g. Sunday, July 26
+               ```
+               The week file is `previous-work/$YEAR/$MON.md`.
+            2. If that file does not exist (this is the week's first active day), create it (`mkdir -p previous-work/$YEAR`) with exactly this scaffold — a `# Week of` title, the in-progress note, an empty gap for day sections, then the footer (substitute the variables above):
+               ```
+               # Week of <WEEK_TITLE>
+
+               *In progress — the summary header is added when the week closes on Monday.*
+
+               ---
+
+               [← Week of <PREV_TITLE>](<PREV_MON>.md) · [Archive index](../README.md)
+               ```
+            3. Build today's day section from today's activity — one bullet per repo with commits in the past 24h, byte-for-byte the same bullet text and links you rendered in the RECENT-ACTIVITY "today" section (same work, recorded in two places; they must not drift). Same link rules as Task 4:
+               ```
+               ## <TODAY_HEAD>
+
+               - `owner/repo` — what shipped ([commits](url) or [#N](url))
+               - `another/repo` — what changed ([repo](url))
+               ```
+            4. Insert today's section between the in-progress note and the `---` footer:
+               - If a heading for TODAY (`## <TODAY_HEAD>`) already exists in the file (the workflow ran earlier today), replace THAT section's body in place — do NOT add a second copy of today.
+               - Otherwise append it as the LAST day section, immediately before the `---` footer, so day sections stay in chronological order (Monday first).
+               - NEVER modify a day section for a past day. Prior days are frozen; only today's section may be added or rewritten.
+
+            Do NOT write the bold topic line or the `*~N commits · M repos*` totals line — those belong to the weekly finalization job, not this daily append.
+
+            ## Task 6: Render SELECTED-PROJECTS
 
             README.md has a marker pair `<!-- SELECTED-PROJECTS:START -->` / `<!-- SELECTED-PROJECTS:END -->` wrapping a six-cell project table. Replace the content between those markers with up to six projects Brandon has actually made substantial recent commits to.
 
@@ -395,7 +436,7 @@ jobs:
 
             - ACCURACY IS PARAMOUNT across all three regions. Only reference real commits and real work. Never fabricate.
             - Routine commits (merge commits, CI tweaks, dependency bumps, typo fixes) get folded into a single bullet at most, or omitted.
-            - Do not touch any region or file outside your three markers and `daily-archive/`.
+            - Do not touch any region or file outside your three markers, `daily-archive/`, and `previous-work/`.
 
             ## Final note
 
@@ -442,9 +483,10 @@ jobs:
 
           # Stage exactly what this job is responsible for. The narrative job
           # owns INTRO-PROSE/RECENT-ACTIVITY/SELECTED-PROJECTS regions of
-          # README.md plus the daily-archive/ tree, and docs/daily.json which
-          # is the Pages site's data feed (the doodle job owns docs/assets/).
-          git add README.md daily-archive/ docs/daily.json 2>/dev/null || true
+          # README.md, the daily-archive/ tree, the previous-work/ weekly
+          # archive, and docs/daily.json which is the Pages site's data feed
+          # (the doodle job owns docs/assets/).
+          git add README.md daily-archive/ previous-work/ docs/daily.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "::error::Narrative job produced no staged changes — Claude did not write the expected files."
