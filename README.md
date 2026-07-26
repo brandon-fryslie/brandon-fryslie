@@ -48,22 +48,36 @@ The `laws:chat` skill I bumped tonight was a small self-indulgence. A fifth comm
 
 *Updated July 26, 2026*
 
-### Today
+### Latest — Sunday, July 26
 
 - `brandon-fryslie/dotfiles` — 17 commits: `iterm2-restore` sub-epic `5k5.1`–`.7` marched from UUID-stability probe through a UUID-keyed sidecar carrier, a live tmux-hook sidecar writer, and a variant-B iTerm2 wire-in, to a post-restore verifier and a launchd-owned periodic resurrect save; added `mxroute-email`, `bro-guru`, and `slop-image` fal-nano-banana provider skills; `share-slop` gained a review-before-publish `/api/draft` path; codex skill-installer hot-load fix ([commits](https://github.com/brandon-fryslie/dotfiles/commits?author=brandon-fryslie&since=2026-07-25)).
 - `promptctl/links-issue-tracker` — 8 commits: sync epic `7p7q.1`–`.4` reconciled schema-version skew via the field-aware engine, sealed one sync-failure contract every reporter renders, added `lit upgrade` as the local-boundary counterpart to downgrade, and refused stale-schema writes against a newer remote head ([#294](https://github.com/promptctl/links-issue-tracker/pull/294), [#296](https://github.com/promptctl/links-issue-tracker/pull/296), [#299](https://github.com/promptctl/links-issue-tracker/pull/299), [#300](https://github.com/promptctl/links-issue-tracker/pull/300)); `lit show` split from `lit history` so `show` renders current state only (`9lv6.1`–`.2`) ([#301](https://github.com/promptctl/links-issue-tracker/pull/301), [#302](https://github.com/promptctl/links-issue-tracker/pull/302)); release-smoke CI gate taken off its cold cliff and under two minutes ([#295](https://github.com/promptctl/links-issue-tracker/pull/295), [#297](https://github.com/promptctl/links-issue-tracker/pull/297)).
 - `promptctl/laws` — 4 commits: sizing floor ends confetti tickets, 0.18.0 ([commit](https://github.com/promptctl/laws/commit/a32b5f68c83de28bc3a08ef232e0e99cb9d0675f)); spikes pay out in backlog structure and verifiability bends for no ticket type, 0.19.0 ([commit](https://github.com/promptctl/laws/commit/16c70fc78d35714d0534622e89e79faa5b3982df)); migration proof reframed as a repo fact rather than measuring apparatus, 0.19.1 ([commit](https://github.com/promptctl/laws/commit/ee209a04a89aa459b8fbdfaaa7ce4b964bff43f7)); `laws:chat` skill added as a fifth communication register, 0.20.0 ([commit](https://github.com/promptctl/laws/commit/1130f5de5681f94c80e0ffe4b49d3031a41cd6da)).
 - `promptctl/cc-candybar` — 4 commits: menu and interaction surface converged onto one canonical set (`bn5.2`–`.3`) ([#154](https://github.com/promptctl/cc-candybar/pull/154), [#155](https://github.com/promptctl/cc-candybar/pull/155)); core git fan-out collapsed into a single porcelain=v2 read (`bb9.1`) ([#152](https://github.com/promptctl/cc-candybar/pull/152)); dropped flaky pid-numbering assertions from socket-lease reclaim tests ([#153](https://github.com/promptctl/cc-candybar/pull/153)).
 
-### This Week
+### Work Log
 
-- `brandon-fryslie/dotfiles` — 20 commits: today's `iterm2-restore` and skill work plus `message-in-a-bottle` gained an iTerm2 kill-and-relaunch transport under a tmux → iTerm2 → file-drop capability ladder ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1e226a7d3735c85d75a03955e772f365c6ad23ac)), `CLAUDE.md` dropped inline laws skill-routing in favor of the plugin ([commit](https://github.com/brandon-fryslie/dotfiles/commit/e42b13347cb74a46a8575d3352ba637c8d5f080c)), and `/goal` now rides across a session handoff ([commit](https://github.com/brandon-fryslie/dotfiles/commit/1d8ab0ede3f745d03a99f38b0776a4d8c0aca0f8)) ([commits](https://github.com/brandon-fryslie/dotfiles/commits?author=brandon-fryslie&since=2026-07-19)).
-- `promptctl/tmux-control-mode-js` — 16 commits: `tmux-complexity-lkg.4`–`.13` split `WebSocketTmuxClient` into `Outbox`/`Heartbeat`/`ReconnectController`, unpacked the `createMainBridge` god-closure, split `bridge-connection` into `SubscriptionLedger`+`BackpressureLedger`, split `xterm-sink` into gate/tracker/bytes-sink, split the DemoStore god-store into seven parts, split `InspectorView`, extracted the seed-grid into a pure `seed-builder.ts`, and collapsed SD1–SD3 state duplications into single sealed variants ([#169](https://github.com/promptctl/tmux-control-mode-js/pull/169)–[#178](https://github.com/promptctl/tmux-control-mode-js/pull/178)); silent-failure `kwv.1`–`.3` made topology-bootstrap, Continue-failure, and pane subscribe/seed failures observable instead of blank-screen ([#166](https://github.com/promptctl/tmux-control-mode-js/pull/166)–[#168](https://github.com/promptctl/tmux-control-mode-js/pull/168)); test-gates `e33.3.1`–`.5` killed the g6 dispose-reclaim false positives, made SPEC §23 conformance a real gate, and put the e2e suite in CI behind an import-graph gate ([#163](https://github.com/promptctl/tmux-control-mode-js/pull/163)–[#165](https://github.com/promptctl/tmux-control-mode-js/pull/165)).
-- `promptctl/links-issue-tracker` — 8 commits: see Today.
-- `promptctl/laws` — 7 commits: today's sizing/spikes/migration/chat progression plus README recut to lead with the payoff ([commit](https://github.com/promptctl/laws/commit/9fe3cb16ac39b963f5cf233482a2d88b967f4302)), 0.16.0 framing simplicity as the aim ([commit](https://github.com/promptctl/laws/commit/f20a25a0088cede752807b5891073d1e41519738)), and 0.17.0 shipping the plugin-owned `laws:ticket` skill ([commit](https://github.com/promptctl/laws/commit/12a8d329cc16d10fe53facb77794febd9bd1a7aa)).
-- `promptctl/cc-candybar` — 5 commits: today's menu/git/tests work plus a two-row informational default bar ([#151](https://github.com/promptctl/cc-candybar/pull/151)).
-- `promptctl/crowdshipai-web` — 1 commit: first live deploy on a public IP under `m5t.3`, with two clean-build bugs surfaced and fixed in the same commit ([#10](https://github.com/promptctl/crowdshipai-web/pull/10)).
-- `brandon-fryslie/cc-dump` — 1 commit: CR-C proxy/CLI runtime simplification with a Copilot upstream ([#121](https://github.com/brandon-fryslie/cc-dump/pull/121)).
+- **Jul 21–22** · `brandon-fryslie/dotfiles` — `finalize-session` gained an iTerm2 kill-and-relaunch transport under a tmux → iTerm2 → file-drop capability ladder; `/goal` now rides across session handoffs ([commits](https://github.com/brandon-fryslie/dotfiles/commits?author=brandon-fryslie&since=2026-07-20))
+- **Jul 21–22** · `promptctl/laws` — README recut to lead with the payoff, 0.16.0 framing simplicity as the aim, 0.17.0 shipping the plugin-owned `laws:ticket` skill ([commits](https://github.com/promptctl/laws/commits?author=brandon-fryslie&since=2026-07-20))
+- **Jul 22** · `promptctl/cc-candybar` — two-row informational default bar ([#151](https://github.com/promptctl/cc-candybar/pull/151))
+- **Jul 18–20** · `promptctl/tmux-control-mode-js` — 20+ commits: `tmux-complexity-lkg` decomposition (`WebSocketTmuxClient` → `Outbox`/`Heartbeat`/`ReconnectController`, DemoStore split seven ways), silent failures made observable, publish and test gates hardened ([#156](https://github.com/promptctl/tmux-control-mode-js/pull/156)–[#178](https://github.com/promptctl/tmux-control-mode-js/pull/178))
+- **Jul 20** · `promptctl/crowdshipai-web` — first live deploy on a public IP; two clean-build bugs surfaced and fixed ([#10](https://github.com/promptctl/crowdshipai-web/pull/10))
+- **Jul 20** · `brandon-fryslie/cc-dump` — CR-C proxy/CLI runtime simplification with a Copilot upstream ([#121](https://github.com/brandon-fryslie/cc-dump/pull/121))
+- **Jul 18** · `promptctl/laws` — 9 commits reshaping the hooks and the comments law: `[DEVICE:]` citations, one engagement definition, `comments-carry-meaning` ([commits](https://github.com/promptctl/laws/commits?author=brandon-fryslie&since=2026-07-17))
+- **Jul 13** · `brandon-fryslie/cc-dump` — 0.3.0 cut with an onboarding-rewritten README; release mechanics encoded as `just publish` ([#122](https://github.com/brandon-fryslie/cc-dump/pull/122), [#123](https://github.com/brandon-fryslie/cc-dump/pull/123))
+- **Jul 12** · `promptctl/crowdshipai-web` — 11 commits reaching the money layer into the app: typed stream lifecycle, bought-effect overlays, settlements and refunds in view of the stream ([commits](https://github.com/promptctl/crowdshipai-web/commits?author=brandon-fryslie&since=2026-07-11))
+- **Jul 12** · `brandon-fryslie/swe4vibe-swamp` — companion before/after swamp repo taken public; Show HN drafted ([commits](https://github.com/brandon-fryslie/swe4vibe-swamp/commits?author=brandon-fryslie&since=2026-07-11))
+- **Jul 9–12** · `promptctl/tinkerpadai-web` — launch arc: deploy pivot, Cloudflare Workers deploy + sandbox security audit, 18-commit launch push (legal, moderation, quality ladder, seeding to 100+ commons), render-sandbox thumbnails ([#35](https://github.com/promptctl/tinkerpadai-web/pull/35)–[#57](https://github.com/promptctl/tinkerpadai-web/pull/57))
+- **Jul 10–12** · `brandon-fryslie/oscilla-animator-v2` — unified editor boot (one dockview shell, two provider sets), era-neutral undo/redo and selection/clipboard/duplicate, parity checklist ([#413](https://github.com/brandon-fryslie/oscilla-animator-v2/pull/413)–[#419](https://github.com/brandon-fryslie/oscilla-animator-v2/pull/419))
+- **Jul 9–11** · `promptctl/cc-candybar` — daemon lifecycle ladder (pid lease, ownership self-check, spawn cooldown), `theme.effective` single resolution, incremental transcript fold ([#145](https://github.com/promptctl/cc-candybar/pull/145)–[#150](https://github.com/promptctl/cc-candybar/pull/150))
+- **Jul 9–10** · `brandon-fryslie/slopspot-paste` — continuation bundle to copy a conversation and keep going elsewhere; source-origin label derived from the URL ([#95](https://github.com/brandon-fryslie/slopspot-paste/pull/95), [#96](https://github.com/brandon-fryslie/slopspot-paste/pull/96))
+- **Jul 8** · `promptctl/links-issue-tracker` — 14-commit types-are-the-program recut: retention as a sealed sum, one typed change seam, `IssueType`/`Priority` behind parse gates, musl-static binaries ([#280](https://github.com/promptctl/links-issue-tracker/pull/280)–[#293](https://github.com/promptctl/links-issue-tracker/pull/293))
+- **Jul 6–7** · `brandon-fryslie/slopspot-paste` — 14 commits: pre-publish secret guard, then the embed/diff wave — oEmbed, chromeless `/embed`, side-by-side diff routes, download-as-files ([#80](https://github.com/brandon-fryslie/slopspot-paste/pull/80)–[#93](https://github.com/brandon-fryslie/slopspot-paste/pull/93))
+- **Jul 6–7** · `promptctl/tmux-control-mode-js` — reliability wave: unified `ConnectionState`, every pending promise settles on transport close, parser recovery, reconnect-sweep generation tags ([#147](https://github.com/promptctl/tmux-control-mode-js/pull/147)–[#155](https://github.com/promptctl/tmux-control-mode-js/pull/155))
+- **Jul 6–7** · `brandon-fryslie/slopspot-web` — comments surface unified; posts became complete objects at `/p/:id` with share metadata and named lineage ([#244](https://github.com/brandon-fryslie/slopspot-web/pull/244)–[#254](https://github.com/brandon-fryslie/slopspot-web/pull/254))
+- **Jul 6–7** · `promptctl/tinkerpadai-web` — commons search + topic tags, design-system pass on player and commons, first seeding wave ([#26](https://github.com/promptctl/tinkerpadai-web/pull/26)–[#34](https://github.com/promptctl/tinkerpadai-web/pull/34))
+- **Jul 7** · `brandon-fryslie/oscilla-animator-v2` — four "one neutral authority, both eras" seams: `SelectionDetail`, `EdgeDecorator`, `TypeOracle`, `BlockCatalog`, plus adapter conformance suite ([#407](https://github.com/brandon-fryslie/oscilla-animator-v2/pull/407)–[#412](https://github.com/brandon-fryslie/oscilla-animator-v2/pull/412))
+- **Jul 7** · `promptctl/cc-candybar` — legacy-parity example config, fish-style abbreviated paths default, standalone `candybar-lite` ([#141](https://github.com/promptctl/cc-candybar/pull/141)–[#144](https://github.com/promptctl/cc-candybar/pull/144))
 
 ### This Month
 
@@ -82,22 +96,19 @@ The `laws:chat` skill I bumped tonight was a small self-indulgence. A fifth comm
 
 Languages: TypeScript, Go, Shell, Python, JavaScript, HTML.
 
----
-
-<details>
-<summary>Previous highlights</summary>
-
-- [2026-07-25](./daily-archive/2026-07-25.md)
-- [2026-07-24](./daily-archive/2026-07-24.md)
-- [2026-07-23](./daily-archive/2026-07-23.md)
-- [2026-07-22](./daily-archive/2026-07-22.md)
-- [2026-07-21](./daily-archive/2026-07-21.md)
-- [2026-07-20](./daily-archive/2026-07-20.md)
-- [2026-07-19](./daily-archive/2026-07-19.md)
-
-</details>
-
 <!-- RECENT-ACTIVITY:END -->
+
+<!-- PREVIOUS-WORK:START -->
+
+### Previous Engineering Work
+
+- **[Week of July 20](./previous-work/2026/2026-07-20.md)** — *in progress*
+- **[Week of July 13](./previous-work/2026/2026-07-13.md)** — cc-dump 0.3.0 release · laws hooks and comments-law reshape · tmux publish-gate hardening
+- **[Week of July 6](./previous-work/2026/2026-07-06.md)** — tinkerpadai launch arc · links-issue-tracker types-are-the-program recut · slopspot-paste embeds & diffs · crowdship money layer
+
+[Full archive →](./previous-work/)
+
+<!-- PREVIOUS-WORK:END -->
 
 ---
 
