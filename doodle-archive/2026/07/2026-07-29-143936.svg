@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: NASA's 68th Anniversary — On July 29, 1958, President Dwight D. Eisenhower signed the National Aeronautics and Space Act, establishing the National Aeronautics and Space Administration (NASA) from the predecessor NACA. The agency began operations October 1, 1958. In the 68 years since, it has put humans on the Moon (Apollo 11, 1969), landed rovers on Mars (Sojourner 1997, Curiosity 2012, Perseverance 2021), flown the Voyager probes past the outer planets and out of the heliosphere, deployed Hubble (1990) and JWST (2021), and orbited the ISS continuously since 2000. A cosmic tableau on a deep-space backdrop: on the left, an evocative circular mission-patch emblem (deep navy disc, tilted white orbit ellipse, cream stars, a curving red vector swoosh nodding to the agency's insignia), rimmed by a thin gold border and haloed by a faint nebular glow; a small planet-dot travels the tilted orbit; a slim white-and-yellow rocket streaks diagonally up-right trailing a luminous contrail; a scatter of twinkling stars fills the background; a small cross-section of tick marks reads like a launch-count strip along the bottom; a big cream JULY 29, 2026 headline dominates the right side; a red NASA · 68 YEARS OF EXPLORATION subhead; italic NATIONAL AERONAUTICS AND SPACE ACT · 29 JULY 1958 · EISENHOWER tertiary; T-MINUS ZERO · APOLLO · VOYAGER · HUBBLE · JWST · PERSEVERANCE stamp. Palette: deep space #0d1117, navy #0b3d91, mission red #fc3d21, cream #f4efdc, star white #ffffff, orbit silver #cfd8e5, contrail warm gold #ffcf70, faint nebula magenta #4a2266. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 29, 2026 — the 68th anniversary of NASA, established when President Eisenhower signed the National Aeronautics and Space Act on July 29, 1958. A cosmic tableau on a deep-space backdrop: on the left, a mission-patch style circular emblem with a deep navy disc, a tilted white orbit ellipse crossing it, scattered cream stars, and a curving red vector swoosh, all rimmed in thin gold; a small planet-dot travels the tilted orbit; a slim white-and-yellow rocket streaks diagonally up-right trailing a luminous gold contrail; a scatter of twinkling stars fills the background; a tick-mark launch-count strip runs along the bottom; a large cream JULY 29, 2026 headline dominates the right side, with a red NASA · 68 YEARS OF EXPLORATION subhead and italic NATIONAL AERONAUTICS AND SPACE ACT · 29 JULY 1958 · EISENHOWER tertiary; a small stamp reads T-MINUS ZERO · APOLLO · VOYAGER · HUBBLE · JWST · PERSEVERANCE.">
+  <defs>
+    <!-- Deep space backdrop -->
+    <radialGradient id="space" cx="30%" cy="40%" r="90%">
+      <stop offset="0%"   stop-color="#1a1638"/>
+      <stop offset="35%"  stop-color="#0f1024"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </radialGradient>
+
+    <!-- Faint magenta nebula behind emblem -->
+    <radialGradient id="nebula" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#4a2266" stop-opacity="0.55"/>
+      <stop offset="55%"  stop-color="#1a1442" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Emblem disc gradient -->
+    <radialGradient id="disc" cx="35%" cy="30%" r="80%">
+      <stop offset="0%"   stop-color="#1c5cd6"/>
+      <stop offset="55%"  stop-color="#0b3d91"/>
+      <stop offset="100%" stop-color="#04184a"/>
+    </radialGradient>
+
+    <!-- Gold rim gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f4d97a"/>
+      <stop offset="50%"  stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#7a5808"/>
+    </linearGradient>
+
+    <!-- Contrail gradient (rocket exhaust) -->
+    <linearGradient id="trail" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ffcf70" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#ffcf70" stop-opacity="0.55"/>
+      <stop offset="85%"  stop-color="#fff4d0" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Rocket body gradient -->
+    <linearGradient id="rocket" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#cccccc"/>
+      <stop offset="50%"  stop-color="#f4efdc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Text cushion -->
+    <linearGradient id="cushion" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0d1117" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#04102a" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Reusable star (4-point) -->
+    <symbol id="star4" overflow="visible">
+      <path d="M 0,-3 L 0.7,-0.7 L 3,0 L 0.7,0.7 L 0,3 L -0.7,0.7 L -3,0 L -0.7,-0.7 Z" fill="#ffffff"/>
+    </symbol>
+
+    <!-- Rocket glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Vignette -->
+    <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+      <stop offset="60%"  stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.75"/>
+    </radialGradient>
+
+    <!-- Path of the tilted orbit (for planet-dot to travel) -->
+    <path id="orbitPath" d="M 150,100 m -74,-18 a 74 22 -18 1 0 148,36 a 74 22 -18 1 0 -148,-36 z"/>
+  </defs>
+
+  <!-- ============================================================== -->
+  <!-- Space background                                                 -->
+  <!-- ============================================================== -->
+  <rect width="800" height="200" fill="url(#space)"/>
+
+  <!-- Faint background starfield (twinkling in staggered groups) -->
+  <g fill="#ffffff">
+    <!-- Group A -->
+    <g>
+      <animate attributeName="opacity" values="0.35;0.95;0.35" dur="7s" repeatCount="indefinite"/>
+      <circle cx="55"  cy="30"  r="0.8"/>
+      <circle cx="220" cy="18"  r="1.1"/>
+      <circle cx="360" cy="60"  r="0.7"/>
+      <circle cx="480" cy="15"  r="0.9"/>
+      <circle cx="610" cy="30"  r="0.6"/>
+      <circle cx="720" cy="20"  r="1.0"/>
+      <circle cx="90"  cy="170" r="0.8"/>
+      <circle cx="260" cy="185" r="0.9"/>
+      <circle cx="540" cy="180" r="0.7"/>
+      <circle cx="680" cy="170" r="0.9"/>
+    </g>
+    <!-- Group B -->
+    <g>
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="11s" repeatCount="indefinite"/>
+      <circle cx="120" cy="40"  r="0.6"/>
+      <circle cx="300" cy="35"  r="0.9"/>
+      <circle cx="420" cy="45"  r="0.7"/>
+      <circle cx="560" cy="25"  r="0.8"/>
+      <circle cx="640" cy="55"  r="0.6"/>
+      <circle cx="770" cy="45"  r="1.0"/>
+      <circle cx="30"  cy="120" r="0.7"/>
+      <circle cx="330" cy="170" r="0.6"/>
+      <circle cx="470" cy="190" r="0.8"/>
+      <circle cx="750" cy="185" r="0.9"/>
+    </g>
+    <!-- Group C -->
+    <g>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/>
+      <circle cx="180" cy="25"  r="0.9"/>
+      <circle cx="270" cy="55"  r="0.6"/>
+      <circle cx="395" cy="20"  r="0.7"/>
+      <circle cx="510" cy="55"  r="0.6"/>
+      <circle cx="595" cy="12"  r="0.9"/>
+      <circle cx="705" cy="60"  r="0.7"/>
+      <circle cx="50"  cy="185" r="0.6"/>
+      <circle cx="200" cy="175" r="0.8"/>
+      <circle cx="410" cy="185" r="0.6"/>
+      <circle cx="620" cy="165" r="0.7"/>
+    </g>
+  </g>
+
+  <!-- Nebula halo behind emblem -->
+  <circle cx="150" cy="100" r="105" fill="url(#nebula)"/>
+
+  <!-- ============================================================== -->
+  <!-- Rocket streak (background layer, behind emblem near intersection)-->
+  <!-- Trail arcs up-right from lower-left; rocket at its head.         -->
+  <!-- ============================================================== -->
+  <g>
+    <!-- Contrail arc -->
+    <path d="M 20,192 Q 140,150 220,90 T 380,20"
+          stroke="url(#trail)" stroke-width="3.5" fill="none"
+          stroke-linecap="round" opacity="0.9">
+      <animate attributeName="stroke-dasharray"
+               values="0 500;120 380;500 0" dur="13s" repeatCount="indefinite"/>
+    </path>
+    <!-- Faint outer glow trail -->
+    <path d="M 20,192 Q 140,150 220,90 T 380,20"
+          stroke="#ffcf70" stroke-width="7" fill="none"
+          stroke-linecap="round" opacity="0.15"/>
+
+    <!-- Rocket at head of trail — small chevron w/ fins, drifting slightly -->
+    <g transform="translate(378,22)" filter="url(#glow)">
+      <g transform="rotate(-35)">
+        <animateTransform attributeName="transform" type="translate"
+                          values="0,0; 1.5,-1; 0,0" dur="7s" repeatCount="indefinite" additive="sum"/>
+        <!-- Body -->
+        <path d="M -12,0 L 10,0 L 14,-2 L 10,-4 L -12,-4 Z" fill="url(#rocket)" stroke="#8a8a8a" stroke-width="0.5"/>
+        <!-- Nose cone -->
+        <path d="M 10,0 L 18,-2 L 10,-4 Z" fill="#fc3d21"/>
+        <!-- Fin -->
+        <path d="M -12,0 L -16,3 L -8,0 Z" fill="#fc3d21"/>
+        <path d="M -12,-4 L -16,-7 L -8,-4 Z" fill="#fc3d21"/>
+        <!-- Window -->
+        <circle cx="2" cy="-2" r="0.9" fill="#7ec8ff"/>
+        <!-- Exhaust flame -->
+        <path d="M -12,-3 L -18,-2 L -12,-1 Z" fill="#ffcf70">
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="0.7s" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- Mission-patch emblem (left, ~150,100)                            -->
+  <!-- ============================================================== -->
+  <g>
+    <!-- Outer gold rim -->
+    <circle cx="150" cy="100" r="72" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+    <circle cx="150" cy="100" r="76" fill="none" stroke="#7a5808" stroke-width="0.8" opacity="0.7"/>
+
+    <!-- Navy disc -->
+    <circle cx="150" cy="100" r="70" fill="url(#disc)"/>
+
+    <!-- Stars inside disc (constellation-y) -->
+    <g fill="#f4efdc">
+      <use href="#star4" x="120" y="70"  transform="scale(1)"/>
+      <use href="#star4" x="180" y="82"/>
+      <use href="#star4" x="140" y="130"/>
+      <use href="#star4" x="185" y="128"/>
+      <use href="#star4" x="108" y="112"/>
+      <circle cx="132" cy="95"  r="0.9"/>
+      <circle cx="165" cy="108" r="0.8"/>
+      <circle cx="155" cy="72"  r="0.7"/>
+      <circle cx="190" cy="105" r="0.7"/>
+      <circle cx="115" cy="135" r="0.6"/>
+    </g>
+
+    <!-- Constellation lines (subtle) -->
+    <g stroke="#6a8fce" stroke-width="0.6" opacity="0.6" fill="none">
+      <path d="M 120,70 L 155,72 L 180,82 L 185,128 L 140,130 L 108,112 L 120,70"/>
+    </g>
+
+    <!-- Tilted orbit ellipse (silver-white) -->
+    <ellipse cx="150" cy="100" rx="74" ry="22"
+             transform="rotate(-18 150 100)"
+             fill="none" stroke="#cfd8e5" stroke-width="1.4" opacity="0.9"/>
+    <ellipse cx="150" cy="100" rx="74" ry="22"
+             transform="rotate(-18 150 100)"
+             fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.55"/>
+
+    <!-- Red vector swoosh — a curved chevron nodding to agency insignia -->
+    <path d="M 88,118 Q 150,60 218,102"
+          fill="none" stroke="#fc3d21" stroke-width="4" stroke-linecap="round"/>
+    <!-- Swoosh arrow tip -->
+    <path d="M 218,102 L 210,94 L 208,110 Z" fill="#fc3d21"/>
+
+    <!-- Planet-dot traveling the tilted orbit -->
+    <circle r="3.2" fill="#ffcf70" stroke="#fff4d0" stroke-width="0.6">
+      <animateMotion dur="11s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#orbitPath"/>
+      </animateMotion>
+    </circle>
+
+    <!-- Central hub dot -->
+    <circle cx="150" cy="100" r="2.4" fill="#f4efdc"/>
+    <circle cx="150" cy="100" r="1"   fill="#fc3d21"/>
+
+    <!-- Small "68" year mark bottom of patch -->
+    <text x="150" y="182" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="8" font-weight="700" fill="#f4d97a" letter-spacing="3" opacity="0.9">
+      EST · 29 JULY 1958
+    </text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- Faint launch-count tick strip along the bottom                   -->
+  <!-- ============================================================== -->
+  <g stroke="#3a4a70" stroke-width="0.8" opacity="0.55">
+    <path d="M 240,196 L 800,196"/>
+    <g stroke="#5a7ab0">
+      <path d="M 260,192 L 260,196 M 280,193 L 280,196 M 300,193 L 300,196 M 320,193 L 320,196
+               M 340,192 L 340,196 M 360,193 L 360,196 M 380,193 L 380,196 M 400,192 L 400,196
+               M 420,193 L 420,196 M 440,193 L 440,196 M 460,193 L 460,196 M 480,192 L 480,196
+               M 500,193 L 500,196 M 520,193 L 520,196 M 540,193 L 540,196 M 560,192 L 560,196
+               M 580,193 L 580,196 M 600,193 L 600,196 M 620,193 L 620,196 M 640,192 L 640,196
+               M 660,193 L 660,196 M 680,193 L 680,196 M 700,193 L 700,196 M 720,192 L 720,196
+               M 740,193 L 740,196 M 760,193 L 760,196 M 780,193 L 780,196"/>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- Right-side text block                                            -->
+  <!-- ============================================================== -->
+  <rect x="410" y="30" width="380" height="150" fill="url(#cushion)"/>
+  <!-- Red left accent -->
+  <rect x="410" y="30" width="3" height="150" fill="#fc3d21"/>
+  <!-- Gold top-corner tick -->
+  <path d="M 410,30 L 430,30 L 410,50 Z" fill="#f4d97a" opacity="0.7"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Headline: today's date -->
+    <text x="780" y="82" text-anchor="end" fill="#f4efdc" font-size="34" font-weight="800" letter-spacing="1.5">
+      JULY 29, 2026
+    </text>
+    <!-- Subhead -->
+    <text x="780" y="110" text-anchor="end" fill="#fc3d21" font-size="15" font-weight="700" letter-spacing="3">
+      NASA · 68 YEARS OF EXPLORATION
+    </text>
+    <!-- Tertiary -->
+    <text x="780" y="132" text-anchor="end" fill="#cfd8e5" font-size="10" font-style="italic" letter-spacing="1.8" opacity="0.95">
+      NATIONAL AERONAUTICS AND SPACE ACT · 29 JULY 1958
+    </text>
+    <!-- Quaternary -->
+    <text x="780" y="150" text-anchor="end" fill="#8fa8d4" font-size="9" letter-spacing="2.5" opacity="0.85">
+      SIGNED BY PRESIDENT EISENHOWER
+    </text>
+    <!-- Stamp -->
+    <text x="780" y="170" text-anchor="end" fill="#6a7fa8" font-size="7.5" letter-spacing="2.5" opacity="0.8">
+      APOLLO · VOYAGER · HUBBLE · JWST · PERSEVERANCE
+    </text>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="800" height="200" fill="url(#vig)"/>
+</svg>
