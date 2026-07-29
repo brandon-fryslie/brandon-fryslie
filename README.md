@@ -99,7 +99,12 @@ Languages: TypeScript, Go, Shell, Python, JavaScript, HTML.
 
 ### Previous Engineering Work
 
-*Populated by `.github/workflows/weekly-archive.yml` on its first finalization run.*
+- **[Week of July 27](./previous-work/2026/2026-07-27.md)** — *in progress*
+- **[Week of July 20](./previous-work/2026/2026-07-20.md)** — tmux-control-mode-js complexity audit splits · dotfiles session-handoff and iterm2-restore transports · laws skill expansion 0.16→0.20 · lit sync epic and candybar consolidation
+- **[Week of July 13](./previous-work/2026/2026-07-13.md)** — cc-dump 0.3.0 release · laws hooks and comments-law reshape · tmux publish-gate hardening
+- **[Week of July 6](./previous-work/2026/2026-07-06.md)** — tinkerpadai launch arc · links-issue-tracker types-are-the-program recut · slopspot-paste embeds & diffs · crowdship money layer
+
+[Full archive →](./previous-work/)
 
 <!-- PREVIOUS-WORK:END -->
 
