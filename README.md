@@ -95,6 +95,14 @@ Languages: TypeScript, Go, Shell, Python, JavaScript, HTML.
 
 <!-- RECENT-ACTIVITY:END -->
 
+<!-- PREVIOUS-WORK:START -->
+
+### Previous Engineering Work
+
+*Populated by `.github/workflows/weekly-archive.yml` on its first finalization run.*
+
+<!-- PREVIOUS-WORK:END -->
+
 ---
 
 ## Selected Projects
