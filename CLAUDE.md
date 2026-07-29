@@ -25,15 +25,25 @@ Concurrency model — important to understand before changing anything:
 
 If you are editing this workflow, preserve all three properties: per-job path whitelist on `git add`, rebase-retry on push, and the Verify step. They are load-bearing.
 
+## The Weekly Archive Finalization Loop
+
+`.github/workflows/weekly-archive.yml` is `workflow_dispatch`-only (no schedule of its own yet — see `brandon-work-archive-iaq.3` for the Monday-cron wiring). It finalizes exactly one already-written week file under `previous-work/`:
+
+1. A deterministic bash step resolves the target Monday (an explicit `week` input, or the most recently completed week by default) and gates the rest of the job: if `previous-work/YYYY/<monday>.md` doesn't exist, that week had no commits and the run is a no-op; if the file no longer contains the `*In progress — ...*` placeholder line, it's already finalized and the run is a no-op. Both no-op paths exit green with zero commits — this is what makes re-dispatching the same week safe.
+2. If the week genuinely needs finalizing, a Claude step mines that week's commits and merged-PR descriptions via `gh api` (PR bodies carry the "why" commit messages don't) and replaces *only* the placeholder line with a bold topic line, an italic totals line, and a short summary paragraph. It never touches the day sections or footer already in the file.
+3. `.github/scripts/render-previous-work-index.py` then mechanically regenerates `previous-work/README.md`'s index and README.md's `PREVIOUS-WORK` block by scanning every `previous-work/<year>/*.md` file's own content (whether it still has the placeholder line, and what its topic line says). Finalized-vs-in-progress is never tracked as a separate flag — it's read straight from the files, so the two derived surfaces can't drift from what's actually on disk.
+4. Same commit/push contract as `daily-highlights.yml`: shared `daily-highlights` concurrency group, path-whitelisted `git add` (`previous-work/` and `README.md`), rebase-retry push, and a `Verify Claude result` step.
+
 ## README Marker Contract
 
-`README.md` is partly hand-authored and partly machine-rewritten. Four marker pairs delimit the machine-owned regions. Markers are exact strings; never rename, reformat, or move them:
+`README.md` is partly hand-authored and partly machine-rewritten. Five marker pairs delimit the machine-owned regions. Markers are exact strings; never rename, reformat, or move them:
 
 ```
 README.md
   <!-- DAILY-DOODLE:START -->        ... <!-- DAILY-DOODLE:END -->        (doodle job)
   <!-- INTRO-PROSE:START -->         ... <!-- INTRO-PROSE:END -->         (narrative job)
   <!-- RECENT-ACTIVITY:START -->     ... <!-- RECENT-ACTIVITY:END -->     (narrative job)
+  <!-- PREVIOUS-WORK:START -->       ... <!-- PREVIOUS-WORK:END -->       (weekly-archive job)
   <!-- SELECTED-PROJECTS:START -->   ... <!-- SELECTED-PROJECTS:END -->   (narrative job)
 
 DOODLES.md
@@ -51,6 +61,7 @@ For anything inside the marker regions, in `assets/daily-highlight.svg`, `assets
 - **`.github/workflows/daily-highlights.yml`** — the prompt strings for both `doodle` and `narrative` jobs. This is where SVG creative direction, theme-picking priorities, the Recent Activity bullet format and link-construction rules, the Selected Projects qualification thresholds (≥10 commits in 90d, fallback ≥5 in 365d), and per-region tone rules all live.
 - **`.github/intro-seed.md`** — the voice and stance scaffolding for the INTRO-PROSE region. INTRO-PROSE is a daily journal entry written by Claude in *its* first person about today's work on Brandon's profile (Brandon is "Brandon" or "he," not "I"). The seed defines stance, a theme palette, and the anti-lockstep rule that today's entry must diverge from yesterday's in opening sentence, paragraph order, and theme spine. The seed is deliberately a palette, not a template — it carries no specific projects, dates, or rephrase-this-verbatim bullets. Edit it to change *how the journal sounds* or *what themes Claude is allowed to riff on*; don't edit it to add transient facts.
 - **`.github/scripts/generate-stats-svg.py`** — the deterministic stats SVG. Picks 4 metrics from a pool of 8 with varying time periods. Requires `GITHUB_TOKEN` and `pip install requests`. The doodle job runs this *before* invoking Claude, and the Claude prompt is explicitly told not to touch the resulting file.
+- **`.github/workflows/weekly-archive.yml`** and **`.github/scripts/render-previous-work-index.py`** — the weekly finalization prompt (topic line, totals, summary tone) and the mechanical index-regeneration script (which weeks count as finalized, how many appear in README.md's `PREVIOUS-WORK` block) respectively.
 
 The one legitimate exception is a **one-time legacy cleanup** — e.g., a stale archive entry from before a prompt change. Even then, fix the prompt in the same commit.
 
@@ -94,8 +105,11 @@ Switching themes overwrites the marker regions; the next 06:00 UTC run repopulat
 ## Manual Triggers
 
 ```bash
-gh workflow run daily-highlights.yml          # full daily rewrite
-python .github/scripts/generate-stats-svg.py  # regenerate stats SVG locally (needs GITHUB_TOKEN)
+gh workflow run daily-highlights.yml                      # full daily rewrite
+gh workflow run weekly-archive.yml                        # finalize the most recently completed week
+gh workflow run weekly-archive.yml -f week=2026-07-20      # finalize a specific week (must be a Monday, already ended)
+python .github/scripts/generate-stats-svg.py               # regenerate stats SVG locally (needs GITHUB_TOKEN)
+python .github/scripts/render-previous-work-index.py       # regenerate the previous-work index locally
 ```
 
 ## Issue Tracking
