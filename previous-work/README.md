@@ -8,7 +8,8 @@ Day sections are written once and never rewritten. The raw, verbatim record of w
 
 ## 2026
 
-- **[Week of July 20](2026/2026-07-20.md)** — *in progress*
+- **[Week of July 27](2026/2026-07-27.md)** — *in progress*
+- **[Week of July 20](2026/2026-07-20.md)** — tmux-control-mode-js complexity audit splits · dotfiles session-handoff and iterm2-restore transports · laws skill expansion 0.16→0.20 · lit sync epic and candybar consolidation
 - **[Week of July 13](2026/2026-07-13.md)** — cc-dump 0.3.0 release · laws hooks and comments-law reshape · tmux publish-gate hardening
 - **[Week of July 6](2026/2026-07-06.md)** — tinkerpadai launch arc · links-issue-tracker types-are-the-program recut · slopspot-paste embeds & diffs · crowdship money layer
 
