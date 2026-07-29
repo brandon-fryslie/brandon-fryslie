@@ -1,0 +1,214 @@
+name: Weekly Archive Finalization
+
+on:
+  workflow_dispatch:
+    inputs:
+      week:
+        description: 'Monday (YYYY-MM-DD) of the week to finalize. Defaults to the most recently completed week.'
+        required: false
+        type: string
+
+concurrency:
+  # Shares the daily-highlights group so a finalization run can never race a
+  # daily doodle/narrative push — both push to master and use the same
+  # rebase-retry loop below.
+  group: daily-highlights
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0 # full history so rebase-on-push can find a common ancestor
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Resolve target week
+        id: week
+        run: |
+          set -euo pipefail
+          INPUT_WEEK="${{ inputs.week }}"
+          if [ -n "$INPUT_WEEK" ]; then
+            MON="$INPUT_WEEK"
+            if ! date -u -d "$MON" >/dev/null 2>&1; then
+              echo "::error::'$MON' is not a valid date."
+              exit 1
+            fi
+            DOW=$(date -u -d "$MON" +%u)
+            if [ "$DOW" != "1" ]; then
+              echo "::error::$MON is not a Monday (weekday=$DOW). Pass the Monday that starts the target week."
+              exit 1
+            fi
+          else
+            TODAY_DOW=$(date -u +%u)
+            THIS_MON=$(date -u -d "-$((TODAY_DOW-1)) days" +%Y-%m-%d)
+            MON=$(date -u -d "$THIS_MON -7 days" +%Y-%m-%d)
+          fi
+
+          YEAR=$(date -u -d "$MON" +%Y)
+          WEEK_END=$(date -u -d "$MON +6 days" +%Y-%m-%d)
+          WEEK_END_EPOCH=$(date -u -d "$WEEK_END" +%s)
+          TODAY_EPOCH=$(date -u -d "$(date -u +%Y-%m-%d)" +%s)
+          if [ "$WEEK_END_EPOCH" -gt "$TODAY_EPOCH" ]; then
+            echo "::error::Week of $MON hasn't ended yet (ends $WEEK_END) — refusing to finalize a week still in progress."
+            exit 1
+          fi
+
+          FILE="previous-work/$YEAR/$MON.md"
+          NEEDS_FINALIZE=false
+          if [ ! -f "$FILE" ]; then
+            echo "No file at $FILE — week of $MON had no commits, nothing to finalize."
+          elif grep -qF '*In progress — the summary header is added when the week closes on Monday.*' "$FILE"; then
+            NEEDS_FINALIZE=true
+            echo "Week of $MON ($FILE) is unfinalized — will generate its summary header."
+          else
+            echo "Week of $MON ($FILE) is already finalized — nothing to do."
+          fi
+
+          echo "monday=$MON" >> "$GITHUB_OUTPUT"
+          echo "year=$YEAR" >> "$GITHUB_OUTPUT"
+          echo "week_end=$WEEK_END" >> "$GITHUB_OUTPUT"
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "needs_finalize=$NEEDS_FINALIZE" >> "$GITHUB_OUTPUT"
+
+      - name: No-op — nothing to finalize
+        if: steps.week.outputs.needs_finalize != 'true'
+        run: |
+          echo "Week of ${{ steps.week.outputs.monday }}: nothing to finalize (see the 'Resolve target week' step log above for why). Exiting green with no commit."
+
+      - name: Generate weekly summary (Claude)
+        id: claude
+        if: steps.week.outputs.needs_finalize == 'true'
+        uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(gh:*),Bash(date:*),Bash(jq:*),Read,Write,Edit,Glob,Grep"'
+          prompt: |
+            You are finalizing one week of Brandon Fryslie's `previous-work/` weekly archive — the durable, curated record of his engineering work (contract doc: `previous-work/README.md`).
+
+            TARGET WEEK: Monday ${{ steps.week.outputs.monday }} through Sunday ${{ steps.week.outputs.week_end }} (UTC). Target file: `${{ steps.week.outputs.file }}`.
+
+            This file already exists, written day-by-day by the daily narrative job: it has a `# Week of ...` title, an "*In progress — ...*" placeholder line, one or more `## <Weekday>, <Month D>` day sections with real commit/PR bullets, and a footer with a back-link. Your ONLY job is to replace the placeholder line with a finalized summary header — everything else in the file is frozen.
+
+            ## Task 1: Gather the week's data via gh api
+
+            Commit totals (count distinct commits and distinct repos across the window):
+              gh api "search/commits?q=author:brandon-fryslie+committer-date:${{ steps.week.outputs.monday }}..${{ steps.week.outputs.week_end }}&per_page=100" --paginate --jq '.items[].repository.full_name' | sort | uniq -c | sort -rn
+
+            Merged PRs in the window (PR descriptions carry the "why" behind the work that commit messages don't):
+              gh api "search/issues?q=type:pr+is:merged+author:brandon-fryslie+merged:${{ steps.week.outputs.monday }}..${{ steps.week.outputs.week_end }}&per_page=100" --paginate --jq '.items[] | {repo: .repository_url, title: .title, number: .number, body: .body, html_url: .html_url}'
+
+            Also read the day sections already written in the target file — they are the curated, same-day-context record of what shipped. Your summary must stay consistent with them; do not introduce facts absent from both the day sections and the gh api data.
+
+            ## Task 2: Write the finalized header
+
+            Replace ONLY this exact line in the target file:
+              *In progress — the summary header is added when the week closes on Monday.*
+
+            with, in order and separated by blank lines:
+
+            1. A bold topic line — 2 to 4 terse thematic phrases joined by ` · `, e.g. `**cc-dump 0.3.0 release · laws hooks and comments-law reshape · tmux publish-gate hardening**`. Each phrase names one real thread of work from the week's commits/PRs. No editorializing, no adjectives like "exciting" or "major."
+            2. An italic totals line — `*~N commits · M repositories · Month D–D*` using the real counts from Task 1 and the week's actual date range, e.g. `*~17 commits · 4 repositories · July 13–19*`.
+            3. A 2 to 4 sentence matter-of-fact summary paragraph synthesizing the week, drawing on the merged-PR descriptions for the "why" behind what shipped. Same tone as the rest of the profile: third-person past tense, plain verbs, no promotional framing, no fabrication.
+
+            Everything else in the file — the `# Week of ...` title, every `## <Weekday>...` day section (bullets and links unchanged), and the `---` / back-link footer — must come out byte-for-byte identical to how you found it.
+
+            ## Cross-cutting rules
+
+            - Touch only `${{ steps.week.outputs.file }}`. Not README.md, not previous-work/README.md, not any other week file — a mechanical step after you handles those.
+            - ACCURACY IS PARAMOUNT. Only reference real commits and real PRs you actually found via the gh api calls above.
+
+            ## Final note
+
+            Do NOT run `git commit` or `git push`. A subsequent step stages, commits, and pushes with rebase-retry. Just edit the one file and finish.
+
+      - name: Verify Claude result
+        if: steps.week.outputs.needs_finalize == 'true'
+        run: |
+          set -euo pipefail
+          EXEC_FILE="${{ steps.claude.outputs.execution_file }}"
+          if [ -z "$EXEC_FILE" ] || [ ! -f "$EXEC_FILE" ]; then
+            echo "::error::Claude execution_file missing — the action did not run to completion."
+            exit 1
+          fi
+          RESULT=$(jq -c '[.[] | select(.type=="result")] | last' "$EXEC_FILE")
+          if [ -z "$RESULT" ] || [ "$RESULT" = "null" ]; then
+            echo "::error::Claude execution output has no result entry — shape unexpected."
+            exit 1
+          fi
+          IS_ERROR=$(echo "$RESULT" | jq -r '.is_error')
+          DENIALS=$(echo "$RESULT" | jq -r '.permission_denials_count // 0')
+          echo "Weekly-archive Claude: is_error=$IS_ERROR permission_denials_count=$DENIALS"
+          if [ "$IS_ERROR" != "false" ]; then
+            echo "::error::Weekly-archive Claude reported is_error=$IS_ERROR"
+            exit 1
+          fi
+          if [ "$DENIALS" -gt 0 ]; then
+            echo "::error::Weekly-archive Claude had $DENIALS permission denials."
+            exit 1
+          fi
+
+      - name: Regenerate previous-work index (mechanical)
+        # Finalized-vs-in-progress and each finalized week's topic line are
+        # facts already sitting in the week files themselves; this script
+        # derives the previous-work/README.md index and README.md's
+        # PREVIOUS-WORK block from that one source rather than tracking
+        # either as a second, driftable representation.
+        if: steps.week.outputs.needs_finalize == 'true'
+        run: python .github/scripts/render-previous-work-index.py
+
+      - name: Commit and push (rebase-retry on race with parallel job)
+        if: steps.week.outputs.needs_finalize == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Stage exactly what this job is responsible for: the finalized
+          # week file plus the two derived index surfaces.
+          git add previous-work/ README.md 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "::error::Weekly-archive job produced no staged changes — Claude did not write the expected file."
+            exit 1
+          fi
+
+          git commit -m "chore: finalize week of ${{ steps.week.outputs.monday }}"
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:master; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt rejected — fetching and rebasing."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              echo "::error::Rebase failed (real conflict). Aborting."
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep $(( (RANDOM % 4) + 1 ))
+          done
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: weekly-archive-finalize
+          path: |
+            previous-work/
+            README.md
+          if-no-files-found: ignore
