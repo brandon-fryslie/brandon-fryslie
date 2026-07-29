@@ -1,296 +1,370 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Vincent van Gogh — 136 Years — Vincent van Gogh died on July 29, 1890, in Auvers-sur-Oise, France, at age 37. In the last ten weeks of his life he painted at a fever pitch, including "Wheatfield with Crows" and "Portrait of Dr. Gachet." His masterpiece "The Starry Night" was painted in June 1889 from the barred window of the Saint-Paul-de-Mausole asylum in Saint-Rémy-de-Provence. A Starry Night homage on an 800x200 canvas: a deep cobalt-and-indigo sky whipped with concentric painterly spiral brushstrokes forming two churning wind-currents across the upper half; a large crescent-moon-and-sun luminary in warm cadmium yellow at the upper right with radiating short brushstrokes; a scatter of eight-armed haloed stars distributed across the sky; a tall blue-black cypress flame rising along the left edge; a small silhouetted village with a spired church nestled at the base under the swirls; a warm-yellow JULY 29, 2026 headline in the lower right; cream VINCENT VAN GOGH · 136 YEARS subhead; italic AUVERS-SUR-OISE · 29 JULY 1890 · THE STARRY NIGHT tertiary. Palette: deep cobalt #1e3a8a, indigo #0f1a4a, midnight #050a1e, cadmium yellow #ffcf40, warm yellow #ffe066, cream #fff4c9, cypress green-black #0a1a12. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 29, 2026 — 136 years since Vincent van Gogh died on July 29, 1890 in Auvers-sur-Oise, France. A Starry Night homage: a deep cobalt-and-indigo sky whipped with painterly concentric spiral brushstrokes forming two churning wind-currents across the upper half; a large crescent-moon-sun luminary at the upper right with radiating brushstrokes; a scatter of eight-armed haloed stars; a tall blue-black cypress flame rising along the left edge; a small silhouetted village with a spired church nestled beneath the swirls; a warm-yellow JULY 29, 2026 headline in the lower right; a cream VINCENT VAN GOGH · 136 YEARS subhead; italic AUVERS-SUR-OISE · 29 JULY 1890 · THE STARRY NIGHT tertiary.">
+<!-- theme: International Tiger Day (July 29) — Established at the 2010 Saint Petersburg Tiger Summit, observed annually on July 29 to raise awareness of tiger conservation. When founded, an estimated ~3,200 wild tigers remained across their range (down from ~100,000 a century earlier). The TX2 initiative committed 13 tiger-range countries to doubling that number. A jungle-noir tableau on an 800x200 canvas: on the left, a large stylized tiger head emerges from banded shadows — glowing amber eyes, black nose, sweeping black stripes on ember-orange fur; the head is enclosed by a subtle circular emblem ring; midground behind the tiger is a curtain of dark bamboo stalks with pale bamboo leaves; low jungle mist rolls across the bottom; scattered fireflies drift up through the frame; on the right, a large amber JULY 29, 2026 headline dominates; beneath it, an ember-orange INTERNATIONAL TIGER DAY subhead; italic PANTHERA TIGRIS · TX2 · 2010 SAINT PETERSBURG SUMMIT tertiary. Palette: jungle-night #050e0a, deep-forest #0d2018, ember-orange #ff8c1a, warm-amber #ffb347, cream #fff2d6, black-stripe #0a0a0a, bamboo-pale #d9e6c8. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 29, 2026 — International Tiger Day. A jungle-noir tableau: on the left, a large stylized tiger head with glowing amber eyes and sweeping black stripes on ember-orange fur, enclosed in a subtle emblem ring, behind a curtain of dark bamboo stalks with pale leaves; low jungle mist rolls across the bottom; drifting fireflies rise through the frame; on the right, a large amber JULY 29, 2026 headline; ember-orange INTERNATIONAL TIGER DAY subhead; italic PANTHERA TIGRIS · TX2 · 2010 SAINT PETERSBURG SUMMIT tertiary.">
   <defs>
-    <!-- Sky gradient: indigo top, cobalt mid, midnight bottom -->
-    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#0f1a4a"/>
-      <stop offset="35%"  stop-color="#1e3a8a"/>
-      <stop offset="80%"  stop-color="#0a1636"/>
-      <stop offset="100%" stop-color="#050a1e"/>
+    <!-- Jungle-night background: deep forest fading to jungle-night at the edges -->
+    <radialGradient id="jungle" cx="50%" cy="55%" r="75%">
+      <stop offset="0%"   stop-color="#12291e"/>
+      <stop offset="55%"  stop-color="#0d2018"/>
+      <stop offset="100%" stop-color="#050e0a"/>
+    </radialGradient>
+
+    <!-- Fur radial: bright ember at nose fading to amber -->
+    <radialGradient id="furBody" cx="50%" cy="55%" r="60%">
+      <stop offset="0%"   stop-color="#ffb347"/>
+      <stop offset="55%"  stop-color="#ff8c1a"/>
+      <stop offset="100%" stop-color="#c04a05"/>
+    </radialGradient>
+
+    <!-- Amber emblem ring glow -->
+    <radialGradient id="emblemGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#ff8c1a" stop-opacity="0"/>
+      <stop offset="70%"  stop-color="#ff8c1a" stop-opacity="0"/>
+      <stop offset="90%"  stop-color="#ff8c1a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff8c1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Eye glow -->
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fff2d6" stop-opacity="1"/>
+      <stop offset="30%"  stop-color="#ffb347" stop-opacity="0.85"/>
+      <stop offset="80%"  stop-color="#ff8c1a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff8c1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Firefly glow -->
+    <radialGradient id="fireflyGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fff2d6" stop-opacity="1"/>
+      <stop offset="50%"  stop-color="#ffb347" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff8c1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mist gradient (bottom) -->
+    <linearGradient id="mist" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0d2018" stop-opacity="0"/>
+      <stop offset="60%"  stop-color="#1a3a2a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d2018" stop-opacity="0.85"/>
     </linearGradient>
-
-    <!-- Moon glow -->
-    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#ffe066" stop-opacity="0.95"/>
-      <stop offset="30%"  stop-color="#ffcf40" stop-opacity="0.55"/>
-      <stop offset="75%"  stop-color="#ff9a1f" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#ff9a1f" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Star aura -->
-    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#fff4c9" stop-opacity="0.95"/>
-      <stop offset="45%"  stop-color="#ffe066" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#ffcf40" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Impasto brushstroke wobble filter -->
-    <filter id="impasto" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="4"/>
-      <feDisplacementMap in="SourceGraphic" scale="1.2"/>
-    </filter>
-
-    <!-- Bigger wave filter for hills -->
-    <filter id="hillTexture" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.06" numOctaves="2" seed="11"/>
-      <feDisplacementMap in="SourceGraphic" scale="2"/>
-    </filter>
-
-    <!-- Reusable Van Gogh eight-arm star -->
-    <symbol id="vgstar" overflow="visible">
-      <circle r="10" fill="url(#starGlow)"/>
-      <path d="M 0,-7 L 1.1,-1.1 L 7,0 L 1.1,1.1 L 0,7 L -1.1,1.1 L -7,0 L -1.1,-1.1 Z" fill="#fff4c9"/>
-      <path d="M 0,-5 L 0.8,-0.8 L 5,0 L 0.8,0.8 L 0,5 L -0.8,0.8 L -5,0 L -0.8,-0.8 Z"
-            fill="#ffe066" transform="rotate(22.5)"/>
-      <circle r="1.3" fill="#ffffff"/>
-    </symbol>
 
     <!-- Text cushion behind headline -->
     <linearGradient id="cushion" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#050a1e" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#050a1e" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#050a1e" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#050e0a" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#050e0a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#050e0a" stop-opacity="0"/>
     </linearGradient>
+
+    <!-- Fur wobble filter -->
+    <filter id="furRough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="1" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="0.8"/>
+    </filter>
+
+    <!-- Mist turbulence -->
+    <filter id="mistWobble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.05" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="3"/>
+    </filter>
 
     <!-- Vignette -->
     <radialGradient id="vig" cx="50%" cy="55%" r="80%">
       <stop offset="55%"  stop-color="#000" stop-opacity="0"/>
       <stop offset="100%" stop-color="#000" stop-opacity="0.7"/>
     </radialGradient>
+
+    <!-- Clip path shaped like the tiger's face — used to constrain stripes and fur textures inside the head -->
+    <clipPath id="faceClip">
+      <path d="M 170,100
+               C 168,60 190,42 220,40
+               C 235,22 265,20 275,42
+               C 285,20 315,22 330,40
+               C 360,42 382,60 380,100
+               C 388,120 380,140 360,152
+               C 345,168 320,178 275,180
+               C 230,178 205,168 190,152
+               C 170,140 162,120 170,100 Z"/>
+    </clipPath>
+
+    <!-- Reusable firefly -->
+    <symbol id="firefly" overflow="visible">
+      <circle r="4" fill="url(#fireflyGlow)"/>
+      <circle r="1.1" fill="#fff2d6"/>
+    </symbol>
   </defs>
 
   <!-- ================================================================== -->
-  <!-- Base sky                                                             -->
+  <!-- Base jungle sky                                                      -->
   <!-- ================================================================== -->
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <rect width="800" height="200" fill="url(#jungle)"/>
 
-  <!-- Horizontal wind-stroke bands across the whole sky (subtle) -->
-  <g stroke-linecap="round" fill="none" opacity="0.55" filter="url(#impasto)">
-    <path d="M -20,25 Q 100,15 240,28 Q 380,42 520,26 Q 660,12 820,28" stroke="#3a4aa0" stroke-width="2.5"/>
-    <path d="M -20,45 Q 120,32 260,48 Q 400,62 540,44 Q 680,30 820,46" stroke="#4a5cb8" stroke-width="2"/>
-    <path d="M -20,68 Q 140,55 280,72 Q 420,86 560,66 Q 700,50 820,68" stroke="#2a3a90" stroke-width="2.5"/>
-    <path d="M -20,92 Q 120,78 260,96 Q 400,110 540,90 Q 680,74 820,92" stroke="#3a4aa0" stroke-width="2"/>
-    <path d="M -20,118 Q 140,104 280,122 Q 420,138 560,116 Q 700,100 820,118" stroke="#25358a" stroke-width="2.5"/>
-    <path d="M -20,140 Q 120,126 260,144 Q 400,160 540,140 Q 680,122 820,140" stroke="#1a2a78" stroke-width="2.2"/>
+  <!-- Very faint atmospheric bands so background isn't dead flat -->
+  <g stroke-linecap="round" fill="none" opacity="0.25">
+    <path d="M -20,40 Q 200,32 400,44 Q 600,54 820,40" stroke="#1e4a34" stroke-width="1"/>
+    <path d="M -20,70 Q 200,62 400,74 Q 600,84 820,70" stroke="#1e4a34" stroke-width="0.8"/>
+    <path d="M -20,110 Q 200,102 400,114 Q 600,124 820,110" stroke="#1e4a34" stroke-width="0.8"/>
   </g>
 
   <!-- ================================================================== -->
-  <!-- SWIRL A: large primary spiral (center-left, ~x=240, y=75)           -->
-  <!-- Built from stacked concentric elliptical rings, each a brushstroke  -->
+  <!-- Bamboo grove — dark stalks behind tiger, pale leaves floating         -->
   <!-- ================================================================== -->
-  <g transform="translate(240,75)" filter="url(#impasto)">
-    <animateTransform attributeName="transform" type="rotate"
-                      values="0;360" dur="61s" repeatCount="indefinite" additive="sum"/>
-    <g fill="none" stroke-linecap="round" transform="rotate(-8)">
-      <!-- outer rings (dark cobalt) -->
-      <ellipse cx="0" cy="0" rx="128" ry="46" stroke="#3a4aa8" stroke-width="2" opacity="0.55"
-               stroke-dasharray="60 30 40 50 80 40"/>
-      <ellipse cx="0" cy="0" rx="118" ry="40" stroke="#5a70c8" stroke-width="1.8" opacity="0.6"
-               stroke-dasharray="70 40 50 30 60 50"/>
-      <ellipse cx="0" cy="0" rx="104" ry="34" stroke="#a3b8f2" stroke-width="1.6" opacity="0.7"
-               stroke-dasharray="80 25 40 55 90 35"/>
-      <!-- inner rings, brighter cream -->
-      <ellipse cx="0" cy="0" rx="88"  ry="28" stroke="#c8d4f0" stroke-width="1.6" opacity="0.8"
-               stroke-dasharray="60 20 55 30 70 25"/>
-      <ellipse cx="0" cy="0" rx="72"  ry="22" stroke="#fff4c9" stroke-width="1.8" opacity="0.85"
-               stroke-dasharray="55 22 40 28 60 30"/>
-      <ellipse cx="0" cy="0" rx="56"  ry="17" stroke="#ffe066" stroke-width="1.6" opacity="0.85"
-               stroke-dasharray="40 20 55 15 45 22"/>
-      <ellipse cx="0" cy="0" rx="42"  ry="12" stroke="#fff4c9" stroke-width="1.4" opacity="0.9"
-               stroke-dasharray="30 15 40 20 35 18"/>
-      <ellipse cx="0" cy="0" rx="28"  ry="8"  stroke="#ffe066" stroke-width="1.4" opacity="0.9"
-               stroke-dasharray="20 10 25 12"/>
-      <ellipse cx="0" cy="0" rx="16"  ry="4.5" stroke="#fff4c9" stroke-width="1.2" opacity="0.95"/>
+  <g>
+    <!-- Bamboo stalks (dark) -->
+    <g stroke="#0d2018" stroke-linecap="round" opacity="0.95">
+      <line x1="40"  y1="0"   x2="55"  y2="200" stroke-width="7"/>
+      <line x1="95"  y1="0"   x2="105" y2="200" stroke-width="5"/>
+      <line x1="410" y1="0"   x2="420" y2="200" stroke-width="7"/>
+      <line x1="470" y1="0"   x2="482" y2="200" stroke-width="5"/>
+      <line x1="540" y1="0"   x2="548" y2="200" stroke-width="8"/>
+      <line x1="620" y1="0"   x2="628" y2="200" stroke-width="6"/>
+      <line x1="695" y1="0"   x2="702" y2="200" stroke-width="5"/>
+      <line x1="760" y1="0"   x2="770" y2="200" stroke-width="7"/>
     </g>
-    <!-- Bright core -->
-    <circle cx="0" cy="0" r="7" fill="#fff4c9"/>
-    <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
-    <circle cx="0" cy="0" r="14" fill="none" stroke="#ffe066" stroke-width="1" opacity="0.6"/>
-  </g>
-
-  <!-- ================================================================== -->
-  <!-- SWIRL B: smaller secondary spiral (right-of-center, ~x=470, y=65)    -->
-  <!-- ================================================================== -->
-  <g transform="translate(470,65)" filter="url(#impasto)">
-    <animateTransform attributeName="transform" type="rotate"
-                      values="360;0" dur="47s" repeatCount="indefinite" additive="sum"/>
-    <g fill="none" stroke-linecap="round" transform="rotate(12)">
-      <ellipse cx="0" cy="0" rx="92" ry="34" stroke="#3a4aa8" stroke-width="1.8" opacity="0.55"
-               stroke-dasharray="50 25 45 30 55 30"/>
-      <ellipse cx="0" cy="0" rx="80" ry="28" stroke="#6c82d4" stroke-width="1.6" opacity="0.7"
-               stroke-dasharray="60 20 40 28 55 25"/>
-      <ellipse cx="0" cy="0" rx="66" ry="22" stroke="#b8c8f0" stroke-width="1.6" opacity="0.75"
-               stroke-dasharray="55 22 50 20 45 28"/>
-      <ellipse cx="0" cy="0" rx="52" ry="17" stroke="#fff4c9" stroke-width="1.6" opacity="0.85"
-               stroke-dasharray="45 18 35 22 50 20"/>
-      <ellipse cx="0" cy="0" rx="38" ry="12" stroke="#ffe066" stroke-width="1.4" opacity="0.9"
-               stroke-dasharray="30 15 40 12 30 18"/>
-      <ellipse cx="0" cy="0" rx="24" ry="7"  stroke="#fff4c9" stroke-width="1.3" opacity="0.95"
-               stroke-dasharray="20 10 25 10"/>
-      <ellipse cx="0" cy="0" rx="12" ry="3.5" stroke="#ffe066" stroke-width="1.2" opacity="1"/>
+    <!-- Bamboo node bands (segment rings) -->
+    <g stroke="#1e4a34" stroke-width="1.3" stroke-linecap="round" opacity="0.9">
+      <line x1="42"  y1="40"  x2="55"  y2="42"/>
+      <line x1="45"  y1="90"  x2="58"  y2="92"/>
+      <line x1="48"  y1="140" x2="61"  y2="142"/>
+      <line x1="97"  y1="55"  x2="107" y2="57"/>
+      <line x1="99"  y1="105" x2="110" y2="107"/>
+      <line x1="101" y1="155" x2="112" y2="157"/>
+      <line x1="412" y1="50"  x2="425" y2="52"/>
+      <line x1="415" y1="100" x2="428" y2="102"/>
+      <line x1="418" y1="150" x2="431" y2="152"/>
+      <line x1="472" y1="45"  x2="484" y2="47"/>
+      <line x1="475" y1="95"  x2="486" y2="97"/>
+      <line x1="478" y1="145" x2="490" y2="147"/>
+      <line x1="542" y1="60"  x2="556" y2="62"/>
+      <line x1="544" y1="110" x2="558" y2="112"/>
+      <line x1="546" y1="160" x2="560" y2="162"/>
+      <line x1="622" y1="40"  x2="635" y2="42"/>
+      <line x1="624" y1="90"  x2="637" y2="92"/>
+      <line x1="626" y1="140" x2="639" y2="142"/>
+      <line x1="697" y1="55"  x2="708" y2="57"/>
+      <line x1="699" y1="105" x2="710" y2="107"/>
+      <line x1="762" y1="65"  x2="775" y2="67"/>
+      <line x1="765" y1="115" x2="777" y2="117"/>
     </g>
-    <circle cx="0" cy="0" r="5" fill="#ffe066"/>
-    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
-    <circle cx="0" cy="0" r="10" fill="none" stroke="#ffe066" stroke-width="0.8" opacity="0.55"/>
+    <!-- Pale bamboo leaves scattered -->
+    <g fill="#d9e6c8" opacity="0.7">
+      <path d="M 60,60  q 14,-6 22,4  q -18,2 -22,-4 Z"/>
+      <path d="M 100,120 q -14,-6 -22,4 q 18,2 22,-4 Z"/>
+      <path d="M 425,70 q 14,-4 20,5 q -18,1 -20,-5 Z"/>
+      <path d="M 550,45 q 14,-6 22,4 q -18,2 -22,-4 Z"/>
+      <path d="M 630,130 q -14,-6 -22,4 q 18,2 22,-4 Z"/>
+      <path d="M 700,90  q 14,-6 22,4 q -18,2 -22,-4 Z"/>
+      <path d="M 770,140 q -14,-6 -22,4 q 18,2 22,-4 Z"/>
+      <path d="M 470,155 q 14,-4 20,5 q -18,1 -20,-5 Z"/>
+    </g>
+    <!-- Leaf-sway animation on a couple of them for organic feel -->
+    <g fill="#c8d9b0" opacity="0.55">
+      <path d="M 50,25 q 16,-4 22,6 q -20,0 -22,-6 Z">
+        <animateTransform attributeName="transform" type="rotate" values="-4 60 25;5 60 25;-4 60 25" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 415,180 q 16,-4 22,6 q -20,0 -22,-6 Z">
+        <animateTransform attributeName="transform" type="rotate" values="4 425 180;-5 425 180;4 425 180" dur="13s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 720,20 q 16,-4 22,6 q -20,0 -22,-6 Z">
+        <animateTransform attributeName="transform" type="rotate" values="-5 730 20;4 730 20;-5 730 20" dur="7s" repeatCount="indefinite"/>
+      </path>
+    </g>
   </g>
 
   <!-- ================================================================== -->
-  <!-- Moon-sun luminary (upper right)                                      -->
+  <!-- Emblem ring: subtle circular glow behind the tiger head              -->
   <!-- ================================================================== -->
-  <g transform="translate(710,52)">
-    <circle r="52" fill="url(#moonGlow)">
-      <animate attributeName="r" values="48;58;48" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" repeatCount="indefinite"/>
+  <g transform="translate(275,100)">
+    <circle r="105" fill="url(#emblemGlow)"/>
+    <circle r="98" fill="none" stroke="#ff8c1a" stroke-width="0.6" opacity="0.55" stroke-dasharray="2 4"/>
+    <circle r="104" fill="none" stroke="#ffb347" stroke-width="0.4" opacity="0.35" stroke-dasharray="1 6"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="97s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- TIGER HEAD                                                          -->
+  <!-- Center at ~ (275,100). Symmetric with slight breath animation.       -->
+  <!-- ================================================================== -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 0 -1.6; 0 0" dur="7s" repeatCount="indefinite"/>
+
+    <!-- Ears (behind face) -->
+    <g>
+      <path d="M 200,60 Q 195,20 220,30 Q 232,42 226,58 Z" fill="url(#furBody)" filter="url(#furRough)"/>
+      <path d="M 205,52 Q 208,32 220,36 Q 226,44 222,54 Z" fill="#3a1608"/>
+      <path d="M 350,60 Q 355,20 330,30 Q 318,42 324,58 Z" fill="url(#furBody)" filter="url(#furRough)"/>
+      <path d="M 345,52 Q 342,32 330,36 Q 324,44 328,54 Z" fill="#3a1608"/>
+    </g>
+
+    <!-- Face fill (orange, textured) -->
+    <path d="M 170,100
+             C 168,60 190,42 220,40
+             C 235,22 265,20 275,42
+             C 285,20 315,22 330,40
+             C 360,42 382,60 380,100
+             C 388,120 380,140 360,152
+             C 345,168 320,178 275,180
+             C 230,178 205,168 190,152
+             C 170,140 162,120 170,100 Z"
+          fill="url(#furBody)" filter="url(#furRough)"/>
+
+    <!-- Cream cheek/chin/muzzle patches -->
+    <g clip-path="url(#faceClip)">
+      <ellipse cx="275" cy="140" rx="52" ry="26" fill="#fff2d6" opacity="0.95"/>
+      <ellipse cx="230" cy="118" rx="20" ry="12" fill="#fff2d6" opacity="0.75"/>
+      <ellipse cx="320" cy="118" rx="20" ry="12" fill="#fff2d6" opacity="0.75"/>
+      <ellipse cx="275" cy="55" rx="35" ry="14" fill="#fff2d6" opacity="0.6"/>
+      <!-- inner ear cream -->
+      <path d="M 208,50 Q 212,36 220,40 Q 222,48 218,54 Z" fill="#fff2d6" opacity="0.85"/>
+      <path d="M 342,50 Q 338,36 330,40 Q 328,48 332,54 Z" fill="#fff2d6" opacity="0.85"/>
+    </g>
+
+    <!-- Black stripes (clipped inside face). Bold, tapering, asymmetric to look alive. -->
+    <g clip-path="url(#faceClip)" fill="#0a0a0a">
+      <!-- Forehead central stripe (the "王" reference — big vertical) -->
+      <path d="M 272,42 Q 274,64 270,86 L 280,86 Q 276,64 278,42 Z"/>
+      <!-- Forehead side stripes -->
+      <path d="M 244,44 Q 248,66 244,88 L 252,90 Q 254,66 250,44 Z"/>
+      <path d="M 300,44 Q 296,66 300,88 L 292,90 Q 290,66 294,44 Z"/>
+      <path d="M 218,58 Q 224,74 220,92 L 228,94 Q 230,76 226,58 Z"/>
+      <path d="M 326,58 Q 320,74 324,92 L 316,94 Q 314,76 318,58 Z"/>
+
+      <!-- Cheek stripes fanning outward from muzzle -->
+      <path d="M 190,110 Q 210,112 234,116 L 234,122 Q 210,118 188,116 Z"/>
+      <path d="M 186,128 Q 210,130 232,134 L 232,140 Q 210,136 184,134 Z"/>
+      <path d="M 195,148 Q 218,150 238,152 L 238,158 Q 216,156 193,154 Z"/>
+
+      <path d="M 360,110 Q 340,112 316,116 L 316,122 Q 340,118 362,116 Z"/>
+      <path d="M 364,128 Q 340,130 318,134 L 318,140 Q 340,136 366,134 Z"/>
+      <path d="M 355,148 Q 332,150 312,152 L 312,158 Q 334,156 357,154 Z"/>
+
+      <!-- Under-jaw stripes -->
+      <path d="M 250,168 Q 258,172 262,178 L 254,180 Q 250,174 246,168 Z"/>
+      <path d="M 300,168 Q 292,172 288,178 L 296,180 Q 300,174 304,168 Z"/>
+    </g>
+
+    <!-- Eye sockets (dark) -->
+    <ellipse cx="238" cy="102" rx="14" ry="10" fill="#1a0a02"/>
+    <ellipse cx="312" cy="102" rx="14" ry="10" fill="#1a0a02"/>
+
+    <!-- Eye glow -->
+    <circle cx="238" cy="102" r="10" fill="url(#eyeGlow)">
+      <animate attributeName="r" values="9;11;9" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
     </circle>
-    <!-- disc + crescent bite -->
-    <circle r="22" fill="#ffe066"/>
-    <circle cx="8" cy="-3" r="18.5" fill="#0f1a4a"/>
-    <!-- crescent tapered highlight -->
-    <path d="M -16,-8 Q -20,0 -16,10 Q -12,14 -8,9 Q -14,0 -8,-11 Q -12,-14 -16,-8 Z"
-          fill="#fff4c9" opacity="0.92"/>
-    <!-- radiating short brushstrokes -->
-    <g stroke="#ffcf40" stroke-width="1.5" stroke-linecap="round" opacity="0.85" filter="url(#impasto)">
-      <line x1="0" y1="-30" x2="0"  y2="-40"/>
-      <line x1="0" y1="30"  x2="0"  y2="40"/>
-      <line x1="-30" y1="0" x2="-40" y2="0"/>
-      <line x1="30"  y1="0" x2="40"  y2="0"/>
-      <line x1="-22" y1="-22" x2="-30" y2="-30"/>
-      <line x1="22"  y1="-22" x2="30"  y2="-30"/>
-      <line x1="-22" y1="22"  x2="-30" y2="30"/>
-      <line x1="22"  y1="22"  x2="30"  y2="30"/>
-      <line x1="-13" y1="-27" x2="-16" y2="-36"/>
-      <line x1="13"  y1="-27" x2="16"  y2="-36"/>
-      <line x1="-27" y1="-13" x2="-36" y2="-16"/>
-      <line x1="27"  y1="-13" x2="36"  y2="-16"/>
+    <circle cx="312" cy="102" r="10" fill="url(#eyeGlow)">
+      <animate attributeName="r" values="9;11;9" dur="7s" repeatCount="indefinite" begin="0.4s"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+
+    <!-- Amber irises -->
+    <circle cx="238" cy="102" r="6" fill="#ffb347"/>
+    <circle cx="312" cy="102" r="6" fill="#ffb347"/>
+    <!-- Vertical slit pupils -->
+    <ellipse cx="238" cy="102" rx="1.4" ry="5.5" fill="#0a0a0a"/>
+    <ellipse cx="312" cy="102" rx="1.4" ry="5.5" fill="#0a0a0a"/>
+    <!-- Eye highlights -->
+    <circle cx="240" cy="99" r="1.5" fill="#fff2d6"/>
+    <circle cx="314" cy="99" r="1.5" fill="#fff2d6"/>
+
+    <!-- Nose -->
+    <path d="M 265,124 Q 275,120 285,124 Q 288,132 280,138 Q 275,141 270,138 Q 262,132 265,124 Z" fill="#3a1608"/>
+    <path d="M 268,125 Q 275,122 282,125 Q 284,130 279,132 Q 275,134 271,132 Q 266,130 268,125 Z" fill="#0a0a0a"/>
+    <ellipse cx="273" cy="126" rx="1.3" ry="0.8" fill="#ffb347" opacity="0.75"/>
+
+    <!-- Mouth -->
+    <path d="M 275,138 L 275,148" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 275,148 Q 262,156 253,154" stroke="#0a0a0a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 275,148 Q 288,156 297,154" stroke="#0a0a0a" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Whisker spots -->
+    <g fill="#0a0a0a">
+      <circle cx="256" cy="146" r="0.8"/>
+      <circle cx="252" cy="152" r="0.8"/>
+      <circle cx="260" cy="154" r="0.8"/>
+      <circle cx="294" cy="146" r="0.8"/>
+      <circle cx="298" cy="152" r="0.8"/>
+      <circle cx="290" cy="154" r="0.8"/>
+    </g>
+
+    <!-- Whiskers -->
+    <g stroke="#fff2d6" stroke-width="0.6" stroke-linecap="round" opacity="0.85">
+      <line x1="255" y1="148" x2="200" y2="140"/>
+      <line x1="253" y1="154" x2="198" y2="156"/>
+      <line x1="260" y1="156" x2="205" y2="168"/>
+      <line x1="295" y1="148" x2="350" y2="140"/>
+      <line x1="297" y1="154" x2="352" y2="156"/>
+      <line x1="290" y1="156" x2="345" y2="168"/>
     </g>
   </g>
 
   <!-- ================================================================== -->
-  <!-- Van Gogh eight-armed stars scattered across the sky                  -->
+  <!-- Ground mist                                                          -->
+  <!-- ================================================================== -->
+  <g filter="url(#mistWobble)">
+    <rect x="0" y="150" width="800" height="50" fill="url(#mist)"/>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- Fireflies drifting                                                   -->
   <!-- ================================================================== -->
   <g>
-    <g transform="translate(75,40)">
-      <use href="#vgstar"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="7s" repeatCount="indefinite"/>
+    <g transform="translate(130,150)">
+      <use href="#firefly"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="130 150; 138 110; 130 150" dur="13s" repeatCount="indefinite" additive="sum"/>
     </g>
-    <g transform="translate(365,25)">
-      <use href="#vgstar" transform="scale(0.85)"/>
-      <animate attributeName="opacity" values="0.65;1;0.65" dur="11s" repeatCount="indefinite" begin="1s"/>
+    <g transform="translate(160,160)">
+      <use href="#firefly" transform="scale(0.75)"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="11s" repeatCount="indefinite" begin="1s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="160 160; 152 120; 160 160" dur="11s" repeatCount="indefinite" additive="sum"/>
     </g>
-    <g transform="translate(575,20)">
-      <use href="#vgstar"/>
-      <animate attributeName="opacity" values="0.75;1;0.75" dur="13s" repeatCount="indefinite" begin="2s"/>
+    <g transform="translate(395,155)">
+      <use href="#firefly" transform="scale(0.85)"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="13s" repeatCount="indefinite" begin="2s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="395 155; 402 115; 395 155" dur="13s" repeatCount="indefinite" additive="sum"/>
     </g>
-    <g transform="translate(140,115)">
-      <use href="#vgstar" transform="scale(0.7)"/>
-      <animate attributeName="opacity" values="0.55;0.95;0.55" dur="11s" repeatCount="indefinite" begin="3s"/>
+    <g transform="translate(500,165)">
+      <use href="#firefly" transform="scale(0.7)"/>
+      <animate attributeName="opacity" values="0.45;1;0.45" dur="7s" repeatCount="indefinite" begin="0.5s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="500 165; 508 125; 500 165" dur="11s" repeatCount="indefinite" additive="sum"/>
     </g>
-    <g transform="translate(605,120)">
-      <use href="#vgstar" transform="scale(0.6)"/>
-      <animate attributeName="opacity" values="0.55;1;0.55" dur="13s" repeatCount="indefinite" begin="4s"/>
+    <g transform="translate(660,160)">
+      <use href="#firefly"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite" begin="1.5s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="660 160; 652 120; 660 160" dur="13s" repeatCount="indefinite" additive="sum"/>
     </g>
-    <g transform="translate(340,125)">
-      <use href="#vgstar" transform="scale(0.55)"/>
-      <animate attributeName="opacity" values="0.55;0.95;0.55" dur="7s" repeatCount="indefinite" begin="5s"/>
-    </g>
-    <g transform="translate(500,130)">
-      <use href="#vgstar" transform="scale(0.5)"/>
-      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="11s" repeatCount="indefinite" begin="1.5s"/>
-    </g>
-  </g>
-
-  <!-- ================================================================== -->
-  <!-- Cypress flame silhouette (foreground, left)                          -->
-  <!-- ================================================================== -->
-  <g>
-    <g transform="translate(55,200)">
-      <animateTransform attributeName="transform" type="rotate"
-                        values="-1.6 0 0; 1.6 0 0; -1.6 0 0" dur="13s" repeatCount="indefinite" additive="sum"/>
-      <path d="M 0,0
-               C -22,-25 -28,-60 -18,-95
-               C -28,-120 -14,-145 -8,-165
-               C -6,-178 -12,-188 -3,-200
-               C 6,-188 -1,-178 4,-165
-               C 12,-145 22,-120 14,-95
-               C 24,-65 18,-30 0,0 Z"
-            fill="#0a1a12"/>
-      <g stroke="#1a3a2a" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.9">
-        <path d="M -8,-20 Q -12,-55 -6,-95 Q -12,-135 -4,-180"/>
-        <path d="M  5,-25 Q  12,-60 5,-100 Q 10,-140 1,-185"/>
-        <path d="M -1,-45 Q  2,-85 -3,-125 Q 2,-165 -1,-192"/>
-      </g>
-      <g stroke="#0f2418" stroke-width="1" fill="none" stroke-linecap="round">
-        <path d="M -16,-30 Q -22,-40 -16,-50"/>
-        <path d="M  14,-45 Q  20,-55  14,-65"/>
-        <path d="M -14,-80 Q -20,-90 -14,-100"/>
-        <path d="M  12,-105 Q  18,-115 12,-125"/>
-        <path d="M -12,-140 Q -18,-150 -12,-160"/>
-      </g>
+    <g transform="translate(735,155)">
+      <use href="#firefly" transform="scale(0.75)"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite" begin="3s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="735 155; 742 115; 735 155" dur="11s" repeatCount="indefinite" additive="sum"/>
     </g>
   </g>
 
   <!-- ================================================================== -->
-  <!-- Rolling hill horizon + tiny village with spired church               -->
+  <!-- Text block (right side)                                              -->
   <!-- ================================================================== -->
-  <g>
-    <path d="M 0,175 Q 120,160 240,168 Q 360,178 480,170 Q 600,162 720,172 L 800,170 L 800,200 L 0,200 Z"
-          fill="#0f1a4a" filter="url(#hillTexture)"/>
-    <path d="M 0,185 Q 200,175 400,183 Q 600,190 800,180 L 800,200 L 0,200 Z"
-          fill="#050a1e"/>
-
-    <!-- Village huddle (~x=380, y=175) -->
-    <g fill="#2b3a6b">
-      <rect x="330" y="170" width="10" height="8"/>
-      <rect x="342" y="167" width="8"  height="11"/>
-      <rect x="352" y="171" width="9"  height="7"/>
-      <rect x="365" y="168" width="12" height="10"/>
-      <rect x="380" y="172" width="8"  height="6"/>
-      <rect x="392" y="169" width="10" height="9"/>
-      <rect x="405" y="171" width="9"  height="7"/>
-      <rect x="416" y="174" width="7"  height="4"/>
-    </g>
-    <!-- Warm window lights -->
-    <g fill="#ffcf40">
-      <rect x="333" y="173" width="1.5" height="1.5"/>
-      <rect x="345" y="171" width="1.5" height="1.5"/>
-      <rect x="368" y="172" width="1.5" height="1.5"/>
-      <rect x="395" y="172" width="1.5" height="1.5"/>
-      <rect x="408" y="173" width="1.5" height="1.5"/>
-      <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
-    </g>
-    <!-- Church with tall spire -->
-    <g fill="#2b3a6b">
-      <rect x="374" y="158" width="10" height="20"/>
-      <polygon points="373,158 385,158 379,148"/>
-      <polygon points="378,148 380,148 379,133"/>
-    </g>
-    <g stroke="#4d5f9a" stroke-width="0.6">
-      <line x1="379" y1="131" x2="379" y2="136"/>
-      <line x1="377.5" y1="133" x2="380.5" y2="133"/>
-    </g>
-  </g>
-
-  <!-- ================================================================== -->
-  <!-- Text block (lower right)                                             -->
-  <!-- ================================================================== -->
-  <rect x="430" y="112" width="370" height="76" fill="url(#cushion)"/>
+  <rect x="420" y="46" width="380" height="112" fill="url(#cushion)"/>
 
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="790" y="152" text-anchor="end"
-          fill="#ffe066" font-size="30" font-weight="800" letter-spacing="1.5"
-          style="paint-order: stroke; stroke: #050a1e; stroke-width: 3.5px; stroke-linejoin: round;">
+    <text x="790" y="98" text-anchor="end"
+          fill="#ffb347" font-size="34" font-weight="800" letter-spacing="1.8"
+          style="paint-order: stroke; stroke: #050e0a; stroke-width: 4px; stroke-linejoin: round;">
       JULY 29, 2026
     </text>
-    <text x="790" y="171" text-anchor="end"
-          fill="#fff4c9" font-size="12" font-weight="700" letter-spacing="2.6"
-          style="paint-order: stroke; stroke: #050a1e; stroke-width: 3px; stroke-linejoin: round;">
-      VINCENT VAN GOGH · 136 YEARS
+    <text x="790" y="122" text-anchor="end"
+          fill="#ff8c1a" font-size="14" font-weight="800" letter-spacing="3.4"
+          style="paint-order: stroke; stroke: #050e0a; stroke-width: 3px; stroke-linejoin: round;">
+      INTERNATIONAL TIGER DAY
     </text>
-    <text x="790" y="186" text-anchor="end"
-          fill="#a3b8f2" font-size="9" font-style="italic" letter-spacing="2"
-          style="paint-order: stroke; stroke: #050a1e; stroke-width: 2.5px; stroke-linejoin: round;">
-      AUVERS-SUR-OISE · 29 JULY 1890 · THE STARRY NIGHT
+    <text x="790" y="142" text-anchor="end"
+          fill="#d9e6c8" font-size="9.5" font-style="italic" letter-spacing="2"
+          style="paint-order: stroke; stroke: #050e0a; stroke-width: 2.5px; stroke-linejoin: round;">
+      PANTHERA TIGRIS · TX2 · 2010 SAINT PETERSBURG SUMMIT
     </text>
   </g>
 
