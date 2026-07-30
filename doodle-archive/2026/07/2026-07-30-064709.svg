@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: International Tiger Day (July 29) — Established at the 2010 Saint Petersburg Tiger Summit, observed annually on July 29 to raise awareness of tiger conservation. When founded, an estimated ~3,200 wild tigers remained across their range (down from ~100,000 a century earlier). The TX2 initiative committed 13 tiger-range countries to doubling that number. A jungle-noir tableau on an 800x200 canvas: on the left, a large stylized tiger head emerges from banded shadows — glowing amber eyes, black nose, sweeping black stripes on ember-orange fur; the head is enclosed by a subtle circular emblem ring; midground behind the tiger is a curtain of dark bamboo stalks with pale bamboo leaves; low jungle mist rolls across the bottom; scattered fireflies drift up through the frame; on the right, a large amber JULY 29, 2026 headline dominates; beneath it, an ember-orange INTERNATIONAL TIGER DAY subhead; italic PANTHERA TIGRIS · TX2 · 2010 SAINT PETERSBURG SUMMIT tertiary. Palette: jungle-night #050e0a, deep-forest #0d2018, ember-orange #ff8c1a, warm-amber #ffb347, cream #fff2d6, black-stripe #0a0a0a, bamboo-pale #d9e6c8. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Daily doodle for July 29, 2026 — International Tiger Day. A jungle-noir tableau: on the left, a large stylized tiger head with glowing amber eyes and sweeping black stripes on ember-orange fur, enclosed in a subtle emblem ring, behind a curtain of dark bamboo stalks with pale leaves; low jungle mist rolls across the bottom; drifting fireflies rise through the frame; on the right, a large amber JULY 29, 2026 headline; ember-orange INTERNATIONAL TIGER DAY subhead; italic PANTHERA TIGRIS · TX2 · 2010 SAINT PETERSBURG SUMMIT tertiary.">
+  <defs>
+    <!-- Jungle-night background: deep forest fading to jungle-night at the edges -->
+    <radialGradient id="jungle" cx="50%" cy="55%" r="75%">
+      <stop offset="0%"   stop-color="#12291e"/>
+      <stop offset="55%"  stop-color="#0d2018"/>
+      <stop offset="100%" stop-color="#050e0a"/>
+    </radialGradient>
+
+    <!-- Fur radial: bright ember at nose fading to amber -->
+    <radialGradient id="furBody" cx="50%" cy="55%" r="60%">
+      <stop offset="0%"   stop-color="#ffb347"/>
+      <stop offset="55%"  stop-color="#ff8c1a"/>
+      <stop offset="100%" stop-color="#c04a05"/>
+    </radialGradient>
+
+    <!-- Amber emblem ring glow -->
+    <radialGradient id="emblemGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#ff8c1a" stop-opacity="0"/>
+      <stop offset="70%"  stop-color="#ff8c1a" stop-opacity="0"/>
+      <stop offset="90%"  stop-color="#ff8c1a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff8c1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Eye glow -->
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fff2d6" stop-opacity="1"/>
+      <stop offset="30%"  stop-color="#ffb347" stop-opacity="0.85"/>
+      <stop offset="80%"  stop-color="#ff8c1a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff8c1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Firefly glow -->
+    <radialGradient id="fireflyGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fff2d6" stop-opacity="1"/>
+      <stop offset="50%"  stop-color="#ffb347" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff8c1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mist gradient (bottom) -->
+    <linearGradient id="mist" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0d2018" stop-opacity="0"/>
+      <stop offset="60%"  stop-color="#1a3a2a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d2018" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Text cushion behind headline -->
+    <linearGradient id="cushion" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#050e0a" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#050e0a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#050e0a" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Fur wobble filter -->
+    <filter id="furRough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="1" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="0.8"/>
+    </filter>
+
+    <!-- Mist turbulence -->
+    <filter id="mistWobble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.05" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="3"/>
+    </filter>
+
+    <!-- Vignette -->
+    <radialGradient id="vig" cx="50%" cy="55%" r="80%">
+      <stop offset="55%"  stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.7"/>
+    </radialGradient>
+
+    <!-- Clip path shaped like the tiger's face — used to constrain stripes and fur textures inside the head -->
+    <clipPath id="faceClip">
+      <path d="M 170,100
+               C 168,60 190,42 220,40
+               C 235,22 265,20 275,42
+               C 285,20 315,22 330,40
+               C 360,42 382,60 380,100
+               C 388,120 380,140 360,152
+               C 345,168 320,178 275,180
+               C 230,178 205,168 190,152
+               C 170,140 162,120 170,100 Z"/>
+    </clipPath>
+
+    <!-- Reusable firefly -->
+    <symbol id="firefly" overflow="visible">
+      <circle r="4" fill="url(#fireflyGlow)"/>
+      <circle r="1.1" fill="#fff2d6"/>
+    </symbol>
+  </defs>
+
+  <!-- ================================================================== -->
+  <!-- Base jungle sky                                                      -->
+  <!-- ================================================================== -->
+  <rect width="800" height="200" fill="url(#jungle)"/>
+
+  <!-- Very faint atmospheric bands so background isn't dead flat -->
+  <g stroke-linecap="round" fill="none" opacity="0.25">
+    <path d="M -20,40 Q 200,32 400,44 Q 600,54 820,40" stroke="#1e4a34" stroke-width="1"/>
+    <path d="M -20,70 Q 200,62 400,74 Q 600,84 820,70" stroke="#1e4a34" stroke-width="0.8"/>
+    <path d="M -20,110 Q 200,102 400,114 Q 600,124 820,110" stroke="#1e4a34" stroke-width="0.8"/>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- Bamboo grove — dark stalks behind tiger, pale leaves floating         -->
+  <!-- ================================================================== -->
+  <g>
+    <!-- Bamboo stalks (dark) -->
+    <g stroke="#0d2018" stroke-linecap="round" opacity="0.95">
+      <line x1="40"  y1="0"   x2="55"  y2="200" stroke-width="7"/>
+      <line x1="95"  y1="0"   x2="105" y2="200" stroke-width="5"/>
+      <line x1="410" y1="0"   x2="420" y2="200" stroke-width="7"/>
+      <line x1="470" y1="0"   x2="482" y2="200" stroke-width="5"/>
+      <line x1="540" y1="0"   x2="548" y2="200" stroke-width="8"/>
+      <line x1="620" y1="0"   x2="628" y2="200" stroke-width="6"/>
+      <line x1="695" y1="0"   x2="702" y2="200" stroke-width="5"/>
+      <line x1="760" y1="0"   x2="770" y2="200" stroke-width="7"/>
+    </g>
+    <!-- Bamboo node bands (segment rings) -->
+    <g stroke="#1e4a34" stroke-width="1.3" stroke-linecap="round" opacity="0.9">
+      <line x1="42"  y1="40"  x2="55"  y2="42"/>
+      <line x1="45"  y1="90"  x2="58"  y2="92"/>
+      <line x1="48"  y1="140" x2="61"  y2="142"/>
+      <line x1="97"  y1="55"  x2="107" y2="57"/>
+      <line x1="99"  y1="105" x2="110" y2="107"/>
+      <line x1="101" y1="155" x2="112" y2="157"/>
+      <line x1="412" y1="50"  x2="425" y2="52"/>
+      <line x1="415" y1="100" x2="428" y2="102"/>
+      <line x1="418" y1="150" x2="431" y2="152"/>
+      <line x1="472" y1="45"  x2="484" y2="47"/>
+      <line x1="475" y1="95"  x2="486" y2="97"/>
+      <line x1="478" y1="145" x2="490" y2="147"/>
+      <line x1="542" y1="60"  x2="556" y2="62"/>
+      <line x1="544" y1="110" x2="558" y2="112"/>
+      <line x1="546" y1="160" x2="560" y2="162"/>
+      <line x1="622" y1="40"  x2="635" y2="42"/>
+      <line x1="624" y1="90"  x2="637" y2="92"/>
+      <line x1="626" y1="140" x2="639" y2="142"/>
+      <line x1="697" y1="55"  x2="708" y2="57"/>
+      <line x1="699" y1="105" x2="710" y2="107"/>
+      <line x1="762" y1="65"  x2="775" y2="67"/>
+      <line x1="765" y1="115" x2="777" y2="117"/>
+    </g>
+    <!-- Pale bamboo leaves scattered -->
+    <g fill="#d9e6c8" opacity="0.7">
+      <path d="M 60,60  q 14,-6 22,4  q -18,2 -22,-4 Z"/>
+      <path d="M 100,120 q -14,-6 -22,4 q 18,2 22,-4 Z"/>
+      <path d="M 425,70 q 14,-4 20,5 q -18,1 -20,-5 Z"/>
+      <path d="M 550,45 q 14,-6 22,4 q -18,2 -22,-4 Z"/>
+      <path d="M 630,130 q -14,-6 -22,4 q 18,2 22,-4 Z"/>
+      <path d="M 700,90  q 14,-6 22,4 q -18,2 -22,-4 Z"/>
+      <path d="M 770,140 q -14,-6 -22,4 q 18,2 22,-4 Z"/>
+      <path d="M 470,155 q 14,-4 20,5 q -18,1 -20,-5 Z"/>
+    </g>
+    <!-- Leaf-sway animation on a couple of them for organic feel -->
+    <g fill="#c8d9b0" opacity="0.55">
+      <path d="M 50,25 q 16,-4 22,6 q -20,0 -22,-6 Z">
+        <animateTransform attributeName="transform" type="rotate" values="-4 60 25;5 60 25;-4 60 25" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 415,180 q 16,-4 22,6 q -20,0 -22,-6 Z">
+        <animateTransform attributeName="transform" type="rotate" values="4 425 180;-5 425 180;4 425 180" dur="13s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 720,20 q 16,-4 22,6 q -20,0 -22,-6 Z">
+        <animateTransform attributeName="transform" type="rotate" values="-5 730 20;4 730 20;-5 730 20" dur="7s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- Emblem ring: subtle circular glow behind the tiger head              -->
+  <!-- ================================================================== -->
+  <g transform="translate(275,100)">
+    <circle r="105" fill="url(#emblemGlow)"/>
+    <circle r="98" fill="none" stroke="#ff8c1a" stroke-width="0.6" opacity="0.55" stroke-dasharray="2 4"/>
+    <circle r="104" fill="none" stroke="#ffb347" stroke-width="0.4" opacity="0.35" stroke-dasharray="1 6"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="97s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- TIGER HEAD                                                          -->
+  <!-- Center at ~ (275,100). Symmetric with slight breath animation.       -->
+  <!-- ================================================================== -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 0 -1.6; 0 0" dur="7s" repeatCount="indefinite"/>
+
+    <!-- Ears (behind face) -->
+    <g>
+      <path d="M 200,60 Q 195,20 220,30 Q 232,42 226,58 Z" fill="url(#furBody)" filter="url(#furRough)"/>
+      <path d="M 205,52 Q 208,32 220,36 Q 226,44 222,54 Z" fill="#3a1608"/>
+      <path d="M 350,60 Q 355,20 330,30 Q 318,42 324,58 Z" fill="url(#furBody)" filter="url(#furRough)"/>
+      <path d="M 345,52 Q 342,32 330,36 Q 324,44 328,54 Z" fill="#3a1608"/>
+    </g>
+
+    <!-- Face fill (orange, textured) -->
+    <path d="M 170,100
+             C 168,60 190,42 220,40
+             C 235,22 265,20 275,42
+             C 285,20 315,22 330,40
+             C 360,42 382,60 380,100
+             C 388,120 380,140 360,152
+             C 345,168 320,178 275,180
+             C 230,178 205,168 190,152
+             C 170,140 162,120 170,100 Z"
+          fill="url(#furBody)" filter="url(#furRough)"/>
+
+    <!-- Cream cheek/chin/muzzle patches -->
+    <g clip-path="url(#faceClip)">
+      <ellipse cx="275" cy="140" rx="52" ry="26" fill="#fff2d6" opacity="0.95"/>
+      <ellipse cx="230" cy="118" rx="20" ry="12" fill="#fff2d6" opacity="0.75"/>
+      <ellipse cx="320" cy="118" rx="20" ry="12" fill="#fff2d6" opacity="0.75"/>
+      <ellipse cx="275" cy="55" rx="35" ry="14" fill="#fff2d6" opacity="0.6"/>
+      <!-- inner ear cream -->
+      <path d="M 208,50 Q 212,36 220,40 Q 222,48 218,54 Z" fill="#fff2d6" opacity="0.85"/>
+      <path d="M 342,50 Q 338,36 330,40 Q 328,48 332,54 Z" fill="#fff2d6" opacity="0.85"/>
+    </g>
+
+    <!-- Black stripes (clipped inside face). Bold, tapering, asymmetric to look alive. -->
+    <g clip-path="url(#faceClip)" fill="#0a0a0a">
+      <!-- Forehead central stripe (the "王" reference — big vertical) -->
+      <path d="M 272,42 Q 274,64 270,86 L 280,86 Q 276,64 278,42 Z"/>
+      <!-- Forehead side stripes -->
+      <path d="M 244,44 Q 248,66 244,88 L 252,90 Q 254,66 250,44 Z"/>
+      <path d="M 300,44 Q 296,66 300,88 L 292,90 Q 290,66 294,44 Z"/>
+      <path d="M 218,58 Q 224,74 220,92 L 228,94 Q 230,76 226,58 Z"/>
+      <path d="M 326,58 Q 320,74 324,92 L 316,94 Q 314,76 318,58 Z"/>
+
+      <!-- Cheek stripes fanning outward from muzzle -->
+      <path d="M 190,110 Q 210,112 234,116 L 234,122 Q 210,118 188,116 Z"/>
+      <path d="M 186,128 Q 210,130 232,134 L 232,140 Q 210,136 184,134 Z"/>
+      <path d="M 195,148 Q 218,150 238,152 L 238,158 Q 216,156 193,154 Z"/>
+
+      <path d="M 360,110 Q 340,112 316,116 L 316,122 Q 340,118 362,116 Z"/>
+      <path d="M 364,128 Q 340,130 318,134 L 318,140 Q 340,136 366,134 Z"/>
+      <path d="M 355,148 Q 332,150 312,152 L 312,158 Q 334,156 357,154 Z"/>
+
+      <!-- Under-jaw stripes -->
+      <path d="M 250,168 Q 258,172 262,178 L 254,180 Q 250,174 246,168 Z"/>
+      <path d="M 300,168 Q 292,172 288,178 L 296,180 Q 300,174 304,168 Z"/>
+    </g>
+
+    <!-- Eye sockets (dark) -->
+    <ellipse cx="238" cy="102" rx="14" ry="10" fill="#1a0a02"/>
+    <ellipse cx="312" cy="102" rx="14" ry="10" fill="#1a0a02"/>
+
+    <!-- Eye glow -->
+    <circle cx="238" cy="102" r="10" fill="url(#eyeGlow)">
+      <animate attributeName="r" values="9;11;9" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="312" cy="102" r="10" fill="url(#eyeGlow)">
+      <animate attributeName="r" values="9;11;9" dur="7s" repeatCount="indefinite" begin="0.4s"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+
+    <!-- Amber irises -->
+    <circle cx="238" cy="102" r="6" fill="#ffb347"/>
+    <circle cx="312" cy="102" r="6" fill="#ffb347"/>
+    <!-- Vertical slit pupils -->
+    <ellipse cx="238" cy="102" rx="1.4" ry="5.5" fill="#0a0a0a"/>
+    <ellipse cx="312" cy="102" rx="1.4" ry="5.5" fill="#0a0a0a"/>
+    <!-- Eye highlights -->
+    <circle cx="240" cy="99" r="1.5" fill="#fff2d6"/>
+    <circle cx="314" cy="99" r="1.5" fill="#fff2d6"/>
+
+    <!-- Nose -->
+    <path d="M 265,124 Q 275,120 285,124 Q 288,132 280,138 Q 275,141 270,138 Q 262,132 265,124 Z" fill="#3a1608"/>
+    <path d="M 268,125 Q 275,122 282,125 Q 284,130 279,132 Q 275,134 271,132 Q 266,130 268,125 Z" fill="#0a0a0a"/>
+    <ellipse cx="273" cy="126" rx="1.3" ry="0.8" fill="#ffb347" opacity="0.75"/>
+
+    <!-- Mouth -->
+    <path d="M 275,138 L 275,148" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 275,148 Q 262,156 253,154" stroke="#0a0a0a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 275,148 Q 288,156 297,154" stroke="#0a0a0a" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Whisker spots -->
+    <g fill="#0a0a0a">
+      <circle cx="256" cy="146" r="0.8"/>
+      <circle cx="252" cy="152" r="0.8"/>
+      <circle cx="260" cy="154" r="0.8"/>
+      <circle cx="294" cy="146" r="0.8"/>
+      <circle cx="298" cy="152" r="0.8"/>
+      <circle cx="290" cy="154" r="0.8"/>
+    </g>
+
+    <!-- Whiskers -->
+    <g stroke="#fff2d6" stroke-width="0.6" stroke-linecap="round" opacity="0.85">
+      <line x1="255" y1="148" x2="200" y2="140"/>
+      <line x1="253" y1="154" x2="198" y2="156"/>
+      <line x1="260" y1="156" x2="205" y2="168"/>
+      <line x1="295" y1="148" x2="350" y2="140"/>
+      <line x1="297" y1="154" x2="352" y2="156"/>
+      <line x1="290" y1="156" x2="345" y2="168"/>
+    </g>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- Ground mist                                                          -->
+  <!-- ================================================================== -->
+  <g filter="url(#mistWobble)">
+    <rect x="0" y="150" width="800" height="50" fill="url(#mist)"/>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- Fireflies drifting                                                   -->
+  <!-- ================================================================== -->
+  <g>
+    <g transform="translate(130,150)">
+      <use href="#firefly"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="130 150; 138 110; 130 150" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <g transform="translate(160,160)">
+      <use href="#firefly" transform="scale(0.75)"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="11s" repeatCount="indefinite" begin="1s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="160 160; 152 120; 160 160" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <g transform="translate(395,155)">
+      <use href="#firefly" transform="scale(0.85)"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="13s" repeatCount="indefinite" begin="2s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="395 155; 402 115; 395 155" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <g transform="translate(500,165)">
+      <use href="#firefly" transform="scale(0.7)"/>
+      <animate attributeName="opacity" values="0.45;1;0.45" dur="7s" repeatCount="indefinite" begin="0.5s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="500 165; 508 125; 500 165" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <g transform="translate(660,160)">
+      <use href="#firefly"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite" begin="1.5s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="660 160; 652 120; 660 160" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    <g transform="translate(735,155)">
+      <use href="#firefly" transform="scale(0.75)"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite" begin="3s"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="735 155; 742 115; 735 155" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+
+  <!-- ================================================================== -->
+  <!-- Text block (right side)                                              -->
+  <!-- ================================================================== -->
+  <rect x="420" y="46" width="380" height="112" fill="url(#cushion)"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="790" y="98" text-anchor="end"
+          fill="#ffb347" font-size="34" font-weight="800" letter-spacing="1.8"
+          style="paint-order: stroke; stroke: #050e0a; stroke-width: 4px; stroke-linejoin: round;">
+      JULY 29, 2026
+    </text>
+    <text x="790" y="122" text-anchor="end"
+          fill="#ff8c1a" font-size="14" font-weight="800" letter-spacing="3.4"
+          style="paint-order: stroke; stroke: #050e0a; stroke-width: 3px; stroke-linejoin: round;">
+      INTERNATIONAL TIGER DAY
+    </text>
+    <text x="790" y="142" text-anchor="end"
+          fill="#d9e6c8" font-size="9.5" font-style="italic" letter-spacing="2"
+          style="paint-order: stroke; stroke: #050e0a; stroke-width: 2.5px; stroke-linejoin: round;">
+      PANTHERA TIGRIS · TX2 · 2010 SAINT PETERSBURG SUMMIT
+    </text>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="800" height="200" fill="url(#vig)"/>
+</svg>
