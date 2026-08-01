@@ -13,6 +13,15 @@ name: Stats Card Preview
 
 on:
   workflow_dispatch: {}
+  # Runs automatically on PRs that touch the stats pipeline, using the workflow file
+  # from the PR branch — so a change can be demoed before it's merged. The paths filter
+  # keeps unrelated PRs from spending agent runs. (workflow_dispatch alone can't do this:
+  # GitHub won't dispatch a workflow that isn't on the default branch yet.)
+  pull_request:
+    paths:
+      - '.github/scripts/generate-stats-svg.py'
+      - '.github/prompts/stats-card.md'
+      - '.github/workflows/stats-preview.yml'
 
 concurrency:
   group: stats-preview-${{ github.ref }}
@@ -159,8 +168,12 @@ jobs:
           # Always surface it in the run summary (works even with no PR).
           cat "$body" >> "$GITHUB_STEP_SUMMARY"
 
-          # If this branch has an open PR, post/refresh a sticky comment on it.
-          PR="$(gh pr list --head "${GITHUB_REF_NAME}" --json number --jq '.[0].number' 2>/dev/null || true)"
+          # Resolve the PR: from the event on pull_request, else look it up by branch
+          # (workflow_dispatch against a branch that has an open PR).
+          PR="${{ github.event.pull_request.number }}"
+          if [ -z "$PR" ]; then
+            PR="$(gh pr list --head "${GITHUB_REF_NAME}" --json number --jq '.[0].number' 2>/dev/null || true)"
+          fi
           if [ -n "$PR" ]; then
             prev="$(gh api "repos/${REPO}/issues/${PR}/comments" --jq '.[] | select(.body | startswith("<!-- stats-preview -->")) | .id' 2>/dev/null | head -1 || true)"
             if [ -n "$prev" ]; then
