@@ -232,13 +232,19 @@ def date_qualifier(period, field="committer-date"):
 def year_windows(start, end):
     """Yield consecutive (from, to) datetimes covering [start, end], each ≤ 364 days
     so no window trips GraphQL's 'must not exceed 1 year' limit. This is the workaround
-    for the per-query span cap: all-time is the union over these windows."""
+    for the per-query span cap: all-time is the union over these windows.
+
+    Windows are disjoint, not merely consecutive: the next one starts one second past the
+    previous window's inclusive `to`, so they partition [start, end] at GitHub's 1-second
+    timestamp granularity. [LAW:one-source-of-truth] a commit at a boundary instant belongs
+    to exactly one window — otherwise the summing path (_repo_commit_counts) would count it
+    in both and inflate the repo/language breakdowns."""
     step = timedelta(days=364)
     cur = start
     while cur < end:
         nxt = min(cur + step, end)
         yield cur, nxt
-        cur = nxt
+        cur = nxt + timedelta(seconds=1)
 
 
 # ─── Cached Data Fetcher ───────────────────────────────────
