@@ -2,11 +2,28 @@
 """
 Generate daily stats SVG for GitHub profile.
 
-Picks 4 random metrics (from 8) with random time periods each day,
-queries GitHub API with pagination, and creates the stats card.
+Picks 4 metrics (from 8) with varying time periods each day (seeded by the date),
+queries GitHub, and renders an animated dark-theme stats card whose palette and
+background motif also change daily.
+
+Data sourcing — read this before touching a query:
+
+  * Pure counts (commits, PRs, reviews, issues) come from the REST *search* API's
+    `total_count`, which is accurate at any magnitude. Only *retrieving items* past
+    1000 is capped; the count itself is not.
+
+  * Enumeration metrics (days active, active repos, languages) do NOT use search.
+    Search caps item retrieval at 1000 results, which silently truncated these to a
+    fraction of reality (e.g. Days Active 1y read 101 when the truth was 252). They
+    now come from the GraphQL `contributionsCollection` — the same data that draws
+    the profile contribution graph — which is exact and includes org repos. Its only
+    limit is a 1-year span per query, so all-time is stitched from consecutive
+    ≤1-year windows. See GitHubData.contribution_scope. [LAW:one-source-of-truth]
 """
 
 import hashlib
+import json
+import math
 import os
 import random
 import sys
@@ -18,7 +35,6 @@ try:
 
     HAS_REQUESTS = True
 except ImportError:
-    import json
     import urllib.error
     import urllib.request
 
@@ -29,16 +45,19 @@ except ImportError:
 USERNAME = "brandon-fryslie"
 STATS_PATH = "assets/daily-stats.svg"
 API_TIMEOUT = 30  # seconds
+GRAPHQL_URL = "https://api.github.com/graphql"
 FONT = (
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
 )
 
-# GitHub Primer palette
-BG = "#fafbfc"
-TEXT = "#24292e"
-SECONDARY = "#586069"
-ACCENT = "#0366d6"
-BORDER = "#e1e4e8"
+# Dark-profile chrome to match the doodle above it and GitHub's dark README.
+BG = "#0d1117"
+CARD = "#11161d"
+BORDER = "#21262d"
+TITLE = "#e6edf3"
+LABEL = "#9aa4b2"
+SUB = "#6e7681"
+TRACK = "#1c2430"
 
 # ─── Time Periods ───────────────────────────────────────────
 
@@ -60,23 +79,35 @@ METRIC_DEFS = {
 }
 
 
-# ─── API Layer ──────────────────────────────────────────────
+# ─── Errors ─────────────────────────────────────────────────
 
 class GitHubAPIError(RuntimeError):
     def __init__(self, url, status, body):
-        super().__init__(f"GET {url} failed with status {status}: {body[:300]}")
+        super().__init__(f"POST/GET {url} failed with status {status}: {body[:300]}")
         self.url = url
         self.status = status
         self.body = body
 
 
-def api_get(endpoint, token):
-    """Make a single GitHub API GET request. Returns parsed JSON.
+class SearchIncompleteError(RuntimeError):
+    """GitHub set incomplete_results=true — its search timed out, so total_count is
+    partial and must not be trusted as a real value. Fail loud instead of reporting a
+    wrong (often zero) number. [LAW:no-silent-failure]"""
 
-    On non-2xx, raises GitHubAPIError with the status code and body so callers
-    can distinguish 422 (search past 1000 results) from 403 (rate limit)
-    instead of getting a generic "—" with no signal.
-    """
+    def __init__(self, path, query):
+        super().__init__(f"/search/{path} returned incomplete_results for: {query}")
+
+
+class GraphQLError(RuntimeError):
+    def __init__(self, messages):
+        super().__init__("GraphQL errors: " + "; ".join(messages))
+
+
+# ─── REST API Layer ─────────────────────────────────────────
+
+def api_get(endpoint, token):
+    """Single GitHub REST GET. Returns parsed JSON; raises GitHubAPIError on non-2xx
+    so a rate-limit (403) or search cap (422) surfaces instead of a silent '—'."""
     url = f"https://api.github.com{endpoint}"
     headers = {
         "Authorization": f"token {token}",
@@ -111,94 +142,135 @@ def api_paginate_list(endpoint, token):
 
 
 def search_total_count(path, query, token):
-    """Get total_count from a GitHub search endpoint."""
+    """total_count from a GitHub search endpoint. Accurate at any magnitude (the 1000
+    cap only limits item *retrieval*, not the count). Loud-fails on incomplete_results
+    so a timed-out search can't masquerade as a real number. [LAW:no-silent-failure]"""
     encoded_q = quote(query, safe="+:")
     data = api_get(f"/search/{path}?q={encoded_q}&per_page=1", token)
+    if data.get("incomplete_results"):
+        raise SearchIncompleteError(path, query)
     return data.get("total_count", 0)
 
 
-SEARCH_PAGE_CAP = 10  # GitHub search caps at 1000 results (10 pages * 100); page 11 returns 422.
+# ─── GraphQL API Layer ──────────────────────────────────────
+
+def api_graphql(query, variables, token):
+    """POST a GraphQL query. Returns the `data` object; raises on transport errors or
+    a top-level `errors` array (GraphQL returns 200 with errors). [LAW:no-silent-failure]"""
+    body = json.dumps({"query": query, "variables": variables}).encode()
+    headers = {
+        "Authorization": f"bearer {token}",
+        "Content-Type": "application/json",
+    }
+    if HAS_REQUESTS:
+        resp = requests.post(GRAPHQL_URL, headers=headers, data=body, timeout=API_TIMEOUT)
+        if not (200 <= resp.status_code < 300):
+            raise GitHubAPIError(GRAPHQL_URL, resp.status_code, resp.text)
+        payload = resp.json()
+    else:
+        req = urllib.request.Request(GRAPHQL_URL, data=body, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=API_TIMEOUT) as resp:
+                payload = json.loads(resp.read().decode())
+        except urllib.error.HTTPError as e:
+            raise GitHubAPIError(GRAPHQL_URL, e.code,
+                                 e.read().decode("utf-8", errors="replace")) from e
+    if payload.get("errors"):
+        raise GraphQLError([e.get("message", "?") for e in payload["errors"]])
+    return payload["data"]
 
 
-def search_commit_items(query, token):
-    """Paginate commit search up to the GitHub 1000-result cap.
+CONTRIB_QUERY = """
+query($login:String!, $from:DateTime!, $to:DateTime!) {
+  user(login:$login) {
+    contributionsCollection(from:$from, to:$to) {
+      contributionCalendar { weeks { contributionDays { date contributionCount } } }
+      commitContributionsByRepository(maxRepositories: 100) {
+        repository { nameWithOwner primaryLanguage { name } }
+      }
+    }
+  }
+}
+"""
 
-    Going past page 10 returns 422 ('Only the first 1000 search results are
-    available'), which previously turned every metric depending on this list
-    into "—" once Brandon's commit volume in the period exceeded 1000.
-    """
-    encoded_q = quote(query, safe="+:")
-    items = []
-    for page in range(1, SEARCH_PAGE_CAP + 1):
-        data = api_get(
-            f"/search/commits?q={encoded_q}&per_page=100&page={page}", token
-        )
-        batch = data.get("items", [])
-        items.extend(batch)
-        if len(batch) < 100:
-            break
-    return items
+REPO_MAX = 100  # commitContributionsByRepository ceiling; hitting it makes repo/lang counts a floor.
 
 
 # ─── Date Helpers ───────────────────────────────────────────
+
+def _iso(dt):
+    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+
 
 def cutoff_iso(period):
     """ISO date string for period start, or None for 'all'."""
     days = PERIOD_DAYS[period]
     if days is None:
         return None
-    dt = datetime.now(timezone.utc) - timedelta(days=days)
-    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+    return _iso(datetime.now(timezone.utc) - timedelta(days=days))
 
 
 def date_qualifier(period, field="committer-date"):
-    """Search query fragment like '+committer-date:>2024-01-01T...' or empty."""
+    """Search query fragment like '+committer-date:>2024-...' or empty."""
     since = cutoff_iso(period)
     return f"+{field}:>{since}" if since else ""
+
+
+def year_windows(start, end):
+    """Yield consecutive (from, to) datetimes covering [start, end], each ≤ 364 days
+    so no window trips GraphQL's 'must not exceed 1 year' limit. This is the workaround
+    for the per-query span cap: all-time is the union over these windows."""
+    step = timedelta(days=364)
+    cur = start
+    while cur < end:
+        nxt = min(cur + step, end)
+        yield cur, nxt
+        cur = nxt
 
 
 # ─── Cached Data Fetcher ───────────────────────────────────
 
 class GitHubData:
-    """Fetches and caches GitHub API data to avoid duplicate calls."""
+    """Fetches and caches GitHub data. REST for pure counts and repo metadata;
+    GraphQL contributions for exact enumeration metrics."""
 
     def __init__(self, token):
         self.token = token
         self._user = None
         self._repos = None
-        self._commit_items = {}
+        self._contrib = {}  # (from_iso, to_iso) -> contributionsCollection
+
+    # -- account / repos (REST) --
 
     def user(self):
-        """Canonical /users/{username} payload — has public_repos as a single field."""
         if self._user is None:
             self._user = api_get(f"/users/{USERNAME}", self.token)
         return self._user
 
     def public_repo_count(self):
-        """The truth-source count for public repos. Avoids list-endpoint pagination quirks."""
+        """Truth-source count for public repos; avoids list-endpoint pagination quirks."""
         return self.user().get("public_repos", 0)
 
+    def account_created(self):
+        return datetime.strptime(
+            self.user()["created_at"], "%Y-%m-%dT%H:%M:%SZ"
+        ).replace(tzinfo=timezone.utc)
+
     def repos(self):
-        """Paginated repo list. Logs a warning if its length disagrees with public_repos
-        so silent pagination caps surface instead of producing a wrong number."""
+        """Paginated owned-repo list. Warns if its length disagrees with public_repos
+        so a silent pagination cap surfaces instead of producing a wrong number."""
         if self._repos is None:
-            self._repos = api_paginate_list(
-                f"/users/{USERNAME}/repos", self.token
-            )
+            self._repos = api_paginate_list(f"/users/{USERNAME}/repos", self.token)
             expected = self.public_repo_count()
             if expected and len(self._repos) != expected:
                 print(
-                    f"Warning: paginated repo list returned {len(self._repos)} but /users/{USERNAME}.public_repos = {expected}",
+                    f"Warning: paginated repo list returned {len(self._repos)} but "
+                    f"/users/{USERNAME}.public_repos = {expected}",
                     file=sys.stderr,
                 )
         return self._repos
 
-    def commit_items(self, period):
-        """Fetch commit items for a period (cached). Needed for languages, active_repos, days_active."""
-        if period not in self._commit_items:
-            q = f"author:{USERNAME}{date_qualifier(period)}"
-            self._commit_items[period] = search_commit_items(q, self.token)
-        return self._commit_items[period]
+    # -- pure counts (REST search total_count) --
 
     def commit_count(self, period):
         q = f"author:{USERNAME}{date_qualifier(period)}"
@@ -225,52 +297,88 @@ class GitHubData:
             q += f"+closed:>{since}"
         return search_total_count("issues", q, self.token)
 
+    # -- enumeration metrics (GraphQL contributions) --
+
+    def _contributions(self, from_iso, to_iso):
+        key = (from_iso, to_iso)
+        if key not in self._contrib:
+            data = api_graphql(
+                CONTRIB_QUERY,
+                {"login": USERNAME, "from": from_iso, "to": to_iso},
+                self.token,
+            )
+            self._contrib[key] = data["user"]["contributionsCollection"]
+        return self._contrib[key]
+
+    def _window_scope(self, from_iso, to_iso):
+        """(active_dates, repos, languages, capped) for one ≤1-year window."""
+        c = self._contributions(from_iso, to_iso)
+        lo, hi = from_iso[:10], to_iso[:10]
+        active = {
+            d["date"]
+            for w in c["contributionCalendar"]["weeks"]
+            for d in w["contributionDays"]
+            if d["contributionCount"] > 0 and lo <= d["date"] <= hi
+        }
+        by_repo = c["commitContributionsByRepository"]
+        repos = {r["repository"]["nameWithOwner"] for r in by_repo}
+        langs = {
+            r["repository"]["primaryLanguage"]["name"]
+            for r in by_repo
+            if r["repository"]["primaryLanguage"]
+        }
+        return active, repos, langs, len(by_repo) >= REPO_MAX
+
+    def contribution_scope(self, period):
+        """Union of (active days, repos, languages, capped) over the period, stitched
+        from ≤1-year windows so neither the search 1000-cap nor the GraphQL 1-year-span
+        cap can truncate the answer. `capped` means a window hit the 100-repo ceiling,
+        making repo/language counts a floor rather than an exact value."""
+        now = datetime.now(timezone.utc)
+        days = PERIOD_DAYS[period]
+        start = self.account_created() if days is None else now - timedelta(days=days)
+        active, repos, langs, capped = set(), set(), set(), False
+        for f, t in year_windows(start, now):
+            a, r, l, cap = self._window_scope(_iso(f), _iso(t))
+            active |= a
+            repos |= r
+            langs |= l
+            capped = capped or cap
+        return active, repos, langs, capped
+
 
 # ─── Metric Computation ────────────────────────────────────
 
+def floor_str(n, capped):
+    """A count that could be truncated by an upstream cap is a *floor*, not a truth.
+    Render it 'n+' so an undercount can't pose as an exact value. [LAW:no-silent-failure]"""
+    return f"{n}+" if capped else n
+
+
 def compute_metric(name, period, data):
-    """Compute a single metric value. Returns an int."""
+    """Compute a single metric value. Returns an int, an 'n+' floor string, or raises."""
     if name == "commits":
         return data.commit_count(period)
-
     if name == "prs_merged":
         return data.pr_merged_count(period)
-
     if name == "reviews":
         return data.review_count(period)
-
     if name == "issues_closed":
         return data.issue_closed_count(period)
 
-    if name == "languages":
-        if period == "all":
-            return len({r["language"] for r in data.repos() if r.get("language")})
-        items = data.commit_items(period)
-        repo_names = {it["repository"]["full_name"] for it in items}
-        repo_langs = {
-            r["language"]
-            for r in data.repos()
-            if r["full_name"] in repo_names and r.get("language")
-        }
-        return len(repo_langs)
-
-    if name == "active_repos":
-        items = data.commit_items(period)
-        return len({it["repository"]["full_name"] for it in items})
-
     if name == "days_active":
-        items = data.commit_items(period)
-        dates = set()
-        for it in items:
-            d = it.get("commit", {}).get("committer", {}).get("date", "")
-            if d:
-                dates.add(d[:10])
-        return len(dates)
+        active, _, _, _ = data.contribution_scope(period)
+        return len(active)  # calendar is exact; never capped
+    if name == "active_repos":
+        _, repos, _, capped = data.contribution_scope(period)
+        return floor_str(len(repos), capped)
+    if name == "languages":
+        _, _, langs, capped = data.contribution_scope(period)
+        return floor_str(len(langs), capped)
 
     if name == "repos_created":
         since = cutoff_iso(period)
         if since is None:
-            # Use the canonical public_repos field instead of paginated list length.
             return data.public_repo_count()
         return sum(1 for r in data.repos() if r["created_at"] > since)
 
@@ -281,68 +389,231 @@ def compute_metric(name, period, data):
 
 def pick_daily_metrics(date_str):
     """Deterministically pick 4 (metric_name, period) combos for a given date."""
-    seed = int(hashlib.md5(date_str.encode()).hexdigest(), 16)
-    rng = random.Random(seed)
+    rng = random.Random(int(hashlib.md5(date_str.encode()).hexdigest(), 16))
+    chosen = rng.sample(list(METRIC_DEFS.keys()), 4)
+    return [(name, rng.choice(METRIC_DEFS[name][1])) for name in chosen]
 
-    metric_names = list(METRIC_DEFS.keys())
-    chosen = rng.sample(metric_names, 4)
 
-    result = []
-    for name in chosen:
-        _, valid_periods = METRIC_DEFS[name]
-        period = rng.choice(valid_periods)
-        result.append((name, period))
+# ─── Daily Visual Theme ─────────────────────────────────────
+# Palette + background motif are seeded off the date (independently of the metric
+# pick) so the card's look changes every day while staying deterministic/reproducible.
 
-    return result
+PALETTES = [
+    ("Ember",      "#ff7043", "#ffd166"),
+    ("Aurora",     "#64ffda", "#48beff"),
+    ("Synthwave",  "#ff5cf4", "#b06bff"),
+    ("Solarflare", "#ffd166", "#ff8f1c"),
+    ("Matrix",     "#7cff8a", "#38f9d7"),
+    ("Glacier",    "#8ecae6", "#a2d2ff"),
+    ("Magma",      "#ff6b6b", "#ffa45b"),
+    ("Ultraviolet","#a78bfa", "#f472b6"),
+    ("Citrus",     "#c8f560", "#4dd4ac"),
+    ("Coral",      "#ff8fab", "#ffc2a1"),
+]
+MOTIFS = ["constellation", "sonar", "waves", "grid"]
+
+
+def pick_daily_theme(date_str):
+    """(rng, (name, c0, c1), motif) for the date. Same rng drives motif placement so
+    the whole card is one reproducible composition.
+
+    STATS_THEME_SALT (env) perturbs the seed. Default empty = today's deterministic
+    pick. The doodle job's legibility self-review bumps it (1, 2, ...) to re-roll a
+    different palette/motif when a rendered card reads poorly — the deterministic analog
+    of the doodle reviewer's "rewrite with a different approach, don't patch"."""
+    salt = os.environ.get("STATS_THEME_SALT", "")
+    rng = random.Random(int(hashlib.md5((date_str + "::theme" + salt).encode()).hexdigest(), 16))
+    return rng, rng.choice(PALETTES), rng.choice(MOTIFS)
+
+
+# ─── SVG helpers ────────────────────────────────────────────
+
+def bar_magnitude(value):
+    """Numeric magnitude of a display value for meter sizing. '252' -> 252,
+    '55+' -> 55, '—' -> 0."""
+    digits = "".join(ch for ch in str(value) if ch.isdigit())
+    return int(digits) if digits else 0
+
+
+def motif_constellation(rng, w, h, color):
+    """Scattered stars with faint links; each star twinkles on a prime-second cycle."""
+    pts = [(rng.randint(24, w - 24), rng.randint(54, h - 14)) for _ in range(16)]
+    out = []
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
+        out.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" '
+                   f'stroke="{color}" stroke-width="0.5" opacity="0.07"/>')
+    for x, y in pts:
+        r = rng.choice([1, 1.5, 2])
+        dur = rng.choice([7, 11, 13])
+        beg = round(rng.uniform(0, 4), 1)
+        out.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{color}" opacity="0.22">'
+                   f'<animate attributeName="opacity" values="0.05;0.4;0.05" '
+                   f'dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/></circle>')
+    return "".join(out)
+
+
+def motif_sonar(rng, w, h, color):
+    """Concentric rings pinging outward from one side, like a radar sweep."""
+    cx = rng.choice([70, w - 70])
+    cy = h // 2 + 12
+    out = []
+    for k in range(4):
+        beg = round(k * 2.75, 2)
+        out.append(
+            f'<circle cx="{cx}" cy="{cy}" r="8" fill="none" stroke="{color}" '
+            f'stroke-width="1" opacity="0">'
+            f'<animate attributeName="r" values="8;{w // 2}" dur="11s" begin="{beg}s" repeatCount="indefinite"/>'
+            f'<animate attributeName="opacity" values="0.32;0" dur="11s" begin="{beg}s" repeatCount="indefinite"/>'
+            f'</circle>'
+        )
+    return "".join(out)
+
+
+def motif_waves(rng, w, h, color):
+    """Layered sine curves drifting horizontally at different speeds."""
+    out = []
+    for k in range(3):
+        base = 66 + k * 26 + rng.randint(-6, 6)
+        amp = rng.choice([6, 8, 10])
+        phase = rng.uniform(0, 6)
+        pts, x = [], 0
+        while x <= 2 * w + 20:
+            y = base + amp * math.sin(x / 38.0 + phase + k)
+            pts.append(f"{x},{round(y, 1)}")
+            x += 20
+        d = "M" + " L".join(pts)
+        dur = [13, 17, 19][k]
+        out.append(
+            f'<g opacity="0.13"><path d="{d}" fill="none" stroke="{color}" stroke-width="1"/>'
+            f'<animateTransform attributeName="transform" type="translate" '
+            f'values="0 0;-{w} 0" dur="{dur}s" repeatCount="indefinite"/></g>'
+        )
+    return "".join(out)
+
+
+def motif_grid(rng, w, h, color):
+    """A faint technical grid drifting slowly sideways."""
+    out = ['<g opacity="0.06">']
+    for gx in range(0, w + 40, 40):
+        out.append(f'<line x1="{gx}" y1="50" x2="{gx}" y2="{h}" stroke="{color}" stroke-width="0.5"/>')
+    for gy in range(58, h, 22):
+        out.append(f'<line x1="0" y1="{gy}" x2="{w}" y2="{gy}" stroke="{color}" stroke-width="0.5"/>')
+    out.append('<animateTransform attributeName="transform" type="translate" '
+               'values="0 0;-40 0;0 0" dur="31s" repeatCount="indefinite"/></g>')
+    return "".join(out)
+
+
+MOTIF_FNS = {
+    "constellation": motif_constellation,
+    "sonar": motif_sonar,
+    "waves": motif_waves,
+    "grid": motif_grid,
+}
 
 
 # ─── SVG Generation ─────────────────────────────────────────
 
-def generate_stats_svg(stat_items):
-    """Generate the stats card SVG.
+def generate_stats_svg(stat_items, date_label, rng, palette, motif):
+    """Render the animated stats card.
 
-    stat_items: list of (value, label, period_label) tuples
+    stat_items: list of (value, label, period_label). value is int | 'n+' | '—'.
     """
-    width = 800
-    height = 140
-    date_str = datetime.now(timezone.utc).strftime("%B %d, %Y")
+    W, H = 800, 160
+    pal_name, c0, c1 = palette
 
-    stat_cells = ""
-    cell_width = width // len(stat_items)
+    motif_svg = MOTIF_FNS[motif](rng, W, H, c0)
+
+    # Meter bars are log-scaled relative to the largest value on this card, so a 6000
+    # and a 7 both read sensibly. Bars are decorative; the numbers carry the truth.
+    mags = [bar_magnitude(v) for v, _, _ in stat_items]
+    peak = max(mags) if mags else 0
+    BAR_W = 108
+
+    def bar_width(mag):
+        if peak <= 0 or mag <= 0:
+            return 0
+        return round(BAR_W * math.log10(1 + mag) / math.log10(1 + peak))
+
+    n = len(stat_items)
+    cw = W // n
+    cells = []
     for i, (value, label, period_label) in enumerate(stat_items):
-        x = i * cell_width + cell_width // 2
-        stat_cells += f'''
-    <text x="{x}" y="76" font-family="{FONT}" font-size="28" fill="{ACCENT}" font-weight="600" text-anchor="middle">{value}</text>
-    <text x="{x}" y="96" font-family="{FONT}" font-size="12" fill="{SECONDARY}" text-anchor="middle">{label}</text>
-    <text x="{x}" y="112" font-family="{FONT}" font-size="10" fill="#8b949e" text-anchor="middle">({period_label})</text>'''
+        cx = i * cw + cw // 2
+        delay = round(0.15 * i, 2)
+        fw = bar_width(bar_magnitude(value))
+        bx = cx - BAR_W // 2
+        # Big number: base opacity 1 (so a static render — and any SMIL-blind viewer —
+        # always shows it legibly); the animate only adds a staggered fade-in on load.
+        cells.append(
+            f'<text x="{cx}" y="96" font-family="{FONT}" font-size="30" fill="url(#num)" '
+            f'font-weight="700" text-anchor="middle" opacity="1">{value}'
+            f'<animate attributeName="opacity" from="0" to="1" begin="{delay}s" dur="0.7s" fill="freeze"/>'
+            f'</text>'
+        )
+        # meter track + animated fill (base width = final so a static render still shows it)
+        cells.append(
+            f'<rect x="{bx}" y="108" width="{BAR_W}" height="5" rx="2.5" fill="{TRACK}"/>'
+            f'<rect x="{bx}" y="108" width="{fw}" height="5" rx="2.5" fill="{c0}" opacity="0.9">'
+            f'<animate attributeName="width" from="0" to="{fw}" begin="{delay + 0.2}s" '
+            f'dur="1.2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.2 0.8 0.2 1"/></rect>'
+        )
+        cells.append(
+            f'<text x="{cx}" y="132" font-family="{FONT}" font-size="12" fill="{LABEL}" text-anchor="middle">{label}</text>'
+            f'<text x="{cx}" y="148" font-family="{FONT}" font-size="10" fill="{SUB}" text-anchor="middle">({period_label})</text>'
+        )
 
-    return f'''<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="{width}" height="{height}" rx="6" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-  <text x="20" y="30" font-family="{FONT}" font-size="14" fill="{TEXT}" font-weight="600">Live GitHub Stats</text>
-  <text x="{width - 20}" y="30" font-family="{FONT}" font-size="12" fill="{SECONDARY}" text-anchor="end">Updated {date_str}</text>
-  <line x1="20" y1="42" x2="{width - 20}" y2="42" stroke="{BORDER}" stroke-width="1"/>
-  <g>{stat_cells}
+    return f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats">
+  <defs>
+    <clipPath id="card"><rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10"/></clipPath>
+    <linearGradient id="num" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="{c0}"/><stop offset="1" stop-color="{c1}"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="{c0}"/><stop offset="1" stop-color="{c1}"/>
+    </linearGradient>
+  </defs>
+  <rect width="{W}" height="{H}" rx="10" fill="{BG}"/>
+  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="10" fill="{CARD}" stroke="{BORDER}" stroke-width="1"/>
+  <g clip-path="url(#card)">{motif_svg}
+    <rect x="0" y="0" width="{W}" height="3" fill="url(#edge)" opacity="0.85"/>
   </g>
+  <circle cx="26" cy="25" r="3.5" fill="{c0}">
+    <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="40" y="30" font-family="{FONT}" font-size="14" fill="{TITLE}" font-weight="600">Live GitHub Stats</text>
+  <text x="{W - 20}" y="30" font-family="{FONT}" font-size="12" fill="{SUB}" text-anchor="end">Updated {date_label}</text>
+  <line x1="20" y1="44" x2="{W - 20}" y2="44" stroke="{BORDER}" stroke-width="1"/>
+  <g>{"".join(cells)}
+  </g>
+  <text x="{W - 20}" y="154" font-family="{FONT}" font-size="9" fill="{SUB}" text-anchor="end" opacity="0.7">◆ {pal_name}</text>
 </svg>'''
 
 
 # ─── Main ───────────────────────────────────────────────────
 
 def main():
+    # --theme-salt N re-rolls the palette/motif (used by the doodle job's legibility
+    # review to regenerate a different-looking card); it also honors STATS_THEME_SALT.
+    if "--theme-salt" in sys.argv:
+        os.environ["STATS_THEME_SALT"] = sys.argv[sys.argv.index("--theme-salt") + 1]
+
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
         print("Error: GITHUB_TOKEN environment variable not set", file=sys.stderr)
         sys.exit(1)
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    date_label = datetime.now(timezone.utc).strftime("%B %d, %Y")
     print(f"Date seed: {today}")
 
     selections = pick_daily_metrics(today)
-    print(f"Today's metrics: {[(n, p) for n, p in selections]}")
+    print(f"Today's metrics: {selections}")
+
+    rng, palette, motif = pick_daily_theme(today)
+    print(f"Today's theme: palette={palette[0]} motif={motif}")
 
     data = GitHubData(token)
 
-    # Compute the 4 selected metrics
     stat_items = []
     for name, period in selections:
         label, _ = METRIC_DEFS[name]
@@ -356,10 +627,9 @@ def main():
         print(f"  {label} ({period_label}): {value}")
 
     os.makedirs("assets", exist_ok=True)
-
     print("Generating stats SVG...")
     with open(STATS_PATH, "w") as f:
-        f.write(generate_stats_svg(stat_items))
+        f.write(generate_stats_svg(stat_items, date_label, rng, palette, motif))
     print(f"  Written to {STATS_PATH}")
 
 
