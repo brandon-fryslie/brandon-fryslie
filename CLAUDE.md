@@ -10,17 +10,18 @@ When you are asked to change "what shows up on the profile," the answer is almos
 
 ## The Daily Rewrite Loop
 
-`.github/workflows/daily-highlights.yml` is the system. It runs at 06:00 UTC and on `workflow_dispatch`. One workflow run contains two jobs that **execute in parallel** and both push to `master`:
+`.github/workflows/daily-highlights.yml` is the system. It runs at 06:00 UTC and on `workflow_dispatch`. One workflow run contains three jobs that **execute in parallel** and all push to `master`:
 
 | Job         | Owns these paths                                                          | What it produces |
 |-------------|---------------------------------------------------------------------------|------------------|
-| `doodle`    | `README.md` (DAILY-DOODLE block only), `DOODLES.md` (DOODLE-GALLERY block), `assets/daily-highlight.svg`, `assets/daily-stats.svg`, `doodle-archive/` | Today's animated SVG "doodle", an archive copy of yesterday's doodle SVG, and a prepended gallery entry in `DOODLES.md`. The `<img>` tag inside `DAILY-DOODLE` is rewritten idempotently each run. Owns one creative output and its archival infrastructure. |
+| `doodle`    | `README.md` (DAILY-DOODLE block only), `DOODLES.md` (DOODLE-GALLERY block), `assets/daily-highlight.svg`, `doodle-archive/`, `docs/assets/daily-highlight.svg` | Today's animated SVG "doodle", an archive copy of yesterday's doodle SVG, and a prepended `DOODLES.md` gallery entry. The `<img>` tag inside `DAILY-DOODLE` is rewritten idempotently each run. Owns one creative output and its archival infrastructure. |
 | `narrative` | `README.md` (INTRO-PROSE + RECENT-ACTIVITY + SELECTED-PROJECTS blocks), `daily-archive/`, `previous-work/` | All three text regions: the daily-rewritten first-person intro prose (anchored to `.github/intro-seed.md`), the bulleted Today/Week/Month recent-activity list with commit/PR links, the 6-cell project table, and an archive of yesterday's recent-activity content. Also appends today's day section to the current week's file under `previous-work/` (the durable weekly work archive; see `previous-work/README.md`). Owns all text-rendering and shares one commit-data query across all three regions. |
+| `stats`     | `assets/daily-stats.svg`, `assets/daily-stats.json` | The "Live GitHub Stats" card, authored fresh each day by a **dedicated** Claude invocation as a meaningful data-visualization. A prior mechanical step emits `daily-stats.json` — the rich data seam (a 365-day contribution calendar plus 3–6 relevance-selected metrics, each with its `max`/`breakdown` distribution) and a deterministic fallback card to `/tmp`. The agent visualizes that data (the picture encodes the numbers), an accuracy gate verifies every value is rendered, and it falls back to the deterministic card if it can't. See **Update the Generator** below. |
 
 Concurrency model — important to understand before changing anything:
 
 - **Workflow-level** `concurrency: { group: daily-highlights, cancel-in-progress: false }` prevents two whole runs from interleaving.
-- **Within a run**, the two jobs deliberately race. Each job stages **only its own paths** (`git add` is whitelisted per job) and pushes through a 5-attempt `fetch + rebase + push` loop. This is the mechanism by which two parallel Claude invocations can both update `README.md` without stomping each other.
+- **Within a run**, the three jobs deliberately race. Each job stages **only its own paths** (`git add` is whitelisted per job) and pushes through a 5-attempt `fetch + rebase + push` loop. This is the mechanism by which the parallel Claude invocations can all push to `master` (and both `doodle` and `narrative` update `README.md`, in non-overlapping marker regions) without stomping each other. `stats` touches no shared file — it owns `assets/daily-stats.svg` and `.json` alone.
 - Each job has a `Verify Claude result` step that parses `steps.claude.outputs.execution_file` (JSONL of the action's run), pulls the last `result` entry, and fails the job if `is_error != false` or `permission_denials_count > 0`. A no-op or denied run is treated as a hard failure, not silently swallowed.
 
 If you are editing this workflow, preserve all three properties: per-job path whitelist on `git add`, rebase-retry on push, and the Verify step. They are load-bearing.
@@ -60,7 +61,9 @@ For anything inside the marker regions, in `assets/daily-highlight.svg`, `assets
 
 - **`.github/workflows/daily-highlights.yml`** — the prompt strings for both `doodle` and `narrative` jobs. This is where SVG creative direction, theme-picking priorities, the Recent Activity bullet format and link-construction rules, the Selected Projects qualification thresholds (≥10 commits in 90d, fallback ≥5 in 365d), and per-region tone rules all live.
 - **`.github/intro-seed.md`** — the voice and stance scaffolding for the INTRO-PROSE region. INTRO-PROSE is a daily journal entry written by Claude in *its* first person about today's work on Brandon's profile (Brandon is "Brandon" or "he," not "I"). The seed defines stance, a theme palette, and the anti-lockstep rule that today's entry must diverge from yesterday's in opening sentence, paragraph order, and theme spine. The seed is deliberately a palette, not a template — it carries no specific projects, dates, or rephrase-this-verbatim bullets. Edit it to change *how the journal sounds* or *what themes Claude is allowed to riff on*; don't edit it to add transient facts.
-- **`.github/scripts/generate-stats-svg.py`** — the deterministic stats SVG. Picks 4 metrics from a pool of 8 with varying time periods. Requires `GITHUB_TOKEN` and `pip install requests`. The doodle job runs this *before* invoking Claude, and the Claude prompt is explicitly told not to touch the resulting file.
+- **`.github/scripts/generate-stats-svg.py`** — the stats *data*, not its final look. Computes a pool of 8 metrics, drops the boring/zero ones, and selects a **variable 3–6** for the day, then writes `assets/daily-stats.json` — the rich data seam: a universal 365-day contribution `calendar` (time-series) plus each selected metric's exact value and any `max` (denominator, e.g. 252/365 days) or `breakdown` (category distribution, e.g. languages by commit count). It also writes a deterministic fallback SVG (to `/tmp` in CI). Enumeration metrics and all distributions come from the GraphQL `contributionsCollection` — exact and uncapped — *not* the 1000-result-capped commit search; pure counts use search `total_count`. Requires `GITHUB_TOKEN` and `pip install requests`. The **`stats` job** (its own dedicated Claude invocation) runs it before Claude; the agent then authors `daily-stats.svg` as a data-visualization of the seam. That prompt lives in **`.github/prompts/stats-card.md`** — the single source of truth for the card's creative direction, loaded into `$STATS_PROMPT` by both the daily `stats` job and the `stats-preview.yml` workflow so the two can't diverge. Its cardinal rules: *the picture encodes the data* (not decoration with numbers pasted on), the card is *continually animated* (never a one-time entrance that freezes), and the `rsvg-convert` self-review exists to confirm *precise layout*. A later `--verify-svg assets/daily-stats.svg` step fails the run if any value isn't rendered; the agent falls back to the deterministic card rather than ship a wrong or illegible one.
+
+  Edit the card's behavior in `.github/prompts/stats-card.md`, not in either workflow's YAML.
 - **`.github/workflows/finalize-week.yml`** and **`.github/scripts/render-previous-work-index.py`** — the weekly finalization prompt (topic line, totals, summary tone) and the mechanical index-regeneration script (which weeks count as finalized, how many appear in README.md's `PREVIOUS-WORK` block) respectively. `.github/workflows/weekly-archive.yml` only decides *which* weeks to attempt (cron schedule, dispatch input, self-healing scan) — it holds no finalization logic itself.
 
 The one legitimate exception is a **one-time legacy cleanup** — e.g., a stale archive entry from before a prompt change. Even then, fix the prompt in the same commit.
@@ -106,9 +109,11 @@ Switching themes overwrites the marker regions; the next 06:00 UTC run repopulat
 
 ```bash
 gh workflow run daily-highlights.yml                      # full daily rewrite
+gh workflow run stats-preview.yml --ref <branch>          # demo the stats pipeline on a branch/PR: renders 3 agent-authored card variations to PNG, comments them on the PR (no push to master)
 gh workflow run weekly-archive.yml                        # self-healing scan: finalize every unfinalized week in the last 4
 gh workflow run weekly-archive.yml -f week=2026-07-20      # finalize one specific week (must be a Monday, already ended)
-python .github/scripts/generate-stats-svg.py               # regenerate stats SVG locally (needs GITHUB_TOKEN)
+python .github/scripts/generate-stats-svg.py               # write daily-stats.json seam + deterministic fallback card (needs GITHUB_TOKEN)
+python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg   # gate: assert the card renders every value in daily-stats.json
 python .github/scripts/render-previous-work-index.py       # regenerate the previous-work index locally
 ```
 
@@ -135,3 +140,12 @@ Work is not complete until `git push` succeeds and `git status` shows "up to dat
 - `RANDOMNESS-GUIDE.md` — pseudo-random effects without JS.
 - `3D-GALLERY.md`, `GALLERY.md` — SVG showcases and 3D transform techniques.
 - `QUICKSTART.md` — theme switching commands.
+
+<!-- BEGIN LIT INTEGRATION -->
+## lit Agent-Native Workflow
+
+This repository uses `lit` for agent-native issue tracking.
+
+Start by running `lit quickstart` to load the workflow instructions. It prints how tickets are found, created, updated, and closed here, so running it first means the rest of your work follows the conventions this repo expects. It's a quick, read-only command — no need to check in before running it.
+
+<!-- END LIT INTEGRATION -->
