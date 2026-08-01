@@ -629,6 +629,19 @@ jobs:
             - The visualization **aids** comprehension — a viewer should understand the data faster because of it, not slower. If any decorative or motif element crosses a digit, lowers its contrast, or competes with a value for the eye, the decoration loses: subdue it or move it.
             - "Busy" is allowed; "understated" is fine; **"illegible" is a failure, full stop** — regardless of how clever the chart is. A gorgeous card where a stranger squints to read `5971` has failed at its one job.
 
+            ## Keep it continually alive — perpetual motion
+
+            The card must be **continually in motion** — always, not just at load. At any moment someone glances at it, a second or more after it appears, something is visibly moving; it never settles into a still image. This is a requirement, not a flourish.
+
+            Design against **entrance-only animation** — motion that plays once and then freezes. A bar that grows to its final width and stops, a value that fades in once, a one-shot count-up, anything whose whole animation is `fill="freeze"` — each of these is a static picture two seconds after load. That is the opposite of what is wanted.
+
+            - WRONG: every animation is a startup flourish that plays once and holds. Blink and it's over; for the rest of its life the card is frozen.
+            - RIGHT: motion that **loops forever** — SMIL with `repeatCount="indefinite"`, or CSS `@keyframes` applied `infinite` — so the card is alive whenever anyone looks.
+
+            Make the motion *belong to the visualization* rather than a decorative layer laid over it: let the representation itself be what moves — breathing, pulsing, flowing, cycling, advancing — so the animation and the meaning are one thing. How it moves is yours to invent each day; that it never stops is not.
+
+            The one limit: motion must never cost legibility. Keep the values themselves rock-steady and readable — never make a stat number jitter, drift, or flicker so it is hard to read. Move around, behind, and within the composition; keep the digits legible at every frame.
+
             ## Format and platform constraints
 
             - 800px wide. Height is yours — compose for what the piece needs (the surrounding card frame reads well around ~160px, but let the composition drive it).
