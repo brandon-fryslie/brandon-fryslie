@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: System Administrator Appreciation Day (Last Friday of July — July 31, 2026). Created by Ted Kekatos in 2000, SysAdmin Appreciation Day honors the people who keep servers up, backups fresh, pagers silent, and the internet's plumbing intact. A server-room tableau on an 800x200 canvas: on the left, a tall dark server rack full of 1U units with blinking green, amber, and red status LEDs; a slate-blue ethernet cable arcs out of the rack and drapes over the top into a large glowing CRT terminal that fills the right two-thirds of the frame; bright data-pulse packets travel along the cable; on the CRT, monospaced phosphor-green terminal prompts ("$ date", "$ echo ...") sandwich a huge cream JULY 31, 2026 headline and a phosphor-green SYSADMIN APPRECIATION DAY subhead, over a subtle scanline overlay; a blinking cursor pulses at the last prompt. Palette: bg #0d1117, rack #1a1a1a, phosphor-green #39d353, bright-green #00ff41, amber #f2c94a, warm-red #ff6b6b, slate-blue #2a4a8a, cream #f5efd8. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for July 31, 2026 — System Administrator Appreciation Day (last Friday of July, first celebrated in 2000, created by Ted Kekatos). A server-room tableau: on the left, a tall dark server rack full of 1U units with blinking green, amber, and red status LEDs; a slate-blue ethernet cable arcs out of the rack and drapes over the top into a large glowing CRT terminal that fills the right two-thirds of the frame; bright data-pulse packets travel along the cable; on the CRT, monospaced phosphor-green terminal prompts sandwich a huge cream JULY 31, 2026 headline and a phosphor-green SYSADMIN APPRECIATION DAY subhead, over subtle scanlines; a blinking cursor pulses at the last prompt.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#05080f"/>
+    </linearGradient>
+    <linearGradient id="rackGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="0.5" stop-color="#232323"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="unitGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2a"/>
+      <stop offset="1" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="crtBezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#2a2a2a"/>
+      <stop offset="0.5" stop-color="#141414"/>
+      <stop offset="1"   stop-color="#2a2a2a"/>
+    </linearGradient>
+    <radialGradient id="crtScreen" cx="50%" cy="45%" r="70%">
+      <stop offset="0"   stop-color="#0e2814"/>
+      <stop offset="0.7" stop-color="#0a1a0e"/>
+      <stop offset="1"   stop-color="#050c07"/>
+    </radialGradient>
+    <radialGradient id="crtGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0"   stop-color="#39d353" stop-opacity="0.22"/>
+      <stop offset="0.7" stop-color="#39d353" stop-opacity="0.05"/>
+      <stop offset="1"   stop-color="#39d353" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.4" fill="#000" opacity="0.32"/>
+    </pattern>
+    <linearGradient id="cable" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a4a8a"/>
+      <stop offset="1" stop-color="#1a2a4a"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="50%" cy="50%" r="80%">
+      <stop offset="60%"  stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+    </radialGradient>
+
+    <!-- Path for cable data-packet animation -->
+    <path id="cablePath" d="M 140,60 C 160,10 220,4 300,20"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- ============================================================ -->
+  <!-- CRT TERMINAL (right two-thirds)                                -->
+  <!-- ============================================================ -->
+  <g transform="translate(155,18)">
+    <!-- Bezel -->
+    <rect x="0" y="0" width="630" height="164" rx="8" fill="url(#crtBezel)" stroke="#3a3a3a" stroke-width="1"/>
+    <!-- Screen -->
+    <rect x="12" y="12" width="606" height="126" rx="6" fill="url(#crtScreen)"/>
+    <!-- Screen glow halo (subtle) -->
+    <rect x="12" y="12" width="606" height="126" rx="6" fill="url(#crtGlow)"/>
+    <!-- Scanlines -->
+    <rect x="12" y="12" width="606" height="126" rx="6" fill="url(#scanlines)"/>
+
+    <!-- Terminal contents -->
+    <g font-family="ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace">
+      <!-- Prompt 1: $ date -->
+      <text x="28" y="34" font-size="12">
+        <tspan fill="#00ff41" font-weight="700">sysadmin@profile</tspan><tspan fill="#7a8ca0">:~$</tspan><tspan fill="#39d353"> date</tspan>
+      </text>
+
+      <!-- Big date output — the star of the show -->
+      <text x="315" y="80" text-anchor="middle" font-size="44" font-weight="800" letter-spacing="2"
+            fill="#f5efd8"
+            style="paint-order: stroke; stroke: #0a1a0e; stroke-width: 4.5px; stroke-linejoin: round;">
+        JULY 31, 2026
+      </text>
+
+      <!-- Subhead -->
+      <text x="315" y="102" text-anchor="middle" font-size="14.5" font-weight="800" letter-spacing="4.4"
+            fill="#00ff41"
+            style="paint-order: stroke; stroke: #0a1a0e; stroke-width: 3px; stroke-linejoin: round;">
+        SYSADMIN APPRECIATION DAY
+      </text>
+
+      <!-- Prompt 2: echo -->
+      <text x="28" y="122" font-size="12">
+        <tspan fill="#00ff41" font-weight="700">sysadmin@profile</tspan><tspan fill="#7a8ca0">:~$</tspan><tspan fill="#39d353"> echo </tspan><tspan fill="#f2c94a">"thanks for keeping the lights on"</tspan>
+      </text>
+
+      <!-- Status bar on bezel bottom -->
+      <text x="20" y="152" font-size="8.5" fill="#7a8ca0" letter-spacing="1.6" font-weight="600">
+        VT220 · 80x24 · 9600 8N1 · LAST FRIDAY OF JULY · EST. 2000 BY TED KEKATOS
+      </text>
+
+      <!-- Blinking cursor at end of prompt 2 line (positioned after the "on" quote) -->
+      <rect x="452" y="113" width="8" height="12" fill="#00ff41">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Power LED on bezel bottom right -->
+    <circle cx="608" cy="150" r="2.8" fill="#00ff41">
+      <animate attributeName="opacity" values="1;0.55;1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Subtle screen edge highlight -->
+    <rect x="12" y="12" width="606" height="126" rx="6" fill="none" stroke="#0e2814" stroke-width="1" opacity="0.9"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- Ethernet cable: arcs from rack over to top-left of CRT         -->
+  <!-- ============================================================ -->
+  <g>
+    <!-- Cable body -->
+    <path d="M 140,60 C 160,10 220,4 300,20"
+          stroke="url(#cable)" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Cable highlight -->
+    <path d="M 140,60 C 160,10 220,4 300,20"
+          stroke="#6a8ad0" stroke-width="1" fill="none" opacity="0.55" stroke-linecap="round"/>
+    <!-- RJ45 plug at CRT end -->
+    <g transform="translate(298,18) rotate(15)">
+      <rect x="-4" y="-4" width="10" height="8" rx="1" fill="#3a3a3a" stroke="#111" stroke-width="0.5"/>
+      <rect x="-2" y="-4" width="6" height="1.2" fill="#f2c94a" opacity="0.85"/>
+    </g>
+
+    <!-- Data pulse packets traveling along the cable -->
+    <g>
+      <circle r="3.2" fill="#00ff41">
+        <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#cablePath"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="2.4" fill="#f2c94a">
+        <animateMotion dur="11s" begin="2s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#cablePath"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="11s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="2" fill="#59b7e8">
+        <animateMotion dur="13s" begin="4.5s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#cablePath"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="13s" begin="4.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- SERVER RACK (left)                                             -->
+  <!-- ============================================================ -->
+  <g transform="translate(20,15)">
+    <!-- Cast shadow -->
+    <ellipse cx="60" cy="181" rx="66" ry="4" fill="#000" opacity="0.55"/>
+    <!-- Frame -->
+    <rect x="0" y="0" width="120" height="176" rx="4" fill="url(#rackGrad)" stroke="#3a3a3a" stroke-width="1"/>
+    <!-- Top vent -->
+    <g fill="#000" opacity="0.7">
+      <rect x="8" y="4" width="104" height="1.5"/>
+      <rect x="8" y="7" width="104" height="1"/>
+    </g>
+    <!-- Bottom vent -->
+    <g fill="#000" opacity="0.7">
+      <rect x="8" y="167" width="104" height="1"/>
+      <rect x="8" y="170" width="104" height="1.5"/>
+    </g>
+
+    <!-- Rack units (6) -->
+    <g transform="translate(8, 12)">
+      <!-- Unit 1 -->
+      <g>
+        <rect width="104" height="23" rx="1" fill="url(#unitGrad)" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="4"  y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="94" y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <g fill="#000" opacity="0.75">
+          <rect x="26" y="9"  width="36" height="1"/>
+          <rect x="26" y="12" width="36" height="1"/>
+        </g>
+        <circle cx="70" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="1;0.3;1" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="77" cy="11.5" r="1.7" fill="#f2c94a">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="11s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="84" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="1;0.5;1;0.3;1" dur="13s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- Unit 2 -->
+      <g transform="translate(0, 26)">
+        <rect width="104" height="23" rx="1" fill="url(#unitGrad)" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="4"  y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="94" y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <g fill="#000" opacity="0.75">
+          <rect x="26" y="9"  width="36" height="1"/>
+          <rect x="26" y="12" width="36" height="1"/>
+        </g>
+        <circle cx="70" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="77" cy="11.5" r="1.7" fill="#ff6b6b">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="84" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="1;0.4;1" dur="13s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- Unit 3 -->
+      <g transform="translate(0, 52)">
+        <rect width="104" height="23" rx="1" fill="url(#unitGrad)" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="4"  y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="94" y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <g fill="#000" opacity="0.75">
+          <rect x="26" y="9"  width="36" height="1"/>
+          <rect x="26" y="12" width="36" height="1"/>
+        </g>
+        <circle cx="70" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="1;0.5;1" dur="13s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="77" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="84" cy="11.5" r="1.7" fill="#f2c94a">
+          <animate attributeName="opacity" values="0.3;1;0.3;1;0.3" dur="11s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- Unit 4 -->
+      <g transform="translate(0, 78)">
+        <rect width="104" height="23" rx="1" fill="url(#unitGrad)" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="4"  y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="94" y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <g fill="#000" opacity="0.75">
+          <rect x="26" y="9"  width="36" height="1"/>
+          <rect x="26" y="12" width="36" height="1"/>
+        </g>
+        <circle cx="70" cy="11.5" r="1.7" fill="#f2c94a">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="77" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="1;0.3;1" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="84" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="0.3;1;0.5;1" dur="13s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- Unit 5 -->
+      <g transform="translate(0, 104)">
+        <rect width="104" height="23" rx="1" fill="url(#unitGrad)" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="4"  y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="94" y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <g fill="#000" opacity="0.75">
+          <rect x="26" y="9"  width="36" height="1"/>
+          <rect x="26" y="12" width="36" height="1"/>
+        </g>
+        <circle cx="70" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="1;0.4;1" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="77" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="13s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="84" cy="11.5" r="1.7" fill="#ff6b6b">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="11s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- Unit 6 -->
+      <g transform="translate(0, 130)">
+        <rect width="104" height="23" rx="1" fill="url(#unitGrad)" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="4"  y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <rect x="94" y="7" width="6" height="9" rx="1" fill="#050505" stroke="#3a3a3a" stroke-width="0.4"/>
+        <g fill="#000" opacity="0.75">
+          <rect x="26" y="9"  width="36" height="1"/>
+          <rect x="26" y="12" width="36" height="1"/>
+        </g>
+        <circle cx="70" cy="11.5" r="1.7" fill="#f2c94a">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="77" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="1;0.3;1" dur="11s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="84" cy="11.5" r="1.7" fill="#39d353">
+          <animate attributeName="opacity" values="0.4;1;0.6;1;0.4" dur="13s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+
+    <!-- Ethernet port on right side of upper unit where cable emerges -->
+    <g transform="translate(115, 44)">
+      <rect x="0" y="0" width="7" height="5" fill="#000" stroke="#3a3a3a" stroke-width="0.4"/>
+      <rect x="1" y="1" width="5" height="1" fill="#f2c94a" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="800" height="200" fill="url(#vig)" pointer-events="none"/>
+</svg>
