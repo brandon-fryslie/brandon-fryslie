@@ -635,8 +635,18 @@ def generate_stats_svg(stat_items, date_label, rng, palette, motif):
         return round(BAR_W * math.log10(1 + mag) / math.log10(1 + peak))
 
     n = len(stat_items)
-    cw = W // n
+    # [LAW:no-silent-failure] This deterministic card is the reliable fallback path, so
+    # it must render *something* even in the degenerate case where no metric survived
+    # selection (every metric query transiently failed). max(n, 1) keeps the column math
+    # total instead of dividing by zero; the empty-state cell says so honestly rather
+    # than shipping a blank card. n == 0 is a real domain shape here, not a bug to hide.
+    cw = W // max(n, 1)
     cells = []
+    if not stat_items:
+        cells.append(
+            f'<text x="{W // 2}" y="96" font-family="{FONT}" font-size="15" fill="{SUB}" '
+            f'text-anchor="middle">Live stats momentarily unavailable</text>'
+        )
     for i, (value, label, period_label) in enumerate(stat_items):
         cx = i * cw + cw // 2
         delay = round(0.15 * i, 2)
