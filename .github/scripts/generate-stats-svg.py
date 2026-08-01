@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
 """
-Generate daily stats SVG for GitHub profile.
+Generate the daily GitHub stats data + a fallback stats card.
 
-Picks 4 metrics (from 8) with varying time periods each day (seeded by the date),
-queries GitHub, and renders an animated dark-theme stats card whose palette and
-background motif also change daily.
+Picks 4 metrics (from 8) with varying time periods each day (seeded by the date) and
+queries GitHub for their exact values. It then writes two things:
+
+  * assets/daily-stats.json — the *data seam*: the four exact values, labels, and
+    periods. This is the source of truth the doodle job's Claude reads to author a
+    fresh, radically-different-each-day stats card. The verify step
+    (`--verify-svg PATH`) checks that authored card against this JSON, so a wrong or
+    missing number fails the run instead of shipping.
+
+  * a deterministic fallback SVG (`--svg-out PATH`) — an always-valid, always-legible
+    animated dark card (palette + motif seeded off the date). It backstops the
+    creative step: if the LLM-authored card can't be made legible/accurate, the job
+    falls back to this. Never a broken card. [LAW:no-silent-failure]
 
 Data sourcing — read this before touching a query:
 
@@ -21,6 +31,7 @@ Data sourcing — read this before touching a query:
     ≤1-year windows. See GitHubData.contribution_scope. [LAW:one-source-of-truth]
 """
 
+import argparse
 import hashlib
 import json
 import math
@@ -44,6 +55,7 @@ except ImportError:
 
 USERNAME = "brandon-fryslie"
 STATS_PATH = "assets/daily-stats.svg"
+JSON_PATH = "assets/daily-stats.json"
 API_TIMEOUT = 30  # seconds
 GRAPHQL_URL = "https://api.github.com/graphql"
 FONT = (
@@ -591,11 +603,68 @@ def generate_stats_svg(stat_items, date_label, rng, palette, motif):
 
 # ─── Main ───────────────────────────────────────────────────
 
+def write_json(path, today, stat_items):
+    """Write the data seam: the exact values the authored card must render."""
+    payload = {
+        "date": today,
+        "generated_at": _iso(datetime.now(timezone.utc)),
+        "metrics": [
+            {"value": str(v), "label": label, "period": period}
+            for (v, label, period) in stat_items
+        ],
+    }
+    with open(path, "w") as f:
+        json.dump(payload, f, indent=2)
+        f.write("\n")
+
+
+def verify_svg(svg_path, json_path):
+    """Accuracy gate: fail unless every value in json_path is rendered as text in
+    svg_path. The digit-boundary guard stops a value like '9' from matching spuriously
+    inside another number ('1956'), so a wrong or dropped number can't slip through.
+    [LAW:verifiable-goals] [LAW:no-silent-failure]"""
+    import re
+    import xml.etree.ElementTree as ET
+
+    with open(json_path) as f:
+        payload = json.load(f)
+    root = ET.parse(svg_path).getroot()
+    ns = "{http://www.w3.org/2000/svg}"
+    rendered = "\n".join("".join(el.itertext()).strip() for el in root.iter(f"{ns}text"))
+
+    missing = [
+        f'{m["label"]} ({m["period"]}) = {m["value"]}'
+        for m in payload["metrics"]
+        if not re.search(r"(?<!\d)" + re.escape(str(m["value"])) + r"(?!\d)", rendered)
+    ]
+    if missing:
+        print(f"ERROR: {svg_path} is missing or altered these values vs {json_path}:",
+              file=sys.stderr)
+        for x in missing:
+            print(f"  - {x}", file=sys.stderr)
+        sys.exit(1)
+    print(f"OK: all {len(payload['metrics'])} values from {json_path} render in {svg_path}")
+
+
 def main():
-    # --theme-salt N re-rolls the palette/motif (used by the doodle job's legibility
-    # review to regenerate a different-looking card); it also honors STATS_THEME_SALT.
-    if "--theme-salt" in sys.argv:
-        os.environ["STATS_THEME_SALT"] = sys.argv[sys.argv.index("--theme-salt") + 1]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--svg-out", default=STATS_PATH,
+                        help="path to write the fallback SVG (default: %(default)s)")
+    parser.add_argument("--json-out", default=JSON_PATH,
+                        help="path to write the metric data seam (default: %(default)s)")
+    parser.add_argument("--theme-salt", default=None,
+                        help="re-roll the fallback palette/motif to a different look")
+    parser.add_argument("--verify-svg", metavar="PATH", default=None,
+                        help="verify PATH renders every value in --json-out, then exit")
+    args = parser.parse_args()
+
+    # Verify mode is pure (no token, no network): read the JSON and the SVG, compare.
+    if args.verify_svg:
+        verify_svg(args.verify_svg, args.json_out)
+        return
+
+    if args.theme_salt is not None:
+        os.environ["STATS_THEME_SALT"] = args.theme_salt
 
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
@@ -608,12 +677,10 @@ def main():
 
     selections = pick_daily_metrics(today)
     print(f"Today's metrics: {selections}")
-
     rng, palette, motif = pick_daily_theme(today)
-    print(f"Today's theme: palette={palette[0]} motif={motif}")
+    print(f"Fallback theme: palette={palette[0]} motif={motif}")
 
     data = GitHubData(token)
-
     stat_items = []
     for name, period in selections:
         label, _ = METRIC_DEFS[name]
@@ -626,11 +693,14 @@ def main():
         stat_items.append((value, label, period_label))
         print(f"  {label} ({period_label}): {value}")
 
-    os.makedirs("assets", exist_ok=True)
-    print("Generating stats SVG...")
-    with open(STATS_PATH, "w") as f:
+    os.makedirs(os.path.dirname(args.json_out) or ".", exist_ok=True)
+    write_json(args.json_out, today, stat_items)
+    print(f"  Data seam written to {args.json_out}")
+
+    os.makedirs(os.path.dirname(args.svg_out) or ".", exist_ok=True)
+    with open(args.svg_out, "w") as f:
         f.write(generate_stats_svg(stat_items, date_label, rng, palette, motif))
-    print(f"  Written to {STATS_PATH}")
+    print(f"  Fallback SVG written to {args.svg_out}")
 
 
 if __name__ == "__main__":
