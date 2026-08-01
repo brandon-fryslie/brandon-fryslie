@@ -36,28 +36,19 @@ jobs:
       - name: Install rsvg-convert (for doodle preview)
         run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
 
-      - name: Generate stats data + fallback card (mechanical)
-        # Writes the data seam (assets/daily-stats.json) that Claude authors the card
-        # from, and a deterministic fallback SVG to /tmp. The fallback goes to /tmp on
-        # purpose: the committed assets/daily-stats.svg is left as yesterday's card so
-        # the creative step can read it and deliberately diverge from it.
-        run: python .github/scripts/generate-stats-svg.py --svg-out /tmp/daily-stats-fallback.svg
-
       - name: Generate doodle (Claude)
         id: claude
         uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ github.token }}
-          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(gh:*),Bash(git:*),Bash(date:*),Bash(jq:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(rsvg-convert:*),Bash(python:*),Bash(rm:*),Read,Write,Edit,Glob,Grep"'
+          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(gh:*),Bash(git:*),Bash(date:*),Bash(jq:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(rsvg-convert:*),Bash(rm:*),Read,Write,Edit,Glob,Grep"'
           prompt: |
             You are generating today's daily doodle SVG for Brandon Fryslie's GitHub profile. The text regions of the README (intro prose, recent activity, selected projects) are owned by a parallel `narrative` job — do not touch README.md's INTRO-PROSE, RECENT-ACTIVITY, or SELECTED-PROJECTS marker regions, and do not touch daily-archive/.
 
             TODAY: Run `date -u '+%Y-%m-%d %A'` to get today's ISO date and day of week.
 
             Read the CLAUDE.md file first for SVG constraints and project context.
-
-            A prior step wrote today's stats data to `assets/daily-stats.json` and a deterministic fallback card to `/tmp/daily-stats-fallback.svg`. You author today's live stats card yourself — see Task 3.5 below.
 
             ## Task 1: Archive the Live Doodle and Prepend to the Gallery
 
@@ -141,94 +132,6 @@ jobs:
 
             **Iterate if needed, but cap strictly at 3 total attempts.** If the first preview is bad, rewrite the SVG (don't patch — start over with a different approach), re-render, re-view. After 3 attempts, accept the current version even if imperfect — do NOT loop indefinitely. Each attempt should be a real rethink, not a tweak; if you're tweaking the same composition over and over, stop and pick a different visual direction entirely.
 
-            ## Task 3.5: Author Today's Live Stats Card
-
-            Alongside the doodle, you author the profile's "Live GitHub Stats" card fresh each day, as `assets/daily-stats.svg`. Like the doodle, it must be **radically different every day** — a genuinely new visual concept, not a recolored template. Unlike the doodle, it has a hard job it can never abandon: it renders exactly four real numbers, and those four numbers must be legible at a glance. Creativity serves the numbers; it never fights them.
-
-            **Read the data first.** A prior workflow step wrote `assets/daily-stats.json`. Read it. Its shape:
-
-            ```json
-            { "date": "2026-08-01", "metrics": [
-              { "value": "252", "label": "Days Active", "period": "1 Year" },
-              { "value": "9",   "label": "Merged PRs",  "period": "30 Days" },
-              ...
-            ] }
-            ```
-
-            Always exactly four metrics. Each has a `value`, a `label`, and a `period`.
-
-            ### The numbers are law — render them verbatim
-
-            - Render **every** metric's value, label, and period. All four.
-            - The `value` string is rendered **byte-for-byte** as given. Never invent, round, reformat, abbreviate, pad, or "clean up" a value. `"1956"` renders as `1956`, not `1,956` or `~2k`. `"55+"` renders as `55+`. An em-dash `"—"` (a metric that failed to compute) renders as `—`, not as `0`, `N/A`, or a blank.
-            - Each value must be its own standalone SVG `<text>` element whose text content is **exactly** that value string — nothing else concatenated into the same element. Style it, animate it, gradient-fill it freely; the *text content* stays exactly the value. This is required because an automated gate greps for each value with digit boundaries (see the gate below), and a value split across two `<text>` elements, or fused with a stray character, will not match.
-
-              - WRONG: `<text>2</text><text>52</text>` (value split across two elements — the gate joins each element's text separately, so it never sees the contiguous string `252`, and the run fails).
-              - WRONG: `<text>1956 30</text>` (value fused with the start of another number in one element — the gate sees `195630` with no digit boundary after `1956`, so `1956` fails to match).
-              - RIGHT: `<text ...>252</text>` as its own element, with `Days Active` and `(1 Year)` in their own separate elements nearby.
-
-            ### Radically different from yesterday
-
-            The previous day's card is on disk at `assets/daily-stats.svg` — the prior step deliberately left it in place instead of overwriting it. Read it. Then author something that is a **different visual concept**: different composition, layout, motion, and organizing metaphor — not the same arrangement with a new palette. You are authoring a new piece each day the way the doodle is a new piece each day; a fresh stranger seeing yesterday's and today's side by side should read them as two different ideas, not two skins of one.
-
-            Do not carry over yesterday's structure as a scaffold. Invent how the four numbers are arranged and animated today. (Study the art in `assets/` — e.g. `heartbeat.svg`, `constellation.svg`, `vision.svg` — for the house style of animated SVG, then do your own thing.)
-
-            ### Legibility is paramount — it is the whole point of the card
-
-            The card exists to communicate four numbers at a glance. That is non-negotiable and it outranks every creative impulse.
-
-            - The four **values** are the loudest thing on the card: large, high-contrast, instantly readable against whatever sits behind them.
-            - Each value's **label** and **period** are clearly readable — not clipped, not smudged, not shrunk to decorative micro-text.
-            - Decoration sits **behind or around** the numbers. It never crosses a digit, never lowers a digit's contrast, never competes with a value for the eye. If a background motif element fights a number, the motif loses — subdue it or move it.
-            - "Understated" is not required and "busy" is allowed — but "illegible" is a failure, full stop. A gorgeous card where a stranger squints to read `1956` has failed at its one job.
-
-            ### Visual fit and format
-
-            - 800px wide. (Height is yours; the surrounding card frame reads well around ~160px, but compose for what the piece needs.)
-            - Dark theme in the GitHub dark-profile family — background around `#0d1117` — so it sits beneath the doodle without clashing.
-            - Animation is encouraged. Same platform limits as the doodle above: GitHub renders these as sanitized `<img>` tags — **no JavaScript, no `:hover`/pseudo-classes, no `<a>`, no `<foreignObject>`.** Allowed: CSS `@keyframes`, SMIL `<animate>`/`<animateTransform>`, SVG filters, gradients. Prefer SMIL. Use prime-number durations with staggered delays for organic motion.
-
-            ### Self-review — render and look at it, same as the doodle
-
-            After writing `assets/daily-stats.svg`, rasterize the static frame and view it with the Read tool:
-
-            ```
-            rsvg-convert -w 800 -h 160 assets/daily-stats.svg -o /tmp/stats-preview.png
-            ```
-
-            Then `Read /tmp/stats-preview.png` and judge it honestly against the two things that matter:
-
-            - **Accuracy:** is every one of the four values from `assets/daily-stats.json` present and readable in the image? Cross-check each against the JSON, not against memory.
-            - **Legibility:** are the four values large, high-contrast, instantly readable? Are labels and periods readable? Is decoration subordinate — nothing crossing or dimming a digit?
-
-            Same caveat as the doodle: `rsvg-convert` renders only static frame 0 and cannot judge animation. It is for catching illegible numbers, weak layout, and decoration fighting the digits — which is where this card fails.
-
-            **Iterate, capped at 3 total attempts.** If the preview fails on accuracy or legibility, don't patch — start over with a genuinely different concept, re-render, re-view. Each attempt is a real rethink, not a nudge to the same composition.
-
-            ### Fallback — never ship a broken card
-
-            If after 3 attempts you cannot produce a card that is **both** legible **and** accurate, do not ship what you have. Copy the deterministic fallback card into place instead:
-
-            ```
-            cp /tmp/daily-stats-fallback.svg assets/daily-stats.svg
-            ```
-
-            A plain correct card beats a beautiful wrong or illegible one every time. Falling back is the correct outcome when the creative one won't come together — not a failure to hide.
-
-            ### The automated gate you must satisfy
-
-            Separately from your own self-review, a later workflow step runs:
-
-            ```
-            python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg
-            ```
-
-            It fails the **entire run** if any value from `assets/daily-stats.json` is not rendered as text in the card. Satisfy it honestly — by actually rendering all four values as described above. Do not attempt to defeat it (no hidden off-canvas text, no zero-opacity value dumps); the numbers are supposed to be visible and readable, and that is exactly what passes.
-
-            ### Output and handoff
-
-            Write the final card to `assets/daily-stats.svg`. Do **not** run `git commit` or `git push` — a later workflow step stages and commits it.
-
             ## Task 4: Update README's DAILY-DOODLE Marker
 
             README.md has a marker pair `<!-- DAILY-DOODLE:START -->` / `<!-- DAILY-DOODLE:END -->` at the very top. Replace the content between them with:
@@ -267,14 +170,6 @@ jobs:
             exit 1
           fi
 
-      - name: Verify stats card renders the exact numbers
-        # Accuracy gate for the LLM-authored stats card, independent of Claude's own
-        # self-review: every value in the data seam must be rendered as text in the
-        # card, or the run fails. Claude is instructed to fall back to the
-        # deterministic card before this point if it can't author an accurate one, so
-        # a failure here means the fallback was skipped — a hard error, not a silent pass.
-        run: python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg
-
       - name: Mirror doodle SVG to docs/ (for Pages site)
         # The Pages site (brandon-fryslie.github.io/brandon-fryslie/) is served
         # from /docs/ and can't reach back to /assets/, so the freshly-generated
@@ -296,7 +191,7 @@ jobs:
           # narrative job owns INTRO-PROSE/RECENT-ACTIVITY/SELECTED-PROJECTS.
           # docs/assets/daily-highlight.svg mirrors the doodle for the Pages
           # site (the narrative job owns docs/daily.json).
-          git add README.md DOODLES.md assets/daily-stats.svg assets/daily-stats.json assets/daily-highlight.svg doodle-archive/ docs/assets/daily-highlight.svg 2>/dev/null || true
+          git add README.md DOODLES.md assets/daily-highlight.svg doodle-archive/ docs/assets/daily-highlight.svg 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "::error::Doodle job produced no staged changes — Claude did not write the expected files."
@@ -331,8 +226,6 @@ jobs:
             README.md
             DOODLES.md
             assets/daily-highlight.svg
-            assets/daily-stats.svg
-            assets/daily-stats.json
             doodle-archive/
             docs/assets/daily-highlight.svg
           if-no-files-found: ignore
@@ -622,4 +515,239 @@ jobs:
             README.md
             daily-archive/
             docs/daily.json
+          if-no-files-found: ignore
+
+  stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0  # full history so rebase-on-push can find a common ancestor
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Install rsvg-convert (for stats preview)
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+
+      - name: Generate stats data seam + fallback card (mechanical)
+        # Writes the rich data seam (assets/daily-stats.json — a 365-day calendar plus
+        # 3-6 relevant metrics with their max/breakdown distributions) and a deterministic
+        # fallback SVG to /tmp. The fallback goes to /tmp on purpose: the committed
+        # assets/daily-stats.svg is left as yesterday's card so the creative step can read
+        # it and deliberately diverge from it.
+        run: python .github/scripts/generate-stats-svg.py --svg-out /tmp/daily-stats-fallback.svg
+
+      - name: Author stats card (Claude)
+        id: claude
+        uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(date:*),Bash(rsvg-convert:*),Bash(cp:*),Bash(python:*),Bash(ls:*),Bash(cat:*),Read,Write,Edit,Glob,Grep"'
+          prompt: |
+            You are the stats-card agent for Brandon Fryslie's GitHub profile. You have exactly one job today: author the profile's "Live GitHub Stats" card as an animated SVG at `assets/daily-stats.svg`. Nothing else in the repo is yours to touch. This card is your centerpiece the way the doodle is the doodle agent's centerpiece — give it that focus.
+
+            TODAY: Run `date -u '+%Y-%m-%d %A'` to get today's ISO date and day of week.
+
+            Read the CLAUDE.md file first — it holds the project context and the SVG platform constraints you must work within.
+
+            A prior workflow step has already written two files for you:
+            - `assets/daily-stats.json` — the data you visualize (described below). It exists; read it.
+            - `/tmp/daily-stats-fallback.svg` — a deterministic, always-valid fallback card. Your safety net.
+
+            ## What this card must be
+
+            The requester has rejected three previous attempts, and the reason each time is the same, so read it and design against it. They do not want a decorative animation with the numbers pasted on top. A network, a constellation, a nebula, a reactor with the stat values floating over it is the **rejected failure mode** — it visualizes nothing and reads as derivative of the doodle art. What they want instead, in their words: "meaningful visualizations of the stats."
+
+            The rule that follows from that: **the picture IS the data.** The visual form must represent the actual numbers — their magnitude, their proportion, their distribution, or their change over time — so that a stranger glancing at the card *learns something from the shape itself*, before reading a single digit. The digits confirm the shape; the shape is not decoration around the digits.
+
+            - WRONG: an animated galaxy of orbiting particles with "252", "9", "5971" set as labels floating on top. (The galaxy encodes none of those numbers. It is art with data stapled to it — the exact thing that got rejected.)
+            - RIGHT: a form whose geometry is driven by the data — a shape that is 252/365 as full because the metric is 252 of a possible 365; a distribution whose segments are sized by the breakdown counts they represent; a year of activity drawn from the 365 calendar values. The viewer reads proportion and trend off the picture, and the exact value sits legibly within it.
+
+            Do not let this collapse into "make a chart and call it done" either — you have the full house style of animated SVG at your disposal (study `assets/heartbeat.svg`, `assets/constellation.svg`, `assets/celestial-orrery.svg` for the motion vocabulary). The goal is a visualization that is *both* genuinely data-driven *and* alive and striking. Data-faithful first, beautiful second, but both.
+
+            ## The data you are given
+
+            Read `assets/daily-stats.json`. Its exact shape:
+
+            ```json
+            {
+              "date": "2026-08-01",
+              "username": "brandon-fryslie",
+              "calendar": { "start": "2025-08-02", "counts": [0, 13, 5, 9, ...] },
+              "metrics": [
+                { "key": "days_active", "label": "Days Active", "period": "1 Year", "value": "252", "max": 365 },
+                { "key": "languages", "label": "Languages", "period": "1 Year", "value": "9",
+                  "breakdown": [ {"name": "Python", "count": 40}, {"name": "TypeScript", "count": 22}, ... ] },
+                { "key": "commits", "label": "Commits", "period": "1 Year", "value": "5971" }
+              ]
+            }
+            ```
+
+            Read every field before you design — the visualization concept should come *from* what the data offers today, not be chosen first and forced onto it.
+
+            - **`calendar`** is ALWAYS present. `counts` is a chronological array of roughly 365 daily contribution counts; `counts[0]` falls on the date `start`, and each subsequent entry is the next day. This is a full year-long time series you can visualize however you invent — activity over the year, its rhythm, its streaks, its recent shape. It is always available even on a day when the metrics are thin.
+
+            - **`metrics`** has a VARIABLE number of entries — between 3 and 6. The count and the set change day to day (boring and zero metrics are already filtered out upstream). You render exactly the metrics present today, however many there are, and the composition must adapt to that count: a 3-metric day and a 6-metric day should not be the same layout with empty slots. **Vary how many stats you feature and how prominently, to fit the day** — this is explicitly wanted, not a liberty.
+
+            - Each metric always carries `key`, `label`, `period`, `value`. Some also carry:
+              - **`max`** — a natural denominator (e.g. 252 of 365 days). This is a proportion waiting to be drawn: a fill, a gauge, an arc, a share of a whole. Wherever `max` exists, the metric wants a visual that shows value-against-max, not a bare number.
+              - **`breakdown`** — a category distribution (e.g. languages by commit count). This is a distribution waiting to be drawn: relative sizes, shares, a ranked spread. Wherever `breakdown` exists, the metric wants a visual that shows the parts and their proportions.
+
+              A metric with neither `max` nor `breakdown` is a scalar — it can still be given a meaningful, deliberate treatment (its magnitude related to the others, its value emphasized), but the metrics carrying `max`, `breakdown`, or the calendar are where the real visualizations come from. Use them. A card that ignores `max`/`breakdown`/`calendar` and just styles numbers has missed the entire point.
+
+            ## The numbers are law — render them verbatim
+
+            - Render **every** metric present in `metrics` today (all 3–6 of them): its `value`, its `label`, and its `period`. None omitted.
+            - The `value` string is rendered **byte-for-byte** as given. Never invent, round, reformat, abbreviate, pad, or "clean up" a value. `"5971"` renders as `5971`, not `5,971` or `~6k`. `"55+"` renders as `55+`. An em-dash `"—"` (a metric that failed to compute) renders as `—`, not `0`, `N/A`, or blank.
+            - Each value must be its own standalone SVG `<text>` element whose text content is **exactly** that value string — nothing else concatenated into the same element. Style it, animate it, gradient-fill it, place it inside your visualization freely; the *text content* of that one element stays exactly the value. This is required because the automated gate (below) joins each `<text>` element's text separately and matches each value with digit boundaries — a value split across two elements, or fused with a stray character, will not match and the run fails.
+              - WRONG: `<text>2</text><text>52</text>` (value split across two elements — the gate never sees the contiguous string `252`, run fails).
+              - WRONG: `<text>5971 9</text>` (two values fused in one element — the gate sees `59719` with no boundary, `5971` fails to match).
+              - RIGHT: `<text ...>252</text>` as its own element, with `Days Active` and `1 Year` in their own separate elements nearby.
+
+            ## Radically different from yesterday
+
+            Yesterday's card is on disk at `assets/daily-stats.svg` — the prior step deliberately left it in place instead of overwriting it. Read it first. Then author a **different visualization concept**: a different way of turning the data into a picture, a different composition, layout, motion, and organizing idea — not yesterday's arrangement with a new palette. A recolor is the failure the requester already rejected once. A fresh stranger seeing yesterday's and today's side by side should read them as two different ideas about how to show these numbers, not two skins of one. Do not carry yesterday's structure over as a scaffold; invent today's from today's data.
+
+            ## Legibility is paramount — it is the whole point of the card
+
+            The card exists to communicate. That outranks every creative impulse.
+
+            - The **values** are the loudest thing on the card: large, high-contrast, instantly readable against whatever sits behind them.
+            - Each value's **label** and **period** are clearly readable — not clipped, not smudged, not shrunk to decorative micro-text.
+            - The visualization **aids** comprehension — a viewer should understand the data faster because of it, not slower. If any decorative or motif element crosses a digit, lowers its contrast, or competes with a value for the eye, the decoration loses: subdue it or move it.
+            - "Busy" is allowed; "understated" is fine; **"illegible" is a failure, full stop** — regardless of how clever the chart is. A gorgeous card where a stranger squints to read `5971` has failed at its one job.
+
+            ## Format and platform constraints
+
+            - 800px wide. Height is yours — compose for what the piece needs (the surrounding card frame reads well around ~160px, but let the composition drive it).
+            - Dark theme in the GitHub dark-profile family — background around `#0d1117` — so it sits cleanly beneath the doodle.
+            - GitHub renders this as a sanitized `<img>` tag. **No JavaScript, no `:hover` or other pseudo-classes, no `<a>`, no `<foreignObject>`** — all stripped or inert. Allowed: CSS `@keyframes`, SMIL `<animate>`/`<animateTransform>`, SVG filters, gradients. Prefer SMIL for GitHub compatibility. Use prime-number durations (7s, 11s, 13s) with staggered delays for organic motion. See CLAUDE.md's "SVG Animation Constraints" for the full reference.
+
+            ## Self-review — render it and look at it
+
+            After writing `assets/daily-stats.svg`, rasterize the static frame and view it with the Read tool:
+
+            ```
+            rsvg-convert -w 800 assets/daily-stats.svg -o /tmp/stats-preview.png
+            ```
+
+            Then `Read /tmp/stats-preview.png` and judge it honestly against the two things that matter:
+
+            - **Does the visualization actually represent the data?** Look at the picture and ask: could a stranger read the proportions, distribution, or trend off the shape, without the numbers? If the shape would look identical for a completely different set of numbers, it is decoration, not visualization — start over.
+            - **Is every value present and legible?** Cross-check each value against `assets/daily-stats.json`, not against memory. Are the values large, high-contrast, instantly readable? Are labels and periods readable? Is nothing crossing or dimming a digit?
+
+            Caveat, same as the doodle: `rsvg-convert` renders only static frame 0 — it cannot judge animation. Don't try to evaluate motion from the PNG. It is for catching decoration-with-numbers-pasted-on, illegible values, and weak layout — which is exactly where this card fails.
+
+            **Iterate, capped strictly at 3 total attempts.** If the preview fails on either count, do NOT patch — start over with a genuinely different visualization concept, re-render, re-view. Each attempt is a real rethink, not a nudge to the same composition. After 3 attempts, stop iterating.
+
+            ## Fallback — never ship a broken card
+
+            If after 3 attempts you cannot produce a card that is **both** meaningful+legible **AND** accurate, do not ship what you have. Copy the deterministic fallback into place instead:
+
+            ```
+            cp /tmp/daily-stats-fallback.svg assets/daily-stats.svg
+            ```
+
+            A plain correct card beats a broken clever one every time. Falling back is the correct outcome when the creative one won't come together — not a failure to hide.
+
+            ## The automated gate you must satisfy
+
+            Separately from your own review, a later workflow step runs:
+
+            ```
+            python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg
+            ```
+
+            It fails the **entire run** if any value in `assets/daily-stats.json` is not rendered as text in the card (matched per `<text>` element, with digit boundaries — hence the standalone-element rule above). Satisfy it honestly, by actually rendering all the values as described. Do not attempt to defeat it — no hidden off-canvas text, no zero-opacity value dumps. The numbers are supposed to be visible and readable, and that is exactly what passes.
+
+            ## Output and handoff
+
+            Write the final card to `assets/daily-stats.svg`. Do **not** run `git commit` or `git push` — a later workflow step stages, commits, and pushes it. Just write the file and finish.
+
+      - name: Verify Claude result
+        id: parse_claude
+        run: |
+          set -euo pipefail
+          EXEC_FILE="${{ steps.claude.outputs.execution_file }}"
+          if [ -z "$EXEC_FILE" ] || [ ! -f "$EXEC_FILE" ]; then
+            echo "::error::Claude execution_file missing — the action did not run to completion."
+            exit 1
+          fi
+          RESULT=$(jq -c '[.[] | select(.type=="result")] | last' "$EXEC_FILE")
+          if [ -z "$RESULT" ] || [ "$RESULT" = "null" ]; then
+            echo "::error::Claude execution output has no result entry — shape unexpected."
+            exit 1
+          fi
+          IS_ERROR=$(echo "$RESULT" | jq -r '.is_error')
+          DENIALS=$(echo "$RESULT" | jq -r '.permission_denials_count // 0')
+          echo "Stats Claude: is_error=$IS_ERROR permission_denials_count=$DENIALS"
+          if [ "$IS_ERROR" != "false" ]; then
+            echo "::error::Stats Claude reported is_error=$IS_ERROR"
+            exit 1
+          fi
+          if [ "$DENIALS" -gt 0 ]; then
+            echo "::error::Stats Claude had $DENIALS permission denials."
+            exit 1
+          fi
+
+      - name: Verify stats card renders the exact numbers
+        # Accuracy gate, independent of Claude's self-review: every value in the data
+        # seam must be rendered as text in the card, or the run fails. Claude is told to
+        # fall back to the deterministic card before this point if it can't author an
+        # accurate one, so a failure here means the fallback was skipped — a hard error.
+        run: python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg
+
+      - name: Commit and push (rebase-retry on race with parallel jobs)
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # This job owns exactly the stats card and its data seam — nothing else.
+          git add assets/daily-stats.svg assets/daily-stats.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "::error::Stats job produced no staged changes — Claude did not write the card."
+            exit 1
+          fi
+
+          git commit -m 'chore: update daily stats'
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:master; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt rejected — fetching and rebasing."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              echo "::error::Rebase failed (real conflict). Aborting."
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep $(( (RANDOM % 4) + 1 ))
+          done
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: daily-highlights-stats
+          path: |
+            assets/daily-stats.svg
+            assets/daily-stats.json
           if-no-files-found: ignore

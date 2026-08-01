@@ -198,6 +198,7 @@ query($login:String!, $from:DateTime!, $to:DateTime!) {
     contributionsCollection(from:$from, to:$to) {
       contributionCalendar { weeks { contributionDays { date contributionCount } } }
       commitContributionsByRepository(maxRepositories: 100) {
+        contributions { totalCount }
         repository { nameWithOwner primaryLanguage { name } }
       }
     }
@@ -358,6 +359,56 @@ class GitHubData:
             capped = capped or cap
         return active, repos, langs, capped
 
+    # -- distributions for meaningful visualizations (the rich seam) --
+
+    def calendar_year(self):
+        """{start, counts}: chronological daily contribution counts for the last 365
+        days — a universal time-series for heatmaps/sparklines. Same 1y window the
+        enumeration metrics use, so it's already cached."""
+        now = datetime.now(timezone.utc)
+        c = self._contributions(_iso(now - timedelta(days=365)), _iso(now))
+        days = sorted(
+            (d for w in c["contributionCalendar"]["weeks"] for d in w["contributionDays"]),
+            key=lambda d: d["date"],
+        )
+        if not days:
+            return {"start": (now - timedelta(days=365)).strftime("%Y-%m-%d"), "counts": []}
+        return {"start": days[0]["date"], "counts": [d["contributionCount"] for d in days]}
+
+    def _repo_commit_counts(self, period):
+        """(repo_full_name -> commit count, repo_full_name -> primary language) over the
+        period, aggregated across ≤1-year windows."""
+        now = datetime.now(timezone.utc)
+        days = PERIOD_DAYS[period]
+        start = self.account_created() if days is None else now - timedelta(days=days)
+        counts, langs = {}, {}
+        for f, t in year_windows(start, now):
+            c = self._contributions(_iso(f), _iso(t))
+            for r in c["commitContributionsByRepository"]:
+                name = r["repository"]["nameWithOwner"]
+                counts[name] = counts.get(name, 0) + r["contributions"]["totalCount"]
+                lang = (r["repository"].get("primaryLanguage") or {}).get("name")
+                if lang:
+                    langs[name] = lang
+        return counts, langs
+
+    def repo_breakdown(self, period, top=6):
+        """Top repos by commit count over the period: [{name, count}] (repo basename)."""
+        counts, _ = self._repo_commit_counts(period)
+        ranked = sorted(counts.items(), key=lambda kv: -kv[1])[:top]
+        return [{"name": name.split("/")[-1], "count": n} for name, n in ranked]
+
+    def language_breakdown(self, period, top=8):
+        """Languages by commit count over the period: [{name, count}]."""
+        counts, langs = self._repo_commit_counts(period)
+        agg = {}
+        for name, n in counts.items():
+            lang = langs.get(name)
+            if lang:
+                agg[lang] = agg.get(lang, 0) + n
+        ranked = sorted(agg.items(), key=lambda kv: -kv[1])[:top]
+        return [{"name": name, "count": n} for name, n in ranked]
+
 
 # ─── Metric Computation ────────────────────────────────────
 
@@ -399,11 +450,48 @@ def compute_metric(name, period, data):
 
 # ─── Daily Selection ────────────────────────────────────────
 
-def pick_daily_metrics(date_str):
-    """Deterministically pick 4 (metric_name, period) combos for a given date."""
-    rng = random.Random(int(hashlib.md5(date_str.encode()).hexdigest(), 16))
-    chosen = rng.sample(list(METRIC_DEFS.keys()), 4)
-    return [(name, rng.choice(METRIC_DEFS[name][1])) for name in chosen]
+def build_metric_record(key, period, data):
+    """Compute a metric AND attach the distribution that makes it visualizable:
+    a `max` denominator (proportion/gauge) or a `breakdown` (category distribution).
+    A metric with neither is a plain scalar. Returns the seam record; raises on a
+    compute error so the caller can simply drop it from the day's candidates."""
+    value = compute_metric(key, period, data)
+    rec = {
+        "key": key,
+        "label": METRIC_DEFS[key][0],
+        "period": PERIOD_LABELS[period],
+        "value": str(value),
+    }
+    if key == "days_active":
+        rec["max"] = PERIOD_DAYS[period]          # 30 or 365 — days-active out of N
+    elif key == "languages":
+        rec["breakdown"] = data.language_breakdown(period)
+    elif key == "active_repos":
+        rec["breakdown"] = data.repo_breakdown(period)
+    return rec
+
+
+def pick_daily_pool(date_str):
+    """Assign each of the 8 metrics a period for the day (seeded). The full pool is
+    computed, then relevance-filtered down to the 3-6 shown."""
+    rng = random.Random(int(hashlib.md5((date_str + "::pool").encode()).hexdigest(), 16))
+    return [(key, rng.choice(defs[1])) for key, defs in METRIC_DEFS.items()]
+
+
+BORING_VALUES = {"0", "—"}
+
+
+def select_daily_metrics(records, date_str):
+    """Pick 3-6 metrics to feature: drop the boring ones (zero, or failed→absent), then
+    a seeded count and subset so the card shows a different, relevant set each day.
+    Varying the count is deliberate — a day with less to say shows fewer, bigger stats."""
+    rng = random.Random(int(hashlib.md5((date_str + "::select").encode()).hexdigest(), 16))
+    interesting = [r for r in records if str(r["value"]) not in BORING_VALUES]
+    pool = interesting if len(interesting) >= 3 else records
+    if not pool:
+        return []
+    count = rng.randint(min(3, len(pool)), min(6, len(pool)))
+    return rng.sample(pool, count)
 
 
 # ─── Daily Visual Theme ─────────────────────────────────────
@@ -603,19 +691,23 @@ def generate_stats_svg(stat_items, date_label, rng, palette, motif):
 
 # ─── Main ───────────────────────────────────────────────────
 
-def write_json(path, today, stat_items):
-    """Write the data seam: the exact values the authored card must render."""
+def write_json(path, today, username, calendar, metrics):
+    """Write the rich data seam the authored card visualizes: a universal 365-day
+    contribution `calendar` (time-series) plus the 3-6 selected `metrics`, each with its
+    exact value and any `max`/`breakdown` distribution."""
+    # Keep the ~365 calendar counts on one line — this file is committed daily, and a
+    # count-per-line array would make every diff 360+ lines of churn.
+    counts = calendar.get("counts", [])
     payload = {
         "date": today,
         "generated_at": _iso(datetime.now(timezone.utc)),
-        "metrics": [
-            {"value": str(v), "label": label, "period": period}
-            for (v, label, period) in stat_items
-        ],
+        "username": username,
+        "calendar": {**calendar, "counts": "__COUNTS__"},
+        "metrics": metrics,
     }
+    text = json.dumps(payload, indent=2).replace('"__COUNTS__"', json.dumps(counts))
     with open(path, "w") as f:
-        json.dump(payload, f, indent=2)
-        f.write("\n")
+        f.write(text + "\n")
 
 
 def verify_svg(svg_path, json_path):
@@ -675,32 +767,34 @@ def main():
     date_label = datetime.now(timezone.utc).strftime("%B %d, %Y")
     print(f"Date seed: {today}")
 
-    selections = pick_daily_metrics(today)
-    print(f"Today's metrics: {selections}")
-    rng, palette, motif = pick_daily_theme(today)
-    print(f"Fallback theme: palette={palette[0]} motif={motif}")
-
     data = GitHubData(token)
-    stat_items = []
-    for name, period in selections:
-        label, _ = METRIC_DEFS[name]
-        period_label = PERIOD_LABELS[period]
+
+    # Compute the full pool, keeping each metric's supporting distribution; drop any that
+    # fail to compute (a rate-limited metric is simply not a candidate, not a wrong "0").
+    records = []
+    for key, period in pick_daily_pool(today):
         try:
-            value = compute_metric(name, period, data)
+            records.append(build_metric_record(key, period, data))
         except Exception as e:
-            print(f"Warning: failed to compute {name} ({period}): {e}", file=sys.stderr)
-            value = "—"
-        stat_items.append((value, label, period_label))
-        print(f"  {label} ({period_label}): {value}")
+            print(f"Warning: failed to build {key} ({period}): {e}", file=sys.stderr)
+
+    selected = select_daily_metrics(records, today)
+    print(f"Selected {len(selected)} metrics: {[(r['key'], r['value']) for r in selected]}")
+
+    calendar = data.calendar_year()
+    print(f"Calendar: {len(calendar['counts'])} days from {calendar['start']}")
 
     os.makedirs(os.path.dirname(args.json_out) or ".", exist_ok=True)
-    write_json(args.json_out, today, stat_items)
-    print(f"  Data seam written to {args.json_out}")
+    write_json(args.json_out, today, USERNAME, calendar, selected)
+    print(f"  Rich data seam written to {args.json_out}")
 
+    # Deterministic fallback card — renders the selected metrics as scalars, variable count.
+    rng, palette, motif = pick_daily_theme(today)
+    stat_items = [(r["value"], r["label"], r["period"]) for r in selected]
     os.makedirs(os.path.dirname(args.svg_out) or ".", exist_ok=True)
     with open(args.svg_out, "w") as f:
         f.write(generate_stats_svg(stat_items, date_label, rng, palette, motif))
-    print(f"  Fallback SVG written to {args.svg_out}")
+    print(f"  Fallback SVG ({palette[0]}/{motif}) written to {args.svg_out}")
 
 
 if __name__ == "__main__":
