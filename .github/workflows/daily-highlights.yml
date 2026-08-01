@@ -548,6 +548,14 @@ jobs:
         # it and deliberately diverge from it.
         run: python .github/scripts/generate-stats-svg.py --svg-out /tmp/daily-stats-fallback.svg
 
+      - name: Load the stats prompt (single source of truth)
+        run: |
+          {
+            echo 'STATS_PROMPT<<STATS_PROMPT_EOF'
+            cat .github/prompts/stats-card.md
+            echo 'STATS_PROMPT_EOF'
+          } >> "$GITHUB_ENV"
+
       - name: Author stats card (Claude)
         id: claude
         uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
@@ -555,141 +563,7 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ github.token }}
           claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(date:*),Bash(rsvg-convert:*),Bash(cp:*),Bash(python:*),Bash(ls:*),Bash(cat:*),Read,Write,Edit,Glob,Grep"'
-          prompt: |
-            You are the stats-card agent for Brandon Fryslie's GitHub profile. You have exactly one job today: author the profile's "Live GitHub Stats" card as an animated SVG at `assets/daily-stats.svg`. Nothing else in the repo is yours to touch. This card is your centerpiece the way the doodle is the doodle agent's centerpiece — give it that focus.
-
-            TODAY: Run `date -u '+%Y-%m-%d %A'` to get today's ISO date and day of week.
-
-            Read the CLAUDE.md file first — it holds the project context and the SVG platform constraints you must work within.
-
-            A prior workflow step has already written two files for you:
-            - `assets/daily-stats.json` — the data you visualize (described below). It exists; read it.
-            - `/tmp/daily-stats-fallback.svg` — a deterministic, always-valid fallback card. Your safety net.
-
-            ## What this card must be
-
-            The requester has rejected three previous attempts, and the reason each time is the same, so read it and design against it. They do not want a decorative animation with the numbers pasted on top. A network, a constellation, a nebula, a reactor with the stat values floating over it is the **rejected failure mode** — it visualizes nothing and reads as derivative of the doodle art. What they want instead, in their words: "meaningful visualizations of the stats."
-
-            The rule that follows from that: **the picture IS the data.** The visual form must represent the actual numbers — their magnitude, their proportion, their distribution, or their change over time — so that a stranger glancing at the card *learns something from the shape itself*, before reading a single digit. The digits confirm the shape; the shape is not decoration around the digits.
-
-            - WRONG: an animated galaxy of orbiting particles with "252", "9", "5971" set as labels floating on top. (The galaxy encodes none of those numbers. It is art with data stapled to it — the exact thing that got rejected.)
-            - RIGHT: a form whose geometry is driven by the data — a shape that is 252/365 as full because the metric is 252 of a possible 365; a distribution whose segments are sized by the breakdown counts they represent; a year of activity drawn from the 365 calendar values. The viewer reads proportion and trend off the picture, and the exact value sits legibly within it.
-
-            Do not let this collapse into "make a chart and call it done" either — you have the full house style of animated SVG at your disposal (study `assets/heartbeat.svg`, `assets/constellation.svg`, `assets/celestial-orrery.svg` for the motion vocabulary). The goal is a visualization that is *both* genuinely data-driven *and* alive and striking. Data-faithful first, beautiful second, but both.
-
-            ## The data you are given
-
-            Read `assets/daily-stats.json`. Its exact shape:
-
-            ```json
-            {
-              "date": "2026-08-01",
-              "username": "brandon-fryslie",
-              "calendar": { "start": "2025-08-02", "counts": [0, 13, 5, 9, ...] },
-              "metrics": [
-                { "key": "days_active", "label": "Days Active", "period": "1 Year", "value": "252", "max": 365 },
-                { "key": "languages", "label": "Languages", "period": "1 Year", "value": "9",
-                  "breakdown": [ {"name": "Python", "count": 40}, {"name": "TypeScript", "count": 22}, ... ] },
-                { "key": "commits", "label": "Commits", "period": "1 Year", "value": "5971" }
-              ]
-            }
-            ```
-
-            Read every field before you design — the visualization concept should come *from* what the data offers today, not be chosen first and forced onto it.
-
-            - **`calendar`** is ALWAYS present. `counts` is a chronological array of roughly 365 daily contribution counts; `counts[0]` falls on the date `start`, and each subsequent entry is the next day. This is a full year-long time series you can visualize however you invent — activity over the year, its rhythm, its streaks, its recent shape. It is always available even on a day when the metrics are thin.
-
-            - **`metrics`** has a VARIABLE number of entries — between 3 and 6. The count and the set change day to day (boring and zero metrics are already filtered out upstream). You render exactly the metrics present today, however many there are, and the composition must adapt to that count: a 3-metric day and a 6-metric day should not be the same layout with empty slots. **Vary how many stats you feature and how prominently, to fit the day** — this is explicitly wanted, not a liberty.
-
-            - Each metric always carries `key`, `label`, `period`, `value`. Some also carry:
-              - **`max`** — a natural denominator (e.g. 252 of 365 days). This is a proportion waiting to be drawn: a fill, a gauge, an arc, a share of a whole. Wherever `max` exists, the metric wants a visual that shows value-against-max, not a bare number.
-              - **`breakdown`** — a category distribution (e.g. languages by commit count). This is a distribution waiting to be drawn: relative sizes, shares, a ranked spread. Wherever `breakdown` exists, the metric wants a visual that shows the parts and their proportions.
-
-              A metric with neither `max` nor `breakdown` is a scalar — it can still be given a meaningful, deliberate treatment (its magnitude related to the others, its value emphasized), but the metrics carrying `max`, `breakdown`, or the calendar are where the real visualizations come from. Use them. A card that ignores `max`/`breakdown`/`calendar` and just styles numbers has missed the entire point.
-
-            ## The numbers are law — render them verbatim
-
-            - Render **every** metric present in `metrics` today (all 3–6 of them): its `value`, its `label`, and its `period`. None omitted.
-            - The `value` string is rendered **byte-for-byte** as given. Never invent, round, reformat, abbreviate, pad, or "clean up" a value. `"5971"` renders as `5971`, not `5,971` or `~6k`. `"55+"` renders as `55+`. An em-dash `"—"` (a metric that failed to compute) renders as `—`, not `0`, `N/A`, or blank.
-            - Each value must be its own standalone SVG `<text>` element whose text content is **exactly** that value string — nothing else concatenated into the same element. Style it, animate it, gradient-fill it, place it inside your visualization freely; the *text content* of that one element stays exactly the value. This is required because the automated gate (below) joins each `<text>` element's text separately and matches each value with digit boundaries — a value split across two elements, or fused with a stray character, will not match and the run fails.
-              - WRONG: `<text>2</text><text>52</text>` (value split across two elements — the gate never sees the contiguous string `252`, run fails).
-              - WRONG: `<text>5971 9</text>` (two values fused in one element — the gate sees `59719` with no boundary, `5971` fails to match).
-              - RIGHT: `<text ...>252</text>` as its own element, with `Days Active` and `1 Year` in their own separate elements nearby.
-
-            ## Radically different from yesterday
-
-            Yesterday's card is on disk at `assets/daily-stats.svg` — the prior step deliberately left it in place instead of overwriting it. Read it first. Then author a **different visualization concept**: a different way of turning the data into a picture, a different composition, layout, motion, and organizing idea — not yesterday's arrangement with a new palette. A recolor is the failure the requester already rejected once. A fresh stranger seeing yesterday's and today's side by side should read them as two different ideas about how to show these numbers, not two skins of one. Do not carry yesterday's structure over as a scaffold; invent today's from today's data.
-
-            ## Legibility is paramount — it is the whole point of the card
-
-            The card exists to communicate. That outranks every creative impulse.
-
-            - The **values** are the loudest thing on the card: large, high-contrast, instantly readable against whatever sits behind them.
-            - Each value's **label** and **period** are clearly readable — not clipped, not smudged, not shrunk to decorative micro-text.
-            - The visualization **aids** comprehension — a viewer should understand the data faster because of it, not slower. If any decorative or motif element crosses a digit, lowers its contrast, or competes with a value for the eye, the decoration loses: subdue it or move it.
-            - "Busy" is allowed; "understated" is fine; **"illegible" is a failure, full stop** — regardless of how clever the chart is. A gorgeous card where a stranger squints to read `5971` has failed at its one job.
-
-            ## Keep it continually alive — perpetual motion
-
-            The card must be **continually in motion** — always, not just at load. At any moment someone glances at it, a second or more after it appears, something is visibly moving; it never settles into a still image. This is a requirement, not a flourish.
-
-            Design against **entrance-only animation** — motion that plays once and then freezes. A bar that grows to its final width and stops, a value that fades in once, a one-shot count-up, anything whose whole animation is `fill="freeze"` — each of these is a static picture two seconds after load. That is the opposite of what is wanted.
-
-            - WRONG: every animation is a startup flourish that plays once and holds. Blink and it's over; for the rest of its life the card is frozen.
-            - RIGHT: motion that **loops forever** — SMIL with `repeatCount="indefinite"`, or CSS `@keyframes` applied `infinite` — so the card is alive whenever anyone looks.
-
-            Make the motion *belong to the visualization* rather than a decorative layer laid over it: let the representation itself be what moves — breathing, pulsing, flowing, cycling, advancing — so the animation and the meaning are one thing. How it moves is yours to invent each day; that it never stops is not.
-
-            The one limit: motion must never cost legibility. Keep the values themselves rock-steady and readable — never make a stat number jitter, drift, or flicker so it is hard to read. Move around, behind, and within the composition; keep the digits legible at every frame.
-
-            ## Format and platform constraints
-
-            - 800px wide. Height is yours — compose for what the piece needs (the surrounding card frame reads well around ~160px, but let the composition drive it).
-            - Dark theme in the GitHub dark-profile family — background around `#0d1117` — so it sits cleanly beneath the doodle.
-            - GitHub renders this as a sanitized `<img>` tag. **No JavaScript, no `:hover` or other pseudo-classes, no `<a>`, no `<foreignObject>`** — all stripped or inert. Allowed: CSS `@keyframes`, SMIL `<animate>`/`<animateTransform>`, SVG filters, gradients. Prefer SMIL for GitHub compatibility. Use prime-number durations (7s, 11s, 13s) with staggered delays for organic motion. See CLAUDE.md's "SVG Animation Constraints" for the full reference.
-
-            ## Self-review — render it and look at it
-
-            After writing `assets/daily-stats.svg`, rasterize the static frame and view it with the Read tool:
-
-            ```
-            rsvg-convert -w 800 assets/daily-stats.svg -o /tmp/stats-preview.png
-            ```
-
-            Then `Read /tmp/stats-preview.png` and judge it honestly against the two things that matter:
-
-            - **Does the visualization actually represent the data?** Look at the picture and ask: could a stranger read the proportions, distribution, or trend off the shape, without the numbers? If the shape would look identical for a completely different set of numbers, it is decoration, not visualization — start over.
-            - **Is every value present and legible?** Cross-check each value against `assets/daily-stats.json`, not against memory. Are the values large, high-contrast, instantly readable? Are labels and periods readable? Is nothing crossing or dimming a digit?
-            - **Is the layout precisely correct?** This is the main thing the render is for — the PNG shows you exactly what the code cannot. Confirm every element sits precisely where you intended: nothing overlaps (a value landing on a bar, two labels colliding, the visualization running under text), nothing is clipped or spills past the 800px edges, rows and columns line up, spacing is even, and every piece of text has room. A card can be a strong concept and still ship broken because two things landed on top of each other — regenerate until the render is clean.
-
-            Caveat, same as the doodle: `rsvg-convert` renders only static frame 0 — it cannot judge animation. Don't try to evaluate motion from the PNG. Its core job here is confirming the layout is **precisely** correct — no overlaps, no clipping, everything placed exactly — because that is what the code can't show you and where this card most often breaks; it also catches decoration-with-numbers-pasted-on and illegible values.
-
-            **Iterate until the render is clean, then stop.** A layout defect — overlap, clipping, spill past the edges, misalignment — is a positioning bug: fix the coordinates and re-render, as many times as it takes, until the render is precise. That is normal work, not a wasted attempt. But if the *concept* fails — decoration rather than visualization, or illegible by design — do NOT patch it into shape; start over with a genuinely different concept. Cap concept rethinks at 3 total; after that, ship the best clean-layout version you have or fall back.
-
-            ## Fallback — never ship a broken card
-
-            If after 3 attempts you cannot produce a card that is **both** meaningful+legible **AND** accurate, do not ship what you have. Copy the deterministic fallback into place instead:
-
-            ```
-            cp /tmp/daily-stats-fallback.svg assets/daily-stats.svg
-            ```
-
-            A plain correct card beats a broken clever one every time. Falling back is the correct outcome when the creative one won't come together — not a failure to hide.
-
-            ## The automated gate you must satisfy
-
-            Separately from your own review, a later workflow step runs:
-
-            ```
-            python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg
-            ```
-
-            It fails the **entire run** if any value in `assets/daily-stats.json` is not rendered as text in the card (matched per `<text>` element, with digit boundaries — hence the standalone-element rule above). Satisfy it honestly, by actually rendering all the values as described. Do not attempt to defeat it — no hidden off-canvas text, no zero-opacity value dumps. The numbers are supposed to be visible and readable, and that is exactly what passes.
-
-            ## Output and handoff
-
-            Write the final card to `assets/daily-stats.svg`. Do **not** run `git commit` or `git push` — a later workflow step stages, commits, and pushes it. Just write the file and finish.
-
+          prompt: ${{ env.STATS_PROMPT }}
       - name: Verify Claude result
         id: parse_claude
         run: |
