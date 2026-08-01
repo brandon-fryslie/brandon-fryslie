@@ -1,0 +1,188 @@
+name: Stats Card Preview
+
+# Demo the FULL stats pipeline on a PR without publishing to master: it runs the exact
+# same steps the daily `stats` job runs — generate the data seam, have the Claude agent
+# author the card from the single-source-of-truth prompt (.github/prompts/stats-card.md),
+# gate it, and rasterize it — but routes the output to PNG artifacts + an inline PR
+# comment + the run summary instead of committing to master.
+#
+# Run it: Actions → "Stats Card Preview" → Run workflow → pick your PR's branch.
+# It renders 3 variations (the agent invents a different concept each run), so you can
+# see the range. Re-run for more. Nothing is pushed to master or to your PR branch;
+# rendered previews live only on the throwaway `stats-previews` branch.
+
+on:
+  workflow_dispatch: {}
+  # Runs automatically on PRs that touch the stats pipeline, using the workflow file
+  # from the PR branch — so a change can be demoed before it's merged. The paths filter
+  # keeps unrelated PRs from spending agent runs. (workflow_dispatch alone can't do this:
+  # GitHub won't dispatch a workflow that isn't on the default branch yet.)
+  pull_request:
+    paths:
+      - '.github/scripts/generate-stats-svg.py'
+      - '.github/prompts/stats-card.md'
+      - '.github/workflows/stats-preview.yml'
+
+concurrency:
+  group: stats-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # push rendered previews to the throwaway stats-previews branch
+      id-token: write
+    strategy:
+      fail-fast: false     # one bad variation shouldn't hide the others
+      max-parallel: 1      # serialize pushes to the preview branch
+      matrix:
+        variation: [1, 2, 3]
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Install rsvg-convert
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+
+      - name: Load the stats prompt (single source of truth)
+        run: |
+          {
+            echo 'STATS_PROMPT<<STATS_PROMPT_EOF'
+            cat .github/prompts/stats-card.md
+            echo 'STATS_PROMPT_EOF'
+          } >> "$GITHUB_ENV"
+
+      - name: Generate stats data seam + fallback card (mechanical)
+        run: python .github/scripts/generate-stats-svg.py --svg-out /tmp/daily-stats-fallback.svg
+
+      - name: Author stats card (Claude)
+        uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(date:*),Bash(rsvg-convert:*),Bash(cp:*),Bash(python:*),Bash(ls:*),Bash(cat:*),Read,Write,Edit,Glob,Grep"'
+          prompt: ${{ env.STATS_PROMPT }}
+
+      - name: Verify the card renders the exact numbers (same gate as production)
+        run: python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg
+
+      - name: Rasterize the card to PNG
+        run: rsvg-convert -w 800 assets/daily-stats.svg -o /tmp/preview.png
+
+      - name: Publish preview to the stats-previews branch
+        run: |
+          set -euo pipefail
+          REMOTE="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          DEST="run-${GITHUB_RUN_ID}/v${{ matrix.variation }}"
+          WORK="$(mktemp -d)"
+          (
+            cd "$WORK"
+            git init -q
+            git remote add origin "$REMOTE"
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            if git fetch --depth 1 origin stats-previews 2>/dev/null; then
+              git checkout -q FETCH_HEAD -b stats-previews
+            else
+              git checkout -q --orphan stats-previews
+              git rm -rfq . 2>/dev/null || true
+            fi
+            # The first variation prunes prior runs so the branch stays small (this run only).
+            if [ "${{ matrix.variation }}" = "1" ]; then git rm -rfq 'run-*' 2>/dev/null || true; fi
+            mkdir -p "$(dirname "$DEST")"
+          )
+          cp /tmp/preview.png "$WORK/${DEST}.png"
+          cp assets/daily-stats.svg "$WORK/${DEST}.svg"
+          cd "$WORK"
+          git add -A
+          git commit -qm "stats preview ${DEST} (${GITHUB_SHA})"
+          for i in 1 2 3 4 5; do
+            git push "$REMOTE" HEAD:stats-previews && exit 0
+            echo "push $i rejected — rebasing"
+            git fetch --depth 1 origin stats-previews && git rebase FETCH_HEAD || git rebase --abort || true
+            sleep $(( (RANDOM % 3) + 1 ))
+          done
+          echo "::error::failed to push preview after 5 attempts"; exit 1
+
+      - name: Upload preview artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: stats-preview-v${{ matrix.variation }}
+          path: |
+            assets/daily-stats.svg
+            assets/daily-stats.json
+            /tmp/preview.png
+          if-no-files-found: warn
+
+  comment:
+    needs: render
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Assemble preview gallery and post it
+        run: |
+          set -euo pipefail
+          REPO="${GITHUB_REPOSITORY}"
+          RUN="${GITHUB_RUN_ID}"
+          RAW="https://raw.githubusercontent.com/${REPO}/stats-previews/run-${RUN}"
+          RUN_URL="https://github.com/${REPO}/actions/runs/${RUN}"
+
+          # List which variations actually rendered (a failed gate leaves no image).
+          names="$(gh api "repos/${REPO}/contents/run-${RUN}?ref=stats-previews" --jq '.[].name' 2>/dev/null | grep '\.png$' | sort || true)"
+
+          body="$(mktemp)"
+          {
+            echo "<!-- stats-preview -->"
+            echo "### 🎨 Stats card preview — live pipeline"
+            echo
+            echo "Rendered by the real pipeline (data seam → Claude authors the card → accuracy gate → rasterize) at \`${GITHUB_SHA:0:7}\`. Each is a fresh concept the agent invented; re-run the workflow for more."
+            echo
+            if [ -z "$names" ]; then
+              echo "> ⚠️ No variations rendered — every attempt failed its gate or errored. See the [run](${RUN_URL})."
+            else
+              for f in $names; do
+                echo "![${f}](${RAW}/${f})"
+                echo
+              done
+            fi
+            echo "---"
+            echo "[Full run & downloadable SVG/PNG artifacts](${RUN_URL}) · previews live on the throwaway \`stats-previews\` branch."
+          } > "$body"
+
+          # Always surface it in the run summary (works even with no PR).
+          cat "$body" >> "$GITHUB_STEP_SUMMARY"
+
+          # Resolve the PR: from the event on pull_request, else look it up by branch
+          # (workflow_dispatch against a branch that has an open PR).
+          PR="${{ github.event.pull_request.number }}"
+          if [ -z "$PR" ]; then
+            PR="$(gh pr list --head "${GITHUB_REF_NAME}" --json number --jq '.[0].number' 2>/dev/null || true)"
+          fi
+          if [ -n "$PR" ]; then
+            prev="$(gh api "repos/${REPO}/issues/${PR}/comments" --jq '.[] | select(.body | startswith("<!-- stats-preview -->")) | .id' 2>/dev/null | head -1 || true)"
+            if [ -n "$prev" ]; then
+              gh api -X PATCH "repos/${REPO}/issues/comments/${prev}" -F body=@"$body" >/dev/null
+              echo "Updated sticky preview comment on PR #${PR}."
+            else
+              gh pr comment "$PR" --body-file "$body"
+              echo "Posted preview comment on PR #${PR}."
+            fi
+          else
+            echo "No open PR for ${GITHUB_REF_NAME}; preview is in the run summary above."
+          fi
