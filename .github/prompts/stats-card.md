@@ -27,7 +27,7 @@ Read `assets/daily-stats.json`. Its exact shape:
 {
   "date": "2026-08-01",
   "username": "brandon-fryslie",
-  "calendar": { "start": "2025-08-02", "counts": [0, 13, 5, 9, ...] },
+  "calendar": { "start": "2025-08-02", "end": "2026-08-01", "label": "past 12 months", "counts": [0, 13, 5, 9, ...] },
   "metrics": [
     { "key": "days_active", "label": "Days Active", "period": "1 Year", "value": "252", "max": 365 },
     { "key": "languages", "label": "Languages", "period": "1 Year", "value": "9",
@@ -39,7 +39,8 @@ Read `assets/daily-stats.json`. Its exact shape:
 
 Read every field before you design — the visualization concept should come *from* what the data offers today, not be chosen first and forced onto it.
 
-- **`calendar`** is ALWAYS present. `counts` is a chronological array of roughly 365 daily contribution counts; `counts[0]` falls on the date `start`, and each subsequent entry is the next day. This is a full year-long time series you can visualize however you invent — activity over the year, its rhythm, its streaks, its recent shape. It is always available even on a day when the metrics are thin.
+- **`calendar`** is ALWAYS present. `counts` is a chronological array of roughly a year of daily contribution counts; `counts[0]` falls on the date `start`, `counts[-1]` on `end`, and each entry between is the next day. This is a full year-long time series you can visualize however you invent — activity over the year, its rhythm, its streaks, its recent shape. It is always available even on a day when the metrics are thin.
+  - **`label`** is the canonical window descriptor (e.g. `"past 12 months"`). When your visualization names the calendar's time span, render `calendar.label` **verbatim** — do NOT compute or append your own day count. The array length wobbles day to day (GitHub returns whole Sun–Sat weeks, so `counts` holds ~365–371 entries, 366 on a leap span); surfacing that raw count is the exact "past year (366 days)" bug this label exists to prevent. The window is `label`, whatever `len(counts)` happens to be.
 
 - **`metrics`** has a VARIABLE number of entries — between 3 and 6. The count and the set change day to day (boring and zero metrics are already filtered out upstream). You render exactly the metrics present today, however many there are, and the composition must adapt to that count: a 3-metric day and a 6-metric day should not be the same layout with empty slots. **Vary how many stats you feature and how prominently, to fit the day** — this is explicitly wanted, not a liberty.
 
