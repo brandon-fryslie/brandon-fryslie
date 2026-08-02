@@ -86,7 +86,7 @@ METRIC_DEFS = {
     "reviews":       ("Code Reviews",  ["30d", "1y", "all"]),
     "active_repos":  ("Active Repos",  ["7d", "30d", "1y"]),
     "days_active":   ("Days Active",   ["30d", "1y"]),
-    "repos_created": ("Repos Created", ["1y", "all"]),
+    "longest_streak": ("Longest Streak", ["1y"]),
     "issues_closed": ("My Issues Closed", ["30d", "1y", "all"]),
 }
 
@@ -137,20 +137,6 @@ def api_get(endpoint, token):
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")
         raise GitHubAPIError(url, e.code, body) from e
-
-
-def api_paginate_list(endpoint, token):
-    """Paginate a GitHub list endpoint (repos, etc) to exhaustion."""
-    results = []
-    sep = "&" if "?" in endpoint else "?"
-    page = 1
-    while True:
-        data = api_get(f"{endpoint}{sep}page={page}&per_page=100", token)
-        results.extend(data)
-        if len(data) < 100:
-            break
-        page += 1
-    return results
 
 
 def search_total_count(path, query, token):
@@ -256,38 +242,19 @@ class GitHubData:
     def __init__(self, token):
         self.token = token
         self._user = None
-        self._repos = None
         self._contrib = {}  # (from_iso, to_iso) -> contributionsCollection
 
-    # -- account / repos (REST) --
+    # -- account (REST) --
 
     def user(self):
         if self._user is None:
             self._user = api_get(f"/users/{USERNAME}", self.token)
         return self._user
 
-    def public_repo_count(self):
-        """Truth-source count for public repos; avoids list-endpoint pagination quirks."""
-        return self.user().get("public_repos", 0)
-
     def account_created(self):
         return datetime.strptime(
             self.user()["created_at"], "%Y-%m-%dT%H:%M:%SZ"
         ).replace(tzinfo=timezone.utc)
-
-    def repos(self):
-        """Paginated owned-repo list. Warns if its length disagrees with public_repos
-        so a silent pagination cap surfaces instead of producing a wrong number."""
-        if self._repos is None:
-            self._repos = api_paginate_list(f"/users/{USERNAME}/repos", self.token)
-            expected = self.public_repo_count()
-            if expected and len(self._repos) != expected:
-                print(
-                    f"Warning: paginated repo list returned {len(self._repos)} but "
-                    f"/users/{USERNAME}.public_repos = {expected}",
-                    file=sys.stderr,
-                )
-        return self._repos
 
     # -- pure counts (REST search total_count) --
 
@@ -445,11 +412,16 @@ def compute_metric(name, period, data):
         _, _, langs, capped = data.contribution_scope(period)
         return floor_str(len(langs), capped)
 
-    if name == "repos_created":
-        since = cutoff_iso(period)
-        if since is None:
-            return data.public_repo_count()
-        return sum(1 for r in data.repos() if r["created_at"] > since)
+    if name == "longest_streak":
+        # Longest run of consecutive days with any contribution, over the same 365-day
+        # calendar the heatmap already draws (cached — no extra API call). A measure of
+        # sustained activity, not the one-click vanity of "repos created" it replaced.
+        counts = data.calendar_year()["counts"]
+        best = run = 0
+        for c in counts:
+            run = run + 1 if c > 0 else 0
+            best = max(best, run)
+        return best
 
     return 0
 
