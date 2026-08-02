@@ -103,6 +103,8 @@ The one limit: motion must never cost legibility. Keep the values themselves roc
 
 `.github/scripts/svg-layout.py` is a small, dependency-free CLI for the arithmetic underneath your composition — vertically centering text in a box, leaving clearance above/below an element, checking a label fits its container, checking a color is legible. Nothing requires you to use it, and it has no opinion on concept, palette, motion, or what to visualize — those stay entirely yours. It exists because the same few classes of coordinate math have produced real shipped bugs more than once (a baseline set equal to a box's center instead of offset for it; a label placed in a container without checking it fits; a caption color nobody computed the contrast of) — reach for it when you're about to do that kind of arithmetic by hand, skip it when you're not.
 
+Invoke it as `python .github/scripts/svg-layout.py <subcommand> …` (the paths below abbreviate that prefix):
+
 ```
 svg-layout.py center-y --box-top Y --box-height H --font-size N
     # baseline that vertically centers text in a box (e.g. a label inside a bar segment)
