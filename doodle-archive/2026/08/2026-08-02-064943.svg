@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: 94th Anniversary of the Positron Discovery (August 2, 1932) — On August 2, 1932, at Caltech, Carl D. Anderson photographed a curving track in his cloud chamber that could only be explained by a positively-charged particle with the mass of an electron. It was the first observed particle of antimatter, confirming Dirac's 1928 prediction. Anderson would win the 1936 Nobel Prize in Physics for the discovery. A cloud-chamber tableau on an 800x200 canvas: on the left, a rectangular slate-grey glass cloud chamber viewed head-on with a subtle wet-glass sheen; through the chamber, a bright white cosmic-ray track descends and hits a horizontal lead plate midway down; below the plate the track splits into two mirror-image curves — an electron curving left and a positron curving right in opposite directions in the magnetic field (a horizontal "×" of B-field arrows drifts behind); faint vapor-trail whorls drift in the chamber, thin blue arrows mark the field direction and pale radial ticks mark an angular scale; a small labeled tag "e⁻" and "e⁺" sits beside each track. On the right, a huge cream AUGUST 2, 2026 headline, a bright cyan THE POSITRON · 94 YEARS subhead, and italic CARL D. ANDERSON · CALTECH · 2 AUGUST 1932 · FIRST ANTIMATTER tertiary. Continuously animated: cosmic rays enter and split repeatedly, tracks glow and fade, field arrows drift, chamber vapor swirls, headline shimmers faintly. Background #050a12. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for August 2, 2026 — 94th anniversary of Carl D. Anderson's discovery of the positron on August 2, 1932 at Caltech. A cloud-chamber tableau: a slate-grey rectangular cloud chamber on the left containing a cosmic-ray track descending from above and striking a horizontal lead plate; below the plate the track splits into two mirror-image curves — an electron curving left and a positron curving right in opposite directions in a magnetic field — labeled e⁻ and e⁺; drifting vapor whorls and blue field-direction arrows fill the chamber. On the right, a huge cream AUGUST 2, 2026 headline, a bright cyan THE POSITRON · 94 YEARS subhead, and italic CARL D. ANDERSON · CALTECH · 2 AUGUST 1932 · FIRST ANTIMATTER tertiary.">
+  <defs>
+    <!-- Background gradient: deep space blue to black -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1220"/>
+      <stop offset="0.55" stop-color="#050a12"/>
+      <stop offset="1" stop-color="#02060c"/>
+    </linearGradient>
+
+    <!-- Chamber inner gradient: cold slate-grey glass with subtle blue tint -->
+    <linearGradient id="chamberFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101823"/>
+      <stop offset="0.5" stop-color="#0d141d"/>
+      <stop offset="1" stop-color="#08101a"/>
+    </linearGradient>
+
+    <!-- Chamber wet-glass sheen -->
+    <linearGradient id="chamberSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a7ba8" stop-opacity="0.18"/>
+      <stop offset="0.35" stop-color="#4a7ba8" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#4a7ba8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Track glow -->
+    <radialGradient id="trackGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#cfe8ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#4a90d9" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Positron track color (warm) -->
+    <linearGradient id="positronCol" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0" stop-color="#ffe1a8"/>
+      <stop offset="1" stop-color="#ffb454"/>
+    </linearGradient>
+
+    <!-- Electron track color (cool) -->
+    <linearGradient id="electronCol" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0" stop-color="#c7f3ff"/>
+      <stop offset="1" stop-color="#4fd7ff"/>
+    </linearGradient>
+
+    <!-- Vapor turbulence for cloud-chamber wisps -->
+    <filter id="vaporFx" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.03" numOctaves="2" seed="7">
+        <animate attributeName="baseFrequency" values="0.014 0.03;0.02 0.038;0.014 0.03" dur="17s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix values="0 0 0 0 0.55  0 0 0 0 0.72  0 0 0 0 0.95  0 0 0 0.35 0"/>
+    </filter>
+
+    <!-- Soft blur for track glow -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+
+    <filter id="bigGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+
+    <!-- Star pattern for the sky (faint) -->
+    <radialGradient id="starGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Reusable single meteor/cosmic-ray head -->
+    <symbol id="cosmicHead" overflow="visible">
+      <circle r="2.4" fill="#ffffff"/>
+      <circle r="6" fill="url(#trackGlow)" opacity="0.9"/>
+    </symbol>
+
+    <!-- Clip path for chamber contents -->
+    <clipPath id="chamberClip">
+      <rect x="22" y="26" width="336" height="148" rx="6"/>
+    </clipPath>
+
+    <style>
+      .headline {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        fill: #f3ecd8;
+      }
+      .subhead {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 3px;
+        fill: #4fd7ff;
+      }
+      .tertiary {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: 1.6px;
+        fill: #7d90a8;
+      }
+      .caption {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+      }
+      .tag {
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- Faint background stars/sparks (twinkling) -->
+  <g fill="#ffffff" opacity="0.55">
+    <circle cx="430" cy="26" r="0.9"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="520" cy="18" r="0.7"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="610" cy="30" r="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="20" r="0.6"><animate attributeName="opacity" values="0.7;0.15;0.7" dur="7s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="34" r="0.9"><animate attributeName="opacity" values="0.2;0.95;0.2" dur="11s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="465" cy="176" r="0.7"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="655" cy="182" r="0.8"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="745" cy="170" r="0.6"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="11s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="390" cy="180" r="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" begin="0.4s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- ============ CLOUD CHAMBER (LEFT) ============ -->
+  <g>
+    <!-- Chamber body -->
+    <rect x="22" y="26" width="336" height="148" rx="6" fill="url(#chamberFill)" stroke="#3a5670" stroke-width="1.4"/>
+    <!-- Inner bevel -->
+    <rect x="24" y="28" width="332" height="144" rx="5" fill="none" stroke="#1a2735" stroke-width="1"/>
+    <!-- Sheen -->
+    <rect x="22" y="26" width="336" height="148" rx="6" fill="url(#chamberSheen)"/>
+
+    <!-- Chamber contents (clipped) -->
+    <g clip-path="url(#chamberClip)">
+
+      <!-- Angular tick scale (radial from split point at (190, 100)) -->
+      <g stroke="#294057" stroke-width="0.6" opacity="0.55" fill="none">
+        <line x1="190" y1="100" x2="60" y2="100"/>
+        <line x1="190" y1="100" x2="70" y2="140"/>
+        <line x1="190" y1="100" x2="90" y2="165"/>
+        <line x1="190" y1="100" x2="120" y2="172"/>
+        <line x1="190" y1="100" x2="320" y2="100"/>
+        <line x1="190" y1="100" x2="310" y2="140"/>
+        <line x1="190" y1="100" x2="290" y2="165"/>
+        <line x1="190" y1="100" x2="260" y2="172"/>
+      </g>
+
+      <!-- Concentric angular rings -->
+      <g stroke="#294057" stroke-width="0.5" fill="none" opacity="0.4">
+        <circle cx="190" cy="100" r="40"/>
+        <circle cx="190" cy="100" r="62"/>
+        <circle cx="190" cy="100" r="82"/>
+      </g>
+
+      <!-- Vapor wisps (turbulence) -->
+      <rect x="22" y="26" width="336" height="148" filter="url(#vaporFx)" opacity="0.75"/>
+
+      <!-- Magnetic field arrows (B into/out of page symbols drifting) — small circled × across background -->
+      <g fill="none" stroke="#3670a8" stroke-width="0.8" opacity="0.55">
+        <g>
+          <circle cx="70" cy="55" r="4"/>
+          <line x1="67" y1="52" x2="73" y2="58"/>
+          <line x1="73" y1="52" x2="67" y2="58"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="11s" repeatCount="indefinite"/>
+        </g>
+        <g>
+          <circle cx="140" cy="45" r="4"/>
+          <line x1="137" y1="42" x2="143" y2="48"/>
+          <line x1="143" y1="42" x2="137" y2="48"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="13s" repeatCount="indefinite"/>
+        </g>
+        <g>
+          <circle cx="245" cy="50" r="4"/>
+          <line x1="242" y1="47" x2="248" y2="53"/>
+          <line x1="248" y1="47" x2="242" y2="53"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="7s" repeatCount="indefinite"/>
+        </g>
+        <g>
+          <circle cx="315" cy="60" r="4"/>
+          <line x1="312" y1="57" x2="318" y2="63"/>
+          <line x1="318" y1="57" x2="312" y2="63"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="13s" begin="1s" repeatCount="indefinite"/>
+        </g>
+        <g>
+          <circle cx="55" cy="150" r="4"/>
+          <line x1="52" y1="147" x2="58" y2="153"/>
+          <line x1="58" y1="147" x2="52" y2="153"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="11s" begin="2s" repeatCount="indefinite"/>
+        </g>
+        <g>
+          <circle cx="325" cy="152" r="4"/>
+          <line x1="322" y1="149" x2="328" y2="155"/>
+          <line x1="328" y1="149" x2="322" y2="155"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 2;0 0" dur="7s" begin="0.5s" repeatCount="indefinite"/>
+        </g>
+      </g>
+
+      <!-- B-field label -->
+      <text x="35" y="42" class="tag" font-size="9" fill="#3670a8" opacity="0.85">B</text>
+
+      <!-- LEAD PLATE (horizontal bar mid-chamber) -->
+      <g>
+        <rect x="42" y="97" width="296" height="6" fill="#2a3646" stroke="#4a5c75" stroke-width="0.6"/>
+        <!-- Hatching on plate -->
+        <g stroke="#4a5c75" stroke-width="0.5" opacity="0.7">
+          <line x1="46" y1="103" x2="52" y2="109"/>
+          <line x1="56" y1="103" x2="62" y2="109"/>
+          <line x1="66" y1="103" x2="72" y2="109"/>
+          <line x1="76" y1="103" x2="82" y2="109"/>
+          <line x1="86" y1="103" x2="92" y2="109"/>
+          <line x1="96" y1="103" x2="102" y2="109"/>
+          <line x1="106" y1="103" x2="112" y2="109"/>
+          <line x1="116" y1="103" x2="122" y2="109"/>
+          <line x1="126" y1="103" x2="132" y2="109"/>
+          <line x1="136" y1="103" x2="142" y2="109"/>
+          <line x1="146" y1="103" x2="152" y2="109"/>
+          <line x1="156" y1="103" x2="162" y2="109"/>
+          <line x1="166" y1="103" x2="172" y2="109"/>
+          <line x1="176" y1="103" x2="182" y2="109"/>
+          <line x1="196" y1="103" x2="202" y2="109"/>
+          <line x1="206" y1="103" x2="212" y2="109"/>
+          <line x1="216" y1="103" x2="222" y2="109"/>
+          <line x1="226" y1="103" x2="232" y2="109"/>
+          <line x1="236" y1="103" x2="242" y2="109"/>
+          <line x1="246" y1="103" x2="252" y2="109"/>
+          <line x1="256" y1="103" x2="262" y2="109"/>
+          <line x1="266" y1="103" x2="272" y2="109"/>
+          <line x1="276" y1="103" x2="282" y2="109"/>
+          <line x1="286" y1="103" x2="292" y2="109"/>
+          <line x1="296" y1="103" x2="302" y2="109"/>
+          <line x1="306" y1="103" x2="312" y2="109"/>
+          <line x1="316" y1="103" x2="322" y2="109"/>
+          <line x1="326" y1="103" x2="332" y2="109"/>
+        </g>
+        <text x="46" y="94" class="tag" font-size="7" fill="#6b7f97" opacity="0.9">Pb PLATE</text>
+      </g>
+
+      <!-- INCOMING COSMIC RAY (repeats) - vertical bright track from top down to the plate at x=190 -->
+      <g>
+        <line x1="190" y1="28" x2="190" y2="97" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" filter="url(#softGlow)" opacity="0.9">
+          <animate attributeName="opacity" values="0;1;0.85;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.15;0.7;1"/>
+        </line>
+        <line x1="190" y1="28" x2="190" y2="97" stroke="#e6f4ff" stroke-width="0.7" stroke-linecap="round" opacity="0.95">
+          <animate attributeName="opacity" values="0;1;0.9;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.15;0.7;1"/>
+        </line>
+        <!-- Cosmic ray head bead animating downward -->
+        <use href="#cosmicHead" x="190" y="28">
+          <animate attributeName="y" values="28;97;97" dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.55"/>
+        </use>
+      </g>
+
+      <!-- ELECTRON TRACK (curves LEFT below plate) -->
+      <g>
+        <!-- glow underlay -->
+        <path d="M 190 103 C 170 118, 128 138, 78 156" fill="none" stroke="url(#electronCol)" stroke-width="3.2" stroke-linecap="round" opacity="0.55" filter="url(#bigGlow)">
+          <animate attributeName="opacity" values="0;0.65;0.55;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.85;1" begin="0s"/>
+        </path>
+        <!-- main track -->
+        <path d="M 190 103 C 170 118, 128 138, 78 156" fill="none" stroke="url(#electronCol)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="240" stroke-dashoffset="240">
+          <animate attributeName="stroke-dashoffset" values="240;0;0;240" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.85;1"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.85;1"/>
+        </path>
+        <!-- head bead -->
+        <circle r="2.4" fill="#e0f7ff" filter="url(#softGlow)">
+          <animateMotion path="M 190 103 C 170 118, 128 138, 78 156" dur="5s" repeatCount="indefinite" keyPoints="0;1;1;1" keyTimes="0;0.55;0.85;1"/>
+          <animate attributeName="opacity" values="0;1;0;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.6;1"/>
+        </circle>
+      </g>
+
+      <!-- POSITRON TRACK (curves RIGHT below plate) -->
+      <g>
+        <!-- glow underlay -->
+        <path d="M 190 103 C 210 118, 252 138, 302 156" fill="none" stroke="url(#positronCol)" stroke-width="3.2" stroke-linecap="round" opacity="0.55" filter="url(#bigGlow)">
+          <animate attributeName="opacity" values="0;0.65;0.55;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.85;1" begin="0s"/>
+        </path>
+        <!-- main track -->
+        <path d="M 190 103 C 210 118, 252 138, 302 156" fill="none" stroke="url(#positronCol)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="240" stroke-dashoffset="240">
+          <animate attributeName="stroke-dashoffset" values="240;0;0;240" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.85;1"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.85;1"/>
+        </path>
+        <!-- head bead -->
+        <circle r="2.4" fill="#fff2d4" filter="url(#softGlow)">
+          <animateMotion path="M 190 103 C 210 118, 252 138, 302 156" dur="5s" repeatCount="indefinite" keyPoints="0;1;1;1" keyTimes="0;0.55;0.85;1"/>
+          <animate attributeName="opacity" values="0;1;0;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.55;0.6;1"/>
+        </circle>
+      </g>
+
+      <!-- Split-point burst -->
+      <circle cx="190" cy="100" r="5" fill="#ffffff" opacity="0">
+        <animate attributeName="opacity" values="0;0.9;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.5;0.6"/>
+        <animate attributeName="r" values="2;10;14" dur="5s" repeatCount="indefinite" keyTimes="0;0.5;0.6"/>
+      </circle>
+
+      <!-- Track labels: e⁻ (LEFT) and e⁺ (RIGHT) -->
+      <g class="tag" font-size="12">
+        <text x="60" y="170" fill="#4fd7ff" font-weight="800">e⁻</text>
+        <text x="308" y="170" fill="#ffb454" font-weight="800">e⁺</text>
+      </g>
+
+      <!-- Curvature indicators (small "opposite" arrows) -->
+      <g stroke-width="1" fill="none">
+        <path d="M 88 149 l -6 3 l 3 -6" stroke="#4fd7ff" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 292 149 l 6 3 l -3 -6" stroke="#ffb454" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- Chamber outer frame ticks (corners) -->
+    <g stroke="#3a5670" stroke-width="1" fill="none">
+      <path d="M 22 30 l 0 -4 l 4 0"/>
+      <path d="M 358 30 l 0 -4 l -4 0"/>
+      <path d="M 22 170 l 0 4 l 4 0"/>
+      <path d="M 358 170 l 0 4 l -4 0"/>
+    </g>
+  </g>
+
+  <!-- ============ TEXT (RIGHT) ============ -->
+  <!-- Headline: AUGUST 2, 2026 -->
+  <g>
+    <text x="388" y="86" class="headline" font-size="42">
+      AUGUST 2, 2026
+      <animate attributeName="opacity" values="0.94;1;0.94" dur="7s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Subhead -->
+    <text x="388" y="120" class="subhead" font-size="15">THE POSITRON · 94 YEARS</text>
+
+    <!-- Underline accent below subhead (animates its length) -->
+    <line x1="388" y1="128" x2="388" y2="128" stroke="#4fd7ff" stroke-width="1.4" opacity="0.7">
+      <animate attributeName="x2" values="388;720;720;388" dur="11s" repeatCount="indefinite" keyTimes="0;0.35;0.85;1"/>
+    </line>
+
+    <!-- Tertiary -->
+    <text x="388" y="150" class="tertiary" font-size="10.5">CARL D. ANDERSON · CALTECH · 2 AUGUST 1932</text>
+    <text x="388" y="166" class="tertiary" font-size="10.5">FIRST OBSERVED ANTIMATTER · DIRAC 1928 · NOBEL 1936</text>
+  </g>
+
+  <!-- Cosmic ray schematic in the upper right corner (small) -->
+  <g transform="translate(720, 30)" opacity="0.85">
+    <text x="0" y="-6" class="tag" font-size="6.5" fill="#6b7f97">COSMIC RAY</text>
+    <line x1="8" y1="0" x2="8" y2="20" stroke="#4fd7ff" stroke-width="0.8" opacity="0.7"/>
+    <polygon points="8,22 5,17 11,17" fill="#4fd7ff" opacity="0.85"/>
+  </g>
+
+  <!-- Subtle chamber-to-text divider glow bar -->
+  <line x1="370" y1="34" x2="370" y2="166" stroke="#4fd7ff" stroke-width="0.6" opacity="0.28"/>
+</svg>
