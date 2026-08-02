@@ -701,7 +701,7 @@ def generate_stats_svg(stat_items, date_label, rng, palette, motif):
   <line x1="20" y1="44" x2="{W - 20}" y2="44" stroke="{BORDER}" stroke-width="1"/>
   <g>{"".join(cells)}
   </g>
-  <text x="{W - 20}" y="150" font-family="{FONT}" font-size="9" fill="{SUB}" text-anchor="end" opacity="0.7">◆ {pal_name}</text>
+  <text x="{W - 20}" y="154" font-family="{FONT}" font-size="9" fill="{SUB}" text-anchor="end" opacity="0.7">◆ {pal_name}</text>
 </svg>'''
 
 
