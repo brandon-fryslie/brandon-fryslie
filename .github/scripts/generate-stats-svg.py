@@ -350,18 +350,32 @@ class GitHubData:
     # -- distributions for meaningful visualizations (the rich seam) --
 
     def calendar_year(self):
-        """{start, counts}: chronological daily contribution counts for the last 365
-        days — a universal time-series for heatmaps/sparklines. Same 1y window the
-        enumeration metrics use, so it's already cached."""
+        """{start, end, label, counts}: chronological daily contribution counts for the
+        last 365 days — a universal time-series for heatmaps/sparklines. Same 1y window
+        the enumeration metrics use, so it's already cached.
+
+        `label` is the canonical, human-facing window descriptor ('past 12 months') the
+        card renders verbatim. It is deliberately decoupled from `len(counts)`: GitHub
+        returns the calendar in whole Sun–Sat weeks, so the array length wobbles between
+        ~365 and ~371 day to day (and 366 on a leap span). Surfacing that raw count is
+        exactly the '(366 days)' leak this label exists to prevent — the window is 'the
+        past 12 months' whether the array holds 365 or 371 entries."""
         now = datetime.now(timezone.utc)
         c = self._contributions(_iso(now - timedelta(days=365)), _iso(now))
         days = sorted(
             (d for w in c["contributionCalendar"]["weeks"] for d in w["contributionDays"]),
             key=lambda d: d["date"],
         )
+        label = "past 12 months"
         if not days:
-            return {"start": (now - timedelta(days=365)).strftime("%Y-%m-%d"), "counts": []}
-        return {"start": days[0]["date"], "counts": [d["contributionCount"] for d in days]}
+            start = (now - timedelta(days=365)).strftime("%Y-%m-%d")
+            return {"start": start, "end": now.strftime("%Y-%m-%d"), "label": label, "counts": []}
+        return {
+            "start": days[0]["date"],
+            "end": days[-1]["date"],
+            "label": label,
+            "counts": [d["contributionCount"] for d in days],
+        }
 
     def _repo_commit_counts(self, period):
         """(repo_full_name -> commit count, repo_full_name -> primary language) over the
