@@ -18,17 +18,20 @@ queries GitHub for their exact values. It then writes two things:
 
 Data sourcing — read this before touching a query:
 
-  * Pure counts (commits, PRs, reviews, issues) come from the REST *search* API's
+  * Pure counts (commits, PRs, issues) come from the REST *search* API's
     `total_count`, which is accurate at any magnitude. Only *retrieving items* past
     1000 is capped; the count itself is not.
 
-  * Enumeration metrics (days active, active repos, languages) do NOT use search.
-    Search caps item retrieval at 1000 results, which silently truncated these to a
-    fraction of reality (e.g. Days Active 1y read 101 when the truth was 252). They
-    now come from the GraphQL `contributionsCollection` — the same data that draws
-    the profile contribution graph — which is exact and includes org repos. Its only
-    limit is a 1-year span per query, so all-time is stitched from consecutive
-    ≤1-year windows. See GitHubData.contribution_scope. [LAW:one-source-of-truth]
+  * Enumeration/contribution metrics (days active, active repos, languages, PRs
+    reviewed) do NOT use search. Search caps item retrieval at 1000 results, which
+    silently truncated these to a fraction of reality (e.g. Days Active 1y read 101
+    when the truth was 252; reviews via `reviewed-by:...updated:>` counted PRs merely
+    *touched* in the window, not reviewed, and disagreed with GitHub's own tally).
+    They now come from the GraphQL `contributionsCollection` — the same data that
+    draws the profile contribution graph — which is exact and includes org repos.
+    PRs reviewed reads its `totalPullRequestReviewContributions`. Its only limit is a
+    1-year span per query, so all-time is stitched from consecutive ≤1-year windows.
+    See GitHubData.contribution_scope / review_count. [LAW:one-source-of-truth]
 """
 
 import argparse
@@ -83,7 +86,7 @@ METRIC_DEFS = {
     "languages":     ("Languages",     ["30d", "1y", "all"]),
     "commits":       ("Commits",       ["7d", "30d", "1y", "all"]),
     "prs_merged":    ("PRs Merged",    ["7d", "30d", "1y", "all"]),
-    "reviews":       ("Code Reviews",  ["30d", "1y", "all"]),
+    "reviews":       ("PRs Reviewed",  ["30d", "1y", "all"]),
     "active_repos":  ("Active Repos",  ["7d", "30d", "1y"]),
     "days_active":   ("Days Active",   ["30d", "1y"]),
     "longest_streak": ("Longest Streak", ["1y"]),
@@ -182,6 +185,7 @@ CONTRIB_QUERY = """
 query($login:String!, $from:DateTime!, $to:DateTime!) {
   user(login:$login) {
     contributionsCollection(from:$from, to:$to) {
+      totalPullRequestReviewContributions
       contributionCalendar { weeks { contributionDays { date contributionCount } } }
       commitContributionsByRepository(maxRepositories: 100) {
         contributions { totalCount }
@@ -269,13 +273,6 @@ class GitHubData:
             q += f"+merged:>{since}"
         return search_total_count("issues", q, self.token)
 
-    def review_count(self, period):
-        since = cutoff_iso(period)
-        q = f"reviewed-by:{USERNAME}+type:pr+-author:{USERNAME}"
-        if since:
-            q += f"+updated:>{since}"
-        return search_total_count("issues", q, self.token)
-
     def issue_closed_count(self, period):
         since = cutoff_iso(period)
         q = f"author:{USERNAME}+type:issue+is:closed"
@@ -331,6 +328,24 @@ class GitHubData:
             langs |= l
             capped = capped or cap
         return active, repos, langs, capped
+
+    def review_count(self, period):
+        """PRs reviewed over the period, from contributionsCollection's
+        totalPullRequestReviewContributions — the exact number GitHub itself attributes
+        to reviews on the contribution graph, so it's verifiable against the profile's
+        contribution activity. Summed across disjoint ≤1-year windows (same partition
+        year_windows uses elsewhere, so each review contribution is counted once).
+        Replaces the old REST 'reviewed-by:... updated:>' search, which counted PRs
+        *touched* in the window rather than reviewed and disagreed with GitHub's own
+        tally. [LAW:one-source-of-truth] same contributions source the other
+        enumeration metrics already trust."""
+        now = datetime.now(timezone.utc)
+        days = PERIOD_DAYS[period]
+        start = self.account_created() if days is None else now - timedelta(days=days)
+        return sum(
+            self._contributions(_iso(f), _iso(t))["totalPullRequestReviewContributions"]
+            for f, t in year_windows(start, now)
+        )
 
     # -- distributions for meaningful visualizations (the rich seam) --
 
