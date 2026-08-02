@@ -172,7 +172,9 @@ jobs:
           # (workflow_dispatch against a branch that has an open PR).
           PR="${{ github.event.pull_request.number }}"
           if [ -z "$PR" ]; then
-            PR="$(gh pr list --head "${GITHUB_REF_NAME}" --json number --jq '.[0].number' 2>/dev/null || true)"
+            # --repo is required: this job has no checkout, so gh can't infer the repo
+            # from git context (that omission is what broke the original gh pr calls).
+            PR="$(gh pr list --repo "$REPO" --head "${GITHUB_REF_NAME}" --json number --jq '.[0].number' 2>/dev/null || true)"
           fi
           if [ -n "$PR" ]; then
             prev="$(gh api "repos/${REPO}/issues/${PR}/comments" --jq '.[] | select(.body | startswith("<!-- stats-preview -->")) | .id' 2>/dev/null | head -1 || true)"
@@ -180,7 +182,8 @@ jobs:
               gh api -X PATCH "repos/${REPO}/issues/comments/${prev}" -F body=@"$body" >/dev/null
               echo "Updated sticky preview comment on PR #${PR}."
             else
-              gh pr comment "$PR" --body-file "$body"
+              # gh api (not gh pr comment) so posting needs no local git checkout either
+              gh api "repos/${REPO}/issues/${PR}/comments" -F body=@"$body" >/dev/null
               echo "Posted preview comment on PR #${PR}."
             fi
           else

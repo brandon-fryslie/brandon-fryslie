@@ -37,7 +37,7 @@ A pattern across the week's other repos keeps registering as the same instinct. 
 </div>
 
 <div align="center">
-<img src="./assets/daily-stats.svg" width="800" />
+<img src="./assets/daily-stats.svg" width="960" />
 </div>
 
 ---
