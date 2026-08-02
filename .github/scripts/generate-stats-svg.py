@@ -701,7 +701,7 @@ def generate_stats_svg(stat_items, date_label, rng, palette, motif):
   <line x1="20" y1="44" x2="{W - 20}" y2="44" stroke="{BORDER}" stroke-width="1"/>
   <g>{"".join(cells)}
   </g>
-  <text x="{W - 20}" y="154" font-family="{FONT}" font-size="9" fill="{SUB}" text-anchor="end" opacity="0.7">◆ {pal_name}</text>
+  <text x="{W - 20}" y="150" font-family="{FONT}" font-size="9" fill="{SUB}" text-anchor="end" opacity="0.7">◆ {pal_name}</text>
 </svg>'''
 
 
@@ -726,10 +726,73 @@ def write_json(path, today, username, calendar, metrics):
         f.write(text + "\n")
 
 
+def _leading_number(raw, default=None):
+    """Parse the leading numeric part of an SVG length ('340', '12px', '9.5') → float.
+    SVG attributes here are bare numbers, but tolerate a trailing unit rather than
+    crash on one."""
+    num = "".join(ch for ch in str(raw) if ch.isdigit() or ch == ".")
+    return float(num) if num else default
+
+
+def _canvas_height(root):
+    """The card's coordinate-space height — the value a text baseline is measured
+    against for clipping. Prefer viewBox (a `<text y>` is in viewBox units); fall back
+    to the height attribute. [LAW:one-source-of-truth] one canvas height, read from
+    where the coordinates actually live. Returns None only if the SVG declares neither,
+    which these cards always do."""
+    vb = root.get("viewBox")
+    if vb:
+        parts = vb.replace(",", " ").split()
+        if len(parts) == 4:
+            return _leading_number(parts[3])
+    return _leading_number(root.get("height", ""))
+
+
+def _bottom_clip_violations(root, height):
+    """Text baselines jammed against — or past — the bottom edge: the exact defect that
+    shipped on 2026-08-01, a row placed at y == the viewBox height, whose descenders
+    render below the canvas and clip. [LAW:verifiable-goals] make "the text fits in its
+    frame" a machine-checked fact instead of a judgment the eye keeps missing on a
+    downscaled render.
+
+    Scoped deliberately to the bottom edge and to un-transformed text, because that is
+    the signal we can read unambiguously: `y` is the baseline regardless of
+    `text-anchor` (a reliable vertical position, unlike `x`, which an anchored element
+    measures from its own edge), and skipping any text under a `transform` avoids false
+    positives where the real position isn't cheaply resolvable. The visual self-review
+    still covers the transformed and horizontal cases; this gate nails the common,
+    unambiguous one."""
+    ns = "{http://www.w3.org/2000/svg}"
+    parent = {child: par for par in root.iter() for child in par}
+
+    def transformed(el):
+        cur = el
+        while cur is not None:
+            if cur.get("transform"):
+                return True
+            cur = parent.get(cur)
+        return False
+
+    out = []
+    for el in root.iter(f"{ns}text"):
+        baseline = _leading_number(el.get("y", ""))
+        if baseline is None or transformed(el):
+            continue
+        fs = _leading_number(el.get("font-size", ""), 12.0)
+        # Descenders drop ~0.2-0.3x the font size below the baseline; reserve at least
+        # that much clear space (floor 6px) so glyph bottoms land inside the canvas.
+        reserve = max(6.0, 0.3 * fs)
+        if height - baseline < reserve:
+            out.append(("".join(el.itertext()).strip()[:48], baseline, reserve))
+    return out
+
+
 def verify_svg(svg_path, json_path):
-    """Accuracy gate: fail unless every value in json_path is rendered as text in
-    svg_path. The digit-boundary guard stops a value like '9' from matching spuriously
-    inside another number ('1956'), so a wrong or dropped number can't slip through.
+    """Accuracy + layout gate. Fails unless (1) every value in json_path is rendered as
+    text in svg_path, and (2) no un-transformed text baseline is clipped by the bottom
+    edge. The digit-boundary guard stops a value like '9' from matching spuriously
+    inside another number ('1956'), so a wrong or dropped number can't slip through; the
+    bottom-margin check stops an authored card from shipping with its last row cut off.
     [LAW:verifiable-goals] [LAW:no-silent-failure]"""
     import re
     import xml.etree.ElementTree as ET
@@ -740,18 +803,27 @@ def verify_svg(svg_path, json_path):
     ns = "{http://www.w3.org/2000/svg}"
     rendered = "\n".join("".join(el.itertext()).strip() for el in root.iter(f"{ns}text"))
 
-    missing = [
-        f'{m["label"]} ({m["period"]}) = {m["value"]}'
+    errors = [
+        f'missing/altered value: {m["label"]} ({m["period"]}) = {m["value"]}'
         for m in payload["metrics"]
         if not re.search(r"(?<!\d)" + re.escape(str(m["value"])) + r"(?!\d)", rendered)
     ]
-    if missing:
-        print(f"ERROR: {svg_path} is missing or altered these values vs {json_path}:",
+    height = _canvas_height(root)
+    if height is not None:
+        for text, baseline, reserve in _bottom_clip_violations(root, height):
+            errors.append(
+                f'bottom-clipped text (baseline y={baseline:g} in a {height:g}px canvas '
+                f'needs >={reserve:g}px clearance below): "{text}"'
+            )
+
+    if errors:
+        print(f"ERROR: {svg_path} failed the stats-card gate vs {json_path}:",
               file=sys.stderr)
-        for x in missing:
+        for x in errors:
             print(f"  - {x}", file=sys.stderr)
         sys.exit(1)
-    print(f"OK: all {len(payload['metrics'])} values from {json_path} render in {svg_path}")
+    print(f"OK: all {len(payload['metrics'])} values render and no text is bottom-clipped "
+          f"in {svg_path}")
 
 
 def main():
