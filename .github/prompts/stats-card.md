@@ -94,8 +94,31 @@ The one limit: motion must never cost legibility. Keep the values themselves roc
 - **The same clearance rule applies BETWEEN any two stacked elements, not just at the canvas edges** — a caption sitting directly under a bar, grid, or heatmap needs the same ~1.3× font-size of clear space above its own baseline that the canvas edge needs. This is where **count-driven grids** (a dot/cell per unit of some metric — issues closed, repos created) go wrong: the row count is dictated by the day's actual value, not chosen by you, so a grid sized comfortably on a low-count day can grow enough rows on a high-count day to run into whatever sits below it. Before laying out a count-driven grid, compute how many rows its value actually needs at your chosen columns-per-row, and reserve that many rows of vertical space *plus* the caption's clearance — don't lay out the grid first and hope it fits above a caption placed independently.
   - WRONG: a caption fixed at `y="332"` and a 181-dot grid (7 rows at 3.5px spacing) starting at `y="306"` — the grid needs 306 to ~328, colliding with the caption's glyph top at ~325.
   - RIGHT: compute the grid's required rows from its actual count first, then place the caption's baseline at `grid_bottom + 1.3×caption_font_size` below the grid's last row — the caption's position is *derived from* the grid's size, not fixed independently of it.
+- **Pick ONE right-margin value and reuse it for every right-anchored element on the card.** A card that mixes `x="780"` in one row with `x="770"` in another (a real example from a shipped card) reads as misaligned when scanning down the page, even though neither value is individually wrong. Decide the right margin once at the top of your composition and use that same x for every `text-anchor="end"` element.
+- **A decorative motif that's meant to track the plot's own bounds (a baseline, a gridline, the clip region) must derive its position FROM those same values, not from an independently-chosen number.** If a highlight sweep or background wave is supposed to span the chart area, compute its y/height from the same variables that set the chart's gridlines and clip rect — two independently-typed numbers that are "supposed to" match will eventually drift apart; one number reused twice cannot.
 - Dark theme in the GitHub dark-profile family — background around `#0d1117` — so it sits cleanly beneath the doodle.
 - GitHub renders this as a sanitized `<img>` tag. **No JavaScript, no `:hover` or other pseudo-classes, no `<a>`, no `<foreignObject>`** — all stripped or inert. Allowed: CSS `@keyframes`, SMIL `<animate>`/`<animateTransform>`, SVG filters, gradients. Prefer SMIL for GitHub compatibility. Use prime-number durations (7s, 11s, 13s) with staggered delays for organic motion. See CLAUDE.md's "SVG Animation Constraints" for the full reference.
+
+## Optional tooling — deterministic layout math
+
+`.github/scripts/svg-layout.py` is a small, dependency-free CLI for the arithmetic underneath your composition — vertically centering text in a box, leaving clearance above/below an element, checking a label fits its container, checking a color is legible. Nothing requires you to use it, and it has no opinion on concept, palette, motion, or what to visualize — those stay entirely yours. It exists because the same few classes of coordinate math have produced real shipped bugs more than once (a baseline set equal to a box's center instead of offset for it; a label placed in a container without checking it fits; a caption color nobody computed the contrast of) — reach for it when you're about to do that kind of arithmetic by hand, skip it when you're not.
+
+```
+svg-layout.py center-y --box-top Y --box-height H --font-size N
+    # baseline that vertically centers text in a box (e.g. a label inside a bar segment)
+svg-layout.py clear --anchor Y --gap N --font-size N --side below|above
+    # baseline that leaves `gap` px of clearance from an anchor edge — "below": anchor
+    # is the bottom edge of what's above you; "above": anchor is the top edge of what's below you
+svg-layout.py fits "text" --width N --font-size N [--weight 700] [--slack-pct 18]
+    # does this text fit a container of width N, with real safety margin for
+    # cross-viewer font substitution? exits 1 and explains why on overflow
+svg-layout.py text-width "text" --font-size N [--weight 700]
+    # estimated rendered width in px (fits' primitive, useful standalone too)
+svg-layout.py contrast "#hex1" "#hex2" [--min 4.5]
+    # WCAG contrast ratio; exits 1 if below --min
+```
+
+Text-width and fits are estimates (a frozen per-character table sampled from a local proxy font, not the exact font any given viewer's browser resolves) — `fits` already reserves slack for that, so trust its verdict over `text-width`'s raw number.
 
 ## Self-review — render it and look at it
 
