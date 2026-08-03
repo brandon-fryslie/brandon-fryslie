@@ -37,7 +37,17 @@ Three substrates, three straight lines, no rewrites. That's what the week actual
 </div>
 
 <div align="center">
-<a href="./STATS.md"><img src="./assets/daily-stats.svg" width="960" alt="Live GitHub Stats — click to browse each metric on GitHub" /></a>
+<img src="./assets/daily-stats.svg" width="960" alt="Live GitHub Stats" />
+</div>
+
+<div align="center">
+<table>
+<tr>
+<td align="center"><a href="https://github.com/search?q=author%3Abrandon-fryslie&amp;type=commits"><img src="./assets/stat-badges/commits.svg" width="300" height="180" alt="Commits — browse Brandon Fryslie's commits on GitHub" /></a></td>
+<td align="center"><a href="https://github.com/search?q=author%3Abrandon-fryslie+is%3Apr&amp;type=pullrequests"><img src="./assets/stat-badges/prs.svg" width="300" height="180" alt="PRs — browse Brandon Fryslie's pull requests on GitHub" /></a></td>
+<td align="center"><a href="https://github.com/brandon-fryslie?tab=repositories"><img src="./assets/stat-badges/repositories.svg" width="300" height="180" alt="Repositories — browse Brandon Fryslie's repositories on GitHub" /></a></td>
+</tr>
+</table>
 </div>
 
 ---
