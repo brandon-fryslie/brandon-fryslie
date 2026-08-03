@@ -2,7 +2,7 @@
 """
 Generate the daily GitHub stats data + a fallback stats card.
 
-Picks 4 metrics (from 8) with varying time periods each day (seeded by the date) and
+Picks 4 metrics (from 7) with varying time periods each day (seeded by the date) and
 queries GitHub for their exact values. It then writes two things:
 
   * assets/daily-stats.json — the *data seam*: the four exact values, labels, and
@@ -22,16 +22,19 @@ Data sourcing — read this before touching a query:
     `total_count`, which is accurate at any magnitude. Only *retrieving items* past
     1000 is capped; the count itself is not.
 
-  * Enumeration/contribution metrics (days active, active repos, languages, PRs
-    reviewed) do NOT use search. Search caps item retrieval at 1000 results, which
-    silently truncated these to a fraction of reality (e.g. Days Active 1y read 101
-    when the truth was 252; reviews via `reviewed-by:...updated:>` counted PRs merely
-    *touched* in the window, not reviewed, and disagreed with GitHub's own tally).
+  * Enumeration/contribution metrics (days active, active repos, languages) do NOT use
+    search. Search caps item retrieval at 1000 results, which silently truncated these
+    to a fraction of reality (e.g. Days Active 1y read 101 when the truth was 252).
     They now come from the GraphQL `contributionsCollection` — the same data that
     draws the profile contribution graph — which is exact and includes org repos.
-    PRs reviewed reads its `totalPullRequestReviewContributions`. Its only limit is a
-    1-year span per query, so all-time is stitched from consecutive ≤1-year windows.
-    See GitHubData.contribution_scope / review_count. [LAW:one-source-of-truth]
+    Its only limit is a 1-year span per query, so all-time is stitched from
+    consecutive ≤1-year windows. See GitHubData.contribution_scope.
+    [LAW:one-source-of-truth]
+
+  * There is no "PRs reviewed" metric: GitHub disallows self-review, and every PR on
+    this profile is authored (and merged) under Brandon's own account by the
+    automation, so any review-contribution count would always read zero or near-zero
+    — not a real signal, just a structural artifact of who commits the PRs.
 """
 
 import argparse
@@ -86,7 +89,6 @@ METRIC_DEFS = {
     "languages":     ("Languages",     ["30d", "1y", "all"]),
     "commits":       ("Commits",       ["7d", "30d", "1y", "all"]),
     "prs_merged":    ("PRs Merged",    ["7d", "30d", "1y", "all"]),
-    "reviews":       ("PRs Reviewed",  ["30d", "1y", "all"]),
     "active_repos":  ("Active Repos",  ["7d", "30d", "1y"]),
     "days_active":   ("Days Active",   ["30d", "1y"]),
     "longest_streak": ("Longest Streak", ["1y"]),
@@ -185,7 +187,6 @@ CONTRIB_QUERY = """
 query($login:String!, $from:DateTime!, $to:DateTime!) {
   user(login:$login) {
     contributionsCollection(from:$from, to:$to) {
-      totalPullRequestReviewContributions
       contributionCalendar { weeks { contributionDays { date contributionCount } } }
       commitContributionsByRepository(maxRepositories: 100) {
         contributions { totalCount }
@@ -329,24 +330,6 @@ class GitHubData:
             capped = capped or cap
         return active, repos, langs, capped
 
-    def review_count(self, period):
-        """PRs reviewed over the period, from contributionsCollection's
-        totalPullRequestReviewContributions — the exact number GitHub itself attributes
-        to reviews on the contribution graph, so it's verifiable against the profile's
-        contribution activity. Summed across disjoint ≤1-year windows (same partition
-        year_windows uses elsewhere, so each review contribution is counted once).
-        Replaces the old REST 'reviewed-by:... updated:>' search, which counted PRs
-        *touched* in the window rather than reviewed and disagreed with GitHub's own
-        tally. [LAW:one-source-of-truth] same contributions source the other
-        enumeration metrics already trust."""
-        now = datetime.now(timezone.utc)
-        days = PERIOD_DAYS[period]
-        start = self.account_created() if days is None else now - timedelta(days=days)
-        return sum(
-            self._contributions(_iso(f), _iso(t))["totalPullRequestReviewContributions"]
-            for f, t in year_windows(start, now)
-        )
-
     # -- distributions for meaningful visualizations (the rich seam) --
 
     def calendar_year(self):
@@ -426,8 +409,6 @@ def compute_metric(name, period, data):
         return data.commit_count(period)
     if name == "prs_merged":
         return data.pr_merged_count(period)
-    if name == "reviews":
-        return data.review_count(period)
     if name == "issues_closed":
         return data.issue_closed_count(period)
 
@@ -479,7 +460,7 @@ def build_metric_record(key, period, data):
 
 
 def pick_daily_pool(date_str):
-    """Assign each of the 8 metrics a period for the day (seeded). The full pool is
+    """Assign each of the 7 metrics a period for the day (seeded). The full pool is
     computed, then relevance-filtered down to the 3-6 shown."""
     rng = random.Random(int(hashlib.md5((date_str + "::pool").encode()).hexdigest(), 16))
     return [(key, rng.choice(defs[1])) for key, defs in METRIC_DEFS.items()]
