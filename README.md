@@ -37,7 +37,7 @@ Three substrates, three straight lines, no rewrites. That's what the week actual
 </div>
 
 <div align="center">
-<img src="./assets/daily-stats.svg" width="960" />
+<a href="./STATS.md"><img src="./assets/daily-stats.svg" width="960" alt="Live GitHub Stats — click to browse each metric on GitHub" /></a>
 </div>
 
 ---
