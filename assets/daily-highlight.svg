@@ -1,53 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Louis Armstrong's 125th Birthday (August 4, 1901) — Born 4 August 1901 in New Orleans, Louis "Satchmo" Armstrong transformed jazz with his virtuoso trumpet playing, gravelly vocals, and popularization of scat singing. Signature recordings: "West End Blues" (1928), "What a Wonderful World" (1967), "Hello, Dolly!" (1964). Composition: a warm jazz-club tableau on the 800x200 canvas. Dark night background with a warm amber radial glow spilling from the left. A huge golden trumpet bell viewed head-on occupies the left third (a bright gold rim, a flared inner cone shading from gold through burnt-orange down to a dark tube throat, with a warm rim-light arc top-left). Three staggered gold sound-wave rings continually expand outward from the bell. Golden musical notes (eighth notes and a beamed pair, drawn as SVG paths so they render without font-dependent glyphs) drift up and rightward from the bell mouth, staying clear of the text column. On the right, a huge cream AUGUST 4, 2026 headline, a warm-gold LOUIS ARMSTRONG · 125 YEARS subhead with an underline sweeping right to left, italic tertiary lines SATCHMO · NEW ORLEANS · 4 AUGUST 1901 and TRUMPET · SCAT · "WHAT A WONDERFUL WORLD", and a Georgia-italic quote at the base. -->
+<!-- theme: U.S. Coast Guard Day (August 4, 1790) — 236th anniversary of the founding of the Revenue Cutter Service by Treasury Secretary Alexander Hamilton, the direct precursor to the U.S. Coast Guard. Motto: Semper Paratus ("Always Ready"). Composition: a night-sea tableau on the 800x200 canvas. Dark navy sky gradient with a faint warm horizon glow along the sea line. On the left, a small silhouetted rocky islet supports a tall red-and-white-banded lighthouse; a bright golden lantern room at the top emits a wide beam that slowly swings across the upper-left sea/sky (kept out of the right-hand text column), with the beam fading softly with distance and the lamp itself pulsing. Small stars twinkle in the sky. Three horizontally-offset layers of stylized ocean waves undulate at the bottom of the frame. A tiny Coast Guard cutter with the signature red-and-blue racing stripe rides the middle wave line at mid-canvas, bobbing gently. On the right, a huge cream AUGUST 4, 2026 headline, a red U.S. COAST GUARD subhead followed by a white · 236 YEARS, italic tertiary lines FOUNDED 4 AUGUST 1790 · REVENUE CUTTER SERVICE and ALEXANDER HAMILTON · SEMPER PARATUS, and a Georgia-italic caption "So others may live" at the base. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 4, 2026 — Louis Armstrong's 125th birthday. A warm jazz-club tableau: dark background with a warm amber radial glow spilling from the left, a huge golden trumpet bell viewed head-on occupying the left third (a bright gold rim with a flared inner cone shading from gold through burnt-orange down to a dark tube throat, with a warm rim-light arc top-left), three staggered pulsing gold sound-wave rings expanding outward, and golden musical notes drifting up and rightward from the bell mouth. On the right, a huge cream AUGUST 4, 2026 headline, a warm-gold LOUIS ARMSTRONG · 125 YEARS subhead with an underline that sweeps right to left, italic tertiary lines SATCHMO · NEW ORLEANS · 4 AUGUST 1901 and TRUMPET · SCAT · WHAT A WONDERFUL WORLD, and a Georgia-italic quote at the base.">
+     aria-label="Daily doodle for August 4, 2026 — U.S. Coast Guard's 236th anniversary. Night-sea tableau: a dark navy sky gradient over a horizon glow, a silhouetted rocky islet on the left supporting a tall red-and-white-banded lighthouse whose golden lantern room emits a wide beam that swings across the upper-left sea and sky. Small stars twinkle. Three layers of animated ocean waves undulate at the bottom, and a tiny Coast Guard cutter with a red-and-blue racing stripe rides the middle wave line. On the right, a huge cream AUGUST 4, 2026 headline, a red U.S. COAST GUARD subhead with a white 236 YEARS, italic tertiaries FOUNDED 4 AUGUST 1790 · REVENUE CUTTER SERVICE and ALEXANDER HAMILTON · SEMPER PARATUS, and a Georgia-italic So others may live caption at the base.">
   <defs>
-    <!-- Warm background: amber pooling from the left, fading to profile dark on the right -->
-    <radialGradient id="bg" cx="0.22" cy="0.55" r="0.85">
-      <stop offset="0" stop-color="#4a2510"/>
-      <stop offset="0.5" stop-color="#1a0e08"/>
-      <stop offset="1" stop-color="#0d1117"/>
+    <!-- Night sky: deep navy top, brightening subtly toward the horizon -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#04101f"/>
+      <stop offset="0.65" stop-color="#0a1c33"/>
+      <stop offset="0.85" stop-color="#122b45"/>
+      <stop offset="1" stop-color="#1a3552"/>
+    </linearGradient>
+
+    <!-- Faint warm horizon glow on the far left -->
+    <radialGradient id="horizonGlow" cx="0.14" cy="0.72" r="0.42">
+      <stop offset="0" stop-color="#c67a2a" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#5a3418" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#04101f" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Trumpet bell flare: bright gold rim → burnt orange mid → dark tube throat -->
-    <radialGradient id="bellFlare" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#2a1608"/>
-      <stop offset="0.35" stop-color="#6b3d10"/>
-      <stop offset="0.65" stop-color="#c8871a"/>
-      <stop offset="0.92" stop-color="#f5c14b"/>
-      <stop offset="1" stop-color="#e0a52b"/>
-    </radialGradient>
-    <radialGradient id="tubeDark" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#000000"/>
-      <stop offset="1" stop-color="#3a1e08"/>
-    </radialGradient>
-    <radialGradient id="bellGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#f5c14b" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#f5c14b" stop-opacity="0"/>
+    <!-- Sea: darker navy fading to black at the bottom -->
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f2a45"/>
+      <stop offset="1" stop-color="#04101f"/>
+    </linearGradient>
+
+    <!-- Lantern beam: opaque near the lamp, fully transparent at the far end (left edge of the triangle) -->
+    <linearGradient id="beam" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffd769" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ffd769" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#fff2b8" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <!-- Lamp glow -->
+    <radialGradient id="lampGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff4c6" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#ffd769" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffd769" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Soft glow filters -->
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="0.8"/>
+    <!-- Wave gradients: deep near the bottom, brighter crest color -->
+    <linearGradient id="wave1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a6a95"/>
+      <stop offset="1" stop-color="#12283e"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#254a70"/>
+      <stop offset="1" stop-color="#0a1c33"/>
+    </linearGradient>
+    <linearGradient id="wave3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#152f4a"/>
+      <stop offset="1" stop-color="#04101f"/>
+    </linearGradient>
+
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.6"/>
     </filter>
-    <filter id="bigGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <filter id="big" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="2.4"/>
     </filter>
 
-    <!-- Reusable eighth-note glyph (path, no font dependency) -->
-    <g id="eighthNote">
-      <ellipse cx="0" cy="0" rx="5.2" ry="3.6" transform="rotate(-24)"/>
-      <path d="M 4.75 -1.4 L 4.75 -22 Q 13 -19 12 -12 Q 11.2 -7.8 7 -6" fill="none" stroke-width="1.7" stroke-linecap="round"/>
-    </g>
-
-    <!-- Reusable beamed pair (two notes joined by a top beam) -->
-    <g id="beamedPair">
-      <ellipse cx="0" cy="0" rx="4.6" ry="3.2" transform="rotate(-24)"/>
-      <ellipse cx="13" cy="1.2" rx="4.6" ry="3.2" transform="rotate(-24 13 1.2)"/>
-      <path d="M 4.35 -1.3 L 4.35 -22.5" stroke-width="1.7" fill="none" stroke-linecap="round"/>
-      <path d="M 17.35 -0.1 L 17.35 -21.3" stroke-width="1.7" fill="none" stroke-linecap="round"/>
-      <path d="M 3.6 -22.5 L 18.1 -21.3" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <!-- Reusable star -->
+    <g id="star">
+      <circle r="0.9" fill="#eaf1ff"/>
     </g>
 
     <style>
@@ -57,158 +71,250 @@
         letter-spacing: 1.6px;
         fill: #f4e4c1;
       }
-      .subhead {
+      .subhead-red {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: 3.2px;
+        fill: #e04a3c;
+      }
+      .subhead-white {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
         font-weight: 700;
-        letter-spacing: 3.4px;
-        fill: #f5c14b;
+        letter-spacing: 3.2px;
+        fill: #eaf1ff;
       }
       .tertiary {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
         font-style: italic;
         font-weight: 600;
         letter-spacing: 1.3px;
-        fill: #d4a04a;
+        fill: #a9c4e0;
       }
       .tertiary-dim {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
         font-style: italic;
         font-weight: 600;
         letter-spacing: 1.3px;
-        fill: #a67a3a;
+        fill: #6d8aa8;
       }
       .quote {
         font-family: 'Georgia', 'Times New Roman', serif;
         font-style: italic;
         font-weight: 400;
         letter-spacing: 0.8px;
-        fill: #b8873a;
+        fill: #7b9ec2;
       }
-      .noteFill { fill: #f5c14b; stroke: #f5c14b; }
-      .noteFillWarm { fill: #ffd577; stroke: #ffd577; }
     </style>
   </defs>
 
-  <!-- ================ BACKGROUND ================ -->
-  <rect width="800" height="200" fill="#0d1117"/>
-  <rect width="800" height="200" fill="url(#bg)"/>
+  <!-- ================ SKY + HORIZON GLOW ================ -->
+  <rect width="800" height="200" fill="#04101f"/>
+  <rect width="800" height="200" fill="url(#sky)"/>
+  <rect width="800" height="200" fill="url(#horizonGlow)"/>
 
-  <!-- Ambient warm bell glow (breathing) -->
-  <circle cx="160" cy="100" r="135" fill="url(#bellGlow)">
-    <animate attributeName="r" values="125;145;125" dur="7s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- ================ SOUND WAVE RINGS ================ -->
-  <g fill="none" stroke="#f5c14b">
-    <circle cx="160" cy="100" r="70" opacity="0" stroke-width="1.8">
-      <animate attributeName="r" values="70;185" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.75;0" keyTimes="0;0.18;1" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="2.2;0.4" dur="11s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="160" cy="100" r="70" opacity="0" stroke-width="1.8">
-      <animate attributeName="r" values="70;185" dur="11s" begin="3.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.75;0" keyTimes="0;0.18;1" dur="11s" begin="3.7s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="2.2;0.4" dur="11s" begin="3.7s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="160" cy="100" r="70" opacity="0" stroke-width="1.8">
-      <animate attributeName="r" values="70;185" dur="11s" begin="7.3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.75;0" keyTimes="0;0.18;1" dur="11s" begin="7.3s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-width" values="2.2;0.4" dur="11s" begin="7.3s" repeatCount="indefinite"/>
-    </circle>
+  <!-- ================ STARS ================ -->
+  <g>
+    <use href="#star" x="60"  y="24"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s"  repeatCount="indefinite"/></use>
+    <use href="#star" x="42"  y="52"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="11s" repeatCount="indefinite"/></use>
+    <use href="#star" x="140" y="18"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#star" x="188" y="34"><animate attributeName="opacity" values="0.8;0.3;0.8" dur="7s"  repeatCount="indefinite"/></use>
+    <use href="#star" x="228" y="14"><animate attributeName="opacity" values="0.5;1;0.5" dur="11s" repeatCount="indefinite"/></use>
+    <use href="#star" x="272" y="42"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#star" x="310" y="22"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="7s"  repeatCount="indefinite"/></use>
+    <use href="#star" x="94"  y="80"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" repeatCount="indefinite"/></use>
+    <use href="#star" x="250" y="72"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#star" x="176" y="94"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s"  repeatCount="indefinite"/></use>
   </g>
 
-  <!-- ================ TRUMPET BELL (head-on view) ================ -->
-  <g transform="translate(160, 100)">
-    <!-- Outer bright rim -->
-    <circle r="74" fill="#f5c14b"/>
-    <circle r="72" fill="#e0a52b"/>
-    <!-- Flared cone (dark throat → gold rim gradient) -->
-    <circle r="66" fill="url(#bellFlare)"/>
-    <!-- Inner tube going away -->
-    <circle r="22" fill="url(#tubeDark)"/>
-    <!-- Depth ring highlight just inside rim -->
-    <circle r="63" fill="none" stroke="#ffcf6a" stroke-width="1" opacity="0.55"/>
-    <circle r="45" fill="none" stroke="#8a5814" stroke-width="1" opacity="0.5"/>
-    <!-- Rim highlight arc (top-left, warm) -->
-    <path d="M -58 -46 A 74 74 0 0 1 42 -61" stroke="#fff2b8" stroke-width="3" fill="none" opacity="0.88" filter="url(#softGlow)"/>
-    <!-- Rim bottom-right subtle shadow -->
-    <path d="M 55 48 A 74 74 0 0 1 -38 62" stroke="#5a340a" stroke-width="2" fill="none" opacity="0.6"/>
-    <!-- A tiny glint on the rim -->
-    <circle cx="-42" cy="-55" r="2.4" fill="#ffffff" opacity="0.85">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite"/>
-    </circle>
+  <!-- ================ LANTERN BEAM ================ -->
+  <!-- Origin at the top of the lighthouse lamp (115, 52). Beam is a wide triangle pointing left,
+       kept clear of the text column on the right by capping the sweep angle. -->
+  <g transform="translate(115 52)" opacity="0.9">
+    <g>
+      <polygon points="0,0 -340,-90 -340,90" fill="url(#beam)"/>
+      <animateTransform attributeName="transform" type="rotate"
+        values="-40;-135;-40" keyTimes="0;0.5;1"
+        dur="13s" repeatCount="indefinite"/>
+    </g>
   </g>
 
-  <!-- ================ MUSICAL NOTES drifting up-right ================ -->
-  <!-- All notes stay left of x≈310 to avoid overlapping the text column -->
-  <g class="noteFill" filter="url(#softGlow)">
+  <!-- Faint back-beam (opposite side) — kept short so it doesn't touch text at x>=340 -->
+  <g transform="translate(115 52)" opacity="0.35">
     <g>
-      <use href="#eighthNote" transform="scale(1.3)"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="222,110; 250,72; 278,32"
-        keyTimes="0;0.55;1" dur="11s" begin="0s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0.95;0" keyTimes="0;0.2;0.7;1" dur="11s" begin="0s" repeatCount="indefinite"/>
+      <polygon points="0,0 180,-32 180,32" fill="url(#beam)"/>
+      <animateTransform attributeName="transform" type="rotate"
+        values="140;45;140" keyTimes="0;0.5;1"
+        dur="13s" repeatCount="indefinite"/>
     </g>
-    <g>
-      <use href="#beamedPair" transform="scale(1.1)"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="215,105; 236,60; 260,18"
-        keyTimes="0;0.55;1" dur="13s" begin="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0.9;0" keyTimes="0;0.2;0.7;1" dur="13s" begin="2.4s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <use href="#eighthNote" transform="scale(1.05)"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="230,115; 262,90; 305,68"
-        keyTimes="0;0.55;1" dur="13s" begin="5.1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0.9;0" keyTimes="0;0.2;0.7;1" dur="13s" begin="5.1s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <use href="#eighthNote" transform="scale(0.85)"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="220,102; 240,58; 268,22"
-        keyTimes="0;0.55;1" dur="7s" begin="1.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0.9;0" keyTimes="0;0.2;0.7;1" dur="7s" begin="1.5s" repeatCount="indefinite"/>
-    </g>
-    <g class="noteFillWarm">
-      <use href="#beamedPair" transform="scale(0.9)"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="225,108; 258,80; 290,55"
-        keyTimes="0;0.55;1" dur="11s" begin="6.6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0.9;0" keyTimes="0;0.2;0.7;1" dur="11s" begin="6.6s" repeatCount="indefinite"/>
-    </g>
-    <g>
-      <use href="#eighthNote" transform="scale(0.75)"/>
-      <animateTransform attributeName="transform" type="translate"
-        values="215,100; 228,72; 250,48"
-        keyTimes="0;0.55;1" dur="7s" begin="8.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0.9;0" keyTimes="0;0.2;0.7;1" dur="7s" begin="8.2s" repeatCount="indefinite"/>
-    </g>
+  </g>
+
+  <!-- ================ SEA ================ -->
+  <rect x="0" y="140" width="800" height="60" fill="url(#sea)"/>
+
+  <!-- Horizon line highlight -->
+  <line x1="0" y1="140" x2="800" y2="140" stroke="#3a6a95" stroke-width="0.5" opacity="0.55"/>
+  <line x1="0" y1="140.7" x2="800" y2="140.7" stroke="#c67a2a" stroke-width="0.4" opacity="0.35"/>
+
+  <!-- ================ COAST GUARD CUTTER (silhouette with racing stripe) ================ -->
+  <!-- Cutter sits on the mid-wave line, bobbing gently -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-1.3; 0,0.4; 0,0"
+      keyTimes="0;0.3;0.7;1" dur="7s" repeatCount="indefinite"/>
+    <!-- hull (light grey, low-slung cutter) -->
+    <path d="M 268 158 L 344 158 L 336 165 L 276 165 Z" fill="#cfd6de"/>
+    <!-- Coast Guard racing stripe: wide red band + thin blue band, slanted forward on the bow -->
+    <path d="M 302 158 L 314 158 L 320 165 L 308 165 Z" fill="#e04a3c"/>
+    <path d="M 314 158 L 316.6 158 L 322.5 165 L 320 165 Z" fill="#1e4d8c"/>
+    <!-- Superstructure / bridge -->
+    <rect x="292" y="150" width="18" height="8" fill="#eaf1ff"/>
+    <rect x="296" y="146" width="8"  height="4" fill="#eaf1ff"/>
+    <!-- Mast + tiny mast-top light -->
+    <line x1="300" y1="146" x2="300" y2="136" stroke="#a9c4e0" stroke-width="0.9"/>
+    <circle cx="300" cy="135" r="1.1" fill="#ffd769">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Waterline reflection -->
+    <line x1="272" y1="166.5" x2="342" y2="166.5" stroke="#eaf1ff" stroke-width="0.5" opacity="0.35"/>
+  </g>
+
+  <!-- ================ WAVE LAYERS (back → front) ================ -->
+  <!-- Back layer: soft, slow, small amplitude -->
+  <g fill="url(#wave3)">
+    <path d="M 0 152
+             Q 40 148, 80 152 T 160 152 T 240 152 T 320 152 T 400 152
+             T 480 152 T 560 152 T 640 152 T 720 152 T 800 152
+             L 800 200 L 0 200 Z">
+      <animate attributeName="d"
+        values="M 0 152 Q 40 148, 80 152 T 160 152 T 240 152 T 320 152 T 400 152 T 480 152 T 560 152 T 640 152 T 720 152 T 800 152 L 800 200 L 0 200 Z;
+                M 0 152 Q 40 156, 80 152 T 160 152 T 240 152 T 320 152 T 400 152 T 480 152 T 560 152 T 640 152 T 720 152 T 800 152 L 800 200 L 0 200 Z;
+                M 0 152 Q 40 148, 80 152 T 160 152 T 240 152 T 320 152 T 400 152 T 480 152 T 560 152 T 640 152 T 720 152 T 800 152 L 800 200 L 0 200 Z"
+        dur="11s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Middle layer: cutter's waterline -->
+  <g fill="url(#wave2)">
+    <path d="M 0 168
+             Q 30 164, 60 168 T 120 168 T 180 168 T 240 168 T 300 168
+             T 360 168 T 420 168 T 480 168 T 540 168 T 600 168
+             T 660 168 T 720 168 T 780 168 T 840 168
+             L 800 200 L 0 200 Z">
+      <animate attributeName="d"
+        values="M 0 168 Q 30 164, 60 168 T 120 168 T 180 168 T 240 168 T 300 168 T 360 168 T 420 168 T 480 168 T 540 168 T 600 168 T 660 168 T 720 168 T 780 168 T 840 168 L 800 200 L 0 200 Z;
+                M 0 168 Q 30 172, 60 168 T 120 168 T 180 168 T 240 168 T 300 168 T 360 168 T 420 168 T 480 168 T 540 168 T 600 168 T 660 168 T 720 168 T 780 168 T 840 168 L 800 200 L 0 200 Z;
+                M 0 168 Q 30 164, 60 168 T 120 168 T 180 168 T 240 168 T 300 168 T 360 168 T 420 168 T 480 168 T 540 168 T 600 168 T 660 168 T 720 168 T 780 168 T 840 168 L 800 200 L 0 200 Z"
+        dur="7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Foam ticks on middle wave -->
+  <g stroke="#a9c4e0" stroke-width="0.6" fill="none" opacity="0.55">
+    <path d="M 30 168 q 6 -2 12 0" >
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 180 167 q 6 -2 12 0" >
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="7s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 380 167 q 6 -2 12 0" >
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s" begin="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 560 167 q 6 -2 12 0" >
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="7s" begin="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 720 167 q 6 -2 12 0" >
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s" begin="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Front layer: closest, largest, most dynamic -->
+  <g fill="url(#wave1)">
+    <path d="M 0 184
+             Q 25 178, 50 184 T 100 184 T 150 184 T 200 184 T 250 184
+             T 300 184 T 350 184 T 400 184 T 450 184 T 500 184
+             T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184
+             L 800 200 L 0 200 Z">
+      <animate attributeName="d"
+        values="M 0 184 Q 25 178, 50 184 T 100 184 T 150 184 T 200 184 T 250 184 T 300 184 T 350 184 T 400 184 T 450 184 T 500 184 T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184 L 800 200 L 0 200 Z;
+                M 0 184 Q 25 190, 50 184 T 100 184 T 150 184 T 200 184 T 250 184 T 300 184 T 350 184 T 400 184 T 450 184 T 500 184 T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184 L 800 200 L 0 200 Z;
+                M 0 184 Q 25 178, 50 184 T 100 184 T 150 184 T 200 184 T 250 184 T 300 184 T 350 184 T 400 184 T 450 184 T 500 184 T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184 L 800 200 L 0 200 Z"
+        dur="13s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ================ ROCKY ISLET (silhouette base for lighthouse) ================ -->
+  <path d="M 78 152
+           L 92 148 L 104 144 L 118 142 L 132 144 L 146 149 L 156 154
+           L 156 172 L 78 172 Z"
+        fill="#050a12"/>
+  <path d="M 78 152 L 92 148 L 104 144 L 118 142 L 132 144 L 146 149 L 156 154"
+        stroke="#122b45" stroke-width="0.7" fill="none" opacity="0.7"/>
+
+  <!-- ================ LIGHTHOUSE ================ -->
+  <g>
+    <!-- Tower trapezoidal body -->
+    <polygon points="103,142 127,142 130,60 100,60" fill="#f4ecd8"/>
+    <!-- Red horizontal bands -->
+    <rect x="100.5" y="72"  width="29.5" height="10" fill="#d1332c"/>
+    <rect x="100.5" y="96"  width="29" height="10" fill="#d1332c"/>
+    <rect x="100.5" y="120" width="28.5" height="10" fill="#d1332c"/>
+    <!-- Tower shadow edge -->
+    <line x1="127" y1="60" x2="130" y2="142" stroke="#a89570" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- Gallery deck under lantern -->
+    <rect x="96" y="56" width="38" height="5" fill="#3a3025"/>
+    <rect x="96" y="55" width="38" height="1.2" fill="#a89570"/>
+
+    <!-- Lantern room (glass panels) -->
+    <rect x="101" y="42" width="28" height="14" fill="#3a3025"/>
+    <rect x="103" y="44" width="24" height="10" fill="#1a1108"/>
+    <!-- Lantern room mullions -->
+    <line x1="109" y1="44" x2="109" y2="54" stroke="#3a3025" stroke-width="0.7"/>
+    <line x1="115" y1="44" x2="115" y2="54" stroke="#3a3025" stroke-width="0.7"/>
+    <line x1="121" y1="44" x2="121" y2="54" stroke="#3a3025" stroke-width="0.7"/>
+
+    <!-- Glowing lamp inside -->
+    <circle cx="115" cy="49" r="10" fill="url(#lampGlow)"/>
+    <circle cx="115" cy="49" r="3.2" fill="#fff4c6">
+      <animate attributeName="r" values="2.6;3.6;2.6" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Cupola / dome -->
+    <path d="M 99 42 Q 115 26, 131 42 Z" fill="#3a3025"/>
+    <path d="M 99 42 Q 115 28, 131 42" fill="none" stroke="#a89570" stroke-width="0.6" opacity="0.6"/>
+    <!-- Weather vane -->
+    <line x1="115" y1="26" x2="115" y2="16" stroke="#a89570" stroke-width="0.8"/>
+    <polygon points="115,16 121,18 115,20" fill="#a89570"/>
+
+    <!-- Base plinth -->
+    <rect x="96" y="141" width="38" height="6" fill="#3a3025"/>
   </g>
 
   <!-- ================ TEXT COLUMN (right) ================ -->
 
-  <!-- Faint glow-copy under headline for warmth -->
-  <g filter="url(#bigGlow)" opacity="0.55">
-    <text x="340" y="72" class="headline" font-size="40" fill="#8a5814">AUGUST 4, 2026</text>
+  <!-- Faint glow copy under headline for warmth -->
+  <g filter="url(#big)" opacity="0.5">
+    <text x="340" y="72" class="headline" font-size="40" fill="#3a6a95">AUGUST 4, 2026</text>
   </g>
   <!-- Huge date headline -->
   <text x="340" y="72" class="headline" font-size="40">AUGUST 4, 2026</text>
 
-  <!-- Underline sweep -->
-  <line x1="340" y1="86" x2="340" y2="86" stroke="#f5c14b" stroke-width="1.4" opacity="0.9">
+  <!-- Underline sweep (Coast Guard red) -->
+  <line x1="340" y1="86" x2="340" y2="86" stroke="#e04a3c" stroke-width="1.5" opacity="0.9">
     <animate attributeName="x2" values="340;720;720;340" keyTimes="0;0.35;0.85;1" dur="13s" repeatCount="indefinite"/>
   </line>
 
-  <!-- Subhead -->
-  <text x="340" y="108" class="subhead" font-size="13">LOUIS ARMSTRONG  ·  125 YEARS</text>
+  <!-- Subhead: red brand + white years -->
+  <text x="340" y="108" font-size="13">
+    <tspan class="subhead-red">U.S. COAST GUARD</tspan><tspan class="subhead-white">  ·  236 YEARS</tspan>
+  </text>
 
   <!-- Tertiary lines -->
-  <text x="340" y="132" class="tertiary" font-size="11">SATCHMO  ·  NEW ORLEANS  ·  4 AUGUST 1901</text>
-  <text x="340" y="150" class="tertiary-dim" font-size="11">TRUMPET  ·  SCAT  ·  &quot;WHAT A WONDERFUL WORLD&quot;</text>
+  <text x="340" y="132" class="tertiary" font-size="11">FOUNDED 4 AUGUST 1790  ·  REVENUE CUTTER SERVICE</text>
+  <text x="340" y="150" class="tertiary-dim" font-size="11">ALEXANDER HAMILTON  ·  SEMPER PARATUS</text>
 
-  <!-- Warm quote at the base, in Georgia italic -->
-  <text x="340" y="178" class="quote" font-size="11">&quot;If you have to ask what jazz is, you'll never know.&quot;</text>
+  <!-- Base quote -->
+  <text x="340" y="178" class="quote" font-size="11">&quot;So others may live.&quot;</text>
 
 </svg>
