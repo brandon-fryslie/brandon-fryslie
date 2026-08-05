@@ -1,320 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: U.S. Coast Guard Day (August 4, 1790) — 236th anniversary of the founding of the Revenue Cutter Service by Treasury Secretary Alexander Hamilton, the direct precursor to the U.S. Coast Guard. Motto: Semper Paratus ("Always Ready"). Composition: a night-sea tableau on the 800x200 canvas. Dark navy sky gradient with a faint warm horizon glow along the sea line. On the left, a small silhouetted rocky islet supports a tall red-and-white-banded lighthouse; a bright golden lantern room at the top emits a wide beam that slowly swings across the upper-left sea/sky (kept out of the right-hand text column), with the beam fading softly with distance and the lamp itself pulsing. Small stars twinkle in the sky. Three horizontally-offset layers of stylized ocean waves undulate at the bottom of the frame. A tiny Coast Guard cutter with the signature red-and-blue racing stripe rides the middle wave line at mid-canvas, bobbing gently. On the right, a huge cream AUGUST 4, 2026 headline, a red U.S. COAST GUARD subhead followed by a white · 236 YEARS, italic tertiary lines FOUNDED 4 AUGUST 1790 · REVENUE CUTTER SERVICE and ALEXANDER HAMILTON · SEMPER PARATUS, and a Georgia-italic caption "So others may live" at the base. -->
+<!-- theme: The Beatles' Revolver — 60th Anniversary (UK release August 5, 1966). Their seventh studio album, released by Parlophone on 5 August 1966, that closed the "touring years" and opened Beatles psychedelia: tape loops, artificial double-tracking, reversed guitars, Indian classical instruments, and studio-as-instrument techniques. Signature tracks: "Eleanor Rigby," "Tomorrow Never Knows," "Taxman," "Yellow Submarine." Composition on the 800x200 canvas: on the left third, a large black vinyl LP with a magenta Parlophone-style center label spins continuously; behind and around the record, two concentric layers of kaleidoscopic elliptical petals in hot-pink/orange/teal/yellow/lavender rotate slowly in opposite directions; a stylized tone-arm angles in from the upper-right onto the record's edge; small psychedelic dots drift upward through the whole background. On the right, a huge cream AUGUST 5, 2026 headline underlined by a teal sweep, a hot-pink REVOLVER subhead trailed by teal · 60 YEARS, italic amber tertiary THE BEATLES · PARLOPHONE · 5 AUGUST 1966, dim-lavender tertiary TAPE LOOPS · SITAR · BACKMASKING · STUDIO AS INSTRUMENT, and a Georgia-italic quote "Turn off your mind, relax and float downstream" at the base. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 4, 2026 — U.S. Coast Guard's 236th anniversary. Night-sea tableau: a dark navy sky gradient over a horizon glow, a silhouetted rocky islet on the left supporting a tall red-and-white-banded lighthouse whose golden lantern room emits a wide beam that swings across the upper-left sea and sky. Small stars twinkle. Three layers of animated ocean waves undulate at the bottom, and a tiny Coast Guard cutter with a red-and-blue racing stripe rides the middle wave line. On the right, a huge cream AUGUST 4, 2026 headline, a red U.S. COAST GUARD subhead with a white 236 YEARS, italic tertiaries FOUNDED 4 AUGUST 1790 · REVENUE CUTTER SERVICE and ALEXANDER HAMILTON · SEMPER PARATUS, and a Georgia-italic So others may live caption at the base.">
+     aria-label="Daily doodle for August 5, 2026 — 60th anniversary of the Beatles' Revolver album (released by Parlophone on 5 August 1966). On the left third, a large black vinyl LP with a magenta Parlophone-style center label continuously rotates; behind it two concentric layers of kaleidoscopic elliptical petals in hot pink, orange, teal, yellow, and lavender rotate slowly in opposite directions; a stylized tone-arm angles in from the upper right onto the record's edge; small psychedelic dots drift upward through the background. On the right, a huge cream AUGUST 5, 2026 headline underlined by a teal sweep, a hot-pink REVOLVER subhead trailed by teal 60 YEARS, italic amber THE BEATLES · PARLOPHONE · 5 AUGUST 1966 tertiary, dim-lavender TAPE LOOPS · SITAR · BACKMASKING · STUDIO AS INSTRUMENT tertiary, and a Georgia-italic quote 'Turn off your mind, relax and float downstream' at the base.">
   <defs>
-    <!-- Night sky: deep navy top, brightening subtly toward the horizon -->
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#04101f"/>
-      <stop offset="0.65" stop-color="#0a1c33"/>
-      <stop offset="0.85" stop-color="#122b45"/>
-      <stop offset="1" stop-color="#1a3552"/>
+    <!-- Background: near-black with a purple wash toward the record side -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#150820"/>
+      <stop offset="0.55" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0d1117"/>
     </linearGradient>
 
-    <!-- Faint warm horizon glow on the far left -->
-    <radialGradient id="horizonGlow" cx="0.14" cy="0.72" r="0.42">
-      <stop offset="0" stop-color="#c67a2a" stop-opacity="0.35"/>
-      <stop offset="0.6" stop-color="#5a3418" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#04101f" stop-opacity="0"/>
+    <!-- Warm psychedelic glow anchored under the record -->
+    <radialGradient id="glow" cx="0.17" cy="0.5" r="0.42">
+      <stop offset="0" stop-color="#e84a7a" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#7a2668" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Sea: darker navy fading to black at the bottom -->
-    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0f2a45"/>
-      <stop offset="1" stop-color="#04101f"/>
-    </linearGradient>
-
-    <!-- Lantern beam: opaque near the lamp, fully transparent at the far end (left edge of the triangle) -->
-    <linearGradient id="beam" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0" stop-color="#ffd769" stop-opacity="0"/>
-      <stop offset="0.55" stop-color="#ffd769" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#fff2b8" stop-opacity="0.55"/>
-    </linearGradient>
-
-    <!-- Lamp glow -->
-    <radialGradient id="lampGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#fff4c6" stop-opacity="0.9"/>
-      <stop offset="0.5" stop-color="#ffd769" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#ffd769" stop-opacity="0"/>
+    <!-- Vinyl body: dark with a subtle off-center sheen -->
+    <radialGradient id="vinyl" cx="0.38" cy="0.34" r="0.75">
+      <stop offset="0" stop-color="#2a2632"/>
+      <stop offset="0.5" stop-color="#141018"/>
+      <stop offset="1" stop-color="#08060c"/>
     </radialGradient>
 
-    <!-- Wave gradients: deep near the bottom, brighter crest color -->
-    <linearGradient id="wave1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3a6a95"/>
-      <stop offset="1" stop-color="#12283e"/>
-    </linearGradient>
-    <linearGradient id="wave2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#254a70"/>
-      <stop offset="1" stop-color="#0a1c33"/>
-    </linearGradient>
-    <linearGradient id="wave3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#152f4a"/>
-      <stop offset="1" stop-color="#04101f"/>
-    </linearGradient>
+    <!-- Center label: magenta with a slightly darker rim -->
+    <radialGradient id="label" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#f34a86"/>
+      <stop offset="0.85" stop-color="#c81f5c"/>
+      <stop offset="1" stop-color="#9c134b"/>
+    </radialGradient>
 
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="0.6"/>
-    </filter>
-    <filter id="big" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="2.4"/>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2"/>
     </filter>
 
-    <!-- Reusable star -->
-    <g id="star">
-      <circle r="0.9" fill="#eaf1ff"/>
-    </g>
+    <!-- Reusable petal ellipse (tall, pointing up from center) -->
+    <ellipse id="petalA" cx="0" cy="-58" rx="11" ry="44"/>
+    <ellipse id="petalB" cx="0" cy="-88" rx="6" ry="20"/>
 
     <style>
       .headline {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 800;
-        letter-spacing: 1.6px;
-        fill: #f4e4c1;
+        font-weight: 800; letter-spacing: 1.4px; fill: #fbe6c8;
       }
-      .subhead-red {
+      .subhead-pink {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 800;
-        letter-spacing: 3.2px;
-        fill: #e04a3c;
+        font-weight: 800; letter-spacing: 3.2px; fill: #f24985;
       }
-      .subhead-white {
+      .subhead-teal {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 700;
-        letter-spacing: 3.2px;
-        fill: #eaf1ff;
+        font-weight: 700; letter-spacing: 3.2px; fill: #4dd0c8;
       }
       .tertiary {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-style: italic;
-        font-weight: 600;
-        letter-spacing: 1.3px;
-        fill: #a9c4e0;
+        font-style: italic; font-weight: 600; letter-spacing: 1.3px; fill: #f2b47a;
       }
       .tertiary-dim {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-style: italic;
-        font-weight: 600;
-        letter-spacing: 1.3px;
-        fill: #6d8aa8;
+        font-style: italic; font-weight: 600; letter-spacing: 1.3px; fill: #a595c4;
       }
       .quote {
         font-family: 'Georgia', 'Times New Roman', serif;
-        font-style: italic;
-        font-weight: 400;
-        letter-spacing: 0.8px;
-        fill: #7b9ec2;
+        font-style: italic; font-weight: 400; letter-spacing: 0.5px; fill: #b89fe0;
       }
     </style>
   </defs>
 
-  <!-- ================ SKY + HORIZON GLOW ================ -->
-  <rect width="800" height="200" fill="#04101f"/>
-  <rect width="800" height="200" fill="url(#sky)"/>
-  <rect width="800" height="200" fill="url(#horizonGlow)"/>
+  <!-- ================ BACKGROUND ================ -->
+  <rect width="800" height="200" fill="#0d1117"/>
+  <rect width="800" height="200" fill="url(#bg)"/>
+  <rect width="800" height="200" fill="url(#glow)"/>
 
-  <!-- ================ STARS ================ -->
-  <g>
-    <use href="#star" x="60"  y="24"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s"  repeatCount="indefinite"/></use>
-    <use href="#star" x="42"  y="52"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="11s" repeatCount="indefinite"/></use>
-    <use href="#star" x="140" y="18"><animate attributeName="opacity" values="0.3;1;0.3" dur="13s" repeatCount="indefinite"/></use>
-    <use href="#star" x="188" y="34"><animate attributeName="opacity" values="0.8;0.3;0.8" dur="7s"  repeatCount="indefinite"/></use>
-    <use href="#star" x="228" y="14"><animate attributeName="opacity" values="0.5;1;0.5" dur="11s" repeatCount="indefinite"/></use>
-    <use href="#star" x="272" y="42"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" repeatCount="indefinite"/></use>
-    <use href="#star" x="310" y="22"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="7s"  repeatCount="indefinite"/></use>
-    <use href="#star" x="94"  y="80"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" repeatCount="indefinite"/></use>
-    <use href="#star" x="250" y="72"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></use>
-    <use href="#star" x="176" y="94"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s"  repeatCount="indefinite"/></use>
-  </g>
-
-  <!-- ================ LANTERN BEAM ================ -->
-  <!-- Origin at the top of the lighthouse lamp (115, 52). Beam is a wide triangle pointing left,
-       kept clear of the text column on the right by capping the sweep angle. -->
-  <g transform="translate(115 52)" opacity="0.9">
-    <g>
-      <polygon points="0,0 -340,-90 -340,90" fill="url(#beam)"/>
+  <!-- ================ KALEIDOSCOPIC PETALS (behind record) ================ -->
+  <!-- Outer petal ring: 12 petals rotating clockwise slowly (37s) -->
+  <g transform="translate(130 100)">
+    <g opacity="0.55">
       <animateTransform attributeName="transform" type="rotate"
-        values="-40;-135;-40" keyTimes="0;0.5;1"
-        dur="13s" repeatCount="indefinite"/>
+        from="0" to="360" dur="37s" repeatCount="indefinite"/>
+      <use href="#petalA" fill="#f24985"/>
+      <use href="#petalA" fill="#ff8c3a" transform="rotate(30)"/>
+      <use href="#petalA" fill="#4dd0c8" transform="rotate(60)"/>
+      <use href="#petalA" fill="#e6c73a" transform="rotate(90)"/>
+      <use href="#petalA" fill="#b89fe0" transform="rotate(120)"/>
+      <use href="#petalA" fill="#f24985" transform="rotate(150)"/>
+      <use href="#petalA" fill="#ff8c3a" transform="rotate(180)"/>
+      <use href="#petalA" fill="#4dd0c8" transform="rotate(210)"/>
+      <use href="#petalA" fill="#e6c73a" transform="rotate(240)"/>
+      <use href="#petalA" fill="#b89fe0" transform="rotate(270)"/>
+      <use href="#petalA" fill="#f24985" transform="rotate(300)"/>
+      <use href="#petalA" fill="#ff8c3a" transform="rotate(330)"/>
     </g>
   </g>
 
-  <!-- Faint back-beam (opposite side) — kept short so it doesn't touch text at x>=340 -->
-  <g transform="translate(115 52)" opacity="0.35">
-    <g>
-      <polygon points="0,0 180,-32 180,32" fill="url(#beam)"/>
+  <!-- Second petal ring: fewer/thinner petals rotating counterclockwise (53s), offset -->
+  <g transform="translate(130 100)">
+    <g opacity="0.5">
       <animateTransform attributeName="transform" type="rotate"
-        values="140;45;140" keyTimes="0;0.5;1"
-        dur="13s" repeatCount="indefinite"/>
+        from="360" to="0" dur="53s" repeatCount="indefinite"/>
+      <use href="#petalB" fill="#b89fe0" transform="rotate(15)"/>
+      <use href="#petalB" fill="#f24985" transform="rotate(60)"/>
+      <use href="#petalB" fill="#4dd0c8" transform="rotate(105)"/>
+      <use href="#petalB" fill="#e6c73a" transform="rotate(150)"/>
+      <use href="#petalB" fill="#ff8c3a" transform="rotate(195)"/>
+      <use href="#petalB" fill="#b89fe0" transform="rotate(240)"/>
+      <use href="#petalB" fill="#f24985" transform="rotate(285)"/>
+      <use href="#petalB" fill="#4dd0c8" transform="rotate(330)"/>
     </g>
   </g>
 
-  <!-- ================ SEA ================ -->
-  <rect x="0" y="140" width="800" height="60" fill="url(#sea)"/>
-
-  <!-- Horizon line highlight -->
-  <line x1="0" y1="140" x2="800" y2="140" stroke="#3a6a95" stroke-width="0.5" opacity="0.55"/>
-  <line x1="0" y1="140.7" x2="800" y2="140.7" stroke="#c67a2a" stroke-width="0.4" opacity="0.35"/>
-
-  <!-- ================ COAST GUARD CUTTER (silhouette with racing stripe) ================ -->
-  <!-- Cutter sits on the mid-wave line, bobbing gently -->
+  <!-- ================ DRIFTING PSYCHEDELIC DOTS ================ -->
   <g>
-    <animateTransform attributeName="transform" type="translate"
-      values="0,0; 0,-1.3; 0,0.4; 0,0"
-      keyTimes="0;0.3;0.7;1" dur="7s" repeatCount="indefinite"/>
-    <!-- hull (light grey, low-slung cutter) -->
-    <path d="M 268 158 L 344 158 L 336 165 L 276 165 Z" fill="#cfd6de"/>
-    <!-- Coast Guard racing stripe: wide red band + thin blue band, slanted forward on the bow -->
-    <path d="M 302 158 L 314 158 L 320 165 L 308 165 Z" fill="#e04a3c"/>
-    <path d="M 314 158 L 316.6 158 L 322.5 165 L 320 165 Z" fill="#1e4d8c"/>
-    <!-- Superstructure / bridge -->
-    <rect x="292" y="150" width="18" height="8" fill="#eaf1ff"/>
-    <rect x="296" y="146" width="8"  height="4" fill="#eaf1ff"/>
-    <!-- Mast + tiny mast-top light -->
-    <line x1="300" y1="146" x2="300" y2="136" stroke="#a9c4e0" stroke-width="0.9"/>
-    <circle cx="300" cy="135" r="1.1" fill="#ffd769">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    <circle cx="60" cy="210" r="2" fill="#f24985" opacity="0.7">
+      <animate attributeName="cy" values="210;-10;210" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="13s" repeatCount="indefinite"/>
     </circle>
-    <!-- Waterline reflection -->
-    <line x1="272" y1="166.5" x2="342" y2="166.5" stroke="#eaf1ff" stroke-width="0.5" opacity="0.35"/>
+    <circle cx="30" cy="210" r="1.6" fill="#4dd0c8" opacity="0.6">
+      <animate attributeName="cy" values="210;-10;210" dur="11s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="210" r="2.4" fill="#e6c73a" opacity="0.6">
+      <animate attributeName="cy" values="210;-10;210" dur="17s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="17s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="210" r="1.8" fill="#ff8c3a" opacity="0.7">
+      <animate attributeName="cy" values="210;-10;210" dur="19s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="19s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="210" r="1.4" fill="#b89fe0" opacity="0.6">
+      <animate attributeName="cy" values="210;-10;210" dur="23s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="23s" begin="3s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <!-- ================ WAVE LAYERS (back → front) ================ -->
-  <!-- Back layer: soft, slow, small amplitude -->
-  <g fill="url(#wave3)">
-    <path d="M 0 152
-             Q 40 148, 80 152 T 160 152 T 240 152 T 320 152 T 400 152
-             T 480 152 T 560 152 T 640 152 T 720 152 T 800 152
-             L 800 200 L 0 200 Z">
-      <animate attributeName="d"
-        values="M 0 152 Q 40 148, 80 152 T 160 152 T 240 152 T 320 152 T 400 152 T 480 152 T 560 152 T 640 152 T 720 152 T 800 152 L 800 200 L 0 200 Z;
-                M 0 152 Q 40 156, 80 152 T 160 152 T 240 152 T 320 152 T 400 152 T 480 152 T 560 152 T 640 152 T 720 152 T 800 152 L 800 200 L 0 200 Z;
-                M 0 152 Q 40 148, 80 152 T 160 152 T 240 152 T 320 152 T 400 152 T 480 152 T 560 152 T 640 152 T 720 152 T 800 152 L 800 200 L 0 200 Z"
-        dur="11s" repeatCount="indefinite"/>
-    </path>
+  <!-- ================ VINYL LP ================ -->
+  <g transform="translate(130 100)">
+    <!-- Disc body -->
+    <circle r="78" fill="url(#vinyl)"/>
+    <!-- Concentric groove rings -->
+    <g fill="none" stroke="#28242f" stroke-width="0.35" opacity="0.9">
+      <circle r="74"/><circle r="70"/><circle r="66"/><circle r="62"/><circle r="58"/>
+      <circle r="54"/><circle r="50"/><circle r="46"/><circle r="42"/><circle r="38"/>
+    </g>
+    <!-- Sparse brighter reflective rings -->
+    <g fill="none" stroke="#524759" stroke-width="0.35" opacity="0.55">
+      <circle r="72"/><circle r="60"/><circle r="48"/>
+    </g>
+    <!-- Outer edge highlight -->
+    <circle r="78" fill="none" stroke="#3a3548" stroke-width="0.6" opacity="0.8"/>
+
+    <!-- Rotating group: label + reflection sheen -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="360" dur="7s" repeatCount="indefinite"/>
+      <!-- Reflection sheen on the vinyl surface (rotates with disc) -->
+      <path d="M -66 -24 A 74 74 0 0 1 -22 -70 L -18 -54 A 56 56 0 0 0 -50 -18 Z"
+            fill="#5a4f66" opacity="0.28"/>
+      <!-- Center label -->
+      <circle r="28" fill="url(#label)"/>
+      <!-- Thin ring on the label -->
+      <circle r="24.5" fill="none" stroke="#f8b3cd" stroke-width="0.4" opacity="0.7"/>
+      <!-- Label title -->
+      <text x="0" y="-4" text-anchor="middle"
+            font-family="'Georgia','Times New Roman',serif"
+            font-style="italic" font-weight="700" font-size="7"
+            fill="#fbe6c8">Revolver</text>
+      <!-- Label subtitle -->
+      <text x="0" y="6" text-anchor="middle"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            font-weight="700" font-size="3.6"
+            fill="#fbe6c8" letter-spacing="0.6">THE BEATLES</text>
+      <text x="0" y="13" text-anchor="middle"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            font-weight="600" font-size="2.8"
+            fill="#fbe6c8" opacity="0.85" letter-spacing="0.8">PARLOPHONE · 1966</text>
+      <text x="0" y="19" text-anchor="middle"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            font-weight="600" font-size="2.6"
+            fill="#fbe6c8" opacity="0.7" letter-spacing="0.6">33⅓ RPM</text>
+      <!-- Spindle hole -->
+      <circle r="1.7" fill="#08060c"/>
+      <circle r="1.7" fill="none" stroke="#463d54" stroke-width="0.3"/>
+    </g>
   </g>
 
-  <!-- Middle layer: cutter's waterline -->
-  <g fill="url(#wave2)">
-    <path d="M 0 168
-             Q 30 164, 60 168 T 120 168 T 180 168 T 240 168 T 300 168
-             T 360 168 T 420 168 T 480 168 T 540 168 T 600 168
-             T 660 168 T 720 168 T 780 168 T 840 168
-             L 800 200 L 0 200 Z">
-      <animate attributeName="d"
-        values="M 0 168 Q 30 164, 60 168 T 120 168 T 180 168 T 240 168 T 300 168 T 360 168 T 420 168 T 480 168 T 540 168 T 600 168 T 660 168 T 720 168 T 780 168 T 840 168 L 800 200 L 0 200 Z;
-                M 0 168 Q 30 172, 60 168 T 120 168 T 180 168 T 240 168 T 300 168 T 360 168 T 420 168 T 480 168 T 540 168 T 600 168 T 660 168 T 720 168 T 780 168 T 840 168 L 800 200 L 0 200 Z;
-                M 0 168 Q 30 164, 60 168 T 120 168 T 180 168 T 240 168 T 300 168 T 360 168 T 420 168 T 480 168 T 540 168 T 600 168 T 660 168 T 720 168 T 780 168 T 840 168 L 800 200 L 0 200 Z"
-        dur="7s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- Foam ticks on middle wave -->
-  <g stroke="#a9c4e0" stroke-width="0.6" fill="none" opacity="0.55">
-    <path d="M 30 168 q 6 -2 12 0" >
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 180 167 q 6 -2 12 0" >
-      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="7s" begin="1s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 380 167 q 6 -2 12 0" >
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s" begin="2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 560 167 q 6 -2 12 0" >
-      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="7s" begin="3s" repeatCount="indefinite"/>
-    </path>
-    <path d="M 720 167 q 6 -2 12 0" >
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s" begin="4s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- Front layer: closest, largest, most dynamic -->
-  <g fill="url(#wave1)">
-    <path d="M 0 184
-             Q 25 178, 50 184 T 100 184 T 150 184 T 200 184 T 250 184
-             T 300 184 T 350 184 T 400 184 T 450 184 T 500 184
-             T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184
-             L 800 200 L 0 200 Z">
-      <animate attributeName="d"
-        values="M 0 184 Q 25 178, 50 184 T 100 184 T 150 184 T 200 184 T 250 184 T 300 184 T 350 184 T 400 184 T 450 184 T 500 184 T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184 L 800 200 L 0 200 Z;
-                M 0 184 Q 25 190, 50 184 T 100 184 T 150 184 T 200 184 T 250 184 T 300 184 T 350 184 T 400 184 T 450 184 T 500 184 T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184 L 800 200 L 0 200 Z;
-                M 0 184 Q 25 178, 50 184 T 100 184 T 150 184 T 200 184 T 250 184 T 300 184 T 350 184 T 400 184 T 450 184 T 500 184 T 550 184 T 600 184 T 650 184 T 700 184 T 750 184 T 800 184 L 800 200 L 0 200 Z"
-        dur="13s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- ================ ROCKY ISLET (silhouette base for lighthouse) ================ -->
-  <path d="M 78 152
-           L 92 148 L 104 144 L 118 142 L 132 144 L 146 149 L 156 154
-           L 156 172 L 78 172 Z"
-        fill="#050a12"/>
-  <path d="M 78 152 L 92 148 L 104 144 L 118 142 L 132 144 L 146 149 L 156 154"
-        stroke="#122b45" stroke-width="0.7" fill="none" opacity="0.7"/>
-
-  <!-- ================ LIGHTHOUSE ================ -->
+  <!-- ================ TONE ARM ================ -->
+  <!-- Pivot at upper right of the record, arm angling down onto the disc edge -->
   <g>
-    <!-- Tower trapezoidal body -->
-    <polygon points="103,142 127,142 130,60 100,60" fill="#f4ecd8"/>
-    <!-- Red horizontal bands -->
-    <rect x="100.5" y="72"  width="29.5" height="10" fill="#d1332c"/>
-    <rect x="100.5" y="96"  width="29" height="10" fill="#d1332c"/>
-    <rect x="100.5" y="120" width="28.5" height="10" fill="#d1332c"/>
-    <!-- Tower shadow edge -->
-    <line x1="127" y1="60" x2="130" y2="142" stroke="#a89570" stroke-width="0.6" opacity="0.5"/>
-
-    <!-- Gallery deck under lantern -->
-    <rect x="96" y="56" width="38" height="5" fill="#3a3025"/>
-    <rect x="96" y="55" width="38" height="1.2" fill="#a89570"/>
-
-    <!-- Lantern room (glass panels) -->
-    <rect x="101" y="42" width="28" height="14" fill="#3a3025"/>
-    <rect x="103" y="44" width="24" height="10" fill="#1a1108"/>
-    <!-- Lantern room mullions -->
-    <line x1="109" y1="44" x2="109" y2="54" stroke="#3a3025" stroke-width="0.7"/>
-    <line x1="115" y1="44" x2="115" y2="54" stroke="#3a3025" stroke-width="0.7"/>
-    <line x1="121" y1="44" x2="121" y2="54" stroke="#3a3025" stroke-width="0.7"/>
-
-    <!-- Glowing lamp inside -->
-    <circle cx="115" cy="49" r="10" fill="url(#lampGlow)"/>
-    <circle cx="115" cy="49" r="3.2" fill="#fff4c6">
-      <animate attributeName="r" values="2.6;3.6;2.6" dur="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Cupola / dome -->
-    <path d="M 99 42 Q 115 26, 131 42 Z" fill="#3a3025"/>
-    <path d="M 99 42 Q 115 28, 131 42" fill="none" stroke="#a89570" stroke-width="0.6" opacity="0.6"/>
-    <!-- Weather vane -->
-    <line x1="115" y1="26" x2="115" y2="16" stroke="#a89570" stroke-width="0.8"/>
-    <polygon points="115,16 121,18 115,20" fill="#a89570"/>
-
-    <!-- Base plinth -->
-    <rect x="96" y="141" width="38" height="6" fill="#3a3025"/>
+    <!-- Pivot base -->
+    <circle cx="238" cy="24" r="5" fill="#3f3a4a"/>
+    <circle cx="238" cy="24" r="2.4" fill="#8a8595"/>
+    <!-- Counterweight (short stub behind pivot) -->
+    <rect x="240" y="20" width="9" height="8" rx="2" fill="#5a5563"/>
+    <!-- Arm -->
+    <line x1="238" y1="24" x2="176" y2="76" stroke="#8a8595" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="238" y1="24" x2="176" y2="76" stroke="#d0cbdb" stroke-width="0.7" stroke-linecap="round" opacity="0.7"/>
+    <!-- Headshell -->
+    <g transform="translate(176 76) rotate(40)">
+      <rect x="-6" y="-1" width="12" height="7" rx="1.4" fill="#403847"/>
+      <rect x="-2" y="5" width="4" height="2.4" fill="#1a1420"/>
+    </g>
   </g>
 
   <!-- ================ TEXT COLUMN (right) ================ -->
 
-  <!-- Faint glow copy under headline for warmth -->
-  <g filter="url(#big)" opacity="0.5">
-    <text x="340" y="72" class="headline" font-size="40" fill="#3a6a95">AUGUST 4, 2026</text>
+  <!-- Faint glow behind headline for warmth -->
+  <g filter="url(#soft)" opacity="0.55">
+    <text x="300" y="72" class="headline" font-size="40" fill="#f24985">AUGUST 5, 2026</text>
   </g>
   <!-- Huge date headline -->
-  <text x="340" y="72" class="headline" font-size="40">AUGUST 4, 2026</text>
+  <text x="300" y="72" class="headline" font-size="40">AUGUST 5, 2026</text>
 
-  <!-- Underline sweep (Coast Guard red) -->
-  <line x1="340" y1="86" x2="340" y2="86" stroke="#e04a3c" stroke-width="1.5" opacity="0.9">
-    <animate attributeName="x2" values="340;720;720;340" keyTimes="0;0.35;0.85;1" dur="13s" repeatCount="indefinite"/>
+  <!-- Teal underline sweep -->
+  <line x1="300" y1="86" x2="300" y2="86" stroke="#4dd0c8" stroke-width="1.6" opacity="0.9">
+    <animate attributeName="x2" values="300;720;720;300"
+             keyTimes="0;0.35;0.85;1" dur="13s" repeatCount="indefinite"/>
   </line>
 
-  <!-- Subhead: red brand + white years -->
-  <text x="340" y="108" font-size="13">
-    <tspan class="subhead-red">U.S. COAST GUARD</tspan><tspan class="subhead-white">  ·  236 YEARS</tspan>
+  <!-- Subhead: pink title + teal duration -->
+  <text x="300" y="110" font-size="14">
+    <tspan class="subhead-pink">REVOLVER</tspan><tspan class="subhead-teal">  ·  60 YEARS</tspan>
   </text>
 
   <!-- Tertiary lines -->
-  <text x="340" y="132" class="tertiary" font-size="11">FOUNDED 4 AUGUST 1790  ·  REVENUE CUTTER SERVICE</text>
-  <text x="340" y="150" class="tertiary-dim" font-size="11">ALEXANDER HAMILTON  ·  SEMPER PARATUS</text>
+  <text x="300" y="134" class="tertiary" font-size="11">THE BEATLES  ·  PARLOPHONE  ·  5 AUGUST 1966</text>
+  <text x="300" y="152" class="tertiary-dim" font-size="10.5">TAPE LOOPS  ·  SITAR  ·  BACKMASKING  ·  STUDIO AS INSTRUMENT</text>
 
   <!-- Base quote -->
-  <text x="340" y="178" class="quote" font-size="11">&quot;So others may live.&quot;</text>
+  <text x="300" y="180" class="quote" font-size="11">&quot;Turn off your mind, relax and float downstream.&quot;</text>
 
 </svg>
