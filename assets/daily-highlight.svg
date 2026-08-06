@@ -1,232 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: The Beatles' Revolver — 60th Anniversary (UK release August 5, 1966). Their seventh studio album, released by Parlophone on 5 August 1966, that closed the "touring years" and opened Beatles psychedelia: tape loops, artificial double-tracking, reversed guitars, Indian classical instruments, and studio-as-instrument techniques. Signature tracks: "Eleanor Rigby," "Tomorrow Never Knows," "Taxman," "Yellow Submarine." Composition on the 800x200 canvas: on the left third, a large black vinyl LP with a magenta Parlophone-style center label spins continuously; behind and around the record, two concentric layers of kaleidoscopic elliptical petals in hot-pink/orange/teal/yellow/lavender rotate slowly in opposite directions; a stylized tone-arm angles in from the upper-right onto the record's edge; small psychedelic dots drift upward through the whole background. On the right, a huge cream AUGUST 5, 2026 headline underlined by a teal sweep, a hot-pink REVOLVER subhead trailed by teal · 60 YEARS, italic amber tertiary THE BEATLES · PARLOPHONE · 5 AUGUST 1966, dim-lavender tertiary TAPE LOOPS · SITAR · BACKMASKING · STUDIO AS INSTRUMENT, and a Georgia-italic quote "Turn off your mind, relax and float downstream" at the base. -->
+<!-- theme: World Wide Web — 35th Anniversary of the Public Announcement (August 6, 1991). On 6 August 1991 Tim Berners-Lee posted a short summary of the WorldWideWeb project to the alt.hypertext Usenet newsgroup, marking the first public announcement of the WWW; the first public website, info.cern.ch, was also served from a NeXT workstation at CERN that same period. His 1989 proposal to CERN carried the famous marginal note from his boss Mike Sendall: "Vague, but exciting…" Composition on the 800x200 canvas: on the left half, a hypertext web-of-pages tableau — a slightly-larger central "info.cern.ch" paper node connected by animated blue hyperlink lines to five smaller paper nodes scattered around it, each holding a couple of cream text lines and one underlined-blue link, with tiny bright packets continually traveling along the connection lines; a faint dot-field twinkles behind. On the right, a huge cream AUGUST 6, 2026 headline underlined by a swept blue hyperlink bar, a blue underlined WORLD WIDE WEB subhead followed by cream · 35 YEARS, italic amber tertiary TIM BERNERS-LEE · CERN · 6 AUGUST 1991 · alt.hypertext, dim-cyan tertiary HYPERTEXT · HTTP · HTML · URI, and a Georgia-italic caption "Vague, but exciting…" with a blinking cursor at the base. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 5, 2026 — 60th anniversary of the Beatles' Revolver album (released by Parlophone on 5 August 1966). On the left third, a large black vinyl LP with a magenta Parlophone-style center label continuously rotates; behind it two concentric layers of kaleidoscopic elliptical petals in hot pink, orange, teal, yellow, and lavender rotate slowly in opposite directions; a stylized tone-arm angles in from the upper right onto the record's edge; small psychedelic dots drift upward through the background. On the right, a huge cream AUGUST 5, 2026 headline underlined by a teal sweep, a hot-pink REVOLVER subhead trailed by teal 60 YEARS, italic amber THE BEATLES · PARLOPHONE · 5 AUGUST 1966 tertiary, dim-lavender TAPE LOOPS · SITAR · BACKMASKING · STUDIO AS INSTRUMENT tertiary, and a Georgia-italic quote 'Turn off your mind, relax and float downstream' at the base.">
+     aria-label="Daily doodle for August 6, 2026 — 35th anniversary of the public announcement of the World Wide Web (Tim Berners-Lee, 6 August 1991, alt.hypertext). On the left half, a hypertext web-of-pages tableau: a slightly-larger central info.cern.ch paper node connected by animated blue hyperlink lines to five smaller paper nodes scattered around it, each holding cream text lines and one underlined blue link, with tiny bright packets continually traveling along the lines and a faint dot-field twinkling behind. On the right, a huge cream AUGUST 6, 2026 headline underlined by a swept blue hyperlink bar, a blue underlined WORLD WIDE WEB subhead followed by cream 35 YEARS, italic amber TIM BERNERS-LEE · CERN · 6 AUGUST 1991 · alt.hypertext tertiary, a dim-cyan HYPERTEXT · HTTP · HTML · URI tertiary, and a Georgia-italic Vague, but exciting… caption with a blinking cursor at the base.">
   <defs>
-    <!-- Background: near-black with a purple wash toward the record side -->
+    <!-- Background gradient -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#150820"/>
-      <stop offset="0.55" stop-color="#0d1117"/>
-      <stop offset="1" stop-color="#0d1117"/>
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#08111d"/>
     </linearGradient>
 
-    <!-- Warm psychedelic glow anchored under the record -->
-    <radialGradient id="glow" cx="0.17" cy="0.5" r="0.42">
-      <stop offset="0" stop-color="#e84a7a" stop-opacity="0.32"/>
-      <stop offset="0.55" stop-color="#7a2668" stop-opacity="0.14"/>
-      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    <!-- Soft blue glow for links / packets -->
+    <radialGradient id="linkGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#79c0ff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#58a6ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Vinyl body: dark with a subtle off-center sheen -->
-    <radialGradient id="vinyl" cx="0.38" cy="0.34" r="0.75">
-      <stop offset="0" stop-color="#2a2632"/>
-      <stop offset="0.5" stop-color="#141018"/>
-      <stop offset="1" stop-color="#08060c"/>
-    </radialGradient>
+    <!-- Faint hyperlink-blue underline gradient for headline sweep -->
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#79c0ff" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#79c0ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
 
-    <!-- Center label: magenta with a slightly darker rim -->
-    <radialGradient id="label" cx="0.5" cy="0.5" r="0.55">
-      <stop offset="0" stop-color="#f34a86"/>
-      <stop offset="0.85" stop-color="#c81f5c"/>
-      <stop offset="1" stop-color="#9c134b"/>
-    </radialGradient>
+    <!-- Paper node template: rounded off-white rectangle with soft warm tint -->
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f1e6"/>
+      <stop offset="100%" stop-color="#e8e2d2"/>
+    </linearGradient>
 
-    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="2.2"/>
-    </filter>
+    <!-- Central-node paper: slightly warmer / brighter -->
+    <linearGradient id="paperHero" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf6e7"/>
+      <stop offset="100%" stop-color="#ece3c8"/>
+    </linearGradient>
 
-    <!-- Reusable petal ellipse (tall, pointing up from center) -->
-    <ellipse id="petalA" cx="0" cy="-58" rx="11" ry="44"/>
-    <ellipse id="petalB" cx="0" cy="-88" rx="6" ry="20"/>
+    <!-- Reusable small paper node (used by <use>) -->
+    <g id="node">
+      <rect x="-34" y="-22" width="68" height="44" rx="3" ry="3" fill="url(#paper)" stroke="#242938" stroke-width="0.6"/>
+      <!-- title bar -->
+      <rect x="-34" y="-22" width="68" height="6" rx="3" ry="3" fill="#3b4256"/>
+      <!-- faux text lines -->
+      <rect x="-30" y="-12" width="52" height="1.6" fill="#3b4256" opacity="0.75"/>
+      <rect x="-30" y="-8"  width="42" height="1.6" fill="#3b4256" opacity="0.6"/>
+      <rect x="-30" y="-4"  width="48" height="1.6" fill="#3b4256" opacity="0.6"/>
+      <rect x="-30" y="0"   width="30" height="1.6" fill="#3b4256" opacity="0.5"/>
+      <!-- one "hyperlink" line: underlined blue -->
+      <rect x="-30" y="6"   width="34" height="1.8" fill="#1f6feb"/>
+      <rect x="-30" y="8.4" width="34" height="0.6" fill="#1f6feb"/>
+      <!-- footer line -->
+      <rect x="-30" y="13"  width="20" height="1.4" fill="#3b4256" opacity="0.45"/>
+    </g>
 
-    <style>
-      .headline {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 800; letter-spacing: 1.4px; fill: #fbe6c8;
-      }
-      .subhead-pink {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 800; letter-spacing: 3.2px; fill: #f24985;
-      }
-      .subhead-teal {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-weight: 700; letter-spacing: 3.2px; fill: #4dd0c8;
-      }
-      .tertiary {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-style: italic; font-weight: 600; letter-spacing: 1.3px; fill: #f2b47a;
-      }
-      .tertiary-dim {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-style: italic; font-weight: 600; letter-spacing: 1.3px; fill: #a595c4;
-      }
-      .quote {
-        font-family: 'Georgia', 'Times New Roman', serif;
-        font-style: italic; font-weight: 400; letter-spacing: 0.5px; fill: #b89fe0;
-      }
-    </style>
+    <!-- Central hero node: bigger, has a small readable "info.cern.ch" URL bar -->
+    <g id="nodeHero">
+      <rect x="-52" y="-32" width="104" height="64" rx="4" ry="4" fill="url(#paperHero)" stroke="#2a2f42" stroke-width="0.8"/>
+      <!-- title bar -->
+      <rect x="-52" y="-32" width="104" height="10" rx="4" ry="4" fill="#2f3548"/>
+      <!-- three window-dots -->
+      <circle cx="-46" cy="-27" r="1.3" fill="#ff6b6b"/>
+      <circle cx="-41" cy="-27" r="1.3" fill="#ffd166"/>
+      <circle cx="-36" cy="-27" r="1.3" fill="#7bd88f"/>
+      <!-- URL bar -->
+      <rect x="-30" y="-30" width="78" height="6" rx="1" ry="1" fill="#1c2233" opacity="0.85"/>
+      <text x="-27" y="-25.6" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="4.4" fill="#79c0ff">http://info.cern.ch/</text>
+      <!-- body: a "hypertext" heading -->
+      <text x="-46" y="-13" font-family="Georgia, 'Times New Roman', serif" font-size="6.8" fill="#20263a" font-weight="bold">The WorldWideWeb Project</text>
+      <!-- body text lines -->
+      <rect x="-46" y="-8" width="94" height="1.6" fill="#3b4256" opacity="0.7"/>
+      <rect x="-46" y="-4" width="88" height="1.6" fill="#3b4256" opacity="0.6"/>
+      <rect x="-46" y="0"  width="94" height="1.6" fill="#3b4256" opacity="0.6"/>
+      <!-- a couple of underlined blue "links" -->
+      <text x="-46" y="8"  font-family="ui-monospace, Menlo, Consolas, monospace" font-size="4.6" fill="#1f6feb" text-decoration="underline">what is hypertext?</text>
+      <text x="-46" y="15" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="4.6" fill="#1f6feb" text-decoration="underline">people at CERN</text>
+      <text x="18"  y="15" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="4.6" fill="#8b949e">1991</text>
+      <!-- bottom hairline -->
+      <rect x="-46" y="20" width="94" height="0.6" fill="#3b4256" opacity="0.35"/>
+    </g>
   </defs>
 
-  <!-- ================ BACKGROUND ================ -->
-  <rect width="800" height="200" fill="#0d1117"/>
+  <!-- Background -->
   <rect width="800" height="200" fill="url(#bg)"/>
-  <rect width="800" height="200" fill="url(#glow)"/>
 
-  <!-- ================ KALEIDOSCOPIC PETALS (behind record) ================ -->
-  <!-- Outer petal ring: 12 petals rotating clockwise slowly (37s) -->
-  <g transform="translate(130 100)">
-    <g opacity="0.55">
-      <animateTransform attributeName="transform" type="rotate"
-        from="0" to="360" dur="37s" repeatCount="indefinite"/>
-      <use href="#petalA" fill="#f24985"/>
-      <use href="#petalA" fill="#ff8c3a" transform="rotate(30)"/>
-      <use href="#petalA" fill="#4dd0c8" transform="rotate(60)"/>
-      <use href="#petalA" fill="#e6c73a" transform="rotate(90)"/>
-      <use href="#petalA" fill="#b89fe0" transform="rotate(120)"/>
-      <use href="#petalA" fill="#f24985" transform="rotate(150)"/>
-      <use href="#petalA" fill="#ff8c3a" transform="rotate(180)"/>
-      <use href="#petalA" fill="#4dd0c8" transform="rotate(210)"/>
-      <use href="#petalA" fill="#e6c73a" transform="rotate(240)"/>
-      <use href="#petalA" fill="#b89fe0" transform="rotate(270)"/>
-      <use href="#petalA" fill="#f24985" transform="rotate(300)"/>
-      <use href="#petalA" fill="#ff8c3a" transform="rotate(330)"/>
-    </g>
+  <!-- Faint twinkling dot field across whole canvas -->
+  <g fill="#8b949e">
+    <circle cx="52"  cy="24"  r="0.8" opacity="0.5"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="118" cy="14"  r="0.7" opacity="0.4"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="176" cy="30"  r="0.6" opacity="0.4"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="18"  r="0.7" opacity="0.5"><animate attributeName="opacity" values="0.15;0.6;0.15" dur="7s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="10"  r="0.8" opacity="0.4"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="11s" begin="4s" repeatCount="indefinite"/></circle>
+    <circle cx="76"  cy="182" r="0.7" opacity="0.5"><animate attributeName="opacity" values="0.15;0.6;0.15" dur="13s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="196" cy="188" r="0.6" opacity="0.4"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="7s" begin="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="304" cy="176" r="0.8" opacity="0.5"><animate attributeName="opacity" values="0.15;0.6;0.15" dur="11s" begin="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="418" cy="26"  r="0.7" opacity="0.4"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="13s" begin="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="612" cy="20"  r="0.6" opacity="0.35"><animate attributeName="opacity" values="0.1;0.45;0.1" dur="7s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="736" cy="34"  r="0.7" opacity="0.4"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="522" cy="188" r="0.6" opacity="0.35"><animate attributeName="opacity" values="0.1;0.45;0.1" dur="13s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="672" cy="176" r="0.7" opacity="0.4"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="7s" begin="4s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- Second petal ring: fewer/thinner petals rotating counterclockwise (53s), offset -->
-  <g transform="translate(130 100)">
-    <g opacity="0.5">
-      <animateTransform attributeName="transform" type="rotate"
-        from="360" to="0" dur="53s" repeatCount="indefinite"/>
-      <use href="#petalB" fill="#b89fe0" transform="rotate(15)"/>
-      <use href="#petalB" fill="#f24985" transform="rotate(60)"/>
-      <use href="#petalB" fill="#4dd0c8" transform="rotate(105)"/>
-      <use href="#petalB" fill="#e6c73a" transform="rotate(150)"/>
-      <use href="#petalB" fill="#ff8c3a" transform="rotate(195)"/>
-      <use href="#petalB" fill="#b89fe0" transform="rotate(240)"/>
-      <use href="#petalB" fill="#f24985" transform="rotate(285)"/>
-      <use href="#petalB" fill="#4dd0c8" transform="rotate(330)"/>
-    </g>
+  <!-- ================================================== -->
+  <!-- LEFT HALF: hypertext web-of-pages tableau -->
+  <!-- Center of hero node at (180, 100) -->
+  <!-- Peripheral nodes (5): each with its own translate -->
+  <!-- ================================================== -->
+
+  <!-- Connection lines: drawn BEHIND the nodes -->
+  <g stroke="#1f6feb" stroke-width="1.1" fill="none" stroke-linecap="round">
+    <!-- hero(180,100) → node A (56, 44) -->
+    <line x1="180" y1="100" x2="56" y2="44" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.85;0.35" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <!-- hero → node B (300, 40) -->
+    <line x1="180" y1="100" x2="300" y2="40" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.85;0.35" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <!-- hero → node C (60, 158) -->
+    <line x1="180" y1="100" x2="60" y2="158" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.85;0.35" dur="13s" begin="2s" repeatCount="indefinite"/>
+    </line>
+    <!-- hero → node D (310, 160) -->
+    <line x1="180" y1="100" x2="310" y2="160" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.85;0.35" dur="7s" begin="3s" repeatCount="indefinite"/>
+    </line>
+    <!-- hero → node E (360, 100) — off toward the typography, terminating just inside -->
+    <line x1="180" y1="100" x2="360" y2="100" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.85;0.35" dur="11s" begin="4s" repeatCount="indefinite"/>
+    </line>
+    <!-- cross-links between peripheral nodes for a "web" feeling -->
+    <line x1="56"  y1="44"  x2="60"  y2="158" opacity="0.25" stroke-dasharray="2 3"/>
+    <line x1="300" y1="40"  x2="310" y2="160" opacity="0.25" stroke-dasharray="2 3"/>
+    <line x1="56"  y1="44"  x2="300" y2="40"  opacity="0.22" stroke-dasharray="2 3"/>
+    <line x1="60"  y1="158" x2="310" y2="160" opacity="0.22" stroke-dasharray="2 3"/>
   </g>
 
-  <!-- ================ DRIFTING PSYCHEDELIC DOTS ================ -->
+  <!-- Traveling packets (small glowing dots moving along each hero → node line) -->
   <g>
-    <circle cx="60" cy="210" r="2" fill="#f24985" opacity="0.7">
-      <animate attributeName="cy" values="210;-10;210" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0" dur="13s" repeatCount="indefinite"/>
+    <!-- packet along hero → A -->
+    <circle r="2.4" fill="#79c0ff">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.7s" repeatCount="indefinite"/>
+      <animateMotion dur="4.7s" repeatCount="indefinite" path="M180,100 L56,44"/>
     </circle>
-    <circle cx="30" cy="210" r="1.6" fill="#4dd0c8" opacity="0.6">
-      <animate attributeName="cy" values="210;-10;210" dur="11s" begin="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="2s" repeatCount="indefinite"/>
+    <circle r="4.5" fill="url(#linkGlow)">
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.9;1" dur="4.7s" repeatCount="indefinite"/>
+      <animateMotion dur="4.7s" repeatCount="indefinite" path="M180,100 L56,44"/>
     </circle>
-    <circle cx="220" cy="210" r="2.4" fill="#e6c73a" opacity="0.6">
-      <animate attributeName="cy" values="210;-10;210" dur="17s" begin="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="17s" begin="4s" repeatCount="indefinite"/>
+
+    <!-- packet along hero → B (delayed) -->
+    <circle r="2.4" fill="#79c0ff">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5.3s" begin="0.8s" repeatCount="indefinite"/>
+      <animateMotion dur="5.3s" begin="0.8s" repeatCount="indefinite" path="M180,100 L300,40"/>
     </circle>
-    <circle cx="180" cy="210" r="1.8" fill="#ff8c3a" opacity="0.7">
-      <animate attributeName="cy" values="210;-10;210" dur="19s" begin="1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="19s" begin="1s" repeatCount="indefinite"/>
+    <circle r="4.5" fill="url(#linkGlow)">
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.9;1" dur="5.3s" begin="0.8s" repeatCount="indefinite"/>
+      <animateMotion dur="5.3s" begin="0.8s" repeatCount="indefinite" path="M180,100 L300,40"/>
     </circle>
-    <circle cx="90" cy="210" r="1.4" fill="#b89fe0" opacity="0.6">
-      <animate attributeName="cy" values="210;-10;210" dur="23s" begin="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0" dur="23s" begin="3s" repeatCount="indefinite"/>
+
+    <!-- packet along hero → C (reverse direction: C → hero) -->
+    <circle r="2.4" fill="#79c0ff">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="6.1s" begin="1.6s" repeatCount="indefinite"/>
+      <animateMotion dur="6.1s" begin="1.6s" repeatCount="indefinite" path="M60,158 L180,100"/>
+    </circle>
+
+    <!-- packet along hero → D -->
+    <circle r="2.4" fill="#79c0ff">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="7.1s" begin="2.2s" repeatCount="indefinite"/>
+      <animateMotion dur="7.1s" begin="2.2s" repeatCount="indefinite" path="M180,100 L310,160"/>
+    </circle>
+    <circle r="4.5" fill="url(#linkGlow)">
+      <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.9;1" dur="7.1s" begin="2.2s" repeatCount="indefinite"/>
+      <animateMotion dur="7.1s" begin="2.2s" repeatCount="indefinite" path="M180,100 L310,160"/>
+    </circle>
+
+    <!-- packet crossing over to right (hero → E, headed toward typography) -->
+    <circle r="2.6" fill="#79c0ff">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.1s" begin="0.3s" repeatCount="indefinite"/>
+      <animateMotion dur="4.1s" begin="0.3s" repeatCount="indefinite" path="M180,100 L360,100"/>
     </circle>
   </g>
 
-  <!-- ================ VINYL LP ================ -->
-  <g transform="translate(130 100)">
-    <!-- Disc body -->
-    <circle r="78" fill="url(#vinyl)"/>
-    <!-- Concentric groove rings -->
-    <g fill="none" stroke="#28242f" stroke-width="0.35" opacity="0.9">
-      <circle r="74"/><circle r="70"/><circle r="66"/><circle r="62"/><circle r="58"/>
-      <circle r="54"/><circle r="50"/><circle r="46"/><circle r="42"/><circle r="38"/>
-    </g>
-    <!-- Sparse brighter reflective rings -->
-    <g fill="none" stroke="#524759" stroke-width="0.35" opacity="0.55">
-      <circle r="72"/><circle r="60"/><circle r="48"/>
-    </g>
-    <!-- Outer edge highlight -->
-    <circle r="78" fill="none" stroke="#3a3548" stroke-width="0.6" opacity="0.8"/>
-
-    <!-- Rotating group: label + reflection sheen -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate"
-        from="0" to="360" dur="7s" repeatCount="indefinite"/>
-      <!-- Reflection sheen on the vinyl surface (rotates with disc) -->
-      <path d="M -66 -24 A 74 74 0 0 1 -22 -70 L -18 -54 A 56 56 0 0 0 -50 -18 Z"
-            fill="#5a4f66" opacity="0.28"/>
-      <!-- Center label -->
-      <circle r="28" fill="url(#label)"/>
-      <!-- Thin ring on the label -->
-      <circle r="24.5" fill="none" stroke="#f8b3cd" stroke-width="0.4" opacity="0.7"/>
-      <!-- Label title -->
-      <text x="0" y="-4" text-anchor="middle"
-            font-family="'Georgia','Times New Roman',serif"
-            font-style="italic" font-weight="700" font-size="7"
-            fill="#fbe6c8">Revolver</text>
-      <!-- Label subtitle -->
-      <text x="0" y="6" text-anchor="middle"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-weight="700" font-size="3.6"
-            fill="#fbe6c8" letter-spacing="0.6">THE BEATLES</text>
-      <text x="0" y="13" text-anchor="middle"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-weight="600" font-size="2.8"
-            fill="#fbe6c8" opacity="0.85" letter-spacing="0.8">PARLOPHONE · 1966</text>
-      <text x="0" y="19" text-anchor="middle"
-            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-weight="600" font-size="2.6"
-            fill="#fbe6c8" opacity="0.7" letter-spacing="0.6">33⅓ RPM</text>
-      <!-- Spindle hole -->
-      <circle r="1.7" fill="#08060c"/>
-      <circle r="1.7" fill="none" stroke="#463d54" stroke-width="0.3"/>
-    </g>
-  </g>
-
-  <!-- ================ TONE ARM ================ -->
-  <!-- Pivot at upper right of the record, arm angling down onto the disc edge -->
+  <!-- Peripheral nodes (positioned via translate). Each has a subtle drift. -->
   <g>
-    <!-- Pivot base -->
-    <circle cx="238" cy="24" r="5" fill="#3f3a4a"/>
-    <circle cx="238" cy="24" r="2.4" fill="#8a8595"/>
-    <!-- Counterweight (short stub behind pivot) -->
-    <rect x="240" y="20" width="9" height="8" rx="2" fill="#5a5563"/>
-    <!-- Arm -->
-    <line x1="238" y1="24" x2="176" y2="76" stroke="#8a8595" stroke-width="2.6" stroke-linecap="round"/>
-    <line x1="238" y1="24" x2="176" y2="76" stroke="#d0cbdb" stroke-width="0.7" stroke-linecap="round" opacity="0.7"/>
-    <!-- Headshell -->
-    <g transform="translate(176 76) rotate(40)">
-      <rect x="-6" y="-1" width="12" height="7" rx="1.4" fill="#403847"/>
-      <rect x="-2" y="5" width="4" height="2.4" fill="#1a1420"/>
+    <g transform="translate(56 44)">
+      <use href="#node"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="56,44; 56,42; 56,46; 56,44" dur="13s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(300 40)">
+      <use href="#node"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="300,40; 300,43; 300,38; 300,40" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(60 158)">
+      <use href="#node"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="60,158; 60,156; 60,160; 60,158" dur="11s" begin="2s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(310 160)">
+      <use href="#node"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="310,160; 310,158; 310,162; 310,160" dur="13s" begin="3s" repeatCount="indefinite"/>
     </g>
   </g>
 
-  <!-- ================ TEXT COLUMN (right) ================ -->
-
-  <!-- Faint glow behind headline for warmth -->
-  <g filter="url(#soft)" opacity="0.55">
-    <text x="300" y="72" class="headline" font-size="40" fill="#f24985">AUGUST 5, 2026</text>
+  <!-- Central hero node at (180, 100) -->
+  <g transform="translate(180 100)">
+    <use href="#nodeHero"/>
+    <!-- soft breathing pulse around the hero -->
+    <circle r="60" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.35">
+      <animate attributeName="r" values="46;68;46" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0;0.35" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="60" fill="none" stroke="#58a6ff" stroke-width="0.6" opacity="0.25">
+      <animate attributeName="r" values="46;72;46" dur="11s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0;0.25" dur="11s" begin="2s" repeatCount="indefinite"/>
+    </circle>
   </g>
-  <!-- Huge date headline -->
-  <text x="300" y="72" class="headline" font-size="40">AUGUST 5, 2026</text>
 
-  <!-- Teal underline sweep -->
-  <line x1="300" y1="86" x2="300" y2="86" stroke="#4dd0c8" stroke-width="1.6" opacity="0.9">
-    <animate attributeName="x2" values="300;720;720;300"
-             keyTimes="0;0.35;0.85;1" dur="13s" repeatCount="indefinite"/>
-  </line>
+  <!-- Tiny "alt.hypertext" label above the top-right node -->
+  <text x="300" y="20" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="7.4" fill="#8b949e" text-anchor="middle">alt.hypertext</text>
 
-  <!-- Subhead: pink title + teal duration -->
-  <text x="300" y="110" font-size="14">
-    <tspan class="subhead-pink">REVOLVER</tspan><tspan class="subhead-teal">  ·  60 YEARS</tspan>
-  </text>
+  <!-- ================================================== -->
+  <!-- RIGHT HALF: typography stack -->
+  <!-- ================================================== -->
 
-  <!-- Tertiary lines -->
-  <text x="300" y="134" class="tertiary" font-size="11">THE BEATLES  ·  PARLOPHONE  ·  5 AUGUST 1966</text>
-  <text x="300" y="152" class="tertiary-dim" font-size="10.5">TAPE LOOPS  ·  SITAR  ·  BACKMASKING  ·  STUDIO AS INSTRUMENT</text>
+  <!-- Huge cream headline -->
+  <text x="398" y="72"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="42" font-weight="800" letter-spacing="1"
+        fill="#f0f6fc">AUGUST 6, 2026</text>
 
-  <!-- Base quote -->
-  <text x="300" y="180" class="quote" font-size="11">&quot;Turn off your mind, relax and float downstream.&quot;</text>
+  <!-- Swept hyperlink-blue underline bar under the headline -->
+  <rect x="398" y="82" width="308" height="2.6" fill="url(#sweep)" opacity="0.9">
+    <animate attributeName="x" values="398;450;398" dur="11s" repeatCount="indefinite"/>
+  </rect>
 
+  <!-- Subhead: blue underlined "WORLD WIDE WEB" then · 35 YEARS -->
+  <g>
+    <text x="398" y="112"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="20" font-weight="700" letter-spacing="1.2"
+          fill="#79c0ff" text-decoration="underline">WORLD WIDE WEB</text>
+    <text x="618" y="112"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="20" font-weight="600" letter-spacing="1.2"
+          fill="#f0f6fc">·  35 YEARS</text>
+  </g>
+
+  <!-- Amber tertiary -->
+  <text x="398" y="135"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-style="italic" letter-spacing="0.8"
+        fill="#f2cc60">TIM BERNERS-LEE · CERN · 6 AUGUST 1991 · alt.hypertext</text>
+
+  <!-- Dim cyan tertiary -->
+  <text x="398" y="152"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-style="italic" letter-spacing="1.6"
+        fill="#7ee787" opacity="0.9">HYPERTEXT  ·  HTTP  ·  HTML  ·  URI</text>
+
+  <!-- Georgia-italic quote + blinking cursor at the base -->
+  <g>
+    <text x="398" y="182"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="14" font-style="italic"
+          fill="#c9d1d9">“Vague, but exciting…”</text>
+    <!-- Attribution -->
+    <text x="586" y="182"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="10" font-style="italic"
+          fill="#8b949e">— Mike Sendall, CERN, 1989</text>
+    <!-- Blinking cursor -->
+    <rect x="762" y="171" width="7" height="13" fill="#79c0ff">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 </svg>
