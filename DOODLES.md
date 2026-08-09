@@ -15,6 +15,12 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 9, 2026 — Netscape Communications IPO (August 9, 1995)
+
+<img src="./doodle-archive/2026/08/2026-08-09-181253.svg" width="800" alt="Daily doodle archived for August 9, 2026 — 31st anniversary of the Netscape Communications IPO (9 August 1995). On the left half, a retro 90s Netscape Navigator browser window with light-grey chrome, red/yellow/green traffic-light buttons, a Back/Forward/Reload/Home button row, a URL bar reading http://home.netscape.com/, and in the upper right the signature big N badge with a small white meteor continually shooting across it. Inside the window a green stock chart line rockets from $28 up to a $58.25 peak, with dotted price gridlines and an OPEN/HIGH/CLOSE axis label, and a dashed orbital dot travels along the chart line. On the right, a huge cream AUGUST 9, 2026 headline underlined by a green-to-cream sweep, a Netscape-green NETSCAPE IPO subhead trailed by cream 31 YEARS, italic amber NSCP · NASDAQ · 9 AUGUST 1995 · $2.2B tertiary, dim-cyan CLARK · ANDREESSEN · MOSAIC · MOZILLA tertiary, and a Georgia-italic 'the day the web went public' caption with a blinking Navigator-N cursor at the base.">
+
+---
+
 ## August 9, 2026 — International Cat Day (August 8, 2026)
 
 <img src="./doodle-archive/2026/08/2026-08-09-061139.svg" width="800" alt="Daily doodle archived for August 8, 2026 — International Cat Day. On the left, a night-sky tableau: a warm-cream full moon glows behind a silhouetted black cat sitting in profile on a rooftop, gazing up-left at the moon, its tail slowly swishing, its yellow eyes blinking, and whiskers twitching. A cream halo rings the moon with faint craters shading its face; a few stars twinkle; small yellow fireflies drift upward through the scene. On the right, a huge cream AUGUST 8, 2026 headline underlined by a warm pink-to-amber sweep, a hot-pink INTERNATIONAL CAT DAY subhead with a pink paw glyph, italic amber SATURDAY · 8 AUGUST · MEOW · SINCE 2002 tertiary, dim-green WHISKERS · MOONGAZING · NINE LIVES · PURR tertiary, and a Georgia-italic 'they have not forgotten this.' — Terry Pratchett — caption at the base.">
