@@ -1,243 +1,298 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: International Cat Day (August 8, 2026). Recognized annually on 8 August since 2002 (originally by the International Fund for Animal Welfare). Composition on the 800x200 canvas: on the left half, a night-sky tableau — a big warm-cream full moon glows behind a silhouetted black cat sitting in profile on a rooftop, gazing up-left toward the moon; the cat's tail slowly swishes, its eyes blink, its whiskers twitch; a soft cream halo rings the moon, faint craters shade its face, and a few small stars twinkle across the sky; fireflies drift upward through the scene. On the right, a huge cream AUGUST 8, 2026 headline underlined by a warm pink-to-amber sweep, a hot-pink INTERNATIONAL CAT DAY subhead with a small pink paw glyph, italic amber tertiary SATURDAY · 8 AUGUST · MEOW · SINCE 2002, dim-green tertiary WHISKERS · MOONGAZING · NINE LIVES · PURR, and a Georgia-italic caption "In ancient times cats were worshipped as gods; they have not forgotten this." — Terry Pratchett — at the base. -->
+<!-- theme: Netscape Communications IPO (August 9, 1995). 31st anniversary. On 9 August 1995 Netscape went public on NASDAQ (ticker NSCP): priced at $28, opened at $71, closed the day at $58.25, valuing a 16-month-old company that had never turned a profit at $2.2 billion — the moment web tech became public capital markets and the dot-com era started. Founders: Jim Clark and Marc Andreessen (who had co-authored NCSA Mosaic at UIUC). Composition on the 800x200 canvas: on the left half, a retro Netscape Navigator 90s browser window (light-grey chrome, red/yellow/green Mac-style traffic lights, Back/Fwd/Reload/Home button row, URL bar reading "http://home.netscape.com/", and in the upper-right the signature big-N badge with a small white meteor continually shooting across it — the throbber that meant "loading"). Inside the window: a green stock-chart line rockets from $28 up to a $58.25 peak, with dotted price gridlines, an axis labelled OPEN 28 / HIGH 74 / CLOSE 58.25, and an ascending trail of tiny green triangles. A dashed orbital-style progress dot travels along the chart line. On the right, a huge cream AUGUST 9, 2026 headline underlined by a green-to-cream sweep, a Netscape-green NETSCAPE IPO subhead followed by cream · 31 YEARS, italic amber tertiary NSCP · NASDAQ · 9 AUGUST 1995 · $2.2B, dim-cyan tertiary CLARK · ANDREESSEN · MOSAIC · MOZILLA, and a Georgia-italic caption "the day the web went public" with a blinking Navigator-N cursor at the base. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 8, 2026 — International Cat Day. On the left, a night-sky tableau: a warm-cream full moon glows behind a silhouetted black cat sitting in profile on a rooftop, gazing up-left at the moon, its tail slowly swishing, its yellow eyes blinking, and whiskers twitching. A cream halo rings the moon with faint craters shading its face; a few stars twinkle; small yellow fireflies drift upward through the scene. On the right, a huge cream AUGUST 8, 2026 headline underlined by a warm pink-to-amber sweep, a hot-pink INTERNATIONAL CAT DAY subhead with a pink paw glyph, italic amber SATURDAY · 8 AUGUST · MEOW · SINCE 2002 tertiary, dim-green WHISKERS · MOONGAZING · NINE LIVES · PURR tertiary, and a Georgia-italic 'In ancient times cats were worshipped as gods; they have not forgotten this.' — Terry Pratchett — caption at the base.">
+     aria-label="Daily doodle for August 9, 2026 — 31st anniversary of the Netscape Communications IPO (9 August 1995). On the left half, a retro 90s Netscape Navigator browser window with light-grey chrome, red/yellow/green traffic-light buttons, a Back/Forward/Reload/Home button row, a URL bar reading http://home.netscape.com/, and in the upper right the signature big N badge with a small white meteor continually shooting across it. Inside the window a green stock chart line rockets from $28 up to a $58.25 peak, with dotted price gridlines and an OPEN/HIGH/CLOSE axis label, and a dashed orbital dot travels along the chart line. On the right, a huge cream AUGUST 9, 2026 headline underlined by a green-to-cream sweep, a Netscape-green NETSCAPE IPO subhead trailed by cream 31 YEARS, italic amber NSCP · NASDAQ · 9 AUGUST 1995 · $2.2B tertiary, dim-cyan CLARK · ANDREESSEN · MOSAIC · MOZILLA tertiary, and a Georgia-italic 'the day the web went public' caption with a blinking Navigator-N cursor at the base.">
   <defs>
-    <!-- Night sky background -->
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0a0d18"/>
-      <stop offset="55%" stop-color="#0d1220"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <!-- Dark background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a0e14"/>
     </linearGradient>
 
-    <!-- Warm moon body (radial) -->
-    <radialGradient id="moon" cx="0.35" cy="0.35" r="0.75">
-      <stop offset="0%"  stop-color="#fff6d5"/>
-      <stop offset="55%" stop-color="#f2e0a4"/>
-      <stop offset="100%" stop-color="#d9c07a"/>
-    </radialGradient>
-
-    <!-- Moon halo (soft cream glow around moon) -->
-    <radialGradient id="moonHalo" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%"  stop-color="#fff2b8" stop-opacity="0.55"/>
-      <stop offset="45%" stop-color="#fff2b8" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#fff2b8" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Rooftop silhouette base gradient -->
-    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#050810"/>
-      <stop offset="100%" stop-color="#000000"/>
+    <!-- Retro browser chrome (light beige-grey) -->
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e4d8"/>
+      <stop offset="100%" stop-color="#cfc9b8"/>
     </linearGradient>
+    <!-- Title bar (Netscape teal-ish grey) -->
+    <linearGradient id="titlebar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#4a5568"/>
+      <stop offset="100%" stop-color="#2d3748"/>
+    </linearGradient>
+    <!-- Inner content area (browser page, off-white) -->
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0d1520"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+    <!-- Netscape-N badge background (dark blue with stars, like the original throbber panel) -->
+    <radialGradient id="nBadge" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%"   stop-color="#1a2a5a"/>
+      <stop offset="70%"  stop-color="#0a1240"/>
+      <stop offset="100%" stop-color="#050820"/>
+    </radialGradient>
 
-    <!-- Headline underline sweep: pink-to-amber -->
+    <!-- Headline underline sweep: Netscape green → cream -->
     <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#ff9ec7" stop-opacity="0"/>
-      <stop offset="30%"  stop-color="#ff9ec7" stop-opacity="1"/>
-      <stop offset="70%"  stop-color="#f2cc60" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#f2cc60" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#00c853" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#00c853" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#f0f6fc" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f0f6fc" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Reusable sitting cat silhouette (facing LEFT). Local origin at bottom center of feet. -->
-    <g id="cat">
-      <!-- Tail (drawn first so body overlays its root) -->
-      <g style="transform-origin: 38px -18px; transform-box: fill-box;">
-        <path d="M 38 -18 Q 62 -30 70 -60 Q 72 -78 60 -84"
-              stroke="#000" stroke-width="7.5" fill="none" stroke-linecap="round"/>
-        <animateTransform attributeName="transform" type="rotate"
-                          from="-9 38 -18" to="9 38 -18" dur="4.7s"
-                          repeatCount="indefinite" additive="sum"
-                          values="-9 38 -18; 9 38 -18; -9 38 -18" keyTimes="0;0.5;1"/>
-      </g>
+    <!-- Meteor trail gradient for the throbber -->
+    <linearGradient id="meteor" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="70%"  stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
 
-      <!-- Hind haunch (behind, sitting) -->
-      <ellipse cx="30" cy="-18" rx="22" ry="26" fill="#000"/>
+    <!-- Stock-line gradient (green surge, brighter toward the top) -->
+    <linearGradient id="stockGlow" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#00c853" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00c853" stop-opacity="0"/>
+    </linearGradient>
 
-      <!-- Front torso / chest (sits upright) -->
-      <path d="M -13 0
-               L -13 -38
-               Q -13 -56 4 -58
-               L 22 -58
-               Q 36 -56 36 -38
-               L 36 0 Z" fill="#000"/>
-
-      <!-- Front paws (small toe humps at feet) -->
-      <ellipse cx="-6" cy="0" rx="9" ry="4" fill="#000"/>
-      <ellipse cx="30" cy="0" rx="9" ry="4" fill="#000"/>
-
-      <!-- Head (facing left) -->
-      <ellipse cx="6" cy="-67" rx="15.5" ry="13.5" fill="#000"/>
-
-      <!-- Ears -->
-      <path d="M -7 -75 L -5 -88 L 5 -78 Z" fill="#000"/>
-      <path d="M 19 -75 L 17 -88 L 8 -78 Z" fill="#000"/>
-      <!-- Ear inner (faint warm hint) -->
-      <path d="M -4 -78 L -3 -85 L 3 -80 Z" fill="#3a1830" opacity="0.55"/>
-      <path d="M 16 -78 L 15 -85 L 10 -80 Z" fill="#3a1830" opacity="0.55"/>
-
-      <!-- Eyes (glowing yellow, facing left) -->
-      <ellipse cx="-3" cy="-68" rx="1.9" ry="2.9" fill="#fce77d">
-        <animate attributeName="ry"
-                 values="2.9;2.9;0.25;2.9;2.9;2.9;2.9;0.25;2.9"
-                 keyTimes="0;0.30;0.33;0.36;0.60;0.75;0.78;0.81;1"
-                 dur="6.2s" repeatCount="indefinite"/>
-      </ellipse>
-      <ellipse cx="4"  cy="-68" rx="1.9" ry="2.9" fill="#fce77d">
-        <animate attributeName="ry"
-                 values="2.9;2.9;0.25;2.9;2.9;2.9;2.9;0.25;2.9"
-                 keyTimes="0;0.30;0.33;0.36;0.60;0.75;0.78;0.81;1"
-                 dur="6.2s" repeatCount="indefinite"/>
-      </ellipse>
-      <!-- Tiny pupil highlights inside each eye -->
-      <circle cx="-3.5" cy="-69" r="0.5" fill="#ffffff" opacity="0.85"/>
-      <circle cx="3.5"  cy="-69" r="0.5" fill="#ffffff" opacity="0.85"/>
-
-      <!-- Nose (soft pink, facing-left side of muzzle) -->
-      <ellipse cx="-7" cy="-63" rx="1.3" ry="0.9" fill="#ff9ec7" opacity="0.85"/>
-
-      <!-- Whiskers -->
-      <line x1="-9" y1="-61" x2="-20" y2="-59" stroke="#4a4a4a" stroke-width="0.6"/>
-      <line x1="-9" y1="-63" x2="-21" y2="-64" stroke="#4a4a4a" stroke-width="0.6"/>
-      <line x1="-9" y1="-65" x2="-20" y2="-68" stroke="#4a4a4a" stroke-width="0.6"/>
-    </g>
-
-    <!-- Small paw-print glyph (pink) for the subhead -->
-    <g id="paw">
-      <ellipse cx="0" cy="2" rx="4" ry="3.2" fill="#ff9ec7"/>
-      <circle cx="-4.2" cy="-3.2" r="1.5" fill="#ff9ec7"/>
-      <circle cx="-1.4" cy="-4.8" r="1.5" fill="#ff9ec7"/>
-      <circle cx="1.6"  cy="-4.8" r="1.5" fill="#ff9ec7"/>
-      <circle cx="4.4"  cy="-3.2" r="1.5" fill="#ff9ec7"/>
-    </g>
+    <!-- Reusable Netscape N letterform (stylized). Local origin at glyph top-left. -->
+    <symbol id="netN" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <!-- Bold slanted N shape in cream, echoing the original Netscape mark -->
+      <path d="M 18 18
+               L 34 18
+               L 66 68
+               L 66 18
+               L 82 18
+               L 82 82
+               L 66 82
+               L 34 32
+               L 34 82
+               L 18 82 Z"
+            fill="#f0f6fc"/>
+    </symbol>
   </defs>
 
-  <!-- ============ background sky ============ -->
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- ============ background ============ -->
+  <rect width="800" height="200" fill="url(#bg)"/>
 
-  <!-- ============ stars ============ -->
-  <g fill="#f0f6fc">
-    <circle cx="38"  cy="20"  r="0.9" opacity="0.75"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="7s"  repeatCount="indefinite"/></circle>
-    <circle cx="72"  cy="55"  r="0.6" opacity="0.55"><animate attributeName="opacity" values="0.2;0.7;0.2"    dur="11s" begin="1s"   repeatCount="indefinite"/></circle>
-    <circle cx="192" cy="30"  r="0.75" opacity="0.7"><animate attributeName="opacity" values="0.25;0.9;0.25"  dur="13s" begin="2s"   repeatCount="indefinite"/></circle>
-    <circle cx="228" cy="15"  r="0.5"  opacity="0.5"><animate attributeName="opacity" values="0.15;0.7;0.15"  dur="7s"  begin="0.4s" repeatCount="indefinite"/></circle>
-    <circle cx="266" cy="52"  r="0.7"  opacity="0.6"><animate attributeName="opacity" values="0.2;0.85;0.2"   dur="11s" begin="3s"   repeatCount="indefinite"/></circle>
-    <circle cx="298" cy="22"  r="0.55" opacity="0.5"><animate attributeName="opacity" values="0.15;0.7;0.15"  dur="13s" begin="1.5s" repeatCount="indefinite"/></circle>
-    <circle cx="12"  cy="76"  r="0.45" opacity="0.4"><animate attributeName="opacity" values="0.1;0.55;0.1"   dur="11s" begin="4s"   repeatCount="indefinite"/></circle>
-    <circle cx="126" cy="16"  r="0.5"  opacity="0.5"><animate attributeName="opacity" values="0.15;0.65;0.15" dur="7s"  begin="2.5s" repeatCount="indefinite"/></circle>
-    <circle cx="332" cy="76"  r="0.4"  opacity="0.4"><animate attributeName="opacity" values="0.1;0.55;0.1"   dur="13s" begin="3.5s" repeatCount="indefinite"/></circle>
-    <!-- a couple far right, subtle -->
-    <circle cx="482" cy="12"  r="0.45" opacity="0.3"><animate attributeName="opacity" values="0.1;0.5;0.1"    dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="746" cy="26"  r="0.55" opacity="0.35"><animate attributeName="opacity" values="0.1;0.55;0.1"  dur="7s"  begin="2s" repeatCount="indefinite"/></circle>
+  <!-- Subtle background dots (faint star / packet field behind browser) -->
+  <g fill="#7ee787" opacity="0.35">
+    <circle cx="365" cy="30"  r="0.9"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="415" cy="18"  r="0.7"><animate attributeName="opacity" values="0.1;0.55;0.1"  dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="345" cy="180" r="0.7"><animate attributeName="opacity" values="0.1;0.6;0.1"   dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="12"  cy="26"  r="0.6"><animate attributeName="opacity" values="0.1;0.5;0.1"   dur="11s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="18"  cy="180" r="0.5"><animate attributeName="opacity" values="0.1;0.5;0.1"   dur="7s"  begin="1.5s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- ============ moon halo + moon ============ -->
-  <circle cx="105" cy="90" r="90" fill="url(#moonHalo)">
-    <animate attributeName="r" values="88;96;88" dur="11s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="105" cy="90" r="52" fill="url(#moon)"/>
-  <!-- craters (subtle) -->
-  <g fill="#c4a860" opacity="0.35">
-    <circle cx="86"  cy="76"  r="5"/>
-    <circle cx="120" cy="72"  r="3"/>
-    <circle cx="98"  cy="108" r="4"/>
-    <circle cx="122" cy="102" r="2.5"/>
-    <circle cx="80"  cy="98"  r="2.5"/>
-  </g>
-  <!-- moon rim highlight (upper-left) -->
-  <path d="M 63 82 A 52 52 0 0 1 100 42" fill="none" stroke="#fff8dc" stroke-width="1" opacity="0.55"/>
+  <!-- ============ RETRO BROWSER WINDOW (left ~340px) ============ -->
+  <g>
+    <!-- Drop shadow -->
+    <rect x="20" y="24" width="322" height="158" rx="4" ry="4" fill="#000" opacity="0.55"/>
 
-  <!-- ============ fireflies (tiny warm dots drifting up) ============ -->
-  <g fill="#fce77d">
-    <circle cx="60" cy="160" r="1.5" opacity="0.85">
-      <animate attributeName="cy" values="180;40;180" dur="19s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="19s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="220" cy="150" r="1.3" opacity="0.85">
-      <animate attributeName="cy" values="180;30;180" dur="23s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="23s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="150" cy="120" r="1.2" opacity="0.85">
-      <animate attributeName="cy" values="180;60;180" dur="17s" begin="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="17s" begin="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="290" cy="140" r="1" opacity="0.85">
-      <animate attributeName="cy" values="180;70;180" dur="29s" begin="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="29s" begin="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="150" r="1.1" opacity="0.85">
-      <animate attributeName="cy" values="180;80;180" dur="31s" begin="7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="31s" begin="7s" repeatCount="indefinite"/>
-    </circle>
-  </g>
+    <!-- Window body chrome -->
+    <rect x="16" y="20" width="322" height="158" rx="4" ry="4" fill="url(#chrome)"/>
 
-  <!-- ============ rooftop silhouette ============ -->
-  <!-- gentle rooftop line under the cat (a thin dark ridge) -->
-  <path d="M 0 178
-           L 60 178
-           L 90 172
-           L 260 172
-           L 300 178
-           L 340 178
-           L 340 200
-           L 0 200 Z"
-        fill="url(#roof)"/>
-  <!-- little chimney to the right of cat -->
-  <rect x="270" y="160" width="14" height="12" fill="#000"/>
-  <rect x="266" y="158" width="22" height="3" fill="#000"/>
+    <!-- Title bar -->
+    <rect x="16" y="20" width="322" height="18" rx="4" ry="4" fill="url(#titlebar)"/>
+    <rect x="16" y="30" width="322" height="8"  fill="url(#titlebar)"/>
 
-  <!-- ============ cat (sitting on rooftop, facing moon) ============ -->
-  <g transform="translate(200 172)">
-    <use href="#cat"/>
+    <!-- Traffic-light buttons (Mac 90s aesthetic) -->
+    <circle cx="27" cy="29" r="3.2" fill="#ff6058" stroke="#8a3630" stroke-width="0.5"/>
+    <circle cx="37" cy="29" r="3.2" fill="#ffbd2e" stroke="#8a6a1a" stroke-width="0.5"/>
+    <circle cx="47" cy="29" r="3.2" fill="#28ca42" stroke="#1a7028" stroke-width="0.5"/>
+
+    <!-- Title text -->
+    <text x="177" y="33" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="9.5" font-weight="700" fill="#f0f6fc" letter-spacing="0.4">
+      Netscape — [The Netscape Home Page]
+    </text>
+
+    <!-- Toolbar row (buttons) -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+       font-size="8" font-weight="700" fill="#2d3748">
+      <rect x="22" y="43" width="34" height="14" rx="2" fill="#dcd6c4" stroke="#a89e88" stroke-width="0.5"/>
+      <text x="39" y="53" text-anchor="middle">Back</text>
+      <rect x="60" y="43" width="34" height="14" rx="2" fill="#dcd6c4" stroke="#a89e88" stroke-width="0.5"/>
+      <text x="77" y="53" text-anchor="middle">Fwd</text>
+      <rect x="98" y="43" width="42" height="14" rx="2" fill="#dcd6c4" stroke="#a89e88" stroke-width="0.5"/>
+      <text x="119" y="53" text-anchor="middle">Reload</text>
+      <rect x="144" y="43" width="38" height="14" rx="2" fill="#dcd6c4" stroke="#a89e88" stroke-width="0.5"/>
+      <text x="163" y="53" text-anchor="middle">Home</text>
+    </g>
+
+    <!-- Netscape N throbber badge (upper right of chrome) -->
+    <g transform="translate(292 41)">
+      <rect x="0" y="0" width="40" height="20" rx="2" fill="url(#nBadge)"/>
+      <!-- tiny stars inside the badge -->
+      <g fill="#ffffff" opacity="0.6">
+        <circle cx="6"  cy="4"  r="0.5"/>
+        <circle cx="34" cy="6"  r="0.5"/>
+        <circle cx="30" cy="15" r="0.4"/>
+        <circle cx="10" cy="15" r="0.4"/>
+      </g>
+      <!-- N glyph (centered, ~14px tall) -->
+      <use href="#netN" x="13" y="3" width="14" height="14"/>
+      <!-- Meteor: a small bright dot with a trailing streak, arcs across the badge -->
+      <g>
+        <line x1="-6" y1="4" x2="4" y2="4" stroke="url(#meteor)" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="4" cy="4" r="1.4" fill="#ffffff"/>
+        <animateTransform attributeName="transform" type="translate"
+                          values="0 0; 36 12; 0 0"
+                          keyTimes="0;0.5;1"
+                          dur="2.3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- URL/Location bar -->
+    <g>
+      <text x="22" y="72"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            font-size="8" font-weight="700" fill="#2d3748">Location:</text>
+      <rect x="60" y="63" width="272" height="12" rx="1" fill="#ffffff" stroke="#8a8270" stroke-width="0.6"/>
+      <text x="64" y="72"
+            font-family="Menlo, Monaco, 'Courier New', monospace"
+            font-size="8" fill="#1e40af">http://home.netscape.com/</text>
+    </g>
+
+    <!-- Page content area (dark, so the green chart pops) -->
+    <rect x="22" y="82" width="310" height="90" fill="url(#page)" stroke="#8a8270" stroke-width="0.6"/>
+
+    <!-- Dotted gridlines inside the chart -->
+    <g stroke="#2a3040" stroke-width="0.5" stroke-dasharray="2 3">
+      <line x1="30" y1="98"  x2="326" y2="98"/>
+      <line x1="30" y1="118" x2="326" y2="118"/>
+      <line x1="30" y1="138" x2="326" y2="138"/>
+      <line x1="30" y1="158" x2="326" y2="158"/>
+    </g>
+
+    <!-- Y-axis price labels -->
+    <g font-family="Menlo, Monaco, 'Courier New', monospace" font-size="6.5" fill="#6a7480">
+      <text x="316" y="100">$74</text>
+      <text x="316" y="120">$58</text>
+      <text x="316" y="140">$45</text>
+      <text x="316" y="160">$28</text>
+    </g>
+
+    <!-- Chart title inside the page -->
+    <text x="30" y="93"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="7.5" font-weight="700" fill="#c9d1d9" letter-spacing="0.5">NSCP · NASDAQ · 9 AUG 1995</text>
+
+    <!-- Stock line fill (area under the curve) -->
+    <path d="M 30 160
+             L 55 158
+             L 80 154
+             L 105 150
+             L 130 138
+             L 155 124
+             L 180 108
+             L 205 95
+             L 230 100
+             L 255 115
+             L 280 120
+             L 300 120
+             L 300 168
+             L 30 168 Z"
+          fill="url(#stockGlow)"/>
+
+    <!-- Stock line itself (bright green surge) -->
+    <path d="M 30 160
+             L 55 158
+             L 80 154
+             L 105 150
+             L 130 138
+             L 155 124
+             L 180 108
+             L 205 95
+             L 230 100
+             L 255 115
+             L 280 120
+             L 300 120"
+          fill="none" stroke="#00e676" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- Small ascending triangles along the trail -->
+    <g fill="#00e676">
+      <polygon points="55,155 52,159 58,159"/>
+      <polygon points="105,147 102,151 108,151"/>
+      <polygon points="155,121 152,125 158,125"/>
+      <polygon points="205,92  202,96  208,96"/>
+    </g>
+
+    <!-- Traveling dot on the line (progress marker) -->
+    <circle r="2.2" fill="#ffffff" stroke="#00e676" stroke-width="1">
+      <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#stockPath"/>
+      </animateMotion>
+    </circle>
+    <!-- Hidden path for the traveling dot -->
+    <path id="stockPath" d="M 30 160 L 55 158 L 80 154 L 105 150 L 130 138 L 155 124 L 180 108 L 205 95 L 230 100 L 255 115 L 280 120 L 300 120"
+          fill="none" stroke="none"/>
+
+    <!-- Peak label -->
+    <g>
+      <line x1="205" y1="95" x2="205" y2="85" stroke="#00e676" stroke-width="0.6"/>
+      <rect x="180" y="76" width="52" height="11" rx="1.5" fill="#00c853"/>
+      <text x="206" y="84" text-anchor="middle"
+            font-family="Menlo, Monaco, 'Courier New', monospace"
+            font-size="7" font-weight="700" fill="#0d1117">HIGH  $74.00</text>
+    </g>
+
+    <!-- Bottom axis: OPEN / CLOSE small ticks -->
+    <g font-family="Menlo, Monaco, 'Courier New', monospace" font-size="6" fill="#8b949e">
+      <text x="30"  y="170">OPEN 28</text>
+      <text x="290" y="170" text-anchor="end">CLOSE 58.25</text>
+    </g>
   </g>
 
   <!-- ============ RIGHT HALF: typography stack ============ -->
 
   <!-- Huge cream headline: primary date -->
-  <text x="360" y="70"
+  <text x="360" y="60"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="42" font-weight="800" letter-spacing="1"
-        fill="#f0f6fc">AUGUST 8, 2026</text>
+        font-size="40" font-weight="800" letter-spacing="1"
+        fill="#f0f6fc">AUGUST 9, 2026</text>
 
   <!-- Underline sweep bar -->
-  <rect x="360" y="80" width="308" height="2.8" fill="url(#sweep)" opacity="0.95">
+  <rect x="360" y="70" width="308" height="2.8" fill="url(#sweep)" opacity="0.95">
     <animate attributeName="x" values="360;408;360" dur="11s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Subhead: hot-pink INTERNATIONAL CAT DAY, with paw glyph -->
+  <!-- Subhead: Netscape-green NETSCAPE IPO with cream · 31 YEARS trailing -->
   <g>
-    <text x="360" y="112"
+    <text x="360" y="102"
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="20" font-weight="700" letter-spacing="1.4"
-          fill="#ff9ec7">INTERNATIONAL CAT DAY</text>
-    <g transform="translate(658 105)">
-      <use href="#paw"/>
-    </g>
+          font-size="22" font-weight="800" letter-spacing="1.6"
+          fill="#00e676">NETSCAPE IPO</text>
+    <text x="552" y="102"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="15" font-weight="700" letter-spacing="1.4"
+          fill="#f0f6fc">·  31 YEARS</text>
   </g>
 
   <!-- Amber italic tertiary -->
-  <text x="360" y="135"
+  <text x="360" y="126"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="10.5" font-style="italic" letter-spacing="0.8"
-        fill="#f2cc60">SATURDAY  ·  8 AUGUST  ·  MEOW  ·  SINCE 2002</text>
+        fill="#f2cc60">NSCP  ·  NASDAQ  ·  9 AUGUST 1995  ·  $2.2B</text>
 
-  <!-- Green italic tertiary -->
-  <text x="360" y="152"
+  <!-- Dim-cyan italic tertiary -->
+  <text x="360" y="144"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="10.5" font-style="italic" letter-spacing="1.3"
-        fill="#7ee787" opacity="0.9">WHISKERS  ·  MOONGAZING  ·  NINE LIVES  ·  PURR</text>
+        fill="#79c0ff" opacity="0.9">CLARK  ·  ANDREESSEN  ·  MOSAIC  ·  MOZILLA</text>
 
-  <!-- Georgia italic caption + attribution + blinking cursor -->
+  <!-- Georgia italic caption + blinking N cursor -->
   <g>
-    <text x="360" y="182"
+    <text x="360" y="175"
           font-family="Georgia, 'Times New Roman', serif"
-          font-size="12" font-style="italic"
-          fill="#c9d1d9">&#8220;they have not forgotten this.&#8221;</text>
-    <text x="558" y="182"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="10" font-style="italic"
-          fill="#8b949e">— Terry Pratchett</text>
-    <rect x="770" y="171" width="7" height="13" fill="#ff9ec7">
-      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/>
-    </rect>
+          font-size="13" font-style="italic"
+          fill="#c9d1d9">&#8220;the day the web went public.&#8221;</text>
+    <!-- Blinking Navigator-N cursor -->
+    <g transform="translate(600 163)">
+      <rect x="0" y="0" width="14" height="14" rx="1.5" fill="url(#nBadge)">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/>
+      </rect>
+      <use href="#netN" x="1" y="1" width="12" height="12">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/>
+      </use>
+    </g>
   </g>
 </svg>
