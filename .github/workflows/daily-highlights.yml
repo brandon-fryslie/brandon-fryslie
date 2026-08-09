@@ -61,6 +61,7 @@ jobs:
             - Insert the new entry *immediately after* the `<!-- DOODLE-GALLERY:START -->` line so the newest entry is at the top of the gallery.
             - Anything outside the `<!-- DOODLE-GALLERY:START -->` / `<!-- DOODLE-GALLERY:END -->` marker pair is hand-curated (header, **Pinned** section). Never touch it.
             - Heading format: `## <Human-readable date> — <theme name>` where the human date is derived from the archival stamp (e.g. "April 30, 2026"). The theme name comes from the `<!-- theme: ... -->` HTML comment in the archived SVG; if absent, use `(unknown theme)`.
+            - The heading is ONE short line — a title, not a paragraph. If the theme comment you find runs long (multiple sentences, a history lesson, a composition description — over roughly 80 characters), that is a bug upstream in how the comment was written, and pasting it into the heading anyway just relocates the bug onto the public gallery page as a giant bold wall of text. Take only the leading short phrase from the comment (the title plus its date parenthetical, e.g. "World Wide Web — 35th Anniversary (August 6, 1991)") and drop everything after it — do not carry the rest into the heading, the body text, or anywhere else in the entry.
 
             If `assets/daily-highlight.svg` does not exist yet (very first run ever), skip this task entirely and proceed to generating today's doodle.
 
@@ -88,7 +89,17 @@ jobs:
             4. **Verifiable signals from `gh api` only.** If `gh api` surfaces a concrete, date-appropriate event on a repo you can inspect — a recent release, tag, milestone, or announcement that Brandon would plausibly care about — use that as the theme. Cite the source repo/release in the SVG's theme comment. Do NOT draw on general world knowledge of "current events" — if you cannot verify a concrete signal via a tool call, skip this option entirely.
             5. **Season / day-of-week vibe** only as a fallback if nothing above fits (Monday reset energy, Friday momentum, deep-winter cold, high-summer sun, spring bloom, autumn decay, etc.).
 
-            Name the theme explicitly in a short HTML comment at the top of the SVG (e.g. `<!-- theme: Pi Day (March 14) -->`) so future runs can avoid repeating yesterday's pick.
+            Name the theme explicitly in a short HTML comment at the top of the SVG (e.g. `<!-- theme: Pi Day (March 14) -->`) so future runs can avoid repeating yesterday's pick and tomorrow's `doodle` job can build the gallery heading from it (Task 1).
+
+            This comment is a label, not a design brief — keep it to a single short phrase, under about 80 characters: a title, an occasion, a date in parentheses if useful. Nothing more. It gets pasted verbatim into a public markdown `##` heading on DOODLES.md, so every extra sentence you write here becomes literal bold heading text on that page.
+
+            WRONG — this actually shipped and produced an unreadable gallery entry; do not repeat it:
+            `<!-- theme: World Wide Web — 35th Anniversary of the Public Announcement (August 6, 1991). On 6 August 1991 Tim Berners-Lee posted a short summary of the WorldWideWeb project to the alt.hypertext Usenet newsgroup... Composition on the 800x200 canvas: on the left half, a hypertext web-of-pages tableau... -->`
+
+            RIGHT:
+            `<!-- theme: World Wide Web — 35th Anniversary (August 6, 1991) -->`
+
+            Your reasoning about composition, palette, and layout is for you to hold while building the SVG, not to persist in this comment — it doesn't belong here.
 
             Choose ONE theme and go all in. The SVG must:
             1. **Display today's date prominently and legibly.** The full date (e.g. "April 24, 2026" or "Apr 24 · 2026") is a primary visual element — large, high-contrast, easy to read at a glance from a normal browser zoom level. It should not be hidden in a corner, used as decorative micro-text, or so blended into the background that it disappears. It should still be *integrated into* the artwork (woven into the theme, not pasted on top), but readability comes first.
