@@ -335,12 +335,12 @@ jobs:
 
             *Updated [Month Day, Year]*
 
-            ### Today
+            ### Last 24 Hours
 
             - `repo-name` — terse phrase describing what shipped ([commits](url) or [#N](url) for PR/issue references)
             - `another-repo` — what changed ([repo](url))
 
-            (If no commits in the past 24h, write "No new commits today." instead of bullets.)
+            (This first section covers the trailing 24 hours before this run, not the calendar day — the run fires at 06:00 UTC, when "today" is nearly empty by definition. If the past-24h data from Task 2 has commits, use the header `### Last 24 Hours` exactly. If it has NO commits, do NOT render an empty section — never output "No new commits today." or any similar placeholder; the profile must not lead with a void when real recent work exists. Instead, find the most recent UTC calendar day that has commits in the past-7-days data and render that day's bullets under the header `### Latest — <Weekday>, <Month> <D>`, e.g. `### Latest — Friday, August 7`. Only if the entire past 7 days has zero commits, render `### Last 24 Hours` with the single line "Quiet week — no commits in the past 7 days.")
 
             ### This Week
 
@@ -365,7 +365,7 @@ jobs:
             Link rules:
             - Single commit → link to its `html_url`.
             - PR/issue reference like `(#3)` in a commit message → link to `https://github.com/<owner>/<repo>/pull/3` (use `/pull/` — GitHub redirects to `/issues/` automatically if it's an issue).
-            - Multiple commits in a repo → link the word `commits` to a URL like `https://github.com/<owner>/<repo>/commits?author=brandon-fryslie&since=YYYY-MM-DD` (use the appropriate window: yesterday for "Today", 7 days ago for "This Week").
+            - Multiple commits in a repo → link the word `commits` to a URL like `https://github.com/<owner>/<repo>/commits?author=brandon-fryslie&since=YYYY-MM-DD` (use the appropriate window: yesterday for "Last 24 Hours", the displayed day's own date for a "Latest — ..." fallback section, 7 days ago for "This Week").
             - Repo header link in "This Month" → link to `https://github.com/<owner>/<repo>`.
             - If you cannot construct a verifiable URL, omit the link rather than guessing.
 
@@ -373,9 +373,9 @@ jobs:
 
             ## Task 5: Append Today's Day Section to the Weekly Archive
 
-            `previous-work/` is the durable, curated record of engineering work — one file per week, written as each week happens. `previous-work/README.md` is its contract. Your job here is narrow: on a day with commits, append today's day section to the current week's file, reusing the SAME bullets you rendered in the RECENT-ACTIVITY "today" section above. The day section is written once, with same-day context, and is never re-summarized later.
+            `previous-work/` is the durable, curated record of engineering work — one file per week, written as each week happens. `previous-work/README.md` is its contract. Your job here is narrow: on a day with commits, append today's day section to the current week's file, reusing the SAME bullets you rendered in the RECENT-ACTIVITY "Last 24 Hours" section above. The day section is written once, with same-day context, and is never re-summarized later.
 
-            Do this ONLY if Task 2 found commits in the past 24h. On a no-commit day, do NOT create, open, or touch any file under `previous-work/` — skip this task entirely.
+            Do this ONLY if Task 2 found commits in the past 24h. On a no-commit day, do NOT create, open, or touch any file under `previous-work/` — skip this task entirely. In particular: if RECENT-ACTIVITY fell back to a `### Latest — ...` section, that section describes a PAST day whose archive entry is already frozen — do not re-append or rewrite it here.
 
             1. Compute the current week's Monday (UTC; Monday–Sunday weeks) and today's parts:
                ```
@@ -398,7 +398,7 @@ jobs:
 
                [← Week of <PREV_TITLE>](<PREV_MON>.md) · [Archive index](../README.md)
                ```
-            3. Build today's day section from today's activity — one bullet per repo with commits in the past 24h, byte-for-byte the same bullet text and links you rendered in the RECENT-ACTIVITY "today" section (same work, recorded in two places; they must not drift). Same link rules as Task 4:
+            3. Build today's day section from today's activity — one bullet per repo with commits in the past 24h, byte-for-byte the same bullet text and links you rendered in the RECENT-ACTIVITY "Last 24 Hours" section (same work, recorded in two places; they must not drift). Same link rules as Task 4:
                ```
                ## <TODAY_HEAD>
 
