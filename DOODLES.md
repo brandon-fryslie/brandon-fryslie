@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 10, 2026 — Perseid Meteor Shower — approaching peak (August 9, 2026)
+
+<img src="./doodle-archive/2026/08/2026-08-10-004020.svg" width="800" alt="Daily doodle for August 9, 2026 — the Perseid meteor shower, approaching its peak on August 11-13. On the left half, a deep-navy night sky with a soft horizon glow at the bottom, dozens of twinkling stars, the constellation Perseus rendered as connected star lines with the radiant point marked, and bright warm-white and amber meteors continuously streaking diagonally down and to the right leaving glowing trails. On the right, a huge cream AUGUST 9, 2026 headline underlined by a warm amber-to-gold sweep, an amber PERSEIDS subhead trailed by a cream · SHOWER ACTIVE tertiary, italic APPROACHING PEAK · AUG 11-13 in gold, and a Georgia-italic 'wishes falling from Perseus.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+The Perseid meteor shower, active mid-July through late August, approaches its 2026 peak on August 11–13, when up to ~100 meteors per hour streak from a radiant in the constellation Perseus. The debris trail belongs to comet Swift–Tuttle, whose fragments hit the atmosphere at 59 km/s.
+
+A night-sky tableau: the stars of Perseus picked out over a twinkling starfield, with meteors continually streaking down and away from the marked radiant. On the right, a large AUGUST 9, 2026 headline over a PERSEIDS subhead, shower-status tertiary lines, and the caption "wishes falling from Perseus."
+
+</details>
+
+---
+
 ## August 9, 2026 — Netscape Communications IPO (August 9, 1995)
 
 <img src="./doodle-archive/2026/08/2026-08-09-181253.svg" width="800" alt="Daily doodle archived for August 9, 2026 — 31st anniversary of the Netscape Communications IPO (9 August 1995). On the left half, a retro 90s Netscape Navigator browser window with light-grey chrome, red/yellow/green traffic-light buttons, a Back/Forward/Reload/Home button row, a URL bar reading http://home.netscape.com/, and in the upper right the signature big N badge with a small white meteor continually shooting across it. Inside the window a green stock chart line rockets from $28 up to a $58.25 peak, with dotted price gridlines and an OPEN/HIGH/CLOSE axis label, and a dashed orbital dot travels along the chart line. On the right, a huge cream AUGUST 9, 2026 headline underlined by a green-to-cream sweep, a Netscape-green NETSCAPE IPO subhead trailed by cream 31 YEARS, italic amber NSCP · NASDAQ · 9 AUGUST 1995 · $2.2B tertiary, dim-cyan CLARK · ANDREESSEN · MOSAIC · MOZILLA tertiary, and a Georgia-italic 'the day the web went public' caption with a blinking Navigator-N cursor at the base.">
