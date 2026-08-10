@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Perseid Meteor Shower — approaching peak (August 9, 2026) -->
+<!-- about:
+The Perseid meteor shower, active mid-July through late August, approaches its 2026 peak on August 11–13, when up to ~100 meteors per hour streak from a radiant in the constellation Perseus. The debris trail belongs to comet Swift–Tuttle, whose fragments hit the atmosphere at 59 km/s.
+
+A night-sky tableau: the stars of Perseus picked out over a twinkling starfield, with meteors continually streaking down and away from the marked radiant. On the right, a large AUGUST 9, 2026 headline over a PERSEIDS subhead, shower-status tertiary lines, and the caption "wishes falling from Perseus."
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for August 9, 2026 — the Perseid meteor shower, approaching its peak on August 11-13. On the left half, a deep-navy night sky with a soft horizon glow at the bottom, dozens of twinkling stars, the constellation Perseus rendered as connected star lines with the radiant point marked, and bright warm-white and amber meteors continuously streaking diagonally down and to the right leaving glowing trails. On the right, a huge cream AUGUST 9, 2026 headline underlined by a warm amber-to-gold sweep, an amber PERSEIDS subhead trailed by a cream · SHOWER ACTIVE tertiary, italic APPROACHING PEAK · AUG 11-13 in gold, and a Georgia-italic 'wishes falling from Perseus.' caption at the base.">
+  <defs>
+    <!-- Deep night-sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#050814"/>
+      <stop offset="55%"  stop-color="#0b1428"/>
+      <stop offset="100%" stop-color="#1a2540"/>
+    </linearGradient>
+
+    <!-- Horizon glow (soft warm blush at the bottom) -->
+    <radialGradient id="horizon" cx="0.3" cy="1.05" r="0.75">
+      <stop offset="0%"   stop-color="#f2a86b" stop-opacity="0.45"/>
+      <stop offset="45%"  stop-color="#8a4a70" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0b1428" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Meteor trail gradient: bright head, fading tail -->
+    <linearGradient id="meteorTrail" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="15%"  stop-color="#fff5d6" stop-opacity="0.95"/>
+      <stop offset="55%"  stop-color="#f2a86b" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f2a86b" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Amber meteor variant -->
+    <linearGradient id="meteorTrailAmber" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#fff5d6" stop-opacity="1"/>
+      <stop offset="20%"  stop-color="#ffcc66" stop-opacity="0.9"/>
+      <stop offset="60%"  stop-color="#e07b3a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#e07b3a" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Cyan-white meteor variant -->
+    <linearGradient id="meteorTrailCyan" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="25%"  stop-color="#c4e8ff" stop-opacity="0.9"/>
+      <stop offset="65%"  stop-color="#79c0ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#79c0ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Headline underline sweep: amber to gold -->
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#e07b3a" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#e07b3a" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#ffcc66" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffcc66" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Radiant halo -->
+    <radialGradient id="radiantHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ffcc66" stop-opacity="0.9"/>
+      <stop offset="40%"  stop-color="#f2a86b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f2a86b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Reusable meteor: bright head + tapered trail. Length ~90px.
+         Trail extends to the LEFT of the head (head at x=0). -->
+    <symbol id="meteor" overflow="visible">
+      <line x1="-90" y1="0" x2="0" y2="0" stroke="url(#meteorTrail)" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="1.8" fill="#ffffff"/>
+    </symbol>
+    <symbol id="meteorAmber" overflow="visible">
+      <line x1="-70" y1="0" x2="0" y2="0" stroke="url(#meteorTrailAmber)" stroke-width="1.3" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="1.5" fill="#fff5d6"/>
+    </symbol>
+    <symbol id="meteorCyan" overflow="visible">
+      <line x1="-60" y1="0" x2="0" y2="0" stroke="url(#meteorTrailCyan)" stroke-width="1.1" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="1.2" fill="#ffffff"/>
+    </symbol>
+  </defs>
+
+  <!-- ============ background sky ============ -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+  <rect width="800" height="200" fill="url(#horizon)"/>
+
+  <!-- ============ STAR FIELD (twinkling) ============ -->
+  <g fill="#f0f6fc">
+    <!-- Small distant stars -->
+    <circle cx="22"  cy="16"  r="0.6" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="58"  cy="42"  r="0.5" opacity="0.6"><animate attributeName="opacity" values="0.2;0.75;0.2" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="88"  cy="12"  r="0.7" opacity="0.8"><animate attributeName="opacity" values="0.35;1;0.35" dur="13s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="30"  r="0.5" opacity="0.65"><animate attributeName="opacity" values="0.25;0.85;0.25" dur="7s"  begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="8"   r="0.6" opacity="0.75"><animate attributeName="opacity" values="0.3;0.95;0.3" dur="11s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="188" cy="46"  r="0.5" opacity="0.55"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="13s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="212" cy="20"  r="0.6" opacity="0.7"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="7s"  begin="0.9s" repeatCount="indefinite"/></circle>
+    <circle cx="248" cy="8"   r="0.5" opacity="0.6"><animate attributeName="opacity" values="0.25;0.8;0.25" dur="11s" begin="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="278" cy="36"  r="0.7" opacity="0.8"><animate attributeName="opacity" values="0.35;1;0.35" dur="13s" begin="1.7s" repeatCount="indefinite"/></circle>
+    <circle cx="312" cy="14"  r="0.55" opacity="0.65"><animate attributeName="opacity" values="0.25;0.85;0.25" dur="7s"  begin="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="342" cy="42"  r="0.5" opacity="0.6"><animate attributeName="opacity" values="0.2;0.75;0.2" dur="11s" begin="0.7s" repeatCount="indefinite"/></circle>
+
+    <!-- Mid-height stars -->
+    <circle cx="16"  cy="88"  r="0.5" opacity="0.55"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="7s"  begin="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="52"  cy="106" r="0.6" opacity="0.65"><animate attributeName="opacity" values="0.25;0.85;0.25" dur="13s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="96"  cy="132" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="11s" begin="2.3s" repeatCount="indefinite"/></circle>
+    <circle cx="138" cy="112" r="0.55" opacity="0.6"><animate attributeName="opacity" values="0.25;0.8;0.25" dur="7s"  begin="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="184" cy="140" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="11s" begin="1.4s" repeatCount="indefinite"/></circle>
+    <circle cx="222" cy="118" r="0.6" opacity="0.65"><animate attributeName="opacity" values="0.25;0.85;0.25" dur="13s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <circle cx="266" cy="150" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="7s"  begin="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="304" cy="128" r="0.55" opacity="0.6"><animate attributeName="opacity" values="0.25;0.8;0.25" dur="11s" begin="1.1s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="158" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="13s" begin="3.6s" repeatCount="indefinite"/></circle>
+
+    <!-- A few near-headline row stars behind the text -->
+    <circle cx="620" cy="14"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.15;0.6;0.15" dur="11s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="22"  r="0.6" opacity="0.55"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="13s" begin="2.1s" repeatCount="indefinite"/></circle>
+    <circle cx="762" cy="10"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.15;0.65;0.15" dur="7s"  begin="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="782" cy="184" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.15;0.6;0.15" dur="11s" begin="2.8s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- ============ CONSTELLATION PERSEUS ============
+       Stylized (not astronomically exact). Positioned in the upper-left quadrant with
+       Mirfak (α Per) as the brightest star near the radiant. Meteors emanate from here. -->
+  <g>
+    <!-- Constellation lines (very dim so stars dominate) -->
+    <g stroke="#79c0ff" stroke-width="0.5" opacity="0.32" stroke-linecap="round">
+      <line x1="70"  y1="70"  x2="110" y2="52"/>
+      <line x1="110" y1="52"  x2="150" y2="60"/>
+      <line x1="150" y1="60"  x2="180" y2="88"/>
+      <line x1="180" y1="88"  x2="215" y2="76"/>
+      <line x1="180" y1="88"  x2="164" y2="118"/>
+      <line x1="164" y1="118" x2="196" y2="140"/>
+      <line x1="164" y1="118" x2="132" y2="140"/>
+      <line x1="110" y1="52"  x2="88"  y2="30"/>
+    </g>
+
+    <!-- Constellation stars (4-point spikes for the brighter ones) -->
+    <g fill="#f0f6fc">
+      <!-- Mirfak — brightest, also the radiant point -->
+      <g transform="translate(150 60)">
+        <circle r="2.4" fill="url(#radiantHalo)" transform="scale(6)"/>
+        <circle r="2.2" fill="#ffffff"/>
+        <!-- Four-point diffraction spikes -->
+        <path d="M 0 -8 L 0.6 -1 L 8 0 L 0.6 1 L 0 8 L -0.6 1 L -8 0 L -0.6 -1 Z" fill="#ffffff" opacity="0.75"/>
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+      </g>
+      <!-- Algol -->
+      <g transform="translate(110 52)">
+        <circle r="1.6" fill="#ffffff"/>
+        <path d="M 0 -5 L 0.4 -0.7 L 5 0 L 0.4 0.7 L 0 5 L -0.4 0.7 L -5 0 L -0.4 -0.7 Z" fill="#ffffff" opacity="0.7"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="11s" repeatCount="indefinite"/>
+      </g>
+      <!-- Other Perseus stars -->
+      <circle cx="70"  cy="70"  r="1.2"><animate attributeName="opacity" values="0.55;0.95;0.55" dur="13s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="88"  cy="30"  r="1.1"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="7s"  begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="180" cy="88"  r="1.4"><animate attributeName="opacity" values="0.55;1;0.55"   dur="11s" begin="2s" repeatCount="indefinite"/></circle>
+      <circle cx="215" cy="76"  r="1.2"><animate attributeName="opacity" values="0.55;0.95;0.55" dur="13s" begin="0.7s" repeatCount="indefinite"/></circle>
+      <circle cx="164" cy="118" r="1.3"><animate attributeName="opacity" values="0.55;1;0.55"   dur="7s"  begin="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="196" cy="140" r="1.1"><animate attributeName="opacity" values="0.5;0.9;0.5"   dur="11s" begin="1.6s" repeatCount="indefinite"/></circle>
+      <circle cx="132" cy="140" r="1.1"><animate attributeName="opacity" values="0.5;0.9;0.5"   dur="13s" begin="3.1s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- "PERSEUS" label near the constellation (small, dim) -->
+    <text x="70" y="160"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="8" letter-spacing="2.5" fill="#79c0ff" opacity="0.5">PERSEUS</text>
+    <!-- Radiant marker -->
+    <text x="164" y="46"
+          font-family="Menlo, Monaco, 'Courier New', monospace"
+          font-size="6.5" letter-spacing="0.6" fill="#ffcc66" opacity="0.75">↙ RADIANT</text>
+  </g>
+
+  <!-- ============ METEORS (streaking diagonally down-right from the radiant area) ============
+       Each meteor: a symbol whose trail extends to the LEFT of the head, then
+       transform="rotate(30)" so the streak visually points up-left with the head at bottom-right.
+       animateTransform translates each along a diagonal down-right path and back to start.
+       opacity animates so it fades in mid-flight and out at the end. -->
+
+  <!-- Meteor 1 (large, bright, warm) -->
+  <g opacity="0">
+    <use href="#meteor" transform="rotate(30)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="130 30; 470 220" dur="2.6s" repeatCount="indefinite" begin="0s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.2;0.75;1" dur="2.6s" repeatCount="indefinite" begin="0s"/>
+  </g>
+
+  <!-- Meteor 2 (amber, mid) -->
+  <g opacity="0">
+    <use href="#meteorAmber" transform="rotate(32)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="90 20; 400 200" dur="3.1s" repeatCount="indefinite" begin="1.2s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.25;0.8;1" dur="3.1s" repeatCount="indefinite" begin="1.2s"/>
+  </g>
+
+  <!-- Meteor 3 (small cyan, fast) -->
+  <g opacity="0">
+    <use href="#meteorCyan" transform="rotate(28)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="170 12; 470 176" dur="1.9s" repeatCount="indefinite" begin="0.5s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.2;0.75;1" dur="1.9s" repeatCount="indefinite" begin="0.5s"/>
+  </g>
+
+  <!-- Meteor 4 (medium, bright, warm) - originates from further out -->
+  <g opacity="0">
+    <use href="#meteor" transform="rotate(34)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="60 40; 360 240" dur="3.7s" repeatCount="indefinite" begin="2.4s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.06;0.25;0.78;1" dur="3.7s" repeatCount="indefinite" begin="2.4s"/>
+  </g>
+
+  <!-- Meteor 5 (amber, small) -->
+  <g opacity="0">
+    <use href="#meteorAmber" transform="rotate(29)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="200 8; 440 148" dur="2.2s" repeatCount="indefinite" begin="3.6s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.22;0.78;1" dur="2.2s" repeatCount="indefinite" begin="3.6s"/>
+  </g>
+
+  <!-- Meteor 6 (cyan, mid, slower) -->
+  <g opacity="0">
+    <use href="#meteorCyan" transform="rotate(33)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="110 26; 420 210" dur="3.4s" repeatCount="indefinite" begin="4.8s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.22;0.8;1" dur="3.4s" repeatCount="indefinite" begin="4.8s"/>
+  </g>
+
+  <!-- Meteor 7 (large fireball, warm, rare/long delay) -->
+  <g opacity="0">
+    <use href="#meteor" transform="rotate(31)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="150 24; 490 220" dur="2.9s" repeatCount="indefinite" begin="6.3s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.2;0.78;1" dur="2.9s" repeatCount="indefinite" begin="6.3s"/>
+  </g>
+
+  <!-- Meteor 8 (amber, quick) -->
+  <g opacity="0">
+    <use href="#meteorAmber" transform="rotate(30)"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="180 18; 460 180" dur="2.0s" repeatCount="indefinite" begin="5.1s"/>
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.05;0.22;0.78;1" dur="2.0s" repeatCount="indefinite" begin="5.1s"/>
+  </g>
+
+  <!-- ============ RIGHT HALF: typography stack ============ -->
+
+  <!-- Huge cream headline: primary date -->
+  <text x="380" y="62"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="40" font-weight="800" letter-spacing="1"
+        fill="#f0f6fc">AUGUST 9, 2026</text>
+
+  <!-- Underline sweep bar -->
+  <rect x="380" y="72" width="308" height="2.8" fill="url(#sweep)" opacity="0.95">
+    <animate attributeName="x" values="380;428;380" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Subhead: amber PERSEIDS · cream SHOWER ACTIVE -->
+  <g>
+    <text x="380" y="104"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="26" font-weight="800" letter-spacing="2.2"
+          fill="#ffcc66">PERSEIDS</text>
+    <text x="524" y="104"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="14" font-weight="700" letter-spacing="1.4"
+          fill="#f0f6fc">·  SHOWER ACTIVE</text>
+  </g>
+
+  <!-- Amber italic tertiary: peak dates -->
+  <text x="380" y="128"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="11" font-style="italic" font-weight="600" letter-spacing="1"
+        fill="#f2a86b">APPROACHING PEAK  ·  AUG 11–13  ·  ~100 / HR AT ZENITH</text>
+
+  <!-- Dim tertiary: origin data -->
+  <text x="380" y="146"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-style="italic" letter-spacing="1.2"
+        fill="#79c0ff" opacity="0.9">SWIFT-TUTTLE  ·  RADIANT IN PERSEUS  ·  59 KM/S</text>
+
+  <!-- Georgia italic caption -->
+  <g>
+    <text x="380" y="176"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="13" font-style="italic"
+          fill="#c9d1d9">&#8220;wishes falling from Perseus.&#8221;</text>
+    <!-- Small twinkling star at the end of the caption -->
+    <g transform="translate(632 172)">
+      <circle r="1.6" fill="#ffcc66">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.3s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M 0 -4 L 0.4 -0.6 L 4 0 L 0.4 0.6 L 0 4 L -0.4 0.6 L -4 0 L -0.4 -0.6 Z" fill="#ffcc66" opacity="0.7">
+        <animate attributeName="opacity" values="0.3;0.85;0.3" dur="2.3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+</svg>
