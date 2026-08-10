@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 10, 2026 — Smithsonian Institution — 180th Anniversary (August 10, 1846)
+
+<img src="./doodle-archive/2026/08/2026-08-10-062218.svg" width="800" alt="Daily doodle for August 10, 2026 — the 180th anniversary of the Smithsonian Institution's founding on August 10, 1846. On the left half, a twilight tableau: a silhouette of the Smithsonian Castle in warm red sandstone rises against a purple-to-amber sky, its arched windows glowing yellow, its towers crenellated. Specimens — a T. rex, a rocket, an atom, a butterfly — drift steadily upward from the rooflines into the night sky, illustrating the diffusion of knowledge. On the right, a huge cream AUGUST 10, 2026 headline underlined by a red-to-gold sweep, a Smithsonian-red SMITHSONIAN subhead trailed by cream 180 YEARS, italic amber CHARTERED 10 AUGUST 1846 · JAMES SMITHSON tertiary, dim-cyan CASTLE · NORMAN REVIVAL · 21 MUSEUMS · 157M OBJECTS tertiary, and a Georgia-italic 'for the increase and diffusion of knowledge among men.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 10 August 1846, President James K. Polk signed the Act of Congress establishing the Smithsonian Institution, funded by the surprise bequest of English scientist James Smithson — a man who never set foot in the United States — with the charge "for the increase and diffusion of knowledge." The red-sandstone "Castle" on the National Mall, in Norman Revival style, opened its doors in 1855; today the Institution stewards 21 museums, the National Zoo, and roughly 157 million objects. 180 years today.
+
+A twilight tableau: a silhouette of the Castle rises against a warm-purple-to-amber sky, its arched windows glowing, its towers crenellated. Specimens — a T. rex, a rocket, an atom, a butterfly — drift steadily upward from the roofline into the dark sky, the visible act of knowledge diffusing outward. On the right, a large AUGUST 10, 2026 headline anchors a SMITHSONIAN subhead, chartering data, and the Smithson bequest as caption.
+
+</details>
+
+---
+
 ## August 10, 2026 — Perseid Meteor Shower — approaching peak (August 9, 2026)
 
 <img src="./doodle-archive/2026/08/2026-08-10-004020.svg" width="800" alt="Daily doodle for August 9, 2026 — the Perseid meteor shower, approaching its peak on August 11-13. On the left half, a deep-navy night sky with a soft horizon glow at the bottom, dozens of twinkling stars, the constellation Perseus rendered as connected star lines with the radiant point marked, and bright warm-white and amber meteors continuously streaking diagonally down and to the right leaving glowing trails. On the right, a huge cream AUGUST 9, 2026 headline underlined by a warm amber-to-gold sweep, an amber PERSEIDS subhead trailed by a cream · SHOWER ACTIVE tertiary, italic APPROACHING PEAK · AUG 11-13 in gold, and a Georgia-italic 'wishes falling from Perseus.' caption at the base.">
