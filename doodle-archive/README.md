@@ -13,7 +13,7 @@ doodle-archive/
 
 - Filenames are the UTC timestamp (`date -u '+%Y-%m-%d-%H%M%S'`) at the moment of archival. The timestamp guarantees every entry has a unique name, so multiple `doodle` runs in the same calendar day accumulate side-by-side instead of overwriting each other.
 - Year and zero-padded month directories keep any single directory browseable in the GitHub UI and `ls`.
-- The SVG is the exact file that was at `assets/daily-highlight.svg` immediately before the archival run — copied verbatim, not re-rendered. The theme is identifiable from the `<!-- theme: ... -->` HTML comment inside the SVG.
+- The SVG is the exact file that was at `assets/daily-highlight.svg` immediately before the archival run — copied verbatim, not re-rendered. Each SVG carries its metadata in HTML comments: `<!-- theme: ... -->` (a short label, used for the gallery heading) and `<!-- about: ... -->` (two short prose paragraphs — the occasion's story and the composition — rendered as a collapsed `<details>` block under the gallery image). Pre-August-2026 SVGs have only a theme comment, sometimes overloaded with the full write-up; the gallery job splits those instead.
 - Older entries (before the timestamped layout existed) use the form `YYYY-MM-DD.svg`. Both forms are valid; the agent only writes the new form.
 
 ## How entries get added

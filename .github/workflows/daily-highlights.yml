@@ -61,7 +61,18 @@ jobs:
             - Insert the new entry *immediately after* the `<!-- DOODLE-GALLERY:START -->` line so the newest entry is at the top of the gallery.
             - Anything outside the `<!-- DOODLE-GALLERY:START -->` / `<!-- DOODLE-GALLERY:END -->` marker pair is hand-curated (header, **Pinned** section). Never touch it.
             - Heading format: `## <Human-readable date> — <theme name>` where the human date is derived from the archival stamp (e.g. "April 30, 2026"). The theme name comes from the `<!-- theme: ... -->` HTML comment in the archived SVG; if absent, use `(unknown theme)`.
-            - The heading is ONE short line — a title, not a paragraph. If the theme comment you find runs long (multiple sentences, a history lesson, a composition description — over roughly 80 characters), that is a bug upstream in how the comment was written, and pasting it into the heading anyway just relocates the bug onto the public gallery page as a giant bold wall of text. Take only the leading short phrase from the comment (the title plus its date parenthetical, e.g. "World Wide Web — 35th Anniversary (August 6, 1991)") and drop everything after it — do not carry the rest into the heading, the body text, or anywhere else in the entry.
+            - The heading is ONE short line — a title, not a paragraph. If the theme comment you find runs long (multiple sentences, a history lesson, a composition description — over roughly 80 characters), that is a bug upstream in how the comment was written, and pasting it into the heading anyway just relocates the bug onto the public gallery page as a giant bold wall of text. Take only the leading short phrase from the comment (the title plus its date parenthetical, e.g. "World Wide Web — 35th Anniversary (August 6, 1991)") as the heading — NEVER the full text. The remainder is handled by the details block below, not the heading.
+            - Entry body: the `<img>` tag, then — if the archived SVG carries an `<!-- about: ... -->` HTML comment — a collapsed details block directly below the image, exactly this shape (the blank lines after `<summary>` and before `</details>` are required for GitHub to render the body as markdown):
+
+              ```
+              <details>
+              <summary>About this doodle</summary>
+
+              [the about comment's paragraphs, verbatim]
+
+              </details>
+              ```
+            - Legacy fallback: if the SVG has no `about:` comment but its `theme:` comment runs long, the remainder after the leading short phrase becomes the details-block body — split it into two paragraphs (the occasion's story; the composition description) at the sentence where the composition description begins. If the SVG has neither an about comment nor a long theme comment, render no details block at all — just the image. In every case the long text goes in the collapsed block or nowhere; it never appears in the heading.
 
             If `assets/daily-highlight.svg` does not exist yet (very first run ever), skip this task entirely and proceed to generating today's doodle.
 
@@ -99,7 +110,17 @@ jobs:
             RIGHT:
             `<!-- theme: World Wide Web — 35th Anniversary (August 6, 1991) -->`
 
-            Your reasoning about composition, palette, and layout is for you to hold while building the SVG, not to persist in this comment — it doesn't belong here.
+            The longer write-up DOES have a home — a second HTML comment directly below the theme comment:
+
+            ```
+            <!-- about:
+            One short paragraph: the story of the occasion — what the date commemorates and why it's interesting.
+
+            One short paragraph: what the composition shows and how it moves.
+            -->
+            ```
+
+            Keep the about comment to those 2 short paragraphs, roughly 120 words total, written as reader-facing prose — tomorrow's run pastes it verbatim into a collapsed `<details>` block on the public gallery page (Task 1), so write it for a gallery visitor, not for yourself. Blank line between the paragraphs. Never put `--` inside it (that terminates the HTML comment; use an em-dash). Palette hex values, coordinate math, and layout scratch work belong in neither comment — hold those in your head.
 
             Choose ONE theme and go all in. The SVG must:
             1. **Display today's date prominently and legibly.** The full date (e.g. "April 24, 2026" or "Apr 24 · 2026") is a primary visual element — large, high-contrast, easy to read at a glance from a normal browser zoom level. It should not be hidden in a corner, used as decorative micro-text, or so blended into the background that it disappears. It should still be *integrated into* the artwork (woven into the theme, not pasted on top), but readability comes first.
