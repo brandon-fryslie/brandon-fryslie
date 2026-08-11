@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: World Lion Day (August 10) -->
+<!-- about:
+World Lion Day, marked every 10 August since 2013, was launched by the co-founders of Big Cat Rescue and adopted by National Geographic Wild to draw attention to the collapse of wild lion populations — down roughly 40% in three generations to an estimated 20,000 remaining across fragmented African ranges, plus the last few hundred Asiatic lions in India's Gir Forest.
+
+A savanna dusk: an amber-to-violet sky, a sinking sun on the horizon, and a big lion's head in profile, mane haloed by the setting sun. The mane's warm strands drift softly in the wind, the sun pulses on the horizon, and a lone acacia stands to the side. On the right, a large AUGUST 10, 2026 headline anchors a WORLD LION DAY subhead, a since-2013 tertiary, and the Panthera leo caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for August 10, 2026 — World Lion Day, observed annually on 10 August since 2013. On the left half, a savanna dusk tableau: an amber-to-violet sky with a sinking golden sun low on the horizon, a lone silhouetted acacia tree, and a large lion's head shown in profile with its warm rust-and-gold mane haloed by the setting sun; the mane strands drift softly in the wind. On the right, a huge cream AUGUST 10, 2026 headline underlined by a warm amber-to-gold sweep, a warm-gold WORLD LION DAY subhead trailed by cream · SINCE 2013, italic amber PANTHERA LEO · KING OF BEASTS · PRIDE tertiary, dim-cyan BIG CAT RESCUE · NATGEO WILD · ~20,000 REMAINING tertiary, and a Georgia-italic 'the wilderness knows his name.' caption at the base.">
+  <defs>
+    <!-- Dusk sky -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a1030"/>
+      <stop offset="35%"  stop-color="#3a1c3e"/>
+      <stop offset="65%"  stop-color="#8a3222"/>
+      <stop offset="88%"  stop-color="#e08a2c"/>
+      <stop offset="100%" stop-color="#f5c26a"/>
+    </linearGradient>
+
+    <!-- Fade sky into black on right edge -->
+    <linearGradient id="skyFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Sun glow -->
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ffe6a0" stop-opacity="1"/>
+      <stop offset="35%"  stop-color="#ffb44a" stop-opacity="0.85"/>
+      <stop offset="75%"  stop-color="#c05820" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3a1c3e" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sun disk -->
+    <radialGradient id="sunDisk" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#fff2c8"/>
+      <stop offset="65%"  stop-color="#ffcc60"/>
+      <stop offset="100%" stop-color="#f5a836"/>
+    </radialGradient>
+
+    <!-- Mane gradient: warm gold at edge, deeper rust toward middle -->
+    <radialGradient id="maneGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#5a1e08" stop-opacity="1"/>
+      <stop offset="55%"  stop-color="#a8501a" stop-opacity="1"/>
+      <stop offset="85%"  stop-color="#e89240" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffcf6a" stop-opacity="0.85"/>
+    </radialGradient>
+
+    <!-- Backlight halo behind the mane -->
+    <radialGradient id="haloGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ffcf6a" stop-opacity="0.9"/>
+      <stop offset="60%"  stop-color="#e08a2c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3a1c3e" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Ground -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#5a2a14"/>
+      <stop offset="60%"  stop-color="#2a1408"/>
+      <stop offset="100%" stop-color="#150a04"/>
+    </linearGradient>
+
+    <!-- Underline sweep -->
+    <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#f5a836" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#f5a836" stop-opacity="1"/>
+      <stop offset="80%"  stop-color="#ffe6a0" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffe6a0" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Mane wind ripple -->
+    <filter id="windSoft" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.05" numOctaves="2" seed="4">
+        <animate attributeName="baseFrequency" values="0.02 0.05;0.03 0.07;0.02 0.05" dur="11s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="2.5"/>
+    </filter>
+
+    <clipPath id="canvasClip">
+      <rect x="0" y="0" width="800" height="200"/>
+    </clipPath>
+  </defs>
+
+  <!-- Dark base -->
+  <rect width="800" height="200" fill="#0d1117"/>
+
+  <g clip-path="url(#canvasClip)">
+    <!-- ==================== LEFT: SAVANNA DUSK ==================== -->
+    <rect x="0" y="0" width="440" height="200" fill="url(#skyGrad)"/>
+    <rect x="380" y="0" width="80" height="200" fill="url(#skyFade)"/>
+
+    <!-- Faint stars in the upper sky -->
+    <g fill="#f5efe0">
+      <circle cx="30"  cy="18" r="0.9" opacity="0.7">
+        <animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="70"  cy="10" r="0.7" opacity="0.5">
+        <animate attributeName="opacity" values="0.2;0.7;0.2" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="115" cy="26" r="0.8" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="13s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="170" cy="14" r="0.6" opacity="0.4">
+        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="7s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="345" cy="12" r="0.7" opacity="0.5">
+        <animate attributeName="opacity" values="0.2;0.7;0.2" dur="13s" begin="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Sun halo -->
+    <ellipse cx="65" cy="150" rx="200" ry="70" fill="url(#sunGlow)">
+      <animate attributeName="rx" values="200;220;200" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Sun disk -->
+    <circle cx="65" cy="152" r="22" fill="url(#sunDisk)">
+      <animate attributeName="r" values="22;23.5;22" dur="7s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Distant hills -->
+    <path d="M 0 158 Q 50 148 100 152 T 200 150 T 320 154 T 440 158 L 440 200 L 0 200 Z"
+          fill="#2a1220" opacity="0.9"/>
+
+    <!-- Ground plane -->
+    <path d="M 0 168 L 440 168 L 440 200 L 0 200 Z" fill="url(#groundGrad)"/>
+
+    <!-- Lone acacia (small, distant, on the far left near sun) -->
+    <g transform="translate(140, 168)">
+      <path d="M 0 0 L 0 -32" stroke="#0a0503" stroke-width="1.5" fill="none"/>
+      <path d="M 0 -28 Q -8 -30 -14 -32" stroke="#0a0503" stroke-width="1" fill="none"/>
+      <path d="M 0 -28 Q 8 -30 14 -32" stroke="#0a0503" stroke-width="1" fill="none"/>
+      <ellipse cx="0" cy="-34" rx="22" ry="3" fill="#0a0503"/>
+      <ellipse cx="-10" cy="-36" rx="10" ry="3" fill="#0a0503"/>
+      <ellipse cx="12" cy="-36" rx="12" ry="3" fill="#0a0503"/>
+    </g>
+
+    <!-- ==================== LION HEAD IN PROFILE ==================== -->
+    <!-- Centered around x=280, y=100 — the head is the whole hero.
+         Faces left (toward the sun). Backlight halo behind mane. -->
+    <g transform="translate(280, 100)">
+
+      <!-- Backlight halo (behind mane) -->
+      <circle cx="0" cy="0" r="80" fill="url(#haloGrad)" opacity="0.85">
+        <animate attributeName="r" values="80;86;80" dur="11s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Mane: large soft disc with rimmed outer strands.
+           Use filter to make it wisp gently in the wind. -->
+      <g filter="url(#windSoft)">
+        <!-- Outer mane ring: warm gold rim strands -->
+        <g fill="#e89240">
+          <!-- Radiating triangular tufts around the mane perimeter -->
+          <path d="M 0 -68 L -6 -58 L 6 -58 Z"/>
+          <path d="M 22 -64 L 14 -55 L 28 -52 Z"/>
+          <path d="M 42 -52 L 30 -48 L 44 -40 Z"/>
+          <path d="M 56 -34 L 44 -34 L 54 -22 Z"/>
+          <path d="M 62 -12 L 50 -14 L 60 -2 Z"/>
+          <path d="M 62 12 L 50 8 L 58 20 Z"/>
+          <path d="M 54 32 L 44 24 L 50 38 Z"/>
+          <path d="M 38 48 L 30 38 L 42 40 Z"/>
+          <path d="M 16 58 L 12 46 L 24 50 Z"/>
+          <path d="M -10 62 L -8 50 L 0 58 Z"/>
+          <path d="M -32 56 L -24 46 L -22 58 Z"/>
+          <path d="M -52 42 L -42 36 L -42 48 Z"/>
+          <path d="M -64 22 L -52 20 L -56 32 Z"/>
+          <path d="M -68 0 L -56 -2 L -62 10 Z"/>
+          <path d="M -66 -22 L -54 -18 L -60 -8 Z"/>
+          <path d="M -56 -42 L -46 -32 L -44 -42 Z"/>
+          <path d="M -40 -56 L -34 -46 L -26 -52 Z"/>
+          <path d="M -20 -64 L -14 -54 L -6 -58 Z"/>
+        </g>
+
+        <!-- Main mane disc -->
+        <circle cx="0" cy="0" r="55" fill="url(#maneGrad)"/>
+
+        <!-- Inner mane shadow to give volume -->
+        <ellipse cx="4" cy="6" rx="42" ry="42" fill="#3a1408" opacity="0.55"/>
+      </g>
+
+      <!-- ================ HEAD (in front of mane, facing LEFT) ================ -->
+      <!-- Face oval -->
+      <ellipse cx="-8" cy="4" rx="28" ry="30" fill="#c68a4a"/>
+      <!-- Warm face shadow -->
+      <ellipse cx="-2" cy="10" rx="22" ry="22" fill="#8a4a1e" opacity="0.55"/>
+
+      <!-- Ears -->
+      <g fill="#c68a4a">
+        <ellipse cx="-24" cy="-22" rx="6" ry="7" transform="rotate(-25 -24 -22)"/>
+        <ellipse cx="10" cy="-22" rx="6" ry="7" transform="rotate(20 10 -22)"/>
+      </g>
+      <g fill="#5a2a10">
+        <ellipse cx="-24" cy="-20" rx="3" ry="4" transform="rotate(-25 -24 -20)"/>
+        <ellipse cx="10" cy="-20" rx="3" ry="4" transform="rotate(20 10 -20)"/>
+      </g>
+
+      <!-- Muzzle mask (lighter cream around mouth/nose) -->
+      <ellipse cx="-14" cy="18" rx="16" ry="12" fill="#f0d8a4"/>
+      <ellipse cx="-14" cy="18" rx="16" ry="12" fill="#e8c898" opacity="0.6"/>
+
+      <!-- Nose -->
+      <path d="M -18 6 Q -22 4 -24 8 Q -22 14 -14 14 Q -6 14 -4 8 Q -6 4 -10 6 Q -14 10 -18 6 Z"
+            fill="#1a0805"/>
+
+      <!-- Mouth line -->
+      <path d="M -14 14 L -14 22" stroke="#1a0805" stroke-width="1.3" fill="none"/>
+      <path d="M -14 22 Q -20 26 -22 22" stroke="#1a0805" stroke-width="1.3" fill="none"/>
+      <path d="M -14 22 Q -8 26 -6 22" stroke="#1a0805" stroke-width="1.3" fill="none"/>
+
+      <!-- Eyes -->
+      <g>
+        <!-- Left eye (viewer's left, further from us in profile) -->
+        <ellipse cx="-20" cy="-4" rx="4" ry="3.5" fill="#f5efe0"/>
+        <circle cx="-20" cy="-4" r="2.4" fill="#c88a2a"/>
+        <circle cx="-20" cy="-4" r="1.2" fill="#1a0805"/>
+        <!-- Right eye -->
+        <ellipse cx="4" cy="-4" rx="4" ry="3.5" fill="#f5efe0"/>
+        <circle cx="4" cy="-4" r="2.4" fill="#c88a2a"/>
+        <circle cx="4" cy="-4" r="1.2" fill="#1a0805"/>
+        <!-- Blink (both eyelids drop briefly) -->
+        <rect x="-25" y="-8" width="10" height="0" fill="#c68a4a">
+          <animate attributeName="height" values="0;0;7;0;0" keyTimes="0;0.45;0.5;0.55;1" dur="11s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="-1" y="-8" width="10" height="0" fill="#c68a4a">
+          <animate attributeName="height" values="0;0;7;0;0" keyTimes="0;0.45;0.5;0.55;1" dur="11s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Whisker dots -->
+      <g fill="#1a0805" opacity="0.7">
+        <circle cx="-22" cy="16" r="0.6"/>
+        <circle cx="-24" cy="19" r="0.6"/>
+        <circle cx="-6" cy="16" r="0.6"/>
+        <circle cx="-4" cy="19" r="0.6"/>
+      </g>
+    </g>
+
+    <!-- Small acacia far behind lion right side, near the sky-fade edge -->
+    <g transform="translate(370, 168)" opacity="0.5">
+      <path d="M 0 0 L 0 -24" stroke="#0a0503" stroke-width="1" fill="none"/>
+      <ellipse cx="0" cy="-26" rx="16" ry="2.5" fill="#0a0503"/>
+    </g>
+
+    <!-- Slow floating dust motes lit by the sun -->
+    <g fill="#ffcc60" opacity="0.55">
+      <circle cx="90" cy="160" r="1">
+        <animate attributeName="cy" values="180;60" dur="17s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.55;0" dur="17s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="150" cy="170" r="0.8">
+        <animate attributeName="cy" values="180;70" dur="19s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.5;0" dur="19s" begin="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="205" cy="165" r="1">
+        <animate attributeName="cy" values="180;50" dur="23s" begin="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.55;0" dur="23s" begin="5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Grass tufts across the ground -->
+    <g stroke="#c88a3a" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.85">
+      <path d="M 22 180 Q 23 174 22 168"/>
+      <path d="M 48 182 Q 47 176 48 170"/>
+      <path d="M 105 180 Q 106 174 105 168"/>
+      <path d="M 165 182 Q 164 176 165 170"/>
+      <path d="M 220 184 Q 221 178 220 172"/>
+      <path d="M 250 180 Q 249 174 250 168"/>
+      <path d="M 340 182 Q 341 176 340 170"/>
+      <path d="M 385 180 Q 384 174 385 168"/>
+    </g>
+
+    <!-- ==================== RIGHT: TEXT PANEL ==================== -->
+    <text x="460" y="70"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="38" font-weight="800" fill="#f5efe0" letter-spacing="1">
+      AUGUST 10, 2026
+    </text>
+
+    <rect x="460" y="80" width="310" height="3" fill="url(#underlineGrad)">
+      <animate attributeName="x" values="460;470;460" dur="11s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="460" y="110"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="20" font-weight="700" letter-spacing="1.5">
+      <tspan fill="#ffb84d">WORLD LION DAY</tspan><tspan fill="#f5efe0" font-weight="500">  ·  SINCE 2013</tspan>
+    </text>
+
+    <text x="460" y="132"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="11" font-style="italic" fill="#ffb84d" letter-spacing="1.1" opacity="0.95">
+      PANTHERA LEO · KING OF BEASTS · PRIDE
+    </text>
+
+    <text x="460" y="150"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="11" fill="#6ba8c8" letter-spacing="1.1" opacity="0.9">
+      BIG CAT RESCUE · NATGEO WILD · ~20,000 REMAINING
+    </text>
+
+    <text x="460" y="180"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="14" font-style="italic" fill="#f5efe0" opacity="0.9">
+      &#8220;the wilderness knows his name.&#8221;
+    </text>
+  </g>
+</svg>
