@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 11, 2026 — World Lion Day (August 10)
+
+<img src="./doodle-archive/2026/08/2026-08-11-061446.svg" width="800" alt="Daily doodle for August 10, 2026 — World Lion Day, observed annually on 10 August since 2013. On the left half, a savanna dusk tableau: an amber-to-violet sky with a sinking golden sun low on the horizon, a lone silhouetted acacia tree, and a large lion's head shown in profile with its warm rust-and-gold mane haloed by the setting sun; the mane strands drift softly in the wind. On the right, a huge cream AUGUST 10, 2026 headline underlined by a warm amber-to-gold sweep, a warm-gold WORLD LION DAY subhead trailed by cream · SINCE 2013, italic amber PANTHERA LEO · KING OF BEASTS · PRIDE tertiary, dim-cyan BIG CAT RESCUE · NATGEO WILD · ~20,000 REMAINING tertiary, and a Georgia-italic 'the wilderness knows his name.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+World Lion Day, marked every 10 August since 2013, was launched by the co-founders of Big Cat Rescue and adopted by National Geographic Wild to draw attention to the collapse of wild lion populations — down roughly 40% in three generations to an estimated 20,000 remaining across fragmented African ranges, plus the last few hundred Asiatic lions in India's Gir Forest.
+
+A savanna dusk: an amber-to-violet sky, a sinking sun on the horizon, and a big lion's head in profile, mane haloed by the setting sun. The mane's warm strands drift softly in the wind, the sun pulses on the horizon, and a lone acacia stands to the side. On the right, a large AUGUST 10, 2026 headline anchors a WORLD LION DAY subhead, a since-2013 tertiary, and the Panthera leo caption at the base.
+
+</details>
+
+---
+
 ## August 10, 2026 — Smithsonian Institution — 180th Anniversary (August 10, 1846)
 
 <img src="./doodle-archive/2026/08/2026-08-10-062218.svg" width="800" alt="Daily doodle for August 10, 2026 — the 180th anniversary of the Smithsonian Institution's founding on August 10, 1846. On the left half, a twilight tableau: a silhouette of the Smithsonian Castle in warm red sandstone rises against a purple-to-amber sky, its arched windows glowing yellow, its towers crenellated. Specimens — a T. rex, a rocket, an atom, a butterfly — drift steadily upward from the rooflines into the night sky, illustrating the diffusion of knowledge. On the right, a huge cream AUGUST 10, 2026 headline underlined by a red-to-gold sweep, a Smithsonian-red SMITHSONIAN subhead trailed by cream 180 YEARS, italic amber CHARTERED 10 AUGUST 1846 · JAMES SMITHSON tertiary, dim-cyan CASTLE · NORMAN REVIVAL · 21 MUSEUMS · 157M OBJECTS tertiary, and a Georgia-italic 'for the increase and diffusion of knowledge among men.' caption at the base.">
