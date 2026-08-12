@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 12, 2026 — Hip Hop's 53rd Birthday (August 11, 1973)
+
+<img src="./doodle-archive/2026/08/2026-08-12-062531.svg" width="800" alt="Daily doodle for August 11, 2026 — Hip Hop's 53rd birthday, marking DJ Kool Herc's block party at 1520 Sedgwick Avenue in the Bronx on 11 August 1973. On the left half, a DJ turntable tableau against a purple graffiti-tagged brick wall: a large black vinyl LP spins continuously on a silver turntable platter, its warm-gold center label reading HIP HOP · AUG 11 '73, a chrome tonearm rests on the outer grooves, and a big spray-painted number 53 in cream and pink glows behind the deck. A row of hot-pink and gold equalizer bars pulses to the beat, and small cream musical notes drift upward. On the right, a huge cream AUGUST 11, 2026 headline underlined by a gold-to-red sweep, a warm-gold HIP HOP AT 53 subhead trailed by cream · BLOCK PARTY '73, italic amber DJ KOOL HERC · 1520 SEDGWICK AVE · BRONX tertiary, dim-cyan BREAKBEAT · TWO TURNTABLES · BACK TO SCHOOL JAM tertiary, and a Georgia-italic 'the day the beat began.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 11 August 1973, in the rec room of 1520 Sedgwick Avenue in the Bronx, an eighteen-year-old Clive Campbell — DJ Kool Herc — threw a back-to-school party for his sister Cindy and worked out a new trick on the two turntables: cutting back and forth between the same record's drum "break," extending the passage dancers loved into a whole song. The b-boys danced to it, the MC's rhymed over it, and hip hop had its founding moment. 53 years today.
+
+A DJ tableau on a graffiti-tagged wall: a large vinyl LP spins on a turntable, its warm-gold label reading HIP HOP, the tonearm resting on the outer grooves. To the right an equalizer pulses to a beat while musical notes drift upward. A bold spray-painted "53" glows behind the deck. On the right, a large AUGUST 11, 2026 headline anchors a HIP HOP AT 53 subhead, the Sedgwick-Ave block-party attribution, and the caption "the day the beat began."
+
+</details>
+
+---
+
 ## August 11, 2026 — World Lion Day (August 10)
 
 <img src="./doodle-archive/2026/08/2026-08-11-061446.svg" width="800" alt="Daily doodle for August 10, 2026 — World Lion Day, observed annually on 10 August since 2013. On the left half, a savanna dusk tableau: an amber-to-violet sky with a sinking golden sun low on the horizon, a lone silhouetted acacia tree, and a large lion's head shown in profile with its warm rust-and-gold mane haloed by the setting sun; the mane strands drift softly in the wind. On the right, a huge cream AUGUST 10, 2026 headline underlined by a warm amber-to-gold sweep, a warm-gold WORLD LION DAY subhead trailed by cream · SINCE 2013, italic amber PANTHERA LEO · KING OF BEASTS · PRIDE tertiary, dim-cyan BIG CAT RESCUE · NATGEO WILD · ~20,000 REMAINING tertiary, and a Georgia-italic 'the wilderness knows his name.' caption at the base.">
