@@ -1,1176 +1,279 @@
-<svg width="800" height="440" viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for brandon-fryslie: 366-day contribution heatmap, 255 of 365 days active, 82-day longest streak, 8 languages, 16 active repos, 69 commits and 62 PRs merged in the past 7 days.">
+<svg width="800" height="360" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie: 8 languages across 55 active repositories, 19 of 30 days active this month, 67 commits in the past 7 days, 68 issues closed in the past year.">
   <defs>
-    <linearGradient id="daysGrad" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#0891b2"/>
-      <stop offset="1" stop-color="#22d3ee"/>
-    </linearGradient>
-    <linearGradient id="prGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#c4b5fd"/>
-      <stop offset="1" stop-color="#7c3aed"/>
-    </linearGradient>
-    <linearGradient id="sparkGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#7ee787"/>
-      <stop offset="1" stop-color="#1a7f39"/>
-    </linearGradient>
-    <linearGradient id="langSweep" x1="0" x2="1" y1="0" y2="0">
+    <linearGradient id="sweep" x1="0" x2="1" y1="0" y2="0">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="repoGrad" x1="0" x2="1" y1="0" y2="0">
       <stop offset="0" stop-color="#f472b6"/>
       <stop offset="1" stop-color="#be185d"/>
     </linearGradient>
-    <linearGradient id="heatSweep" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.20"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    <linearGradient id="gaugeGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#0891b2"/>
     </linearGradient>
-    <clipPath id="heatClip"><rect x="30" y="60" width="740" height="96" rx="2"/></clipPath>
+    <linearGradient id="commitGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7ee787"/>
+      <stop offset="1" stop-color="#26a641"/>
+    </linearGradient>
+    <clipPath id="langClip"><rect x="140" y="76" width="636" height="40" rx="5"/></clipPath>
   </defs>
 
-  <rect width="800" height="440" fill="#0d1117"/>
+  <rect width="800" height="360" fill="#0d1117"/>
 
-  <!-- Header row -->
-  <text x="24" y="24" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
-  <text x="776" y="24" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#7d8590">brandon-fryslie · past 12 months</text>
+  <!-- HEADER -->
+  <text x="24" y="22" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="13" font-weight="700" letter-spacing="0.6" fill="#e6edf3">LIVE GITHUB STATS</text>
+  <text x="776" y="22" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#8b949e">brandon-fryslie · past 12 months</text>
+  <line x1="24" y1="32" x2="776" y2="32" stroke="#21262d" stroke-width="1"/>
 
-  <!-- Heatmap section title -->
-  <text x="24" y="50" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" font-weight="600" fill="#e6edf3">Daily contributions</text>
-  <text x="776" y="50" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#7d8590">each cell = 1 day · brighter = more contributions</text>
+  <!-- LANGUAGES BAND -->
+  <text x="24" y="58" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">LANGUAGES</text>
+  <text x="24" y="104" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="34" font-weight="700" fill="#22d3ee">8</text>
+  <text x="24" y="124" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">1 Year</text>
 
-  <!-- Heatmap cells -->
-  <g fill="#161b22">
-    <rect x="30" y="130" width="12" height="12" rx="2"/>
-    <rect x="30" y="144" width="12" height="12" rx="2"/>
-    <rect x="44" y="60" width="12" height="12" rx="2"/>
-    <rect x="44" y="74" width="12" height="12" rx="2"/>
-    <rect x="44" y="88" width="12" height="12" rx="2"/>
-    <rect x="44" y="102" width="12" height="12" rx="2"/>
-    <rect x="44" y="116" width="12" height="12" rx="2"/>
-    <rect x="44" y="130" width="12" height="12" rx="2"/>
-    <rect x="44" y="144" width="12" height="12" rx="2"/>
-    <rect x="58" y="74" width="12" height="12" rx="2"/>
-    <rect x="58" y="88" width="12" height="12" rx="2"/>
-    <rect x="58" y="102" width="12" height="12" rx="2"/>
-    <rect x="58" y="116" width="12" height="12" rx="2"/>
-    <rect x="58" y="130" width="12" height="12" rx="2"/>
-    <rect x="72" y="60" width="12" height="12" rx="2"/>
-    <rect x="72" y="74" width="12" height="12" rx="2"/>
-    <rect x="72" y="88" width="12" height="12" rx="2"/>
-    <rect x="72" y="102" width="12" height="12" rx="2"/>
-    <rect x="72" y="116" width="12" height="12" rx="2"/>
-    <rect x="72" y="130" width="12" height="12" rx="2"/>
-    <rect x="72" y="144" width="12" height="12" rx="2"/>
-    <rect x="86" y="60" width="12" height="12" rx="2"/>
-    <rect x="86" y="74" width="12" height="12" rx="2"/>
-    <rect x="86" y="88" width="12" height="12" rx="2"/>
-    <rect x="86" y="102" width="12" height="12" rx="2"/>
-    <rect x="86" y="130" width="12" height="12" rx="2"/>
-    <rect x="86" y="144" width="12" height="12" rx="2"/>
-    <rect x="100" y="60" width="12" height="12" rx="2"/>
-    <rect x="100" y="74" width="12" height="12" rx="2"/>
-    <rect x="100" y="88" width="12" height="12" rx="2"/>
-    <rect x="100" y="102" width="12" height="12" rx="2"/>
-    <rect x="100" y="116" width="12" height="12" rx="2"/>
-    <rect x="100" y="130" width="12" height="12" rx="2"/>
-    <rect x="100" y="144" width="12" height="12" rx="2"/>
-    <rect x="114" y="60" width="12" height="12" rx="2"/>
-    <rect x="114" y="74" width="12" height="12" rx="2"/>
-    <rect x="114" y="88" width="12" height="12" rx="2"/>
-    <rect x="114" y="102" width="12" height="12" rx="2"/>
-    <rect x="114" y="116" width="12" height="12" rx="2"/>
-    <rect x="114" y="130" width="12" height="12" rx="2"/>
-    <rect x="114" y="144" width="12" height="12" rx="2"/>
-    <rect x="128" y="60" width="12" height="12" rx="2"/>
-    <rect x="128" y="74" width="12" height="12" rx="2"/>
-    <rect x="128" y="102" width="12" height="12" rx="2"/>
-    <rect x="128" y="116" width="12" height="12" rx="2"/>
-    <rect x="128" y="130" width="12" height="12" rx="2"/>
-    <rect x="142" y="60" width="12" height="12" rx="2"/>
-    <rect x="142" y="74" width="12" height="12" rx="2"/>
-    <rect x="142" y="88" width="12" height="12" rx="2"/>
-    <rect x="142" y="102" width="12" height="12" rx="2"/>
-    <rect x="142" y="116" width="12" height="12" rx="2"/>
-    <rect x="142" y="144" width="12" height="12" rx="2"/>
-    <rect x="156" y="60" width="12" height="12" rx="2"/>
-    <rect x="156" y="74" width="12" height="12" rx="2"/>
-    <rect x="156" y="88" width="12" height="12" rx="2"/>
-    <rect x="156" y="130" width="12" height="12" rx="2"/>
-    <rect x="156" y="144" width="12" height="12" rx="2"/>
-    <rect x="170" y="60" width="12" height="12" rx="2"/>
-    <rect x="170" y="74" width="12" height="12" rx="2"/>
-    <rect x="170" y="88" width="12" height="12" rx="2"/>
-    <rect x="170" y="102" width="12" height="12" rx="2"/>
-    <rect x="170" y="130" width="12" height="12" rx="2"/>
-    <rect x="170" y="144" width="12" height="12" rx="2"/>
-    <rect x="184" y="74" width="12" height="12" rx="2"/>
-    <rect x="184" y="102" width="12" height="12" rx="2"/>
-    <rect x="184" y="144" width="12" height="12" rx="2"/>
-    <rect x="198" y="60" width="12" height="12" rx="2"/>
-    <rect x="198" y="74" width="12" height="12" rx="2"/>
-    <rect x="198" y="144" width="12" height="12" rx="2"/>
-    <rect x="212" y="130" width="12" height="12" rx="2"/>
-    <rect x="212" y="144" width="12" height="12" rx="2"/>
-    <rect x="226" y="74" width="12" height="12" rx="2"/>
-    <rect x="226" y="102" width="12" height="12" rx="2"/>
-    <rect x="226" y="116" width="12" height="12" rx="2"/>
-    <rect x="226" y="130" width="12" height="12" rx="2"/>
-    <rect x="226" y="144" width="12" height="12" rx="2"/>
-    <rect x="240" y="60" width="12" height="12" rx="2"/>
-    <rect x="240" y="74" width="12" height="12" rx="2"/>
-    <rect x="240" y="102" width="12" height="12" rx="2"/>
-    <rect x="240" y="116" width="12" height="12" rx="2"/>
-    <rect x="240" y="130" width="12" height="12" rx="2"/>
-    <rect x="240" y="144" width="12" height="12" rx="2"/>
-    <rect x="254" y="88" width="12" height="12" rx="2"/>
-    <rect x="254" y="116" width="12" height="12" rx="2"/>
-    <rect x="254" y="130" width="12" height="12" rx="2"/>
-    <rect x="254" y="144" width="12" height="12" rx="2"/>
-    <rect x="268" y="60" width="12" height="12" rx="2"/>
-    <rect x="268" y="74" width="12" height="12" rx="2"/>
-    <rect x="282" y="74" width="12" height="12" rx="2"/>
-    <rect x="310" y="116" width="12" height="12" rx="2"/>
-    <rect x="310" y="130" width="12" height="12" rx="2"/>
-    <rect x="324" y="60" width="12" height="12" rx="2"/>
-    <rect x="324" y="116" width="12" height="12" rx="2"/>
-    <rect x="492" y="102" width="12" height="12" rx="2"/>
-    <rect x="506" y="130" width="12" height="12" rx="2"/>
-    <rect x="548" y="144" width="12" height="12" rx="2"/>
-    <rect x="576" y="88" width="12" height="12" rx="2"/>
-    <rect x="646" y="130" width="12" height="12" rx="2"/>
-    <rect x="660" y="144" width="12" height="12" rx="2"/>
-    <rect x="702" y="74" width="12" height="12" rx="2"/>
-    <rect x="702" y="88" width="12" height="12" rx="2"/>
-    <rect x="702" y="102" width="12" height="12" rx="2"/>
-    <rect x="702" y="116" width="12" height="12" rx="2"/>
-    <rect x="702" y="144" width="12" height="12" rx="2"/>
-    <rect x="716" y="102" width="12" height="12" rx="2"/>
-    <rect x="716" y="116" width="12" height="12" rx="2"/>
-    <rect x="716" y="130" width="12" height="12" rx="2"/>
-    <rect x="730" y="88" width="12" height="12" rx="2"/>
-    <rect x="744" y="116" width="12" height="12" rx="2"/>
-    <rect x="744" y="144" width="12" height="12" rx="2"/>
-    <rect x="758" y="102" width="12" height="12" rx="2"/>
-  </g>
-  <g fill="#0e4429">
-    <rect x="30" y="88" width="12" height="12" rx="2"/>
-    <rect x="30" y="102" width="12" height="12" rx="2"/>
-    <rect x="30" y="116" width="12" height="12" rx="2"/>
-    <rect x="58" y="60" width="12" height="12" rx="2"/>
-    <rect x="58" y="144" width="12" height="12" rx="2"/>
-    <rect x="86" y="116" width="12" height="12" rx="2"/>
-    <rect x="128" y="88" width="12" height="12" rx="2"/>
-    <rect x="128" y="144" width="12" height="12" rx="2"/>
-    <rect x="142" y="130" width="12" height="12" rx="2"/>
-    <rect x="156" y="102" width="12" height="12" rx="2"/>
-    <rect x="156" y="116" width="12" height="12" rx="2"/>
-    <rect x="170" y="116" width="12" height="12" rx="2"/>
-    <rect x="184" y="88" width="12" height="12" rx="2"/>
-    <rect x="184" y="116" width="12" height="12" rx="2"/>
-    <rect x="184" y="130" width="12" height="12" rx="2"/>
-    <rect x="198" y="88" width="12" height="12" rx="2"/>
-    <rect x="198" y="130" width="12" height="12" rx="2"/>
-    <rect x="212" y="74" width="12" height="12" rx="2"/>
-    <rect x="212" y="88" width="12" height="12" rx="2"/>
-    <rect x="226" y="60" width="12" height="12" rx="2"/>
-    <rect x="226" y="88" width="12" height="12" rx="2"/>
-    <rect x="240" y="88" width="12" height="12" rx="2"/>
-    <rect x="254" y="60" width="12" height="12" rx="2"/>
-    <rect x="254" y="74" width="12" height="12" rx="2"/>
-    <rect x="254" y="102" width="12" height="12" rx="2"/>
-    <rect x="268" y="116" width="12" height="12" rx="2"/>
-    <rect x="268" y="130" width="12" height="12" rx="2"/>
-    <rect x="282" y="60" width="12" height="12" rx="2"/>
-    <rect x="310" y="88" width="12" height="12" rx="2"/>
-    <rect x="310" y="144" width="12" height="12" rx="2"/>
-    <rect x="324" y="74" width="12" height="12" rx="2"/>
-    <rect x="324" y="88" width="12" height="12" rx="2"/>
-    <rect x="324" y="144" width="12" height="12" rx="2"/>
-    <rect x="408" y="60" width="12" height="12" rx="2"/>
-    <rect x="408" y="88" width="12" height="12" rx="2"/>
-    <rect x="492" y="88" width="12" height="12" rx="2"/>
-    <rect x="492" y="144" width="12" height="12" rx="2"/>
-    <rect x="506" y="116" width="12" height="12" rx="2"/>
-    <rect x="590" y="102" width="12" height="12" rx="2"/>
-    <rect x="632" y="144" width="12" height="12" rx="2"/>
-    <rect x="674" y="60" width="12" height="12" rx="2"/>
-    <rect x="674" y="116" width="12" height="12" rx="2"/>
-    <rect x="674" y="144" width="12" height="12" rx="2"/>
-    <rect x="688" y="102" width="12" height="12" rx="2"/>
-    <rect x="702" y="60" width="12" height="12" rx="2"/>
-    <rect x="716" y="74" width="12" height="12" rx="2"/>
-    <rect x="744" y="74" width="12" height="12" rx="2"/>
-    <rect x="744" y="88" width="12" height="12" rx="2"/>
-    <rect x="744" y="102" width="12" height="12" rx="2"/>
-    <rect x="758" y="88" width="12" height="12" rx="2"/>
-  </g>
-  <g fill="#006d32">
-    <rect x="184" y="60" width="12" height="12" rx="2"/>
-    <rect x="198" y="102" width="12" height="12" rx="2"/>
-    <rect x="198" y="116" width="12" height="12" rx="2"/>
-    <rect x="212" y="60" width="12" height="12" rx="2"/>
-    <rect x="212" y="102" width="12" height="12" rx="2"/>
-    <rect x="268" y="88" width="12" height="12" rx="2"/>
-    <rect x="268" y="102" width="12" height="12" rx="2"/>
-    <rect x="268" y="144" width="12" height="12" rx="2"/>
-    <rect x="282" y="102" width="12" height="12" rx="2"/>
-    <rect x="296" y="74" width="12" height="12" rx="2"/>
-    <rect x="296" y="88" width="12" height="12" rx="2"/>
-    <rect x="310" y="74" width="12" height="12" rx="2"/>
-    <rect x="310" y="102" width="12" height="12" rx="2"/>
-    <rect x="380" y="144" width="12" height="12" rx="2"/>
-    <rect x="394" y="88" width="12" height="12" rx="2"/>
-    <rect x="394" y="116" width="12" height="12" rx="2"/>
-    <rect x="408" y="74" width="12" height="12" rx="2"/>
-    <rect x="408" y="102" width="12" height="12" rx="2"/>
-    <rect x="422" y="144" width="12" height="12" rx="2"/>
-    <rect x="436" y="116" width="12" height="12" rx="2"/>
-    <rect x="464" y="60" width="12" height="12" rx="2"/>
-    <rect x="464" y="102" width="12" height="12" rx="2"/>
-    <rect x="464" y="130" width="12" height="12" rx="2"/>
-    <rect x="478" y="102" width="12" height="12" rx="2"/>
-    <rect x="478" y="116" width="12" height="12" rx="2"/>
-    <rect x="478" y="130" width="12" height="12" rx="2"/>
-    <rect x="478" y="144" width="12" height="12" rx="2"/>
-    <rect x="492" y="60" width="12" height="12" rx="2"/>
-    <rect x="506" y="60" width="12" height="12" rx="2"/>
-    <rect x="506" y="102" width="12" height="12" rx="2"/>
-    <rect x="506" y="144" width="12" height="12" rx="2"/>
-    <rect x="520" y="88" width="12" height="12" rx="2"/>
-    <rect x="520" y="102" width="12" height="12" rx="2"/>
-    <rect x="520" y="116" width="12" height="12" rx="2"/>
-    <rect x="534" y="88" width="12" height="12" rx="2"/>
-    <rect x="534" y="102" width="12" height="12" rx="2"/>
-    <rect x="576" y="60" width="12" height="12" rx="2"/>
-    <rect x="576" y="116" width="12" height="12" rx="2"/>
-    <rect x="590" y="60" width="12" height="12" rx="2"/>
-    <rect x="590" y="88" width="12" height="12" rx="2"/>
-    <rect x="632" y="60" width="12" height="12" rx="2"/>
-    <rect x="646" y="102" width="12" height="12" rx="2"/>
-    <rect x="660" y="130" width="12" height="12" rx="2"/>
-    <rect x="674" y="74" width="12" height="12" rx="2"/>
-    <rect x="688" y="60" width="12" height="12" rx="2"/>
-    <rect x="716" y="88" width="12" height="12" rx="2"/>
-    <rect x="730" y="130" width="12" height="12" rx="2"/>
-  </g>
-  <g fill="#26a641">
-    <rect x="212" y="116" width="12" height="12" rx="2"/>
-    <rect x="282" y="88" width="12" height="12" rx="2"/>
-    <rect x="282" y="116" width="12" height="12" rx="2"/>
-    <rect x="282" y="130" width="12" height="12" rx="2"/>
-    <rect x="282" y="144" width="12" height="12" rx="2"/>
-    <rect x="296" y="60" width="12" height="12" rx="2"/>
-    <rect x="296" y="102" width="12" height="12" rx="2"/>
-    <rect x="296" y="116" width="12" height="12" rx="2"/>
-    <rect x="310" y="60" width="12" height="12" rx="2"/>
-    <rect x="324" y="102" width="12" height="12" rx="2"/>
-    <rect x="338" y="60" width="12" height="12" rx="2"/>
-    <rect x="338" y="88" width="12" height="12" rx="2"/>
-    <rect x="338" y="102" width="12" height="12" rx="2"/>
-    <rect x="338" y="116" width="12" height="12" rx="2"/>
-    <rect x="338" y="130" width="12" height="12" rx="2"/>
-    <rect x="352" y="130" width="12" height="12" rx="2"/>
-    <rect x="366" y="74" width="12" height="12" rx="2"/>
-    <rect x="366" y="116" width="12" height="12" rx="2"/>
-    <rect x="366" y="144" width="12" height="12" rx="2"/>
-    <rect x="380" y="116" width="12" height="12" rx="2"/>
-    <rect x="380" y="130" width="12" height="12" rx="2"/>
-    <rect x="394" y="60" width="12" height="12" rx="2"/>
-    <rect x="394" y="74" width="12" height="12" rx="2"/>
-    <rect x="394" y="102" width="12" height="12" rx="2"/>
-    <rect x="394" y="130" width="12" height="12" rx="2"/>
-    <rect x="408" y="116" width="12" height="12" rx="2"/>
-    <rect x="422" y="130" width="12" height="12" rx="2"/>
-    <rect x="436" y="60" width="12" height="12" rx="2"/>
-    <rect x="436" y="74" width="12" height="12" rx="2"/>
-    <rect x="436" y="88" width="12" height="12" rx="2"/>
-    <rect x="436" y="102" width="12" height="12" rx="2"/>
-    <rect x="436" y="130" width="12" height="12" rx="2"/>
-    <rect x="436" y="144" width="12" height="12" rx="2"/>
-    <rect x="450" y="74" width="12" height="12" rx="2"/>
-    <rect x="450" y="102" width="12" height="12" rx="2"/>
-    <rect x="450" y="130" width="12" height="12" rx="2"/>
-    <rect x="450" y="144" width="12" height="12" rx="2"/>
-    <rect x="464" y="74" width="12" height="12" rx="2"/>
-    <rect x="464" y="88" width="12" height="12" rx="2"/>
-    <rect x="464" y="144" width="12" height="12" rx="2"/>
-    <rect x="478" y="74" width="12" height="12" rx="2"/>
-    <rect x="478" y="88" width="12" height="12" rx="2"/>
-    <rect x="492" y="74" width="12" height="12" rx="2"/>
-    <rect x="492" y="116" width="12" height="12" rx="2"/>
-    <rect x="492" y="130" width="12" height="12" rx="2"/>
-    <rect x="506" y="88" width="12" height="12" rx="2"/>
-    <rect x="520" y="60" width="12" height="12" rx="2"/>
-    <rect x="520" y="74" width="12" height="12" rx="2"/>
-    <rect x="520" y="130" width="12" height="12" rx="2"/>
-    <rect x="534" y="60" width="12" height="12" rx="2"/>
-    <rect x="534" y="74" width="12" height="12" rx="2"/>
-    <rect x="534" y="116" width="12" height="12" rx="2"/>
-    <rect x="534" y="144" width="12" height="12" rx="2"/>
-    <rect x="548" y="60" width="12" height="12" rx="2"/>
-    <rect x="548" y="74" width="12" height="12" rx="2"/>
-    <rect x="548" y="102" width="12" height="12" rx="2"/>
-    <rect x="548" y="116" width="12" height="12" rx="2"/>
-    <rect x="548" y="130" width="12" height="12" rx="2"/>
-    <rect x="562" y="74" width="12" height="12" rx="2"/>
-    <rect x="562" y="102" width="12" height="12" rx="2"/>
-    <rect x="562" y="116" width="12" height="12" rx="2"/>
-    <rect x="562" y="130" width="12" height="12" rx="2"/>
-    <rect x="562" y="144" width="12" height="12" rx="2"/>
-    <rect x="576" y="74" width="12" height="12" rx="2"/>
-    <rect x="576" y="102" width="12" height="12" rx="2"/>
-    <rect x="576" y="130" width="12" height="12" rx="2"/>
-    <rect x="576" y="144" width="12" height="12" rx="2"/>
-    <rect x="590" y="74" width="12" height="12" rx="2"/>
-    <rect x="590" y="130" width="12" height="12" rx="2"/>
-    <rect x="590" y="144" width="12" height="12" rx="2"/>
-    <rect x="604" y="88" width="12" height="12" rx="2"/>
-    <rect x="604" y="116" width="12" height="12" rx="2"/>
-    <rect x="604" y="144" width="12" height="12" rx="2"/>
-    <rect x="618" y="74" width="12" height="12" rx="2"/>
-    <rect x="618" y="130" width="12" height="12" rx="2"/>
-    <rect x="618" y="144" width="12" height="12" rx="2"/>
-    <rect x="632" y="74" width="12" height="12" rx="2"/>
-    <rect x="646" y="88" width="12" height="12" rx="2"/>
-    <rect x="646" y="116" width="12" height="12" rx="2"/>
-    <rect x="674" y="102" width="12" height="12" rx="2"/>
-    <rect x="674" y="130" width="12" height="12" rx="2"/>
-    <rect x="688" y="88" width="12" height="12" rx="2"/>
-    <rect x="688" y="116" width="12" height="12" rx="2"/>
-    <rect x="688" y="144" width="12" height="12" rx="2"/>
-    <rect x="702" y="130" width="12" height="12" rx="2"/>
-    <rect x="716" y="60" width="12" height="12" rx="2"/>
-    <rect x="716" y="144" width="12" height="12" rx="2"/>
-    <rect x="730" y="60" width="12" height="12" rx="2"/>
-    <rect x="730" y="74" width="12" height="12" rx="2"/>
-    <rect x="730" y="102" width="12" height="12" rx="2"/>
-    <rect x="730" y="116" width="12" height="12" rx="2"/>
-    <rect x="744" y="130" width="12" height="12" rx="2"/>
-    <rect x="758" y="74" width="12" height="12" rx="2"/>
-  </g>
-  <g fill="#39d353">
-    <rect x="296" y="130" width="12" height="12" rx="2"/>
-    <rect x="296" y="144" width="12" height="12" rx="2"/>
-    <rect x="338" y="74" width="12" height="12" rx="2"/>
-    <rect x="338" y="144" width="12" height="12" rx="2"/>
-    <rect x="352" y="74" width="12" height="12" rx="2"/>
-    <rect x="352" y="88" width="12" height="12" rx="2"/>
-    <rect x="352" y="102" width="12" height="12" rx="2"/>
-    <rect x="352" y="116" width="12" height="12" rx="2"/>
-    <rect x="352" y="144" width="12" height="12" rx="2"/>
-    <rect x="366" y="60" width="12" height="12" rx="2"/>
-    <rect x="366" y="88" width="12" height="12" rx="2"/>
-    <rect x="366" y="102" width="12" height="12" rx="2"/>
-    <rect x="380" y="74" width="12" height="12" rx="2"/>
-    <rect x="380" y="88" width="12" height="12" rx="2"/>
-    <rect x="380" y="102" width="12" height="12" rx="2"/>
-    <rect x="408" y="130" width="12" height="12" rx="2"/>
-    <rect x="422" y="74" width="12" height="12" rx="2"/>
-    <rect x="422" y="102" width="12" height="12" rx="2"/>
-    <rect x="422" y="116" width="12" height="12" rx="2"/>
-    <rect x="450" y="60" width="12" height="12" rx="2"/>
-    <rect x="450" y="116" width="12" height="12" rx="2"/>
-    <rect x="464" y="116" width="12" height="12" rx="2"/>
-    <rect x="478" y="60" width="12" height="12" rx="2"/>
-    <rect x="520" y="144" width="12" height="12" rx="2"/>
-    <rect x="534" y="130" width="12" height="12" rx="2"/>
-    <rect x="548" y="88" width="12" height="12" rx="2"/>
-    <rect x="562" y="60" width="12" height="12" rx="2"/>
-    <rect x="562" y="88" width="12" height="12" rx="2"/>
-    <rect x="590" y="116" width="12" height="12" rx="2"/>
-    <rect x="604" y="74" width="12" height="12" rx="2"/>
-    <rect x="604" y="102" width="12" height="12" rx="2"/>
-    <rect x="604" y="130" width="12" height="12" rx="2"/>
-    <rect x="618" y="60" width="12" height="12" rx="2"/>
-    <rect x="618" y="88" width="12" height="12" rx="2"/>
-    <rect x="618" y="102" width="12" height="12" rx="2"/>
-    <rect x="632" y="130" width="12" height="12" rx="2"/>
-    <rect x="646" y="144" width="12" height="12" rx="2"/>
-    <rect x="660" y="60" width="12" height="12" rx="2"/>
-    <rect x="660" y="88" width="12" height="12" rx="2"/>
-    <rect x="674" y="88" width="12" height="12" rx="2"/>
-    <rect x="688" y="130" width="12" height="12" rx="2"/>
-    <rect x="744" y="60" width="12" height="12" rx="2"/>
-    <rect x="758" y="60" width="12" height="12" rx="2"/>
-  </g>
-  <g fill="#7ee787">
-    <rect x="324" y="130" width="12" height="12" rx="2"/>
-    <rect x="352" y="60" width="12" height="12" rx="2"/>
-    <rect x="366" y="130" width="12" height="12" rx="2"/>
-    <rect x="380" y="60" width="12" height="12" rx="2"/>
-    <rect x="394" y="144" width="12" height="12" rx="2"/>
-    <rect x="408" y="144" width="12" height="12" rx="2"/>
-    <rect x="422" y="60" width="12" height="12" rx="2"/>
-    <rect x="422" y="88" width="12" height="12" rx="2"/>
-    <rect x="450" y="88" width="12" height="12" rx="2"/>
-    <rect x="506" y="74" width="12" height="12" rx="2"/>
-    <rect x="604" y="60" width="12" height="12" rx="2"/>
-    <rect x="618" y="116" width="12" height="12" rx="2"/>
-    <rect x="632" y="88" width="12" height="12" rx="2"/>
-    <rect x="632" y="102" width="12" height="12" rx="2"/>
-    <rect x="632" y="116" width="12" height="12" rx="2"/>
-    <rect x="646" y="60" width="12" height="12" rx="2"/>
-    <rect x="646" y="74" width="12" height="12" rx="2"/>
-    <rect x="660" y="74" width="12" height="12" rx="2"/>
-    <rect x="660" y="102" width="12" height="12" rx="2"/>
-    <rect x="660" y="116" width="12" height="12" rx="2"/>
-    <rect x="688" y="74" width="12" height="12" rx="2"/>
-    <rect x="730" y="144" width="12" height="12" rx="2"/>
-  </g>
-
-  <!-- Slow sweep across the heatmap -->
-  <g clip-path="url(#heatClip)">
-    <rect x="-50" y="60" width="80" height="96" fill="url(#heatSweep)">
-      <animate attributeName="x" from="-50" to="770" dur="13s" repeatCount="indefinite"/>
+  <g clip-path="url(#langClip)">
+    <rect x="140" y="76" width="636" height="40" fill="#161b22"/>
+    <rect x="140" y="76" width="421.53" height="40" fill="#3178c6">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="561.53" y="76" width="127.60" height="40" fill="#3572A5">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" begin="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="689.13" y="76" width="63.74" height="40" fill="#00ADD8">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" begin="2.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="752.87" y="76" width="7.92" height="40" fill="#89e051">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="3.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="760.79" y="76" width="6.22" height="40" fill="#e34c26">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="3.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="767.01" y="76" width="3.00" height="40" fill="#a06cd5">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="4.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="770.01" y="76" width="3.00" height="40" fill="#f1e05a">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="4.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="773.01" y="76" width="3.00" height="40" fill="#b28dff">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="5.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="50" y="76" width="110" height="40" fill="url(#sweep)" opacity="0.7">
+      <animate attributeName="x" from="50" to="776" dur="11s" repeatCount="indefinite"/>
     </rect>
   </g>
 
-  <!-- Month labels -->
-  <g font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#6e7681">
-    <text x="30" y="170">Aug</text>
-    <text x="72" y="170">Sep</text>
-    <text x="128" y="170">Oct</text>
-    <text x="184" y="170">Nov</text>
-    <text x="254" y="170">Dec</text>
-    <text x="310" y="170">Jan</text>
-    <text x="380" y="170">Feb</text>
-    <text x="436" y="170">Mar</text>
-    <text x="492" y="170">Apr</text>
-    <text x="548" y="170">May</text>
-    <text x="618" y="170">Jun</text>
-    <text x="674" y="170">Jul</text>
-    <text x="730" y="170">Aug</text>
+  <text x="350.77" y="100" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff">TypeScript</text>
+  <text x="625.33" y="100" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#ffffff">Python</text>
+  <text x="721.00" y="100" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" fill="#ffffff">Go</text>
+
+  <rect x="140" y="128" width="8" height="8" rx="1.5" fill="#89e051"/>
+  <text x="152" y="135" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#8b949e">Shell</text>
+  <rect x="192" y="128" width="8" height="8" rx="1.5" fill="#e34c26"/>
+  <text x="204" y="135" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#8b949e">HTML</text>
+  <rect x="246" y="128" width="8" height="8" rx="1.5" fill="#a06cd5"/>
+  <text x="258" y="135" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#8b949e">CSS</text>
+  <rect x="290" y="128" width="8" height="8" rx="1.5" fill="#f1e05a"/>
+  <text x="302" y="135" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#8b949e">JavaScript</text>
+  <rect x="360" y="128" width="8" height="8" rx="1.5" fill="#b28dff"/>
+  <text x="372" y="135" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#8b949e">Lua</text>
+
+  <line x1="24" y1="146" x2="776" y2="146" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ACTIVE REPOS BAND -->
+  <text x="24" y="162" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">ACTIVE REPOS</text>
+  <text x="24" y="200" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="34" font-weight="700" fill="#f472b6">55</text>
+  <text x="24" y="220" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">1 Year</text>
+  <text x="24" y="236" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#6e7681">top 6 shown</text>
+
+  <text x="140" y="166" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#e6edf3">oscilla-animator-v2</text>
+  <rect x="274" y="158" width="454" height="9" rx="2" fill="#161b22"/>
+  <rect x="274" y="158" width="454" height="9" rx="2" fill="url(#repoGrad)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="166" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#8b949e">1708</text>
+
+  <text x="140" y="181" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#e6edf3">cc-dump</text>
+  <rect x="274" y="173" width="454" height="9" rx="2" fill="#161b22"/>
+  <rect x="274" y="173" width="120.66" height="9" rx="2" fill="url(#repoGrad)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="0.7s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="181" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#8b949e">454</text>
+
+  <text x="140" y="196" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#e6edf3">dotfiles</text>
+  <rect x="274" y="188" width="454" height="9" rx="2" fill="#161b22"/>
+  <rect x="274" y="188" width="112.15" height="9" rx="2" fill="url(#repoGrad)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="196" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#8b949e">422</text>
+
+  <text x="140" y="211" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#e6edf3">links-issue-tracker</text>
+  <rect x="274" y="203" width="454" height="9" rx="2" fill="#161b22"/>
+  <rect x="274" y="203" width="92.22" height="9" rx="2" fill="url(#repoGrad)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="2.1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="211" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#8b949e">347</text>
+
+  <text x="140" y="226" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#e6edf3">cc-candybar</text>
+  <rect x="274" y="218" width="454" height="9" rx="2" fill="#161b22"/>
+  <rect x="274" y="218" width="77.07" height="9" rx="2" fill="url(#repoGrad)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="2.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="226" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#8b949e">290</text>
+
+  <text x="140" y="241" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#e6edf3">slopspot-web</text>
+  <rect x="274" y="233" width="454" height="9" rx="2" fill="#161b22"/>
+  <rect x="274" y="233" width="70.96" height="9" rx="2" fill="url(#repoGrad)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="3.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="241" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#8b949e">267</text>
+
+  <line x1="24" y1="252" x2="776" y2="252" stroke="#21262d" stroke-width="1"/>
+
+  <!-- BOTTOM TRIPTYCH -->
+  <line x1="280" y1="260" x2="280" y2="352" stroke="#21262d" stroke-width="1"/>
+  <line x1="544" y1="260" x2="544" y2="352" stroke="#21262d" stroke-width="1"/>
+
+  <!-- COL 1: DAYS ACTIVE -->
+  <text x="32" y="276" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">DAYS ACTIVE</text>
+  <text x="32" y="316" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#22d3ee">19</text>
+  <text x="70" y="316" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#8b949e">of 30</text>
+  <text x="32" y="338" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">30 Days</text>
+
+  <g>
+    <path d="M 166,344 A 44,44 0 0 1 254,344" fill="none" stroke="#161b22" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 166,344 A 44,44 0 0 1 227.90,303.81" fill="none" stroke="url(#gaugeGrad)" stroke-width="10" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="227.90" cy="303.81" r="4" fill="#7dd3fc">
+      <animate attributeName="r" values="3;5.5;3" dur="2.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="178" y1="344" x2="172" y2="344" stroke="#7d8590" stroke-width="1"/>
+    <line x1="182.29" y1="328" x2="177.09" y2="325" stroke="#7d8590" stroke-width="1"/>
+    <line x1="194" y1="316.29" x2="191" y2="311.09" stroke="#7d8590" stroke-width="1"/>
+    <line x1="210" y1="312" x2="210" y2="306" stroke="#7d8590" stroke-width="1"/>
+    <line x1="226" y1="316.29" x2="229" y2="311.09" stroke="#3b3f47" stroke-width="1"/>
+    <line x1="237.71" y1="328" x2="242.91" y2="325" stroke="#3b3f47" stroke-width="1"/>
+    <line x1="242" y1="344" x2="248" y2="344" stroke="#3b3f47" stroke-width="1"/>
   </g>
 
-  <!-- Divider between heatmap and tile grid -->
-  <line x1="24" y1="182" x2="776" y2="182" stroke="#21262d" stroke-width="1"/>
+  <!-- COL 2: COMMITS + 14-day bar chart -->
+  <text x="292" y="276" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">COMMITS</text>
+  <text x="292" y="316" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#39d353">67</text>
+  <text x="292" y="338" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">7 Days</text>
 
-  <!-- ============ ROW 1 ============ -->
-  <text x="24" y="206" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="600" letter-spacing="0.8" fill="#7d8590">DAYS ACTIVE</text>
-  <text x="24" y="236" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#22d3ee">255</text>
-  <text x="86" y="236" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#7d8590">of 365 · 1 Year</text>
-  <rect x="24" y="252" width="236" height="14" rx="3" fill="#161b22" stroke="#21262d" stroke-width="1"/>
-  <rect x="24" y="252" width="164.9" height="14" rx="3" fill="url(#daysGrad)">
-    <animate attributeName="opacity" values="0.82;1;0.82" dur="7s" repeatCount="indefinite"/>
+  <line x1="352" y1="344" x2="531" y2="344" stroke="#21262d" stroke-width="1"/>
+  <rect x="352" y="331.34" width="10" height="12.66" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" begin="0s" repeatCount="indefinite"/>
   </rect>
-  <line x1="43.7" y1="252" x2="43.7" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="63.3" y1="252" x2="63.3" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="83.0" y1="252" x2="83.0" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="102.7" y1="252" x2="102.7" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="122.3" y1="252" x2="122.3" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="142.0" y1="252" x2="142.0" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="161.7" y1="252" x2="161.7" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="181.3" y1="252" x2="181.3" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="201.0" y1="252" x2="201.0" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="220.7" y1="252" x2="220.7" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <line x1="240.3" y1="252" x2="240.3" y2="266" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
-  <circle cx="185.9" cy="259.0" r="2.5" fill="#e6edf3">
-    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <text x="24" y="284" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#7d8590">255 of 365 days pushed · 69.9% of the year</text>
+  <rect x="365" y="294" width="10" height="50" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" begin="0.3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="378" y="308.80" width="10" height="35.20" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" begin="0.6s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="391" y="337.69" width="10" height="6.31" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" begin="0.9s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="404" y="335.05" width="10" height="8.95" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" begin="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="417" y="336.25" width="10" height="7.75" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" begin="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="430" y="343" width="10" height="1" rx="0.5" fill="#3b3f47"/>
+  <rect x="443" y="323.02" width="10" height="20.98" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" begin="2.1s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="456" y="343" width="10" height="1" rx="0.5" fill="#3b3f47"/>
+  <rect x="469" y="301.56" width="10" height="42.44" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="5s" begin="2.7s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="482" y="326.67" width="10" height="17.33" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" begin="3.0s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="495" y="339.53" width="10" height="4.47" rx="1" fill="url(#commitGrad)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" begin="3.3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="508" y="343" width="10" height="1" rx="0.5" fill="#3b3f47"/>
+  <rect x="521" y="343" width="10" height="1" rx="0.5" fill="#3b3f47"/>
+  <text x="441.5" y="290" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681" letter-spacing="0.8">LAST 14 DAYS · CONTRIBUTIONS</text>
 
-  <text x="280" y="206" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="600" letter-spacing="0.8" fill="#7d8590">PRS MERGED</text>
-  <text x="280" y="236" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#a78bfa">62</text>
-  <text x="332" y="236" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#7d8590">· 7 Days</text>
-  <g fill="#21262d">
-    <rect x="280" y="248" width="5" height="5" rx="1"/>
-    <rect x="287" y="248" width="5" height="5" rx="1"/>
-    <rect x="294" y="248" width="5" height="5" rx="1"/>
-    <rect x="301" y="248" width="5" height="5" rx="1"/>
-    <rect x="308" y="248" width="5" height="5" rx="1"/>
-    <rect x="315" y="248" width="5" height="5" rx="1"/>
-    <rect x="322" y="248" width="5" height="5" rx="1"/>
-    <rect x="329" y="248" width="5" height="5" rx="1"/>
-    <rect x="336" y="248" width="5" height="5" rx="1"/>
-    <rect x="343" y="248" width="5" height="5" rx="1"/>
-    <rect x="350" y="248" width="5" height="5" rx="1"/>
-    <rect x="357" y="248" width="5" height="5" rx="1"/>
-    <rect x="364" y="248" width="5" height="5" rx="1"/>
-    <rect x="371" y="248" width="5" height="5" rx="1"/>
-    <rect x="378" y="248" width="5" height="5" rx="1"/>
-    <rect x="385" y="248" width="5" height="5" rx="1"/>
-    <rect x="280" y="255" width="5" height="5" rx="1"/>
-    <rect x="287" y="255" width="5" height="5" rx="1"/>
-    <rect x="294" y="255" width="5" height="5" rx="1"/>
-    <rect x="301" y="255" width="5" height="5" rx="1"/>
-    <rect x="308" y="255" width="5" height="5" rx="1"/>
-    <rect x="315" y="255" width="5" height="5" rx="1"/>
-    <rect x="322" y="255" width="5" height="5" rx="1"/>
-    <rect x="329" y="255" width="5" height="5" rx="1"/>
-    <rect x="336" y="255" width="5" height="5" rx="1"/>
-    <rect x="343" y="255" width="5" height="5" rx="1"/>
-    <rect x="350" y="255" width="5" height="5" rx="1"/>
-    <rect x="357" y="255" width="5" height="5" rx="1"/>
-    <rect x="364" y="255" width="5" height="5" rx="1"/>
-    <rect x="371" y="255" width="5" height="5" rx="1"/>
-    <rect x="378" y="255" width="5" height="5" rx="1"/>
-    <rect x="385" y="255" width="5" height="5" rx="1"/>
-    <rect x="280" y="262" width="5" height="5" rx="1"/>
-    <rect x="287" y="262" width="5" height="5" rx="1"/>
-    <rect x="294" y="262" width="5" height="5" rx="1"/>
-    <rect x="301" y="262" width="5" height="5" rx="1"/>
-    <rect x="308" y="262" width="5" height="5" rx="1"/>
-    <rect x="315" y="262" width="5" height="5" rx="1"/>
-    <rect x="322" y="262" width="5" height="5" rx="1"/>
-    <rect x="329" y="262" width="5" height="5" rx="1"/>
-    <rect x="336" y="262" width="5" height="5" rx="1"/>
-    <rect x="343" y="262" width="5" height="5" rx="1"/>
-    <rect x="350" y="262" width="5" height="5" rx="1"/>
-    <rect x="357" y="262" width="5" height="5" rx="1"/>
-    <rect x="364" y="262" width="5" height="5" rx="1"/>
-    <rect x="371" y="262" width="5" height="5" rx="1"/>
-    <rect x="378" y="262" width="5" height="5" rx="1"/>
-    <rect x="385" y="262" width="5" height="5" rx="1"/>
-    <rect x="280" y="269" width="5" height="5" rx="1"/>
-    <rect x="287" y="269" width="5" height="5" rx="1"/>
-    <rect x="294" y="269" width="5" height="5" rx="1"/>
-    <rect x="301" y="269" width="5" height="5" rx="1"/>
-    <rect x="308" y="269" width="5" height="5" rx="1"/>
-    <rect x="315" y="269" width="5" height="5" rx="1"/>
-    <rect x="322" y="269" width="5" height="5" rx="1"/>
-    <rect x="329" y="269" width="5" height="5" rx="1"/>
-    <rect x="336" y="269" width="5" height="5" rx="1"/>
-    <rect x="343" y="269" width="5" height="5" rx="1"/>
-    <rect x="350" y="269" width="5" height="5" rx="1"/>
-    <rect x="357" y="269" width="5" height="5" rx="1"/>
-    <rect x="364" y="269" width="5" height="5" rx="1"/>
-    <rect x="371" y="269" width="5" height="5" rx="1"/>
-    <rect x="378" y="269" width="5" height="5" rx="1"/>
-    <rect x="385" y="269" width="5" height="5" rx="1"/>
+  <!-- COL 3: ISSUES CLOSED + 68 dots -->
+  <text x="556" y="276" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">ISSUES CLOSED</text>
+  <text x="556" y="316" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#f472b6">68</text>
+  <text x="556" y="338" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">1 Year</text>
+
+  <g>
+    <circle cx="637" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.00s" repeatCount="indefinite"/></circle>
+    <circle cx="645" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.11s" repeatCount="indefinite"/></circle>
+    <circle cx="653" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.22s" repeatCount="indefinite"/></circle>
+    <circle cx="661" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.33s" repeatCount="indefinite"/></circle>
+    <circle cx="669" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.44s" repeatCount="indefinite"/></circle>
+    <circle cx="677" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.55s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.66s" repeatCount="indefinite"/></circle>
+    <circle cx="693" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.77s" repeatCount="indefinite"/></circle>
+    <circle cx="701" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.88s" repeatCount="indefinite"/></circle>
+    <circle cx="709" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.99s" repeatCount="indefinite"/></circle>
+    <circle cx="717" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.10s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.21s" repeatCount="indefinite"/></circle>
+    <circle cx="733" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.32s" repeatCount="indefinite"/></circle>
+    <circle cx="741" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.43s" repeatCount="indefinite"/></circle>
+    <circle cx="749" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.54s" repeatCount="indefinite"/></circle>
+    <circle cx="757" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.65s" repeatCount="indefinite"/></circle>
+    <circle cx="765" cy="290" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.76s" repeatCount="indefinite"/></circle>
+    <circle cx="637" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.87s" repeatCount="indefinite"/></circle>
+    <circle cx="645" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.98s" repeatCount="indefinite"/></circle>
+    <circle cx="653" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.09s" repeatCount="indefinite"/></circle>
+    <circle cx="661" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.20s" repeatCount="indefinite"/></circle>
+    <circle cx="669" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.31s" repeatCount="indefinite"/></circle>
+    <circle cx="677" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.42s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.53s" repeatCount="indefinite"/></circle>
+    <circle cx="693" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.64s" repeatCount="indefinite"/></circle>
+    <circle cx="701" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.75s" repeatCount="indefinite"/></circle>
+    <circle cx="709" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.86s" repeatCount="indefinite"/></circle>
+    <circle cx="717" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.97s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.08s" repeatCount="indefinite"/></circle>
+    <circle cx="733" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.19s" repeatCount="indefinite"/></circle>
+    <circle cx="741" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.30s" repeatCount="indefinite"/></circle>
+    <circle cx="749" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.41s" repeatCount="indefinite"/></circle>
+    <circle cx="757" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.52s" repeatCount="indefinite"/></circle>
+    <circle cx="765" cy="298" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.63s" repeatCount="indefinite"/></circle>
+    <circle cx="637" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.74s" repeatCount="indefinite"/></circle>
+    <circle cx="645" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="653" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.06s" repeatCount="indefinite"/></circle>
+    <circle cx="661" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.17s" repeatCount="indefinite"/></circle>
+    <circle cx="669" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.28s" repeatCount="indefinite"/></circle>
+    <circle cx="677" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.39s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.50s" repeatCount="indefinite"/></circle>
+    <circle cx="693" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.61s" repeatCount="indefinite"/></circle>
+    <circle cx="701" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.72s" repeatCount="indefinite"/></circle>
+    <circle cx="709" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.83s" repeatCount="indefinite"/></circle>
+    <circle cx="717" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="0.94s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="733" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.16s" repeatCount="indefinite"/></circle>
+    <circle cx="741" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.27s" repeatCount="indefinite"/></circle>
+    <circle cx="749" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.38s" repeatCount="indefinite"/></circle>
+    <circle cx="757" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.49s" repeatCount="indefinite"/></circle>
+    <circle cx="765" cy="306" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.60s" repeatCount="indefinite"/></circle>
+    <circle cx="637" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.71s" repeatCount="indefinite"/></circle>
+    <circle cx="645" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.82s" repeatCount="indefinite"/></circle>
+    <circle cx="653" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="1.93s" repeatCount="indefinite"/></circle>
+    <circle cx="661" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.04s" repeatCount="indefinite"/></circle>
+    <circle cx="669" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.15s" repeatCount="indefinite"/></circle>
+    <circle cx="677" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.26s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.37s" repeatCount="indefinite"/></circle>
+    <circle cx="693" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.48s" repeatCount="indefinite"/></circle>
+    <circle cx="701" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.59s" repeatCount="indefinite"/></circle>
+    <circle cx="709" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.70s" repeatCount="indefinite"/></circle>
+    <circle cx="717" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.81s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.92s" repeatCount="indefinite"/></circle>
+    <circle cx="733" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.03s" repeatCount="indefinite"/></circle>
+    <circle cx="741" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.14s" repeatCount="indefinite"/></circle>
+    <circle cx="749" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.25s" repeatCount="indefinite"/></circle>
+    <circle cx="757" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.36s" repeatCount="indefinite"/></circle>
+    <circle cx="765" cy="314" r="2.5" fill="#f472b6"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.47s" repeatCount="indefinite"/></circle>
   </g>
-  <g fill="url(#prGrad)">
-    <rect x="280" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="287" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="294" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="301" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="308" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="315" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="322" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="329" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.9s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="336" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="343" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="350" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="357" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="364" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="371" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="378" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="385" y="248" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="280" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="287" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.9s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="294" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="301" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="308" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="315" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="322" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="329" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="336" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="343" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="350" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="357" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.9s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="364" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="371" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="378" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="385" y="255" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="280" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="287" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="294" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="301" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="308" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="315" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.9s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="322" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="329" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="336" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="343" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="350" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="357" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="364" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="371" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="378" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="385" y="262" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.9s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="280" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="287" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="294" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="301" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="308" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="315" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="322" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="329" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="336" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="343" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.9s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="350" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="357" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="364" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="371" y="269" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.7s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <text x="280" y="292" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#7d8590">62 of 64 slots · one dot per merged PR</text>
-
-  <text x="536" y="206" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="600" letter-spacing="0.8" fill="#7d8590">COMMITS</text>
-  <text x="536" y="236" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#39d353">69</text>
-  <text x="578" y="236" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#7d8590">· 7 Days</text>
-  <rect x="539.0" y="286.5" width="28.3" height="1.5" rx="1.5" fill="#30363d">
-  </rect>
-  <text x="553.1" y="283.5" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#7d8590">0</text>
-  <text x="553.1" y="298.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">T</text>
-  <rect x="573.3" y="277.7" width="28.3" height="10.3" rx="1.5" fill="url(#sparkGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0.3s" repeatCount="indefinite"/>
-  </rect>
-  <text x="587.4" y="274.7" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#7d8590">22</text>
-  <text x="587.4" y="298.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">F</text>
-  <rect x="607.6" y="286.5" width="28.3" height="1.5" rx="1.5" fill="#30363d">
-  </rect>
-  <text x="621.7" y="283.5" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#7d8590">0</text>
-  <text x="621.7" y="298.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">S</text>
-  <rect x="641.9" y="246.0" width="28.3" height="42.0" rx="1.5" fill="url(#sparkGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0.9s" repeatCount="indefinite"/>
-  </rect>
-  <text x="656.0" y="243.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#7d8590">90</text>
-  <text x="656.0" y="298.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">S</text>
-  <rect x="676.1" y="281.0" width="28.3" height="7.0" rx="1.5" fill="url(#sparkGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-  </rect>
-  <text x="690.3" y="278.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#7d8590">15</text>
-  <text x="690.3" y="298.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">M</text>
-  <rect x="710.4" y="286.5" width="28.3" height="1.5" rx="1.5" fill="url(#sparkGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="1.5s" repeatCount="indefinite"/>
-  </rect>
-  <text x="724.6" y="283.5" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#7d8590">1</text>
-  <text x="724.6" y="298.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">T</text>
-  <rect x="744.7" y="286.5" width="28.3" height="1.5" rx="1.5" fill="#30363d">
-  </rect>
-  <text x="758.9" y="283.5" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#7d8590">0</text>
-  <text x="758.9" y="298.0" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">W</text>
-  <line x1="536" y1="288" x2="776" y2="288" stroke="#21262d" stroke-width="1"/>
-
-
-  <!-- ============ ROW 2 ============ -->
-  <text x="24" y="326" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="600" letter-spacing="0.8" fill="#7d8590">LONGEST STREAK</text>
-  <text x="24" y="356" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#fbbf24">82</text>
-  <text x="66" y="356" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#7d8590">consecutive days</text>
-  <g fill="#21262d">
-    <rect x="24" y="368" width="5" height="5" rx="1"/>
-    <rect x="31" y="368" width="5" height="5" rx="1"/>
-    <rect x="38" y="368" width="5" height="5" rx="1"/>
-    <rect x="45" y="368" width="5" height="5" rx="1"/>
-    <rect x="52" y="368" width="5" height="5" rx="1"/>
-    <rect x="59" y="368" width="5" height="5" rx="1"/>
-    <rect x="66" y="368" width="5" height="5" rx="1"/>
-    <rect x="73" y="368" width="5" height="5" rx="1"/>
-    <rect x="80" y="368" width="5" height="5" rx="1"/>
-    <rect x="87" y="368" width="5" height="5" rx="1"/>
-    <rect x="94" y="368" width="5" height="5" rx="1"/>
-    <rect x="101" y="368" width="5" height="5" rx="1"/>
-    <rect x="108" y="368" width="5" height="5" rx="1"/>
-    <rect x="115" y="368" width="5" height="5" rx="1"/>
-    <rect x="122" y="368" width="5" height="5" rx="1"/>
-    <rect x="129" y="368" width="5" height="5" rx="1"/>
-    <rect x="136" y="368" width="5" height="5" rx="1"/>
-    <rect x="143" y="368" width="5" height="5" rx="1"/>
-    <rect x="150" y="368" width="5" height="5" rx="1"/>
-    <rect x="157" y="368" width="5" height="5" rx="1"/>
-    <rect x="164" y="368" width="5" height="5" rx="1"/>
-    <rect x="24" y="375" width="5" height="5" rx="1"/>
-    <rect x="31" y="375" width="5" height="5" rx="1"/>
-    <rect x="38" y="375" width="5" height="5" rx="1"/>
-    <rect x="45" y="375" width="5" height="5" rx="1"/>
-    <rect x="52" y="375" width="5" height="5" rx="1"/>
-    <rect x="59" y="375" width="5" height="5" rx="1"/>
-    <rect x="66" y="375" width="5" height="5" rx="1"/>
-    <rect x="73" y="375" width="5" height="5" rx="1"/>
-    <rect x="80" y="375" width="5" height="5" rx="1"/>
-    <rect x="87" y="375" width="5" height="5" rx="1"/>
-    <rect x="94" y="375" width="5" height="5" rx="1"/>
-    <rect x="101" y="375" width="5" height="5" rx="1"/>
-    <rect x="108" y="375" width="5" height="5" rx="1"/>
-    <rect x="115" y="375" width="5" height="5" rx="1"/>
-    <rect x="122" y="375" width="5" height="5" rx="1"/>
-    <rect x="129" y="375" width="5" height="5" rx="1"/>
-    <rect x="136" y="375" width="5" height="5" rx="1"/>
-    <rect x="143" y="375" width="5" height="5" rx="1"/>
-    <rect x="150" y="375" width="5" height="5" rx="1"/>
-    <rect x="157" y="375" width="5" height="5" rx="1"/>
-    <rect x="164" y="375" width="5" height="5" rx="1"/>
-    <rect x="24" y="382" width="5" height="5" rx="1"/>
-    <rect x="31" y="382" width="5" height="5" rx="1"/>
-    <rect x="38" y="382" width="5" height="5" rx="1"/>
-    <rect x="45" y="382" width="5" height="5" rx="1"/>
-    <rect x="52" y="382" width="5" height="5" rx="1"/>
-    <rect x="59" y="382" width="5" height="5" rx="1"/>
-    <rect x="66" y="382" width="5" height="5" rx="1"/>
-    <rect x="73" y="382" width="5" height="5" rx="1"/>
-    <rect x="80" y="382" width="5" height="5" rx="1"/>
-    <rect x="87" y="382" width="5" height="5" rx="1"/>
-    <rect x="94" y="382" width="5" height="5" rx="1"/>
-    <rect x="101" y="382" width="5" height="5" rx="1"/>
-    <rect x="108" y="382" width="5" height="5" rx="1"/>
-    <rect x="115" y="382" width="5" height="5" rx="1"/>
-    <rect x="122" y="382" width="5" height="5" rx="1"/>
-    <rect x="129" y="382" width="5" height="5" rx="1"/>
-    <rect x="136" y="382" width="5" height="5" rx="1"/>
-    <rect x="143" y="382" width="5" height="5" rx="1"/>
-    <rect x="150" y="382" width="5" height="5" rx="1"/>
-    <rect x="157" y="382" width="5" height="5" rx="1"/>
-    <rect x="164" y="382" width="5" height="5" rx="1"/>
-    <rect x="24" y="389" width="5" height="5" rx="1"/>
-    <rect x="31" y="389" width="5" height="5" rx="1"/>
-    <rect x="38" y="389" width="5" height="5" rx="1"/>
-    <rect x="45" y="389" width="5" height="5" rx="1"/>
-    <rect x="52" y="389" width="5" height="5" rx="1"/>
-    <rect x="59" y="389" width="5" height="5" rx="1"/>
-    <rect x="66" y="389" width="5" height="5" rx="1"/>
-    <rect x="73" y="389" width="5" height="5" rx="1"/>
-    <rect x="80" y="389" width="5" height="5" rx="1"/>
-    <rect x="87" y="389" width="5" height="5" rx="1"/>
-    <rect x="94" y="389" width="5" height="5" rx="1"/>
-    <rect x="101" y="389" width="5" height="5" rx="1"/>
-    <rect x="108" y="389" width="5" height="5" rx="1"/>
-    <rect x="115" y="389" width="5" height="5" rx="1"/>
-    <rect x="122" y="389" width="5" height="5" rx="1"/>
-    <rect x="129" y="389" width="5" height="5" rx="1"/>
-    <rect x="136" y="389" width="5" height="5" rx="1"/>
-    <rect x="143" y="389" width="5" height="5" rx="1"/>
-    <rect x="150" y="389" width="5" height="5" rx="1"/>
-    <rect x="157" y="389" width="5" height="5" rx="1"/>
-    <rect x="164" y="389" width="5" height="5" rx="1"/>
-  </g>
-  <g fill="#fbbf24">
-    <rect x="24" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="31" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="38" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="45" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="52" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="59" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="66" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="73" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="87" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="94" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="101" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="108" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="115" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="122" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="129" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="136" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="143" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="150" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="7.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="157" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="7.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="164" y="368" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="8.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="24" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="31" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="38" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="45" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="52" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="59" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="66" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="73" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="87" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="94" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="101" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="108" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="115" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="122" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="129" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="136" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="143" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="150" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="7.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="157" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="7.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="164" y="375" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="8.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="24" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="31" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="38" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="45" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="52" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="59" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="66" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="73" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="87" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="94" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="101" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="108" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="115" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="122" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="129" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="136" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="143" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="150" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="7.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="157" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="7.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="164" y="382" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="8.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="24" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="31" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="38" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="45" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="52" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="59" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="66" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="73" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="80" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="87" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="3.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="94" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="101" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="108" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="4.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="115" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="122" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="5.6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="129" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.0s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="136" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.4s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="143" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="6.8s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="150" y="389" width="5" height="5" rx="1">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="7.2s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <text x="24" y="412" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#7d8590">82 of 84 cells · one 82-day unbroken run</text>
-
-  <text x="280" y="326" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="600" letter-spacing="0.8" fill="#7d8590">LANGUAGES</text>
-  <text x="280" y="356" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#e6edf3">8</text>
-  <text x="304" y="356" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#7d8590">· 1 Year commit share</text>
-  <clipPath id="langClip312"><rect x="280" y="368" width="236" height="16" rx="3"/></clipPath>
-  <g clip-path="url(#langClip312)">
-    <rect x="280.00" y="368" width="158.10" height="16" fill="#3178c6"/>
-    <rect x="438.10" y="368" width="47.86" height="16" fill="#3572a5"/>
-    <rect x="485.96" y="368" width="23.91" height="16" fill="#00add8"/>
-    <rect x="509.86" y="368" width="2.97" height="16" fill="#89e051"/>
-    <rect x="512.83" y="368" width="2.34" height="16" fill="#e34c26"/>
-    <rect x="515.17" y="368" width="0.44" height="16" fill="#663399"/>
-    <rect x="515.60" y="368" width="0.36" height="16" fill="#f1e05a"/>
-    <rect x="515.96" y="368" width="0.04" height="16" fill="#000080"/>
-    <rect x="-60" y="368" width="60" height="16" fill="url(#langSweep)">
-      <animate attributeName="x" from="-60" to="516" dur="11s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <rect x="280" y="390" width="7" height="7" fill="#3178c6" rx="1"/>
-  <text x="291" y="397" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#e6edf3">TypeScript <tspan fill="#7d8590">67%</tspan></text>
-  <rect x="362" y="390" width="7" height="7" fill="#3572a5" rx="1"/>
-  <text x="373" y="397" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#e6edf3">Python <tspan fill="#7d8590">20%</tspan></text>
-  <rect x="444" y="390" width="7" height="7" fill="#00add8" rx="1"/>
-  <text x="455" y="397" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#e6edf3">Go <tspan fill="#7d8590">10%</tspan></text>
-  <text x="280" y="412" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" fill="#6e7681">plus 5 more · 5,962 commits total</text>
-
-  <text x="536" y="326" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="600" letter-spacing="0.8" fill="#7d8590">ACTIVE REPOS</text>
-  <text x="536" y="356" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#f472b6">16</text>
-  <text x="576" y="356" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#7d8590">· 30 Days</text>
-  <text x="536" y="373" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">links-issue-t…</text>
-  <rect x="626" y="366" width="124" height="6" rx="1" fill="#21262d"/>
-  <rect x="626" y="366" width="124.0" height="6" rx="1" fill="url(#repoGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.0s" repeatCount="indefinite"/>
-  </rect>
-  <text x="776" y="373" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">68</text>
-  <text x="536" y="382" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">laws</text>
-  <rect x="626" y="375" width="124" height="6" rx="1" fill="#21262d"/>
-  <rect x="626" y="375" width="98.5" height="6" rx="1" fill="url(#repoGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.4s" repeatCount="indefinite"/>
-  </rect>
-  <text x="776" y="382" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">54</text>
-  <text x="536" y="391" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">cc-candybar</text>
-  <rect x="626" y="384" width="124" height="6" rx="1" fill="#21262d"/>
-  <rect x="626" y="384" width="51.1" height="6" rx="1" fill="url(#repoGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.8s" repeatCount="indefinite"/>
-  </rect>
-  <text x="776" y="391" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">28</text>
-  <text x="536" y="400" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">dotfiles</text>
-  <rect x="626" y="393" width="124" height="6" rx="1" fill="#21262d"/>
-  <rect x="626" y="393" width="49.2" height="6" rx="1" fill="url(#repoGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.2s" repeatCount="indefinite"/>
-  </rect>
-  <text x="776" y="400" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">27</text>
-  <text x="536" y="409" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">room-eq-wizar…</text>
-  <rect x="626" y="402" width="124" height="6" rx="1" fill="#21262d"/>
-  <rect x="626" y="402" width="36.5" height="6" rx="1" fill="url(#repoGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.6s" repeatCount="indefinite"/>
-  </rect>
-  <text x="776" y="409" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">20</text>
-  <text x="536" y="418" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">tmux-control-…</text>
-  <rect x="626" y="411" width="124" height="6" rx="1" fill="#21262d"/>
-  <rect x="626" y="411" width="36.5" height="6" rx="1" fill="url(#repoGrad)">
-    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="2.0s" repeatCount="indefinite"/>
-  </rect>
-  <text x="776" y="418" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">20</text>
-
-
+  <text x="701" y="330" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681" letter-spacing="0.8">ONE DOT · ONE ISSUE</text>
 </svg>
