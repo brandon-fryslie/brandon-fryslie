@@ -1,280 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: IBM PC 5150 — 45th Anniversary (August 12, 1981) -->
+<!-- theme: International Left-Handers Day — 50th Year (August 13, 1976) -->
 <!-- about:
-On 12 August 1981, IBM announced the Model 5150 Personal Computer — a beige box with a 4.77 MHz Intel 8088, 16 KB of RAM, and PC DOS 1.0 booting off a 5.25-inch floppy. It wasn't the first personal computer, but it was the one that made "PC" a common noun. Its open architecture spawned an entire clone industry, its ROM BIOS was famously cloned by Compaq, and its keyboard layout still lives in the machine on your desk. 45 years today.
+International Left-Handers Day, observed every 13 August since 1976, was founded by Dean R. Campbell of Lefthanders International as a light-hearted campaign for the roughly one-in-ten humans who write, throw, and cut against the grain of a right-handed world. Its patron saints — Leonardo, Curie, McCartney, Hendrix, Obama — are the shorthand; the daily reality is smudged pinkies, backwards spiral notebooks, and can-openers you have to flip. Fifty years today.
 
-The left half is that machine: a beige 5150 chassis with a green-phosphor CRT above it, C:\ prompt blinking, POST text scrolling past — 640K OK, floppy seek, DOS handoff — behind faint CRT scanlines. On the right, a large AUGUST 12, 2026 headline anchors an IBM PC AT 45 subhead, the 5150 provenance line, and the caption "the beige box that started it all."
+The left half is a page of ruled notebook paper with a fountain pen coming in from the left at the classic hooked-hand angle, writing a big italic "50" across the page in wet royal-blue ink; a drop falls beside it, and a soft pinky-smudge — the lifelong tell — trails behind the nib. On the right, a large AUGUST 13, 2026 headline anchors a LEFT-HANDERS DAY · SINCE 1976 subhead, a roster of famous southpaws, and the caption "the world is upside down for us."
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 12, 2026 — the 45th anniversary of the IBM PC 5150, announced on 12 August 1981. On the left half, an iconic IBM 5150 tableau: a beige monitor housing with a green-phosphor CRT screen shows scrolling POST boot text (IBM Personal Computer, 640K OK, disk boot, then a blinking C prompt) behind faint horizontal scanlines; below it sits the beige PC chassis with two 5.25-inch floppy drives, and to the right an IBM Model M-style keyboard. On the right, a huge cream AUGUST 12, 2026 headline underlined by a blue-to-cyan sweep, an IBM-blue IBM PC AT 45 subhead trailed by cream · EST. 1981, italic amber MODEL 5150 · 4.77 MHZ 8088 · 16K RAM · PC DOS 1.0 tertiary, dim-cyan OPEN ARCHITECTURE · CLONE INDUSTRY · THE PC ERA tertiary, and a Georgia-italic 'the beige box that started it all.' caption at the base.">
+     aria-label="Daily doodle for August 13, 2026 — the 50th International Left-Handers Day. On the left half, a piece of cream ruled notebook paper with a red margin line: a silver-and-royal-blue fountain pen enters from the lower left at a classic hooked left-hander's angle and writes a large italic 50 across the page in wet royal-blue ink, the strokes revealing left-to-right as the pen moves; a small ink drop falls beside the numeral and a soft pinky-smudge trails behind the nib. Below the paper, a small 1976 – 2026 timestamp. On the right, a huge cream AUGUST 13, 2026 headline underlined by a purple-to-pink sweep, a purple LEFT-HANDERS DAY subhead trailed by cream · SINCE 1976, italic amber 50 YEARS OF SOUTHPAWS · DEAN R. CAMPBELL tertiary, dim-cyan DA VINCI · CURIE · MCCARTNEY · OBAMA · HENDRIX tertiary, and a Georgia-italic 'the world is upside down for us.' caption at the base.">
   <defs>
-    <!-- Dark blue-gray desk gradient -->
-    <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#141a24"/>
-      <stop offset="100%" stop-color="#0a0e14"/>
+    <!-- Cream paper gradient -->
+    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f7f1e0"/>
+      <stop offset="100%" stop-color="#ebe3cc"/>
     </linearGradient>
 
-    <!-- Fade left panel into dark on right edge -->
-    <linearGradient id="deskFade" x1="0" y1="0" x2="1" y2="0">
+    <!-- Ink gradient (royal blue, wet look) -->
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a5cc4"/>
+      <stop offset="100%" stop-color="#1a3a99"/>
+    </linearGradient>
+
+    <!-- Pen barrel gradient (deep burgundy with metallic sheen) -->
+    <linearGradient id="barrelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#6a2030"/>
+      <stop offset="50%"  stop-color="#8c2a3c"/>
+      <stop offset="100%" stop-color="#4a1420"/>
+    </linearGradient>
+
+    <!-- Silver nib gradient -->
+    <linearGradient id="nibGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e8f0"/>
+      <stop offset="100%" stop-color="#8a8a98"/>
+    </linearGradient>
+
+    <!-- Underline sweep (purple to pink) -->
+    <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#b48bff" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#b48bff" stop-opacity="1"/>
+      <stop offset="70%"  stop-color="#ff8bc8" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ff8bc8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Fade right edge of paper into dark -->
+    <linearGradient id="paperFade" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#0d1117" stop-opacity="0"/>
       <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Beige plastic gradient (monitor & chassis) -->
-    <linearGradient id="beigeGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#e0d4b0"/>
-      <stop offset="50%"  stop-color="#c9bc94"/>
-      <stop offset="100%" stop-color="#8f8256"/>
-    </linearGradient>
-
-    <!-- Darker beige for shadowed faces -->
-    <linearGradient id="beigeShade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#a89966"/>
-      <stop offset="100%" stop-color="#6f6340"/>
-    </linearGradient>
-
-    <!-- Green phosphor CRT gradient -->
-    <radialGradient id="phosphorGrad" cx="0.5" cy="0.5" r="0.7">
-      <stop offset="0%"   stop-color="#0a2a12"/>
-      <stop offset="70%"  stop-color="#051a0a"/>
-      <stop offset="100%" stop-color="#020a04"/>
+    <!-- Ink smudge radial -->
+    <radialGradient id="smudgeGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#1a3a99" stop-opacity="0.55"/>
+      <stop offset="70%"  stop-color="#1a3a99" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1a3a99" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- CRT screen glow -->
-    <radialGradient id="crtGlow" cx="0.5" cy="0.5" r="0.6">
-      <stop offset="0%"   stop-color="#33ff66" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#33ff66" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Underline sweep -->
-    <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#4d8bff" stop-opacity="0"/>
-      <stop offset="20%"  stop-color="#4d8bff" stop-opacity="1"/>
-      <stop offset="60%"  stop-color="#6bd4c8" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#6bd4c8" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Scanlines pattern -->
-    <pattern id="scanlines" x="0" y="0" width="4" height="3" patternUnits="userSpaceOnUse">
-      <rect width="4" height="3" fill="none"/>
-      <line x1="0" y1="1.5" x2="4" y2="1.5" stroke="#000000" stroke-width="1" opacity="0.35"/>
-    </pattern>
-
-    <!-- Clip for CRT screen (rounded rect) -->
-    <clipPath id="crtClip">
-      <rect x="42" y="26" width="196" height="94" rx="10" ry="12"/>
-    </clipPath>
-
-    <!-- Clip for scrolling text within screen -->
-    <clipPath id="screenTextClip">
-      <rect x="48" y="32" width="184" height="82"/>
+    <!-- Reveal clip for the "50" — visible at rest, erases and redraws each cycle -->
+    <clipPath id="fiftyReveal">
+      <rect x="60" y="30" width="340" height="160">
+        <animate attributeName="width"
+                 values="340;340;0;340;340"
+                 keyTimes="0;0.15;0.35;0.85;1"
+                 dur="13s" repeatCount="indefinite"/>
+      </rect>
     </clipPath>
   </defs>
 
   <!-- Dark base -->
   <rect width="800" height="200" fill="#0d1117"/>
 
-  <!-- ==================== LEFT: DESK + IBM PC ==================== -->
-  <rect x="0" y="0" width="460" height="200" fill="url(#deskGrad)"/>
+  <!-- ==================== LEFT: NOTEBOOK PAPER ==================== -->
+  <!-- Paper slightly rotated for a natural lefty tilt (paper turned clockwise for left-handers) -->
+  <g transform="translate(20 12) rotate(-3 210 90)">
+    <!-- Paper body -->
+    <rect x="0" y="0" width="420" height="180" rx="2" fill="url(#paperGrad)" stroke="#c8bfa0" stroke-width="0.8"/>
 
-  <!-- Faint grid on desk (perspective hint) -->
-  <g stroke="#1a2230" stroke-width="0.6" opacity="0.5">
-    <line x1="0"   y1="170" x2="460" y2="170"/>
-    <line x1="0"   y1="182" x2="460" y2="182"/>
-    <line x1="0"   y1="194" x2="460" y2="194"/>
-  </g>
-
-  <!-- Fade right edge into dark base -->
-  <rect x="380" y="0" width="80" height="200" fill="url(#deskFade)"/>
-
-  <!-- ============ IBM 5150 MONITOR ============ -->
-  <g transform="translate(20 10)">
-    <!-- Monitor bezel (rounded box) -->
-    <rect x="0" y="0" width="280" height="150" rx="14" fill="url(#beigeGrad)" stroke="#4a3f26" stroke-width="1.2"/>
-    <!-- Inner recess bezel -->
-    <rect x="34" y="18" width="212" height="110" rx="14" fill="url(#beigeShade)" stroke="#3a3220" stroke-width="1"/>
-    <!-- CRT screen (dark) -->
-    <rect x="42" y="26" width="196" height="94" rx="10" ry="12" fill="url(#phosphorGrad)"/>
-
-    <!-- Screen contents (scrolling POST + prompt) -->
-    <g clip-path="url(#crtClip)">
-      <g clip-path="url(#screenTextClip)">
-        <g font-family="Consolas, 'Courier New', 'Lucida Console', monospace" font-size="7.5" fill="#33ff66">
-          <g>
-            <!-- Vertical scroll animation over the entire text block -->
-            <animateTransform attributeName="transform" type="translate"
-                              values="0 0; 0 -70; 0 -70" keyTimes="0;0.75;1"
-                              dur="13s" repeatCount="indefinite"/>
-            <text x="50" y="42">IBM Personal Computer</text>
-            <text x="50" y="52">Version 1.10 (C)Copyright IBM Corp 1981</text>
-            <text x="50" y="62">640K OK</text>
-            <text x="50" y="72">Detecting drives .......... OK</text>
-            <text x="50" y="82">Boot from Drive A: ........ OK</text>
-            <text x="50" y="92">Starting PC DOS ...</text>
-            <text x="50" y="102">A:\&gt;C:</text>
-            <text x="50" y="112">C:\&gt;dir</text>
-            <text x="50" y="122">COMMAND  COM     4959  08-12-81</text>
-            <text x="50" y="132">AUTOEXEC BAT       42  08-12-81</text>
-            <text x="50" y="142">CONFIG   SYS       61  08-12-81</text>
-          </g>
-        </g>
-      </g>
-
-      <!-- Final prompt line + blinking cursor (fixed, appears after scroll settles) -->
-      <g font-family="Consolas, 'Courier New', 'Lucida Console', monospace" font-size="8" fill="#33ff66" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.72;0.78;1" dur="13s" repeatCount="indefinite"/>
-        <text x="50" y="110">C:\&gt;_</text>
-      </g>
-      <rect x="72" y="104" width="5" height="8" fill="#33ff66" opacity="0">
-        <animate attributeName="opacity"
-                 values="0;0;1;0;1;0;1;0;1"
-                 keyTimes="0;0.72;0.78;0.82;0.86;0.90;0.94;0.98;1"
-                 dur="13s" repeatCount="indefinite"/>
-      </rect>
-
-      <!-- Screen glow -->
-      <rect x="42" y="26" width="196" height="94" fill="url(#crtGlow)"/>
-      <!-- Scanlines overlay -->
-      <rect x="42" y="26" width="196" height="94" fill="url(#scanlines)"/>
-      <!-- Faint horizontal roll bar drifting down -->
-      <rect x="42" y="26" width="196" height="6" fill="#33ff66" opacity="0.06">
-        <animate attributeName="y" values="26;120;26" dur="11s" repeatCount="indefinite"/>
-      </rect>
+    <!-- Torn/frayed left edge hint (small notches) -->
+    <g fill="#c8bfa0" opacity="0.6">
+      <rect x="0" y="8"   width="2" height="4"/>
+      <rect x="0" y="34"  width="2" height="3"/>
+      <rect x="0" y="72"  width="2" height="4"/>
+      <rect x="0" y="118" width="2" height="3"/>
+      <rect x="0" y="152" width="2" height="4"/>
     </g>
 
-    <!-- Screen subtle outer glow -->
-    <rect x="42" y="26" width="196" height="94" rx="10" ry="12"
-          fill="none" stroke="#33ff66" stroke-width="0.6" opacity="0.25"/>
+    <!-- Red margin line -->
+    <line x1="42" y1="6" x2="42" y2="174" stroke="#d04a5a" stroke-width="1" opacity="0.75"/>
 
-    <!-- IBM logo on bezel -->
-    <text x="140" y="140" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-          font-size="8" font-weight="800" fill="#3a3220" letter-spacing="1.2">IBM</text>
+    <!-- Horizontal ruled lines (blue) -->
+    <g stroke="#8fb0dc" stroke-width="0.6" opacity="0.7">
+      <line x1="8" y1="28"  x2="412" y2="28"/>
+      <line x1="8" y1="52"  x2="412" y2="52"/>
+      <line x1="8" y1="76"  x2="412" y2="76"/>
+      <line x1="8" y1="100" x2="412" y2="100"/>
+      <line x1="8" y1="124" x2="412" y2="124"/>
+      <line x1="8" y1="148" x2="412" y2="148"/>
+      <line x1="8" y1="172" x2="412" y2="172"/>
+    </g>
 
-    <!-- Power LED (blinking) -->
-    <circle cx="248" cy="138" r="1.6" fill="#66ff88">
-      <animate attributeName="opacity" values="1;0.35;1" dur="3s" repeatCount="indefinite"/>
+    <!-- 3-hole punch marks (top-bound notebook page) -->
+    <g fill="#0d1117" opacity="0.35">
+      <circle cx="22" cy="16" r="2.4"/>
+      <circle cx="22" cy="90" r="2.4"/>
+      <circle cx="22" cy="164" r="2.4"/>
+    </g>
+
+    <!-- Pinky smudge trailing behind the pen (soft blob under the writing) -->
+    <ellipse cx="150" cy="126" rx="70" ry="14" fill="url(#smudgeGrad)"/>
+    <ellipse cx="220" cy="130" rx="42" ry="9"  fill="url(#smudgeGrad)" opacity="0.7"/>
+
+    <!-- The "50" — big italic, revealed left-to-right by the clip -->
+    <g clip-path="url(#fiftyReveal)">
+      <text x="80" y="128"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="126" font-weight="700" font-style="italic"
+            fill="url(#inkGrad)" letter-spacing="-2">50</text>
+    </g>
+
+    <!-- Wet ink dot on the tail of the 0 -->
+    <circle cx="290" cy="118" r="3" fill="#1a3a99" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5;0.6;0.9;1" dur="13s" repeatCount="indefinite"/>
     </circle>
-  </g>
 
-  <!-- ============ IBM 5150 SYSTEM CHASSIS (below-left) ============ -->
-  <g transform="translate(20 165)">
-    <!-- Chassis body -->
-    <rect x="0" y="0" width="230" height="28" rx="2" fill="url(#beigeGrad)" stroke="#4a3f26" stroke-width="1"/>
-    <!-- Floppy drives -->
+    <!-- Falling ink drop -->
     <g>
-      <rect x="140" y="6" width="72" height="8" rx="1" fill="#5a4f30" stroke="#2a2418" stroke-width="0.6"/>
-      <line x1="176" y1="10" x2="204" y2="10" stroke="#8a7a48" stroke-width="0.6"/>
-      <rect x="146" y="8" width="3" height="4" fill="#c9bc94"/>
-      <circle cx="151" cy="10" r="1" fill="#c9bc94"/>
-
-      <rect x="140" y="16" width="72" height="8" rx="1" fill="#5a4f30" stroke="#2a2418" stroke-width="0.6"/>
-      <line x1="176" y1="20" x2="204" y2="20" stroke="#8a7a48" stroke-width="0.6"/>
-      <rect x="146" y="18" width="3" height="4" fill="#c9bc94"/>
-      <circle cx="151" cy="20" r="1" fill="#c9bc94"/>
+      <ellipse cx="0" cy="0" rx="2.6" ry="4" fill="#1a3a99">
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.7;1" dur="7s" begin="2s" repeatCount="indefinite"/>
+      </ellipse>
+      <animateTransform attributeName="transform" type="translate"
+                        values="308 122; 308 170; 308 172"
+                        keyTimes="0;0.7;1" dur="7s" begin="2s" repeatCount="indefinite"/>
     </g>
-    <!-- IBM badge on chassis -->
-    <text x="18" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-          font-size="9" font-weight="800" fill="#3a3220" letter-spacing="1.2">IBM</text>
-    <text x="42" y="18" font-family="-apple-system, sans-serif"
-          font-size="5" fill="#3a3220" letter-spacing="0.8">Personal Computer</text>
-    <!-- Power switch (right side) -->
-    <rect x="220" y="10" width="6" height="8" rx="0.6" fill="#3a3220"/>
-  </g>
-
-  <!-- ============ KEYBOARD (right of chassis) ============ -->
-  <g transform="translate(260 172)">
-    <!-- Keyboard base -->
-    <rect x="0" y="0" width="140" height="22" rx="1.5" fill="url(#beigeGrad)" stroke="#4a3f26" stroke-width="0.8"/>
-    <!-- Key rows -->
-    <g fill="#f0e6c4" stroke="#6a5c34" stroke-width="0.4">
-      <!-- Row 1 (function keys / top) -->
-      <g>
-        <rect x="4"   y="3" width="6" height="4" rx="0.6"/>
-        <rect x="12"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="20"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="28"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="36"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="44"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="52"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="60"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="68"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="76"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="84"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="92"  y="3" width="6" height="4" rx="0.6"/>
-        <rect x="100" y="3" width="6" height="4" rx="0.6"/>
-        <rect x="108" y="3" width="6" height="4" rx="0.6"/>
-        <rect x="116" y="3" width="6" height="4" rx="0.6"/>
-        <rect x="124" y="3" width="12" height="4" rx="0.6"/>
-      </g>
-      <!-- Row 2 -->
-      <g>
-        <rect x="4"   y="9" width="6" height="4" rx="0.6"/>
-        <rect x="12"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="20"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="28"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="36"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="44"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="52"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="60"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="68"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="76"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="84"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="92"  y="9" width="6" height="4" rx="0.6"/>
-        <rect x="100" y="9" width="6" height="4" rx="0.6"/>
-        <rect x="108" y="9" width="6" height="4" rx="0.6"/>
-        <rect x="116" y="9" width="20" height="4" rx="0.6"/>
-      </g>
-      <!-- Row 3 (spacebar row) -->
-      <g>
-        <rect x="4"   y="15" width="10" height="4" rx="0.6"/>
-        <rect x="16"  y="15" width="6"  height="4" rx="0.6"/>
-        <rect x="24"  y="15" width="60" height="4" rx="0.6"/>
-        <rect x="86"  y="15" width="6"  height="4" rx="0.6"/>
-        <rect x="94"  y="15" width="6"  height="4" rx="0.6"/>
-        <rect x="102" y="15" width="6"  height="4" rx="0.6"/>
-        <rect x="110" y="15" width="6"  height="4" rx="0.6"/>
-        <rect x="118" y="15" width="6"  height="4" rx="0.6"/>
-        <rect x="126" y="15" width="10" height="4" rx="0.6"/>
-      </g>
+    <!-- Ink splash on landing -->
+    <g transform="translate(308 172)">
+      <circle cx="0" cy="0" r="0" fill="#1a3a99" opacity="0">
+        <animate attributeName="r" values="0;0;5;5;0" keyTimes="0;0.7;0.78;0.9;1" dur="7s" begin="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0.7;0.3;0" keyTimes="0;0.7;0.78;0.9;1" dur="7s" begin="2s" repeatCount="indefinite"/>
+      </circle>
     </g>
-    <!-- Coil cable back to chassis -->
-    <path d="M 0 12 Q -14 14 -12 18" fill="none" stroke="#3a3220" stroke-width="1.4"/>
-  </g>
 
-  <!-- Punch-card / floppy drift (nostalgic ambient) -->
-  <g opacity="0.55">
-    <!-- Little floppy floating up -->
+    <!-- Bottom timestamp on the paper -->
+    <text x="332" y="168"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="10" font-style="italic" fill="#6a5e40" opacity="0.85">
+      1976 – 2026
+    </text>
+
+    <!-- ============ FOUNTAIN PEN ============ -->
+    <!-- Pen enters from lower-left at the classic hooked-lefty angle -->
+    <!-- Position/rotation animates in sync with the "50" reveal -->
     <g>
       <animateTransform attributeName="transform" type="translate"
-                        values="330 150; 330 60; 330 60" keyTimes="0;0.7;1"
+                        values="300 100; 300 100; 70 175; 240 90; 300 100; 300 100"
+                        keyTimes="0;0.15;0.35;0.6;0.85;1"
                         dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.55;0" dur="13s" repeatCount="indefinite"/>
-      <rect x="0" y="0" width="14" height="14" fill="#1a2230" stroke="#4d8bff" stroke-width="0.6"/>
-      <rect x="3" y="1" width="8" height="4" fill="#0d1117" stroke="#4d8bff" stroke-width="0.4"/>
-      <rect x="4" y="10" width="6" height="3" fill="#4d8bff" opacity="0.6"/>
+      <g transform="rotate(-38)">
+        <!-- Barrel (main body) -->
+        <rect x="0" y="-6" width="88" height="12" rx="2" fill="url(#barrelGrad)" stroke="#2a0a12" stroke-width="0.6"/>
+        <!-- Gold band -->
+        <rect x="-2" y="-6" width="6" height="12" fill="#d8ae3a" stroke="#8c6a20" stroke-width="0.4"/>
+        <!-- Cap (back) -->
+        <rect x="82" y="-7" width="24" height="14" rx="3" fill="#2a0a12" stroke="#000" stroke-width="0.4"/>
+        <!-- Clip on cap -->
+        <rect x="86" y="-11" width="16" height="2.4" rx="1" fill="#d8ae3a"/>
+        <!-- Grip section (dark, in front of barrel) -->
+        <rect x="-14" y="-4.5" width="16" height="9" rx="1" fill="#1a1a24" stroke="#000" stroke-width="0.4"/>
+        <!-- Nib (silver, pointed) -->
+        <path d="M -14 -3 L -30 -0.8 L -30 0.8 L -14 3 Z" fill="url(#nibGrad)" stroke="#4a4a58" stroke-width="0.4"/>
+        <!-- Nib center slit -->
+        <line x1="-14" y1="0" x2="-29" y2="0" stroke="#3a3a48" stroke-width="0.5"/>
+        <!-- Breather hole -->
+        <circle cx="-18" cy="0" r="1" fill="#3a3a48"/>
+        <!-- Tiny ink bead at tip -->
+        <circle cx="-30" cy="0" r="1.4" fill="#1a3a99">
+          <animate attributeName="r" values="1;1.6;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </g>
     </g>
-    <!-- second drift -->
-    <g>
-      <animateTransform attributeName="transform" type="translate"
-                        values="355 160; 355 30; 355 30" keyTimes="0;0.8;1"
-                        dur="17s" begin="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.5;0" dur="17s" begin="3s" repeatCount="indefinite"/>
-      <text x="0" y="0" font-family="Consolas, monospace" font-size="8" fill="#33ff66">01001001</text>
-    </g>
-    <g>
-      <animateTransform attributeName="transform" type="translate"
-                        values="405 150; 405 40; 405 40" keyTimes="0;0.75;1"
-                        dur="19s" begin="6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.5;0" dur="19s" begin="6s" repeatCount="indefinite"/>
-      <text x="0" y="0" font-family="Consolas, monospace" font-size="8" fill="#33ff66">10110001</text>
-    </g>
+  </g>
+
+  <!-- Fade right edge of paper region into dark -->
+  <rect x="380" y="0" width="80" height="200" fill="url(#paperFade)"/>
+
+  <!-- Tiny floating "L" glyphs (subtle atmosphere) -->
+  <g font-family="Georgia, serif" font-style="italic" fill="#b48bff" opacity="0.35">
+    <text x="410" y="30" font-size="12">
+      L
+      <animate attributeName="opacity" values="0;0.5;0" dur="11s" begin="1s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -14;0 -14" keyTimes="0;0.8;1" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </text>
+    <text x="430" y="60" font-size="9">
+      L
+      <animate attributeName="opacity" values="0;0.4;0" dur="13s" begin="4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -20;0 -20" keyTimes="0;0.8;1" dur="13s" begin="4s" repeatCount="indefinite"/>
+    </text>
   </g>
 
   <!-- ==================== RIGHT: TEXT PANEL ==================== -->
   <text x="474" y="66"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="34" font-weight="800" fill="#f5efe0" letter-spacing="1">
-    AUGUST 12, 2026
+    AUGUST 13, 2026
   </text>
 
   <rect x="474" y="76" width="300" height="3" fill="url(#underlineGrad)">
@@ -283,25 +208,25 @@ The left half is that machine: a beige 5150 chassis with a green-phosphor CRT ab
 
   <text x="474" y="106"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="19" font-weight="700" letter-spacing="1.5">
-    <tspan fill="#4d8bff">IBM PC AT 45</tspan><tspan fill="#f5efe0" font-weight="500">  ·  EST. 1981</tspan>
+        font-size="17" font-weight="700" letter-spacing="1.2">
+    <tspan fill="#b48bff">LEFT-HANDERS DAY</tspan><tspan fill="#f5efe0" font-weight="500"> · SINCE 1976</tspan>
   </text>
 
   <text x="474" y="128"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="10.5" font-style="italic" fill="#f5b334" letter-spacing="1" opacity="0.95">
-    MODEL 5150 · 4.77 MHZ 8088 · 16K RAM · PC DOS 1.0
+    50 YEARS OF SOUTHPAWS · DEAN R. CAMPBELL
   </text>
 
   <text x="474" y="146"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="10.5" fill="#6bd4c8" letter-spacing="1" opacity="0.9">
-    OPEN BUS · CLONE INDUSTRY · THE PC ERA
+    DA VINCI · CURIE · MCCARTNEY · OBAMA · HENDRIX
   </text>
 
   <text x="474" y="178"
         font-family="Georgia, 'Times New Roman', serif"
         font-size="14" font-style="italic" fill="#f5efe0" opacity="0.9">
-    &#8220;the beige box that started it all.&#8221;
+    &#8220;the world is upside down for us.&#8221;
   </text>
 </svg>
