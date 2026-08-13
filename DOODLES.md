@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 13, 2026 — IBM PC 5150 — 45th Anniversary (August 12, 1981)
+
+<img src="./doodle-archive/2026/08/2026-08-13-062630.svg" width="800" alt="Daily doodle for August 12, 2026 — the 45th anniversary of the IBM PC 5150, announced on 12 August 1981. On the left half, an iconic IBM 5150 tableau: a beige monitor housing with a green-phosphor CRT screen shows scrolling POST boot text (IBM Personal Computer, 640K OK, disk boot, then a blinking C prompt) behind faint horizontal scanlines; below it sits the beige PC chassis with two 5.25-inch floppy drives, and to the right an IBM Model M-style keyboard. On the right, a huge cream AUGUST 12, 2026 headline underlined by a blue-to-cyan sweep, an IBM-blue IBM PC AT 45 subhead trailed by cream · EST. 1981, italic amber MODEL 5150 · 4.77 MHZ 8088 · 16K RAM · PC DOS 1.0 tertiary, dim-cyan OPEN ARCHITECTURE · CLONE INDUSTRY · THE PC ERA tertiary, and a Georgia-italic 'the beige box that started it all.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 12 August 1981, IBM announced the Model 5150 Personal Computer — a beige box with a 4.77 MHz Intel 8088, 16 KB of RAM, and PC DOS 1.0 booting off a 5.25-inch floppy. It wasn't the first personal computer, but it was the one that made "PC" a common noun. Its open architecture spawned an entire clone industry, its ROM BIOS was famously cloned by Compaq, and its keyboard layout still lives in the machine on your desk. 45 years today.
+
+The left half is that machine: a beige 5150 chassis with a green-phosphor CRT above it, C:\ prompt blinking, POST text scrolling past — 640K OK, floppy seek, DOS handoff — behind faint CRT scanlines. On the right, a large AUGUST 12, 2026 headline anchors an IBM PC AT 45 subhead, the 5150 provenance line, and the caption "the beige box that started it all."
+
+</details>
+
+---
+
 ## August 12, 2026 — Hip Hop's 53rd Birthday (August 11, 1973)
 
 <img src="./doodle-archive/2026/08/2026-08-12-062531.svg" width="800" alt="Daily doodle for August 11, 2026 — Hip Hop's 53rd birthday, marking DJ Kool Herc's block party at 1520 Sedgwick Avenue in the Bronx on 11 August 1973. On the left half, a DJ turntable tableau against a purple graffiti-tagged brick wall: a large black vinyl LP spins continuously on a silver turntable platter, its warm-gold center label reading HIP HOP · AUG 11 '73, a chrome tonearm rests on the outer grooves, and a big spray-painted number 53 in cream and pink glows behind the deck. A row of hot-pink and gold equalizer bars pulses to the beat, and small cream musical notes drift upward. On the right, a huge cream AUGUST 11, 2026 headline underlined by a gold-to-red sweep, a warm-gold HIP HOP AT 53 subhead trailed by cream · BLOCK PARTY '73, italic amber DJ KOOL HERC · 1520 SEDGWICK AVE · BRONX tertiary, dim-cyan BREAKBEAT · TWO TURNTABLES · BACK TO SCHOOL JAM tertiary, and a Georgia-italic 'the day the beat began.' caption at the base.">
