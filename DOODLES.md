@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 14, 2026 — International Left-Handers Day — 50th Year (August 13, 1976)
+
+<img src="./doodle-archive/2026/08/2026-08-14-062720.svg" width="800" alt="Daily doodle for August 13, 2026 — the 50th International Left-Handers Day. On the left half, a piece of cream ruled notebook paper with a red margin line: a silver-and-royal-blue fountain pen enters from the lower left at a classic hooked left-hander's angle and writes a large italic 50 across the page in wet royal-blue ink, the strokes revealing left-to-right as the pen moves; a small ink drop falls beside the numeral and a soft pinky-smudge trails behind the nib. Below the paper, a small 1976 – 2026 timestamp. On the right, a huge cream AUGUST 13, 2026 headline underlined by a purple-to-pink sweep, a purple LEFT-HANDERS DAY subhead trailed by cream · SINCE 1976, italic amber 50 YEARS OF SOUTHPAWS · DEAN R. CAMPBELL tertiary, dim-cyan DA VINCI · CURIE · MCCARTNEY · OBAMA · HENDRIX tertiary, and a Georgia-italic 'the world is upside down for us.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+International Left-Handers Day, observed every 13 August since 1976, was founded by Dean R. Campbell of Lefthanders International as a light-hearted campaign for the roughly one-in-ten humans who write, throw, and cut against the grain of a right-handed world. Its patron saints — Leonardo, Curie, McCartney, Hendrix, Obama — are the shorthand; the daily reality is smudged pinkies, backwards spiral notebooks, and can-openers you have to flip. Fifty years today.
+
+The left half is a page of ruled notebook paper with a fountain pen coming in from the left at the classic hooked-hand angle, writing a big italic "50" across the page in wet royal-blue ink; a drop falls beside it, and a soft pinky-smudge — the lifelong tell — trails behind the nib. On the right, a large AUGUST 13, 2026 headline anchors a LEFT-HANDERS DAY · SINCE 1976 subhead, a roster of famous southpaws, and the caption "the world is upside down for us."
+
+</details>
+
+---
+
 ## August 13, 2026 — IBM PC 5150 — 45th Anniversary (August 12, 1981)
 
 <img src="./doodle-archive/2026/08/2026-08-13-062630.svg" width="800" alt="Daily doodle for August 12, 2026 — the 45th anniversary of the IBM PC 5150, announced on 12 August 1981. On the left half, an iconic IBM 5150 tableau: a beige monitor housing with a green-phosphor CRT screen shows scrolling POST boot text (IBM Personal Computer, 640K OK, disk boot, then a blinking C prompt) behind faint horizontal scanlines; below it sits the beige PC chassis with two 5.25-inch floppy drives, and to the right an IBM Model M-style keyboard. On the right, a huge cream AUGUST 12, 2026 headline underlined by a blue-to-cyan sweep, an IBM-blue IBM PC AT 45 subhead trailed by cream · EST. 1981, italic amber MODEL 5150 · 4.77 MHZ 8088 · 16K RAM · PC DOS 1.0 tertiary, dim-cyan OPEN ARCHITECTURE · CLONE INDUSTRY · THE PC ERA tertiary, and a Georgia-italic 'the beige box that started it all.' caption at the base.">
