@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 15, 2026 — Woodstock — 57th Anniversary (August 15, 1969)
+
+<img src="./doodle-archive/2026/08/2026-08-15-171234.svg" width="800" alt="Daily doodle for August 15, 2026 — the 57th anniversary of Woodstock. On the left, a slowly-turning tie-dye sunburst in magenta, orange, and gold behind a big white outlined peace symbol. Three white doves cross the sky. On the right, a huge cream AUGUST 15, 2026 headline underlined by a magenta-to-gold sweep, a magenta WOODSTOCK · 57 YEARS subhead trailed by cream · SINCE 1969, italic amber 3 DAYS OF PEACE & MUSIC · MAX YASGUR'S FARM · BETHEL NY tertiary, dim-cyan HENDRIX · JOPLIN · SANTANA · THE WHO · CSNY tertiary, and a Georgia-italic caption 'half a million kids, and I think you have proven something to the world.'">
+
+<details>
+<summary>About this doodle</summary>
+
+On 15 August 1969, half a million people converged on Max Yasgur's dairy farm in Bethel, New York, for what the poster billed as "3 Days of Peace & Music." Over the next four rain-soaked days they heard Richie Havens open, Jimi Hendrix close with a distorted Star-Spangled Banner, and Janis Joplin, Santana, The Who, Sly Stone, and CSNY pass through the stage in between. The traffic jammed the New York State Thruway, the fences came down, the promoters lost money, and the culture never quite reset. Fifty-seven years today.
+
+The left half is a slowly-turning tie-dye sunburst — warm bands of magenta, orange, and gold — behind a big white peace symbol, with a trio of doves crossing the sky. On the right, a large AUGUST 15, 2026 headline anchors a magenta WOODSTOCK · 57 YEARS subhead, an italic 3 DAYS OF PEACE & MUSIC tagline naming Max Yasgur's farm, a dim-cyan HENDRIX · JOPLIN · SANTANA · THE WHO · CSNY roster, and a Georgia-italic caption from the stage.
+
+</details>
+
+---
+
 ## August 15, 2026 — Pakistan Independence Day — 79th Anniversary (August 14, 1947)
 
 <img src="./doodle-archive/2026/08/2026-08-15-060413.svg" width="800" alt="Daily doodle for August 14, 2026 — the 79th Pakistan Independence Day. On the left half, the crescent-and-star flag of Pakistan waves against a dark backdrop from a wooden pole with a gold finial: a white hoist stripe on the left quarter, a deep green field on the right three quarters bearing a tilted white crescent moon cradling a five-pointed white star. Green and white paper confetti drifts upward like fireworks scraps against a scatter of distant stars. On the right, a huge cream AUGUST 14, 2026 headline underlined by a green-to-white sweep, a green PAKISTAN INDEPENDENCE DAY subhead trailed by cream · SINCE 1947, italic amber 79 YEARS · YOM-E-AZADI tertiary, dim-cyan JINNAH · IQBAL · LIAQUAT · FATIMA tertiary, and a Georgia-italic 'Ittehad, Yaqeen, Tanzeem — unity, faith, discipline.' caption at the base.">

@@ -1,147 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Woodstock — 57th Anniversary (August 15, 1969) -->
+<!-- theme: Panama Canal — 112th Anniversary (August 15, 1914) -->
 <!-- about:
-On 15 August 1969, half a million people converged on Max Yasgur's dairy farm in Bethel, New York, for what the poster billed as "3 Days of Peace & Music." Over the next four rain-soaked days they heard Richie Havens open, Jimi Hendrix close with a distorted Star-Spangled Banner, and Janis Joplin, Santana, The Who, Sly Stone, and CSNY pass through the stage in between. The traffic jammed the New York State Thruway, the fences came down, the promoters lost money, and the culture never quite reset. Fifty-seven years today.
+On 15 August 1914, the SS Ancon made the first official transit of the Panama Canal, a 50-mile shortcut through the isthmus that trimmed roughly 8,000 miles off the sea route from New York to San Francisco. Ten years in the making under U.S. Army Corps engineer George Washington Goethals, it cost the lives of more than 5,600 workers and moved 200 million cubic yards of earth. Its three lock complexes — Gatun, Pedro Miguel, and Miraflores — still lift ships 85 feet above sea level using nothing but gravity-fed fresh water from Gatun Lake. 112 years today.
 
-The left half is a slowly-turning tie-dye sunburst — warm bands of magenta, orange, and gold — behind a big white peace symbol, with a trio of doves crossing the sky. On the right, a large AUGUST 15, 2026 headline anchors a magenta WOODSTOCK · 57 YEARS subhead, an italic 3 DAYS OF PEACE & MUSIC tagline naming Max Yasgur's farm, a dim-cyan HENDRIX · JOPLIN · SANTANA · THE WHO · CSNY roster, and a Georgia-italic caption from the stage.
+The left half is a side-view of a lock chamber at night: two concrete lock gates flank a cargo ship silhouette gliding slowly across the moonlit water, with rippling wake trailing behind and warm lanterns pulsing atop each gate. On the right, a large AUGUST 15, 2026 headline anchors a cyan PANAMA CANAL · 112 YEARS subhead, an italic 50 MILES · ATLANTIC TO PACIFIC · SS ANCON, FIRST TRANSIT tertiary, a dim GATUN · PEDRO MIGUEL · MIRAFLORES · 85 FT LIFT roster, and a Georgia-italic 'a path between the seas.' caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 15, 2026 — the 57th anniversary of Woodstock. On the left, a slowly-turning tie-dye sunburst in magenta, orange, and gold behind a big white outlined peace symbol. Three white doves cross the sky. On the right, a huge cream AUGUST 15, 2026 headline underlined by a magenta-to-gold sweep, a magenta WOODSTOCK · 57 YEARS subhead trailed by cream · SINCE 1969, italic amber 3 DAYS OF PEACE &amp; MUSIC · MAX YASGUR'S FARM · BETHEL NY tertiary, dim-cyan HENDRIX · JOPLIN · SANTANA · THE WHO · CSNY tertiary, and a Georgia-italic caption 'half a million kids, and I think you have proven something to the world.'">
+     aria-label="Daily doodle for August 15, 2026 — the 112th anniversary of the Panama Canal opening. On the left half, a cargo ship silhouette glides through a moonlit lock chamber at night, flanked by two concrete lock gates with warm pulsing lanterns; a moon and stars sit above and ripples move across the dark water. On the right, a huge cream AUGUST 15, 2026 headline underlined by a cyan-to-amber sweep, a cyan PANAMA CANAL · 112 YEARS subhead trailed by cream · SINCE 1914, an italic amber 50 MILES · ATLANTIC TO PACIFIC · SS ANCON, FIRST TRANSIT tertiary, a dim GATUN · PEDRO MIGUEL · MIRAFLORES · 85 FT LIFT roster, and a Georgia-italic 'a path between the seas.' caption at the base.">
   <defs>
-    <linearGradient id="nightGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#1a0a24"/>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0a1428"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
-
-    <!-- Tie-dye sun (yellow core → orange → magenta → deep purple → transparent) -->
-    <radialGradient id="sunGrad" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%"   stop-color="#ffd447"/>
-      <stop offset="30%"  stop-color="#ff8c1a"/>
-      <stop offset="55%"  stop-color="#e91e63"/>
-      <stop offset="80%"  stop-color="#4a1e6b"/>
-      <stop offset="100%" stop-color="#1a0a24" stop-opacity="0"/>
-    </radialGradient>
-
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1e5a7a"/>
+      <stop offset="100%" stop-color="#08202f"/>
+    </linearGradient>
     <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#e91e63" stop-opacity="0"/>
-      <stop offset="30%"  stop-color="#e91e63" stop-opacity="1"/>
-      <stop offset="70%"  stop-color="#ffd447" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#ffd447" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#26c6da" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#26c6da" stop-opacity="1"/>
+      <stop offset="70%"  stop-color="#ffb84d" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffb84d" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- One warm-gold ray -->
-    <symbol id="ray" overflow="visible">
-      <polygon points="0,-140 -5,0 5,0" fill="#ffd447" opacity="0.32"/>
-    </symbol>
-
-    <!-- Dove silhouette -->
-    <symbol id="dove" overflow="visible">
-      <ellipse cx="0" cy="0" rx="10" ry="3.4" fill="#f5efe0"/>
-      <circle cx="10" cy="-2" r="2.8" fill="#f5efe0"/>
-      <polygon points="12.5,-2 17,-1 12.5,0.4" fill="#ffb84d"/>
-      <path d="M -3 -1 Q -8 -13 -20 -9 Q -11 -6 -6 0 Z" fill="#f5efe0"/>
-      <polygon points="-8,-1 -15,-3 -15,3 -8,1" fill="#f5efe0"/>
+    <radialGradient id="lanternGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ffe680" stop-opacity="1"/>
+      <stop offset="55%"  stop-color="#ffb84d" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffb84d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#e6f2f7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e6f2f7" stop-opacity="0"/>
+    </radialGradient>
+    <symbol id="star" overflow="visible">
+      <circle r="0.9" fill="#e6f2f7" opacity="0.75"/>
     </symbol>
   </defs>
 
-  <!-- Night sky -->
-  <rect width="800" height="200" fill="url(#nightGrad)"/>
+  <!-- Sky -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
 
-  <!-- ==================== TIE-DYE SUNBURST (LEFT) ==================== -->
-  <g transform="translate(180 100)">
-    <!-- Gold ray spokes, slow clockwise -->
-    <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="47s" repeatCount="indefinite"/>
-      <use href="#ray" transform="rotate(0)"/>
-      <use href="#ray" transform="rotate(30)"/>
-      <use href="#ray" transform="rotate(60)"/>
-      <use href="#ray" transform="rotate(90)"/>
-      <use href="#ray" transform="rotate(120)"/>
-      <use href="#ray" transform="rotate(150)"/>
-      <use href="#ray" transform="rotate(180)"/>
-      <use href="#ray" transform="rotate(210)"/>
-      <use href="#ray" transform="rotate(240)"/>
-      <use href="#ray" transform="rotate(270)"/>
-      <use href="#ray" transform="rotate(300)"/>
-      <use href="#ray" transform="rotate(330)"/>
-    </g>
-    <!-- Magenta counter-rotating rays -->
-    <g opacity="0.55">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="83s" repeatCount="indefinite"/>
-      <polygon points="0,-125 -4,0 4,0" fill="#e91e63" transform="rotate(15)"/>
-      <polygon points="0,-125 -4,0 4,0" fill="#e91e63" transform="rotate(75)"/>
-      <polygon points="0,-125 -4,0 4,0" fill="#e91e63" transform="rotate(135)"/>
-      <polygon points="0,-125 -4,0 4,0" fill="#e91e63" transform="rotate(195)"/>
-      <polygon points="0,-125 -4,0 4,0" fill="#e91e63" transform="rotate(255)"/>
-      <polygon points="0,-125 -4,0 4,0" fill="#e91e63" transform="rotate(315)"/>
-    </g>
-    <!-- Tie-dye sun disk, gently breathing -->
-    <circle cx="0" cy="0" r="90" fill="url(#sunGrad)">
-      <animate attributeName="r" values="86;93;86" dur="11s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- ==================== PEACE SYMBOL (dark outline + white) ==================== -->
-  <g transform="translate(180 100)" fill="none" stroke-linecap="round">
-    <g stroke="#1a0a24" stroke-width="11">
-      <circle cx="0" cy="0" r="52"/>
-      <line x1="0" y1="-52" x2="0" y2="52"/>
-      <line x1="0" y1="0" x2="-45" y2="26"/>
-      <line x1="0" y1="0" x2="45" y2="26"/>
-    </g>
-    <g stroke="#f5efe0" stroke-width="7">
-      <circle cx="0" cy="0" r="52"/>
-      <line x1="0" y1="-52" x2="0" y2="52"/>
-      <line x1="0" y1="0" x2="-45" y2="26"/>
-      <line x1="0" y1="0" x2="45" y2="26"/>
-    </g>
-  </g>
-
-  <!-- ==================== FLYING DOVES ==================== -->
+  <!-- Stars -->
   <g>
-    <use href="#dove">
-      <animateTransform attributeName="transform" type="translate" values="-40 30;830 22" dur="41s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dove" opacity="0.85">
-      <animateTransform attributeName="transform" type="translate" values="-40 175;830 170" dur="53s" begin="7s" repeatCount="indefinite"/>
-    </use>
-    <use href="#dove" opacity="0.7">
-      <animateTransform attributeName="transform" type="translate" values="830 55;-40 60" dur="61s" begin="3s" repeatCount="indefinite"/>
-    </use>
+    <use href="#star" x="20"  y="18"/>
+    <use href="#star" x="90"  y="40"/>
+    <use href="#star" x="140" y="12"/>
+    <use href="#star" x="185" y="32"/>
+    <use href="#star" x="230" y="8"/>
+    <use href="#star" x="275" y="26"/>
+    <use href="#star" x="310" y="46"/>
+    <use href="#star" x="345" y="14"/>
+    <use href="#star" x="110" y="60"/>
+    <use href="#star" x="250" y="58"/>
   </g>
+
+  <!-- Moon with soft halo -->
+  <circle cx="60" cy="42" r="26" fill="url(#moonGlow)"/>
+  <circle cx="60" cy="42" r="13" fill="#e6f2f7" opacity="0.9"/>
+  <circle cx="65" cy="39" r="11" fill="#0a1428" opacity="0.35"/>
+
+  <!-- Distant hill silhouette on far bank -->
+  <path d="M 0 130 Q 90 118 180 128 Q 260 138 360 130 L 360 140 L 0 140 Z" fill="#0f1a24"/>
+
+  <!-- Water surface (fills the lock chamber below y=130) -->
+  <rect x="0" y="130" width="360" height="70" fill="url(#waterGrad)"/>
+
+  <!-- Water ripples -->
+  <g stroke="#4bb0d0" stroke-width="0.8" fill="none" opacity="0.55">
+    <line x1="50" y1="146" x2="130" y2="146">
+      <animate attributeName="x1" values="50;70;50" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="130;150;130" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <line x1="180" y1="158" x2="270" y2="158">
+      <animate attributeName="x1" values="180;200;180" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="270;290;270" dur="11s" repeatCount="indefinite"/>
+    </line>
+    <line x1="80" y1="172" x2="230" y2="172">
+      <animate attributeName="x1" values="80;100;80" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="230;250;230" dur="13s" repeatCount="indefinite"/>
+    </line>
+    <line x1="200" y1="184" x2="320" y2="184">
+      <animate attributeName="x1" values="200;220;200" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="320;340;320" dur="17s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Lock gate LEFT -->
+  <g>
+    <rect x="6" y="88" width="28" height="112" fill="#3a4048"/>
+    <rect x="6" y="88" width="28" height="6" fill="#5a6068"/>
+    <rect x="6" y="104" width="28" height="2" fill="#22262c"/>
+    <rect x="6" y="122" width="28" height="2" fill="#22262c"/>
+    <rect x="6" y="140" width="28" height="2" fill="#22262c"/>
+    <rect x="6" y="158" width="28" height="2" fill="#22262c"/>
+    <rect x="6" y="176" width="28" height="2" fill="#22262c"/>
+  </g>
+  <!-- Left gate lantern -->
+  <g transform="translate(20 84)">
+    <ellipse cx="0" cy="0" rx="30" ry="14" fill="url(#lanternGlow)" opacity="0.75">
+      <animate attributeName="rx" values="26;34;26" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="2.6" fill="#ffe680"/>
+  </g>
+
+  <!-- Lock gate RIGHT -->
+  <g>
+    <rect x="336" y="88" width="28" height="112" fill="#3a4048"/>
+    <rect x="336" y="88" width="28" height="6" fill="#5a6068"/>
+    <rect x="336" y="104" width="28" height="2" fill="#22262c"/>
+    <rect x="336" y="122" width="28" height="2" fill="#22262c"/>
+    <rect x="336" y="140" width="28" height="2" fill="#22262c"/>
+    <rect x="336" y="158" width="28" height="2" fill="#22262c"/>
+    <rect x="336" y="176" width="28" height="2" fill="#22262c"/>
+  </g>
+  <!-- Right gate lantern -->
+  <g transform="translate(350 84)">
+    <ellipse cx="0" cy="0" rx="30" ry="14" fill="url(#lanternGlow)" opacity="0.7">
+      <animate attributeName="rx" values="26;34;26" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0.85;0.55" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="2.6" fill="#ffe680"/>
+  </g>
+
+  <!-- Cargo ship silhouette, gliding slowly between gates -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="50 0;230 0;50 0" dur="53s" repeatCount="indefinite"/>
+    <!-- Hull -->
+    <path d="M 0 130 L 92 130 L 84 148 L 8 148 Z" fill="#1a1e26"/>
+    <!-- Deck line -->
+    <rect x="0" y="128" width="92" height="2" fill="#2a2e38"/>
+    <!-- Deck cargo containers -->
+    <rect x="10" y="116" width="16" height="12" fill="#c74848"/>
+    <rect x="28" y="116" width="16" height="12" fill="#4a7fbe"/>
+    <rect x="46" y="116" width="16" height="12" fill="#e0a83b"/>
+    <rect x="64" y="116" width="14" height="12" fill="#3f8f5c"/>
+    <!-- Wheelhouse -->
+    <rect x="66" y="100" width="20" height="16" fill="#2a2e38"/>
+    <rect x="70" y="104" width="4" height="4" fill="#ffe680">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="78" y="104" width="4" height="4" fill="#ffe680">
+      <animate attributeName="opacity" values="1;0.7;1" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Smokestack -->
+    <rect x="58" y="96" width="6" height="20" fill="#2a2e38"/>
+    <rect x="57" y="96" width="8" height="2" fill="#c74848"/>
+    <!-- Bow wake -->
+    <path d="M 90 138 Q 100 136 106 140 Q 100 142 94 141 Z" fill="#4bb0d0" opacity="0.65">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Subtle waterline shimmer -->
+  <rect x="34" y="130" width="302" height="1" fill="#7fd4f0" opacity="0.35">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="7s" repeatCount="indefinite"/>
+  </rect>
 
   <!-- ==================== TEXT PANEL (RIGHT) ==================== -->
-  <text x="366" y="66"
+  <text x="386" y="66"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="34" font-weight="800" fill="#f5efe0" letter-spacing="1">
     AUGUST 15, 2026
   </text>
 
-  <rect x="366" y="76" width="410" height="3" fill="url(#underlineGrad)">
-    <animate attributeName="x" values="366;376;366" dur="11s" repeatCount="indefinite"/>
+  <rect x="386" y="76" width="390" height="3" fill="url(#underlineGrad)">
+    <animate attributeName="x" values="386;396;386" dur="11s" repeatCount="indefinite"/>
   </rect>
 
-  <text x="366" y="106"
+  <text x="386" y="106"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="17" font-weight="700" letter-spacing="1.2">
-    <tspan fill="#ff6f9e">WOODSTOCK · 57 YEARS</tspan><tspan fill="#f5efe0" opacity="0.7"> · SINCE 1969</tspan>
+    <tspan fill="#26c6da">PANAMA CANAL · 112 YEARS</tspan><tspan fill="#f5efe0" opacity="0.7"> · SINCE 1914</tspan>
   </text>
 
-  <text x="366" y="128"
+  <text x="386" y="128"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="10.5" font-style="italic" fill="#ffb84d" letter-spacing="1" opacity="0.95">
-    3 DAYS OF PEACE &amp; MUSIC · MAX YASGUR'S FARM · BETHEL NY
+    50 MILES · ATLANTIC TO PACIFIC · SS ANCON, FIRST TRANSIT
   </text>
 
-  <text x="366" y="146"
+  <text x="386" y="146"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="10.5" fill="#6bd4c8" letter-spacing="1" opacity="0.9">
-    HENDRIX · JOPLIN · SANTANA · THE WHO · CSNY
+        font-size="10.5" fill="#7fd4b8" letter-spacing="1" opacity="0.9">
+    GATUN · PEDRO MIGUEL · MIRAFLORES · 85 FT LIFT
   </text>
 
-  <text x="366" y="178"
+  <text x="386" y="178"
         font-family="Georgia, 'Times New Roman', serif"
         font-size="13" font-style="italic" fill="#f5efe0" opacity="0.9">
-    &#8220;half a million kids &#8212; you have proven something to the world.&#8221;
+    &#8220;a path between the seas.&#8221;
   </text>
 </svg>
