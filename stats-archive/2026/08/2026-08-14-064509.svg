@@ -1,0 +1,228 @@
+<svg width="800" height="340" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie: 6243 all-time commits and 2059 all-time PRs merged, a 53-week contribution skyline peaking at 632 in a single week, 13 languages, 19 of 30 days active this month, 9 repositories active in the last 7 days.">
+  <defs>
+    <linearGradient id="gCommits" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#39d353"/>
+      <stop offset="1" stop-color="#7ee787"/>
+      <animate attributeName="x1" values="0;-0.6;0" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;1.6;1" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="gPRs" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#c084fc"/>
+      <animate attributeName="x1" values="0;-0.6;0" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;1.6;1" dur="13s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="gSky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7ee787" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#39d353" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#39d353" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="gSweep" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="skyClip">
+      <rect x="24" y="130" width="752" height="92"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="340" fill="#0d1117"/>
+
+  <!-- HEADER -->
+  <text x="24" y="22" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="13" font-weight="700" letter-spacing="0.6" fill="#e6edf3">LIVE GITHUB STATS</text>
+  <text x="776" y="22" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#8b949e">brandon-fryslie · past 12 months</text>
+  <line x1="24" y1="32" x2="776" y2="32" stroke="#21262d" stroke-width="1"/>
+
+  <!-- SCALAR TOTALS -->
+  <text x="32" y="58" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.4" fill="#8b949e">COMMITS</text>
+  <text x="112" y="58" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">All Time</text>
+  <text x="32" y="100" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="36" font-weight="700" fill="url(#gCommits)">6243</text>
+
+  <text x="440" y="58" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.4" fill="#8b949e">PRs MERGED</text>
+  <text x="540" y="58" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">All Time</text>
+  <text x="440" y="100" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="36" font-weight="700" fill="url(#gPRs)">2059</text>
+
+  <!-- SKYLINE CAPTION -->
+  <text x="400" y="122" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" letter-spacing="1.4" fill="#6e7681">CONTRIBUTIONS · WEEKLY · past 12 months · PEAK 632 IN ONE WEEK</text>
+
+  <!-- SKYLINE — 53 weekly totals as an area path, sqrt-scaled to y=220 baseline, max 90 tall -->
+  <g clip-path="url(#skyClip)">
+    <!-- baseline gridline -->
+    <line x1="24" y1="220" x2="776" y2="220" stroke="#21262d" stroke-width="1"/>
+    <!-- mid gridline (approx half-max) -->
+    <line x1="24" y1="175" x2="776" y2="175" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.7"/>
+
+    <!-- Area path: weekly-sum skyline -->
+    <path d="M 30,220 L 30,213.80 L 44,216.42 L 58,216.42 L 72,220 L 86,216.42 L 100,220 L 114,216.42 L 128,213.80 L 142,212.00 L 156,214.93 L 170,210.52 L 184,206.13 L 198,201.73 L 212,198.21 L 226,220 L 240,212.00 L 254,203.98 L 268,196.24 L 282,178.21 L 296,168.06 L 310,203.20 L 324,163.72 L 338,146.65 L 352,143.97 L 366,142.45 L 380,176.70 L 394,170.48 L 408,130.00 L 422,167.94 L 436,157.19 L 450,169.58 L 464,167.21 L 478,192.76 L 492,172.06 L 506,190.08 L 520,171.25 L 534,160.17 L 548,161.14 L 562,173.70 L 576,180.10 L 590,147.97 L 604,148.68 L 618,141.66 L 632,133.70 L 646,133.33 L 660,165.00 L 674,170.22 L 688,182.95 L 702,190.51 L 716,180.26 L 730,167.01 L 744,179.48 L 758,220 Z"
+          fill="url(#gSky)" stroke="#7ee787" stroke-width="1.2" stroke-linejoin="round">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Peak markers at the three tallest weeks (632, 586, 581) -->
+    <g>
+      <circle cx="408" cy="130" r="3" fill="#7ee787">
+        <animate attributeName="r" values="2.5;5;2.5" dur="3.1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="3.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="646" cy="133.33" r="2.5" fill="#7ee787">
+        <animate attributeName="r" values="2;4;2" dur="3.7s" begin="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0.95;0.5" dur="3.7s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="632" cy="133.70" r="2.5" fill="#7ee787">
+        <animate attributeName="r" values="2;4;2" dur="4.3s" begin="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0.95;0.5" dur="4.3s" begin="1.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Continuous sweep highlight moving left→right -->
+    <rect x="-140" y="130" width="140" height="92" fill="url(#gSweep)">
+      <animate attributeName="x" from="-140" to="800" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Axis end labels: quiet-start and busy-end anchors -->
+  <text x="30" y="234" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">Aug '25</text>
+  <text x="408" y="234" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">peak wk (Feb '26)</text>
+  <text x="770" y="234" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">now</text>
+
+  <line x1="24" y1="244" x2="776" y2="244" stroke="#21262d" stroke-width="1"/>
+
+  <!-- TRIPTYCH — three panels, each: value on left, mini-viz on right -->
+  <line x1="280" y1="252" x2="280" y2="334" stroke="#21262d" stroke-width="1"/>
+  <line x1="540" y1="252" x2="540" y2="334" stroke="#21262d" stroke-width="1"/>
+
+  <!-- PANEL 1 — DAYS ACTIVE, 19 of 30 rendered as 30-dot grid with 19 filled -->
+  <text x="32" y="266" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">DAYS ACTIVE</text>
+  <text x="32" y="300" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#22d3ee">19</text>
+  <text x="72" y="300" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="13" fill="#6e7681">/ 30</text>
+  <text x="32" y="320" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">30 Days</text>
+
+  <!-- 30-cell grid: 6 cols × 5 rows, cells 10×10, spacing 13. Cells 0..18 filled, 19..29 empty. -->
+  <g>
+    <!-- row 0 -->
+    <rect x="140" y="260" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.00s" repeatCount="indefinite"/></rect>
+    <rect x="153" y="260" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.20s" repeatCount="indefinite"/></rect>
+    <rect x="166" y="260" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.40s" repeatCount="indefinite"/></rect>
+    <rect x="179" y="260" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.60s" repeatCount="indefinite"/></rect>
+    <rect x="192" y="260" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.80s" repeatCount="indefinite"/></rect>
+    <rect x="205" y="260" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="1.00s" repeatCount="indefinite"/></rect>
+    <!-- row 1 -->
+    <rect x="140" y="273" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.15s" repeatCount="indefinite"/></rect>
+    <rect x="153" y="273" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.35s" repeatCount="indefinite"/></rect>
+    <rect x="166" y="273" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.55s" repeatCount="indefinite"/></rect>
+    <rect x="179" y="273" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.75s" repeatCount="indefinite"/></rect>
+    <rect x="192" y="273" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.95s" repeatCount="indefinite"/></rect>
+    <rect x="205" y="273" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="1.15s" repeatCount="indefinite"/></rect>
+    <!-- row 2 -->
+    <rect x="140" y="286" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.30s" repeatCount="indefinite"/></rect>
+    <rect x="153" y="286" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.50s" repeatCount="indefinite"/></rect>
+    <rect x="166" y="286" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.70s" repeatCount="indefinite"/></rect>
+    <rect x="179" y="286" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.90s" repeatCount="indefinite"/></rect>
+    <rect x="192" y="286" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="1.10s" repeatCount="indefinite"/></rect>
+    <rect x="205" y="286" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="1.30s" repeatCount="indefinite"/></rect>
+    <!-- row 3: first cell (index 18) filled, rest empty -->
+    <rect x="140" y="299" width="10" height="10" rx="1.5" fill="#22d3ee"><animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" begin="0.45s" repeatCount="indefinite"/></rect>
+    <rect x="153" y="299" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="166" y="299" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="179" y="299" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="192" y="299" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="205" y="299" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <!-- row 4: all empty -->
+    <rect x="140" y="312" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="153" y="312" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="166" y="312" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="179" y="312" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="192" y="312" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+    <rect x="205" y="312" width="10" height="10" rx="1.5" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+  </g>
+
+  <!-- PANEL 2 — LANGUAGES, 13 total; 8-segment stacked bar sized by commit counts -->
+  <text x="292" y="266" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">LANGUAGES</text>
+  <text x="292" y="300" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#a855f7">13</text>
+  <text x="292" y="320" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">All Time</text>
+
+  <!-- Stacked bar: x=336..528 (192 wide), y=272..316 (44 tall). Segments proportional to 6486 total commits. -->
+  <g>
+    <rect x="336" y="272" width="192" height="44" rx="3" fill="#161b22"/>
+    <!-- TypeScript 4004 (61.73%) -->
+    <rect x="336" y="272" width="118.5" height="44" fill="#3178c6">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" begin="0.0s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Python 1276 (19.67%) -->
+    <rect x="454.5" y="272" width="37.8" height="44" fill="#3572A5">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" begin="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Go 604 (9.31%) -->
+    <rect x="492.3" y="272" width="17.9" height="44" fill="#00ADD8">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Shell 279 (4.30%) -->
+    <rect x="510.2" y="272" width="8.3" height="44" fill="#89e051">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="2.1s" repeatCount="indefinite"/>
+    </rect>
+    <!-- HTML 129 (1.99%) -->
+    <rect x="518.5" y="272" width="3.8" height="44" fill="#e34c26"/>
+    <!-- CoffeeScript 109 (1.68%) -->
+    <rect x="522.3" y="272" width="3.2" height="44" fill="#244776"/>
+    <!-- JavaScript 70 (1.08%) -->
+    <rect x="525.5" y="272" width="2.1" height="44" fill="#f1e05a"/>
+    <!-- CSS 15 (0.23%) -->
+    <rect x="527.6" y="272" width="0.4" height="44" fill="#563d7c"/>
+
+    <!-- In-bar labels for the two widest segments -->
+    <text x="395.25" y="298" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#ffffff">TypeScript</text>
+    <text x="473.4" y="298" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="9" font-weight="700" fill="#ffffff">Python</text>
+  </g>
+
+  <!-- Legend below bar: Go + others summary -->
+  <rect x="336" y="323" width="6" height="6" rx="1" fill="#00ADD8"/>
+  <text x="345" y="329" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">Go</text>
+  <rect x="365" y="323" width="6" height="6" rx="1" fill="#89e051"/>
+  <text x="374" y="329" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">Shell</text>
+  <rect x="400" y="323" width="6" height="6" rx="1" fill="#e34c26"/>
+  <text x="409" y="329" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">HTML</text>
+  <text x="528" y="329" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#6e7681">+5 more</text>
+
+  <!-- PANEL 3 — ACTIVE REPOS, 9 total; top-5 mini bars sized by 7-day commit counts -->
+  <text x="552" y="266" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">ACTIVE REPOS</text>
+  <text x="552" y="316" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="26" font-weight="700" fill="#f472b6">9</text>
+  <text x="552" y="332" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="10" fill="#6e7681">7 Days</text>
+
+  <!-- Right side: 5 mini bars for top repos. Bar area x=596..776 (180 wide). Max=19. -->
+  <!-- Row 0: slopspot-paste 19 -->
+  <text x="596" y="278" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">slopspot-paste</text>
+  <rect x="596" y="281" width="180" height="4" rx="1" fill="#161b22"/>
+  <rect x="596" y="281" width="180" height="4" rx="1" fill="#f472b6">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" begin="0.0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="278" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">19</text>
+  <!-- Row 1: links-issue-tracker 19 -->
+  <text x="596" y="292" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">links-issue-tracker</text>
+  <rect x="596" y="295" width="180" height="4" rx="1" fill="#161b22"/>
+  <rect x="596" y="295" width="180" height="4" rx="1" fill="#f472b6">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" begin="0.7s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="292" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">19</text>
+  <!-- Row 2: cc-candybar 12 -->
+  <text x="596" y="306" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">cc-candybar</text>
+  <rect x="596" y="309" width="180" height="4" rx="1" fill="#161b22"/>
+  <rect x="596" y="309" width="113.7" height="4" rx="1" fill="#f472b6">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" begin="1.4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="306" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">12</text>
+  <!-- Row 3: cc-dump 8 -->
+  <text x="596" y="320" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">cc-dump</text>
+  <rect x="596" y="323" width="180" height="4" rx="1" fill="#161b22"/>
+  <rect x="596" y="323" width="75.8" height="4" rx="1" fill="#f472b6">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" begin="2.1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="320" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">8</text>
+  <!-- Row 4: brandon-fryslie 4 -->
+  <text x="596" y="334" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#e6edf3">brandon-fryslie</text>
+  <rect x="596" y="335" width="180" height="3" rx="1" fill="#161b22"/>
+  <rect x="596" y="335" width="37.9" height="3" rx="1" fill="#f472b6">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="5s" begin="2.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="334" text-anchor="end" font-family="ui-sans-serif,-apple-system,'Segoe UI',sans-serif" font-size="8" fill="#8b949e">4</text>
+</svg>

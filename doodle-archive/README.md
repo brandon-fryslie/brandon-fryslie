@@ -35,4 +35,4 @@ If `assets/daily-highlight.svg` doesn't exist yet (very first run ever), the run
 ## What this archive is not
 
 - Not a workspace. Nothing should be edited in place — the only mutation is adding a new file. One-time legacy cleanup is the only allowed exception, and should be paired with a prompt change that explains why.
-- Not a backup of the stats SVG. Only the creative doodle is archived; `assets/daily-stats.svg` is regenerated mechanically each run and has no historical interest.
+- Not a backup of the stats SVG. Only the creative doodle is archived here. The stats card has its own archive at [`stats-archive/`](../stats-archive/), built the opposite way — derived from git history rather than copied aside before each overwrite. (That card was mechanically generated and genuinely disposable when this line first said so; it has been authored fresh each day since August 2026, and is now kept.)

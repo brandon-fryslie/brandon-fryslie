@@ -572,6 +572,14 @@ jobs:
       - name: Install rsvg-convert (for stats preview)
         run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
 
+      - name: Sync the stats card archive from git history (mechanical)
+        # Archives every committed version of the card that is not on disk yet and
+        # regenerates STATS.md from the archive tree. Runs before the Claude step so
+        # an unreadable history fails the job cheaply rather than after an authoring
+        # run. Today's card is committed below and therefore archived by tomorrow's
+        # run — the same one-day lag the doodle archive has.
+        run: python .github/scripts/sync-stats-archive.py
+
       - name: Generate stats data seam + fallback card (mechanical)
         # Writes the rich data seam (assets/daily-stats.json — a 365-day calendar plus
         # 3-6 relevant metrics with their max/breakdown distributions) and a deterministic
@@ -635,8 +643,11 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          # This job owns exactly the stats card and its data seam — nothing else.
-          git add assets/daily-stats.svg assets/daily-stats.json 2>/dev/null || true
+          # This job owns exactly the stats card, its data seam, and the card
+          # archive it derives from history — nothing else. No suppression here:
+          # a git add that fails means a path this job owns has gone missing, and
+          # the next check would misreport that as "Claude wrote nothing".
+          git add assets/daily-stats.svg assets/daily-stats.json stats-archive STATS.md
 
           if git diff --cached --quiet; then
             echo "::error::Stats job produced no staged changes — Claude did not write the card."

@@ -16,12 +16,12 @@ When you are asked to change "what shows up on the profile," the answer is almos
 |-------------|---------------------------------------------------------------------------|------------------|
 | `doodle`    | `README.md` (DAILY-DOODLE block only), `DOODLES.md` (DOODLE-GALLERY block), `assets/daily-highlight.svg`, `doodle-archive/`, `docs/assets/daily-highlight.svg` | Today's animated SVG "doodle", an archive copy of yesterday's doodle SVG, and a prepended `DOODLES.md` gallery entry. The `<img>` tag inside `DAILY-DOODLE` is rewritten idempotently each run. Owns one creative output and its archival infrastructure. |
 | `narrative` | `README.md` (INTRO-PROSE + RECENT-ACTIVITY + SELECTED-PROJECTS blocks), `daily-archive/`, `previous-work/` | All three text regions: the daily-rewritten first-person intro prose (anchored to `.github/intro-seed.md`), the bulleted recent-activity list with commit/PR links (a Last-24-Hours section that falls back to the most recent active day when the trailing window is empty, plus Week and Month rollups), the 6-cell project table, and an archive of yesterday's recent-activity content. Also appends today's day section to the current week's file under `previous-work/` (the durable weekly work archive; see `previous-work/README.md`). Owns all text-rendering and shares one commit-data query across all three regions. |
-| `stats`     | `assets/daily-stats.svg`, `assets/daily-stats.json` | The "Live GitHub Stats" card, authored fresh each day by a **dedicated** Claude invocation as a meaningful data-visualization. A prior mechanical step emits `daily-stats.json` — the rich data seam (a 365-day contribution calendar plus 3–6 relevance-selected metrics, each with its `max`/`breakdown` distribution) and a deterministic fallback card to `/tmp`. The agent visualizes that data (the picture encodes the numbers), an accuracy gate verifies every value is rendered, and it falls back to the deterministic card if it can't. See **Update the Generator** below. |
+| `stats`     | `assets/daily-stats.svg`, `assets/daily-stats.json`, `stats-archive/`, `STATS.md` | The "Live GitHub Stats" card, authored fresh each day by a **dedicated** Claude invocation as a meaningful data-visualization. A prior mechanical step emits `daily-stats.json` — the rich data seam (a 365-day contribution calendar plus 3–6 relevance-selected metrics, each with its `max`/`breakdown` distribution) and a deterministic fallback card to `/tmp`. The agent visualizes that data (the picture encodes the numbers), an accuracy gate verifies every value is rendered, and it falls back to the deterministic card if it can't. A mechanical step before all of that syncs the permanent card archive — see **The Stats Card Archive** below. See **Update the Generator** below. |
 
 Concurrency model — important to understand before changing anything:
 
 - **Workflow-level** `concurrency: { group: daily-highlights, cancel-in-progress: false }` prevents two whole runs from interleaving.
-- **Within a run**, the three jobs deliberately race. Each job stages **only its own paths** (`git add` is whitelisted per job) and pushes through a 5-attempt `fetch + rebase + push` loop. This is the mechanism by which the parallel Claude invocations can all push to `master` (and both `doodle` and `narrative` update `README.md`, in non-overlapping marker regions) without stomping each other. `stats` touches no shared file — it owns `assets/daily-stats.svg` and `.json` alone.
+- **Within a run**, the three jobs deliberately race. Each job stages **only its own paths** (`git add` is whitelisted per job) and pushes through a 5-attempt `fetch + rebase + push` loop. This is the mechanism by which the parallel Claude invocations can all push to `master` (and both `doodle` and `narrative` update `README.md`, in non-overlapping marker regions) without stomping each other. `stats` touches no shared file — it owns `assets/daily-stats.svg`, `.json`, `stats-archive/`, and `STATS.md` alone.
 - Each job has a `Verify Claude result` step that parses `steps.claude.outputs.execution_file` (JSONL of the action's run), pulls the last `result` entry, and fails the job if `is_error != false` or `permission_denials_count > 0`. A no-op or denied run is treated as a hard failure, not silently swallowed.
 
 If you are editing this workflow, preserve all three properties: per-job path whitelist on `git add`, rebase-retry on push, and the Verify step. They are load-bearing.
@@ -49,9 +49,14 @@ README.md
 
 DOODLES.md
   <!-- DOODLE-GALLERY:START -->      ... <!-- DOODLE-GALLERY:END -->      (doodle job)
+
+STATS.md
+  <!-- STATS-GALLERY:START -->       ... <!-- STATS-GALLERY:END -->       (stats job)
 ```
 
-Everything outside these markers is hand-authored and should not be touched by automation. Inside the README markers, content is replaced wholesale each run. Inside the `DOODLE-GALLERY` markers, the doodle job *prepends* a new entry per day (newest first) — it does not rewrite prior entries.
+Everything outside these markers is hand-authored and should not be touched by automation. Inside the README markers, content is replaced wholesale each run. Inside the `DOODLE-GALLERY` markers, the doodle job *prepends* a new entry per day (newest first) — it does not rewrite prior entries. Inside the `STATS-GALLERY` markers, the whole gallery is re-rendered from `stats-archive/` each run, so entries there are never edited in place either — they are regenerated.
+
+Note for anything that parses a marker region: `DOODLES.md` and `STATS.md` both *quote* their own marker strings in the hand-authored header prose that explains the contract. A plain substring search finds that sentence, not the region — match markers anchored at line start and require exactly one of each, or the parse silently returns an empty gallery.
 
 Both jobs concurrently write `README.md` (each owning a non-overlapping marker region) and resolve their push race via the rebase-retry loop. The marker isolation is what makes the parallelism safe.
 
@@ -59,7 +64,21 @@ Both jobs concurrently write `README.md` (each owning a non-overlapping marker r
 
 Directly beneath the Live GitHub Stats `<img>` in `README.md` sits a centered `<table>` of three **browse tiles** — one per metric, each an `<a href>`-wrapped `<img>` pointing at that metric's live GitHub page. Both the card `<img>` and the tile table live **between** the `INTRO-PROSE:END` and `RECENT-ACTIVITY:START` markers — hand-authored substrate in no machine-owned region, and the `stats` job never `git add`s `README.md` (it owns only `assets/daily-stats.svg` and `.json`), so no daily run clobbers them. The links must live in the README markup around each image, not inside an SVG: GitHub sanitizes SVG in `<img>` context — `<a>`, `:hover`, `<foreignObject>`, and image maps *inside* the SVG are stripped — so the only viable click target is a whole image wrapped by a surrounding `<a>`. Do not try to add per-region links inside `assets/daily-stats.svg`.
 
-The tile art lives under `assets/stat-badges/` (commits, prs, repositories — three **landscape** 300×180 tiles on one row, ~900px under the 960px card). Badges are deliberately **numberless** (the tile is the category; the live count lives on GitHub) and are **created once, not regenerated daily** — a higher craft bar, owned by no job. **Tile-inclusion rule (the load-bearing one): a metric gets a tile only if it has a *specific, honest* GitHub destination.** Commits → commit search, PRs → PR search (`is:pr`, all of them), Repositories → the repositories tab. Metrics whose only honest home is the profile contribution overview — PRs reviewed, contributions, days active, languages — get **no tile**: that page reads as a generic homepage rather than a specific browse target, and for reviews a `reviewed-by:`/search query would report a number that contradicts the card. Likewise **no Issues tile** — this repo tracks work in lit, not GitHub Issues, so a GH issue-search link would browse an empty set (a lit-export mirror + an Issues tile is deferred to `brandon-stats-card-b75.5`). A **manual theme switch** (`cp README-*.md README.md`) overwrites this region, so re-add the card `<img>` and the tile table when switching themes (the theme variants don't currently carry the stats card at all). The separate per-day archive of stats cards (`brandon-stats-card-b75.4`, blocked on the doodle-gallery styling fix) will build its own gallery page when unblocked.
+The tile art lives under `assets/stat-badges/` (commits, prs, repositories — three **landscape** 300×180 tiles on one row, ~900px under the 960px card). Badges are deliberately **numberless** (the tile is the category; the live count lives on GitHub) and are **created once, not regenerated daily** — a higher craft bar, owned by no job. **Tile-inclusion rule (the load-bearing one): a metric gets a tile only if it has a *specific, honest* GitHub destination.** Commits → commit search, PRs → PR search (`is:pr`, all of them), Repositories → the repositories tab. Metrics whose only honest home is the profile contribution overview — PRs reviewed, contributions, days active, languages — get **no tile**: that page reads as a generic homepage rather than a specific browse target, and for reviews a `reviewed-by:`/search query would report a number that contradicts the card. Likewise **no Issues tile** — this repo tracks work in lit, not GitHub Issues, so a GH issue-search link would browse an empty set (a lit-export mirror + an Issues tile is deferred to `brandon-stats-card-b75.5`). A **manual theme switch** (`cp README-*.md README.md`) overwrites this region, so re-add the card `<img>` and the tile table when switching themes (the theme variants don't currently carry the stats card at all). The card `<img>` is itself wrapped in an `<a href="./STATS.md">` pointing at the card archive — the same pattern the doodle uses to reach `DOODLES.md` — so re-add that wrapper too.
+
+## The Stats Card Archive
+
+Every stats card that has ever been on the profile is kept under `stats-archive/`, with `STATS.md` as its browsable gallery. `stats-archive/README.md` is the layout source of truth; read it before changing anything here.
+
+The one property to preserve: **the archive is derived from git history, not accumulated by copying files aside.** Every committed version of `assets/daily-stats.svg` is a card that was live, so the commit log is already the authoritative list — `.github/scripts/sync-stats-archive.py` walks it, writes any card missing from the tree, then regenerates `STATS.md` by scanning the tree. Three consequences worth not breaking:
+
+- There is **no `--backfill` flag** and no bookkeeping file, because backfilling and daily operation are the same operation. The first run recovered 156 cards going back to 2026-02-14; each run since adds one.
+- The job **self-heals**: a skipped, failed, or force-pushed-away run is repaired by the next one.
+- `STATS.md` **cannot drift** from the tree, because it is regenerated from it rather than appended to. (This is deliberately *not* how the doodle gallery works — that job prepends an entry as a separate act from writing the archive file, so its two surfaces have to be kept in agreement by hand.)
+
+Cards are stamped with the commit's **author** date, never the committer date: the push loop rebases on contention with the parallel jobs, and rebasing rewrites committer dates, which would let an already-archived card reappear under a second name.
+
+Captions come from `assets/daily-stats.json` for August-2026-onward cards and are read back out of the card's own text for the deterministic-generator era before that; the reading is rejected outright unless value and label counts match, so a card gets no caption rather than a wrong one. Because history only holds what has been committed, today's card is archived by *tomorrow's* run — the same one-day lag the doodle archive has.
 
 ## Update the Generator, Not the Generated Output
 
@@ -122,6 +141,7 @@ gh workflow run weekly-archive.yml                        # self-healing scan: f
 gh workflow run weekly-archive.yml -f week=2026-07-20      # finalize one specific week (must be a Monday, already ended)
 python .github/scripts/generate-stats-svg.py               # write daily-stats.json seam + deterministic fallback card (needs GITHUB_TOKEN)
 python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg   # gate: assert the card renders every value in daily-stats.json
+python .github/scripts/sync-stats-archive.py               # archive every card in git history + re-render STATS.md (idempotent, needs full history)
 python .github/scripts/render-previous-work-index.py       # regenerate the previous-work index locally
 ```
 
@@ -143,6 +163,7 @@ Work is not complete until `git push` succeeds and `git status` shows "up to dat
 
 ## Key Documentation
 
+- `stats-archive/README.md` — how the stats card archive is derived from git history, and why it is built the opposite way from the doodle archive.
 - `AGENTS.md` — full lnks workflow.
 - `INTERACTIVITY-LIMITS.md` — what GitHub allows in profile SVGs.
 - `RANDOMNESS-GUIDE.md` — pseudo-random effects without JS.

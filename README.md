@@ -37,7 +37,7 @@ The one design doc that landed alongside — accepted `work claims` for coordina
 </div>
 
 <div align="center">
-<img src="./assets/daily-stats.svg" width="960" alt="Live GitHub Stats" />
+<a href="./STATS.md"><img src="./assets/daily-stats.svg" width="960" alt="Live GitHub Stats — click for every past card" /></a>
 </div>
 
 <div align="center">
