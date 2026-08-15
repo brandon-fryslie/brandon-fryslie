@@ -1200,9 +1200,16 @@ steaming coffee cup, Duke-orange palette, JVM code drift, Write once run anywher
 
 ---
 
-## May 23, 2026 — Pac-Man 46th anniversary (May 22, 1980 — Namco arcade release); maze, pellets, Pac-Man chomping, four ghosts (Blinky, Pinky, Inky, Clyde), high-score arcade vibe
+## May 23, 2026 — Pac-Man 46th anniversary (May 22, 1980 — Namco arcade release)
 
 <img src="./doodle-archive/2026/05/2026-05-23-064923.svg" width="800" alt="Daily doodle for May 23, 2026: Pac-Man 46th anniversary (May 22, 1980 — Namco arcade release); maze, pellets, Pac-Man chomping, four ghosts (Blinky, Pinky, Inky, Clyde), high-score arcade vibe">
+
+<details>
+<summary>About this doodle</summary>
+
+maze, pellets, Pac-Man chomping, four ghosts (Blinky, Pinky, Inky, Clyde), high-score arcade vibe
+
+</details>
 
 ---
 
@@ -1219,45 +1226,94 @@ Spirit of St. Louis, first solo nonstop transatlantic flight; night-to-dawn sky,
 
 ---
 
-## May 21, 2026 — World Bee Day (May 20, UN observance) — honeycomb, bees, pollen, flowers, amber/gold palette
+## May 21, 2026 — World Bee Day (May 20, UN observance)
 
 <img src="./doodle-archive/2026/05/2026-05-21-070916.svg" width="800" alt="Daily doodle for May 21, 2026: World Bee Day (May 20, UN observance) — honeycomb, bees, pollen, flowers, amber/gold palette">
 
+<details>
+<summary>About this doodle</summary>
+
+honeycomb, bees, pollen, flowers, amber/gold palette
+
+</details>
+
 ---
 
-## May 20, 2026 — Halley's Comet — Earth passes through the tail (May 19, 1910), 116th anniversary; great comet, ion & dust tail, starfield, Earth in the tail
+## May 20, 2026 — Halley's Comet — Earth passes through the tail (May 19, 1910), 116th anniversary
 
 <img src="./doodle-archive/2026/05/2026-05-20-070432.svg" width="800" alt="Daily doodle for May 20, 2026: Halley's Comet — Earth passes through the tail (May 19, 1910), 116th anniversary; great comet, ion & dust tail, starfield, Earth in the tail">
 
+<details>
+<summary>About this doodle</summary>
+
+great comet, ion & dust tail, starfield, Earth in the tail
+
+</details>
+
 ---
 
-## May 19, 2026 — Mount St. Helens eruption 46th anniversary (May 18, 1980) — volcano silhouette, ash plume, pyroclastic cloud, lava glow, embers
+## May 19, 2026 — Mount St. Helens eruption 46th anniversary (May 18, 1980)
 
 <img src="./doodle-archive/2026/05/2026-05-19-070458.svg" width="800" alt="Daily doodle for May 19, 2026: Mount St. Helens eruption 46th anniversary (May 18, 1980) — volcano silhouette, ash plume, pyroclastic cloud, lava glow, embers">
 
+<details>
+<summary>About this doodle</summary>
+
+volcano silhouette, ash plume, pyroclastic cloud, lava glow, embers
+
+</details>
+
 ---
 
-## May 18, 2026 — World Telecommunication and Information Society Day / ITU founded May 17, 1865 (161st anniversary) — signal towers, radio waves, Morse code dots and dashes, networked nodes
+## May 18, 2026 — World Telecommunication and Information Society Day / ITU founded May 17, 1865 (161st anniversary)
 
 <img src="./doodle-archive/2026/05/2026-05-18-071242.svg" width="800" alt="Daily doodle for May 18, 2026: World Telecommunication and Information Society Day / ITU founded May 17, 1865 (161st anniversary) — signal towers, radio waves, Morse code dots and dashes, networked nodes">
 
+<details>
+<summary>About this doodle</summary>
+
+signal towers, radio waves, Morse code dots and dashes, networked nodes
+
+</details>
+
 ---
 
-## May 17, 2026 — First Academy Awards 97th anniversary (May 16, 1929) — Oscar statuette, art deco sunburst, spotlights, red carpet, golden age cinema
+## May 17, 2026 — First Academy Awards 97th anniversary (May 16, 1929)
 
 <img src="./doodle-archive/2026/05/2026-05-17-065210.svg" width="800" alt="Daily doodle for May 17, 2026: First Academy Awards 97th anniversary (May 16, 1929) — Oscar statuette, art deco sunburst, spotlights, red carpet, golden age cinema">
 
+<details>
+<summary>About this doodle</summary>
+
+Oscar statuette, art deco sunburst, spotlights, red carpet, golden age cinema
+
+</details>
+
 ---
 
-## May 16, 2026 — L. Frank Baum 170th birthday (May 15, 1856) — Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies
+## May 16, 2026 — L. Frank Baum 170th birthday (May 15, 1856)
 
 <img src="./doodle-archive/2026/05/2026-05-16-064230.svg" width="800" alt="Daily doodle for May 16, 2026: L. Frank Baum 170th birthday (May 15, 1856) — Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies">
 
+<details>
+<summary>About this doodle</summary>
+
+Wizard of Oz: tornado, yellow brick road, Emerald City, rainbow, ruby slippers, poppies
+
+</details>
+
 ---
 
-## May 15, 2026 — Skylab launch 53rd anniversary (May 14, 1973) — America's first space station, orbital workshop with Apollo Telescope Mount, Earth limb, stars, vacuum blue
+## May 15, 2026 — Skylab launch 53rd anniversary (May 14, 1973)
 
 <img src="./doodle-archive/2026/05/2026-05-15-065953.svg" width="800" alt="Daily doodle for May 15, 2026: Skylab launch 53rd anniversary (May 14, 1973) — America's first space station, orbital workshop with Apollo Telescope Mount, Earth limb, stars, vacuum blue">
+
+<details>
+<summary>About this doodle</summary>
+
+America's first space station, orbital workshop with Apollo Telescope Mount, Earth limb, stars, vacuum blue
+
+</details>
 
 ---
 
@@ -1274,45 +1330,94 @@ race car, checkered flag, speed lines, asphalt and racing red
 
 ---
 
-## May 13, 2026 — International Nurses Day / Florence Nightingale 206th birthday (May 12, 1820) — Lady with the Lamp, nightingale in flight, heartbeat, warm lamplight against night-ward teal
+## May 13, 2026 — International Nurses Day / Florence Nightingale 206th birthday (May 12, 1820)
 
 <img src="./doodle-archive/2026/05/2026-05-13-065608.svg" width="800" alt="Daily doodle for May 13, 2026: International Nurses Day / Florence Nightingale 206th birthday (May 12, 1820) — Lady with the Lamp, nightingale in flight, heartbeat, warm lamplight against night-ward teal">
 
+<details>
+<summary>About this doodle</summary>
+
+Lady with the Lamp, nightingale in flight, heartbeat, warm lamplight against night-ward teal
+
+</details>
+
 ---
 
-## May 12, 2026 — Deep Blue defeats Kasparov, 29th anniversary (May 11, 1997) — chessboard, fallen king, machine-blue glow
+## May 12, 2026 — Deep Blue defeats Kasparov, 29th anniversary (May 11, 1997)
 
 <img src="./doodle-archive/2026/05/2026-05-12-065148.svg" width="800" alt="Daily doodle for May 12, 2026: Deep Blue defeats Kasparov, 29th anniversary (May 11, 1997) — chessboard, fallen king, machine-blue glow">
 
+<details>
+<summary>About this doodle</summary>
+
+chessboard, fallen king, machine-blue glow
+
+</details>
+
 ---
 
-## May 11, 2026 — Mother's Day (US, 2nd Sunday of May = May 10, 2026) — bouquet, hearts, warm coral/rose palette
+## May 11, 2026 — Mother's Day (US, 2nd Sunday of May = May 10, 2026)
 
 <img src="./doodle-archive/2026/05/2026-05-11-070148.svg" width="800" alt="Daily doodle for May 11, 2026: Mother's Day (US, 2nd Sunday of May = May 10, 2026) — bouquet, hearts, warm coral/rose palette">
 
+<details>
+<summary>About this doodle</summary>
+
+bouquet, hearts, warm coral/rose palette
+
+</details>
+
 ---
 
-## May 10, 2026 — First laser beam reflected from the Moon — 64th anniversary (May 9, 1962, MIT Lincoln Lab); ruby-laser red beam, lunar disc, observatory ground station
+## May 10, 2026 — First laser beam reflected from the Moon — 64th anniversary (May 9, 1962, MIT Lincoln Lab)
 
 <img src="./doodle-archive/2026/05/2026-05-10-065031.svg" width="800" alt="Daily doodle for May 10, 2026: First laser beam reflected from the Moon — 64th anniversary (May 9, 1962, MIT Lincoln Lab); ruby-laser red beam, lunar disc, observatory ground station">
 
+<details>
+<summary>About this doodle</summary>
+
+ruby-laser red beam, lunar disc, observatory ground station
+
+</details>
+
 ---
 
-## May 9, 2026 — David Attenborough centenary (May 8, 1926) — lush leaves, wildlife silhouettes, ocean-and-emerald palette, a quiet "100" laurel
+## May 9, 2026 — David Attenborough centenary (May 8, 1926)
 
 <img src="./doodle-archive/2026/05/2026-05-09-063907.svg" width="800" alt="Daily doodle for May 9, 2026: David Attenborough centenary (May 8, 1926) — lush leaves, wildlife silhouettes, ocean-and-emerald palette, a quiet '100' laurel">
 
+<details>
+<summary>About this doodle</summary>
+
+lush leaves, wildlife silhouettes, ocean-and-emerald palette, a quiet "100" laurel
+
+</details>
+
 ---
 
-## May 8, 2026 — Beethoven's 9th Symphony "Ode to Joy" 202nd anniversary (May 7, 1824) — staff lines, notes, conductor's baton
+## May 8, 2026 — Beethoven's 9th Symphony "Ode to Joy" 202nd anniversary (May 7, 1824)
 
 <img src="./doodle-archive/2026/05/2026-05-08-063012.svg" width="800" alt="Daily doodle for May 8, 2026: Beethoven's 9th Symphony Ode to Joy 202nd anniversary (May 7, 1824) — staff lines, notes, conductor's baton">
 
+<details>
+<summary>About this doodle</summary>
+
+staff lines, notes, conductor's baton
+
+</details>
+
 ---
 
-## May 7, 2026 — Roger Bannister 4-minute mile 72nd anniversary (May 6, 1954) — track, stopwatch, motion blur
+## May 7, 2026 — Roger Bannister 4-minute mile 72nd anniversary (May 6, 1954)
 
 <img src="./doodle-archive/2026/05/2026-05-07-065320.svg" width="800" alt="Daily doodle for May 7, 2026: Roger Bannister 4-minute mile 72nd anniversary (May 6, 1954) — track, stopwatch, motion blur">
+
+<details>
+<summary>About this doodle</summary>
+
+track, stopwatch, motion blur
+
+</details>
 
 ---
 
@@ -1322,21 +1427,42 @@ race car, checkered flag, speed lines, asphalt and racing red
 
 ---
 
-## May 5, 2026 — Star Wars Day (May 4) — "May the Fourth Be With You"; crossed lightsabers, hyperspace, twin suns
+## May 5, 2026 — Star Wars Day (May 4)
 
 <img src="./doodle-archive/2026/05/2026-05-05-064020.svg" width="800" alt="Daily doodle for May 5, 2026: Star Wars Day (May 4) — May the Fourth Be With You; crossed lightsabers, hyperspace, twin suns">
 
+<details>
+<summary>About this doodle</summary>
+
+"May the Fourth Be With You"; crossed lightsabers, hyperspace, twin suns
+
+</details>
+
 ---
 
-## May 4, 2026 — World Press Freedom Day (May 3) — UNESCO observance; typewriter, newsprint masthead, ink
+## May 4, 2026 — World Press Freedom Day (May 3)
 
 <img src="./doodle-archive/2026/05/2026-05-04-065400.svg" width="800" alt="Daily doodle for May 4, 2026: World Press Freedom Day (May 3) — UNESCO observance; typewriter, newsprint masthead, ink">
 
+<details>
+<summary>About this doodle</summary>
+
+UNESCO observance; typewriter, newsprint masthead, ink
+
+</details>
+
 ---
 
-## May 3, 2026 — Leonardo da Vinci 507th death anniversary (May 2, 1519) — Vitruvian geometry, aerial screw, ornithopter wing, codex parchment
+## May 3, 2026 — Leonardo da Vinci 507th death anniversary (May 2, 1519)
 
 <img src="./doodle-archive/2026/05/2026-05-03-064647.svg" width="800" alt="Daily doodle for May 3, 2026: Leonardo da Vinci 507th death anniversary (May 2, 1519) — Vitruvian geometry, aerial screw, ornithopter wing, codex parchment">
+
+<details>
+<summary>About this doodle</summary>
+
+Vitruvian geometry, aerial screw, ornithopter wing, codex parchment
+
+</details>
 
 ---
 
@@ -1346,27 +1472,55 @@ race car, checkered flag, speed lines, asphalt and racing red
 
 ---
 
-## April 30, 2026 — World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain
+## April 30, 2026 — World Wide Web Public Domain 33rd anniversary (April 30, 1993)
 
 <img src="./doodle-archive/2026/04/2026-04-30.svg" width="800" alt="Daily doodle for April 30, 2026: World Wide Web Public Domain 33rd anniversary (April 30, 1993) — CERN releases WWW source into the public domain">
 
+<details>
+<summary>About this doodle</summary>
+
+CERN releases WWW source into the public domain
+
+</details>
+
 ---
 
-## April 29, 2026 — International Dance Day (April 29) — UNESCO observance honoring Jean-Georges Noverre's birthday
+## April 29, 2026 — International Dance Day (April 29)
 
 <img src="./doodle-archive/2026/04/2026-04-29.svg" width="800" alt="Daily doodle for April 29, 2026: International Dance Day (April 29) — UNESCO observance honoring Jean-Georges Noverre's birthday">
 
+<details>
+<summary>About this doodle</summary>
+
+UNESCO observance honoring Jean-Georges Noverre's birthday
+
+</details>
+
 ---
 
-## April 28, 2026 — Kon-Tiki 79th anniversary (April 28, 1947) — Thor Heyerdahl's balsa raft sets sail across the Pacific.
+## April 28, 2026 — Kon-Tiki 79th anniversary (April 28, 1947)
 
 <img src="./doodle-archive/2026/04/2026-04-28.svg" width="800" alt="Daily doodle for April 28, 2026: Kon-Tiki 79th anniversary (April 28, 1947) — Thor Heyerdahl's balsa raft sets sail across the Pacific.">
 
+<details>
+<summary>About this doodle</summary>
+
+Thor Heyerdahl's balsa raft sets sail across the Pacific.
+
+</details>
+
 ---
 
-## April 27, 2026 — Samuel Morse 235th birthday (April 27, 1791) — telegraph, dots & dashes traveling a wire.
+## April 27, 2026 — Samuel Morse 235th birthday (April 27, 1791)
 
 <img src="./doodle-archive/2026/04/2026-04-27.svg" width="800" alt="Daily doodle for April 27, 2026: Samuel Morse 235th birthday (April 27, 1791) — telegraph, dots & dashes traveling a wire.">
+
+<details>
+<summary>About this doodle</summary>
+
+telegraph, dots & dashes traveling a wire.
+
+</details>
 
 ---
 
