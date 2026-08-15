@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 15, 2026 — Pakistan Independence Day — 79th Anniversary (August 14, 1947)
+
+<img src="./doodle-archive/2026/08/2026-08-15-060413.svg" width="800" alt="Daily doodle for August 14, 2026 — the 79th Pakistan Independence Day. On the left half, the crescent-and-star flag of Pakistan waves against a dark backdrop from a wooden pole with a gold finial: a white hoist stripe on the left quarter, a deep green field on the right three quarters bearing a tilted white crescent moon cradling a five-pointed white star. Green and white paper confetti drifts upward like fireworks scraps against a scatter of distant stars. On the right, a huge cream AUGUST 14, 2026 headline underlined by a green-to-white sweep, a green PAKISTAN INDEPENDENCE DAY subhead trailed by cream · SINCE 1947, italic amber 79 YEARS · YOM-E-AZADI tertiary, dim-cyan JINNAH · IQBAL · LIAQUAT · FATIMA tertiary, and a Georgia-italic 'Ittehad, Yaqeen, Tanzeem — unity, faith, discipline.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 14 August 1947, the Dominion of Pakistan was born at the stroke of midnight as the British Raj was partitioned into two sovereign states — the culmination of the Pakistan Movement led by Muhammad Ali Jinnah. Yom-e-Azadi (Independence Day) is marked with the national flag flying over every home, ministerial addresses at Karachi's Mazar-e-Quaid, a 31-gun salute in the federal capital and 21 guns in each provincial capital, and green-and-white lights strung along public buildings. Seventy-nine years today.
+
+The left half is the crescent-and-star flag of Pakistan hoisted on a wooden pole: the white hoist stripe, the deep green field, and the white crescent cradling its five-pointed star, all displaced by a slow ripple as if caught in a low evening wind. Green and white confetti drifts upward like fireworks paper. On the right, a large cream AUGUST 14, 2026 headline anchors a green PAKISTAN INDEPENDENCE DAY subhead, a gold 79 YEARS · YOM-E-AZADI tertiary, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 14, 2026 — International Left-Handers Day — 50th Year (August 13, 1976)
 
 <img src="./doodle-archive/2026/08/2026-08-14-062720.svg" width="800" alt="Daily doodle for August 13, 2026 — the 50th International Left-Handers Day. On the left half, a piece of cream ruled notebook paper with a red margin line: a silver-and-royal-blue fountain pen enters from the lower left at a classic hooked left-hander's angle and writes a large italic 50 across the page in wet royal-blue ink, the strokes revealing left-to-right as the pen moves; a small ink drop falls beside the numeral and a soft pinky-smudge trails behind the nib. Below the paper, a small 1976 – 2026 timestamp. On the right, a huge cream AUGUST 13, 2026 headline underlined by a purple-to-pink sweep, a purple LEFT-HANDERS DAY subhead trailed by cream · SINCE 1976, italic amber 50 YEARS OF SOUTHPAWS · DEAN R. CAMPBELL tertiary, dim-cyan DA VINCI · CURIE · MCCARTNEY · OBAMA · HENDRIX tertiary, and a Georgia-italic 'the world is upside down for us.' caption at the base.">
