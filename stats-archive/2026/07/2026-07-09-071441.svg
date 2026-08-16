@@ -1,20 +1,488 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated July 09, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1745</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">69</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">954</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">5</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
+<defs>
+  <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0" stop-color="#0e4429"/>
+    <stop offset="0.55" stop-color="#26a641"/>
+    <stop offset="1" stop-color="#39d353"/>
+  </linearGradient>
+  <linearGradient id="barGradHot" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0" stop-color="#7f5af0"/>
+    <stop offset="1" stop-color="#c4b5fd"/>
+  </linearGradient>
+  <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#161b22"/>
+    <stop offset="1" stop-color="#0d1117"/>
+  </linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.14"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="gaugeFill" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#39d353"/>
+    <stop offset="1" stop-color="#7ee787"/>
+  </linearGradient>
+</defs>
+<rect width="800" height="300" rx="10" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="299" rx="10" fill="none" stroke="#21262d" stroke-width="1"/>
+<text x="22" y="30" font-size="14" font-weight="700" fill="#e6edf3" letter-spacing="1.4">LIVE GITHUB STATS</text>
+<text x="778" y="30" font-size="11" fill="#7d8590" text-anchor="end">past 12 months · ending 2026-07-09</text>
+<line x1="22" y1="42" x2="778" y2="42" stroke="#21262d" stroke-width="1"/>
+<line x1="22" y1="127.0" x2="778" y2="127.0" stroke="#161b22" stroke-width="1"/>
+<line x1="22" y1="100.1" x2="778" y2="100.1" stroke="#161b22" stroke-width="1"/>
+<line x1="22" y1="79.4" x2="778" y2="79.4" stroke="#161b22" stroke-width="1"/>
+<line x1="22" y1="62.0" x2="778" y2="62.0" stroke="#161b22" stroke-width="1"/>
+<text x="22" y="56.0" font-size="9" fill="#7d8590">daily contributions · peak 213</text>
+<line x1="22" y1="192" x2="778" y2="192" stroke="#30363d" stroke-width="1"/>
+<rect x="716.0" y="60" width="62.0" height="134" fill="#7f5af0" fill-opacity="0.07" rx="2"/>
+<rect x="763.5" y="60" width="14.5" height="134" fill="#f778ba" fill-opacity="0.14" rx="2"/>
+<g id="bars">
+<rect x="22.00" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="24.07" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="26.13" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="28.20" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="30.26" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="32.33" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="34.39" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="36.46" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="38.52" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="40.59" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="42.66" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="44.72" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="46.79" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="48.85" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="50.92" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="52.98" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="55.05" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="57.11" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="59.18" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="61.25" y="172.08" width="1.76" height="19.92" fill="url(#barGrad)" opacity="0.62" rx="0.6"/>
+<rect x="63.31" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="65.38" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="67.44" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="69.51" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="71.57" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="73.64" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="75.70" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="77.77" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="79.84" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="81.90" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="83.97" y="159.88" width="1.76" height="32.12" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="86.03" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="88.10" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="90.16" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="92.23" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="94.30" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="96.36" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="98.43" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="100.49" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="102.56" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="104.62" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="106.69" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="108.75" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="110.82" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="112.89" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="114.95" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="117.02" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="119.08" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="121.15" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="123.21" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="125.28" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="127.34" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="129.41" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="131.48" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="133.54" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="135.61" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="137.67" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="139.74" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="141.80" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="143.87" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="145.93" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="148.00" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="150.07" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="152.13" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="154.20" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="156.26" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="158.33" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="160.39" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="162.46" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="164.52" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="166.59" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="168.66" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="170.72" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="172.79" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="174.85" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="176.92" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="178.98" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="181.05" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="183.11" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="185.18" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="187.25" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="189.31" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="191.38" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="193.44" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="195.51" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="197.57" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="199.64" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="201.70" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="203.77" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="205.84" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="207.90" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="209.97" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="212.03" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="214.10" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="216.16" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="218.23" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="220.30" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="222.36" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="224.43" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="226.49" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="228.56" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="230.62" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="232.69" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="234.75" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="236.82" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="238.89" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="240.95" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="243.02" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="245.08" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="247.15" y="172.08" width="1.76" height="19.92" fill="url(#barGrad)" opacity="0.62" rx="0.6"/>
+<rect x="249.21" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="251.28" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="253.34" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="255.41" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="257.48" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="259.54" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="261.61" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="263.67" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="265.74" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="267.80" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="269.87" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="271.93" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="274.00" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="276.07" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="278.13" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="280.20" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="282.26" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="284.33" y="140.83" width="1.76" height="51.17" fill="url(#barGrad)" opacity="0.73" rx="0.6"/>
+<rect x="286.39" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="288.46" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="290.52" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="292.59" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="294.66" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="296.72" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="298.79" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="300.85" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="302.92" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="304.98" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="307.05" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="309.11" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="311.18" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="313.25" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="315.31" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="317.38" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="319.44" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="321.51" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="323.57" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="325.64" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="327.70" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="329.77" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="331.84" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="333.90" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="335.97" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="338.03" y="163.83" width="1.76" height="28.17" fill="url(#barGrad)" opacity="0.65" rx="0.6"/>
+<rect x="340.10" y="163.83" width="1.76" height="28.17" fill="url(#barGrad)" opacity="0.65" rx="0.6"/>
+<rect x="342.16" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="344.23" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="346.30" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="348.36" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="350.43" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="352.49" y="152.16" width="1.76" height="39.84" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="354.56" y="166.81" width="1.76" height="25.19" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="356.62" y="147.46" width="1.76" height="44.54" fill="url(#barGrad)" opacity="0.70" rx="0.6"/>
+<rect x="358.69" y="149.28" width="1.76" height="42.72" fill="url(#barGrad)" opacity="0.70" rx="0.6"/>
+<rect x="360.75" y="155.27" width="1.76" height="36.73" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="362.82" y="154.21" width="1.76" height="37.79" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="364.89" y="162.46" width="1.76" height="29.54" fill="url(#barGrad)" opacity="0.65" rx="0.6"/>
+<rect x="366.95" y="161.14" width="1.76" height="30.86" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="369.02" y="143.21" width="1.76" height="48.79" fill="url(#barGrad)" opacity="0.72" rx="0.6"/>
+<rect x="371.08" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="373.15" y="122.43" width="1.76" height="69.57" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="375.21" y="108.92" width="1.76" height="83.08" fill="url(#barGrad)" opacity="0.84" rx="0.6"/>
+<rect x="377.28" y="148.36" width="1.76" height="43.64" fill="url(#barGrad)" opacity="0.70" rx="0.6"/>
+<rect x="379.34" y="172.08" width="1.76" height="19.92" fill="url(#barGrad)" opacity="0.62" rx="0.6"/>
+<rect x="381.41" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="383.48" y="161.14" width="1.76" height="30.86" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="385.54" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="387.61" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="389.67" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="391.74" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="393.80" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="395.87" y="183.09" width="1.76" height="8.91" fill="url(#barGrad)" opacity="0.58" rx="0.6"/>
+<rect x="397.93" y="157.50" width="1.76" height="34.50" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="400.00" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="402.07" y="102.04" width="1.76" height="89.96" fill="url(#barGrad)" opacity="0.86" rx="0.6"/>
+<rect x="404.13" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="406.20" y="140.06" width="1.76" height="51.94" fill="url(#barGrad)" opacity="0.73" rx="0.6"/>
+<rect x="408.26" y="124.16" width="1.76" height="67.84" fill="url(#barGrad)" opacity="0.78" rx="0.6"/>
+<rect x="410.33" y="154.21" width="1.76" height="37.79" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="412.39" y="142.41" width="1.76" height="49.59" fill="url(#barGrad)" opacity="0.72" rx="0.6"/>
+<rect x="414.46" y="154.21" width="1.76" height="37.79" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="416.52" y="147.46" width="1.76" height="44.54" fill="url(#barGrad)" opacity="0.70" rx="0.6"/>
+<rect x="418.59" y="123.58" width="1.76" height="68.42" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="420.66" y="99.86" width="1.76" height="92.14" fill="url(#barGrad)" opacity="0.87" rx="0.6"/>
+<rect x="422.72" y="123.00" width="1.76" height="69.00" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="424.79" y="103.82" width="1.76" height="88.18" fill="url(#barGrad)" opacity="0.86" rx="0.6"/>
+<rect x="426.85" y="127.15" width="1.76" height="64.85" fill="url(#barGrad)" opacity="0.77" rx="0.6"/>
+<rect x="428.92" y="123.00" width="1.76" height="69.00" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="430.98" y="144.87" width="1.76" height="47.13" fill="url(#barGrad)" opacity="0.71" rx="0.6"/>
+<rect x="433.05" y="104.27" width="1.76" height="87.73" fill="url(#barGrad)" opacity="0.85" rx="0.6"/>
+<rect x="435.11" y="117.47" width="1.76" height="74.53" fill="url(#barGrad)" opacity="0.81" rx="0.6"/>
+<rect x="437.18" y="130.29" width="1.76" height="61.71" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="439.25" y="107.97" width="1.76" height="84.03" fill="url(#barGrad)" opacity="0.84" rx="0.6"/>
+<rect x="441.31" y="123.58" width="1.76" height="68.42" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="443.38" y="142.41" width="1.76" height="49.59" fill="url(#barGrad)" opacity="0.72" rx="0.6"/>
+<rect x="445.44" y="95.65" width="1.76" height="96.35" fill="url(#barGrad)" opacity="0.88" rx="0.6"/>
+<rect x="447.51" y="134.27" width="1.76" height="57.73" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="449.57" y="99.86" width="1.76" height="92.14" fill="url(#barGrad)" opacity="0.87" rx="0.6"/>
+<rect x="451.64" y="122.43" width="1.76" height="69.57" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="453.70" y="122.43" width="1.76" height="69.57" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="455.77" y="129.01" width="1.76" height="62.99" fill="url(#barGrad)" opacity="0.77" rx="0.6"/>
+<rect x="457.84" y="135.66" width="1.76" height="56.34" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="459.90" y="144.03" width="1.76" height="47.97" fill="url(#barGrad)" opacity="0.72" rx="0.6"/>
+<rect x="461.97" y="165.28" width="1.76" height="26.72" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="464.03" y="152.16" width="1.76" height="39.84" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="466.10" y="150.22" width="1.76" height="41.78" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="468.16" y="163.83" width="1.76" height="28.17" fill="url(#barGrad)" opacity="0.65" rx="0.6"/>
+<rect x="470.23" y="156.37" width="1.76" height="35.63" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="472.30" y="168.43" width="1.76" height="23.57" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="474.36" y="132.91" width="1.76" height="59.09" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="476.43" y="93.61" width="1.76" height="98.39" fill="url(#barGrad)" opacity="0.89" rx="0.6"/>
+<rect x="478.49" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="480.56" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="482.62" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="484.69" y="168.43" width="1.76" height="23.57" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="486.75" y="139.30" width="1.76" height="52.70" fill="url(#barGrad)" opacity="0.73" rx="0.6"/>
+<rect x="488.82" y="109.40" width="1.76" height="82.60" fill="url(#barGrad)" opacity="0.84" rx="0.6"/>
+<rect x="490.89" y="87.36" width="1.76" height="104.64" fill="url(#barGrad)" opacity="0.91" rx="0.6"/>
+<rect x="492.95" y="92.81" width="1.76" height="99.19" fill="url(#barGrad)" opacity="0.89" rx="0.6"/>
+<rect x="495.02" y="119.64" width="1.76" height="72.36" fill="url(#barGrad)" opacity="0.80" rx="0.6"/>
+<rect x="497.08" y="96.89" width="1.76" height="95.11" fill="url(#barGrad)" opacity="0.88" rx="0.6"/>
+<rect x="499.15" y="118.01" width="1.76" height="73.99" fill="url(#barGrad)" opacity="0.81" rx="0.6"/>
+<rect x="501.21" y="124.16" width="1.76" height="67.84" fill="url(#barGrad)" opacity="0.78" rx="0.6"/>
+<rect x="503.28" y="138.56" width="1.76" height="53.44" fill="url(#barGrad)" opacity="0.74" rx="0.6"/>
+<rect x="505.34" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="507.41" y="151.18" width="1.76" height="40.82" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="509.48" y="131.59" width="1.76" height="60.41" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="511.54" y="156.37" width="1.76" height="35.63" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="513.61" y="144.87" width="1.76" height="47.13" fill="url(#barGrad)" opacity="0.71" rx="0.6"/>
+<rect x="515.67" y="172.08" width="1.76" height="19.92" fill="url(#barGrad)" opacity="0.62" rx="0.6"/>
+<rect x="517.74" y="151.18" width="1.76" height="40.82" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="519.80" y="135.66" width="1.76" height="56.34" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="521.87" y="109.88" width="1.76" height="82.12" fill="url(#barGrad)" opacity="0.83" rx="0.6"/>
+<rect x="523.93" y="151.18" width="1.76" height="40.82" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="526.00" y="99.00" width="1.76" height="93.00" fill="url(#barGrad)" opacity="0.87" rx="0.6"/>
+<rect x="528.07" y="146.58" width="1.76" height="45.42" fill="url(#barGrad)" opacity="0.71" rx="0.6"/>
+<rect x="530.13" y="119.09" width="1.76" height="72.91" fill="url(#barGrad)" opacity="0.80" rx="0.6"/>
+<rect x="532.20" y="144.87" width="1.76" height="47.13" fill="url(#barGrad)" opacity="0.71" rx="0.6"/>
+<rect x="534.26" y="150.22" width="1.76" height="41.78" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="536.33" y="159.88" width="1.76" height="32.12" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="538.39" y="144.87" width="1.76" height="47.13" fill="url(#barGrad)" opacity="0.71" rx="0.6"/>
+<rect x="540.46" y="145.72" width="1.76" height="46.28" fill="url(#barGrad)" opacity="0.71" rx="0.6"/>
+<rect x="542.52" y="159.88" width="1.76" height="32.12" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="544.59" y="129.01" width="1.76" height="62.99" fill="url(#barGrad)" opacity="0.77" rx="0.6"/>
+<rect x="546.66" y="162.46" width="1.76" height="29.54" fill="url(#barGrad)" opacity="0.65" rx="0.6"/>
+<rect x="548.72" y="136.37" width="1.76" height="55.63" fill="url(#barGrad)" opacity="0.74" rx="0.6"/>
+<rect x="550.79" y="128.39" width="1.76" height="63.61" fill="url(#barGrad)" opacity="0.77" rx="0.6"/>
+<rect x="552.85" y="137.82" width="1.76" height="54.18" fill="url(#barGrad)" opacity="0.74" rx="0.6"/>
+<rect x="554.92" y="149.28" width="1.76" height="42.72" fill="url(#barGrad)" opacity="0.70" rx="0.6"/>
+<rect x="556.98" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="559.05" y="172.08" width="1.76" height="19.92" fill="url(#barGrad)" opacity="0.62" rx="0.6"/>
+<rect x="561.11" y="163.83" width="1.76" height="28.17" fill="url(#barGrad)" opacity="0.65" rx="0.6"/>
+<rect x="563.18" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="565.25" y="159.88" width="1.76" height="32.12" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="567.31" y="150.22" width="1.76" height="41.78" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="569.38" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="571.44" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="573.51" y="150.22" width="1.76" height="41.78" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="575.57" y="157.50" width="1.76" height="34.50" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="577.64" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="579.70" y="161.14" width="1.76" height="30.86" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="581.77" y="102.93" width="1.76" height="89.07" fill="url(#barGrad)" opacity="0.86" rx="0.6"/>
+<rect x="583.84" y="154.21" width="1.76" height="37.79" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="585.90" y="166.81" width="1.76" height="25.19" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="587.97" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="590.03" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="592.10" y="158.67" width="1.76" height="33.33" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="594.16" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="596.23" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="598.30" y="170.18" width="1.76" height="21.82" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="600.36" y="165.28" width="1.76" height="26.72" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="602.43" y="161.14" width="1.76" height="30.86" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="604.49" y="144.03" width="1.76" height="47.97" fill="url(#barGrad)" opacity="0.72" rx="0.6"/>
+<rect x="606.56" y="108.92" width="1.76" height="83.08" fill="url(#barGrad)" opacity="0.84" rx="0.6"/>
+<rect x="608.62" y="150.22" width="1.76" height="41.78" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="610.69" y="151.18" width="1.76" height="40.82" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="612.75" y="172.08" width="1.76" height="19.92" fill="url(#barGrad)" opacity="0.62" rx="0.6"/>
+<rect x="614.82" y="165.28" width="1.76" height="26.72" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="616.89" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="618.95" y="115.89" width="1.76" height="76.11" fill="url(#barGrad)" opacity="0.81" rx="0.6"/>
+<rect x="621.02" y="151.18" width="1.76" height="40.82" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="623.08" y="147.46" width="1.76" height="44.54" fill="url(#barGrad)" opacity="0.70" rx="0.6"/>
+<rect x="625.15" y="147.46" width="1.76" height="44.54" fill="url(#barGrad)" opacity="0.70" rx="0.6"/>
+<rect x="627.21" y="115.38" width="1.76" height="76.62" fill="url(#barGrad)" opacity="0.82" rx="0.6"/>
+<rect x="629.28" y="134.27" width="1.76" height="57.73" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="631.34" y="130.93" width="1.76" height="61.07" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="633.41" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="635.48" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="637.54" y="122.43" width="1.76" height="69.57" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="639.61" y="132.25" width="1.76" height="59.75" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="641.67" y="129.01" width="1.76" height="62.99" fill="url(#barGrad)" opacity="0.77" rx="0.6"/>
+<rect x="643.74" y="130.29" width="1.76" height="61.71" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="645.80" y="137.82" width="1.76" height="54.18" fill="url(#barGrad)" opacity="0.74" rx="0.6"/>
+<rect x="647.87" y="131.59" width="1.76" height="60.41" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="649.93" y="132.25" width="1.76" height="59.75" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="652.00" y="165.28" width="1.76" height="26.72" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="654.07" y="157.50" width="1.76" height="34.50" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="656.13" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="658.20" y="157.50" width="1.76" height="34.50" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="660.26" y="159.88" width="1.76" height="32.12" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="662.33" y="152.16" width="1.76" height="39.84" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="664.39" y="138.56" width="1.76" height="53.44" fill="url(#barGrad)" opacity="0.74" rx="0.6"/>
+<rect x="666.46" y="162.46" width="1.76" height="29.54" fill="url(#barGrad)" opacity="0.65" rx="0.6"/>
+<rect x="668.52" y="143.21" width="1.76" height="48.79" fill="url(#barGrad)" opacity="0.72" rx="0.6"/>
+<rect x="670.59" y="161.14" width="1.76" height="30.86" fill="url(#barGrad)" opacity="0.66" rx="0.6"/>
+<rect x="672.66" y="179.40" width="1.76" height="12.60" fill="url(#barGrad)" opacity="0.59" rx="0.6"/>
+<rect x="674.72" y="123.00" width="1.76" height="69.00" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="676.79" y="134.96" width="1.76" height="57.04" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="678.85" y="152.16" width="1.76" height="39.84" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="680.92" y="94.83" width="1.76" height="97.17" fill="url(#barGrad)" opacity="0.89" rx="0.6"/>
+<rect x="682.98" y="109.88" width="1.76" height="82.12" fill="url(#barGrad)" opacity="0.83" rx="0.6"/>
+<rect x="685.05" y="152.16" width="1.76" height="39.84" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="687.11" y="123.00" width="1.76" height="69.00" fill="url(#barGrad)" opacity="0.79" rx="0.6"/>
+<rect x="689.18" y="131.59" width="1.76" height="60.41" fill="url(#barGrad)" opacity="0.76" rx="0.6"/>
+<rect x="691.25" y="106.10" width="1.76" height="85.90" fill="url(#barGrad)" opacity="0.85" rx="0.6"/>
+<rect x="693.31" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="695.38" y="109.88" width="1.76" height="82.12" fill="url(#barGrad)" opacity="0.83" rx="0.6"/>
+<rect x="697.44" y="135.66" width="1.76" height="56.34" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="699.51" y="125.34" width="1.76" height="66.66" fill="url(#barGrad)" opacity="0.78" rx="0.6"/>
+<rect x="701.57" y="124.16" width="1.76" height="67.84" fill="url(#barGrad)" opacity="0.78" rx="0.6"/>
+<rect x="703.64" y="98.15" width="1.76" height="93.85" fill="url(#barGrad)" opacity="0.87" rx="0.6"/>
+<rect x="705.70" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="707.77" y="153.17" width="1.76" height="38.83" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="709.84" y="165.28" width="1.76" height="26.72" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="711.90" y="155.27" width="1.76" height="36.73" fill="url(#barGrad)" opacity="0.68" rx="0.6"/>
+<rect x="713.97" y="68.25" width="1.76" height="123.75" fill="url(#barGrad)" opacity="0.98" rx="0.6"/>
+<rect x="716.03" y="98.15" width="1.76" height="93.85" fill="url(#barGrad)" opacity="0.87" rx="0.6"/>
+<rect x="718.10" y="91.62" width="1.76" height="100.38" fill="url(#barGrad)" opacity="0.90" rx="0.6"/>
+<rect x="720.16" y="109.40" width="1.76" height="82.60" fill="url(#barGrad)" opacity="0.84" rx="0.6"/>
+<rect x="722.23" y="176.57" width="1.76" height="15.43" fill="url(#barGrad)" opacity="0.60" rx="0.6"/>
+<rect x="724.30" y="62.00" width="1.76" height="130.00" fill="url(#barGrad)" opacity="1.00" rx="0.6"/>
+<rect x="726.36" y="101.60" width="1.76" height="90.40" fill="url(#barGrad)" opacity="0.86" rx="0.6"/>
+<rect x="728.43" y="139.30" width="1.76" height="52.70" fill="url(#barGrad)" opacity="0.73" rx="0.6"/>
+<rect x="730.49" y="158.67" width="1.76" height="33.33" fill="url(#barGrad)" opacity="0.67" rx="0.6"/>
+<rect x="732.56" y="132.91" width="1.76" height="59.09" fill="url(#barGrad)" opacity="0.75" rx="0.6"/>
+<rect x="734.62" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="736.69" y="118.01" width="1.76" height="73.99" fill="url(#barGrad)" opacity="0.81" rx="0.6"/>
+<rect x="738.75" y="126.54" width="1.76" height="65.46" fill="url(#barGrad)" opacity="0.78" rx="0.6"/>
+<rect x="740.82" y="63.53" width="1.76" height="128.47" fill="url(#barGrad)" opacity="0.99" rx="0.6"/>
+<rect x="742.89" y="105.64" width="1.76" height="86.36" fill="url(#barGrad)" opacity="0.85" rx="0.6"/>
+<rect x="744.95" y="95.65" width="1.76" height="96.35" fill="url(#barGrad)" opacity="0.88" rx="0.6"/>
+<rect x="747.02" y="92.41" width="1.76" height="99.59" fill="url(#barGrad)" opacity="0.89" rx="0.6"/>
+<rect x="749.08" y="168.43" width="1.76" height="23.57" fill="url(#barGrad)" opacity="0.63" rx="0.6"/>
+<rect x="751.15" y="190.80" width="1.76" height="1.20" fill="url(#barGrad)" opacity="0.55" rx="0.6"/>
+<rect x="753.21" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="755.28" y="166.81" width="1.76" height="25.19" fill="url(#barGrad)" opacity="0.64" rx="0.6"/>
+<rect x="757.34" y="117.47" width="1.76" height="74.53" fill="url(#barGrad)" opacity="0.81" rx="0.6"/>
+<rect x="759.41" y="150.22" width="1.76" height="41.78" fill="url(#barGrad)" opacity="0.69" rx="0.6"/>
+<rect x="761.48" y="174.19" width="1.76" height="17.81" fill="url(#barGrad)" opacity="0.61" rx="0.6"/>
+<rect x="763.54" y="142.41" width="1.76" height="49.59" fill="url(#barGradHot)" opacity="0.72" rx="0.6"/>
+<rect x="765.61" y="174.19" width="1.76" height="17.81" fill="url(#barGradHot)" opacity="0.61" rx="0.6"/>
+<rect x="767.67" y="159.88" width="1.76" height="32.12" fill="url(#barGradHot)" opacity="0.66" rx="0.6"/>
+<rect x="769.74" y="99.86" width="1.76" height="92.14" fill="url(#barGradHot)" opacity="0.87" rx="0.6"/>
+<rect x="771.80" y="143.21" width="1.76" height="48.79" fill="url(#barGradHot)" opacity="0.72" rx="0.6"/>
+<rect x="773.87" y="174.19" width="1.76" height="17.81" fill="url(#barGradHot)" opacity="0.61" rx="0.6"/>
+<rect x="775.93" y="147.46" width="1.76" height="44.54" fill="url(#barGradHot)" opacity="0.70" rx="0.6"/>
+</g>
+<g clip-path="inset(0)">
+  <rect x="-158" y="62" width="180" height="130" fill="url(#sweep)">
+    <animate attributeName="x" from="-158" to="778" dur="11s" repeatCount="indefinite"/>
+  </rect>
+</g>
+<rect x="763.5" y="60" width="14.5" height="134" fill="none" stroke="#f778ba" stroke-width="1" rx="2" opacity="0.35">
+  <animate attributeName="opacity" values="0.20;0.55;0.20" dur="7s" repeatCount="indefinite"/>
+</rect>
+<text x="770.8" y="74.0" font-size="9" font-weight="700" fill="#f778ba" text-anchor="middle">7d</text>
+<text x="739.8" y="74.0" font-size="9" font-weight="700" fill="#a58cff" text-anchor="middle" opacity="0.9">30d</text>
+<line x1="70.5" y1="192" x2="70.5" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="70.5" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Aug</text>
+<line x1="134.6" y1="192" x2="134.6" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="134.6" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Sep</text>
+<line x1="196.5" y1="192" x2="196.5" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="196.5" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Oct</text>
+<line x1="260.6" y1="192" x2="260.6" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="260.6" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Nov</text>
+<line x1="322.5" y1="192" x2="322.5" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="322.5" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Dec</text>
+<line x1="386.6" y1="192" x2="386.6" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="386.6" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Jan</text>
+<line x1="450.6" y1="192" x2="450.6" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="450.6" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Feb</text>
+<line x1="508.4" y1="192" x2="508.4" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="508.4" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Mar</text>
+<line x1="572.5" y1="192" x2="572.5" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="572.5" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Apr</text>
+<line x1="634.4" y1="192" x2="634.4" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="634.4" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">May</text>
+<line x1="698.5" y1="192" x2="698.5" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="698.5" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Jun</text>
+<line x1="760.4" y1="192" x2="760.4" y2="195" stroke="#30363d" stroke-width="1"/>
+<text x="760.4" y="204.0" font-size="8" fill="#6e7681" text-anchor="middle">Jul</text>
+<line x1="22" y1="212" x2="778" y2="212" stroke="#21262d" stroke-width="1"/>
+<rect x="22.0" y="218.0" width="146.4" height="70.0" rx="6" fill="url(#cardBg)" stroke="#21262d" stroke-width="1"/>
+<rect x="22.0" y="226.0" width="3" height="54.0" rx="1.5" fill="#f778ba"/>
+<text x="95.2" y="250.0" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">82</text>
+<text x="95.2" y="264.0" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle">Longest Streak</text>
+<rect x="34.0" y="273.0" width="122.4" height="1.5" rx="0.75" fill="#21262d"/>
+<rect x="34.0" y="273.0" width="22" height="1.5" rx="0.75" fill="#f778ba" opacity="0.85">
+  <animate attributeName="x" values="34.0;134.4;34.0" dur="13s" repeatCount="indefinite"/>
+</rect>
+<text x="95.2" y="284.0" font-size="9" fill="#7d8590" text-anchor="middle">1 Year</text>
+<rect x="174.4" y="218.0" width="146.4" height="70.0" rx="6" fill="url(#cardBg)" stroke="#21262d" stroke-width="1"/>
+<rect x="174.4" y="226.0" width="3" height="54.0" rx="1.5" fill="#7f5af0"/>
+<text x="247.6" y="250.0" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">29</text>
+<text x="267.7" y="250.0" font-size="12" fill="#7d8590">/30</text>
+<text x="247.6" y="264.0" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle">Days Active</text>
+<rect x="186.4" y="272.0" width="122.4" height="3" rx="1.5" fill="#21262d"/>
+<rect x="186.4" y="272.0" width="118.3" height="3" rx="1.5" fill="url(#gaugeFill)">
+  <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+</rect>
+<text x="247.6" y="284.0" font-size="9" fill="#7d8590" text-anchor="middle">30 Days</text>
+<rect x="326.8" y="218.0" width="146.4" height="70.0" rx="6" fill="url(#cardBg)" stroke="#21262d" stroke-width="1"/>
+<rect x="326.8" y="226.0" width="3" height="54.0" rx="1.5" fill="#3fb950"/>
+<text x="400.0" y="250.0" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">87</text>
+<text x="400.0" y="264.0" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle">My Issues Closed</text>
+<rect x="338.8" y="273.0" width="122.4" height="1.5" rx="0.75" fill="#21262d"/>
+<rect x="338.8" y="273.0" width="22" height="1.5" rx="0.75" fill="#3fb950" opacity="0.85">
+  <animate attributeName="x" values="338.8;439.20000000000005;338.8" dur="13s" repeatCount="indefinite"/>
+</rect>
+<text x="400.0" y="284.0" font-size="9" fill="#7d8590" text-anchor="middle">All Time</text>
+<rect x="479.2" y="218.0" width="146.4" height="70.0" rx="6" fill="url(#cardBg)" stroke="#21262d" stroke-width="1"/>
+<rect x="479.2" y="226.0" width="3" height="54.0" rx="1.5" fill="#58a6ff"/>
+<text x="552.4" y="250.0" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">94</text>
+<text x="552.4" y="264.0" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle">Commits</text>
+<rect x="491.2" y="273.0" width="122.4" height="1.5" rx="0.75" fill="#21262d"/>
+<rect x="491.2" y="273.0" width="22" height="1.5" rx="0.75" fill="#58a6ff" opacity="0.85">
+  <animate attributeName="x" values="491.20000000000005;591.6;491.20000000000005" dur="13s" repeatCount="indefinite"/>
+</rect>
+<text x="552.4" y="284.0" font-size="9" fill="#7d8590" text-anchor="middle">7 Days</text>
+<rect x="631.6" y="218.0" width="146.4" height="70.0" rx="6" fill="url(#cardBg)" stroke="#21262d" stroke-width="1"/>
+<rect x="631.6" y="226.0" width="3" height="54.0" rx="1.5" fill="#a371f7"/>
+<text x="704.8" y="250.0" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">98</text>
+<text x="704.8" y="264.0" font-size="11" font-weight="600" fill="#c9d1d9" text-anchor="middle">PRs Merged</text>
+<rect x="643.6" y="273.0" width="122.4" height="1.5" rx="0.75" fill="#21262d"/>
+<rect x="643.6" y="273.0" width="22" height="1.5" rx="0.75" fill="#a371f7" opacity="0.85">
+  <animate attributeName="x" values="643.6;744.0;643.6" dur="13s" repeatCount="indefinite"/>
+</rect>
+<text x="704.8" y="284.0" font-size="9" fill="#7d8590" text-anchor="middle">7 Days</text>
 </svg>
