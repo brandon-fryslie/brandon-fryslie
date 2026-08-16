@@ -214,7 +214,7 @@ My Issues Closed 69 (1 Year) · Days Active 249/365 (1 Year) · Commits 312 (30 
 
 <img src="./stats-archive/2026/07/2026-07-29-144421.svg" width="960" alt="Live GitHub stats card for July 29, 2026">
 
-Code Reviews 0 (30 Days) · PRs Merged 264 (30 Days) · Languages 7 (1 Year) · Active Repos 16 (30 Days)
+My Issues Closed 69 (1 Year) · Languages 9 (1 Year) · Days Active 248/365 (1 Year) · PRs Merged 264 (30 Days)
 
 ---
 
