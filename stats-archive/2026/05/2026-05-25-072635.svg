@@ -1,20 +1,239 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 25, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats">
+  <defs>
+    <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3fb950"/>
+      <stop offset="1" stop-color="#7ee787"/>
+    </linearGradient>
+    <linearGradient id="barFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#79c0ff"/>
+      <stop offset="1" stop-color="#a5d6ff"/>
+    </linearGradient>
+    <linearGradient id="streakGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f0883e"/>
+      <stop offset="1" stop-color="#ffb464"/>
+    </linearGradient>
+    <symbol id="colDim" overflow="visible">
+      <rect x="0" y="0" width="5" height="5" rx="1" fill="#21262d"/>
+      <rect x="0" y="6" width="5" height="5" rx="1" fill="#21262d"/>
+      <rect x="0" y="12" width="5" height="5" rx="1" fill="#21262d"/>
+      <rect x="0" y="18" width="5" height="5" rx="1" fill="#21262d"/>
+      <rect x="0" y="24" width="5" height="5" rx="1" fill="#21262d"/>
+      <rect x="0" y="30" width="5" height="5" rx="1" fill="#21262d"/>
+      <rect x="0" y="36" width="5" height="5" rx="1" fill="#21262d"/>
+    </symbol>
+    <symbol id="colLit" overflow="visible">
+      <rect x="0" y="0" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="6" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="12" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="18" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="24" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="30" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="36" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+    </symbol>
+    <symbol id="colPartial" overflow="visible">
+      <rect x="0" y="0" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="6" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="12" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="18" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="24" width="5" height="5" rx="1" fill="url(#streakGlow)"/>
+      <rect x="0" y="30" width="5" height="5" rx="1" fill="#21262d"/>
+      <rect x="0" y="36" width="5" height="5" rx="1" fill="#21262d"/>
+    </symbol>
+    <symbol id="prCol" overflow="visible">
+      <circle cx="0" cy="0" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="4" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="8" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="12" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="16" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="20" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="24" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="28" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="32" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="36" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="40" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="44" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="48" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="52" r="1.3" fill="#d2a8ff"/>
+      <circle cx="0" cy="56" r="1.3" fill="#d2a8ff"/>
+    </symbol>
+  </defs>
+
+  <!-- Card frame -->
+  <rect x="0" y="0" width="800" height="400" rx="10" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="399" rx="10" fill="#11161d" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Header -->
+  <circle cx="28" cy="26" r="3.5" fill="#2f81f7">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="44" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
+  <text x="778" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681" text-anchor="end">May 25, 2026</text>
+  <line x1="22" y1="44" x2="778" y2="44" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- Panel TL — Days Active radial gauge (29 / 30 past days)      -->
+  <!-- ============================================================ -->
+  <!-- gauge track -->
+  <circle cx="208" cy="137" r="58" fill="none" stroke="#21262d" stroke-width="9"/>
+  <!-- filled arc: circumference 2π·58 = 364.42 ; 29/30 filled = 352.28 -->
+  <circle cx="208" cy="137" r="58" fill="none" stroke="url(#gaugeGrad)" stroke-width="9" stroke-linecap="round" stroke-dasharray="352.28 30" transform="rotate(-90 208 137)">
+    <animate attributeName="stroke-opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <!-- rotating sparkle orbit (perpetual motion) -->
+  <g transform="translate(208 137)">
+    <circle cx="0" cy="-78" r="1.8" fill="#7ee787" opacity="0.85"/>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="17s" repeatCount="indefinite" additive="sum"/>
+  </g>
+  <!-- 30 fine tick marks INSIDE the ring, one per day: 29 lit green, 1 unlit grey -->
+  <g stroke-linecap="round" stroke-width="1.4">
+    <line x1="212.39" y1="95.23" x2="213.02" y2="89.26" stroke="#7ee787"/>
+    <line x1="220.98" y1="97.05" x2="222.83" y2="91.35" stroke="#7ee787"/>
+    <line x1="229.00" y1="100.63" x2="232.00" y2="95.43" stroke="#7ee787"/>
+    <line x1="236.10" y1="105.79" x2="240.12" y2="101.33" stroke="#7ee787"/>
+    <line x1="241.98" y1="112.31" x2="246.83" y2="108.79" stroke="#7ee787"/>
+    <line x1="246.37" y1="119.92" x2="251.85" y2="117.48" stroke="#7ee787"/>
+    <line x1="249.08" y1="128.27" x2="254.95" y2="127.02" stroke="#7ee787"/>
+    <line x1="250.00" y1="137.00" x2="256.00" y2="137.00" stroke="#7ee787"/>
+    <line x1="249.08" y1="145.73" x2="254.95" y2="146.98" stroke="#7ee787"/>
+    <line x1="246.37" y1="154.08" x2="251.85" y2="156.52" stroke="#7ee787"/>
+    <line x1="241.98" y1="161.69" x2="246.83" y2="165.21" stroke="#7ee787"/>
+    <line x1="236.10" y1="168.21" x2="240.12" y2="172.67" stroke="#7ee787"/>
+    <line x1="229.00" y1="173.37" x2="232.00" y2="178.57" stroke="#7ee787"/>
+    <line x1="220.98" y1="176.95" x2="222.83" y2="182.65" stroke="#7ee787"/>
+    <line x1="212.39" y1="178.77" x2="213.02" y2="184.74" stroke="#7ee787"/>
+    <line x1="203.61" y1="178.77" x2="202.98" y2="184.74" stroke="#7ee787"/>
+    <line x1="195.02" y1="176.95" x2="193.17" y2="182.65" stroke="#7ee787"/>
+    <line x1="187.00" y1="173.37" x2="184.00" y2="178.57" stroke="#7ee787"/>
+    <line x1="179.90" y1="168.21" x2="175.88" y2="172.67" stroke="#7ee787"/>
+    <line x1="174.02" y1="161.69" x2="169.17" y2="165.21" stroke="#7ee787"/>
+    <line x1="169.63" y1="154.08" x2="164.15" y2="156.52" stroke="#7ee787"/>
+    <line x1="166.92" y1="145.73" x2="161.05" y2="146.98" stroke="#7ee787"/>
+    <line x1="166.00" y1="137.00" x2="160.00" y2="137.00" stroke="#7ee787"/>
+    <line x1="166.92" y1="128.27" x2="161.05" y2="127.02" stroke="#7ee787"/>
+    <line x1="169.63" y1="119.92" x2="164.15" y2="117.48" stroke="#7ee787"/>
+    <line x1="174.02" y1="112.31" x2="169.17" y2="108.79" stroke="#7ee787"/>
+    <line x1="179.90" y1="105.79" x2="175.88" y2="101.33" stroke="#7ee787"/>
+    <line x1="187.00" y1="100.63" x2="184.00" y2="95.43" stroke="#7ee787"/>
+    <line x1="195.02" y1="97.05" x2="193.17" y2="91.35" stroke="#7ee787"/>
+    <line x1="203.61" y1="95.23" x2="202.98" y2="89.26" stroke="#30363d"/>
+  </g>
+  <!-- center number -->
+  <text x="208" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" fill="#e6edf3" font-weight="700" text-anchor="middle">29</text>
+  <text x="208" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">of 30</text>
+  <text x="208" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="600" text-anchor="middle">Days Active</text>
+  <text x="208" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">30 Days</text>
+
+  <!-- ============================================================ -->
+  <!-- Panel TR — Active Repos: 6 top repos by commit count         -->
+  <!-- ============================================================ -->
+  <text x="420" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="36" fill="#a5d6ff" font-weight="700">23</text>
+  <text x="420" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="600">Active Repos</text>
+  <text x="420" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">30 Days · top 6 by commits</text>
+
+  <!-- Row 0 : cc-candybar 135 -->
+  <text x="420" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">cc-candybar</text>
+  <rect x="556" y="140" width="170" height="10" rx="2" fill="#21262d"/>
+  <rect x="556" y="140" width="170.00" height="10" rx="2" fill="url(#barFill)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="770" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">135</text>
+
+  <!-- Row 1 : go-template-js 75 -->
+  <text x="420" y="161" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">go-template-js</text>
+  <rect x="556" y="153" width="170" height="10" rx="2" fill="#21262d"/>
+  <rect x="556" y="153" width="94.44" height="10" rx="2" fill="url(#barFill)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="9s" begin="0.4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="770" y="161" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">75</text>
+
+  <!-- Row 2 : links-issue-tracker 65 -->
+  <text x="420" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">links-issue-tracker</text>
+  <rect x="556" y="166" width="170" height="10" rx="2" fill="#21262d"/>
+  <rect x="556" y="166" width="81.85" height="10" rx="2" fill="url(#barFill)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="770" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">65</text>
+
+  <!-- Row 3 : tmux-control-mode-js 56 -->
+  <text x="420" y="187" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">tmux-control-mode-js</text>
+  <rect x="556" y="179" width="170" height="10" rx="2" fill="#21262d"/>
+  <rect x="556" y="179" width="70.52" height="10" rx="2" fill="url(#barFill)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="770" y="187" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">56</text>
+
+  <!-- Row 4 : promptctl 55 -->
+  <text x="420" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">promptctl</text>
+  <rect x="556" y="192" width="170" height="10" rx="2" fill="#21262d"/>
+  <rect x="556" y="192" width="69.26" height="10" rx="2" fill="url(#barFill)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="9s" begin="1.6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="770" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">55</text>
+
+  <!-- Row 5 : slopspot-web 47 -->
+  <text x="420" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">slopspot-web</text>
+  <rect x="556" y="205" width="170" height="10" rx="2" fill="#21262d"/>
+  <rect x="556" y="205" width="59.19" height="10" rx="2" fill="url(#barFill)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="2.0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="770" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">47</text>
+
+  <!-- ============================================================ -->
+  <!-- Panel BL — Longest Streak: 82 lit cells in a 52×7 year grid  -->
+  <!-- ============================================================ -->
+  <text x="36" y="274" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" fill="#f0883e" font-weight="700">82</text>
+  <text x="36" y="292" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="600">Longest Streak</text>
+  <text x="36" y="306" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">1 Year · consecutive active days</text>
+
+  <!-- Heatmap: 52 cols × 7 rows, cell 5×5 pitch 6, origin (36,324) -->
+  <!-- Dim background cols 12..51 (40 cols) -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">30</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">137</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">5</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">134</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
+    <use href="#colDim" x="108" y="324"/><use href="#colDim" x="114" y="324"/><use href="#colDim" x="120" y="324"/><use href="#colDim" x="126" y="324"/><use href="#colDim" x="132" y="324"/>
+    <use href="#colDim" x="138" y="324"/><use href="#colDim" x="144" y="324"/><use href="#colDim" x="150" y="324"/><use href="#colDim" x="156" y="324"/><use href="#colDim" x="162" y="324"/>
+    <use href="#colDim" x="168" y="324"/><use href="#colDim" x="174" y="324"/><use href="#colDim" x="180" y="324"/><use href="#colDim" x="186" y="324"/><use href="#colDim" x="192" y="324"/>
+    <use href="#colDim" x="198" y="324"/><use href="#colDim" x="204" y="324"/><use href="#colDim" x="210" y="324"/><use href="#colDim" x="216" y="324"/><use href="#colDim" x="222" y="324"/>
+    <use href="#colDim" x="228" y="324"/><use href="#colDim" x="234" y="324"/><use href="#colDim" x="240" y="324"/><use href="#colDim" x="246" y="324"/><use href="#colDim" x="252" y="324"/>
+    <use href="#colDim" x="258" y="324"/><use href="#colDim" x="264" y="324"/><use href="#colDim" x="270" y="324"/><use href="#colDim" x="276" y="324"/><use href="#colDim" x="282" y="324"/>
+    <use href="#colDim" x="288" y="324"/><use href="#colDim" x="294" y="324"/><use href="#colDim" x="300" y="324"/><use href="#colDim" x="306" y="324"/><use href="#colDim" x="312" y="324"/>
+    <use href="#colDim" x="318" y="324"/><use href="#colDim" x="324" y="324"/><use href="#colDim" x="330" y="324"/><use href="#colDim" x="336" y="324"/><use href="#colDim" x="342" y="324"/>
+  </g>
+  <!-- Lit streak: cols 0..10 (11 full) + col 11 partial (rows 0..4 lit) = 82 cells -->
+  <g>
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    <use href="#colLit" x="36" y="324"/><use href="#colLit" x="42" y="324"/><use href="#colLit" x="48" y="324"/><use href="#colLit" x="54" y="324"/><use href="#colLit" x="60" y="324"/>
+    <use href="#colLit" x="66" y="324"/><use href="#colLit" x="72" y="324"/><use href="#colLit" x="78" y="324"/><use href="#colLit" x="84" y="324"/><use href="#colLit" x="90" y="324"/>
+    <use href="#colLit" x="96" y="324"/><use href="#colPartial" x="102" y="324"/>
+  </g>
+  <!-- axis labels -->
+  <text x="36" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">each cell = 1 day · 82 of 365 days lit</text>
+
+  <!-- ============================================================ -->
+  <!-- Panel BR — PRs Merged: 600 dots in a 40×15 grid              -->
+  <!-- ============================================================ -->
+  <text x="420" y="274" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" fill="#d2a8ff" font-weight="700">600</text>
+  <text x="420" y="292" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="600">PRs Merged</text>
+  <text x="420" y="306" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">1 Year · each dot = 1 PR</text>
+
+  <!-- Grid: 40 cols × 15 rows = 600 dots. cols at x=420..771 step 9; rows via symbol prCol at cy=0..56 step 4; y offset 320. -->
+  <!-- 4-phase shimmer wave (col%4 groups) -->
+  <g>
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0s" repeatCount="indefinite"/>
+    <use href="#prCol" x="420" y="320"/><use href="#prCol" x="456" y="320"/><use href="#prCol" x="492" y="320"/><use href="#prCol" x="528" y="320"/><use href="#prCol" x="564" y="320"/>
+    <use href="#prCol" x="600" y="320"/><use href="#prCol" x="636" y="320"/><use href="#prCol" x="672" y="320"/><use href="#prCol" x="708" y="320"/><use href="#prCol" x="744" y="320"/>
+  </g>
+  <g>
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.75s" repeatCount="indefinite"/>
+    <use href="#prCol" x="429" y="320"/><use href="#prCol" x="465" y="320"/><use href="#prCol" x="501" y="320"/><use href="#prCol" x="537" y="320"/><use href="#prCol" x="573" y="320"/>
+    <use href="#prCol" x="609" y="320"/><use href="#prCol" x="645" y="320"/><use href="#prCol" x="681" y="320"/><use href="#prCol" x="717" y="320"/><use href="#prCol" x="753" y="320"/>
+  </g>
+  <g>
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="3.5s" repeatCount="indefinite"/>
+    <use href="#prCol" x="438" y="320"/><use href="#prCol" x="474" y="320"/><use href="#prCol" x="510" y="320"/><use href="#prCol" x="546" y="320"/><use href="#prCol" x="582" y="320"/>
+    <use href="#prCol" x="618" y="320"/><use href="#prCol" x="654" y="320"/><use href="#prCol" x="690" y="320"/><use href="#prCol" x="726" y="320"/><use href="#prCol" x="762" y="320"/>
+  </g>
+  <g>
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="5.25s" repeatCount="indefinite"/>
+    <use href="#prCol" x="447" y="320"/><use href="#prCol" x="483" y="320"/><use href="#prCol" x="519" y="320"/><use href="#prCol" x="555" y="320"/><use href="#prCol" x="591" y="320"/>
+    <use href="#prCol" x="627" y="320"/><use href="#prCol" x="663" y="320"/><use href="#prCol" x="699" y="320"/><use href="#prCol" x="735" y="320"/><use href="#prCol" x="771" y="320"/>
   </g>
 </svg>
