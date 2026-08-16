@@ -1,20 +1,203 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 21, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1374</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">247</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">81</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">84</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!--
+    Concept: Four Proportions
+    Every metric becomes a horizontal bar whose geometry IS the data.
+      Row 1 Days Active     — bar filled 225/365 on a 1-year scale
+      Row 2 Longest Streak  — bar filled 82/365 on the SAME 1-year scale (visually comparable)
+      Row 3 Active Repos    — 6-segment stacked bar sized by each repo's 30-day commit count
+      Row 4 Languages       — 8-segment stacked bar sized by each language's commit-line share
+    Continuous motion via SMIL shimmer sweeps + staggered opacity pulses; values stay rock-steady.
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0a0e14"/>
+    </linearGradient>
+    <linearGradient id="daFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e4429"/>
+      <stop offset="1" stop-color="#39d353"/>
+    </linearGradient>
+    <linearGradient id="lsFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b3a1f"/>
+      <stop offset="1" stop-color="#ffb26b"/>
+    </linearGradient>
+    <linearGradient id="daShimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e6ffe0" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#e6ffe0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#e6ffe0" stop-opacity="0"/>
+      <animate attributeName="x1" values="-0.4;1.05" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="-0.1;1.35" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="lsShimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffe3c8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffe3c8" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ffe3c8" stop-opacity="0"/>
+      <animate attributeName="x1" values="-0.4;1.05" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="-0.1;1.35" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="repoScan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-0.3;1.05" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;1.35" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="langScan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-0.3;1.05" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;1.35" dur="13s" repeatCount="indefinite"/>
+    </linearGradient>
+    <clipPath id="daFillClip"><rect x="220" y="74" width="342.74" height="26" rx="4"/></clipPath>
+    <clipPath id="lsFillClip"><rect x="220" y="140" width="124.90" height="26" rx="4"/></clipPath>
+    <clipPath id="repoBarClip"><rect x="220" y="206" width="556" height="26" rx="4"/></clipPath>
+    <clipPath id="langBarClip"><rect x="220" y="272" width="556" height="26" rx="4"/></clipPath>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="340" fill="url(#bg)"/>
+
+  <!-- HEADER -->
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="776" y="30" font-size="12" fill="#8b949e" text-anchor="end">Sunday · June 21, 2026</text>
+  <line x1="24" y1="42" x2="776" y2="42" stroke="#21262d"/>
+
+  <!-- ================================================================= -->
+  <!-- ROW 1  DAYS ACTIVE  — bar filled 225/365 of a 1-year scale        -->
+  <!-- ================================================================= -->
+  <text x="24" y="68" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.7">DAYS ACTIVE</text>
+  <text x="776" y="68" font-size="10" fill="#6e7681" text-anchor="end">of 365 possible days</text>
+
+  <!-- bar track (empty) -->
+  <rect x="220" y="74" width="556" height="26" rx="4" fill="#161b22" stroke="#21262d"/>
+  <!-- quartile gridlines: 25%, 50%, 75% of the year -->
+  <g stroke="#21262d" stroke-width="1">
+    <line x1="359" y1="74" x2="359" y2="100"/>
+    <line x1="498" y1="74" x2="498" y2="100"/>
+    <line x1="637" y1="74" x2="637" y2="100"/>
   </g>
+  <!-- bar fill: 225/365 of 556 = 342.74 wide -->
+  <rect x="220" y="74" width="342.74" height="26" rx="4" fill="url(#daFill)"/>
+  <rect x="220" y="74" width="342.74" height="26" fill="url(#daShimmer)" clip-path="url(#daFillClip)"/>
+  <!-- fill-edge chevron marker -->
+  <g filter="url(#softGlow)">
+    <path d="M 562.74 71 L 559.74 66 L 565.74 66 Z" fill="#39d353">
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="5.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- big value + period (left column) -->
+  <text x="24" y="96" font-size="28" font-weight="700" fill="#e6edf3">225</text>
+  <text x="24" y="114" font-size="10" fill="#6e7681">1 Year</text>
+  <!-- caption under bar (right column) -->
+  <text x="220" y="114" font-size="10" fill="#8b949e">days with a commit — 61.6% of the year</text>
+
+  <!-- ================================================================= -->
+  <!-- ROW 2  LONGEST STREAK  — bar filled 82/365 on the SAME 1-year scale -->
+  <!-- ================================================================= -->
+  <text x="24" y="134" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.7">LONGEST STREAK</text>
+  <text x="776" y="134" font-size="10" fill="#6e7681" text-anchor="end">consecutive days · same 1-year axis</text>
+
+  <rect x="220" y="140" width="556" height="26" rx="4" fill="#161b22" stroke="#21262d"/>
+  <g stroke="#21262d" stroke-width="1">
+    <line x1="359" y1="140" x2="359" y2="166"/>
+    <line x1="498" y1="140" x2="498" y2="166"/>
+    <line x1="637" y1="140" x2="637" y2="166"/>
+  </g>
+  <!-- fill: 82/365 of 556 = 124.90 wide -->
+  <rect x="220" y="140" width="124.90" height="26" rx="4" fill="url(#lsFill)"/>
+  <rect x="220" y="140" width="124.90" height="26" fill="url(#lsShimmer)" clip-path="url(#lsFillClip)"/>
+  <g filter="url(#softGlow)">
+    <path d="M 344.90 137 L 341.90 132 L 347.90 132 Z" fill="#ffb26b">
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <text x="24" y="162" font-size="28" font-weight="700" fill="#e6edf3">82</text>
+  <text x="24" y="180" font-size="10" fill="#6e7681">1 Year</text>
+  <text x="220" y="180" font-size="10" fill="#8b949e">longest unbroken run — 22.5% of the year in one stretch</text>
+
+  <!-- ================================================================= -->
+  <!-- ROW 3  ACTIVE REPOS  — 6-segment stacked bar sized by 30-day commits -->
+  <!-- ================================================================= -->
+  <text x="24" y="200" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.7">ACTIVE REPOS</text>
+  <text x="776" y="200" font-size="10" fill="#6e7681" text-anchor="end">top 6 shown by 30-day commit count</text>
+
+  <rect x="220" y="206" width="556" height="26" rx="4" fill="#161b22"/>
+  <g clip-path="url(#repoBarClip)">
+    <!-- segments: widths proportional to commit counts (total 658) -->
+    <rect x="220.00" y="206" width="183.36" height="26" fill="#7cf6ff" opacity="0.92">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="403.36" y="206" width="99.71" height="26" fill="#a5f37f" opacity="0.92">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="-1.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="503.07" y="206" width="95.48" height="26" fill="#f7b955" opacity="0.92">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="-3.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="598.55" y="206" width="84.50" height="26" fill="#f78166" opacity="0.92">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="-4.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="683.05" y="206" width="48.16" height="26" fill="#c9b6f5" opacity="0.92">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="-6.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="731.21" y="206" width="44.79" height="26" fill="#7ed3f7" opacity="0.92">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="-8.0s" repeatCount="indefinite"/>
+    </rect>
+    <!-- inline segment labels (only where segment is wide enough) -->
+    <text x="311.68" y="223" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">slopspot-web</text>
+    <text x="453.22" y="223" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">dotfiles</text>
+    <text x="550.81" y="223" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">cc-candybar</text>
+    <!-- traveling scan highlight -->
+    <rect x="220" y="206" width="556" height="26" fill="url(#repoScan)"/>
+  </g>
+
+  <text x="24" y="228" font-size="28" font-weight="700" fill="#e6edf3">17</text>
+  <text x="24" y="246" font-size="10" fill="#6e7681">30 Days</text>
+  <text x="220" y="246" font-size="10" fill="#8b949e">segment widths = 30-day commit share; smaller three: links-issue-tracker, slopspot-paste, mit-design-notes</text>
+
+  <!-- ================================================================= -->
+  <!-- ROW 4  LANGUAGES  — 8-segment stacked bar sized by commit-line share -->
+  <!-- ================================================================= -->
+  <text x="24" y="266" font-size="10" font-weight="600" fill="#8b949e" letter-spacing="0.7">LANGUAGES</text>
+  <text x="776" y="266" font-size="10" fill="#6e7681" text-anchor="end">top 8 shown by commit-line share</text>
+
+  <rect x="220" y="272" width="556" height="26" rx="4" fill="#161b22"/>
+  <g clip-path="url(#langBarClip)">
+    <!-- widths proportional to commit-line counts (total 5205) -->
+    <rect x="220.00" y="272" width="372.83" height="26" fill="#3178c6" opacity="0.94">
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="13s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="592.83" y="272" width="117.29" height="26" fill="#3572a5" opacity="0.94">
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="13s" begin="-1.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="710.12" y="272" width="49.99" height="26" fill="#00add8" opacity="0.94">
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="13s" begin="-3.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="760.11" y="272" width="8.44" height="26" fill="#89e051" opacity="0.94">
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="13s" begin="-5.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="768.55" y="272" width="5.98" height="26" fill="#e34c26" opacity="0.94">
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="13s" begin="-7.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="774.53" y="272" width="1.18" height="26" fill="#563d7c" opacity="0.94">
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="13s" begin="-9.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="775.71" y="272" width="0.32" height="26" fill="#f1e05a" opacity="0.94"/>
+    <rect x="776.03" y="272" width="0.21" height="26" fill="#844fba" opacity="0.94"/>
+    <!-- inline labels for the three that fit -->
+    <text x="406.42" y="289" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">TypeScript</text>
+    <text x="651.48" y="289" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Python</text>
+    <text x="735.12" y="289" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">Go</text>
+    <rect x="220" y="272" width="556" height="26" fill="url(#langScan)"/>
+  </g>
+
+  <text x="24" y="294" font-size="28" font-weight="700" fill="#e6edf3">10</text>
+  <text x="24" y="312" font-size="10" fill="#6e7681">1 Year</text>
+  <text x="220" y="312" font-size="10" fill="#8b949e">TypeScript 67% · Python 21% · Go 9% · rest: Shell, HTML, CSS, JS, HCL</text>
 </svg>
