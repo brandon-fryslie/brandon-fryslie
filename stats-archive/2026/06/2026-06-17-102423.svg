@@ -1,20 +1,245 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 17, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg width="800" height="360" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="ridgeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0.05"/>
+    </linearGradient>
+    <clipPath id="ridgeClip">
+      <path d="M20,155 L20.0,153.3 L34.6,154.9 L49.2,155.0 L63.8,154.9 L78.5,154.8 L93.1,154.4 L107.7,154.5 L122.3,153.4 L136.9,153.9 L151.5,154.9 L166.2,154.9 L180.8,155.0 L195.4,154.9 L210.0,155.0 L224.6,155.0 L239.2,154.5 L253.8,154.8 L268.5,154.4 L283.1,154.3 L297.7,154.3 L312.3,152.0 L326.9,149.5 L341.5,154.8 L356.2,154.4 L370.8,154.6 L385.4,150.7 L400.0,140.4 L414.6,126.5 L429.2,152.6 L443.8,129.4 L458.5,117.0 L473.1,100.7 L487.7,94.5 L502.3,127.4 L516.9,130.2 L531.5,100.1 L546.2,113.1 L560.8,129.2 L575.4,120.0 L590.0,127.7 L604.6,144.8 L619.2,136.5 L633.8,145.3 L648.5,132.8 L663.1,133.8 L677.7,120.6 L692.3,125.1 L706.9,140.1 L721.5,114.5 L736.2,111.6 L750.8,120.4 L765.4,55.0 L780.0,149.1 L780,155 Z"/>
+    </clipPath>
+    <clipPath id="langBarClip">
+      <rect x="614.5" y="283" width="150" height="14" rx="2"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="360" fill="#0d1117"/>
+
+  <!-- Header -->
+  <text x="20" y="32" font-size="14" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="780" y="32" font-size="11" fill="#7d8590" text-anchor="end">brandon-fryslie &#183; June 17, 2026</text>
+
+  <!-- ================= RIDGE (calendar) ================= -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">12</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">262</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">63</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">—</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
+    <!-- horizontal grid at 25/50/75 percent of ridge height -->
+    <line x1="20" y1="130" x2="780" y2="130" stroke="#1a2028" stroke-width="1" stroke-dasharray="2 4"/>
+    <line x1="20" y1="105" x2="780" y2="105" stroke="#1a2028" stroke-width="1" stroke-dasharray="2 4"/>
+    <line x1="20" y1="80"  x2="780" y2="80"  stroke="#1a2028" stroke-width="1" stroke-dasharray="2 4"/>
+    <!-- baseline -->
+    <line x1="20" y1="155" x2="780" y2="155" stroke="#30363d" stroke-width="1"/>
+
+    <!-- month/quarter ticks -->
+    <g stroke="#30363d" stroke-width="1">
+      <line x1="210" y1="155" x2="210" y2="159"/>
+      <line x1="400" y1="155" x2="400" y2="159"/>
+      <line x1="590" y1="155" x2="590" y2="159"/>
+    </g>
+
+    <!-- filled area (weekly aggregation of 366-day calendar) -->
+    <path d="M20,155 L20.0,153.3 L34.6,154.9 L49.2,155.0 L63.8,154.9 L78.5,154.8 L93.1,154.4 L107.7,154.5 L122.3,153.4 L136.9,153.9 L151.5,154.9 L166.2,154.9 L180.8,155.0 L195.4,154.9 L210.0,155.0 L224.6,155.0 L239.2,154.5 L253.8,154.8 L268.5,154.4 L283.1,154.3 L297.7,154.3 L312.3,152.0 L326.9,149.5 L341.5,154.8 L356.2,154.4 L370.8,154.6 L385.4,150.7 L400.0,140.4 L414.6,126.5 L429.2,152.6 L443.8,129.4 L458.5,117.0 L473.1,100.7 L487.7,94.5 L502.3,127.4 L516.9,130.2 L531.5,100.1 L546.2,113.1 L560.8,129.2 L575.4,120.0 L590.0,127.7 L604.6,144.8 L619.2,136.5 L633.8,145.3 L648.5,132.8 L663.1,133.8 L677.7,120.6 L692.3,125.1 L706.9,140.1 L721.5,114.5 L736.2,111.6 L750.8,120.4 L765.4,55.0 L780.0,149.1 L780,155 Z" fill="url(#ridgeFill)"/>
+
+    <!-- top stroke of ridge -->
+    <polyline points="20.0,153.3 34.6,154.9 49.2,155.0 63.8,154.9 78.5,154.8 93.1,154.4 107.7,154.5 122.3,153.4 136.9,153.9 151.5,154.9 166.2,154.9 180.8,155.0 195.4,154.9 210.0,155.0 224.6,155.0 239.2,154.5 253.8,154.8 268.5,154.4 283.1,154.3 297.7,154.3 312.3,152.0 326.9,149.5 341.5,154.8 356.2,154.4 370.8,154.6 385.4,150.7 400.0,140.4 414.6,126.5 429.2,152.6 443.8,129.4 458.5,117.0 473.1,100.7 487.7,94.5 502.3,127.4 516.9,130.2 531.5,100.1 546.2,113.1 560.8,129.2 575.4,120.0 590.0,127.7 604.6,144.8 619.2,136.5 633.8,145.3 648.5,132.8 663.1,133.8 677.7,120.6 692.3,125.1 706.9,140.1 721.5,114.5 736.2,111.6 750.8,120.4 765.4,55.0 780.0,149.1" fill="none" stroke="#79c0ff" stroke-width="1.4" stroke-linejoin="round"/>
+
+    <!-- shimmer sweep clipped to ridge silhouette -->
+    <g clip-path="url(#ridgeClip)">
+      <rect x="-140" y="55" width="140" height="100" fill="#e6edf3" opacity="0.14">
+        <animate attributeName="x" from="-140" to="800" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- peak marker (recent weekly peak = week of 2026-06-11: 836 commits) -->
+    <circle cx="765.4" cy="55" r="3" fill="#ffa657" stroke="#0d1117" stroke-width="0.75">
+      <animate attributeName="r" values="3;4.6;3" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <text x="759" y="49" font-size="9" fill="#e6edf3" text-anchor="end">recent peak</text>
+
+    <!-- month labels -->
+    <text x="20"  y="170" font-size="9" fill="#6e7681">Jun &#8217;25</text>
+    <text x="210" y="170" font-size="9" fill="#6e7681" text-anchor="middle">Sep &#8217;25</text>
+    <text x="400" y="170" font-size="9" fill="#6e7681" text-anchor="middle">Dec &#8217;25</text>
+    <text x="590" y="170" font-size="9" fill="#6e7681" text-anchor="middle">Mar &#8217;26</text>
+    <text x="780" y="170" font-size="9" fill="#6e7681" text-anchor="end">Jun &#8217;26</text>
+
+    <!-- caption uses calendar.label verbatim -->
+    <text x="20"  y="184" font-size="10" fill="#8b949e">past 12 months &#183; weekly activity</text>
+    <text x="780" y="184" font-size="10" fill="#8b949e" text-anchor="end">peak 836 / week</text>
+  </g>
+
+  <!-- Divider between hero and panels -->
+  <line x1="20" y1="194" x2="780" y2="194" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ================= PANEL 1: Days Active 31 / 30 Days ================= -->
+  <g>
+    <text x="110.5" y="230" font-size="32" font-weight="700" fill="#e6edf3" text-anchor="middle">31</text>
+    <text x="110.5" y="250" font-size="12" fill="#8b949e" text-anchor="middle">Days Active</text>
+    <text x="110.5" y="264" font-size="10" fill="#6e7681" text-anchor="middle">30 Days</text>
+
+    <!-- 31 dots @ stride 6, r=2.5, cx = 20.5 + i*6 -->
+    <g fill="#3fb950">
+      <circle cx="20.5"  cy="305" r="2.5"/>
+      <circle cx="26.5"  cy="305" r="2.5"/>
+      <circle cx="32.5"  cy="305" r="2.5"/>
+      <circle cx="38.5"  cy="305" r="2.5"/>
+      <circle cx="44.5"  cy="305" r="2.5"/>
+      <circle cx="50.5"  cy="305" r="2.5"/>
+      <circle cx="56.5"  cy="305" r="2.5"/>
+      <circle cx="62.5"  cy="305" r="2.5"/>
+      <circle cx="68.5"  cy="305" r="2.5"/>
+      <circle cx="74.5"  cy="305" r="2.5"/>
+      <circle cx="80.5"  cy="305" r="2.5"/>
+      <circle cx="86.5"  cy="305" r="2.5"/>
+      <circle cx="92.5"  cy="305" r="2.5"/>
+      <circle cx="98.5"  cy="305" r="2.5"/>
+      <circle cx="104.5" cy="305" r="2.5"/>
+      <circle cx="110.5" cy="305" r="2.5"/>
+      <circle cx="116.5" cy="305" r="2.5"/>
+      <circle cx="122.5" cy="305" r="2.5"/>
+      <circle cx="128.5" cy="305" r="2.5"/>
+      <circle cx="134.5" cy="305" r="2.5"/>
+      <circle cx="140.5" cy="305" r="2.5"/>
+      <circle cx="146.5" cy="305" r="2.5"/>
+      <circle cx="152.5" cy="305" r="2.5"/>
+      <circle cx="158.5" cy="305" r="2.5"/>
+      <circle cx="164.5" cy="305" r="2.5"/>
+      <circle cx="170.5" cy="305" r="2.5"/>
+      <circle cx="176.5" cy="305" r="2.5"/>
+      <circle cx="182.5" cy="305" r="2.5"/>
+      <circle cx="188.5" cy="305" r="2.5"/>
+      <circle cx="194.5" cy="305" r="2.5"/>
+    </g>
+    <!-- 31st dot = overflow, warmer color + ring -->
+    <circle cx="200.5" cy="305" r="2.8" fill="#ffa657"/>
+    <circle cx="200.5" cy="305" r="4.6" fill="none" stroke="#ffa657" stroke-width="0.8" opacity="0.7">
+      <animate attributeName="r" values="4.6;7;4.6" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- traveling pulse through the 31 positions -->
+    <circle r="4" cy="305" fill="#7ee787" opacity="0.85">
+      <animate attributeName="cx" values="20.5;200.5;20.5" dur="6.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;0.35;0.85" dur="6.3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- caption -->
+    <text x="20"  y="332" font-size="9" fill="#6e7681">cap 30</text>
+    <text x="201" y="332" font-size="9" fill="#ffa657" text-anchor="end">+1 over</text>
+  </g>
+
+  <!-- ================= PANEL 2: Longest Streak 82 / 1 Year ================= -->
+  <g>
+    <text x="303.5" y="230" font-size="32" font-weight="700" fill="#e6edf3" text-anchor="middle">82</text>
+    <text x="303.5" y="250" font-size="12" fill="#8b949e" text-anchor="middle">Longest Streak</text>
+    <text x="303.5" y="264" font-size="10" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+    <!-- Bar representing the 365-day year, 82-day segment highlighted -->
+    <!-- Bar frame: x=228.5, y=300, w=150, h=8 -->
+    <rect x="228.5" y="300" width="150" height="8" rx="2" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+    <!-- highlight width = 82/365 * 150 = 33.7 -->
+    <rect x="344.8" y="300" width="33.7" height="8" rx="2" fill="#a371f7">
+      <animate attributeName="opacity" values="1;0.6;1" dur="3.3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- moving glow across highlight -->
+    <rect x="344.8" y="300" width="33.7" height="8" rx="2" fill="none" stroke="#d2a8ff" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3.3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- tick labels underneath -->
+    <text x="228.5" y="322" font-size="9" fill="#6e7681">1</text>
+    <text x="378.5" y="322" font-size="9" fill="#6e7681" text-anchor="end">365 d</text>
+    <text x="361.7" y="332" font-size="9" fill="#a371f7" text-anchor="middle">82 unbroken</text>
+  </g>
+
+  <!-- ================= PANEL 3: Active Repos 50 / 1 Year (breakdown top 6) ================= -->
+  <g>
+    <text x="496.5" y="230" font-size="32" font-weight="700" fill="#e6edf3" text-anchor="middle">50</text>
+    <text x="496.5" y="250" font-size="12" fill="#8b949e" text-anchor="middle">Active Repos</text>
+    <text x="496.5" y="264" font-size="10" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+    <!-- 6 horizontal bars for top-6 repos, sized by commit count (max=1649) -->
+    <!-- layout: name @ x=410 (font 8), bar 490..580, count right-anchored @ x=585 -->
+    <g font-size="8" fill="#8b949e">
+      <text x="410" y="283">oscilla-anim-v2</text>
+      <text x="410" y="292">cc-dump</text>
+      <text x="410" y="301">dotfiles</text>
+      <text x="410" y="310">cc-candybar</text>
+      <text x="410" y="319">slopspot-web</text>
+      <text x="410" y="328">oscilla-animator</text>
+    </g>
+    <!-- bars: bar h=5, top edges at 277.5/286.5/295.5/304.5/313.5/322.5 -->
+    <!-- widths (px @ 65 max, scaled from 1649): 65.0, 17.3, 14.5, 9.8, 9.1, 8.9 -->
+    <g fill="#58a6ff">
+      <rect x="490" y="277.5" width="65.0" height="5" rx="1"/>
+      <rect x="490" y="286.5" width="17.3" height="5" rx="1"/>
+      <rect x="490" y="295.5" width="14.5" height="5" rx="1"/>
+      <rect x="490" y="304.5" width="9.8"  height="5" rx="1"/>
+      <rect x="490" y="313.5" width="9.1"  height="5" rx="1"/>
+      <rect x="490" y="322.5" width="8.9"  height="5" rx="1"/>
+    </g>
+    <!-- breathing highlight scan across each bar (per-row scan dot) -->
+    <g fill="#a5d6ff">
+      <circle cy="280" r="2" opacity="0.9">
+        <animate attributeName="cx" values="490;555;490" dur="5.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0.2;0.9" dur="5.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cy="289" r="1.6" opacity="0.85">
+        <animate attributeName="cx" values="490;507.3;490" dur="4.7s" begin="0.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cy="298" r="1.6" opacity="0.85">
+        <animate attributeName="cx" values="490;504.5;490" dur="4.7s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cy="307" r="1.5" opacity="0.8">
+        <animate attributeName="cx" values="490;499.8;490" dur="4.7s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cy="316" r="1.5" opacity="0.8">
+        <animate attributeName="cx" values="490;499.1;490" dur="4.7s" begin="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cy="325" r="1.5" opacity="0.8">
+        <animate attributeName="cx" values="490;498.9;490" dur="4.7s" begin="2.0s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- counts on right, font 8, text-anchor end -->
+    <g font-size="8" fill="#c9d1d9" text-anchor="end">
+      <text x="585" y="283">1649</text>
+      <text x="585" y="292">439</text>
+      <text x="585" y="301">367</text>
+      <text x="585" y="310">249</text>
+      <text x="585" y="319">232</text>
+      <text x="585" y="328">227</text>
+    </g>
+  </g>
+
+  <!-- ================= PANEL 4: Languages 13 / All Time (stacked breakdown) ================= -->
+  <g>
+    <text x="689.5" y="230" font-size="32" font-weight="700" fill="#e6edf3" text-anchor="middle">13</text>
+    <text x="689.5" y="250" font-size="12" fill="#8b949e" text-anchor="middle">Languages</text>
+    <text x="689.5" y="264" font-size="10" fill="#6e7681" text-anchor="middle">All Time</text>
+
+    <!-- stacked horizontal bar: x=614.5, y=283, w=150, h=14 -->
+    <!-- segments cumulative x: 614.5, 705.9, 736.2, 748.7, 756.1, 759.5, 762.4, 764.1 (end 764.5) -->
+    <g>
+      <rect x="614.5" y="283" width="91.4" height="14" fill="#3178c6"/>
+      <rect x="705.9" y="283" width="30.3" height="14" fill="#4b8bbe"/>
+      <rect x="736.2" y="283" width="12.4" height="14" fill="#00add8"/>
+      <rect x="748.6" y="283" width="7.4"  height="14" fill="#89e051"/>
+      <rect x="756.0" y="283" width="3.4"  height="14" fill="#e34c26"/>
+      <rect x="759.4" y="283" width="2.9"  height="14" fill="#a37b5a"/>
+      <rect x="762.3" y="283" width="1.7"  height="14" fill="#f1e05a"/>
+      <rect x="764.0" y="283" width="0.5"  height="14" fill="#a371f7"/>
+    </g>
+    <!-- outer stroke on the bar -->
+    <rect x="614.5" y="283" width="150" height="14" fill="none" stroke="#30363d" stroke-width="0.5" rx="2"/>
+    <!-- shimmer sweep across the language bar -->
+    <g clip-path="url(#langBarClip)">
+      <rect x="580" y="283" width="30" height="14" fill="#ffffff" opacity="0.18">
+        <animate attributeName="x" from="580" to="790" dur="7s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- inline segment labels where they fit -->
+    <text x="660.2" y="294" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="middle">TS</text>
+    <text x="721.1" y="294" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="middle">Py</text>
+
+    <!-- legend row: top 3 named + tail count -->
+    <text x="689.5" y="316" font-size="9" fill="#8b949e" text-anchor="middle">TS 61% &#183; Py 20% &#183; Go 8% &#183; +5 more</text>
+    <text x="689.5" y="330" font-size="9" fill="#6e7681" text-anchor="middle">5575 commits across shown</text>
   </g>
 </svg>
