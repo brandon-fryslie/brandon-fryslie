@@ -79,13 +79,13 @@ jobs:
       id-token: write
     strategy:
       fail-fast: false    # one card that won't come together must not cancel the rest
-      # Eight at a time. Each job is a full agent invocation — ~20-30 minutes — so serial
-      # execution put a limit=8 run over three hours; the ceiling here is how much
-      # concurrent agent work to spend at once, not correctness, because the jobs write
-      # disjoint paths (see the header). Contention is expected and harmless at this
-      # width: in the 4-wide validation run two jobs finished 12s apart, both had their
-      # first push rejected, and both rebased onto the other and landed on attempt 2.
-      max-parallel: 8
+      # Twenty at a time — GitHub's concurrent-job ceiling for a public repo, so this is as
+      # wide as the platform goes. Nothing here is throttled for safety: the jobs write
+      # disjoint paths (see the header), so width costs nothing but concurrent agent work.
+      # Contention is expected and harmless — in the 4-wide validation run two jobs
+      # finished 12s apart, both had their first push rejected, and both rebased onto the
+      # other and landed on attempt 2. Jobs past the ceiling queue rather than fail.
+      max-parallel: 20
       matrix:
         stamp: ${{ fromJSON(needs.select.outputs.stamps) }}
     env:
