@@ -1,20 +1,344 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 01, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">29</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">81</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">23</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">176</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
+<svg viewBox="0 0 800 480" width="800" height="480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie — Monday June 1 2026">
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#79c0ff"/>
+    </linearGradient>
+    <linearGradient id="langBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#238636"/>
+      <stop offset="1" stop-color="#7ee787"/>
+    </linearGradient>
+    <linearGradient id="repoBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8957e5"/>
+      <stop offset="1" stop-color="#d2a8ff"/>
+    </linearGradient>
+    <linearGradient id="dialArc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#a5d6ff"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#79c0ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#79c0ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#79c0ff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chartClip">
+      <rect x="30" y="80" width="740" height="122"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#0d1117"/>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+
+    <!-- Header -->
+    <text x="24" y="34" font-size="14" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+    <text x="776" y="34" text-anchor="end" font-size="11" fill="#7d8590">Monday · June 01, 2026</text>
+    <line x1="24" y1="46" x2="776" y2="46" stroke="#21262d" stroke-width="1"/>
+
+    <!-- Chart heading -->
+    <text x="24" y="68" font-size="11" font-weight="600" fill="#c9d1d9">Contribution rhythm</text>
+    <text x="141" y="68" font-size="11" fill="#7d8590">weekly totals · past 12 months</text>
+
+    <!-- Streak highlight band (behind bars) -->
+    <rect x="466" y="84" width="188" height="120" rx="4" fill="#ffa657" opacity="0.09">
+      <animate attributeName="opacity" values="0.07;0.15;0.07" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="466" y="84" width="188" height="120" rx="4" fill="none" stroke="#ffa657" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.4"/>
+
+    <!-- Chart baseline -->
+    <line x1="30" y1="200" x2="770" y2="200" stroke="#30363d" stroke-width="0.75"/>
+
+    <!-- 52 weekly bars -->
+    <g fill="url(#barGrad)">
+      <rect x="36" y="198" width="12" height="2" rx="1"/>
+      <rect x="50" y="198" width="12" height="2" rx="1"/>
+      <rect x="78" y="196" width="12" height="4" rx="1"/>
+      <rect x="120" y="198" width="12" height="2" rx="1"/>
+      <rect x="134" y="198" width="12" height="2" rx="1"/>
+      <rect x="148" y="198" width="12" height="2" rx="1"/>
+      <rect x="162" y="197" width="12" height="3" rx="1"/>
+      <rect x="176" y="198" width="12" height="2" rx="1"/>
+      <rect x="204" y="198" width="12" height="2" rx="1"/>
+      <rect x="232" y="198" width="12" height="2" rx="1"/>
+      <rect x="274" y="198" width="12" height="2" rx="1"/>
+      <rect x="288" y="198" width="12" height="2" rx="1"/>
+      <rect x="302" y="198" width="12" height="2" rx="1"/>
+      <rect x="316" y="198" width="12" height="2" rx="1"/>
+      <rect x="330" y="197" width="12" height="3" rx="1"/>
+      <rect x="344" y="196" width="12" height="4" rx="1"/>
+      <rect x="358" y="188" width="12" height="12" rx="1"/>
+      <rect x="372" y="198" width="12" height="2" rx="1"/>
+      <rect x="386" y="198" width="12" height="2" rx="1"/>
+      <rect x="400" y="198" width="12" height="2" rx="1"/>
+      <rect x="414" y="192" width="12" height="8" rx="1"/>
+      <rect x="428" y="177" width="12" height="23" rx="1"/>
+      <rect x="442" y="144" width="12" height="56" rx="1"/>
+      <rect x="456" y="189" width="12" height="11" rx="1"/>
+      <rect x="470" y="170" width="12" height="30" rx="1"/>
+      <rect x="484" y="143" width="12" height="57" rx="1"/>
+      <rect x="498" y="82" width="12" height="118" rx="1"/>
+      <rect x="512" y="93" width="12" height="107" rx="1"/>
+      <rect x="526" y="116" width="12" height="84" rx="1"/>
+      <rect x="540" y="143" width="12" height="57" rx="1"/>
+      <rect x="554" y="135" width="12" height="65" rx="1"/>
+      <rect x="568" y="89" width="12" height="111" rx="1"/>
+      <rect x="582" y="158" width="12" height="42" rx="1"/>
+      <rect x="596" y="116" width="12" height="84" rx="1"/>
+      <rect x="610" y="158" width="12" height="42" rx="1"/>
+      <rect x="624" y="168" width="12" height="32" rx="1"/>
+      <rect x="638" y="182" width="12" height="18" rx="1"/>
+      <rect x="652" y="164" width="12" height="36" rx="1"/>
+      <rect x="666" y="158" width="12" height="42" rx="1"/>
+      <rect x="680" y="160" width="12" height="40" rx="1"/>
+      <rect x="694" y="146" width="12" height="54" rx="1"/>
+      <rect x="708" y="122" width="12" height="78" rx="1"/>
+      <rect x="722" y="175" width="12" height="25" rx="1"/>
+      <rect x="736" y="159" width="12" height="41" rx="1"/>
+      <rect x="750" y="96" width="12" height="104" rx="1"/>
+    </g>
+
+    <!-- Chart sweep highlight (perpetual motion across the year) -->
+    <g clip-path="url(#chartClip)">
+      <rect x="-40" y="82" width="40" height="118" fill="url(#sweep)">
+        <animate attributeName="x" from="-40" to="800" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Chart month labels (positions correspond to each month's first-week bar) -->
+    <text x="42"  y="216" text-anchor="middle" font-size="8.5" fill="#6e7681">Jun ’25</text>
+    <text x="168" y="216" text-anchor="middle" font-size="8.5" fill="#6e7681">Aug</text>
+    <text x="280" y="216" text-anchor="middle" font-size="8.5" fill="#6e7681">Oct</text>
+    <text x="406" y="216" text-anchor="middle" font-size="8.5" fill="#6e7681">Dec</text>
+    <text x="532" y="216" text-anchor="middle" font-size="8.5" fill="#6e7681">Feb ’26</text>
+    <text x="644" y="216" text-anchor="middle" font-size="8.5" fill="#6e7681">Apr</text>
+    <text x="756" y="216" text-anchor="end"    font-size="8.5" fill="#6e7681">May</text>
+
+    <!-- Streak bracket -->
+    <path d="M470,224 L470,228 L650,228 L650,224" fill="none" stroke="#ffa657" stroke-width="1"/>
+    <line x1="560" y1="228" x2="560" y2="232" stroke="#ffa657" stroke-width="1"/>
+
+    <!-- Streak value + label -->
+    <text x="512" y="250" text-anchor="end" font-size="11" fill="#c9d1d9">Longest Streak</text>
+    <text x="560" y="252" text-anchor="middle" font-size="22" font-weight="700" fill="#ffa657">82</text>
+    <text x="608" y="250" text-anchor="start" font-size="11" fill="#7d8590">1 Year</text>
+
+    <!-- Section divider before panel row -->
+    <line x1="24" y1="272" x2="776" y2="272" stroke="#21262d" stroke-width="1"/>
+
+    <!-- ============= PANEL 1: Days Active dial ============= -->
+    <g>
+      <text x="142" y="292" text-anchor="middle" font-size="11" font-weight="600" fill="#c9d1d9">Days Active</text>
+      <text x="142" y="306" text-anchor="middle" font-size="9" fill="#7d8590">1 Year</text>
+
+      <!-- Track -->
+      <circle cx="142" cy="352" r="36" fill="none" stroke="#21262d" stroke-width="8"/>
+      <!-- Filled arc for 213/365 = 58.36% of circumference (2πr = 226.19; filled = 132.02) -->
+      <circle cx="142" cy="352" r="36" fill="none" stroke="url(#dialArc)" stroke-width="8" stroke-linecap="round"
+              stroke-dasharray="132.02 226.19" transform="rotate(-90 142 352)">
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Moving indicator dot travels the filled arc -->
+      <circle cx="142" cy="316" r="3.2" fill="#ffa657">
+        <animateMotion dur="11s" repeatCount="indefinite" rotate="auto"
+          path="M0,0 A36,36 0 1,1 -34.19,-11.11"/>
+      </circle>
+
+      <!-- Center value + denominator -->
+      <text x="142" y="358" text-anchor="middle" font-size="28" font-weight="700" fill="#ffa657">213</text>
+      <text x="142" y="376" text-anchor="middle" font-size="10" fill="#8b949e">of 365 days</text>
+    </g>
+
+    <!-- Divider between panels -->
+    <line x1="269" y1="284" x2="269" y2="396" stroke="#21262d" stroke-width="1"/>
+
+    <!-- ============= PANEL 2: Languages ============= -->
+    <g>
+      <text x="284" y="292" font-size="11" font-weight="600" fill="#c9d1d9">Languages</text>
+      <text x="284" y="306" font-size="9" fill="#7d8590">1 Year</text>
+      <text x="518" y="298" text-anchor="end" font-size="22" font-weight="700" fill="#ffa657">10</text>
+
+      <!-- Rows: chip, name, bar (max 130), count -->
+      <!-- Bar scale: 130/3124 = 0.04161. Bar height 6, y = row_y - 5 (bar center = row_y - 2) -->
+      <!-- Row 1: TypeScript 3124 -->
+      <rect x="284" y="320" width="6" height="6" rx="1" fill="#3178c6"/>
+      <text x="295" y="326" font-size="10" fill="#c9d1d9">TypeScript</text>
+      <rect x="360" y="320" width="130" height="6" rx="2" fill="url(#langBar)"/>
+      <text x="518" y="326" text-anchor="end" font-size="10" fill="#8b949e">3124</text>
+      <!-- Row 2: Python 988 → 41 -->
+      <rect x="284" y="336" width="6" height="6" rx="1" fill="#3572a5"/>
+      <text x="295" y="342" font-size="10" fill="#c9d1d9">Python</text>
+      <rect x="360" y="336" width="41" height="6" rx="2" fill="url(#langBar)"/>
+      <text x="518" y="342" text-anchor="end" font-size="10" fill="#8b949e">988</text>
+      <!-- Row 3: Go 382 → 16 -->
+      <rect x="284" y="352" width="6" height="6" rx="1" fill="#00add8"/>
+      <text x="295" y="358" font-size="10" fill="#c9d1d9">Go</text>
+      <rect x="360" y="352" width="16" height="6" rx="2" fill="url(#langBar)"/>
+      <text x="518" y="358" text-anchor="end" font-size="10" fill="#8b949e">382</text>
+      <!-- Row 4: Shell 62 → 3 (min 3) -->
+      <rect x="284" y="368" width="6" height="6" rx="1" fill="#89e051"/>
+      <text x="295" y="374" font-size="10" fill="#c9d1d9">Shell</text>
+      <rect x="360" y="368" width="3" height="6" rx="1" fill="url(#langBar)"/>
+      <text x="518" y="374" text-anchor="end" font-size="10" fill="#8b949e">62</text>
+      <!-- Row 5: CSS 11 → 2 (min) -->
+      <rect x="284" y="384" width="6" height="6" rx="1" fill="#563d7c"/>
+      <text x="295" y="390" font-size="10" fill="#c9d1d9">CSS</text>
+      <rect x="360" y="384" width="2" height="6" rx="1" fill="url(#langBar)"/>
+      <text x="518" y="390" text-anchor="end" font-size="10" fill="#8b949e">11</text>
+
+      <!-- + 3 more indicator -->
+      <text x="284" y="404" font-size="9" fill="#6e7681">+ HTML · JavaScript · HCL</text>
+    </g>
+
+    <!-- Divider between panels -->
+    <line x1="527" y1="284" x2="527" y2="396" stroke="#21262d" stroke-width="1"/>
+
+    <!-- ============= PANEL 3: Active Repos ============= -->
+    <g>
+      <text x="540" y="292" font-size="11" font-weight="600" fill="#c9d1d9">Active Repos</text>
+      <text x="540" y="306" font-size="9" fill="#7d8590">1 Year</text>
+      <text x="776" y="298" text-anchor="end" font-size="22" font-weight="700" fill="#ffa657">53</text>
+
+      <!-- Bar scale: max 1649 → 72px so 4-digit counts have full clearance -->
+      <!-- Row 1: oscilla-animator-v2 1649 → 72 -->
+      <rect x="540" y="320" width="6" height="6" rx="1" fill="#a371f7"/>
+      <text x="551" y="326" font-size="9.5" fill="#c9d1d9">oscilla-animator-v2</text>
+      <rect x="666" y="320" width="72" height="6" rx="2" fill="url(#repoBar)"/>
+      <text x="776" y="326" text-anchor="end" font-size="10" fill="#8b949e">1649</text>
+      <!-- Row 2: cc-dump 439 → 19 -->
+      <rect x="540" y="336" width="6" height="6" rx="1" fill="#a371f7"/>
+      <text x="551" y="342" font-size="9.5" fill="#c9d1d9">cc-dump</text>
+      <rect x="666" y="336" width="19" height="6" rx="2" fill="url(#repoBar)"/>
+      <text x="776" y="342" text-anchor="end" font-size="10" fill="#8b949e">439</text>
+      <!-- Row 3: dotfiles 294 → 13 -->
+      <rect x="540" y="352" width="6" height="6" rx="1" fill="#a371f7"/>
+      <text x="551" y="358" font-size="9.5" fill="#c9d1d9">dotfiles</text>
+      <rect x="666" y="352" width="13" height="6" rx="2" fill="url(#repoBar)"/>
+      <text x="776" y="358" text-anchor="end" font-size="10" fill="#8b949e">294</text>
+      <!-- Row 4: oscilla-animator 227 → 10 -->
+      <rect x="540" y="368" width="6" height="6" rx="1" fill="#a371f7"/>
+      <text x="551" y="374" font-size="9.5" fill="#c9d1d9">oscilla-animator</text>
+      <rect x="666" y="368" width="10" height="6" rx="2" fill="url(#repoBar)"/>
+      <text x="776" y="374" text-anchor="end" font-size="10" fill="#8b949e">227</text>
+      <!-- Row 5: chaperone-auth-gateway 188 → 8 -->
+      <rect x="540" y="384" width="6" height="6" rx="1" fill="#a371f7"/>
+      <text x="551" y="390" font-size="9.5" fill="#c9d1d9">chaperone-auth-gateway</text>
+      <rect x="666" y="384" width="8" height="6" rx="2" fill="url(#repoBar)"/>
+      <text x="776" y="390" text-anchor="end" font-size="10" fill="#8b949e">188</text>
+
+      <text x="540" y="404" font-size="9" fill="#6e7681">+ 48 more</text>
+    </g>
+
+    <!-- Bottom divider -->
+    <line x1="24" y1="418" x2="776" y2="418" stroke="#21262d" stroke-width="1"/>
+
+    <!-- ============= BOTTOM ROW: Commits + Issues Closed ============= -->
+    <!-- Commits (7 Days) with 7-cell recent-day pulse -->
+    <g>
+      <text x="120" y="446" text-anchor="end" font-size="12" fill="#8b949e">Commits</text>
+      <text x="185" y="446" text-anchor="end" font-size="24" font-weight="700" fill="#ffa657">195</text>
+      <text x="194" y="446" font-size="10" fill="#7d8590">in 7 Days</text>
+
+      <!-- 7 small day-cells representing recent 7 days of contribution activity -->
+      <!-- last 7: 20, 60, 46, 93, 19, 85, 40 ; heights scaled to max 93 -->
+      <g transform="translate(268,428)">
+        <rect x="0"  y="14" width="10" height="4"  rx="1" fill="#238636" opacity="0.55"/>
+        <rect x="14" y="6"  width="10" height="12" rx="1" fill="#238636" opacity="0.75"/>
+        <rect x="28" y="9"  width="10" height="9"  rx="1" fill="#238636" opacity="0.7"/>
+        <rect x="42" y="0"  width="10" height="18" rx="1" fill="#3fb950"/>
+        <rect x="56" y="14" width="10" height="4"  rx="1" fill="#238636" opacity="0.55"/>
+        <rect x="70" y="1"  width="10" height="17" rx="1" fill="#3fb950" opacity="0.9"/>
+        <rect x="84" y="10" width="10" height="8"  rx="1" fill="#238636" opacity="0.7"/>
+        <!-- perpetual sweep pulse across the 7 cells -->
+        <rect x="0" y="-2" width="10" height="24" fill="#7ee787" opacity="0.35">
+          <animate attributeName="x" values="-14;98;-14" dur="7s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <!-- Divider vertical between bottom stats -->
+    <line x1="400" y1="426" x2="400" y2="466" stroke="#21262d" stroke-width="1"/>
+
+    <!-- Issues Closed -->
+    <g>
+      <text x="500" y="446" text-anchor="end" font-size="12" fill="#8b949e">My Issues Closed</text>
+      <text x="555" y="446" text-anchor="end" font-size="24" font-weight="700" fill="#ffa657">64</text>
+      <text x="562" y="446" font-size="10" fill="#7d8590">in 1 Year</text>
+
+      <!-- 64 tiny closed-issue tick marks in a 32×2 grid -->
+      <g transform="translate(628,432)" fill="#f85149">
+        <!-- Row 1: 32 dots -->
+        <rect x="0"   y="0" width="3" height="3" rx="1"/>
+        <rect x="4.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="9"   y="0" width="3" height="3" rx="1"/>
+        <rect x="13.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="18"  y="0" width="3" height="3" rx="1"/>
+        <rect x="22.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="27"  y="0" width="3" height="3" rx="1"/>
+        <rect x="31.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="36"  y="0" width="3" height="3" rx="1"/>
+        <rect x="40.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="45"  y="0" width="3" height="3" rx="1"/>
+        <rect x="49.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="54"  y="0" width="3" height="3" rx="1"/>
+        <rect x="58.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="63"  y="0" width="3" height="3" rx="1"/>
+        <rect x="67.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="72"  y="0" width="3" height="3" rx="1"/>
+        <rect x="76.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="81"  y="0" width="3" height="3" rx="1"/>
+        <rect x="85.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="90"  y="0" width="3" height="3" rx="1"/>
+        <rect x="94.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="99"  y="0" width="3" height="3" rx="1"/>
+        <rect x="103.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="108" y="0" width="3" height="3" rx="1"/>
+        <rect x="112.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="117" y="0" width="3" height="3" rx="1"/>
+        <rect x="121.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="126" y="0" width="3" height="3" rx="1"/>
+        <rect x="130.5" y="0" width="3" height="3" rx="1"/>
+        <rect x="135" y="0" width="3" height="3" rx="1"/>
+        <rect x="139.5" y="0" width="3" height="3" rx="1"/>
+        <!-- Row 2: 32 dots -->
+        <rect x="0"   y="6" width="3" height="3" rx="1"/>
+        <rect x="4.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="9"   y="6" width="3" height="3" rx="1"/>
+        <rect x="13.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="18"  y="6" width="3" height="3" rx="1"/>
+        <rect x="22.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="27"  y="6" width="3" height="3" rx="1"/>
+        <rect x="31.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="36"  y="6" width="3" height="3" rx="1"/>
+        <rect x="40.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="45"  y="6" width="3" height="3" rx="1"/>
+        <rect x="49.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="54"  y="6" width="3" height="3" rx="1"/>
+        <rect x="58.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="63"  y="6" width="3" height="3" rx="1"/>
+        <rect x="67.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="72"  y="6" width="3" height="3" rx="1"/>
+        <rect x="76.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="81"  y="6" width="3" height="3" rx="1"/>
+        <rect x="85.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="90"  y="6" width="3" height="3" rx="1"/>
+        <rect x="94.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="99"  y="6" width="3" height="3" rx="1"/>
+        <rect x="103.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="108" y="6" width="3" height="3" rx="1"/>
+        <rect x="112.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="117" y="6" width="3" height="3" rx="1"/>
+        <rect x="121.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="126" y="6" width="3" height="3" rx="1"/>
+        <rect x="130.5" y="6" width="3" height="3" rx="1"/>
+        <rect x="135" y="6" width="3" height="3" rx="1"/>
+        <rect x="139.5" y="6" width="3" height="3" rx="1"/>
+        <!-- shimmer across the grid -->
+        <rect x="0" y="-2" width="8" height="14" fill="#ffa198" opacity="0.5">
+          <animate attributeName="x" values="-10;150;-10" dur="11s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
   </g>
 </svg>
