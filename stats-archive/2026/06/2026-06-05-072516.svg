@@ -1,20 +1,177 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 05, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">21</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">19</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">30</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">81</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
+<svg width="800" height="320" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for brandon-fryslie on 2026-06-05">
+  <defs>
+    <linearGradient id="calBar" gradientUnits="userSpaceOnUse" x1="-200" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#26a641"/>
+      <stop offset="0.5" stop-color="#7ee787"/>
+      <stop offset="1" stop-color="#26a641"/>
+      <animate attributeName="x1" values="-200;800;-200" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;1000;0" dur="17s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="shineA" gradientUnits="userSpaceOnUse" x1="-150" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-150;900;-150" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;1050;0" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="shineB" gradientUnits="userSpaceOnUse" x1="900" y1="0" x2="1050" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="900;-150;900" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1050;0;1050" dur="13s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="streakGlow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#39d353" stop-opacity="0.45"/>
+      <stop offset="0.6" stop-color="#39d353" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#39d353" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;fill:#f0f6fc}
+    .h{fill:#7d8590;letter-spacing:2px;font-size:10px;font-weight:600}
+    .sub{fill:#c9d1d9;font-size:12px;font-weight:500}
+    .per{fill:#6e7681;font-size:10px}
+    .val{font-size:40px;font-weight:700;letter-spacing:-1.5px}
+    .valLg{font-size:44px;font-weight:700;letter-spacing:-2px}
+    .seg{font-size:10.5px;font-weight:600;fill:#ffffff}
+    .segDk{font-size:10.5px;font-weight:600;fill:#0d1117}
+  </style>
+
+  <!-- Card background -->
+  <rect width="800" height="320" rx="8" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="319" rx="8" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ======= HEADER ======= -->
+  <text class="h" x="22" y="25">LIVE GITHUB STATS</text>
+  <text class="per" x="778" y="25" text-anchor="end" fill="#8b949e">brandon-fryslie &#183; June 5, 2026</text>
+  <line x1="22" y1="34" x2="778" y2="34" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ======= CALENDAR + STREAK ======= -->
+  <text class="h" x="22" y="55">12&#8209;MONTH RHYTHM</text>
+  <text class="per" x="650" y="55" text-anchor="end">past 12 months</text>
+
+  <!-- 53 weekly bars: heights encode weekly contribution sums (sqrt-scaled, max weekly = 503) -->
+  <g fill="url(#calBar)">
+    <rect x="22.0"  y="124.9" width="10" height="9.1"/>
+    <rect x="45.7"  y="122.7" width="10" height="11.3"/>
+    <rect x="57.6"  y="131.0" width="10" height="3.0"/>
+    <rect x="81.3"  y="131.0" width="10" height="3.0"/>
+    <rect x="93.1"  y="129.7" width="10" height="4.3"/>
+    <rect x="105.0" y="126.6" width="10" height="7.4"/>
+    <rect x="116.8" y="128.8" width="10" height="5.2"/>
+    <rect x="128.7" y="122.3" width="10" height="11.7"/>
+    <rect x="140.5" y="126.0" width="10" height="8.0"/>
+    <rect x="152.4" y="131.0" width="10" height="3.0"/>
+    <rect x="164.2" y="131.0" width="10" height="3.0"/>
+    <rect x="187.9" y="131.0" width="10" height="3.0"/>
+    <rect x="211.6" y="131.0" width="10" height="3.0"/>
+    <rect x="223.5" y="128.8" width="10" height="5.2"/>
+    <rect x="235.3" y="129.7" width="10" height="4.3"/>
+    <rect x="247.2" y="127.2" width="10" height="6.8"/>
+    <rect x="259.0" y="126.6" width="10" height="7.4"/>
+    <rect x="270.9" y="126.6" width="10" height="7.4"/>
+    <rect x="282.7" y="118.8" width="10" height="15.2"/>
+    <rect x="294.6" y="113.4" width="10" height="20.6"/>
+    <rect x="306.4" y="129.7" width="10" height="4.3"/>
+    <rect x="318.3" y="127.2" width="10" height="6.8"/>
+    <rect x="330.1" y="128.8" width="10" height="5.2"/>
+    <rect x="342.0" y="116.6" width="10" height="17.4"/>
+    <rect x="353.8" y="104.3" width="10" height="29.7"/>
+    <rect x="365.7" y="87.2"  width="10" height="46.8"/>
+    <rect x="377.5" y="113.7" width="10" height="20.3"/>
+    <rect x="389.4" y="100.1" width="10" height="33.9"/>
+    <rect x="401.2" y="86.7"  width="10" height="47.3"/>
+    <rect x="413.1" y="66.0"  width="10" height="68.0"/>
+    <rect x="424.9" y="69.3"  width="10" height="64.7"/>
+    <rect x="436.8" y="76.7"  width="10" height="57.3"/>
+    <rect x="448.6" y="86.9"  width="10" height="47.1"/>
+    <rect x="460.5" y="83.5"  width="10" height="50.5"/>
+    <rect x="472.3" y="68.1"  width="10" height="65.9"/>
+    <rect x="484.2" y="93.7"  width="10" height="40.3"/>
+    <rect x="496.0" y="76.6"  width="10" height="57.4"/>
+    <rect x="507.9" y="93.2"  width="10" height="40.8"/>
+    <rect x="519.7" y="98.4"  width="10" height="35.6"/>
+    <rect x="531.6" y="107.2" width="10" height="26.8"/>
+    <rect x="543.4" y="96.3"  width="10" height="37.7"/>
+    <rect x="555.3" y="93.2"  width="10" height="40.8"/>
+    <rect x="567.1" y="94.5"  width="10" height="39.5"/>
+    <rect x="579.0" y="87.8"  width="10" height="46.2"/>
+    <rect x="590.8" y="78.8"  width="10" height="55.2"/>
+    <rect x="602.7" y="102.5" width="10" height="31.5"/>
+    <rect x="614.5" y="93.8"  width="10" height="40.2"/>
+    <rect x="626.4" y="70.3"  width="10" height="63.7"/>
+    <rect x="638.2" y="100.1" width="10" height="33.9"/>
   </g>
+
+  <!-- Baseline reference -->
+  <line x1="22" y1="134.5" x2="650" y2="134.5" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Time-axis markers: subtle month ticks aren't drawn, but the two endpoints are labeled -->
+  <text class="per" x="22" y="147" font-size="9" fill="#6e7681">Jun 2025</text>
+  <text class="per" x="650" y="147" font-size="9" fill="#6e7681" text-anchor="end">Jun 2026</text>
+
+  <!-- Divider between calendar and streak badge -->
+  <line x1="662" y1="42" x2="662" y2="140" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Streak badge: pulsing green glow + big number -->
+  <rect x="676" y="70" width="100" height="60" rx="10" fill="url(#streakGlow)">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" repeatCount="indefinite"/>
+  </rect>
+  <text class="valLg" x="726" y="107" text-anchor="middle" fill="#7ee787">82</text>
+  <text class="sub" x="726" y="123" text-anchor="middle">Longest Streak</text>
+  <text class="per" x="726" y="137" text-anchor="middle">1 Year</text>
+
+  <!-- ======= LANGUAGES ======= -->
+  <text class="h" x="22" y="170">LANGUAGES</text>
+  <text class="per" x="778" y="170" text-anchor="end">width &#8801; lines committed</text>
+
+  <text class="val" x="30" y="211" fill="#58a6ff">10</text>
+  <text class="sub" x="94" y="199">Languages</text>
+  <text class="per" x="94" y="213">1 Year</text>
+
+  <!-- Stacked bar (x = 190..778, total 4705) -->
+  <g>
+    <rect x="190.0"  y="180" width="403.3" height="30" fill="#3178c6"/>
+    <rect x="593.3"  y="180" width="123.4" height="30" fill="#3572a5"/>
+    <rect x="716.7"  y="180" width="50.1"  height="30" fill="#00add8"/>
+    <rect x="766.8"  y="180" width="7.8"   height="30" fill="#89e051"/>
+    <rect x="774.5"  y="180" width="1.8"   height="30" fill="#e34c26"/>
+    <rect x="776.3"  y="180" width="1.4"   height="30" fill="#a371f7"/>
+    <rect x="777.7"  y="180" width="0.2"   height="30" fill="#f1e05a"/>
+    <rect x="777.9"  y="180" width="0.1"   height="30" fill="#844fba"/>
+    <!-- shine sweep on top -->
+    <rect x="190" y="180" width="588" height="30" fill="url(#shineA)"/>
+  </g>
+  <!-- Segment labels on the biggest slices -->
+  <text class="seg" x="391.6" y="199" text-anchor="middle">TypeScript &#183; 3225</text>
+  <text class="seg" x="654.9" y="199" text-anchor="middle">Python &#183; 987</text>
+  <text class="segDk" x="741.7" y="199" text-anchor="middle" font-size="9">Go 401</text>
+
+  <!-- ======= REPOS ======= -->
+  <text class="h" x="22" y="250">TOP 6 REPOS BY ACTIVITY</text>
+  <text class="per" x="778" y="250" text-anchor="end">of 52 active this year</text>
+
+  <text class="val" x="30" y="291" fill="#79c0ff">52</text>
+  <text class="sub" x="94" y="279">Active Repos</text>
+  <text class="per" x="94" y="293">1 Year</text>
+
+  <!-- Stacked bar (x = 190..778, total 3033 across top 6) -->
+  <g>
+    <rect x="190.0"  y="260" width="319.7" height="30" fill="#58a6ff"/>
+    <rect x="509.7"  y="260" width="85.1"  height="30" fill="#bc8cff"/>
+    <rect x="594.9"  y="260" width="56.8"  height="30" fill="#ff7b72"/>
+    <rect x="651.7"  y="260" width="44.0"  height="30" fill="#7ee787"/>
+    <rect x="695.7"  y="260" width="42.5"  height="30" fill="#ffa657"/>
+    <rect x="738.1"  y="260" width="39.9"  height="30" fill="#f0883e"/>
+    <!-- shine sweep -->
+    <rect x="190" y="260" width="588" height="30" fill="url(#shineB)"/>
+  </g>
+  <!-- Segment labels: only the two dominant segments are labeled in-bar -->
+  <text class="segDk" x="349.9" y="279" text-anchor="middle">oscilla-animator-v2 &#183; 1649</text>
+  <text class="segDk" x="552.3" y="279" text-anchor="middle">cc-dump 439</text>
+
+  <!-- Legend for the four narrow segments (color squares match bar-segment fills) -->
+  <text x="778" y="306" font-size="9" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"><tspan fill="#ff7b72">&#9632;</tspan> dotfiles 293 &#8194;<tspan fill="#7ee787">&#9632;</tspan> oscilla-animator 227 &#8194;<tspan fill="#ffa657">&#9632;</tspan> slopspot-web 219 &#8194;<tspan fill="#f0883e">&#9632;</tspan> cc-candybar 206</text>
 </svg>
