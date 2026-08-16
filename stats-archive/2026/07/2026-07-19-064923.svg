@@ -1,20 +1,267 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated July 19, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">45</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">18</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">17</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">19</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-  </g>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs>
+<linearGradient id="calScan" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#58a6ff" stop-opacity="0"/>
+<stop offset="0.5" stop-color="#79c0ff" stop-opacity="0.45"/>
+<stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="barShine" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.55"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="repoShine" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.75"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="calClip"><rect x="24" y="76" width="752" height="72"/></clipPath>
+<clipPath id="p1Clip"><rect x="28" y="220" width="232" height="18"/></clipPath>
+<clipPath id="rbc0"><rect x="540" y="233" width="232.00" height="5"/></clipPath>
+<clipPath id="rbc1"><rect x="540" y="254" width="158.11" height="5"/></clipPath>
+<clipPath id="rbc2"><rect x="540" y="275" width="90.13" height="5"/></clipPath>
+<clipPath id="rbc3"><rect x="540" y="296" width="87.18" height="5"/></clipPath>
+<clipPath id="rbc4"><rect x="540" y="317" width="75.36" height="5"/></clipPath>
+<clipPath id="rbc5"><rect x="540" y="338" width="56.15" height="5"/></clipPath>
+</defs>
+
+<rect width="800" height="400" fill="#0d1117"/>
+
+<text x="24" y="32" font-size="14" font-weight="600" fill="#c9d1d9">Live GitHub Stats</text>
+<text x="776" y="32" font-size="12" fill="#8b949e" text-anchor="end">July 19, 2026</text>
+<line x1="24" y1="44" x2="776" y2="44" stroke="#21262d" stroke-width="1"/>
+
+<text x="24" y="66" font-size="11" fill="#8b949e">Contributions per week &#8212; past 12 months</text>
+<text x="776" y="66" font-size="11" fill="#8b949e" text-anchor="end">peak week 605 &#183; peak day 213</text>
+
+<g clip-path="url(#calClip)">
+<line x1="24" y1="146.5" x2="776" y2="146.5" stroke="#21262d" stroke-width="1"/>
+<rect x="24.00" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="38.46" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="52.92" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="67.38" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="96.31" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="125.23" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="168.61" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="183.08" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="197.54" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="212.00" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="226.46" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="240.92" y="143.93" width="12" height="2.07" fill="#0e4429"/>
+<rect x="255.38" y="140.55" width="12" height="5.45" fill="#006d32"/>
+<rect x="269.85" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="284.31" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="298.77" y="144.50" width="12" height="1.50" fill="#0e4429"/>
+<rect x="313.23" y="142.40" width="12" height="3.60" fill="#0e4429"/>
+<rect x="327.69" y="135.53" width="12" height="10.47" fill="#006d32"/>
+<rect x="342.15" y="120.04" width="12" height="25.96" fill="#26a641"/>
+<rect x="356.62" y="141.09" width="12" height="4.91" fill="#0e4429"/>
+<rect x="371.08" y="132.26" width="12" height="13.74" fill="#006d32"/>
+<rect x="385.54" y="119.49" width="12" height="26.51" fill="#26a641"/>
+<rect x="400.00" y="91.14" width="12" height="54.86" fill="#39d353"/>
+<rect x="414.46" y="96.26" width="12" height="49.74" fill="#39d353"/>
+<rect x="428.92" y="107.06" width="12" height="38.94" fill="#26a641"/>
+<rect x="443.38" y="119.71" width="12" height="26.29" fill="#26a641"/>
+<rect x="457.85" y="115.78" width="12" height="30.22" fill="#26a641"/>
+<rect x="472.31" y="94.40" width="12" height="51.60" fill="#39d353"/>
+<rect x="486.77" y="126.69" width="12" height="19.31" fill="#006d32"/>
+<rect x="501.23" y="106.95" width="12" height="39.05" fill="#26a641"/>
+<rect x="515.69" y="126.25" width="12" height="19.75" fill="#006d32"/>
+<rect x="530.15" y="130.95" width="12" height="15.05" fill="#006d32"/>
+<rect x="544.62" y="137.49" width="12" height="8.51" fill="#006d32"/>
+<rect x="559.08" y="129.09" width="12" height="16.91" fill="#006d32"/>
+<rect x="573.54" y="126.25" width="12" height="19.75" fill="#006d32"/>
+<rect x="588.00" y="127.45" width="12" height="18.55" fill="#006d32"/>
+<rect x="602.46" y="120.69" width="12" height="25.31" fill="#26a641"/>
+<rect x="616.92" y="109.78" width="12" height="36.22" fill="#26a641"/>
+<rect x="631.38" y="134.22" width="12" height="11.78" fill="#006d32"/>
+<rect x="645.85" y="126.80" width="12" height="19.20" fill="#006d32"/>
+<rect x="660.31" y="97.78" width="12" height="48.22" fill="#39d353"/>
+<rect x="674.77" y="103.68" width="12" height="42.32" fill="#26a641"/>
+<rect x="689.23" y="86.43" width="12" height="59.57" fill="#39d353"/>
+<rect x="703.69" y="93.86" width="12" height="52.14" fill="#39d353"/>
+<rect x="718.15" y="80.00" width="12" height="66.00" fill="#39d353"/>
+<rect x="732.62" y="130.40" width="12" height="15.60" fill="#006d32"/>
+<rect x="747.08" y="117.97" width="12" height="28.03" fill="#26a641"/>
+<rect x="761.54" y="139.13" width="12" height="6.87" fill="#006d32"/>
+<rect x="-160" y="80" width="160" height="66" fill="url(#calScan)">
+<animate attributeName="x" values="-160;790;-160" dur="17s" repeatCount="indefinite"/>
+</rect>
+</g>
+
+<text x="28" y="192" font-size="12" fill="#8b949e">Languages</text>
+<text x="260" y="208" font-size="30" font-weight="700" fill="#c9d1d9" text-anchor="end">5</text>
+<rect x="28.00" y="220" width="184.40" height="18" fill="#3178c6"/>
+<rect x="212.40" y="220" width="20.90" height="18" fill="#3572A5"/>
+<rect x="233.30" y="220" width="18.70" height="18" fill="#00ADD8"/>
+<rect x="252.00" y="220" width="4.00" height="18" fill="#f1e05a"/>
+<rect x="256.00" y="220" width="4.00" height="18" fill="#e34c26"/>
+<g clip-path="url(#p1Clip)">
+<rect x="-60" y="220" width="60" height="18" fill="url(#barShine)">
+<animate attributeName="x" values="-60;260;-60" dur="7s" repeatCount="indefinite"/>
+</rect>
+</g>
+<rect x="28" y="249" width="10" height="10" rx="2" fill="#3178c6"/>
+<text x="44" y="258" font-size="11" fill="#c9d1d9">TypeScript</text>
+<text x="260" y="258" font-size="11" fill="#8b949e" text-anchor="end">518</text>
+<rect x="28" y="269" width="10" height="10" rx="2" fill="#3572A5"/>
+<text x="44" y="278" font-size="11" fill="#c9d1d9">Python</text>
+<text x="260" y="278" font-size="11" fill="#8b949e" text-anchor="end">57</text>
+<rect x="28" y="289" width="10" height="10" rx="2" fill="#00ADD8"/>
+<text x="44" y="298" font-size="11" fill="#c9d1d9">Go</text>
+<text x="260" y="298" font-size="11" fill="#8b949e" text-anchor="end">51</text>
+<rect x="28" y="309" width="10" height="10" rx="2" fill="#f1e05a"/>
+<text x="44" y="318" font-size="11" fill="#c9d1d9">JavaScript</text>
+<text x="260" y="318" font-size="11" fill="#8b949e" text-anchor="end">4</text>
+<rect x="28" y="329" width="10" height="10" rx="2" fill="#e34c26"/>
+<text x="44" y="338" font-size="11" fill="#c9d1d9">HTML</text>
+<text x="260" y="338" font-size="11" fill="#8b949e" text-anchor="end">3</text>
+<text x="260" y="366" font-size="10" fill="#6e7681" text-anchor="end">30 Days</text>
+
+<text x="284" y="192" font-size="12" fill="#8b949e">My Issues Closed</text>
+<text x="516" y="208" font-size="30" font-weight="700" fill="#c9d1d9" text-anchor="end">87</text>
+<rect x="323" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="336" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.35s" repeatCount="indefinite"/></rect>
+<rect x="349" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="362" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="375" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="388" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="401" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="414" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="427" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="440" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="453" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="466" y="222" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.85s" repeatCount="indefinite"/></rect>
+<rect x="323" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.35s" repeatCount="indefinite"/></rect>
+<rect x="336" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="349" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="362" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="375" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="388" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="401" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="414" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="427" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="440" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="453" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.85s" repeatCount="indefinite"/></rect>
+<rect x="466" y="235" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="323" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="336" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="349" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="362" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="375" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="388" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="401" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="414" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="427" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="440" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.85s" repeatCount="indefinite"/></rect>
+<rect x="453" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="466" y="248" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.35s" repeatCount="indefinite"/></rect>
+<rect x="323" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="336" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="349" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="362" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="375" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="388" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="401" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="414" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="427" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.85s" repeatCount="indefinite"/></rect>
+<rect x="440" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="453" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.35s" repeatCount="indefinite"/></rect>
+<rect x="466" y="261" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="323" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="336" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="349" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="362" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="375" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="388" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="401" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="414" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.85s" repeatCount="indefinite"/></rect>
+<rect x="427" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="440" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.35s" repeatCount="indefinite"/></rect>
+<rect x="453" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="466" y="274" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="323" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="336" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="349" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="362" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="375" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="388" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="401" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.85s" repeatCount="indefinite"/></rect>
+<rect x="414" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="427" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.35s" repeatCount="indefinite"/></rect>
+<rect x="440" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="453" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="466" y="287" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="323" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="336" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="349" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="362" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="375" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="388" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.85s" repeatCount="indefinite"/></rect>
+<rect x="401" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="414" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.35s" repeatCount="indefinite"/></rect>
+<rect x="427" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="440" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="453" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="466" y="300" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="323" y="313" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="336" y="313" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="349" y="313" width="10" height="10" rx="2.5" fill="#f78166"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.2s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="362" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="375" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="388" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="401" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="414" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="427" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="440" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="453" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<rect x="466" y="313" width="10" height="10" rx="2.5" fill="#30363d"/>
+<text x="516" y="366" font-size="10" fill="#6e7681" text-anchor="end">All Time</text>
+
+<text x="540" y="192" font-size="12" fill="#8b949e">Active Repos</text>
+<text x="772" y="208" font-size="30" font-weight="700" fill="#c9d1d9" text-anchor="end">17</text>
+<text x="540" y="230" font-size="10" fill="#c9d1d9">crowdshipai-web</text>
+<text x="772" y="230" font-size="10" fill="#8b949e" text-anchor="end">157</text>
+<rect x="540" y="233" width="232" height="5" rx="2" fill="#161b22"/>
+<rect x="540" y="233" width="232.00" height="5" rx="2" fill="#58a6ff"/>
+<rect x="-50" y="233" width="50" height="5" fill="url(#repoShine)" clip-path="url(#rbc0)">
+<animate attributeName="x" values="-50;772;-50" dur="9s" begin="0.0s" repeatCount="indefinite"/>
+</rect>
+<text x="540" y="251" font-size="10" fill="#c9d1d9">tmux-control-mode-js</text>
+<text x="772" y="251" font-size="10" fill="#8b949e" text-anchor="end">107</text>
+<rect x="540" y="254" width="232" height="5" rx="2" fill="#161b22"/>
+<rect x="540" y="254" width="158.11" height="5" rx="2" fill="#79c0ff"/>
+<rect x="-50" y="254" width="50" height="5" fill="url(#repoShine)" clip-path="url(#rbc1)">
+<animate attributeName="x" values="-50;772;-50" dur="9s" begin="1.5s" repeatCount="indefinite"/>
+</rect>
+<text x="540" y="272" font-size="10" fill="#c9d1d9">tinkerpadai-web</text>
+<text x="772" y="272" font-size="10" fill="#8b949e" text-anchor="end">61</text>
+<rect x="540" y="275" width="232" height="5" rx="2" fill="#161b22"/>
+<rect x="540" y="275" width="90.13" height="5" rx="2" fill="#a5b4fc"/>
+<rect x="-50" y="275" width="50" height="5" fill="url(#repoShine)" clip-path="url(#rbc2)">
+<animate attributeName="x" values="-50;772;-50" dur="9s" begin="3.0s" repeatCount="indefinite"/>
+</rect>
+<text x="540" y="293" font-size="10" fill="#c9d1d9">oscilla-animator-v2</text>
+<text x="772" y="293" font-size="10" fill="#8b949e" text-anchor="end">59</text>
+<rect x="540" y="296" width="232" height="5" rx="2" fill="#161b22"/>
+<rect x="540" y="296" width="87.18" height="5" rx="2" fill="#c084fc"/>
+<rect x="-50" y="296" width="50" height="5" fill="url(#repoShine)" clip-path="url(#rbc3)">
+<animate attributeName="x" values="-50;772;-50" dur="9s" begin="4.5s" repeatCount="indefinite"/>
+</rect>
+<text x="540" y="314" font-size="10" fill="#c9d1d9">links-issue-tracker</text>
+<text x="772" y="314" font-size="10" fill="#8b949e" text-anchor="end">51</text>
+<rect x="540" y="317" width="232" height="5" rx="2" fill="#161b22"/>
+<rect x="540" y="317" width="75.36" height="5" rx="2" fill="#d8b4fe"/>
+<rect x="-50" y="317" width="50" height="5" fill="url(#repoShine)" clip-path="url(#rbc4)">
+<animate attributeName="x" values="-50;772;-50" dur="9s" begin="6.0s" repeatCount="indefinite"/>
+</rect>
+<text x="540" y="335" font-size="10" fill="#c9d1d9">shader-playground</text>
+<text x="772" y="335" font-size="10" fill="#8b949e" text-anchor="end">38</text>
+<rect x="540" y="338" width="232" height="5" rx="2" fill="#161b22"/>
+<rect x="540" y="338" width="56.15" height="5" rx="2" fill="#f0abfc"/>
+<rect x="-50" y="338" width="50" height="5" fill="url(#repoShine)" clip-path="url(#rbc5)">
+<animate attributeName="x" values="-50;772;-50" dur="9s" begin="7.5s" repeatCount="indefinite"/>
+</rect>
+<text x="772" y="366" font-size="10" fill="#6e7681" text-anchor="end">30 Days</text>
+
 </svg>
