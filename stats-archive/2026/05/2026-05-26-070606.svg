@@ -1,20 +1,131 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 26, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">23</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">87</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">4006</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">134</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" role="img" aria-label="Live GitHub stats for brandon-fryslie">
+  <defs>
+    <linearGradient id="barGrad" x1="0" x2="0" y1="1" y2="0">
+      <stop offset="0" stop-color="#1a5a2a"/>
+      <stop offset="0.35" stop-color="#2ea043"/>
+      <stop offset="1" stop-color="#7ee787"/>
+    </linearGradient>
+    <linearGradient id="sweepGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0b0e13"/>
+    </linearGradient>
+    <clipPath id="chartClip">
+      <rect x="24" y="88" width="752" height="103"/>
+    </clipPath>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="799" height="359" rx="10" fill="url(#panelGrad)" stroke="#21262d" stroke-width="1"/>
+
+  <!-- header -->
+  <text x="24" y="26" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="700" letter-spacing="1.5">LIVE GITHUB STATS</text>
+  <text x="776" y="26" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7d8590" text-anchor="end" letter-spacing="0.8">May 26, 2026</text>
+  <line x1="24" y1="38" x2="776" y2="38" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ SECTION 1 · YEAR OF CONTRIBUTIONS ============ -->
+  <text x="24" y="60" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#7d8590" letter-spacing="1.4">CONTRIBUTIONS · PAST 12 MONTHS</text>
+  <text x="776" y="60" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#7d8590" text-anchor="end" letter-spacing="1.4">DAILY · SCALED TO PEAK 138</text>
+
+  <g clip-path="url(#chartClip)">
+    <!-- baseline -->
+    <line x1="24" y1="190.5" x2="776" y2="190.5" stroke="#30363d" stroke-width="1"/>
+
+    <!-- daily bars: one bar per day of the year, height proportional to contribution count -->
+    <path fill="url(#barGrad)" d="M28.11 190h1.48v-2.17h-1.48ZM32.22 190h1.48v-0.72h-1.48ZM34.27 190h1.48v-0.72h-1.48ZM38.38 190h1.48v-1.45h-1.48ZM40.44 190h1.48v-1.45h-1.48ZM44.55 190h1.48v-2.17h-1.48ZM46.60 190h1.48v-2.17h-1.48ZM52.76 190h1.48v-0.72h-1.48ZM54.82 190h1.48v-0.72h-1.48ZM56.87 190h1.48v-0.72h-1.48ZM81.53 190h1.48v-10.14h-1.48ZM89.75 190h1.48v-0.72h-1.48ZM124.68 190h1.48v-0.72h-1.48ZM139.06 190h1.48v-1.45h-1.48ZM153.44 190h1.48v-3.62h-1.48ZM157.55 190h1.48v-0.72h-1.48ZM161.66 190h1.48v-1.45h-1.48ZM163.71 190h1.48v-0.72h-1.48ZM176.04 190h1.48v-9.42h-1.48ZM184.26 190h1.48v-1.45h-1.48ZM186.32 190h1.48v-2.90h-1.48ZM188.37 190h1.48v-2.17h-1.48ZM208.92 190h1.48v-0.72h-1.48ZM221.24 190h1.48v-0.72h-1.48ZM245.90 190h1.48v-0.72h-1.48ZM284.94 190h1.48v-0.72h-1.48ZM293.16 190h1.48v-2.17h-1.48ZM305.48 190h1.48v-1.45h-1.48ZM315.76 190h1.48v-2.17h-1.48ZM317.82 190h1.48v-1.45h-1.48ZM332.19 190h1.48v-0.72h-1.48ZM338.35 190h1.48v-3.62h-1.48ZM342.46 190h1.48v-0.72h-1.48ZM346.57 190h1.48v-0.72h-1.48ZM348.62 190h1.48v-2.90h-1.48ZM356.84 190h1.48v-2.90h-1.48ZM358.90 190h1.48v-4.35h-1.48ZM360.95 190h1.48v-4.35h-1.48ZM363.01 190h1.48v-2.17h-1.48ZM367.12 190h1.48v-4.35h-1.48ZM369.17 190h1.48v-2.17h-1.48ZM371.22 190h1.48v-1.45h-1.48ZM373.28 190h1.48v-4.35h-1.48ZM375.33 190h1.48v-23.91h-1.48ZM381.50 190h1.48v-1.45h-1.48ZM385.60 190h1.48v-1.45h-1.48ZM399.99 190h1.48v-2.17h-1.48ZM410.26 190h1.48v-1.45h-1.48ZM412.32 190h1.48v-1.45h-1.48ZM416.43 190h1.48v-0.72h-1.48ZM428.75 190h1.48v-7.25h-1.48ZM430.81 190h1.48v-7.25h-1.48ZM432.86 190h1.48v-2.90h-1.48ZM434.92 190h1.48v-2.17h-1.48ZM436.97 190h1.48v-4.35h-1.48ZM439.03 190h1.48v-2.17h-1.48ZM443.13 190h1.48v-14.49h-1.48ZM445.19 190h1.48v-5.80h-1.48ZM447.24 190h1.48v-18.12h-1.48ZM449.30 190h1.48v-16.67h-1.48ZM451.35 190h1.48v-12.32h-1.48ZM453.41 190h1.48v-13.04h-1.48ZM455.46 190h1.48v-7.97h-1.48ZM457.52 190h1.48v-8.70h-1.48ZM459.57 190h1.48v-21.74h-1.48ZM461.63 190h1.48v-13.77h-1.48ZM463.68 190h1.48v-44.20h-1.48ZM465.74 190h1.48v-63.04h-1.48ZM467.79 190h1.48v-17.39h-1.48ZM469.85 190h1.48v-3.62h-1.48ZM471.90 190h1.48v-1.45h-1.48ZM473.96 190h1.48v-8.70h-1.48ZM480.12 190h1.48v-1.45h-1.48ZM484.23 190h1.48v-2.90h-1.48ZM486.29 190h1.48v-0.72h-1.48ZM488.34 190h1.48v-10.87h-1.48ZM492.45 190h1.48v-73.91h-1.48ZM494.51 190h1.48v-2.90h-1.48ZM496.56 190h1.48v-24.64h-1.48ZM498.62 190h1.48v-42.03h-1.48ZM500.67 190h1.48v-13.04h-1.48ZM502.73 190h1.48v-22.46h-1.48ZM504.78 190h1.48v-13.04h-1.48ZM506.84 190h1.48v-18.12h-1.48ZM508.89 190h1.48v-42.75h-1.48ZM510.94 190h1.48v-77.54h-1.48ZM513.00 190h1.48v-43.48h-1.48ZM515.05 190h1.48v-71.01h-1.48ZM517.11 190h1.48v-38.41h-1.48ZM519.16 190h1.48v-43.48h-1.48ZM521.22 190h1.48v-20.29h-1.48ZM523.27 190h1.48v-70.29h-1.48ZM525.33 190h1.48v-50.72h-1.48ZM527.38 190h1.48v-34.78h-1.48ZM529.44 190h1.48v-64.49h-1.48ZM531.49 190h1.48v-42.75h-1.48ZM533.55 190h1.48v-22.46h-1.48ZM535.60 190h1.48v-84.78h-1.48ZM537.66 190h1.48v-30.43h-1.48ZM539.71 190h1.48v-77.54h-1.48ZM541.77 190h1.48v-44.20h-1.48ZM543.82 190h1.48v-44.20h-1.48ZM545.88 190h1.48v-36.23h-1.48ZM547.93 190h1.48v-28.99h-1.48ZM549.99 190h1.48v-21.01h-1.48ZM552.04 190h1.48v-6.52h-1.48ZM554.10 190h1.48v-14.49h-1.48ZM556.15 190h1.48v-15.94h-1.48ZM558.21 190h1.48v-7.25h-1.48ZM560.26 190h1.48v-11.59h-1.48ZM562.32 190h1.48v-5.07h-1.48ZM564.37 190h1.48v-31.88h-1.48ZM566.43 190h1.48v-88.41h-1.48ZM568.48 190h1.48v-1.45h-1.48ZM570.54 190h1.48v-4.35h-1.48ZM572.59 190h1.48v-2.17h-1.48ZM574.65 190h1.48v-5.07h-1.48ZM576.70 190h1.48v-25.36h-1.48ZM578.76 190h1.48v-62.32h-1.48ZM580.81 190h1.48v-100h-1.48ZM582.87 190h1.48v-89.86h-1.48ZM584.92 190h1.48v-47.83h-1.48ZM586.98 190h1.48v-82.61h-1.48ZM589.03 190h1.48v-50h-1.48ZM591.09 190h1.48v-42.03h-1.48ZM593.14 190h1.48v-26.09h-1.48ZM595.20 190h1.48v-4.35h-1.48ZM597.25 190h1.48v-15.22h-1.48ZM599.31 190h1.48v-33.33h-1.48ZM601.36 190h1.48v-11.59h-1.48ZM603.42 190h1.48v-20.29h-1.48ZM605.47 190h1.48v-3.62h-1.48ZM607.53 190h1.48v-15.22h-1.48ZM609.58 190h1.48v-28.99h-1.48ZM611.64 190h1.48v-61.59h-1.48ZM613.69 190h1.48v-15.22h-1.48ZM615.75 190h1.48v-78.99h-1.48ZM617.80 190h1.48v-18.84h-1.48ZM619.86 190h1.48v-48.55h-1.48ZM621.91 190h1.48v-20.29h-1.48ZM623.97 190h1.48v-15.94h-1.48ZM626.02 190h1.48v-9.42h-1.48ZM628.08 190h1.48v-20.29h-1.48ZM630.13 190h1.48v-19.57h-1.48ZM632.19 190h1.48v-9.42h-1.48ZM634.24 190h1.48v-36.23h-1.48ZM636.30 190h1.48v-7.97h-1.48ZM638.35 190h1.48v-28.26h-1.48ZM640.41 190h1.48v-36.96h-1.48ZM642.46 190h1.48v-26.81h-1.48ZM644.52 190h1.48v-16.67h-1.48ZM646.57 190h1.48v-4.35h-1.48ZM648.62 190h1.48v-3.62h-1.48ZM650.68 190h1.48v-7.25h-1.48ZM652.73 190h1.48v-4.35h-1.48ZM654.79 190h1.48v-9.42h-1.48ZM656.84 190h1.48v-15.94h-1.48ZM658.90 190h1.48v-1.45h-1.48ZM663.01 190h1.48v-15.94h-1.48ZM665.06 190h1.48v-10.87h-1.48ZM667.12 190h1.48v-2.90h-1.48ZM669.17 190h1.48v-8.70h-1.48ZM671.23 190h1.48v-72.46h-1.48ZM673.28 190h1.48v-13.04h-1.48ZM675.34 190h1.48v-5.80h-1.48ZM677.39 190h1.48v-2.17h-1.48ZM681.50 190h1.48v-10.14h-1.48ZM683.55 190h1.48v-13.77h-1.48ZM685.61 190h1.48v-13.77h-1.48ZM687.66 190h1.48v-4.35h-1.48ZM689.72 190h1.48v-6.52h-1.48ZM691.77 190h1.48v-8.70h-1.48ZM693.83 190h1.48v-21.01h-1.48ZM695.88 190h1.48v-63.04h-1.48ZM697.94 190h1.48v-15.94h-1.48ZM699.99 190h1.48v-15.22h-1.48ZM702.05 190h1.48v-3.62h-1.48ZM704.10 190h1.48v-6.52h-1.48ZM706.16 190h1.48v-13.77h-1.48ZM708.21 190h1.48v-52.90h-1.48ZM710.27 190h1.48v-15.22h-1.48ZM712.32 190h1.48v-18.12h-1.48ZM714.38 190h1.48v-18.12h-1.48ZM716.43 190h1.48v-53.62h-1.48ZM718.49 190h1.48v-30.43h-1.48ZM720.54 190h1.48v-34.06h-1.48ZM722.60 190h1.48v-13.77h-1.48ZM726.71 190h1.48v-44.20h-1.48ZM728.76 190h1.48v-32.61h-1.48ZM730.82 190h1.48v-36.23h-1.48ZM732.87 190h1.48v-34.78h-1.48ZM734.93 190h1.48v-26.81h-1.48ZM736.98 190h1.48v-33.33h-1.48ZM739.04 190h1.48v-32.61h-1.48ZM741.09 190h1.48v-6.52h-1.48ZM743.15 190h1.48v-10.87h-1.48ZM747.26 190h1.48v-10.87h-1.48ZM749.31 190h1.48v-9.42h-1.48ZM751.37 190h1.48v-14.49h-1.48ZM753.42 190h1.48v-26.09h-1.48ZM755.48 190h1.48v-7.97h-1.48ZM757.53 190h1.48v-21.74h-1.48ZM759.59 190h1.48v-8.70h-1.48ZM761.64 190h1.48v-1.45h-1.48ZM763.70 190h1.48v-43.48h-1.48ZM765.75 190h1.48v-29.71h-1.48ZM767.81 190h1.48v-14.49h-1.48ZM769.86 190h1.48v-86.23h-1.48ZM771.92 190h1.48v-61.59h-1.48ZM773.97 190h1.48v-14.49h-1.48Z"/>
+
+    <!-- sweep cursor: perpetual left-to-right shimmer over the year -->
+    <rect x="0" y="90" width="70" height="100" fill="url(#sweepGrad)" opacity="0.65">
+      <animateTransform attributeName="transform" type="translate" from="-70 0" to="800 0" dur="13s" repeatCount="indefinite"/>
+    </rect>
   </g>
+
+  <!-- year axis and commits scalar (pinned beneath the year it represents) -->
+  <text x="24" y="204" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" letter-spacing="0.6">2025-05-26</text>
+  <text x="776" y="204" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end" letter-spacing="0.6">2026-05-26</text>
+  <text x="400" y="204" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="9" fill="#7d8590" text-anchor="middle" letter-spacing="1.4">COMMITS · 1 YEAR</text>
+  <text x="400" y="220" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#3fb950" text-anchor="middle" font-weight="700">4053</text>
+
+  <!-- ============ SECTION 2 · LANGUAGE DISTRIBUTION ============ -->
+  <!-- horizontal stacked bar: segment widths are proportional to lines-of-code per language -->
+  <text x="24" y="240" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#7d8590" letter-spacing="1.4">LANGUAGE MIX BY LOC · ALL TIME · TOP 8 SHOWN OF</text>
+  <text x="373" y="240" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#58a6ff" font-weight="700" letter-spacing="1.4">13</text>
+
+  <!-- TypeScript 2975 · width 451.4 -->
+  <rect x="24" y="248" width="451.40" height="26" fill="#3178c6" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="7s" repeatCount="indefinite"/>
+  </rect>
+  <text x="32" y="265" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0d1117" font-weight="700" letter-spacing="0.3">TypeScript</text>
+
+  <!-- Python 1022 · width 155.1 -->
+  <rect x="475.40" y="248" width="155.09" height="26" fill="#4b8bbe" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="8s" begin="0.4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="483.40" y="265" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0d1117" font-weight="700" letter-spacing="0.3">Python</text>
+
+  <!-- Go 366 · width 55.5 -->
+  <rect x="630.49" y="248" width="55.53" height="26" fill="#00add8" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="9s" begin="0.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="638.49" y="265" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#0d1117" font-weight="700" letter-spacing="0.3">Go</text>
+
+  <!-- Shell 254 · width 38.5 -->
+  <rect x="686.02" y="248" width="38.54" height="26" fill="#89e051" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="10s" begin="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- CoffeeScript 109 · width 16.5 -->
+  <rect x="724.56" y="248" width="16.54" height="26" fill="#a37c5b" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="11s" begin="1.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- HTML 73 · width 11.1 -->
+  <rect x="741.10" y="248" width="11.07" height="26" fill="#e34c26" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="7s" begin="2.0s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- JavaScript 64 · width 9.7 -->
+  <rect x="752.17" y="248" width="9.71" height="26" fill="#f1e05a" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="8s" begin="2.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- CSS 15 · width 2.3 -->
+  <rect x="761.88" y="248" width="2.28" height="26" fill="#a371f7" opacity="0.92">
+    <animate attributeName="opacity" values="0.92;1;0.82;0.92" dur="9s" begin="2.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============ SECTION 3 · METRICS ============ -->
+  <!-- Days Active gauge -->
+  <g transform="translate(60 308)">
+    <circle r="22" fill="none" stroke="#21262d" stroke-width="5"/>
+    <circle r="22" fill="none" stroke="#3fb950" stroke-width="5"
+      stroke-dasharray="133.62 138.23" stroke-dashoffset="0"
+      stroke-linecap="round" transform="rotate(-90)">
+      <animate attributeName="stroke-opacity" values="1;0.55;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="60" y="313" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">29</text>
+  <text x="94" y="303" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="600" letter-spacing="0.4">DAYS ACTIVE</text>
+  <text x="94" y="318" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#7d8590" letter-spacing="0.4">of a possible 30 · past 30 days</text>
+
+  <!-- Longest Streak: value + horizontal scale showing 82/365 of the year -->
+  <text x="300" y="298" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="600" letter-spacing="0.4">LONGEST STREAK</text>
+  <text x="500" y="298" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" fill="#ff9500" text-anchor="end" font-weight="700">82</text>
+  <text x="500" y="314" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#7d8590" text-anchor="end" letter-spacing="0.4">days · past 1 year</text>
+  <rect x="300" y="325" width="200" height="4" rx="2" fill="#21262d"/>
+  <rect x="300" y="325" width="44.93" height="4" rx="2" fill="#ff9500">
+    <animate attributeName="opacity" values="1;0.55;1" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Issues Closed -->
+  <text x="540" y="298" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="600" letter-spacing="0.4">MY ISSUES CLOSED</text>
+  <text x="770" y="298" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" fill="#d2a8ff" text-anchor="end" font-weight="700">1</text>
+  <text x="770" y="314" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="10" fill="#7d8590" text-anchor="end" letter-spacing="0.4">past 30 days</text>
+  <circle cx="758" cy="308" r="6" fill="none" stroke="#d2a8ff" stroke-width="1" opacity="0.7">
+    <animate attributeName="r" values="6;14;6" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite"/>
+  </circle>
 </svg>
