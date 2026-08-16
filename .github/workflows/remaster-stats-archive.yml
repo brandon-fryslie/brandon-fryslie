@@ -16,7 +16,9 @@ name: Remaster Stats Archive
 #
 # Re-running is how you make progress: a remastered slot stops being a candidate, so each
 # run picks up where the last one stopped and a failed card is simply retried by the next
-# run. There are 136 deterministic cards; at limit=8 that is 17 runs.
+# run. `limit` is how many cards one dispatch attempts; `max-parallel` below is how many
+# of them run at once. Sizing a dispatch is a question of how long you want to leave it
+# unattended and how much agent work you want in flight — not of correctness.
 #
 # Why the remaster jobs may run concurrently: each one stages exactly the two files of its
 # own slot — `archive` reports them, nothing globs for them — and no two slots share a
@@ -77,11 +79,13 @@ jobs:
       id-token: write
     strategy:
       fail-fast: false    # one card that won't come together must not cancel the rest
-      # Four at a time. Each job is a full agent invocation — ~20-30 minutes — so serial
+      # Eight at a time. Each job is a full agent invocation — ~20-30 minutes — so serial
       # execution put a limit=8 run over three hours; the ceiling here is how much
       # concurrent agent work to spend at once, not correctness, because the jobs write
-      # disjoint paths (see the header).
-      max-parallel: 4
+      # disjoint paths (see the header). Contention is expected and harmless at this
+      # width: in the 4-wide validation run two jobs finished 12s apart, both had their
+      # first push rejected, and both rebased onto the other and landed on attempt 2.
+      max-parallel: 8
       matrix:
         stamp: ${{ fromJSON(needs.select.outputs.stamps) }}
     env:
