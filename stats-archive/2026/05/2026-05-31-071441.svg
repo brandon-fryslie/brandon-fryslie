@@ -1,20 +1,214 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 31, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="scan" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="prs-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#58a6ff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="chart-clip">
+      <rect x="24" y="76" width="752" height="108"/>
+    </clipPath>
+    <clipPath id="stack-clip">
+      <rect x="281" y="244" width="237" height="18" rx="3"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="340" rx="10" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="339" rx="9.5" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="24" y="30" font-size="14" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="776" y="30" font-size="11" fill="#7d8590" text-anchor="end">May 31, 2026 &#183; brandon-fryslie</text>
+  <line x1="24" y1="44" x2="776" y2="44" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Bar chart title -->
+  <text x="24" y="62" font-size="11" fill="#7d8590">Contributions per month &#183; past 12 months</text>
+  <text x="776" y="62" font-size="11" fill="#7d8590" text-anchor="end">5,420 total</text>
+
+  <!-- Bar chart baseline -->
+  <line x1="24" y1="182.5" x2="776" y2="182.5" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Bars: 12 monthly totals. Height = val/1408 * 104, min 2. Baseline y=182. -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">176</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">19</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">689</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
+    <!-- Jun 2025: 28 -->
+    <rect x="35.33" y="180.0" width="40" height="2.5" rx="1.5" fill="#0e4429">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Jul 2025: 9 -->
+    <rect x="98" y="180.5" width="40" height="2" rx="1.5" fill="#0e4429">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Aug 2025: 27 -->
+    <rect x="160.67" y="180.0" width="40" height="2.5" rx="1.5" fill="#0e4429">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Sep 2025: 1 -->
+    <rect x="223.33" y="180.5" width="40" height="2" rx="1.5" fill="#0e4429">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Oct 2025: 11 -->
+    <rect x="286" y="180.5" width="40" height="2" rx="1.5" fill="#0e4429">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Nov 2025: 85 -->
+    <rect x="348.67" y="175.72" width="40" height="6.78" rx="1.5" fill="#006d32">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="3.0s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Dec 2025: 120 -->
+    <rect x="411.33" y="173.14" width="40" height="9.36" rx="1.5" fill="#006d32">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Jan 2026: 836 -->
+    <rect x="474" y="120.25" width="40" height="62.25" rx="1.5" fill="#26a641">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="4.2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Feb 2026: 1398 -->
+    <rect x="536.67" y="78.74" width="40" height="103.76" rx="1.5" fill="#39d353">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="4.8s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Mar 2026: 1408 (peak) -->
+    <rect x="599.33" y="78" width="40" height="104.5" rx="1.5" fill="#39d353">
+      <animate attributeName="fill-opacity" values="0.9;1;0.9" dur="7s" begin="5.4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Apr 2026: 602 -->
+    <rect x="662" y="137.53" width="40" height="44.97" rx="1.5" fill="#26a641">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="6.0s" repeatCount="indefinite"/>
+    </rect>
+    <!-- May 2026: 895 -->
+    <rect x="724.67" y="115.89" width="40" height="66.61" rx="1.5" fill="#26a641">
+      <animate attributeName="fill-opacity" values="0.85;1;0.85" dur="7s" begin="6.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Scanline sweep across bar chart -->
+  <g clip-path="url(#chart-clip)">
+    <rect x="-80" y="76" width="80" height="108" fill="url(#scan)">
+      <animate attributeName="x" from="-80" to="800" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Month labels under bars -->
+  <g font-size="9" fill="#6e7681" text-anchor="middle">
+    <text x="55.33" y="196">Jun</text>
+    <text x="118" y="196">Jul</text>
+    <text x="180.67" y="196">Aug</text>
+    <text x="243.33" y="196">Sep</text>
+    <text x="306" y="196">Oct</text>
+    <text x="368.67" y="196">Nov</text>
+    <text x="431.33" y="196">Dec</text>
+    <text x="494" y="196">Jan</text>
+    <text x="556.67" y="196">Feb</text>
+    <text x="619.33" y="196">Mar</text>
+    <text x="682" y="196">Apr</text>
+    <text x="744.67" y="196">May</text>
+  </g>
+
+  <!-- Divider between chart and metrics -->
+  <line x1="24" y1="210" x2="776" y2="210" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- METRIC CELLS  y range 214..340                                -->
+  <!-- ============================================================ -->
+
+  <!-- ================= Cell 1: Days Active gauge ================= -->
+  <!-- Vertical divider between cells -->
+  <line x1="271" y1="218" x2="271" y2="332" stroke="#21262d" stroke-width="1"/>
+
+  <g>
+    <!-- outer thin ring -->
+    <circle cx="142" cy="268" r="42" fill="none" stroke="#161b22" stroke-width="1"/>
+    <!-- inner track (grey) -->
+    <circle cx="142" cy="268" r="32" fill="none" stroke="#21262d" stroke-width="8"/>
+    <!-- filled arc 29/30 = 348 degrees, cw from top -->
+    <path d="M 142 236 A 32 32 0 1 1 138.66 236.18" fill="none" stroke="#3fb950" stroke-width="8" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="7.2;9;7.2" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <!-- rotating tracker dot on outer ring -->
+    <circle cx="142" cy="226" r="2.5" fill="#3fb950">
+      <animateTransform attributeName="transform" type="rotate" from="0 142 268" to="360 142 268" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <!-- gauge value: 29 -->
+    <text x="142" y="278" font-size="28" font-weight="700" fill="#e6edf3" text-anchor="middle">29</text>
+    <!-- of 30 sub -->
+    <text x="142" y="294" font-size="10" fill="#7d8590" text-anchor="middle">of 30</text>
+    <!-- label -->
+    <text x="142" y="314" font-size="12" fill="#8b949e" text-anchor="middle">Days Active</text>
+    <!-- period -->
+    <text x="142" y="328" font-size="9" fill="#6e7681" text-anchor="middle">30 Days</text>
+  </g>
+
+  <!-- ================= Cell 2: Active Repos stacked bar ================= -->
+  <line x1="528" y1="218" x2="528" y2="332" stroke="#21262d" stroke-width="1"/>
+
+  <g>
+    <!-- header: label left, value right -->
+    <text x="281" y="232" font-size="12" fill="#8b949e" font-weight="500">Active Repos</text>
+    <text x="518" y="234" font-size="22" font-weight="700" fill="#e6edf3" text-anchor="end">53</text>
+
+    <!-- stacked bar (top-6 repos by commit count, total 2964) -->
+    <!-- widths: 131.85, 35.10, 22.63, 18.15, 15.03, 14.24 -->
+    <g clip-path="url(#stack-clip)">
+      <rect x="281" y="244" width="237" height="18" fill="#21262d"/>
+      <rect x="281"    y="244" width="131.85" height="18" fill="#58a6ff"/>
+      <rect x="412.85" y="244" width="35.10"  height="18" fill="#7ee787"/>
+      <rect x="447.95" y="244" width="22.63"  height="18" fill="#d29922"/>
+      <rect x="470.58" y="244" width="18.15"  height="18" fill="#a371f7"/>
+      <rect x="488.73" y="244" width="15.03"  height="18" fill="#f97583"/>
+      <rect x="503.77" y="244" width="14.23"  height="18" fill="#79c0ff"/>
+      <!-- shimmer highlight sweeping across the bar -->
+      <rect x="281" y="244" width="34" height="18" fill="url(#shimmer)">
+        <animate attributeName="x" from="247" to="518" dur="11s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- legend rows: top 3 named + count, spacing 14 -->
+    <circle cx="285" cy="277" r="3.5" fill="#58a6ff"/>
+    <text x="293" y="280" font-size="10" fill="#c9d1d9">oscilla-animator-v2</text>
+    <text x="518" y="280" font-size="10" fill="#c9d1d9" text-anchor="end">1,649</text>
+
+    <circle cx="285" cy="291" r="3.5" fill="#7ee787"/>
+    <text x="293" y="294" font-size="10" fill="#c9d1d9">cc-dump</text>
+    <text x="518" y="294" font-size="10" fill="#c9d1d9" text-anchor="end">439</text>
+
+    <circle cx="285" cy="305" r="3.5" fill="#d29922"/>
+    <text x="293" y="308" font-size="10" fill="#c9d1d9">dotfiles</text>
+    <text x="518" y="308" font-size="10" fill="#c9d1d9" text-anchor="end">283</text>
+
+    <text x="281" y="326" font-size="9" fill="#6e7681">+3 more repos</text>
+    <text x="518" y="326" font-size="9" fill="#6e7681" text-anchor="end">1 Year &#183; commits by repo</text>
+  </g>
+
+  <!-- ================= Cell 3: PRs Merged scalar ================= -->
+  <g>
+    <!-- soft radial glow behind the number -->
+    <ellipse cx="657" cy="272" rx="86" ry="34" fill="url(#prs-glow)">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- big value -->
+    <text x="657" y="282" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">725</text>
+    <!-- animated accent underline: two segments oscillating outward from center -->
+    <line x1="657" y1="296" x2="617" y2="296" stroke="#58a6ff" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="x2" values="647;597;647" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.95;0.5" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <line x1="657" y1="296" x2="697" y2="296" stroke="#58a6ff" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="x2" values="667;717;667" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.95;0.5" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <!-- label -->
+    <text x="657" y="313" font-size="12" fill="#8b949e" text-anchor="middle">PRs Merged</text>
+    <!-- period -->
+    <text x="657" y="328" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
   </g>
 </svg>
