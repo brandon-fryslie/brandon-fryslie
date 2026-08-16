@@ -190,7 +190,7 @@ Code Reviews 29 (1 Year) · Active Repos 15 (30 Days) · PRs Merged 1957 (All Ti
 
 <img src="./stats-archive/2026/08/2026-08-01-065019.svg" width="960" alt="Live GitHub stats card for August 1, 2026">
 
-Active Repos 7 (7 Days) · Languages 7 (1 Year) · PRs Merged 1916 (All Time) · Days Active 96 (1 Year)
+Active Repos 17 (30 Days) · Days Active 250/365 (1 Year) · PRs Merged 1916 (All Time)
 
 ---
 
