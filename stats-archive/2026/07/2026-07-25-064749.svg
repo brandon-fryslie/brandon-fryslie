@@ -1,20 +1,193 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated July 25, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1860</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">20</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">6</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">179</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-  </g>
+<svg width="800" height="412" viewBox="0 0 800 412" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs>
+  <clipPath id="chartSweep"><rect x="-60" y="94" width="70" height="90"><animate attributeName="x" from="-70" to="800" dur="13s" repeatCount="indefinite"/></rect></clipPath>
+  <linearGradient id="g_bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ee787"/><stop offset="0.55" stop-color="#39d353"/><stop offset="1" stop-color="#26a641"/></linearGradient>
+  <linearGradient id="g_ts"     x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3178c6"/><stop offset="1" stop-color="#245e9c"/></linearGradient>
+  <linearGradient id="g_py"     x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3776ab"/><stop offset="1" stop-color="#295a82"/></linearGradient>
+  <linearGradient id="g_go"     x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00add8"/><stop offset="1" stop-color="#0088aa"/></linearGradient>
+  <linearGradient id="g_js"     x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1c40f"/><stop offset="1" stop-color="#c69e0a"/></linearGradient>
+  <linearGradient id="g_html"   x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e34c26"/><stop offset="1" stop-color="#b83c1c"/></linearGradient>
+  <linearGradient id="g_r0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f78166"/><stop offset="1" stop-color="#c6634d"/></linearGradient>
+  <linearGradient id="g_r1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#db6d28"/><stop offset="1" stop-color="#a9531c"/></linearGradient>
+  <linearGradient id="g_r2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bb8009"/><stop offset="1" stop-color="#8f6106"/></linearGradient>
+  <linearGradient id="g_r3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c72ff"/><stop offset="1" stop-color="#5b52d6"/></linearGradient>
+  <linearGradient id="g_r4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cf222e"/><stop offset="1" stop-color="#9d1922"/></linearGradient>
+  <linearGradient id="g_r5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e65a99"/><stop offset="1" stop-color="#b74378"/></linearGradient>
+  <linearGradient id="g_gauge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39d353"/><stop offset="1" stop-color="#7ee787"/></linearGradient>
+</defs>
+
+<rect x="0" y="0" width="800" height="412" rx="10" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="411" rx="10" fill="none" stroke="#21262d" stroke-width="1"/>
+
+<!-- Header -->
+<text x="20" y="30" font-size="15" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+<circle cx="150" cy="25" r="3.5" fill="#39d353"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.6s" repeatCount="indefinite"/></circle>
+<text x="780" y="30" font-size="12" fill="#8b949e" text-anchor="end">July 25, 2026</text>
+<line x1="20" y1="44" x2="780" y2="44" stroke="#21262d" stroke-width="1"/>
+
+<!-- BAND 1: monthly contributions bar chart -->
+<text x="20" y="64" font-size="11" font-weight="600" fill="#8b949e" letter-spacing="0.6">CONTRIBUTIONS <tspan fill="#6e7681" font-weight="400">· past 12 months</tspan></text>
+<text x="780" y="64" font-size="10" fill="#6e7681" text-anchor="end">peak 213/day · Jun was biggest month</text>
+<line x1="20" y1="180" x2="780" y2="180" stroke="#21262d" stroke-width="1"/>
+
+<!-- Base bars: heights = monthlyTotal / 2014 * 80, baseline y=180 -->
+<g>
+  <rect x="28"  y="178.50" width="48" height="1.50"  rx="1.5" fill="url(#g_bar)"/>
+  <rect x="86"  y="178.50" width="48" height="1.50"  rx="1.5" fill="url(#g_bar)"/>
+  <rect x="144" y="178.50" width="48" height="1.50"  rx="1.5" fill="url(#g_bar)"/>
+  <rect x="202" y="178.50" width="48" height="1.50"  rx="1.5" fill="url(#g_bar)"/>
+  <rect x="260" y="176.90" width="48" height="3.10"  rx="1.5" fill="url(#g_bar)"/>
+  <rect x="318" y="163.60" width="48" height="16.40" rx="2" fill="url(#g_bar)"/>
+  <rect x="376" y="127.17" width="48" height="52.83" rx="2" fill="url(#g_bar)"/>
+  <rect x="434" y="126.46" width="48" height="53.54" rx="2" fill="url(#g_bar)"/>
+  <rect x="492" y="144.61" width="48" height="35.39" rx="2" fill="url(#g_bar)"/>
+  <rect x="550" y="149.81" width="48" height="30.19" rx="2" fill="url(#g_bar)"/>
+  <rect x="608" y="133.84" width="48" height="46.16" rx="2" fill="url(#g_bar)"/>
+  <rect x="666" y="100.00" width="48" height="80.00" rx="2" fill="url(#g_bar)"/>
+  <rect x="724" y="163.39" width="48" height="16.61" rx="2" fill="url(#g_bar)"/>
+</g>
+<!-- Sweep highlight: brighter overlay of same bars, clipped to moving vertical band -->
+<g clip-path="url(#chartSweep)" opacity="0.7">
+  <rect x="28"  y="178.50" width="48" height="1.50"  rx="1.5" fill="#ffffff" opacity="0.4"/>
+  <rect x="86"  y="178.50" width="48" height="1.50"  rx="1.5" fill="#ffffff" opacity="0.4"/>
+  <rect x="144" y="178.50" width="48" height="1.50"  rx="1.5" fill="#ffffff" opacity="0.4"/>
+  <rect x="202" y="178.50" width="48" height="1.50"  rx="1.5" fill="#ffffff" opacity="0.4"/>
+  <rect x="260" y="176.90" width="48" height="3.10"  rx="1.5" fill="#ffffff" opacity="0.4"/>
+  <rect x="318" y="163.60" width="48" height="16.40" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="376" y="127.17" width="48" height="52.83" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="434" y="126.46" width="48" height="53.54" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="492" y="144.61" width="48" height="35.39" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="550" y="149.81" width="48" height="30.19" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="608" y="133.84" width="48" height="46.16" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="666" y="100.00" width="48" height="80.00" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="724" y="163.39" width="48" height="16.61" rx="2" fill="#ffffff" opacity="0.4"/>
+</g>
+
+<!-- Value labels on tall bars (>= ~15% of max) -->
+<text x="342" y="159" font-size="9" fill="#c9d1d9" text-anchor="middle">413</text>
+<text x="400" y="123" font-size="9" fill="#c9d1d9" text-anchor="middle">1,330</text>
+<text x="458" y="122" font-size="9" fill="#c9d1d9" text-anchor="middle">1,348</text>
+<text x="516" y="141" font-size="9" fill="#c9d1d9" text-anchor="middle">891</text>
+<text x="574" y="146" font-size="9" fill="#c9d1d9" text-anchor="middle">760</text>
+<text x="632" y="130" font-size="9" fill="#c9d1d9" text-anchor="middle">1,162</text>
+<text x="690" y="96"  font-size="10" font-weight="700" fill="#f0f6fc" text-anchor="middle">2,014</text>
+<text x="748" y="159" font-size="9" fill="#c9d1d9" text-anchor="middle">418</text>
+
+<!-- Month labels below baseline -->
+<text x="52"  y="194" font-size="9" fill="#8b949e" text-anchor="middle">Jul</text>
+<text x="110" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Aug</text>
+<text x="168" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Sep</text>
+<text x="226" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Oct</text>
+<text x="284" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Nov</text>
+<text x="342" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Dec</text>
+<text x="400" y="194" font-size="9" fill="#c9d1d9" text-anchor="middle" font-weight="600">Jan</text>
+<text x="458" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Feb</text>
+<text x="516" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Mar</text>
+<text x="574" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Apr</text>
+<text x="632" y="194" font-size="9" fill="#8b949e" text-anchor="middle">May</text>
+<text x="690" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Jun</text>
+<text x="748" y="194" font-size="9" fill="#8b949e" text-anchor="middle">Jul</text>
+<!-- Year ticks -->
+<text x="52"  y="205" font-size="8" fill="#6e7681" text-anchor="middle">2025</text>
+<text x="400" y="205" font-size="8" fill="#6e7681" text-anchor="middle">2026</text>
+
+<!-- BAND 2: languages stacked bar -->
+<text x="20" y="222" font-size="11" font-weight="600" fill="#8b949e" letter-spacing="0.6">LANGUAGES</text>
+<text x="680" y="222" font-size="11" font-weight="700" fill="#e6edf3" text-anchor="end">5</text>
+<text x="686" y="222" font-size="10" fill="#6e7681">distinct</text>
+<text x="780" y="222" font-size="10" fill="#6e7681" text-anchor="end">past 30 days</text>
+
+<!-- Bar: y=228, h=24; widths TS 593, Py 85, Go 66, JS 9, HTML 7 -->
+<g>
+  <path d="M24,228 h589 v24 h-589 a4,4 0 0 1 -4,-4 v-16 a4,4 0 0 1 4,-4 z" fill="url(#g_ts)"/>
+  <rect x="613" y="228" width="85" height="24" fill="url(#g_py)"/>
+  <rect x="698" y="228" width="66" height="24" fill="url(#g_go)"/>
+  <rect x="764" y="228" width="9"  height="24" fill="url(#g_js)"/>
+  <path d="M773,228 h3 a4,4 0 0 1 4,4 v16 a4,4 0 0 1 -4,4 h-3 z" fill="url(#g_html)"/>
+</g>
+<!-- Shimmer overlays per segment -->
+<rect x="20"  y="228" width="593" height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.12;0" dur="7s"  begin="0s"   repeatCount="indefinite"/></rect>
+<rect x="613" y="228" width="85"  height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.12;0" dur="9s"  begin="1.2s" repeatCount="indefinite"/></rect>
+<rect x="698" y="228" width="66"  height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.12;0" dur="11s" begin="2.4s" repeatCount="indefinite"/></rect>
+<rect x="764" y="228" width="9"   height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.14;0" dur="7s"  begin="3.6s" repeatCount="indefinite"/></rect>
+<rect x="773" y="228" width="7"   height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.14;0" dur="7s"  begin="4.8s" repeatCount="indefinite"/></rect>
+
+<!-- In-bar labels (only for segments wide enough) -->
+<text x="316" y="244" font-size="10" fill="#ffffff" font-weight="600" text-anchor="middle">TypeScript <tspan opacity="0.8">244</tspan></text>
+<text x="655" y="244" font-size="10" fill="#ffffff" font-weight="600" text-anchor="middle">Python <tspan opacity="0.8">35</tspan></text>
+<text x="731" y="244" font-size="10" fill="#ffffff" font-weight="600" text-anchor="middle">Go <tspan opacity="0.8">27</tspan></text>
+<!-- Tiny JS/HTML tail: visible slivers, no label (too narrow) -->
+
+<!-- BAND 3: active repos stacked bar -->
+<text x="20" y="270" font-size="11" font-weight="600" fill="#8b949e" letter-spacing="0.6">ACTIVE REPOS</text>
+<text x="680" y="270" font-size="11" font-weight="700" fill="#e6edf3" text-anchor="end">7</text>
+<text x="686" y="270" font-size="10" fill="#6e7681">distinct</text>
+<text x="780" y="270" font-size="10" fill="#6e7681" text-anchor="end">past 7 days</text>
+
+<!-- Bar: y=276, h=24; widths tmux 285, dotfiles 133, laws 114, links 114, cc 95, crowd 19 -->
+<g>
+  <path d="M24,276 h281 v24 h-281 a4,4 0 0 1 -4,-4 v-16 a4,4 0 0 1 4,-4 z" fill="url(#g_r0)"/>
+  <rect x="305" y="276" width="133" height="24" fill="url(#g_r1)"/>
+  <rect x="438" y="276" width="114" height="24" fill="url(#g_r2)"/>
+  <rect x="552" y="276" width="114" height="24" fill="url(#g_r3)"/>
+  <rect x="666" y="276" width="95"  height="24" fill="url(#g_r4)"/>
+  <path d="M761,276 h15 a4,4 0 0 1 4,4 v16 a4,4 0 0 1 -4,4 h-15 z" fill="url(#g_r5)"/>
+</g>
+<!-- Shimmer overlays per segment -->
+<rect x="20"  y="276" width="285" height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.10;0" dur="11s" begin="0.5s" repeatCount="indefinite"/></rect>
+<rect x="305" y="276" width="133" height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.10;0" dur="13s" begin="1.7s" repeatCount="indefinite"/></rect>
+<rect x="438" y="276" width="114" height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.10;0" dur="11s" begin="2.9s" repeatCount="indefinite"/></rect>
+<rect x="552" y="276" width="114" height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.10;0" dur="9s"  begin="4.1s" repeatCount="indefinite"/></rect>
+<rect x="666" y="276" width="95"  height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.10;0" dur="13s" begin="5.3s" repeatCount="indefinite"/></rect>
+<rect x="761" y="276" width="19"  height="24" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.14;0" dur="7s"  begin="6.5s" repeatCount="indefinite"/></rect>
+
+<!-- In-bar labels for wide-enough segments -->
+<text x="162" y="292" font-size="10" fill="#ffffff" font-weight="600" text-anchor="middle">tmux-control-mode-js <tspan opacity="0.85">15</tspan></text>
+<text x="371" y="292" font-size="10" fill="#ffffff" font-weight="600" text-anchor="middle">dotfiles <tspan opacity="0.85">7</tspan></text>
+<text x="495" y="292" font-size="10" fill="#ffffff" font-weight="600" text-anchor="middle">laws <tspan opacity="0.85">6</tspan></text>
+<text x="713" y="292" font-size="10" fill="#ffffff" font-weight="600" text-anchor="middle">cc-candybar <tspan opacity="0.85">5</tspan></text>
+
+<!-- Callouts for the two segments that don't fit in-bar -->
+<circle cx="556" cy="311" r="3" fill="#7c72ff"/>
+<text x="562" y="314" font-size="9" fill="#8b949e">links-issue-tracker <tspan fill="#c9d1d9">6</tspan></text>
+<circle cx="683" cy="311" r="3" fill="#e65a99"/>
+<text x="689" y="314" font-size="9" fill="#8b949e">crowdshipai-web <tspan fill="#c9d1d9">1</tspan></text>
+
+<!-- BAND 4: scalar tiles -->
+<line x1="210" y1="326" x2="210" y2="402" stroke="#21262d" stroke-width="1" opacity="0.55"/>
+<line x1="400" y1="326" x2="400" y2="402" stroke="#21262d" stroke-width="1" opacity="0.55"/>
+<line x1="590" y1="326" x2="590" y2="402" stroke="#21262d" stroke-width="1" opacity="0.55"/>
+
+<!-- Tile 1: My Issues Closed = 69 (past year) -->
+<text x="115" y="336" font-size="9" font-weight="600" fill="#8b949e" letter-spacing="0.8" text-anchor="middle">MY ISSUES CLOSED</text>
+<text x="115" y="374" font-size="30" font-weight="800" fill="#f0f6fc" text-anchor="middle">69</text>
+<text x="115" y="395" font-size="10" fill="#6e7681" text-anchor="middle">past year</text>
+
+<!-- Tile 2: Longest Streak = 82 (past year) -->
+<text x="305" y="336" font-size="9" font-weight="600" fill="#8b949e" letter-spacing="0.8" text-anchor="middle">LONGEST STREAK</text>
+<text x="299" y="374" font-size="30" font-weight="800" fill="#f0f6fc" text-anchor="end">82</text>
+<text x="306" y="374" font-size="12" fill="#8b949e">days</text>
+<text x="305" y="395" font-size="10" fill="#6e7681" text-anchor="middle">past year</text>
+
+<!-- Tile 3: PRs Merged = 289 (past 30 days) -->
+<text x="495" y="336" font-size="9" font-weight="600" fill="#8b949e" letter-spacing="0.8" text-anchor="middle">PRS MERGED</text>
+<text x="495" y="374" font-size="30" font-weight="800" fill="#f0f6fc" text-anchor="middle">289</text>
+<text x="495" y="395" font-size="10" fill="#6e7681" text-anchor="middle">past 30 days</text>
+
+<!-- Tile 4: Days Active = 22 / 30 (past 30 days) with a proportional fill bar -->
+<text x="685" y="336" font-size="9" font-weight="600" fill="#8b949e" letter-spacing="0.8" text-anchor="middle">DAYS ACTIVE</text>
+<text x="679" y="374" font-size="30" font-weight="800" fill="#f0f6fc" text-anchor="end">22</text>
+<text x="686" y="374" font-size="12" fill="#8b949e">/ 30</text>
+<!-- Proportional gauge bar under the value: 22/30 filled -->
+<rect x="653" y="381" width="64" height="4" rx="2" fill="#1c2430"/>
+<rect x="653" y="381" width="46.93" height="4" rx="2" fill="url(#g_gauge)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+</rect>
+<!-- A little flowing dot travels along the filled portion -->
+<circle cx="653" cy="383" r="2.5" fill="#ffffff" opacity="0.85">
+  <animate attributeName="cx" values="653;700;653" dur="11s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.2;0.9;0.2" dur="11s" repeatCount="indefinite"/>
+</circle>
+<text x="685" y="395" font-size="10" fill="#6e7681" text-anchor="middle">past 30 days</text>
+
 </svg>
