@@ -3,7 +3,16 @@
 Generate the daily GitHub stats data + a fallback stats card.
 
 Picks 4 metrics (from 7) with varying time periods each day (seeded by the date) and
-queries GitHub for their exact values. It then writes two things:
+queries GitHub for their exact values as of one instant. That instant is `--as-of`,
+defaulting to now; every window below is a closed range ending there, and the metric
+selection is seeded off its date, so the whole program is a pure function of it. Passing
+a past instant reconstructs that day — which is how `remaster-stats-card.py` redraws the
+archive's deterministic-era cards. The one caveat is not fixable here: GitHub's commit
+and PR search index lags by minutes, so a reconstruction of a past morning returns
+slightly more than that morning's own run saw. It is the more accurate reading of the
+two, not the more faithful one.
+
+It then writes two things:
 
   * assets/daily-stats.json — the *data seam*: the four exact values, labels, and
     periods. This is the source of truth the doodle job's Claude reads to author a
@@ -206,18 +215,34 @@ def _iso(dt):
     return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def cutoff_iso(period):
-    """ISO date string for period start, or None for 'all'."""
-    days = PERIOD_DAYS[period]
-    if days is None:
-        return None
-    return _iso(datetime.now(timezone.utc) - timedelta(days=days))
+# The daily workflow's cron. A bare `--as-of YYYY-MM-DD` resolves here rather than to
+# midnight, because the instant a card describes is the instant its run started — and
+# every run of this pipeline starts at 06:00 UTC.
+RUN_HOUR_UTC = 6
 
 
-def date_qualifier(period, field="committer-date"):
-    """Search query fragment like '+committer-date:>2024-...' or empty."""
-    since = cutoff_iso(period)
-    return f"+{field}:>{since}" if since else ""
+def parse_as_of(raw):
+    """Parse the as-of instant, or exit. Accepts a bare date (resolved to that day's
+    06:00 UTC run) or a full ISO instant, and returns a tz-aware UTC datetime whose
+    existence is itself the proof that the window is well-formed — nothing downstream
+    re-checks it. [LAW:parse-dont-validate]
+
+    A future instant is rejected here rather than absorbed: every query below is a
+    closed range ending at as_of, so a future bound would silently report present-day
+    numbers under a future date's name. [LAW:no-silent-failure]"""
+    text = raw.strip().replace("Z", "+00:00")
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError:
+        sys.exit(f"ERROR: --as-of must be YYYY-MM-DD or an ISO instant, got {raw!r}")
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    if (parsed.hour, parsed.minute, parsed.second) == (0, 0, 0) and "T" not in text:
+        parsed = parsed.replace(hour=RUN_HOUR_UTC)
+    as_of = parsed.astimezone(timezone.utc)
+    if as_of > datetime.now(timezone.utc):
+        sys.exit(f"ERROR: --as-of {as_of:%Y-%m-%dT%H:%M:%SZ} is in the future")
+    return as_of
 
 
 def year_windows(start, end):
@@ -241,11 +266,19 @@ def year_windows(start, end):
 # ─── Cached Data Fetcher ───────────────────────────────────
 
 class GitHubData:
-    """Fetches and caches GitHub data. REST for pure counts and repo metadata;
-    GraphQL contributions for exact enumeration metrics."""
+    """Fetches and caches GitHub data as of one instant. REST for pure counts and repo
+    metadata; GraphQL contributions for exact enumeration metrics.
 
-    def __init__(self, token):
+    `as_of` is the single owner of "when this dataset is": every window below ends
+    there, so the same instant bounds the search counts, the contribution calendar, and
+    the repo/language breakdowns. Reading the wall clock per query instead — as this did
+    before — is ambient temporal coupling: eight independent readings of a moving value,
+    none of them nameable, and no way to ask for any instant but the present.
+    [LAW:no-ambient-temporal-coupling] [LAW:one-source-of-truth]"""
+
+    def __init__(self, token, as_of):
         self.token = token
+        self.as_of = as_of
         self._user = None
         self._contrib = {}  # (from_iso, to_iso) -> contributionsCollection
 
@@ -261,24 +294,38 @@ class GitHubData:
             self.user()["created_at"], "%Y-%m-%dT%H:%M:%SZ"
         ).replace(tzinfo=timezone.utc)
 
+    # -- windows --
+
+    def period_start(self, period):
+        """The instant a period opens. 'all' opens at account creation, so every period
+        is a real interval and no caller has to special-case an unbounded one."""
+        days = PERIOD_DAYS[period]
+        return self.account_created() if days is None else self.as_of - timedelta(days=days)
+
+    def search_window(self, period, field):
+        """Search qualifier bounding `field` to the period ending at as_of, e.g.
+        '+merged:2026-01-30T06:00:00Z..2026-03-01T06:00:00Z'.
+
+        Always closed above — that upper bound is what makes an as-of query mean
+        anything. 'all' supplies GitHub's open lower bound `*` rather than dropping the
+        qualifier, so the range is one unconditional format string and the period varies
+        only the value inside it. [LAW:dataflow-not-control-flow]"""
+        days = PERIOD_DAYS[period]
+        lo = "*" if days is None else _iso(self.as_of - timedelta(days=days))
+        return f"+{field}:{lo}..{_iso(self.as_of)}"
+
     # -- pure counts (REST search total_count) --
 
     def commit_count(self, period):
-        q = f"author:{USERNAME}{date_qualifier(period)}"
+        q = f"author:{USERNAME}{self.search_window(period, 'committer-date')}"
         return search_total_count("commits", q, self.token)
 
     def pr_merged_count(self, period):
-        since = cutoff_iso(period)
-        q = f"author:{USERNAME}+type:pr+is:merged"
-        if since:
-            q += f"+merged:>{since}"
+        q = f"author:{USERNAME}+type:pr+is:merged{self.search_window(period, 'merged')}"
         return search_total_count("issues", q, self.token)
 
     def issue_closed_count(self, period):
-        since = cutoff_iso(period)
-        q = f"author:{USERNAME}+type:issue+is:closed"
-        if since:
-            q += f"+closed:>{since}"
+        q = f"author:{USERNAME}+type:issue+is:closed{self.search_window(period, 'closed')}"
         return search_total_count("issues", q, self.token)
 
     # -- enumeration metrics (GraphQL contributions) --
@@ -318,11 +365,8 @@ class GitHubData:
         from ≤1-year windows so neither the search 1000-cap nor the GraphQL 1-year-span
         cap can truncate the answer. `capped` means a window hit the 100-repo ceiling,
         making repo/language counts a floor rather than an exact value."""
-        now = datetime.now(timezone.utc)
-        days = PERIOD_DAYS[period]
-        start = self.account_created() if days is None else now - timedelta(days=days)
         active, repos, langs, capped = set(), set(), set(), False
-        for f, t in year_windows(start, now):
+        for f, t in year_windows(self.period_start(period), self.as_of):
             a, r, l, cap = self._window_scope(_iso(f), _iso(t))
             active |= a
             repos |= r
@@ -343,16 +387,15 @@ class GitHubData:
         ~365 and ~371 day to day (and 366 on a leap span). Surfacing that raw count is
         exactly the '(366 days)' leak this label exists to prevent — the window is 'the
         past 12 months' whether the array holds 365 or 371 entries."""
-        now = datetime.now(timezone.utc)
-        c = self._contributions(_iso(now - timedelta(days=365)), _iso(now))
+        c = self._contributions(_iso(self.period_start("1y")), _iso(self.as_of))
         days = sorted(
             (d for w in c["contributionCalendar"]["weeks"] for d in w["contributionDays"]),
             key=lambda d: d["date"],
         )
         label = "past 12 months"
         if not days:
-            start = (now - timedelta(days=365)).strftime("%Y-%m-%d")
-            return {"start": start, "end": now.strftime("%Y-%m-%d"), "label": label, "counts": []}
+            start = self.period_start("1y").strftime("%Y-%m-%d")
+            return {"start": start, "end": f"{self.as_of:%Y-%m-%d}", "label": label, "counts": []}
         return {
             "start": days[0]["date"],
             "end": days[-1]["date"],
@@ -363,11 +406,8 @@ class GitHubData:
     def _repo_commit_counts(self, period):
         """(repo_full_name -> commit count, repo_full_name -> primary language) over the
         period, aggregated across ≤1-year windows."""
-        now = datetime.now(timezone.utc)
-        days = PERIOD_DAYS[period]
-        start = self.account_created() if days is None else now - timedelta(days=days)
         counts, langs = {}, {}
-        for f, t in year_windows(start, now):
+        for f, t in year_windows(self.period_start(period), self.as_of):
             c = self._contributions(_iso(f), _iso(t))
             for r in c["commitContributionsByRepository"]:
                 name = r["repository"]["nameWithOwner"]
@@ -689,16 +729,21 @@ def generate_stats_svg(stat_items, date_label, rng, palette, motif):
 
 # ─── Main ───────────────────────────────────────────────────
 
-def write_json(path, today, username, calendar, metrics):
+def write_json(path, today, username, calendar, metrics, generated_at):
     """Write the rich data seam the authored card visualizes: a universal 365-day
     contribution `calendar` (time-series) plus the 3-6 selected `metrics`, each with its
-    exact value and any `max`/`breakdown` distribution."""
+    exact value and any `max`/`breakdown` distribution.
+
+    `date` and `generated_at` are two different facts and are deliberately allowed to
+    disagree: the first is the instant the data describes, the second the instant this
+    file was written. On a same-day run they coincide; on a reconstruction of an older
+    day they don't, and their gap is the provenance record of that reconstruction."""
     # Keep the ~365 calendar counts on one line — this file is committed daily, and a
     # count-per-line array would make every diff 360+ lines of churn.
     counts = calendar.get("counts", [])
     payload = {
         "date": today,
-        "generated_at": _iso(datetime.now(timezone.utc)),
+        "generated_at": _iso(generated_at),
         "username": username,
         "calendar": {**calendar, "counts": "__COUNTS__"},
         "metrics": metrics,
@@ -818,6 +863,9 @@ def main():
                         help="re-roll the fallback palette/motif to a different look")
     parser.add_argument("--verify-svg", metavar="PATH", default=None,
                         help="verify PATH renders every value in --json-out, then exit")
+    parser.add_argument("--as-of", metavar="WHEN", default=None,
+                        help="instant the stats describe: YYYY-MM-DD (that day's 06:00 UTC "
+                             "run) or a full ISO instant. Default: now.")
     args = parser.parse_args()
 
     # Verify mode is pure (no token, no network): read the JSON and the SVG, compare.
@@ -833,11 +881,16 @@ def main():
         print("Error: GITHUB_TOKEN environment variable not set", file=sys.stderr)
         sys.exit(1)
 
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    date_label = datetime.now(timezone.utc).strftime("%B %d, %Y")
-    print(f"Date seed: {today}")
+    # The one wall-clock reading in the program, taken at the edge and then carried as
+    # data. Everything below is a pure function of `as_of`, which is what makes any past
+    # day reconstructible. [LAW:effects-at-boundaries]
+    now = datetime.now(timezone.utc)
+    as_of = parse_as_of(args.as_of) if args.as_of else now
+    today = as_of.strftime("%Y-%m-%d")
+    date_label = as_of.strftime("%B %d, %Y")
+    print(f"Date seed: {today} (as of {_iso(as_of)})")
 
-    data = GitHubData(token)
+    data = GitHubData(token, as_of)
 
     # Compute the full pool, keeping each metric's supporting distribution; drop any that
     # fail to compute (a rate-limited metric is simply not a candidate, not a wrong "0").
@@ -855,7 +908,7 @@ def main():
     print(f"Calendar: {len(calendar['counts'])} days from {calendar['start']}")
 
     os.makedirs(os.path.dirname(args.json_out) or ".", exist_ok=True)
-    write_json(args.json_out, today, USERNAME, calendar, selected)
+    write_json(args.json_out, today, USERNAME, calendar, selected, now)
     print(f"  Rich data seam written to {args.json_out}")
 
     # Deterministic fallback card — renders the selected metrics as scalars, variable count.

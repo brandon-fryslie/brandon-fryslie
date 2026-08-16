@@ -4,12 +4,17 @@
 Every version of assets/daily-stats.svg that has ever been committed is a card
 that was live on the profile for a day, so git history — not a bookkeeping file,
 and not a copy-before-overwrite step in the workflow — is the authoritative
-record of which cards existed. This script derives the archive tree from that
+record of which cards existed. This script derives the archive's slots from that
 history and the gallery from the archive tree, which is what makes it safe to
 run at any time: backfilling six months and archiving yesterday are the same
 operation, and a run that was skipped, failed, or lost to a force-push heals on
 the next one. There is deliberately no --backfill flag; there is nothing for it
 to select.
+
+History decides the slots; the tree owns their contents. A slot already holding
+both its files is left exactly as it is, so remaster-stats-card.py can replace a
+deterministic-era card with an authored one without the next morning's sync
+quietly putting the old one back. See stats-archive/README.md.
 
 The doodle archive works the other way round (the job copies the live SVG aside
 and prepends a gallery entry), which is why its gallery can drift from its tree.
@@ -32,12 +37,23 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-ARCHIVE = REPO_ROOT / "stats-archive"
-GALLERY = REPO_ROOT / "STATS.md"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from stats_archive import (  # noqa: E402
+    CARD_PATH,
+    GALLERY,
+    REPO_ROOT,
+    SEAM_PATH,
+    STAMP_FORMAT,
+    all_records,
+    card_record,
+    metric_record,
+    record_path,
+    stamp_of,
+    svg_path,
+    write_record,
+)
+from stats_archive import metrics_from_seam as seam_metrics  # noqa: E402
 
-CARD_PATH = "assets/daily-stats.svg"
-SEAM_PATH = "assets/daily-stats.json"
 GALLERY_MARKER = "STATS-GALLERY"
 CARD_WIDTH = 960  # matches the card's own <img> in README.md
 
@@ -47,7 +63,6 @@ CARD_WIDTH = 960  # matches the card's own <img> in README.md
 # seam instead, so nothing here has to guess at them.
 LEGACY_TEXT = re.compile(r'<text[^>]*font-size="(\d+)"[^>]*>([^<]*)</text>')
 LEGACY_VALUE_SIZE, LEGACY_LABEL_SIZE, LEGACY_PERIOD_SIZE = "28", "12", "10"
-STAMP_FORMAT = "%Y-%m-%d-%H%M%S"
 
 
 def git(*args: str) -> str:
@@ -90,44 +105,31 @@ class Card:
 
     @property
     def name(self) -> str:
-        return self.stamp.strftime(STAMP_FORMAT)
+        return stamp_of(self.stamp)
 
     @property
     def svg_path(self) -> Path:
-        return ARCHIVE / f"{self.stamp:%Y}" / f"{self.stamp:%m}" / f"{self.name}.svg"
+        return svg_path(self.name)
 
     @property
     def record_path(self) -> Path:
-        return self.svg_path.with_suffix(".json")
+        return record_path(self.name)
 
     def record(self) -> dict:
-        """The gallery's only input: the numbers, their provenance, and a way back.
-
-        The full data seam is not copied here — it is already in git history at
-        `commit`, and a second copy of it could only ever disagree with the first.
-        """
-        return {
-            "stamp": self.name,
-            "date": self.stamp.strftime("%Y-%m-%d"),
-            "commit": self.commit,
-            "source": self.source,
-            "metrics": [
-                {
-                    "label": m.label,
-                    "value": m.value,
-                    "period": m.period,
-                    **({"max": m.maximum} if m.maximum else {}),
-                }
-                for m in self.metrics
-            ],
-        }
+        """The gallery's only input. Shape owned by `stats_archive.card_record`, which
+        the remaster path writes through too, so one schema serves both writers."""
+        return card_record(
+            self.name,
+            self.commit,
+            self.source,
+            [metric_record(m.label, m.value, m.period, m.maximum) for m in self.metrics],
+        )
 
 
 def metrics_from_seam(seam_json: str) -> list[Metric]:
-    seam = json.loads(seam_json)
     return [
-        Metric(m["label"], str(m["value"]), m.get("period", ""), m.get("max"))
-        for m in seam["metrics"]
+        Metric(m["label"], m["value"], m["period"], m.get("max"))
+        for m in seam_metrics(json.loads(seam_json))
     ]
 
 
@@ -202,36 +204,30 @@ def seam_exists(commit: str) -> bool:
 
 
 def write_archive(cards: list[Card]) -> int:
-    """Materialise every card that is not on disk yet. Never overwrite one."""
+    """Fill in every card slot history knows about that the tree does not have yet.
+
+    Write-once, per slot: a slot holding both its files is already materialised and is
+    left exactly as it is. History supplies what is missing; it does not restate what is
+    present.
+
+    This is the seam that lets `remaster-stats-card.py` replace a deterministic-era card
+    in place. Re-deriving an existing slot every run would undo each remaster on the next
+    morning's sync — and worse, would re-caption the new card with the numbers the old
+    one rendered, since the sidecar is where the gallery reads its figures from.
+
+    The slot is the unit, not the file: a half-written slot (svg without sidecar, or the
+    reverse) is re-derived whole rather than left in a state where the gallery can read
+    one card's picture under another's numbers.
+    """
     added = 0
     for card in cards:
+        if card.svg_path.exists() and card.record_path.exists():
+            continue
         card.svg_path.parent.mkdir(parents=True, exist_ok=True)
-        if card.svg_path.exists():
-            if card.svg_path.read_text(encoding="utf-8") != card.svg:
-                sys.exit(
-                    f"ERROR: {card.svg_path.relative_to(REPO_ROOT)} differs from the card at"
-                    f" {card.commit[:8]}. An archived card is immutable, so this means the"
-                    " file was hand-edited or history was rewritten. Resolve deliberately."
-                )
-        else:
-            card.svg_path.write_text(card.svg, encoding="utf-8")
-            added += 1
-        card.record_path.write_text(
-            json.dumps(card.record(), indent=2) + "\n", encoding="utf-8"
-        )
+        card.svg_path.write_text(card.svg, encoding="utf-8")
+        write_record(card.record_path, card.record())
+        added += 1
     return added
-
-
-def load_records() -> list[dict]:
-    """Read the archive tree back. The gallery is a function of disk, not of git.
-
-    Rendering from the freshly-read tree rather than from the in-memory cards is
-    what guarantees the page and the directory cannot disagree: if a file is not
-    on disk, it is not in the gallery, and there is no third place to check.
-    """
-    records = [json.loads(p.read_text(encoding="utf-8")) for p in ARCHIVE.glob("*/*/*.json")]
-    records.sort(key=lambda r: r["stamp"], reverse=True)
-    return records
 
 
 def render_entry(record: dict) -> str:
@@ -277,7 +273,7 @@ def main() -> int:
     cards = read_history()
     added = write_archive(cards)
 
-    records = load_records()
+    records = all_records()
     if len(records) != len(cards):
         sys.exit(
             f"ERROR: archive holds {len(records)} cards but history has {len(cards)}."
