@@ -1,20 +1,121 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 21, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">173</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">4</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">41</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">6</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" role="img" aria-label="Live GitHub Stats for brandon-fryslie, May 21, 2026">
+  <defs>
+    <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#39d353" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0e4429" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39d353" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#39d353" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#39d353" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sweepBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#58a6ff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="repoBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1f6feb" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0.85"/>
+    </linearGradient>
+    <clipPath id="chartClip">
+      <rect x="30" y="58" width="740" height="134"/>
+    </clipPath>
+    <clipPath id="repoClip">
+      <rect x="200" y="256" width="520" height="88"/>
+    </clipPath>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="380" fill="#0d1117"/>
+
+  <!-- Title row -->
+  <text x="24" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Live GitHub Stats · brandon-fryslie</text>
+  <text x="776" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="end">past 12 months · May 21, 2026</text>
+  <line x1="24" y1="44" x2="776" y2="44" stroke="#30363d" stroke-width="0.5"/>
+
+  <!-- Commits headline sits in the quiet early trough of the timeline -->
+  <text x="32" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#39d353">3903</text>
+  <text x="32" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">Commits · 1 Year</text>
+
+  <!-- Streak wash sits behind the timeline over the exact 82-day span (weeks 33-45) -->
+  <g clip-path="url(#chartClip)">
+    <rect x="498" y="58" width="172" height="134" fill="#e3b341" opacity="0.10">
+      <animate attributeName="opacity" values="0.06;0.16;0.06" dur="7s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Chart baseline -->
+    <line x1="30" y1="190" x2="770" y2="190" stroke="#30363d" stroke-width="0.5"/>
+
+    <!-- Weekly area path: 53 vertices, y encodes each week's contribution total (max 506 → 128px) -->
+    <path d="M 30,190 L 30,189 L 44,187 L 58,187 L 72,188 L 86,186 L 100,188 L 114,189 L 128,188 L 142,188 L 156,188 L 170,188 L 184,186 L 198,188 L 212,188 L 226,188 L 240,189 L 254,188 L 268,189 L 282,188 L 296,188 L 310,188 L 324,188 L 338,188 L 352,188 L 366,182 L 380,179 L 394,188 L 408,188 L 422,188 L 436,180 L 450,159 L 464,130 L 478,184 L 492,136 L 506,110 L 520,75 L 534,62 L 548,132 L 562,138 L 576,74 L 590,101 L 604,135 L 618,116 L 632,132 L 646,168 L 660,151 L 674,169 L 688,143 L 702,145 L 716,117 L 730,127 L 744,158 L 758,171 L 758,190 Z" fill="url(#areaFill)"/>
+    <path d="M 30,189 L 44,187 L 58,187 L 72,188 L 86,186 L 100,188 L 114,189 L 128,188 L 142,188 L 156,188 L 170,188 L 184,186 L 198,188 L 212,188 L 226,188 L 240,189 L 254,188 L 268,189 L 282,188 L 296,188 L 310,188 L 324,188 L 338,188 L 352,188 L 366,182 L 380,179 L 394,188 L 408,188 L 422,188 L 436,180 L 450,159 L 464,130 L 478,184 L 492,136 L 506,110 L 520,75 L 534,62 L 548,132 L 562,138 L 576,74 L 590,101 L 604,135 L 618,116 L 632,132 L 646,168 L 660,151 L 674,169 L 688,143 L 702,145 L 716,117 L 730,127 L 744,158 L 758,171" fill="none" stroke="#39d353" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- Continuous sweeping highlight over the timeline -->
+    <rect x="-100" y="58" width="120" height="134" fill="url(#sweep)">
+      <animate attributeName="x" from="-100" to="800" dur="13s" repeatCount="indefinite"/>
+    </rect>
   </g>
+
+  <!-- Streak bracket: literally spans the 82 consecutive days on the timeline scale -->
+  <line x1="502" y1="204" x2="668" y2="204" stroke="#e3b341" stroke-width="1.3" opacity="0.9">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="502" y1="200" x2="502" y2="208" stroke="#e3b341" stroke-width="1.3" opacity="0.9"/>
+  <line x1="668" y1="200" x2="668" y2="208" stroke="#e3b341" stroke-width="1.3" opacity="0.9"/>
+
+  <!-- Streak label sits under the bracket; "82" and "1 Year" are byte-exact standalone values -->
+  <text x="502" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#e3b341">82</text>
+  <text x="518" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9">day Longest Streak</text>
+  <text x="632" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">· 1 Year</text>
+
+  <!-- Repo section header: two stat callouts share one line -->
+  <text x="24" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#58a6ff">25</text>
+  <text x="46" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9">Active Repos</text>
+  <text x="132" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">30 Days · top 6 shown</text>
+  <text x="560" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9">My Issues Closed</text>
+  <text x="660" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#58a6ff">2</text>
+  <text x="676" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">· 30 Days</text>
+
+  <!-- Repo bars: widths are proportional to commit counts (max 134 → 520px). Six rows, pitch 14. -->
+  <g clip-path="url(#repoClip)">
+    <!-- Row 1: cc-candybar 134 -->
+    <rect x="200" y="262" width="520" height="10" fill="url(#repoBar)" rx="1"/>
+    <!-- Row 2: go-template-js 75 -->
+    <rect x="200" y="276" width="291" height="10" fill="url(#repoBar)" rx="1"/>
+    <!-- Row 3: dotfiles 62 -->
+    <rect x="200" y="290" width="241" height="10" fill="url(#repoBar)" rx="1"/>
+    <!-- Row 4: links-issue-tracker 56 -->
+    <rect x="200" y="304" width="217" height="10" fill="url(#repoBar)" rx="1"/>
+    <!-- Row 5: promptctl 51 -->
+    <rect x="200" y="318" width="198" height="10" fill="url(#repoBar)" rx="1"/>
+    <!-- Row 6: tmux-control-mode-js 45 -->
+    <rect x="200" y="332" width="175" height="10" fill="url(#repoBar)" rx="1"/>
+
+    <!-- Continuous sweep over repo bars area -->
+    <rect x="-100" y="256" width="140" height="88" fill="url(#sweepBlue)">
+      <animate attributeName="x" from="-100" to="800" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Repo names (left) and counts (right), baseline-centered on each bar -->
+  <text x="24" y="271" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">cc-candybar</text>
+  <text x="776" y="271" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">134</text>
+
+  <text x="24" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">go-template-js</text>
+  <text x="776" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">75</text>
+
+  <text x="24" y="299" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">dotfiles</text>
+  <text x="776" y="299" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">62</text>
+
+  <text x="24" y="313" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">links-issue-tracker</text>
+  <text x="776" y="313" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">56</text>
+
+  <text x="24" y="327" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">promptctl</text>
+  <text x="776" y="327" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">51</text>
+
+  <text x="24" y="341" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#c9d1d9">tmux-control-mode-js</text>
+  <text x="776" y="341" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="end">45</text>
+
+  <!-- Bottom caption: window label + max weekly peak, honest tiny annotation -->
+  <text x="776" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end">weekly contributions · peak 506 (week of Jan 26, 2026)</text>
 </svg>
