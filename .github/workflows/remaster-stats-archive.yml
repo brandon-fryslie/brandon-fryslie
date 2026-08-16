@@ -1,0 +1,208 @@
+name: Remaster Stats Archive
+
+# Replace deterministic-era cards in `stats-archive/` with cards authored from the same
+# day's real data. Dispatch-only: this rewrites history's pictures, so it runs when asked
+# and never on a schedule.
+#
+# One matrix job per card. Each reconstructs that day's numbers with
+# `generate-stats-svg.py --as-of`, hands them to the stats-card agent under the exact
+# prompt the daily job uses (.github/prompts/stats-card.md — one source of truth for the
+# card's creative direction), gates the result, drops it into that day's archive slot,
+# and pushes.
+#
+# Run it:
+#   gh workflow run remaster-stats-archive.yml -f limit=8
+#   gh workflow run remaster-stats-archive.yml -f stamps='2026-03-01-062057 2026-03-02-062619'
+#
+# Re-running is how you make progress: a remastered slot stops being a candidate, so each
+# run picks up where the last one stopped and a failed card is simply retried by the next
+# run. There are 136 deterministic cards; at limit=8 that is 17 runs.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'How many cards to remaster in this run (matrix ceiling is 256)'
+        required: false
+        default: '8'
+      stamps:
+        description: 'Space-separated archive stamps (YYYY-MM-DD-HHMMSS) to target instead of the newest pending'
+        required: false
+        default: ''
+
+# Shared with daily-highlights.yml and weekly-archive.yml on purpose: this job writes
+# stats-archive/ and STATS.md, which the daily `stats` job also writes. Two runs holding
+# different ideas of the archive tree must never overlap.
+concurrency:
+  group: daily-highlights
+  cancel-in-progress: false
+
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    outputs:
+      stamps: ${{ steps.pick.outputs.stamps }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Pick the slots to remaster
+        id: pick
+        env:
+          # Through the environment, never interpolated into the script body: a workflow
+          # input is untrusted text, and `${{ }}` inside a run block pastes it in as shell
+          # source.
+          LIMIT: ${{ inputs.limit }}
+          STAMPS: ${{ inputs.stamps }}
+        run: |
+          set -euo pipefail
+          args=(select --limit "$LIMIT")
+          for stamp in $STAMPS; do args+=(--stamp "$stamp"); done
+          picked="$(python .github/scripts/remaster-stats-card.py "${args[@]}")"
+          echo "stamps=${picked}" >> "$GITHUB_OUTPUT"
+          echo "Selected: ${picked}" >> "$GITHUB_STEP_SUMMARY"
+
+  remaster:
+    needs: select
+    if: needs.select.outputs.stamps != '[]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    strategy:
+      fail-fast: false    # one card that won't come together must not cancel the rest
+      max-parallel: 1     # each job commits and pushes; keep those serial within a run
+      matrix:
+        stamp: ${{ fromJSON(needs.select.outputs.stamps) }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0  # sync-stats-archive.py reads the full card history
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Install rsvg-convert
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+
+      - name: Stage the slot (mechanical)
+        # Puts the card this one should diverge from at assets/daily-stats.svg — the path
+        # the prompt names — and reports the instant this card's data must describe.
+        id: stage
+        run: |
+          set -euo pipefail
+          as_of="$(python .github/scripts/remaster-stats-card.py stage '${{ matrix.stamp }}')"
+          echo "as_of=${as_of}" >> "$GITHUB_OUTPUT"
+          echo "Remastering ${{ matrix.stamp }} with data as of ${as_of}"
+
+      - name: Reconstruct that day's data seam (mechanical)
+        # The same generator the daily job runs, pinned to the archived card's own instant.
+        # Fallback card goes to /tmp so the staged divergence target survives at
+        # assets/daily-stats.svg.
+        run: |
+          python .github/scripts/generate-stats-svg.py \
+            --as-of '${{ steps.stage.outputs.as_of }}' \
+            --svg-out /tmp/daily-stats-fallback.svg
+
+      - name: Load the stats prompt (single source of truth)
+        run: |
+          {
+            echo 'STATS_PROMPT<<STATS_PROMPT_EOF'
+            cat .github/prompts/stats-card.md
+            echo 'STATS_PROMPT_EOF'
+          } >> "$GITHUB_ENV"
+
+      - name: Author stats card (Claude)
+        id: claude
+        uses: anthropics/claude-code-action@1b422b3517b51140e4484faab676c5e68b914866 # v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          claude_args: '--model claude-opus-4-7 --permission-mode acceptEdits --allowedTools "Bash(date:*),Bash(rsvg-convert:*),Bash(cp:*),Bash(python:*),Bash(ls:*),Bash(cat:*),Read,Write,Edit,Glob,Grep"'
+          prompt: ${{ env.STATS_PROMPT }}
+
+      - name: Verify Claude result
+        run: |
+          set -euo pipefail
+          EXEC_FILE="${{ steps.claude.outputs.execution_file }}"
+          if [ -z "$EXEC_FILE" ] || [ ! -f "$EXEC_FILE" ]; then
+            echo "::error::Claude execution_file missing — the action did not run to completion."
+            exit 1
+          fi
+          RESULT=$(jq -c '[.[] | select(.type=="result")] | last' "$EXEC_FILE")
+          if [ -z "$RESULT" ] || [ "$RESULT" = "null" ]; then
+            echo "::error::Claude execution output has no result entry — shape unexpected."
+            exit 1
+          fi
+          IS_ERROR=$(echo "$RESULT" | jq -r '.is_error')
+          DENIALS=$(echo "$RESULT" | jq -r '.permission_denials_count // 0')
+          echo "Remaster Claude: is_error=$IS_ERROR permission_denials_count=$DENIALS"
+          if [ "$IS_ERROR" != "false" ]; then
+            echo "::error::Remaster Claude reported is_error=$IS_ERROR"
+            exit 1
+          fi
+          if [ "$DENIALS" -gt 0 ]; then
+            echo "::error::Remaster Claude had $DENIALS permission denials."
+            exit 1
+          fi
+
+      - name: Verify the card renders the exact numbers
+        run: python .github/scripts/generate-stats-svg.py --verify-svg assets/daily-stats.svg
+
+      - name: Move the card into its archive slot (mechanical)
+        # Also restores assets/daily-stats.{svg,json} from HEAD, so the commit below holds
+        # the archive and nothing else.
+        run: python .github/scripts/remaster-stats-card.py archive '${{ matrix.stamp }}'
+
+      - name: Re-render the gallery from the archive tree (mechanical)
+        run: python .github/scripts/sync-stats-archive.py
+
+      - name: Commit and push (rebase-retry)
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # This job owns the archive tree and its gallery — nothing else. The live card
+          # and seam were borrowed as the agent's workspace and already handed back.
+          git add stats-archive STATS.md
+
+          if git diff --cached --quiet; then
+            echo "::error::Remaster produced no staged changes for ${{ matrix.stamp }}."
+            exit 1
+          fi
+
+          git commit -m 'chore: remaster stats card for ${{ matrix.stamp }}'
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:master; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt rejected — fetching and rebasing."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              echo "::error::Rebase failed (real conflict). Aborting."
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep $(( (RANDOM % 4) + 1 ))
+          done
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
+
+      - name: Upload the remastered card
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: remastered-${{ matrix.stamp }}
+          path: |
+            stats-archive/**/${{ matrix.stamp }}.svg
+            stats-archive/**/${{ matrix.stamp }}.json
+          if-no-files-found: warn
