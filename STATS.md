@@ -206,7 +206,7 @@ Languages 5 (30 Days) · Longest Streak 82 (1 Year) · Active Repos 7 (7 Days) �
 
 <img src="./stats-archive/2026/07/2026-07-30-065045.svg" width="960" alt="Live GitHub stats card for July 30, 2026">
 
-Code Reviews 0 (30 Days) · Commits 6056 (All Time) · Languages 4 (30 Days) · Active Repos 7 (7 Days)
+My Issues Closed 69 (1 Year) · Days Active 249/365 (1 Year) · Commits 312 (30 Days) · PRs Merged 1832 (1 Year) · Longest Streak 82 (1 Year)
 
 ---
 
