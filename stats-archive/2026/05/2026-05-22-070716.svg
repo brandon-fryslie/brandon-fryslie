@@ -1,20 +1,163 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 22, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">86</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">81</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">5</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">78</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
+<svg width="800" height="320" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="valueGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a5d6ff"/>
+      <stop offset="1" stop-color="#58a6ff"/>
+    </linearGradient>
+    <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e4429"/>
+      <stop offset="0.55" stop-color="#26a641"/>
+      <stop offset="1" stop-color="#39d353"/>
+    </linearGradient>
+    <linearGradient id="prBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#388bfd"/>
+      <stop offset="1" stop-color="#a5d6ff"/>
+    </linearGradient>
+    <linearGradient id="repoBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#79c0ff"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="gaugeClip"><rect x="140" y="130" width="240" height="10" rx="5"/></clipPath>
+    <clipPath id="meterClip"><rect x="540" y="130" width="220" height="10" rx="5"/></clipPath>
+    <clipPath id="langClip"><rect x="490" y="222" width="270" height="14" rx="3"/></clipPath>
+  </defs>
+
+  <rect width="800" height="320" fill="#0d1117"/>
+
+  <!-- Header -->
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#f0f6fc">Live GitHub Stats</text>
+  <text x="776" y="30" font-size="13" fill="#8b949e" text-anchor="end">May 22, 2026</text>
+  <line x1="24" y1="44" x2="776" y2="44" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ================= PANEL 1: Longest Streak ================= -->
+  <g id="p1">
+    <text x="34" y="76" font-size="12" fill="#8b949e">Longest Streak</text>
+    <text x="384" y="76" font-size="10" fill="#8b949e" text-anchor="end">1 Year</text>
+    <text x="34" y="148" font-size="62" font-weight="700" fill="url(#valueGrad)">82</text>
+    <rect x="140" y="130" width="240" height="10" rx="5" fill="#21262d"/>
+    <rect x="140" y="130" width="54" height="10" rx="5" fill="url(#gaugeGrad)"/>
+    <g clip-path="url(#gaugeClip)">
+      <rect x="0" y="130" width="70" height="10" fill="url(#sweep)" opacity="0.55">
+        <animate attributeName="x" from="70" to="380" dur="5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <text x="140" y="154" font-size="9" fill="#8b949e">0</text>
+    <text x="380" y="154" font-size="9" fill="#8b949e" text-anchor="end">365</text>
+    <text x="260" y="170" font-size="10" fill="#8b949e" text-anchor="middle">consecutive days</text>
   </g>
+
+  <!-- ================= PANEL 2: PRs Merged ================= -->
+  <g id="p2">
+    <text x="416" y="76" font-size="12" fill="#8b949e">PRs Merged</text>
+    <text x="766" y="76" font-size="10" fill="#8b949e" text-anchor="end">30 Days</text>
+    <text x="416" y="148" font-size="62" font-weight="700" fill="url(#valueGrad)">177</text>
+    <rect x="540" y="130" width="220" height="10" rx="5" fill="#21262d"/>
+    <rect x="540" y="130" width="195" height="10" rx="5" fill="url(#prBar)"/>
+    <g clip-path="url(#meterClip)">
+      <rect x="0" y="130" width="70" height="10" fill="url(#sweep)" opacity="0.55">
+        <animate attributeName="x" from="470" to="760" dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <line x1="540" y1="143" x2="540" y2="147" stroke="#8b949e" stroke-width="1"/>
+    <line x1="595" y1="143" x2="595" y2="147" stroke="#8b949e" stroke-width="1"/>
+    <line x1="650" y1="143" x2="650" y2="147" stroke="#8b949e" stroke-width="1"/>
+    <line x1="705" y1="143" x2="705" y2="147" stroke="#8b949e" stroke-width="1"/>
+    <line x1="760" y1="143" x2="760" y2="147" stroke="#8b949e" stroke-width="1"/>
+    <text x="540" y="158" font-size="9" fill="#8b949e">0</text>
+    <text x="650" y="158" font-size="9" fill="#8b949e" text-anchor="middle">100</text>
+    <text x="760" y="158" font-size="9" fill="#8b949e" text-anchor="end">200</text>
+    <text x="650" y="174" font-size="10" fill="#8b949e" text-anchor="middle">pull requests merged</text>
+  </g>
+
+  <!-- ================= PANEL 3: Active Repos ================= -->
+  <g id="p3">
+    <text x="34" y="214" font-size="12" fill="#8b949e">Active Repos</text>
+    <text x="384" y="214" font-size="10" fill="#8b949e" text-anchor="end">30 Days</text>
+    <text x="34" y="285" font-size="62" font-weight="700" fill="url(#valueGrad)">24</text>
+
+    <!-- top-6 repo bars (commits in period, max=136) -->
+    <g id="repoBars">
+      <!-- row 0: cc-candybar 136 -->
+      <text x="140" y="229" font-size="9" fill="#c9d1d9">cc-candybar</text>
+      <text x="380" y="229" font-size="9" fill="#8b949e" text-anchor="end">136</text>
+      <rect x="140" y="232" width="240" height="3" rx="1.5" fill="#21262d"/>
+      <rect x="140" y="232" width="240" height="3" rx="1.5" fill="url(#repoBar)"/>
+      <!-- row 1: go-template-js 75 -->
+      <text x="140" y="244" font-size="9" fill="#c9d1d9">go-template-js</text>
+      <text x="380" y="244" font-size="9" fill="#8b949e" text-anchor="end">75</text>
+      <rect x="140" y="247" width="240" height="3" rx="1.5" fill="#21262d"/>
+      <rect x="140" y="247" width="132" height="3" rx="1.5" fill="url(#repoBar)"/>
+      <!-- row 2: dotfiles 62 -->
+      <text x="140" y="259" font-size="9" fill="#c9d1d9">dotfiles</text>
+      <text x="380" y="259" font-size="9" fill="#8b949e" text-anchor="end">62</text>
+      <rect x="140" y="262" width="240" height="3" rx="1.5" fill="#21262d"/>
+      <rect x="140" y="262" width="109" height="3" rx="1.5" fill="url(#repoBar)"/>
+      <!-- row 3: links-issue-tracker 61 -->
+      <text x="140" y="274" font-size="9" fill="#c9d1d9">links-issue-tracker</text>
+      <text x="380" y="274" font-size="9" fill="#8b949e" text-anchor="end">61</text>
+      <rect x="140" y="277" width="240" height="3" rx="1.5" fill="#21262d"/>
+      <rect x="140" y="277" width="108" height="3" rx="1.5" fill="url(#repoBar)"/>
+      <!-- row 4: promptctl 59 -->
+      <text x="140" y="289" font-size="9" fill="#c9d1d9">promptctl</text>
+      <text x="380" y="289" font-size="9" fill="#8b949e" text-anchor="end">59</text>
+      <rect x="140" y="292" width="240" height="3" rx="1.5" fill="#21262d"/>
+      <rect x="140" y="292" width="104" height="3" rx="1.5" fill="url(#repoBar)"/>
+      <!-- row 5: tmux-control-mode-js 49 -->
+      <text x="140" y="304" font-size="9" fill="#c9d1d9">tmux-control-mode-js</text>
+      <text x="380" y="304" font-size="9" fill="#8b949e" text-anchor="end">49</text>
+      <rect x="140" y="307" width="240" height="3" rx="1.5" fill="#21262d"/>
+      <rect x="140" y="307" width="86" height="3" rx="1.5" fill="url(#repoBar)"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="7s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ================= PANEL 4: Languages ================= -->
+  <g id="p4">
+    <text x="416" y="214" font-size="12" fill="#8b949e">Languages</text>
+    <text x="766" y="214" font-size="10" fill="#8b949e" text-anchor="end">30 Days</text>
+    <text x="416" y="285" font-size="62" font-weight="700" fill="url(#valueGrad)">5</text>
+
+    <rect x="490" y="222" width="270" height="14" rx="3" fill="#21262d"/>
+    <g clip-path="url(#langClip)">
+      <rect x="490" y="222" width="187" height="14" fill="#3178c6"/>
+      <rect x="677" y="222" width="48" height="14" fill="#3572a5"/>
+      <rect x="725" y="222" width="24" height="14" fill="#00add8"/>
+      <rect x="749" y="222" width="7" height="14" fill="#89e051"/>
+      <rect x="756" y="222" width="5" height="14" fill="#563d7c"/>
+      <rect x="0" y="222" width="70" height="14" fill="url(#sweep)" opacity="0.5">
+        <animate attributeName="x" from="420" to="760" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Legend rows -->
+    <rect x="490" y="247" width="10" height="10" rx="2" fill="#3178c6"/>
+    <text x="508" y="255" font-size="10" fill="#c9d1d9">TypeScript</text>
+    <text x="760" y="255" font-size="10" fill="#8b949e" text-anchor="end">467</text>
+
+    <rect x="490" y="259" width="10" height="10" rx="2" fill="#3572a5"/>
+    <text x="508" y="267" font-size="10" fill="#c9d1d9">Python</text>
+    <text x="760" y="267" font-size="10" fill="#8b949e" text-anchor="end">119</text>
+
+    <rect x="490" y="271" width="10" height="10" rx="2" fill="#00add8"/>
+    <text x="508" y="279" font-size="10" fill="#c9d1d9">Go</text>
+    <text x="760" y="279" font-size="10" fill="#8b949e" text-anchor="end">61</text>
+
+    <rect x="490" y="283" width="10" height="10" rx="2" fill="#89e051"/>
+    <text x="508" y="291" font-size="10" fill="#c9d1d9">Shell</text>
+    <text x="760" y="291" font-size="10" fill="#8b949e" text-anchor="end">17</text>
+
+    <rect x="490" y="295" width="10" height="10" rx="2" fill="#563d7c"/>
+    <text x="508" y="303" font-size="10" fill="#c9d1d9">CSS</text>
+    <text x="760" y="303" font-size="10" fill="#8b949e" text-anchor="end">11</text>
+  </g>
+
+  <!-- Panel dividers (very subtle) -->
+  <line x1="400" y1="60" x2="400" y2="176" stroke="#161b22" stroke-width="1"/>
+  <line x1="400" y1="200" x2="400" y2="316" stroke="#161b22" stroke-width="1"/>
+  <line x1="24" y1="190" x2="776" y2="190" stroke="#161b22" stroke-width="1"/>
 </svg>
