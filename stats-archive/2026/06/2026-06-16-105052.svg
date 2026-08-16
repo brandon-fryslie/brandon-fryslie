@@ -1,20 +1,124 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 16, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">328</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1226</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">4</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="410" viewBox="0 0 800 410" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="Live GitHub stats — the year in commits">
+  <defs>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#58a6ff" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#388bfd" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="streakGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#f78166"/>
+      <stop offset="100%" stop-color="#db6d3a"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="45%"  stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="55%"  stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chartClip"><rect x="40" y="76" width="720" height="93"/></clipPath>
+    <clipPath id="langClip"><rect x="40" y="268" width="720" height="22" rx="4"/></clipPath>
+    <clipPath id="gaugeClip"><rect x="40" y="358" width="720" height="22" rx="6"/></clipPath>
+  </defs>
+
+  <rect width="800" height="410" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="409" fill="none" stroke="#161b22" stroke-width="1"/>
+
+  <text x="20" y="30" font-size="14" fill="#c9d1d9" font-weight="600">Brandon Fryslie · Live GitHub Stats</text>
+  <text x="780" y="30" font-size="12" fill="#8b949e" text-anchor="end">Tuesday, June 16, 2026</text>
+  <line x1="20" y1="44" x2="780" y2="44" stroke="#21262d" stroke-width="1"/>
+
+  <text x="20" y="66" font-size="10" fill="#8b949e" letter-spacing="1.2" font-weight="600">CONTRIBUTIONS ·</text>
+  <text x="132" y="66" font-size="10" fill="#8b949e" letter-spacing="0.5">past 12 months</text>
+  <text x="780" y="66" font-size="10" fill="#8b949e" letter-spacing="1.2" font-weight="600" text-anchor="end">PEAK 213</text>
+
+  <line x1="40" y1="123.00" x2="760" y2="123.00" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2,4"/>
+  <line x1="40" y1="78" x2="760" y2="78" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.5"/>
+
+  <g clip-path="url(#chartClip)">
+    <path d="M 40.00,168.00 L 40.00,168.00 L 41.97,168.00 L 43.95,168.00 L 45.92,168.00 L 47.89,168.00 L 49.86,168.00 L 51.84,168.00 L 53.81,162.08 L 55.78,168.00 L 57.75,168.00 L 59.73,168.00 L 61.70,167.58 L 63.67,168.00 L 65.64,168.00 L 67.62,168.00 L 69.59,168.00 L 71.56,168.00 L 73.53,168.00 L 75.51,168.00 L 77.48,168.00 L 79.45,168.00 L 81.42,168.00 L 83.40,168.00 L 85.37,168.00 L 87.34,168.00 L 89.32,168.00 L 91.29,168.00 L 93.26,168.00 L 95.23,167.58 L 97.21,168.00 L 99.18,168.00 L 101.15,168.00 L 103.12,168.00 L 105.10,168.00 L 107.07,168.00 L 109.04,167.15 L 111.01,168.00 L 112.99,168.00 L 114.96,168.00 L 116.93,168.00 L 118.90,168.00 L 120.88,168.00 L 122.85,165.89 L 124.82,168.00 L 126.79,167.58 L 128.77,168.00 L 130.74,167.15 L 132.71,167.58 L 134.68,168.00 L 136.66,168.00 L 138.63,168.00 L 140.60,168.00 L 142.58,168.00 L 144.55,162.51 L 146.52,168.00 L 148.49,168.00 L 150.47,168.00 L 152.44,167.15 L 154.41,166.31 L 156.38,166.73 L 158.36,168.00 L 160.33,168.00 L 162.30,168.00 L 164.27,168.00 L 166.25,168.00 L 168.22,168.00 L 170.19,168.00 L 172.16,168.00 L 174.14,168.00 L 176.11,167.58 L 178.08,168.00 L 180.05,168.00 L 182.03,168.00 L 184.00,168.00 L 185.97,168.00 L 187.95,167.58 L 189.92,168.00 L 191.89,168.00 L 193.86,168.00 L 195.84,168.00 L 197.81,168.00 L 199.78,168.00 L 201.75,168.00 L 203.73,168.00 L 205.70,168.00 L 207.67,168.00 L 209.64,168.00 L 211.62,167.58 L 213.59,168.00 L 215.56,168.00 L 217.53,168.00 L 219.51,168.00 L 221.48,168.00 L 223.45,168.00 L 225.42,168.00 L 227.40,168.00 L 229.37,168.00 L 231.34,168.00 L 233.32,168.00 L 235.29,168.00 L 237.26,168.00 L 239.23,168.00 L 241.21,168.00 L 243.18,168.00 L 245.15,168.00 L 247.12,168.00 L 249.10,167.58 L 251.07,168.00 L 253.04,168.00 L 255.01,168.00 L 256.99,166.73 L 258.96,168.00 L 260.93,168.00 L 262.90,168.00 L 264.88,168.00 L 266.85,168.00 L 268.82,167.15 L 270.79,168.00 L 272.77,168.00 L 274.74,168.00 L 276.71,168.00 L 278.68,166.73 L 280.66,167.15 L 282.63,168.00 L 284.60,168.00 L 286.58,168.00 L 288.55,168.00 L 290.52,168.00 L 292.49,168.00 L 294.47,167.58 L 296.44,168.00 L 298.41,168.00 L 300.38,165.89 L 302.36,168.00 L 304.33,167.58 L 306.30,168.00 L 308.27,167.58 L 310.25,166.31 L 312.22,168.00 L 314.19,168.00 L 316.16,168.00 L 318.14,166.31 L 320.11,165.46 L 322.08,165.46 L 324.05,166.73 L 326.03,168.00 L 328.00,165.46 L 329.97,166.73 L 331.95,167.15 L 333.92,165.46 L 335.89,154.06 L 337.86,168.00 L 339.84,168.00 L 341.81,167.15 L 343.78,168.00 L 345.75,167.15 L 347.73,168.00 L 349.70,168.00 L 351.67,168.00 L 353.64,168.00 L 355.62,168.00 L 357.59,168.00 L 359.56,166.73 L 361.53,168.00 L 363.51,168.00 L 365.48,168.00 L 367.45,168.00 L 369.42,167.15 L 371.40,167.15 L 373.37,168.00 L 375.34,167.58 L 377.32,168.00 L 379.29,168.00 L 381.26,168.00 L 383.23,168.00 L 385.21,168.00 L 387.18,163.77 L 389.15,163.77 L 391.12,166.31 L 393.10,166.73 L 395.07,165.46 L 397.04,166.73 L 399.01,168.00 L 400.99,159.55 L 402.96,164.62 L 404.93,157.44 L 406.90,158.28 L 408.88,160.82 L 410.85,160.39 L 412.82,163.35 L 414.79,162.93 L 416.77,155.32 L 418.74,159.97 L 420.71,142.23 L 422.68,131.24 L 424.66,157.86 L 426.63,165.89 L 428.60,167.15 L 430.58,162.93 L 432.55,168.00 L 434.52,168.00 L 436.49,167.15 L 438.47,168.00 L 440.44,166.31 L 442.41,167.58 L 444.38,161.66 L 446.36,168.00 L 448.33,124.90 L 450.30,166.31 L 452.27,153.63 L 454.25,143.49 L 456.22,160.39 L 458.19,154.90 L 460.16,160.39 L 462.14,157.44 L 464.11,143.07 L 466.08,122.79 L 468.05,142.65 L 470.03,126.59 L 472.00,145.61 L 473.97,142.65 L 475.95,156.17 L 477.92,127.01 L 479.89,138.42 L 481.86,147.72 L 483.84,130.39 L 485.81,143.07 L 487.78,154.90 L 489.75,118.56 L 491.73,150.25 L 493.70,122.79 L 495.67,142.23 L 497.64,142.23 L 499.62,146.87 L 501.59,151.10 L 503.56,155.75 L 505.53,164.20 L 507.51,159.55 L 509.48,158.70 L 511.45,163.77 L 513.42,161.24 L 515.40,165.04 L 517.37,149.41 L 519.34,116.45 L 521.32,167.15 L 523.29,165.46 L 525.26,166.73 L 527.23,165.04 L 529.21,153.21 L 531.18,131.66 L 533.15,109.69 L 535.12,115.61 L 537.10,140.11 L 539.07,119.83 L 541.04,138.85 L 543.01,143.49 L 544.99,152.79 L 546.96,165.46 L 548.93,159.13 L 550.90,148.56 L 552.88,161.24 L 554.85,156.17 L 556.82,165.89 L 558.79,159.13 L 560.77,151.10 L 562.74,132.08 L 564.71,159.13 L 566.68,121.94 L 568.66,157.01 L 570.63,139.69 L 572.60,156.17 L 574.58,158.70 L 576.55,162.51 L 578.52,156.17 L 580.49,156.59 L 582.47,162.51 L 584.44,146.87 L 586.41,163.35 L 588.38,151.52 L 590.36,146.45 L 592.33,152.37 L 594.30,158.28 L 596.27,165.46 L 598.25,165.89 L 600.22,163.77 L 602.19,165.46 L 604.16,162.51 L 606.14,158.70 L 608.11,167.15 L 610.08,168.00 L 612.05,158.70 L 614.03,161.66 L 616.00,166.31 L 617.97,162.93 L 619.95,125.75 L 621.92,160.39 L 623.89,164.62 L 625.86,166.73 L 627.84,168.00 L 629.81,162.08 L 631.78,159.97 L 633.75,159.97 L 635.73,165.46 L 637.70,164.20 L 639.67,162.93 L 641.64,155.75 L 643.62,131.24 L 645.59,158.70 L 647.56,159.13 L 649.53,165.89 L 651.51,164.20 L 653.48,159.97 L 655.45,137.15 L 657.42,159.13 L 659.40,157.44 L 661.37,157.44 L 663.34,136.73 L 665.32,150.25 L 667.29,148.14 L 669.26,159.97 L 671.23,168.00 L 673.21,142.23 L 675.18,148.99 L 677.15,146.87 L 679.12,147.72 L 681.10,152.37 L 683.07,148.56 L 685.04,148.99 L 687.01,164.20 L 688.99,161.66 L 690.96,168.00 L 692.93,161.66 L 694.90,162.51 L 696.88,159.55 L 698.85,152.79 L 700.82,163.35 L 702.79,155.32 L 704.77,162.93 L 706.74,167.15 L 708.71,142.65 L 710.68,150.68 L 712.66,159.55 L 714.63,117.72 L 716.60,132.08 L 718.58,159.55 L 720.55,142.65 L 722.52,148.56 L 724.49,128.70 L 726.47,159.97 L 728.44,132.08 L 730.41,151.10 L 732.38,144.34 L 734.36,143.49 L 736.33,121.10 L 738.30,159.97 L 740.27,159.97 L 742.25,164.20 L 744.22,160.82 L 746.19,86.45 L 748.16,121.10 L 750.14,114.34 L 752.11,131.66 L 754.08,166.73 L 756.05,78.00 L 758.03,124.48 L 760.00,153.21 L 760.00,168.00 Z" fill="url(#areaGrad)"/>
+    <path d="M 40.00,168.00 L 41.97,168.00 L 43.95,168.00 L 45.92,168.00 L 47.89,168.00 L 49.86,168.00 L 51.84,168.00 L 53.81,162.08 L 55.78,168.00 L 57.75,168.00 L 59.73,168.00 L 61.70,167.58 L 63.67,168.00 L 65.64,168.00 L 67.62,168.00 L 69.59,168.00 L 71.56,168.00 L 73.53,168.00 L 75.51,168.00 L 77.48,168.00 L 79.45,168.00 L 81.42,168.00 L 83.40,168.00 L 85.37,168.00 L 87.34,168.00 L 89.32,168.00 L 91.29,168.00 L 93.26,168.00 L 95.23,167.58 L 97.21,168.00 L 99.18,168.00 L 101.15,168.00 L 103.12,168.00 L 105.10,168.00 L 107.07,168.00 L 109.04,167.15 L 111.01,168.00 L 112.99,168.00 L 114.96,168.00 L 116.93,168.00 L 118.90,168.00 L 120.88,168.00 L 122.85,165.89 L 124.82,168.00 L 126.79,167.58 L 128.77,168.00 L 130.74,167.15 L 132.71,167.58 L 134.68,168.00 L 136.66,168.00 L 138.63,168.00 L 140.60,168.00 L 142.58,168.00 L 144.55,162.51 L 146.52,168.00 L 148.49,168.00 L 150.47,168.00 L 152.44,167.15 L 154.41,166.31 L 156.38,166.73 L 158.36,168.00 L 160.33,168.00 L 162.30,168.00 L 164.27,168.00 L 166.25,168.00 L 168.22,168.00 L 170.19,168.00 L 172.16,168.00 L 174.14,168.00 L 176.11,167.58 L 178.08,168.00 L 180.05,168.00 L 182.03,168.00 L 184.00,168.00 L 185.97,168.00 L 187.95,167.58 L 189.92,168.00 L 191.89,168.00 L 193.86,168.00 L 195.84,168.00 L 197.81,168.00 L 199.78,168.00 L 201.75,168.00 L 203.73,168.00 L 205.70,168.00 L 207.67,168.00 L 209.64,168.00 L 211.62,167.58 L 213.59,168.00 L 215.56,168.00 L 217.53,168.00 L 219.51,168.00 L 221.48,168.00 L 223.45,168.00 L 225.42,168.00 L 227.40,168.00 L 229.37,168.00 L 231.34,168.00 L 233.32,168.00 L 235.29,168.00 L 237.26,168.00 L 239.23,168.00 L 241.21,168.00 L 243.18,168.00 L 245.15,168.00 L 247.12,168.00 L 249.10,167.58 L 251.07,168.00 L 253.04,168.00 L 255.01,168.00 L 256.99,166.73 L 258.96,168.00 L 260.93,168.00 L 262.90,168.00 L 264.88,168.00 L 266.85,168.00 L 268.82,167.15 L 270.79,168.00 L 272.77,168.00 L 274.74,168.00 L 276.71,168.00 L 278.68,166.73 L 280.66,167.15 L 282.63,168.00 L 284.60,168.00 L 286.58,168.00 L 288.55,168.00 L 290.52,168.00 L 292.49,168.00 L 294.47,167.58 L 296.44,168.00 L 298.41,168.00 L 300.38,165.89 L 302.36,168.00 L 304.33,167.58 L 306.30,168.00 L 308.27,167.58 L 310.25,166.31 L 312.22,168.00 L 314.19,168.00 L 316.16,168.00 L 318.14,166.31 L 320.11,165.46 L 322.08,165.46 L 324.05,166.73 L 326.03,168.00 L 328.00,165.46 L 329.97,166.73 L 331.95,167.15 L 333.92,165.46 L 335.89,154.06 L 337.86,168.00 L 339.84,168.00 L 341.81,167.15 L 343.78,168.00 L 345.75,167.15 L 347.73,168.00 L 349.70,168.00 L 351.67,168.00 L 353.64,168.00 L 355.62,168.00 L 357.59,168.00 L 359.56,166.73 L 361.53,168.00 L 363.51,168.00 L 365.48,168.00 L 367.45,168.00 L 369.42,167.15 L 371.40,167.15 L 373.37,168.00 L 375.34,167.58 L 377.32,168.00 L 379.29,168.00 L 381.26,168.00 L 383.23,168.00 L 385.21,168.00 L 387.18,163.77 L 389.15,163.77 L 391.12,166.31 L 393.10,166.73 L 395.07,165.46 L 397.04,166.73 L 399.01,168.00 L 400.99,159.55 L 402.96,164.62 L 404.93,157.44 L 406.90,158.28 L 408.88,160.82 L 410.85,160.39 L 412.82,163.35 L 414.79,162.93 L 416.77,155.32 L 418.74,159.97 L 420.71,142.23 L 422.68,131.24 L 424.66,157.86 L 426.63,165.89 L 428.60,167.15 L 430.58,162.93 L 432.55,168.00 L 434.52,168.00 L 436.49,167.15 L 438.47,168.00 L 440.44,166.31 L 442.41,167.58 L 444.38,161.66 L 446.36,168.00 L 448.33,124.90 L 450.30,166.31 L 452.27,153.63 L 454.25,143.49 L 456.22,160.39 L 458.19,154.90 L 460.16,160.39 L 462.14,157.44 L 464.11,143.07 L 466.08,122.79 L 468.05,142.65 L 470.03,126.59 L 472.00,145.61 L 473.97,142.65 L 475.95,156.17 L 477.92,127.01 L 479.89,138.42 L 481.86,147.72 L 483.84,130.39 L 485.81,143.07 L 487.78,154.90 L 489.75,118.56 L 491.73,150.25 L 493.70,122.79 L 495.67,142.23 L 497.64,142.23 L 499.62,146.87 L 501.59,151.10 L 503.56,155.75 L 505.53,164.20 L 507.51,159.55 L 509.48,158.70 L 511.45,163.77 L 513.42,161.24 L 515.40,165.04 L 517.37,149.41 L 519.34,116.45 L 521.32,167.15 L 523.29,165.46 L 525.26,166.73 L 527.23,165.04 L 529.21,153.21 L 531.18,131.66 L 533.15,109.69 L 535.12,115.61 L 537.10,140.11 L 539.07,119.83 L 541.04,138.85 L 543.01,143.49 L 544.99,152.79 L 546.96,165.46 L 548.93,159.13 L 550.90,148.56 L 552.88,161.24 L 554.85,156.17 L 556.82,165.89 L 558.79,159.13 L 560.77,151.10 L 562.74,132.08 L 564.71,159.13 L 566.68,121.94 L 568.66,157.01 L 570.63,139.69 L 572.60,156.17 L 574.58,158.70 L 576.55,162.51 L 578.52,156.17 L 580.49,156.59 L 582.47,162.51 L 584.44,146.87 L 586.41,163.35 L 588.38,151.52 L 590.36,146.45 L 592.33,152.37 L 594.30,158.28 L 596.27,165.46 L 598.25,165.89 L 600.22,163.77 L 602.19,165.46 L 604.16,162.51 L 606.14,158.70 L 608.11,167.15 L 610.08,168.00 L 612.05,158.70 L 614.03,161.66 L 616.00,166.31 L 617.97,162.93 L 619.95,125.75 L 621.92,160.39 L 623.89,164.62 L 625.86,166.73 L 627.84,168.00 L 629.81,162.08 L 631.78,159.97 L 633.75,159.97 L 635.73,165.46 L 637.70,164.20 L 639.67,162.93 L 641.64,155.75 L 643.62,131.24 L 645.59,158.70 L 647.56,159.13 L 649.53,165.89 L 651.51,164.20 L 653.48,159.97 L 655.45,137.15 L 657.42,159.13 L 659.40,157.44 L 661.37,157.44 L 663.34,136.73 L 665.32,150.25 L 667.29,148.14 L 669.26,159.97 L 671.23,168.00 L 673.21,142.23 L 675.18,148.99 L 677.15,146.87 L 679.12,147.72 L 681.10,152.37 L 683.07,148.56 L 685.04,148.99 L 687.01,164.20 L 688.99,161.66 L 690.96,168.00 L 692.93,161.66 L 694.90,162.51 L 696.88,159.55 L 698.85,152.79 L 700.82,163.35 L 702.79,155.32 L 704.77,162.93 L 706.74,167.15 L 708.71,142.65 L 710.68,150.68 L 712.66,159.55 L 714.63,117.72 L 716.60,132.08 L 718.58,159.55 L 720.55,142.65 L 722.52,148.56 L 724.49,128.70 L 726.47,159.97 L 728.44,132.08 L 730.41,151.10 L 732.38,144.34 L 734.36,143.49 L 736.33,121.10 L 738.30,159.97 L 740.27,159.97 L 742.25,164.20 L 744.22,160.82 L 746.19,86.45 L 748.16,121.10 L 750.14,114.34 L 752.11,131.66 L 754.08,166.73 L 756.05,78.00 L 758.03,124.48 L 760.00,153.21" fill="none" stroke="#79c0ff" stroke-width="1.2" stroke-linejoin="round"/>
   </g>
+  <line x1="40" y1="168" x2="760" y2="168" stroke="#30363d" stroke-width="1"/>
+
+  <g>
+    <circle cx="756.05" cy="78.00" r="4" fill="#79c0ff" opacity="0.35">
+      <animate attributeName="r" values="4;10;4" dur="3.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0;0.35" dur="3.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="756.05" cy="78.00" r="2.6" fill="#f0f6fc"/>
+  </g>
+
+  <line y1="76" y2="168" stroke="#58a6ff" stroke-width="1" opacity="0.35">
+    <animate attributeName="x1" values="40;760;40" dur="19s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="40;760;40" dur="19s" repeatCount="indefinite"/>
+  </line>
+
+  <rect x="448.33" y="173" width="159.78" height="7" rx="2" fill="url(#streakGrad)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="4.3s" repeatCount="indefinite"/>
+  </rect>
+  <line x1="448.33" y1="170" x2="448.33" y2="183" stroke="#f78166" stroke-width="1"/>
+  <line x1="608.11" y1="170" x2="608.11" y2="183" stroke="#f78166" stroke-width="1"/>
+
+  <text x="528.22" y="198" font-size="9.5" fill="#8b949e" letter-spacing="1.6" font-weight="600" text-anchor="middle">LONGEST STREAK</text>
+  <text x="528.22" y="226" font-size="26" fill="#f78166" font-weight="700" text-anchor="middle">82</text>
+  <text x="528.22" y="241" font-size="9.5" fill="#8b949e" text-anchor="middle">consecutive days · 1 Year</text>
+
+  <text x="20" y="258" font-size="10" fill="#8b949e" letter-spacing="1.2" font-weight="600">LANGUAGES ·</text>
+  <text x="105" y="258" font-size="10" fill="#8b949e" letter-spacing="0.5">1 Year</text>
+  <text x="780" y="260" font-size="20" fill="#c9d1d9" font-weight="700" text-anchor="end">10</text>
+
+  <rect x="40" y="268" width="720" height="22" rx="4" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+
+  <g clip-path="url(#langClip)">
+    <rect x="40.00" y="268" width="480.99" height="22" fill="#3178c6"/>
+    <rect x="520.99" y="268" width="151.32" height="22" fill="#f7df1e"/>
+    <rect x="672.30" y="268" width="65.03" height="22" fill="#00ADD8"/>
+    <rect x="737.34" y="268" width="11.26" height="22" fill="#89e051"/>
+    <rect x="748.60" y="268" width="9.15" height="22" fill="#e34c26"/>
+    <rect x="757.75" y="268" width="1.55" height="22" fill="#563d7c"/>
+    <rect x="759.30" y="268" width="0.42" height="22" fill="#f1e05a"/>
+    <rect x="759.72" y="268" width="0.28" height="22" fill="#844FBA"/>
+    <rect x="-120" y="268" width="160" height="22" fill="url(#shine)" opacity="0.6">
+      <animate attributeName="x" from="-120" to="760" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <text x="280.49" y="283.00" font-size="10.5" fill="#0d1117" font-weight="700" text-anchor="middle">TypeScript</text>
+  <text x="596.65" y="283.00" font-size="10.5" fill="#0d1117" font-weight="700" text-anchor="middle">Python</text>
+  <text x="704.82" y="283.00" font-size="10.5" fill="#0d1117" font-weight="700" text-anchor="middle">Go</text>
+  <rect x="40" y="298" width="8" height="8" rx="1.5" fill="#3178c6"/>
+  <text x="52" y="306" font-size="10" fill="#8b949e">TypeScript 66.8%</text>
+  <rect x="162" y="298" width="8" height="8" rx="1.5" fill="#f7df1e"/>
+  <text x="174" y="306" font-size="10" fill="#8b949e">Python 21.0%</text>
+  <rect x="260" y="298" width="8" height="8" rx="1.5" fill="#00ADD8"/>
+  <text x="272" y="306" font-size="10" fill="#8b949e">Go 9.0%</text>
+  <rect x="328" y="298" width="8" height="8" rx="1.5" fill="#89e051"/>
+  <text x="340" y="306" font-size="10" fill="#8b949e">Shell 1.6%</text>
+  <rect x="414" y="298" width="8" height="8" rx="1.5" fill="#e34c26"/>
+  <text x="426" y="306" font-size="10" fill="#8b949e">HTML 1.3%</text>
+
+  <text x="20" y="348" font-size="10" fill="#8b949e" letter-spacing="1.2" font-weight="600">DAYS ACTIVE ·</text>
+  <text x="115" y="348" font-size="10" fill="#8b949e" letter-spacing="0.5">30 Days</text>
+  <text x="780" y="350" font-size="20" fill="#3fb950" font-weight="700" text-anchor="end">31</text>
+
+  <rect x="40" y="358" width="720" height="22" rx="6" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+
+  <g clip-path="url(#gaugeClip)">
+    <rect x="40" y="358" width="696.77" height="22" fill="#2ea043"/>
+    <rect x="736.77" y="358" width="23.23" height="22" fill="#f0883e">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="2.7s" repeatCount="indefinite"/>
+    </rect>
+    <circle cy="369.00" r="4" fill="#ffffff" opacity="0.75">
+      <animate attributeName="cx" values="40;760;40" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.95;0.7" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="-100" y="358" width="140" height="22" fill="url(#shine)" opacity="0.55">
+      <animate attributeName="x" from="-100" to="760" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <line x1="736.77" y1="354" x2="736.77" y2="384" stroke="#f0f6fc" stroke-width="1" opacity="0.85"/>
+  <text x="736.77" y="352" font-size="9" fill="#c9d1d9" text-anchor="middle">max 30</text>
+
+  <text x="20" y="398" font-size="9" fill="#484f58" letter-spacing="0.6">github.com/brandon-fryslie · picture encodes the data</text>
 </svg>
