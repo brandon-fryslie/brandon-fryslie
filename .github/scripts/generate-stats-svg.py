@@ -7,10 +7,17 @@ queries GitHub for their exact values as of one instant. That instant is `--as-o
 defaulting to now; every window below is a closed range ending there, and the metric
 selection is seeded off its date, so the whole program is a pure function of it. Passing
 a past instant reconstructs that day — which is how `remaster-stats-card.py` redraws the
-archive's deterministic-era cards. The one caveat is not fixable here: GitHub's commit
-and PR search index lags by minutes, so a reconstruction of a past morning returns
-slightly more than that morning's own run saw. It is the more accurate reading of the
-two, not the more faithful one.
+archive's deterministic-era cards. Run under the same token the daily job uses, that
+reconstruction is exact — replaying 2026-08-16T06:03:56Z reproduced all four of that
+morning's committed values. Two things it still cannot recover, neither fixable here:
+repos deleted or made private since that day are gone from the query, and a metric whose
+definition has changed reads differently than it did (the pre-GraphQL `days_active` was
+silently truncated by the search 1000-result cap, so a remastered card shows the number
+that day actually earned rather than the one it displayed).
+
+Hold token scope steady before concluding anything from a difference: a personal token
+sees private repos the Actions token cannot, so the same query run locally reports more
+than CI does. That gap is visibility, not time.
 
 It then writes two things:
 

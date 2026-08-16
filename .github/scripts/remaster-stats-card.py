@@ -145,6 +145,16 @@ def cmd_archive(args: argparse.Namespace) -> None:
     [LAW:no-silent-failure]
     """
     seam = json.loads(LIVE_SEAM.read_text(encoding="utf-8"))
+    card = LIVE_CARD.read_text(encoding="utf-8")
+    fallback = Path(args.fallback).read_text(encoding="utf-8")
+    previous = read_record(record_path(args.stamp))
+
+    # Everything needed is in memory now, so give the working paths back before deciding
+    # anything. They are the daily job's files, borrowed as the agent's workspace; a
+    # decision below that ends this run must not end it holding them.
+    # [LAW:effects-at-boundaries]
+    git("checkout", "HEAD", "--", CARD_PATH, SEAM_PATH)
+
     expected = instant_of(args.stamp).strftime("%Y-%m-%d")
     if seam["date"] != expected:
         sys.exit(
@@ -152,8 +162,18 @@ def cmd_archive(args: argparse.Namespace) -> None:
             " The reconstruction ran with the wrong --as-of; refusing to archive it."
         )
 
-    previous = read_record(record_path(args.stamp))
-    card = LIVE_CARD.read_text(encoding="utf-8")
+    # The agent is told to copy the deterministic fallback in rather than ship a card it
+    # cannot make both accurate and legible. For the daily job that is the right answer —
+    # the profile needs a card this morning. Here it is not an answer at all: the slot
+    # already holds a card, and swapping one deterministic card for another achieves
+    # nothing while marking the slot done, which would retire it from the pending set
+    # forever. Fail instead, so the run goes red and the next dispatch retries the slot.
+    # [LAW:no-silent-failure]
+    if card == fallback:
+        sys.exit(
+            f"ERROR: the agent fell back to the deterministic card for {args.stamp}."
+            " Nothing was remastered; leaving the slot pending for a later run."
+        )
 
     svg_path(args.stamp).write_text(card, encoding="utf-8")
     write_record(
@@ -163,11 +183,6 @@ def cmd_archive(args: argparse.Namespace) -> None:
         # meant. Nothing else survives — these numbers and this picture are new.
         card_record(args.stamp, previous["commit"], AUTHORED_SOURCE, metrics_from_seam(seam)),
     )
-
-    # The live card and seam are the daily job's to own; this run only borrowed them as
-    # the agent's workspace. Hand them back untouched so the commit that follows contains
-    # the archive and nothing else. [LAW:effects-at-boundaries]
-    git("checkout", "HEAD", "--", CARD_PATH, SEAM_PATH)
 
     values = " · ".join(f"{m['label']} {m['value']}" for m in metrics_from_seam(seam))
     print(f"archived {svg_path(args.stamp).relative_to(REPO_ROOT)} — {values}")
@@ -191,6 +206,10 @@ def main() -> int:
 
     p_archive = sub.add_parser("archive", help="move the authored card into its slot")
     p_archive.add_argument("stamp")
+    p_archive.add_argument("--fallback", required=True, metavar="PATH",
+                           help="the deterministic card this run generated; a result "
+                                "identical to it means the agent fell back and the slot "
+                                "must stay pending")
     p_archive.set_defaults(func=cmd_archive)
 
     args = parser.parse_args()
