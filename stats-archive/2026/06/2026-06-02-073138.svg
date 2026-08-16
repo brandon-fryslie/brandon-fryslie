@@ -1,20 +1,666 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 02, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">635</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">46</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">19</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="ui-sans-serif,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<defs>
+  <linearGradient id="calGrad" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#7ee787"/>
+    <stop offset="0.45" stop-color="#26a641"/>
+    <stop offset="1" stop-color="#0e4429"/>
+  </linearGradient>
+  <linearGradient id="streakGrad" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#d29922"/>
+    <stop offset="0.55" stop-color="#f0883e"/>
+    <stop offset="1" stop-color="#ff7b72"/>
+  </linearGradient>
+  <linearGradient id="repoGrad" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#1f6feb"/>
+    <stop offset="1" stop-color="#79c0ff"/>
+  </linearGradient>
+  <linearGradient id="shimmer" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.55"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="streakSweep" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.65"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="calClip">
+    <rect x="22" y="68" width="756" height="70"/>
+  </clipPath>
+  <clipPath id="streakClip">
+    <rect id="streakClipRect" x="22" y="180" width="1" height="14"/>
+  </clipPath>
+</defs>
+<rect width="800" height="360" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="359" rx="10" ry="10" fill="none" stroke="#21262d" stroke-width="1"/>
+<text x="22" y="28" fill="#e6edf3" font-size="15" font-weight="700">Live GitHub Stats</text>
+<text x="170" y="28" fill="#8b949e" font-size="12">&#183; brandon-fryslie</text>
+<text x="780" y="28" text-anchor="end" fill="#e6edf3" font-size="13" font-weight="500">Tue &#183; Jun 2, 2026</text>
+<text x="22" y="60" fill="#8b949e" font-size="10.5" letter-spacing="1.2">CONTRIBUTIONS &#183; PAST 12 MONTHS</text>
+<line x1="22" y1="138.5" x2="778" y2="138.5" stroke="#21262d" stroke-width="1"/>
+<rect x="22.00" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="24.07" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="26.13" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="28.20" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="30.26" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="32.33" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="34.39" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="36.46" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="38.52" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="40.59" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="42.66" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="44.72" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="46.79" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="48.85" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="50.92" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="52.98" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="55.05" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="57.11" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="59.18" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="61.25" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="63.31" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="65.38" y="130.90" width="1.69" height="7.10" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="67.44" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="69.51" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="71.57" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="73.64" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="75.70" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="77.77" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="79.84" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="81.90" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="83.97" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="86.03" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="88.10" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="90.16" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="92.23" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="94.30" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="96.36" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="98.43" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="100.49" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="102.56" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="104.62" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="106.69" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="108.75" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="110.82" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="112.89" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="114.95" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="117.02" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="119.08" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="121.15" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="123.21" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="125.28" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="127.34" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="129.41" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="131.48" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="133.54" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="135.61" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="137.67" y="135.46" width="1.69" height="2.54" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="139.74" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="141.80" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="143.87" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="145.93" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="148.00" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="150.07" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="152.13" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="154.20" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="156.26" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="158.33" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="160.39" y="131.41" width="1.69" height="6.59" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="162.46" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="164.52" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="166.59" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="168.66" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="170.72" y="135.97" width="1.69" height="2.03" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="172.79" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="174.85" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="176.92" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="178.98" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="181.05" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="183.11" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="185.18" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="187.25" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="189.31" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="191.38" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="193.44" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="195.51" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="197.57" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="199.64" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="201.70" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="203.77" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="205.84" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="207.90" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="209.97" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="212.03" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="214.10" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="216.16" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="218.23" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="220.30" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="222.36" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="224.43" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="226.49" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="228.56" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="230.62" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="232.69" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="234.75" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="236.82" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="238.89" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="240.95" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="243.02" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="245.08" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="247.15" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="249.21" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="251.28" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="253.34" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="255.41" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="257.48" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="259.54" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="261.61" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="263.67" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="265.74" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="267.80" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="269.87" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="271.93" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="274.00" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="276.07" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="278.13" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="280.20" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="282.26" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="284.33" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="286.39" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="288.46" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="290.52" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="292.59" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="294.66" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="296.72" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="298.79" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="300.85" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="302.92" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="304.98" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="307.05" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="309.11" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="311.18" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="313.25" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="315.31" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="317.38" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="319.44" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="321.51" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="323.57" y="135.46" width="1.69" height="2.54" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="325.64" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="327.70" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="329.77" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="331.84" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="333.90" y="135.97" width="1.69" height="2.03" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="335.97" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="338.03" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="340.10" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="342.16" y="135.97" width="1.69" height="2.03" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="344.23" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="346.30" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="348.36" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="350.43" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="352.49" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="354.56" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="356.62" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="358.69" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="360.75" y="121.26" width="1.69" height="16.74" fill="url(#calGrad)" opacity="0.66"/>
+<rect x="362.82" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="364.89" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="366.95" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="369.02" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="371.08" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="373.15" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="375.21" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="377.28" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="379.34" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="381.41" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="383.48" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="385.54" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="387.61" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="389.67" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="391.74" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="393.80" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="395.87" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="397.93" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="400.00" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="402.07" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="404.13" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="406.20" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="408.26" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="410.33" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="412.39" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="414.46" y="132.93" width="1.69" height="5.07" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="416.52" y="132.93" width="1.69" height="5.07" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="418.59" y="135.97" width="1.69" height="2.03" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="420.66" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="422.72" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="424.79" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="426.85" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="428.92" y="127.86" width="1.69" height="10.14" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="430.98" y="133.94" width="1.69" height="4.06" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="433.05" y="125.32" width="1.69" height="12.68" fill="url(#calGrad)" opacity="0.63"/>
+<rect x="435.11" y="126.33" width="1.69" height="11.67" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="437.18" y="129.38" width="1.69" height="8.62" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="439.25" y="128.87" width="1.69" height="9.13" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="441.31" y="132.42" width="1.69" height="5.58" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="443.38" y="131.91" width="1.69" height="6.09" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="445.44" y="122.78" width="1.69" height="15.22" fill="url(#calGrad)" opacity="0.65"/>
+<rect x="447.51" y="128.36" width="1.69" height="9.64" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="449.57" y="107.06" width="1.69" height="30.94" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="451.64" y="93.87" width="1.69" height="44.13" fill="url(#calGrad)" opacity="0.83"/>
+<rect x="453.70" y="125.83" width="1.69" height="12.17" fill="url(#calGrad)" opacity="0.63"/>
+<rect x="455.77" y="135.46" width="1.69" height="2.54" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="457.84" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="459.90" y="131.91" width="1.69" height="6.09" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="461.97" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="464.03" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="466.10" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="468.16" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="470.23" y="135.97" width="1.69" height="2.03" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="472.30" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.55"/>
+<rect x="474.36" y="130.39" width="1.69" height="7.61" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="476.43" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="478.49" y="86.26" width="1.69" height="51.74" fill="url(#calGrad)" opacity="0.88"/>
+<rect x="480.56" y="135.97" width="1.69" height="2.03" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="482.62" y="120.75" width="1.69" height="17.25" fill="url(#calGrad)" opacity="0.66"/>
+<rect x="484.69" y="108.58" width="1.69" height="29.42" fill="url(#calGrad)" opacity="0.74"/>
+<rect x="486.75" y="128.87" width="1.69" height="9.13" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="488.82" y="122.28" width="1.69" height="15.72" fill="url(#calGrad)" opacity="0.65"/>
+<rect x="490.89" y="128.87" width="1.69" height="9.13" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="492.95" y="125.32" width="1.69" height="12.68" fill="url(#calGrad)" opacity="0.63"/>
+<rect x="495.02" y="108.07" width="1.69" height="29.93" fill="url(#calGrad)" opacity="0.74"/>
+<rect x="497.08" y="83.72" width="1.69" height="54.28" fill="url(#calGrad)" opacity="0.90"/>
+<rect x="499.15" y="107.57" width="1.69" height="30.43" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="501.21" y="88.29" width="1.69" height="49.71" fill="url(#calGrad)" opacity="0.87"/>
+<rect x="503.28" y="111.12" width="1.69" height="26.88" fill="url(#calGrad)" opacity="0.72"/>
+<rect x="505.34" y="107.57" width="1.69" height="30.43" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="507.41" y="123.80" width="1.69" height="14.20" fill="url(#calGrad)" opacity="0.64"/>
+<rect x="509.48" y="88.80" width="1.69" height="49.20" fill="url(#calGrad)" opacity="0.87"/>
+<rect x="511.54" y="102.49" width="1.69" height="35.51" fill="url(#calGrad)" opacity="0.78"/>
+<rect x="513.61" y="113.65" width="1.69" height="24.35" fill="url(#calGrad)" opacity="0.71"/>
+<rect x="515.67" y="92.86" width="1.69" height="45.14" fill="url(#calGrad)" opacity="0.84"/>
+<rect x="517.74" y="108.07" width="1.69" height="29.93" fill="url(#calGrad)" opacity="0.74"/>
+<rect x="519.80" y="122.28" width="1.69" height="15.72" fill="url(#calGrad)" opacity="0.65"/>
+<rect x="521.87" y="78.65" width="1.69" height="59.35" fill="url(#calGrad)" opacity="0.93"/>
+<rect x="523.93" y="116.70" width="1.69" height="21.30" fill="url(#calGrad)" opacity="0.69"/>
+<rect x="526.00" y="83.72" width="1.69" height="54.28" fill="url(#calGrad)" opacity="0.90"/>
+<rect x="528.07" y="107.06" width="1.69" height="30.94" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="530.13" y="107.06" width="1.69" height="30.94" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="532.20" y="112.64" width="1.69" height="25.36" fill="url(#calGrad)" opacity="0.71"/>
+<rect x="534.26" y="117.71" width="1.69" height="20.29" fill="url(#calGrad)" opacity="0.68"/>
+<rect x="536.33" y="123.29" width="1.69" height="14.71" fill="url(#calGrad)" opacity="0.64"/>
+<rect x="538.39" y="133.43" width="1.69" height="4.57" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="540.46" y="127.86" width="1.69" height="10.14" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="542.52" y="126.84" width="1.69" height="11.16" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="544.59" y="132.93" width="1.69" height="5.07" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="546.66" y="129.88" width="1.69" height="8.12" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="548.72" y="134.45" width="1.69" height="3.55" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="550.79" y="115.68" width="1.69" height="22.32" fill="url(#calGrad)" opacity="0.69"/>
+<rect x="552.85" y="76.12" width="1.69" height="61.88" fill="url(#calGrad)" opacity="0.95"/>
+<rect x="554.92" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="556.98" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="559.05" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="561.11" y="134.45" width="1.69" height="3.55" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="563.18" y="120.25" width="1.69" height="17.75" fill="url(#calGrad)" opacity="0.66"/>
+<rect x="565.25" y="94.38" width="1.69" height="43.62" fill="url(#calGrad)" opacity="0.83"/>
+<rect x="567.31" y="68.00" width="1.69" height="70.00" fill="url(#calGrad)" opacity="1.00"/>
+<rect x="569.38" y="75.10" width="1.69" height="62.90" fill="url(#calGrad)" opacity="0.95"/>
+<rect x="571.44" y="104.52" width="1.69" height="33.48" fill="url(#calGrad)" opacity="0.77"/>
+<rect x="573.51" y="80.17" width="1.69" height="57.83" fill="url(#calGrad)" opacity="0.92"/>
+<rect x="575.57" y="103.00" width="1.69" height="35.00" fill="url(#calGrad)" opacity="0.78"/>
+<rect x="577.64" y="108.58" width="1.69" height="29.42" fill="url(#calGrad)" opacity="0.74"/>
+<rect x="579.70" y="119.74" width="1.69" height="18.26" fill="url(#calGrad)" opacity="0.67"/>
+<rect x="581.77" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="583.84" y="127.35" width="1.69" height="10.65" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="585.90" y="114.67" width="1.69" height="23.33" fill="url(#calGrad)" opacity="0.70"/>
+<rect x="587.97" y="129.88" width="1.69" height="8.12" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="590.03" y="123.80" width="1.69" height="14.20" fill="url(#calGrad)" opacity="0.64"/>
+<rect x="592.10" y="135.46" width="1.69" height="2.54" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="594.16" y="127.35" width="1.69" height="10.65" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="596.23" y="117.71" width="1.69" height="20.29" fill="url(#calGrad)" opacity="0.68"/>
+<rect x="598.30" y="94.88" width="1.69" height="43.12" fill="url(#calGrad)" opacity="0.83"/>
+<rect x="600.36" y="127.35" width="1.69" height="10.65" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="602.43" y="82.71" width="1.69" height="55.29" fill="url(#calGrad)" opacity="0.91"/>
+<rect x="604.49" y="124.81" width="1.69" height="13.19" fill="url(#calGrad)" opacity="0.63"/>
+<rect x="606.56" y="104.01" width="1.69" height="33.99" fill="url(#calGrad)" opacity="0.77"/>
+<rect x="608.62" y="123.80" width="1.69" height="14.20" fill="url(#calGrad)" opacity="0.64"/>
+<rect x="610.69" y="126.84" width="1.69" height="11.16" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="612.75" y="131.41" width="1.69" height="6.59" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="614.82" y="123.80" width="1.69" height="14.20" fill="url(#calGrad)" opacity="0.64"/>
+<rect x="616.89" y="124.30" width="1.69" height="13.70" fill="url(#calGrad)" opacity="0.64"/>
+<rect x="618.95" y="131.41" width="1.69" height="6.59" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="621.02" y="112.64" width="1.69" height="25.36" fill="url(#calGrad)" opacity="0.71"/>
+<rect x="623.08" y="132.42" width="1.69" height="5.58" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="625.15" y="118.22" width="1.69" height="19.78" fill="url(#calGrad)" opacity="0.68"/>
+<rect x="627.21" y="112.13" width="1.69" height="25.87" fill="url(#calGrad)" opacity="0.72"/>
+<rect x="629.28" y="119.23" width="1.69" height="18.77" fill="url(#calGrad)" opacity="0.67"/>
+<rect x="631.34" y="126.33" width="1.69" height="11.67" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="633.41" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="635.48" y="135.46" width="1.69" height="2.54" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="637.54" y="132.93" width="1.69" height="5.07" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="639.61" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="641.67" y="131.41" width="1.69" height="6.59" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="643.74" y="126.84" width="1.69" height="11.16" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="645.80" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="647.87" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="649.93" y="126.84" width="1.69" height="11.16" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="652.00" y="130.39" width="1.69" height="7.61" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="654.07" y="135.97" width="1.69" height="2.03" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="656.13" y="131.91" width="1.69" height="6.09" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="658.20" y="87.28" width="1.69" height="50.72" fill="url(#calGrad)" opacity="0.88"/>
+<rect x="660.26" y="128.87" width="1.69" height="9.13" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="662.33" y="133.94" width="1.69" height="4.06" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="664.39" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="666.46" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="668.52" y="130.90" width="1.69" height="7.10" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="670.59" y="128.36" width="1.69" height="9.64" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="672.66" y="128.36" width="1.69" height="9.64" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="674.72" y="134.96" width="1.69" height="3.04" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="676.79" y="133.43" width="1.69" height="4.57" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="678.85" y="131.91" width="1.69" height="6.09" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="680.92" y="123.29" width="1.69" height="14.71" fill="url(#calGrad)" opacity="0.64"/>
+<rect x="682.98" y="93.87" width="1.69" height="44.13" fill="url(#calGrad)" opacity="0.83"/>
+<rect x="685.05" y="126.84" width="1.69" height="11.16" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="687.11" y="127.35" width="1.69" height="10.65" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="689.18" y="135.46" width="1.69" height="2.54" fill="url(#calGrad)" opacity="0.57"/>
+<rect x="691.25" y="133.43" width="1.69" height="4.57" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="693.31" y="128.36" width="1.69" height="9.64" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="695.38" y="100.97" width="1.69" height="37.03" fill="url(#calGrad)" opacity="0.79"/>
+<rect x="697.44" y="127.35" width="1.69" height="10.65" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="699.51" y="125.32" width="1.69" height="12.68" fill="url(#calGrad)" opacity="0.63"/>
+<rect x="701.57" y="125.32" width="1.69" height="12.68" fill="url(#calGrad)" opacity="0.63"/>
+<rect x="703.64" y="100.46" width="1.69" height="37.54" fill="url(#calGrad)" opacity="0.79"/>
+<rect x="705.70" y="116.70" width="1.69" height="21.30" fill="url(#calGrad)" opacity="0.69"/>
+<rect x="707.77" y="114.16" width="1.69" height="23.84" fill="url(#calGrad)" opacity="0.70"/>
+<rect x="709.84" y="128.36" width="1.69" height="9.64" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="711.90" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="713.97" y="107.06" width="1.69" height="30.94" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="716.03" y="115.17" width="1.69" height="22.83" fill="url(#calGrad)" opacity="0.70"/>
+<rect x="718.10" y="112.64" width="1.69" height="25.36" fill="url(#calGrad)" opacity="0.71"/>
+<rect x="720.16" y="113.65" width="1.69" height="24.35" fill="url(#calGrad)" opacity="0.71"/>
+<rect x="722.23" y="119.23" width="1.69" height="18.77" fill="url(#calGrad)" opacity="0.67"/>
+<rect x="724.30" y="114.67" width="1.69" height="23.33" fill="url(#calGrad)" opacity="0.70"/>
+<rect x="726.36" y="115.17" width="1.69" height="22.83" fill="url(#calGrad)" opacity="0.70"/>
+<rect x="728.43" y="133.43" width="1.69" height="4.57" fill="url(#calGrad)" opacity="0.58"/>
+<rect x="730.49" y="130.39" width="1.69" height="7.61" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="732.56" y="136.80" width="1.69" height="1.20" fill="url(#calGrad)" opacity="0.14"/>
+<rect x="734.62" y="130.39" width="1.69" height="7.61" fill="url(#calGrad)" opacity="0.60"/>
+<rect x="736.69" y="131.41" width="1.69" height="6.59" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="738.75" y="127.86" width="1.69" height="10.14" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="740.82" y="119.74" width="1.69" height="18.26" fill="url(#calGrad)" opacity="0.67"/>
+<rect x="742.89" y="132.42" width="1.69" height="5.58" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="744.95" y="122.78" width="1.69" height="15.22" fill="url(#calGrad)" opacity="0.65"/>
+<rect x="747.02" y="131.91" width="1.69" height="6.09" fill="url(#calGrad)" opacity="0.59"/>
+<rect x="749.08" y="136.00" width="1.69" height="2.00" fill="url(#calGrad)" opacity="0.56"/>
+<rect x="751.15" y="107.57" width="1.69" height="30.43" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="753.21" y="117.20" width="1.69" height="20.80" fill="url(#calGrad)" opacity="0.68"/>
+<rect x="755.28" y="127.86" width="1.69" height="10.14" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="757.34" y="77.64" width="1.69" height="60.36" fill="url(#calGrad)" opacity="0.94"/>
+<rect x="759.41" y="94.88" width="1.69" height="43.12" fill="url(#calGrad)" opacity="0.83"/>
+<rect x="761.48" y="127.86" width="1.69" height="10.14" fill="url(#calGrad)" opacity="0.62"/>
+<rect x="763.54" y="107.57" width="1.69" height="30.43" fill="url(#calGrad)" opacity="0.75"/>
+<rect x="765.61" y="114.67" width="1.69" height="23.33" fill="url(#calGrad)" opacity="0.70"/>
+<rect x="767.67" y="90.83" width="1.69" height="47.17" fill="url(#calGrad)" opacity="0.85"/>
+<rect x="769.74" y="128.36" width="1.69" height="9.64" fill="url(#calGrad)" opacity="0.61"/>
+<rect x="771.80" y="94.88" width="1.69" height="43.12" fill="url(#calGrad)" opacity="0.83"/>
+<rect x="773.87" y="117.71" width="1.69" height="20.29" fill="url(#calGrad)" opacity="0.68"/>
+<rect x="775.93" y="109.59" width="1.69" height="28.41" fill="url(#calGrad)" opacity="0.73"/>
+<g clip-path="url(#calClip)">
+<rect x="-178" y="68" width="200" height="70" fill="url(#shimmer)" opacity="0.5">
+  <animate attributeName="x" from="-178" to="778" dur="13s" repeatCount="indefinite"/>
+</rect></g>
+<text x="22" y="152" fill="#6e7681" font-size="10">2025-06-02</text>
+<text x="400.0" y="152" text-anchor="middle" fill="#6e7681" font-size="10">peak day: 138 commits</text>
+<text x="778.0" y="152" text-anchor="end" fill="#6e7681" font-size="10">2026-06-02</text>
+<text x="22" y="174" fill="#8b949e" font-size="10.5" letter-spacing="1.2">LONGEST STREAK &#183; 1 YEAR</text>
+<rect x="22" y="180" width="756" height="14" rx="3" fill="#161b22" stroke="#21262d" stroke-width="0.5"/>
+<line x1="211.0" y1="183" x2="211.0" y2="191" stroke="#21262d" stroke-width="0.8"/>
+<line x1="400.0" y1="183" x2="400.0" y2="191" stroke="#21262d" stroke-width="0.8"/>
+<line x1="589.0" y1="183" x2="589.0" y2="191" stroke="#21262d" stroke-width="0.8"/>
+<rect x="22" y="180" width="169.38" height="14" rx="3" fill="url(#streakGrad)"/>
+<clipPath id="streakFillClip"><rect x="22" y="180" width="169.38" height="14" rx="3"/></clipPath>
+<g clip-path="url(#streakFillClip)">
+<rect x="-48" y="180" width="70" height="14" fill="url(#streakSweep)" opacity="0.85">
+  <animate attributeName="x" from="-48" to="191.38" dur="7s" repeatCount="indefinite"/>
+</rect></g>
+<text x="199.38" y="191" fill="#f0883e" font-size="13" font-weight="700">82</text>
+<text x="221.38" y="191" fill="#8b949e" font-size="11">of 366 days consecutively active</text>
+<line x1="22" y1="218" x2="780" y2="218" stroke="#21262d" stroke-width="1"/>
+<text x="22" y="236" fill="#8b949e" font-size="10.5" letter-spacing="1.2">ACTIVE REPOS &#183; 7 DAYS</text>
+<text x="396" y="236" text-anchor="end" fill="#e6edf3" font-size="16" font-weight="700">9</text>
+<text x="22" y="257" fill="#c9d1d9" font-size="10.5">slopspot-web</text>
+<rect x="150" y="248" width="218" height="12" rx="2" fill="#161b22"/>
+<rect x="150" y="248" width="218.00" height="12" rx="2" fill="url(#repoGrad)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0.0s" repeatCount="indefinite"/>
+</rect>
+<text x="396" y="257" text-anchor="end" fill="#e6edf3" font-size="10.5" font-weight="600">83</text>
+<text x="22" y="274" fill="#c9d1d9" font-size="10.5">cc-candybar</text>
+<rect x="150" y="265" width="218" height="12" rx="2" fill="#161b22"/>
+<rect x="150" y="265" width="94.55" height="12" rx="2" fill="url(#repoGrad)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="8s" begin="0.4s" repeatCount="indefinite"/>
+</rect>
+<text x="396" y="274" text-anchor="end" fill="#e6edf3" font-size="10.5" font-weight="600">36</text>
+<text x="22" y="291" fill="#c9d1d9" font-size="10.5">links-issue-tracker</text>
+<rect x="150" y="282" width="218" height="12" rx="2" fill="#161b22"/>
+<rect x="150" y="282" width="44.65" height="12" rx="2" fill="url(#repoGrad)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="9s" begin="0.8s" repeatCount="indefinite"/>
+</rect>
+<text x="396" y="291" text-anchor="end" fill="#e6edf3" font-size="10.5" font-weight="600">17</text>
+<text x="22" y="308" fill="#c9d1d9" font-size="10.5">dotfiles</text>
+<rect x="150" y="299" width="218" height="12" rx="2" fill="#161b22"/>
+<rect x="150" y="299" width="42.02" height="12" rx="2" fill="url(#repoGrad)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="10s" begin="1.2s" repeatCount="indefinite"/>
+</rect>
+<text x="396" y="308" text-anchor="end" fill="#e6edf3" font-size="10.5" font-weight="600">16</text>
+<text x="22" y="325" fill="#c9d1d9" font-size="10.5">promptctl</text>
+<rect x="150" y="316" width="218" height="12" rx="2" fill="#161b22"/>
+<rect x="150" y="316" width="42.02" height="12" rx="2" fill="url(#repoGrad)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.6s" repeatCount="indefinite"/>
+</rect>
+<text x="396" y="325" text-anchor="end" fill="#e6edf3" font-size="10.5" font-weight="600">16</text>
+<text x="22" y="342" fill="#c9d1d9" font-size="10.5">tmux-control-mode-js</text>
+<rect x="150" y="333" width="218" height="12" rx="2" fill="#161b22"/>
+<rect x="150" y="333" width="34.14" height="12" rx="2" fill="url(#repoGrad)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="12s" begin="2.0s" repeatCount="indefinite"/>
+</rect>
+<text x="396" y="342" text-anchor="end" fill="#e6edf3" font-size="10.5" font-weight="600">13</text>
+<line x1="410" y1="224" x2="410" y2="344" stroke="#21262d" stroke-width="1"/>
+<text x="420" y="236" fill="#8b949e" font-size="10.5" letter-spacing="1.2">COMMITS &#183; ALL TIME</text>
+<text x="420" y="276" fill="#e6edf3" font-size="38" font-weight="700" letter-spacing="-1">4785</text>
+<text x="420" y="296" fill="#8b949e" font-size="10.5" letter-spacing="1.2">MY ISSUES CLOSED &#183; 1 YEAR</text>
+<text x="420" y="328" fill="#e6edf3" font-size="22" font-weight="700" letter-spacing="-1">64</text>
+<g>
+<circle cx="483.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.00s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.11s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.22s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.33s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.44s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.55s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.66s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="302.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.77s" repeatCount="indefinite"/>
+</circle>
+<circle cx="483.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.88s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.99s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.10s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.21s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.32s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.43s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.54s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="307.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.65s" repeatCount="indefinite"/>
+</circle>
+<circle cx="483.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.76s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.87s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.98s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.09s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.20s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.31s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.42s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="312.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.53s" repeatCount="indefinite"/>
+</circle>
+<circle cx="483.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.64s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.75s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.86s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="2.97s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.08s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.19s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.30s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="317.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.41s" repeatCount="indefinite"/>
+</circle>
+<circle cx="483.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.52s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.63s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.74s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.85s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="3.96s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.07s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.18s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="322.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.29s" repeatCount="indefinite"/>
+</circle>
+<circle cx="483.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.40s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.51s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.62s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.73s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.84s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="4.95s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="5.06s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="327.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="5.17s" repeatCount="indefinite"/>
+</circle>
+<circle cx="483.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="5.28s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="5.39s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.00s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.11s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.22s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.33s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.44s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="332.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.55s" repeatCount="indefinite"/>
+</circle>
+<circle cx="483.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.66s" repeatCount="indefinite"/>
+</circle>
+<circle cx="488.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.77s" repeatCount="indefinite"/>
+</circle>
+<circle cx="493.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.88s" repeatCount="indefinite"/>
+</circle>
+<circle cx="498.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="0.99s" repeatCount="indefinite"/>
+</circle>
+<circle cx="503.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.10s" repeatCount="indefinite"/>
+</circle>
+<circle cx="508.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.21s" repeatCount="indefinite"/>
+</circle>
+<circle cx="513.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.32s" repeatCount="indefinite"/>
+</circle>
+<circle cx="518.60" cy="337.60" r="1.6" fill="#a5d6ff">
+  <animate attributeName="opacity" values="0.45;1;0.45" dur="5.5s" begin="1.43s" repeatCount="indefinite"/>
+</circle>
+</g>
+<text x="528.2" y="323.1" fill="#6e7681" font-size="9.5">one dot = one issue</text>
 </svg>
