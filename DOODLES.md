@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 16, 2026 — Panama Canal — 112th Anniversary (August 15, 1914)
+
+<img src="./doodle-archive/2026/08/2026-08-16-060434.svg" width="800" alt="Daily doodle for August 15, 2026 — the 112th anniversary of the Panama Canal opening. On the left half, a cargo ship silhouette glides through a moonlit lock chamber at night, flanked by two concrete lock gates with warm pulsing lanterns; a moon and stars sit above and ripples move across the dark water. On the right, a huge cream AUGUST 15, 2026 headline underlined by a cyan-to-amber sweep, a cyan PANAMA CANAL · 112 YEARS subhead trailed by cream · SINCE 1914, an italic amber 50 MILES · ATLANTIC TO PACIFIC · SS ANCON, FIRST TRANSIT tertiary, a dim GATUN · PEDRO MIGUEL · MIRAFLORES · 85 FT LIFT roster, and a Georgia-italic 'a path between the seas.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 15 August 1914, the SS Ancon made the first official transit of the Panama Canal, a 50-mile shortcut through the isthmus that trimmed roughly 8,000 miles off the sea route from New York to San Francisco. Ten years in the making under U.S. Army Corps engineer George Washington Goethals, it cost the lives of more than 5,600 workers and moved 200 million cubic yards of earth. Its three lock complexes — Gatun, Pedro Miguel, and Miraflores — still lift ships 85 feet above sea level using nothing but gravity-fed fresh water from Gatun Lake. 112 years today.
+
+The left half is a side-view of a lock chamber at night: two concrete lock gates flank a cargo ship silhouette gliding slowly across the moonlit water, with rippling wake trailing behind and warm lanterns pulsing atop each gate. On the right, a large AUGUST 15, 2026 headline anchors a cyan PANAMA CANAL · 112 YEARS subhead, an italic 50 MILES · ATLANTIC TO PACIFIC · SS ANCON, FIRST TRANSIT tertiary, a dim GATUN · PEDRO MIGUEL · MIRAFLORES · 85 FT LIFT roster, and a Georgia-italic 'a path between the seas.' caption at the base.
+
+</details>
+
+---
+
 ## August 15, 2026 — Woodstock — 57th Anniversary (August 15, 1969)
 
 <img src="./doodle-archive/2026/08/2026-08-15-171234.svg" width="800" alt="Daily doodle for August 15, 2026 — the 57th anniversary of Woodstock. On the left, a slowly-turning tie-dye sunburst in magenta, orange, and gold behind a big white outlined peace symbol. Three white doves cross the sky. On the right, a huge cream AUGUST 15, 2026 headline underlined by a magenta-to-gold sweep, a magenta WOODSTOCK · 57 YEARS subhead trailed by cream · SINCE 1969, italic amber 3 DAYS OF PEACE & MUSIC · MAX YASGUR'S FARM · BETHEL NY tertiary, dim-cyan HENDRIX · JOPLIN · SANTANA · THE WHO · CSNY tertiary, and a Georgia-italic caption 'half a million kids, and I think you have proven something to the world.'">
