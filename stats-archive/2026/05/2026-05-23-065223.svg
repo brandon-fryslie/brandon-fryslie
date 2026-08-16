@@ -1,20 +1,215 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 23, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">3916</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">9</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">46</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">131</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#58a6ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#39d0d8"/>
+      <stop offset="55%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#bc8cff"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#7ee787"/>
+    </linearGradient>
+    <radialGradient id="playGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#58a6ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barShimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chartClip"><rect x="188" y="72" width="584" height="116"/></clipPath>
+    <clipPath id="barClip0"><rect x="186" y="268" width="240.0" height="8" rx="2"/></clipPath>
+    <clipPath id="barClip1"><rect x="186" y="282" width="216.0" height="8" rx="2"/></clipPath>
+    <clipPath id="barClip2"><rect x="186" y="296" width="216.0" height="8" rx="2"/></clipPath>
+    <clipPath id="barClip3"><rect x="186" y="310" width="204.0" height="8" rx="2"/></clipPath>
+    <clipPath id="barClip4"><rect x="186" y="324" width="144.0" height="8" rx="2"/></clipPath>
+    <clipPath id="barClip5"><rect x="186" y="338" width="132.0" height="8" rx="2"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="360" fill="#0d1117"/>
+
+  <!-- Header -->
+  <text x="24" y="36" font-size="15" font-weight="700" fill="#f0f6fc">Live GitHub Stats</text>
+  <text x="180" y="36" font-size="10" fill="#6e7681" letter-spacing="1.4">THREE TIME SCALES</text>
+  <text x="776" y="36" font-size="12" fill="#7d8590" text-anchor="end">May 23, 2026</text>
+  <line x1="24" y1="46" x2="776" y2="46" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ===== Row 1: THE YEAR (365-day area chart) ===== -->
+  <rect x="20" y="60" width="760" height="136" rx="6" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="34" y="78" font-size="9" fill="#6e7681" letter-spacing="1.4">THE YEAR</text>
+
+  <!-- Value block: 3956 Commits (1 Year) -->
+  <text x="34" y="112" font-size="38" font-weight="700" fill="#f0f6fc">3956</text>
+  <text x="34" y="130" font-size="12" fill="#c9d1d9">Commits</text>
+  <text x="34" y="145" font-size="10" fill="#7d8590">1 Year</text>
+  <text x="34" y="172" font-size="9" fill="#6e7681" letter-spacing="0.4">past 12 months</text>
+
+  <!-- Grid: baseline + midline -->
+  <line x1="190" y1="184" x2="770" y2="184" stroke="#30363d" stroke-width="1"/>
+  <line x1="190" y1="130" x2="770" y2="130" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2 4"/>
+
+  <!-- Month ticks -->
+  <line x1="190" y1="184" x2="190" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="238.33" y1="184" x2="238.33" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="286.67" y1="184" x2="286.67" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="335" y1="184" x2="335" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="383.33" y1="184" x2="383.33" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="431.67" y1="184" x2="431.67" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="480" y1="184" x2="480" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="528.33" y1="184" x2="528.33" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="576.67" y1="184" x2="576.67" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="625" y1="184" x2="625" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="673.33" y1="184" x2="673.33" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="721.67" y1="184" x2="721.67" y2="187" stroke="#30363d" stroke-width="0.7"/>
+  <line x1="770" y1="184" x2="770" y2="187" stroke="#30363d" stroke-width="0.7"/>
+
+  <!-- Area polygon (366 daily counts) -->
+  <polygon fill="url(#areaGrad)" clip-path="url(#chartClip)" points="190,184 191.59,184 193.18,184 194.77,184 196.36,184 197.95,181.65 199.53,184 201.12,183.22 202.71,183.22 204.3,184 205.89,182.43 207.48,182.43 209.07,184 210.66,181.65 212.25,181.65 213.84,184 215.42,184 217.01,183.22 218.6,183.22 220.19,183.22 221.78,184 223.37,184 224.96,184 226.55,184 228.14,184 229.73,184 231.32,184 232.9,184 234.49,184 236.08,184 237.67,184 239.26,173.04 240.85,184 242.44,184 244.03,184 245.62,183.22 247.21,184 248.79,184 250.38,184 251.97,184 253.56,184 255.15,184 256.74,184 258.33,184 259.92,184 261.51,184 263.1,184 264.68,184 266.27,184 267.86,184 269.45,184 271.04,184 272.63,183.22 274.22,184 275.81,184 277.4,184 278.99,184 280.58,184 282.16,184 283.75,182.43 285.34,184 286.93,184 288.52,184 290.11,184 291.7,184 293.29,184 294.88,180.09 296.47,184 298.05,183.22 299.64,184 301.23,182.43 302.82,183.22 304.41,184 306,184 307.59,184 309.18,184 310.77,184 312.36,173.83 313.95,184 315.53,184 317.12,184 318.71,182.43 320.3,180.87 321.89,181.65 323.48,184 325.07,184 326.66,184 328.25,184 329.84,184 331.42,184 333.01,184 334.6,184 336.19,184 337.78,183.22 339.37,184 340.96,184 342.55,184 344.14,184 345.73,184 347.32,183.22 348.9,184 350.49,184 352.08,184 353.67,184 355.26,184 356.85,184 358.44,184 360.03,184 361.62,184 363.21,184 364.79,184 366.38,183.22 367.97,184 369.56,184 371.15,184 372.74,184 374.33,184 375.92,184 377.51,184 379.1,184 380.68,184 382.27,184 383.86,184 385.45,184 387.04,184 388.63,184 390.22,184 391.81,184 393.4,184 394.99,184 396.58,183.22 398.16,184 399.75,184 401.34,184 402.93,181.65 404.52,184 406.11,184 407.7,184 409.29,184 410.88,184 412.47,182.43 414.05,184 415.64,184 417.23,184 418.82,184 420.41,181.65 422,182.43 423.59,184 425.18,184 426.77,184 428.36,184 429.95,184 431.53,184 433.12,183.22 434.71,184 436.3,184 437.89,180.09 439.48,184 441.07,183.22 442.66,184 444.25,183.22 445.84,180.87 447.42,184 449.01,184 450.6,184 452.19,180.87 453.78,179.3 455.37,179.3 456.96,181.65 458.55,184 460.14,179.3 461.73,181.65 463.32,182.43 464.9,179.3 466.49,158.17 468.08,184 469.67,184 471.26,182.43 472.85,184 474.44,182.43 476.03,184 477.62,184 479.21,184 480.79,184 482.38,184 483.97,184 485.56,181.65 487.15,184 488.74,184 490.33,184 491.92,184 493.51,182.43 495.1,182.43 496.68,184 498.27,183.22 499.86,184 501.45,184 503.04,184 504.63,184 506.22,184 507.81,176.17 509.4,176.17 510.99,180.87 512.58,181.65 514.16,179.3 515.75,181.65 517.34,184 518.93,168.35 520.52,177.74 522.11,164.43 523.7,166 525.29,170.7 526.88,169.91 528.47,175.39 530.05,174.61 531.64,160.52 533.23,169.13 534.82,136.26 536.41,115.91 538,165.22 539.59,180.09 541.18,182.43 542.77,174.61 544.36,184 545.95,184 547.53,182.43 549.12,184 550.71,180.87 552.3,183.22 553.89,172.26 555.48,184 557.07,104.17 558.66,180.87 560.25,157.39 561.84,138.61 563.42,169.91 565.01,159.74 566.6,169.91 568.19,164.43 569.78,137.83 571.37,100.26 572.96,137.04 574.55,107.3 576.14,142.52 577.73,137.04 579.32,162.09 580.9,108.09 582.49,129.22 584.08,146.43 585.67,114.35 587.26,137.83 588.85,159.74 590.44,92.43 592.03,151.13 593.62,100.26 595.21,136.26 596.79,136.26 598.38,144.87 599.97,152.7 601.56,161.3 603.15,176.96 604.74,168.35 606.33,166.78 607.92,176.17 609.51,171.48 611.1,178.52 612.68,149.57 614.27,88.52 615.86,182.43 617.45,179.3 619.04,181.65 620.63,178.52 622.22,156.61 623.81,116.7 625.4,76 626.99,86.96 628.58,132.35 630.16,94.78 631.75,130 633.34,138.61 634.93,155.83 636.52,179.3 638.11,167.57 639.7,148 641.29,171.48 642.88,162.09 644.47,180.09 646.05,167.57 647.64,152.7 649.23,117.48 650.82,167.57 652.41,98.7 654,163.65 655.59,131.57 657.18,162.09 658.77,166.78 660.36,173.83 661.95,162.09 663.53,162.87 665.12,173.83 666.71,144.87 668.3,175.39 669.89,153.48 671.48,144.09 673.07,155.04 674.66,166 676.25,179.3 677.84,180.09 679.42,176.17 681.01,179.3 682.6,173.83 684.19,166.78 685.78,182.43 687.37,184 688.96,166.78 690.55,172.26 692.14,180.87 693.73,174.61 695.32,105.74 696.9,169.91 698.49,177.74 700.08,181.65 701.67,184 703.26,173.04 704.85,169.13 706.44,169.13 708.03,179.3 709.62,176.96 711.21,174.61 712.79,161.3 714.38,115.91 715.97,166.78 717.56,167.57 719.15,180.09 720.74,176.96 722.33,169.13 723.92,126.87 725.51,167.57 727.1,164.43 728.68,164.43 730.27,126.09 731.86,151.13 733.45,147.22 735.04,169.13 736.63,184 738.22,136.26 739.81,148.78 741.4,144.87 742.99,146.43 744.58,155.04 746.16,148 747.75,148.78 749.34,176.96 750.93,172.26 752.52,184 754.11,172.26 755.7,173.83 757.29,168.35 758.88,155.83 760.47,175.39 762.05,160.52 763.64,174.61 765.23,182.43 766.82,137.04 768.41,151.91 770,168.35 770,184"/>
+
+  <!-- Line stroke (top edge of the area) -->
+  <polyline fill="none" stroke="url(#lineGrad)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" clip-path="url(#chartClip)" points="190,184 191.59,184 193.18,184 194.77,184 196.36,184 197.95,181.65 199.53,184 201.12,183.22 202.71,183.22 204.3,184 205.89,182.43 207.48,182.43 209.07,184 210.66,181.65 212.25,181.65 213.84,184 215.42,184 217.01,183.22 218.6,183.22 220.19,183.22 221.78,184 223.37,184 224.96,184 226.55,184 228.14,184 229.73,184 231.32,184 232.9,184 234.49,184 236.08,184 237.67,184 239.26,173.04 240.85,184 242.44,184 244.03,184 245.62,183.22 247.21,184 248.79,184 250.38,184 251.97,184 253.56,184 255.15,184 256.74,184 258.33,184 259.92,184 261.51,184 263.1,184 264.68,184 266.27,184 267.86,184 269.45,184 271.04,184 272.63,183.22 274.22,184 275.81,184 277.4,184 278.99,184 280.58,184 282.16,184 283.75,182.43 285.34,184 286.93,184 288.52,184 290.11,184 291.7,184 293.29,184 294.88,180.09 296.47,184 298.05,183.22 299.64,184 301.23,182.43 302.82,183.22 304.41,184 306,184 307.59,184 309.18,184 310.77,184 312.36,173.83 313.95,184 315.53,184 317.12,184 318.71,182.43 320.3,180.87 321.89,181.65 323.48,184 325.07,184 326.66,184 328.25,184 329.84,184 331.42,184 333.01,184 334.6,184 336.19,184 337.78,183.22 339.37,184 340.96,184 342.55,184 344.14,184 345.73,184 347.32,183.22 348.9,184 350.49,184 352.08,184 353.67,184 355.26,184 356.85,184 358.44,184 360.03,184 361.62,184 363.21,184 364.79,184 366.38,183.22 367.97,184 369.56,184 371.15,184 372.74,184 374.33,184 375.92,184 377.51,184 379.1,184 380.68,184 382.27,184 383.86,184 385.45,184 387.04,184 388.63,184 390.22,184 391.81,184 393.4,184 394.99,184 396.58,183.22 398.16,184 399.75,184 401.34,184 402.93,181.65 404.52,184 406.11,184 407.7,184 409.29,184 410.88,184 412.47,182.43 414.05,184 415.64,184 417.23,184 418.82,184 420.41,181.65 422,182.43 423.59,184 425.18,184 426.77,184 428.36,184 429.95,184 431.53,184 433.12,183.22 434.71,184 436.3,184 437.89,180.09 439.48,184 441.07,183.22 442.66,184 444.25,183.22 445.84,180.87 447.42,184 449.01,184 450.6,184 452.19,180.87 453.78,179.3 455.37,179.3 456.96,181.65 458.55,184 460.14,179.3 461.73,181.65 463.32,182.43 464.9,179.3 466.49,158.17 468.08,184 469.67,184 471.26,182.43 472.85,184 474.44,182.43 476.03,184 477.62,184 479.21,184 480.79,184 482.38,184 483.97,184 485.56,181.65 487.15,184 488.74,184 490.33,184 491.92,184 493.51,182.43 495.1,182.43 496.68,184 498.27,183.22 499.86,184 501.45,184 503.04,184 504.63,184 506.22,184 507.81,176.17 509.4,176.17 510.99,180.87 512.58,181.65 514.16,179.3 515.75,181.65 517.34,184 518.93,168.35 520.52,177.74 522.11,164.43 523.7,166 525.29,170.7 526.88,169.91 528.47,175.39 530.05,174.61 531.64,160.52 533.23,169.13 534.82,136.26 536.41,115.91 538,165.22 539.59,180.09 541.18,182.43 542.77,174.61 544.36,184 545.95,184 547.53,182.43 549.12,184 550.71,180.87 552.3,183.22 553.89,172.26 555.48,184 557.07,104.17 558.66,180.87 560.25,157.39 561.84,138.61 563.42,169.91 565.01,159.74 566.6,169.91 568.19,164.43 569.78,137.83 571.37,100.26 572.96,137.04 574.55,107.3 576.14,142.52 577.73,137.04 579.32,162.09 580.9,108.09 582.49,129.22 584.08,146.43 585.67,114.35 587.26,137.83 588.85,159.74 590.44,92.43 592.03,151.13 593.62,100.26 595.21,136.26 596.79,136.26 598.38,144.87 599.97,152.7 601.56,161.3 603.15,176.96 604.74,168.35 606.33,166.78 607.92,176.17 609.51,171.48 611.1,178.52 612.68,149.57 614.27,88.52 615.86,182.43 617.45,179.3 619.04,181.65 620.63,178.52 622.22,156.61 623.81,116.7 625.4,76 626.99,86.96 628.58,132.35 630.16,94.78 631.75,130 633.34,138.61 634.93,155.83 636.52,179.3 638.11,167.57 639.7,148 641.29,171.48 642.88,162.09 644.47,180.09 646.05,167.57 647.64,152.7 649.23,117.48 650.82,167.57 652.41,98.7 654,163.65 655.59,131.57 657.18,162.09 658.77,166.78 660.36,173.83 661.95,162.09 663.53,162.87 665.12,173.83 666.71,144.87 668.3,175.39 669.89,153.48 671.48,144.09 673.07,155.04 674.66,166 676.25,179.3 677.84,180.09 679.42,176.17 681.01,179.3 682.6,173.83 684.19,166.78 685.78,182.43 687.37,184 688.96,166.78 690.55,172.26 692.14,180.87 693.73,174.61 695.32,105.74 696.9,169.91 698.49,177.74 700.08,181.65 701.67,184 703.26,173.04 704.85,169.13 706.44,169.13 708.03,179.3 709.62,176.96 711.21,174.61 712.79,161.3 714.38,115.91 715.97,166.78 717.56,167.57 719.15,180.09 720.74,176.96 722.33,169.13 723.92,126.87 725.51,167.57 727.1,164.43 728.68,164.43 730.27,126.09 731.86,151.13 733.45,147.22 735.04,169.13 736.63,184 738.22,136.26 739.81,148.78 741.4,144.87 742.99,146.43 744.58,155.04 746.16,148 747.75,148.78 749.34,176.96 750.93,172.26 752.52,184 754.11,172.26 755.7,173.83 757.29,168.35 758.88,155.83 760.47,175.39 762.05,160.52 763.64,174.61 765.23,182.43 766.82,137.04 768.41,151.91 770,168.35"/>
+
+  <!-- Peak marker -->
+  <circle cx="625.4" cy="76" r="2.8" fill="#f0f6fc" stroke="#0d1117" stroke-width="1"/>
+  <text x="625.4" y="70" font-size="9" fill="#c9d1d9" text-anchor="middle">peak 138</text>
+
+  <!-- Playhead sweep (perpetual, 17s loop) -->
+  <g clip-path="url(#chartClip)">
+    <rect x="190" y="76" width="2" height="108" fill="#ffffff" fill-opacity="0.12">
+      <animate attributeName="x" from="190" to="770" dur="17s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="190" cy="182" r="14" fill="url(#playGlow)">
+      <animate attributeName="cx" from="190" to="770" dur="17s" repeatCount="indefinite"/>
+    </circle>
   </g>
+
+  <!-- Chart date bookends -->
+  <text x="190" y="196" font-size="9" fill="#6e7681">2025-05-23</text>
+  <text x="770" y="196" font-size="9" fill="#6e7681" text-anchor="end">2026-05-23</text>
+
+  <!-- ===== Row 2 Left: THE WEEK (active repos as ranked bars) ===== -->
+  <rect x="20" y="208" width="480" height="140" rx="6" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="34" y="226" font-size="9" fill="#6e7681" letter-spacing="1.4">THE WEEK</text>
+
+  <!-- Value: 9 Active Repos (7 Days) -->
+  <text x="34" y="256" font-size="34" font-weight="700" fill="#f0f6fc">9</text>
+  <text x="76" y="246" font-size="12" fill="#c9d1d9">Active Repos</text>
+  <text x="76" y="260" font-size="10" fill="#7d8590">7 Days</text>
+
+  <!-- Bar 0: slopspot-web, 20 -->
+  <text x="176" y="275" font-size="10" fill="#c9d1d9" text-anchor="end">slopspot-web</text>
+  <rect x="186" y="268" width="240" height="8" rx="2" fill="#21262d"/>
+  <rect x="186" y="268" width="240.0" height="8" rx="2" fill="url(#barGrad)"/>
+  <rect x="150" y="268" width="36" height="8" fill="url(#barShimmer)" opacity="0.55" clip-path="url(#barClip0)">
+    <animate attributeName="x" from="150" to="428" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="432" y="275" font-size="10" font-weight="600" fill="#7d8590">20</text>
+
+  <!-- Bar 1: promptctl, 18 -->
+  <text x="176" y="289" font-size="10" fill="#c9d1d9" text-anchor="end">promptctl</text>
+  <rect x="186" y="282" width="240" height="8" rx="2" fill="#21262d"/>
+  <rect x="186" y="282" width="216.0" height="8" rx="2" fill="url(#barGrad)"/>
+  <rect x="150" y="282" width="36" height="8" fill="url(#barShimmer)" opacity="0.55" clip-path="url(#barClip1)">
+    <animate attributeName="x" from="150" to="404" dur="7s" begin="0.9s" repeatCount="indefinite"/>
+  </rect>
+  <text x="408" y="289" font-size="10" font-weight="600" fill="#7d8590">18</text>
+
+  <!-- Bar 2: links-issue-tracker, 18 -->
+  <text x="176" y="303" font-size="10" fill="#c9d1d9" text-anchor="end">links-issue-tracker</text>
+  <rect x="186" y="296" width="240" height="8" rx="2" fill="#21262d"/>
+  <rect x="186" y="296" width="216.0" height="8" rx="2" fill="url(#barGrad)"/>
+  <rect x="150" y="296" width="36" height="8" fill="url(#barShimmer)" opacity="0.55" clip-path="url(#barClip2)">
+    <animate attributeName="x" from="150" to="404" dur="7s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="408" y="303" font-size="10" font-weight="600" fill="#7d8590">18</text>
+
+  <!-- Bar 3: cc-candybar, 17 -->
+  <text x="176" y="317" font-size="10" fill="#c9d1d9" text-anchor="end">cc-candybar</text>
+  <rect x="186" y="310" width="240" height="8" rx="2" fill="#21262d"/>
+  <rect x="186" y="310" width="204.0" height="8" rx="2" fill="url(#barGrad)"/>
+  <rect x="150" y="310" width="36" height="8" fill="url(#barShimmer)" opacity="0.55" clip-path="url(#barClip3)">
+    <animate attributeName="x" from="150" to="392" dur="7s" begin="2.7s" repeatCount="indefinite"/>
+  </rect>
+  <text x="396" y="317" font-size="10" font-weight="600" fill="#7d8590">17</text>
+
+  <!-- Bar 4: rich-js, 12 -->
+  <text x="176" y="331" font-size="10" fill="#c9d1d9" text-anchor="end">rich-js</text>
+  <rect x="186" y="324" width="240" height="8" rx="2" fill="#21262d"/>
+  <rect x="186" y="324" width="144.0" height="8" rx="2" fill="url(#barGrad)"/>
+  <rect x="150" y="324" width="36" height="8" fill="url(#barShimmer)" opacity="0.55" clip-path="url(#barClip4)">
+    <animate attributeName="x" from="150" to="332" dur="7s" begin="3.6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="336" y="331" font-size="10" font-weight="600" fill="#7d8590">12</text>
+
+  <!-- Bar 5: tmux-control-mode-js, 11 -->
+  <text x="176" y="345" font-size="10" fill="#c9d1d9" text-anchor="end">tmux-control-mode-js</text>
+  <rect x="186" y="338" width="240" height="8" rx="2" fill="#21262d"/>
+  <rect x="186" y="338" width="132.0" height="8" rx="2" fill="url(#barGrad)"/>
+  <rect x="150" y="338" width="36" height="8" fill="url(#barShimmer)" opacity="0.55" clip-path="url(#barClip5)">
+    <animate attributeName="x" from="150" to="320" dur="7s" begin="4.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="324" y="345" font-size="10" font-weight="600" fill="#7d8590">11</text>
+
+  <!-- ===== Row 2 Right: THE MONTH (issues closed as 30-dot grid) ===== -->
+  <rect x="512" y="208" width="268" height="140" rx="6" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="526" y="226" font-size="9" fill="#6e7681" letter-spacing="1.4">THE MONTH</text>
+
+  <!-- Big value: 2 -->
+  <text x="574" y="298" font-size="66" font-weight="700" fill="#ffa657" text-anchor="middle">2</text>
+  <text x="574" y="318" font-size="12" fill="#c9d1d9" text-anchor="middle">My Issues Closed</text>
+  <text x="574" y="332" font-size="10" fill="#7d8590" text-anchor="middle">30 Days</text>
+
+  <!-- 30-dot grid: 6 cols x 5 rows, 2 lit dots -->
+  <text x="660" y="242" font-size="8" fill="#6e7681" letter-spacing="0.6">2 OF 30 DAYS</text>
+  <!-- Row 0 -->
+  <circle cx="664" cy="250" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="680" cy="250" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="696" cy="250" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="712" cy="250" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="728" cy="250" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="744" cy="250" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <!-- Row 1 (col 1 = LIT) -->
+  <circle cx="664" cy="266" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="680" cy="266" r="4.5" fill="#ffa657" opacity="0.30">
+    <animate attributeName="r" values="4.5;7;4.5" dur="3.1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.30;0.05;0.30" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="680" cy="266" r="3.5" fill="#ffa657"/>
+  <circle cx="696" cy="266" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="712" cy="266" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="728" cy="266" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="744" cy="266" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <!-- Row 2 -->
+  <circle cx="664" cy="282" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="680" cy="282" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="696" cy="282" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="712" cy="282" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="728" cy="282" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="744" cy="282" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <!-- Row 3 (col 4 = LIT) -->
+  <circle cx="664" cy="298" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="680" cy="298" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="696" cy="298" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="712" cy="298" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="728" cy="298" r="4.5" fill="#ffa657" opacity="0.30">
+    <animate attributeName="r" values="4.5;7;4.5" dur="3.1s" begin="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.30;0.05;0.30" dur="3.1s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="728" cy="298" r="3.5" fill="#ffa657"/>
+  <circle cx="744" cy="298" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <!-- Row 4 -->
+  <circle cx="664" cy="314" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="680" cy="314" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="696" cy="314" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="712" cy="314" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="728" cy="314" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
+  <circle cx="744" cy="314" r="2.3" fill="#30363d" stroke="#21262d" stroke-width="0.5"/>
 </svg>
