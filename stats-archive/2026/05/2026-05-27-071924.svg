@@ -1,20 +1,200 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 27, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">153</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">270</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">5</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">135</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-  </g>
+<svg width="800" height="446" viewBox="0 0 800 446" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs>
+<linearGradient id="yearSweep" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="50%" stop-color="#ffffff" stop-opacity="0.22"/>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="barSweep" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="50%" stop-color="#ffffff" stop-opacity="0.28"/>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="daysFill" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#0e4429"/>
+<stop offset="55%" stop-color="#26a641"/>
+<stop offset="100%" stop-color="#39d353"/>
+</linearGradient>
+</defs>
+<rect width="800" height="446" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="445" fill="none" stroke="#21262d" rx="6"/>
+
+<!-- Header -->
+<text x="24" y="28" font-size="15" font-weight="600" fill="#f0f6fc">Live GitHub Stats</text>
+<text x="776" y="28" font-size="11" fill="#8b949e" text-anchor="end">May 27, 2026</text>
+<line x1="24" y1="42" x2="776" y2="42" stroke="#21262d"/>
+
+<!-- Section A: THE YEAR - 53 weekly contribution bars (past 12 months, 366 days aggregated) -->
+<text x="24" y="62" font-size="10" fill="#6e7681" letter-spacing="1.4">THE YEAR · past 12 months · 53 weeks</text>
+<text x="776" y="62" font-size="10" fill="#6e7681" text-anchor="end" letter-spacing="1.2">peak-week 506 · daily-peak 138</text>
+<line x1="24" y1="191.5" x2="776" y2="191.5" stroke="#21262d"/>
+<line x1="24" y1="140.0" x2="776" y2="140.0" stroke="#161b22" stroke-dasharray="2,4"/>
+<g>
+<rect x="24.00" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="38.19" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="52.38" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="66.57" y="187.23" width="12" height="2.77" fill="#0e4429"/>
+<rect x="80.75" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="94.94" y="188.80" width="12" height="1.20" fill="#1a2028"/>
+<rect x="109.13" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="123.32" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="137.51" y="188.80" width="12" height="1.20" fill="#1a2028"/>
+<rect x="151.70" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="165.89" y="187.43" width="12" height="2.57" fill="#0e4429"/>
+<rect x="180.08" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="194.26" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="208.45" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="222.64" y="188.80" width="12" height="1.20" fill="#1a2028"/>
+<rect x="236.83" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="251.02" y="188.80" width="12" height="1.20" fill="#1a2028"/>
+<rect x="265.21" y="188.80" width="12" height="1.20" fill="#1a2028"/>
+<rect x="279.40" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="293.58" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="307.77" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="321.96" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="336.15" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="350.34" y="184.47" width="12" height="5.53" fill="#0e4429"/>
+<rect x="364.53" y="181.50" width="12" height="8.50" fill="#0e4429"/>
+<rect x="378.72" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="392.91" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="407.09" y="187.50" width="12" height="2.50" fill="#0e4429"/>
+<rect x="421.28" y="182.89" width="12" height="7.11" fill="#0e4429"/>
+<rect x="435.47" y="165.89" width="12" height="24.11" fill="#006d32"/>
+<rect x="449.66" y="142.97" width="12" height="47.03" fill="#26a641"/>
+<rect x="463.85" y="186.05" width="12" height="3.95" fill="#0e4429"/>
+<rect x="478.04" y="147.71" width="12" height="42.29" fill="#26a641"/>
+<rect x="492.23" y="127.16" width="12" height="62.84" fill="#26a641"/>
+<rect x="506.42" y="100.28" width="12" height="89.72" fill="#39d353"/>
+<rect x="520.60" y="90.00" width="12" height="100.00" fill="#39d353"/>
+<rect x="534.79" y="144.35" width="12" height="45.65" fill="#26a641"/>
+<rect x="548.98" y="149.10" width="12" height="40.90" fill="#26a641"/>
+<rect x="563.17" y="99.29" width="12" height="90.71" fill="#39d353"/>
+<rect x="577.36" y="120.83" width="12" height="69.17" fill="#26a641"/>
+<rect x="591.55" y="147.32" width="12" height="42.68" fill="#26a641"/>
+<rect x="605.74" y="132.10" width="12" height="57.90" fill="#26a641"/>
+<rect x="619.92" y="144.95" width="12" height="45.05" fill="#26a641"/>
+<rect x="634.11" y="173.20" width="12" height="16.80" fill="#006d32"/>
+<rect x="648.30" y="159.37" width="12" height="30.63" fill="#006d32"/>
+<rect x="662.49" y="173.99" width="12" height="16.01" fill="#006d32"/>
+<rect x="676.68" y="153.25" width="12" height="36.75" fill="#006d32"/>
+<rect x="690.87" y="155.02" width="12" height="34.98" fill="#006d32"/>
+<rect x="705.06" y="133.09" width="12" height="56.91" fill="#26a641"/>
+<rect x="719.25" y="140.60" width="12" height="49.40" fill="#26a641"/>
+<rect x="733.43" y="165.30" width="12" height="24.70" fill="#006d32"/>
+<rect x="747.62" y="123.00" width="12" height="67.00" fill="#26a641"/>
+<rect x="761.81" y="174.19" width="12" height="15.81" fill="#006d32"/>
+<rect x="-140" y="84" width="140" height="110" fill="url(#yearSweep)">
+<animate attributeName="x" from="-140" to="776" dur="7s" repeatCount="indefinite"/>
+</rect>
+</g>
+
+<!-- Section B1: Languages proportional stacked bar -->
+<text x="24" y="210" font-size="12" fill="#c9d1d9" font-weight="600">Languages</text>
+<text x="95" y="210" font-size="10" fill="#6e7681">· 30 Days</text>
+<text x="776" y="212" font-size="15" font-weight="700" fill="#f0f6fc" text-anchor="end">5</text>
+<rect x="24.00" y="218" width="498.19" height="22" fill="#3178c6"/>
+<rect x="522.19" y="218" width="91.29" height="22" fill="#3572A5"/>
+<rect x="613.48" y="218" width="59.90" height="22" fill="#00ADD8"/>
+<rect x="673.38" y="218" width="16.16" height="22" fill="#89e051"/>
+<rect x="689.54" y="218" width="10.46" height="22" fill="#563d7c"/>
+<text x="32.0" y="233" font-size="11" fill="#ffffff" opacity="0.95" font-weight="600">TypeScript</text>
+<text x="530.19" y="233" font-size="11" fill="#ffffff" opacity="0.95" font-weight="600">Python</text>
+<rect x="-90" y="218" width="90" height="22" fill="url(#barSweep)">
+<animate attributeName="x" from="-90" to="700" dur="11s" repeatCount="indefinite"/>
+</rect>
+<!-- Languages legend -->
+<rect x="24" y="252" width="7" height="7" fill="#3178c6"/>
+<text x="35" y="259" font-size="10" fill="#8b949e">TypeScript 524</text>
+<rect x="136" y="252" width="7" height="7" fill="#3572A5"/>
+<text x="147" y="259" font-size="10" fill="#8b949e">Python 96</text>
+<rect x="217" y="252" width="7" height="7" fill="#00ADD8"/>
+<text x="228" y="259" font-size="10" fill="#8b949e">Go 63</text>
+<rect x="274" y="252" width="7" height="7" fill="#89e051"/>
+<text x="285" y="259" font-size="10" fill="#8b949e">Shell 17</text>
+<rect x="349" y="252" width="7" height="7" fill="#563d7c"/>
+<text x="360" y="259" font-size="10" fill="#8b949e">CSS 11</text>
+
+<!-- Section B2: Active Repos proportional stacked bar -->
+<text x="24" y="274" font-size="12" fill="#c9d1d9" font-weight="600">Active Repos</text>
+<text x="107" y="274" font-size="10" fill="#6e7681">· 7 Days</text>
+<text x="776" y="276" font-size="15" font-weight="700" fill="#f0f6fc" text-anchor="end">8</text>
+<rect x="24.00" y="282" width="164.11" height="22" fill="#f78166"/>
+<rect x="188.11" y="282" width="148.48" height="22" fill="#d29922"/>
+<rect x="336.59" y="282" width="125.03" height="22" fill="#a371f7"/>
+<rect x="461.62" y="282" width="93.77" height="22" fill="#58a6ff"/>
+<rect x="555.39" y="282" width="74.24" height="22" fill="#ff7b72"/>
+<rect x="629.63" y="282" width="70.34" height="22" fill="#7ee787"/>
+<text x="32.0" y="297" font-size="11" fill="#0d1117" opacity="0.9" font-weight="600">slopspot-web</text>
+<text x="344.59" y="297" font-size="11" fill="#0d1117" opacity="0.9" font-weight="600">promptctl</text>
+<text x="469.62" y="297" font-size="11" fill="#0d1117" opacity="0.9" font-weight="600">rich-js</text>
+<rect x="-90" y="282" width="90" height="22" fill="url(#barSweep)">
+<animate attributeName="x" from="-90" to="700" dur="13s" repeatCount="indefinite"/>
+</rect>
+<!-- Active Repos legend -->
+<rect x="24" y="316" width="7" height="7" fill="#f78166"/>
+<text x="35" y="323" font-size="10" fill="#8b949e">slopspot-web 42</text>
+<rect x="143" y="316" width="7" height="7" fill="#d29922"/>
+<text x="154" y="323" font-size="10" fill="#8b949e">tmux-control-mode-js 38</text>
+<rect x="312" y="316" width="7" height="7" fill="#a371f7"/>
+<text x="323" y="323" font-size="10" fill="#8b949e">promptctl 32</text>
+<rect x="412" y="316" width="7" height="7" fill="#58a6ff"/>
+<text x="423" y="323" font-size="10" fill="#8b949e">rich-js 24</text>
+<rect x="500" y="316" width="7" height="7" fill="#ff7b72"/>
+<text x="511" y="323" font-size="10" fill="#8b949e">links-issue-tracker 19</text>
+<rect x="662" y="316" width="7" height="7" fill="#7ee787"/>
+<text x="673" y="323" font-size="10" fill="#8b949e">cc-candybar 18</text>
+
+<!-- Section C: Days Active — 30-tick fill bar (29 of 30) -->
+<text x="24" y="352" font-size="12" fill="#c9d1d9" font-weight="600">Days Active</text>
+<text x="24" y="366" font-size="10" fill="#6e7681">· 30 Days</text>
+<rect x="200" y="342" width="500" height="20" rx="3" fill="#161b22" stroke="#21262d"/>
+<rect x="200" y="342" width="483.33" height="20" rx="3" fill="url(#daysFill)"/>
+<line x1="216.67" y1="358" x2="216.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="233.33" y1="358" x2="233.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="250.00" y1="358" x2="250.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="266.67" y1="358" x2="266.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="283.33" y1="358" x2="283.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="300.00" y1="358" x2="300.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="316.67" y1="358" x2="316.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="333.33" y1="358" x2="333.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="350.00" y1="358" x2="350.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="366.67" y1="358" x2="366.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="383.33" y1="358" x2="383.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="400.00" y1="358" x2="400.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="416.67" y1="358" x2="416.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="433.33" y1="358" x2="433.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="450.00" y1="358" x2="450.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="466.67" y1="358" x2="466.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="483.33" y1="358" x2="483.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="500.00" y1="358" x2="500.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="516.67" y1="358" x2="516.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="533.33" y1="358" x2="533.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="550.00" y1="358" x2="550.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="566.67" y1="358" x2="566.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="583.33" y1="358" x2="583.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="600.00" y1="358" x2="600.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="616.67" y1="358" x2="616.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="633.33" y1="358" x2="633.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="650.00" y1="358" x2="650.00" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="666.67" y1="358" x2="666.67" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<line x1="683.33" y1="358" x2="683.33" y2="361.5" stroke="#0d1117" opacity="0.75"/>
+<circle cx="683.33" cy="352" r="4" fill="#7ee787">
+<animate attributeName="r" values="3;6;3" dur="2.8s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0.55;1;0.55" dur="2.8s" repeatCount="indefinite"/>
+</circle>
+<text x="712" y="358" font-size="20" font-weight="700" fill="#7ee787">29</text>
+<text x="748" y="358" font-size="12" fill="#8b949e">/ 30</text>
+
+<!-- Section D: three scalar tiles -->
+<line x1="274" y1="386" x2="274" y2="430" stroke="#21262d"/>
+<line x1="526" y1="386" x2="526" y2="430" stroke="#21262d"/>
+<text x="148" y="406" font-size="26" font-weight="700" fill="#7ee787" text-anchor="middle">82<animate attributeName="fill" values="#7ee787;#39d353;#7ee787" dur="11s" repeatCount="indefinite"/></text>
+<text x="148" y="422" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="600">Longest Streak</text>
+<text x="148" y="433" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
+<text x="400" y="406" font-size="26" font-weight="700" fill="#7ee787" text-anchor="middle">4617<animate attributeName="fill" values="#7ee787;#39d353;#7ee787" dur="11s" repeatCount="indefinite"/></text>
+<text x="400" y="422" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="600">Commits</text>
+<text x="400" y="433" font-size="9" fill="#6e7681" text-anchor="middle">All Time</text>
+<text x="652" y="406" font-size="26" font-weight="700" fill="#7ee787" text-anchor="middle">1<animate attributeName="fill" values="#7ee787;#39d353;#7ee787" dur="11s" repeatCount="indefinite"/></text>
+<text x="652" y="422" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="600">My Issues Closed</text>
+<text x="652" y="433" font-size="9" fill="#6e7681" text-anchor="middle">30 Days</text>
 </svg>
