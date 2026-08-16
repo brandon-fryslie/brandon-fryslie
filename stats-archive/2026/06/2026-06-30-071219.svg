@@ -1,20 +1,240 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 30, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 348" width="800" height="348" role="img" aria-label="Live GitHub stats for brandon-fryslie, June 30, 2026">
+  <defs>
+    <linearGradient id="bar-grad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#0e4429"/>
+      <stop offset="0.55" stop-color="#26a641"/>
+      <stop offset="1" stop-color="#39d353"/>
+    </linearGradient>
+    <linearGradient id="sweep-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#e6ffe6" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tile-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#10151c"/>
+    </linearGradient>
+    <linearGradient id="header-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39d353" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#39d353" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#39d353" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chart-clip"><rect x="24" y="70" width="752" height="140"/></clipPath>
+    <!-- 23x7 dot grid (=161 cells) for PRs Merged. Cell 4x4 with 3x3 dot in corner. -->
+    <pattern id="pr-dots" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="3" height="3" fill="#58a6ff" opacity="0.85"/>
+    </pattern>
+    <!-- 41x2 streak tick grid (=82 marks) for Longest Streak. Cell 2.4 wide, tick 1.9. -->
+    <pattern id="streak-ticks" x="0" y="0" width="2.4" height="8" patternUnits="userSpaceOnUse">
+      <rect width="1.9" height="6" fill="#f78166" opacity="0.85"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="348" rx="10" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="347" rx="10" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- header -->
+  <text x="24" y="28" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#c9d1d9">Live GitHub Stats</text>
+  <text x="776" y="28" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8b949e" text-anchor="end">June 30, 2026</text>
+  <line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+  <rect x="24" y="41" width="140" height="2" fill="url(#header-fade)">
+    <animate attributeName="x" values="24;636;24" dur="17s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- chart title -->
+  <text x="24" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#c9d1d9">Contributions by month</text>
+  <text x="776" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e" text-anchor="end">past 12 months</text>
+
+  <!-- chart: 12 monthly bars, sqrt-scaled to max month (2014, June) -->
+  <!-- chart area: x [28..772] w=744, baseline y=204, top y=78, height=126, scale=2.808 -->
+  <g clip-path="url(#chart-clip)">
+    <line x1="28" y1="204.5" x2="772" y2="204.5" stroke="#21262d" stroke-width="1"/>
+    <line x1="28" y1="172.5" x2="772" y2="172.5" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.55"/>
+    <line x1="28" y1="141" x2="772" y2="141" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.55"/>
+    <line x1="28" y1="109.5" x2="772" y2="109.5" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.55"/>
+
+    <!-- Jul 2025 (9) -->
+    <rect x="28.00" y="195.58" width="58.3" height="8.42" rx="1.5" fill="url(#bar-grad)" opacity="0.85"/>
+    <!-- Aug 2025 (27) -->
+    <rect x="90.30" y="189.41" width="58.3" height="14.59" rx="1.5" fill="url(#bar-grad)" opacity="0.85"/>
+    <!-- Sep 2025 (2) -->
+    <rect x="152.60" y="200.00" width="58.3" height="4.00" rx="1.5" fill="url(#bar-grad)" opacity="0.85"/>
+    <!-- Oct 2025 (22) -->
+    <rect x="214.90" y="190.83" width="58.3" height="13.17" rx="1.5" fill="url(#bar-grad)" opacity="0.85"/>
+    <!-- Nov 2025 (78) -->
+    <rect x="277.20" y="179.21" width="58.3" height="24.79" rx="1.5" fill="url(#bar-grad)" opacity="0.85"/>
+    <!-- Dec 2025 (413) -->
+    <rect x="339.50" y="146.94" width="58.3" height="57.06" rx="1.5" fill="url(#bar-grad)" opacity="0.9"/>
+    <!-- Jan 2026 (1330) -->
+    <rect x="401.80" y="101.58" width="58.3" height="102.42" rx="1.5" fill="url(#bar-grad)" opacity="0.95"/>
+    <!-- Feb 2026 (1348) -->
+    <rect x="464.10" y="100.89" width="58.3" height="103.11" rx="1.5" fill="url(#bar-grad)" opacity="0.95"/>
+    <!-- Mar 2026 (891) -->
+    <rect x="526.40" y="120.17" width="58.3" height="83.83" rx="1.5" fill="url(#bar-grad)" opacity="0.95"/>
+    <!-- Apr 2026 (760) -->
+    <rect x="588.70" y="126.58" width="58.3" height="77.42" rx="1.5" fill="url(#bar-grad)" opacity="0.95"/>
+    <!-- May 2026 (1162) -->
+    <rect x="651.00" y="108.28" width="58.3" height="95.72" rx="1.5" fill="url(#bar-grad)" opacity="0.95"/>
+    <!-- Jun 2026 (2014) -->
+    <rect x="713.30" y="78.00" width="58.3" height="126.00" rx="1.5" fill="url(#bar-grad)" opacity="1.0"/>
+
+    <!-- moving highlight sweep across the timeline (loops forever) -->
+    <rect x="28" y="78" width="150" height="126" fill="url(#sweep-grad)" opacity="0.9">
+      <animate attributeName="x" from="-122" to="772" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- month axis labels -->
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" fill="#8b949e" text-anchor="middle">
+    <text x="57.15" y="220">Jul</text>
+    <text x="119.45" y="220">Aug</text>
+    <text x="181.75" y="220">Sep</text>
+    <text x="244.05" y="220">Oct</text>
+    <text x="306.35" y="220">Nov</text>
+    <text x="368.65" y="220">Dec</text>
+    <text x="430.95" y="220" fill="#c9d1d9">Jan</text>
+    <text x="493.25" y="220" fill="#c9d1d9">Feb</text>
+    <text x="555.55" y="220" fill="#c9d1d9">Mar</text>
+    <text x="617.85" y="220" fill="#c9d1d9">Apr</text>
+    <text x="680.15" y="220" fill="#c9d1d9">May</text>
+    <text x="742.45" y="220" fill="#c9d1d9">Jun</text>
+  </g>
+
+  <!-- ============================================================
+       6 metric tiles across y=232..336 (h=104)
+       Tile w=118.67, gap=8. x-starts: 24, 150.67, 277.33, 404, 530.67, 657.33
+       Inside each tile:
+         - value baseline y=254, size 22, x=tile_x+10 (left)
+         - period baseline y=254, size 9,  x=tile_x+108.67 (right, muted)
+         - label  baseline y=270, size 10, x=tile_x+10 (muted)
+         - decoration y=280..328
+       ============================================================ -->
+
+  <!-- TILE 1: Days Active 231 / 365 (1 Year) — proportion ring -->
+  <rect x="24.0" y="232" width="118.67" height="104" rx="8" fill="url(#tile-bg)" stroke="#21262d" stroke-width="1"/>
+  <text x="34.0" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="#c9d1d9">231</text>
+  <text x="78.0" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#8b949e">/ 365</text>
+  <text x="132.67" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">1 Year</text>
+  <text x="34.0" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">Days Active</text>
+  <!-- proportion ring, 63.3% of full circle -->
+  <g transform="translate(83.33 306)">
+    <circle r="16" fill="none" stroke="#21262d" stroke-width="4"/>
+    <!-- 231/365 = 0.6329, arc = 227.8°. From top clockwise to angle 227.8°:
+         end offset = (r*sin(227.8°), -r*cos(227.8°)) = (16*-0.7405, 16*0.6721) = (-11.85, 10.75)
+         large-arc = 1 (>180°), sweep = 1 (clockwise) -->
+    <path d="M 0 -16 A 16 16 0 1 1 -11.85 10.75" fill="none" stroke="#39d353" stroke-width="4" stroke-linecap="round" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <!-- tiny percentage in ring center -->
+    <text y="4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#c9d1d9" font-weight="700" text-anchor="middle">63%</text>
+  </g>
+
+  <!-- TILE 2: Active Repos 51 (1 Year) — top-6 breakdown as sqrt-scaled vertical bars -->
+  <rect x="150.67" y="232" width="118.67" height="104" rx="8" fill="url(#tile-bg)" stroke="#21262d" stroke-width="1"/>
+  <text x="160.67" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="#c9d1d9">51</text>
+  <text x="259.34" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">1 Year</text>
+  <text x="160.67" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">Active Repos</text>
+  <!-- 6 vertical bars: base y=326, max h=42, sqrt scale on max=1692
+       oscilla(1692)=42.0 cc-dump(439)=21.4 dotfiles(394)=20.3 links(264)=16.6 slopspot(254)=16.3 candybar(247)=16.0
+       bar w=13.94, gap=3, x-starts: 160.67, 177.61, 194.55, 211.49, 228.43, 245.37 -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">841</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">19</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">177</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">46</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
+    <rect x="160.67" y="284.0" width="13.94" height="42.0" rx="1" fill="#39d353" opacity="0.95">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="177.61" y="304.6" width="13.94" height="21.4" rx="1" fill="#26a641" opacity="0.85">
+      <animate attributeName="opacity" values="0.65;0.95;0.65" dur="8s" begin="-0.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="194.55" y="305.7" width="13.94" height="20.3" rx="1" fill="#26a641" opacity="0.8">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="9s" begin="-0.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="211.49" y="309.4" width="13.94" height="16.6" rx="1" fill="#0e6b31" opacity="0.75">
+      <animate attributeName="opacity" values="0.55;0.85;0.55" dur="10s" begin="-1.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="228.43" y="309.7" width="13.94" height="16.3" rx="1" fill="#0e6b31" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="11s" begin="-1.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="245.37" y="310.0" width="13.94" height="16.0" rx="1" fill="#0e4429" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="13s" begin="-2.0s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- TILE 3: Languages 5 (30 Days) — 5 stacked horizontal segments by commit count -->
+  <rect x="277.33" y="232" width="118.67" height="104" rx="8" fill="url(#tile-bg)" stroke="#21262d" stroke-width="1"/>
+  <text x="287.33" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="#c9d1d9">5</text>
+  <text x="386.00" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">30 Days</text>
+  <text x="287.33" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">Languages</text>
+  <!-- stacked segments: total=1058, width=98.67, y=300, h=14
+       TS(717)=66.85 Py(141)=13.15 Go(129)=12.03 HTML(50)=4.66 Shell(21)=1.96
+       x-starts: 287.33, 354.18, 367.33, 379.36, 384.02  -->
+  <g>
+    <rect x="287.33" y="300" width="66.85" height="14" fill="#3178c6" opacity="0.9">
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="354.18" y="300" width="13.15" height="14" fill="#3572A5" opacity="0.9"/>
+    <rect x="367.33" y="300" width="12.03" height="14" fill="#00ADD8" opacity="0.9"/>
+    <rect x="379.36" y="300" width="4.66" height="14" fill="#e34c26" opacity="0.9"/>
+    <rect x="384.02" y="300" width="1.98" height="14" fill="#89e051" opacity="0.9"/>
+    <!-- tiny leading-language label under the bar -->
+    <text x="336.67" y="324" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" fill="#8b949e" text-anchor="middle">TypeScript leads</text>
+  </g>
+
+  <!-- TILE 4: PRs Merged 161 (7 Days) — 23x7 dot grid (all 161 cells filled) -->
+  <rect x="404.0" y="232" width="118.67" height="104" rx="8" fill="url(#tile-bg)" stroke="#21262d" stroke-width="1"/>
+  <text x="414.0" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="#c9d1d9">161</text>
+  <text x="512.67" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">7 Days</text>
+  <text x="414.0" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">PRs Merged</text>
+  <!-- 23 cols x 7 rows = 161 cells (all filled). Cell 4x4 tile with 3x3 dot.
+       Grid dims 23*4=92 wide, 7*4=28 tall. x_start=404+10+(98.67-92)/2=417.34, y_start=284 -->
+  <g transform="translate(417.34 284)">
+    <rect width="92" height="28" fill="url(#pr-dots)"/>
+    <!-- ambient sweep across the dot grid, loops forever -->
+    <rect y="0" width="14" height="28" fill="#58a6ff" opacity="0.35">
+      <animate attributeName="x" from="-14" to="92" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- TILE 5: Longest Streak 82 (1 Year) — 82 tick marks (41x2) -->
+  <rect x="530.67" y="232" width="118.67" height="104" rx="8" fill="url(#tile-bg)" stroke="#21262d" stroke-width="1"/>
+  <text x="540.67" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="#c9d1d9">82</text>
+  <text x="639.34" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">1 Year</text>
+  <text x="540.67" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">Longest Streak</text>
+  <!-- 41 cols x 2 rows = 82 marks. Cell 2.4 wide, tick 1.9. Grid 41*2.4-0.5=97.9 wide, 14 tall.
+       x_start = 530.67 + 10 + (98.67-97.9)/2 = 541.05. y_start = 293 -->
+  <g transform="translate(541.05 293)">
+    <rect width="97.9" height="14" fill="url(#streak-ticks)"/>
+    <!-- bright highlight scrolling along the streak -->
+    <rect y="0" width="14" height="14" fill="#e3b341" opacity="0.85">
+      <animate attributeName="x" from="-14" to="97.9" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <text x="590.0" y="323" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" fill="#8b949e" text-anchor="middle">82 consecutive days</text>
+
+  <!-- TILE 6: My Issues Closed 6 (30 Days) — 6 discrete dots -->
+  <rect x="657.33" y="232" width="118.67" height="104" rx="8" fill="url(#tile-bg)" stroke="#21262d" stroke-width="1"/>
+  <text x="667.33" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="#c9d1d9">6</text>
+  <text x="766.0" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#8b949e" text-anchor="end">30 Days</text>
+  <text x="667.33" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">My Issues Closed</text>
+  <!-- 6 circles across decoration area, spacing 98.67/6=16.445, r=5
+       cx = 667.33 + 16.445*(i+0.5) for i=0..5, cy=306 -->
+  <g fill="#bc8cff">
+    <circle cx="675.55" cy="306" r="5" opacity="0.9">
+      <animate attributeName="r" values="4.4;5.6;4.4" dur="5s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="692.00" cy="306" r="5" opacity="0.9">
+      <animate attributeName="r" values="4.4;5.6;4.4" dur="6s" begin="-0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="708.44" cy="306" r="5" opacity="0.9">
+      <animate attributeName="r" values="4.4;5.6;4.4" dur="7s" begin="-1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="724.89" cy="306" r="5" opacity="0.9">
+      <animate attributeName="r" values="4.4;5.6;4.4" dur="8s" begin="-1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="741.33" cy="306" r="5" opacity="0.9">
+      <animate attributeName="r" values="4.4;5.6;4.4" dur="9s" begin="-2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="757.78" cy="306" r="5" opacity="0.9">
+      <animate attributeName="r" values="4.4;5.6;4.4" dur="10s" begin="-3.0s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
