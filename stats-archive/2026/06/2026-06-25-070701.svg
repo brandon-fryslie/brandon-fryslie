@@ -1,20 +1,264 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 25, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg viewBox="0 0 800 360" width="800" height="360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="brandon-fryslie GitHub stats card">
+  <defs>
+    <linearGradient id="areaGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1f6feb" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="strokeGrad" x1="0" x2="1" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b7bd1"/>
+      <stop offset="0.55" stop-color="#7ee787"/>
+      <stop offset="1" stop-color="#f0883e"/>
+    </linearGradient>
+    <linearGradient id="playheadGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e6edf3" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#e6edf3" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#e6edf3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="langShimmer" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="langBarClip">
+      <rect x="541" y="316" width="108" height="14" rx="3"/>
+    </clipPath>
+    <clipPath id="chartClip">
+      <rect x="20" y="60" width="760" height="122"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="360" rx="8" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="359" rx="8" fill="none" stroke="#21262d"/>
+
+  <!-- Header -->
+  <text x="20" y="26" font-size="14" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="780" y="26" font-size="11" fill="#7d8590" text-anchor="end">June 25, 2026 · brandon-fryslie</text>
+  <line x1="20" y1="40" x2="780" y2="40" stroke="#21262d"/>
+
+  <!-- Ribbon caption -->
+  <text x="20" y="58" font-size="11" fill="#7d8590">Contribution volume · past 12 months</text>
+  <text x="780" y="58" font-size="11" fill="#7d8590" text-anchor="end">peak day 213 · Jun 14</text>
+
+  <!-- Chart baseline -->
+  <line x1="20" y1="180" x2="780" y2="180" stroke="#30363d"/>
+
+  <!-- Filled area (366 daily contribution counts, y=68..180 = 0..213) -->
+  <g clip-path="url(#chartClip)">
+    <polygon fill="url(#areaGrad)" points="20,180 20.00,180.00 22.08,180.00 24.16,179.47 26.25,180.00 28.33,180.00 30.41,180.00 32.49,180.00 34.58,180.00 36.66,180.00 38.74,180.00 40.82,180.00 42.90,180.00 44.99,180.00 47.07,180.00 49.15,180.00 51.23,180.00 53.32,180.00 55.40,180.00 57.48,180.00 59.56,179.47 61.64,180.00 63.73,180.00 65.81,180.00 67.89,180.00 69.97,180.00 72.05,180.00 74.14,178.95 76.22,180.00 78.30,180.00 80.38,180.00 82.47,180.00 84.55,180.00 86.63,180.00 88.71,177.37 90.79,180.00 92.88,179.47 94.96,180.00 97.04,178.95 99.12,179.47 101.21,180.00 103.29,180.00 105.37,180.00 107.45,180.00 109.53,180.00 111.62,173.16 113.70,180.00 115.78,180.00 117.86,180.00 119.95,178.95 122.03,177.90 124.11,178.42 126.19,180.00 128.27,180.00 130.36,180.00 132.44,180.00 134.52,180.00 136.60,180.00 138.68,180.00 140.77,180.00 142.85,180.00 144.93,179.47 147.01,180.00 149.10,180.00 151.18,180.00 153.26,180.00 155.34,180.00 157.42,179.47 159.51,180.00 161.59,180.00 163.67,180.00 165.75,180.00 167.84,180.00 169.92,180.00 172.00,180.00 174.08,180.00 176.16,180.00 178.25,180.00 180.33,180.00 182.41,179.47 184.49,180.00 186.58,180.00 188.66,180.00 190.74,180.00 192.82,180.00 194.90,180.00 196.99,180.00 199.07,180.00 201.15,180.00 203.23,180.00 205.32,180.00 207.40,180.00 209.48,180.00 211.56,180.00 213.64,180.00 215.73,180.00 217.81,180.00 219.89,180.00 221.97,179.47 224.05,180.00 226.14,180.00 228.22,180.00 230.30,178.42 232.38,180.00 234.47,180.00 236.55,180.00 238.63,180.00 240.71,180.00 242.79,178.95 244.88,180.00 246.96,180.00 249.04,180.00 251.12,180.00 253.21,178.42 255.29,178.95 257.37,180.00 259.45,180.00 261.53,180.00 263.62,180.00 265.70,180.00 267.78,180.00 269.86,179.47 271.95,180.00 274.03,180.00 276.11,177.37 278.19,180.00 280.27,179.47 282.36,180.00 284.44,179.47 286.52,177.90 288.60,180.00 290.68,180.00 292.77,180.00 294.85,177.90 296.93,176.85 299.01,176.85 301.10,178.42 303.18,180.00 305.26,176.85 307.34,178.42 309.42,178.95 311.51,176.85 313.59,162.65 315.67,180.00 317.75,180.00 319.84,178.95 321.92,180.00 324.00,178.95 326.08,180.00 328.16,180.00 330.25,180.00 332.33,180.00 334.41,180.00 336.49,180.00 338.58,178.42 340.66,180.00 342.74,180.00 344.82,180.00 346.90,180.00 348.99,178.95 351.07,178.95 353.15,180.00 355.23,179.47 357.32,180.00 359.40,180.00 361.48,180.00 363.56,180.00 365.64,180.00 367.73,174.74 369.81,174.74 371.89,177.90 373.97,178.42 376.05,176.85 378.14,178.42 380.22,180.00 382.30,169.48 384.38,175.79 386.47,166.85 388.55,167.91 390.63,171.06 392.71,170.54 394.79,174.22 396.88,173.69 398.96,164.23 401.04,170.01 403.12,147.92 405.21,134.25 407.29,167.38 409.37,177.37 411.45,178.95 413.53,173.69 415.62,180.00 417.70,180.00 419.78,178.95 421.86,180.00 423.95,177.90 426.03,179.47 428.11,172.11 430.19,180.00 432.27,126.37 434.36,177.90 436.44,162.12 438.52,149.50 440.60,170.54 442.68,163.70 444.77,170.54 446.85,166.85 448.93,148.98 451.01,123.74 453.10,148.45 455.18,128.47 457.26,152.13 459.34,148.45 461.42,165.28 463.51,129.00 465.59,143.19 467.67,154.76 469.75,133.20 471.84,148.98 473.92,163.70 476.00,118.48 478.08,157.92 480.16,123.74 482.25,147.92 484.33,147.92 486.41,153.71 488.49,158.97 490.58,164.75 492.66,175.27 494.74,169.48 496.82,168.43 498.90,174.74 500.99,171.59 503.07,176.32 505.15,156.86 507.23,115.85 509.32,178.95 511.40,176.85 513.48,178.42 515.56,176.32 517.64,161.60 519.73,134.78 521.81,107.44 523.89,114.80 525.97,145.30 528.05,120.06 530.14,143.72 532.22,149.50 534.30,161.07 536.38,176.85 538.47,168.96 540.55,155.81 542.63,171.59 544.71,165.28 546.79,177.37 548.88,168.96 550.96,158.97 553.04,135.31 555.12,168.96 557.21,122.69 559.29,166.33 561.37,144.77 563.45,165.28 565.53,168.43 567.62,173.16 569.70,165.28 571.78,165.80 573.86,173.16 575.95,153.71 578.03,174.22 580.11,159.49 582.19,153.18 584.27,160.54 586.36,167.91 588.44,176.85 590.52,177.37 592.60,174.74 594.68,176.85 596.77,173.16 598.85,168.43 600.93,178.95 603.01,180.00 605.10,168.43 607.18,172.11 609.26,177.90 611.34,173.69 613.42,127.42 615.51,170.54 617.59,175.79 619.67,178.42 621.75,180.00 623.84,172.64 625.92,170.01 628.00,170.01 630.08,176.85 632.16,175.27 634.25,173.69 636.33,164.75 638.41,134.25 640.49,168.43 642.58,168.96 644.66,177.37 646.74,175.27 648.82,170.01 650.90,141.62 652.99,168.96 655.07,166.85 657.15,166.85 659.23,141.09 661.32,157.92 663.40,155.29 665.48,170.01 667.56,180.00 669.64,147.92 671.73,156.34 673.81,153.71 675.89,154.76 677.97,160.54 680.05,155.81 682.14,156.34 684.22,175.27 686.30,172.11 688.38,180.00 690.47,172.11 692.55,173.16 694.63,169.48 696.71,161.07 698.79,174.22 700.88,164.23 702.96,173.69 705.04,178.95 707.12,148.45 709.21,158.44 711.29,169.48 713.37,117.43 715.45,135.31 717.53,169.48 719.62,148.45 721.70,155.81 723.78,131.10 725.86,170.01 727.95,135.31 730.03,158.97 732.11,150.55 734.19,149.50 736.27,121.63 738.36,170.01 740.44,170.01 742.52,175.27 744.60,171.06 746.68,78.52 748.77,121.63 750.85,113.22 752.93,134.78 755.01,178.42 757.10,68.00 759.18,125.84 761.26,161.60 763.34,172.64 765.42,156.86 767.51,180.00 769.59,143.72 771.67,151.61 773.75,70.63 775.84,130.57 777.92,118.48 780.00,114.27 780,180"/>
+
+    <!-- Top-line stroke, gradient colored -->
+    <polyline fill="none" stroke="url(#strokeGrad)" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" points="20.00,180.00 22.08,180.00 24.16,179.47 26.25,180.00 28.33,180.00 30.41,180.00 32.49,180.00 34.58,180.00 36.66,180.00 38.74,180.00 40.82,180.00 42.90,180.00 44.99,180.00 47.07,180.00 49.15,180.00 51.23,180.00 53.32,180.00 55.40,180.00 57.48,180.00 59.56,179.47 61.64,180.00 63.73,180.00 65.81,180.00 67.89,180.00 69.97,180.00 72.05,180.00 74.14,178.95 76.22,180.00 78.30,180.00 80.38,180.00 82.47,180.00 84.55,180.00 86.63,180.00 88.71,177.37 90.79,180.00 92.88,179.47 94.96,180.00 97.04,178.95 99.12,179.47 101.21,180.00 103.29,180.00 105.37,180.00 107.45,180.00 109.53,180.00 111.62,173.16 113.70,180.00 115.78,180.00 117.86,180.00 119.95,178.95 122.03,177.90 124.11,178.42 126.19,180.00 128.27,180.00 130.36,180.00 132.44,180.00 134.52,180.00 136.60,180.00 138.68,180.00 140.77,180.00 142.85,180.00 144.93,179.47 147.01,180.00 149.10,180.00 151.18,180.00 153.26,180.00 155.34,180.00 157.42,179.47 159.51,180.00 161.59,180.00 163.67,180.00 165.75,180.00 167.84,180.00 169.92,180.00 172.00,180.00 174.08,180.00 176.16,180.00 178.25,180.00 180.33,180.00 182.41,179.47 184.49,180.00 186.58,180.00 188.66,180.00 190.74,180.00 192.82,180.00 194.90,180.00 196.99,180.00 199.07,180.00 201.15,180.00 203.23,180.00 205.32,180.00 207.40,180.00 209.48,180.00 211.56,180.00 213.64,180.00 215.73,180.00 217.81,180.00 219.89,180.00 221.97,179.47 224.05,180.00 226.14,180.00 228.22,180.00 230.30,178.42 232.38,180.00 234.47,180.00 236.55,180.00 238.63,180.00 240.71,180.00 242.79,178.95 244.88,180.00 246.96,180.00 249.04,180.00 251.12,180.00 253.21,178.42 255.29,178.95 257.37,180.00 259.45,180.00 261.53,180.00 263.62,180.00 265.70,180.00 267.78,180.00 269.86,179.47 271.95,180.00 274.03,180.00 276.11,177.37 278.19,180.00 280.27,179.47 282.36,180.00 284.44,179.47 286.52,177.90 288.60,180.00 290.68,180.00 292.77,180.00 294.85,177.90 296.93,176.85 299.01,176.85 301.10,178.42 303.18,180.00 305.26,176.85 307.34,178.42 309.42,178.95 311.51,176.85 313.59,162.65 315.67,180.00 317.75,180.00 319.84,178.95 321.92,180.00 324.00,178.95 326.08,180.00 328.16,180.00 330.25,180.00 332.33,180.00 334.41,180.00 336.49,180.00 338.58,178.42 340.66,180.00 342.74,180.00 344.82,180.00 346.90,180.00 348.99,178.95 351.07,178.95 353.15,180.00 355.23,179.47 357.32,180.00 359.40,180.00 361.48,180.00 363.56,180.00 365.64,180.00 367.73,174.74 369.81,174.74 371.89,177.90 373.97,178.42 376.05,176.85 378.14,178.42 380.22,180.00 382.30,169.48 384.38,175.79 386.47,166.85 388.55,167.91 390.63,171.06 392.71,170.54 394.79,174.22 396.88,173.69 398.96,164.23 401.04,170.01 403.12,147.92 405.21,134.25 407.29,167.38 409.37,177.37 411.45,178.95 413.53,173.69 415.62,180.00 417.70,180.00 419.78,178.95 421.86,180.00 423.95,177.90 426.03,179.47 428.11,172.11 430.19,180.00 432.27,126.37 434.36,177.90 436.44,162.12 438.52,149.50 440.60,170.54 442.68,163.70 444.77,170.54 446.85,166.85 448.93,148.98 451.01,123.74 453.10,148.45 455.18,128.47 457.26,152.13 459.34,148.45 461.42,165.28 463.51,129.00 465.59,143.19 467.67,154.76 469.75,133.20 471.84,148.98 473.92,163.70 476.00,118.48 478.08,157.92 480.16,123.74 482.25,147.92 484.33,147.92 486.41,153.71 488.49,158.97 490.58,164.75 492.66,175.27 494.74,169.48 496.82,168.43 498.90,174.74 500.99,171.59 503.07,176.32 505.15,156.86 507.23,115.85 509.32,178.95 511.40,176.85 513.48,178.42 515.56,176.32 517.64,161.60 519.73,134.78 521.81,107.44 523.89,114.80 525.97,145.30 528.05,120.06 530.14,143.72 532.22,149.50 534.30,161.07 536.38,176.85 538.47,168.96 540.55,155.81 542.63,171.59 544.71,165.28 546.79,177.37 548.88,168.96 550.96,158.97 553.04,135.31 555.12,168.96 557.21,122.69 559.29,166.33 561.37,144.77 563.45,165.28 565.53,168.43 567.62,173.16 569.70,165.28 571.78,165.80 573.86,173.16 575.95,153.71 578.03,174.22 580.11,159.49 582.19,153.18 584.27,160.54 586.36,167.91 588.44,176.85 590.52,177.37 592.60,174.74 594.68,176.85 596.77,173.16 598.85,168.43 600.93,178.95 603.01,180.00 605.10,168.43 607.18,172.11 609.26,177.90 611.34,173.69 613.42,127.42 615.51,170.54 617.59,175.79 619.67,178.42 621.75,180.00 623.84,172.64 625.92,170.01 628.00,170.01 630.08,176.85 632.16,175.27 634.25,173.69 636.33,164.75 638.41,134.25 640.49,168.43 642.58,168.96 644.66,177.37 646.74,175.27 648.82,170.01 650.90,141.62 652.99,168.96 655.07,166.85 657.15,166.85 659.23,141.09 661.32,157.92 663.40,155.29 665.48,170.01 667.56,180.00 669.64,147.92 671.73,156.34 673.81,153.71 675.89,154.76 677.97,160.54 680.05,155.81 682.14,156.34 684.22,175.27 686.30,172.11 688.38,180.00 690.47,172.11 692.55,173.16 694.63,169.48 696.71,161.07 698.79,174.22 700.88,164.23 702.96,173.69 705.04,178.95 707.12,148.45 709.21,158.44 711.29,169.48 713.37,117.43 715.45,135.31 717.53,169.48 719.62,148.45 721.70,155.81 723.78,131.10 725.86,170.01 727.95,135.31 730.03,158.97 732.11,150.55 734.19,149.50 736.27,121.63 738.36,170.01 740.44,170.01 742.52,175.27 744.60,171.06 746.68,78.52 748.77,121.63 750.85,113.22 752.93,134.78 755.01,178.42 757.10,68.00 759.18,125.84 761.26,161.60 763.34,172.64 765.42,156.86 767.51,180.00 769.59,143.72 771.67,151.61 773.75,70.63 775.84,130.57 777.92,118.48 780.00,114.27"/>
+
+    <!-- Perpetual playhead sweep (vertical highlight moving L->R) -->
+    <rect x="0" y="68" width="6" height="112" fill="url(#playheadGrad)">
+      <animate attributeName="x" values="14;774;14" keyTimes="0;0.5;1" dur="17s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Peak marker (2026-06-14, 213 contributions) -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1456</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">358</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">177</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">11</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
+    <circle cx="757.10" cy="68" r="5" fill="none" stroke="#f0883e" stroke-opacity="0.6" stroke-width="1">
+      <animate attributeName="r" values="3;7;3" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.75;0;0.75" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="757.10" cy="68" r="2.6" fill="#f0883e"/>
+  </g>
+
+  <!-- Month labels -->
+  <g font-size="9" fill="#6e7681" text-anchor="middle">
+    <text x="32.5" y="192">Jul</text>
+    <text x="97.0" y="192">Aug</text>
+    <text x="161.6" y="192">Sep</text>
+    <text x="224.1" y="192">Oct</text>
+    <text x="288.6" y="192">Nov</text>
+    <text x="351.1" y="192">Dec</text>
+    <text x="415.6" y="192">Jan '26</text>
+    <text x="480.2" y="192">Feb</text>
+    <text x="538.5" y="192">Mar</text>
+    <text x="603.0" y="192">Apr</text>
+    <text x="665.5" y="192">May</text>
+    <text x="730.0" y="192">Jun</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="20" y1="204" x2="780" y2="204" stroke="#21262d"/>
+
+  <!-- ============================================================ -->
+  <!-- METRIC TILES (6 tiles, centers x = 75, 205, 335, 465, 595, 725) -->
+  <!-- Value baseline y=248 (28px), label y=272 (11px), period y=286 (9px) -->
+  <!-- Viz slot y=294 to y=340 -->
+  <!-- ============================================================ -->
+
+  <!-- Vertical dividers between tiles -->
+  <g stroke="#21262d" stroke-width="1">
+    <line x1="140" y1="216" x2="140" y2="344"/>
+    <line x1="270" y1="216" x2="270" y2="344"/>
+    <line x1="400" y1="216" x2="400" y2="344"/>
+    <line x1="530" y1="216" x2="530" y2="344"/>
+    <line x1="660" y1="216" x2="660" y2="344"/>
+  </g>
+
+  <!-- TILE 1: PRs Merged 217 (7 Days) — mini bar chart of last 7 days -->
+  <text x="75" y="248" font-size="28" font-weight="700" fill="#f0f6fc" text-anchor="middle">217</text>
+  <text x="75" y="272" font-size="11" fill="#8b949e" text-anchor="middle">PRs Merged</text>
+  <text x="75" y="286" font-size="9" fill="#6e7681" text-anchor="middle">7 Days</text>
+  <g transform="translate(0 0)">
+    <!-- Bars — last 7 days [0, 69, 54, 208, 94, 117, 125] scaled max 208 -> 40px -->
+    <line x1="27.5" y1="340" x2="122.5" y2="340" stroke="#30363d" stroke-width="0.5"/>
+    <!-- day 0: value 0 — leave a tiny placeholder tick at baseline -->
+    <rect x="27.5" y="339.5" width="11" height="0.5" fill="#7ee787" opacity="0.4"/>
+    <rect x="41.5" y="326.73" width="11" height="13.27" fill="#7ee787" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.85;0.55" dur="3.1s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="55.5" y="329.62" width="11" height="10.38" fill="#7ee787" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.85;0.55" dur="3.1s" begin="0.35s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="69.5" y="300.00" width="11" height="40.00" fill="#7ee787" opacity="0.95">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="3.1s" begin="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="83.5" y="321.92" width="11" height="18.08" fill="#7ee787" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3.1s" begin="1.05s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="97.5" y="317.50" width="11" height="22.50" fill="#7ee787" opacity="0.65">
+      <animate attributeName="opacity" values="0.65;0.95;0.65" dur="3.1s" begin="1.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="111.5" y="315.96" width="11" height="24.04" fill="#7ee787" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.1s" begin="1.75s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- TILE 2: Longest Streak 82 (1 Year) — 82 dots (14 cols × 6 rows, last row 12) -->
+  <text x="205" y="248" font-size="28" font-weight="700" fill="#f0f6fc" text-anchor="middle">82</text>
+  <text x="205" y="272" font-size="11" fill="#8b949e" text-anchor="middle">Longest Streak</text>
+  <text x="205" y="286" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
+  <g fill="#ff7b72">
+    <!-- Row 1 (y=302) — all 14 -->
+    <g opacity="0.55"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="0s" repeatCount="indefinite"/>
+      <circle cx="159.5" cy="302" r="1.8"/><circle cx="166.5" cy="302" r="1.8"/><circle cx="173.5" cy="302" r="1.8"/><circle cx="180.5" cy="302" r="1.8"/><circle cx="187.5" cy="302" r="1.8"/><circle cx="194.5" cy="302" r="1.8"/><circle cx="201.5" cy="302" r="1.8"/><circle cx="208.5" cy="302" r="1.8"/><circle cx="215.5" cy="302" r="1.8"/><circle cx="222.5" cy="302" r="1.8"/><circle cx="229.5" cy="302" r="1.8"/><circle cx="236.5" cy="302" r="1.8"/><circle cx="243.5" cy="302" r="1.8"/><circle cx="250.5" cy="302" r="1.8"/>
+    </g>
+    <g opacity="0.55"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="0.3s" repeatCount="indefinite"/>
+      <circle cx="159.5" cy="308" r="1.8"/><circle cx="166.5" cy="308" r="1.8"/><circle cx="173.5" cy="308" r="1.8"/><circle cx="180.5" cy="308" r="1.8"/><circle cx="187.5" cy="308" r="1.8"/><circle cx="194.5" cy="308" r="1.8"/><circle cx="201.5" cy="308" r="1.8"/><circle cx="208.5" cy="308" r="1.8"/><circle cx="215.5" cy="308" r="1.8"/><circle cx="222.5" cy="308" r="1.8"/><circle cx="229.5" cy="308" r="1.8"/><circle cx="236.5" cy="308" r="1.8"/><circle cx="243.5" cy="308" r="1.8"/><circle cx="250.5" cy="308" r="1.8"/>
+    </g>
+    <g opacity="0.55"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="0.6s" repeatCount="indefinite"/>
+      <circle cx="159.5" cy="314" r="1.8"/><circle cx="166.5" cy="314" r="1.8"/><circle cx="173.5" cy="314" r="1.8"/><circle cx="180.5" cy="314" r="1.8"/><circle cx="187.5" cy="314" r="1.8"/><circle cx="194.5" cy="314" r="1.8"/><circle cx="201.5" cy="314" r="1.8"/><circle cx="208.5" cy="314" r="1.8"/><circle cx="215.5" cy="314" r="1.8"/><circle cx="222.5" cy="314" r="1.8"/><circle cx="229.5" cy="314" r="1.8"/><circle cx="236.5" cy="314" r="1.8"/><circle cx="243.5" cy="314" r="1.8"/><circle cx="250.5" cy="314" r="1.8"/>
+    </g>
+    <g opacity="0.55"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="0.9s" repeatCount="indefinite"/>
+      <circle cx="159.5" cy="320" r="1.8"/><circle cx="166.5" cy="320" r="1.8"/><circle cx="173.5" cy="320" r="1.8"/><circle cx="180.5" cy="320" r="1.8"/><circle cx="187.5" cy="320" r="1.8"/><circle cx="194.5" cy="320" r="1.8"/><circle cx="201.5" cy="320" r="1.8"/><circle cx="208.5" cy="320" r="1.8"/><circle cx="215.5" cy="320" r="1.8"/><circle cx="222.5" cy="320" r="1.8"/><circle cx="229.5" cy="320" r="1.8"/><circle cx="236.5" cy="320" r="1.8"/><circle cx="243.5" cy="320" r="1.8"/><circle cx="250.5" cy="320" r="1.8"/>
+    </g>
+    <g opacity="0.55"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="1.2s" repeatCount="indefinite"/>
+      <circle cx="159.5" cy="326" r="1.8"/><circle cx="166.5" cy="326" r="1.8"/><circle cx="173.5" cy="326" r="1.8"/><circle cx="180.5" cy="326" r="1.8"/><circle cx="187.5" cy="326" r="1.8"/><circle cx="194.5" cy="326" r="1.8"/><circle cx="201.5" cy="326" r="1.8"/><circle cx="208.5" cy="326" r="1.8"/><circle cx="215.5" cy="326" r="1.8"/><circle cx="222.5" cy="326" r="1.8"/><circle cx="229.5" cy="326" r="1.8"/><circle cx="236.5" cy="326" r="1.8"/><circle cx="243.5" cy="326" r="1.8"/><circle cx="250.5" cy="326" r="1.8"/>
+    </g>
+    <!-- Row 6 (y=332) — only 12 (5*14+12 = 82) -->
+    <g opacity="0.55"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+      <circle cx="159.5" cy="332" r="1.8"/><circle cx="166.5" cy="332" r="1.8"/><circle cx="173.5" cy="332" r="1.8"/><circle cx="180.5" cy="332" r="1.8"/><circle cx="187.5" cy="332" r="1.8"/><circle cx="194.5" cy="332" r="1.8"/><circle cx="201.5" cy="332" r="1.8"/><circle cx="208.5" cy="332" r="1.8"/><circle cx="215.5" cy="332" r="1.8"/><circle cx="222.5" cy="332" r="1.8"/><circle cx="229.5" cy="332" r="1.8"/><circle cx="236.5" cy="332" r="1.8"/>
+    </g>
+  </g>
+
+  <!-- TILE 3: Active Repos 11 (7 Days) — 6 bars proportional to top-6 repo commit counts -->
+  <text x="335" y="248" font-size="28" font-weight="700" fill="#f0f6fc" text-anchor="middle">11</text>
+  <text x="335" y="272" font-size="11" fill="#8b949e" text-anchor="middle">Active Repos</text>
+  <text x="335" y="286" font-size="9" fill="#6e7681" text-anchor="middle">7 Days</text>
+  <g>
+    <line x1="289" y1="340" x2="381" y2="340" stroke="#30363d" stroke-width="0.5"/>
+    <!-- 6 top repos, counts [151, 78, 38, 36, 28, 27], scaled 151->40px -->
+    <rect x="289" y="300.00" width="12" height="40.00" fill="#d2a8ff" opacity="0.95"/>
+    <rect x="305" y="319.34" width="12" height="20.66" fill="#d2a8ff" opacity="0.85"/>
+    <rect x="321" y="329.93" width="12" height="10.07" fill="#d2a8ff" opacity="0.75"/>
+    <rect x="337" y="330.46" width="12" height="9.54" fill="#d2a8ff" opacity="0.7"/>
+    <rect x="353" y="332.58" width="12" height="7.42" fill="#d2a8ff" opacity="0.65"/>
+    <rect x="369" y="332.85" width="12" height="7.15" fill="#d2a8ff" opacity="0.6"/>
+    <!-- Group breathing pulse -->
+    <rect x="285" y="298" width="100" height="44" fill="#d2a8ff" opacity="0">
+      <animate attributeName="opacity" values="0;0.08;0" dur="4.7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- TILE 4: Days Active 228 (1 Year) — arc showing 228/365 = 62.5% -->
+  <text x="465" y="248" font-size="28" font-weight="700" fill="#f0f6fc" text-anchor="middle">228</text>
+  <text x="465" y="272" font-size="11" fill="#8b949e" text-anchor="middle">Days Active</text>
+  <text x="465" y="286" font-size="9" fill="#6e7681" text-anchor="middle">1 Year · of 365</text>
+  <g transform="rotate(-90 465 317)">
+    <!-- Background ring -->
+    <circle cx="465" cy="317" r="20" fill="none" stroke="#30363d" stroke-width="6"/>
+    <!-- Filled arc (228/365 of circumference 125.664 = 78.497 filled) -->
+    <circle cx="465" cy="317" r="20" fill="none" stroke="#79c0ff" stroke-width="6" stroke-linecap="round"
+            stroke-dasharray="78.497 47.167">
+      <animateTransform attributeName="transform" type="rotate" from="0 465 317" to="360 465 317" dur="19s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Center pulse dot -->
+  <circle cx="465" cy="317" r="2" fill="#79c0ff" opacity="0.75">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- TILE 5: Languages 13 (All Time) — stacked bar of 8 named languages -->
+  <text x="595" y="248" font-size="28" font-weight="700" fill="#f0f6fc" text-anchor="middle">13</text>
+  <text x="595" y="272" font-size="11" fill="#8b949e" text-anchor="middle">Languages</text>
+  <text x="595" y="286" font-size="9" fill="#6e7681" text-anchor="middle">All Time</text>
+  <g>
+    <!-- Stacked bar (total width 108, y=316..330) — 8 segments proportional to commit counts -->
+    <g clip-path="url(#langBarClip)">
+      <rect x="541.00" y="316" width="67.50" height="14" fill="#3178c6"/>
+      <rect x="608.50" y="316" width="20.96" height="14" fill="#3572A5"/>
+      <rect x="629.46" y="316" width="8.95" height="14" fill="#00ADD8"/>
+      <rect x="638.41" y="316" width="4.94" height="14" fill="#89e051"/>
+      <rect x="643.36" y="316" width="2.27" height="14" fill="#e34c26"/>
+      <rect x="645.62" y="316" width="1.96" height="14" fill="#244776"/>
+      <rect x="647.58" y="316" width="1.15" height="14" fill="#f1e05a"/>
+      <rect x="648.74" y="316" width="0.27" height="14" fill="#563d7c"/>
+      <!-- Shimmer overlay sweeping L->R -->
+      <rect x="-40" y="316" width="40" height="14" fill="url(#langShimmer)">
+        <animate attributeName="x" values="-40;149;-40" keyTimes="0;0.55;1" dur="7s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- Bar border -->
+    <rect x="541" y="316" width="108" height="14" rx="3" fill="none" stroke="#30363d" stroke-width="0.5"/>
+    <!-- Legend swatches (tiny hint of the color coding) -->
+    <g>
+      <rect x="541" y="304" width="8" height="3" fill="#3178c6"/>
+      <rect x="552" y="304" width="8" height="3" fill="#3572A5"/>
+      <rect x="563" y="304" width="8" height="3" fill="#00ADD8"/>
+      <rect x="574" y="304" width="8" height="3" fill="#89e051"/>
+      <rect x="585" y="304" width="8" height="3" fill="#e34c26"/>
+      <rect x="596" y="304" width="8" height="3" fill="#244776"/>
+      <rect x="607" y="304" width="8" height="3" fill="#f1e05a"/>
+      <rect x="618" y="304" width="8" height="3" fill="#563d7c"/>
+    </g>
+  </g>
+
+  <!-- TILE 6: My Issues Closed 63 (1 Year) — 63 dots (9 cols × 7 rows) -->
+  <text x="725" y="248" font-size="28" font-weight="700" fill="#f0f6fc" text-anchor="middle">63</text>
+  <text x="725" y="272" font-size="11" fill="#8b949e" text-anchor="middle">My Issues Closed</text>
+  <text x="725" y="286" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
+  <g fill="#f0883e">
+    <!-- Wave-per-column: 9 columns, staggered pulse -->
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="0s" repeatCount="indefinite"/>
+      <circle cx="685" cy="298" r="2"/><circle cx="685" cy="304" r="2"/><circle cx="685" cy="310" r="2"/><circle cx="685" cy="316" r="2"/><circle cx="685" cy="322" r="2"/><circle cx="685" cy="328" r="2"/><circle cx="685" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="0.25s" repeatCount="indefinite"/>
+      <circle cx="695" cy="298" r="2"/><circle cx="695" cy="304" r="2"/><circle cx="695" cy="310" r="2"/><circle cx="695" cy="316" r="2"/><circle cx="695" cy="322" r="2"/><circle cx="695" cy="328" r="2"/><circle cx="695" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="0.5s" repeatCount="indefinite"/>
+      <circle cx="705" cy="298" r="2"/><circle cx="705" cy="304" r="2"/><circle cx="705" cy="310" r="2"/><circle cx="705" cy="316" r="2"/><circle cx="705" cy="322" r="2"/><circle cx="705" cy="328" r="2"/><circle cx="705" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="0.75s" repeatCount="indefinite"/>
+      <circle cx="715" cy="298" r="2"/><circle cx="715" cy="304" r="2"/><circle cx="715" cy="310" r="2"/><circle cx="715" cy="316" r="2"/><circle cx="715" cy="322" r="2"/><circle cx="715" cy="328" r="2"/><circle cx="715" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="1.0s" repeatCount="indefinite"/>
+      <circle cx="725" cy="298" r="2"/><circle cx="725" cy="304" r="2"/><circle cx="725" cy="310" r="2"/><circle cx="725" cy="316" r="2"/><circle cx="725" cy="322" r="2"/><circle cx="725" cy="328" r="2"/><circle cx="725" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="1.25s" repeatCount="indefinite"/>
+      <circle cx="735" cy="298" r="2"/><circle cx="735" cy="304" r="2"/><circle cx="735" cy="310" r="2"/><circle cx="735" cy="316" r="2"/><circle cx="735" cy="322" r="2"/><circle cx="735" cy="328" r="2"/><circle cx="735" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="1.5s" repeatCount="indefinite"/>
+      <circle cx="745" cy="298" r="2"/><circle cx="745" cy="304" r="2"/><circle cx="745" cy="310" r="2"/><circle cx="745" cy="316" r="2"/><circle cx="745" cy="322" r="2"/><circle cx="745" cy="328" r="2"/><circle cx="745" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="1.75s" repeatCount="indefinite"/>
+      <circle cx="755" cy="298" r="2"/><circle cx="755" cy="304" r="2"/><circle cx="755" cy="310" r="2"/><circle cx="755" cy="316" r="2"/><circle cx="755" cy="322" r="2"/><circle cx="755" cy="328" r="2"/><circle cx="755" cy="334" r="2"/>
+    </g>
+    <g><animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" begin="2.0s" repeatCount="indefinite"/>
+      <circle cx="765" cy="298" r="2"/><circle cx="765" cy="304" r="2"/><circle cx="765" cy="310" r="2"/><circle cx="765" cy="316" r="2"/><circle cx="765" cy="322" r="2"/><circle cx="765" cy="328" r="2"/><circle cx="765" cy="334" r="2"/>
+    </g>
   </g>
 </svg>
