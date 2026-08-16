@@ -53,6 +53,15 @@ jobs:
       stamps: ${{ steps.pick.outputs.stamps }}
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          # master, not the dispatch SHA — the same reason `gallery` below needs it, and
+          # the more expensive one to get wrong. Which slots are pending is read off the
+          # archive tree, and this run may have sat in the shared concurrency queue behind
+          # another one that remastered dozens of them. Selecting against the tree as it
+          # stood at dispatch hands those finished slots to the matrix again: the jobs all
+          # pass, each burning a full agent invocation to overwrite a card that was
+          # already authored. Twenty of them did exactly that before this was caught.
+          ref: master
 
       - name: Pick the slots to remaster
         id: pick
