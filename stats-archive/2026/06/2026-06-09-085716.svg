@@ -1,20 +1,234 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated June 09, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="calFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7ee787" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#39d353" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#39d353" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="streakFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#79c0ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="calSweep" x1="-1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-1;1" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="13s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="langShimmer" x1="-1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="56%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-1;1" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="repoSweep" x1="-1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-1;1" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <clipPath id="calClip">
+      <rect x="32" y="52" width="736" height="102"/>
+    </clipPath>
+  </defs>
+
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" width="799" height="339" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="24" y="42" font-size="15" font-weight="600" fill="#c9d1d9">Live GitHub Stats</text>
+  <text x="776" y="42" font-size="12" fill="#7d8590" text-anchor="end">brandon-fryslie · Jun 9, 2026</text>
+
+  <!-- Streak label above the streak span (span x=463.5–626.8) -->
+  <text x="465" y="66" font-size="10" fill="#7d8590">Longest Streak</text>
+  <text x="551" y="66" font-size="15" font-weight="700" fill="#79c0ff">82</text>
+  <text x="571" y="66" font-size="10" fill="#7d8590">days · 1 Year</text>
+  <!-- Streak bracket -->
+  <path d="M 463.5,70 L 463.5,76 L 626.8,76 L 626.8,70" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.55"/>
+
+  <!-- Calendar background reference lines (quartiles of max=193) -->
+  <g stroke="#21262d" stroke-width="1" fill="none">
+    <line x1="32" y1="154" x2="768" y2="154"/>
+    <line x1="32" y1="131.5" x2="768" y2="131.5" stroke-dasharray="1 4" opacity="0.6"/>
+    <line x1="32" y1="109" x2="768" y2="109" stroke-dasharray="1 4" opacity="0.6"/>
+    <line x1="32" y1="86.5" x2="768" y2="86.5" stroke-dasharray="1 4" opacity="0.6"/>
+    <line x1="32" y1="64" x2="768" y2="64" stroke-dasharray="1 4" opacity="0.4"/>
+  </g>
+
+  <!-- Streak highlight band (behind area) -->
+  <rect x="463.5" y="64" width="163.3" height="90" fill="url(#streakFill)" opacity="0.55">
+    <animate attributeName="opacity" values="0.42;0.68;0.42" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Calendar area fill (full 366-day polyline) -->
+  <path d="M 32,154 L 32.0,153.5 L 34.0,153.5 L 36.0,153.5 L 38.0,154.0 L 40.1,154.0 L 42.1,154.0 L 44.1,154.0 L 46.1,154.0 L 48.1,154.0 L 50.1,154.0 L 52.2,154.0 L 54.2,154.0 L 56.2,154.0 L 58.2,154.0 L 60.2,147.5 L 62.2,154.0 L 64.3,154.0 L 66.3,154.0 L 68.3,153.5 L 70.3,154.0 L 72.3,154.0 L 74.3,154.0 L 76.4,154.0 L 78.4,154.0 L 80.4,154.0 L 82.4,154.0 L 84.4,154.0 L 86.4,154.0 L 88.5,154.0 L 90.5,154.0 L 92.5,154.0 L 94.5,154.0 L 96.5,154.0 L 98.5,154.0 L 100.6,154.0 L 102.6,153.5 L 104.6,154.0 L 106.6,154.0 L 108.6,154.0 L 110.6,154.0 L 112.7,154.0 L 114.7,154.0 L 116.7,153.1 L 118.7,154.0 L 120.7,154.0 L 122.7,154.0 L 124.8,154.0 L 126.8,154.0 L 128.8,154.0 L 130.8,151.7 L 132.8,154.0 L 134.8,153.5 L 136.9,154.0 L 138.9,153.1 L 140.9,153.5 L 142.9,154.0 L 144.9,154.0 L 146.9,154.0 L 149.0,154.0 L 151.0,154.0 L 153.0,147.9 L 155.0,154.0 L 157.0,154.0 L 159.0,154.0 L 161.1,153.1 L 163.1,152.1 L 165.1,152.6 L 167.1,154.0 L 169.1,154.0 L 171.1,154.0 L 173.2,154.0 L 175.2,154.0 L 177.2,154.0 L 179.2,154.0 L 181.2,154.0 L 183.2,154.0 L 185.2,153.5 L 187.3,154.0 L 189.3,154.0 L 191.3,154.0 L 193.3,154.0 L 195.3,154.0 L 197.3,153.5 L 199.4,154.0 L 201.4,154.0 L 203.4,154.0 L 205.4,154.0 L 207.4,154.0 L 209.4,154.0 L 211.5,154.0 L 213.5,154.0 L 215.5,154.0 L 217.5,154.0 L 219.5,154.0 L 221.5,153.5 L 223.6,154.0 L 225.6,154.0 L 227.6,154.0 L 229.6,154.0 L 231.6,154.0 L 233.6,154.0 L 235.7,154.0 L 237.7,154.0 L 239.7,154.0 L 241.7,154.0 L 243.7,154.0 L 245.7,154.0 L 247.8,154.0 L 249.8,154.0 L 251.8,154.0 L 253.8,154.0 L 255.8,154.0 L 257.8,154.0 L 259.9,153.5 L 261.9,154.0 L 263.9,154.0 L 265.9,154.0 L 267.9,152.6 L 269.9,154.0 L 272.0,154.0 L 274.0,154.0 L 276.0,154.0 L 278.0,154.0 L 280.0,153.1 L 282.0,154.0 L 284.1,154.0 L 286.1,154.0 L 288.1,154.0 L 290.1,152.6 L 292.1,153.1 L 294.1,154.0 L 296.2,154.0 L 298.2,154.0 L 300.2,154.0 L 302.2,154.0 L 304.2,154.0 L 306.2,153.5 L 308.3,154.0 L 310.3,154.0 L 312.3,151.7 L 314.3,154.0 L 316.3,153.5 L 318.3,154.0 L 320.4,153.5 L 322.4,152.1 L 324.4,154.0 L 326.4,154.0 L 328.4,154.0 L 330.4,152.1 L 332.4,151.2 L 334.5,151.2 L 336.5,152.6 L 338.5,154.0 L 340.5,151.2 L 342.5,152.6 L 344.5,153.1 L 346.6,151.2 L 348.6,138.6 L 350.6,154.0 L 352.6,154.0 L 354.6,153.1 L 356.6,154.0 L 358.7,153.1 L 360.7,154.0 L 362.7,154.0 L 364.7,154.0 L 366.7,154.0 L 368.7,154.0 L 370.8,154.0 L 372.8,152.6 L 374.8,154.0 L 376.8,154.0 L 378.8,154.0 L 380.8,154.0 L 382.9,153.1 L 384.9,153.1 L 386.9,154.0 L 388.9,153.5 L 390.9,154.0 L 392.9,154.0 L 395.0,154.0 L 397.0,154.0 L 399.0,154.0 L 401.0,149.3 L 403.0,149.3 L 405.0,152.1 L 407.1,152.6 L 409.1,151.2 L 411.1,152.6 L 413.1,154.0 L 415.1,144.7 L 417.1,150.3 L 419.2,142.3 L 421.2,143.3 L 423.2,146.1 L 425.2,145.6 L 427.2,148.9 L 429.2,148.4 L 431.3,140.0 L 433.3,145.1 L 435.3,125.6 L 437.3,113.4 L 439.3,142.8 L 441.3,151.7 L 443.4,153.1 L 445.4,148.4 L 447.4,154.0 L 449.4,154.0 L 451.4,153.1 L 453.4,154.0 L 455.5,152.1 L 457.5,153.5 L 459.5,147.0 L 461.5,154.0 L 463.5,106.4 L 465.5,152.1 L 467.6,138.1 L 469.6,127.0 L 471.6,145.6 L 473.6,139.5 L 475.6,145.6 L 477.6,142.3 L 479.6,126.5 L 481.7,104.1 L 483.7,126.0 L 485.7,108.3 L 487.7,129.3 L 489.7,126.0 L 491.7,140.9 L 493.8,108.8 L 495.8,121.4 L 497.8,131.6 L 499.8,112.5 L 501.8,126.5 L 503.8,139.5 L 505.9,99.4 L 507.9,134.4 L 509.9,104.1 L 511.9,125.6 L 513.9,125.6 L 515.9,130.7 L 518.0,135.3 L 520.0,140.5 L 522.0,149.8 L 524.0,144.7 L 526.0,143.7 L 528.0,149.3 L 530.1,146.5 L 532.1,150.7 L 534.1,133.5 L 536.1,97.1 L 538.1,153.1 L 540.1,151.2 L 542.2,152.6 L 544.2,150.7 L 546.2,137.7 L 548.2,113.9 L 550.2,89.6 L 552.2,96.2 L 554.3,123.2 L 556.3,100.8 L 558.3,121.8 L 560.3,127.0 L 562.3,137.2 L 564.3,151.2 L 566.4,144.2 L 568.4,132.5 L 570.4,146.5 L 572.4,140.9 L 574.4,151.7 L 576.4,144.2 L 578.5,135.3 L 580.5,114.4 L 582.5,144.2 L 584.5,103.2 L 586.5,141.9 L 588.5,122.8 L 590.6,140.9 L 592.6,143.7 L 594.6,147.9 L 596.6,140.9 L 598.6,141.4 L 600.6,147.9 L 602.7,130.7 L 604.7,148.9 L 606.7,135.8 L 608.7,130.2 L 610.7,136.7 L 612.7,143.3 L 614.8,151.2 L 616.8,151.7 L 618.8,149.3 L 620.8,151.2 L 622.8,147.9 L 624.8,143.7 L 626.8,153.1 L 628.9,154.0 L 630.9,143.7 L 632.9,147.0 L 634.9,152.1 L 636.9,148.4 L 638.9,107.4 L 641.0,145.6 L 643.0,150.3 L 645.0,152.6 L 647.0,154.0 L 649.0,147.5 L 651.0,145.1 L 653.1,145.1 L 655.1,151.2 L 657.1,149.8 L 659.1,148.4 L 661.1,140.5 L 663.1,113.4 L 665.2,143.7 L 667.2,144.2 L 669.2,151.7 L 671.2,149.8 L 673.2,145.1 L 675.2,120.0 L 677.3,144.2 L 679.3,142.3 L 681.3,142.3 L 683.3,119.5 L 685.3,134.4 L 687.3,132.1 L 689.4,145.1 L 691.4,154.0 L 693.4,125.6 L 695.4,133.0 L 697.4,130.7 L 699.4,131.6 L 701.5,136.7 L 703.5,132.5 L 705.5,133.0 L 707.5,149.8 L 709.5,147.0 L 711.5,154.0 L 713.6,147.0 L 715.6,147.9 L 717.6,144.7 L 719.6,137.2 L 721.6,148.9 L 723.6,140.0 L 725.7,148.4 L 727.7,153.1 L 729.7,126.0 L 731.7,134.9 L 733.7,144.7 L 735.7,98.5 L 737.8,114.4 L 739.8,144.7 L 741.8,126.0 L 743.8,132.5 L 745.8,110.6 L 747.8,145.1 L 749.9,114.4 L 751.9,135.3 L 753.9,127.9 L 755.9,127.0 L 757.9,102.2 L 759.9,145.1 L 762.0,145.1 L 764.0,149.8 L 766.0,146.1 L 768.0,64.0 L 768,154 Z" fill="url(#calFill)"/>
+
+  <!-- Calendar area stroke (crest line) -->
+  <path d="M 32.0,153.5 L 34.0,153.5 L 36.0,153.5 L 38.0,154.0 L 40.1,154.0 L 42.1,154.0 L 44.1,154.0 L 46.1,154.0 L 48.1,154.0 L 50.1,154.0 L 52.2,154.0 L 54.2,154.0 L 56.2,154.0 L 58.2,154.0 L 60.2,147.5 L 62.2,154.0 L 64.3,154.0 L 66.3,154.0 L 68.3,153.5 L 70.3,154.0 L 72.3,154.0 L 74.3,154.0 L 76.4,154.0 L 78.4,154.0 L 80.4,154.0 L 82.4,154.0 L 84.4,154.0 L 86.4,154.0 L 88.5,154.0 L 90.5,154.0 L 92.5,154.0 L 94.5,154.0 L 96.5,154.0 L 98.5,154.0 L 100.6,154.0 L 102.6,153.5 L 104.6,154.0 L 106.6,154.0 L 108.6,154.0 L 110.6,154.0 L 112.7,154.0 L 114.7,154.0 L 116.7,153.1 L 118.7,154.0 L 120.7,154.0 L 122.7,154.0 L 124.8,154.0 L 126.8,154.0 L 128.8,154.0 L 130.8,151.7 L 132.8,154.0 L 134.8,153.5 L 136.9,154.0 L 138.9,153.1 L 140.9,153.5 L 142.9,154.0 L 144.9,154.0 L 146.9,154.0 L 149.0,154.0 L 151.0,154.0 L 153.0,147.9 L 155.0,154.0 L 157.0,154.0 L 159.0,154.0 L 161.1,153.1 L 163.1,152.1 L 165.1,152.6 L 167.1,154.0 L 169.1,154.0 L 171.1,154.0 L 173.2,154.0 L 175.2,154.0 L 177.2,154.0 L 179.2,154.0 L 181.2,154.0 L 183.2,154.0 L 185.2,153.5 L 187.3,154.0 L 189.3,154.0 L 191.3,154.0 L 193.3,154.0 L 195.3,154.0 L 197.3,153.5 L 199.4,154.0 L 201.4,154.0 L 203.4,154.0 L 205.4,154.0 L 207.4,154.0 L 209.4,154.0 L 211.5,154.0 L 213.5,154.0 L 215.5,154.0 L 217.5,154.0 L 219.5,154.0 L 221.5,153.5 L 223.6,154.0 L 225.6,154.0 L 227.6,154.0 L 229.6,154.0 L 231.6,154.0 L 233.6,154.0 L 235.7,154.0 L 237.7,154.0 L 239.7,154.0 L 241.7,154.0 L 243.7,154.0 L 245.7,154.0 L 247.8,154.0 L 249.8,154.0 L 251.8,154.0 L 253.8,154.0 L 255.8,154.0 L 257.8,154.0 L 259.9,153.5 L 261.9,154.0 L 263.9,154.0 L 265.9,154.0 L 267.9,152.6 L 269.9,154.0 L 272.0,154.0 L 274.0,154.0 L 276.0,154.0 L 278.0,154.0 L 280.0,153.1 L 282.0,154.0 L 284.1,154.0 L 286.1,154.0 L 288.1,154.0 L 290.1,152.6 L 292.1,153.1 L 294.1,154.0 L 296.2,154.0 L 298.2,154.0 L 300.2,154.0 L 302.2,154.0 L 304.2,154.0 L 306.2,153.5 L 308.3,154.0 L 310.3,154.0 L 312.3,151.7 L 314.3,154.0 L 316.3,153.5 L 318.3,154.0 L 320.4,153.5 L 322.4,152.1 L 324.4,154.0 L 326.4,154.0 L 328.4,154.0 L 330.4,152.1 L 332.4,151.2 L 334.5,151.2 L 336.5,152.6 L 338.5,154.0 L 340.5,151.2 L 342.5,152.6 L 344.5,153.1 L 346.6,151.2 L 348.6,138.6 L 350.6,154.0 L 352.6,154.0 L 354.6,153.1 L 356.6,154.0 L 358.7,153.1 L 360.7,154.0 L 362.7,154.0 L 364.7,154.0 L 366.7,154.0 L 368.7,154.0 L 370.8,154.0 L 372.8,152.6 L 374.8,154.0 L 376.8,154.0 L 378.8,154.0 L 380.8,154.0 L 382.9,153.1 L 384.9,153.1 L 386.9,154.0 L 388.9,153.5 L 390.9,154.0 L 392.9,154.0 L 395.0,154.0 L 397.0,154.0 L 399.0,154.0 L 401.0,149.3 L 403.0,149.3 L 405.0,152.1 L 407.1,152.6 L 409.1,151.2 L 411.1,152.6 L 413.1,154.0 L 415.1,144.7 L 417.1,150.3 L 419.2,142.3 L 421.2,143.3 L 423.2,146.1 L 425.2,145.6 L 427.2,148.9 L 429.2,148.4 L 431.3,140.0 L 433.3,145.1 L 435.3,125.6 L 437.3,113.4 L 439.3,142.8 L 441.3,151.7 L 443.4,153.1 L 445.4,148.4 L 447.4,154.0 L 449.4,154.0 L 451.4,153.1 L 453.4,154.0 L 455.5,152.1 L 457.5,153.5 L 459.5,147.0 L 461.5,154.0 L 463.5,106.4 L 465.5,152.1 L 467.6,138.1 L 469.6,127.0 L 471.6,145.6 L 473.6,139.5 L 475.6,145.6 L 477.6,142.3 L 479.6,126.5 L 481.7,104.1 L 483.7,126.0 L 485.7,108.3 L 487.7,129.3 L 489.7,126.0 L 491.7,140.9 L 493.8,108.8 L 495.8,121.4 L 497.8,131.6 L 499.8,112.5 L 501.8,126.5 L 503.8,139.5 L 505.9,99.4 L 507.9,134.4 L 509.9,104.1 L 511.9,125.6 L 513.9,125.6 L 515.9,130.7 L 518.0,135.3 L 520.0,140.5 L 522.0,149.8 L 524.0,144.7 L 526.0,143.7 L 528.0,149.3 L 530.1,146.5 L 532.1,150.7 L 534.1,133.5 L 536.1,97.1 L 538.1,153.1 L 540.1,151.2 L 542.2,152.6 L 544.2,150.7 L 546.2,137.7 L 548.2,113.9 L 550.2,89.6 L 552.2,96.2 L 554.3,123.2 L 556.3,100.8 L 558.3,121.8 L 560.3,127.0 L 562.3,137.2 L 564.3,151.2 L 566.4,144.2 L 568.4,132.5 L 570.4,146.5 L 572.4,140.9 L 574.4,151.7 L 576.4,144.2 L 578.5,135.3 L 580.5,114.4 L 582.5,144.2 L 584.5,103.2 L 586.5,141.9 L 588.5,122.8 L 590.6,140.9 L 592.6,143.7 L 594.6,147.9 L 596.6,140.9 L 598.6,141.4 L 600.6,147.9 L 602.7,130.7 L 604.7,148.9 L 606.7,135.8 L 608.7,130.2 L 610.7,136.7 L 612.7,143.3 L 614.8,151.2 L 616.8,151.7 L 618.8,149.3 L 620.8,151.2 L 622.8,147.9 L 624.8,143.7 L 626.8,153.1 L 628.9,154.0 L 630.9,143.7 L 632.9,147.0 L 634.9,152.1 L 636.9,148.4 L 638.9,107.4 L 641.0,145.6 L 643.0,150.3 L 645.0,152.6 L 647.0,154.0 L 649.0,147.5 L 651.0,145.1 L 653.1,145.1 L 655.1,151.2 L 657.1,149.8 L 659.1,148.4 L 661.1,140.5 L 663.1,113.4 L 665.2,143.7 L 667.2,144.2 L 669.2,151.7 L 671.2,149.8 L 673.2,145.1 L 675.2,120.0 L 677.3,144.2 L 679.3,142.3 L 681.3,142.3 L 683.3,119.5 L 685.3,134.4 L 687.3,132.1 L 689.4,145.1 L 691.4,154.0 L 693.4,125.6 L 695.4,133.0 L 697.4,130.7 L 699.4,131.6 L 701.5,136.7 L 703.5,132.5 L 705.5,133.0 L 707.5,149.8 L 709.5,147.0 L 711.5,154.0 L 713.6,147.0 L 715.6,147.9 L 717.6,144.7 L 719.6,137.2 L 721.6,148.9 L 723.6,140.0 L 725.7,148.4 L 727.7,153.1 L 729.7,126.0 L 731.7,134.9 L 733.7,144.7 L 735.7,98.5 L 737.8,114.4 L 739.8,144.7 L 741.8,126.0 L 743.8,132.5 L 745.8,110.6 L 747.8,145.1 L 749.9,114.4 L 751.9,135.3 L 753.9,127.9 L 755.9,127.0 L 757.9,102.2 L 759.9,145.1 L 762.0,145.1 L 764.0,149.8 L 766.0,146.1 L 768.0,64.0" fill="none" stroke="#7ee787" stroke-width="1.1" stroke-linejoin="round" opacity="0.85"/>
+
+  <!-- Calendar sweep highlight (perpetual motion) -->
+  <rect x="32" y="52" width="736" height="102" fill="url(#calSweep)" clip-path="url(#calClip)" pointer-events="none"/>
+
+  <!-- Peak marker: the 193-spike at right end -->
+  <circle cx="768" cy="64" r="3" fill="#7ee787">
+    <animate attributeName="r" values="2.5;4.5;2.5" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <text x="763" y="60" font-size="9" fill="#7ee787" text-anchor="end">peak 193</text>
+
+  <!-- Calendar caption -->
+  <text x="32" y="167" font-size="10" fill="#7d8590">past 12 months · contribution activity</text>
+
+  <!-- Divider -->
+  <line x1="24" y1="180" x2="776" y2="180" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ========== PANEL 1: Languages 13 ========== -->
+  <text x="44" y="216" font-size="30" font-weight="700" fill="#58a6ff">13</text>
+  <text x="98" y="204" font-size="12" font-weight="600" fill="#c9d1d9">Languages</text>
+  <text x="98" y="220" font-size="10" fill="#7d8590">All Time</text>
+
+  <!-- Stacked bar (widths from proportion of 5277 total commits) -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">4355</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">177</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">134</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">4</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
+    <rect x="32" y="238" width="228" height="16" rx="3" fill="#21262d"/>
+    <!-- TS 3260 (61.8%) -> 140.9px -->
+    <rect x="32" y="238" width="140.9" height="16" fill="#3178c6"/>
+    <!-- Python 1067 (20.2%) -> 46.1px -->
+    <rect x="172.9" y="238" width="46.1" height="16" fill="#3572a5"/>
+    <!-- Go 418 (7.9%) -> 18.1px -->
+    <rect x="219.0" y="238" width="18.1" height="16" fill="#00add8"/>
+    <!-- Shell 262 (5.0%) -> 11.3px -->
+    <rect x="237.1" y="238" width="11.3" height="16" fill="#89e051"/>
+    <!-- CoffeeScript 109 (2.1%) -> 4.7px -->
+    <rect x="248.4" y="238" width="4.7" height="16" fill="#244776"/>
+    <!-- HTML 82 (1.6%) -> 3.5px -->
+    <rect x="253.1" y="238" width="3.5" height="16" fill="#e34c26"/>
+    <!-- JS 64 (1.2%) -> 2.8px -->
+    <rect x="256.6" y="238" width="2.8" height="16" fill="#f1e05a"/>
+    <!-- CSS 15 (0.3%) -> 0.6px (visible edge) -->
+    <rect x="259.4" y="238" width="0.6" height="16" fill="#563d7c"/>
+    <!-- Shimmer overlay -->
+    <rect x="32" y="238" width="228" height="16" rx="3" fill="url(#langShimmer)" pointer-events="none"/>
+    <!-- Container outline -->
+    <rect x="32" y="238" width="228" height="16" rx="3" fill="none" stroke="#30363d" stroke-width="0.5"/>
+  </g>
+
+  <!-- Legend row -->
+  <g font-size="9" fill="#c9d1d9">
+    <circle cx="36" cy="272" r="3" fill="#3178c6"/>
+    <text x="42" y="275">TypeScript 62%</text>
+    <circle cx="120" cy="272" r="3" fill="#3572a5"/>
+    <text x="126" y="275">Python 20%</text>
+    <circle cx="182" cy="272" r="3" fill="#00add8"/>
+    <text x="188" y="275">Go 8%</text>
+    <text x="222" y="275" fill="#7d8590">+5 more</text>
+  </g>
+
+  <!-- Panel column separator -->
+  <line x1="278" y1="196" x2="278" y2="316" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ========== PANEL 2: Days Active 30 (of 30 — perfect month) ========== -->
+  <text x="296" y="216" font-size="30" font-weight="700" fill="#39d353">30</text>
+  <text x="350" y="204" font-size="12" font-weight="600" fill="#c9d1d9">Days Active</text>
+  <text x="350" y="220" font-size="10" fill="#7d8590">of 30 · 30 Days</text>
+
+  <!-- 30-dot grid: 10 cols × 3 rows, all filled (perfect month) -->
+  <g fill="#39d353">
+    <!-- Row 0 (y=250) -->
+    <circle cx="303" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0s" repeatCount="indefinite"/></circle>
+    <circle cx="325" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="347" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="369" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="391" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="413" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.0s" repeatCount="indefinite"/></circle>
+    <circle cx="435" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="457" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.4s" repeatCount="indefinite"/></circle>
+    <circle cx="479" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="501" cy="250" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.8s" repeatCount="indefinite"/></circle>
+    <!-- Row 1 (y=272) -->
+    <circle cx="303" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <circle cx="325" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="347" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.7s" repeatCount="indefinite"/></circle>
+    <circle cx="369" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.9s" repeatCount="indefinite"/></circle>
+    <circle cx="391" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.1s" repeatCount="indefinite"/></circle>
+    <circle cx="413" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="435" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="457" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.7s" repeatCount="indefinite"/></circle>
+    <circle cx="479" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="501" cy="272" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="2.1s" repeatCount="indefinite"/></circle>
+    <!-- Row 2 (y=294) -->
+    <circle cx="303" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="325" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="347" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.0s" repeatCount="indefinite"/></circle>
+    <circle cx="369" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="391" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.4s" repeatCount="indefinite"/></circle>
+    <circle cx="413" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="435" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="457" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="2.0s" repeatCount="indefinite"/></circle>
+    <circle cx="479" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="501" cy="294" r="5"><animate attributeName="opacity" values="0.55;1;0.55" dur="7s" begin="2.4s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <text x="402" y="316" font-size="9" fill="#7d8590" text-anchor="middle">unbroken month</text>
+
+  <!-- Panel column separator -->
+  <line x1="522" y1="196" x2="522" y2="316" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ========== PANEL 3: Active Repos 15 ========== -->
+  <text x="540" y="216" font-size="30" font-weight="700" fill="#ffa657">15</text>
+  <text x="588" y="204" font-size="12" font-weight="600" fill="#c9d1d9">Active Repos</text>
+  <text x="588" y="220" font-size="10" fill="#7d8590">top 6 · 30 Days</text>
+
+  <!-- Name column (540-644), bar column (648-742), count right-anchored 768. Scale max=205 → 94px. -->
+  <g>
+    <!-- slopspot-web 205 -> 94.0 -->
+    <text x="540" y="244" font-size="9" font-weight="600" fill="#c9d1d9">slopspot-web</text>
+    <rect x="648" y="236" width="94" height="10" rx="2" fill="#161b22"/>
+    <rect x="648" y="236" width="94.0" height="10" rx="2" fill="#58a6ff"/>
+    <rect x="648" y="236" width="94" height="10" rx="2" fill="url(#repoSweep)" pointer-events="none"/>
+    <text x="768" y="244" font-size="9" fill="#c9d1d9" text-anchor="end">205</text>
+
+    <!-- cc-candybar 97 -> 44.5 -->
+    <text x="540" y="258" font-size="9" font-weight="600" fill="#c9d1d9">cc-candybar</text>
+    <rect x="648" y="250" width="94" height="10" rx="2" fill="#161b22"/>
+    <rect x="648" y="250" width="44.5" height="10" rx="2" fill="#7ee787"/>
+    <rect x="648" y="250" width="94" height="10" rx="2" fill="url(#repoSweep)" pointer-events="none"/>
+    <text x="768" y="258" font-size="9" fill="#c9d1d9" text-anchor="end">97</text>
+
+    <!-- links-issue-tracker 71 -> 32.6 -->
+    <text x="540" y="272" font-size="9" font-weight="600" fill="#c9d1d9">links-issue-tracker</text>
+    <rect x="648" y="264" width="94" height="10" rx="2" fill="#161b22"/>
+    <rect x="648" y="264" width="32.6" height="10" rx="2" fill="#ff7b72"/>
+    <rect x="648" y="264" width="94" height="10" rx="2" fill="url(#repoSweep)" pointer-events="none"/>
+    <text x="768" y="272" font-size="9" fill="#c9d1d9" text-anchor="end">71</text>
+
+    <!-- dotfiles 68 -> 31.2 -->
+    <text x="540" y="286" font-size="9" font-weight="600" fill="#c9d1d9">dotfiles</text>
+    <rect x="648" y="278" width="94" height="10" rx="2" fill="#161b22"/>
+    <rect x="648" y="278" width="31.2" height="10" rx="2" fill="#bc8cff"/>
+    <rect x="648" y="278" width="94" height="10" rx="2" fill="url(#repoSweep)" pointer-events="none"/>
+    <text x="768" y="286" font-size="9" fill="#c9d1d9" text-anchor="end">68</text>
+
+    <!-- tmux-control-mode-js 45 -> 20.6 -->
+    <text x="540" y="300" font-size="8" font-weight="600" fill="#c9d1d9">tmux-control-mode-js</text>
+    <rect x="648" y="292" width="94" height="10" rx="2" fill="#161b22"/>
+    <rect x="648" y="292" width="20.6" height="10" rx="2" fill="#ffa657"/>
+    <rect x="648" y="292" width="94" height="10" rx="2" fill="url(#repoSweep)" pointer-events="none"/>
+    <text x="768" y="300" font-size="9" fill="#c9d1d9" text-anchor="end">45</text>
+
+    <!-- promptctl 39 -> 17.9 -->
+    <text x="540" y="314" font-size="9" font-weight="600" fill="#c9d1d9">promptctl</text>
+    <rect x="648" y="306" width="94" height="10" rx="2" fill="#161b22"/>
+    <rect x="648" y="306" width="17.9" height="10" rx="2" fill="#79c0ff"/>
+    <rect x="648" y="306" width="94" height="10" rx="2" fill="url(#repoSweep)" pointer-events="none"/>
+    <text x="768" y="314" font-size="9" fill="#c9d1d9" text-anchor="end">39</text>
   </g>
 </svg>
