@@ -222,7 +222,7 @@ My Issues Closed 69 (1 Year) · Languages 9 (1 Year) · Days Active 248/365 (1 Y
 
 <img src="./stats-archive/2026/07/2026-07-29-065243.svg" width="960" alt="Live GitHub stats card for July 29, 2026">
 
-Code Reviews 0 (30 Days) · PRs Merged 263 (30 Days) · Languages 7 (1 Year) · Active Repos 15 (30 Days)
+My Issues Closed 69 (1 Year) · Languages 9 (1 Year) · Days Active 248/365 (1 Year) · PRs Merged 263 (30 Days)
 
 ---
 
@@ -230,7 +230,7 @@ Code Reviews 0 (30 Days) · PRs Merged 263 (30 Days) · Languages 7 (1 Year) · 
 
 <img src="./stats-archive/2026/07/2026-07-28-065109.svg" width="960" alt="Live GitHub stats card for July 28, 2026">
 
-Days Active 96 (1 Year) · Repos Created 179 (All Time) · Commits 72 (7 Days) · Active Repos 15 (30 Days)
+Active Repos 15 (30 Days) · Languages 9 (1 Year) · Longest Streak 82 (1 Year) · PRs Merged 265 (30 Days)
 
 ---
 
@@ -238,7 +238,7 @@ Days Active 96 (1 Year) · Repos Created 179 (All Time) · Commits 72 (7 Days) �
 
 <img src="./stats-archive/2026/07/2026-07-27-070427.svg" width="960" alt="Live GitHub stats card for July 27, 2026">
 
-Active Repos 22 (1 Year) · Days Active 22 (30 Days) · Repos Created 82 (1 Year) · Code Reviews 29 (1 Year)
+Active Repos 55 (1 Year) · Commits 66 (7 Days) · Languages 9 (1 Year) · Longest Streak 82 (1 Year)
 
 ---
 
@@ -246,7 +246,7 @@ Active Repos 22 (1 Year) · Days Active 22 (30 Days) · Repos Created 82 (1 Year
 
 <img src="./stats-archive/2026/07/2026-07-26-065420.svg" width="960" alt="Live GitHub stats card for July 26, 2026">
 
-PRs Merged 1793 (1 Year) · Days Active 95 (1 Year) · Active Repos 14 (30 Days) · Commits 265 (30 Days)
+Longest Streak 82 (1 Year) · Active Repos 55 (1 Year) · Languages 5 (30 Days) · Commits 6005 (All Time) · Days Active 22/30 (30 Days)
 
 ---
 
