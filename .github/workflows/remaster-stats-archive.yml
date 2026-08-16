@@ -8,7 +8,7 @@ name: Remaster Stats Archive
 # `generate-stats-svg.py --as-of`, hands them to the stats-card agent under the exact
 # prompt the daily job uses (.github/prompts/stats-card.md — one source of truth for the
 # card's creative direction), gates the result, drops it into that day's archive slot,
-# and pushes.
+# and pushes. A final `gallery` job re-renders STATS.md once, after them all.
 #
 # Run it:
 #   gh workflow run remaster-stats-archive.yml -f limit=8
@@ -17,6 +17,13 @@ name: Remaster Stats Archive
 # Re-running is how you make progress: a remastered slot stops being a candidate, so each
 # run picks up where the last one stopped and a failed card is simply retried by the next
 # run. There are 136 deterministic cards; at limit=8 that is 17 runs.
+#
+# Why the remaster jobs may run concurrently: each one stages exactly the two files of its
+# own slot — `archive` reports them, nothing globs for them — and no two slots share a
+# path, so the rebase-retry push loop can never hit a real conflict between them. That is
+# the same property that lets daily-highlights.yml's three jobs race. Regenerating STATS.md
+# is the one write they would all have shared, so it is not theirs: it moved to `gallery`,
+# which runs once when the tree is final. [LAW:one-source-of-truth]
 
 on:
   workflow_dispatch:
@@ -70,7 +77,11 @@ jobs:
       id-token: write
     strategy:
       fail-fast: false    # one card that won't come together must not cancel the rest
-      max-parallel: 1     # each job commits and pushes; keep those serial within a run
+      # Four at a time. Each job is a full agent invocation — ~20-30 minutes — so serial
+      # execution put a limit=8 run over three hours; the ceiling here is how much
+      # concurrent agent work to spend at once, not correctness, because the jobs write
+      # disjoint paths (see the header).
+      max-parallel: 4
       matrix:
         stamp: ${{ fromJSON(needs.select.outputs.stamps) }}
     env:
@@ -79,7 +90,7 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
-          fetch-depth: 0  # sync-stats-archive.py reads the full card history
+          fetch-depth: 0  # the push loop rebases; a shallow clone cannot
 
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
@@ -160,12 +171,17 @@ jobs:
         # the archive and nothing else. Fails if the agent fell back to the deterministic
         # card — that is a no-op for a slot that already has one, and archiving it would
         # retire the slot from the pending set without remastering anything.
+        #
+        # Its stdout is the list of paths it wrote — the staging list for the commit step.
         run: |
+          set -euo pipefail
           python .github/scripts/remaster-stats-card.py archive '${{ matrix.stamp }}' \
-            --fallback /tmp/daily-stats-fallback.svg
-
-      - name: Re-render the gallery from the archive tree (mechanical)
-        run: python .github/scripts/sync-stats-archive.py
+            --fallback /tmp/daily-stats-fallback.svg > /tmp/remastered-paths.txt
+          if [ ! -s /tmp/remastered-paths.txt ]; then
+            echo "::error::archive reported no written paths for ${{ matrix.stamp }}."
+            exit 1
+          fi
+          cat /tmp/remastered-paths.txt
 
       - name: Commit and push (rebase-retry)
         run: |
@@ -173,9 +189,12 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          # This job owns the archive tree and its gallery — nothing else. The live card
-          # and seam were borrowed as the agent's workspace and already handed back.
-          git add stats-archive STATS.md
+          # Exactly this slot's two files, named by the script that wrote them. Nothing
+          # else: the live card and seam were borrowed as the agent's workspace and
+          # already handed back, and STATS.md belongs to the `gallery` job. Staging by
+          # this list rather than by directory is what makes concurrent remasters safe —
+          # two jobs can rebase past each other because they never touch one path.
+          git add --pathspec-from-file=/tmp/remastered-paths.txt
 
           if git diff --cached --quiet; then
             echo "::error::Remaster produced no staged changes for ${{ matrix.stamp }}."
@@ -210,3 +229,68 @@ jobs:
             stats-archive/**/${{ matrix.stamp }}.svg
             stats-archive/**/${{ matrix.stamp }}.json
           if-no-files-found: warn
+
+  gallery:
+    # STATS.md is regenerated from the whole archive tree, so it is the one file every
+    # remaster would have rewritten. Rendering it once here — after the last card lands —
+    # is what frees those jobs to run concurrently.
+    #
+    # `always()` because a run where some cards failed still improved the tree for the
+    # ones that succeeded, and the gallery should describe what is actually on disk.
+    # `select` is listed even though `remaster` already depends on it: a transitive need
+    # is not in the `needs` context, and the condition below reads it.
+    needs: [select, remaster]
+    if: always() && needs.select.result == 'success' && needs.select.outputs.stamps != '[]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          # master, not the dispatch SHA: the cards this job describes were pushed by the
+          # matrix jobs after this run started, so checking out `github.sha` would render
+          # a gallery of the tree as it stood before any of them landed.
+          ref: master
+          fetch-depth: 0  # sync-stats-archive.py reads the full card history
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Re-render the gallery from the archive tree (mechanical)
+        run: python .github/scripts/sync-stats-archive.py
+
+      - name: Commit and push (rebase-retry)
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # The gallery and any slots the sync filled in from history — this job's paths.
+          git add stats-archive STATS.md
+
+          # Unlike a remaster, "nothing changed" is a real outcome here: if every card in
+          # this run failed, the tree is what the gallery already described. Success.
+          if git diff --cached --quiet; then
+            echo "Gallery already matches the archive tree; nothing to commit."
+            exit 0
+          fi
+
+          git commit -m 'chore: re-render stats gallery'
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:master; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt rejected — fetching and rebasing."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              echo "::error::Rebase failed (real conflict). Aborting."
+              git rebase --abort || true
+              exit 1
+            fi
+            sleep $(( (RANDOM % 4) + 1 ))
+          done
+          echo "::error::Failed to push after 5 attempts."
+          exit 1
