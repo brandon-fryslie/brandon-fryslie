@@ -143,6 +143,10 @@ def cmd_archive(args: argparse.Namespace) -> None:
     A mismatch here means the reconstruction step ran with the wrong `--as-of`, and
     writing it anyway would put numbers in the archive that belong to another date.
     [LAW:no-silent-failure]
+
+    Prints the paths it wrote, one per line, on stdout; the human summary goes to stderr.
+    Those paths are the caller's staging list, and they are this slot's alone — which is
+    what lets several remasters run at once without two of them writing one file.
     """
     seam = json.loads(LIVE_SEAM.read_text(encoding="utf-8"))
     card = LIVE_CARD.read_text(encoding="utf-8")
@@ -185,7 +189,15 @@ def cmd_archive(args: argparse.Namespace) -> None:
     )
 
     values = " · ".join(f"{m['label']} {m['value']}" for m in metrics_from_seam(seam))
-    print(f"archived {svg_path(args.stamp).relative_to(REPO_ROOT)} — {values}")
+    print(f"archived {svg_path(args.stamp).relative_to(REPO_ROOT)} — {values}", file=sys.stderr)
+
+    # The two paths this run touched, for the caller to stage — stdout is the machine
+    # channel here, as it is for `stage`. The workflow must not glob them back out of the
+    # tree: a stamp resolves to files through `stats_archive`, and a second spelling of
+    # that convention in YAML is the copy that eventually disagrees.
+    # [LAW:one-source-of-truth]
+    for path in (svg_path(args.stamp), record_path(args.stamp)):
+        print(path.relative_to(REPO_ROOT))
 
 
 def main() -> int:
