@@ -1,20 +1,620 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated July 02, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg viewBox="0 0 800 312" width="800" height="312" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="daysGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="55%" stop-color="#79c0ff"/>
+      <stop offset="100%" stop-color="#a5d6ff"/>
+    </linearGradient>
+    <linearGradient id="prGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fb950"/>
+      <stop offset="100%" stop-color="#7ee787"/>
+    </linearGradient>
+    <linearGradient id="langGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d2a8ff"/>
+      <stop offset="100%" stop-color="#ff9bd2"/>
+    </linearGradient>
+    <linearGradient id="ridgeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#3fb950" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#3fb950" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="barSweep" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="ridgeClip">
+      <rect x="20" y="212" width="760" height="80"/>
+    </clipPath>
+    <clipPath id="langBarClip">
+      <rect x="560" y="94" width="200" height="16" rx="3"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="312" fill="#0d1117"/>
+
+  <!-- Header -->
+  <text x="20" y="26" font-size="14" font-weight="600" fill="#c9d1d9">Live GitHub Stats</text>
+  <text x="780" y="26" font-size="11" fill="#8b949e" text-anchor="end">July 02, 2026 · brandon-fryslie</text>
+  <line x1="20" y1="40" x2="780" y2="40" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ Panel 1: Days Active — radial gauge showing 233 of 365 ============ -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">46</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">19</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">69</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">86</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
+    <!-- Track ring -->
+    <circle cx="140" cy="98" r="45" fill="none" stroke="#21262d" stroke-width="10"/>
+    <!-- Filled arc: 233/365 of circumference — the picture IS the fraction -->
+    <circle cx="140" cy="98" r="45" fill="none" stroke="url(#daysGrad)" stroke-width="10"
+            stroke-dasharray="180.51 282.74" stroke-linecap="round"
+            transform="rotate(-90 140 98)">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Comet dot orbiting along the filled arc, perpetually -->
+    <circle r="3.4" fill="#e6edf3" opacity="0">
+      <animateMotion dur="11s" repeatCount="indefinite"
+        path="M 140 53 A 45 45 0 1 1 105.58 126.99"/>
+      <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.08;0.92;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Value in center of ring -->
+    <text x="140" y="107" font-size="30" font-weight="700" fill="#e6edf3" text-anchor="middle">233</text>
+    <text x="140" y="126" font-size="11" fill="#8b949e" text-anchor="middle">of 365</text>
+    <!-- Panel label & period -->
+    <text x="140" y="172" font-size="13" font-weight="600" fill="#c9d1d9" text-anchor="middle">Days Active</text>
+    <text x="140" y="188" font-size="11" fill="#8b949e" text-anchor="middle">1 Year</text>
+  </g>
+
+  <!-- ============ Panel 2: PRs Merged — grid of 110 dots, ONE PER PR ============ -->
+  <g>
+    <!-- Value: the count printed clearly above the grid -->
+    <text x="400" y="76" font-size="40" font-weight="700" fill="url(#prGrad)" text-anchor="middle">110</text>
+    <!-- 110 dots arranged 22×5 — the count IS the picture -->
+<circle cx="316" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" begin="0s" repeatCount="indefinite"/></circle>
+<circle cx="324" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.55s" begin="0.11s" repeatCount="indefinite"/></circle>
+<circle cx="332" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.95s" begin="0.22s" repeatCount="indefinite"/></circle>
+<circle cx="340" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.35s" begin="0.33s" repeatCount="indefinite"/></circle>
+<circle cx="348" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.75s" begin="0.44s" repeatCount="indefinite"/></circle>
+<circle cx="356" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.7s" begin="0.55s" repeatCount="indefinite"/></circle>
+<circle cx="364" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="0.66s" repeatCount="indefinite"/></circle>
+<circle cx="372" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="0.77s" repeatCount="indefinite"/></circle>
+<circle cx="380" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" begin="0.88s" repeatCount="indefinite"/></circle>
+<circle cx="388" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.85s" begin="0.99s" repeatCount="indefinite"/></circle>
+<circle cx="396" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.25s" begin="1.1s" repeatCount="indefinite"/></circle>
+<circle cx="404" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6500000000000004s" begin="1.21s" repeatCount="indefinite"/></circle>
+<circle cx="412" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.05s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="420" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="5s" begin="1.43s" repeatCount="indefinite"/></circle>
+<circle cx="428" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.4s" begin="1.54s" repeatCount="indefinite"/></circle>
+<circle cx="436" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" begin="1.65s" repeatCount="indefinite"/></circle>
+<circle cx="444" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" begin="1.76s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" begin="1.87s" repeatCount="indefinite"/></circle>
+<circle cx="460" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.55s" begin="1.98s" repeatCount="indefinite"/></circle>
+<circle cx="468" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.95s" begin="2.09s" repeatCount="indefinite"/></circle>
+<circle cx="476" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.35s" begin="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="484" cy="108" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.75s" begin="2.31s" repeatCount="indefinite"/></circle>
+<circle cx="316" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.7s" begin="0.11s" repeatCount="indefinite"/></circle>
+<circle cx="324" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="0.22s" repeatCount="indefinite"/></circle>
+<circle cx="332" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="0.33s" repeatCount="indefinite"/></circle>
+<circle cx="340" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" begin="0.44s" repeatCount="indefinite"/></circle>
+<circle cx="348" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.85s" begin="0.55s" repeatCount="indefinite"/></circle>
+<circle cx="356" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.25s" begin="0.66s" repeatCount="indefinite"/></circle>
+<circle cx="364" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6500000000000004s" begin="0.77s" repeatCount="indefinite"/></circle>
+<circle cx="372" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.05s" begin="0.88s" repeatCount="indefinite"/></circle>
+<circle cx="380" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="5s" begin="0.99s" repeatCount="indefinite"/></circle>
+<circle cx="388" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.4s" begin="1.1s" repeatCount="indefinite"/></circle>
+<circle cx="396" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" begin="1.21s" repeatCount="indefinite"/></circle>
+<circle cx="404" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="412" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" begin="1.43s" repeatCount="indefinite"/></circle>
+<circle cx="420" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.55s" begin="1.54s" repeatCount="indefinite"/></circle>
+<circle cx="428" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.95s" begin="1.65s" repeatCount="indefinite"/></circle>
+<circle cx="436" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.35s" begin="1.76s" repeatCount="indefinite"/></circle>
+<circle cx="444" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.75s" begin="1.87s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.7s" begin="1.98s" repeatCount="indefinite"/></circle>
+<circle cx="460" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="2.09s" repeatCount="indefinite"/></circle>
+<circle cx="468" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="476" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" begin="2.31s" repeatCount="indefinite"/></circle>
+<circle cx="484" cy="116" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.85s" begin="2.42s" repeatCount="indefinite"/></circle>
+<circle cx="316" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.25s" begin="0.22s" repeatCount="indefinite"/></circle>
+<circle cx="324" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6500000000000004s" begin="0.33s" repeatCount="indefinite"/></circle>
+<circle cx="332" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.05s" begin="0.44s" repeatCount="indefinite"/></circle>
+<circle cx="340" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="5s" begin="0.55s" repeatCount="indefinite"/></circle>
+<circle cx="348" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.4s" begin="0.66s" repeatCount="indefinite"/></circle>
+<circle cx="356" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" begin="0.77s" repeatCount="indefinite"/></circle>
+<circle cx="364" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" begin="0.88s" repeatCount="indefinite"/></circle>
+<circle cx="372" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" begin="0.99s" repeatCount="indefinite"/></circle>
+<circle cx="380" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.55s" begin="1.1s" repeatCount="indefinite"/></circle>
+<circle cx="388" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.95s" begin="1.21s" repeatCount="indefinite"/></circle>
+<circle cx="396" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.35s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="404" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.75s" begin="1.43s" repeatCount="indefinite"/></circle>
+<circle cx="412" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.7s" begin="1.54s" repeatCount="indefinite"/></circle>
+<circle cx="420" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="1.65s" repeatCount="indefinite"/></circle>
+<circle cx="428" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="1.76s" repeatCount="indefinite"/></circle>
+<circle cx="436" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" begin="1.87s" repeatCount="indefinite"/></circle>
+<circle cx="444" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.85s" begin="1.98s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.25s" begin="2.09s" repeatCount="indefinite"/></circle>
+<circle cx="460" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6500000000000004s" begin="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="468" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.05s" begin="2.31s" repeatCount="indefinite"/></circle>
+<circle cx="476" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="5s" begin="2.42s" repeatCount="indefinite"/></circle>
+<circle cx="484" cy="124" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.4s" begin="2.53s" repeatCount="indefinite"/></circle>
+<circle cx="316" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" begin="0.33s" repeatCount="indefinite"/></circle>
+<circle cx="324" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" begin="0.44s" repeatCount="indefinite"/></circle>
+<circle cx="332" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" begin="0.55s" repeatCount="indefinite"/></circle>
+<circle cx="340" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.55s" begin="0.66s" repeatCount="indefinite"/></circle>
+<circle cx="348" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.95s" begin="0.77s" repeatCount="indefinite"/></circle>
+<circle cx="356" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.35s" begin="0.88s" repeatCount="indefinite"/></circle>
+<circle cx="364" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.75s" begin="0.99s" repeatCount="indefinite"/></circle>
+<circle cx="372" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.7s" begin="1.1s" repeatCount="indefinite"/></circle>
+<circle cx="380" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="1.21s" repeatCount="indefinite"/></circle>
+<circle cx="388" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="396" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" begin="1.43s" repeatCount="indefinite"/></circle>
+<circle cx="404" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.85s" begin="1.54s" repeatCount="indefinite"/></circle>
+<circle cx="412" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.25s" begin="1.65s" repeatCount="indefinite"/></circle>
+<circle cx="420" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6500000000000004s" begin="1.76s" repeatCount="indefinite"/></circle>
+<circle cx="428" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.05s" begin="1.87s" repeatCount="indefinite"/></circle>
+<circle cx="436" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="5s" begin="1.98s" repeatCount="indefinite"/></circle>
+<circle cx="444" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.4s" begin="2.09s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" begin="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="460" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" begin="2.31s" repeatCount="indefinite"/></circle>
+<circle cx="468" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" begin="2.42s" repeatCount="indefinite"/></circle>
+<circle cx="476" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.55s" begin="2.53s" repeatCount="indefinite"/></circle>
+<circle cx="484" cy="132" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.95s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="316" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.35s" begin="0.44s" repeatCount="indefinite"/></circle>
+<circle cx="324" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.75s" begin="0.55s" repeatCount="indefinite"/></circle>
+<circle cx="332" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.7s" begin="0.66s" repeatCount="indefinite"/></circle>
+<circle cx="340" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="0.77s" repeatCount="indefinite"/></circle>
+<circle cx="348" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="0.88s" repeatCount="indefinite"/></circle>
+<circle cx="356" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" begin="0.99s" repeatCount="indefinite"/></circle>
+<circle cx="364" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.85s" begin="1.1s" repeatCount="indefinite"/></circle>
+<circle cx="372" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.25s" begin="1.21s" repeatCount="indefinite"/></circle>
+<circle cx="380" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6500000000000004s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="388" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.05s" begin="1.43s" repeatCount="indefinite"/></circle>
+<circle cx="396" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="5s" begin="1.54s" repeatCount="indefinite"/></circle>
+<circle cx="404" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.4s" begin="1.65s" repeatCount="indefinite"/></circle>
+<circle cx="412" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.8s" begin="1.76s" repeatCount="indefinite"/></circle>
+<circle cx="420" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" begin="1.87s" repeatCount="indefinite"/></circle>
+<circle cx="428" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" begin="1.98s" repeatCount="indefinite"/></circle>
+<circle cx="436" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.55s" begin="2.09s" repeatCount="indefinite"/></circle>
+<circle cx="444" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.95s" begin="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="452" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.35s" begin="2.31s" repeatCount="indefinite"/></circle>
+<circle cx="460" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.75s" begin="2.42s" repeatCount="indefinite"/></circle>
+<circle cx="468" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.7s" begin="2.53s" repeatCount="indefinite"/></circle>
+<circle cx="476" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.1s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="484" cy="140" r="2.6" fill="url(#prGrad)"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" begin="2.75s" repeatCount="indefinite"/></circle>
+    <!-- Panel label & period -->
+    <text x="400" y="172" font-size="13" font-weight="600" fill="#c9d1d9" text-anchor="middle">PRs Merged</text>
+    <text x="400" y="188" font-size="11" fill="#8b949e" text-anchor="middle">7 Days</text>
+  </g>
+
+  <!-- ============ Panel 3: Languages — segmented bar sized by real code volume ============ -->
+  <g>
+    <!-- Value -->
+    <text x="660" y="76" font-size="40" font-weight="700" fill="url(#langGrad)" text-anchor="middle">9</text>
+    <!-- Stacked bar: 8 segments sized proportional to bytes-per-language (TS 3785, Py 1114, Go 503, Sh 73, HTML 62, CSS 11, JS 3, HCL 2). The tiny slivers are true to the data. -->
+    <g clip-path="url(#langBarClip)">
+      <rect x="560" y="94" width="200" height="16" fill="#21262d"/>
+      <!-- TypeScript 68.16% -->
+      <rect x="560" y="94" width="136.34" height="16" fill="#3178c6"/>
+      <!-- Python 20.06% -->
+      <rect x="696.34" y="94" width="40.13" height="16" fill="#3572a5"/>
+      <!-- Go 9.06% -->
+      <rect x="736.47" y="94" width="18.12" height="16" fill="#00add8"/>
+      <!-- Shell 1.31% -->
+      <rect x="754.59" y="94" width="2.63" height="16" fill="#89e051"/>
+      <!-- HTML 1.12% -->
+      <rect x="757.22" y="94" width="2.23" height="16" fill="#e34c26"/>
+      <!-- CSS 0.20% -->
+      <rect x="759.45" y="94" width="0.40" height="16" fill="#563d7c"/>
+      <!-- JavaScript 0.05% -->
+      <rect x="759.85" y="94" width="0.11" height="16" fill="#f1e05a"/>
+      <!-- HCL 0.04% -->
+      <rect x="759.96" y="94" width="0.07" height="16" fill="#844fba"/>
+      <!-- Sliding highlight sweep across the bar, perpetual -->
+      <rect x="-40" y="94" width="40" height="16" fill="url(#barSweep)">
+        <animate attributeName="x" values="520;760" dur="7s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- Segment separators (thin dark lines between the visible chunks) -->
+    <line x1="696.34" y1="94" x2="696.34" y2="110" stroke="#0d1117" stroke-width="0.8"/>
+    <line x1="736.47" y1="94" x2="736.47" y2="110" stroke="#0d1117" stroke-width="0.8"/>
+    <line x1="754.59" y1="94" x2="754.59" y2="110" stroke="#0d1117" stroke-width="0.8"/>
+    <!-- Legend below bar names the three that carry the mass; the coloured slivers on the far right stand for the other five languages -->
+    <g font-size="10" fill="#c9d1d9">
+      <circle cx="562" cy="126" r="2.8" fill="#3178c6"/>
+      <text x="568" y="129">TypeScript 68%</text>
+      <circle cx="649" cy="126" r="2.8" fill="#3572a5"/>
+      <text x="655" y="129">Python 20%</text>
+      <circle cx="716" cy="126" r="2.8" fill="#00add8"/>
+      <text x="722" y="129">Go 9%</text>
+    </g>
+    <!-- Panel label & period -->
+    <text x="660" y="172" font-size="13" font-weight="600" fill="#c9d1d9" text-anchor="middle">Languages</text>
+    <text x="660" y="188" font-size="11" fill="#8b949e" text-anchor="middle">1 Year</text>
+  </g>
+
+  <!-- ============ Ridge: 366-day contribution calendar as a year of vertical bars ============ -->
+  <!-- Caption right-anchored above ridge -->
+  <text x="780" y="207" font-size="10" fill="#8b949e" text-anchor="end">contributions · past 12 months</text>
+  <text x="20" y="207" font-size="10" fill="#8b949e">peak 213</text>
+
+  <!-- Ridge bars: 366 per-day rects, each with height = that day's count.
+       The group transform scales day-index → x (760/366 px), count → y-pixels (76/213). -->
+  <g clip-path="url(#ridgeClip)">
+    <g transform="translate(20 291) scale(2.0765 0.3568)" fill="url(#ridgeGrad)">
+<rect x="0" y="-0" width="1.05" height="0"/>
+<rect x="1" y="-0" width="1.05" height="0"/>
+<rect x="2" y="-0" width="1.05" height="0"/>
+<rect x="3" y="-0" width="1.05" height="0"/>
+<rect x="4" y="-0" width="1.05" height="0"/>
+<rect x="5" y="-0" width="1.05" height="0"/>
+<rect x="6" y="-0" width="1.05" height="0"/>
+<rect x="7" y="-0" width="1.05" height="0"/>
+<rect x="8" y="-0" width="1.05" height="0"/>
+<rect x="9" y="-0" width="1.05" height="0"/>
+<rect x="10" y="-0" width="1.05" height="0"/>
+<rect x="11" y="-0" width="1.05" height="0"/>
+<rect x="12" y="-1" width="1.05" height="1"/>
+<rect x="13" y="-0" width="1.05" height="0"/>
+<rect x="14" y="-0" width="1.05" height="0"/>
+<rect x="15" y="-0" width="1.05" height="0"/>
+<rect x="16" y="-0" width="1.05" height="0"/>
+<rect x="17" y="-0" width="1.05" height="0"/>
+<rect x="18" y="-0" width="1.05" height="0"/>
+<rect x="19" y="-2" width="1.05" height="2"/>
+<rect x="20" y="-0" width="1.05" height="0"/>
+<rect x="21" y="-0" width="1.05" height="0"/>
+<rect x="22" y="-0" width="1.05" height="0"/>
+<rect x="23" y="-0" width="1.05" height="0"/>
+<rect x="24" y="-0" width="1.05" height="0"/>
+<rect x="25" y="-0" width="1.05" height="0"/>
+<rect x="26" y="-5" width="1.05" height="5"/>
+<rect x="27" y="-0" width="1.05" height="0"/>
+<rect x="28" y="-1" width="1.05" height="1"/>
+<rect x="29" y="-0" width="1.05" height="0"/>
+<rect x="30" y="-2" width="1.05" height="2"/>
+<rect x="31" y="-1" width="1.05" height="1"/>
+<rect x="32" y="-0" width="1.05" height="0"/>
+<rect x="33" y="-0" width="1.05" height="0"/>
+<rect x="34" y="-0" width="1.05" height="0"/>
+<rect x="35" y="-0" width="1.05" height="0"/>
+<rect x="36" y="-0" width="1.05" height="0"/>
+<rect x="37" y="-13" width="1.05" height="13"/>
+<rect x="38" y="-0" width="1.05" height="0"/>
+<rect x="39" y="-0" width="1.05" height="0"/>
+<rect x="40" y="-0" width="1.05" height="0"/>
+<rect x="41" y="-2" width="1.05" height="2"/>
+<rect x="42" y="-4" width="1.05" height="4"/>
+<rect x="43" y="-3" width="1.05" height="3"/>
+<rect x="44" y="-0" width="1.05" height="0"/>
+<rect x="45" y="-0" width="1.05" height="0"/>
+<rect x="46" y="-0" width="1.05" height="0"/>
+<rect x="47" y="-0" width="1.05" height="0"/>
+<rect x="48" y="-0" width="1.05" height="0"/>
+<rect x="49" y="-0" width="1.05" height="0"/>
+<rect x="50" y="-0" width="1.05" height="0"/>
+<rect x="51" y="-0" width="1.05" height="0"/>
+<rect x="52" y="-0" width="1.05" height="0"/>
+<rect x="53" y="-1" width="1.05" height="1"/>
+<rect x="54" y="-0" width="1.05" height="0"/>
+<rect x="55" y="-0" width="1.05" height="0"/>
+<rect x="56" y="-0" width="1.05" height="0"/>
+<rect x="57" y="-0" width="1.05" height="0"/>
+<rect x="58" y="-0" width="1.05" height="0"/>
+<rect x="59" y="-1" width="1.05" height="1"/>
+<rect x="60" y="-0" width="1.05" height="0"/>
+<rect x="61" y="-0" width="1.05" height="0"/>
+<rect x="62" y="-0" width="1.05" height="0"/>
+<rect x="63" y="-0" width="1.05" height="0"/>
+<rect x="64" y="-0" width="1.05" height="0"/>
+<rect x="65" y="-0" width="1.05" height="0"/>
+<rect x="66" y="-0" width="1.05" height="0"/>
+<rect x="67" y="-0" width="1.05" height="0"/>
+<rect x="68" y="-0" width="1.05" height="0"/>
+<rect x="69" y="-0" width="1.05" height="0"/>
+<rect x="70" y="-0" width="1.05" height="0"/>
+<rect x="71" y="-1" width="1.05" height="1"/>
+<rect x="72" y="-0" width="1.05" height="0"/>
+<rect x="73" y="-0" width="1.05" height="0"/>
+<rect x="74" y="-0" width="1.05" height="0"/>
+<rect x="75" y="-0" width="1.05" height="0"/>
+<rect x="76" y="-0" width="1.05" height="0"/>
+<rect x="77" y="-0" width="1.05" height="0"/>
+<rect x="78" y="-0" width="1.05" height="0"/>
+<rect x="79" y="-0" width="1.05" height="0"/>
+<rect x="80" y="-0" width="1.05" height="0"/>
+<rect x="81" y="-0" width="1.05" height="0"/>
+<rect x="82" y="-0" width="1.05" height="0"/>
+<rect x="83" y="-0" width="1.05" height="0"/>
+<rect x="84" y="-0" width="1.05" height="0"/>
+<rect x="85" y="-0" width="1.05" height="0"/>
+<rect x="86" y="-0" width="1.05" height="0"/>
+<rect x="87" y="-0" width="1.05" height="0"/>
+<rect x="88" y="-0" width="1.05" height="0"/>
+<rect x="89" y="-0" width="1.05" height="0"/>
+<rect x="90" y="-1" width="1.05" height="1"/>
+<rect x="91" y="-0" width="1.05" height="0"/>
+<rect x="92" y="-0" width="1.05" height="0"/>
+<rect x="93" y="-0" width="1.05" height="0"/>
+<rect x="94" y="-3" width="1.05" height="3"/>
+<rect x="95" y="-0" width="1.05" height="0"/>
+<rect x="96" y="-0" width="1.05" height="0"/>
+<rect x="97" y="-0" width="1.05" height="0"/>
+<rect x="98" y="-0" width="1.05" height="0"/>
+<rect x="99" y="-0" width="1.05" height="0"/>
+<rect x="100" y="-2" width="1.05" height="2"/>
+<rect x="101" y="-0" width="1.05" height="0"/>
+<rect x="102" y="-0" width="1.05" height="0"/>
+<rect x="103" y="-0" width="1.05" height="0"/>
+<rect x="104" y="-0" width="1.05" height="0"/>
+<rect x="105" y="-3" width="1.05" height="3"/>
+<rect x="106" y="-2" width="1.05" height="2"/>
+<rect x="107" y="-0" width="1.05" height="0"/>
+<rect x="108" y="-0" width="1.05" height="0"/>
+<rect x="109" y="-0" width="1.05" height="0"/>
+<rect x="110" y="-0" width="1.05" height="0"/>
+<rect x="111" y="-0" width="1.05" height="0"/>
+<rect x="112" y="-0" width="1.05" height="0"/>
+<rect x="113" y="-1" width="1.05" height="1"/>
+<rect x="114" y="-0" width="1.05" height="0"/>
+<rect x="115" y="-0" width="1.05" height="0"/>
+<rect x="116" y="-5" width="1.05" height="5"/>
+<rect x="117" y="-0" width="1.05" height="0"/>
+<rect x="118" y="-1" width="1.05" height="1"/>
+<rect x="119" y="-0" width="1.05" height="0"/>
+<rect x="120" y="-1" width="1.05" height="1"/>
+<rect x="121" y="-4" width="1.05" height="4"/>
+<rect x="122" y="-0" width="1.05" height="0"/>
+<rect x="123" y="-0" width="1.05" height="0"/>
+<rect x="124" y="-0" width="1.05" height="0"/>
+<rect x="125" y="-4" width="1.05" height="4"/>
+<rect x="126" y="-6" width="1.05" height="6"/>
+<rect x="127" y="-6" width="1.05" height="6"/>
+<rect x="128" y="-3" width="1.05" height="3"/>
+<rect x="129" y="-0" width="1.05" height="0"/>
+<rect x="130" y="-6" width="1.05" height="6"/>
+<rect x="131" y="-3" width="1.05" height="3"/>
+<rect x="132" y="-2" width="1.05" height="2"/>
+<rect x="133" y="-6" width="1.05" height="6"/>
+<rect x="134" y="-33" width="1.05" height="33"/>
+<rect x="135" y="-0" width="1.05" height="0"/>
+<rect x="136" y="-0" width="1.05" height="0"/>
+<rect x="137" y="-2" width="1.05" height="2"/>
+<rect x="138" y="-0" width="1.05" height="0"/>
+<rect x="139" y="-2" width="1.05" height="2"/>
+<rect x="140" y="-0" width="1.05" height="0"/>
+<rect x="141" y="-0" width="1.05" height="0"/>
+<rect x="142" y="-0" width="1.05" height="0"/>
+<rect x="143" y="-0" width="1.05" height="0"/>
+<rect x="144" y="-0" width="1.05" height="0"/>
+<rect x="145" y="-0" width="1.05" height="0"/>
+<rect x="146" y="-3" width="1.05" height="3"/>
+<rect x="147" y="-0" width="1.05" height="0"/>
+<rect x="148" y="-0" width="1.05" height="0"/>
+<rect x="149" y="-0" width="1.05" height="0"/>
+<rect x="150" y="-0" width="1.05" height="0"/>
+<rect x="151" y="-2" width="1.05" height="2"/>
+<rect x="152" y="-2" width="1.05" height="2"/>
+<rect x="153" y="-0" width="1.05" height="0"/>
+<rect x="154" y="-1" width="1.05" height="1"/>
+<rect x="155" y="-0" width="1.05" height="0"/>
+<rect x="156" y="-0" width="1.05" height="0"/>
+<rect x="157" y="-0" width="1.05" height="0"/>
+<rect x="158" y="-0" width="1.05" height="0"/>
+<rect x="159" y="-0" width="1.05" height="0"/>
+<rect x="160" y="-10" width="1.05" height="10"/>
+<rect x="161" y="-10" width="1.05" height="10"/>
+<rect x="162" y="-4" width="1.05" height="4"/>
+<rect x="163" y="-3" width="1.05" height="3"/>
+<rect x="164" y="-6" width="1.05" height="6"/>
+<rect x="165" y="-3" width="1.05" height="3"/>
+<rect x="166" y="-0" width="1.05" height="0"/>
+<rect x="167" y="-20" width="1.05" height="20"/>
+<rect x="168" y="-8" width="1.05" height="8"/>
+<rect x="169" y="-25" width="1.05" height="25"/>
+<rect x="170" y="-23" width="1.05" height="23"/>
+<rect x="171" y="-17" width="1.05" height="17"/>
+<rect x="172" y="-18" width="1.05" height="18"/>
+<rect x="173" y="-11" width="1.05" height="11"/>
+<rect x="174" y="-12" width="1.05" height="12"/>
+<rect x="175" y="-30" width="1.05" height="30"/>
+<rect x="176" y="-19" width="1.05" height="19"/>
+<rect x="177" y="-61" width="1.05" height="61"/>
+<rect x="178" y="-87" width="1.05" height="87"/>
+<rect x="179" y="-24" width="1.05" height="24"/>
+<rect x="180" y="-5" width="1.05" height="5"/>
+<rect x="181" y="-2" width="1.05" height="2"/>
+<rect x="182" y="-12" width="1.05" height="12"/>
+<rect x="183" y="-0" width="1.05" height="0"/>
+<rect x="184" y="-0" width="1.05" height="0"/>
+<rect x="185" y="-2" width="1.05" height="2"/>
+<rect x="186" y="-0" width="1.05" height="0"/>
+<rect x="187" y="-4" width="1.05" height="4"/>
+<rect x="188" y="-1" width="1.05" height="1"/>
+<rect x="189" y="-15" width="1.05" height="15"/>
+<rect x="190" y="-0" width="1.05" height="0"/>
+<rect x="191" y="-102" width="1.05" height="102"/>
+<rect x="192" y="-4" width="1.05" height="4"/>
+<rect x="193" y="-34" width="1.05" height="34"/>
+<rect x="194" y="-58" width="1.05" height="58"/>
+<rect x="195" y="-18" width="1.05" height="18"/>
+<rect x="196" y="-31" width="1.05" height="31"/>
+<rect x="197" y="-18" width="1.05" height="18"/>
+<rect x="198" y="-25" width="1.05" height="25"/>
+<rect x="199" y="-59" width="1.05" height="59"/>
+<rect x="200" y="-107" width="1.05" height="107"/>
+<rect x="201" y="-60" width="1.05" height="60"/>
+<rect x="202" y="-98" width="1.05" height="98"/>
+<rect x="203" y="-53" width="1.05" height="53"/>
+<rect x="204" y="-60" width="1.05" height="60"/>
+<rect x="205" y="-28" width="1.05" height="28"/>
+<rect x="206" y="-97" width="1.05" height="97"/>
+<rect x="207" y="-70" width="1.05" height="70"/>
+<rect x="208" y="-48" width="1.05" height="48"/>
+<rect x="209" y="-89" width="1.05" height="89"/>
+<rect x="210" y="-59" width="1.05" height="59"/>
+<rect x="211" y="-31" width="1.05" height="31"/>
+<rect x="212" y="-117" width="1.05" height="117"/>
+<rect x="213" y="-42" width="1.05" height="42"/>
+<rect x="214" y="-107" width="1.05" height="107"/>
+<rect x="215" y="-61" width="1.05" height="61"/>
+<rect x="216" y="-61" width="1.05" height="61"/>
+<rect x="217" y="-50" width="1.05" height="50"/>
+<rect x="218" y="-40" width="1.05" height="40"/>
+<rect x="219" y="-29" width="1.05" height="29"/>
+<rect x="220" y="-9" width="1.05" height="9"/>
+<rect x="221" y="-20" width="1.05" height="20"/>
+<rect x="222" y="-22" width="1.05" height="22"/>
+<rect x="223" y="-10" width="1.05" height="10"/>
+<rect x="224" y="-16" width="1.05" height="16"/>
+<rect x="225" y="-7" width="1.05" height="7"/>
+<rect x="226" y="-44" width="1.05" height="44"/>
+<rect x="227" y="-122" width="1.05" height="122"/>
+<rect x="228" y="-2" width="1.05" height="2"/>
+<rect x="229" y="-6" width="1.05" height="6"/>
+<rect x="230" y="-3" width="1.05" height="3"/>
+<rect x="231" y="-7" width="1.05" height="7"/>
+<rect x="232" y="-35" width="1.05" height="35"/>
+<rect x="233" y="-86" width="1.05" height="86"/>
+<rect x="234" y="-138" width="1.05" height="138"/>
+<rect x="235" y="-124" width="1.05" height="124"/>
+<rect x="236" y="-66" width="1.05" height="66"/>
+<rect x="237" y="-114" width="1.05" height="114"/>
+<rect x="238" y="-69" width="1.05" height="69"/>
+<rect x="239" y="-58" width="1.05" height="58"/>
+<rect x="240" y="-36" width="1.05" height="36"/>
+<rect x="241" y="-6" width="1.05" height="6"/>
+<rect x="242" y="-21" width="1.05" height="21"/>
+<rect x="243" y="-46" width="1.05" height="46"/>
+<rect x="244" y="-16" width="1.05" height="16"/>
+<rect x="245" y="-28" width="1.05" height="28"/>
+<rect x="246" y="-5" width="1.05" height="5"/>
+<rect x="247" y="-21" width="1.05" height="21"/>
+<rect x="248" y="-40" width="1.05" height="40"/>
+<rect x="249" y="-85" width="1.05" height="85"/>
+<rect x="250" y="-21" width="1.05" height="21"/>
+<rect x="251" y="-109" width="1.05" height="109"/>
+<rect x="252" y="-26" width="1.05" height="26"/>
+<rect x="253" y="-67" width="1.05" height="67"/>
+<rect x="254" y="-28" width="1.05" height="28"/>
+<rect x="255" y="-22" width="1.05" height="22"/>
+<rect x="256" y="-13" width="1.05" height="13"/>
+<rect x="257" y="-28" width="1.05" height="28"/>
+<rect x="258" y="-27" width="1.05" height="27"/>
+<rect x="259" y="-13" width="1.05" height="13"/>
+<rect x="260" y="-50" width="1.05" height="50"/>
+<rect x="261" y="-11" width="1.05" height="11"/>
+<rect x="262" y="-39" width="1.05" height="39"/>
+<rect x="263" y="-51" width="1.05" height="51"/>
+<rect x="264" y="-37" width="1.05" height="37"/>
+<rect x="265" y="-23" width="1.05" height="23"/>
+<rect x="266" y="-6" width="1.05" height="6"/>
+<rect x="267" y="-5" width="1.05" height="5"/>
+<rect x="268" y="-10" width="1.05" height="10"/>
+<rect x="269" y="-6" width="1.05" height="6"/>
+<rect x="270" y="-13" width="1.05" height="13"/>
+<rect x="271" y="-22" width="1.05" height="22"/>
+<rect x="272" y="-2" width="1.05" height="2"/>
+<rect x="273" y="-0" width="1.05" height="0"/>
+<rect x="274" y="-22" width="1.05" height="22"/>
+<rect x="275" y="-15" width="1.05" height="15"/>
+<rect x="276" y="-4" width="1.05" height="4"/>
+<rect x="277" y="-12" width="1.05" height="12"/>
+<rect x="278" y="-100" width="1.05" height="100"/>
+<rect x="279" y="-18" width="1.05" height="18"/>
+<rect x="280" y="-8" width="1.05" height="8"/>
+<rect x="281" y="-3" width="1.05" height="3"/>
+<rect x="282" y="-0" width="1.05" height="0"/>
+<rect x="283" y="-14" width="1.05" height="14"/>
+<rect x="284" y="-19" width="1.05" height="19"/>
+<rect x="285" y="-19" width="1.05" height="19"/>
+<rect x="286" y="-6" width="1.05" height="6"/>
+<rect x="287" y="-9" width="1.05" height="9"/>
+<rect x="288" y="-12" width="1.05" height="12"/>
+<rect x="289" y="-29" width="1.05" height="29"/>
+<rect x="290" y="-87" width="1.05" height="87"/>
+<rect x="291" y="-22" width="1.05" height="22"/>
+<rect x="292" y="-21" width="1.05" height="21"/>
+<rect x="293" y="-5" width="1.05" height="5"/>
+<rect x="294" y="-9" width="1.05" height="9"/>
+<rect x="295" y="-19" width="1.05" height="19"/>
+<rect x="296" y="-73" width="1.05" height="73"/>
+<rect x="297" y="-21" width="1.05" height="21"/>
+<rect x="298" y="-25" width="1.05" height="25"/>
+<rect x="299" y="-25" width="1.05" height="25"/>
+<rect x="300" y="-74" width="1.05" height="74"/>
+<rect x="301" y="-42" width="1.05" height="42"/>
+<rect x="302" y="-47" width="1.05" height="47"/>
+<rect x="303" y="-19" width="1.05" height="19"/>
+<rect x="304" y="-0" width="1.05" height="0"/>
+<rect x="305" y="-61" width="1.05" height="61"/>
+<rect x="306" y="-45" width="1.05" height="45"/>
+<rect x="307" y="-50" width="1.05" height="50"/>
+<rect x="308" y="-48" width="1.05" height="48"/>
+<rect x="309" y="-37" width="1.05" height="37"/>
+<rect x="310" y="-46" width="1.05" height="46"/>
+<rect x="311" y="-45" width="1.05" height="45"/>
+<rect x="312" y="-9" width="1.05" height="9"/>
+<rect x="313" y="-15" width="1.05" height="15"/>
+<rect x="314" y="-0" width="1.05" height="0"/>
+<rect x="315" y="-15" width="1.05" height="15"/>
+<rect x="316" y="-13" width="1.05" height="13"/>
+<rect x="317" y="-20" width="1.05" height="20"/>
+<rect x="318" y="-36" width="1.05" height="36"/>
+<rect x="319" y="-11" width="1.05" height="11"/>
+<rect x="320" y="-30" width="1.05" height="30"/>
+<rect x="321" y="-12" width="1.05" height="12"/>
+<rect x="322" y="-2" width="1.05" height="2"/>
+<rect x="323" y="-60" width="1.05" height="60"/>
+<rect x="324" y="-41" width="1.05" height="41"/>
+<rect x="325" y="-20" width="1.05" height="20"/>
+<rect x="326" y="-119" width="1.05" height="119"/>
+<rect x="327" y="-85" width="1.05" height="85"/>
+<rect x="328" y="-20" width="1.05" height="20"/>
+<rect x="329" y="-60" width="1.05" height="60"/>
+<rect x="330" y="-46" width="1.05" height="46"/>
+<rect x="331" y="-93" width="1.05" height="93"/>
+<rect x="332" y="-19" width="1.05" height="19"/>
+<rect x="333" y="-85" width="1.05" height="85"/>
+<rect x="334" y="-40" width="1.05" height="40"/>
+<rect x="335" y="-56" width="1.05" height="56"/>
+<rect x="336" y="-58" width="1.05" height="58"/>
+<rect x="337" y="-111" width="1.05" height="111"/>
+<rect x="338" y="-19" width="1.05" height="19"/>
+<rect x="339" y="-19" width="1.05" height="19"/>
+<rect x="340" y="-9" width="1.05" height="9"/>
+<rect x="341" y="-17" width="1.05" height="17"/>
+<rect x="342" y="-193" width="1.05" height="193"/>
+<rect x="343" y="-111" width="1.05" height="111"/>
+<rect x="344" y="-127" width="1.05" height="127"/>
+<rect x="345" y="-86" width="1.05" height="86"/>
+<rect x="346" y="-3" width="1.05" height="3"/>
+<rect x="347" y="-213" width="1.05" height="213"/>
+<rect x="348" y="-103" width="1.05" height="103"/>
+<rect x="349" y="-35" width="1.05" height="35"/>
+<rect x="350" y="-14" width="1.05" height="14"/>
+<rect x="351" y="-44" width="1.05" height="44"/>
+<rect x="352" y="-0" width="1.05" height="0"/>
+<rect x="353" y="-69" width="1.05" height="69"/>
+<rect x="354" y="-54" width="1.05" height="54"/>
+<rect x="355" y="-208" width="1.05" height="208"/>
+<rect x="356" y="-94" width="1.05" height="94"/>
+<rect x="357" y="-117" width="1.05" height="117"/>
+<rect x="358" y="-125" width="1.05" height="125"/>
+<rect x="359" y="-7" width="1.05" height="7"/>
+<rect x="360" y="-0" width="1.05" height="0"/>
+<rect x="361" y="-4" width="1.05" height="4"/>
+<rect x="362" y="-8" width="1.05" height="8"/>
+<rect x="363" y="-70" width="1.05" height="70"/>
+<rect x="364" y="-22" width="1.05" height="22"/>
+<rect x="365" y="-4" width="1.05" height="4"/>
+    </g>
+    <!-- Baseline reference line under the ridge -->
+    <line x1="20" y1="291" x2="780" y2="291" stroke="#30363d" stroke-width="1"/>
+    <!-- Sweeping highlight bar that travels the ridge continuously -->
+    <rect x="0" y="212" width="26" height="80" fill="url(#sweepGrad)">
+      <animate attributeName="x" values="-30;790" dur="19s" repeatCount="indefinite"/>
+    </rect>
   </g>
 </svg>
