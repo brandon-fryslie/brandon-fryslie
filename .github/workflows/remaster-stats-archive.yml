@@ -157,8 +157,12 @@ jobs:
 
       - name: Move the card into its archive slot (mechanical)
         # Also restores assets/daily-stats.{svg,json} from HEAD, so the commit below holds
-        # the archive and nothing else.
-        run: python .github/scripts/remaster-stats-card.py archive '${{ matrix.stamp }}'
+        # the archive and nothing else. Fails if the agent fell back to the deterministic
+        # card — that is a no-op for a slot that already has one, and archiving it would
+        # retire the slot from the pending set without remastering anything.
+        run: |
+          python .github/scripts/remaster-stats-card.py archive '${{ matrix.stamp }}' \
+            --fallback /tmp/daily-stats-fallback.svg
 
       - name: Re-render the gallery from the archive tree (mechanical)
         run: python .github/scripts/sync-stats-archive.py
