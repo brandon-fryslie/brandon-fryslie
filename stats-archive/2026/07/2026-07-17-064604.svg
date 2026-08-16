@@ -1,20 +1,194 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated July 17, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">6</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">91</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">87</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">41</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Live GitHub stats · July 17, 2026">
+<defs>
+<linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ee787" stop-opacity="0.9"/><stop offset="1" stop-color="#26a641" stop-opacity="0.35"/></linearGradient>
+<linearGradient id="barTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ee787"/><stop offset="1" stop-color="#26a641"/></linearGradient>
+<linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#26a641"/><stop offset="0.6" stop-color="#39d353"/><stop offset="1" stop-color="#7ee787"/></linearGradient>
+<linearGradient id="numGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5f3fc"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+<linearGradient id="chartSweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7ff5e0" stop-opacity="0"/><stop offset="0.5" stop-color="#7ff5e0" stop-opacity="0.3"/><stop offset="1" stop-color="#7ff5e0" stop-opacity="0"/></linearGradient>
+<linearGradient id="gaugeShimmer" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<linearGradient id="langWave" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<clipPath id="chartClip"><rect x="24" y="78" width="752" height="72"/></clipPath>
+<clipPath id="gaugeFillClip"><rect x="24" y="160" width="500.68" height="6" rx="3"/></clipPath>
+<clipPath id="langBarClip"><rect x="24" y="226" width="364" height="14" rx="3"/></clipPath>
+</defs>
+
+<!-- Card background -->
+<rect width="800" height="360" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="359" rx="10" fill="#11161d" stroke="#21262d" stroke-width="1"/>
+
+<!-- Header -->
+<circle cx="26" cy="24" r="3.5" fill="#7ee787"><animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/></circle>
+<text x="40" y="28" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
+<text x="776" y="28" font-size="12" fill="#8b949e" text-anchor="end">@brandon-fryslie · July 17, 2026</text>
+<line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+
+<!-- ================================================== -->
+<!-- Section 1: Weekly-binned contribution timeline      -->
+<!-- 52 weekly bars, chart y=82..148, peak week=667      -->
+<!-- ================================================== -->
+<text x="24" y="66" font-size="10" font-weight="700" letter-spacing="1.5" fill="#8b949e">CONTRIBUTIONS · past 12 months · WEEKLY</text>
+<text x="776" y="66" font-size="10" fill="#8b949e" text-anchor="end">peak 667 / week</text>
+
+<!-- Gridlines -->
+<line x1="24" y1="88.60" x2="776" y2="88.60" stroke="#161b22" stroke-width="1"/>
+<text x="774" y="86.60" font-size="8" fill="#484f58" text-anchor="end">600</text>
+<line x1="24" y1="108.40" x2="776" y2="108.40" stroke="#161b22" stroke-width="1"/>
+<text x="774" y="106.40" font-size="8" fill="#484f58" text-anchor="end">400</text>
+<line x1="24" y1="128.20" x2="776" y2="128.20" stroke="#161b22" stroke-width="1"/>
+<text x="774" y="126.20" font-size="8" fill="#484f58" text-anchor="end">200</text>
+<line x1="24" y1="148" x2="776" y2="148" stroke="#30363d" stroke-width="1"/>
+
+<!-- Weekly bars (52 bars, width 11, pitch 14.46) -->
+<g clip-path="url(#chartClip)">
+<rect x="24.00" y="147.80" width="11" height="0.20" fill="url(#barTop)"/>
+<rect x="38.46" y="147.41" width="11" height="0.59" fill="url(#barTop)"/>
+<rect x="52.92" y="147.70" width="11" height="0.30" fill="url(#barTop)"/>
+<rect x="67.38" y="146.12" width="11" height="1.88" fill="url(#barTop)"/>
+<rect x="81.85" y="147.70" width="11" height="0.30" fill="url(#barTop)"/>
+<rect x="96.31" y="147.90" width="11" height="0.10" fill="url(#barTop)"/>
+<rect x="110.77" y="147.90" width="11" height="0.10" fill="url(#barTop)"/>
+<rect x="125.23" y="148.00" width="11" height="0" fill="url(#barTop)"/>
+<rect x="139.69" y="147.90" width="11" height="0.10" fill="url(#barTop)"/>
+<rect x="154.15" y="148.00" width="11" height="0" fill="url(#barTop)"/>
+<rect x="168.62" y="147.90" width="11" height="0.10" fill="url(#barTop)"/>
+<rect x="183.08" y="147.70" width="11" height="0.30" fill="url(#barTop)"/>
+<rect x="197.54" y="147.31" width="11" height="0.69" fill="url(#barTop)"/>
+<rect x="212.00" y="147.90" width="11" height="0.10" fill="url(#barTop)"/>
+<rect x="226.46" y="147.31" width="11" height="0.69" fill="url(#barTop)"/>
+<rect x="240.92" y="146.02" width="11" height="1.98" fill="url(#barTop)"/>
+<rect x="255.38" y="142.75" width="11" height="5.25" fill="url(#barTop)"/>
+<rect x="269.85" y="147.60" width="11" height="0.40" fill="url(#barTop)"/>
+<rect x="284.31" y="147.70" width="11" height="0.30" fill="url(#barTop)"/>
+<rect x="298.77" y="147.50" width="11" height="0.50" fill="url(#barTop)"/>
+<rect x="313.23" y="145.62" width="11" height="2.38" fill="url(#barTop)"/>
+<rect x="327.69" y="141.56" width="11" height="6.44" fill="url(#barTop)"/>
+<rect x="342.15" y="135.13" width="11" height="12.87" fill="url(#barTop)"/>
+<rect x="356.62" y="129.09" width="11" height="18.91" fill="url(#barTop)"/>
+<rect x="371.08" y="145.82" width="11" height="2.18" fill="url(#barTop)"/>
+<rect x="385.54" y="121.76" width="11" height="26.24" fill="url(#barTop)"/>
+<rect x="400.00" y="102.26" width="11" height="45.74" fill="url(#barTop)"/>
+<rect x="414.46" y="106.22" width="11" height="41.78" fill="url(#barTop)"/>
+<rect x="428.92" y="100.68" width="11" height="47.32" fill="url(#barTop)"/>
+<rect x="443.38" y="136.81" width="11" height="11.19" fill="url(#barTop)"/>
+<rect x="457.85" y="126.32" width="11" height="21.68" fill="url(#barTop)"/>
+<rect x="472.31" y="83.15" width="11" height="64.85" fill="url(#barTop)"/>
+<rect x="486.77" y="132.36" width="11" height="15.64" fill="url(#barTop)"/>
+<rect x="501.23" y="111.47" width="11" height="36.53" fill="url(#barTop)"/>
+<rect x="515.69" y="130.08" width="11" height="17.92" fill="url(#barTop)"/>
+<rect x="530.15" y="130.97" width="11" height="17.03" fill="url(#barTop)"/>
+<rect x="544.62" y="140.57" width="11" height="7.43" fill="url(#barTop)"/>
+<rect x="559.08" y="132.16" width="11" height="15.84" fill="url(#barTop)"/>
+<rect x="573.54" y="140.18" width="11" height="7.82" fill="url(#barTop)"/>
+<rect x="588.00" y="128.99" width="11" height="19.01" fill="url(#barTop)"/>
+<rect x="602.46" y="117.61" width="11" height="30.39" fill="url(#barTop)"/>
+<rect x="616.92" y="122.26" width="11" height="25.74" fill="url(#barTop)"/>
+<rect x="631.38" y="133.84" width="11" height="14.16" fill="url(#barTop)"/>
+<rect x="645.85" y="131.07" width="11" height="16.93" fill="url(#barTop)"/>
+<rect x="660.31" y="109.29" width="11" height="38.71" fill="url(#barTop)"/>
+<rect x="674.77" y="102.26" width="11" height="45.74" fill="url(#barTop)"/>
+<rect x="689.23" y="98.99" width="11" height="49.01" fill="url(#barTop)"/>
+<rect x="703.69" y="98.70" width="11" height="49.30" fill="url(#barTop)"/>
+<rect x="718.15" y="81.97" width="11" height="66.03" fill="url(#barTop)"/>
+<rect x="732.62" y="136.61" width="11" height="11.39" fill="url(#barTop)"/>
+<rect x="747.08" y="126.81" width="11" height="21.19" fill="url(#barTop)"/>
+<rect x="761.54" y="137.51" width="11" height="10.49" fill="url(#barTop)"/>
+<!-- Perpetual sweep across chart -->
+<rect x="0" y="78" width="180" height="72" fill="url(#chartSweep)" transform="translate(-200 0)"><animateTransform attributeName="transform" type="translate" from="-200 0" to="800 0" dur="13s" repeatCount="indefinite"/></rect>
+</g>
+
+<!-- Days Active gauge -->
+<rect x="24" y="160" width="752" height="6" rx="3" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+<rect x="24" y="160" width="500.68" height="6" rx="3" fill="url(#gaugeGrad)"/>
+<g clip-path="url(#gaugeFillClip)">
+<rect x="24" y="160" width="140" height="6" fill="url(#gaugeShimmer)" transform="translate(-160 0)"><animateTransform attributeName="transform" type="translate" from="-160 0" to="500 0" dur="7s" repeatCount="indefinite"/></rect>
+</g>
+<text x="24" y="184" font-size="10" font-weight="700" letter-spacing="1.5" fill="#8b949e">DAYS ACTIVE · 1 YEAR</text>
+<text x="776" y="184" font-size="12" fill="#8b949e" text-anchor="end">/ 365 days</text>
+<text x="708" y="184" font-size="13" font-weight="700" fill="#7ee787" text-anchor="end">243</text>
+
+<!-- ================================================== -->
+<!-- Section 2: Distributions                            -->
+<!-- Languages (left) + Active Repos (right)             -->
+<!-- ================================================== -->
+
+<!-- Languages header -->
+<text x="24" y="216" font-size="10" font-weight="700" letter-spacing="1.5" fill="#8b949e">LANGUAGES · SHARE OF COMMITS</text>
+<text x="388" y="216" font-size="13" font-weight="700" fill="#e6edf3" text-anchor="end">13</text>
+
+<!-- Languages stacked bar (total commits = 6218, width = 364) -->
+<rect x="24" y="226" width="364" height="14" rx="3" fill="#161b22"/>
+<g clip-path="url(#langBarClip)">
+<rect x="24.00"  y="226" width="229.32" height="14" fill="#3178c6"/>
+<rect x="253.32" y="226" width="69.49"  height="14" fill="#3572A5"/>
+<rect x="322.81" y="226" width="30.33"  height="14" fill="#00ADD8"/>
+<rect x="353.14" y="226" width="16.10"  height="14" fill="#89e051"/>
+<rect x="369.24" y="226" width="7.55"   height="14" fill="#e34c26"/>
+<rect x="376.79" y="226" width="6.38"   height="14" fill="#244776"/>
+<rect x="383.17" y="226" width="3.98"   height="14" fill="#f1e05a"/>
+<rect x="387.15" y="226" width="0.85"   height="14" fill="#563d7c"/>
+<rect x="24" y="226" width="90" height="14" fill="url(#langWave)" transform="translate(-100 0)"><animateTransform attributeName="transform" type="translate" from="-100 0" to="364 0" dur="11s" repeatCount="indefinite"/></rect>
+</g>
+
+<!-- Languages legend, row 1 (top 4 langs) -->
+<rect x="24"  y="246" width="8" height="8" rx="1.5" fill="#3178c6"/><text x="36"  y="253" font-size="10" fill="#c9d1d9">TypeScript <tspan fill="#8b949e">3917</tspan></text>
+<rect x="128" y="246" width="8" height="8" rx="1.5" fill="#3572A5"/><text x="140" y="253" font-size="10" fill="#c9d1d9">Python <tspan fill="#8b949e">1187</tspan></text>
+<rect x="214" y="246" width="8" height="8" rx="1.5" fill="#00ADD8"/><text x="226" y="253" font-size="10" fill="#c9d1d9">Go <tspan fill="#8b949e">518</tspan></text>
+<rect x="270" y="246" width="8" height="8" rx="1.5" fill="#89e051"/><text x="282" y="253" font-size="10" fill="#c9d1d9">Shell <tspan fill="#8b949e">275</tspan></text>
+
+<!-- Languages legend, row 2 (next 4 langs) -->
+<rect x="24"  y="263" width="8" height="8" rx="1.5" fill="#e34c26"/><text x="36"  y="270" font-size="10" fill="#c9d1d9">HTML <tspan fill="#8b949e">129</tspan></text>
+<rect x="86"  y="263" width="8" height="8" rx="1.5" fill="#244776"/><text x="98"  y="270" font-size="10" fill="#c9d1d9">CoffeeScript <tspan fill="#8b949e">109</tspan></text>
+<rect x="196" y="263" width="8" height="8" rx="1.5" fill="#f1e05a"/><text x="208" y="270" font-size="10" fill="#c9d1d9">JavaScript <tspan fill="#8b949e">68</tspan></text>
+<rect x="288" y="263" width="8" height="8" rx="1.5" fill="#563d7c"/><text x="300" y="270" font-size="10" fill="#c9d1d9">CSS <tspan fill="#8b949e">15</tspan></text>
+
+<!-- Active Repos header -->
+<text x="412" y="216" font-size="10" font-weight="700" letter-spacing="1.5" fill="#8b949e">ACTIVE REPOS · 30D COMMITS</text>
+<text x="776" y="216" font-size="13" font-weight="700" fill="#e6edf3" text-anchor="end">17</text>
+
+<!-- Repo bars: 6 ranked rows, pitch 10, bar_h 5, bar_area_x=528..746 (max width 218) -->
+<text x="412" y="234" font-size="9" fill="#c9d1d9">crowdshipai-web</text>
+<rect x="528" y="230" width="218" height="5" rx="2.5" fill="#161b22"/>
+<rect x="528" y="230" width="218.00" height="5" rx="2.5" fill="#7ff5e0"><animate attributeName="opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/></rect>
+<text x="776" y="234" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="end">162</text>
+
+<text x="412" y="244" font-size="9" fill="#c9d1d9">tmux-control-mode-js</text>
+<rect x="528" y="240" width="218" height="5" rx="2.5" fill="#161b22"/>
+<rect x="528" y="240" width="123.80" height="5" rx="2.5" fill="#5cead4"><animate attributeName="opacity" values="0.78;1;0.78" dur="8s" begin="0.4s" repeatCount="indefinite"/></rect>
+<text x="776" y="244" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="end">92</text>
+
+<text x="412" y="254" font-size="9" fill="#c9d1d9">tinkerpadai-web</text>
+<rect x="528" y="250" width="218" height="5" rx="2.5" fill="#161b22"/>
+<rect x="528" y="250" width="83.43" height="5" rx="2.5" fill="#4dd0b8"><animate attributeName="opacity" values="0.78;1;0.78" dur="9s" begin="0.8s" repeatCount="indefinite"/></rect>
+<text x="776" y="254" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="end">62</text>
+
+<text x="412" y="264" font-size="9" fill="#c9d1d9">oscilla-animator-v2</text>
+<rect x="528" y="260" width="218" height="5" rx="2.5" fill="#161b22"/>
+<rect x="528" y="260" width="79.40" height="5" rx="2.5" fill="#39d353"><animate attributeName="opacity" values="0.78;1;0.78" dur="10s" begin="1.2s" repeatCount="indefinite"/></rect>
+<text x="776" y="264" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="end">59</text>
+
+<text x="412" y="274" font-size="9" fill="#c9d1d9">links-issue-tracker</text>
+<rect x="528" y="270" width="218" height="5" rx="2.5" fill="#161b22"/>
+<rect x="528" y="270" width="75.36" height="5" rx="2.5" fill="#26a641"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.6s" repeatCount="indefinite"/></rect>
+<text x="776" y="274" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="end">56</text>
+
+<text x="412" y="284" font-size="9" fill="#c9d1d9">slopspot-web</text>
+<rect x="528" y="280" width="218" height="5" rx="2.5" fill="#161b22"/>
+<rect x="528" y="280" width="55.17" height="5" rx="2.5" fill="#1a7f37"><animate attributeName="opacity" values="0.78;1;0.78" dur="12s" begin="2.0s" repeatCount="indefinite"/></rect>
+<text x="776" y="284" font-size="9" font-weight="600" fill="#e6edf3" text-anchor="end">41</text>
+
+<!-- ================================================== -->
+<!-- Section 3: Scalars                                  -->
+<!-- ================================================== -->
+<line x1="271" y1="306" x2="271" y2="348" stroke="#21262d" stroke-width="1"/>
+<line x1="529" y1="306" x2="529" y2="348" stroke="#21262d" stroke-width="1"/>
+
+<text x="143" y="328" font-size="24" font-weight="700" fill="url(#numGrad)" text-anchor="middle">1753<animate attributeName="opacity" values="0.88;1;0.88" dur="5s" repeatCount="indefinite"/></text>
+<text x="143" y="346" font-size="9" letter-spacing="0.4" fill="#8b949e" text-anchor="middle">PRs Merged · 1 Year</text>
+
+<text x="400" y="328" font-size="24" font-weight="700" fill="url(#numGrad)" text-anchor="middle">82<animate attributeName="opacity" values="0.88;1;0.88" dur="6s" repeatCount="indefinite"/></text>
+<text x="400" y="346" font-size="9" letter-spacing="0.4" fill="#8b949e" text-anchor="middle">Longest Streak · 1 Year</text>
+
+<text x="657" y="328" font-size="24" font-weight="700" fill="url(#numGrad)" text-anchor="middle">6<animate attributeName="opacity" values="0.88;1;0.88" dur="7s" repeatCount="indefinite"/></text>
+<text x="657" y="346" font-size="9" letter-spacing="0.4" fill="#8b949e" text-anchor="middle">Issues Closed · 30 Days</text>
+
 </svg>
