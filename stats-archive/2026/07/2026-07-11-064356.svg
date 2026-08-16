@@ -1,20 +1,225 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated July 11, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">124</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">89</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">20</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">4</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs>
+<linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#58a6ff" stop-opacity="0.75"/>
+<stop offset="55%" stop-color="#a371f7" stop-opacity="0.30"/>
+<stop offset="100%" stop-color="#58a6ff" stop-opacity="0.02"/>
+</linearGradient>
+<linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#3fb950"/>
+<stop offset="50%" stop-color="#58a6ff"/>
+<stop offset="100%" stop-color="#a371f7"/>
+</linearGradient>
+<linearGradient id="playhead" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="50%" stop-color="#ffffff" stop-opacity="0.30"/>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="heroClip"><rect x="24" y="54" width="752" height="124"/></clipPath>
+<clipPath id="langClip"><rect x="338" y="290" width="125" height="12" rx="3"/></clipPath>
+</defs>
+
+<!-- Card background -->
+<rect x="0" y="0" width="800" height="340" rx="8" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="339" rx="7.5" fill="none" stroke="#21262d" stroke-width="1"/>
+
+<!-- Header -->
+<text x="24" y="26" font-size="16" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+<text x="776" y="26" font-size="12" fill="#8b949e" text-anchor="end">Sat, Jul 11, 2026</text>
+<text x="24" y="42" font-size="11" fill="#6e7681">@brandon-fryslie — a year of contribution volume, weekly</text>
+<line x1="24" y1="52" x2="776" y2="52" stroke="#21262d" stroke-width="1"/>
+
+<!-- Chart gridlines and value labels -->
+<line x1="24" y1="140" x2="776" y2="140" stroke="#161b22" stroke-width="1" stroke-dasharray="2 4" opacity="0.7"/>
+<line x1="24" y1="108" x2="776" y2="108" stroke="#161b22" stroke-width="1" stroke-dasharray="2 4" opacity="0.7"/>
+<line x1="24" y1="76" x2="776" y2="76" stroke="#161b22" stroke-width="1" stroke-dasharray="2 4" opacity="0.7"/>
+<text x="20" y="143" font-size="8" fill="#6e7681" text-anchor="end">200</text>
+<text x="20" y="111" font-size="8" fill="#6e7681" text-anchor="end">400</text>
+<text x="20" y="79" font-size="8" fill="#6e7681" text-anchor="end">600</text>
+
+<!-- Chart baseline -->
+<line x1="24" y1="172" x2="776" y2="172" stroke="#30363d" stroke-width="1"/>
+
+<g clip-path="url(#heroClip)">
+<!-- Area fill (52 weekly points) -->
+<polygon fill="url(#areaGrad)" points="24.00,172.00 24.00,171.84 38.75,171.68 53.49,171.04 68.24,171.52 82.98,168.48 97.73,172.00 112.47,171.84 127.22,171.84 141.96,171.84 156.71,172.00 171.45,172.00 186.20,171.84 200.94,171.52 215.69,170.88 230.43,171.84 245.18,170.88 259.92,168.80 274.67,163.52 289.41,171.36 304.16,171.52 318.90,171.20 333.65,168.16 348.39,161.60 363.14,151.20 377.88,141.44 392.63,168.48 407.37,129.60 422.12,98.08 436.86,104.48 451.61,95.52 466.35,153.92 481.10,136.96 495.84,67.20 510.59,146.72 525.33,112.96 540.08,143.04 554.82,144.48 569.57,160.00 584.31,146.40 599.06,159.36 613.80,141.28 628.55,122.88 643.29,130.40 658.04,149.12 672.78,144.64 687.53,109.44 702.27,98.08 717.02,92.80 731.76,92.32 746.51,65.28 761.25,153.60 776.00,125.28 776.00,172.00">
+<animate attributeName="opacity" values="0.88;1;0.88" dur="11s" repeatCount="indefinite"/>
+</polygon>
+<!-- Top line -->
+<polyline fill="none" stroke="url(#lineGrad)" stroke-width="1.6" stroke-linejoin="round" points="24.00,171.84 38.75,171.68 53.49,171.04 68.24,171.52 82.98,168.48 97.73,172.00 112.47,171.84 127.22,171.84 141.96,171.84 156.71,172.00 171.45,172.00 186.20,171.84 200.94,171.52 215.69,170.88 230.43,171.84 245.18,170.88 259.92,168.80 274.67,163.52 289.41,171.36 304.16,171.52 318.90,171.20 333.65,168.16 348.39,161.60 363.14,151.20 377.88,141.44 392.63,168.48 407.37,129.60 422.12,98.08 436.86,104.48 451.61,95.52 466.35,153.92 481.10,136.96 495.84,67.20 510.59,146.72 525.33,112.96 540.08,143.04 554.82,144.48 569.57,160.00 584.31,146.40 599.06,159.36 613.80,141.28 628.55,122.88 643.29,130.40 658.04,149.12 672.78,144.64 687.53,109.44 702.27,98.08 717.02,92.80 731.76,92.32 746.51,65.28 761.25,153.60 776.00,125.28"/>
+
+<!-- Playhead sweep -->
+<rect x="-60" y="56" width="60" height="120" fill="url(#playhead)">
+<animate attributeName="x" from="-36" to="776" dur="29s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Peak marker at week 50 (index 49, value 667) -->
+<circle cx="746.51" cy="65.28" r="3" fill="#ffffff" stroke="#58a6ff" stroke-width="1.4">
+<animate attributeName="r" values="3;5;3" dur="3.7s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0.95;0.55;0.95" dur="3.7s" repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- Peak label outside clip so it's fully visible -->
+<text x="746.51" y="59" font-size="9" fill="#8b949e" text-anchor="end">peak week 667</text>
+
+<!-- Chart caption row -->
+<text x="24" y="186" font-size="10" fill="#8b949e">Weekly contributions · past 12 months</text>
+<text x="776" y="186" font-size="10" fill="#8b949e" text-anchor="end">total 8,374</text>
+
+<!-- ===== METRIC TILES ===== -->
+
+<!-- Tile 1: Longest Streak (24..169) -->
+<rect x="24" y="208" width="145" height="112" rx="5" fill="#11161d" stroke="#161b22" stroke-width="1"/>
+<text x="96.5" y="223" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="middle">Longest Streak</text>
+<text x="96.5" y="236" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
+<text x="96.5" y="268" font-size="32" font-weight="700" fill="#58a6ff" text-anchor="middle">82</text>
+<!-- Streak track: 82/365 -->
+<rect x="34" y="286" width="125" height="10" rx="3" fill="#161b22"/>
+<rect x="34" y="286" width="28.08" height="10" rx="3" fill="#58a6ff" opacity="0.9">
+<animate attributeName="opacity" values="0.95;0.65;0.95" dur="7s" repeatCount="indefinite"/>
+</rect>
+<!-- Tick marks at 90, 180, 273, 365 days -->
+<line x1="64.82" y1="297" x2="64.82" y2="300" stroke="#6e7681" stroke-width="1"/>
+<line x1="95.64" y1="297" x2="95.64" y2="300" stroke="#6e7681" stroke-width="1"/>
+<line x1="127.49" y1="297" x2="127.49" y2="300" stroke="#6e7681" stroke-width="1"/>
+<line x1="159" y1="297" x2="159" y2="300" stroke="#6e7681" stroke-width="1"/>
+<text x="96.5" y="314" font-size="9" fill="#6e7681" text-anchor="middle">consecutive days of 365</text>
+
+<!-- Tile 2: Days Active (176..321) -->
+<rect x="176" y="208" width="145" height="112" rx="5" fill="#11161d" stroke="#161b22" stroke-width="1"/>
+<text x="248.5" y="223" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="middle">Days Active</text>
+<text x="248.5" y="236" font-size="9" fill="#6e7681" text-anchor="middle">30 Days</text>
+<text x="248.5" y="268" font-size="32" font-weight="700" fill="#58a6ff" text-anchor="middle">29</text>
+<!-- 30-dot grid: 6 cols x 5 rows, all filled except row 1 col 1 (index 7 in last 30) -->
+<circle cx="231" cy="282" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle cx="238" cy="282" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.13s" repeatCount="indefinite"/></circle>
+<circle cx="245" cy="282" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.26s" repeatCount="indefinite"/></circle>
+<circle cx="252" cy="282" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.39s" repeatCount="indefinite"/></circle>
+<circle cx="259" cy="282" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.52s" repeatCount="indefinite"/></circle>
+<circle cx="266" cy="282" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.65s" repeatCount="indefinite"/></circle>
+<circle cx="231" cy="289" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.78s" repeatCount="indefinite"/></circle>
+<circle cx="238" cy="289" r="2" fill="none" stroke="#6e7681" stroke-width="1" opacity="0.5"/>
+<circle cx="245" cy="289" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.04s" repeatCount="indefinite"/></circle>
+<circle cx="252" cy="289" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.17s" repeatCount="indefinite"/></circle>
+<circle cx="259" cy="289" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.30s" repeatCount="indefinite"/></circle>
+<circle cx="266" cy="289" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.43s" repeatCount="indefinite"/></circle>
+<circle cx="231" cy="296" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="238" cy="296" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.69s" repeatCount="indefinite"/></circle>
+<circle cx="245" cy="296" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.82s" repeatCount="indefinite"/></circle>
+<circle cx="252" cy="296" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="1.95s" repeatCount="indefinite"/></circle>
+<circle cx="259" cy="296" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.08s" repeatCount="indefinite"/></circle>
+<circle cx="266" cy="296" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.21s" repeatCount="indefinite"/></circle>
+<circle cx="231" cy="303" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.34s" repeatCount="indefinite"/></circle>
+<circle cx="238" cy="303" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.47s" repeatCount="indefinite"/></circle>
+<circle cx="245" cy="303" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.60s" repeatCount="indefinite"/></circle>
+<circle cx="252" cy="303" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.73s" repeatCount="indefinite"/></circle>
+<circle cx="259" cy="303" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.86s" repeatCount="indefinite"/></circle>
+<circle cx="266" cy="303" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="2.99s" repeatCount="indefinite"/></circle>
+<circle cx="231" cy="310" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="3.12s" repeatCount="indefinite"/></circle>
+<circle cx="238" cy="310" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="3.25s" repeatCount="indefinite"/></circle>
+<circle cx="245" cy="310" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="3.38s" repeatCount="indefinite"/></circle>
+<circle cx="252" cy="310" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="3.51s" repeatCount="indefinite"/></circle>
+<circle cx="259" cy="310" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="3.64s" repeatCount="indefinite"/></circle>
+<circle cx="266" cy="310" r="2" fill="#58a6ff"><animate attributeName="opacity" values="0.75;1;0.75" dur="3.7s" begin="0.07s" repeatCount="indefinite"/></circle>
+
+<!-- Tile 3: Languages (328..473) -->
+<rect x="328" y="208" width="145" height="112" rx="5" fill="#11161d" stroke="#161b22" stroke-width="1"/>
+<text x="400.5" y="223" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="middle">Languages</text>
+<text x="400.5" y="236" font-size="9" fill="#6e7681" text-anchor="middle">30 Days</text>
+<text x="400.5" y="268" font-size="32" font-weight="700" fill="#58a6ff" text-anchor="middle">6</text>
+<!-- Stacked bar background -->
+<rect x="338" y="290" width="125" height="12" rx="3" fill="#161b22"/>
+<!-- Segments (proportional to commit counts) -->
+<rect x="338.00" y="290" width="90.13" height="12" fill="#3178c6"/>
+<rect x="428.13" y="290" width="15.07" height="12" fill="#3572a5"/>
+<rect x="443.20" y="290" width="10.91" height="12" fill="#00add8"/>
+<rect x="454.11" y="290" width="6.60" height="12" fill="#e34c26"/>
+<rect x="460.71" y="290" width="1.72" height="12" fill="#89e051"/>
+<rect x="462.43" y="290" width="0.57" height="12" fill="#f1e05a"/>
+<!-- Shine sweep -->
+<g clip-path="url(#langClip)">
+<rect x="338" y="290" width="40" height="12" fill="url(#shine)">
+<animate attributeName="x" from="298" to="463" dur="4.3s" repeatCount="indefinite"/>
+</rect>
+</g>
+<text x="400.5" y="314" font-size="9" fill="#6e7681" text-anchor="middle">TypeScript 72% · 5 more</text>
+
+<!-- Tile 4: PRs Merged (479..624) -->
+<rect x="479" y="208" width="145" height="112" rx="5" fill="#11161d" stroke="#161b22" stroke-width="1"/>
+<text x="551.5" y="223" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="middle">PRs Merged</text>
+<text x="551.5" y="236" font-size="9" fill="#6e7681" text-anchor="middle">All Time</text>
+<text x="551.5" y="268" font-size="32" font-weight="700" fill="#a371f7" text-anchor="middle">1823</text>
+<!-- Brick grid: 20 bricks, 18 full + 1 partial (23%) + 1 empty -->
+<!-- Row 0 (y=288): all 10 full -->
+<rect x="492.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="504.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="0.15s" repeatCount="indefinite"/></rect>
+<rect x="516.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="0.30s" repeatCount="indefinite"/></rect>
+<rect x="528.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="0.45s" repeatCount="indefinite"/></rect>
+<rect x="540.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="0.60s" repeatCount="indefinite"/></rect>
+<rect x="552.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="0.75s" repeatCount="indefinite"/></rect>
+<rect x="564.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="0.90s" repeatCount="indefinite"/></rect>
+<rect x="576.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="588.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="1.20s" repeatCount="indefinite"/></rect>
+<rect x="600.5" y="288" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="1.35s" repeatCount="indefinite"/></rect>
+<!-- Row 1 (y=295): cols 0-7 full, col 8 partial, col 9 empty -->
+<rect x="492.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="1.50s" repeatCount="indefinite"/></rect>
+<rect x="504.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="1.65s" repeatCount="indefinite"/></rect>
+<rect x="516.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="1.80s" repeatCount="indefinite"/></rect>
+<rect x="528.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="1.95s" repeatCount="indefinite"/></rect>
+<rect x="540.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="552.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="2.25s" repeatCount="indefinite"/></rect>
+<rect x="564.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="2.40s" repeatCount="indefinite"/></rect>
+<rect x="576.5" y="295" width="10" height="5" rx="1" fill="#a371f7"><animate attributeName="opacity" values="0.85;1;0.85" dur="5.3s" begin="2.55s" repeatCount="indefinite"/></rect>
+<!-- Partial brick (col 8): outline + 23% fill -->
+<rect x="588.5" y="295" width="10" height="5" rx="1" fill="none" stroke="#a371f7" stroke-width="1" opacity="0.6"/>
+<rect x="588.5" y="295" width="2.3" height="5" rx="1" fill="#a371f7" opacity="0.9"/>
+<!-- Empty brick (col 9) -->
+<rect x="600.5" y="295" width="10" height="5" rx="1" fill="none" stroke="#6e7681" stroke-width="1" opacity="0.35"/>
+<text x="551.5" y="314" font-size="9" fill="#6e7681" text-anchor="middle">each brick = 100 merged</text>
+
+<!-- Tile 5: Commits (631..776) -->
+<rect x="631" y="208" width="145" height="112" rx="5" fill="#11161d" stroke="#161b22" stroke-width="1"/>
+<text x="703.5" y="223" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="middle">Commits</text>
+<text x="703.5" y="236" font-size="9" fill="#6e7681" text-anchor="middle">30 Days</text>
+<text x="703.5" y="268" font-size="32" font-weight="700" fill="#58a6ff" text-anchor="middle">848</text>
+<!-- Sparkline: last 30 days from calendar. baseline y=306, max h=26 -->
+<rect x="641.58" y="295.50" width="3" height="10.50" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="645.75" y="305.50" width="3" height="0.5" fill="#58a6ff" opacity="0.85"/>
+<rect x="649.92" y="280.00" width="3" height="26.00" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.22s" repeatCount="indefinite"/></rect>
+<rect x="654.08" y="293.43" width="3" height="12.57" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.33s" repeatCount="indefinite"/></rect>
+<rect x="658.25" y="301.73" width="3" height="4.27" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.44s" repeatCount="indefinite"/></rect>
+<rect x="662.42" y="304.29" width="3" height="1.71" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.55s" repeatCount="indefinite"/></rect>
+<rect x="666.58" y="300.63" width="3" height="5.37" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.66s" repeatCount="indefinite"/></rect>
+<rect x="670.75" y="305.50" width="3" height="0.5" fill="#6e7681" opacity="0.35"/>
+<rect x="674.92" y="297.58" width="3" height="8.42" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.88s" repeatCount="indefinite"/></rect>
+<rect x="679.08" y="299.41" width="3" height="6.59" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="0.99s" repeatCount="indefinite"/></rect>
+<rect x="683.25" y="280.61" width="3" height="25.39" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="1.10s" repeatCount="indefinite"/></rect>
+<rect x="687.42" y="294.53" width="3" height="11.47" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="1.21s" repeatCount="indefinite"/></rect>
+<rect x="691.58" y="291.72" width="3" height="14.28" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="1.32s" repeatCount="indefinite"/></rect>
+<rect x="695.75" y="290.74" width="3" height="15.26" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="1.43s" repeatCount="indefinite"/></rect>
+<rect x="699.92" y="305.15" width="3" height="0.85" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="1.54s" repeatCount="indefinite"/></rect>
+<rect x="704.08" y="305.50" width="3" height="0.5" fill="#6e7681" opacity="0.35"/>
+<rect x="708.25" y="305.50" width="3" height="0.5" fill="#58a6ff" opacity="0.85"/>
+<rect x="712.42" y="305.02" width="3" height="0.98" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="1.87s" repeatCount="indefinite"/></rect>
+<rect x="716.58" y="297.45" width="3" height="8.55" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="1.98s" repeatCount="indefinite"/></rect>
+<rect x="720.75" y="303.31" width="3" height="2.69" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="2.09s" repeatCount="indefinite"/></rect>
+<rect x="724.92" y="305.50" width="3" height="0.5" fill="#58a6ff" opacity="0.85"/>
+<rect x="729.08" y="302.22" width="3" height="3.78" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="2.31s" repeatCount="indefinite"/></rect>
+<rect x="733.25" y="305.50" width="3" height="0.5" fill="#58a6ff" opacity="0.85"/>
+<rect x="737.42" y="304.41" width="3" height="1.59" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="2.53s" repeatCount="indefinite"/></rect>
+<rect x="741.58" y="292.94" width="3" height="13.06" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="2.64s" repeatCount="indefinite"/></rect>
+<rect x="745.75" y="302.34" width="3" height="3.66" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="2.75s" repeatCount="indefinite"/></rect>
+<rect x="749.92" y="305.50" width="3" height="0.5" fill="#58a6ff" opacity="0.85"/>
+<rect x="754.08" y="302.95" width="3" height="3.05" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="2.97s" repeatCount="indefinite"/></rect>
+<rect x="758.25" y="299.41" width="3" height="6.59" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="3.08s" repeatCount="indefinite"/></rect>
+<rect x="762.42" y="303.07" width="3" height="2.93" fill="#58a6ff" opacity="0.85"><animate attributeName="opacity" values="0.65;1;0.65" dur="4.7s" begin="3.19s" repeatCount="indefinite"/></rect>
+<line x1="641" y1="306.5" x2="766" y2="306.5" stroke="#30363d" stroke-width="1"/>
+<text x="703.5" y="316" font-size="9" fill="#6e7681" text-anchor="middle">daily · last 30 days</text>
+
 </svg>
