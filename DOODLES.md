@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 17, 2026 — Klondike Gold Rush — 130th Anniversary (August 16, 1896)
+
+<img src="./doodle-archive/2026/08/2026-08-17-060603.svg" width="800" alt="Daily doodle for August 16, 2026 — the 130th anniversary of the Klondike Gold Rush discovery. On the left half, a prospector's gold pan holds dark stream water that slowly swirls; heavier gold flakes and nuggets settle glinting at the bottom, a wooden handle juts out to the right, and behind the pan a dim mountain ridge sits under a curling green aurora borealis and a scatter of stars. On the right, a huge cream AUGUST 16, 2026 headline underlined by a gold-to-aurora sweep, a gold KLONDIKE GOLD RUSH · 130 YEARS subhead trailed by cream · SINCE 1896, an italic amber BONANZA CREEK · YUKON · RABBIT CREEK, RENAMED tertiary, a dim CARMACK · SKOOKUM JIM · DAWSON CHARLIE roster, and a Georgia-italic 'strange things done in the midnight sun.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 16 August 1896, George Carmack, Skookum Jim Mason, and Dawson Charlie found coarse gold on Rabbit Creek — soon renamed Bonanza Creek — in the Yukon's Klondike region. Word travelled at the speed of steamships, and by the following summer roughly 100,000 stampeders had set out for Dawson City by way of the Chilkoot and White Pass trails, each required by the North-West Mounted Police to haul in a full year of provisions. Fewer than 40,000 arrived; only a few thousand ever struck pay dirt. The rush lasted three winters and rewrote the map of the Yukon before it collapsed almost as fast as it began. 130 years today.
+
+The left half is a prospector's gold pan seen from above at a raked angle: dark stream water slowly rocks around its rim while heavier gold flakes and nuggets settle glinting at the bottom, with a distant mountain ridge and a shimmer of aurora borealis behind. On the right, a large AUGUST 16, 2026 headline anchors a gold KLONDIKE GOLD RUSH · 130 YEARS subhead, an italic BONANZA CREEK · YUKON · RABBIT CREEK, RENAMED tertiary, a dim CARMACK · SKOOKUM JIM · DAWSON CHARLIE roster, and a Georgia-italic caption from Robert Service at the base.
+
+</details>
+
+---
+
 ## August 16, 2026 — Panama Canal — 112th Anniversary (August 15, 1914)
 
 <img src="./doodle-archive/2026/08/2026-08-16-060434.svg" width="800" alt="Daily doodle for August 15, 2026 — the 112th anniversary of the Panama Canal opening. On the left half, a cargo ship silhouette glides through a moonlit lock chamber at night, flanked by two concrete lock gates with warm pulsing lanterns; a moon and stars sit above and ripples move across the dark water. On the right, a huge cream AUGUST 15, 2026 headline underlined by a cyan-to-amber sweep, a cyan PANAMA CANAL · 112 YEARS subhead trailed by cream · SINCE 1914, an italic amber 50 MILES · ATLANTIC TO PACIFIC · SS ANCON, FIRST TRANSIT tertiary, a dim GATUN · PEDRO MIGUEL · MIRAFLORES · 85 FT LIFT roster, and a Georgia-italic 'a path between the seas.' caption at the base.">
