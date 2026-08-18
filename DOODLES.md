@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 18, 2026 — First Compact Disc — 44th Anniversary (August 17, 1982)
+
+<img src="./doodle-archive/2026/08/2026-08-18-060527.svg" width="800" alt="Daily doodle for August 17, 2026 — the 44th anniversary of the first mass-produced compact disc. On the left half, a mirrored silver CD spins slowly on a dark backdrop; iridescent rainbow bands sweep across its surface, faint concentric grooves catch the light, and a small red laser dot pulses at the read radius; the center clamp ring and hole sit at the middle with a rotating ABBA · THE VISITORS label. On the right, a huge cream AUGUST 17, 2026 headline underlined by a rainbow sweep, a silver COMPACT DISC · 44 YEARS subhead trailed by cream · SINCE 1982, an italic amber PHILIPS · SONY · LANGENHAGEN · ABBA · THE VISITORS tertiary, a dim cyan 16-BIT · 44.1 kHz · 74 MIN · RED BOOK roster, and a Georgia-italic 'the sound the future arrived on.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 17 August 1982, the first mass-produced compact disc rolled off the line at the joint Philips/Sony plant in Langenhagen, near Hanover — a silver polycarbonate coin encoding 16-bit, 44.1 kHz audio in a spiral of pits read by an infrared laser. The disc chosen for that first press was ABBA's The Visitors. Within a decade the format had displaced vinyl at the top of the charts, made an audible mess of the loudness wars, and given a generation the phrase "skipping track." The Red Book standard Philips and Sony had inked in 1980 is still, word for word, what your car stereo expects. Forty-four years today.
+
+The left half is a compact disc face-on: a mirrored silver platter spins slowly on a dark backdrop, an iridescent rainbow shimmer sweeping across its surface at its own pace and a small red laser dot pulsing at the read radius. Faint concentric grooves catch the light, and the center clamp ring and hole sit at the middle with a rotating "ABBA · THE VISITORS" label. On the right, a large AUGUST 17, 2026 headline anchors a silver COMPACT DISC · 44 YEARS subhead, an italic PHILIPS · SONY · LANGENHAGEN · ABBA · THE VISITORS tertiary, a dim 16-BIT · 44.1 kHz · 74 MIN · RED BOOK spec line, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 17, 2026 — Klondike Gold Rush — 130th Anniversary (August 16, 1896)
 
 <img src="./doodle-archive/2026/08/2026-08-17-060603.svg" width="800" alt="Daily doodle for August 16, 2026 — the 130th anniversary of the Klondike Gold Rush discovery. On the left half, a prospector's gold pan holds dark stream water that slowly swirls; heavier gold flakes and nuggets settle glinting at the bottom, a wooden handle juts out to the right, and behind the pan a dim mountain ridge sits under a curling green aurora borealis and a scatter of stars. On the right, a huge cream AUGUST 16, 2026 headline underlined by a gold-to-aurora sweep, a gold KLONDIKE GOLD RUSH · 130 YEARS subhead trailed by cream · SINCE 1896, an italic amber BONANZA CREEK · YUKON · RABBIT CREEK, RENAMED tertiary, a dim CARMACK · SKOOKUM JIM · DAWSON CHARLIE roster, and a Georgia-italic 'strange things done in the midnight sun.' caption at the base.">
