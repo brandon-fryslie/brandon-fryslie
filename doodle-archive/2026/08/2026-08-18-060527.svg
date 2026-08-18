@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: First Compact Disc — 44th Anniversary (August 17, 1982) -->
+<!-- about:
+On 17 August 1982, the first mass-produced compact disc rolled off the line at the joint Philips/Sony plant in Langenhagen, near Hanover — a silver polycarbonate coin encoding 16-bit, 44.1 kHz audio in a spiral of pits read by an infrared laser. The disc chosen for that first press was ABBA's The Visitors. Within a decade the format had displaced vinyl at the top of the charts, made an audible mess of the loudness wars, and given a generation the phrase &#8220;skipping track.&#8221; The Red Book standard Philips and Sony had inked in 1980 is still, word for word, what your car stereo expects. Forty-four years today.
+
+The left half is a compact disc face-on: a mirrored silver platter spins slowly on a dark backdrop, an iridescent rainbow shimmer sweeping across its surface at its own pace and a small red laser dot pulsing at the read radius. Faint concentric grooves catch the light, and the center clamp ring and hole sit at the middle with a rotating &#8220;ABBA · THE VISITORS&#8221; label. On the right, a large AUGUST 17, 2026 headline anchors a silver COMPACT DISC · 44 YEARS subhead, an italic PHILIPS · SONY · LANGENHAGEN · ABBA · THE VISITORS tertiary, a dim 16-BIT · 44.1 kHz · 74 MIN · RED BOOK spec line, and a Georgia-italic caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for August 17, 2026 — the 44th anniversary of the first mass-produced compact disc. On the left half, a mirrored silver CD spins slowly on a dark backdrop; iridescent rainbow bands sweep across its surface, faint concentric grooves catch the light, and a small red laser dot pulses at the read radius; the center clamp ring and hole sit at the middle with a rotating ABBA · THE VISITORS label. On the right, a huge cream AUGUST 17, 2026 headline underlined by a rainbow sweep, a silver COMPACT DISC · 44 YEARS subhead trailed by cream · SINCE 1982, an italic amber PHILIPS · SONY · LANGENHAGEN · ABBA · THE VISITORS tertiary, a dim cyan 16-BIT · 44.1 kHz · 74 MIN · RED BOOK roster, and a Georgia-italic 'the sound the future arrived on.' caption at the base.">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0a1220"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ff6b9d" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#ff6b9d" stop-opacity="1"/>
+      <stop offset="38%"  stop-color="#ffd166" stop-opacity="1"/>
+      <stop offset="58%"  stop-color="#7fd4b8" stop-opacity="1"/>
+      <stop offset="80%"  stop-color="#7ec8ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="discBase" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0%"   stop-color="#f5f5fa"/>
+      <stop offset="65%"  stop-color="#c9c9d6"/>
+      <stop offset="100%" stop-color="#8a8a99"/>
+    </radialGradient>
+    <radialGradient id="labelGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#1a2338"/>
+      <stop offset="100%" stop-color="#0f1626"/>
+    </radialGradient>
+    <radialGradient id="laserGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ff5252" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#ff2020" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff2020" stop-opacity="0"/>
+    </radialGradient>
+    <symbol id="star" overflow="visible">
+      <circle r="0.85" fill="#e6f2f7" opacity="0.7"/>
+    </symbol>
+    <clipPath id="discRingClip">
+      <!-- annulus from r=34 (label edge) to r=85 (disc edge) -->
+      <path d="M -85 0 A 85 85 0 1 0 85 0 A 85 85 0 1 0 -85 0 Z M -34 0 A 34 34 0 1 1 34 0 A 34 34 0 1 1 -34 0 Z" fill-rule="evenodd"/>
+    </clipPath>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <g>
+    <use href="#star" x="18"  y="18"/>
+    <use href="#star" x="46"  y="8"/>
+    <use href="#star" x="86"  y="24"/>
+    <use href="#star" x="128" y="10"/>
+    <use href="#star" x="298" y="14"/>
+    <use href="#star" x="328" y="26"/>
+    <use href="#star" x="356" y="8"/>
+    <use href="#star" x="42"  y="184"/>
+    <use href="#star" x="326" y="182"/>
+    <use href="#star" x="12"  y="112"/>
+    <use href="#star" x="352" y="118"/>
+  </g>
+
+  <!-- ==================== DISC (LEFT) ==================== -->
+  <g transform="translate(170 100)">
+    <!-- Soft shadow behind disc -->
+    <ellipse cx="4" cy="6" rx="88" ry="88" fill="#000" opacity="0.55"/>
+
+    <!-- Disc base -->
+    <circle r="85" fill="url(#discBase)"/>
+
+    <!-- Iridescent rainbow shimmer, clipped to annulus, rotating (soft) -->
+    <g clip-path="url(#discRingClip)">
+      <g opacity="0.28">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="19s" repeatCount="indefinite"/>
+        <path d="M 0 0 L 85 0 A 85 85 0 0 1 42.5 73.6 Z" fill="#ff6b9d"/>
+        <path d="M 0 0 L 42.5 73.6 A 85 85 0 0 1 -42.5 73.6 Z" fill="#ffd166"/>
+        <path d="M 0 0 L -42.5 73.6 A 85 85 0 0 1 -85 0 Z" fill="#7fd4b8"/>
+        <path d="M 0 0 L -85 0 A 85 85 0 0 1 -42.5 -73.6 Z" fill="#7ec8ff"/>
+        <path d="M 0 0 L -42.5 -73.6 A 85 85 0 0 1 42.5 -73.6 Z" fill="#c084fc"/>
+        <path d="M 0 0 L 42.5 -73.6 A 85 85 0 0 1 85 0 Z" fill="#ff8a4c"/>
+      </g>
+    </g>
+
+    <!-- Concentric grooves (subtle rings, visible on silver) -->
+    <g fill="none" stroke="#3a3a48" opacity="0.55">
+      <circle r="40" stroke-width="0.4"/>
+      <circle r="46" stroke-width="0.35"/>
+      <circle r="52" stroke-width="0.4"/>
+      <circle r="58" stroke-width="0.35"/>
+      <circle r="64" stroke-width="0.4"/>
+      <circle r="70" stroke-width="0.35"/>
+      <circle r="76" stroke-width="0.4"/>
+      <circle r="82" stroke-width="0.35"/>
+    </g>
+
+    <!-- Bright specular rainbow arc — a narrow sweeping band -->
+    <g clip-path="url(#discRingClip)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite"/>
+        <!-- narrow ~28° bright band, softened by two flanking bands -->
+        <path d="M 0 0 L 85 0 A 85 85 0 0 1 74.9 40.5 Z" fill="#ffffff" opacity="0.55"/>
+        <path d="M 0 0 L 74.9 40.5 A 85 85 0 0 1 60.1 60.1 Z" fill="#ffd166" opacity="0.35"/>
+        <path d="M 0 0 L 60.1 60.1 A 85 85 0 0 1 40.5 74.9 Z" fill="#ff6b9d" opacity="0.28"/>
+        <path d="M 0 0 L 85 0 A 85 85 0 0 0 74.9 -40.5 Z" fill="#7ec8ff" opacity="0.35"/>
+        <path d="M 0 0 L 74.9 -40.5 A 85 85 0 0 0 60.1 -60.1 Z" fill="#c084fc" opacity="0.28"/>
+      </g>
+    </g>
+
+    <!-- Second narrow band, opposite side, slower rotation -->
+    <g clip-path="url(#discRingClip)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="23s" repeatCount="indefinite"/>
+        <path d="M 0 0 L 85 0 A 85 85 0 0 1 74.9 40.5 Z" fill="#ffffff" opacity="0.35"/>
+        <path d="M 0 0 L 74.9 40.5 A 85 85 0 0 1 60.1 60.1 Z" fill="#7fd4b8" opacity="0.3"/>
+      </g>
+    </g>
+
+    <!-- Label area -->
+    <circle r="34" fill="url(#labelGrad)"/>
+    <circle r="34" fill="none" stroke="#4b5b78" stroke-width="0.7" opacity="0.85"/>
+
+    <!-- Label text - rotates with disc -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="41s" repeatCount="indefinite"/>
+      <text y="-16" text-anchor="middle"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            font-size="8" font-weight="700" fill="#f5efe0" letter-spacing="2">ABBA</text>
+      <text y="24" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif"
+            font-size="7" fill="#ffd166" font-style="italic" letter-spacing="0.8">THE VISITORS</text>
+      <text y="-6" text-anchor="middle"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            font-size="4" fill="#7fd4b8" letter-spacing="0.6" opacity="0.75">POLAR · 1981</text>
+    </g>
+
+    <!-- Inner clamp ring -->
+    <circle r="16" fill="#e6e6ec"/>
+    <circle r="16" fill="none" stroke="#7a7a8c" stroke-width="0.6"/>
+
+    <!-- Center spindle hole -->
+    <circle r="9" fill="#0d1117"/>
+    <circle r="9" fill="none" stroke="#6a6a78" stroke-width="0.4"/>
+
+    <!-- Laser read dot (pulsing) at read radius -->
+    <g transform="translate(50 32)">
+      <circle r="7" fill="url(#laserGlow)">
+        <animate attributeName="opacity" values="0.35;1;0.35" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.5" fill="#ffe4e4">
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Outer rim highlight -->
+    <circle r="85" fill="none" stroke="#ffffff" stroke-width="0.6" opacity="0.5"/>
+    <circle r="84" fill="none" stroke="#4a4a55" stroke-width="0.4" opacity="0.7"/>
+  </g>
+
+  <!-- ==================== TEXT PANEL (RIGHT) ==================== -->
+  <text x="386" y="66"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="34" font-weight="800" fill="#f5efe0" letter-spacing="1">
+    AUGUST 17, 2026
+  </text>
+
+  <rect x="386" y="76" width="390" height="3" fill="url(#underlineGrad)">
+    <animate attributeName="x" values="386;396;386" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="386" y="106"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="17" font-weight="700" letter-spacing="1.2">
+    <tspan fill="#e6e6ec">COMPACT DISC</tspan><tspan fill="#f5efe0" opacity="0.7"> · 44 YEARS</tspan>
+  </text>
+
+  <text x="386" y="128"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-style="italic" fill="#ffb84d" letter-spacing="1" opacity="0.95">
+    PHILIPS · SONY · LANGENHAGEN · ABBA · THE VISITORS
+  </text>
+
+  <text x="386" y="146"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" fill="#7fd4b8" letter-spacing="1" opacity="0.9">
+    16-BIT · 44.1 kHz · 74 MIN · RED BOOK
+  </text>
+
+  <text x="386" y="178"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="13" font-style="italic" fill="#f5efe0" opacity="0.9">
+    &#8220;the sound the future arrived on.&#8221;
+  </text>
+</svg>
