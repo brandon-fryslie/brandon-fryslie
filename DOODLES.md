@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 19, 2026 — Discovery of Helium — 158th Anniversary (August 18, 1868)
+
+<img src="./doodle-archive/2026/08/2026-08-19-060511.svg" width="800" alt="Daily doodle for August 18, 2026 — the 158th anniversary of the discovery of helium. On the left half, a total solar eclipse: a black lunar disc silhouetted against a pale silver corona whose streamers pulse gently, ringed by a coral-pink chromosphere with two prominence arcs bowing off the limb. Below the eclipse a long horizontal solar spectrum runs violet-to-red with one bright vertical marker snapped to the yellow band, labelled D3 · 587.49 nm — the helium line. On the right, a huge cream AUGUST 18, 2026 headline underlined by a sunrise sweep, a gold HELIUM · 158 YEARS subhead trailed by cream · SINCE 1868, an italic amber JANSSEN · LOCKYER · GUNTUR, INDIA tertiary, a dim cyan He · Z = 2 · SUN'S GIFT roster, and a Georgia-italic 'the first element discovered off-Earth.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 18 August 1868, during a total solar eclipse tracked across India, the French astronomer Pierre Janssen turned a spectroscope on the sun's chromosphere from Guntur and saw an unfamiliar bright yellow line at 587.49 nanometres. Two months later, back in England, Norman Lockyer picked the same line out of the daytime spectrum with a modified instrument and, convinced it belonged to no element then known on Earth, named it helium after Helios, the sun. It was the first — and still the only — element discovered off-Earth before it was found here, twenty-seven years before William Ramsay isolated it from uranium ore. Every party balloon, MRI scanner, and rocket-fuel purge line since owes its name to that morning over Guntur.
+
+The left half is the eclipse itself: a black lunar disc silhouetted against a pale silver corona whose streamers gently pulse, ringed by a coral-pink chromosphere with two prominence arcs bowing off the limb. Below it, a long horizontal solar spectrum runs violet-to-red with one bright vertical marker snapped to the yellow band — the D3 line labelled "587.49 nm." On the right, a large AUGUST 18, 2026 headline anchors a HELIUM · 158 YEARS subhead, an italic JANSSEN · LOCKYER · GUNTUR, INDIA tertiary, a dim He · Z = 2 · SUN'S GIFT spec line, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 18, 2026 — First Compact Disc — 44th Anniversary (August 17, 1982)
 
 <img src="./doodle-archive/2026/08/2026-08-18-060527.svg" width="800" alt="Daily doodle for August 17, 2026 — the 44th anniversary of the first mass-produced compact disc. On the left half, a mirrored silver CD spins slowly on a dark backdrop; iridescent rainbow bands sweep across its surface, faint concentric grooves catch the light, and a small red laser dot pulses at the read radius; the center clamp ring and hole sit at the middle with a rotating ABBA · THE VISITORS label. On the right, a huge cream AUGUST 17, 2026 headline underlined by a rainbow sweep, a silver COMPACT DISC · 44 YEARS subhead trailed by cream · SINCE 1982, an italic amber PHILIPS · SONY · LANGENHAGEN · ABBA · THE VISITORS tertiary, a dim cyan 16-BIT · 44.1 kHz · 74 MIN · RED BOOK roster, and a Georgia-italic 'the sound the future arrived on.' caption at the base.">
