@@ -1,18 +1,244 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated March 08, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">23</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">882</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a371f7" stop-opacity="0.65"/>
+      <stop offset="70%" stop-color="#2ea4ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#2ea4ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="segGloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="sparkClip"><rect x="530" y="10" width="240" height="46"/></clipPath>
+    <clipPath id="barClip"><rect x="20" y="140" width="760" height="32"/></clipPath>
+    <clipPath id="streakClip"><rect x="20" y="288" width="240" height="10"/></clipPath>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="0" y="0" width="800" height="360" rx="8" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="359" rx="8" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Header, left -->
+  <text x="20" y="30" font-size="15" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="20" y="48" font-size="11" fill="#7d8590">@brandon-fryslie · Sun, Mar 08, 2026</text>
+
+  <!-- Header, right: 30-day sparkline of daily commits -->
+  <g clip-path="url(#sparkClip)">
+    <!-- baseline -->
+    <line x1="530" y1="55" x2="770" y2="55" stroke="#21262d" stroke-width="1"/>
+    <!-- area under the curve of the last 30 days -->
+    <polygon points="530,55 530,52.39 536.21,49.21 542.41,48.62 548.62,52.10 554.83,50.36 561.03,52.97 567.24,42.24 573.45,19.62 579.66,54.42 585.86,53.26 592.07,54.13 598.28,52.97 604.48,44.84 610.69,30.06 616.90,15.00 623.10,19.05 629.31,35.86 635.52,21.95 641.72,34.99 647.93,38.18 654.14,44.55 660.34,53.26 666.55,48.91 672.76,41.66 678.97,50.36 685.17,46.88 691.38,53.55 697.59,48.91 703.79,43.40 710,30.35 710,55" fill="url(#sparkFill)"/>
+    <!-- contour of last 30 days -->
+    <polyline points="530,52.39 536.21,49.21 542.41,48.62 548.62,52.10 554.83,50.36 561.03,52.97 567.24,42.24 573.45,19.62 579.66,54.42 585.86,53.26 592.07,54.13 598.28,52.97 604.48,44.84 610.69,30.06 616.90,15.00 623.10,19.05 629.31,35.86 635.52,21.95 641.72,34.99 647.93,38.18 654.14,44.55 660.34,53.26 666.55,48.91 672.76,41.66 678.97,50.36 685.17,46.88 691.38,53.55 697.59,48.91 703.79,43.40 710,30.35" fill="none" stroke="#2ea4ff" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Peak marker (day with 138 commits, spark index 14) -->
+    <circle cx="616.90" cy="15" r="2.8" fill="#f0b429">
+      <animate attributeName="r" values="2.8;4.2;2.8" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="1;0.55;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Endpoint dot (today) -->
+    <circle cx="710" cy="30.35" r="2.4" fill="#e6edf3">
+      <animate attributeName="fill-opacity" values="1;0.4;1" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Continuous shimmer across the sparkline -->
+    <rect x="0" y="10" width="70" height="46" fill="url(#sweep)">
+      <animate attributeName="x" from="460" to="770" dur="11s" repeatCount="indefinite"/>
+    </rect>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (9) / TypeScript (7) / Shell (5) / CoffeeScript (4)</text>
+  <!-- Sparkline caption: right-anchored, three own <text> elements so the "889" is standalone -->
+  <text x="530" y="66" font-size="9" fill="#7d8590" letter-spacing="1">LAST 30 DAYS ·</text>
+  <text x="609" y="66" font-size="12" font-weight="700" fill="#e6edf3">889</text>
+  <text x="637" y="66" font-size="10" fill="#7d8590">commits · peak 138</text>
+
+  <!-- ==================== Active Repos breakdown ==================== -->
+  <!-- Section header (own text elements; digits inside are not metric values) -->
+  <text x="20" y="92" font-size="10" fill="#7d8590" letter-spacing="1.4">ACTIVE REPOS · 30 DAYS</text>
+  <text x="780" y="92" font-size="10" fill="#7d8590" letter-spacing="1" text-anchor="end">by commit count · top 6 shown</text>
+
+  <!-- Big value: "10" own text -->
+  <text x="20" y="126" font-size="34" font-weight="700" fill="#a371f7">10</text>
+  <text x="58" y="122" font-size="12" fill="#e6edf3" font-weight="600">repos touched</text>
+  <text x="58" y="136" font-size="10" fill="#7d8590">in the past 30 days</text>
+
+  <!-- Proportional segmented bar: segment WIDTHS ARE THE COMMIT COUNTS. -->
+  <!-- Widths for 760 total: 509,337,69,37,15,12 (sum 979) → 395.1, 261.5, 53.5, 28.7, 11.6, 9.3 -->
+  <g clip-path="url(#barClip)">
+    <!-- Segment 1: oscilla-animator-v2 (509) -->
+    <rect x="20"    y="140" width="395.1" height="32" fill="#a371f7"/>
+    <rect x="20"    y="140" width="395.1" height="16" fill="url(#segGloss)"/>
+    <!-- Segment 2: cc-dump (337) -->
+    <rect x="415.1" y="140" width="261.5" height="32" fill="#2ea4ff"/>
+    <rect x="415.1" y="140" width="261.5" height="16" fill="url(#segGloss)"/>
+    <!-- Segment 3: brandon-fryslie (69) -->
+    <rect x="676.6" y="140" width="53.5"  height="32" fill="#3fb950"/>
+    <rect x="676.6" y="140" width="53.5"  height="16" fill="url(#segGloss)"/>
+    <!-- Segment 4: dotfiles (37) -->
+    <rect x="730.1" y="140" width="28.7"  height="32" fill="#f0b429"/>
+    <rect x="730.1" y="140" width="28.7"  height="16" fill="url(#segGloss)"/>
+    <!-- Segment 5: links-issue-tracker (15) -->
+    <rect x="758.8" y="140" width="11.6"  height="32" fill="#f778ba"/>
+    <rect x="758.8" y="140" width="11.6"  height="16" fill="url(#segGloss)"/>
+    <!-- Segment 6: cc-viz (12) -->
+    <rect x="770.4" y="140" width="9.6"   height="32" fill="#56d4dd"/>
+    <rect x="770.4" y="140" width="9.6"   height="16" fill="url(#segGloss)"/>
+
+    <!-- Continuous shimmer sweep across the whole bar -->
+    <rect x="0" y="140" width="110" height="32" fill="url(#sweep)" opacity="0.85">
+      <animate attributeName="x" from="-110" to="780" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- Fine outline unifying the bar -->
+  <rect x="20" y="140" width="760" height="32" rx="3" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Labels *inside* the two wide segments -->
+  <text x="30"  y="158" font-size="12" font-weight="700" fill="#ffffff">oscilla-animator-v2</text>
+  <text x="30"  y="169" font-size="10" fill="#ffffff" opacity="0.85">509</text>
+  <text x="425" y="158" font-size="12" font-weight="700" fill="#0d1117">cc-dump</text>
+  <text x="425" y="169" font-size="10" fill="#0d1117" opacity="0.85">337</text>
+
+  <!-- Legend row for the four narrow segments (own text elements per count) -->
+  <g font-size="10" fill="#e6edf3">
+    <rect x="20"  y="185" width="8" height="8" rx="1" fill="#3fb950"/>
+    <text x="32"  y="193">brandon-fryslie</text>
+    <text x="123" y="193" fill="#7d8590">69</text>
+
+    <rect x="200" y="185" width="8" height="8" rx="1" fill="#f0b429"/>
+    <text x="212" y="193">dotfiles</text>
+    <text x="260" y="193" fill="#7d8590">37</text>
+
+    <rect x="380" y="185" width="8" height="8" rx="1" fill="#f778ba"/>
+    <text x="392" y="193">links-issue-tracker</text>
+    <text x="502" y="193" fill="#7d8590">15</text>
+
+    <rect x="580" y="185" width="8" height="8" rx="1" fill="#56d4dd"/>
+    <text x="592" y="193">cc-viz</text>
+    <text x="631" y="193" fill="#7d8590">12</text>
+  </g>
+
+  <!-- ==================== Bottom chip row ==================== -->
+  <!-- Divider -->
+  <line x1="20" y1="210" x2="780" y2="210" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Chip 1: Longest Streak (x=20..260) -->
+  <text x="20" y="230" font-size="10" fill="#7d8590" letter-spacing="1.4">LONGEST STREAK · 1 YEAR</text>
+  <text x="20" y="268" font-size="34" font-weight="700" fill="#f0b429">59</text>
+  <text x="60" y="256" font-size="11" fill="#e6edf3" font-weight="600">consecutive</text>
+  <text x="60" y="269" font-size="11" fill="#7d8590">days on GitHub</text>
+  <!-- 365-day timeline: streak is 16.2% of the year, positioned in the recent-active band -->
+  <rect x="20" y="288" width="240" height="10" rx="2" fill="#21262d"/>
+  <g clip-path="url(#streakClip)">
+    <!-- Streak-length band: 240 * 59/365 = 38.79 wide; place ending near "today" (right edge) -->
+    <rect x="199" y="288" width="38.8" height="10" rx="2" fill="#f0b429">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Faint glowing sweep across the whole strip -->
+    <rect x="-50" y="288" width="45" height="10" fill="url(#sweep)" opacity="0.6">
+      <animate attributeName="x" from="-50" to="260" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <line x1="20" y1="303" x2="260" y2="303" stroke="#21262d" stroke-width="1"/>
+  <text x="20"  y="314" font-size="8" fill="#7d8590">1y ago</text>
+  <text x="260" y="314" font-size="8" fill="#7d8590" text-anchor="end">today</text>
+  <text x="20"  y="332" font-size="10" fill="#7d8590">16.2% of the year, unbroken</text>
+
+  <!-- Chip 2: Days Active (x=280..520) -->
+  <text x="280" y="230" font-size="10" fill="#7d8590" letter-spacing="1.4">DAYS ACTIVE · 30 DAYS</text>
+  <text x="280" y="268" font-size="34" font-weight="700" fill="#3fb950">31</text>
+  <text x="320" y="256" font-size="11" fill="#e6edf3" font-weight="600">of 30 days</text>
+  <text x="320" y="269" font-size="11" fill="#7d8590">a UTC-day rollover</text>
+  <!-- 6×5 = 30-cell grid, ALL filled (every day active), plus a dashed overflow cell for the 31st -->
+  <!-- Cell 8×8, gap 3; grid width = 6*8 + 5*3 = 63, grid height = 5*8 + 4*3 = 52 -->
+  <!-- Origin: (390, 282). Grid spans x=390..453, y=282..334 -->
+  <g fill="#3fb950">
+    <!-- row 0 -->
+    <rect x="390" y="282" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.00s" repeatCount="indefinite"/></rect>
+    <rect x="401" y="282" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.15s" repeatCount="indefinite"/></rect>
+    <rect x="412" y="282" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.30s" repeatCount="indefinite"/></rect>
+    <rect x="423" y="282" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.45s" repeatCount="indefinite"/></rect>
+    <rect x="434" y="282" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.60s" repeatCount="indefinite"/></rect>
+    <rect x="445" y="282" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.75s" repeatCount="indefinite"/></rect>
+    <!-- row 1 -->
+    <rect x="390" y="293" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.20s" repeatCount="indefinite"/></rect>
+    <rect x="401" y="293" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.35s" repeatCount="indefinite"/></rect>
+    <rect x="412" y="293" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.50s" repeatCount="indefinite"/></rect>
+    <rect x="423" y="293" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.65s" repeatCount="indefinite"/></rect>
+    <rect x="434" y="293" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.80s" repeatCount="indefinite"/></rect>
+    <rect x="445" y="293" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.95s" repeatCount="indefinite"/></rect>
+    <!-- row 2 -->
+    <rect x="390" y="304" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.40s" repeatCount="indefinite"/></rect>
+    <rect x="401" y="304" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.55s" repeatCount="indefinite"/></rect>
+    <rect x="412" y="304" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.70s" repeatCount="indefinite"/></rect>
+    <rect x="423" y="304" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.85s" repeatCount="indefinite"/></rect>
+    <rect x="434" y="304" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.00s" repeatCount="indefinite"/></rect>
+    <rect x="445" y="304" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.15s" repeatCount="indefinite"/></rect>
+    <!-- row 3 -->
+    <rect x="390" y="315" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.60s" repeatCount="indefinite"/></rect>
+    <rect x="401" y="315" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.75s" repeatCount="indefinite"/></rect>
+    <rect x="412" y="315" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.90s" repeatCount="indefinite"/></rect>
+    <rect x="423" y="315" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.05s" repeatCount="indefinite"/></rect>
+    <rect x="434" y="315" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.20s" repeatCount="indefinite"/></rect>
+    <rect x="445" y="315" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.35s" repeatCount="indefinite"/></rect>
+    <!-- row 4 -->
+    <rect x="390" y="326" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.80s" repeatCount="indefinite"/></rect>
+    <rect x="401" y="326" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="0.95s" repeatCount="indefinite"/></rect>
+    <rect x="412" y="326" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.10s" repeatCount="indefinite"/></rect>
+    <rect x="423" y="326" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.25s" repeatCount="indefinite"/></rect>
+    <rect x="434" y="326" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.40s" repeatCount="indefinite"/></rect>
+    <rect x="445" y="326" width="8" height="8" rx="1"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="7s" begin="1.55s" repeatCount="indefinite"/></rect>
+  </g>
+  <!-- Overflow cell for the 31st (dashed outline) -->
+  <rect x="466" y="304" width="8" height="8" rx="1" fill="none" stroke="#3fb950" stroke-width="1" stroke-dasharray="1.5 1.5">
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="483" y="311" font-size="9" fill="#3fb950">+1</text>
+
+  <!-- Chip 3: PRs Merged (x=540..780) -->
+  <text x="540" y="230" font-size="10" fill="#7d8590" letter-spacing="1.4">PRs MERGED · 7 DAYS</text>
+  <text x="540" y="268" font-size="34" font-weight="700" fill="#f778ba">27</text>
+  <text x="580" y="256" font-size="11" fill="#e6edf3" font-weight="600">across 7 days</text>
+  <text x="580" y="269" font-size="11" fill="#7d8590">≈ 3.9 per day</text>
+  <!-- 27 dots in 7 columns: 6 columns of 4 + 1 column of 3 = 27 (dot-per-PR, grouped per day) -->
+  <!-- Column centers evenly spread over 540..780 → 240/7 ≈ 34.29, starting +17 -->
+  <g fill="#f778ba">
+    <!-- Col 0 (4 dots) -->
+    <circle cx="557" cy="326" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.00s" repeatCount="indefinite"/></circle>
+    <circle cx="557" cy="317" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.13s" repeatCount="indefinite"/></circle>
+    <circle cx="557" cy="308" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.26s" repeatCount="indefinite"/></circle>
+    <circle cx="557" cy="299" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.39s" repeatCount="indefinite"/></circle>
+    <!-- Col 1 (4) -->
+    <circle cx="591" cy="326" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.20s" repeatCount="indefinite"/></circle>
+    <circle cx="591" cy="317" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.33s" repeatCount="indefinite"/></circle>
+    <circle cx="591" cy="308" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.46s" repeatCount="indefinite"/></circle>
+    <circle cx="591" cy="299" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.59s" repeatCount="indefinite"/></circle>
+    <!-- Col 2 (4) -->
+    <circle cx="625" cy="326" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.40s" repeatCount="indefinite"/></circle>
+    <circle cx="625" cy="317" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.53s" repeatCount="indefinite"/></circle>
+    <circle cx="625" cy="308" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.66s" repeatCount="indefinite"/></circle>
+    <circle cx="625" cy="299" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.79s" repeatCount="indefinite"/></circle>
+    <!-- Col 3 (4) -->
+    <circle cx="660" cy="326" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.60s" repeatCount="indefinite"/></circle>
+    <circle cx="660" cy="317" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.73s" repeatCount="indefinite"/></circle>
+    <circle cx="660" cy="308" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.86s" repeatCount="indefinite"/></circle>
+    <circle cx="660" cy="299" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.99s" repeatCount="indefinite"/></circle>
+    <!-- Col 4 (4) -->
+    <circle cx="694" cy="326" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.80s" repeatCount="indefinite"/></circle>
+    <circle cx="694" cy="317" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="0.93s" repeatCount="indefinite"/></circle>
+    <circle cx="694" cy="308" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.06s" repeatCount="indefinite"/></circle>
+    <circle cx="694" cy="299" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.19s" repeatCount="indefinite"/></circle>
+    <!-- Col 5 (4) -->
+    <circle cx="728" cy="326" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.00s" repeatCount="indefinite"/></circle>
+    <circle cx="728" cy="317" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.13s" repeatCount="indefinite"/></circle>
+    <circle cx="728" cy="308" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.26s" repeatCount="indefinite"/></circle>
+    <circle cx="728" cy="299" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.39s" repeatCount="indefinite"/></circle>
+    <!-- Col 6 (3) -->
+    <circle cx="762" cy="326" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.20s" repeatCount="indefinite"/></circle>
+    <circle cx="762" cy="317" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.33s" repeatCount="indefinite"/></circle>
+    <circle cx="762" cy="308" r="3.2"><animate attributeName="fill-opacity" values="0.7;1;0.7" dur="9s" begin="1.46s" repeatCount="indefinite"/></circle>
+  </g>
+  <!-- Baseline under the columns -->
+  <line x1="547" y1="333" x2="772" y2="333" stroke="#21262d" stroke-width="1"/>
 </svg>
