@@ -1,18 +1,512 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated March 14, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">23</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">882</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
-  </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (9) / TypeScript (7) / Shell (5) / CoffeeScript (4)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs>
+<linearGradient id="baseBar" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#1f6feb" stop-opacity="0.55"/>
+  <stop offset="1" stop-color="#58a6ff" stop-opacity="0.95"/>
+</linearGradient>
+<linearGradient id="streakBar" x1="0" y1="1" x2="0" y2="0">
+  <stop offset="0" stop-color="#f0883e" stop-opacity="0.75"/>
+  <stop offset="1" stop-color="#ffb454" stop-opacity="1.0"/>
+</linearGradient>
+<linearGradient id="repoBarGrad" x1="0" x2="1" y1="0" y2="0">
+  <stop offset="0" stop-color="#1f6feb"/>
+  <stop offset="1" stop-color="#58a6ff"/>
+</linearGradient>
+<linearGradient id="shimmer" x1="0" x2="1" y1="0" y2="0">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+  <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="scanGrad" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#ffb454" stop-opacity="0.0"/>
+  <stop offset="0.5" stop-color="#ffb454" stop-opacity="0.9"/>
+  <stop offset="1" stop-color="#ffb454" stop-opacity="0.0"/>
+</linearGradient>
+</defs>
+<rect width="800" height="400" rx="8" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="399" rx="8" fill="none" stroke="#30363d" stroke-width="1"/>
+<text x="24" y="26" font-size="14" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+<text x="776" y="26" font-size="12" fill="#7d8590" text-anchor="end">March 14, 2026</text>
+<line x1="24" y1="40" x2="776" y2="40" stroke="#30363d" stroke-width="1"/>
+<text x="24" y="56" font-size="10" font-weight="600" fill="#7d8590" letter-spacing="1">CONTRIBUTIONS · PAST 12 MONTHS</text>
+<text x="776" y="56" font-size="10" fill="#7d8590" text-anchor="end">peak day 138</text>
+<line x1="24" y1="129.0" x2="776" y2="129.0" stroke="#30363d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.5"/>
+<line x1="24" y1="106.0" x2="776" y2="106.0" stroke="#30363d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.5"/>
+<line x1="24" y1="83.0" x2="776" y2="83.0" stroke="#30363d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.5"/>
+<line x1="24" y1="60.0" x2="776" y2="60.0" stroke="#30363d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.5"/>
+<g id="baseBars">
+<rect x="24.00" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="26.05" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="28.11" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="30.16" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="32.22" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="34.27" y="145.33" width="1.80" height="6.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="36.33" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="38.38" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="40.44" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="42.49" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="44.55" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="46.60" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="48.66" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="50.71" y="149.33" width="1.80" height="2.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="52.77" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="54.82" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="56.87" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="58.93" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="60.98" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="63.04" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="65.09" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="67.15" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="69.20" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="71.26" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="73.31" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="75.37" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="77.42" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="79.48" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="81.53" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="83.58" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="85.64" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="87.69" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="89.75" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="91.80" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="93.86" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="95.91" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="97.97" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="100.02" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="102.08" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="104.13" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="106.19" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="108.24" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="110.30" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="112.35" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="114.40" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="116.46" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="118.51" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="120.57" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="122.62" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="124.68" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="126.73" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="128.79" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="130.84" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="132.90" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="134.95" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="137.01" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="139.06" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="141.11" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="143.17" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="145.22" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="147.28" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="149.33" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="151.39" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="153.44" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="155.50" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="157.55" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="159.61" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="161.66" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="163.72" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="165.77" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="167.83" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="169.88" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="171.93" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="173.99" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="176.04" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="178.10" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="180.15" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="182.21" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="184.26" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="186.32" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="188.37" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="190.43" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="192.48" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="194.54" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="196.59" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="198.64" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="200.70" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="202.75" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="204.81" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="206.86" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="208.92" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="210.97" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="213.03" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="215.08" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="217.14" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="219.19" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="221.25" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="223.30" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="225.36" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="227.41" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="229.46" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="231.52" y="142.67" width="1.80" height="9.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="233.57" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="235.63" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="237.68" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="239.74" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="241.79" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="243.85" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="245.90" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="247.96" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="250.01" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="252.07" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="254.12" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="256.17" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="258.23" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="260.28" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="262.34" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="264.39" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="266.45" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="268.50" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="270.56" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="272.61" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="274.67" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="276.72" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="278.78" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="280.83" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="282.89" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="284.94" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="286.99" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="289.05" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="291.10" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="293.16" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="295.21" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="297.27" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="299.32" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="301.38" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="303.43" y="148.67" width="1.80" height="3.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="305.49" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="307.54" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="309.60" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="311.65" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="313.70" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="315.76" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="317.81" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="319.87" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="321.92" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="323.98" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="326.03" y="143.33" width="1.80" height="8.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="328.09" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="330.14" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="332.20" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="334.25" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="336.31" y="149.33" width="1.80" height="2.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="338.36" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="340.42" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="342.47" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="344.52" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="346.58" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="348.63" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="350.69" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="352.74" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="354.80" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="356.85" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="358.91" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="360.96" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="363.02" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="365.07" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="367.13" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="369.18" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="371.23" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="373.29" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="375.34" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="377.40" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="379.45" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="381.51" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="383.56" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="385.62" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="387.67" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="389.73" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="391.78" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="393.84" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="395.89" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="397.95" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="400.00" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="402.05" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="404.11" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="406.16" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="408.22" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="410.27" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="412.33" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="414.38" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="416.44" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="418.49" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="420.55" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="422.60" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="424.66" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="426.71" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="428.77" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="430.82" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="432.87" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="434.93" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="436.98" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="439.04" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="441.09" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="443.15" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="445.20" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="447.26" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="449.31" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="451.37" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="453.42" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="455.48" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="457.53" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="459.58" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="461.64" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="463.69" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="465.75" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="467.80" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="469.86" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="471.91" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="473.97" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="476.02" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="478.08" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="480.13" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="482.19" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="484.24" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="486.30" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="488.35" y="148.67" width="1.80" height="3.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="490.40" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="492.46" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="494.51" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="496.57" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="498.62" y="149.33" width="1.80" height="2.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="500.68" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="502.73" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="504.79" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="506.84" y="149.33" width="1.80" height="2.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="508.90" y="148.00" width="1.80" height="4.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="510.95" y="148.00" width="1.80" height="4.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="513.01" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="515.06" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="517.11" y="148.00" width="1.80" height="4.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="519.17" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="521.22" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="523.28" y="148.00" width="1.80" height="4.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="525.33" y="130.00" width="1.80" height="22.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="527.39" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="529.44" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="531.50" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="533.55" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="535.61" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="537.66" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="539.72" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="541.77" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="543.83" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="545.88" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="547.93" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="549.99" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="552.04" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="554.10" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="556.15" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="558.21" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="560.26" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="562.32" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="564.37" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="566.43" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="568.48" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="570.54" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="572.59" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="574.64" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="576.70" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="578.75" y="145.33" width="1.80" height="6.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="580.81" y="145.33" width="1.80" height="6.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="582.86" y="149.33" width="1.80" height="2.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="584.92" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="586.97" y="148.00" width="1.80" height="4.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="589.03" y="150.00" width="1.80" height="2.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="591.08" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="593.14" y="138.67" width="1.80" height="13.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="595.19" y="146.67" width="1.80" height="5.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="597.25" y="135.33" width="1.80" height="16.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="599.30" y="136.67" width="1.80" height="15.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="601.36" y="140.67" width="1.80" height="11.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="603.41" y="140.00" width="1.80" height="12.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="605.46" y="144.67" width="1.80" height="7.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="607.52" y="144.00" width="1.80" height="8.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="609.57" y="132.00" width="1.80" height="20.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="611.63" y="139.33" width="1.80" height="12.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="613.68" y="111.33" width="1.80" height="40.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="615.74" y="94.00" width="1.80" height="58.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="617.79" y="136.00" width="1.80" height="16.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="619.85" y="148.67" width="1.80" height="3.33" fill="url(#baseBar)" rx="0.5"/>
+<rect x="621.90" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="623.96" y="144.00" width="1.80" height="8.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="626.01" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="628.07" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="630.12" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="632.17" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+<rect x="634.23" y="149.33" width="1.80" height="2.67" fill="url(#baseBar)" rx="0.5"/>
+<rect x="636.28" y="150.50" width="1.80" height="1.50" fill="url(#baseBar)" rx="0.5"/>
+<rect x="638.34" y="142.00" width="1.80" height="10.00" fill="url(#baseBar)" rx="0.5"/>
+<rect x="640.39" y="150.80" width="1.80" height="1.20" fill="url(#baseBar)" rx="0.5"/>
+</g>
+<g id="streakBars">
+<animate attributeName="opacity" values="0.85;1;0.85" dur="13s" repeatCount="indefinite"/>
+<rect x="642.45" y="84.00" width="1.80" height="68.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="644.50" y="149.33" width="1.80" height="2.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="646.56" y="129.33" width="1.80" height="22.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="648.61" y="113.33" width="1.80" height="38.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="650.67" y="140.00" width="1.80" height="12.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="652.72" y="131.33" width="1.80" height="20.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="654.78" y="140.00" width="1.80" height="12.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="656.83" y="135.33" width="1.80" height="16.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="658.89" y="112.67" width="1.80" height="39.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="660.94" y="80.67" width="1.80" height="71.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="662.99" y="112.00" width="1.80" height="40.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="665.05" y="86.67" width="1.80" height="65.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="667.10" y="116.67" width="1.80" height="35.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="669.16" y="112.00" width="1.80" height="40.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="671.21" y="133.33" width="1.80" height="18.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="673.27" y="87.33" width="1.80" height="64.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="675.32" y="105.33" width="1.80" height="46.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="677.38" y="120.00" width="1.80" height="32.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="679.43" y="92.67" width="1.80" height="59.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="681.49" y="112.67" width="1.80" height="39.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="683.54" y="131.33" width="1.80" height="20.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="685.60" y="74.00" width="1.80" height="78.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="687.65" y="124.00" width="1.80" height="28.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="689.70" y="80.67" width="1.80" height="71.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="691.76" y="111.33" width="1.80" height="40.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="693.81" y="111.33" width="1.80" height="40.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="695.87" y="118.67" width="1.80" height="33.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="697.92" y="125.33" width="1.80" height="26.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="699.98" y="132.67" width="1.80" height="19.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="702.03" y="146.00" width="1.80" height="6.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="704.09" y="138.67" width="1.80" height="13.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="706.14" y="137.33" width="1.80" height="14.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="708.20" y="145.33" width="1.80" height="6.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="710.25" y="141.33" width="1.80" height="10.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="712.31" y="147.33" width="1.80" height="4.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="714.36" y="122.67" width="1.80" height="29.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="716.42" y="70.67" width="1.80" height="81.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="718.47" y="150.00" width="1.80" height="2.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="720.52" y="148.00" width="1.80" height="4.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="722.58" y="150.00" width="1.80" height="2.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="724.63" y="147.33" width="1.80" height="4.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="726.69" y="128.67" width="1.80" height="23.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="728.74" y="94.67" width="1.80" height="57.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="730.80" y="60.00" width="1.80" height="92.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="732.85" y="69.33" width="1.80" height="82.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="734.91" y="108.00" width="1.80" height="44.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="736.96" y="76.00" width="1.80" height="76.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="739.02" y="106.00" width="1.80" height="46.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="741.07" y="113.33" width="1.80" height="38.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="743.13" y="128.00" width="1.80" height="24.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="745.18" y="148.00" width="1.80" height="4.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="747.23" y="138.00" width="1.80" height="14.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="749.29" y="121.33" width="1.80" height="30.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="751.34" y="141.33" width="1.80" height="10.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="753.40" y="133.33" width="1.80" height="18.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="755.45" y="148.67" width="1.80" height="3.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="757.51" y="138.00" width="1.80" height="14.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="759.56" y="125.33" width="1.80" height="26.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="761.62" y="95.33" width="1.80" height="56.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="763.67" y="138.00" width="1.80" height="14.00" fill="url(#streakBar)" rx="0.5"/>
+<rect x="765.73" y="79.33" width="1.80" height="72.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="767.78" y="134.67" width="1.80" height="17.33" fill="url(#streakBar)" rx="0.5"/>
+<rect x="769.84" y="107.33" width="1.80" height="44.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="771.89" y="133.33" width="1.80" height="18.67" fill="url(#streakBar)" rx="0.5"/>
+<rect x="773.95" y="137.33" width="1.80" height="14.67" fill="url(#streakBar)" rx="0.5"/>
+</g>
+<line x1="642.45" y1="155.0" x2="776.00" y2="155.0" stroke="#f0883e" stroke-width="1.5" opacity="0.9"/>
+<line x1="642.45" y1="153.0" x2="642.45" y2="157.0" stroke="#f0883e" stroke-width="1.5"/>
+<line x1="776.00" y1="153.0" x2="776.00" y2="157.0" stroke="#f0883e" stroke-width="1.5"/>
+<line x1="24" y1="152" x2="776" y2="152" stroke="#7d8590" stroke-width="0.8" opacity="0.6"/>
+<g>
+<rect x="0" y="60" width="2" height="92" fill="url(#scanGrad)" opacity="0.7">
+  <animate attributeName="x" from="24" to="776" dur="17s" repeatCount="indefinite"/>
+</rect>
+<circle cx="0" cy="60" r="2.5" fill="#ffb454">
+  <animate attributeName="cx" from="24" to="776" dur="17s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
+</circle>
+</g>
+<text x="24" y="172" font-size="10" fill="#7d8590">2025-03-14</text>
+<text x="776" y="172" font-size="10" fill="#ffb454" text-anchor="end" font-weight="600">active streak · through 2026-03-14</text>
+<line x1="24" y1="184" x2="776" y2="184" stroke="#30363d" stroke-width="1"/>
+<text x="24" y="202" font-size="10" font-weight="600" fill="#7d8590" letter-spacing="1">ACTIVE REPOS · 30 DAYS</text>
+<text x="24" y="230" font-size="28" font-weight="700" fill="#e6edf3">9</text>
+<text x="52" y="230" font-size="11" fill="#7d8590">repositories with work this month</text>
+<text x="400" y="202" font-size="10" font-weight="600" fill="#7d8590" letter-spacing="1">LANGUAGES · 30 DAYS</text>
+<text x="400" y="230" font-size="28" font-weight="700" fill="#e6edf3">3</text>
+<text x="428" y="230" font-size="11" fill="#7d8590">languages by commit share</text>
+<rect x="146" y="247" width="158" height="6" rx="1.5" fill="#30363d" opacity="0.5"/>
+<rect x="146" y="247" width="158.00" height="6" rx="1.5" fill="url(#repoBarGrad)"/>
+<rect x="146" y="247" width="158" height="6" rx="1.5" fill="url(#shimmer)" opacity="0.4" clip-path="inset(0 0 0 0)">
+  <animate attributeName="x" values="106;304" dur="9s" begin="0.0s" repeatCount="indefinite"/>
+</rect>
+<text x="24" y="254" font-size="10" fill="#e6edf3">oscilla-animator-v2</text>
+<text x="376" y="254" font-size="10" fill="#7d8590" text-anchor="end">513 commits</text>
+<rect x="146" y="261" width="158" height="6" rx="1.5" fill="#30363d" opacity="0.5"/>
+<rect x="146" y="261" width="99.17" height="6" rx="1.5" fill="url(#repoBarGrad)"/>
+<rect x="146" y="261" width="158" height="6" rx="1.5" fill="url(#shimmer)" opacity="0.4" clip-path="inset(0 0 0 0)">
+  <animate attributeName="x" values="106;304" dur="9s" begin="1.3s" repeatCount="indefinite"/>
+</rect>
+<text x="24" y="268" font-size="10" fill="#e6edf3">cc-dump</text>
+<text x="376" y="268" font-size="10" fill="#7d8590" text-anchor="end">322 commits</text>
+<rect x="146" y="275" width="158" height="6" rx="1.5" fill="#30363d" opacity="0.5"/>
+<rect x="146" y="275" width="21.25" height="6" rx="1.5" fill="url(#repoBarGrad)"/>
+<rect x="146" y="275" width="158" height="6" rx="1.5" fill="url(#shimmer)" opacity="0.4" clip-path="inset(0 0 0 0)">
+  <animate attributeName="x" values="106;304" dur="9s" begin="2.6s" repeatCount="indefinite"/>
+</rect>
+<text x="24" y="282" font-size="10" fill="#e6edf3">brandon-fryslie</text>
+<text x="376" y="282" font-size="10" fill="#7d8590" text-anchor="end">69 commits</text>
+<rect x="146" y="289" width="158" height="6" rx="1.5" fill="#30363d" opacity="0.5"/>
+<rect x="146" y="289" width="12.94" height="6" rx="1.5" fill="url(#repoBarGrad)"/>
+<rect x="146" y="289" width="158" height="6" rx="1.5" fill="url(#shimmer)" opacity="0.4" clip-path="inset(0 0 0 0)">
+  <animate attributeName="x" values="106;304" dur="9s" begin="3.9000000000000004s" repeatCount="indefinite"/>
+</rect>
+<text x="24" y="296" font-size="10" fill="#e6edf3">links-issue-tracker</text>
+<text x="376" y="296" font-size="10" fill="#7d8590" text-anchor="end">42 commits</text>
+<rect x="146" y="303" width="158" height="6" rx="1.5" fill="#30363d" opacity="0.5"/>
+<rect x="146" y="303" width="9.24" height="6" rx="1.5" fill="url(#repoBarGrad)"/>
+<rect x="146" y="303" width="158" height="6" rx="1.5" fill="url(#shimmer)" opacity="0.4" clip-path="inset(0 0 0 0)">
+  <animate attributeName="x" values="106;304" dur="9s" begin="5.2s" repeatCount="indefinite"/>
+</rect>
+<text x="24" y="310" font-size="10" fill="#e6edf3">dotfiles</text>
+<text x="376" y="310" font-size="10" fill="#7d8590" text-anchor="end">30 commits</text>
+<rect x="146" y="317" width="158" height="6" rx="1.5" fill="#30363d" opacity="0.5"/>
+<rect x="146" y="317" width="3.08" height="6" rx="1.5" fill="url(#repoBarGrad)"/>
+<rect x="146" y="317" width="158" height="6" rx="1.5" fill="url(#shimmer)" opacity="0.4" clip-path="inset(0 0 0 0)">
+  <animate attributeName="x" values="106;304" dur="9s" begin="6.5s" repeatCount="indefinite"/>
+</rect>
+<text x="24" y="324" font-size="10" fill="#e6edf3">snarfx</text>
+<text x="376" y="324" font-size="10" fill="#7d8590" text-anchor="end">10 commits</text>
+<rect x="400.00" y="248" width="211.73" height="22" fill="#3178c6" opacity="0.9">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" repeatCount="indefinite"/>
+</rect>
+<text x="505.9" y="262" font-size="11" font-weight="600" fill="#0d1117" text-anchor="middle">TypeScript</text>
+<rect x="611.73" y="248" width="147.24" height="22" fill="#ffd43b" opacity="0.9">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="13s" repeatCount="indefinite"/>
+</rect>
+<text x="685.3" y="262" font-size="11" font-weight="600" fill="#0d1117" text-anchor="middle">Python</text>
+<rect x="758.96" y="248" width="17.04" height="22" fill="#00add8" opacity="0.9">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+</rect>
+<rect x="430" y="278" width="8" height="8" rx="1.5" fill="#3178c6"/>
+<text x="442" y="286" font-size="11" font-weight="600" fill="#e6edf3">TypeScript</text>
+<text x="442" y="300" font-size="10" fill="#7d8590">522 commits · 56%</text>
+<rect x="545" y="278" width="8" height="8" rx="1.5" fill="#ffd43b"/>
+<text x="557" y="286" font-size="11" font-weight="600" fill="#e6edf3">Python</text>
+<text x="557" y="300" font-size="10" fill="#7d8590">363 commits · 39%</text>
+<rect x="660" y="278" width="8" height="8" rx="1.5" fill="#00add8"/>
+<text x="672" y="286" font-size="11" font-weight="600" fill="#e6edf3">Go</text>
+<text x="672" y="300" font-size="10" fill="#7d8590">42 commits · 5%</text>
+<line x1="24" y1="332" x2="776" y2="332" stroke="#30363d" stroke-width="1"/>
+<text x="118.0" y="366" font-size="26" font-weight="700" fill="#ffb454" text-anchor="middle" letter-spacing="-0.5">65
+  <animate attributeName="fill-opacity" values="1;0.85;1" dur="7s" repeatCount="indefinite"/>
+</text>
+<text x="118.0" y="384" font-size="9" fill="#7d8590" text-anchor="middle" letter-spacing="1">LONGEST STREAK · 1 YEAR</text>
+<text x="306.0" y="366" font-size="26" font-weight="700" fill="#58a6ff" text-anchor="middle" letter-spacing="-0.5">3375
+  <animate attributeName="fill-opacity" values="1;0.85;1" dur="9s" repeatCount="indefinite"/>
+</text>
+<text x="306.0" y="384" font-size="9" fill="#7d8590" text-anchor="middle" letter-spacing="1">COMMITS · ALL TIME</text>
+<text x="494.0" y="366" font-size="26" font-weight="700" fill="#8957e5" text-anchor="middle" letter-spacing="-0.5">319
+  <animate attributeName="fill-opacity" values="1;0.85;1" dur="11s" repeatCount="indefinite"/>
+</text>
+<text x="494.0" y="384" font-size="9" fill="#7d8590" text-anchor="middle" letter-spacing="1">PRs MERGED · ALL TIME</text>
+<text x="682.0" y="366" font-size="26" font-weight="700" fill="#3fb950" text-anchor="middle" letter-spacing="-0.5">48
+  <animate attributeName="fill-opacity" values="1;0.85;1" dur="13s" repeatCount="indefinite"/>
+</text>
+<text x="682.0" y="384" font-size="9" fill="#7d8590" text-anchor="middle" letter-spacing="1">ISSUES CLOSED · ALL TIME</text>
+<line x1="212.0" y1="342" x2="212.0" y2="386" stroke="#30363d" stroke-width="0.75" opacity="0.6"/>
+<line x1="400.0" y1="342" x2="400.0" y2="386" stroke="#30363d" stroke-width="0.75" opacity="0.6"/>
+<line x1="588.0" y1="342" x2="588.0" y2="386" stroke="#30363d" stroke-width="0.75" opacity="0.6"/>
 </svg>
