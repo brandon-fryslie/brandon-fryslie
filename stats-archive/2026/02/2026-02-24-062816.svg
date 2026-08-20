@@ -1,18 +1,276 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated February 24, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">25</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1311</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg width="800" height="340" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for brandon-fryslie on 2026-02-24: past 12 months of monthly contributions climbing from a quiet spring into a 1428-event peak in February 2026; 2475 commits in 1 Year, 95 PRs merged All Time, 9 issues closed in 1 Year, 3 active repos in 7 Days led by oscilla-animator-v2 with 350 commits.">
+  <defs>
+    <style>text{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;}</style>
+
+    <linearGradient id="gBar" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="gPeak" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="gSweep" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="gCommits" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#67e8f9"/><stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="gPrs" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="gIssues" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="gRepos" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#86efac"/><stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="gRepoBar" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#064e3b"/>
+    </linearGradient>
+
+    <clipPath id="cChart"><rect x="30" y="52" width="740" height="122"/></clipPath>
+  </defs>
+
+  <rect width="800" height="340" fill="#0d1117"/>
+
+  <!-- ============ HEADER ============ -->
+  <text x="20" y="22" font-size="12" font-weight="700" letter-spacing="1.4" fill="#e6edf3">LIVE GITHUB STATS</text>
+  <text x="780" y="22" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-02-24</text>
+  <line x1="20" y1="30" x2="780" y2="30" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ CHART SUB-HEADER ============ -->
+  <text x="20" y="46" font-size="9" letter-spacing="1.2" fill="#6e7681">PAST 12 MONTHS · MONTHLY CONTRIBUTIONS · BAR HEIGHT = COUNT · PEAK 1428 IN FEB</text>
+
+  <!-- ============ 13-MONTH BAR CHART ============ -->
+  <!-- Chart region: x=30..770, y=54..172. max=1428. scale=118/1428. -->
+  <!-- Reference grid lines at ~25/50/75/100% of 1428 (357, 714, 1071, 1428) -->
+  <line x1="30" y1="143.5" x2="770" y2="143.5" stroke="#161b22" stroke-width="1"/>
+  <line x1="30" y1="113" x2="770" y2="113" stroke="#161b22" stroke-width="1"/>
+  <line x1="30" y1="82.5" x2="770" y2="82.5" stroke="#161b22" stroke-width="1"/>
+  <line x1="30" y1="54" x2="770" y2="54" stroke="#161b22" stroke-width="1"/>
+  <!-- Baseline -->
+  <line x1="30" y1="172" x2="770" y2="172" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Y-axis tick labels (right side, subtle) -->
+  <g font-size="7" fill="#484f58" letter-spacing="0.3">
+    <text x="774" y="57">1428</text>
+    <text x="774" y="86">1071</text>
+    <text x="774" y="116">714</text>
+    <text x="774" y="147">357</text>
+    <text x="774" y="175">0</text>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (9) / TypeScript (8) / Shell (5) / CoffeeScript (4)</text>
+
+  <!-- Bars: 13 monthly columns, pitch=56.92, bar_width=40. Column i center x = 58.46 + i*56.92 -->
+  <!-- Zero-nonzero months use min h=2 for visibility. Real heights = value*(118/1428). -->
+  <g clip-path="url(#cChart)">
+    <!-- i=0 Feb'25: 2 → h=2, y=170 -->
+    <rect x="38.46" y="170" width="40" height="2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.00s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=1 Mar'25: 27 → h=2.2, y=169.8 -->
+    <rect x="95.38" y="169.8" width="40" height="2.2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.40s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=2 Apr'25: 1 → h=2, y=170 -->
+    <rect x="152.31" y="170" width="40" height="2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.80s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=3 May'25: 8 → h=2, y=170 -->
+    <rect x="209.23" y="170" width="40" height="2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.20s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=4 Jun'25: 28 → h=2.3, y=169.7 -->
+    <rect x="266.15" y="169.7" width="40" height="2.3" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.60s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=5 Jul'25: 8 → h=2, y=170 -->
+    <rect x="323.08" y="170" width="40" height="2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="2.00s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=6 Aug'25: 27 → h=2.2, y=169.8 -->
+    <rect x="380" y="169.8" width="40" height="2.2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="2.40s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=7 Sep'25: 2 → h=2, y=170 -->
+    <rect x="436.92" y="170" width="40" height="2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="2.80s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=8 Oct'25: 17 → h=2, y=170 -->
+    <rect x="493.85" y="170" width="40" height="2" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="3.20s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=9 Nov'25: 82 → h=6.8, y=165.2 -->
+    <rect x="550.77" y="165.2" width="40" height="6.8" rx="1" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="3.60s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=10 Dec'25: 372 → h=30.7, y=141.3 -->
+    <rect x="607.69" y="141.3" width="40" height="30.7" rx="1.5" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="4.00s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=11 Jan'26: 1124 → h=92.85, y=79.15 -->
+    <rect x="664.62" y="79.15" width="40" height="92.85" rx="1.5" fill="url(#gBar)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="4.40s" repeatCount="indefinite"/>
+    </rect>
+    <!-- i=12 Feb'26 PEAK: 1428 → h=118, y=54 -->
+    <rect x="721.54" y="54" width="40" height="118" rx="1.5" fill="url(#gPeak)">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Sweeping highlight across chart region -->
+    <rect x="0" y="54" width="140" height="118" fill="url(#gSweep)">
+      <animate attributeName="x" from="-140" to="770" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Peak-bar callout: pulsing ring above peak bar top (center x=741.54, top y=54) -->
+  <circle cx="741.54" cy="49" r="3" fill="none" stroke="#fbbf24" stroke-width="1.2" opacity="0.85">
+    <animate attributeName="r" values="3;9;3" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="741.54" cy="49" r="2.4" fill="#fbbf24"/>
+
+  <!-- Value labels above bars (font 7, static — legibility is law) -->
+  <g font-size="7" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.2">
+    <text x="58.46" y="166">2</text>
+    <text x="115.38" y="166">27</text>
+    <text x="172.31" y="166">1</text>
+    <text x="229.23" y="166">8</text>
+    <text x="286.15" y="166">28</text>
+    <text x="343.08" y="166">8</text>
+    <text x="400" y="166">27</text>
+    <text x="456.92" y="166">2</text>
+    <text x="513.85" y="166">17</text>
+    <text x="570.77" y="161">82</text>
+    <text x="627.69" y="137">372</text>
+  </g>
+  <!-- Larger labels for the two tallest bars — the story of the year -->
+  <text x="684.62" y="74" font-size="9" font-weight="700" fill="#e6edf3" text-anchor="middle">1124</text>
+  <text x="741.54" y="70" font-size="10" font-weight="700" fill="#fef3c7" text-anchor="middle">1428</text>
+
+  <!-- Month labels below bars. Bar baseline y=172, label baseline y=182 (font 8, ~10px clearance) -->
+  <g font-size="8" fill="#8b949e" text-anchor="middle" letter-spacing="0.2">
+    <text x="58.46" y="182">Feb</text>
+    <text x="115.38" y="182">Mar</text>
+    <text x="172.31" y="182">Apr</text>
+    <text x="229.23" y="182">May</text>
+    <text x="286.15" y="182">Jun</text>
+    <text x="343.08" y="182">Jul</text>
+    <text x="400" y="182">Aug</text>
+    <text x="456.92" y="182">Sep</text>
+    <text x="513.85" y="182">Oct</text>
+    <text x="570.77" y="182">Nov</text>
+    <text x="627.69" y="182">Dec</text>
+    <text x="684.62" y="182">Jan</text>
+    <text x="741.54" y="182">Feb</text>
+  </g>
+  <!-- Year sub-labels: '25 on left edge, '26 at Jan onward -->
+  <g font-size="6.5" fill="#484f58" text-anchor="middle" letter-spacing="0.2">
+    <text x="58.46" y="191">'25</text>
+    <text x="684.62" y="191">'26</text>
+    <text x="741.54" y="191">'26</text>
+  </g>
+
+  <!-- Divider between chart and metrics -->
+  <line x1="20" y1="204" x2="780" y2="204" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ TILE 1: COMMITS (x 20..190) ============ -->
+  <text x="20" y="220" font-size="9" font-weight="700" letter-spacing="1.4" fill="#8b949e">COMMITS</text>
+  <text x="190" y="220" text-anchor="end" font-size="8" letter-spacing="0.6" fill="#6e7681">1 YEAR</text>
+
+  <!-- Big value "2475" — baseline y=266, font 42. Fits ~120px in 170 available. -->
+  <text x="24" y="266" font-size="42" font-weight="700" fill="url(#gCommits)">2475</text>
+
+  <!-- Underline strip: represents "always active" — hairline animated -->
+  <line x1="24" y1="276" x2="186" y2="276" stroke="#164e63" stroke-width="1"/>
+  <line x1="24" y1="276" x2="186" y2="276" stroke="url(#gCommits)" stroke-width="2" opacity="0.65">
+    <animate attributeName="opacity" values="0.35;0.85;0.35" dur="7s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Captions -->
+  <text x="24" y="292" font-size="8.5" fill="#c9d1d9">total pushed</text>
+  <text x="24" y="305" font-size="7" fill="#6e7681" letter-spacing="0.4">~6.8 PER DAY AVG</text>
+  <text x="24" y="316" font-size="7" fill="#6e7681" letter-spacing="0.4">SEE ABOVE FOR MONTHLY SHAPE</text>
+
+  <!-- Vertical divider -->
+  <line x1="200" y1="212" x2="200" y2="324" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ TILE 2: PRS MERGED (x 210..350) ============ -->
+  <text x="210" y="220" font-size="9" font-weight="700" letter-spacing="1.4" fill="#8b949e">PRS MERGED</text>
+  <text x="350" y="220" text-anchor="end" font-size="8" letter-spacing="0.6" fill="#6e7681">ALL TIME</text>
+
+  <text x="214" y="266" font-size="42" font-weight="700" fill="url(#gPrs)">95</text>
+
+  <line x1="214" y1="276" x2="346" y2="276" stroke="#4c1d95" stroke-width="1"/>
+  <line x1="214" y1="276" x2="346" y2="276" stroke="url(#gPrs)" stroke-width="2" opacity="0.65">
+    <animate attributeName="opacity" values="0.35;0.85;0.35" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+  </line>
+
+  <text x="214" y="292" font-size="8.5" fill="#c9d1d9">contributions shipped</text>
+  <text x="214" y="305" font-size="7" fill="#6e7681" letter-spacing="0.4">ACROSS ALL REPOSITORIES</text>
+  <text x="214" y="316" font-size="7" fill="#6e7681" letter-spacing="0.4">SINCE ACCOUNT OPENING</text>
+
+  <!-- Vertical divider -->
+  <line x1="360" y1="212" x2="360" y2="324" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ TILE 3: MY ISSUES CLOSED (x 370..500) ============ -->
+  <text x="370" y="220" font-size="7.5" font-weight="700" letter-spacing="0.9" fill="#8b949e">MY ISSUES CLOSED</text>
+  <text x="500" y="220" text-anchor="end" font-size="7.5" letter-spacing="0.5" fill="#6e7681">1 YEAR</text>
+
+  <text x="374" y="266" font-size="42" font-weight="700" fill="url(#gIssues)">9</text>
+
+  <line x1="374" y1="276" x2="496" y2="276" stroke="#78350f" stroke-width="1"/>
+  <line x1="374" y1="276" x2="496" y2="276" stroke="url(#gIssues)" stroke-width="2" opacity="0.65">
+    <animate attributeName="opacity" values="0.35;0.85;0.35" dur="7s" begin="2.8s" repeatCount="indefinite"/>
+  </line>
+
+  <text x="374" y="292" font-size="8.5" fill="#c9d1d9">tickets resolved</text>
+  <text x="374" y="305" font-size="7" fill="#6e7681" letter-spacing="0.4">ON OWN REPOSITORIES</text>
+  <text x="374" y="316" font-size="7" fill="#6e7681" letter-spacing="0.4">LNKS TRACKS THE REST</text>
+
+  <!-- Vertical divider -->
+  <line x1="510" y1="212" x2="510" y2="324" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ TILE 4: ACTIVE REPOS w/ BREAKDOWN (x 520..780) ============ -->
+  <text x="520" y="220" font-size="9" font-weight="700" letter-spacing="1.4" fill="#8b949e">ACTIVE REPOS</text>
+  <text x="780" y="220" text-anchor="end" font-size="8" letter-spacing="0.6" fill="#6e7681">7 DAYS</text>
+
+  <!-- Big value "3" -->
+  <text x="524" y="252" font-size="30" font-weight="700" fill="url(#gRepos)">3</text>
+  <text x="550" y="246" font-size="10" fill="#c9d1d9">touched this week</text>
+  <text x="550" y="257" font-size="7" fill="#6e7681" letter-spacing="0.4">BAR WIDTH = COMMITS PER REPO · TOTAL 551</text>
+
+  <!-- Breakdown bars: 3 rows -->
+  <!-- Row spacing: y=270, 285, 300. Bar area x=650..770 (width 120). Repo name right-anchored at x=644. Count right-anchored at x=776. Bar height 10, y_top = row_y+1. Text baseline row_y+8. -->
+  <!-- max_count = 350 (oscilla-animator-v2). Scale = 120/350 = 0.3428571. -->
+
+  <!-- Row 0: oscilla-animator-v2, 350, bar w=120 -->
+  <text x="644" y="278" text-anchor="end" font-size="8" fill="#c9d1d9">oscilla-animator-v2</text>
+  <rect x="650" y="271" width="120" height="10" rx="1.5" fill="#1f2937"/>
+  <rect x="650" y="271" width="120" height="10" rx="1.5" fill="url(#gRepoBar)">
+    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="278" text-anchor="end" font-size="8" fill="#8b949e">350</text>
+
+  <!-- Row 1: cc-dump, 184, bar w=184*120/350 = 63.09 -->
+  <text x="644" y="293" text-anchor="end" font-size="8" fill="#c9d1d9">cc-dump</text>
+  <rect x="650" y="286" width="120" height="10" rx="1.5" fill="#1f2937"/>
+  <rect x="650" y="286" width="63.09" height="10" rx="1.5" fill="url(#gRepoBar)">
+    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="293" text-anchor="end" font-size="8" fill="#8b949e">184</text>
+
+  <!-- Row 2: brandon-fryslie, 17, bar w=17*120/350 = 5.83 -->
+  <text x="644" y="308" text-anchor="end" font-size="8" fill="#c9d1d9">brandon-fryslie</text>
+  <rect x="650" y="301" width="120" height="10" rx="1.5" fill="#1f2937"/>
+  <rect x="650" y="301" width="5.83" height="10" rx="1.5" fill="url(#gRepoBar)">
+    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="776" y="308" text-anchor="end" font-size="8" fill="#8b949e">17</text>
+
+  <!-- Caption below last bar. Last bar bottom = 301+10 = 311. Baseline y=321 gives ~10px clearance above bottom edge. Font 7 needs ~9px below baseline (y=321 baseline, descender to ~y=323 leaves 17px to bottom at 340). -->
+  <text x="520" y="321" font-size="7" fill="#6e7681" letter-spacing="0.3">TOP DRIVER: OSCILLA-ANIMATOR-V2 · 64% OF WEEK'S WORK</text>
 </svg>
