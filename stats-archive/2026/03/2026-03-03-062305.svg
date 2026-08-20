@@ -1,18 +1,220 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated March 03, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">25</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1109</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg width="800" height="340" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats card">
+  <defs>
+    <linearGradient id="uBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#58a6ff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="uGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39d353" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#39d353" stop-opacity="1"/>
+      <stop offset="1" stop-color="#39d353" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="uPurp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d2a8ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#d2a8ff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#d2a8ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="progShimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#79c0ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#c8e1ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#79c0ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sparkShimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sparkBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a5f0b0"/>
+      <stop offset="1" stop-color="#2ea043"/>
+    </linearGradient>
+    <linearGradient id="prsRing" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d2a8ff" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#d2a8ff" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#d2a8ff" stop-opacity="0.15"/>
+    </linearGradient>
+    <clipPath id="clipCard"><rect x="0.5" y="0.5" width="799" height="339" rx="10"/></clipPath>
+  </defs>
+
+  <!-- background + card frame -->
+  <rect width="800" height="340" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="339" rx="10" fill="#11161d" stroke="#21262d" stroke-width="1"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+    <!-- ============ HEADER ============ -->
+    <circle cx="24" cy="26" r="3.5" fill="#39d353">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="38" y="30" font-size="14" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+    <text x="776" y="30" font-size="12" fill="#6e7681" text-anchor="end">Updated March 03, 2026</text>
+    <line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+
+    <!-- ============================================================
+         ROW 1: three scalar / gauge panels
+         Days Active (proportion) | Commits (+ 30-day sparkline) | PRs Merged
+         ============================================================ -->
+
+    <!-- Days Active panel -->
+    <rect x="24" y="54" width="236" height="130" rx="8" fill="#151a22" stroke="#21262d" stroke-width="1"/>
+    <text x="36" y="72" font-size="10" font-weight="700" letter-spacing="0.8" fill="#9aa4b2">DAYS ACTIVE &#183; 1 YEAR</text>
+    <text x="248" y="72" font-size="12" font-weight="700" fill="#58a6ff" text-anchor="end">39%</text>
+
+    <!-- big number: 141 (metric value, standalone element) -->
+    <text x="36" y="130" font-size="54" font-weight="700" fill="#58a6ff">141</text>
+    <!-- suffix -->
+    <text x="124" y="130" font-size="20" fill="#6e7681">/ 365</text>
+    <!-- accent underline (perpetual) -->
+    <rect x="36" y="138" width="88" height="2" fill="url(#uBlue)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <text x="36" y="154" font-size="10" fill="#8b949e">days with a contribution</text>
+
+    <!-- proportion bar: length IS the value/365 ratio -->
+    <rect x="36" y="162" width="212" height="6" rx="3" fill="#1c2431"/>
+    <rect x="36" y="162" width="82" height="6" rx="3" fill="#58a6ff" opacity="0.9"/>
+    <!-- shimmer sweep across the filled portion -->
+    <rect x="36" y="162" width="60" height="6" rx="3" fill="url(#progShimmer)" clip-path="url(#clipCard)">
+      <animateTransform attributeName="transform" type="translate" from="-70 0" to="220 0" dur="9s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Commits panel (with 30-day sparkline) -->
+    <rect x="276" y="54" width="246" height="130" rx="8" fill="#151a22" stroke="#21262d" stroke-width="1"/>
+    <text x="288" y="72" font-size="10" font-weight="700" letter-spacing="0.8" fill="#9aa4b2">COMMITS &#183; 30 DAYS</text>
+    <text x="510" y="72" font-size="10" fill="#6e7681" text-anchor="end">last 30d, oldest &#8594; today</text>
+
+    <!-- big number: 1118 -->
+    <text x="288" y="104" font-size="36" font-weight="700" fill="#39d353">1118</text>
+    <rect x="288" y="110" width="100" height="2" fill="url(#uGreen)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- sparkline: 30 bars, one per day, height = count/138 * 52 -->
+    <line x1="288" y1="167.5" x2="510" y2="167.5" stroke="#21262d" stroke-width="1"/>
+    <g fill="url(#sparkBar)">
+      <rect x="288.0" y="144.0" width="5" height="23.0"/>
+      <rect x="295.4" y="144.0" width="5" height="23.0"/>
+      <rect x="302.8" y="148.2" width="5" height="18.8"/>
+      <rect x="310.2" y="151.9" width="5" height="15.1"/>
+      <rect x="317.6" y="156.1" width="5" height="10.9"/>
+      <rect x="325.0" y="163.6" width="5" height="3.4"/>
+      <rect x="332.4" y="159.5" width="5" height="7.5"/>
+      <rect x="339.8" y="158.7" width="5" height="8.3"/>
+      <rect x="347.2" y="163.2" width="5" height="3.8"/>
+      <rect x="354.6" y="161.0" width="5" height="6.0"/>
+      <rect x="362.0" y="164.4" width="5" height="2.6"/>
+      <rect x="369.4" y="150.4" width="5" height="16.6"/>
+      <rect x="376.8" y="121.0" width="5" height="46.0"/>
+      <rect x="384.2" y="165.8" width="5" height="1.2"/>
+      <rect x="391.6" y="164.7" width="5" height="2.3"/>
+      <rect x="399.0" y="165.8" width="5" height="1.2"/>
+      <rect x="406.4" y="164.4" width="5" height="2.6"/>
+      <rect x="413.8" y="153.8" width="5" height="13.2"/>
+      <rect x="421.2" y="134.6" width="5" height="32.4"/>
+      <rect x="428.6" y="115.0" width="5" height="52.0"/>
+      <rect x="436.0" y="120.3" width="5" height="46.7"/>
+      <rect x="443.4" y="142.1" width="5" height="24.9"/>
+      <rect x="450.8" y="124.0" width="5" height="43.0"/>
+      <rect x="458.2" y="141.0" width="5" height="26.0"/>
+      <rect x="465.6" y="145.1" width="5" height="21.9"/>
+      <rect x="473.0" y="153.4" width="5" height="13.6"/>
+      <rect x="480.4" y="164.7" width="5" height="2.3"/>
+      <rect x="487.8" y="159.1" width="5" height="7.9"/>
+      <rect x="495.2" y="149.7" width="5" height="17.3"/>
+      <rect x="502.6" y="161.0" width="5" height="6.0"/>
+    </g>
+    <!-- shimmer sweep across the sparkline -->
+    <rect x="288" y="115" width="70" height="52" fill="url(#sparkShimmer)" pointer-events="none">
+      <animateTransform attributeName="transform" type="translate" from="-80 0" to="240 0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+    <text x="510" y="180" font-size="9" fill="#6e7681" text-anchor="end">peak day: 138</text>
+
+    <!-- PRs Merged panel -->
+    <rect x="538" y="54" width="238" height="130" rx="8" fill="#151a22" stroke="#21262d" stroke-width="1"/>
+    <text x="550" y="72" font-size="10" font-weight="700" letter-spacing="0.8" fill="#9aa4b2">PRS MERGED &#183; ALL TIME</text>
+    <text x="764" y="72" font-size="10" fill="#6e7681" text-anchor="end">lifetime</text>
+
+    <!-- big number: 205 -->
+    <text x="550" y="128" font-size="54" font-weight="700" fill="#d2a8ff">205</text>
+    <rect x="550" y="136" width="120" height="2" fill="url(#uPurp)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <text x="550" y="154" font-size="10" fill="#8b949e">merged pull requests</text>
+
+    <!-- perpetual accent: a slim rotating arc-like line under the number -->
+    <rect x="550" y="164" width="214" height="4" rx="2" fill="#1c2431"/>
+    <rect x="550" y="164" width="90" height="4" rx="2" fill="url(#prsRing)">
+      <animateTransform attributeName="transform" type="translate" from="-100 0" to="220 0" dur="11s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ============================================================
+         ROW 2: Languages distribution (100% stacked bar)
+         Segment widths ARE the commit counts, proportionally.
+         ============================================================ -->
+    <text x="24" y="210" font-size="10" font-weight="700" letter-spacing="0.8" fill="#9aa4b2">LANGUAGES &#183; 30 DAYS &#183; segment width = commits share</text>
+    <!-- big count on right: 4 (standalone element) -->
+    <text x="776" y="212" font-size="22" font-weight="700" fill="#e6edf3" text-anchor="end">4</text>
+    <!-- above-bar callout for segments too small to label inline -->
+    <text x="759" y="217" font-size="9" fill="#6e7681" text-anchor="end">Go 22 &#183; Shell 3</text>
+
+    <!-- stacked segments -->
+    <g>
+      <rect x="24" y="220" width="477.7" height="24" fill="#3178c6">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="9s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="501.7" y="220" width="257.9" height="24" fill="#ffde57">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="9s" begin="-2.25s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="759.6" y="220" width="14.4" height="24" fill="#00add8">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="9s" begin="-4.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="774.0" y="220" width="2.0" height="24" fill="#89e051">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="9s" begin="-6.75s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- in-segment labels (only where they fit) -->
+    <text x="262.85" y="235.5" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TypeScript &#183; 730</text>
+    <text x="630.65" y="235.5" font-size="11" font-weight="700" fill="#0d1117" text-anchor="middle">Python &#183; 394</text>
+
+    <!-- ============================================================
+         ROW 3: Active Repos distribution (100% stacked bar)
+         Segment widths ARE the commit counts, proportionally.
+         ============================================================ -->
+    <text x="24" y="270" font-size="10" font-weight="700" letter-spacing="0.8" fill="#9aa4b2">ACTIVE REPOS &#183; 30 DAYS &#183; segment width = commits share</text>
+    <!-- big count on right: 11 (standalone element) -->
+    <text x="776" y="272" font-size="22" font-weight="700" fill="#e6edf3" text-anchor="end">11</text>
+    <!-- above-bar callout for small segments -->
+    <text x="732" y="277" font-size="9" fill="#6e7681" text-anchor="end">brandon-fryslie 69 &#183; dotfiles 33 &#183; chaperone-auth-gateway 22 &#183; cc-viz 13</text>
+
+    <!-- stacked segments -->
+    <g>
+      <rect x="24" y="280" width="448.2" height="24" fill="#79b8ff">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="472.2" y="280" width="217.8" height="24" fill="#b392f0">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" begin="-1.83s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="690.0" y="280" width="43.3" height="24" fill="#f97583">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" begin="-3.66s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="733.3" y="280" width="20.7" height="24" fill="#85e89d">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" begin="-5.49s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="754.0" y="280" width="13.8" height="24" fill="#ffab70">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" begin="-7.32s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="767.8" y="280" width="8.2" height="24" fill="#34d0d5">
+        <animate attributeName="opacity" values="0.85;1;0.85" dur="11s" begin="-9.15s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- in-segment labels for the two largest -->
+    <text x="248.1" y="295.5" font-size="11" font-weight="700" fill="#0d1117" text-anchor="middle">oscilla-animator-v2 &#183; 714</text>
+    <text x="581.1" y="295.5" font-size="11" font-weight="700" fill="#0d1117" text-anchor="middle">cc-dump &#183; 347</text>
+
+    <!-- ============ FOOTER ============ -->
+    <text x="24" y="324" font-size="9" fill="#6e7681">contributions calendar: past 12 months</text>
+    <text x="776" y="324" font-size="9" fill="#6e7681" text-anchor="end">brandon-fryslie</text>
+
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (9) / TypeScript (8) / Shell (5) / CoffeeScript (4)</text>
 </svg>
