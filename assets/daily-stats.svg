@@ -1,347 +1,116 @@
-<svg width="800" height="352" viewBox="0 0 800 352" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-08-19: daily contributions over the last 30 days peaking at 125 on Aug 1; 21 of 30 days active; 14 active repos with top 6 shown; 16 PRs merged in 7 days.">
-  <defs>
-    <style>text{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;}</style>
-
-    <linearGradient id="gBar" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#7dd3fc"/>
-      <stop offset="1" stop-color="#0891b2"/>
-    </linearGradient>
-    <linearGradient id="gPeak" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#fde68a"/>
-      <stop offset="1" stop-color="#f59e0b"/>
-    </linearGradient>
-    <linearGradient id="gPips" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#86efac"/>
-      <stop offset="1" stop-color="#22c55e"/>
-    </linearGradient>
-    <linearGradient id="gRepo" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#c4b5fd"/>
-      <stop offset="1" stop-color="#8b5cf6"/>
-    </linearGradient>
-    <linearGradient id="gPr" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#fda4af"/>
-      <stop offset="1" stop-color="#f43f5e"/>
-    </linearGradient>
-    <linearGradient id="gSweep" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <clipPath id="cChart"><rect x="38" y="66" width="724" height="104"/></clipPath>
-  </defs>
-
-  <rect width="800" height="352" fill="#0d1117"/>
-
-  <!-- ============ HEADER ============ -->
-  <text x="20" y="22" font-size="12" font-weight="700" letter-spacing="1.4" fill="#e6edf3">LIVE GITHUB STATS</text>
-  <text x="780" y="22" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-08-19</text>
-  <line x1="20" y1="30" x2="780" y2="30" stroke="#21262d" stroke-width="1"/>
-
-  <!-- ============ CHART SUB-HEADER ============ -->
-  <text x="20" y="48" font-size="9" letter-spacing="1.2" fill="#6e7681">LAST 30 DAYS · DAILY CONTRIBUTIONS · BAR HEIGHT = COMMIT COUNT</text>
-  <text x="780" y="48" text-anchor="end" font-size="9" letter-spacing="0.6" fill="#6e7681">peak Aug 1 · 125 · total 519</text>
-
-  <!-- ============ 30-DAY BAR CHART ============ -->
-  <!-- Reference grid lines at 25/50/75/100% of max=125 -->
-  <line x1="42" y1="143" x2="758" y2="143" stroke="#161b22" stroke-width="1"/>
-  <line x1="42" y1="118" x2="758" y2="118" stroke="#161b22" stroke-width="1"/>
-  <line x1="42" y1="93"  x2="758" y2="93"  stroke="#161b22" stroke-width="1"/>
-  <line x1="42" y1="68"  x2="758" y2="68"  stroke="#161b22" stroke-width="1"/>
-  <!-- baseline -->
-  <line x1="42" y1="168" x2="758" y2="168" stroke="#30363d" stroke-width="1"/>
-
-  <!-- Y-axis tick labels (right side, subtle) -->
-  <g font-size="7" fill="#484f58" letter-spacing="0.3">
-    <text x="762" y="71">125</text>
-    <text x="762" y="96">94</text>
-    <text x="762" y="121">63</text>
-    <text x="762" y="146">31</text>
-    <text x="762" y="171">0</text>
-  </g>
-
-  <!-- Bars: 30 days, bar_width=20, gap=4, pitch=24. Bar i at x=42+i*24. -->
-  <!-- Zero-count days: draw a 2px stub at baseline so absence is still legible. -->
-  <g clip-path="url(#cChart)">
-    <!-- Day 1: Jul 21 (Tue), 6 commits, h=4.8 -->
-    <rect x="42" y="163.2" width="20" height="4.8" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.00s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 2: Jul 22, 0 -->
-    <rect x="66" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 3: Jul 23, 0 -->
-    <rect x="90" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 4: Jul 24, 0 -->
-    <rect x="114" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 5: Jul 25, 28, h=22.4 -->
-    <rect x="138" y="145.6" width="20" height="22.4" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.20s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 6: Jul 26, 48, h=38.4 -->
-    <rect x="162" y="129.6" width="20" height="38.4" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.28s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 7: Jul 27, 17, h=13.6 -->
-    <rect x="186" y="154.4" width="20" height="13.6" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.36s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 8: Jul 28, 0 -->
-    <rect x="210" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 9: Jul 29, 30, h=24 -->
-    <rect x="234" y="144" width="20" height="24" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.52s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 10: Jul 30, 15, h=12 -->
-    <rect x="258" y="156" width="20" height="12" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.60s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 11: Jul 31, 8, h=6.4 -->
-    <rect x="282" y="161.6" width="20" height="6.4" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.68s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 12: Aug 1, 125 (PEAK), h=100 -->
-    <rect x="306" y="68" width="20" height="100" rx="1.5" fill="url(#gPeak)">
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="3.5s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 13: Aug 2, 62, h=49.6 -->
-    <rect x="330" y="118.4" width="20" height="49.6" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.84s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 14: Aug 3, 2, h=1.6 -->
-    <rect x="354" y="166.4" width="20" height="1.6" rx="0.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="0.92s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 15: Aug 4, 4, h=3.2 -->
-    <rect x="378" y="164.8" width="20" height="3.2" rx="1" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.00s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 16: Aug 5, 3, h=2.4 -->
-    <rect x="402" y="165.6" width="20" height="2.4" rx="1" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.08s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 17: Aug 6, 0 -->
-    <rect x="426" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 18: Aug 7, 22, h=17.6 -->
-    <rect x="450" y="150.4" width="20" height="17.6" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.24s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 19: Aug 8, 0 -->
-    <rect x="474" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 20: Aug 9, 90, h=72 -->
-    <rect x="498" y="96" width="20" height="72" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.40s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 21: Aug 10, 15, h=12 -->
-    <rect x="522" y="156" width="20" height="12" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.48s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 22: Aug 11, 1, h=0.8 -->
-    <rect x="546" y="167.2" width="20" height="0.8" rx="0.4" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.56s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 23: Aug 12, 0 -->
-    <rect x="570" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 24: Aug 13, 0 -->
-    <rect x="594" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 25: Aug 14, 13, h=10.4 -->
-    <rect x="618" y="157.6" width="20" height="10.4" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.80s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 26: Aug 15, 16, h=12.8 -->
-    <rect x="642" y="155.2" width="20" height="12.8" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.88s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 27: Aug 16, 12, h=9.6 -->
-    <rect x="666" y="158.4" width="20" height="9.6" rx="1.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="1.96s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 28: Aug 17, 2, h=1.6 -->
-    <rect x="690" y="166.4" width="20" height="1.6" rx="0.5" fill="url(#gBar)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" begin="2.04s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Day 29: Aug 18, 0 -->
-    <rect x="714" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-    <!-- Day 30: Aug 19 (today), 0 -->
-    <rect x="738" y="166" width="20" height="2" rx="1" fill="#1f2937"/>
-
-    <!-- Sweeping highlight across chart region -->
-    <rect x="0" y="66" width="140" height="102" fill="url(#gSweep)">
-      <animate attributeName="x" from="-140" to="758" dur="13s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- Peak-day callout pulse ring above peak bar (center x=316, top y=68) -->
-  <circle cx="316" cy="63" r="3" fill="none" stroke="#fbbf24" stroke-width="1.2" opacity="0.85">
-    <animate attributeName="r" values="3;9;3" dur="3.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.9;0;0.9" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="316" cy="63" r="2.4" fill="#fbbf24"/>
-
-  <!-- Date labels along x-axis: every ~5 days -->
-  <g font-size="8" fill="#6e7681" letter-spacing="0.3">
-    <text x="52"  y="184" text-anchor="middle">Jul 21</text>
-    <text x="172" y="184" text-anchor="middle">Jul 26</text>
-    <text x="292" y="184" text-anchor="middle">Jul 31</text>
-    <text x="412" y="184" text-anchor="middle">Aug 5</text>
-    <text x="532" y="184" text-anchor="middle">Aug 10</text>
-    <text x="652" y="184" text-anchor="middle">Aug 15</text>
-    <text x="748" y="184" text-anchor="middle">Aug 19</text>
-  </g>
-
-  <!-- Divider -->
-  <line x1="20" y1="196" x2="780" y2="196" stroke="#21262d" stroke-width="1"/>
-
-  <!-- ============ TILE 1: DAYS ACTIVE (x 20..260) ============ -->
-  <text x="20" y="212" font-size="9" font-weight="700" letter-spacing="1.4" fill="#8b949e">DAYS ACTIVE</text>
-  <text x="256" y="212" text-anchor="end" font-size="8" letter-spacing="0.6" fill="#6e7681">30 DAYS</text>
-
-  <!-- Big value 21 -->
-  <text x="24" y="258" font-size="42" font-weight="700" fill="url(#gPips)">21</text>
-  <text x="84" y="254" font-size="13" fill="#8b949e">of 30</text>
-  <text x="84" y="269" font-size="8" letter-spacing="0.6" fill="#6e7681">DAYS</text>
-
-  <!-- 30 pip grid, 6 cols x 5 rows. Pip 14x14, gap 5, pitch 19. Grid width 6*19-5=109, height 5*19-5=90. -->
-  <!-- Start at x=148, y=218. First 21 pips (row-major) are filled. -->
-  <g>
-    <!-- Row 0 (y=218), 6 pips -->
-    <rect x="148" y="218" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.00s" repeatCount="indefinite"/></rect>
-    <rect x="167" y="218" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.13s" repeatCount="indefinite"/></rect>
-    <rect x="186" y="218" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.26s" repeatCount="indefinite"/></rect>
-    <rect x="205" y="218" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.39s" repeatCount="indefinite"/></rect>
-    <rect x="224" y="218" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.52s" repeatCount="indefinite"/></rect>
-    <rect x="243" y="218" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.65s" repeatCount="indefinite"/></rect>
-    <!-- Row 1 (y=237) -->
-    <rect x="148" y="237" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.78s" repeatCount="indefinite"/></rect>
-    <rect x="167" y="237" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="0.91s" repeatCount="indefinite"/></rect>
-    <rect x="186" y="237" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.04s" repeatCount="indefinite"/></rect>
-    <rect x="205" y="237" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.17s" repeatCount="indefinite"/></rect>
-    <rect x="224" y="237" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.30s" repeatCount="indefinite"/></rect>
-    <rect x="243" y="237" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.43s" repeatCount="indefinite"/></rect>
-    <!-- Row 2 (y=256) -->
-    <rect x="148" y="256" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.56s" repeatCount="indefinite"/></rect>
-    <rect x="167" y="256" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.69s" repeatCount="indefinite"/></rect>
-    <rect x="186" y="256" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.82s" repeatCount="indefinite"/></rect>
-    <rect x="205" y="256" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="1.95s" repeatCount="indefinite"/></rect>
-    <rect x="224" y="256" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="2.08s" repeatCount="indefinite"/></rect>
-    <rect x="243" y="256" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="2.21s" repeatCount="indefinite"/></rect>
-    <!-- Row 3 (y=275) — 3 lit, 3 dim (21 total lit) -->
-    <rect x="148" y="275" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="2.34s" repeatCount="indefinite"/></rect>
-    <rect x="167" y="275" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="2.47s" repeatCount="indefinite"/></rect>
-    <rect x="186" y="275" width="14" height="14" rx="2.5" fill="url(#gPips)"><animate attributeName="opacity" values="0.6;1;0.6" dur="4s" begin="2.60s" repeatCount="indefinite"/></rect>
-    <rect x="205" y="275" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <rect x="224" y="275" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <rect x="243" y="275" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <!-- Row 4 (y=294) — all dim -->
-    <rect x="148" y="294" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <rect x="167" y="294" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <rect x="186" y="294" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <rect x="205" y="294" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <rect x="224" y="294" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-    <rect x="243" y="294" width="14" height="14" rx="2.5" fill="#1f2937" stroke="#30363d" stroke-width="0.6"/>
-  </g>
-
-  <!-- Caption: grid bottom row y=308, height 14 → bottom edge 308+14=322. Caption baseline ≥ 322+1.3*8 ≈ 332.4 → y=325 gives clearance -->
-  <text x="148" y="322" font-size="7" fill="#6e7681" letter-spacing="0.3">EACH PIP = ONE DAY · 21 OF 30 LIT</text>
-
-  <!-- Tile divider -->
-  <line x1="270" y1="204" x2="270" y2="336" stroke="#21262d" stroke-width="1"/>
-
-  <!-- ============ TILE 2: ACTIVE REPOS (x 280..520) ============ -->
-  <text x="280" y="212" font-size="9" font-weight="700" letter-spacing="1.4" fill="#8b949e">ACTIVE REPOS</text>
-  <text x="516" y="212" text-anchor="end" font-size="8" letter-spacing="0.6" fill="#6e7681">30 DAYS</text>
-
-  <!-- Big value 14 with sub-label -->
-  <text x="280" y="238" font-size="26" font-weight="700" fill="url(#gRepo)">14</text>
-  <text x="322" y="230" font-size="10" fill="#c9d1d9">repos touched</text>
-  <text x="322" y="242" font-size="7" fill="#6e7681" letter-spacing="0.4">TOP 6 · BAR = COMMITS</text>
-
-  <!-- Horizontal bars for top-6 breakdown -->
-  <!-- Bar rail x0=390, max width 120. Bar height 11, gap 3. Row 0 top y=252, row 5 top y=252+5*14=322. -->
-  <!-- max count = 81 (links-issue-tracker), scale = 120/81 = 1.481 -->
-  <!-- Row 0: links-issue-tracker, 81, w=120.0 -->
-  <text x="384" y="261" text-anchor="end" font-size="8.5" fill="#c9d1d9">links-issue-tracker</text>
-  <rect x="390" y="252" width="120" height="11" rx="1.5" fill="#1f2937"/>
-  <rect x="390" y="252" width="120" height="11" rx="1.5" fill="url(#gRepo)">
-    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.00s" repeatCount="indefinite"/>
-  </rect>
-  <text x="514" y="261" font-size="8.5" fill="#8b949e">81</text>
-
-  <!-- Row 1: laws, 46, w=68.1 -->
-  <text x="384" y="275" text-anchor="end" font-size="8.5" fill="#c9d1d9">laws</text>
-  <rect x="390" y="266" width="120" height="11" rx="1.5" fill="#1f2937"/>
-  <rect x="390" y="266" width="68.1" height="11" rx="1.5" fill="url(#gRepo)">
-    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.15s" repeatCount="indefinite"/>
-  </rect>
-  <text x="462.1" y="275" font-size="8.5" fill="#8b949e">46</text>
-
-  <!-- Row 2: cc-candybar, 28, w=41.5 -->
-  <text x="384" y="289" text-anchor="end" font-size="8.5" fill="#c9d1d9">cc-candybar</text>
-  <rect x="390" y="280" width="120" height="11" rx="1.5" fill="#1f2937"/>
-  <rect x="390" y="280" width="41.5" height="11" rx="1.5" fill="url(#gRepo)">
-    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.30s" repeatCount="indefinite"/>
-  </rect>
-  <text x="435.5" y="289" font-size="8.5" fill="#8b949e">28</text>
-
-  <!-- Row 3: brandon-fryslie, 26, w=38.5 -->
-  <text x="384" y="303" text-anchor="end" font-size="8.5" fill="#c9d1d9">brandon-fryslie</text>
-  <rect x="390" y="294" width="120" height="11" rx="1.5" fill="#1f2937"/>
-  <rect x="390" y="294" width="38.5" height="11" rx="1.5" fill="url(#gRepo)">
-    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.45s" repeatCount="indefinite"/>
-  </rect>
-  <text x="432.5" y="303" font-size="8.5" fill="#8b949e">26</text>
-
-  <!-- Row 4: dotfiles, 26, w=38.5 -->
-  <text x="384" y="317" text-anchor="end" font-size="8.5" fill="#c9d1d9">dotfiles</text>
-  <rect x="390" y="308" width="120" height="11" rx="1.5" fill="#1f2937"/>
-  <rect x="390" y="308" width="38.5" height="11" rx="1.5" fill="url(#gRepo)">
-    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.60s" repeatCount="indefinite"/>
-  </rect>
-  <text x="432.5" y="317" font-size="8.5" fill="#8b949e">26</text>
-
-  <!-- Row 5: room-eq-wizard-mcp, 20, w=29.6 -->
-  <text x="384" y="331" text-anchor="end" font-size="7.5" fill="#c9d1d9">room-eq-wizard-mcp</text>
-  <rect x="390" y="322" width="120" height="11" rx="1.5" fill="#1f2937"/>
-  <rect x="390" y="322" width="29.6" height="11" rx="1.5" fill="url(#gRepo)">
-    <animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.75s" repeatCount="indefinite"/>
-  </rect>
-  <text x="423.6" y="331" font-size="8.5" fill="#8b949e">20</text>
-
-  <!-- Tile divider -->
-  <line x1="530" y1="204" x2="530" y2="336" stroke="#21262d" stroke-width="1"/>
-
-  <!-- ============ TILE 3: PRS MERGED (x 540..780) ============ -->
-  <text x="540" y="212" font-size="9" font-weight="700" letter-spacing="1.4" fill="#8b949e">PRS MERGED</text>
-  <text x="776" y="212" text-anchor="end" font-size="8" letter-spacing="0.6" fill="#6e7681">7 DAYS</text>
-
-  <!-- Big value 16 -->
-  <text x="544" y="258" font-size="42" font-weight="700" fill="url(#gPr)">16</text>
-  <text x="604" y="254" font-size="13" fill="#8b949e">PRs</text>
-  <text x="604" y="269" font-size="8" letter-spacing="0.6" fill="#6e7681">MERGED</text>
-
-  <!-- 16 pip dots, 4 cols × 4 rows. Circle d=18, gap 8, pitch 26. Grid width 4*26-8=96, height 4*26-8=96. -->
-  <!-- Start at x=668, y=222. Circle cx = x+9, cy = y+9. -->
-  <g>
-    <!-- Row 0 -->
-    <circle cx="677" cy="231" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.00s" repeatCount="indefinite"/></circle>
-    <circle cx="703" cy="231" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.11s" repeatCount="indefinite"/></circle>
-    <circle cx="729" cy="231" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.22s" repeatCount="indefinite"/></circle>
-    <circle cx="755" cy="231" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.33s" repeatCount="indefinite"/></circle>
-    <!-- Row 1 -->
-    <circle cx="677" cy="257" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.44s" repeatCount="indefinite"/></circle>
-    <circle cx="703" cy="257" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.55s" repeatCount="indefinite"/></circle>
-    <circle cx="729" cy="257" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.66s" repeatCount="indefinite"/></circle>
-    <circle cx="755" cy="257" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.77s" repeatCount="indefinite"/></circle>
-    <!-- Row 2 -->
-    <circle cx="677" cy="283" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.88s" repeatCount="indefinite"/></circle>
-    <circle cx="703" cy="283" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.99s" repeatCount="indefinite"/></circle>
-    <circle cx="729" cy="283" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.10s" repeatCount="indefinite"/></circle>
-    <circle cx="755" cy="283" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.21s" repeatCount="indefinite"/></circle>
-    <!-- Row 3 -->
-    <circle cx="677" cy="309" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.32s" repeatCount="indefinite"/></circle>
-    <circle cx="703" cy="309" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.43s" repeatCount="indefinite"/></circle>
-    <circle cx="729" cy="309" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.54s" repeatCount="indefinite"/></circle>
-    <circle cx="755" cy="309" r="8" fill="url(#gPr)"><animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.65s" repeatCount="indefinite"/></circle>
-  </g>
-
-  <!-- Caption: PR grid bottom edge = 309+8 = 317. Caption baseline y=328 gives clearance -->
-  <text x="668" y="328" font-size="7" fill="#6e7681" letter-spacing="0.3">EACH DOT = ONE PR · 16 IN 7 DAYS</text>
+<svg width="800" height="360" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-08-20: ridgeline of daily contributions across the past 12 months, peaking at 213 on Jun 14 2026; 256 of 365 days active in the year; 13 languages distributed across repositories; 6267 commits all time; 16 PRs merged in the past 7 days.">
+<defs>
+<style>text{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;}</style>
+<linearGradient id="gArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.90"><animate attributeName="stop-color" values="#38bdf8;#818cf8;#38bdf8" dur="17s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#0c4a6e" stop-opacity="0.08"/></linearGradient>
+<linearGradient id="gSweep" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<linearGradient id="gGauge" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#86efac"><animate attributeName="stop-color" values="#86efac;#5eead4;#86efac" dur="13s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#22c55e"/></linearGradient>
+<linearGradient id="gCommits" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fbbf24"><animate attributeName="stop-color" values="#fbbf24;#fb923c;#fbbf24" dur="11s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<linearGradient id="gPr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#f472b6"><animate attributeName="stop-color" values="#f472b6;#fb7185;#f472b6" dur="13s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#e11d48"/></linearGradient>
+<linearGradient id="gLang" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+<clipPath id="cChart"><rect x="30" y="74" width="740" height="103"/></clipPath>
+</defs>
+<rect width="800" height="360" fill="#0d1117"/>
+<text x="24" y="32" font-size="12" font-weight="700" letter-spacing="1.4" fill="#e6edf3">LIVE GITHUB STATS</text>
+<text x="776" y="32" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-08-20</text>
+<line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+<text x="24" y="60" font-size="9" letter-spacing="1.2" fill="#6e7681">DAILY CONTRIBUTIONS · PAST 12 MONTHS · AREA = COMMITS</text>
+<text x="776" y="60" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">peak 213 on Jun 14 2026</text>
+<g>
+<line x1="30" y1="76.0" x2="770" y2="76.0" stroke="#161b22" stroke-width="1"/>
+<line x1="30" y1="101.0" x2="770" y2="101.0" stroke="#161b22" stroke-width="1"/>
+<line x1="30" y1="126.0" x2="770" y2="126.0" stroke="#161b22" stroke-width="1"/>
+<line x1="30" y1="151.0" x2="770" y2="151.0" stroke="#161b22" stroke-width="1"/>
+<line x1="30" y1="176.0" x2="770" y2="176.0" stroke="#161b22" stroke-width="1"/>
+</g>
+<g font-size="7" fill="#484f58" letter-spacing="0.3">
+<text x="776" y="79.0" text-anchor="end">213</text>
+<text x="776" y="104.0" text-anchor="end">160</text>
+<text x="776" y="129.0" text-anchor="end">106</text>
+<text x="776" y="154.0" text-anchor="end">53</text>
+<text x="776" y="179.0" text-anchor="end">0</text>
+</g>
+<g clip-path="url(#cChart)">
+<path d="M 30.0,176 L 30.00,176.00 L 32.03,176.00 L 34.05,176.00 L 36.08,176.00 L 38.11,175.53 L 40.14,176.00 L 42.16,176.00 L 44.19,176.00 L 46.22,176.00 L 48.25,176.00 L 50.27,175.53 L 52.30,176.00 L 54.33,176.00 L 56.36,176.00 L 58.38,176.00 L 60.41,176.00 L 62.44,176.00 L 64.47,176.00 L 66.49,176.00 L 68.52,176.00 L 70.55,176.00 L 72.58,176.00 L 74.60,175.53 L 76.63,176.00 L 78.66,176.00 L 80.68,176.00 L 82.71,176.00 L 84.74,176.00 L 86.77,176.00 L 88.79,176.00 L 90.82,176.00 L 92.85,176.00 L 94.88,176.00 L 96.90,176.00 L 98.93,176.00 L 100.96,176.00 L 102.99,176.00 L 105.01,176.00 L 107.04,176.00 L 109.07,176.00 L 111.10,176.00 L 113.12,175.53 L 115.15,176.00 L 117.18,176.00 L 119.21,176.00 L 121.23,174.59 L 123.26,176.00 L 125.29,176.00 L 127.32,176.00 L 129.34,176.00 L 131.37,176.00 L 133.40,175.06 L 135.42,176.00 L 137.45,176.00 L 139.48,176.00 L 141.51,176.00 L 143.53,174.59 L 145.56,175.06 L 147.59,176.00 L 149.62,176.00 L 151.64,176.00 L 153.67,176.00 L 155.70,176.00 L 157.73,176.00 L 159.75,175.53 L 161.78,176.00 L 163.81,176.00 L 165.84,173.65 L 167.86,176.00 L 169.89,175.53 L 171.92,176.00 L 173.95,175.53 L 175.97,174.12 L 178.00,176.00 L 180.03,176.00 L 182.05,176.00 L 184.08,174.12 L 186.11,173.18 L 188.14,173.18 L 190.16,174.59 L 192.19,176.00 L 194.22,173.18 L 196.25,174.59 L 198.27,175.06 L 200.30,173.18 L 202.33,160.51 L 204.36,176.00 L 206.38,176.00 L 208.41,175.06 L 210.44,176.00 L 212.47,175.06 L 214.49,176.00 L 216.52,176.00 L 218.55,176.00 L 220.58,176.00 L 222.60,176.00 L 224.63,176.00 L 226.66,174.59 L 228.68,176.00 L 230.71,176.00 L 232.74,176.00 L 234.77,176.00 L 236.79,175.06 L 238.82,175.06 L 240.85,176.00 L 242.88,175.53 L 244.90,176.00 L 246.93,176.00 L 248.96,176.00 L 250.99,176.00 L 253.01,176.00 L 255.04,171.31 L 257.07,171.31 L 259.10,174.12 L 261.12,174.59 L 263.15,173.18 L 265.18,174.59 L 267.21,176.00 L 269.23,166.61 L 271.26,172.24 L 273.29,164.26 L 275.32,165.20 L 277.34,168.02 L 279.37,167.55 L 281.40,170.84 L 283.42,170.37 L 285.45,161.92 L 287.48,167.08 L 289.51,147.36 L 291.53,135.15 L 293.56,164.73 L 295.59,173.65 L 297.62,175.06 L 299.64,170.37 L 301.67,176.00 L 303.70,176.00 L 305.73,175.06 L 307.75,176.00 L 309.78,174.12 L 311.81,175.53 L 313.84,168.96 L 315.86,176.00 L 317.89,128.11 L 319.92,174.12 L 321.95,160.04 L 323.97,148.77 L 326.00,167.55 L 328.03,161.45 L 330.05,167.55 L 332.08,164.26 L 334.11,148.30 L 336.14,125.77 L 338.16,147.83 L 340.19,129.99 L 342.22,151.12 L 344.25,147.83 L 346.27,162.85 L 348.30,130.46 L 350.33,143.14 L 352.36,153.46 L 354.38,134.22 L 356.41,148.30 L 358.44,161.45 L 360.47,121.07 L 362.49,156.28 L 364.52,125.77 L 366.55,147.36 L 368.58,147.36 L 370.60,152.53 L 372.63,157.22 L 374.66,162.38 L 376.68,171.77 L 378.71,166.61 L 380.74,165.67 L 382.77,171.31 L 384.79,168.49 L 386.82,172.71 L 388.85,155.34 L 390.88,118.72 L 392.90,175.06 L 394.93,173.18 L 396.96,174.59 L 398.99,172.71 L 401.01,159.57 L 403.04,135.62 L 405.07,111.21 L 407.10,117.78 L 409.12,145.01 L 411.15,122.48 L 413.18,143.61 L 415.21,148.77 L 417.23,159.10 L 419.26,173.18 L 421.29,166.14 L 423.32,154.40 L 425.34,168.49 L 427.37,162.85 L 429.40,173.65 L 431.42,166.14 L 433.45,157.22 L 435.48,136.09 L 437.51,166.14 L 439.53,124.83 L 441.56,163.79 L 443.59,144.54 L 445.62,162.85 L 447.64,165.67 L 449.67,169.90 L 451.70,162.85 L 453.73,163.32 L 455.75,169.90 L 457.78,152.53 L 459.81,170.84 L 461.84,157.69 L 463.86,152.06 L 465.89,158.63 L 467.92,165.20 L 469.95,173.18 L 471.97,173.65 L 474.00,171.31 L 476.03,173.18 L 478.05,169.90 L 480.08,165.67 L 482.11,175.06 L 484.14,176.00 L 486.16,165.67 L 488.19,168.96 L 490.22,174.12 L 492.25,170.37 L 494.27,129.05 L 496.30,167.55 L 498.33,172.24 L 500.36,174.59 L 502.38,176.00 L 504.41,169.43 L 506.44,167.08 L 508.47,167.08 L 510.49,173.18 L 512.52,171.77 L 514.55,170.37 L 516.58,162.38 L 518.60,135.15 L 520.63,165.67 L 522.66,166.14 L 524.68,173.65 L 526.71,171.77 L 528.74,167.08 L 530.77,141.73 L 532.79,166.14 L 534.82,164.26 L 536.85,164.26 L 538.88,141.26 L 540.90,156.28 L 542.93,153.93 L 544.96,167.08 L 546.99,176.00 L 549.01,147.36 L 551.04,154.87 L 553.07,152.53 L 555.10,153.46 L 557.12,158.63 L 559.15,154.40 L 561.18,154.87 L 563.21,171.77 L 565.23,168.96 L 567.26,176.00 L 569.29,168.96 L 571.32,169.90 L 573.34,166.61 L 575.37,159.10 L 577.40,170.84 L 579.42,161.92 L 581.45,170.37 L 583.48,175.06 L 585.51,147.83 L 587.53,156.75 L 589.56,166.61 L 591.59,120.13 L 593.62,136.09 L 595.64,166.61 L 597.67,147.83 L 599.70,154.40 L 601.73,132.34 L 603.75,167.08 L 605.78,136.09 L 607.81,157.22 L 609.84,149.71 L 611.86,148.77 L 613.89,123.89 L 615.92,167.08 L 617.95,167.08 L 619.97,171.77 L 622.00,168.02 L 624.03,85.39 L 626.05,123.89 L 628.08,116.38 L 630.11,135.62 L 632.14,174.59 L 634.16,76.00 L 636.19,127.64 L 638.22,159.57 L 640.25,169.43 L 642.27,155.34 L 644.30,176.00 L 646.33,143.61 L 648.36,150.65 L 650.38,78.35 L 652.41,131.87 L 654.44,121.07 L 656.47,117.31 L 658.49,172.71 L 660.52,176.00 L 662.55,174.12 L 664.58,172.24 L 666.60,143.14 L 668.63,165.67 L 670.66,174.12 L 672.68,161.45 L 674.71,174.12 L 676.74,169.90 L 678.77,125.77 L 680.79,161.92 L 682.82,174.12 L 684.85,164.26 L 686.88,150.65 L 688.90,164.73 L 690.93,174.12 L 692.96,176.00 L 694.99,176.00 L 697.01,176.00 L 699.04,176.00 L 701.07,164.73 L 703.10,176.00 L 705.12,159.57 L 707.15,174.59 L 709.18,173.18 L 711.21,176.00 L 713.23,176.00 L 715.26,176.00 L 717.29,162.85 L 719.32,153.46 L 721.34,168.02 L 723.37,176.00 L 725.40,161.92 L 727.42,168.96 L 729.45,172.24 L 731.48,117.31 L 733.51,146.89 L 735.53,175.06 L 737.56,174.12 L 739.59,174.59 L 741.62,176.00 L 743.64,165.67 L 745.67,176.00 L 747.70,133.75 L 749.73,168.96 L 751.75,175.53 L 753.78,176.00 L 755.81,176.00 L 757.84,169.90 L 759.86,168.49 L 761.89,170.37 L 763.92,175.06 L 765.95,176.00 L 767.97,176.00 L 770.00,176.00 L 770.0,176 Z" fill="url(#gArea)"/>
+<path d="M 30.00,176.00 L 32.03,176.00 L 34.05,176.00 L 36.08,176.00 L 38.11,175.53 L 40.14,176.00 L 42.16,176.00 L 44.19,176.00 L 46.22,176.00 L 48.25,176.00 L 50.27,175.53 L 52.30,176.00 L 54.33,176.00 L 56.36,176.00 L 58.38,176.00 L 60.41,176.00 L 62.44,176.00 L 64.47,176.00 L 66.49,176.00 L 68.52,176.00 L 70.55,176.00 L 72.58,176.00 L 74.60,175.53 L 76.63,176.00 L 78.66,176.00 L 80.68,176.00 L 82.71,176.00 L 84.74,176.00 L 86.77,176.00 L 88.79,176.00 L 90.82,176.00 L 92.85,176.00 L 94.88,176.00 L 96.90,176.00 L 98.93,176.00 L 100.96,176.00 L 102.99,176.00 L 105.01,176.00 L 107.04,176.00 L 109.07,176.00 L 111.10,176.00 L 113.12,175.53 L 115.15,176.00 L 117.18,176.00 L 119.21,176.00 L 121.23,174.59 L 123.26,176.00 L 125.29,176.00 L 127.32,176.00 L 129.34,176.00 L 131.37,176.00 L 133.40,175.06 L 135.42,176.00 L 137.45,176.00 L 139.48,176.00 L 141.51,176.00 L 143.53,174.59 L 145.56,175.06 L 147.59,176.00 L 149.62,176.00 L 151.64,176.00 L 153.67,176.00 L 155.70,176.00 L 157.73,176.00 L 159.75,175.53 L 161.78,176.00 L 163.81,176.00 L 165.84,173.65 L 167.86,176.00 L 169.89,175.53 L 171.92,176.00 L 173.95,175.53 L 175.97,174.12 L 178.00,176.00 L 180.03,176.00 L 182.05,176.00 L 184.08,174.12 L 186.11,173.18 L 188.14,173.18 L 190.16,174.59 L 192.19,176.00 L 194.22,173.18 L 196.25,174.59 L 198.27,175.06 L 200.30,173.18 L 202.33,160.51 L 204.36,176.00 L 206.38,176.00 L 208.41,175.06 L 210.44,176.00 L 212.47,175.06 L 214.49,176.00 L 216.52,176.00 L 218.55,176.00 L 220.58,176.00 L 222.60,176.00 L 224.63,176.00 L 226.66,174.59 L 228.68,176.00 L 230.71,176.00 L 232.74,176.00 L 234.77,176.00 L 236.79,175.06 L 238.82,175.06 L 240.85,176.00 L 242.88,175.53 L 244.90,176.00 L 246.93,176.00 L 248.96,176.00 L 250.99,176.00 L 253.01,176.00 L 255.04,171.31 L 257.07,171.31 L 259.10,174.12 L 261.12,174.59 L 263.15,173.18 L 265.18,174.59 L 267.21,176.00 L 269.23,166.61 L 271.26,172.24 L 273.29,164.26 L 275.32,165.20 L 277.34,168.02 L 279.37,167.55 L 281.40,170.84 L 283.42,170.37 L 285.45,161.92 L 287.48,167.08 L 289.51,147.36 L 291.53,135.15 L 293.56,164.73 L 295.59,173.65 L 297.62,175.06 L 299.64,170.37 L 301.67,176.00 L 303.70,176.00 L 305.73,175.06 L 307.75,176.00 L 309.78,174.12 L 311.81,175.53 L 313.84,168.96 L 315.86,176.00 L 317.89,128.11 L 319.92,174.12 L 321.95,160.04 L 323.97,148.77 L 326.00,167.55 L 328.03,161.45 L 330.05,167.55 L 332.08,164.26 L 334.11,148.30 L 336.14,125.77 L 338.16,147.83 L 340.19,129.99 L 342.22,151.12 L 344.25,147.83 L 346.27,162.85 L 348.30,130.46 L 350.33,143.14 L 352.36,153.46 L 354.38,134.22 L 356.41,148.30 L 358.44,161.45 L 360.47,121.07 L 362.49,156.28 L 364.52,125.77 L 366.55,147.36 L 368.58,147.36 L 370.60,152.53 L 372.63,157.22 L 374.66,162.38 L 376.68,171.77 L 378.71,166.61 L 380.74,165.67 L 382.77,171.31 L 384.79,168.49 L 386.82,172.71 L 388.85,155.34 L 390.88,118.72 L 392.90,175.06 L 394.93,173.18 L 396.96,174.59 L 398.99,172.71 L 401.01,159.57 L 403.04,135.62 L 405.07,111.21 L 407.10,117.78 L 409.12,145.01 L 411.15,122.48 L 413.18,143.61 L 415.21,148.77 L 417.23,159.10 L 419.26,173.18 L 421.29,166.14 L 423.32,154.40 L 425.34,168.49 L 427.37,162.85 L 429.40,173.65 L 431.42,166.14 L 433.45,157.22 L 435.48,136.09 L 437.51,166.14 L 439.53,124.83 L 441.56,163.79 L 443.59,144.54 L 445.62,162.85 L 447.64,165.67 L 449.67,169.90 L 451.70,162.85 L 453.73,163.32 L 455.75,169.90 L 457.78,152.53 L 459.81,170.84 L 461.84,157.69 L 463.86,152.06 L 465.89,158.63 L 467.92,165.20 L 469.95,173.18 L 471.97,173.65 L 474.00,171.31 L 476.03,173.18 L 478.05,169.90 L 480.08,165.67 L 482.11,175.06 L 484.14,176.00 L 486.16,165.67 L 488.19,168.96 L 490.22,174.12 L 492.25,170.37 L 494.27,129.05 L 496.30,167.55 L 498.33,172.24 L 500.36,174.59 L 502.38,176.00 L 504.41,169.43 L 506.44,167.08 L 508.47,167.08 L 510.49,173.18 L 512.52,171.77 L 514.55,170.37 L 516.58,162.38 L 518.60,135.15 L 520.63,165.67 L 522.66,166.14 L 524.68,173.65 L 526.71,171.77 L 528.74,167.08 L 530.77,141.73 L 532.79,166.14 L 534.82,164.26 L 536.85,164.26 L 538.88,141.26 L 540.90,156.28 L 542.93,153.93 L 544.96,167.08 L 546.99,176.00 L 549.01,147.36 L 551.04,154.87 L 553.07,152.53 L 555.10,153.46 L 557.12,158.63 L 559.15,154.40 L 561.18,154.87 L 563.21,171.77 L 565.23,168.96 L 567.26,176.00 L 569.29,168.96 L 571.32,169.90 L 573.34,166.61 L 575.37,159.10 L 577.40,170.84 L 579.42,161.92 L 581.45,170.37 L 583.48,175.06 L 585.51,147.83 L 587.53,156.75 L 589.56,166.61 L 591.59,120.13 L 593.62,136.09 L 595.64,166.61 L 597.67,147.83 L 599.70,154.40 L 601.73,132.34 L 603.75,167.08 L 605.78,136.09 L 607.81,157.22 L 609.84,149.71 L 611.86,148.77 L 613.89,123.89 L 615.92,167.08 L 617.95,167.08 L 619.97,171.77 L 622.00,168.02 L 624.03,85.39 L 626.05,123.89 L 628.08,116.38 L 630.11,135.62 L 632.14,174.59 L 634.16,76.00 L 636.19,127.64 L 638.22,159.57 L 640.25,169.43 L 642.27,155.34 L 644.30,176.00 L 646.33,143.61 L 648.36,150.65 L 650.38,78.35 L 652.41,131.87 L 654.44,121.07 L 656.47,117.31 L 658.49,172.71 L 660.52,176.00 L 662.55,174.12 L 664.58,172.24 L 666.60,143.14 L 668.63,165.67 L 670.66,174.12 L 672.68,161.45 L 674.71,174.12 L 676.74,169.90 L 678.77,125.77 L 680.79,161.92 L 682.82,174.12 L 684.85,164.26 L 686.88,150.65 L 688.90,164.73 L 690.93,174.12 L 692.96,176.00 L 694.99,176.00 L 697.01,176.00 L 699.04,176.00 L 701.07,164.73 L 703.10,176.00 L 705.12,159.57 L 707.15,174.59 L 709.18,173.18 L 711.21,176.00 L 713.23,176.00 L 715.26,176.00 L 717.29,162.85 L 719.32,153.46 L 721.34,168.02 L 723.37,176.00 L 725.40,161.92 L 727.42,168.96 L 729.45,172.24 L 731.48,117.31 L 733.51,146.89 L 735.53,175.06 L 737.56,174.12 L 739.59,174.59 L 741.62,176.00 L 743.64,165.67 L 745.67,176.00 L 747.70,133.75 L 749.73,168.96 L 751.75,175.53 L 753.78,176.00 L 755.81,176.00 L 757.84,169.90 L 759.86,168.49 L 761.89,170.37 L 763.92,175.06 L 765.95,176.00 L 767.97,176.00 L 770.00,176.00" fill="none" stroke="#7dd3fc" stroke-width="1" stroke-opacity="0.7"/>
+<path d="M 30.0,176 L 30.00,176.00 L 32.03,176.00 L 34.05,176.00 L 36.08,176.00 L 38.11,175.53 L 40.14,176.00 L 42.16,176.00 L 44.19,176.00 L 46.22,176.00 L 48.25,176.00 L 50.27,175.53 L 52.30,176.00 L 54.33,176.00 L 56.36,176.00 L 58.38,176.00 L 60.41,176.00 L 62.44,176.00 L 64.47,176.00 L 66.49,176.00 L 68.52,176.00 L 70.55,176.00 L 72.58,176.00 L 74.60,175.53 L 76.63,176.00 L 78.66,176.00 L 80.68,176.00 L 82.71,176.00 L 84.74,176.00 L 86.77,176.00 L 88.79,176.00 L 90.82,176.00 L 92.85,176.00 L 94.88,176.00 L 96.90,176.00 L 98.93,176.00 L 100.96,176.00 L 102.99,176.00 L 105.01,176.00 L 107.04,176.00 L 109.07,176.00 L 111.10,176.00 L 113.12,175.53 L 115.15,176.00 L 117.18,176.00 L 119.21,176.00 L 121.23,174.59 L 123.26,176.00 L 125.29,176.00 L 127.32,176.00 L 129.34,176.00 L 131.37,176.00 L 133.40,175.06 L 135.42,176.00 L 137.45,176.00 L 139.48,176.00 L 141.51,176.00 L 143.53,174.59 L 145.56,175.06 L 147.59,176.00 L 149.62,176.00 L 151.64,176.00 L 153.67,176.00 L 155.70,176.00 L 157.73,176.00 L 159.75,175.53 L 161.78,176.00 L 163.81,176.00 L 165.84,173.65 L 167.86,176.00 L 169.89,175.53 L 171.92,176.00 L 173.95,175.53 L 175.97,174.12 L 178.00,176.00 L 180.03,176.00 L 182.05,176.00 L 184.08,174.12 L 186.11,173.18 L 188.14,173.18 L 190.16,174.59 L 192.19,176.00 L 194.22,173.18 L 196.25,174.59 L 198.27,175.06 L 200.30,173.18 L 202.33,160.51 L 204.36,176.00 L 206.38,176.00 L 208.41,175.06 L 210.44,176.00 L 212.47,175.06 L 214.49,176.00 L 216.52,176.00 L 218.55,176.00 L 220.58,176.00 L 222.60,176.00 L 224.63,176.00 L 226.66,174.59 L 228.68,176.00 L 230.71,176.00 L 232.74,176.00 L 234.77,176.00 L 236.79,175.06 L 238.82,175.06 L 240.85,176.00 L 242.88,175.53 L 244.90,176.00 L 246.93,176.00 L 248.96,176.00 L 250.99,176.00 L 253.01,176.00 L 255.04,171.31 L 257.07,171.31 L 259.10,174.12 L 261.12,174.59 L 263.15,173.18 L 265.18,174.59 L 267.21,176.00 L 269.23,166.61 L 271.26,172.24 L 273.29,164.26 L 275.32,165.20 L 277.34,168.02 L 279.37,167.55 L 281.40,170.84 L 283.42,170.37 L 285.45,161.92 L 287.48,167.08 L 289.51,147.36 L 291.53,135.15 L 293.56,164.73 L 295.59,173.65 L 297.62,175.06 L 299.64,170.37 L 301.67,176.00 L 303.70,176.00 L 305.73,175.06 L 307.75,176.00 L 309.78,174.12 L 311.81,175.53 L 313.84,168.96 L 315.86,176.00 L 317.89,128.11 L 319.92,174.12 L 321.95,160.04 L 323.97,148.77 L 326.00,167.55 L 328.03,161.45 L 330.05,167.55 L 332.08,164.26 L 334.11,148.30 L 336.14,125.77 L 338.16,147.83 L 340.19,129.99 L 342.22,151.12 L 344.25,147.83 L 346.27,162.85 L 348.30,130.46 L 350.33,143.14 L 352.36,153.46 L 354.38,134.22 L 356.41,148.30 L 358.44,161.45 L 360.47,121.07 L 362.49,156.28 L 364.52,125.77 L 366.55,147.36 L 368.58,147.36 L 370.60,152.53 L 372.63,157.22 L 374.66,162.38 L 376.68,171.77 L 378.71,166.61 L 380.74,165.67 L 382.77,171.31 L 384.79,168.49 L 386.82,172.71 L 388.85,155.34 L 390.88,118.72 L 392.90,175.06 L 394.93,173.18 L 396.96,174.59 L 398.99,172.71 L 401.01,159.57 L 403.04,135.62 L 405.07,111.21 L 407.10,117.78 L 409.12,145.01 L 411.15,122.48 L 413.18,143.61 L 415.21,148.77 L 417.23,159.10 L 419.26,173.18 L 421.29,166.14 L 423.32,154.40 L 425.34,168.49 L 427.37,162.85 L 429.40,173.65 L 431.42,166.14 L 433.45,157.22 L 435.48,136.09 L 437.51,166.14 L 439.53,124.83 L 441.56,163.79 L 443.59,144.54 L 445.62,162.85 L 447.64,165.67 L 449.67,169.90 L 451.70,162.85 L 453.73,163.32 L 455.75,169.90 L 457.78,152.53 L 459.81,170.84 L 461.84,157.69 L 463.86,152.06 L 465.89,158.63 L 467.92,165.20 L 469.95,173.18 L 471.97,173.65 L 474.00,171.31 L 476.03,173.18 L 478.05,169.90 L 480.08,165.67 L 482.11,175.06 L 484.14,176.00 L 486.16,165.67 L 488.19,168.96 L 490.22,174.12 L 492.25,170.37 L 494.27,129.05 L 496.30,167.55 L 498.33,172.24 L 500.36,174.59 L 502.38,176.00 L 504.41,169.43 L 506.44,167.08 L 508.47,167.08 L 510.49,173.18 L 512.52,171.77 L 514.55,170.37 L 516.58,162.38 L 518.60,135.15 L 520.63,165.67 L 522.66,166.14 L 524.68,173.65 L 526.71,171.77 L 528.74,167.08 L 530.77,141.73 L 532.79,166.14 L 534.82,164.26 L 536.85,164.26 L 538.88,141.26 L 540.90,156.28 L 542.93,153.93 L 544.96,167.08 L 546.99,176.00 L 549.01,147.36 L 551.04,154.87 L 553.07,152.53 L 555.10,153.46 L 557.12,158.63 L 559.15,154.40 L 561.18,154.87 L 563.21,171.77 L 565.23,168.96 L 567.26,176.00 L 569.29,168.96 L 571.32,169.90 L 573.34,166.61 L 575.37,159.10 L 577.40,170.84 L 579.42,161.92 L 581.45,170.37 L 583.48,175.06 L 585.51,147.83 L 587.53,156.75 L 589.56,166.61 L 591.59,120.13 L 593.62,136.09 L 595.64,166.61 L 597.67,147.83 L 599.70,154.40 L 601.73,132.34 L 603.75,167.08 L 605.78,136.09 L 607.81,157.22 L 609.84,149.71 L 611.86,148.77 L 613.89,123.89 L 615.92,167.08 L 617.95,167.08 L 619.97,171.77 L 622.00,168.02 L 624.03,85.39 L 626.05,123.89 L 628.08,116.38 L 630.11,135.62 L 632.14,174.59 L 634.16,76.00 L 636.19,127.64 L 638.22,159.57 L 640.25,169.43 L 642.27,155.34 L 644.30,176.00 L 646.33,143.61 L 648.36,150.65 L 650.38,78.35 L 652.41,131.87 L 654.44,121.07 L 656.47,117.31 L 658.49,172.71 L 660.52,176.00 L 662.55,174.12 L 664.58,172.24 L 666.60,143.14 L 668.63,165.67 L 670.66,174.12 L 672.68,161.45 L 674.71,174.12 L 676.74,169.90 L 678.77,125.77 L 680.79,161.92 L 682.82,174.12 L 684.85,164.26 L 686.88,150.65 L 688.90,164.73 L 690.93,174.12 L 692.96,176.00 L 694.99,176.00 L 697.01,176.00 L 699.04,176.00 L 701.07,164.73 L 703.10,176.00 L 705.12,159.57 L 707.15,174.59 L 709.18,173.18 L 711.21,176.00 L 713.23,176.00 L 715.26,176.00 L 717.29,162.85 L 719.32,153.46 L 721.34,168.02 L 723.37,176.00 L 725.40,161.92 L 727.42,168.96 L 729.45,172.24 L 731.48,117.31 L 733.51,146.89 L 735.53,175.06 L 737.56,174.12 L 739.59,174.59 L 741.62,176.00 L 743.64,165.67 L 745.67,176.00 L 747.70,133.75 L 749.73,168.96 L 751.75,175.53 L 753.78,176.00 L 755.81,176.00 L 757.84,169.90 L 759.86,168.49 L 761.89,170.37 L 763.92,175.06 L 765.95,176.00 L 767.97,176.00 L 770.00,176.00 L 770.0,176 Z" fill="url(#gArea)" opacity="0.2">
+<animate attributeName="opacity" values="0.1;0.35;0.1" dur="11s" repeatCount="indefinite"/>
+</path>
+<rect x="0" y="74" width="180" height="103" fill="url(#gSweep)">
+<animate attributeName="x" from="-180" to="770" dur="13s" repeatCount="indefinite"/>
+</rect>
+</g>
+<circle cx="634.16" cy="76.00" r="2.6" fill="#fde68a"/>
+<circle cx="634.16" cy="76.00" r="3" fill="none" stroke="#fbbf24" stroke-width="1.2" opacity="0.85">
+<animate attributeName="r" values="3;9;3" dur="3.5s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0.9;0;0.9" dur="3.5s" repeatCount="indefinite"/>
+</circle>
+<g font-size="8" fill="#6e7681" letter-spacing="0.3">
+<text x="54.3" y="192" text-anchor="middle">Sep '25</text>
+<text x="178.0" y="192" text-anchor="middle">Nov '25</text>
+<text x="301.7" y="192" text-anchor="middle">Jan '26</text>
+<text x="421.3" y="192" text-anchor="middle">Mar '26</text>
+<text x="545.0" y="192" text-anchor="middle">May '26</text>
+<text x="668.6" y="192" text-anchor="middle">Jul '26</text>
+<text x="731.5" y="192" text-anchor="middle">Aug '26</text>
+</g>
+<line x1="24" y1="204" x2="776" y2="204" stroke="#21262d" stroke-width="1"/>
+<text x="30" y="228" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">DAYS ACTIVE</text>
+<text x="237" y="228" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">1 YEAR</text>
+<circle cx="82" cy="296" r="33" fill="none" stroke="#1f2937" stroke-width="10"/>
+<circle cx="82" cy="296" r="33" fill="none" stroke="url(#gGauge)" stroke-width="10" stroke-linecap="round" stroke-dasharray="145.43 61.92" transform="rotate(-90 82 296)">
+<animate attributeName="stroke-opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/>
+</circle>
+<circle r="3" fill="#a7f3d0">
+<animateMotion dur="19s" repeatCount="indefinite" path="M 82 263 A 33 33 0 0 1 82 329 A 33 33 0 0 1 82 263"/>
+<animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+</circle>
+<text x="130" y="302" font-size="34" font-weight="700" fill="url(#gGauge)">256</text>
+<text x="130" y="320" font-size="10" fill="#8b949e">of 365 days</text>
+<text x="130" y="334" font-size="7" letter-spacing="0.4" fill="#6e7681">DAYS WITH COMMITS</text>
+<line x1="245" y1="214" x2="245" y2="348" stroke="#21262d" stroke-width="1"/>
+<text x="260" y="228" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">LANGUAGES</text>
+<text x="537" y="228" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">ALL TIME</text>
+<text x="260" y="278" font-size="34" font-weight="700" fill="url(#gLang)">13</text>
+<text x="308" y="272" font-size="12" fill="#c9d1d9">distinct</text>
+<text x="308" y="286" font-size="7" letter-spacing="0.4" fill="#6e7681">BY LINES OF CODE</text>
+<rect x="260.00" y="300" width="166.29" height="22" fill="#3178c6">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.00s" repeatCount="indefinite"/>
+</rect>
+<rect x="426.29" y="300" width="53.04" height="22" fill="#4b8bbe">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.35s" repeatCount="indefinite"/>
+</rect>
+<rect x="479.33" y="300" width="25.67" height="22" fill="#00ADD8">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.70s" repeatCount="indefinite"/>
+</rect>
+<rect x="505.00" y="300" width="11.59" height="22" fill="#89e051">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.05s" repeatCount="indefinite"/>
+</rect>
+<rect x="516.59" y="300" width="5.36" height="22" fill="#e34c26">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.40s" repeatCount="indefinite"/>
+</rect>
+<rect x="521.94" y="300" width="4.53" height="22" fill="#8a5cf0">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.75s" repeatCount="indefinite"/>
+</rect>
+<rect x="526.47" y="300" width="2.91" height="22" fill="#f1e05a">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="2.10s" repeatCount="indefinite"/>
+</rect>
+<rect x="529.38" y="300" width="0.62" height="22" fill="#c678dd">
+<animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="2.45s" repeatCount="indefinite"/>
+</rect>
+<text x="343.15" y="314.50" text-anchor="middle" font-size="10" font-weight="700" fill="#0d1117">TypeScript</text>
+<text x="452.81" y="313.80" text-anchor="middle" font-size="8" font-weight="700" fill="#0d1117">Python</text>
+<text x="395.0" y="333.0" text-anchor="middle" font-size="7.5" letter-spacing="0.1" fill="#8b949e">TypeScript 4004  ·  Python 1277  ·  Go 618  ·  Shell 279</text>
+<text x="395.0" y="343.0" text-anchor="middle" font-size="7" letter-spacing="0.1" fill="#6e7681">HTML 129  ·  CoffeeScript 109  ·  JavaScript 70  ·  CSS 15</text>
+<line x1="545" y1="214" x2="545" y2="348" stroke="#21262d" stroke-width="1"/>
+<text x="560" y="228" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">COMMITS</text>
+<text x="677" y="228" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">ALL TIME</text>
+<text x="560" y="290" font-size="34" font-weight="700" fill="url(#gCommits)">6267</text>
+<text x="560" y="310" font-size="11" fill="#c9d1d9">commits total</text>
+<text x="560" y="326" font-size="7" letter-spacing="0.4" fill="#6e7681">ACROSS ALL REPOS</text>
+<line x1="685" y1="214" x2="685" y2="348" stroke="#21262d" stroke-width="1"/>
+<text x="695" y="228" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">PRS MERGED</text>
+<text x="772" y="228" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">7 DAYS</text>
+<text x="695" y="290" font-size="34" font-weight="700" fill="url(#gPr)">16</text>
+<text x="695" y="310" font-size="11" fill="#c9d1d9">merged</text>
+<text x="695" y="326" font-size="7" letter-spacing="0.4" fill="#6e7681">THIS WEEK</text>
 </svg>
