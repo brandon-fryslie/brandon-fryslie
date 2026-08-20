@@ -1,18 +1,136 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated March 05, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">25</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">964</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <!-- Sweep highlight: a soft bright vertical band used across every meter for perpetual motion -->
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f0f6fc" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#f0f6fc" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#f0f6fc" stop-opacity="0.45"/>
+      <stop offset="52%" stop-color="#f0f6fc" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#f0f6fc" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Commit tick pattern: one vertical dash every 2.795px (269 dashes across 752px) -->
+    <pattern id="commitTicks" width="2.795" height="16" patternUnits="userSpaceOnUse">
+      <line x1="0.6" y1="1" x2="0.6" y2="15" stroke="#58a6ff" stroke-width="1.1" opacity="0.85"/>
+    </pattern>
+
+    <!-- Streak cell grid: fine subdivisions marking each of the 365 days -->
+    <pattern id="dayGrid" width="2.0603" height="14" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#161b22" stroke-width="0.6"/>
+    </pattern>
+
+    <!-- PR tick pattern: one tick every 5.449px (138 ticks across 752px) -->
+    <pattern id="prTicks" width="5.449" height="24" patternUnits="userSpaceOnUse">
+      <line x1="1" y1="2" x2="1" y2="22" stroke="#a371f7" stroke-width="1.6" opacity="0.9"/>
+    </pattern>
+
+    <clipPath id="commitClip"><rect x="24" y="82" width="752" height="16" rx="2"/></clipPath>
+    <clipPath id="streakClip"><rect x="24" y="130" width="752" height="14" rx="2"/></clipPath>
+    <clipPath id="langClip"><rect x="24" y="182" width="752" height="22" rx="3"/></clipPath>
+    <clipPath id="prClip"><rect x="24" y="262" width="752" height="24" rx="2"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#0d1117"/>
+
+  <!-- ================ Header ================ -->
+  <text x="24" y="30" font-size="14" font-weight="600" fill="#c9d1d9">Live GitHub Stats</text>
+  <text x="776" y="30" font-size="12" fill="#8b949e" text-anchor="end">March 05, 2026</text>
+  <line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ================ Row 1 — Commits ================ -->
+  <!-- Big value + label + right-hand caption -->
+  <text x="24" y="70" font-size="20" font-weight="700" fill="#58a6ff">2692</text>
+  <text x="72" y="70" font-size="11" fill="#8b949e">commits &#183; past year</text>
+  <text x="776" y="70" font-size="10" fill="#6e7681" text-anchor="end">269 dashes &#8594; each &#8776; 10 commits</text>
+
+  <!-- Commit tick bar: 269 dashes tiled by pattern; total width represents the year's commit volume -->
+  <g clip-path="url(#commitClip)">
+    <rect x="24" y="82" width="752" height="16" fill="#0d1117"/>
+    <rect x="24" y="82" width="751.855" height="16" fill="url(#commitTicks)"/>
+    <!-- Perpetual sweep across the bar -->
+    <rect x="-140" y="82" width="140" height="16" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="920 0" dur="13s" repeatCount="indefinite"/>
+    </rect>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (9) / TypeScript (8) / Shell (5) / CoffeeScript (4)</text>
+
+  <line x1="24" y1="108" x2="776" y2="108" stroke="#161b22" stroke-width="1"/>
+
+  <!-- ================ Row 2 — Longest Streak ================ -->
+  <text x="24" y="122" font-size="20" font-weight="700" fill="#f778ba">56</text>
+  <text x="60" y="122" font-size="11" fill="#8b949e">consecutive days &#183; longest streak, past year</text>
+  <text x="776" y="122" font-size="10" fill="#6e7681" text-anchor="end">filled slice = 56 &#8725; 365 days</text>
+
+  <!-- 365-day track with the streak (56 days) anchored at the year's tail, where it actually happened -->
+  <g clip-path="url(#streakClip)">
+    <!-- Track background -->
+    <rect x="24" y="130" width="752" height="14" fill="#161b22"/>
+    <!-- Fine day-gridlines -->
+    <rect x="24" y="130" width="751.98" height="14" fill="url(#dayGrid)"/>
+    <!-- Streak fill: 56/365 of the track, right-anchored -->
+    <!-- width = 752 * 56/365 = 115.397; x = 776 - 115.397 = 660.603 -->
+    <rect x="660.60" y="130" width="115.40" height="14" fill="#f778ba" opacity="0.85">
+      <animate attributeName="opacity" values="0.72;1;0.72" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Sweep highlight -->
+    <rect x="-120" y="130" width="120" height="14" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="900 0" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- Bracket marking the streak boundary on the track -->
+  <line x1="660.60" y1="146" x2="660.60" y2="150" stroke="#f778ba" stroke-width="1.2"/>
+  <line x1="776" y1="146" x2="776" y2="150" stroke="#f778ba" stroke-width="1.2"/>
+
+  <line x1="24" y1="160" x2="776" y2="160" stroke="#161b22" stroke-width="1"/>
+
+  <!-- ================ Row 3 — Languages ================ -->
+  <text x="24" y="176" font-size="20" font-weight="700" fill="#3fb950">4</text>
+  <text x="48" y="176" font-size="11" fill="#8b949e">languages authored &#183; past 30 days</text>
+  <text x="776" y="176" font-size="10" fill="#6e7681" text-anchor="end">segment width &#8733; commits</text>
+
+  <!-- Stacked bar: widths proportional to commit counts (min-width 10px so tiny slices stay visible) -->
+  <!-- Totals: TS 576, Py 412, Go 22, Shell 3, sum 1013.
+       Available 752; 10px min each = 40; remainder 712 distributed proportionally.
+       TS: 10 + 712*576/1013 = 414.81  -> x 24.00  width 414.81
+       Py: 10 + 712*412/1013 = 299.60  -> x 438.81 width 299.60
+       Go: 10 + 712*22/1013  =  25.46  -> x 738.41 width  25.46
+       Sh: 10 + 712*3/1013   =  12.11  -> x 763.87 width  12.11  (ends at 775.98) -->
+  <g clip-path="url(#langClip)">
+    <rect x="24"     y="182" width="414.81" height="22" fill="#3178c6"/>
+    <rect x="438.81" y="182" width="299.60" height="22" fill="#f2c14e"/>
+    <rect x="738.41" y="182" width="25.46"  height="22" fill="#00add8"/>
+    <rect x="763.87" y="182" width="12.13"  height="22" fill="#89e051"/>
+    <!-- Sweep -->
+    <rect x="-160" y="182" width="160" height="22" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="940 0" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Language legend row: colored dot + name + count. Left-aligned, evenly spaced. -->
+  <!-- Legend baseline at y=224; dots centered at cy=220, r=4 -->
+  <circle cx="28"  cy="220" r="4" fill="#3178c6"/>
+  <text   x="38"  y="224" font-size="11" fill="#c9d1d9">TypeScript 576</text>
+  <circle cx="150" cy="220" r="4" fill="#f2c14e"/>
+  <text   x="160" y="224" font-size="11" fill="#c9d1d9">Python 412</text>
+  <circle cx="248" cy="220" r="4" fill="#00add8"/>
+  <text   x="258" y="224" font-size="11" fill="#c9d1d9">Go 22</text>
+  <circle cx="316" cy="220" r="4" fill="#89e051"/>
+  <text   x="326" y="224" font-size="11" fill="#c9d1d9">Shell 3</text>
+
+  <line x1="24" y1="236" x2="776" y2="236" stroke="#161b22" stroke-width="1"/>
+
+  <!-- ================ Row 4 — PRs Merged ================ -->
+  <text x="24" y="250" font-size="20" font-weight="700" fill="#a371f7">138</text>
+  <text x="72" y="250" font-size="11" fill="#8b949e">pull requests merged &#183; past year</text>
+  <text x="776" y="250" font-size="10" fill="#6e7681" text-anchor="end">138 ticks &#8594; one per merged PR</text>
+
+  <!-- 138 discrete ticks, tiled by pattern. Total width 138 * 5.449 = 751.96 -->
+  <g clip-path="url(#prClip)">
+    <rect x="24" y="262" width="752" height="24" fill="#0d1117"/>
+    <rect x="24" y="262" width="751.96" height="24" fill="url(#prTicks)"/>
+    <!-- Perpetual chase highlight -->
+    <rect x="-110" y="262" width="110" height="24" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="890 0" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 </svg>
