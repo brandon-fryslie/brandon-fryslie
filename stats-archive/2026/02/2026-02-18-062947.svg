@@ -1,18 +1,175 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated February 18, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">25</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">842</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" width="800" height="370">
+  <defs>
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f0f6fc" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f0f6fc" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#f0f6fc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="barsClip"><rect x="22" y="51" width="756" height="118"/></clipPath>
+    <clipPath id="bd1clip"><rect x="22" y="285" width="756" height="20"/></clipPath>
+    <clipPath id="bd2clip"><rect x="22" y="332" width="756" height="20"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="370" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="369" fill="none" stroke="#21262d" stroke-width="1" rx="6"/>
+
+  <!-- Title strip -->
+  <text x="20" y="26" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Weekly contributions · past 12 months</text>
+  <text x="780" y="26" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#7d8590">Wednesday, February 18, 2026</text>
+
+  <!-- Chart annotation: peak week + total -->
+  <text x="20" y="46" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590">peak week 506 · year total 2566</text>
+
+  <!-- Year-bar baseline -->
+  <line x1="22" y1="165" x2="778" y2="165" stroke="#30363d" stroke-width="1"/>
+
+  <!-- 53 weekly bars (each bar = one Sun–Sat week of the past year) -->
+  <g clip-path="url(#barsClip)">
+    <rect x="22.00" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="36.26" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="50.53" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="64.79" y="162.83" width="12" height="2.17" fill="#006d32" rx="1"/>
+    <rect x="79.06" y="162.61" width="12" height="2.39" fill="#26a641" rx="1"/>
+    <rect x="93.32" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="107.58" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="121.85" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="136.11" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="150.37" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="164.64" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="178.90" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="193.17" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="207.43" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="221.69" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="235.96" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="250.22" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="264.49" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="278.75" y="161.74" width="12" height="3.26" fill="#26a641" rx="1"/>
+    <rect x="293.01" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="307.28" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="321.54" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="335.81" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="350.07" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="364.33" y="162.17" width="12" height="2.83" fill="#26a641" rx="1"/>
+    <rect x="378.60" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="392.86" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="407.12" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="421.39" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="435.65" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="449.92" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="464.18" y="163.00" width="12" height="2.00" fill="#161b22" rx="1"/>
+    <rect x="478.44" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="492.71" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="506.97" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="521.24" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="535.50" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="549.76" y="158.91" width="12" height="6.09" fill="#39d353" rx="1"/>
+    <rect x="564.03" y="155.65" width="12" height="9.35" fill="#39d353" rx="1"/>
+    <rect x="578.29" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="592.55" y="163.00" width="12" height="2.00" fill="#006d32" rx="1"/>
+    <rect x="606.82" y="163.00" width="12" height="2.00" fill="#0e4429" rx="1"/>
+    <rect x="621.08" y="157.17" width="12" height="7.83" fill="#39d353" rx="1"/>
+    <rect x="635.35" y="138.47" width="12" height="26.53" fill="#39d353" rx="1"/>
+    <rect x="649.61" y="113.26" width="12" height="51.74" fill="#39d353" rx="1"/>
+    <rect x="663.87" y="160.65" width="12" height="4.35" fill="#26a641" rx="1"/>
+    <rect x="678.14" y="118.48" width="12" height="46.52" fill="#39d353" rx="1"/>
+    <rect x="692.40" y="95.87" width="12" height="69.13" fill="#39d353" rx="1"/>
+    <rect x="706.67" y="66.30" width="12" height="98.70" fill="#39d353" rx="1"/>
+    <rect x="720.93" y="55.00" width="12" height="110.00" fill="#39d353" rx="1"/>
+    <rect x="735.19" y="114.78" width="12" height="50.22" fill="#39d353" rx="1"/>
+    <rect x="749.46" y="120.00" width="12" height="45.00" fill="#39d353" rx="1"/>
+    <rect x="763.72" y="162.83" width="12" height="2.17" fill="#006d32" rx="1"/>
+
+    <!-- Continuous reading head sweeping across the year -->
+    <rect x="0" y="51" width="70" height="118" fill="url(#scanGrad)">
+      <animate attributeName="x" from="-70" to="778" dur="11s" repeatCount="indefinite"/>
+    </rect>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (10) / TypeScript (8) / Shell (5) / CoffeeScript (4)</text>
+
+  <!-- Month tick marks and labels -->
+  <line x1="44.4" y1="166" x2="44.4" y2="170" stroke="#30363d" stroke-width="0.8"/>
+  <text x="44.4" y="182" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">Mar</text>
+  <line x1="168.8" y1="166" x2="168.8" y2="170" stroke="#30363d" stroke-width="0.8"/>
+  <text x="168.8" y="182" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">May</text>
+  <line x1="293.0" y1="166" x2="293.0" y2="170" stroke="#30363d" stroke-width="0.8"/>
+  <text x="293.0" y="182" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">Jul</text>
+  <line x1="419.4" y1="166" x2="419.4" y2="170" stroke="#30363d" stroke-width="0.8"/>
+  <text x="419.4" y="182" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">Sep</text>
+  <line x1="543.8" y1="166" x2="543.8" y2="170" stroke="#30363d" stroke-width="0.8"/>
+  <text x="543.8" y="182" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">Nov</text>
+  <line x1="668.0" y1="166" x2="668.0" y2="170" stroke="#30363d" stroke-width="0.8"/>
+  <text x="668.0" y="182" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">Jan</text>
+
+  <!-- Metric row: 5 cells centered at x = 80, 240, 400, 560, 720 -->
+  <text x="80" y="225" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#58a6ff">1</text>
+  <text x="80" y="244" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#e6edf3">My Issues Closed</text>
+  <text x="80" y="257" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590">30 Days</text>
+
+  <text x="240" y="225" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#58a6ff">23</text>
+  <text x="240" y="244" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#e6edf3">PRs Merged</text>
+  <text x="240" y="257" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590">1 Year</text>
+
+  <text x="400" y="225" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#58a6ff">1271</text>
+  <text x="400" y="244" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#e6edf3">Commits</text>
+  <text x="400" y="257" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590">30 Days</text>
+
+  <text x="560" y="225" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#58a6ff">10</text>
+  <text x="560" y="244" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#e6edf3">Active Repos</text>
+  <text x="560" y="257" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590">30 Days</text>
+
+  <text x="720" y="225" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="32" font-weight="700" fill="#58a6ff">13</text>
+  <text x="720" y="244" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#e6edf3">Languages</text>
+  <text x="720" y="257" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#7d8590">All Time</text>
+
+  <!-- Breakdown 1: Commits by repo (30 days). Segment widths proportional to commit count. -->
+  <text x="22" y="278" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" fill="#7d8590">Commits by repo · 30 days · total 1302</text>
+  <g>
+    <rect x="22.00" y="285" width="517.94" height="20" fill="#58a6ff"/>
+    <text x="28.00" y="300" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117">oscilla-animator-v2 · 892</text>
+    <rect x="539.94" y="285" width="103.33" height="20" fill="#f778ba"/>
+    <text x="545.94" y="300" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117">cc-dump · 178</text>
+    <rect x="643.28" y="285" width="50.51" height="20" fill="#a371f7"/>
+    <text x="668.53" y="300" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117" text-anchor="middle">87</text>
+    <rect x="693.78" y="285" width="48.77" height="20" fill="#f0883e"/>
+    <text x="718.17" y="300" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117" text-anchor="middle">84</text>
+    <rect x="742.55" y="285" width="22.64" height="20" fill="#3fb950"/>
+    <text x="753.87" y="300" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117" text-anchor="middle">39</text>
+    <rect x="765.19" y="285" width="12.77" height="20" fill="#e3b341"/>
+    <text x="771.58" y="300" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117" text-anchor="middle">22</text>
+    <g clip-path="url(#bd1clip)">
+      <rect x="0" y="285" width="90" height="20" fill="url(#shimmer)">
+        <animate attributeName="x" from="-90" to="778" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Breakdown 2: Languages by repo count (all time). -->
+  <text x="22" y="325" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" fill="#7d8590">Languages by repo count · all time · total 2735</text>
+  <g>
+    <rect x="22.00" y="332" width="409.02" height="20" fill="#58a6ff"/>
+    <text x="28.00" y="347" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117">TypeScript · 1480</text>
+    <rect x="431.02" y="332" width="149.79" height="20" fill="#f778ba"/>
+    <text x="437.02" y="347" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117">Python · 542</text>
+    <rect x="580.81" y="332" width="64.95" height="20" fill="#a371f7"/>
+    <text x="586.81" y="347" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117">Shell · 235</text>
+    <rect x="645.76" y="332" width="61.63" height="20" fill="#f0883e"/>
+    <text x="651.76" y="347" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117">Go · 223</text>
+    <rect x="707.39" y="332" width="30.13" height="20" fill="#3fb950"/>
+    <text x="722.46" y="347" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117" text-anchor="middle">109</text>
+    <rect x="737.52" y="332" width="19.35" height="20" fill="#e3b341"/>
+    <text x="747.20" y="347" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117" text-anchor="middle">70</text>
+    <rect x="756.87" y="332" width="17.41" height="20" fill="#79c0ff"/>
+    <text x="765.58" y="347" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#0d1117" text-anchor="middle">63</text>
+    <rect x="774.28" y="332" width="3.59" height="20" fill="#d29922"/>
+    <g clip-path="url(#bd2clip)">
+      <rect x="0" y="332" width="90" height="20" fill="url(#shimmer)">
+        <animate attributeName="x" from="-90" to="778" dur="17s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
 </svg>
