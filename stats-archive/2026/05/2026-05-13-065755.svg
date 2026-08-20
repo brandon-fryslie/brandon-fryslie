@@ -1,20 +1,190 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 13, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">28</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">26</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">80</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">173</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
+<svg width="800" height="240" viewBox="0 0 800 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for brandon-fryslie">
+  <defs>
+    <linearGradient id="num" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8f560"/><stop offset="1" stop-color="#4dd4ac"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c8f560"/><stop offset="1" stop-color="#4dd4ac"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="cardClip"><rect x="0.5" y="0.5" width="799" height="239" rx="10"/></clipPath>
+    <pattern id="streakMark" x="0" y="0" width="3.2" height="15" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="2.6" height="15" rx="0.5" fill="#c8f560"/>
+    </pattern>
+    <pattern id="dotGrid" x="0" y="0" width="7.5" height="7.5" patternUnits="userSpaceOnUse">
+      <circle cx="3.75" cy="3.75" r="2.6" fill="#4dd4ac"/>
+    </pattern>
+    <pattern id="cellDim" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="10" height="10" rx="1.5" fill="#1c2430"/>
+    </pattern>
+    <pattern id="cellLit" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="10" height="10" rx="1.5" fill="#c8f560"/>
+    </pattern>
+  </defs>
+
+  <!-- Card background + frame -->
+  <rect width="800" height="240" rx="10" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="239" rx="10" fill="#11161d" stroke="#21262d" stroke-width="1"/>
+  <rect x="0" y="0" width="800" height="3" fill="url(#edge)" opacity="0.85"/>
+
+  <!-- Perpetual sweeping highlight across the card -->
+  <g clip-path="url(#cardClip)">
+    <rect x="-140" y="46" width="140" height="194" fill="url(#scan)">
+      <animate attributeName="x" from="-140" to="800" dur="11s" repeatCount="indefinite"/>
+    </rect>
   </g>
+
+  <!-- Header -->
+  <circle cx="26" cy="26" r="3.5" fill="#c8f560">
+    <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="40" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
+  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#6e7681" text-anchor="end">May 13, 2026</text>
+  <line x1="20" y1="42" x2="780" y2="42" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ PANEL 1: Days Active 29 / 30 (arc gauge) ============ -->
+  <rect x="20" y="50" width="148" height="170" rx="8" fill="#0e131b" stroke="#21262d" stroke-width="1"/>
+  <!-- background ring -->
+  <circle cx="94" cy="102" r="30" stroke="#1c2430" stroke-width="8" fill="none"/>
+  <!-- 29/30 filled arc: circumference = 2*pi*30 = 188.50; filled = 29/30 = 182.22; gap = 6.28 -->
+  <circle cx="94" cy="102" r="30" stroke="url(#num)" stroke-width="8" fill="none"
+          stroke-dasharray="182.22 6.28" transform="rotate(-90 94 102)" opacity="0.95">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <!-- 30 tick marks around ring showing individual day slots -->
+  <g stroke="#0e131b" stroke-width="1" opacity="0.6">
+    <line x1="94" y1="68" x2="94" y2="72"/>
+    <line x1="94" y1="132" x2="94" y2="136" transform="rotate(12 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(24 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(48 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(72 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(96 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(120 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(144 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(168 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(192 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(216 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(240 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(264 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(288 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(312 94 102)"/>
+    <line x1="94" y1="68" x2="94" y2="72" transform="rotate(336 94 102)"/>
+  </g>
+  <!-- rotating current-day pointer -->
+  <g transform="translate(94 102)">
+    <circle cx="0" cy="-30" r="3" fill="#ffffff" opacity="0.9"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="13s" repeatCount="indefinite"/>
+  </g>
+  <text x="94" y="109" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="url(#num)" font-weight="700" text-anchor="middle">29</text>
+  <text x="94" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">of 30</text>
+  <text x="94" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#9aa4b2" text-anchor="middle" font-weight="600">Days Active</text>
+  <text x="94" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">30 Days</text>
+
+  <!-- ============ PANEL 2: Longest Streak 82 (unit-mark track) ============ -->
+  <rect x="173" y="50" width="148" height="170" rx="8" fill="#0e131b" stroke="#21262d" stroke-width="1"/>
+  <text x="247" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="url(#num)" font-weight="700" text-anchor="middle">82</text>
+  <text x="247" y="107" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">consecutive days</text>
+  <!-- 82 marks: 2 rows × 41 marks each. Pattern tile 3.2, mark 2.6, gap 0.6 -->
+  <!-- Row width: 41 × 3.2 - 0.6 = 130.6. Centered at x=247, start x=181.7 -->
+  <rect x="181.7" y="118" width="130.6" height="15" fill="url(#streakMark)" opacity="0.9">
+    <animate attributeName="opacity" values="0.7;1;0.85;0.7" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="181.7" y="137" width="130.6" height="15" fill="url(#streakMark)" opacity="0.9">
+    <animate attributeName="opacity" values="0.85;0.7;1;0.85" dur="9s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
+  <!-- moving highlight bead along the track -->
+  <g clip-path="url(#cardClip)">
+    <rect x="181.7" y="118" width="14" height="34" fill="url(#scan)">
+      <animate attributeName="x" values="181.7;312.3;181.7" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <text x="247" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#9aa4b2" text-anchor="middle" font-weight="600">Longest Streak</text>
+  <text x="247" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+  <!-- ============ PANEL 3: Issues Closed 64 (8×8 dot grid) ============ -->
+  <rect x="326" y="50" width="148" height="170" rx="8" fill="#0e131b" stroke="#21262d" stroke-width="1"/>
+  <!-- 8×8 grid: 8 dots @ 7.5 spacing = 60 wide -->
+  <rect x="370" y="70" width="60" height="60" fill="url(#dotGrid)" opacity="0.92">
+    <animate attributeName="opacity" values="0.75;1;0.9;0.75" dur="7s" repeatCount="indefinite"/>
+  </rect>
+  <!-- diagonal wipe -->
+  <g clip-path="url(#cardClip)">
+    <rect x="330" y="70" width="18" height="60" fill="url(#scan)" opacity="0.7">
+      <animate attributeName="x" values="340;430;340" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <text x="400" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="url(#num)" font-weight="700" text-anchor="middle">64</text>
+  <text x="400" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">8 × 8 issues</text>
+  <text x="400" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#9aa4b2" text-anchor="middle" font-weight="600">My Issues Closed</text>
+  <text x="400" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+  <!-- ============ PANEL 4: Active Repos 8 (segmented bar) ============ -->
+  <rect x="479" y="50" width="148" height="170" rx="8" fill="#0e131b" stroke="#21262d" stroke-width="1"/>
+  <text x="553" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" fill="url(#num)" font-weight="700" text-anchor="middle">8</text>
+  <text x="553" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">segments ∝ commits</text>
+  <!-- Stacked bar: 130 wide, x=488..618. Totals: 59+37+23+15+14+12=160 -->
+  <rect x="488" y="112" width="47.94" height="14" fill="#c8f560" opacity="0.9">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="535.94" y="112" width="30.06" height="14" fill="#a5e07a" opacity="0.9">
+    <animate attributeName="opacity" values="1;0.8;1" dur="8s" begin="0.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="566.00" y="112" width="18.69" height="14" fill="#7ed88f" opacity="0.9">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="8s" begin="1.0s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="584.69" y="112" width="12.19" height="14" fill="#5fd39f" opacity="0.9">
+    <animate attributeName="opacity" values="1;0.8;1" dur="8s" begin="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="596.88" y="112" width="11.38" height="14" fill="#4dd4ac" opacity="0.9">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="8s" begin="2.0s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="608.26" y="112" width="9.75" height="14" fill="#3fbfb0" opacity="0.9">
+    <animate attributeName="opacity" values="1;0.8;1" dur="8s" begin="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Top 3 repo legend -->
+  <rect x="488" y="136" width="6" height="6" rx="1" fill="#c8f560"/>
+  <text x="498" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#9aa4b2">go-template-js</text>
+  <text x="618" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end">59</text>
+  <rect x="488" y="147" width="6" height="6" rx="1" fill="#a5e07a"/>
+  <text x="498" y="153" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#9aa4b2">cc-candybar</text>
+  <text x="618" y="153" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end">37</text>
+  <rect x="488" y="158" width="6" height="6" rx="1" fill="#7ed88f"/>
+  <text x="498" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#9aa4b2">cc-nerf-buster</text>
+  <text x="618" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end">23</text>
+  <text x="553" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#9aa4b2" text-anchor="middle" font-weight="600">Active Repos</text>
+  <text x="553" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">7 Days</text>
+
+  <!-- ============ PANEL 5: Commits 3827 (hundreds grid) ============ -->
+  <rect x="632" y="50" width="148" height="170" rx="8" fill="#0e131b" stroke="#21262d" stroke-width="1"/>
+  <text x="706" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="url(#num)" font-weight="700" text-anchor="middle">3827</text>
+  <text x="706" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">1 square ≈ 100</text>
+  <!-- Hundreds grid: 10×4 = 40 slots. Cell 10×10, tile 12×12. Full width 118, height 46 -->
+  <rect x="647" y="110" width="118" height="46" fill="url(#cellDim)"/>
+  <!-- 38 full + 1 partial: rows 0..2 entirely, row 3 first 8 cells, then partial in col 8 -->
+  <rect x="647" y="110" width="118" height="10" fill="url(#cellLit)" opacity="0.95">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="647" y="122" width="118" height="10" fill="url(#cellLit)" opacity="0.95">
+    <animate attributeName="opacity" values="1;0.85;1" dur="9s" begin="0.6s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="647" y="134" width="118" height="10" fill="url(#cellLit)" opacity="0.95">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="9s" begin="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="647" y="146" width="94" height="10" fill="url(#cellLit)" opacity="0.95">
+    <animate attributeName="opacity" values="1;0.85;1" dur="9s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
+  <!-- partial 39th cell: 0.27 of full width = 2.7px -->
+  <rect x="743" y="146" width="2.7" height="10" rx="1" fill="#c8f560" opacity="0.9">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="706" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#9aa4b2" text-anchor="middle" font-weight="600">Commits</text>
+  <text x="706" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+  <!-- Footer -->
+  <text x="20" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" opacity="0.75">brandon-fryslie · shape follows data</text>
+  <text x="780" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end" opacity="0.75">◆ Metric-native</text>
 </svg>
