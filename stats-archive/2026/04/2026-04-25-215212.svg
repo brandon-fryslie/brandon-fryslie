@@ -1,20 +1,148 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated April 25, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">6</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">26</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">8</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">316</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 378" width="800" height="378" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="calGrad" x1="0" x2="0" y1="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#39d0d8" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="playhead" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f0883e" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f0883e" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#f0883e" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="repoBar" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0.95">
+        <animate attributeName="stop-color" values="#58a6ff;#79c0ff;#58a6ff" dur="11s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#39d0d8" stop-opacity="0.55">
+        <animate attributeName="stop-color" values="#39d0d8;#56d4dd;#39d0d8" dur="11s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="langBar" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#39d0d8" stop-opacity="0.95">
+        <animate attributeName="stop-color" values="#39d0d8;#56d4dd;#39d0d8" dur="13s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#3fb950" stop-opacity="0.55">
+        <animate attributeName="stop-color" values="#3fb950;#56d364;#3fb950" dur="13s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background + card border -->
+  <rect x="0" y="0" width="800" height="378" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="377" rx="6" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="24" y="28" fill="#f0f6fc" font-size="13" font-weight="700" letter-spacing="1.5">LIVE GITHUB STATS</text>
+  <text x="776" y="28" fill="#7d8590" font-size="12" text-anchor="end">Saturday · April 25, 2026</text>
+  <line x1="24" y1="40" x2="776" y2="40" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Calendar caption + peak callout -->
+  <text x="24" y="60" fill="#7d8590" font-size="10" letter-spacing="1.2">A YEAR OF CONTRIBUTIONS · past 12 months</text>
+  <text x="776" y="60" fill="#f0883e" font-size="10" text-anchor="end">peak day · 138 contributions</text>
+
+  <!-- Chart baseline gridline + quarter ticks (visual scaffolding) -->
+  <line x1="211.48" y1="74" x2="211.48" y2="152" stroke="#21262d" stroke-width="1" stroke-dasharray="1 4" opacity="0.55"/>
+  <line x1="401.03" y1="74" x2="401.03" y2="152" stroke="#21262d" stroke-width="1" stroke-dasharray="1 4" opacity="0.55"/>
+  <line x1="588.52" y1="74" x2="588.52" y2="152" stroke="#21262d" stroke-width="1" stroke-dasharray="1 4" opacity="0.55"/>
+  <line x1="24" y1="152.5" x2="776" y2="152.5" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Calendar: one vertical stroke per day, height ∝ contributions -->
+  <path d="M50.78 152V150.87 M67.27 152V151.43 M91.99 152V150.30 M96.11 152V151.43 M98.17 152V151.43 M102.29 152V150.87 M104.35 152V150.87 M108.47 152V150.30 M110.53 152V150.30 M116.71 152V151.43 M118.77 152V151.43 M120.83 152V151.43 M145.56 152V144.09 M153.80 152V151.43 M188.82 152V151.43 M203.24 152V150.87 M217.67 152V149.17 M221.79 152V151.43 M225.91 152V150.87 M227.97 152V151.43 M240.33 152V144.65 M248.57 152V150.87 M250.63 152V149.74 M252.69 152V150.30 M273.29 152V151.43 M285.65 152V151.43 M310.38 152V151.43 M349.52 152V151.43 M357.76 152V150.30 M370.13 152V150.87 M380.43 152V150.30 M382.49 152V150.87 M396.91 152V151.43 M403.09 152V149.17 M407.21 152V151.43 M411.33 152V151.43 M413.39 152V149.74 M421.63 152V149.74 M423.69 152V148.61 M425.75 152V148.61 M427.81 152V150.30 M431.93 152V148.61 M433.99 152V150.30 M436.05 152V150.87 M438.12 152V148.61 M440.18 152V133.35 M446.36 152V150.87 M450.48 152V150.87 M464.90 152V150.30 M475.20 152V150.87 M477.26 152V150.87 M481.38 152V151.43 M493.74 152V146.35 M495.80 152V146.35 M497.86 152V149.74 M499.92 152V150.30 M501.98 152V148.61 M504.04 152V150.30 M508.16 152V140.70 M510.22 152V147.48 M512.28 152V137.87 M514.35 152V139.00 M516.41 152V142.39 M518.47 152V141.83 M520.53 152V145.78 M522.59 152V145.22 M524.65 152V135.04 M526.71 152V141.26 M528.77 152V117.52 M530.83 152V102.83 M532.89 152V138.43 M534.95 152V149.17 M537.01 152V150.87 M539.07 152V145.22 M545.25 152V150.87 M549.37 152V149.74 M551.43 152V151.43 M553.49 152V143.52 M557.61 152V94.35 M559.67 152V149.74 M561.73 152V132.78 M563.79 152V119.22 M565.85 152V141.83 M567.91 152V134.48 M569.97 152V141.83 M572.03 152V137.87 M574.09 152V118.65 M576.15 152V91.52 M578.21 152V118.09 M580.27 152V96.61 M582.33 152V122.04 M584.39 152V118.09 M586.45 152V136.17 M588.52 152V97.17 M590.58 152V112.43 M592.64 152V124.87 M594.70 152V101.70 M596.76 152V118.65 M598.82 152V134.48 M600.88 152V85.87 M602.94 152V128.26 M605.00 152V91.52 M607.06 152V117.52 M609.12 152V117.52 M611.18 152V123.74 M613.24 152V129.39 M615.30 152V135.61 M617.36 152V146.91 M619.42 152V140.70 M621.48 152V139.57 M623.54 152V146.35 M625.60 152V142.96 M627.66 152V148.04 M629.72 152V127.13 M631.78 152V83.04 M633.84 152V150.87 M635.90 152V148.61 M637.96 152V150.30 M640.02 152V148.04 M642.08 152V132.22 M644.14 152V103.39 M646.20 152V74.00 M648.26 152V81.91 M650.32 152V114.70 M652.38 152V87.57 M654.44 152V113.00 M656.50 152V119.22 M658.56 152V131.65 M660.62 152V148.61 M662.68 152V140.13 M664.75 152V126.00 M666.81 152V142.96 M668.87 152V136.17 M670.93 152V149.17 M672.99 152V140.13 M675.05 152V129.39 M677.11 152V103.96 M679.17 152V140.13 M681.23 152V90.39 M683.29 152V137.30 M685.35 152V114.13 M687.41 152V136.17 M689.47 152V139.57 M691.53 152V144.65 M693.59 152V136.17 M695.65 152V136.74 M697.71 152V144.65 M699.77 152V123.74 M701.83 152V145.78 M703.89 152V129.96 M705.95 152V123.17 M708.01 152V131.09 M710.07 152V139.00 M712.13 152V148.61 M714.19 152V149.17 M716.25 152V146.35 M718.31 152V148.61 M720.37 152V144.65 M722.43 152V139.57 M724.49 152V150.87 M728.61 152V139.57 M730.67 152V143.52 M732.73 152V149.74 M734.79 152V145.22 M736.85 152V95.48 M738.92 152V141.83 M740.98 152V147.48 M743.04 152V150.30 M747.16 152V144.09 M749.22 152V141.26 M751.28 152V141.26 M753.34 152V148.61 M755.40 152V146.91 M757.46 152V145.22 M759.52 152V135.61 M761.58 152V102.83 M763.64 152V139.57 M765.70 152V140.13 M767.76 152V149.17 M769.82 152V146.91 M771.88 152V141.26 M773.94 152V110.74 M776.00 152V140.13" stroke="url(#calGrad)" stroke-width="1.9" fill="none" stroke-linecap="butt"/>
+
+  <!-- Peak-day marker: dot + pulse -->
+  <line x1="646.20" y1="72" x2="646.20" y2="152" stroke="#f0883e" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.55"/>
+  <circle cx="646.20" cy="70.00" r="3" fill="#f0883e">
+    <animate attributeName="r" values="3;5.5;3" dur="3.7s" repeatCount="indefinite"/>
+    <animate attributeName="fill-opacity" values="1;0.55;1" dur="3.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Playhead sweep: reads the year left→right, continuous -->
+  <rect x="24" y="72" width="70" height="82" fill="url(#playhead)" pointer-events="none">
+    <animate attributeName="x" from="-46" to="776" dur="17s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Timeline axis labels -->
+  <text x="24" y="166" fill="#7d8590" font-size="9">← 365 days ago</text>
+  <text x="776" y="166" fill="#7d8590" font-size="9" text-anchor="end">today →</text>
+
+  <!-- Divider between calendar band and breakdown band -->
+  <line x1="24" y1="172" x2="776" y2="172" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Vertical divider between two breakdown panels -->
+  <line x1="400" y1="180" x2="400" y2="310" stroke="#21262d" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+
+
+  <!-- LEFT PANEL: Active Repos -->
+  <text x="24" y="204" fill="#58a6ff" font-size="30" font-weight="700">46</text>
+  <text x="82" y="190" fill="#f0f6fc" font-size="12" font-weight="700" letter-spacing="0.8">ACTIVE REPOS</text>
+  <text x="82" y="204" fill="#7d8590" font-size="10">1 Year · top 6 by commits</text>
+
+  <text x="28" y="224" fill="#c9d1d9" font-size="10">oscilla-animator-v2</text>
+  <rect x="140" y="215" width="200.00" height="8" rx="1.5" fill="url(#repoBar)"/>
+  <text x="384" y="224" fill="#7d8590" font-size="10" text-anchor="end">1649</text>
+  <text x="28" y="240" fill="#c9d1d9" font-size="10">cc-dump</text>
+  <rect x="140" y="231" width="53.00" height="8" rx="1.5" fill="url(#repoBar)"/>
+  <text x="384" y="240" fill="#7d8590" font-size="10" text-anchor="end">437</text>
+  <text x="28" y="256" fill="#c9d1d9" font-size="10">dotfiles</text>
+  <rect x="140" y="247" width="27.77" height="8" rx="1.5" fill="url(#repoBar)"/>
+  <text x="384" y="256" fill="#7d8590" font-size="10" text-anchor="end">229</text>
+  <text x="28" y="272" fill="#c9d1d9" font-size="10">oscilla-animator</text>
+  <rect x="140" y="263" width="27.53" height="8" rx="1.5" fill="url(#repoBar)"/>
+  <text x="384" y="272" fill="#7d8590" font-size="10" text-anchor="end">227</text>
+  <text x="28" y="288" fill="#c9d1d9" font-size="10">chaperone-auth-gateway</text>
+  <rect x="140" y="279" width="22.80" height="8" rx="1.5" fill="url(#repoBar)"/>
+  <text x="384" y="288" fill="#7d8590" font-size="10" text-anchor="end">188</text>
+  <text x="28" y="304" fill="#c9d1d9" font-size="10">brandon-fryslie</text>
+  <rect x="140" y="295" width="20.13" height="8" rx="1.5" fill="url(#repoBar)"/>
+  <text x="384" y="304" fill="#7d8590" font-size="10" text-anchor="end">166</text>
+
+  <!-- RIGHT PANEL: Languages -->
+  <text x="412" y="204" fill="#39d0d8" font-size="30" font-weight="700">6</text>
+  <text x="446" y="190" fill="#f0f6fc" font-size="12" font-weight="700" letter-spacing="0.8">LANGUAGES</text>
+  <text x="446" y="204" fill="#7d8590" font-size="10">30 Days · top 6 by commits</text>
+
+  <text x="416" y="224" fill="#c9d1d9" font-size="10">TypeScript</text>
+  <rect x="508" y="215" width="220.00" height="8" rx="1.5" fill="url(#langBar)"/>
+  <text x="776" y="224" fill="#7d8590" font-size="10" text-anchor="end">360</text>
+  <text x="416" y="240" fill="#c9d1d9" font-size="10">Python</text>
+  <rect x="508" y="231" width="47.67" height="8" rx="1.5" fill="url(#langBar)"/>
+  <text x="776" y="240" fill="#7d8590" font-size="10" text-anchor="end">78</text>
+  <text x="416" y="256" fill="#c9d1d9" font-size="10">Go</text>
+  <rect x="508" y="247" width="13.44" height="8" rx="1.5" fill="url(#langBar)"/>
+  <text x="776" y="256" fill="#7d8590" font-size="10" text-anchor="end">22</text>
+  <text x="416" y="272" fill="#c9d1d9" font-size="10">HTML</text>
+  <rect x="508" y="263" width="1.83" height="8" rx="1.5" fill="url(#langBar)"/>
+  <text x="776" y="272" fill="#7d8590" font-size="10" text-anchor="end">3</text>
+  <text x="416" y="288" fill="#c9d1d9" font-size="10">Shell</text>
+  <rect x="508" y="279" width="1.22" height="8" rx="1.5" fill="url(#langBar)"/>
+  <text x="776" y="288" fill="#7d8590" font-size="10" text-anchor="end">2</text>
+  <text x="416" y="304" fill="#c9d1d9" font-size="10">JavaScript</text>
+  <rect x="508" y="295" width="0.61" height="8" rx="1.5" fill="url(#langBar)"/>
+  <text x="776" y="304" fill="#7d8590" font-size="10" text-anchor="end">1</text>
+
+  <!-- Tile row divider -->
+  <line x1="24" y1="318" x2="776" y2="318" stroke="#21262d" stroke-width="1"/>
+  <!-- Vertical dividers between the three scalar tiles -->
+  <line x1="284" y1="326" x2="284" y2="360" stroke="#21262d" stroke-width="1"/>
+  <line x1="516" y1="326" x2="516" y2="360" stroke="#21262d" stroke-width="1"/>
+
+  <text x="168" y="344" fill="#3fb950" font-size="28" font-weight="700" text-anchor="middle">82</text>
+  <rect x="150" y="347" width="36" height="2" rx="1" fill="#3fb950" opacity="0.75">
+    <animate attributeName="width" values="36;52;36" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="150;142;150" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="168" y="362" fill="#7d8590" font-size="10" text-anchor="middle">Longest Streak · 1 Year</text>
+  <text x="400" y="344" fill="#58a6ff" font-size="28" font-weight="700" text-anchor="middle">414</text>
+  <rect x="382" y="347" width="36" height="2" rx="1" fill="#58a6ff" opacity="0.75">
+    <animate attributeName="width" values="36;52;36" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="382;374;382" dur="7s" repeatCount="indefinite"/>
+  </rect>
+  <text x="400" y="362" fill="#7d8590" font-size="10" text-anchor="middle">Commits · 30 Days</text>
+  <text x="632" y="344" fill="#f0883e" font-size="28" font-weight="700" text-anchor="middle">80</text>
+  <rect x="614" y="347" width="36" height="2" rx="1" fill="#f0883e" opacity="0.75">
+    <animate attributeName="width" values="36;52;36" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="614;606;614" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="632" y="362" fill="#7d8590" font-size="10" text-anchor="middle">My Issues Closed · All Time</text>
+
 </svg>
