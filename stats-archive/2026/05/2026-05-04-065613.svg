@@ -1,20 +1,187 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 04, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">7</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">38</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">26</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">21</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="ridgeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="barSheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="ridgeClip">
+      <rect x="20" y="68" width="760" height="94"/>
+    </clipPath>
+    <clipPath id="langBarClip">
+      <rect x="88" y="248" width="420" height="24" rx="3"/>
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="800" height="330" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="329" fill="none" stroke="#21262d" rx="6"/>
+
+  <!-- Header -->
+  <text x="20" y="24" font-size="13" font-weight="600" fill="#c9d1d9">Live GitHub Stats</text>
+  <text x="780" y="24" font-size="12" fill="#8b949e" text-anchor="end">May 04, 2026</text>
+  <line x1="20" y1="34" x2="780" y2="34" stroke="#21262d"/>
+
+  <!-- Ridge section labels -->
+  <text x="20" y="56" font-size="11" fill="#8b949e">Weekly contributions · past 12 months</text>
+  <text x="780" y="56" font-size="10" fill="#6e7681" text-anchor="end">peak week 605</text>
+
+  <!-- Streak background highlight (behind the bars) - a soft green wash marking the streak span -->
+  <rect x="539" y="68" width="170" height="94" fill="#7ee787" fill-opacity="0.10">
+    <animate attributeName="fill-opacity" values="0.07;0.17;0.07" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Bracket ticks at each streak boundary -->
+  <line x1="539" y1="68" x2="539" y2="170" stroke="#7ee787" stroke-opacity="0.55" stroke-width="1"/>
+  <line x1="709" y1="68" x2="709" y2="170" stroke="#7ee787" stroke-opacity="0.55" stroke-width="1"/>
+
+  <!-- Weekly bars (53 weeks, 14.34 px pitch, 13 px wide, baseline y=162). Height = weekly_total * (94/605) -->
+  <g fill="url(#ridgeFill)">
+    <rect x="20.0" y="161.7" width="13" height="0.3"/>
+    <rect x="34.3" y="161.8" width="13" height="0.2"/>
+    <rect x="63.0" y="161.2" width="13" height="0.8"/>
+    <rect x="77.3" y="160.4" width="13" height="1.6"/>
+    <rect x="91.7" y="161.5" width="13" height="0.5"/>
+    <rect x="120.4" y="159.7" width="13" height="2.3"/>
+    <rect x="163.4" y="161.8" width="13" height="0.2"/>
+    <rect x="177.7" y="161.7" width="13" height="0.3"/>
+    <rect x="192.0" y="160.8" width="13" height="1.2"/>
+    <rect x="206.4" y="159.8" width="13" height="2.2"/>
+    <rect x="220.7" y="160.6" width="13" height="1.4"/>
+    <rect x="235.1" y="161.8" width="13" height="0.2"/>
+    <rect x="249.4" y="161.8" width="13" height="0.2"/>
+    <rect x="278.1" y="161.8" width="13" height="0.2"/>
+    <rect x="321.1" y="161.8" width="13" height="0.2"/>
+    <rect x="335.4" y="161.2" width="13" height="0.8"/>
+    <rect x="349.8" y="161.2" width="13" height="0.8"/>
+    <rect x="364.1" y="161.8" width="13" height="0.2"/>
+    <rect x="378.5" y="160.3" width="13" height="1.7"/>
+    <rect x="392.8" y="159.0" width="13" height="3.0"/>
+    <rect x="407.2" y="154.2" width="13" height="7.8"/>
+    <rect x="421.5" y="161.4" width="13" height="0.6"/>
+    <rect x="435.9" y="161.5" width="13" height="0.5"/>
+    <rect x="450.2" y="161.2" width="13" height="0.8"/>
+    <rect x="464.6" y="157.8" width="13" height="4.2"/>
+    <rect x="478.9" y="148.8" width="13" height="13.2"/>
+    <rect x="493.3" y="135.9" width="13" height="26.1"/>
+    <rect x="507.6" y="141.8" width="13" height="20.2"/>
+    <rect x="522.0" y="142.7" width="13" height="19.3"/>
+    <rect x="536.3" y="132.8" width="13" height="29.2"/>
+    <rect x="550.7" y="89.7" width="13" height="72.3"/>
+    <rect x="565.0" y="82.6" width="13" height="79.4"/>
+    <rect x="579.4" y="101.4" width="13" height="60.6"/>
+    <rect x="593.7" y="142.1" width="13" height="19.9"/>
+    <rect x="608.1" y="121.4" width="13" height="40.6"/>
+    <rect x="622.4" y="68.0" width="13" height="94.0"/>
+    <rect x="636.8" y="139.8" width="13" height="22.2"/>
+    <rect x="651.1" y="103.6" width="13" height="58.4"/>
+    <rect x="665.5" y="136.5" width="13" height="25.5"/>
+    <rect x="679.8" y="135.4" width="13" height="26.6"/>
+    <rect x="694.2" y="149.6" width="13" height="12.4"/>
+    <rect x="708.5" y="139.5" width="13" height="22.5"/>
+    <rect x="722.9" y="145.2" width="13" height="16.8"/>
+    <rect x="737.2" y="125.3" width="13" height="36.7"/>
+    <rect x="751.6" y="122.7" width="13" height="39.3"/>
+    <!-- last partial week -->
+    <rect x="766.0" y="145.5" width="13" height="16.5"/>
   </g>
+
+  <!-- Ridge baseline -->
+  <line x1="20" y1="162" x2="780" y2="162" stroke="#21262d"/>
+
+  <!-- Streak solid stripe below baseline: width == 82/366 of plot width, visually encoding the streak length -->
+  <rect x="539" y="166" width="170" height="4" rx="2" fill="#7ee787">
+    <animate attributeName="fill-opacity" values="0.65;1;0.65" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Shimmer sweep across ridge (perpetual motion) -->
+  <g clip-path="url(#ridgeClip)">
+    <rect x="0" y="68" width="220" height="94" fill="url(#shimmer)" transform="translate(-220 0)">
+      <animateTransform attributeName="transform" type="translate" from="-220 0" to="800 0" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Streak caption: "82" + "Longest Streak" + "1 Year" as separate <text> elements -->
+  <text x="624" y="186" font-size="15" font-weight="700" fill="#7ee787" text-anchor="middle">82</text>
+  <text x="624" y="198" font-size="9" fill="#8b949e" text-anchor="middle">Longest Streak</text>
+  <text x="624" y="207" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+  <!-- Divider before bottom row -->
+  <line x1="20" y1="216" x2="780" y2="216" stroke="#21262d"/>
+
+  <!-- Bottom section headers -->
+  <text x="20" y="234" font-size="11" fill="#8b949e">Language mix · 30 Days</text>
+  <text x="660" y="234" font-size="11" fill="#8b949e" text-anchor="middle">Pull requests · 1 Year</text>
+
+  <!-- Left hero: 7 Languages -->
+  <text x="45" y="270" font-size="30" font-weight="700" fill="#f0f6fc" text-anchor="middle">7</text>
+  <text x="45" y="286" font-size="10" fill="#8b949e" text-anchor="middle">Languages</text>
+  <text x="45" y="297" font-size="9" fill="#6e7681" text-anchor="middle">30 Days</text>
+
+  <!-- Stacked language bar. Widths are proportional to commit counts (total 680). -->
+  <rect x="88" y="248" width="420" height="24" rx="3" fill="#161b22" stroke="#21262d"/>
+  <g clip-path="url(#langBarClip)">
+    <rect x="88.00" y="248" width="318.71" height="24" fill="#3178c6"/>
+    <rect x="406.71" y="248" width="64.24" height="24" fill="#3572A5"/>
+    <rect x="470.95" y="248" width="25.94" height="24" fill="#00ADD8"/>
+    <rect x="496.89" y="248" width="6.79" height="24" fill="#663399"/>
+    <rect x="503.68" y="248" width="2.47" height="24" fill="#89e051"/>
+    <rect x="506.15" y="248" width="1.24" height="24" fill="#e34c26"/>
+    <rect x="507.39" y="248" width="0.62" height="24" fill="#f1e05a"/>
+    <!-- Sheen sweep across the bar (perpetual motion) -->
+    <rect x="0" y="248" width="140" height="24" fill="url(#barSheen)" transform="translate(-140 0)">
+      <animateTransform attributeName="transform" type="translate" from="-140 0" to="560 0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Inline name label on the dominant segment (only where it fits) -->
+  <text x="247.35" y="264" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">TypeScript</text>
+
+  <!-- Legend below the bar. Two rows so all 7 fit without crowding.
+       Each language name and its count are their own <text> elements. -->
+  <!-- Row 1: TypeScript, Python, Go -->
+  <rect x="92"  y="282" width="8" height="8" rx="1.5" fill="#3178c6"/>
+  <text x="104" y="290" font-size="10" fill="#c9d1d9">TypeScript</text>
+  <text x="164" y="290" font-size="10" fill="#8b949e">516</text>
+  <rect x="232" y="282" width="8" height="8" rx="1.5" fill="#3572A5"/>
+  <text x="244" y="290" font-size="10" fill="#c9d1d9">Python</text>
+  <text x="286" y="290" font-size="10" fill="#8b949e">104</text>
+  <rect x="372" y="282" width="8" height="8" rx="1.5" fill="#00ADD8"/>
+  <text x="384" y="290" font-size="10" fill="#c9d1d9">Go</text>
+  <text x="404" y="290" font-size="10" fill="#8b949e">42</text>
+
+  <!-- Row 2: CSS, Shell, HTML, JavaScript -->
+  <rect x="92"  y="300" width="8" height="8" rx="1.5" fill="#663399"/>
+  <text x="104" y="308" font-size="10" fill="#c9d1d9">CSS</text>
+  <text x="130" y="308" font-size="10" fill="#8b949e">11</text>
+  <rect x="180" y="300" width="8" height="8" rx="1.5" fill="#89e051"/>
+  <text x="192" y="308" font-size="10" fill="#c9d1d9">Shell</text>
+  <text x="222" y="308" font-size="10" fill="#8b949e">4</text>
+  <rect x="268" y="300" width="8" height="8" rx="1.5" fill="#e34c26"/>
+  <text x="280" y="308" font-size="10" fill="#c9d1d9">HTML</text>
+  <text x="312" y="308" font-size="10" fill="#8b949e">2</text>
+  <rect x="358" y="300" width="8" height="8" rx="1.5" fill="#f1e05a"/>
+  <text x="370" y="308" font-size="10" fill="#c9d1d9">JavaScript</text>
+  <text x="428" y="308" font-size="10" fill="#8b949e">1</text>
+
+  <!-- Right hero: 404 PRs Merged, with a perpetual orbit ring -->
+  <circle cx="660" cy="266" r="46" fill="none" stroke="#58a6ff" stroke-opacity="0.18" stroke-width="1"/>
+  <circle cx="660" cy="266" r="46" fill="none" stroke="#58a6ff" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="6 30">
+    <animateTransform attributeName="transform" type="rotate" from="0 660 266" to="360 660 266" dur="17s" repeatCount="indefinite"/>
+  </circle>
+  <text x="660" y="275" font-size="36" font-weight="700" fill="#58a6ff" text-anchor="middle">
+    <animate attributeName="fill-opacity" values="0.82;1;0.82" dur="7s" repeatCount="indefinite"/>
+    404
+  </text>
+  <text x="660" y="293" font-size="11" fill="#8b949e" text-anchor="middle">PRs Merged</text>
+  <text x="660" y="305" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
 </svg>
