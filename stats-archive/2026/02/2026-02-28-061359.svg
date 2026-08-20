@@ -1,18 +1,231 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated February 28, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">25</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1248</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0e4429" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9d1d9" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e6edf3" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c9d1d9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="streakGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f78166" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#f78166" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="gridScan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6edf3" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e6edf3" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#e6edf3" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="calClip">
+      <rect x="24" y="112" width="750.075" height="93"/>
+    </clipPath>
+    <clipPath id="pgClip">
+      <rect x="649.5" y="285" width="74" height="64"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0.5" y="0.5" width="799" height="419" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ HEADER ============ -->
+  <text x="24" y="44" font-size="16" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="776" y="44" font-size="12" text-anchor="end" fill="#7d8590">February 28, 2026</text>
+  <line x1="24" y1="54" x2="776" y2="54" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ CALENDAR SECTION ============ -->
+  <!-- eyebrow row -->
+  <text x="24" y="76" font-size="10" fill="#8b949e" letter-spacing="1.2">past 12 months</text>
+  <text x="24" y="90" font-size="10" fill="#7d8590" letter-spacing="1.2">DAILY CONTRIBUTIONS</text>
+
+  <!-- Commits scalar in top-right of calendar section -->
+  <text x="702" y="76" font-size="10" text-anchor="end" fill="#c9d1d9" font-weight="600">Commits</text>
+  <text x="776" y="76" font-size="10" text-anchor="end" fill="#7d8590">All Time</text>
+  <text x="776" y="104" font-size="24" font-weight="700" text-anchor="end" fill="#39d353">3195</text>
+
+  <!-- Baseline for calendar plot -->
+  <line x1="24" y1="204.5" x2="776" y2="204.5" stroke="#21262d" stroke-width="0.5"/>
+
+  <!-- Reference lines (subtle) -->
+  <line x1="24" y1="171" x2="776" y2="171" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.6"/>
+  <line x1="24" y1="138" x2="776" y2="138" stroke="#21262d" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.4"/>
+
+  <g clip-path="url(#calClip)">
+    <!-- Streak highlight background (last 51 days) -->
+    <rect x="671.325" y="112" width="102.75" height="92" fill="url(#streakGrad)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Calendar area (filled) -->
+    <path fill="url(#areaGrad)" d="M24 204 L24 204 L26.055 204 L28.11 204 L30.165 204 L32.22 204 L34.275 204 L36.33 203.348 L38.385 204 L40.44 204 L42.495 204 L44.55 203.348 L46.605 204 L48.66 203.348 L50.715 198.783 L52.77 204 L54.825 204 L56.88 203.348 L58.935 204 L60.99 204 L63.045 197.478 L65.1 204 L67.155 204 L69.21 203.348 L71.265 204 L73.32 204 L75.375 204 L77.43 204 L79.485 201.391 L81.54 204 L83.595 204 L85.65 204 L87.705 204 L89.76 203.348 L91.815 204 L93.87 204 L95.925 204 L97.98 204 L100.035 204 L102.09 204 L104.145 204 L106.2 204 L108.255 204 L110.31 204 L112.365 204 L114.42 204 L116.475 204 L118.53 204 L120.585 204 L122.64 204 L124.695 204 L126.75 204 L128.805 204 L130.86 204 L132.915 204 L134.97 204 L137.025 204 L139.08 204 L141.135 204 L143.19 204 L145.245 204 L147.3 204 L149.355 204 L151.41 204 L153.465 204 L155.52 204 L157.575 204 L159.63 204 L161.685 204 L163.74 204 L165.795 202.696 L167.85 204 L169.905 204 L171.96 204 L174.015 204 L176.07 204 L178.125 204 L180.18 204 L182.235 203.348 L184.29 204 L186.345 204 L188.4 204 L190.455 204 L192.51 204 L194.565 204 L196.62 204 L198.675 204 L200.73 204 L202.785 204 L204.84 204 L206.895 202.043 L208.95 204 L211.005 203.348 L213.06 203.348 L215.115 204 L217.17 202.696 L219.225 202.696 L221.28 204 L223.335 202.043 L225.39 202.043 L227.445 204 L229.5 204 L231.555 203.348 L233.61 203.348 L235.665 203.348 L237.72 204 L239.775 204 L241.83 204 L243.885 204 L245.94 204 L247.995 204 L250.05 204 L252.105 204 L254.16 204 L256.215 204 L258.27 204 L260.325 194.87 L262.38 204 L264.435 204 L266.49 204 L268.545 203.348 L270.6 204 L272.655 204 L274.71 204 L276.765 204 L278.82 204 L280.875 204 L282.93 204 L284.985 204 L287.04 204 L289.095 204 L291.15 204 L293.205 204 L295.26 204 L297.315 204 L299.37 204 L301.425 204 L303.48 203.348 L305.535 204 L307.59 204 L309.645 204 L311.7 204 L313.755 204 L315.81 204 L317.865 202.696 L319.92 204 L321.975 204 L324.03 204 L326.085 204 L328.14 204 L330.195 204 L332.25 200.739 L334.305 204 L336.36 203.348 L338.415 204 L340.47 202.696 L342.525 203.348 L344.58 204 L346.635 204 L348.69 204 L350.745 204 L352.8 204 L354.855 195.522 L356.91 204 L358.965 204 L361.02 204 L363.075 202.696 L365.13 201.391 L367.185 202.043 L369.24 204 L371.295 204 L373.35 204 L375.405 204 L377.46 204 L379.515 204 L381.57 204 L383.625 204 L385.68 204 L387.735 203.348 L389.79 204 L391.845 204 L393.9 204 L395.955 204 L398.01 204 L400.065 203.348 L402.12 204 L404.175 204 L406.23 204 L408.285 204 L410.34 204 L412.395 204 L414.45 204 L416.505 204 L418.56 204 L420.615 204 L422.67 204 L424.725 203.348 L426.78 204 L428.835 204 L430.89 204 L432.945 204 L435 204 L437.055 204 L439.11 204 L441.165 204 L443.22 204 L445.275 204 L447.33 204 L449.385 204 L451.44 204 L453.495 204 L455.55 204 L457.605 204 L459.66 204 L461.715 204 L463.77 203.348 L465.825 204 L467.88 204 L469.935 204 L471.99 202.043 L474.045 204 L476.1 204 L478.155 204 L480.21 204 L482.265 204 L484.32 202.696 L486.375 204 L488.43 204 L490.485 204 L492.54 204 L494.595 202.043 L496.65 202.696 L498.705 204 L500.76 204 L502.815 204 L504.87 204 L506.925 204 L508.98 204 L511.035 203.348 L513.09 204 L515.145 204 L517.2 200.739 L519.255 204 L521.31 203.348 L523.365 204 L525.42 203.348 L527.475 201.391 L529.53 204 L531.585 204 L533.64 204 L535.695 201.391 L537.75 200.087 L539.805 200.087 L541.86 202.043 L543.915 204 L545.97 200.087 L548.025 202.043 L550.08 202.696 L552.135 200.087 L554.19 182.478 L556.245 204 L558.3 204 L560.355 202.696 L562.41 204 L564.465 202.696 L566.52 204 L568.575 204 L570.63 204 L572.685 204 L574.74 204 L576.795 204 L578.85 202.043 L580.905 204 L582.96 204 L585.015 204 L587.07 204 L589.125 202.696 L591.18 202.696 L593.235 204 L595.29 203.348 L597.345 204 L599.4 204 L601.455 204 L603.51 204 L605.565 204 L607.62 197.478 L609.675 197.478 L611.73 201.391 L613.785 202.043 L615.84 200.087 L617.895 202.043 L619.95 204 L622.005 190.957 L624.06 198.783 L626.115 187.696 L628.17 189 L630.225 192.913 L632.28 192.261 L634.335 196.826 L636.39 196.174 L638.445 184.435 L640.5 191.609 L642.555 164.217 L644.61 147.261 L646.665 188.348 L648.72 200.739 L650.775 202.696 L652.83 196.174 L654.885 204 L656.94 204 L658.995 202.696 L661.05 204 L663.105 201.391 L665.16 203.348 L667.215 194.217 L669.27 204 L671.325 137.478 L673.38 201.391 L675.435 181.826 L677.49 166.174 L679.545 192.261 L681.6 183.783 L683.655 192.261 L685.71 187.696 L687.765 165.522 L689.82 134.217 L691.875 164.87 L693.93 140.087 L695.985 169.435 L698.04 164.87 L700.095 185.739 L702.15 140.739 L704.205 158.348 L706.26 172.696 L708.315 145.957 L710.37 165.522 L712.425 183.783 L714.48 127.696 L716.535 176.609 L718.59 134.217 L720.645 164.217 L722.7 164.217 L724.755 171.391 L726.81 177.913 L728.865 185.087 L730.92 198.13 L732.975 190.957 L735.03 189.652 L737.085 197.478 L739.14 193.565 L741.195 199.435 L743.25 175.304 L745.305 124.435 L747.36 202.696 L749.415 200.087 L751.47 202.043 L753.525 199.435 L755.58 181.174 L757.635 147.913 L759.69 114 L761.745 123.13 L763.8 160.957 L765.855 129.652 L767.91 159 L769.965 166.174 L772.02 179.217 L774.075 200.087 L774.075 204 Z"/>
+
+    <!-- Calendar stroke (top line) -->
+    <path fill="none" stroke="#39d353" stroke-width="1" stroke-linejoin="round" opacity="0.85" d="M24 204 L26.055 204 L28.11 204 L30.165 204 L32.22 204 L34.275 204 L36.33 203.348 L38.385 204 L40.44 204 L42.495 204 L44.55 203.348 L46.605 204 L48.66 203.348 L50.715 198.783 L52.77 204 L54.825 204 L56.88 203.348 L58.935 204 L60.99 204 L63.045 197.478 L65.1 204 L67.155 204 L69.21 203.348 L71.265 204 L73.32 204 L75.375 204 L77.43 204 L79.485 201.391 L81.54 204 L83.595 204 L85.65 204 L87.705 204 L89.76 203.348 L91.815 204 L93.87 204 L95.925 204 L97.98 204 L100.035 204 L102.09 204 L104.145 204 L106.2 204 L108.255 204 L110.31 204 L112.365 204 L114.42 204 L116.475 204 L118.53 204 L120.585 204 L122.64 204 L124.695 204 L126.75 204 L128.805 204 L130.86 204 L132.915 204 L134.97 204 L137.025 204 L139.08 204 L141.135 204 L143.19 204 L145.245 204 L147.3 204 L149.355 204 L151.41 204 L153.465 204 L155.52 204 L157.575 204 L159.63 204 L161.685 204 L163.74 204 L165.795 202.696 L167.85 204 L169.905 204 L171.96 204 L174.015 204 L176.07 204 L178.125 204 L180.18 204 L182.235 203.348 L184.29 204 L186.345 204 L188.4 204 L190.455 204 L192.51 204 L194.565 204 L196.62 204 L198.675 204 L200.73 204 L202.785 204 L204.84 204 L206.895 202.043 L208.95 204 L211.005 203.348 L213.06 203.348 L215.115 204 L217.17 202.696 L219.225 202.696 L221.28 204 L223.335 202.043 L225.39 202.043 L227.445 204 L229.5 204 L231.555 203.348 L233.61 203.348 L235.665 203.348 L237.72 204 L239.775 204 L241.83 204 L243.885 204 L245.94 204 L247.995 204 L250.05 204 L252.105 204 L254.16 204 L256.215 204 L258.27 204 L260.325 194.87 L262.38 204 L264.435 204 L266.49 204 L268.545 203.348 L270.6 204 L272.655 204 L274.71 204 L276.765 204 L278.82 204 L280.875 204 L282.93 204 L284.985 204 L287.04 204 L289.095 204 L291.15 204 L293.205 204 L295.26 204 L297.315 204 L299.37 204 L301.425 204 L303.48 203.348 L305.535 204 L307.59 204 L309.645 204 L311.7 204 L313.755 204 L315.81 204 L317.865 202.696 L319.92 204 L321.975 204 L324.03 204 L326.085 204 L328.14 204 L330.195 204 L332.25 200.739 L334.305 204 L336.36 203.348 L338.415 204 L340.47 202.696 L342.525 203.348 L344.58 204 L346.635 204 L348.69 204 L350.745 204 L352.8 204 L354.855 195.522 L356.91 204 L358.965 204 L361.02 204 L363.075 202.696 L365.13 201.391 L367.185 202.043 L369.24 204 L371.295 204 L373.35 204 L375.405 204 L377.46 204 L379.515 204 L381.57 204 L383.625 204 L385.68 204 L387.735 203.348 L389.79 204 L391.845 204 L393.9 204 L395.955 204 L398.01 204 L400.065 203.348 L402.12 204 L404.175 204 L406.23 204 L408.285 204 L410.34 204 L412.395 204 L414.45 204 L416.505 204 L418.56 204 L420.615 204 L422.67 204 L424.725 203.348 L426.78 204 L428.835 204 L430.89 204 L432.945 204 L435 204 L437.055 204 L439.11 204 L441.165 204 L443.22 204 L445.275 204 L447.33 204 L449.385 204 L451.44 204 L453.495 204 L455.55 204 L457.605 204 L459.66 204 L461.715 204 L463.77 203.348 L465.825 204 L467.88 204 L469.935 204 L471.99 202.043 L474.045 204 L476.1 204 L478.155 204 L480.21 204 L482.265 204 L484.32 202.696 L486.375 204 L488.43 204 L490.485 204 L492.54 204 L494.595 202.043 L496.65 202.696 L498.705 204 L500.76 204 L502.815 204 L504.87 204 L506.925 204 L508.98 204 L511.035 203.348 L513.09 204 L515.145 204 L517.2 200.739 L519.255 204 L521.31 203.348 L523.365 204 L525.42 203.348 L527.475 201.391 L529.53 204 L531.585 204 L533.64 204 L535.695 201.391 L537.75 200.087 L539.805 200.087 L541.86 202.043 L543.915 204 L545.97 200.087 L548.025 202.043 L550.08 202.696 L552.135 200.087 L554.19 182.478 L556.245 204 L558.3 204 L560.355 202.696 L562.41 204 L564.465 202.696 L566.52 204 L568.575 204 L570.63 204 L572.685 204 L574.74 204 L576.795 204 L578.85 202.043 L580.905 204 L582.96 204 L585.015 204 L587.07 204 L589.125 202.696 L591.18 202.696 L593.235 204 L595.29 203.348 L597.345 204 L599.4 204 L601.455 204 L603.51 204 L605.565 204 L607.62 197.478 L609.675 197.478 L611.73 201.391 L613.785 202.043 L615.84 200.087 L617.895 202.043 L619.95 204 L622.005 190.957 L624.06 198.783 L626.115 187.696 L628.17 189 L630.225 192.913 L632.28 192.261 L634.335 196.826 L636.39 196.174 L638.445 184.435 L640.5 191.609 L642.555 164.217 L644.61 147.261 L646.665 188.348 L648.72 200.739 L650.775 202.696 L652.83 196.174 L654.885 204 L656.94 204 L658.995 202.696 L661.05 204 L663.105 201.391 L665.16 203.348 L667.215 194.217 L669.27 204 L671.325 137.478 L673.38 201.391 L675.435 181.826 L677.49 166.174 L679.545 192.261 L681.6 183.783 L683.655 192.261 L685.71 187.696 L687.765 165.522 L689.82 134.217 L691.875 164.87 L693.93 140.087 L695.985 169.435 L698.04 164.87 L700.095 185.739 L702.15 140.739 L704.205 158.348 L706.26 172.696 L708.315 145.957 L710.37 165.522 L712.425 183.783 L714.48 127.696 L716.535 176.609 L718.59 134.217 L720.645 164.217 L722.7 164.217 L724.755 171.391 L726.81 177.913 L728.865 185.087 L730.92 198.13 L732.975 190.957 L735.03 189.652 L737.085 197.478 L739.14 193.565 L741.195 199.435 L743.25 175.304 L745.305 124.435 L747.36 202.696 L749.415 200.087 L751.47 202.043 L753.525 199.435 L755.58 181.174 L757.635 147.913 L759.69 114 L761.745 123.13 L763.8 160.957 L765.855 129.652 L767.91 159 L769.965 166.174 L772.02 179.217 L774.075 200.087"/>
+
+    <!-- Time sweep: continuously moving highlight -->
+    <rect x="0" y="112" width="34" height="92" fill="url(#sweepGrad)" opacity="0.55">
+      <animate attributeName="x" values="-10;790" dur="17s" repeatCount="indefinite"/>
+    </rect>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (9) / TypeScript (8) / Shell (5) / CoffeeScript (4)</text>
+
+  <!-- Baseline start label -->
+  <text x="24" y="216" font-size="8" fill="#6e7681">2025-02-28</text>
+  <text x="655" y="216" font-size="8" text-anchor="end" fill="#6e7681">peak day: 138</text>
+
+  <!-- Streak bracket + label -->
+  <path d="M671.325 207 L671.325 212 L774.075 212 L774.075 207" stroke="#f78166" stroke-width="1.5" fill="none">
+    <animate attributeName="stroke-width" values="1.5;2.4;1.5" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <text x="722.7" y="224" font-size="14" font-weight="700" text-anchor="middle" fill="#f78166">51</text>
+  <text x="676" y="234" font-size="9" fill="#f0b39c" letter-spacing="0.4">Longest Streak</text>
+  <text x="774" y="234" font-size="9" fill="#8b949e" text-anchor="end">1 Year</text>
+
+  <!-- Separator -->
+  <line x1="24" y1="244" x2="776" y2="244" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ============ METRICS ROW ============ -->
+
+  <!-- CELL 1: Active Repos (x=24..203) -->
+  <g>
+    <text x="32" y="262" font-size="10" font-weight="600" fill="#c9d1d9" letter-spacing="0.4">Active Repos</text>
+    <text x="195" y="262" font-size="9" text-anchor="end" fill="#7d8590">30 Days</text>
+    <text x="113.5" y="298" font-size="32" font-weight="700" text-anchor="middle" fill="#58a6ff">11</text>
+    <text x="113.5" y="313" font-size="8" text-anchor="middle" fill="#7d8590" letter-spacing="1.4">TOP 6 BY COMMITS</text>
+
+    <!-- Stacked horizontal bar -->
+    <g>
+      <rect x="32" y="322" width="147" height="14" rx="3" fill="#161b22"/>
+      <!-- 6 segments proportional to commits (752, 355, 82, 61, 33, 22), total 1305 -->
+      <rect x="32" y="322" width="84.72" height="14" fill="#58a6ff"/>
+      <rect x="116.72" y="322" width="40" height="14" fill="#79c0ff"/>
+      <rect x="156.72" y="322" width="9.24" height="14" fill="#a5d6ff"/>
+      <rect x="165.96" y="322" width="6.87" height="14" fill="#388bfd"/>
+      <rect x="172.83" y="322" width="3.72" height="14" fill="#1f6feb"/>
+      <rect x="176.55" y="322" width="2.45" height="14" fill="#1158c7"/>
+      <!-- shimmer overlay -->
+      <rect x="32" y="322" width="20" height="14" fill="url(#sweepGrad)" opacity="0.35">
+        <animate attributeName="x" values="30;180;30" dur="11s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Top 2 repo legend -->
+    <circle cx="36" cy="352" r="3" fill="#58a6ff"/>
+    <text x="43" y="355" font-size="9" fill="#c9d1d9">oscilla-animator-v2</text>
+    <text x="195" y="355" font-size="9" text-anchor="end" fill="#7d8590">752</text>
+    <circle cx="36" cy="366" r="3" fill="#79c0ff"/>
+    <text x="43" y="369" font-size="9" fill="#c9d1d9">cc-dump</text>
+    <text x="195" y="369" font-size="9" text-anchor="end" fill="#7d8590">355</text>
+    <circle cx="36" cy="380" r="3" fill="#a5d6ff"/>
+    <text x="43" y="383" font-size="9" fill="#8b949e">brandon-fryslie</text>
+    <text x="195" y="383" font-size="9" text-anchor="end" fill="#7d8590">82</text>
+  </g>
+
+  <!-- CELL 2: Languages (x=215..394) -->
+  <g>
+    <text x="223" y="262" font-size="10" font-weight="600" fill="#c9d1d9" letter-spacing="0.4">Languages</text>
+    <text x="386" y="262" font-size="9" text-anchor="end" fill="#7d8590">1 Year</text>
+    <text x="304.5" y="298" font-size="32" font-weight="700" text-anchor="middle" fill="#a371f7">8</text>
+    <text x="304.5" y="313" font-size="8" text-anchor="middle" fill="#7d8590" letter-spacing="1.4">BY COMMIT SHARE</text>
+
+    <!-- Stacked horizontal bar -->
+    <g>
+      <rect x="223" y="322" width="147" height="14" rx="3" fill="#161b22"/>
+      <!-- 8 segments (1897, 702, 223, 48, 3, 2, 2, 1), total 2878 -->
+      <rect x="223" y="322" width="96.87" height="14" fill="#3178c6"/>
+      <rect x="319.87" y="322" width="35.85" height="14" fill="#3572a5"/>
+      <rect x="355.72" y="322" width="11.39" height="14" fill="#00add8"/>
+      <rect x="367.11" y="322" width="2.45" height="14" fill="#89e051"/>
+      <rect x="369.56" y="322" width="0.15" height="14" fill="#a97bff"/>
+      <rect x="369.71" y="322" width="0.1" height="14" fill="#f1e05a"/>
+      <rect x="369.81" y="322" width="0.1" height="14" fill="#844fba"/>
+      <rect x="369.91" y="322" width="0.05" height="14" fill="#e0e0e0"/>
+      <!-- shimmer overlay -->
+      <rect x="223" y="322" width="24" height="14" fill="url(#sweepGrad)" opacity="0.35">
+        <animate attributeName="x" values="220;370;220" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Top-3 language legend -->
+    <circle cx="227" cy="352" r="3" fill="#3178c6"/>
+    <text x="234" y="355" font-size="9" fill="#c9d1d9">TypeScript</text>
+    <text x="386" y="355" font-size="9" text-anchor="end" fill="#7d8590">1897</text>
+    <circle cx="227" cy="366" r="3" fill="#3572a5"/>
+    <text x="234" y="369" font-size="9" fill="#c9d1d9">Python</text>
+    <text x="386" y="369" font-size="9" text-anchor="end" fill="#7d8590">702</text>
+    <circle cx="227" cy="380" r="3" fill="#00add8"/>
+    <text x="234" y="383" font-size="9" fill="#8b949e">Go</text>
+    <text x="386" y="383" font-size="9" text-anchor="end" fill="#7d8590">223</text>
+  </g>
+
+  <!-- CELL 3: Days Active (x=406..585) — donut/gauge -->
+  <g>
+    <text x="414" y="262" font-size="10" font-weight="600" fill="#c9d1d9" letter-spacing="0.4">Days Active</text>
+    <text x="577" y="262" font-size="9" text-anchor="end" fill="#7d8590">30 Days</text>
+
+    <!-- Donut ring (radius 34, stroke 7) — perfect 30/30 fills the whole ring; +1 overflow shown as orange arc -->
+    <!-- background ring -->
+    <circle cx="495.5" cy="335" r="34" fill="none" stroke="#161b22" stroke-width="7"/>
+    <!-- full green ring (100% of max) — starts at 12 o'clock via rotation -->
+    <g transform="rotate(-90 495.5 335)">
+      <circle cx="495.5" cy="335" r="34" fill="none" stroke="#39d353" stroke-width="7" stroke-linecap="round" stroke-dasharray="213.63 213.63"/>
+      <!-- overflow arc (the +1 day past 30) -->
+      <circle cx="495.5" cy="335" r="34" fill="none" stroke="#f78166" stroke-width="9" stroke-linecap="round" stroke-dasharray="7.12 213.63" stroke-dashoffset="0"/>
+      <!-- travelling dot -->
+      <circle cx="495.5" cy="335" r="34" fill="none" stroke="#e6edf3" stroke-width="7" stroke-linecap="round" stroke-dasharray="1.5 212" opacity="0.9">
+        <animateTransform attributeName="transform" type="rotate" from="0 495.5 335" to="360 495.5 335" dur="7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- Center value -->
+    <text x="495.5" y="342" font-size="28" font-weight="700" text-anchor="middle" fill="#f78166">31</text>
+    <!-- Caption under donut -->
+    <text x="495.5" y="386" font-size="9" text-anchor="middle" fill="#8b949e">one day over the ceiling</text>
+  </g>
+
+  <!-- CELL 4: PRs Merged (x=597..776) — 195-dot grid -->
+  <g>
+    <text x="605" y="262" font-size="10" font-weight="600" fill="#c9d1d9" letter-spacing="0.4">PRs Merged</text>
+    <text x="768" y="262" font-size="9" text-anchor="end" fill="#7d8590">All Time</text>
+    <text x="605" y="313" font-size="8" fill="#7d8590" letter-spacing="1.4">EACH DOT = 1 PR</text>
+    <text x="768" y="313" font-size="8" text-anchor="end" fill="#7d8590" letter-spacing="1.4">15 × 13 GRID</text>
+
+    <!-- 15 cols × 13 rows = 195 dots. cell 3×3, gap 1. grid = 59×51. -->
+    <g id="prGrid">
+      <!-- row 1 -->
+      <rect x="657" y="322" width="3" height="3" fill="#a371f7"/><rect x="661" y="322" width="3" height="3" fill="#a371f7"/><rect x="665" y="322" width="3" height="3" fill="#a371f7"/><rect x="669" y="322" width="3" height="3" fill="#a371f7"/><rect x="673" y="322" width="3" height="3" fill="#a371f7"/><rect x="677" y="322" width="3" height="3" fill="#a371f7"/><rect x="681" y="322" width="3" height="3" fill="#a371f7"/><rect x="685" y="322" width="3" height="3" fill="#a371f7"/><rect x="689" y="322" width="3" height="3" fill="#a371f7"/><rect x="693" y="322" width="3" height="3" fill="#a371f7"/><rect x="697" y="322" width="3" height="3" fill="#a371f7"/><rect x="701" y="322" width="3" height="3" fill="#a371f7"/><rect x="705" y="322" width="3" height="3" fill="#a371f7"/><rect x="709" y="322" width="3" height="3" fill="#a371f7"/><rect x="713" y="322" width="3" height="3" fill="#a371f7"/>
+      <!-- row 2 -->
+      <rect x="657" y="326" width="3" height="3" fill="#a371f7"/><rect x="661" y="326" width="3" height="3" fill="#a371f7"/><rect x="665" y="326" width="3" height="3" fill="#a371f7"/><rect x="669" y="326" width="3" height="3" fill="#a371f7"/><rect x="673" y="326" width="3" height="3" fill="#a371f7"/><rect x="677" y="326" width="3" height="3" fill="#a371f7"/><rect x="681" y="326" width="3" height="3" fill="#a371f7"/><rect x="685" y="326" width="3" height="3" fill="#a371f7"/><rect x="689" y="326" width="3" height="3" fill="#a371f7"/><rect x="693" y="326" width="3" height="3" fill="#a371f7"/><rect x="697" y="326" width="3" height="3" fill="#a371f7"/><rect x="701" y="326" width="3" height="3" fill="#a371f7"/><rect x="705" y="326" width="3" height="3" fill="#a371f7"/><rect x="709" y="326" width="3" height="3" fill="#a371f7"/><rect x="713" y="326" width="3" height="3" fill="#a371f7"/>
+      <!-- row 3 -->
+      <rect x="657" y="330" width="3" height="3" fill="#a371f7"/><rect x="661" y="330" width="3" height="3" fill="#a371f7"/><rect x="665" y="330" width="3" height="3" fill="#a371f7"/><rect x="669" y="330" width="3" height="3" fill="#a371f7"/><rect x="673" y="330" width="3" height="3" fill="#a371f7"/><rect x="677" y="330" width="3" height="3" fill="#a371f7"/><rect x="681" y="330" width="3" height="3" fill="#a371f7"/><rect x="685" y="330" width="3" height="3" fill="#a371f7"/><rect x="689" y="330" width="3" height="3" fill="#a371f7"/><rect x="693" y="330" width="3" height="3" fill="#a371f7"/><rect x="697" y="330" width="3" height="3" fill="#a371f7"/><rect x="701" y="330" width="3" height="3" fill="#a371f7"/><rect x="705" y="330" width="3" height="3" fill="#a371f7"/><rect x="709" y="330" width="3" height="3" fill="#a371f7"/><rect x="713" y="330" width="3" height="3" fill="#a371f7"/>
+      <!-- row 4 -->
+      <rect x="657" y="334" width="3" height="3" fill="#a371f7"/><rect x="661" y="334" width="3" height="3" fill="#a371f7"/><rect x="665" y="334" width="3" height="3" fill="#a371f7"/><rect x="669" y="334" width="3" height="3" fill="#a371f7"/><rect x="673" y="334" width="3" height="3" fill="#a371f7"/><rect x="677" y="334" width="3" height="3" fill="#a371f7"/><rect x="681" y="334" width="3" height="3" fill="#a371f7"/><rect x="685" y="334" width="3" height="3" fill="#a371f7"/><rect x="689" y="334" width="3" height="3" fill="#a371f7"/><rect x="693" y="334" width="3" height="3" fill="#a371f7"/><rect x="697" y="334" width="3" height="3" fill="#a371f7"/><rect x="701" y="334" width="3" height="3" fill="#a371f7"/><rect x="705" y="334" width="3" height="3" fill="#a371f7"/><rect x="709" y="334" width="3" height="3" fill="#a371f7"/><rect x="713" y="334" width="3" height="3" fill="#a371f7"/>
+      <!-- row 5 -->
+      <rect x="657" y="338" width="3" height="3" fill="#a371f7"/><rect x="661" y="338" width="3" height="3" fill="#a371f7"/><rect x="665" y="338" width="3" height="3" fill="#a371f7"/><rect x="669" y="338" width="3" height="3" fill="#a371f7"/><rect x="673" y="338" width="3" height="3" fill="#a371f7"/><rect x="677" y="338" width="3" height="3" fill="#a371f7"/><rect x="681" y="338" width="3" height="3" fill="#a371f7"/><rect x="685" y="338" width="3" height="3" fill="#a371f7"/><rect x="689" y="338" width="3" height="3" fill="#a371f7"/><rect x="693" y="338" width="3" height="3" fill="#a371f7"/><rect x="697" y="338" width="3" height="3" fill="#a371f7"/><rect x="701" y="338" width="3" height="3" fill="#a371f7"/><rect x="705" y="338" width="3" height="3" fill="#a371f7"/><rect x="709" y="338" width="3" height="3" fill="#a371f7"/><rect x="713" y="338" width="3" height="3" fill="#a371f7"/>
+      <!-- row 6 -->
+      <rect x="657" y="342" width="3" height="3" fill="#a371f7"/><rect x="661" y="342" width="3" height="3" fill="#a371f7"/><rect x="665" y="342" width="3" height="3" fill="#a371f7"/><rect x="669" y="342" width="3" height="3" fill="#a371f7"/><rect x="673" y="342" width="3" height="3" fill="#a371f7"/><rect x="677" y="342" width="3" height="3" fill="#a371f7"/><rect x="681" y="342" width="3" height="3" fill="#a371f7"/><rect x="685" y="342" width="3" height="3" fill="#a371f7"/><rect x="689" y="342" width="3" height="3" fill="#a371f7"/><rect x="693" y="342" width="3" height="3" fill="#a371f7"/><rect x="697" y="342" width="3" height="3" fill="#a371f7"/><rect x="701" y="342" width="3" height="3" fill="#a371f7"/><rect x="705" y="342" width="3" height="3" fill="#a371f7"/><rect x="709" y="342" width="3" height="3" fill="#a371f7"/><rect x="713" y="342" width="3" height="3" fill="#a371f7"/>
+      <!-- row 7 -->
+      <rect x="657" y="346" width="3" height="3" fill="#a371f7"/><rect x="661" y="346" width="3" height="3" fill="#a371f7"/><rect x="665" y="346" width="3" height="3" fill="#a371f7"/><rect x="669" y="346" width="3" height="3" fill="#a371f7"/><rect x="673" y="346" width="3" height="3" fill="#a371f7"/><rect x="677" y="346" width="3" height="3" fill="#a371f7"/><rect x="681" y="346" width="3" height="3" fill="#a371f7"/><rect x="685" y="346" width="3" height="3" fill="#a371f7"/><rect x="689" y="346" width="3" height="3" fill="#a371f7"/><rect x="693" y="346" width="3" height="3" fill="#a371f7"/><rect x="697" y="346" width="3" height="3" fill="#a371f7"/><rect x="701" y="346" width="3" height="3" fill="#a371f7"/><rect x="705" y="346" width="3" height="3" fill="#a371f7"/><rect x="709" y="346" width="3" height="3" fill="#a371f7"/><rect x="713" y="346" width="3" height="3" fill="#a371f7"/>
+      <!-- row 8 -->
+      <rect x="657" y="350" width="3" height="3" fill="#a371f7"/><rect x="661" y="350" width="3" height="3" fill="#a371f7"/><rect x="665" y="350" width="3" height="3" fill="#a371f7"/><rect x="669" y="350" width="3" height="3" fill="#a371f7"/><rect x="673" y="350" width="3" height="3" fill="#a371f7"/><rect x="677" y="350" width="3" height="3" fill="#a371f7"/><rect x="681" y="350" width="3" height="3" fill="#a371f7"/><rect x="685" y="350" width="3" height="3" fill="#a371f7"/><rect x="689" y="350" width="3" height="3" fill="#a371f7"/><rect x="693" y="350" width="3" height="3" fill="#a371f7"/><rect x="697" y="350" width="3" height="3" fill="#a371f7"/><rect x="701" y="350" width="3" height="3" fill="#a371f7"/><rect x="705" y="350" width="3" height="3" fill="#a371f7"/><rect x="709" y="350" width="3" height="3" fill="#a371f7"/><rect x="713" y="350" width="3" height="3" fill="#a371f7"/>
+      <!-- row 9 -->
+      <rect x="657" y="354" width="3" height="3" fill="#a371f7"/><rect x="661" y="354" width="3" height="3" fill="#a371f7"/><rect x="665" y="354" width="3" height="3" fill="#a371f7"/><rect x="669" y="354" width="3" height="3" fill="#a371f7"/><rect x="673" y="354" width="3" height="3" fill="#a371f7"/><rect x="677" y="354" width="3" height="3" fill="#a371f7"/><rect x="681" y="354" width="3" height="3" fill="#a371f7"/><rect x="685" y="354" width="3" height="3" fill="#a371f7"/><rect x="689" y="354" width="3" height="3" fill="#a371f7"/><rect x="693" y="354" width="3" height="3" fill="#a371f7"/><rect x="697" y="354" width="3" height="3" fill="#a371f7"/><rect x="701" y="354" width="3" height="3" fill="#a371f7"/><rect x="705" y="354" width="3" height="3" fill="#a371f7"/><rect x="709" y="354" width="3" height="3" fill="#a371f7"/><rect x="713" y="354" width="3" height="3" fill="#a371f7"/>
+      <!-- row 10 -->
+      <rect x="657" y="358" width="3" height="3" fill="#a371f7"/><rect x="661" y="358" width="3" height="3" fill="#a371f7"/><rect x="665" y="358" width="3" height="3" fill="#a371f7"/><rect x="669" y="358" width="3" height="3" fill="#a371f7"/><rect x="673" y="358" width="3" height="3" fill="#a371f7"/><rect x="677" y="358" width="3" height="3" fill="#a371f7"/><rect x="681" y="358" width="3" height="3" fill="#a371f7"/><rect x="685" y="358" width="3" height="3" fill="#a371f7"/><rect x="689" y="358" width="3" height="3" fill="#a371f7"/><rect x="693" y="358" width="3" height="3" fill="#a371f7"/><rect x="697" y="358" width="3" height="3" fill="#a371f7"/><rect x="701" y="358" width="3" height="3" fill="#a371f7"/><rect x="705" y="358" width="3" height="3" fill="#a371f7"/><rect x="709" y="358" width="3" height="3" fill="#a371f7"/><rect x="713" y="358" width="3" height="3" fill="#a371f7"/>
+      <!-- row 11 -->
+      <rect x="657" y="362" width="3" height="3" fill="#a371f7"/><rect x="661" y="362" width="3" height="3" fill="#a371f7"/><rect x="665" y="362" width="3" height="3" fill="#a371f7"/><rect x="669" y="362" width="3" height="3" fill="#a371f7"/><rect x="673" y="362" width="3" height="3" fill="#a371f7"/><rect x="677" y="362" width="3" height="3" fill="#a371f7"/><rect x="681" y="362" width="3" height="3" fill="#a371f7"/><rect x="685" y="362" width="3" height="3" fill="#a371f7"/><rect x="689" y="362" width="3" height="3" fill="#a371f7"/><rect x="693" y="362" width="3" height="3" fill="#a371f7"/><rect x="697" y="362" width="3" height="3" fill="#a371f7"/><rect x="701" y="362" width="3" height="3" fill="#a371f7"/><rect x="705" y="362" width="3" height="3" fill="#a371f7"/><rect x="709" y="362" width="3" height="3" fill="#a371f7"/><rect x="713" y="362" width="3" height="3" fill="#a371f7"/>
+      <!-- row 12 -->
+      <rect x="657" y="366" width="3" height="3" fill="#a371f7"/><rect x="661" y="366" width="3" height="3" fill="#a371f7"/><rect x="665" y="366" width="3" height="3" fill="#a371f7"/><rect x="669" y="366" width="3" height="3" fill="#a371f7"/><rect x="673" y="366" width="3" height="3" fill="#a371f7"/><rect x="677" y="366" width="3" height="3" fill="#a371f7"/><rect x="681" y="366" width="3" height="3" fill="#a371f7"/><rect x="685" y="366" width="3" height="3" fill="#a371f7"/><rect x="689" y="366" width="3" height="3" fill="#a371f7"/><rect x="693" y="366" width="3" height="3" fill="#a371f7"/><rect x="697" y="366" width="3" height="3" fill="#a371f7"/><rect x="701" y="366" width="3" height="3" fill="#a371f7"/><rect x="705" y="366" width="3" height="3" fill="#a371f7"/><rect x="709" y="366" width="3" height="3" fill="#a371f7"/><rect x="713" y="366" width="3" height="3" fill="#a371f7"/>
+      <!-- row 13 -->
+      <rect x="657" y="370" width="3" height="3" fill="#a371f7"/><rect x="661" y="370" width="3" height="3" fill="#a371f7"/><rect x="665" y="370" width="3" height="3" fill="#a371f7"/><rect x="669" y="370" width="3" height="3" fill="#a371f7"/><rect x="673" y="370" width="3" height="3" fill="#a371f7"/><rect x="677" y="370" width="3" height="3" fill="#a371f7"/><rect x="681" y="370" width="3" height="3" fill="#a371f7"/><rect x="685" y="370" width="3" height="3" fill="#a371f7"/><rect x="689" y="370" width="3" height="3" fill="#a371f7"/><rect x="693" y="370" width="3" height="3" fill="#a371f7"/><rect x="697" y="370" width="3" height="3" fill="#a371f7"/><rect x="701" y="370" width="3" height="3" fill="#a371f7"/><rect x="705" y="370" width="3" height="3" fill="#a371f7"/><rect x="709" y="370" width="3" height="3" fill="#a371f7"/><rect x="713" y="370" width="3" height="3" fill="#a371f7"/>
+    </g>
+    <!-- scanning highlight moving through grid rows -->
+    <g clip-path="url(#pgClip)">
+      <rect x="649.5" y="285" width="74" height="6" fill="url(#gridScan)" opacity="0.9">
+        <animate attributeName="y" values="282;370;282" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- big value below -->
+    <text x="686.5" y="388" font-size="20" font-weight="700" text-anchor="middle" fill="#a371f7">195</text>
+  </g>
+
 </svg>
