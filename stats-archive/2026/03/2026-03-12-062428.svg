@@ -1,18 +1,146 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated March 12, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">23</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">927</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" role="img" aria-label="Live GitHub stats — a year of daily commits, days-active strip with longest streak highlighted, language distribution, and headline counts">
+  <defs>
+    <linearGradient id="valNum" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffcc80"/>
+      <stop offset="1" stop-color="#ff8a3d"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffc98a"/>
+      <stop offset="1" stop-color="#ff7530"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stripSweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4fd28c" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffb56b" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#4fd28c" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chartClip"><rect x="22" y="60" width="756" height="138"/></clipPath>
+    <clipPath id="stripClip"><rect x="22" y="201" width="756" height="8"/></clipPath>
+    <clipPath id="cardClip"><rect x="0.5" y="0.5" width="799" height="359" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="800" height="360" rx="10" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="359" rx="10" fill="#11161d" stroke="#21262d" stroke-width="1"/>
+
+  <g clip-path="url(#cardClip)">
+    <rect x="0" y="0" width="800" height="2" fill="url(#barGrad)" opacity="0.75"/>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (9) / TypeScript (7) / Shell (5) / CoffeeScript (4)</text>
+
+  <!-- Header -->
+  <circle cx="24" cy="24" r="3.6" fill="#ff8a3d">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3.6;4.4;3.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="38" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
+  <text x="776" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8a94a1" text-anchor="end">March 12, 2026</text>
+  <line x1="20" y1="44" x2="780" y2="44" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Calendar section label + peak annotation -->
+  <text x="24" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8a94a1" font-weight="500">Daily commits &#183; past 12 months</text>
+  <text x="776" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8a94a1" text-anchor="end">peak <tspan fill="#ff9e5b" font-weight="700">138</tspan> commits / day</text>
+
+  <!-- Calendar bars: single strip of vertical strokes, split into 4 intensity paths -->
+  <g clip-path="url(#chartClip)">
+    <line x1="24" y1="194.5" x2="776" y2="194.5" stroke="#21262d" stroke-width="1"/>
+    <line x1="24" y1="149.1" x2="776" y2="149.1" stroke="#1c2430" stroke-width="1" stroke-dasharray="2 4"/>
+    <line x1="24" y1="104.2" x2="776" y2="104.2" stroke="#1c2430" stroke-width="1" stroke-dasharray="2 4"/>
+    <text x="28" y="147" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8" fill="#3d4550">50</text>
+    <text x="28" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="8" fill="#3d4550">100</text>
+
+    <path stroke="url(#barGrad)" stroke-width="1.75" fill="none" opacity="0.42" stroke-linecap="butt"
+      d="M24 194v-0.9 M32.22 194v-0.9 M44.55 194v-0.9 M65.09 194v-0.9 M141.11 194v-1.8 M157.55 194v-0.9 M182.21 194v-2.7 M186.32 194v-0.9 M188.37 194v-0.9 M192.48 194v-1.8 M194.54 194v-1.8 M198.64 194v-2.7 M200.7 194v-2.7 M206.86 194v-0.9 M208.92 194v-0.9 M210.97 194v-0.9 M243.85 194v-0.9 M278.78 194v-0.9 M293.16 194v-1.8 M311.65 194v-0.9 M315.76 194v-1.8 M317.81 194v-0.9 M338.36 194v-1.8 M342.47 194v-2.7 M363.02 194v-0.9 M375.34 194v-0.9 M400 194v-0.9 M439.04 194v-0.9 M447.26 194v-2.7 M459.58 194v-1.8 M469.86 194v-2.7 M471.91 194v-1.8 M486.3 194v-0.9 M496.57 194v-0.9 M500.68 194v-0.9 M517.11 194v-2.7 M523.28 194v-2.7 M525.33 194v-1.8 M535.61 194v-1.8 M539.72 194v-1.8 M554.1 194v-2.7 M564.37 194v-1.8 M566.43 194v-1.8 M570.54 194v-0.9 M589.03 194v-2.7 M593.14 194v-2.7 M626.01 194v-1.8 M634.23 194v-1.8 M640.39 194v-0.9 M722.58 194v-1.8 M726.69 194v-2.7"/>
+    <path stroke="url(#barGrad)" stroke-width="1.75" fill="none" opacity="0.60" stroke-linecap="butt"
+      d="M26.05 194v-7.19 M38.38 194v-8.99 M54.82 194v-3.59 M235.63 194v-12.58 M307.54 194v-4.49 M330.14 194v-11.68 M340.42 194v-3.59 M492.46 194v-4.49 M502.73 194v-3.59 M510.95 194v-3.59 M513.01 194v-5.39 M515.06 194v-5.39 M521.22 194v-5.39 M527.39 194v-5.39 M582.86 194v-8.99 M584.92 194v-8.99 M586.97 194v-3.59 M591.08 194v-5.39 M599.3 194v-7.19 M609.57 194v-9.88 M611.63 194v-10.78 M623.96 194v-4.49 M628.07 194v-10.78 M638.34 194v-3.59 M642.45 194v-13.48 M648.61 194v-3.59 M706.14 194v-8.09 M712.31 194v-8.99 M716.42 194v-6.29 M724.63 194v-5.39 M728.74 194v-6.29 M749.29 194v-5.39 M759.56 194v-4.49"/>
+    <path stroke="url(#barGrad)" stroke-width="1.75" fill="none" opacity="0.80" stroke-linecap="butt"
+      d="M529.44 194v-29.65 M597.25 194v-17.97 M601.36 194v-22.46 M603.41 194v-20.67 M605.46 194v-15.28 M607.52 194v-16.17 M613.68 194v-26.96 M615.74 194v-17.07 M621.9 194v-21.57 M650.67 194v-30.55 M654.78 194v-16.17 M656.83 194v-27.86 M658.89 194v-16.17 M660.94 194v-22.46 M675.32 194v-25.16 M681.49 194v-43.13 M687.65 194v-27.86 M691.76 194v-37.74 M702.03 194v-35.94 M704.09 194v-26.06 M708.2 194v-17.97 M710.25 194v-19.77 M714.36 194v-14.38 M718.47 194v-39.54 M730.8 194v-31.45 M747.23 194v-32.35 M751.34 194v-18.87 M753.4 194v-41.33 M755.45 194v-14.38 M757.51 194v-25.16 M761.62 194v-18.87 M763.67 194v-35.94 M767.78 194v-18.87 M771.89 194v-23.36"/>
+    <path stroke="url(#barGrad)" stroke-width="1.75" fill="none" opacity="0.98" stroke-linecap="butt"
+      d="M617.79 194v-54.81 M619.85 194v-78.17 M646.56 194v-91.65 M652.72 194v-52.12 M662.99 194v-53.01 M665.05 194v-96.14 M667.1 194v-53.91 M669.16 194v-88.06 M671.21 194v-47.62 M673.27 194v-53.91 M677.38 194v-87.16 M679.43 194v-62.9 M683.54 194v-79.97 M685.6 194v-53.01 M689.7 194v-105.13 M693.81 194v-96.14 M695.87 194v-54.81 M697.92 194v-54.81 M699.98 194v-44.93 M720.52 194v-109.62 M732.85 194v-77.28 M734.91 194v-124 M736.96 194v-111.42 M739.02 194v-59.3 M741.07 194v-102.43 M743.13 194v-62 M745.18 194v-52.12 M765.73 194v-76.38 M769.84 194v-97.94 M773.95 194v-60.2"/>
+
+    <!-- Traveling highlight sweep across the chart -->
+    <rect x="-90" y="60" width="90" height="136" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="translate" from="-90 0" to="800 0" dur="17s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Days-active strip: one cell per day, colored active/inactive; streak cells warm -->
+  <g clip-path="url(#stripClip)">
+    <rect x="24" y="202" width="752" height="6" fill="#161c25"/>
+    <path stroke="#4fd28c" stroke-width="1.75" fill="none" stroke-linecap="butt" opacity="0.92"
+      d="M24 202v6 M26.05 202v6 M32.22 202v6 M38.38 202v6 M44.55 202v6 M54.82 202v6 M65.09 202v6 M141.11 202v6 M157.55 202v6 M182.21 202v6 M186.32 202v6 M188.37 202v6 M192.48 202v6 M194.54 202v6 M198.64 202v6 M200.7 202v6 M206.86 202v6 M208.92 202v6 M210.97 202v6 M235.63 202v6 M243.85 202v6 M278.78 202v6 M293.16 202v6 M307.54 202v6 M311.65 202v6 M315.76 202v6 M317.81 202v6 M330.14 202v6 M338.36 202v6 M340.42 202v6 M342.47 202v6 M363.02 202v6 M375.34 202v6 M400 202v6 M439.04 202v6 M447.26 202v6 M459.58 202v6 M469.86 202v6 M471.91 202v6 M486.3 202v6 M492.46 202v6 M496.57 202v6 M500.68 202v6 M502.73 202v6 M510.95 202v6 M513.01 202v6 M515.06 202v6 M517.11 202v6 M521.22 202v6 M523.28 202v6 M525.33 202v6 M527.39 202v6 M529.44 202v6 M535.61 202v6 M539.72 202v6 M554.1 202v6 M564.37 202v6 M566.43 202v6 M570.54 202v6 M582.86 202v6 M584.92 202v6 M586.97 202v6 M589.03 202v6 M591.08 202v6 M593.14 202v6 M597.25 202v6 M599.3 202v6 M601.36 202v6 M603.41 202v6 M605.46 202v6 M607.52 202v6 M609.57 202v6 M611.63 202v6 M613.68 202v6 M615.74 202v6 M617.79 202v6 M619.85 202v6 M621.9 202v6 M623.96 202v6 M626.01 202v6 M628.07 202v6 M634.23 202v6 M638.34 202v6 M640.39 202v6 M642.45 202v6"/>
+    <path stroke="#ffb56b" stroke-width="1.75" fill="none" stroke-linecap="butt"
+      d="M646.56 202v6 M648.61 202v6 M650.67 202v6 M652.72 202v6 M654.78 202v6 M656.83 202v6 M658.89 202v6 M660.94 202v6 M662.99 202v6 M665.05 202v6 M667.1 202v6 M669.16 202v6 M671.21 202v6 M673.27 202v6 M675.32 202v6 M677.38 202v6 M679.43 202v6 M681.49 202v6 M683.54 202v6 M685.6 202v6 M687.65 202v6 M689.7 202v6 M691.76 202v6 M693.81 202v6 M695.87 202v6 M697.92 202v6 M699.98 202v6 M702.03 202v6 M704.09 202v6 M706.14 202v6 M708.2 202v6 M710.25 202v6 M712.31 202v6 M714.36 202v6 M716.42 202v6 M718.47 202v6 M720.52 202v6 M722.58 202v6 M724.63 202v6 M726.69 202v6 M728.74 202v6 M730.8 202v6 M732.85 202v6 M734.91 202v6 M736.96 202v6 M739.02 202v6 M741.07 202v6 M743.13 202v6 M745.18 202v6 M747.23 202v6 M749.29 202v6 M751.34 202v6 M753.4 202v6 M755.45 202v6 M757.51 202v6 M759.56 202v6 M761.62 202v6 M763.67 202v6 M765.73 202v6 M767.78 202v6 M769.84 202v6 M771.89 202v6 M773.95 202v6">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <rect x="-120" y="201" width="120" height="8" fill="url(#stripSweep)" opacity="0.75">
+      <animateTransform attributeName="transform" type="translate" from="-120 0" to="800 0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Caption row: days-active (value 148) + streak legend -->
+  <text x="24" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3" font-weight="700">148</text>
+  <text x="46" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681">/</text>
+  <text x="54" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8a94a1">365</text>
+  <text x="82" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" font-weight="500">Days Active</text>
+  <text x="152" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">&#183; 1 Year</text>
+
+  <rect x="510" y="217" width="10" height="6" fill="#ffb56b">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="526" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9">longest active streak highlighted &#8212; 63 days, ongoing</text>
+
+  <!-- Languages: header (value 8) + stacked bar sized by commits + legend -->
+  <text x="24" y="243" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="url(#valNum)" font-weight="700">8</text>
+  <text x="42" y="243" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" font-weight="600">Languages</text>
+  <text x="108" y="243" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">&#183; 1 Year</text>
+  <text x="776" y="243" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">bar widths proportional to commits &#183; 3087 total</text>
+
+  <g>
+    <rect x="24" y="250" width="752" height="22" rx="3" fill="#0e131a"/>
+    <rect x="24" y="250" width="477.17" height="22" fill="#4ea1ff" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="7s" begin="0s" repeatCount="indefinite"/></rect>
+    <rect x="501.17" y="250" width="188.71" height="22" fill="#8b5cf6" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="9s" begin="0.4s" repeatCount="indefinite"/></rect>
+    <rect x="689.88" y="250" width="62.74" height="22" fill="#22d3aa" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="11s" begin="0.8s" repeatCount="indefinite"/></rect>
+    <rect x="752.62" y="250" width="11.54" height="22" fill="#fb923c" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="13s" begin="1.2s" repeatCount="indefinite"/></rect>
+    <rect x="764.16" y="250" width="2.96" height="22" fill="#facc15" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="7s" begin="1.6s" repeatCount="indefinite"/></rect>
+    <rect x="767.12" y="250" width="2.96" height="22" fill="#f472b6" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="9s" begin="2s" repeatCount="indefinite"/></rect>
+    <rect x="770.08" y="250" width="2.96" height="22" fill="#38bdf8" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="11s" begin="2.4s" repeatCount="indefinite"/></rect>
+    <rect x="773.04" y="250" width="2.96" height="22" fill="#84cc16" opacity="0.92"><animate attributeName="opacity" values="0.78;0.98;0.78" dur="13s" begin="2.8s" repeatCount="indefinite"/></rect>
+    <rect x="24" y="250" width="752" height="22" rx="3" fill="none" stroke="#0d1117" stroke-width="1"/>
+  </g>
+
+  <!-- Inline segment labels (only on segments wide enough to hold them) -->
+  <text x="262.59" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0b1220" font-weight="700" text-anchor="middle">TypeScript 1985</text>
+  <text x="595.53" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0b1220" font-weight="700" text-anchor="middle">Python 785</text>
+  <text x="721.25" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0b1220" font-weight="700" text-anchor="middle">Go 261</text>
+
+  <!-- Legend: all 8 languages with counts (so the "8" count is visually confirmable) -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9">
+    <circle cx="30" cy="287" r="2.8" fill="#4ea1ff"/><text x="37" y="290" fill="#c9d1d9">TypeScript</text><text x="114" y="290" fill="#6e7681" text-anchor="end">1985</text>
+    <circle cx="124" cy="287" r="2.8" fill="#8b5cf6"/><text x="131" y="290" fill="#c9d1d9">Python</text><text x="208" y="290" fill="#6e7681" text-anchor="end">785</text>
+    <circle cx="218" cy="287" r="2.8" fill="#22d3aa"/><text x="225" y="290" fill="#c9d1d9">Go</text><text x="302" y="290" fill="#6e7681" text-anchor="end">261</text>
+    <circle cx="312" cy="287" r="2.8" fill="#fb923c"/><text x="319" y="290" fill="#c9d1d9">Shell</text><text x="396" y="290" fill="#6e7681" text-anchor="end">48</text>
+    <circle cx="406" cy="287" r="2.8" fill="#facc15"/><text x="413" y="290" fill="#c9d1d9">Kotlin</text><text x="490" y="290" fill="#6e7681" text-anchor="end">3</text>
+    <circle cx="500" cy="287" r="2.8" fill="#f472b6"/><text x="507" y="290" fill="#c9d1d9">HCL</text><text x="584" y="290" fill="#6e7681" text-anchor="end">2</text>
+    <circle cx="594" cy="287" r="2.8" fill="#38bdf8"/><text x="601" y="290" fill="#c9d1d9">JavaScript</text><text x="678" y="290" fill="#6e7681" text-anchor="end">2</text>
+    <circle cx="688" cy="287" r="2.8" fill="#84cc16"/><text x="695" y="290" fill="#c9d1d9">Lua</text><text x="776" y="290" fill="#6e7681" text-anchor="end">1</text>
+  </g>
+
+  <!-- Callouts: three headline scalars -->
+  <line x1="280" y1="303" x2="280" y2="347" stroke="#21262d" stroke-width="1"/>
+  <line x1="520" y1="303" x2="520" y2="347" stroke="#21262d" stroke-width="1"/>
+
+  <text x="160" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="url(#valNum)" font-weight="700" text-anchor="middle">2819</text>
+  <text x="160" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="500">Commits</text>
+  <text x="160" y="347" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+  <text x="400" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="url(#valNum)" font-weight="700" text-anchor="middle">63</text>
+  <text x="400" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="500">Longest Streak</text>
+  <text x="400" y="347" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+  <text x="640" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="url(#valNum)" font-weight="700" text-anchor="middle">302</text>
+  <text x="640" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="500">PRs Merged</text>
+  <text x="640" y="347" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">All Time</text>
 </svg>
