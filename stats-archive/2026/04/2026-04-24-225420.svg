@@ -1,20 +1,106 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated April 24, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">392</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">—</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">77</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">13</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 326" width="800" height="326" role="img" aria-label="Live GitHub Stats for April 24, 2026">
+  <defs>
+    <style>text{font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;fill:#c9d1d9;}</style>
+    <radialGradient id="sweep" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd966" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#ffd966" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffd966" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chartClip"><rect x="24" y="46" width="752" height="128"/></clipPath>
+    <clipPath id="langClip"><rect x="30" y="230" width="740" height="20" rx="3"/></clipPath>
+  </defs>
+
+  <!-- background + subtle frame -->
+  <rect width="800" height="326" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="325" fill="none" stroke="#161b22" stroke-width="1" rx="8"/>
+
+  <!-- header -->
+  <text x="24" y="22" font-size="14" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="776" y="22" font-size="11" fill="#7d8590" text-anchor="end">Updated April 24, 2026</text>
+  <line x1="24" y1="30" x2="776" y2="30" stroke="#21262d" stroke-width="1"/>
+
+  <!-- chart subtitle -->
+  <text x="24" y="44" font-size="9" fill="#7d8590" letter-spacing="1.6">CONTRIBUTIONS &#183; PAST 12 MONTHS</text>
+
+  <!-- chart -->
+  <g clip-path="url(#chartClip)">
+    <!-- baseline hairline -->
+    <line x1="30" y1="170.5" x2="770" y2="170.5" stroke="#21262d" stroke-width="1"/>
+    <!-- Tier 1: 1-4 contributions -->
+    <path fill="none" stroke="#0e4429" stroke-width="1.7" stroke-linecap="butt" d="M58.85,170v-14.5M74.85,170v-10.2M98.85,170v-17.7M102.85,170v-10.2M104.85,170v-10.2M108.85,170v-14.5M110.85,170v-14.5M114.85,170v-17.7M116.85,170v-17.7M122.85,170v-10.2M124.85,170v-10.2M126.85,170v-10.2M158.85,170v-10.2M192.85,170v-10.2M206.85,170v-14.5M224.85,170v-10.2M228.85,170v-14.5M230.85,170v-10.2M250.85,170v-14.5M252.85,170v-20.4M254.85,170v-17.7M274.85,170v-10.2M286.85,170v-10.2M312.85,170v-10.2M356.85,170v-10.2M364.85,170v-17.7M376.85,170v-14.5M386.85,170v-17.7M388.85,170v-14.5M402.85,170v-10.2M412.85,170v-10.2M416.85,170v-10.2M418.85,170v-20.4M426.85,170v-20.4M432.85,170v-17.7M438.85,170v-17.7M440.85,170v-14.5M450.85,170v-14.5M454.85,170v-14.5M468.85,170v-17.7M478.85,170v-14.5M480.85,170v-14.5M484.85,170v-10.2M500.85,170v-20.4M502.85,170v-17.7M506.85,170v-17.7M538.85,170v-14.5M546.85,170v-14.5M550.85,170v-20.4M552.85,170v-10.2M560.85,170v-20.4M632.85,170v-14.5M636.85,170v-17.7M720.85,170v-14.5M728.85,170v-20.4M738.85,170v-17.7"/>
+    <!-- Tier 2: 5-19 -->
+    <path fill="none" stroke="#006d32" stroke-width="1.7" stroke-linecap="butt" d="M150.85,170v-38.2M220.85,170v-22.8M242.85,170v-36.8M408.85,170v-22.8M428.85,170v-25M430.85,170v-25M436.85,170v-25M442.85,170v-25M496.85,170v-32.3M498.85,170v-32.3M504.85,170v-25M512.85,170v-28.9M518.85,170v-42.1M520.85,170v-43.3M522.85,170v-33.9M524.85,170v-35.4M528.85,170v-44.5M536.85,170v-22.8M540.85,170v-35.4M554.85,170v-39.6M566.85,170v-43.3M570.85,170v-43.3M616.85,170v-30.7M622.85,170v-32.3M624.85,170v-40.9M626.85,170v-27M634.85,170v-25M638.85,170v-27M658.85,170v-25M664.85,170v-40.9M668.85,170v-22.8M688.85,170v-36.8M694.85,170v-36.8M698.85,170v-33.9M708.85,170v-25M710.85,170v-22.8M712.85,170v-32.3M714.85,170v-25M716.85,170v-36.8M726.85,170v-39.6M730.85,170v-35.4M734.85,170v-43.3M736.85,170v-28.9M742.85,170v-38.2M744.85,170v-44.5M746.85,170v-44.5M748.85,170v-25M750.85,170v-30.7M752.85,170v-35.4M762.85,170v-22.8M764.85,170v-30.7M766.85,170v-44.5"/>
+    <!-- Tier 3: 20-59 -->
+    <path fill="none" stroke="#26a641" stroke-width="1.7" stroke-linecap="butt" d="M444.85,170v-58.7M510.85,170v-45.7M514.85,170v-51.1M516.85,170v-49M526.85,170v-56M534.85,170v-50M562.85,170v-59.6M564.85,170v-77.8M568.85,170v-56.9M572.85,170v-51.1M574.85,170v-78.4M582.85,170v-74.4M586.85,170v-54.1M592.85,170v-70.8M596.85,170v-78.4M598.85,170v-56.9M602.85,170v-66.2M610.85,170v-72.2M612.85,170v-64.6M614.85,170v-55M618.85,170v-45.7M620.85,170v-47.9M628.85,170v-67.7M640.85,170v-60.4M654.85,170v-77.8M656.85,170v-61.3M660.85,170v-46.8M662.85,170v-69.3M666.85,170v-54.1M670.85,170v-46.8M672.85,170v-64.6M676.85,170v-46.8M680.85,170v-52.1M684.85,170v-54.1M686.85,170v-47.9M690.85,170v-54.1M692.85,170v-53.1M696.85,170v-72.2M700.85,170v-63.8M702.85,170v-72.9M704.85,170v-62.1M706.85,170v-49M718.85,170v-47.9M724.85,170v-47.9M754.85,170v-55M758.85,170v-47.9M760.85,170v-46.8"/>
+    <!-- Tier 4: 60+ -->
+    <path fill="none" stroke="#39d353" stroke-width="1.7" stroke-linecap="butt" d="M530.85,170v-79.8M532.85,170v-95.3M558.85,170v-103.1M576.85,170v-105.7M578.85,170v-79.1M580.85,170v-101.1M584.85,170v-79.1M588.85,170v-100.6M590.85,170v-85.5M594.85,170v-96.4M600.85,170v-110.4M604.85,170v-105.7M606.85,170v-79.8M608.85,170v-79.8M630.85,170v-112.8M642.85,170v-94.8M644.85,170v-120M646.85,170v-113.8M648.85,170v-83.1M650.85,170v-109.1M652.85,170v-84.9M674.85,170v-94.2M678.85,170v-106.7M682.85,170v-83.6M732.85,170v-102.2M756.85,170v-95.3M768.85,170v-87.3"/>
+    <!-- perpetual sweep highlight travelling across the year -->
+    <ellipse cx="-140" cy="110" rx="90" ry="60" fill="url(#sweep)">
+      <animate attributeName="cx" from="-140" to="940" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
   </g>
+
+  <!-- streak bracket (span = 82-day longest streak, idx 264..345) -->
+  <g fill="none" stroke="#f0883e" stroke-linecap="round">
+    <line x1="558" y1="180" x2="722" y2="180" stroke-width="1.5" stroke-dasharray="4 3">
+      <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.6s" repeatCount="indefinite"/>
+    </line>
+    <line x1="558" y1="175" x2="558" y2="182" stroke-width="1.4"/>
+    <line x1="722" y1="175" x2="722" y2="182" stroke-width="1.4"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.7s" repeatCount="indefinite"/>
+  </g>
+  <text x="640" y="196" font-size="13" font-weight="700" fill="#f0883e" text-anchor="middle">82</text>
+  <text x="640" y="208" font-size="8.5" fill="#7d8590" text-anchor="middle" letter-spacing="1.1">DAY LONGEST STREAK</text>
+
+  <!-- languages -->
+  <text x="24" y="222" font-size="9" fill="#7d8590" letter-spacing="1.6">LANGUAGES &#183; SHARE BY COMMIT</text>
+  <g clip-path="url(#langClip)">
+    <rect x="30"  y="230" width="485" height="20" fill="#3178c6"/>
+    <rect x="515" y="230" width="174" height="20" fill="#f0d160"/>
+    <rect x="689" y="230" width="60"  height="20" fill="#00add8"/>
+    <rect x="749" y="230" width="9"   height="20" fill="#89e051"/>
+    <rect x="758" y="230" width="3"   height="20" fill="#e34c26"/>
+    <rect x="761" y="230" width="3"   height="20" fill="#a97bff"/>
+    <rect x="764" y="230" width="3"   height="20" fill="#f7df1e"/>
+    <rect x="767" y="230" width="3"   height="20" fill="#7fb1c9"/>
+    <!-- perpetual sheen -->
+    <rect x="-220" y="230" width="220" height="20" fill="url(#sheen)">
+      <animate attributeName="x" from="-220" to="1020" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- inline segment labels (above clip so they can't be shaved) -->
+  <text x="272" y="244" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">TypeScript 67%</text>
+  <text x="602" y="244" font-size="10.5" font-weight="700" fill="#0d1117" text-anchor="middle">Python 24%</text>
+  <text x="719" y="244" font-size="10.5" font-weight="700" fill="#0d1117" text-anchor="middle">Go 8%</text>
+
+  <!-- KPI row -->
+  <line x1="200" y1="264" x2="200" y2="310" stroke="#21262d" stroke-width="1"/>
+  <line x1="400" y1="264" x2="400" y2="310" stroke="#21262d" stroke-width="1"/>
+  <line x1="600" y1="264" x2="600" y2="310" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Commits -->
+  <text x="100" y="284" font-size="24" font-weight="700" fill="#e6edf3" text-anchor="middle">3338</text>
+  <text x="100" y="299" font-size="11" fill="#c9d1d9" text-anchor="middle">Commits</text>
+  <text x="100" y="310" font-size="9"  fill="#7d8590" text-anchor="middle" letter-spacing="0.6">1 YEAR</text>
+
+  <!-- Languages -->
+  <text x="300" y="284" font-size="24" font-weight="700" fill="#e6edf3" text-anchor="middle">9</text>
+  <text x="300" y="299" font-size="11" fill="#c9d1d9" text-anchor="middle">Languages</text>
+  <text x="300" y="310" font-size="9"  fill="#7d8590" text-anchor="middle" letter-spacing="0.6">1 YEAR</text>
+
+  <!-- Days Active (with /365 max as secondary) -->
+  <text x="490" y="284" font-size="24" font-weight="700" fill="#e6edf3" text-anchor="middle">182</text>
+  <text x="514" y="284" font-size="12" fill="#7d8590">/365</text>
+  <text x="505" y="299" font-size="11" fill="#c9d1d9" text-anchor="middle">Days Active</text>
+  <text x="505" y="310" font-size="9"  fill="#7d8590" text-anchor="middle" letter-spacing="0.6">1 YEAR</text>
+
+  <!-- Longest Streak -->
+  <text x="700" y="284" font-size="24" font-weight="700" fill="#f0883e" text-anchor="middle">82</text>
+  <text x="700" y="299" font-size="11" fill="#c9d1d9" text-anchor="middle">Longest Streak</text>
+  <text x="700" y="310" font-size="9"  fill="#7d8590" text-anchor="middle" letter-spacing="0.6">1 YEAR</text>
 </svg>
