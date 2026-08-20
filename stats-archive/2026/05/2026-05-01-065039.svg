@@ -1,20 +1,291 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 01, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="310" viewBox="0 0 800 310" role="img" aria-label="Live GitHub Stats for brandon-fryslie">
+  <defs>
+    <style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}</style>
+    <linearGradient id="playhead" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="streakField" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffa657" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffa657" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="310" fill="#0d1117"/>
+
+  <!-- Header -->
+  <text x="20" y="30" font-size="14" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="780" y="30" font-size="11" fill="#7d8590" text-anchor="end">past 12 months</text>
+
+  <!-- Baseline (very subtle) -->
+  <line x1="20" y1="210.5" x2="780" y2="210.5" stroke="#161b22" stroke-width="1"/>
+
+  <!-- Streak field (subtle amber underlay behind streak bars) -->
+  <rect x="547.78" y="54" width="169.74" height="156" fill="url(#streakField)" rx="2"/>
+
+  <!-- Blue bars: pre-streak (indices 0-253) and post-streak (indices 336-366), height=count -->
+  <g fill="#58a6ff">
+    <rect x="36.49" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="53.05" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="77.89" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="82.03" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="84.10" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="88.24" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="90.31" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="94.45" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="96.52" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="102.73" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="104.80" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="106.87" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="131.71" y="196" width="1.4" height="14" rx="0.5"/>
+    <rect x="139.99" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="175.18" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="189.67" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="204.16" y="205" width="1.4" height="5" rx="0.5"/>
+    <rect x="208.30" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="212.44" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="214.51" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="226.93" y="197" width="1.4" height="13" rx="0.5"/>
+    <rect x="235.21" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="237.28" y="206" width="1.4" height="4" rx="0.5"/>
+    <rect x="239.35" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="260.05" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="272.47" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="297.31" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="338.71" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="346.99" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="359.41" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="369.76" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="371.83" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="386.32" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="392.53" y="205" width="1.4" height="5" rx="0.5"/>
+    <rect x="396.67" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="400.81" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="402.88" y="206" width="1.4" height="4" rx="0.5"/>
+    <rect x="411.16" y="206" width="1.4" height="4" rx="0.5"/>
+    <rect x="413.23" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="415.30" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="417.37" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="421.51" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="423.58" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="425.65" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="427.72" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="429.79" y="177" width="1.4" height="33" rx="0.5"/>
+    <rect x="436.00" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="440.14" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="454.63" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="464.98" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="467.05" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="471.19" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="483.61" y="200" width="1.4" height="10" rx="0.5"/>
+    <rect x="485.68" y="200" width="1.4" height="10" rx="0.5"/>
+    <rect x="487.75" y="206" width="1.4" height="4" rx="0.5"/>
+    <rect x="489.82" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="491.89" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="493.96" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="498.10" y="190" width="1.4" height="20" rx="0.5"/>
+    <rect x="500.17" y="202" width="1.4" height="8" rx="0.5"/>
+    <rect x="502.24" y="185" width="1.4" height="25" rx="0.5"/>
+    <rect x="504.31" y="187" width="1.4" height="23" rx="0.5"/>
+    <rect x="506.38" y="193" width="1.4" height="17" rx="0.5"/>
+    <rect x="508.45" y="192" width="1.4" height="18" rx="0.5"/>
+    <rect x="510.52" y="199" width="1.4" height="11" rx="0.5"/>
+    <rect x="512.59" y="198" width="1.4" height="12" rx="0.5"/>
+    <rect x="514.66" y="180" width="1.4" height="30" rx="0.5"/>
+    <rect x="516.73" y="191" width="1.4" height="19" rx="0.5"/>
+    <rect x="518.80" y="149" width="1.4" height="61" rx="0.5"/>
+    <rect x="520.87" y="123" width="1.4" height="87" rx="0.5"/>
+    <rect x="522.94" y="186" width="1.4" height="24" rx="0.5"/>
+    <rect x="525.01" y="205" width="1.4" height="5" rx="0.5"/>
+    <rect x="527.08" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="529.15" y="198" width="1.4" height="12" rx="0.5"/>
+    <rect x="535.36" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="539.50" y="206" width="1.4" height="4" rx="0.5"/>
+    <rect x="541.57" y="209" width="1.4" height="1" rx="0.5"/>
+    <rect x="543.64" y="195" width="1.4" height="15" rx="0.5"/>
+    <rect x="719.59" y="188" width="1.4" height="22" rx="0.5"/>
+    <rect x="721.66" y="195" width="1.4" height="15" rx="0.5"/>
+    <rect x="723.73" y="206" width="1.4" height="4" rx="0.5"/>
+    <rect x="725.80" y="198" width="1.4" height="12" rx="0.5"/>
+    <rect x="727.87" y="110" width="1.4" height="100" rx="0.5"/>
+    <rect x="729.94" y="192" width="1.4" height="18" rx="0.5"/>
+    <rect x="732.01" y="202" width="1.4" height="8" rx="0.5"/>
+    <rect x="734.08" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="738.22" y="196" width="1.4" height="14" rx="0.5"/>
+    <rect x="740.29" y="191" width="1.4" height="19" rx="0.5"/>
+    <rect x="742.36" y="191" width="1.4" height="19" rx="0.5"/>
+    <rect x="744.43" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="746.50" y="201" width="1.4" height="9" rx="0.5"/>
+    <rect x="748.57" y="198" width="1.4" height="12" rx="0.5"/>
+    <rect x="750.64" y="181" width="1.4" height="29" rx="0.5"/>
+    <rect x="752.71" y="123" width="1.4" height="87" rx="0.5"/>
+    <rect x="754.78" y="188" width="1.4" height="22" rx="0.5"/>
+    <rect x="756.85" y="189" width="1.4" height="21" rx="0.5"/>
+    <rect x="758.92" y="205" width="1.4" height="5" rx="0.5"/>
+    <rect x="760.99" y="201" width="1.4" height="9" rx="0.5"/>
+    <rect x="763.06" y="191" width="1.4" height="19" rx="0.5"/>
+    <rect x="765.13" y="137" width="1.4" height="73" rx="0.5"/>
+    <rect x="767.20" y="189" width="1.4" height="21" rx="0.5"/>
+    <rect x="769.27" y="185" width="1.4" height="25" rx="0.5"/>
+    <rect x="771.34" y="185" width="1.4" height="25" rx="0.5"/>
+    <rect x="773.41" y="136" width="1.4" height="74" rx="0.5"/>
+    <rect x="775.48" y="168" width="1.4" height="42" rx="0.5"/>
+    <rect x="777.55" y="163" width="1.4" height="47" rx="0.5"/>
+    <rect x="779.62" y="191" width="1.4" height="19" rx="0.5"/>
+  </g>
+
+  <!-- Amber bars: 82-day longest streak (indices 254-335) -->
+  <g fill="#ffa657">
+    <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" repeatCount="indefinite"/>
+    <rect x="547.78" y="108" width="1.4" height="102" rx="0.5"/>
+    <rect x="549.85" y="206" width="1.4" height="4" rx="0.5"/>
+    <rect x="551.92" y="176" width="1.4" height="34" rx="0.5"/>
+    <rect x="553.99" y="152" width="1.4" height="58" rx="0.5"/>
+    <rect x="556.06" y="192" width="1.4" height="18" rx="0.5"/>
+    <rect x="558.13" y="179" width="1.4" height="31" rx="0.5"/>
+    <rect x="560.20" y="192" width="1.4" height="18" rx="0.5"/>
+    <rect x="562.27" y="185" width="1.4" height="25" rx="0.5"/>
+    <rect x="564.34" y="151" width="1.4" height="59" rx="0.5"/>
+    <rect x="566.41" y="103" width="1.4" height="107" rx="0.5"/>
+    <rect x="568.48" y="150" width="1.4" height="60" rx="0.5"/>
+    <rect x="570.55" y="112" width="1.4" height="98" rx="0.5"/>
+    <rect x="572.62" y="157" width="1.4" height="53" rx="0.5"/>
+    <rect x="574.69" y="150" width="1.4" height="60" rx="0.5"/>
+    <rect x="576.76" y="182" width="1.4" height="28" rx="0.5"/>
+    <rect x="578.83" y="113" width="1.4" height="97" rx="0.5"/>
+    <rect x="580.90" y="140" width="1.4" height="70" rx="0.5"/>
+    <rect x="582.97" y="162" width="1.4" height="48" rx="0.5"/>
+    <rect x="585.04" y="121" width="1.4" height="89" rx="0.5"/>
+    <rect x="587.11" y="151" width="1.4" height="59" rx="0.5"/>
+    <rect x="589.18" y="179" width="1.4" height="31" rx="0.5"/>
+    <rect x="591.25" y="93" width="1.4" height="117" rx="0.5"/>
+    <rect x="593.32" y="168" width="1.4" height="42" rx="0.5"/>
+    <rect x="595.39" y="103" width="1.4" height="107" rx="0.5"/>
+    <rect x="597.46" y="149" width="1.4" height="61" rx="0.5"/>
+    <rect x="599.53" y="149" width="1.4" height="61" rx="0.5"/>
+    <rect x="601.60" y="160" width="1.4" height="50" rx="0.5"/>
+    <rect x="603.67" y="170" width="1.4" height="40" rx="0.5"/>
+    <rect x="605.74" y="181" width="1.4" height="29" rx="0.5"/>
+    <rect x="607.81" y="201" width="1.4" height="9" rx="0.5"/>
+    <rect x="609.88" y="190" width="1.4" height="20" rx="0.5"/>
+    <rect x="611.95" y="188" width="1.4" height="22" rx="0.5"/>
+    <rect x="614.02" y="200" width="1.4" height="10" rx="0.5"/>
+    <rect x="616.09" y="194" width="1.4" height="16" rx="0.5"/>
+    <rect x="618.16" y="203" width="1.4" height="7" rx="0.5"/>
+    <rect x="620.23" y="166" width="1.4" height="44" rx="0.5"/>
+    <rect x="622.30" y="88" width="1.4" height="122" rx="0.5"/>
+    <rect x="624.37" y="208" width="1.4" height="2" rx="0.5"/>
+    <rect x="626.44" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="628.51" y="207" width="1.4" height="3" rx="0.5"/>
+    <rect x="630.58" y="203" width="1.4" height="7" rx="0.5"/>
+    <rect x="632.65" y="175" width="1.4" height="35" rx="0.5"/>
+    <rect x="634.72" y="124" width="1.4" height="86" rx="0.5"/>
+    <rect x="636.79" y="72" width="1.4" height="138" rx="0.5"/>
+    <rect x="638.86" y="86" width="1.4" height="124" rx="0.5"/>
+    <rect x="640.93" y="144" width="1.4" height="66" rx="0.5"/>
+    <rect x="643.00" y="96" width="1.4" height="114" rx="0.5"/>
+    <rect x="645.07" y="141" width="1.4" height="69" rx="0.5"/>
+    <rect x="647.14" y="152" width="1.4" height="58" rx="0.5"/>
+    <rect x="649.21" y="174" width="1.4" height="36" rx="0.5"/>
+    <rect x="651.28" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="653.35" y="189" width="1.4" height="21" rx="0.5"/>
+    <rect x="655.42" y="164" width="1.4" height="46" rx="0.5"/>
+    <rect x="657.49" y="194" width="1.4" height="16" rx="0.5"/>
+    <rect x="659.56" y="182" width="1.4" height="28" rx="0.5"/>
+    <rect x="661.63" y="205" width="1.4" height="5" rx="0.5"/>
+    <rect x="663.70" y="189" width="1.4" height="21" rx="0.5"/>
+    <rect x="665.77" y="170" width="1.4" height="40" rx="0.5"/>
+    <rect x="667.84" y="125" width="1.4" height="85" rx="0.5"/>
+    <rect x="669.91" y="189" width="1.4" height="21" rx="0.5"/>
+    <rect x="671.98" y="101" width="1.4" height="109" rx="0.5"/>
+    <rect x="674.05" y="184" width="1.4" height="26" rx="0.5"/>
+    <rect x="676.12" y="143" width="1.4" height="67" rx="0.5"/>
+    <rect x="678.19" y="182" width="1.4" height="28" rx="0.5"/>
+    <rect x="680.26" y="188" width="1.4" height="22" rx="0.5"/>
+    <rect x="682.33" y="197" width="1.4" height="13" rx="0.5"/>
+    <rect x="684.40" y="182" width="1.4" height="28" rx="0.5"/>
+    <rect x="686.47" y="183" width="1.4" height="27" rx="0.5"/>
+    <rect x="688.54" y="197" width="1.4" height="13" rx="0.5"/>
+    <rect x="690.61" y="160" width="1.4" height="50" rx="0.5"/>
+    <rect x="692.68" y="199" width="1.4" height="11" rx="0.5"/>
+    <rect x="694.75" y="171" width="1.4" height="39" rx="0.5"/>
+    <rect x="696.82" y="159" width="1.4" height="51" rx="0.5"/>
+    <rect x="698.89" y="173" width="1.4" height="37" rx="0.5"/>
+    <rect x="700.96" y="187" width="1.4" height="23" rx="0.5"/>
+    <rect x="703.03" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="705.10" y="205" width="1.4" height="5" rx="0.5"/>
+    <rect x="707.17" y="200" width="1.4" height="10" rx="0.5"/>
+    <rect x="709.24" y="204" width="1.4" height="6" rx="0.5"/>
+    <rect x="711.31" y="197" width="1.4" height="13" rx="0.5"/>
+    <rect x="713.38" y="188" width="1.4" height="22" rx="0.5"/>
+    <rect x="715.45" y="208" width="1.4" height="2" rx="0.5"/>
+  </g>
+
+  <!-- Playhead sweep -->
+  <rect x="0" y="54" width="10" height="156" fill="url(#playhead)">
+    <animate attributeName="x" from="14" to="770" dur="19s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Peak-day marker (aligns with the 82-day streak's tallest bar) -->
+  <circle cx="637.49" cy="72" r="2.4" fill="#f0f6fc" opacity="0.95"/>
+  <circle cx="637.49" cy="72" r="3" fill="none" stroke="#f0f6fc" stroke-width="1" opacity="0.85">
+    <animate attributeName="r" values="3;12;3" dur="3.7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.85;0;0.85" dur="3.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Big callouts overlaid on the calendar's quiet left zone -->
+  <text x="30" y="100" font-size="40" font-weight="800" fill="#f0f6fc" letter-spacing="-0.5">3542</text>
+  <text x="30" y="122" font-size="11" fill="#8b949e">Commits · 1 Year</text>
+
+  <text x="30" y="160" font-size="30" font-weight="700" fill="#79c0ff">189</text>
+  <text x="87" y="160" font-size="15" fill="#6e7681">/ 365</text>
+  <text x="30" y="180" font-size="11" fill="#8b949e">Days Active · 1 Year</text>
+
+  <!-- PRs Merged callout (upper right, clear of tall bars) -->
+  <text x="780" y="74" font-size="26" font-weight="700" fill="#7ee787" text-anchor="end">44</text>
+  <text x="780" y="90" font-size="11" fill="#8b949e" text-anchor="end">PRs Merged · 7 Days</text>
+
+  <!-- Streak underline (below the calendar baseline, aligned with the amber span) -->
+  <rect x="547.78" y="214" width="169.74" height="3" rx="1.5" fill="#ffa657">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="4.7s" repeatCount="indefinite"/>
+  </rect>
+  <text x="632.65" y="232" font-size="15" font-weight="700" fill="#ffa657" text-anchor="middle">82</text>
+  <text x="632.65" y="248" font-size="10" fill="#8b949e" text-anchor="middle">Longest Streak · 1 Year</text>
+
+  <!-- Language row header -->
+  <text x="20" y="266" font-size="11" font-weight="600" fill="#e6edf3">Languages</text>
+  <text x="94" y="266" font-size="11" font-weight="700" fill="#f0f6fc">10</text>
+  <text x="112" y="266" font-size="10" fill="#7d8590">· 1 Year</text>
+
+  <!-- Language stacked bar (segment widths proportional to per-language commit counts) -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">42</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">15</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">356</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">171</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
+    <rect x="20" y="272" width="508.71" height="18" fill="#3178c6"/>
+    <rect x="528.71" y="272" width="175.54" height="18" fill="#4b8bbe"/>
+    <rect x="704.25" y="272" width="62.47" height="18" fill="#00add8"/>
+    <rect x="766.72" y="272" width="9.18" height="18" fill="#89e051"/>
+    <rect x="775.90" y="272" width="2.34" height="18" fill="#663399"/>
+    <rect x="778.24" y="272" width="0.585" height="18" fill="#e34c26"/>
+    <rect x="778.825" y="272" width="0.585" height="18" fill="#f1e05a"/>
+    <rect x="779.410" y="272" width="0.590" height="18" fill="#a97bff"/>
+
+    <!-- Shimmer sweep over the language bar (subtle, under labels) -->
+    <rect y="272" width="140" height="18" fill="url(#shimmer)">
+      <animate attributeName="x" from="-140" to="800" dur="13s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- In-segment labels (only where the segment is wide enough) -->
+    <text x="30" y="284" font-size="10" font-weight="600" fill="#ffffff">TypeScript</text>
+    <text x="94" y="284" font-size="10" fill="#dbe6f2">2606</text>
+    <text x="538" y="284" font-size="10" font-weight="600" fill="#ffffff">Python</text>
+    <text x="576" y="284" font-size="10" fill="#dbe6f2">899</text>
+    <text x="713" y="284" font-size="10" font-weight="600" fill="#ffffff">Go</text>
+    <text x="728" y="284" font-size="10" fill="#dbe6f2">320</text>
   </g>
 </svg>
