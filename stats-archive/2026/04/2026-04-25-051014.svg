@@ -1,20 +1,226 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated April 25, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" role="img" aria-label="Live GitHub stats for brandon-fryslie">
+  <defs>
+    <clipPath id="calClip"><rect x="24" y="52" width="752" height="124"/></clipPath>
+    <clipPath id="langClip"><rect x="24" y="214" width="752" height="18"/></clipPath>
+    <clipPath id="sparkClip"><rect x="364" y="270" width="196" height="46"/></clipPath>
+    <linearGradient id="amber" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f0883e" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f0883e" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="340" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="339" fill="none" stroke="#21262d" stroke-width="1" rx="6"/>
+
+  <!-- header -->
+  <text x="24" y="26" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" letter-spacing="1.6">LIVE GITHUB STATS</text>
+  <text x="776" y="26" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#7d8590" text-anchor="end">Apr 25, 2026 · brandon-fryslie</text>
+  <line x1="24" y1="36" x2="776" y2="36" stroke="#21262d" stroke-width="1"/>
+
+  <!-- CALENDAR: 53 weekly bars, baseline y=176, max h=124, chart top y=52 -->
+  <!-- amber streak overlay: covers weeks 37-49 where the 82-day run lives -->
+  <rect x="547" y="52" width="182" height="124" fill="url(#amber)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" repeatCount="indefinite"/>
+  </rect>
+  <line x1="547" y1="176" x2="729" y2="176" stroke="#f0883e" stroke-width="1.5" opacity="0.55"/>
+  <line x1="547" y1="176" x2="547" y2="171" stroke="#f0883e" stroke-width="1.5" opacity="0.55"/>
+  <line x1="729" y1="176" x2="729" y2="171" stroke="#f0883e" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- chart baseline -->
+  <line x1="24" y1="176" x2="776" y2="176" stroke="#30363d" stroke-width="1"/>
+
+  <!-- weekly bars (fills chosen by intensity bin) -->
   <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">6</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Languages</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">25</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">6</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">316</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
+    <rect x="43" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="71" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="85" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="99" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="113" y="174" width="12" height="2" fill="#0e4429"/>
+    <rect x="127" y="174" width="12" height="2" fill="#0e4429"/>
+    <rect x="155" y="173" width="12" height="3" fill="#006d32"/>
+    <rect x="169" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="197" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="211" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="225" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="239" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="253" y="172" width="12" height="4" fill="#006d32"/>
+    <rect x="267" y="174" width="12" height="2" fill="#0e4429"/>
+    <rect x="281" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="295" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="323" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="351" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="365" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="379" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="393" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="407" y="174" width="12" height="2" fill="#0e4429"/>
+    <rect x="421" y="174" width="12" height="2" fill="#0e4429"/>
+    <rect x="435" y="169" width="12" height="7" fill="#006d32"/>
+    <rect x="449" y="165" width="12" height="11" fill="#26a641"/>
+    <rect x="463" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="477" y="174" width="12" height="2" fill="#0e4429"/>
+    <rect x="491" y="175" width="12" height="1" fill="#0e4429"/>
+    <rect x="505" y="167" width="12" height="9" fill="#006d32"/>
+    <rect x="519" y="146" width="12" height="30" fill="#26a641"/>
+    <rect x="533" y="118" width="12" height="58" fill="#26a641"/>
+    <rect x="547" y="171" width="12" height="5" fill="#006d32"/>
+    <rect x="561" y="124" width="12" height="52" fill="#26a641"/>
+    <rect x="575" y="98" width="12" height="78" fill="#39d353"/>
+    <rect x="589" y="65" width="12" height="111" fill="#39d353"/>
+    <rect x="603" y="52" width="12" height="124" fill="#39d353"/>
+    <rect x="617" y="119" width="12" height="57" fill="#26a641"/>
+    <rect x="631" y="125" width="12" height="51" fill="#26a641"/>
+    <rect x="645" y="64" width="12" height="112" fill="#39d353"/>
+    <rect x="659" y="90" width="12" height="86" fill="#39d353"/>
+    <rect x="673" y="123" width="12" height="53" fill="#26a641"/>
+    <rect x="687" y="104" width="12" height="72" fill="#39d353"/>
+    <rect x="701" y="120" width="12" height="56" fill="#26a641"/>
+    <rect x="715" y="155" width="12" height="21" fill="#26a641"/>
+    <rect x="729" y="138" width="12" height="38" fill="#26a641"/>
+    <rect x="743" y="156" width="12" height="20" fill="#26a641"/>
+    <rect x="757" y="130" width="12" height="46" fill="#26a641"/>
+    <rect x="771" y="145" width="5" height="31" fill="#26a641"/>
+  </g>
+
+  <!-- calendar sweep highlight -->
+  <g clip-path="url(#calClip)">
+    <rect x="-40" y="52" width="40" height="124" fill="#39d353" opacity="0.11">
+      <animate attributeName="x" from="-40" to="800" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- streak callout in the sparse upper-left dead zone -->
+  <text x="60" y="118" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="46" font-weight="700" fill="#f0883e">82</text>
+  <text x="146" y="102" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">day streak</text>
+  <text x="146" y="118" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#7d8590">Longest Streak</text>
+  <text x="146" y="131" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#6e7681">1 Year</text>
+
+  <!-- calendar micro-caption -->
+  <text x="24" y="192" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#6e7681">past 12 months</text>
+  <text x="776" y="192" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#6e7681" text-anchor="end">weekly contributions</text>
+
+  <!-- LANGUAGES: 6 stacked segments proportional to 30d commit counts -->
+  <text x="24" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#c9d1d9">Languages</text>
+  <text x="98" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#58a6ff">6</text>
+  <text x="114" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#7d8590">· 30 Days</text>
+  <text x="776" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#6e7681" text-anchor="end">by commits: TS 360 · Py 78 · Go 22 · HTML 3 · Sh 2 · JS 1</text>
+
+  <!-- stacked bar y=214..232, total width 752 (466 commits total; widths pre-scaled) -->
+  <g>
+    <rect x="24" y="214" width="581" height="18" fill="#3178c6"/>
+    <rect x="605" y="214" width="126" height="18" fill="#3572a5"/>
+    <rect x="731" y="214" width="36" height="18" fill="#00add8"/>
+    <rect x="767" y="214" width="5" height="18" fill="#e34c26"/>
+    <rect x="772" y="214" width="3" height="18" fill="#89e051"/>
+    <rect x="775" y="214" width="1" height="18" fill="#f1e05a"/>
+  </g>
+  <text x="314" y="227" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">TypeScript · 360</text>
+  <text x="668" y="227" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">Python · 78</text>
+
+  <!-- languages shimmer sweep -->
+  <g clip-path="url(#langClip)">
+    <rect x="-40" y="214" width="40" height="18" fill="#ffffff" opacity="0.09">
+      <animate attributeName="x" from="-40" to="800" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- BOTTOM ROW: Repos (left) | Commits sparkline (mid) | Issues dot grid (right) -->
+
+  <!-- Column A: Active Repos -->
+  <text x="24" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#c9d1d9">Active Repos</text>
+  <text x="113" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#58a6ff">46</text>
+  <text x="135" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#7d8590">· 1 Year</text>
+
+  <!-- 6 top repos, bar widths pre-scaled: max 160 for oscilla-animator-v2 (1649 commits) -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="8" fill="#c9d1d9">
+    <text x="24" y="269">oscilla-animator-v2</text>
+    <rect x="145" y="265" width="160" height="4" fill="#58a6ff"/>
+    <text x="309" y="269" fill="#7d8590">1649</text>
+
+    <text x="24" y="278">cc-dump</text>
+    <rect x="145" y="274" width="42" height="4" fill="#58a6ff" opacity="0.85"/>
+    <text x="191" y="278" fill="#7d8590">437</text>
+
+    <text x="24" y="287">dotfiles</text>
+    <rect x="145" y="283" width="22" height="4" fill="#58a6ff" opacity="0.75"/>
+    <text x="171" y="287" fill="#7d8590">229</text>
+
+    <text x="24" y="296">oscilla-animator</text>
+    <rect x="145" y="292" width="22" height="4" fill="#58a6ff" opacity="0.75"/>
+    <text x="171" y="296" fill="#7d8590">227</text>
+
+    <text x="24" y="305">chaperone-auth-gateway</text>
+    <rect x="145" y="301" width="18" height="4" fill="#58a6ff" opacity="0.7"/>
+    <text x="167" y="305" fill="#7d8590">188</text>
+
+    <text x="24" y="314">brandon-fryslie</text>
+    <rect x="145" y="310" width="16" height="4" fill="#58a6ff" opacity="0.7"/>
+    <text x="165" y="314" fill="#7d8590">166</text>
+  </g>
+
+  <!-- column separator lines -->
+  <line x1="357" y1="248" x2="357" y2="320" stroke="#21262d" stroke-width="1"/>
+  <line x1="567" y1="248" x2="567" y2="320" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Column B: Commits (30d) sparkline -->
+  <text x="369" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#c9d1d9">Commits</text>
+  <text x="429" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#58a6ff">400</text>
+  <text x="459" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#7d8590">· 30 Days</text>
+
+  <!-- sparkline baseline y=316, top y=270, 30 daily bars stride 6, width 5, x=372..546 -->
+  <line x1="369" y1="316" x2="561" y2="316" stroke="#30363d" stroke-width="1"/>
+  <g fill="#58a6ff">
+    <rect x="372" y="311" width="5" height="5"/>
+    <rect x="378" y="313" width="5" height="3"/>
+    <rect x="384" y="310" width="5" height="6"/>
+    <rect x="390" y="306" width="5" height="10"/>
+    <rect x="396" y="315" width="5" height="1"/>
+    <rect x="408" y="306" width="5" height="10"/>
+    <rect x="414" y="309" width="5" height="7"/>
+    <rect x="420" y="314" width="5" height="2"/>
+    <rect x="426" y="310" width="5" height="6"/>
+    <rect x="432" y="270" width="5" height="46" fill="#79c0ff"/>
+    <rect x="438" y="308" width="5" height="8"/>
+    <rect x="444" y="312" width="5" height="4"/>
+    <rect x="450" y="315" width="5" height="1"/>
+    <rect x="462" y="310" width="5" height="6"/>
+    <rect x="468" y="307" width="5" height="9"/>
+    <rect x="474" y="307" width="5" height="9"/>
+    <rect x="480" y="313" width="5" height="3"/>
+    <rect x="486" y="312" width="5" height="4"/>
+    <rect x="492" y="310" width="5" height="6"/>
+    <rect x="498" y="303" width="5" height="13"/>
+    <rect x="504" y="276" width="5" height="40" fill="#79c0ff"/>
+    <rect x="510" y="306" width="5" height="10"/>
+    <rect x="516" y="306" width="5" height="10"/>
+    <rect x="522" y="314" width="5" height="2"/>
+    <rect x="528" y="312" width="5" height="4"/>
+    <rect x="534" y="307" width="5" height="9"/>
+    <rect x="540" y="282" width="5" height="34" fill="#79c0ff"/>
+    <rect x="546" y="306" width="5" height="10"/>
+  </g>
+  <!-- sparkline sweep -->
+  <g clip-path="url(#sparkClip)">
+    <rect x="364" y="270" width="20" height="46" fill="#58a6ff" opacity="0.14">
+      <animate attributeName="x" from="344" to="560" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Column C: Issues Closed dot grid (80 dots = 10 cols × 8 rows) -->
+  <text x="580" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#c9d1d9">Issues Closed</text>
+  <text x="660" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#58a6ff">80</text>
+  <text x="682" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#7d8590">· All Time</text>
+
+  <!-- 80 dots: 10 cols × 8 rows, stride 7, radius 2, origin (646, 268) -->
+  <g fill="#a371f7">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+    <circle cx="646" cy="268" r="2"/><circle cx="653" cy="268" r="2"/><circle cx="660" cy="268" r="2"/><circle cx="667" cy="268" r="2"/><circle cx="674" cy="268" r="2"/><circle cx="681" cy="268" r="2"/><circle cx="688" cy="268" r="2"/><circle cx="695" cy="268" r="2"/><circle cx="702" cy="268" r="2"/><circle cx="709" cy="268" r="2"/>
+    <circle cx="646" cy="275" r="2"/><circle cx="653" cy="275" r="2"/><circle cx="660" cy="275" r="2"/><circle cx="667" cy="275" r="2"/><circle cx="674" cy="275" r="2"/><circle cx="681" cy="275" r="2"/><circle cx="688" cy="275" r="2"/><circle cx="695" cy="275" r="2"/><circle cx="702" cy="275" r="2"/><circle cx="709" cy="275" r="2"/>
+    <circle cx="646" cy="282" r="2"/><circle cx="653" cy="282" r="2"/><circle cx="660" cy="282" r="2"/><circle cx="667" cy="282" r="2"/><circle cx="674" cy="282" r="2"/><circle cx="681" cy="282" r="2"/><circle cx="688" cy="282" r="2"/><circle cx="695" cy="282" r="2"/><circle cx="702" cy="282" r="2"/><circle cx="709" cy="282" r="2"/>
+    <circle cx="646" cy="289" r="2"/><circle cx="653" cy="289" r="2"/><circle cx="660" cy="289" r="2"/><circle cx="667" cy="289" r="2"/><circle cx="674" cy="289" r="2"/><circle cx="681" cy="289" r="2"/><circle cx="688" cy="289" r="2"/><circle cx="695" cy="289" r="2"/><circle cx="702" cy="289" r="2"/><circle cx="709" cy="289" r="2"/>
+    <circle cx="646" cy="296" r="2"/><circle cx="653" cy="296" r="2"/><circle cx="660" cy="296" r="2"/><circle cx="667" cy="296" r="2"/><circle cx="674" cy="296" r="2"/><circle cx="681" cy="296" r="2"/><circle cx="688" cy="296" r="2"/><circle cx="695" cy="296" r="2"/><circle cx="702" cy="296" r="2"/><circle cx="709" cy="296" r="2"/>
+    <circle cx="646" cy="303" r="2"/><circle cx="653" cy="303" r="2"/><circle cx="660" cy="303" r="2"/><circle cx="667" cy="303" r="2"/><circle cx="674" cy="303" r="2"/><circle cx="681" cy="303" r="2"/><circle cx="688" cy="303" r="2"/><circle cx="695" cy="303" r="2"/><circle cx="702" cy="303" r="2"/><circle cx="709" cy="303" r="2"/>
+    <circle cx="646" cy="310" r="2"/><circle cx="653" cy="310" r="2"/><circle cx="660" cy="310" r="2"/><circle cx="667" cy="310" r="2"/><circle cx="674" cy="310" r="2"/><circle cx="681" cy="310" r="2"/><circle cx="688" cy="310" r="2"/><circle cx="695" cy="310" r="2"/><circle cx="702" cy="310" r="2"/><circle cx="709" cy="310" r="2"/>
+    <circle cx="646" cy="317" r="2"/><circle cx="653" cy="317" r="2"/><circle cx="660" cy="317" r="2"/><circle cx="667" cy="317" r="2"/><circle cx="674" cy="317" r="2"/><circle cx="681" cy="317" r="2"/><circle cx="688" cy="317" r="2"/><circle cx="695" cy="317" r="2"/><circle cx="702" cy="317" r="2"/><circle cx="709" cy="317" r="2"/>
   </g>
 </svg>
