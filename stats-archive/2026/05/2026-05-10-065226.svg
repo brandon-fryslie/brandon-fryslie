@@ -1,20 +1,99 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated May 10, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">1</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">My Issues Closed</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">145</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(7 Days)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">28</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">26</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Code Reviews</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs>
+<linearGradient id="ridgeFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#58a6ff" stop-opacity="0.55"/><stop offset="100%" stop-color="#58a6ff" stop-opacity="0.04"/></linearGradient>
+<linearGradient id="streakFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffa657" stop-opacity="0.32"/><stop offset="100%" stop-color="#ffa657" stop-opacity="0.02"/></linearGradient>
+<linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#79c0ff" stop-opacity="0"/><stop offset="50%" stop-color="#79c0ff" stop-opacity="0.42"/><stop offset="100%" stop-color="#79c0ff" stop-opacity="0"/></linearGradient>
+<linearGradient id="barShimmer" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ffffff" stop-opacity="0"/><stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<clipPath id="ridgeClip"><rect x="24" y="46" width="752" height="110"/></clipPath>
+<clipPath id="barClip0"><rect x="140" y="218" width="540.0" height="9" rx="1.5"/></clipPath>
+<clipPath id="barClip1"><rect x="140" y="230" width="400.2" height="9" rx="1.5"/></clipPath>
+<clipPath id="barClip2"><rect x="140" y="242" width="294.1" height="9" rx="1.5"/></clipPath>
+<clipPath id="barClip3"><rect x="140" y="254" width="284.5" height="9" rx="1.5"/></clipPath>
+<clipPath id="barClip4"><rect x="140" y="266" width="284.5" height="9" rx="1.5"/></clipPath>
+<clipPath id="barClip5"><rect x="140" y="278" width="241.1" height="9" rx="1.5"/></clipPath>
+</defs>
+<rect width="800" height="360" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="359" rx="6" fill="none" stroke="#21262d" stroke-width="1"/>
+<text x="24" y="26" font-size="14" font-weight="700" fill="#e6edf3">Live GitHub Stats</text>
+<text x="776" y="26" font-size="11" font-weight="500" fill="#7d8590" text-anchor="end">past 12 months · ending May 10, 2026</text>
+<line x1="24" x2="776" y1="34" y2="34" stroke="#21262d" stroke-width="1"/>
+<line x1="24" x2="776" y1="128.5" y2="128.5" stroke="#161b22" stroke-width="1"/>
+<line x1="24" x2="776" y1="101.0" y2="101.0" stroke="#161b22" stroke-width="1"/>
+<line x1="24" x2="776" y1="73.5" y2="73.5" stroke="#161b22" stroke-width="1"/>
+<line x1="24" x2="776" y1="46.0" y2="46.0" stroke="#161b22" stroke-width="1"/>
+<line x1="24" x2="776" y1="156" y2="156" stroke="#30363d" stroke-width="1"/>
+<rect x="526.0" y="46" width="167.3" height="110" fill="url(#streakFill)"><animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/></rect>
+<polygon points="24.0,156.0 24.0,156.0 26.1,156.0 28.1,156.0 30.2,156.0 32.3,156.0 34.3,155.2 36.4,156.0 38.5,156.0 40.5,156.0 42.6,156.0 44.7,156.0 46.7,156.0 48.8,156.0 50.9,156.0 52.9,156.0 55.0,156.0 57.1,156.0 59.1,153.6 61.2,156.0 63.3,155.2 65.3,155.2 67.4,156.0 69.5,154.4 71.5,154.4 73.6,156.0 75.6,153.6 77.7,153.6 79.8,156.0 81.8,156.0 83.9,155.2 86.0,155.2 88.0,155.2 90.1,156.0 92.2,156.0 94.2,156.0 96.3,156.0 98.4,156.0 100.4,156.0 102.5,156.0 104.6,156.0 106.6,156.0 108.7,156.0 110.8,156.0 112.8,144.8 114.9,156.0 117.0,156.0 119.0,156.0 121.1,155.2 123.2,156.0 125.2,156.0 127.3,156.0 129.4,156.0 131.4,156.0 133.5,156.0 135.6,156.0 137.6,156.0 139.7,156.0 141.8,156.0 143.8,156.0 145.9,156.0 148.0,156.0 150.0,156.0 152.1,156.0 154.2,156.0 156.2,155.2 158.3,156.0 160.4,156.0 162.4,156.0 164.5,156.0 166.5,156.0 168.6,156.0 170.7,154.4 172.7,156.0 174.8,156.0 176.9,156.0 178.9,156.0 181.0,156.0 183.1,156.0 185.1,152.0 187.2,156.0 189.3,155.2 191.3,156.0 193.4,154.4 195.5,155.2 197.5,156.0 199.6,156.0 201.7,156.0 203.7,156.0 205.8,156.0 207.9,145.6 209.9,156.0 212.0,156.0 214.1,156.0 216.1,154.4 218.2,152.8 220.3,153.6 222.3,156.0 224.4,156.0 226.5,156.0 228.5,156.0 230.6,156.0 232.7,156.0 234.7,156.0 236.8,156.0 238.9,156.0 240.9,155.2 243.0,156.0 245.1,156.0 247.1,156.0 249.2,156.0 251.3,156.0 253.3,155.2 255.4,156.0 257.5,156.0 259.5,156.0 261.6,156.0 263.6,156.0 265.7,156.0 267.8,156.0 269.8,156.0 271.9,156.0 274.0,156.0 276.0,156.0 278.1,155.2 280.2,156.0 282.2,156.0 284.3,156.0 286.4,156.0 288.4,156.0 290.5,156.0 292.6,156.0 294.6,156.0 296.7,156.0 298.8,156.0 300.8,156.0 302.9,156.0 305.0,156.0 307.0,156.0 309.1,156.0 311.2,156.0 313.2,156.0 315.3,156.0 317.4,155.2 319.4,156.0 321.5,156.0 323.6,156.0 325.6,153.6 327.7,156.0 329.8,156.0 331.8,156.0 333.9,156.0 336.0,156.0 338.0,154.4 340.1,156.0 342.2,156.0 344.2,156.0 346.3,156.0 348.4,153.6 350.4,154.4 352.5,156.0 354.5,156.0 356.6,156.0 358.7,156.0 360.7,156.0 362.8,156.0 364.9,155.2 366.9,156.0 369.0,156.0 371.1,152.0 373.1,156.0 375.2,155.2 377.3,156.0 379.3,155.2 381.4,152.8 383.5,156.0 385.5,156.0 387.6,156.0 389.7,152.8 391.7,151.2 393.8,151.2 395.9,153.6 397.9,156.0 400.0,151.2 402.1,153.6 404.1,154.4 406.2,151.2 408.3,129.7 410.3,156.0 412.4,156.0 414.5,154.4 416.5,156.0 418.6,154.4 420.7,156.0 422.7,156.0 424.8,156.0 426.9,156.0 428.9,156.0 431.0,156.0 433.1,153.6 435.1,156.0 437.2,156.0 439.3,156.0 441.3,156.0 443.4,154.4 445.5,154.4 447.5,156.0 449.6,155.2 451.6,156.0 453.7,156.0 455.8,156.0 457.8,156.0 459.9,156.0 462.0,148.0 464.0,148.0 466.1,152.8 468.2,153.6 470.2,151.2 472.3,153.6 474.4,156.0 476.4,140.1 478.5,149.6 480.6,136.1 482.6,137.7 484.7,142.4 486.8,141.7 488.8,147.2 490.9,146.4 493.0,132.1 495.0,140.9 497.1,107.4 499.2,86.7 501.2,136.9 503.3,152.0 505.4,154.4 507.4,146.4 509.5,156.0 511.6,156.0 513.6,154.4 515.7,156.0 517.8,152.8 519.8,155.2 521.9,144.0 524.0,156.0 526.0,74.7 528.1,152.8 530.2,128.9 532.2,109.8 534.3,141.7 536.4,131.3 538.4,141.7 540.5,136.1 542.5,109.0 544.6,70.7 546.7,108.2 548.7,77.9 550.8,113.8 552.9,108.2 554.9,133.7 557.0,78.7 559.1,100.2 561.1,117.7 563.2,85.1 565.3,109.0 567.3,131.3 569.4,62.7 571.5,122.5 573.5,70.7 575.6,107.4 577.7,107.4 579.7,116.1 581.8,124.1 583.9,132.9 585.9,148.8 588.0,140.1 590.1,138.5 592.1,148.0 594.2,143.2 596.3,150.4 598.3,120.9 600.4,58.8 602.5,154.4 604.5,151.2 606.6,153.6 608.7,150.4 610.7,128.1 612.8,87.4 614.9,46.0 616.9,57.2 619.0,103.4 621.1,65.1 623.1,101.0 625.2,109.8 627.3,127.3 629.3,151.2 631.4,139.3 633.5,119.3 635.5,143.2 637.6,133.7 639.6,152.0 641.7,139.3 643.8,124.1 645.8,88.2 647.9,139.3 650.0,69.1 652.0,135.3 654.1,102.6 656.2,133.7 658.2,138.5 660.3,145.6 662.4,133.7 664.4,134.5 666.5,145.6 668.6,116.1 670.6,147.2 672.7,124.9 674.8,115.3 676.8,126.5 678.9,137.7 681.0,151.2 683.0,152.0 685.1,148.0 687.2,151.2 689.2,145.6 691.3,138.5 693.4,154.4 695.4,156.0 697.5,138.5 699.6,144.0 701.6,152.8 703.7,146.4 705.8,76.3 707.8,141.7 709.9,149.6 712.0,153.6 714.0,156.0 716.1,144.8 718.2,140.9 720.2,140.9 722.3,151.2 724.4,148.8 726.4,146.4 728.5,132.9 730.5,86.7 732.6,138.5 734.7,139.3 736.7,152.0 738.8,148.8 740.9,140.9 742.9,97.8 745.0,139.3 747.1,136.1 749.1,136.1 751.2,97.0 753.3,122.5 755.3,118.5 757.4,140.9 759.5,156.0 761.5,107.4 763.6,120.1 765.7,116.1 767.7,117.7 769.8,126.5 771.9,119.3 773.9,120.1 776.0,148.8 776.0,156.0" fill="url(#ridgeFill)"/>
+<polyline points="24.0,156.0 26.1,156.0 28.1,156.0 30.2,156.0 32.3,156.0 34.3,155.2 36.4,156.0 38.5,156.0 40.5,156.0 42.6,156.0 44.7,156.0 46.7,156.0 48.8,156.0 50.9,156.0 52.9,156.0 55.0,156.0 57.1,156.0 59.1,153.6 61.2,156.0 63.3,155.2 65.3,155.2 67.4,156.0 69.5,154.4 71.5,154.4 73.6,156.0 75.6,153.6 77.7,153.6 79.8,156.0 81.8,156.0 83.9,155.2 86.0,155.2 88.0,155.2 90.1,156.0 92.2,156.0 94.2,156.0 96.3,156.0 98.4,156.0 100.4,156.0 102.5,156.0 104.6,156.0 106.6,156.0 108.7,156.0 110.8,156.0 112.8,144.8 114.9,156.0 117.0,156.0 119.0,156.0 121.1,155.2 123.2,156.0 125.2,156.0 127.3,156.0 129.4,156.0 131.4,156.0 133.5,156.0 135.6,156.0 137.6,156.0 139.7,156.0 141.8,156.0 143.8,156.0 145.9,156.0 148.0,156.0 150.0,156.0 152.1,156.0 154.2,156.0 156.2,155.2 158.3,156.0 160.4,156.0 162.4,156.0 164.5,156.0 166.5,156.0 168.6,156.0 170.7,154.4 172.7,156.0 174.8,156.0 176.9,156.0 178.9,156.0 181.0,156.0 183.1,156.0 185.1,152.0 187.2,156.0 189.3,155.2 191.3,156.0 193.4,154.4 195.5,155.2 197.5,156.0 199.6,156.0 201.7,156.0 203.7,156.0 205.8,156.0 207.9,145.6 209.9,156.0 212.0,156.0 214.1,156.0 216.1,154.4 218.2,152.8 220.3,153.6 222.3,156.0 224.4,156.0 226.5,156.0 228.5,156.0 230.6,156.0 232.7,156.0 234.7,156.0 236.8,156.0 238.9,156.0 240.9,155.2 243.0,156.0 245.1,156.0 247.1,156.0 249.2,156.0 251.3,156.0 253.3,155.2 255.4,156.0 257.5,156.0 259.5,156.0 261.6,156.0 263.6,156.0 265.7,156.0 267.8,156.0 269.8,156.0 271.9,156.0 274.0,156.0 276.0,156.0 278.1,155.2 280.2,156.0 282.2,156.0 284.3,156.0 286.4,156.0 288.4,156.0 290.5,156.0 292.6,156.0 294.6,156.0 296.7,156.0 298.8,156.0 300.8,156.0 302.9,156.0 305.0,156.0 307.0,156.0 309.1,156.0 311.2,156.0 313.2,156.0 315.3,156.0 317.4,155.2 319.4,156.0 321.5,156.0 323.6,156.0 325.6,153.6 327.7,156.0 329.8,156.0 331.8,156.0 333.9,156.0 336.0,156.0 338.0,154.4 340.1,156.0 342.2,156.0 344.2,156.0 346.3,156.0 348.4,153.6 350.4,154.4 352.5,156.0 354.5,156.0 356.6,156.0 358.7,156.0 360.7,156.0 362.8,156.0 364.9,155.2 366.9,156.0 369.0,156.0 371.1,152.0 373.1,156.0 375.2,155.2 377.3,156.0 379.3,155.2 381.4,152.8 383.5,156.0 385.5,156.0 387.6,156.0 389.7,152.8 391.7,151.2 393.8,151.2 395.9,153.6 397.9,156.0 400.0,151.2 402.1,153.6 404.1,154.4 406.2,151.2 408.3,129.7 410.3,156.0 412.4,156.0 414.5,154.4 416.5,156.0 418.6,154.4 420.7,156.0 422.7,156.0 424.8,156.0 426.9,156.0 428.9,156.0 431.0,156.0 433.1,153.6 435.1,156.0 437.2,156.0 439.3,156.0 441.3,156.0 443.4,154.4 445.5,154.4 447.5,156.0 449.6,155.2 451.6,156.0 453.7,156.0 455.8,156.0 457.8,156.0 459.9,156.0 462.0,148.0 464.0,148.0 466.1,152.8 468.2,153.6 470.2,151.2 472.3,153.6 474.4,156.0 476.4,140.1 478.5,149.6 480.6,136.1 482.6,137.7 484.7,142.4 486.8,141.7 488.8,147.2 490.9,146.4 493.0,132.1 495.0,140.9 497.1,107.4 499.2,86.7 501.2,136.9 503.3,152.0 505.4,154.4 507.4,146.4 509.5,156.0 511.6,156.0 513.6,154.4 515.7,156.0 517.8,152.8 519.8,155.2 521.9,144.0 524.0,156.0 526.0,74.7 528.1,152.8 530.2,128.9 532.2,109.8 534.3,141.7 536.4,131.3 538.4,141.7 540.5,136.1 542.5,109.0 544.6,70.7 546.7,108.2 548.7,77.9 550.8,113.8 552.9,108.2 554.9,133.7 557.0,78.7 559.1,100.2 561.1,117.7 563.2,85.1 565.3,109.0 567.3,131.3 569.4,62.7 571.5,122.5 573.5,70.7 575.6,107.4 577.7,107.4 579.7,116.1 581.8,124.1 583.9,132.9 585.9,148.8 588.0,140.1 590.1,138.5 592.1,148.0 594.2,143.2 596.3,150.4 598.3,120.9 600.4,58.8 602.5,154.4 604.5,151.2 606.6,153.6 608.7,150.4 610.7,128.1 612.8,87.4 614.9,46.0 616.9,57.2 619.0,103.4 621.1,65.1 623.1,101.0 625.2,109.8 627.3,127.3 629.3,151.2 631.4,139.3 633.5,119.3 635.5,143.2 637.6,133.7 639.6,152.0 641.7,139.3 643.8,124.1 645.8,88.2 647.9,139.3 650.0,69.1 652.0,135.3 654.1,102.6 656.2,133.7 658.2,138.5 660.3,145.6 662.4,133.7 664.4,134.5 666.5,145.6 668.6,116.1 670.6,147.2 672.7,124.9 674.8,115.3 676.8,126.5 678.9,137.7 681.0,151.2 683.0,152.0 685.1,148.0 687.2,151.2 689.2,145.6 691.3,138.5 693.4,154.4 695.4,156.0 697.5,138.5 699.6,144.0 701.6,152.8 703.7,146.4 705.8,76.3 707.8,141.7 709.9,149.6 712.0,153.6 714.0,156.0 716.1,144.8 718.2,140.9 720.2,140.9 722.3,151.2 724.4,148.8 726.4,146.4 728.5,132.9 730.5,86.7 732.6,138.5 734.7,139.3 736.7,152.0 738.8,148.8 740.9,140.9 742.9,97.8 745.0,139.3 747.1,136.1 749.1,136.1 751.2,97.0 753.3,122.5 755.3,118.5 757.4,140.9 759.5,156.0 761.5,107.4 763.6,120.1 765.7,116.1 767.7,117.7 769.8,126.5 771.9,119.3 773.9,120.1 776.0,148.8" fill="none" stroke="#79c0ff" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"><animate attributeName="opacity" values="0.72;0.95;0.72" dur="11s" repeatCount="indefinite"/></polyline>
+<polyline points="526.0,74.7 528.1,152.8 530.2,128.9 532.2,109.8 534.3,141.7 536.4,131.3 538.4,141.7 540.5,136.1 542.5,109.0 544.6,70.7 546.7,108.2 548.7,77.9 550.8,113.8 552.9,108.2 554.9,133.7 557.0,78.7 559.1,100.2 561.1,117.7 563.2,85.1 565.3,109.0 567.3,131.3 569.4,62.7 571.5,122.5 573.5,70.7 575.6,107.4 577.7,107.4 579.7,116.1 581.8,124.1 583.9,132.9 585.9,148.8 588.0,140.1 590.1,138.5 592.1,148.0 594.2,143.2 596.3,150.4 598.3,120.9 600.4,58.8 602.5,154.4 604.5,151.2 606.6,153.6 608.7,150.4 610.7,128.1 612.8,87.4 614.9,46.0 616.9,57.2 619.0,103.4 621.1,65.1 623.1,101.0 625.2,109.8 627.3,127.3 629.3,151.2 631.4,139.3 633.5,119.3 635.5,143.2 637.6,133.7 639.6,152.0 641.7,139.3 643.8,124.1 645.8,88.2 647.9,139.3 650.0,69.1 652.0,135.3 654.1,102.6 656.2,133.7 658.2,138.5 660.3,145.6 662.4,133.7 664.4,134.5 666.5,145.6 668.6,116.1 670.6,147.2 672.7,124.9 674.8,115.3 676.8,126.5 678.9,137.7 681.0,151.2 683.0,152.0 685.1,148.0 687.2,151.2 689.2,145.6 691.3,138.5 693.4,154.4" fill="none" stroke="#ffa657" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g clip-path="url(#ridgeClip)">
+<rect x="0" y="46" width="160" height="110" fill="url(#scan)"><animate attributeName="x" from="-160" to="776" dur="13s" repeatCount="indefinite"/></rect>
+</g>
+<line x1="526.0" x2="693.4" y1="162" y2="162" stroke="#ffa657" stroke-width="1.4"/>
+<line x1="526.0" x2="526.0" y1="159" y2="165" stroke="#ffa657" stroke-width="1.4"/>
+<line x1="693.4" x2="693.4" y1="159" y2="165" stroke="#ffa657" stroke-width="1.4"/>
+<text x="609.7" y="178" font-size="13" font-weight="700" fill="#ffa657" text-anchor="middle">82</text>
+<text x="609.7" y="190" font-size="9" fill="#7d8590" text-anchor="middle">day Longest Streak</text>
+<text x="24" y="178" font-size="10" fill="#7d8590">Contributions per day · peak 138</text>
+<text x="776" y="178" font-size="10" fill="#7d8590" text-anchor="end">1 Year window</text>
+<text x="24" y="205" font-size="12" font-weight="700" fill="#e6edf3">Active Repos</text>
+<text x="130" y="205" font-size="12" font-weight="700" fill="#79c0ff">26</text>
+<text x="152" y="205" font-size="10" fill="#7d8590">· 30 Days · top 6 by commits</text>
+<rect x="140" y="218" width="540" height="9" rx="1.5" fill="#161b22"/>
+<rect x="140" y="218" width="540.0" height="9" rx="1.5" fill="#3fb950" opacity="0.85"/>
+<g clip-path="url(#barClip0)">
+<rect x="140" y="218" width="70" height="9" fill="url(#barShimmer)"><animate attributeName="x" from="70" to="680.0" dur="9s" begin="0.0s" repeatCount="indefinite"/></rect>
+</g>
+<text x="24" y="225" font-size="9" fill="#e6edf3">cc-candybar</text>
+<text x="688" y="225" font-size="9" fill="#7d8590">112</text>
+<rect x="140" y="230" width="540" height="9" rx="1.5" fill="#161b22"/>
+<rect x="140" y="230" width="400.2" height="9" rx="1.5" fill="#4ac26b" opacity="0.85"/>
+<g clip-path="url(#barClip1)">
+<rect x="140" y="230" width="70" height="9" fill="url(#barShimmer)"><animate attributeName="x" from="70" to="540.2" dur="10s" begin="0.7s" repeatCount="indefinite"/></rect>
+</g>
+<text x="24" y="237" font-size="9" fill="#e6edf3">dotfiles</text>
+<text x="688" y="237" font-size="9" fill="#7d8590">83</text>
+<rect x="140" y="242" width="540" height="9" rx="1.5" fill="#161b22"/>
+<rect x="140" y="242" width="294.1" height="9" rx="1.5" fill="#56d364" opacity="0.85"/>
+<g clip-path="url(#barClip2)">
+<rect x="140" y="242" width="70" height="9" fill="url(#barShimmer)"><animate attributeName="x" from="70" to="434.1" dur="11s" begin="1.4s" repeatCount="indefinite"/></rect>
+</g>
+<text x="24" y="249" font-size="9" fill="#e6edf3">shader-playground</text>
+<text x="688" y="249" font-size="9" fill="#7d8590">61</text>
+<rect x="140" y="254" width="540" height="9" rx="1.5" fill="#161b22"/>
+<rect x="140" y="254" width="284.5" height="9" rx="1.5" fill="#79c0ff" opacity="0.85"/>
+<g clip-path="url(#barClip3)">
+<rect x="140" y="254" width="70" height="9" fill="url(#barShimmer)"><animate attributeName="x" from="70" to="424.5" dur="12s" begin="2.0999999999999996s" repeatCount="indefinite"/></rect>
+</g>
+<text x="24" y="261" font-size="9" fill="#e6edf3">go-template-js</text>
+<text x="688" y="261" font-size="9" fill="#7d8590">59</text>
+<rect x="140" y="266" width="540" height="9" rx="1.5" fill="#161b22"/>
+<rect x="140" y="266" width="284.5" height="9" rx="1.5" fill="#58a6ff" opacity="0.85"/>
+<g clip-path="url(#barClip4)">
+<rect x="140" y="266" width="70" height="9" fill="url(#barShimmer)"><animate attributeName="x" from="70" to="424.5" dur="13s" begin="2.8s" repeatCount="indefinite"/></rect>
+</g>
+<text x="24" y="273" font-size="9" fill="#e6edf3">promptctl</text>
+<text x="688" y="273" font-size="9" fill="#7d8590">59</text>
+<rect x="140" y="278" width="540" height="9" rx="1.5" fill="#161b22"/>
+<rect x="140" y="278" width="241.1" height="9" rx="1.5" fill="#388bfd" opacity="0.85"/>
+<g clip-path="url(#barClip5)">
+<rect x="140" y="278" width="70" height="9" fill="url(#barShimmer)"><animate attributeName="x" from="70" to="381.1" dur="14s" begin="3.5s" repeatCount="indefinite"/></rect>
+</g>
+<text x="24" y="285" font-size="9" fill="#e6edf3">links-issue-tracker</text>
+<text x="688" y="285" font-size="9" fill="#7d8590">50</text>
+<line x1="24" x2="776" y1="298" y2="298" stroke="#21262d" stroke-width="1"/>
+<line x1="274" x2="274" y1="304" y2="352" stroke="#161b22" stroke-width="1"/>
+<line x1="526" x2="526" y1="304" y2="352" stroke="#161b22" stroke-width="1"/>
+<text x="148" y="316" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">515</text>
+<text x="148" y="332" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle">PRs Merged</text>
+<text x="148" y="344" font-size="9" fill="#7d8590" text-anchor="middle">All Time</text>
+<text x="400" y="316" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">4363</text>
+<text x="400" y="332" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle">Commits</text>
+<text x="400" y="344" font-size="9" fill="#7d8590" text-anchor="middle">All Time</text>
+<text x="652" y="316" font-size="26" font-weight="700" fill="#e6edf3" text-anchor="middle">1</text>
+<text x="652" y="332" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle">My Issues Closed</text>
+<text x="652" y="344" font-size="9" fill="#7d8590" text-anchor="middle">30 Days</text>
+<circle cx="148" cy="322" r="1.4" fill="#58a6ff"><animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="400" cy="322" r="1.4" fill="#58a6ff"><animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="652" cy="322" r="1.4" fill="#58a6ff"><animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite"/></circle>
 </svg>
