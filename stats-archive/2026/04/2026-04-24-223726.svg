@@ -1,20 +1,207 @@
-<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="140" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated April 24, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">390</text>
-    <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">PRs Merged</text>
-    <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(All Time)</text>
-    <text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">—</text>
-    <text x="300" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Days Active</text>
-    <text x="300" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="500" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">77</text>
-    <text x="500" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repos Created</text>
-    <text x="500" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(1 Year)</text>
-    <text x="700" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">13</text>
-    <text x="700" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Active Repos</text>
-    <text x="700" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(30 Days)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340">
+  <defs>
+    <linearGradient id="bar-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#79c0ff">
+        <animate attributeName="stop-color" values="#79c0ff;#a5d6ff;#79c0ff" dur="11s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#1f6feb">
+        <animate attributeName="stop-color" values="#1f6feb;#388bfd;#1f6feb" dur="11s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="scan-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#79c0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a5d6ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#79c0ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="number-fill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#79c0ff">
+        <animate attributeName="stop-color" values="#79c0ff;#a5d6ff;#79c0ff" dur="13s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#a5d6ff">
+        <animate attributeName="stop-color" values="#a5d6ff;#79c0ff;#a5d6ff" dur="13s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chart-clip">
+      <rect x="24" y="76" width="752" height="120"/>
+    </clipPath>
+    <clipPath id="days-clip">
+      <rect x="280" y="292" width="119.66" height="14" rx="3"/>
+    </clipPath>
+    <clipPath id="streak-clip">
+      <rect x="722.08" y="292" width="53.92" height="14" rx="3"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="340" fill="#0d1117"/>
+
+  <!-- Header -->
+  <text x="24" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="776" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#7d8590" text-anchor="end">Apr 24, 2026</text>
+
+  <!-- Chart subtitle -->
+  <text x="24" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#7d8590" letter-spacing="0.8">WEEKLY CONTRIBUTION VOLUME · PAST 12 MONTHS</text>
+  <text x="776" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">peak week: 632</text>
+
+  <!-- Chart region: 53 weekly bars + sweeping beam -->
+  <g clip-path="url(#chart-clip)">
+    <rect x="53.47" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="67.66" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="81.85" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="96.04" y="194.86" width="12" height="1.14" fill="url(#bar-fill)"/>
+    <rect x="110.22" y="194.29" width="12" height="1.71" fill="url(#bar-fill)"/>
+    <rect x="138.60" y="193.34" width="12" height="2.66" fill="url(#bar-fill)"/>
+    <rect x="152.79" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="181.17" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="195.36" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="209.55" y="194.86" width="12" height="1.14" fill="url(#bar-fill)"/>
+    <rect x="223.74" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="237.92" y="193.15" width="12" height="2.85" fill="url(#bar-fill)"/>
+    <rect x="252.11" y="194.67" width="12" height="1.33" fill="url(#bar-fill)"/>
+    <rect x="266.30" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="280.49" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="308.87" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="337.25" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="351.44" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="365.63" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="379.82" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="394.00" y="194.67" width="12" height="1.33" fill="url(#bar-fill)"/>
+    <rect x="408.19" y="192.20" width="12" height="3.80" fill="url(#bar-fill)"/>
+    <rect x="422.38" y="185.94" width="12" height="10.06" fill="url(#bar-fill)"/>
+    <rect x="436.57" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="450.76" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="464.95" y="195.00" width="12" height="1.00" fill="url(#bar-fill)"/>
+    <rect x="479.14" y="192.20" width="12" height="3.80" fill="url(#bar-fill)"/>
+    <rect x="493.32" y="187.65" width="12" height="8.35" fill="url(#bar-fill)"/>
+    <rect x="507.51" y="170.18" width="12" height="25.82" fill="url(#bar-fill)"/>
+    <rect x="521.70" y="156.13" width="12" height="39.87" fill="url(#bar-fill)"/>
+    <rect x="535.89" y="191.82" width="12" height="4.18" fill="url(#bar-fill)"/>
+    <rect x="550.08" y="149.10" width="12" height="46.90" fill="url(#bar-fill)"/>
+    <rect x="564.27" y="116.25" width="12" height="79.75" fill="url(#bar-fill)"/>
+    <rect x="578.45" y="110.37" width="12" height="85.63" fill="url(#bar-fill)"/>
+    <rect x="592.64" y="106.95" width="12" height="89.05" fill="url(#bar-fill)"/>
+    <rect x="606.83" y="168.28" width="12" height="27.72" fill="url(#bar-fill)"/>
+    <rect x="621.02" y="159.74" width="12" height="36.26" fill="url(#bar-fill)"/>
+    <rect x="635.21" y="76.00" width="12" height="120.00" fill="url(#bar-fill)"/>
+    <rect x="649.40" y="155.94" width="12" height="40.06" fill="url(#bar-fill)"/>
+    <rect x="663.59" y="137.71" width="12" height="58.29" fill="url(#bar-fill)"/>
+    <rect x="677.77" y="158.41" width="12" height="37.59" fill="url(#bar-fill)"/>
+    <rect x="691.96" y="154.80" width="12" height="41.20" fill="url(#bar-fill)"/>
+    <rect x="706.15" y="184.99" width="12" height="11.01" fill="url(#bar-fill)"/>
+    <rect x="720.34" y="162.01" width="12" height="33.99" fill="url(#bar-fill)"/>
+    <rect x="734.53" y="182.71" width="12" height="13.29" fill="url(#bar-fill)"/>
+    <rect x="748.72" y="160.87" width="12" height="35.13" fill="url(#bar-fill)"/>
+    <rect x="762.91" y="178.53" width="12" height="17.47" fill="url(#bar-fill)"/>
+
+    <!-- Sweeping scan beam -->
+    <rect x="-100" y="76" width="100" height="120" fill="url(#scan-beam)">
+      <animate attributeName="x" values="-100;800" dur="9s" repeatCount="indefinite"/>
+    </rect>
   </g>
+
+  <!-- Chart baseline -->
+  <line x1="24" y1="196" x2="776" y2="196" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Peak indicator (pulsing dot atop tallest bar w=43) -->
+  <circle cx="641.21" cy="76" r="3" fill="#a5d6ff">
+    <animate attributeName="r" values="3;6;3" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.95;0.3;0.95" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Big Commits value overlaid on the sparse left region of the chart -->
+  <text x="200" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" fill="url(#number-fill)" text-anchor="middle" letter-spacing="-1.5">3336</text>
+  <text x="200" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#e6edf3" text-anchor="middle" letter-spacing="0.5">Commits</text>
+  <text x="200" y="172" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#7d8590" text-anchor="middle">1 Year</text>
+
+  <!-- X-axis quarter labels -->
+  <text x="24" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">Apr 2025</text>
+  <text x="208.46" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">Jul</text>
+  <text x="392.91" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">Oct</text>
+  <text x="577.37" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">Jan 2026</text>
+  <text x="776" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end">Apr 2026</text>
+
+  <!-- Divider -->
+  <line x1="24" y1="220" x2="776" y2="220" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ================= COLUMN 1: LANGUAGES ================= -->
+  <text x="24" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#7d8590" letter-spacing="0.8">LANGUAGES</text>
+  <text x="264" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+  <text x="24" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#d2a8ff">9</text>
+  <text x="54" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#7d8590">used</text>
+
+  <!-- Stacked bar: segment widths ARE the proportions of 3679 total -->
+  <rect x="24" y="292" width="159.63" height="14" fill="#58a6ff"/>
+  <rect x="183.63" y="292" width="57.08" height="14" fill="#ffa657"/>
+  <rect x="240.71" y="292" width="19.64" height="14" fill="#7ee787"/>
+  <rect x="260.35" y="292" width="3.65" height="14" fill="#6e7681"/>
+
+  <!-- Segment glow pulse (all four subtly, staggered) -->
+  <rect x="24" y="292" width="159.63" height="14" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.08;0" dur="11s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="183.63" y="292" width="57.08" height="14" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.08;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="240.71" y="292" width="19.64" height="14" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.08;0" dur="11s" begin="-6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- In-segment language labels -->
+  <text x="103.82" y="303" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">TypeScript</text>
+  <text x="212.17" y="303" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">Python</text>
+  <text x="250.53" y="303" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">Go</text>
+
+  <!-- Caption below the language bar -->
+  <text x="24" y="322" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#7d8590">TS 67% · Py 24% · Go 8% · +5 more</text>
+
+  <!-- ================= COLUMN 2: DAYS ACTIVE ================= -->
+  <text x="280" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#7d8590" letter-spacing="0.8">DAYS ACTIVE</text>
+  <text x="520" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+  <text x="280" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#7ee787">182</text>
+  <text x="342" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#7d8590">/ 365</text>
+
+  <!-- Fill bar: width IS 182/365 = 49.86% of 240px = 119.66px -->
+  <rect x="280" y="292" width="240" height="14" fill="#21262d" rx="3"/>
+  <rect x="280" y="292" width="119.66" height="14" fill="#7ee787" rx="3"/>
+
+  <!-- Shimmer traveling through the filled portion -->
+  <g clip-path="url(#days-clip)">
+    <rect x="220" y="292" width="60" height="14" fill="url(#shimmer)">
+      <animate attributeName="x" values="220;400" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Tick marker at the fill boundary + halfway reference tick -->
+  <line x1="399.66" y1="288" x2="399.66" y2="310" stroke="#7ee787" stroke-width="1" opacity="0.7"/>
+  <line x1="400" y1="312" x2="400" y2="316" stroke="#484f58" stroke-width="1"/>
+  <text x="400" y="322" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">49.9% of the year shipped a commit</text>
+
+  <!-- ================= COLUMN 3: LONGEST STREAK ================= -->
+  <text x="536" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#7d8590" letter-spacing="0.8">LONGEST STREAK</text>
+  <text x="776" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+  <text x="536" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffa657">82</text>
+  <text x="586" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#7d8590">days consecutive</text>
+
+  <!-- Base 365-day window bar + streak segment sized proportionally -->
+  <rect x="536" y="292" width="240" height="14" fill="#21262d" rx="3"/>
+  <rect x="722.08" y="292" width="53.92" height="14" fill="#ffa657" rx="3">
+    <animate attributeName="opacity" values="0.72;1;0.72" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Shimmer traversing the streak segment -->
+  <g clip-path="url(#streak-clip)">
+    <rect x="662" y="292" width="60" height="14" fill="url(#shimmer)">
+      <animate attributeName="x" values="662;782" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Leading-edge marker at streak start -->
+  <line x1="722.08" y1="288" x2="722.08" y2="310" stroke="#ffa657" stroke-width="1" opacity="0.85"/>
+
+  <text x="722.08" y="322" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#7d8590" text-anchor="middle">22% of the year, unbroken</text>
 </svg>
