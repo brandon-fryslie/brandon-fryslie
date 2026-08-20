@@ -88,13 +88,24 @@ jobs:
       id-token: write
     strategy:
       fail-fast: false    # one card that won't come together must not cancel the rest
-      # Twenty at a time — GitHub's concurrent-job ceiling for a public repo, so this is as
-      # wide as the platform goes. Nothing here is throttled for safety: the jobs write
-      # disjoint paths (see the header), so width costs nothing but concurrent agent work.
-      # Contention is expected and harmless — in the 4-wide validation run two jobs
-      # finished 12s apart, both had their first push rejected, and both rebased onto the
-      # other and landed on attempt 2. Jobs past the ceiling queue rather than fail.
-      max-parallel: 20
+      # Eight. This number is empirical, not a guess, and it is bounded from above by two
+      # limits that have nothing to do with git:
+      #
+      #   1. Claude usage. At 20-wide a 96-card run exhausted the account's quota partway
+      #      through and 61 jobs died with "You're out of extra usage". Failed slots stay
+      #      pending, so nothing was lost but the agent time.
+      #   2. The GitHub search API. Every job runs generate-stats-svg.py, which issues
+      #      several search queries; twenty of them starting together tripped "API rate
+      #      limit exceeded for installation" and some metrics came back 403. Those metrics
+      #      were dropped from the seam rather than rendered wrong, so no bad card shipped
+      #      — but a card was thinner than the day deserved.
+      #
+      # Do not raise this on the theory that the jobs are independent. They are independent
+      # in what they WRITE — that is what the disjoint paths buy, and it is why pushes only
+      # ever contend and never conflict. They are not independent in what they CONSUME.
+      # 8-wide ran 32 cards with zero failures of any kind; that is the evidence for this
+      # number.
+      max-parallel: 8
       matrix:
         stamp: ${{ fromJSON(needs.select.outputs.stamps) }}
     env:
