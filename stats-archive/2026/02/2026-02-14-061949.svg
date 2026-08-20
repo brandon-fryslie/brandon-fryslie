@@ -1,18 +1,365 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated February 14, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">100</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">25</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">989</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">14+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg width="800" height="360" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie">
+  <defs>
+    <linearGradient id="streakBar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#0e7490"/>
+      <stop offset="0.5" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="warmGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+    <linearGradient id="playhead" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#5eead4" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chartClip">
+      <rect x="24" y="88" width="588" height="104"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="360" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="359" rx="10" fill="#11161d" stroke="#21262d" stroke-width="1"/>
+
+  <circle cx="26" cy="26" r="3.5" fill="#5eead4">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="40" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
+  <text x="780" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#6e7681" text-anchor="end">As of February 14, 2026</text>
+  <line x1="20" y1="44" x2="780" y2="44" stroke="#21262d" stroke-width="1"/>
+
+  <text x="24" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#9aa4b2" font-weight="600">Daily contributions</text>
+  <text x="612" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#6e7681" text-anchor="end">past 12 months</text>
+
+  <g clip-path="url(#chartClip)">
+    <line x1="24" y1="192" x2="612" y2="192" stroke="#21262d" stroke-width="1"/>
+    <g fill="#3a4553">
+      <rect x="32.18" y="191.2" width="1.32" height="0.8"/>
+      <rect x="38.6" y="190.39" width="1.32" height="1.61"/>
+      <rect x="40.21" y="190.39" width="1.32" height="1.61"/>
+      <rect x="56.27" y="191.2" width="1.32" height="0.8"/>
+      <rect x="62.7" y="191.2" width="1.32" height="0.8"/>
+      <rect x="65.91" y="191.2" width="1.32" height="0.8"/>
+      <rect x="67.52" y="185.57" width="1.32" height="6.43"/>
+      <rect x="72.34" y="191.2" width="1.32" height="0.8"/>
+      <rect x="77.16" y="183.97" width="1.32" height="8.03"/>
+      <rect x="81.98" y="191.2" width="1.32" height="0.8"/>
+      <rect x="90.01" y="188.79" width="1.32" height="3.21"/>
+      <rect x="98.04" y="191.2" width="1.32" height="0.8"/>
+      <rect x="157.49" y="190.39" width="1.32" height="1.61"/>
+      <rect x="170.34" y="191.2" width="1.32" height="0.8"/>
+      <rect x="189.62" y="189.59" width="1.32" height="2.41"/>
+      <rect x="192.83" y="191.2" width="1.32" height="0.8"/>
+      <rect x="194.44" y="191.2" width="1.32" height="0.8"/>
+      <rect x="197.65" y="190.39" width="1.32" height="1.61"/>
+      <rect x="199.26" y="190.39" width="1.32" height="1.61"/>
+      <rect x="202.47" y="189.59" width="1.32" height="2.41"/>
+      <rect x="204.08" y="189.59" width="1.32" height="2.41"/>
+      <rect x="208.9" y="191.2" width="1.32" height="0.8"/>
+      <rect x="210.5" y="191.2" width="1.32" height="0.8"/>
+      <rect x="212.11" y="191.2" width="1.32" height="0.8"/>
+      <rect x="231.39" y="180.75" width="1.32" height="11.25"/>
+      <rect x="237.82" y="191.2" width="1.32" height="0.8"/>
+      <rect x="265.13" y="191.2" width="1.32" height="0.8"/>
+      <rect x="276.37" y="190.39" width="1.32" height="1.61"/>
+      <rect x="287.62" y="187.98" width="1.32" height="4.02"/>
+      <rect x="290.83" y="191.2" width="1.32" height="0.8"/>
+      <rect x="294.04" y="190.39" width="1.32" height="1.61"/>
+      <rect x="295.65" y="191.2" width="1.32" height="0.8"/>
+      <rect x="305.29" y="181.56" width="1.32" height="10.44"/>
+      <rect x="311.72" y="190.39" width="1.32" height="1.61"/>
+      <rect x="313.32" y="188.79" width="1.32" height="3.21"/>
+      <rect x="314.93" y="189.59" width="1.32" height="2.41"/>
+      <rect x="331" y="191.2" width="1.32" height="0.8"/>
+      <rect x="340.64" y="191.2" width="1.32" height="0.8"/>
+      <rect x="359.91" y="191.2" width="1.32" height="0.8"/>
+      <rect x="390.44" y="191.2" width="1.32" height="0.8"/>
+      <rect x="396.86" y="189.59" width="1.32" height="2.41"/>
+      <rect x="406.5" y="190.39" width="1.32" height="1.61"/>
+      <rect x="414.54" y="189.59" width="1.32" height="2.41"/>
+      <rect x="416.14" y="190.39" width="1.32" height="1.61"/>
+      <rect x="427.39" y="191.2" width="1.32" height="0.8"/>
+      <rect x="432.21" y="187.98" width="1.32" height="4.02"/>
+      <rect x="435.42" y="191.2" width="1.32" height="0.8"/>
+      <rect x="438.64" y="191.2" width="1.32" height="0.8"/>
+      <rect x="440.24" y="188.79" width="1.32" height="3.21"/>
+      <rect x="446.67" y="188.79" width="1.32" height="3.21"/>
+      <rect x="448.27" y="187.18" width="1.32" height="4.82"/>
+      <rect x="449.88" y="187.18" width="1.32" height="4.82"/>
+      <rect x="451.49" y="189.59" width="1.32" height="2.41"/>
+      <rect x="454.7" y="187.18" width="1.32" height="4.82"/>
+      <rect x="456.31" y="189.59" width="1.32" height="2.41"/>
+      <rect x="457.91" y="190.39" width="1.32" height="1.61"/>
+      <rect x="459.52" y="187.18" width="1.32" height="4.82"/>
+      <rect x="461.13" y="165.49" width="1.32" height="26.51"/>
+      <rect x="465.95" y="190.39" width="1.32" height="1.61"/>
+      <rect x="469.16" y="190.39" width="1.32" height="1.61"/>
+      <rect x="480.41" y="189.59" width="1.32" height="2.41"/>
+      <rect x="488.44" y="190.39" width="1.32" height="1.61"/>
+      <rect x="490.04" y="190.39" width="1.32" height="1.61"/>
+      <rect x="493.26" y="191.2" width="1.32" height="0.8"/>
+      <rect x="502.9" y="183.97" width="1.32" height="8.03"/>
+      <rect x="504.5" y="183.97" width="1.32" height="8.03"/>
+      <rect x="506.11" y="188.79" width="1.32" height="3.21"/>
+      <rect x="507.72" y="189.59" width="1.32" height="2.41"/>
+      <rect x="509.32" y="187.18" width="1.32" height="4.82"/>
+      <rect x="510.93" y="189.59" width="1.32" height="2.41"/>
+      <rect x="514.14" y="175.93" width="1.32" height="16.07"/>
+      <rect x="515.75" y="185.57" width="1.32" height="6.43"/>
+      <rect x="517.36" y="171.92" width="1.32" height="20.08"/>
+      <rect x="518.96" y="173.52" width="1.32" height="18.48"/>
+      <rect x="520.57" y="178.34" width="1.32" height="13.66"/>
+      <rect x="522.18" y="177.54" width="1.32" height="14.46"/>
+      <rect x="523.78" y="183.16" width="1.32" height="8.84"/>
+      <rect x="525.39" y="182.36" width="1.32" height="9.64"/>
+      <rect x="527" y="167.9" width="1.32" height="24.1"/>
+      <rect x="528.6" y="176.74" width="1.32" height="15.26"/>
+      <rect x="530.21" y="143" width="1.32" height="49"/>
+      <rect x="531.82" y="122.11" width="1.32" height="69.89"/>
+      <rect x="533.42" y="172.72" width="1.32" height="19.28"/>
+      <rect x="535.03" y="187.98" width="1.32" height="4.02"/>
+      <rect x="536.64" y="190.39" width="1.32" height="1.61"/>
+      <rect x="538.24" y="182.36" width="1.32" height="9.64"/>
+      <rect x="543.06" y="190.39" width="1.32" height="1.61"/>
+      <rect x="546.27" y="188.79" width="1.32" height="3.21"/>
+      <rect x="547.88" y="191.2" width="1.32" height="0.8"/>
+      <rect x="549.49" y="179.95" width="1.32" height="12.05"/>
+    </g>
+    <g fill="url(#streakBar)">
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="3.7s" repeatCount="indefinite"/>
+      <rect x="552.7" y="110.07" width="1.32" height="81.93"/>
+      <rect x="554.31" y="188.79" width="1.32" height="3.21"/>
+      <rect x="555.91" y="164.69" width="1.32" height="27.31"/>
+      <rect x="557.52" y="145.41" width="1.32" height="46.59"/>
+      <rect x="559.13" y="177.54" width="1.32" height="14.46"/>
+      <rect x="560.73" y="167.1" width="1.32" height="24.9"/>
+      <rect x="562.34" y="177.54" width="1.32" height="14.46"/>
+      <rect x="563.95" y="171.92" width="1.32" height="20.08"/>
+      <rect x="565.55" y="144.61" width="1.32" height="47.39"/>
+      <rect x="567.16" y="106.05" width="1.32" height="85.95"/>
+      <rect x="568.77" y="143.8" width="1.32" height="48.2"/>
+      <rect x="570.37" y="113.28" width="1.32" height="78.72"/>
+      <rect x="571.98" y="149.43" width="1.32" height="42.57"/>
+      <rect x="573.59" y="143.8" width="1.32" height="48.2"/>
+      <rect x="575.19" y="169.51" width="1.32" height="22.49"/>
+      <rect x="576.8" y="114.08" width="1.32" height="77.92"/>
+      <rect x="578.41" y="135.77" width="1.32" height="56.23"/>
+      <rect x="580.01" y="153.44" width="1.32" height="38.56"/>
+      <rect x="581.62" y="120.51" width="1.32" height="71.49"/>
+      <rect x="583.23" y="144.61" width="1.32" height="47.39"/>
+      <rect x="584.83" y="167.1" width="1.32" height="24.9"/>
+      <rect x="586.44" y="98.02" width="1.32" height="93.98"/>
+      <rect x="588.04" y="158.26" width="1.32" height="33.74"/>
+      <rect x="589.65" y="106.05" width="1.32" height="85.95"/>
+      <rect x="591.26" y="143" width="1.32" height="49"/>
+      <rect x="592.86" y="143" width="1.32" height="49"/>
+      <rect x="594.47" y="151.84" width="1.32" height="40.16"/>
+      <rect x="596.08" y="159.87" width="1.32" height="32.13"/>
+      <rect x="597.68" y="168.7" width="1.32" height="23.3"/>
+      <rect x="599.29" y="184.77" width="1.32" height="7.23"/>
+      <rect x="600.9" y="175.93" width="1.32" height="16.07"/>
+      <rect x="602.5" y="174.33" width="1.32" height="17.67"/>
+      <rect x="604.11" y="183.97" width="1.32" height="8.03"/>
+      <rect x="605.72" y="179.15" width="1.32" height="12.85"/>
+      <rect x="607.32" y="186.38" width="1.32" height="5.62"/>
+      <rect x="608.93" y="156.66" width="1.32" height="35.34"/>
+      <rect x="610.54" y="94" width="1.32" height="98"/>
+    </g>
+    <rect x="24" y="88" width="10" height="102" fill="url(#playhead)" opacity="0">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="578 0" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0.55;0" keyTimes="0;0.08;0.92;1" dur="13s" repeatCount="indefinite"/>
+    </rect>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (15) / JavaScript (10) / TypeScript (8) / Shell (5) / CoffeeScript (4)</text>
+
+  <line x1="24.8" y1="192" x2="24.8" y2="196" stroke="#2c3441" stroke-width="1"/>
+  <line x1="146.9" y1="192" x2="146.9" y2="196" stroke="#2c3441" stroke-width="1"/>
+  <line x1="294.71" y1="192" x2="294.71" y2="196" stroke="#2c3441" stroke-width="1"/>
+  <line x1="442.51" y1="192" x2="442.51" y2="196" stroke="#2c3441" stroke-width="1"/>
+  <line x1="611.2" y1="192" x2="611.2" y2="196" stroke="#2c3441" stroke-width="1"/>
+  <text x="24.8" y="207" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="start">Feb &#x2019;25</text>
+  <text x="146.9" y="207" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">May</text>
+  <text x="294.71" y="207" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">Aug</text>
+  <text x="442.51" y="207" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">Nov</text>
+  <text x="611.2" y="207" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="end">Feb &#x2019;26</text>
+
+  <text x="24" y="222" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#6e7681">A quiet year until the recent surge — a month-long active streak closes it out (peak 122 in a day).</text>
+
+  <line x1="613" y1="140" x2="672" y2="140" stroke="#5eead4" stroke-width="0.8" opacity="0.4"/>
+  <text x="712" y="150" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="52" fill="url(#hero)" font-weight="700" text-anchor="middle">37<animate attributeName="opacity" values="0.9;1;0.9" dur="4.3s" repeatCount="indefinite"/></text>
+  <text x="712" y="170" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#9aa4b2" text-anchor="middle" font-weight="600">Longest Streak</text>
+  <text x="712" y="184" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">1 Year</text>
+
+  <line x1="20" y1="238" x2="780" y2="238" stroke="#21262d" stroke-width="1"/>
+
+  <text x="55" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="42" fill="url(#hero)" font-weight="700" text-anchor="middle">6<animate attributeName="opacity" values="0.9;1;0.9" dur="5.3s" repeatCount="indefinite"/></text>
+  <text x="55" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#9aa4b2" text-anchor="middle" font-weight="600">Active Repos</text>
+  <text x="55" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">7 Days</text>
+
+  <text x="218" y="260.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#9aa4b2" text-anchor="end">cc-dump</text>
+  <rect x="222" y="254" width="208" height="8" rx="1.5" fill="url(#barGrad)"><animate attributeName="opacity" values="0.85;1;0.85" dur="4.7s" begin="0s" repeatCount="indefinite"/></rect>
+  <text x="434" y="260.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681">88</text>
+
+  <text x="218" y="274.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#9aa4b2" text-anchor="end">oscilla-animator-v2</text>
+  <rect x="222" y="268" width="56.73" height="8" rx="1.5" fill="url(#barGrad)"><animate attributeName="opacity" values="0.85;1;0.85" dur="4.7s" begin="0.4s" repeatCount="indefinite"/></rect>
+  <text x="282.73" y="274.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681">24</text>
+
+  <text x="218" y="288.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#9aa4b2" text-anchor="end">brandon-fryslie</text>
+  <rect x="222" y="282" width="47.27" height="8" rx="1.5" fill="url(#barGrad)"><animate attributeName="opacity" values="0.85;1;0.85" dur="4.7s" begin="0.8s" repeatCount="indefinite"/></rect>
+  <text x="273.27" y="288.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681">20</text>
+
+  <text x="218" y="302.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#9aa4b2" text-anchor="end">dotfiles</text>
+  <rect x="222" y="296" width="16.55" height="8" rx="1.5" fill="url(#barGrad)"><animate attributeName="opacity" values="0.85;1;0.85" dur="4.7s" begin="1.2s" repeatCount="indefinite"/></rect>
+  <text x="242.55" y="302.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681">7</text>
+
+  <text x="218" y="316.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#9aa4b2" text-anchor="end">cc-viz</text>
+  <rect x="222" y="310" width="11.82" height="8" rx="1.5" fill="url(#barGrad)"><animate attributeName="opacity" values="0.85;1;0.85" dur="4.7s" begin="1.6s" repeatCount="indefinite"/></rect>
+  <text x="237.82" y="316.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681">5</text>
+
+  <text x="218" y="330.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#9aa4b2" text-anchor="end">rad-plugins</text>
+  <rect x="222" y="324" width="7.09" height="8" rx="1.5" fill="url(#barGrad)"><animate attributeName="opacity" values="0.85;1;0.85" dur="4.7s" begin="2.0s" repeatCount="indefinite"/></rect>
+  <text x="233.09" y="330.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681">3</text>
+
+  <text x="486" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" fill="url(#warmGrad)" font-weight="700" text-anchor="middle">25<animate attributeName="opacity" values="0.9;1;0.9" dur="6.1s" repeatCount="indefinite"/></text>
+  <g fill="url(#warmGrad)">
+    <circle cx="522" cy="258" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="0.00s" repeatCount="indefinite"/></circle>
+    <circle cx="535" cy="258" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="0.35s" repeatCount="indefinite"/></circle>
+    <circle cx="548" cy="258" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="0.70s" repeatCount="indefinite"/></circle>
+    <circle cx="561" cy="258" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="574" cy="258" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="522" cy="271" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="0.35s" repeatCount="indefinite"/></circle>
+    <circle cx="535" cy="271" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="0.70s" repeatCount="indefinite"/></circle>
+    <circle cx="548" cy="271" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="561" cy="271" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="574" cy="271" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="522" cy="284" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="0.70s" repeatCount="indefinite"/></circle>
+    <circle cx="535" cy="284" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="548" cy="284" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="561" cy="284" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="574" cy="284" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="522" cy="297" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="535" cy="297" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="548" cy="297" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="561" cy="297" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="574" cy="297" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="522" cy="310" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="535" cy="310" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="548" cy="310" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="561" cy="310" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="574" cy="310" r="3.2"><animate attributeName="opacity" values="0.55;1;0.55" dur="4.9s" begin="2.80s" repeatCount="indefinite"/></circle>
+  </g>
+  <text x="530" y="328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#9aa4b2" text-anchor="middle" font-weight="600">My Issues Closed</text>
+  <text x="530" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">All Time</text>
+
+  <text x="645" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" fill="url(#warmGrad)" font-weight="700" text-anchor="middle">94<animate attributeName="opacity" values="0.9;1;0.9" dur="7.1s" repeatCount="indefinite"/></text>
+  <g fill="url(#warmGrad)">
+    <circle cx="685" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="0.00s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="0.35s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="0.70s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="735" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="258" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="0.35s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="0.70s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="735" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="263" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.20s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="0.70s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="735" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.20s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="268" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.05s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.20s" repeatCount="indefinite"/></circle>
+    <circle cx="735" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="273" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.90s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.40s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.20s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <circle cx="735" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.90s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="278" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.25s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="1.75s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.20s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.90s" repeatCount="indefinite"/></circle>
+    <circle cx="735" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.25s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="283" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.60s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.10s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.20s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.90s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.25s" repeatCount="indefinite"/></circle>
+    <circle cx="735" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.60s" repeatCount="indefinite"/></circle>
+    <circle cx="740" cy="288" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.95s" repeatCount="indefinite"/></circle>
+    <circle cx="685" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <circle cx="690" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="2.80s" repeatCount="indefinite"/></circle>
+    <circle cx="695" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.15s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.50s" repeatCount="indefinite"/></circle>
+    <circle cx="705" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="3.85s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.20s" repeatCount="indefinite"/></circle>
+    <circle cx="715" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="4.90s" repeatCount="indefinite"/></circle>
+    <circle cx="725" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.25s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="293" r="1.8"><animate attributeName="opacity" values="1;0.5;1" dur="6.7s" begin="5.60s" repeatCount="indefinite"/></circle>
+  </g>
+  <g fill="#2c3441">
+    <circle cx="735" cy="293" r="1.8" opacity="0.55"/>
+    <circle cx="740" cy="293" r="1.8" opacity="0.55"/>
+  </g>
+  <text x="700" y="328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#9aa4b2" text-anchor="middle" font-weight="600">PRs Merged</text>
+  <text x="700" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">All Time</text>
 </svg>
