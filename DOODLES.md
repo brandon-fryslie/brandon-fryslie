@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 20, 2026 — Daguerreotype Unveiled — 187th Anniversary (August 19, 1839)
+
+<img src="./doodle-archive/2026/08/2026-08-20-060542.svg" width="800" alt="Daily doodle for August 19, 2026 — the 187th anniversary of the daguerreotype being unveiled to the world. On the left half, a polished silver daguerreotype plate sits in a red velvet-lined case: a Victorian portrait bust in warm sepia slowly develops into visibility on the mirrored surface as pale mercury vapor curls upward and a diagonal reflection sweep glides across the metal. On the right, a huge cream AUGUST 19, 2026 headline underlined by a silver-to-amber sweep, a silver DAGUERREOTYPE · 187 YEARS subhead trailed by cream · SINCE 1839, an italic amber DAGUERRE · NIÉPCE · ARAGO · ACADÉMIE tertiary, a dim cyan SILVER · IODINE · MERCURY · GILT COPPER roster, and a Georgia-italic 'a gift, free to the world.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 19 August 1839, at a joint session of the French Academy of Sciences and Academy of Fine Arts held at the Institut de France in Paris, François Arago revealed the full working process of Louis Daguerre's photographic technique to a packed room. The French government had bought the invention outright from Daguerre and Isidore Niépce — son of Daguerre's late collaborator Nicéphore — in exchange for lifetime pensions, then placed it in the public domain as a gift to the world. Within a year, daguerreotype studios had opened on both sides of the Atlantic. Every silver print, glass plate, film emulsion, and phone-camera sensor since traces its lineage to that afternoon.
+
+The left half is a polished silver daguerreotype plate seated in a red velvet-lined case: a Victorian portrait slowly develops into visibility on its mirrored surface as pale mercury vapour curls upward and a diagonal reflection sweep glides across the metal. On the right, a large AUGUST 19, 2026 headline anchors a silver DAGUERREOTYPE · 187 YEARS subhead, an italic amber DAGUERRE · NIÉPCE · ARAGO · ACADÉMIE tertiary, a dim SILVER · IODINE · MERCURY · GILT COPPER spec line, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 19, 2026 — Discovery of Helium — 158th Anniversary (August 18, 1868)
 
 <img src="./doodle-archive/2026/08/2026-08-19-060511.svg" width="800" alt="Daily doodle for August 18, 2026 — the 158th anniversary of the discovery of helium. On the left half, a total solar eclipse: a black lunar disc silhouetted against a pale silver corona whose streamers pulse gently, ringed by a coral-pink chromosphere with two prominence arcs bowing off the limb. Below the eclipse a long horizontal solar spectrum runs violet-to-red with one bright vertical marker snapped to the yellow band, labelled D3 · 587.49 nm — the helium line. On the right, a huge cream AUGUST 18, 2026 headline underlined by a sunrise sweep, a gold HELIUM · 158 YEARS subhead trailed by cream · SINCE 1868, an italic amber JANSSEN · LOCKYER · GUNTUR, INDIA tertiary, a dim cyan He · Z = 2 · SUN'S GIFT roster, and a Georgia-italic 'the first element discovered off-Earth.' caption at the base.">
