@@ -1,18 +1,177 @@
-<svg width="800" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="160" rx="6" fill="#fafbfc" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#24292e" font-weight="600">Live GitHub Stats</text>
-  <text x="780" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="end">Updated February 13, 2026</text>
-  <line x1="20" y1="42" x2="780" y2="42" stroke="#e1e4e8" stroke-width="1"/>
-  <g>
-    <text x="100" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">71</text>
-    <text x="100" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Repositories</text>
-    <text x="300" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">78</text>
-    <text x="300" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Stars</text>
-    <text x="500" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">150</text>
-    <text x="500" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Commits (30d)</text>
-    <text x="700" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" fill="#0366d6" font-weight="600" text-anchor="middle">15+</text>
-    <text x="700" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#586069" text-anchor="middle">Years Active</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" viewBox="0 0 800 395" role="img" aria-label="Live GitHub Stats for February 14, 2026">
+  <defs>
+    <linearGradient id="yearBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#79c0ff"/>
+      <stop offset="1" stop-color="#1f6feb"/>
+    </linearGradient>
+    <linearGradient id="repoBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#238636"/>
+      <stop offset="1" stop-color="#3fb950"/>
+    </linearGradient>
+    <linearGradient id="scalarBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8957e5"/>
+      <stop offset="1" stop-color="#d2a8ff"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="chartClip"><rect x="20" y="43" width="760" height="134"/></clipPath>
+    <clipPath id="repoBarsClip"><rect x="150" y="236" width="600" height="82"/></clipPath>
+    <clipPath id="scalarBarsClip"><rect x="20" y="372" width="760" height="6"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="395" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="394" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="20" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#e6edf3">Live GitHub Stats</text>
+  <text x="780" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="end">February 14, 2026</text>
+
+  <!-- ==================== SECTION 1: YEAR ==================== -->
+  <line x1="20" y1="175" x2="780" y2="175" stroke="#30363d" stroke-width="1">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="7s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Fortnight bars: 31 buckets of 12 days (last = 9) across 12 months -->
+  <g fill="url(#yearBar)">
+    <rect x="20.5"  y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="45.0"  y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="69.5"  y="171.5" width="22" height="3.5" rx="0.6"/>
+    <rect x="94.0"  y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="167.5" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="192.0" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="216.5" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="241.0" y="172.8" width="22" height="2.2" rx="0.6"/>
+    <rect x="265.5" y="172.6" width="22" height="2.4" rx="0.6"/>
+    <rect x="290.0" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="314.5" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="339.0" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="363.5" y="172.1" width="22" height="2.9" rx="0.6"/>
+    <rect x="388.0" y="173.5" width="22" height="1.5" rx="0.6"/>
+    <rect x="412.5" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="437.0" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="486.0" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="510.5" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="535.0" y="173.0" width="22" height="2.0" rx="0.6"/>
+    <rect x="559.5" y="163.4" width="22" height="11.6" rx="0.6"/>
+    <rect x="584.0" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="608.5" y="173.8" width="22" height="1.2" rx="0.6"/>
+    <rect x="633.0" y="156.2" width="22" height="18.8" rx="1"/>
+    <rect x="657.5" y="125.0" width="22" height="50.0" rx="1.5"/>
+    <rect x="682.0" y="138.1" width="22" height="36.9" rx="1.5"/>
+    <rect x="706.5" y="65.3"  width="22" height="109.7" rx="2"/>
+    <rect x="731.0" y="45.0"  width="22" height="130.0" rx="2"/>
+    <rect x="755.5" y="128.2" width="16" height="46.8" rx="1.5"/>
   </g>
-  <line x1="20" y1="118" x2="780" y2="118" stroke="#e1e4e8" stroke-width="1"/>
-  <text x="400" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#586069" text-anchor="middle">Python (21) / JavaScript (7) / TypeScript (6) / Shell (6) / Go (3)</text>
+
+  <!-- Peak-fortnight marker sitting above the tallest bar -->
+  <circle cx="742" cy="41" r="3" fill="#79c0ff">
+    <animate attributeName="r" values="2.5;4.5;2.5" dur="2.7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Perpetual sweep across the year chart -->
+  <g clip-path="url(#chartClip)">
+    <rect x="-140" y="43" width="140" height="134" fill="url(#sweep)">
+      <animate attributeName="x" values="-140;800" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Year caption row -->
+  <text x="20" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">past 12 months — daily contributions, bucketed by fortnight</text>
+  <text x="780" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="end">peak fortnight 775 · peak day 122</text>
+
+  <!-- ==================== SECTION 2: WEEK ==================== -->
+  <line x1="20" y1="205" x2="780" y2="205" stroke="#21262d" stroke-width="1"/>
+
+  <text x="20"  y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e">Active Repos</text>
+  <text x="110" y="227" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#3fb950">6</text>
+  <text x="132" y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681">in 7 Days</text>
+  <text x="780" y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">commits per repo</text>
+
+  <!-- Six repo rows: name (left) — bar (scaled to max=88) — count (bar end) -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- cc-dump 88 → 550 -->
+    <text x="20"  y="246" font-size="11" fill="#c9d1d9">cc-dump</text>
+    <rect x="150" y="238" width="550" height="10" rx="2" fill="url(#repoBar)"/>
+    <text x="708" y="247" font-size="11" font-weight="600" fill="#e6edf3">88</text>
+
+    <!-- oscilla-animator-v2 24 → 150 -->
+    <text x="20"  y="260" font-size="11" fill="#c9d1d9">oscilla-animator-v2</text>
+    <rect x="150" y="252" width="150" height="10" rx="2" fill="url(#repoBar)"/>
+    <text x="308" y="261" font-size="11" font-weight="600" fill="#e6edf3">24</text>
+
+    <!-- brandon-fryslie 20 → 125 -->
+    <text x="20"  y="274" font-size="11" fill="#c9d1d9">brandon-fryslie</text>
+    <rect x="150" y="266" width="125" height="10" rx="2" fill="url(#repoBar)"/>
+    <text x="283" y="275" font-size="11" font-weight="600" fill="#e6edf3">20</text>
+
+    <!-- dotfiles 7 → 44 -->
+    <text x="20"  y="288" font-size="11" fill="#c9d1d9">dotfiles</text>
+    <rect x="150" y="280" width="44" height="10" rx="2" fill="url(#repoBar)"/>
+    <text x="202" y="289" font-size="11" font-weight="600" fill="#e6edf3">7</text>
+
+    <!-- cc-viz 5 → 31 -->
+    <text x="20"  y="302" font-size="11" fill="#c9d1d9">cc-viz</text>
+    <rect x="150" y="294" width="31" height="10" rx="2" fill="url(#repoBar)"/>
+    <text x="189" y="303" font-size="11" font-weight="600" fill="#e6edf3">5</text>
+
+    <!-- rad-plugins 3 → 19 -->
+    <text x="20"  y="316" font-size="11" fill="#c9d1d9">rad-plugins</text>
+    <rect x="150" y="308" width="19" height="10" rx="2" fill="url(#repoBar)"/>
+    <text x="177" y="317" font-size="11" font-weight="600" fill="#e6edf3">3</text>
+  </g>
+
+  <!-- Perpetual sweep across the repo bars area -->
+  <g clip-path="url(#repoBarsClip)">
+    <rect x="-160" y="236" width="160" height="82" fill="url(#sweep)">
+      <animate attributeName="x" values="-160;800" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ==================== SECTION 3: TOTALS ==================== -->
+  <line x1="20" y1="330" x2="780" y2="330" stroke="#21262d" stroke-width="1"/>
+
+  <text x="20"  y="347" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">Totals — bars scaled to the largest of the three</text>
+  <text x="780" y="347" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">max 94</text>
+
+  <!-- Tile 1: My Issues Closed = 25 → 25/94 * 240 = 64 -->
+  <text x="30"  y="368" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#d2a8ff">25</text>
+  <text x="68"  y="361" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9">My Issues Closed</text>
+  <text x="68"  y="373" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">All Time</text>
+  <rect x="20"  y="378" width="240" height="6" rx="3" fill="#21262d"/>
+  <rect x="20"  y="378" width="64"  height="6" rx="3" fill="url(#scalarBar)"/>
+  <circle cx="84" cy="381" r="2.5" fill="#d2a8ff">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="3.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Tile 2: Longest Streak = 37 → 37/94 * 240 = 95 -->
+  <text x="290" y="368" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#d2a8ff">37</text>
+  <text x="328" y="361" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9">Longest Streak</text>
+  <text x="328" y="373" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">1 Year</text>
+  <rect x="280" y="378" width="240" height="6" rx="3" fill="#21262d"/>
+  <rect x="280" y="378" width="95"  height="6" rx="3" fill="url(#scalarBar)"/>
+  <circle cx="375" cy="381" r="2.5" fill="#d2a8ff">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="4.3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Tile 3: PRs Merged = 94 → 94/94 * 240 = 240 (full) -->
+  <text x="550" y="368" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#d2a8ff">94</text>
+  <text x="588" y="361" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9">PRs Merged</text>
+  <text x="588" y="373" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">All Time</text>
+  <rect x="540" y="378" width="240" height="6" rx="3" fill="#21262d"/>
+  <rect x="540" y="378" width="240" height="6" rx="3" fill="url(#scalarBar)"/>
+  <circle cx="774" cy="381" r="2.5" fill="#d2a8ff">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="5.1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Perpetual sweep across scalar bars -->
+  <g clip-path="url(#scalarBarsClip)">
+    <rect x="-140" y="372" width="140" height="6" fill="url(#sweep)">
+      <animate attributeName="x" values="-140;800" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 </svg>
