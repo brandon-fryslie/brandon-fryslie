@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 21, 2026 — Voyager 2 Launch — 49th Anniversary (August 20, 1977)
+
+<img src="./doodle-archive/2026/08/2026-08-21-060824.svg" width="800" alt="Daily doodle for August 20, 2026 — the 49th anniversary of the launch of Voyager 2. On the left half, the Voyager Golden Record — a gilded copper disc — turns slowly on a dark starfield, its etched grooves catching a rotating highlight and its pulsar-map rays radiating from the center. A small Voyager 2 spacecraft silhouette with its high-gain dish drifts leftward across the field, a thin blue crescent of Neptune tucked at the lower edge. On the right, a huge cream AUGUST 20, 2026 headline underlined by a gold-to-blue sweep, a gold VOYAGER 2 · 49 YEARS subhead trailed by cream · SINCE 1977, an italic amber JPL · TITAN III-E · CAPE CANAVERAL tertiary, a dim cyan JUPITER · SATURN · URANUS · NEPTUNE roster, and a Georgia-italic 'the grand tour continues.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 20 August 1977, a Titan III-E rocket lifted Voyager 2 off Pad 41 at Cape Canaveral, bound on a trajectory JPL had timed to a once-in-176-years alignment of the outer planets. Sixteen days later its twin, Voyager 1, followed on a faster arc. Voyager 2 is still the only spacecraft ever to have flown past all four gas giants — Jupiter (1979), Saturn (1981), Uranus (1986), and Neptune (1989) — and both probes carry the Golden Record, a gilded copper phonograph disc etched with a pulsar map, 116 images, and greetings in 55 languages, aimed at whoever might one day find it drifting between the stars.
+
+The left half is the Golden Record itself, seated on a dark starfield: the gilded disc turns slowly on its center hole while its etched grooves catch a rotating highlight, ringed by the pulsar-map rays that fix the sun's position for any finder. A small Voyager 2 spacecraft silhouette — high-gain dish, magnetometer boom, RTG cluster — drifts leftward across the field, a thin blue crescent of Neptune tucked at the lower edge. On the right, a large AUGUST 20, 2026 headline anchors a gold VOYAGER 2 · 49 YEARS subhead, an italic JPL · TITAN III-E · CAPE CANAVERAL tertiary, a dim JUPITER · SATURN · URANUS · NEPTUNE roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 20, 2026 — Daguerreotype Unveiled — 187th Anniversary (August 19, 1839)
 
 <img src="./doodle-archive/2026/08/2026-08-20-060542.svg" width="800" alt="Daily doodle for August 19, 2026 — the 187th anniversary of the daguerreotype being unveiled to the world. On the left half, a polished silver daguerreotype plate sits in a red velvet-lined case: a Victorian portrait bust in warm sepia slowly develops into visibility on the mirrored surface as pale mercury vapor curls upward and a diagonal reflection sweep glides across the metal. On the right, a huge cream AUGUST 19, 2026 headline underlined by a silver-to-amber sweep, a silver DAGUERREOTYPE · 187 YEARS subhead trailed by cream · SINCE 1839, an italic amber DAGUERRE · NIÉPCE · ARAGO · ACADÉMIE tertiary, a dim cyan SILVER · IODINE · MERCURY · GILT COPPER roster, and a Georgia-italic 'a gift, free to the world.' caption at the base.">
