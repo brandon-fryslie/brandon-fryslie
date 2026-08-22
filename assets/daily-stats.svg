@@ -1,182 +1,166 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-08-21: contribution heatmap for past 12 months with peak day 213 and an 82-day streak Jan 9 to Mar 31 2026 highlighted; 5 active repos in 7 days, 8 languages, 82-day longest streak, 6277 commits all time, 87 issues closed, 17 PRs merged in 7 days.">
+<svg width="800" height="490" viewBox="0 0 800 490" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-08-22: monthly commit bars over the past 12 months (peak June with 2014); Days Active 258 of 365 as a radial gauge; Languages 5 distinct in past 30 days with Go/Python/TypeScript dominant; Longest Streak 82 of 365 days lit on a year strip; Issues Closed 68 and PRs Merged 226 shown proportionally.">
 <defs>
 <style>text{font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;}</style>
-<linearGradient id="gStreak" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#7ff5b3"><animate attributeName="stop-color" values="#7ff5b3;#39d353;#7ff5b3" dur="7s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#39d353"/></linearGradient>
-<linearGradient id="gCommits" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fbbf24"><animate attributeName="stop-color" values="#fbbf24;#f59e0b;#fbbf24" dur="11s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#f97316"/></linearGradient>
-<linearGradient id="gPr" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"><animate attributeName="stop-color" values="#c084fc;#a78bfa;#c084fc" dur="13s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#7c3aed"/></linearGradient>
-<linearGradient id="gIssues" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fb7185"><animate attributeName="stop-color" values="#fb7185;#f43f5e;#fb7185" dur="11s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#e11d48"/></linearGradient>
-<linearGradient id="gRepos" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+<linearGradient id="gBar" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#7ff5b3"><animate attributeName="stop-color" values="#7ff5b3;#39d353;#7ff5b3" dur="13s" repeatCount="indefinite"/></stop>
+<stop offset="1" stop-color="#0e4429"/>
+</linearGradient>
+<linearGradient id="gPeak" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#fef08a"><animate attributeName="stop-color" values="#fef08a;#fbbf24;#fef08a" dur="7s" repeatCount="indefinite"/></stop>
+<stop offset="1" stop-color="#f97316"/>
+</linearGradient>
+<linearGradient id="gGauge" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#7ff5b3"><animate attributeName="stop-color" values="#7ff5b3;#39d353;#7ff5b3" dur="11s" repeatCount="indefinite"/></stop>
+<stop offset="1" stop-color="#26a641"/>
+</linearGradient>
+<linearGradient id="gStreak" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#fbbf24"><animate attributeName="stop-color" values="#fbbf24;#f97316;#fbbf24" dur="9s" repeatCount="indefinite"/></stop>
+<stop offset="1" stop-color="#f97316"/>
+</linearGradient>
+<linearGradient id="gIssues" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#fb7185"/><stop offset="1" stop-color="#e11d48"/>
+</linearGradient>
+<linearGradient id="gPr" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#7c3aed"/>
+</linearGradient>
+<linearGradient id="gSweep" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clipStrip"><rect x="545" y="305" width="230" height="43"/></clipPath>
+<pattern id="pDim" x="545" y="305" width="3.15" height="9" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="2.75" height="8" rx="1" fill="#161b22"/></pattern>
 </defs>
-<rect width="800" height="400" fill="#0d1117"/>
-<text x="24" y="28" font-size="12" font-weight="700" letter-spacing="1.6" fill="#e6edf3">LIVE GITHUB STATS</text>
-<text x="776" y="28" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-08-21</text>
-<line x1="20" y1="38" x2="780" y2="38" stroke="#21262d" stroke-width="1"/>
-<text x="24" y="56" font-size="9" letter-spacing="1.4" fill="#6e7681">CONTRIBUTION CALENDAR · PAST 12 MONTHS</text>
-<text x="776" y="56" text-anchor="end" font-size="9" letter-spacing="0.5" fill="#6e7681">peak day 213</text>
-<g font-size="8" fill="#6e7681" letter-spacing="0.4">
-<text x="128.5" y="70">Sep</text>
-<text x="227.5" y="70">Nov</text>
-<text x="326.5" y="70">Jan</text>
-<text x="414.5" y="70">Mar</text>
-<text x="513.5" y="70">May</text>
-<text x="601.5" y="70">Jul</text>
+<rect width="800" height="490" fill="#0d1117"/>
+
+<text x="24" y="30" font-size="12" font-weight="700" letter-spacing="1.6" fill="#e6edf3">LIVE GITHUB STATS</text>
+<text x="776" y="30" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-08-22</text>
+<line x1="20" y1="42" x2="780" y2="42" stroke="#21262d" stroke-width="1"/>
+
+<text x="24" y="60" font-size="9" letter-spacing="1.4" fill="#6e7681">COMMITS PER MONTH · past 12 months</text>
+<text x="776" y="60" text-anchor="end" font-size="9" letter-spacing="0.5" fill="#6e7681">peak Jun · 2014</text>
+
+<line x1="30" y1="115" x2="770" y2="115" stroke="#161b22" stroke-width="1" stroke-dasharray="2,4"/>
+<line x1="30" y1="155" x2="770" y2="155" stroke="#161b22" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="26" y="118" font-size="7" fill="#484f58" letter-spacing="0.3">1000</text>
+<text x="26" y="158" font-size="7" fill="#484f58" letter-spacing="0.3">500</text>
+
+<rect x="40" y="193" width="42" height="2" rx="1" fill="url(#gBar)" opacity="0.85"/>
+<text x="61" y="188" text-anchor="middle" font-size="8" fill="#6e7681">2</text>
+<rect x="96" y="193" width="42" height="2" rx="1" fill="url(#gBar)" opacity="0.85"/>
+<text x="117" y="188" text-anchor="middle" font-size="8" fill="#6e7681">2</text>
+<rect x="152" y="193" width="42" height="2" rx="1" fill="url(#gBar)" opacity="0.85"/>
+<text x="173" y="188" text-anchor="middle" font-size="8" fill="#6e7681">18</text>
+<rect x="208" y="190" width="42" height="5" rx="1" fill="url(#gBar)" opacity="0.85"/>
+<text x="229" y="185" text-anchor="middle" font-size="8" fill="#6e7681">82</text>
+<rect x="264" y="171" width="42" height="24" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="9s" begin="0s" repeatCount="indefinite"/></rect>
+<text x="285" y="166" text-anchor="middle" font-size="8" fill="#8b949e">413</text>
+<rect x="320" y="117" width="42" height="78" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="11s" begin="0.3s" repeatCount="indefinite"/></rect>
+<text x="341" y="112" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">1330</text>
+<rect x="376" y="116" width="42" height="79" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="13s" begin="0.6s" repeatCount="indefinite"/></rect>
+<text x="397" y="111" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">1348</text>
+<rect x="432" y="143" width="42" height="52" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="9s" begin="0.9s" repeatCount="indefinite"/></rect>
+<text x="453" y="138" text-anchor="middle" font-size="9" fill="#e6edf3">891</text>
+<rect x="488" y="150" width="42" height="45" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="11s" begin="1.2s" repeatCount="indefinite"/></rect>
+<text x="509" y="145" text-anchor="middle" font-size="9" fill="#e6edf3">760</text>
+<rect x="544" y="127" width="42" height="68" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="13s" begin="1.5s" repeatCount="indefinite"/></rect>
+<text x="565" y="122" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">1162</text>
+<rect x="600" y="77" width="42" height="118" rx="1" fill="url(#gPeak)" opacity="0.95"><animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/></rect>
+<text x="621" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#fef08a">2014</text>
+<rect x="656" y="164" width="42" height="31" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="11s" begin="0.4s" repeatCount="indefinite"/></rect>
+<text x="677" y="159" text-anchor="middle" font-size="8" fill="#8b949e">536</text>
+<rect x="712" y="172" width="42" height="23" rx="1" fill="url(#gBar)" opacity="0.9"><animate attributeName="opacity" values="0.8;1;0.8" dur="9s" begin="0.7s" repeatCount="indefinite"/></rect>
+<text x="733" y="167" text-anchor="middle" font-size="8" fill="#8b949e">402</text>
+
+<line x1="30" y1="195" x2="770" y2="195" stroke="#30363d" stroke-width="1"/>
+
+<text x="61" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Aug</text>
+<text x="117" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Sep</text>
+<text x="173" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Oct</text>
+<text x="229" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Nov</text>
+<text x="285" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Dec</text>
+<text x="341" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Jan</text>
+<text x="397" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Feb</text>
+<text x="453" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Mar</text>
+<text x="509" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Apr</text>
+<text x="565" y="209" text-anchor="middle" font-size="8" fill="#6e7681">May</text>
+<text x="621" y="209" text-anchor="middle" font-size="8" fill="#fef08a" font-weight="700">Jun</text>
+<text x="677" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Jul</text>
+<text x="733" y="209" text-anchor="middle" font-size="8" fill="#6e7681">Aug</text>
+
+<line x1="20" y1="222" x2="780" y2="222" stroke="#21262d" stroke-width="1"/>
+
+<text x="30" y="240" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">DAYS ACTIVE</text>
+<text x="250" y="240" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">1 YEAR</text>
+<path d="M 104.64 345.36 A 50 50 0 1 1 175.36 345.36" fill="none" stroke="#161b22" stroke-width="10" stroke-linecap="round"/>
+<line x1="102.12" y1="294.31" x2="85.49" y2="287.42" stroke="#30363d" stroke-width="1"/>
+<line x1="140" y1="269" x2="140" y2="251" stroke="#30363d" stroke-width="1"/>
+<line x1="177.88" y1="294.31" x2="194.51" y2="287.42" stroke="#30363d" stroke-width="1"/>
+<path d="M 104.64 345.36 A 50 50 0 1 1 181.37 281.92" fill="none" stroke="url(#gGauge)" stroke-width="10" stroke-linecap="round" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/></path>
+<circle cx="181.37" cy="281.92" r="4.5" fill="#7ff5b3"><animate attributeName="r" values="3.5;6.5;3.5" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
+<text x="140" y="322" text-anchor="middle" font-size="38" font-weight="700" fill="url(#gGauge)">258</text>
+<text x="140" y="342" text-anchor="middle" font-size="10" fill="#8b949e">of 365 days</text>
+<text x="140" y="370" text-anchor="middle" font-size="8" letter-spacing="0.4" fill="#6e7681">70% of the year</text>
+
+<text x="280" y="240" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">LANGUAGES</text>
+<text x="520" y="240" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">30 DAYS</text>
+<text x="290" y="275" font-size="30" font-weight="700" fill="#c4b5fd">5</text>
+<text x="320" y="264" font-size="8" letter-spacing="0.4" fill="#6e7681">DISTINCT</text>
+<text x="320" y="274" font-size="8" letter-spacing="0.4" fill="#6e7681">LANGUAGES</text>
+
+<rect x="292" y="290" width="32" height="70" rx="2" fill="#00ADD8" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="7s" begin="0.0s" repeatCount="indefinite"/></rect>
+<text x="308" y="286" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">119</text>
+<text x="308" y="372" text-anchor="middle" font-size="8" fill="#8b949e">Go</text>
+
+<rect x="339" y="311" width="32" height="49" rx="2" fill="#3572A5" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="9s" begin="0.4s" repeatCount="indefinite"/></rect>
+<text x="355" y="307" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">84</text>
+<text x="355" y="372" text-anchor="middle" font-size="8" fill="#8b949e">Python</text>
+
+<rect x="386" y="319" width="32" height="41" rx="2" fill="#3178c6" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="11s" begin="0.8s" repeatCount="indefinite"/></rect>
+<text x="402" y="315" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">70</text>
+<text x="402" y="372" text-anchor="middle" font-size="8" fill="#8b949e">TypeScript</text>
+
+<rect x="433" y="357" width="32" height="3" rx="1" fill="#89e051" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="13s" begin="1.2s" repeatCount="indefinite"/></rect>
+<text x="449" y="353" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">5</text>
+<text x="449" y="372" text-anchor="middle" font-size="8" fill="#8b949e">Shell</text>
+
+<rect x="480" y="358" width="32" height="2" rx="1" fill="#f1e05a" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="11s" begin="1.6s" repeatCount="indefinite"/></rect>
+<text x="496" y="354" text-anchor="middle" font-size="9" font-weight="700" fill="#e6edf3">2</text>
+<text x="496" y="372" text-anchor="middle" font-size="8" fill="#8b949e">JavaScript</text>
+
+<text x="540" y="240" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">LONGEST STREAK</text>
+<text x="775" y="240" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">1 YEAR</text>
+<text x="545" y="286" font-size="42" font-weight="700" fill="url(#gStreak)">82</text>
+<text x="615" y="270" font-size="9" letter-spacing="0.5" fill="#8b949e">CONSECUTIVE</text>
+<text x="615" y="282" font-size="9" letter-spacing="0.5" fill="#8b949e">DAYS OF 365</text>
+
+<g clip-path="url(#clipStrip)">
+<rect x="545" y="305" width="230" height="43" fill="url(#pDim)"/>
+<g opacity="0.95"><animate attributeName="opacity" values="0.75;1;0.75" dur="5s" repeatCount="indefinite"/>
+<rect x="545.0" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="548.15" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="551.30" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="554.45" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="557.60" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="560.75" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="563.90" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="567.05" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="570.20" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="573.35" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="576.50" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="579.65" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="582.80" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="585.95" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="589.10" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="592.25" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="595.40" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="598.55" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="601.70" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="604.85" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="608.00" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="611.15" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="614.30" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="617.45" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="620.60" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="623.75" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="626.90" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="630.05" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="633.20" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="636.35" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="639.50" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="642.65" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="645.80" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="648.95" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="652.10" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="655.25" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="658.40" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="661.55" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="664.70" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="667.85" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="671.00" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="674.15" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="677.30" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="680.45" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="683.60" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="686.75" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="689.90" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="693.05" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="696.20" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="699.35" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="702.50" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="705.65" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="708.80" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="711.95" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="715.10" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="718.25" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="721.40" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="724.55" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="727.70" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="730.85" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="734.00" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="737.15" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="740.30" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="743.45" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="746.60" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="749.75" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="752.90" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="756.05" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="759.20" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="762.35" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="765.50" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="768.65" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="771.80" y="305" width="2.75" height="8" rx="1" fill="url(#gStreak)"/>
+<rect x="545.0" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="548.15" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="551.30" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="554.45" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="557.60" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="560.75" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="563.90" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="567.05" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/><rect x="570.20" y="314" width="2.75" height="8" rx="1" fill="url(#gStreak)"/>
 </g>
-<g font-size="7" fill="#484f58" letter-spacing="0.4">
-<text x="115" y="95" text-anchor="end">M</text>
-<text x="115" y="117" text-anchor="end">W</text>
-<text x="115" y="139" text-anchor="end">F</text>
+<rect x="-40" y="305" width="40" height="18" fill="url(#gSweep)"><animate attributeName="x" from="540" to="775" dur="9s" repeatCount="indefinite"/></rect>
 </g>
-<g>
-<rect x="119" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="119" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="119" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="119" y="109" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="119" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="119" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="119" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="130" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="130" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="130" y="98" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="130" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="130" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="130" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="130" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="141" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="141" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="141" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="141" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="141" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="141" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="141" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="152" y="76" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="152" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="152" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="152" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="152" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="152" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="152" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="163" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="163" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="163" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="163" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="163" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="163" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="163" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="174" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="174" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="174" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="174" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="174" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="174" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="174" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="185" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="185" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="185" y="98" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="185" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="185" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="185" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="185" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="196" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="196" y="87" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="196" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="196" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="196" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="196" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="196" y="142" width="9" height="9" rx="1.5" fill="#0e4429"/>
-<rect x="207" y="76" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="207" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="207" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="207" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="207" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="207" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="207" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="218" y="76" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="218" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="218" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="218" y="109" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="218" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="218" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="218" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="229" y="76" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="229" y="87" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="229" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="229" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="229" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="229" y="131" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="229" y="142" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="240" y="76" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="240" y="87" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="240" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="240" y="109" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="240" y="120" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="240" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="240" y="142" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="251" y="76" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="251" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="251" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="251" y="109" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="251" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="251" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="251" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="262" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="262" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="262" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="262" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="262" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="262" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="262" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="273" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="273" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="273" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="273" y="109" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="273" y="120" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="273" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="273" y="142" width="9" height="9" rx="1.5" fill="#0e4429"/>
-<rect x="284" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="284" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="284" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="284" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="284" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="284" y="131" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="284" y="142" width="9" height="9" rx="1.5" fill="#26a641"/>
-<rect x="295" y="76" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="295" y="87" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="295" y="98" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="295" y="109" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="295" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="295" y="131" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="295" y="142" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="306" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="306" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="306" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="306" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="306" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="306" y="131" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="306" y="142" width="9" height="9" rx="1.5" fill="#39d353"/>
-<rect x="317" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="317" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="317" y="98" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="317" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="317" y="120" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="317" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="317" y="142" width="9" height="9" rx="1.5" fill="#26a641"/>
-<rect x="328" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="328" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="328" y="98" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="328" y="109" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="328" y="120" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="328" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="328" y="142" width="9" height="9" rx="1.5" fill="#26a641"/>
-<rect x="339" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="339" y="87" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.00s" repeatCount="indefinite"/></rect><rect x="339" y="98" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.05s" repeatCount="indefinite"/></rect><rect x="339" y="109" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.10s" repeatCount="indefinite"/></rect><rect x="339" y="120" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.15s" repeatCount="indefinite"/></rect><rect x="339" y="131" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.20s" repeatCount="indefinite"/></rect><rect x="339" y="142" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.25s" repeatCount="indefinite"/></rect>
-<rect x="350" y="76" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.30s" repeatCount="indefinite"/></rect><rect x="350" y="87" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.35s" repeatCount="indefinite"/></rect><rect x="350" y="98" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.40s" repeatCount="indefinite"/></rect><rect x="350" y="109" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.45s" repeatCount="indefinite"/></rect><rect x="350" y="120" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.50s" repeatCount="indefinite"/></rect><rect x="350" y="131" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.55s" repeatCount="indefinite"/></rect><rect x="350" y="142" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.60s" repeatCount="indefinite"/></rect>
-<rect x="361" y="76" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.65s" repeatCount="indefinite"/></rect><rect x="361" y="87" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.70s" repeatCount="indefinite"/></rect><rect x="361" y="98" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.75s" repeatCount="indefinite"/></rect><rect x="361" y="109" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.80s" repeatCount="indefinite"/></rect><rect x="361" y="120" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.85s" repeatCount="indefinite"/></rect><rect x="361" y="131" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.90s" repeatCount="indefinite"/></rect><rect x="361" y="142" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="0.95s" repeatCount="indefinite"/></rect>
-<rect x="372" y="76" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.00s" repeatCount="indefinite"/></rect><rect x="372" y="87" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.05s" repeatCount="indefinite"/></rect><rect x="372" y="98" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.10s" repeatCount="indefinite"/></rect><rect x="372" y="109" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.15s" repeatCount="indefinite"/></rect><rect x="372" y="120" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.20s" repeatCount="indefinite"/></rect><rect x="372" y="131" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.25s" repeatCount="indefinite"/></rect><rect x="372" y="142" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.30s" repeatCount="indefinite"/></rect>
-<rect x="383" y="76" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.35s" repeatCount="indefinite"/></rect><rect x="383" y="87" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.40s" repeatCount="indefinite"/></rect><rect x="383" y="98" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.45s" repeatCount="indefinite"/></rect><rect x="383" y="109" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.50s" repeatCount="indefinite"/></rect><rect x="383" y="120" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.55s" repeatCount="indefinite"/></rect><rect x="383" y="131" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.60s" repeatCount="indefinite"/></rect><rect x="383" y="142" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.65s" repeatCount="indefinite"/></rect>
-<rect x="394" y="76" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.70s" repeatCount="indefinite"/></rect><rect x="394" y="87" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.75s" repeatCount="indefinite"/></rect><rect x="394" y="98" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.80s" repeatCount="indefinite"/></rect><rect x="394" y="109" width="9" height="9" rx="1.5" fill="#0e4429"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.85s" repeatCount="indefinite"/></rect><rect x="394" y="120" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.90s" repeatCount="indefinite"/></rect><rect x="394" y="131" width="9" height="9" rx="1.5" fill="#0e4429"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="1.95s" repeatCount="indefinite"/></rect><rect x="394" y="142" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.00s" repeatCount="indefinite"/></rect>
-<rect x="405" y="76" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.05s" repeatCount="indefinite"/></rect><rect x="405" y="87" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.10s" repeatCount="indefinite"/></rect><rect x="405" y="98" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.15s" repeatCount="indefinite"/></rect><rect x="405" y="109" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.20s" repeatCount="indefinite"/></rect><rect x="405" y="120" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.25s" repeatCount="indefinite"/></rect><rect x="405" y="131" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.30s" repeatCount="indefinite"/></rect><rect x="405" y="142" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.35s" repeatCount="indefinite"/></rect>
-<rect x="416" y="76" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.40s" repeatCount="indefinite"/></rect><rect x="416" y="87" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.45s" repeatCount="indefinite"/></rect><rect x="416" y="98" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.50s" repeatCount="indefinite"/></rect><rect x="416" y="109" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.55s" repeatCount="indefinite"/></rect><rect x="416" y="120" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.60s" repeatCount="indefinite"/></rect><rect x="416" y="131" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.65s" repeatCount="indefinite"/></rect><rect x="416" y="142" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.70s" repeatCount="indefinite"/></rect>
-<rect x="427" y="76" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.75s" repeatCount="indefinite"/></rect><rect x="427" y="87" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.80s" repeatCount="indefinite"/></rect><rect x="427" y="98" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.85s" repeatCount="indefinite"/></rect><rect x="427" y="109" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.90s" repeatCount="indefinite"/></rect><rect x="427" y="120" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="2.95s" repeatCount="indefinite"/></rect><rect x="427" y="131" width="9" height="9" rx="1.5" fill="#7ff5b3"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.00s" repeatCount="indefinite"/></rect><rect x="427" y="142" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.05s" repeatCount="indefinite"/></rect>
-<rect x="438" y="76" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.10s" repeatCount="indefinite"/></rect><rect x="438" y="87" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.15s" repeatCount="indefinite"/></rect><rect x="438" y="98" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.20s" repeatCount="indefinite"/></rect><rect x="438" y="109" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.25s" repeatCount="indefinite"/></rect><rect x="438" y="120" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.30s" repeatCount="indefinite"/></rect><rect x="438" y="131" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.35s" repeatCount="indefinite"/></rect><rect x="438" y="142" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.40s" repeatCount="indefinite"/></rect>
-<rect x="449" y="76" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.45s" repeatCount="indefinite"/></rect><rect x="449" y="87" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.50s" repeatCount="indefinite"/></rect><rect x="449" y="98" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.55s" repeatCount="indefinite"/></rect><rect x="449" y="109" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.60s" repeatCount="indefinite"/></rect><rect x="449" y="120" width="9" height="9" rx="1.5" fill="#39d353"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.65s" repeatCount="indefinite"/></rect><rect x="449" y="131" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.70s" repeatCount="indefinite"/></rect><rect x="449" y="142" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.75s" repeatCount="indefinite"/></rect>
-<rect x="460" y="76" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.80s" repeatCount="indefinite"/></rect><rect x="460" y="87" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.85s" repeatCount="indefinite"/></rect><rect x="460" y="98" width="9" height="9" rx="1.5" fill="#006d32"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.90s" repeatCount="indefinite"/></rect><rect x="460" y="109" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="3.95s" repeatCount="indefinite"/></rect><rect x="460" y="120" width="9" height="9" rx="1.5" fill="#26a641"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="4.00s" repeatCount="indefinite"/></rect><rect x="460" y="131" width="9" height="9" rx="1.5" fill="#0e4429"><animate attributeName="opacity" values="0.7;1;0.7" dur="4s" begin="4.05s" repeatCount="indefinite"/></rect><rect x="460" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="471" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="471" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="471" y="98" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="471" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="471" y="120" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="471" y="131" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="471" y="142" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="482" y="76" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="482" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="482" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="482" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="482" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="482" y="131" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="482" y="142" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="493" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="493" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="493" y="98" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="493" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="493" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="493" y="131" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="493" y="142" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="504" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="504" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="504" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="504" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="504" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="504" y="131" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="504" y="142" width="9" height="9" rx="1.5" fill="#39d353"/>
-<rect x="515" y="76" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="515" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="515" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="515" y="109" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="515" y="120" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="515" y="131" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="515" y="142" width="9" height="9" rx="1.5" fill="#39d353"/>
-<rect x="526" y="76" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="526" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="526" y="98" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="526" y="109" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="526" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="526" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="526" y="142" width="9" height="9" rx="1.5" fill="#26a641"/>
-<rect x="537" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="537" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="537" y="98" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="537" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="537" y="120" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="537" y="131" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="537" y="142" width="9" height="9" rx="1.5" fill="#0e4429"/>
-<rect x="548" y="76" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="548" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="548" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="548" y="109" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="548" y="120" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="548" y="131" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="548" y="142" width="9" height="9" rx="1.5" fill="#39d353"/>
-<rect x="559" y="76" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="559" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="559" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="559" y="109" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="559" y="120" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="559" y="131" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="559" y="142" width="9" height="9" rx="1.5" fill="#39d353"/>
-<rect x="570" y="76" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="570" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="570" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="570" y="109" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="570" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="570" y="131" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="570" y="142" width="9" height="9" rx="1.5" fill="#7ff5b3"/>
-<rect x="581" y="76" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="581" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="581" y="98" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="581" y="109" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="581" y="120" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="581" y="131" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="581" y="142" width="9" height="9" rx="1.5" fill="#26a641"/>
-<rect x="592" y="76" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="592" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="592" y="98" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="592" y="109" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="592" y="120" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="592" y="131" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="592" y="142" width="9" height="9" rx="1.5" fill="#7ff5b3"/>
-<rect x="603" y="76" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="603" y="87" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="603" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="603" y="109" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="603" y="120" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="603" y="131" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="603" y="142" width="9" height="9" rx="1.5" fill="#26a641"/>
-<rect x="614" y="76" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="614" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="614" y="98" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="614" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="614" y="120" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="614" y="131" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="614" y="142" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="625" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="625" y="87" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="625" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="625" y="109" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="625" y="120" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="625" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="625" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="636" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="636" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="636" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="636" y="109" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="636" y="120" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="636" y="131" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="636" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="647" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="647" y="87" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="647" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="647" y="109" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="647" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="647" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="647" y="142" width="9" height="9" rx="1.5" fill="#39d353"/>
-<rect x="658" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="658" y="87" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="658" y="98" width="9" height="9" rx="1.5" fill="#7ff5b3"/><rect x="658" y="109" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="658" y="120" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="658" y="131" width="9" height="9" rx="1.5" fill="#006d32"/><rect x="658" y="142" width="9" height="9" rx="1.5" fill="#0e4429"/>
-<rect x="669" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="669" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="669" y="98" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="669" y="109" width="9" height="9" rx="1.5" fill="#39d353"/><rect x="669" y="120" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="669" y="131" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="669" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="680" y="76" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="680" y="87" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="680" y="98" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="680" y="109" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="680" y="120" width="9" height="9" rx="1.5" fill="#0e4429"/><rect x="680" y="131" width="9" height="9" rx="1.5" fill="#161b22"/><rect x="680" y="142" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="691" y="76" width="9" height="9" rx="1.5" fill="#26a641"/><rect x="691" y="87" width="9" height="9" rx="1.5" fill="#0e4429"/>
-</g>
-<text x="24" y="168" font-size="8" fill="#6e7681" letter-spacing="0.3">Less</text>
-<rect x="52" y="160" width="9" height="9" rx="1.5" fill="#161b22"/>
-<rect x="63" y="160" width="9" height="9" rx="1.5" fill="#0e4429"/>
-<rect x="74" y="160" width="9" height="9" rx="1.5" fill="#006d32"/>
-<rect x="85" y="160" width="9" height="9" rx="1.5" fill="#26a641"/>
-<rect x="96" y="160" width="9" height="9" rx="1.5" fill="#39d353"/>
-<rect x="107" y="160" width="9" height="9" rx="1.5" fill="#7ff5b3"/>
-<text x="122" y="168" font-size="8" fill="#6e7681" letter-spacing="0.3">More</text>
-<text x="776" y="168" text-anchor="end" font-size="8" fill="#8b949e" letter-spacing="0.3">82-day streak highlighted · Jan 9 → Mar 31, 2026</text>
-<line x1="20" y1="190" x2="780" y2="190" stroke="#21262d" stroke-width="1"/>
 
-<text x="26" y="219" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">ACTIVE REPOS</text>
-<text x="259" y="219" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">7 DAYS</text>
-<text x="26" y="257" font-size="34" font-weight="700" fill="url(#gRepos)">5</text>
-<text x="26" y="273" font-size="7" letter-spacing="0.4" fill="#6e7681">REPOSITORIES · 7-DAY COMMITS</text>
-<rect x="82" y="231" width="171" height="8" rx="1.5" fill="#161b22"/>
-<rect x="82" y="231" width="171.0" height="8" rx="1.5" fill="url(#gRepos)" opacity="0.85"><animate attributeName="opacity" values="0.7;1;0.7" dur="9s" begin="0.0s" repeatCount="indefinite"/></rect>
-<text x="85" y="237.5" font-size="7" fill="#e6edf3">links-issue-tracker</text>
-<text x="250" y="237.5" text-anchor="end" font-size="7" font-weight="700" fill="#0d1117">14</text>
-<rect x="82" y="243" width="171" height="8" rx="1.5" fill="#161b22"/>
-<rect x="82" y="243" width="122.1" height="8" rx="1.5" fill="url(#gRepos)" opacity="0.85"><animate attributeName="opacity" values="0.7;1;0.7" dur="10s" begin="0.3s" repeatCount="indefinite"/></rect>
-<text x="85" y="249.5" font-size="7" fill="#e6edf3">brandon-fryslie</text>
-<text x="250" y="249.5" text-anchor="end" font-size="7" font-weight="700" fill="#0d1117">10</text>
-<rect x="82" y="255" width="171" height="8" rx="1.5" fill="#161b22"/>
-<rect x="82" y="255" width="97.7" height="8" rx="1.5" fill="url(#gRepos)" opacity="0.85"><animate attributeName="opacity" values="0.7;1;0.7" dur="11s" begin="0.6s" repeatCount="indefinite"/></rect>
-<text x="85" y="261.5" font-size="7" fill="#e6edf3">primitives</text>
-<text x="250" y="261.5" text-anchor="end" font-size="7" font-weight="700" fill="#0d1117">8</text>
-<rect x="82" y="267" width="171" height="8" rx="1.5" fill="#161b22"/>
-<rect x="82" y="267" width="12.2" height="8" rx="1.5" fill="url(#gRepos)" opacity="0.85"><animate attributeName="opacity" values="0.7;1;0.7" dur="12s" begin="0.9s" repeatCount="indefinite"/></rect>
-<text x="85" y="273.5" font-size="7" fill="#e6edf3">macklebox</text>
-<text x="250" y="273.5" text-anchor="end" font-size="7" font-weight="700" fill="#e6edf3">1</text>
-<rect x="82" y="279" width="171" height="8" rx="1.5" fill="#161b22"/>
-<rect x="82" y="279" width="12.2" height="8" rx="1.5" fill="url(#gRepos)" opacity="0.85"><animate attributeName="opacity" values="0.7;1;0.7" dur="13s" begin="1.2s" repeatCount="indefinite"/></rect>
-<text x="85" y="285.5" font-size="7" fill="#e6edf3">laws</text>
-<text x="250" y="285.5" text-anchor="end" font-size="7" font-weight="700" fill="#e6edf3">1</text>
+<line x1="545" y1="352" x2="775" y2="352" stroke="#21262d" stroke-width="1"/>
+<text x="545" y="365" font-size="8" letter-spacing="0.4" fill="#8b949e">22% of a full year lit</text>
+<text x="775" y="365" text-anchor="end" font-size="8" letter-spacing="0.4" fill="#6e7681">each cell = 1 day</text>
 
-<text x="283" y="219" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">LANGUAGES</text>
-<text x="516" y="219" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">1 YEAR</text>
-<text x="283" y="257" font-size="34" font-weight="700" fill="#c4b5fd">8</text>
-<text x="283" y="273" font-size="7" letter-spacing="0.4" fill="#6e7681">DISTINCT · BY LINES OF CODE</text>
-<rect x="339" y="233" width="113.90" height="20" fill="#3178c6"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.00s" repeatCount="indefinite"/></rect>
-<rect x="452.90" y="233" width="34.53" height="20" fill="#4b8bbe"><animate attributeName="opacity" values="0.78;1;0.78" dur="13s" begin="0.35s" repeatCount="indefinite"/></rect>
-<rect x="487.43" y="233" width="18.12" height="20" fill="#00ADD8"><animate attributeName="opacity" values="0.78;1;0.78" dur="15s" begin="0.70s" repeatCount="indefinite"/></rect>
-<rect x="505.55" y="233" width="2.11" height="20" fill="#89e051"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.05s" repeatCount="indefinite"/></rect>
-<rect x="507.66" y="233" width="1.68" height="20" fill="#e34c26"><animate attributeName="opacity" values="0.78;1;0.78" dur="13s" begin="1.40s" repeatCount="indefinite"/></rect>
-<rect x="509.34" y="233" width="0.31" height="20" fill="#563d7c"><animate attributeName="opacity" values="0.78;1;0.78" dur="15s" begin="1.75s" repeatCount="indefinite"/></rect>
-<rect x="509.65" y="233" width="0.26" height="20" fill="#f1e05a"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="2.10s" repeatCount="indefinite"/></rect>
-<rect x="509.91" y="233" width="0.09" height="20" fill="#9c9cff"><animate attributeName="opacity" values="0.78;1;0.78" dur="13s" begin="2.45s" repeatCount="indefinite"/></rect>
-<text x="360" y="247" font-size="9" font-weight="700" fill="#0d1117">TypeScript</text>
-<rect x="339" y="259" width="6" height="6" rx="1" fill="#3178c6"/>
-<text x="348" y="265" font-size="7" fill="#8b949e">TypeScript</text>
-<rect x="381.8" y="259" width="6" height="6" rx="1" fill="#4b8bbe"/>
-<text x="390.8" y="265" font-size="7" fill="#8b949e">Python</text>
-<rect x="424.5" y="259" width="6" height="6" rx="1" fill="#00ADD8"/>
-<text x="433.5" y="265" font-size="7" fill="#8b949e">Go</text>
-<rect x="467.2" y="259" width="6" height="6" rx="1" fill="#89e051"/>
-<text x="476.2" y="265" font-size="7" fill="#8b949e">Shell</text>
-<rect x="339" y="271" width="6" height="6" rx="1" fill="#e34c26"/>
-<text x="348" y="277" font-size="7" fill="#8b949e">HTML</text>
-<rect x="381.8" y="271" width="6" height="6" rx="1" fill="#563d7c"/>
-<text x="390.8" y="277" font-size="7" fill="#8b949e">CSS</text>
-<rect x="424.5" y="271" width="6" height="6" rx="1" fill="#f1e05a"/>
-<text x="433.5" y="277" font-size="7" fill="#8b949e">JavaScript</text>
-<rect x="467.2" y="271" width="6" height="6" rx="1" fill="#9c9cff"/>
-<text x="476.2" y="277" font-size="7" fill="#8b949e">Lua</text>
+<line x1="20" y1="388" x2="780" y2="388" stroke="#21262d" stroke-width="1"/>
 
-<text x="540" y="219" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">LONGEST STREAK</text>
-<text x="773" y="219" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">1 YEAR</text>
-<text x="540" y="257" font-size="34" font-weight="700" fill="url(#gStreak)">82</text>
-<text x="540" y="273" font-size="7" letter-spacing="0.4" fill="#6e7681">CONSECUTIVE DAYS · MAX 365</text>
-<rect x="596" y="235" width="171" height="16" rx="2" fill="#161b22"/>
-<rect x="596" y="235" width="38.4" height="16" rx="2" fill="url(#gStreak)"><animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/></rect>
-<circle cx="634.4" cy="243" r="2.5" fill="#ffffff" opacity="0.9"><animate attributeName="r" values="2.5;4.5;2.5" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0.3;0.9" dur="3s" repeatCount="indefinite"/></circle>
-<line x1="638.75" y1="237" x2="638.75" y2="249" stroke="#0d1117" stroke-width="1" opacity="0.6"/>
-<line x1="681.50" y1="237" x2="681.50" y2="249" stroke="#0d1117" stroke-width="1" opacity="0.6"/>
-<line x1="724.25" y1="237" x2="724.25" y2="249" stroke="#0d1117" stroke-width="1" opacity="0.6"/>
-<text x="596" y="261" font-size="7" fill="#6e7681">0</text>
-<text x="681.5" y="261" text-anchor="middle" font-size="7" fill="#6e7681">half year</text>
-<text x="767" y="261" text-anchor="end" font-size="7" fill="#6e7681">365</text>
-<text x="540" y="297" font-size="8" fill="#8b949e">22.5% of a full year</text>
+<text x="30" y="405" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">MY ISSUES CLOSED</text>
+<text x="385" y="405" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">1 YEAR</text>
+<text x="30" y="443" font-size="30" font-weight="700" fill="url(#gIssues)">68</text>
+<text x="115" y="418" font-size="8" letter-spacing="0.4" fill="#8b949e">RESOLVED THIS YEAR · scale vs PRs</text>
+<rect x="115" y="424" width="270" height="14" rx="3" fill="#161b22"/>
+<rect x="115" y="424" width="81.28" height="14" rx="3" fill="url(#gIssues)" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="9s" repeatCount="indefinite"/></rect>
 
-<rect x="20" y="320" width="245" height="60" rx="4" fill="#0f1520" stroke="#21262d" stroke-width="1"/>
-<text x="30" y="336" font-size="9" font-weight="700" letter-spacing="1.2" fill="#8b949e">COMMITS</text>
-<text x="255" y="336" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">ALL TIME</text>
-<text x="30" y="368" font-size="28" font-weight="700" fill="url(#gCommits)">6277</text>
-<text x="255" y="368" text-anchor="end" font-size="9" fill="#6e7681">across all repos</text>
+<text x="415" y="405" font-size="10" font-weight="700" letter-spacing="1.2" fill="#8b949e">PRS MERGED</text>
+<text x="770" y="405" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">30 DAYS</text>
+<text x="415" y="443" font-size="30" font-weight="700" fill="url(#gPr)">226</text>
+<text x="510" y="418" font-size="8" letter-spacing="0.4" fill="#8b949e">MERGED IN PAST MONTH · scale vs issues</text>
+<rect x="510" y="424" width="260" height="14" rx="3" fill="#161b22"/>
+<rect x="510" y="424" width="260" height="14" rx="3" fill="url(#gPr)" opacity="0.95"><animate attributeName="opacity" values="0.8;1;0.8" dur="11s" repeatCount="indefinite"/></rect>
 
-<rect x="277" y="320" width="245" height="60" rx="4" fill="#0f1520" stroke="#21262d" stroke-width="1"/>
-<text x="287" y="336" font-size="9" font-weight="700" letter-spacing="1.2" fill="#8b949e">MY ISSUES CLOSED</text>
-<text x="512" y="336" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">ALL TIME</text>
-<text x="287" y="368" font-size="28" font-weight="700" fill="url(#gIssues)">87</text>
-<text x="512" y="368" text-anchor="end" font-size="9" fill="#6e7681">issues resolved</text>
-
-<rect x="534" y="320" width="245" height="60" rx="4" fill="#0f1520" stroke="#21262d" stroke-width="1"/>
-<text x="544" y="336" font-size="9" font-weight="700" letter-spacing="1.2" fill="#8b949e">PRS MERGED</text>
-<text x="769" y="336" text-anchor="end" font-size="8" letter-spacing="0.5" fill="#6e7681">7 DAYS</text>
-<text x="544" y="368" font-size="28" font-weight="700" fill="url(#gPr)">17</text>
-<text x="769" y="368" text-anchor="end" font-size="9" fill="#6e7681">this week</text>
 </svg>
