@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 22, 2026 — Mona Lisa Stolen — 115th Anniversary (August 21, 1911)
+
+<img src="./doodle-archive/2026/08/2026-08-22-060436.svg" width="800" alt="Daily doodle for August 21, 2026 — the 115th anniversary of the Mona Lisa being stolen from the Louvre. On the left half, an ornate gilded picture frame hangs empty against a warm plaster museum wall, gently swaying; inside the frame is a paler rectangle in the plaster where the panel shaded the wall for a century, with three small iron hooks visible. A caped silhouette with a wide-brimmed hat drifts rightward off the panel, a wrapped bundle under one arm. Gold dust motes float in a warm lantern glow from the upper left. On the right, a huge cream AUGUST 21, 2026 headline underlined by a gold-to-burgundy sweep, a gold MONA LISA · 115 YEARS subhead trailed by cream · SINCE 1911, an italic amber PERUGGIA · LOUVRE · PARIS · SALON CARRÉ tertiary, a dim cyan MONDAY, CLOSED · RECOVERED IN FLORENCE 1913 roster, and a Georgia-italic 'fame is a story about absence.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the morning of 21 August 1911, an Italian handyman named Vincenzo Peruggia walked out of the Louvre with the Mona Lisa hidden under his workman's smock. He had spent the previous day inside as a visitor, then hidden in a storage cupboard overnight — the theft itself took roughly fifteen minutes on a Monday when the museum was closed to the public. The empty wall stayed on display for a full day before anyone noticed. Recovered in Florence two years later, when Peruggia tried to sell it to the Uffizi, the painting returned to Paris a global celebrity: before the theft it had been well-regarded; after, it was the most famous picture on Earth. Fame, it turns out, is a story about absence.
+
+The left half is the Louvre gallery wall the morning of the theft: an ornate gilded frame hangs empty against warm plaster, its interior showing a paler rectangle where the panel had shaded the wall for a century and three small hooks catching the light. A caped silhouette drifts away toward the right edge with a bundle under one arm, and gold dust motes hang in the shaft of a museum lantern. On the right, a large AUGUST 21, 2026 headline anchors a gold MONA LISA · 115 YEARS subhead, an italic PERUGGIA · LOUVRE · PARIS · SALON CARRÉ tertiary, a dim MONDAY, CLOSED · RECOVERED IN FLORENCE 1913 roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 21, 2026 — Voyager 2 Launch — 49th Anniversary (August 20, 1977)
 
 <img src="./doodle-archive/2026/08/2026-08-21-060824.svg" width="800" alt="Daily doodle for August 20, 2026 — the 49th anniversary of the launch of Voyager 2. On the left half, the Voyager Golden Record — a gilded copper disc — turns slowly on a dark starfield, its etched grooves catching a rotating highlight and its pulsar-map rays radiating from the center. A small Voyager 2 spacecraft silhouette with its high-gain dish drifts leftward across the field, a thin blue crescent of Neptune tucked at the lower edge. On the right, a huge cream AUGUST 20, 2026 headline underlined by a gold-to-blue sweep, a gold VOYAGER 2 · 49 YEARS subhead trailed by cream · SINCE 1977, an italic amber JPL · TITAN III-E · CAPE CANAVERAL tertiary, a dim cyan JUPITER · SATURN · URANUS · NEPTUNE roster, and a Georgia-italic 'the grand tour continues.' caption at the base.">
