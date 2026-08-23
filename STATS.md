@@ -10,6 +10,14 @@ Captions carry each day's headline numbers so the gallery can be skimmed without
 
 <!-- STATS-GALLERY:START -->
 
+## August 22, 2026 · 06:23 UTC
+
+<img src="./stats-archive/2026/08/2026-08-22-062336.svg" width="960" alt="Live GitHub stats card for August 22, 2026">
+
+Longest Streak 82 (1 Year) · My Issues Closed 68 (1 Year) · Days Active 258/365 (1 Year) · Languages 5 (30 Days) · PRs Merged 226 (30 Days)
+
+---
+
 ## August 21, 2026 · 06:26 UTC
 
 <img src="./stats-archive/2026/08/2026-08-21-062659.svg" width="960" alt="Live GitHub stats card for August 21, 2026">
