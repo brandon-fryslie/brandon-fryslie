@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 23, 2026 — America's Cup — 175th Anniversary (August 22, 1851)
+
+<img src="./doodle-archive/2026/08/2026-08-23-060506.svg" width="800" alt="Daily doodle for August 22, 2026 — the 175th anniversary of the first America's Cup race. On the left half, the schooner America runs past the Isle of Wight under a full moon: two raked masts carry cream-coloured mainsail, foresail, and jib swelling gently in the westerly wind; a long low black hull cuts a thin white wake through dark rolling swell; a pale silver moon with a soft halo hangs at upper left, chalk-cliff silhouettes of the Needles sit on the far horizon, and stars twinkle across the deep navy sky. On the right, a huge cream AUGUST 22, 2026 headline underlined by a silver-to-blue sweep, a silver AMERICA'S CUP · 175 YEARS subhead trailed by cream · SINCE 1851, an italic amber SCHOONER AMERICA · ISLE OF WIGHT · £100 CUP tertiary, a dim cyan ROYAL YACHT SQUADRON · FIFTEEN CHALLENGERS · ONE PRIZE roster, and a Georgia-italic 'your majesty, there is no second.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 22 August 1851, the schooner America — 101 feet of black-hulled New York-built speed — sailed a 53-mile course around the Isle of Wight against fifteen British yachts and won the Royal Yacht Squadron's £100 Cup by a margin so wide the story spread on its own. When Queen Victoria, watching from the royal yacht at Cowes, asked who was second, the reply came back: "Your Majesty, there is no second." The trophy went home to the New York Yacht Club, where in 1857 the syndicate that had built America deeded it as a perpetual challenge cup — soon known simply as the America's Cup. It is the oldest international sporting trophy still contested, 175 years on.
+
+The left half is the schooner America on a moonlit run past the Isle of Wight: raked twin masts, a spread of cream sails swelling in the westerly, a long dark hull cutting through gentle swell, and a low chalk-cliff silhouette in the distance. A pale moon hangs above with its cool halo, stars twinkle in a deep navy sky, and a thin wake trails aft. On the right, a large AUGUST 22, 2026 headline anchors a silver AMERICA'S CUP · 175 YEARS subhead, an italic amber SCHOONER AMERICA · ISLE OF WIGHT · £100 CUP tertiary, a dim cyan ROYAL YACHT SQUADRON · FIFTEEN CHALLENGERS · ONE PRIZE roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 22, 2026 — Mona Lisa Stolen — 115th Anniversary (August 21, 1911)
 
 <img src="./doodle-archive/2026/08/2026-08-22-060436.svg" width="800" alt="Daily doodle for August 21, 2026 — the 115th anniversary of the Mona Lisa being stolen from the Louvre. On the left half, an ornate gilded picture frame hangs empty against a warm plaster museum wall, gently swaying; inside the frame is a paler rectangle in the plaster where the panel shaded the wall for a century, with three small iron hooks visible. A caped silhouette with a wide-brimmed hat drifts rightward off the panel, a wrapped bundle under one arm. Gold dust motes float in a warm lantern glow from the upper left. On the right, a huge cream AUGUST 21, 2026 headline underlined by a gold-to-burgundy sweep, a gold MONA LISA · 115 YEARS subhead trailed by cream · SINCE 1911, an italic amber PERUGGIA · LOUVRE · PARIS · SALON CARRÉ tertiary, a dim cyan MONDAY, CLOSED · RECOVERED IN FLORENCE 1913 roster, and a Georgia-italic 'fame is a story about absence.' caption at the base.">
