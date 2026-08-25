@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 25, 2026 — Gossamer Condor — 49th Anniversary (August 23, 1977)
+
+<img src="./doodle-archive/2026/08/2026-08-25-060545.svg" width="800" alt="Daily doodle for August 23, 2026 — the 49th anniversary of the Gossamer Condor winning the Kremer Prize for the first sustained, controlled human-powered flight. On the left half, the Condor flies at dawn over the Central Valley: an enormous translucent single-wing spans most of the panel with delicate rib lines glowing in warm sunlight, the pilot silhouetted in a small transparent pod pedals a bicycle drivetrain, a slow pusher propeller spins behind, and a long horizontal stabilizer on a slender forward boom leads the aircraft. Low golden hills scroll below under a pale peach-to-blue dawn sky with a hazy sun. On the right, a huge cream AUGUST 23, 2026 headline underlined by a gold-to-amber sweep, a silver GOSSAMER CONDOR · 49 YEARS subhead trailed by cream · SINCE 1977, an italic amber MACCREADY · ALLEN · SHAFTER · KREMER PRIZE tertiary, a dim cyan MYLAR · ALUMINIUM · PIANO WIRE · 137 LB roster, and a Georgia-italic 'a bicycle that learned to fly.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the morning of 23 August 1977, at Shafter Airport north of Bakersfield, California, a 137-pound aircraft made of aluminium tubing, piano wire, mylar film, and corrugated cardboard ribs completed a figure-eight course around two pylons half a mile apart. Its pilot, Bryan Allen, pedalled a bicycle drivetrain that turned a rear pusher propeller; the aircraft — designed by Paul MacCready and a small volunteer team — was the Gossamer Condor, and the flight won the £50,000 Kremer Prize, seventeen years old and until that morning unclaimed. Human-powered flight had been attempted since Icarus; Condor was the first machine to prove it could actually be done. Two years later Allen would pedal MacCready's follow-up, the Gossamer Albatross, across the English Channel.
+
+The left half is the Condor over Shafter at dawn: an enormous translucent wing spanning most of the frame, delicate rib lines glowing under a low amber sun, the pilot silhouetted in the pod pedalling a bicycle drivetrain, a slow pusher propeller spinning behind, and a long horizontal stabilizer forward on a slender boom. Distant Central Valley hills scroll by beneath. On the right, a large AUGUST 23, 2026 headline anchors a silver GOSSAMER CONDOR · 49 YEARS subhead, an italic amber MACCREADY · ALLEN · SHAFTER · KREMER PRIZE tertiary, a dim cyan MYLAR · ALUMINIUM · PIANO WIRE · 137 LB roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 23, 2026 — America's Cup — 175th Anniversary (August 22, 1851)
 
 <img src="./doodle-archive/2026/08/2026-08-23-060506.svg" width="800" alt="Daily doodle for August 22, 2026 — the 175th anniversary of the first America's Cup race. On the left half, the schooner America runs past the Isle of Wight under a full moon: two raked masts carry cream-coloured mainsail, foresail, and jib swelling gently in the westerly wind; a long low black hull cuts a thin white wake through dark rolling swell; a pale silver moon with a soft halo hangs at upper left, chalk-cliff silhouettes of the Needles sit on the far horizon, and stars twinkle across the deep navy sky. On the right, a huge cream AUGUST 22, 2026 headline underlined by a silver-to-blue sweep, a silver AMERICA'S CUP · 175 YEARS subhead trailed by cream · SINCE 1851, an italic amber SCHOONER AMERICA · ISLE OF WIGHT · £100 CUP tertiary, a dim cyan ROYAL YACHT SQUADRON · FIFTEEN CHALLENGERS · ONE PRIZE roster, and a Georgia-italic 'your majesty, there is no second.' caption at the base.">
