@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Linux Announced — 35th Anniversary (August 25, 1991) -->
+<!-- about:
+On the evening of 25 August 1991, a 21-year-old Helsinki computer-science student named Linus Torvalds posted a short note to the comp.os.minix Usenet newsgroup: "Hello everybody out there using minix — I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones." He asked what people liked and disliked about minix, so he could try to make his hobby project a little better. The kernel that grew out of that post now runs on essentially every supercomputer, most of the world's servers, three billion Android phones, and the machinery that serves this very GitHub page. It is safe to say the "just a hobby" prediction did not age well.
+
+The left half is a beige-bezelled CRT monitor sitting in a dark room, its phosphor screen glowing green: the Usenet post header and opening lines are rendered in period-correct monospaced text, a soft scanline sweeps down the glass, the cursor blinks after the last line, and a tiny Tux silhouette peeks from the lower-right corner as a wink to what came later. On the right, a large AUGUST 25, 2026 headline anchors a green LINUX · 35 YEARS subhead, an italic amber TORVALDS · HELSINKI · comp.os.minix tertiary, a dim cyan 386 · MINIX · GNU · FREE SOFTWARE roster, and a Georgia-italic caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for August 25, 2026 — the 35th anniversary of Linus Torvalds announcing Linux on the comp.os.minix Usenet newsgroup. On the left half, a beige-bezelled CRT monitor glows green in a dark room: the Usenet post header (From: torvalds@klaava.Helsinki.FI, Newsgroups: comp.os.minix, Date: 25 Aug 91) and its famous opening lines are rendered in monospaced phosphor text, a soft scanline sweeps down the glass, a bright cursor blinks after the last line, and a small Tux penguin silhouette sits in the lower-right corner of the screen. On the right, a huge cream AUGUST 25, 2026 headline underlined by a green-to-cream sweep, a green LINUX · 35 YEARS subhead trailed by cream · SINCE 1991, an italic amber TORVALDS · HELSINKI · comp.os.minix tertiary, a dim cyan 386 · MINIX · GNU · FREE SOFTWARE roster, and a Georgia-italic 'just a hobby, won't be big and professional...' caption at the base.">
+  <defs>
+    <radialGradient id="phosphor" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0%"   stop-color="#0a2214"/>
+      <stop offset="70%"  stop-color="#03110a"/>
+      <stop offset="100%" stop-color="#010704"/>
+    </radialGradient>
+    <linearGradient id="screenGlare" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#c8ffdc" stop-opacity="0.10"/>
+      <stop offset="40%"  stop-color="#c8ffdc" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#c8ffdc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8b898"/>
+      <stop offset="55%"  stop-color="#a8987a"/>
+      <stop offset="100%" stop-color="#4a4032"/>
+    </linearGradient>
+    <linearGradient id="bezelInner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a3226"/>
+      <stop offset="100%" stop-color="#1a1510"/>
+    </linearGradient>
+    <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7ff09a" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#7ff09a" stop-opacity="1"/>
+      <stop offset="48%"  stop-color="#f5efe0" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#4a9c60" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="panelSeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#000000" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#4a9c60" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="scanlines" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="3" height="1.2" fill="#000000" fill-opacity="0.22"/>
+    </pattern>
+    <clipPath id="screenClip">
+      <rect x="46" y="32" width="268" height="126" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============ LEFT PANEL: DARK ROOM WITH CRT ============ -->
+  <rect x="0" y="0" width="360" height="200" fill="#0d1117"/>
+
+  <!-- Ambient green room glow radiating from the monitor -->
+  <ellipse cx="180" cy="98" rx="200" ry="110" fill="#4a9c60" opacity="0.13">
+    <animate attributeName="opacity" values="0.10;0.17;0.10" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Desk surface hint (subtle horizon under monitor) -->
+  <rect x="0" y="178" width="360" height="22" fill="#141821" opacity="0.85"/>
+  <line x1="0" y1="178" x2="360" y2="178" stroke="#4a9c60" stroke-width="0.4" opacity="0.35"/>
+
+  <!-- CRT monitor bezel (beige, 1991 vibe) -->
+  <rect x="28" y="18" width="304" height="162" rx="14" ry="14" fill="url(#bezel)" stroke="#2a2418" stroke-width="1.2"/>
+  <!-- Inner bezel recess around the screen -->
+  <rect x="40" y="26" width="280" height="138" rx="10" ry="10" fill="url(#bezelInner)"/>
+  <!-- Nameplate strip under screen -->
+  <rect x="152" y="168" width="56" height="6" rx="1.5" fill="#2a2418"/>
+  <text x="180" y="173" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="4" font-weight="700" fill="#c8b898" letter-spacing="0.5">TERM-386</text>
+  <!-- Power LED -->
+  <circle cx="310" cy="171" r="1.6" fill="#7ff09a">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="2.1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Screen: phosphor field -->
+  <rect x="46" y="32" width="268" height="126" rx="10" ry="10" fill="url(#phosphor)"/>
+
+  <!-- Screen contents clipped to the screen rectangle -->
+  <g clip-path="url(#screenClip)">
+    <!-- Post header -->
+    <g font-family="'Courier New', Courier, monospace" font-size="7.5" fill="#7ff09a">
+      <text x="54" y="44" opacity="0.85">From: torvalds@klaava.Helsinki.FI</text>
+      <text x="54" y="55" opacity="0.85">Newsgroups: comp.os.minix</text>
+      <text x="54" y="66" opacity="0.85">Date: 25 Aug 91 20:57:08 GMT</text>
+    </g>
+    <line x1="54" y1="72" x2="306" y2="72" stroke="#4a9c60" stroke-width="0.5" opacity="0.7"/>
+
+    <!-- Post body (bright phosphor for emphasis) -->
+    <g font-family="'Courier New', Courier, monospace" font-size="9" fill="#c8ffdc">
+      <text x="54" y="86">Hello everybody out there</text>
+      <text x="54" y="98">using minix -</text>
+    </g>
+    <g font-family="'Courier New', Courier, monospace" font-size="8" fill="#7ff09a" opacity="0.92">
+      <text x="54" y="114">I'm doing a (free) operating</text>
+      <text x="54" y="126">system (just a hobby, won't</text>
+      <text x="54" y="138">be big and professional like</text>
+      <text x="54" y="150">gnu) for 386(486) AT clones.</text>
+    </g>
+
+    <!-- Blinking cursor after last line -->
+    <rect x="203" y="143" width="6" height="8" fill="#c8ffdc">
+      <animate attributeName="opacity" values="0;0;1;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Small Tux penguin silhouette bottom-right of screen -->
+    <g transform="translate(292, 138)" opacity="0.7">
+      <!-- body -->
+      <ellipse cx="0" cy="6" rx="7" ry="9" fill="#0a1a10"/>
+      <!-- white belly -->
+      <ellipse cx="0" cy="8" rx="4.2" ry="6.2" fill="#e0ffe8" opacity="0.9"/>
+      <!-- head -->
+      <circle cx="0" cy="-3" r="5" fill="#0a1a10"/>
+      <!-- eye whites -->
+      <circle cx="-1.7" cy="-3.5" r="1.2" fill="#e0ffe8"/>
+      <circle cx="1.7" cy="-3.5" r="1.2" fill="#e0ffe8"/>
+      <!-- pupils -->
+      <circle cx="-1.7" cy="-3.2" r="0.6" fill="#0a1a10"/>
+      <circle cx="1.7" cy="-3.2" r="0.6" fill="#0a1a10"/>
+      <!-- beak -->
+      <path d="M -1.3 -1.4 L 1.3 -1.4 L 0 0.4 Z" fill="#f5c85a"/>
+      <!-- flippers -->
+      <ellipse cx="-6.5" cy="7" rx="1.4" ry="4" fill="#0a1a10" transform="rotate(-14 -6.5 7)"/>
+      <ellipse cx="6.5" cy="7" rx="1.4" ry="4" fill="#0a1a10" transform="rotate(14 6.5 7)"/>
+      <!-- feet -->
+      <ellipse cx="-2.6" cy="15.2" rx="2.4" ry="1.2" fill="#f5c85a"/>
+      <ellipse cx="2.6" cy="15.2" rx="2.4" ry="1.2" fill="#f5c85a"/>
+    </g>
+
+    <!-- Scanline bright sweep -->
+    <rect x="46" y="32" width="268" height="10" fill="#7ff09a" opacity="0.08">
+      <animate attributeName="y" values="32;158;32" dur="11s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Fixed scanline overlay across screen -->
+    <rect x="46" y="32" width="268" height="126" fill="url(#scanlines)"/>
+
+    <!-- Glass reflection -->
+    <rect x="46" y="32" width="268" height="126" fill="url(#screenGlare)"/>
+
+    <!-- Subtle phosphor flicker over whole screen -->
+    <rect x="46" y="32" width="268" height="126" fill="#7ff09a" opacity="0.02">
+      <animate attributeName="opacity" values="0.015;0.045;0.02;0.03;0.015" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Bezel edge highlight (outside clip) -->
+  <rect x="28" y="18" width="304" height="162" rx="14" ry="14" fill="none" stroke="#e0d4b0" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- Seam -->
+  <rect x="358" y="10" width="2" height="180" fill="url(#panelSeam)"/>
+
+  <!-- ============ RIGHT TEXT PANEL ============ -->
+  <rect x="360" y="0" width="440" height="200" fill="#0d1117"/>
+
+  <text x="386" y="66"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="34" font-weight="800" fill="#f5efe0" letter-spacing="1">
+    AUGUST 25, 2026
+  </text>
+
+  <rect x="386" y="76" width="390" height="3" fill="url(#underlineGrad)">
+    <animate attributeName="x" values="386;396;386" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="386" y="106"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="17" font-weight="700" letter-spacing="1.2">
+    <tspan fill="#7ff09a">LINUX</tspan><tspan fill="#f5efe0" opacity="0.75">&#160;·&#160;35 YEARS</tspan><tspan fill="#8a94a8" opacity="0.85">&#160;·&#160;SINCE 1991</tspan>
+  </text>
+
+  <text x="386" y="128"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-style="italic" fill="#ffb84d" letter-spacing="1" opacity="0.95">
+    TORVALDS · HELSINKI · comp.os.minix
+  </text>
+
+  <text x="386" y="146"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" fill="#7fd4b8" letter-spacing="1" opacity="0.9">
+    386 · MINIX · GNU · FREE SOFTWARE
+  </text>
+
+  <text x="386" y="178"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="12.5" font-style="italic" fill="#f5efe0" opacity="0.9">
+    &#8220;just a hobby, won&#8217;t be big and professional&#8230;&#8221;
+  </text>
+</svg>

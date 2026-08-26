@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 26, 2026 — Linux Announced — 35th Anniversary (August 25, 1991)
+
+<img src="./doodle-archive/2026/08/2026-08-26-060610.svg" width="800" alt="Daily doodle for August 25, 2026 — the 35th anniversary of Linus Torvalds announcing Linux on the comp.os.minix Usenet newsgroup. On the left half, a beige-bezelled CRT monitor glows green in a dark room: the Usenet post header (From: torvalds@klaava.Helsinki.FI, Newsgroups: comp.os.minix, Date: 25 Aug 91) and its famous opening lines are rendered in monospaced phosphor text, a soft scanline sweeps down the glass, a bright cursor blinks after the last line, and a small Tux penguin silhouette sits in the lower-right corner of the screen. On the right, a huge cream AUGUST 25, 2026 headline underlined by a green-to-cream sweep, a green LINUX · 35 YEARS subhead trailed by cream · SINCE 1991, an italic amber TORVALDS · HELSINKI · comp.os.minix tertiary, a dim cyan 386 · MINIX · GNU · FREE SOFTWARE roster, and a Georgia-italic 'just a hobby, won't be big and professional...' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the evening of 25 August 1991, a 21-year-old Helsinki computer-science student named Linus Torvalds posted a short note to the comp.os.minix Usenet newsgroup: "Hello everybody out there using minix — I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones." He asked what people liked and disliked about minix, so he could try to make his hobby project a little better. The kernel that grew out of that post now runs on essentially every supercomputer, most of the world's servers, three billion Android phones, and the machinery that serves this very GitHub page. It is safe to say the "just a hobby" prediction did not age well.
+
+The left half is a beige-bezelled CRT monitor sitting in a dark room, its phosphor screen glowing green: the Usenet post header and opening lines are rendered in period-correct monospaced text, a soft scanline sweeps down the glass, the cursor blinks after the last line, and a tiny Tux silhouette peeks from the lower-right corner as a wink to what came later. On the right, a large AUGUST 25, 2026 headline anchors a green LINUX · 35 YEARS subhead, an italic amber TORVALDS · HELSINKI · comp.os.minix tertiary, a dim cyan 386 · MINIX · GNU · FREE SOFTWARE roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 25, 2026 — Gossamer Condor — 49th Anniversary (August 23, 1977)
 
 <img src="./doodle-archive/2026/08/2026-08-25-060545.svg" width="800" alt="Daily doodle for August 23, 2026 — the 49th anniversary of the Gossamer Condor winning the Kremer Prize for the first sustained, controlled human-powered flight. On the left half, the Condor flies at dawn over the Central Valley: an enormous translucent single-wing spans most of the panel with delicate rib lines glowing in warm sunlight, the pilot silhouetted in a small transparent pod pedals a bicycle drivetrain, a slow pusher propeller spins behind, and a long horizontal stabilizer on a slender forward boom leads the aircraft. Low golden hills scroll below under a pale peach-to-blue dawn sky with a hazy sun. On the right, a huge cream AUGUST 23, 2026 headline underlined by a gold-to-amber sweep, a silver GOSSAMER CONDOR · 49 YEARS subhead trailed by cream · SINCE 1977, an italic amber MACCREADY · ALLEN · SHAFTER · KREMER PRIZE tertiary, a dim cyan MYLAR · ALUMINIUM · PIANO WIRE · 137 LB roster, and a Georgia-italic 'a bicycle that learned to fly.' caption at the base.">
