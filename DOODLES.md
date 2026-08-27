@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 27, 2026 — 19th Amendment Certified — 106th Anniversary (August 26, 1920)
+
+<img src="./doodle-archive/2026/08/2026-08-27-085814.svg" width="800" alt="Daily doodle for August 26, 2026 — the 106th anniversary of the Nineteenth Amendment being certified. On the left half, an aged parchment proclamation sits on a dark oak desk: the amendment's opening words in period type, a signature line where a fountain pen draws Bainbridge Colby's signature, and a deep purple wax seal stamped beside it with the year 1920. Above the parchment, a tricolor sash — suffragist purple, white, and gold — waves slowly with the words VOTES FOR WOMEN. On the right, a huge cream AUGUST 26, 2026 headline underlined by a purple-to-gold sweep, a purple 19TH AMENDMENT · 106 YEARS subhead trailed by cream · SINCE 1920, an italic amber STANTON · ANTHONY · CATT · PAUL · BURN tertiary, a dim cyan SENECA FALLS · TENNESSEE · CERTIFIED roster, and a Georgia-italic 'shall not be denied on account of sex.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 26 August 1920, U.S. Secretary of State Bainbridge Colby signed the proclamation certifying that Tennessee had become the thirty-sixth state to ratify the Nineteenth Amendment — the last one needed — and that "the right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of sex." Seventy-two years of organizing had led to that pen stroke: Seneca Falls in 1848, the split between the National and American associations, the state-by-state grind, the picketing of the Wilson White House, the hunger strikes. Tennessee itself came down to a single vote in the state house, cast by 24-year-old Harry Burn after his mother wrote him a letter telling him to "be a good boy." Congress made the day Women's Equality Day in 1971.
+
+The left half is the certified proclamation on parchment: a fountain pen lays down the signature line, a purple wax seal presses in beside it, and a tricolor VOTES FOR WOMEN sash — the suffragist purple, white, and gold — waves slowly above. On the right, a large cream AUGUST 26, 2026 headline anchors a purple 19TH AMENDMENT · 106 YEARS subhead, an italic amber STANTON · ANTHONY · CATT · PAUL · BURN tertiary, a dim SENECA FALLS · TENNESSEE · CERTIFIED roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 26, 2026 — Linux Announced — 35th Anniversary (August 25, 1991)
 
 <img src="./doodle-archive/2026/08/2026-08-26-060610.svg" width="800" alt="Daily doodle for August 25, 2026 — the 35th anniversary of Linus Torvalds announcing Linux on the comp.os.minix Usenet newsgroup. On the left half, a beige-bezelled CRT monitor glows green in a dark room: the Usenet post header (From: torvalds@klaava.Helsinki.FI, Newsgroups: comp.os.minix, Date: 25 Aug 91) and its famous opening lines are rendered in monospaced phosphor text, a soft scanline sweeps down the glass, a bright cursor blinks after the last line, and a small Tux penguin silhouette sits in the lower-right corner of the screen. On the right, a huge cream AUGUST 25, 2026 headline underlined by a green-to-cream sweep, a green LINUX · 35 YEARS subhead trailed by cream · SINCE 1991, an italic amber TORVALDS · HELSINKI · comp.os.minix tertiary, a dim cyan 386 · MINIX · GNU · FREE SOFTWARE roster, and a Georgia-italic 'just a hobby, won't be big and professional...' caption at the base.">

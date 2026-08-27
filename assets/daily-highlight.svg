@@ -1,263 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: 19th Amendment Certified — 106th Anniversary (August 26, 1920) -->
+<!-- theme: Krakatoa — 143rd Anniversary (August 27, 1883) -->
 <!-- about:
-On 26 August 1920, U.S. Secretary of State Bainbridge Colby signed the proclamation certifying that Tennessee had become the thirty-sixth state to ratify the Nineteenth Amendment — the last one needed — and that "the right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of sex." Seventy-two years of organizing had led to that pen stroke: Seneca Falls in 1848, the split between the National and American associations, the state-by-state grind, the picketing of the Wilson White House, the hunger strikes. Tennessee itself came down to a single vote in the state house, cast by 24-year-old Harry Burn after his mother wrote him a letter telling him to "be a good boy." Congress made the day Women's Equality Day in 1971.
+On the morning of 27 August 1883, four paroxysmal explosions tore the volcanic island of Krakatoa apart in the Sunda Strait between Java and Sumatra. The largest — at 10:02 local time — is among the loudest sounds ever recorded in human history: a sharp report heard 3,000 miles away on Rodrigues in the Indian Ocean, an atmospheric pressure wave that circled the Earth four times, and tsunamis over 30 metres tall that killed more than 36,000 people along the strait. Ash injected into the stratosphere cooled global temperatures for years and painted sunsets a strange fire-red as far away as Norway — the sky Edvard Munch would later remember in "The Scream." When it was over, two-thirds of the island had vanished beneath the sea; a new cone, Anak Krakatoa — the child of Krakatoa — began growing from the caldera forty-four years later.
 
-The left half is the certified proclamation on parchment: a fountain pen lays down the signature line, a purple wax seal presses in beside it, and a tricolor VOTES FOR WOMEN sash — the suffragist purple, white, and gold — waves slowly above. On the right, a large cream AUGUST 26, 2026 headline anchors a purple 19TH AMENDMENT · 106 YEARS subhead, an italic amber STANTON · ANTHONY · CATT · PAUL · BURN tertiary, a dim SENECA FALLS · TENNESSEE · CERTIFIED roster, and a Georgia-italic caption at the base.
+The left half is the eruption itself: a dark ash column boils skyward from a glowing vent between the shattered island silhouettes, embers stream upward, and pressure waves ring outward across a blood-red sky. On the right, a large cream AUGUST 27, 2026 headline anchors an ember KRAKATOA · 143 YEARS subhead, an italic amber SUNDA STRAIT · JAVA · SUMATRA · RODRIGUES tertiary, a dim ash-grey CALDERA · PYROCLASTIC · 36,000 LOST roster, and a Georgia-italic caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 26, 2026 — the 106th anniversary of the Nineteenth Amendment being certified. On the left half, an aged parchment proclamation sits on a dark oak desk: the amendment's opening words in period type, a signature line where a fountain pen draws Bainbridge Colby's signature, and a deep purple wax seal stamped beside it with the year 1920. Above the parchment, a tricolor sash — suffragist purple, white, and gold — waves slowly with the words VOTES FOR WOMEN. On the right, a huge cream AUGUST 26, 2026 headline underlined by a purple-to-gold sweep, a purple 19TH AMENDMENT · 106 YEARS subhead trailed by cream · SINCE 1920, an italic amber STANTON · ANTHONY · CATT · PAUL · BURN tertiary, a dim cyan SENECA FALLS · TENNESSEE · CERTIFIED roster, and a Georgia-italic 'shall not be denied on account of sex.' caption at the base.">
+     aria-label="Daily doodle for August 27, 2026 — the 143rd anniversary of the paroxysmal eruption of Krakatoa. On the left half, a massive dark ash column rises from a glowing red-orange vent between the shattered silhouettes of Krakatoa's three cones in the Sunda Strait; embers rise upward, concentric pressure-wave rings expand across a blood-red sky, and a dark ocean rolls at the base. On the right, a huge cream AUGUST 27, 2026 headline underlined by an ember-to-ash sweep, an ember KRAKATOA · 143 YEARS subhead trailed by cream · SINCE 1883, an italic amber SUNDA STRAIT · JAVA · SUMATRA · RODRIGUES tertiary, a dim ash-grey CALDERA · PYROCLASTIC · 36,000 LOST roster, and a Georgia-italic 'the sound heard around the world.' caption at the base.">
   <defs>
-    <linearGradient id="parchment" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#f0e2b6"/>
-      <stop offset="50%"  stop-color="#e6d29a"/>
-      <stop offset="100%" stop-color="#c9b078"/>
+    <!-- Blood-red sky, night at top -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a0508"/>
+      <stop offset="35%"  stop-color="#5a1208"/>
+      <stop offset="70%"  stop-color="#a8280e"/>
+      <stop offset="100%" stop-color="#d94a1a"/>
     </linearGradient>
-    <radialGradient id="parchmentShade" cx="0.5" cy="0.5" r="0.7">
-      <stop offset="0%"   stop-color="#000000" stop-opacity="0"/>
-      <stop offset="80%"  stop-color="#000000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#4a3818" stop-opacity="0.42"/>
+    <!-- Ash column: dark base, warm inner glow -->
+    <radialGradient id="ashColumn" cx="0.5" cy="0.95" r="0.9">
+      <stop offset="0%"   stop-color="#ffe08a" stop-opacity="0.95"/>
+      <stop offset="18%"  stop-color="#ff8a1a" stop-opacity="0.85"/>
+      <stop offset="42%"  stop-color="#8a2a10" stop-opacity="0.85"/>
+      <stop offset="75%"  stop-color="#2a1810" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="deskWood" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#1a1108"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <!-- Vent glow -->
+    <radialGradient id="ventGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ffefb0"/>
+      <stop offset="35%"  stop-color="#ff8a1a"/>
+      <stop offset="75%"  stop-color="#8a1a08" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8a1a08" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Ocean -->
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2a0a10"/>
+      <stop offset="100%" stop-color="#080204"/>
     </linearGradient>
-    <linearGradient id="sashPurple" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#5a1e75"/>
-      <stop offset="50%"  stop-color="#7d3c98"/>
-      <stop offset="100%" stop-color="#5a1e75"/>
-    </linearGradient>
-    <linearGradient id="sashGold" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#b8860b"/>
-      <stop offset="50%"  stop-color="#f5c430"/>
-      <stop offset="100%" stop-color="#b8860b"/>
-    </linearGradient>
-    <linearGradient id="sashWhite" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#e8ddc8"/>
-      <stop offset="50%"  stop-color="#f5f0e6"/>
-      <stop offset="100%" stop-color="#e8ddc8"/>
-    </linearGradient>
-    <linearGradient id="wax" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#9c3ab8"/>
-      <stop offset="55%"  stop-color="#5a1e75"/>
-      <stop offset="100%" stop-color="#2a0d38"/>
-    </linearGradient>
-    <linearGradient id="penBarrel" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#1a0a10"/>
-      <stop offset="50%"  stop-color="#3a1520"/>
-      <stop offset="100%" stop-color="#1a0a10"/>
-    </linearGradient>
-    <linearGradient id="penNib" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#d4a017"/>
-      <stop offset="100%" stop-color="#8a6810"/>
-    </linearGradient>
+    <!-- Underline sweep -->
     <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#7d3c98" stop-opacity="0"/>
-      <stop offset="18%"  stop-color="#7d3c98" stop-opacity="1"/>
-      <stop offset="48%"  stop-color="#f5efe0" stop-opacity="1"/>
-      <stop offset="78%"  stop-color="#d4a017" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="#ff5a1a" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#ff5a1a" stop-opacity="1"/>
+      <stop offset="48%"  stop-color="#ffd97a" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#a8988a" stop-opacity="1"/>
       <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="panelSeam" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#000000" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#7d3c98" stop-opacity="0.55"/>
+      <stop offset="50%"  stop-color="#ff5a1a" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </linearGradient>
-    <filter id="parchmentGrain" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
-      <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.10  0 0 0 0.18 0"/>
+    <!-- Turbulent ash texture -->
+    <filter id="ashTurb" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018 0.032" numOctaves="3" seed="7">
+        <animate attributeName="baseFrequency" values="0.018 0.032;0.024 0.028;0.018 0.032" dur="13s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="18"/>
+    </filter>
+    <!-- Ocean ripple -->
+    <filter id="oceanRipple" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.02" numOctaves="1" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.4  0 0 0 0 0.15  0 0 0 0 0.10  0 0 0 0.35 0"/>
       <feComposite in2="SourceGraphic" operator="in"/>
     </filter>
-    <clipPath id="sigClip">
-      <rect x="118" y="120" width="150" height="18"/>
+    <clipPath id="leftPanel">
+      <rect x="0" y="0" width="360" height="200"/>
     </clipPath>
   </defs>
 
-  <!-- ============ LEFT PANEL: DESK WITH PROCLAMATION ============ -->
-  <rect x="0" y="0" width="360" height="200" fill="url(#deskWood)"/>
+  <!-- ============ LEFT PANEL: KRAKATOA ============ -->
+  <g clip-path="url(#leftPanel)">
+    <!-- Sky -->
+    <rect x="0" y="0" width="360" height="200" fill="url(#sky)"/>
 
-  <!-- Warm lamp glow radiating from upper-left, subtle pulse -->
-  <ellipse cx="120" cy="60" rx="220" ry="140" fill="#d4a017" opacity="0.08">
-    <animate attributeName="opacity" values="0.06;0.11;0.06" dur="13s" repeatCount="indefinite"/>
-  </ellipse>
+    <!-- Slow sky pulse (atmospheric heat) -->
+    <rect x="0" y="0" width="360" height="200" fill="#ff5a1a" opacity="0.06">
+      <animate attributeName="opacity" values="0.04;0.12;0.04" dur="13s" repeatCount="indefinite"/>
+    </rect>
 
-  <!-- ===== Tricolor sash: VOTES FOR WOMEN, waving above the parchment ===== -->
-  <g transform="translate(0, 14)">
-    <!-- Whole sash gently sways as a group -->
-    <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                      values="0 14; 0 12; 0 15; 0 13; 0 14" dur="11s" repeatCount="indefinite"/>
-    <!-- Purple band -->
-    <path d="M 20 6 Q 90 -2 180 6 T 340 6 L 340 14 Q 260 22 180 14 T 20 14 Z" fill="url(#sashPurple)"/>
-    <!-- White band -->
-    <path d="M 20 14 Q 90 6 180 14 T 340 14 L 340 22 Q 260 30 180 22 T 20 22 Z" fill="url(#sashWhite)"/>
-    <!-- Gold band -->
-    <path d="M 20 22 Q 90 14 180 22 T 340 22 L 340 30 Q 260 38 180 30 T 20 30 Z" fill="url(#sashGold)"/>
-    <!-- Text overlaid on the white band -->
-    <text x="180" y="20" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="9" font-weight="700" fill="#4a1a5c" letter-spacing="3.5">
-      VOTES FOR WOMEN
-    </text>
-    <!-- Frilled edge highlight -->
-    <path d="M 20 6 Q 90 -2 180 6 T 340 6" fill="none" stroke="#f5f0e6" stroke-width="0.35" opacity="0.65"/>
-  </g>
-
-  <!-- ===== Parchment proclamation (with a slight tilt) ===== -->
-  <g transform="translate(30, 62) rotate(-1.2)">
-    <!-- Parchment sheet with torn/wavy edge -->
-    <path d="M 4 4
-             Q 100 -2 200 4 T 300 6
-             L 302 108 Q 200 116 100 110 T 2 108
-             Z"
-          fill="url(#parchment)" stroke="#8a6a30" stroke-width="0.6"/>
-    <!-- Grain overlay -->
-    <path d="M 4 4
-             Q 100 -2 200 4 T 300 6
-             L 302 108 Q 200 116 100 110 T 2 108
-             Z"
-          fill="#000" filter="url(#parchmentGrain)" opacity="0.9"/>
-    <!-- Vignette shading -->
-    <path d="M 4 4
-             Q 100 -2 200 4 T 300 6
-             L 302 108 Q 200 116 100 110 T 2 108
-             Z"
-          fill="url(#parchmentShade)"/>
-
-    <!-- Heading: AMENDMENT XIX -->
-    <text x="152" y="24" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="13" font-weight="700" fill="#3a2410" letter-spacing="3">
-      AMENDMENT · XIX
-    </text>
-    <line x1="70" y1="30" x2="234" y2="30" stroke="#5a3a18" stroke-width="0.5" opacity="0.7"/>
-
-    <!-- Body text (period-styled short lines) -->
-    <g font-family="Georgia, 'Times New Roman', serif" font-size="6.5" fill="#3a2410">
-      <text x="24" y="44">The right of citizens of the United States</text>
-      <text x="24" y="53">to vote shall not be denied or abridged</text>
-      <text x="24" y="62">by the United States or by any State</text>
-      <text x="24" y="71" font-style="italic">on account of sex.</text>
+    <!-- Concentric pressure-wave rings emanating from vent (163, 148) -->
+    <g fill="none" stroke="#ffd97a" stroke-width="0.8">
+      <circle cx="163" cy="148" r="10" opacity="0">
+        <animate attributeName="r" values="10;340" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.55;0" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="163" cy="148" r="10" opacity="0">
+        <animate attributeName="r" values="10;340" dur="11s" begin="3.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.55;0" dur="11s" begin="3.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="163" cy="148" r="10" opacity="0">
+        <animate attributeName="r" values="10;340" dur="11s" begin="7.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.55;0" dur="11s" begin="7.2s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
-    <!-- Signature baseline (very faint pre-printed line) -->
-    <line x1="90" y1="80" x2="220" y2="80" stroke="#5a3a18" stroke-width="0.4" opacity="0.6"/>
-    <text x="90" y="88" font-family="Georgia, 'Times New Roman', serif"
-          font-size="4.5" fill="#5a3a18" opacity="0.75" letter-spacing="0.5">
-      Bainbridge Colby, Secretary of State
-    </text>
-    <text x="90" y="94" font-family="Georgia, 'Times New Roman', serif"
-          font-size="4.5" fill="#5a3a18" opacity="0.75" letter-spacing="0.5">
-      Washington · 26 August 1920
-    </text>
-  </g>
+    <!-- Distant faint ashfall -->
+    <g fill="#c8b8a8" opacity="0.35">
+      <circle cx="60" cy="30" r="0.6"><animate attributeName="cy" values="30;190" dur="17s" repeatCount="indefinite"/></circle>
+      <circle cx="98" cy="10" r="0.5"><animate attributeName="cy" values="10;190" dur="19s" repeatCount="indefinite"/></circle>
+      <circle cx="270" cy="20" r="0.7"><animate attributeName="cy" values="20;190" dur="23s" repeatCount="indefinite"/></circle>
+      <circle cx="310" cy="50" r="0.5"><animate attributeName="cy" values="50;190" dur="17s" begin="3s" repeatCount="indefinite"/></circle>
+      <circle cx="340" cy="80" r="0.6"><animate attributeName="cy" values="80;190" dur="19s" begin="5s" repeatCount="indefinite"/></circle>
+      <circle cx="30" cy="60" r="0.5"><animate attributeName="cy" values="60;190" dur="23s" begin="2s" repeatCount="indefinite"/></circle>
+      <circle cx="220" cy="15" r="0.6"><animate attributeName="cy" values="15;190" dur="21s" begin="4s" repeatCount="indefinite"/></circle>
+    </g>
 
-  <!-- ===== Animated signature over the signature line (in unrotated coords) ===== -->
-  <g clip-path="url(#sigClip)">
-    <!-- Signature: 'Bainbridge Colby' as a stylized script, drawn on with stroke-dashoffset -->
-    <path id="signature"
-          d="M 122 137
-             c 3 -6 5 -6 6 -1  c 1 5 -1 8 -3 6  c -2 -2 1 -5 4 -5
-             m 3 -1  c -1 4 1 6 3 4  c 2 -2 1 -6 -1 -6  c -2 0 -3 3 -1 5
-             m 6 3  c 0 -5 3 -8 4 -3  c 1 5 -2 6 -3 4
-             m 6 -2  c 2 -6 5 -6 5 0  c 0 6 -3 6 -4 3
-             m 7 -3  c 0 6 3 6 4 1  c 1 -5 -2 -6 -3 -3
-             m 6 0  c -1 5 2 6 4 3  c 2 -3 0 -6 -2 -4
-             m 6 -1  c 1 4 3 5 4 2  c 1 -3 -1 -5 -2 -3
-             m 7 4  c 2 -8 6 -8 5 0  c -1 8 -6 3 -3 -2
-             m 5 -1  c 3 -6 6 -5 5 1  c -1 6 -5 4 -3 -1
-             m 6 -1  c 2 -5 6 -4 5 2  c -1 6 -5 3 -3 -1
-             m 6 -2  c 1 6 4 6 5 1  c 1 -5 -2 -6 -3 -3
-             m 6 1  c 2 -6 6 -6 5 1  c -1 7 -5 3 -3 -2"
-          fill="none" stroke="#0a0410" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"
-          stroke-dasharray="260" stroke-dashoffset="0">
-      <animate attributeName="stroke-dashoffset" values="260;260;0;0;0" keyTimes="0;0.15;0.55;0.92;1" dur="13s" repeatCount="indefinite"/>
-    </path>
-  </g>
+    <!-- Ash column: massive plume rising from vent -->
+    <g filter="url(#ashTurb)">
+      <path d="M 130 155
+               Q 100 110 108 70
+               Q 115 30 145 8
+               Q 175 -6 210 8
+               Q 240 30 232 70
+               Q 220 110 200 155 Z"
+            fill="url(#ashColumn)" opacity="0.95">
+        <animate attributeName="opacity" values="0.85;0.98;0.85" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <!-- Second column layer for depth -->
+      <path d="M 145 155
+               Q 130 115 138 85
+               Q 148 50 170 35
+               Q 195 25 218 40
+               Q 235 65 225 100
+               Q 215 130 200 155 Z"
+            fill="url(#ashColumn)" opacity="0.75">
+        <animate attributeName="opacity" values="0.65;0.85;0.65" dur="11s" repeatCount="indefinite"/>
+      </path>
+    </g>
 
-  <!-- ===== Wax seal (impresses in with a pulse after signature) ===== -->
-  <g transform="translate(258, 138)">
-    <!-- Outer wax splat -->
-    <path d="M 0 0
-             m -14 -1
-             q 2 -10 10 -10
-             q 6 0 9 4
-             q 8 -3 10 6
-             q 2 8 -4 12
-             q 3 8 -6 9
-             q -8 1 -13 -3
-             q -10 2 -10 -8
-             q 0 -6 4 -10 Z"
-          fill="url(#wax)" stroke="#2a0d38" stroke-width="0.5"/>
-    <!-- Inner ring -->
-    <circle cx="0" cy="0" r="7.5" fill="none" stroke="#f5c430" stroke-width="0.5" opacity="0.75"/>
-    <!-- Star emblem -->
-    <path d="M 0 -5 L 1.4 -1.5 L 5 -1.5 L 2.1 0.8 L 3.2 4.3 L 0 2.2 L -3.2 4.3 L -2.1 0.8 L -5 -1.5 L -1.4 -1.5 Z"
-          fill="#f5c430" opacity="0.9"/>
-    <!-- Year text below star -->
-    <text x="0" y="9" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="4" font-weight="700" fill="#f5c430" letter-spacing="0.5">1920</text>
-    <!-- Impress pulse -->
-    <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                      values="258 138; 258 138; 258 138; 258 137.2; 258 138; 258 138"
-                      keyTimes="0;0.55;0.62;0.66;0.72;1" dur="13s" repeatCount="indefinite"/>
-    <!-- Subtle sheen -->
-    <ellipse cx="-3" cy="-4" rx="3.5" ry="1.6" fill="#f5f0e6" opacity="0.22"/>
-  </g>
+    <!-- Rising embers -->
+    <g fill="#ffb04a">
+      <circle cx="155" cy="140" r="1.2">
+        <animate attributeName="cy" values="140;20" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="170" cy="135" r="0.9" fill="#ffe08a">
+        <animate attributeName="cy" values="135;10" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="180" cy="145" r="1.1">
+        <animate attributeName="cy" values="145;20" dur="8s" begin="1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="8s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="145" cy="150" r="0.8">
+        <animate attributeName="cy" values="150;30" dur="11s" begin="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="11s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="190" cy="140" r="1.0" fill="#ff7a2a">
+        <animate attributeName="cy" values="140;15" dur="9s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="9s" begin="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="165" cy="148" r="1.3">
+        <animate attributeName="cy" values="148;25" dur="8s" begin="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="8s" begin="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="175" cy="150" r="0.9" fill="#ffe08a">
+        <animate attributeName="cy" values="150;20" dur="10s" begin="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="10s" begin="2.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
 
-  <!-- ===== Fountain pen (glides across, hovers at signature line) ===== -->
-  <g transform="translate(118 132)">
-    <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                      values="60 90; 118 132; 258 130; 258 130; 300 100; 60 90"
-                      keyTimes="0;0.15;0.55;0.62;0.75;1" dur="13s" repeatCount="indefinite"/>
-    <g transform="rotate(-38)">
-      <!-- Pen barrel -->
-      <rect x="0" y="-2.6" width="46" height="5.2" rx="2.4" fill="url(#penBarrel)" stroke="#0a0410" stroke-width="0.3"/>
-      <!-- Cap ring -->
-      <rect x="24" y="-3" width="3" height="6" fill="#d4a017"/>
-      <!-- Clip -->
-      <rect x="28" y="-4" width="10" height="1.4" fill="#d4a017"/>
-      <!-- Nib holder -->
-      <path d="M 0 -2.6 L -6 -1.3 L -6 1.3 L 0 2.6 Z" fill="#2a1620"/>
-      <!-- Gold nib -->
-      <path d="M -6 -1.3 L -14 0 L -6 1.3 Z" fill="url(#penNib)" stroke="#5a3a08" stroke-width="0.3"/>
-      <!-- Nib slit -->
-      <line x1="-6" y1="0" x2="-13" y2="0" stroke="#3a2408" stroke-width="0.35"/>
+    <!-- Ocean -->
+    <rect x="0" y="155" width="360" height="45" fill="url(#ocean)"/>
+    <!-- Ocean texture ripples -->
+    <rect x="0" y="155" width="360" height="45" fill="#8a3a2a" filter="url(#oceanRipple)" opacity="0.35"/>
+
+    <!-- Ocean reflection of eruption glow -->
+    <ellipse cx="163" cy="158" rx="70" ry="4" fill="#ff5a1a" opacity="0.55">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="163" cy="163" rx="55" ry="3" fill="#ffb04a" opacity="0.35">
+      <animate attributeName="opacity" values="0.25;0.55;0.25" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Island silhouettes (three cones: Perbuwatan, Danan, Rakata, in the Sunda Strait) -->
+    <!-- Left small cone -->
+    <path d="M 90 158 L 120 148 L 138 158 Z" fill="#0d1117"/>
+    <!-- Center main cone (partially collapsed / erupting) -->
+    <path d="M 130 158 L 145 138 L 158 128 L 175 132 L 190 145 L 205 158 Z" fill="#0d1117"/>
+    <!-- Right cone (Rakata remnant) -->
+    <path d="M 200 158 L 220 145 L 245 158 Z" fill="#0d1117"/>
+
+    <!-- Vent glow at center of main cone -->
+    <ellipse cx="163" cy="148" rx="18" ry="9" fill="url(#ventGlow)">
+      <animate attributeName="rx" values="16;22;16" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="163" cy="148" rx="8" ry="4" fill="#ffefb0">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Lava streaks down center cone -->
+    <path d="M 158 135 Q 155 145 152 158" fill="none" stroke="#ff7a2a" stroke-width="1.2" opacity="0.85"/>
+    <path d="M 170 135 Q 173 145 176 158" fill="none" stroke="#ff5a1a" stroke-width="1.0" opacity="0.75"/>
+
+    <!-- Distant horizon light (Rodrigues direction — the sound traveled here) -->
+    <line x1="0" y1="156" x2="360" y2="156" stroke="#d94a1a" stroke-width="0.3" opacity="0.55"/>
+
+    <!-- Tiny fleeing ship silhouette on distant water -->
+    <g transform="translate(300, 160)" opacity="0.7">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="300 160; 328 160" dur="23s" repeatCount="indefinite"/>
+      <path d="M -6 0 L 6 0 L 4 3 L -4 3 Z" fill="#0d1117"/>
+      <line x1="0" y1="0" x2="0" y2="-6" stroke="#0d1117" stroke-width="0.5"/>
+      <path d="M 0 -6 L 4 -1 L 0 -1 Z" fill="#0d1117"/>
     </g>
   </g>
-
-  <!-- ===== Small suffragette silhouette marchers on lower desk (subtle) ===== -->
-  <g opacity="0.35" transform="translate(20, 188)">
-    <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                      values="20 188; 30 188; 20 188" dur="17s" repeatCount="indefinite"/>
-    <g fill="#3a1a48">
-      <!-- Silhouette figure 1 (holding a small banner pole) -->
-      <path d="M 0 0 L 0 -8 L -1 -10 L 1 -10 L 0 -8 M -2 -2 L 2 -2 L 2 -6 L -2 -6 Z"/>
-      <circle cx="0" cy="-11.5" r="1.4"/>
-      <rect x="2" y="-14" width="0.5" height="14"/>
-      <rect x="2.5" y="-14" width="6" height="3" fill="#7d3c98" opacity="0.7"/>
-      <!-- figure 2 -->
-      <g transform="translate(10 0)">
-        <path d="M 0 0 L 0 -8 L -1 -10 L 1 -10 L 0 -8 M -2 -2 L 2 -2 L 2 -6 L -2 -6 Z"/>
-        <circle cx="0" cy="-11.5" r="1.4"/>
-      </g>
-      <!-- figure 3 -->
-      <g transform="translate(20 0)">
-        <path d="M 0 0 L 0 -8 L -1 -10 L 1 -10 L 0 -8 M -2 -2 L 2 -2 L 2 -6 L -2 -6 Z"/>
-        <circle cx="0" cy="-11.5" r="1.4"/>
-        <rect x="2" y="-14" width="0.5" height="14"/>
-        <rect x="2.5" y="-14" width="6" height="3" fill="#d4a017" opacity="0.7"/>
-      </g>
-      <!-- figure 4 -->
-      <g transform="translate(30 0)">
-        <path d="M 0 0 L 0 -8 L -1 -10 L 1 -10 L 0 -8 M -2 -2 L 2 -2 L 2 -6 L -2 -6 Z"/>
-        <circle cx="0" cy="-11.5" r="1.4"/>
-      </g>
-    </g>
-  </g>
-
-  <!-- Desk edge highlight -->
-  <line x1="0" y1="178" x2="360" y2="178" stroke="#d4a017" stroke-width="0.35" opacity="0.35"/>
 
   <!-- Seam -->
   <rect x="358" y="10" width="2" height="180" fill="url(#panelSeam)"/>
@@ -265,15 +210,15 @@ The left half is the certified proclamation on parchment: a fountain pen lays do
   <!-- ============ RIGHT TEXT PANEL ============ -->
   <rect x="360" y="0" width="440" height="200" fill="#0d1117"/>
 
-  <!-- Faint tricolor accent on right edge (vertical) -->
-  <rect x="792" y="20" width="4" height="52" fill="#7d3c98" opacity="0.85"/>
-  <rect x="792" y="72" width="4" height="52" fill="#f5f0e6" opacity="0.85"/>
-  <rect x="792" y="124" width="4" height="52" fill="#d4a017" opacity="0.85"/>
+  <!-- Faint ember accent on right edge (vertical) -->
+  <rect x="792" y="20" width="4" height="52" fill="#ff5a1a" opacity="0.85"/>
+  <rect x="792" y="72" width="4" height="52" fill="#ffd97a" opacity="0.85"/>
+  <rect x="792" y="124" width="4" height="52" fill="#a8988a" opacity="0.85"/>
 
   <text x="386" y="66"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="34" font-weight="800" fill="#f5efe0" letter-spacing="1">
-    AUGUST 26, 2026
+    AUGUST 27, 2026
   </text>
 
   <rect x="386" y="76" width="390" height="3" fill="url(#underlineGrad)">
@@ -283,24 +228,24 @@ The left half is the certified proclamation on parchment: a fountain pen lays do
   <text x="386" y="106"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="17" font-weight="700" letter-spacing="1.2">
-    <tspan fill="#c88ce0">19TH AMENDMENT</tspan><tspan fill="#f5efe0" opacity="0.75">&#160;·&#160;106 YEARS</tspan><tspan fill="#8a94a8" opacity="0.85">&#160;·&#160;SINCE 1920</tspan>
+    <tspan fill="#ff7a2a">KRAKATOA</tspan><tspan fill="#f5efe0" opacity="0.75">&#160;·&#160;143 YEARS</tspan><tspan fill="#8a94a8" opacity="0.85">&#160;·&#160;SINCE 1883</tspan>
   </text>
 
   <text x="386" y="128"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="10.5" font-style="italic" fill="#f5c430" letter-spacing="1" opacity="0.95">
-    STANTON · ANTHONY · CATT · PAUL · BURN
+        font-size="10.5" font-style="italic" fill="#ffd97a" letter-spacing="1" opacity="0.95">
+    SUNDA STRAIT · JAVA · SUMATRA · RODRIGUES
   </text>
 
   <text x="386" y="146"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="10.5" fill="#8ac8b8" letter-spacing="1" opacity="0.9">
-    SENECA FALLS · TENNESSEE · CERTIFIED
+        font-size="10.5" fill="#a8988a" letter-spacing="1" opacity="0.9">
+    CALDERA · PYROCLASTIC · 36,000 LOST
   </text>
 
   <text x="386" y="178"
         font-family="Georgia, 'Times New Roman', serif"
         font-size="12.5" font-style="italic" fill="#f5efe0" opacity="0.9">
-    &#8220;shall not be denied on account of sex.&#8221;
+    &#8220;the sound heard around the world.&#8221;
   </text>
 </svg>
