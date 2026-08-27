@@ -10,6 +10,14 @@ Captions carry each day's headline numbers so the gallery can be skimmed without
 
 <!-- STATS-GALLERY:START -->
 
+## August 26, 2026 · 06:17 UTC
+
+<img src="./stats-archive/2026/08/2026-08-26-061711.svg" width="960" alt="Live GitHub stats card for August 26, 2026">
+
+PRs Merged 86 (7 Days) · Active Repos 59 (1 Year) · My Issues Closed 67 (1 Year)
+
+---
+
 ## August 25, 2026 · 06:14 UTC
 
 <img src="./stats-archive/2026/08/2026-08-25-061404.svg" width="960" alt="Live GitHub stats card for August 25, 2026">

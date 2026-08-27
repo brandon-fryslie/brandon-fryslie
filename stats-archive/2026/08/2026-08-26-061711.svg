@@ -1,0 +1,251 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-08-26: 6 ranked horizontal bars show the top active repositories by commit count, with oscilla-animator-v2 dominating at 1708 commits; a 7-day vertical sparkline shows recent contribution rhythm behind 86 PRs merged this week; a grid of 67 dots represents each of the year's closed issues.">
+<defs>
+<style>text{font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;}</style>
+
+<linearGradient id="gRepo" x1="0" x2="1" y1="0" y2="0">
+  <stop offset="0" stop-color="#26a641">
+    <animate attributeName="stop-color" values="#26a641;#39d353;#26a641" dur="11s" repeatCount="indefinite"/>
+  </stop>
+  <stop offset="1" stop-color="#7ff5b3">
+    <animate attributeName="stop-color" values="#7ff5b3;#a4f0c6;#7ff5b3" dur="11s" repeatCount="indefinite"/>
+  </stop>
+</linearGradient>
+
+<linearGradient id="gPr" x1="0" x2="0" y1="1" y2="0">
+  <stop offset="0" stop-color="#be185d"/>
+  <stop offset="1" stop-color="#f472b6">
+    <animate attributeName="stop-color" values="#f472b6;#f9a8d4;#f472b6" dur="7s" repeatCount="indefinite"/>
+  </stop>
+</linearGradient>
+
+<radialGradient id="gIssue" cx="0.35" cy="0.35" r="0.75">
+  <stop offset="0" stop-color="#fed7aa"/>
+  <stop offset="0.6" stop-color="#fb923c"/>
+  <stop offset="1" stop-color="#c2410c"/>
+</radialGradient>
+
+<filter id="glowGreen" x="-40%" y="-40%" width="180%" height="180%">
+  <feGaussianBlur stdDeviation="1.5" result="b">
+    <animate attributeName="stdDeviation" values="1.2;2.6;1.2" dur="13s" repeatCount="indefinite"/>
+  </feGaussianBlur>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+
+<filter id="glowPink" x="-40%" y="-40%" width="180%" height="180%">
+  <feGaussianBlur stdDeviation="1.5" result="b">
+    <animate attributeName="stdDeviation" values="1.2;2.8;1.2" dur="11s" repeatCount="indefinite"/>
+  </feGaussianBlur>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+
+<filter id="glowOrange" x="-40%" y="-40%" width="180%" height="180%">
+  <feGaussianBlur stdDeviation="1.5" result="b">
+    <animate attributeName="stdDeviation" values="1.2;2.8;1.2" dur="17s" repeatCount="indefinite"/>
+  </feGaussianBlur>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+
+<linearGradient id="gShimmer" x1="0" x2="1" y1="0" y2="0">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+  <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.18"/>
+  <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+
+<clipPath id="clipRepoBars">
+  <rect x="200" y="112" width="500" height="132"/>
+</clipPath>
+</defs>
+
+<rect width="800" height="400" fill="#0d1117"/>
+
+<!-- HEADER -->
+<text x="24" y="26" font-size="12" font-weight="700" letter-spacing="1.6" fill="#e6edf3">LIVE GITHUB STATS</text>
+<text x="776" y="26" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-08-26</text>
+<line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+
+<!-- BAND 1: ACTIVE REPOS (6 ranked bars, widths ARE the commit counts, max 1708 -> 500px) -->
+<text x="24" y="62" font-size="9" letter-spacing="1.5" fill="#6e7681">MOST ACTIVE REPOSITORIES · TOP 6 BY COMMITS</text>
+<text x="24" y="80" font-size="13" font-weight="600" fill="#c9d1d9">Active Repos</text>
+<text x="24" y="94" font-size="10" fill="#8b949e">1 Year</text>
+<text x="776" y="90" text-anchor="end" font-size="36" font-weight="700" fill="#39d353" filter="url(#glowGreen)">59</text>
+
+<text x="190" y="124" text-anchor="end" font-size="11" fill="#c9d1d9">oscilla-animator-v2</text>
+<rect x="200" y="112" width="500" height="16" rx="2" fill="url(#gRepo)">
+  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="0s" repeatCount="indefinite"/>
+</rect>
+<text x="708" y="124" font-size="12" font-weight="700" fill="#e6edf3">1708</text>
+
+<text x="190" y="146" text-anchor="end" font-size="11" fill="#c9d1d9">cc-dump</text>
+<rect x="200" y="134" width="133" height="16" rx="2" fill="url(#gRepo)">
+  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="1.1s" repeatCount="indefinite"/>
+</rect>
+<text x="341" y="146" font-size="12" font-weight="700" fill="#e6edf3">455</text>
+
+<text x="190" y="168" text-anchor="end" font-size="11" fill="#c9d1d9">dotfiles</text>
+<rect x="200" y="156" width="132" height="16" rx="2" fill="url(#gRepo)">
+  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="2.2s" repeatCount="indefinite"/>
+</rect>
+<text x="340" y="168" font-size="12" font-weight="700" fill="#e6edf3">450</text>
+
+<text x="190" y="190" text-anchor="end" font-size="11" fill="#c9d1d9">links-issue-tracker</text>
+<rect x="200" y="178" width="116" height="16" rx="2" fill="url(#gRepo)">
+  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="3.3s" repeatCount="indefinite"/>
+</rect>
+<text x="324" y="190" font-size="12" font-weight="700" fill="#e6edf3">396</text>
+
+<text x="190" y="212" text-anchor="end" font-size="11" fill="#c9d1d9">cc-candybar</text>
+<rect x="200" y="200" width="88" height="16" rx="2" fill="url(#gRepo)">
+  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="4.4s" repeatCount="indefinite"/>
+</rect>
+<text x="296" y="212" font-size="12" font-weight="700" fill="#e6edf3">300</text>
+
+<text x="190" y="234" text-anchor="end" font-size="11" fill="#c9d1d9">slopspot-web</text>
+<rect x="200" y="222" width="78" height="16" rx="2" fill="url(#gRepo)">
+  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="5.5s" repeatCount="indefinite"/>
+</rect>
+<text x="286" y="234" font-size="12" font-weight="700" fill="#e6edf3">268</text>
+
+<!-- Shimmer sweep across the bars -->
+<g clip-path="url(#clipRepoBars)">
+  <rect x="-220" y="112" width="220" height="132" fill="url(#gShimmer)">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="920 0" dur="9s" repeatCount="indefinite"/>
+  </rect>
+</g>
+
+<!-- Divider -->
+<line x1="24" y1="252" x2="776" y2="252" stroke="#21262d" stroke-width="1"/>
+
+<!-- BAND 2 LEFT: PRs MERGED - last 7 days sparkline (values 11,27,45,120,37,16,0; max 120, plot h 80) -->
+<text x="24" y="272" font-size="9" letter-spacing="1.5" fill="#6e7681">RECENT MERGES · DAILY ACTIVITY THIS WEEK</text>
+<text x="24" y="324" font-size="42" font-weight="700" fill="#f472b6" filter="url(#glowPink)">86</text>
+<text x="24" y="346" font-size="12" font-weight="600" fill="#c9d1d9">PRs Merged</text>
+<text x="24" y="360" font-size="10" fill="#8b949e">7 Days</text>
+
+<line x1="200" y1="361" x2="386" y2="361" stroke="#30363d" stroke-width="1"/>
+
+<rect x="202" y="352.7" width="22" height="7.3" rx="1" fill="url(#gPr)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0s" repeatCount="indefinite"/>
+</rect>
+<text x="213" y="374" text-anchor="middle" font-size="8" fill="#6e7681">T</text>
+
+<rect x="229" y="342" width="22" height="18" rx="1" fill="url(#gPr)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0.7s" repeatCount="indefinite"/>
+</rect>
+<text x="240" y="374" text-anchor="middle" font-size="8" fill="#6e7681">F</text>
+
+<rect x="256" y="330" width="22" height="30" rx="1" fill="url(#gPr)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+</rect>
+<text x="267" y="374" text-anchor="middle" font-size="8" fill="#6e7681">S</text>
+
+<rect x="283" y="280" width="22" height="80" rx="1" fill="url(#gPr)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="2.1s" repeatCount="indefinite"/>
+</rect>
+<text x="294" y="374" text-anchor="middle" font-size="8" fill="#6e7681">S</text>
+
+<rect x="310" y="335.3" width="22" height="24.7" rx="1" fill="url(#gPr)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="2.8s" repeatCount="indefinite"/>
+</rect>
+<text x="321" y="374" text-anchor="middle" font-size="8" fill="#6e7681">M</text>
+
+<rect x="337" y="349.3" width="22" height="10.7" rx="1" fill="url(#gPr)">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="3.5s" repeatCount="indefinite"/>
+</rect>
+<text x="348" y="374" text-anchor="middle" font-size="8" fill="#6e7681">T</text>
+
+<rect x="364" y="358" width="22" height="2" rx="1" fill="#30363d"/>
+<text x="375" y="374" text-anchor="middle" font-size="8" font-weight="700" fill="#e6edf3">W</text>
+
+<!-- Vertical panel divider -->
+<line x1="400" y1="262" x2="400" y2="380" stroke="#21262d" stroke-width="1"/>
+
+<!-- BAND 2 RIGHT: MY ISSUES CLOSED (67-dot grid, 10x7, first 67 filled, last 3 empty) -->
+<text x="410" y="272" font-size="9" letter-spacing="1.5" fill="#6e7681">RESOLVED ISSUES · EACH DOT IS ONE ISSUE</text>
+<text x="410" y="324" font-size="42" font-weight="700" fill="#fb923c" filter="url(#glowOrange)">67</text>
+<text x="410" y="346" font-size="12" font-weight="600" fill="#c9d1d9">My Issues Closed</text>
+<text x="410" y="360" font-size="10" fill="#8b949e">1 Year</text>
+
+<!-- Row 0 (0-9) -->
+<circle cx="615" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.08s" repeatCount="indefinite"/></circle>
+<circle cx="649" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.16s" repeatCount="indefinite"/></circle>
+<circle cx="666" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="683" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.32s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.40s" repeatCount="indefinite"/></circle>
+<circle cx="717" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="734" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.56s" repeatCount="indefinite"/></circle>
+<circle cx="751" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.64s" repeatCount="indefinite"/></circle>
+<circle cx="768" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.72s" repeatCount="indefinite"/></circle>
+
+<!-- Row 1 (10-19) -->
+<circle cx="615" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.13s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.21s" repeatCount="indefinite"/></circle>
+<circle cx="649" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.29s" repeatCount="indefinite"/></circle>
+<circle cx="666" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.37s" repeatCount="indefinite"/></circle>
+<circle cx="683" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.45s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.53s" repeatCount="indefinite"/></circle>
+<circle cx="717" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.61s" repeatCount="indefinite"/></circle>
+<circle cx="734" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.69s" repeatCount="indefinite"/></circle>
+<circle cx="751" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.77s" repeatCount="indefinite"/></circle>
+<circle cx="768" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.85s" repeatCount="indefinite"/></circle>
+
+<!-- Row 2 (20-29) -->
+<circle cx="615" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.26s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.34s" repeatCount="indefinite"/></circle>
+<circle cx="649" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.42s" repeatCount="indefinite"/></circle>
+<circle cx="666" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.50s" repeatCount="indefinite"/></circle>
+<circle cx="683" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.58s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.66s" repeatCount="indefinite"/></circle>
+<circle cx="717" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.74s" repeatCount="indefinite"/></circle>
+<circle cx="734" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.82s" repeatCount="indefinite"/></circle>
+<circle cx="751" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.90s" repeatCount="indefinite"/></circle>
+<circle cx="768" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.98s" repeatCount="indefinite"/></circle>
+
+<!-- Row 3 (30-39) -->
+<circle cx="615" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.39s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.47s" repeatCount="indefinite"/></circle>
+<circle cx="649" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.55s" repeatCount="indefinite"/></circle>
+<circle cx="666" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.63s" repeatCount="indefinite"/></circle>
+<circle cx="683" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.71s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.79s" repeatCount="indefinite"/></circle>
+<circle cx="717" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.87s" repeatCount="indefinite"/></circle>
+<circle cx="734" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.95s" repeatCount="indefinite"/></circle>
+<circle cx="751" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.03s" repeatCount="indefinite"/></circle>
+<circle cx="768" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.11s" repeatCount="indefinite"/></circle>
+
+<!-- Row 4 (40-49) -->
+<circle cx="615" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.52s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.60s" repeatCount="indefinite"/></circle>
+<circle cx="649" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.68s" repeatCount="indefinite"/></circle>
+<circle cx="666" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.76s" repeatCount="indefinite"/></circle>
+<circle cx="683" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.92s" repeatCount="indefinite"/></circle>
+<circle cx="717" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.00s" repeatCount="indefinite"/></circle>
+<circle cx="734" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="751" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.16s" repeatCount="indefinite"/></circle>
+<circle cx="768" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.24s" repeatCount="indefinite"/></circle>
+
+<!-- Row 5 (50-59) -->
+<circle cx="615" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.65s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.73s" repeatCount="indefinite"/></circle>
+<circle cx="649" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.81s" repeatCount="indefinite"/></circle>
+<circle cx="666" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.89s" repeatCount="indefinite"/></circle>
+<circle cx="683" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.97s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.05s" repeatCount="indefinite"/></circle>
+<circle cx="717" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.13s" repeatCount="indefinite"/></circle>
+<circle cx="734" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.21s" repeatCount="indefinite"/></circle>
+<circle cx="751" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.29s" repeatCount="indefinite"/></circle>
+<circle cx="768" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.37s" repeatCount="indefinite"/></circle>
+
+<!-- Row 6 (60-66 filled, 67-69 empty) -->
+<circle cx="615" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.78s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.86s" repeatCount="indefinite"/></circle>
+<circle cx="649" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.94s" repeatCount="indefinite"/></circle>
+<circle cx="666" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.02s" repeatCount="indefinite"/></circle>
+<circle cx="683" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.10s" repeatCount="indefinite"/></circle>
+<circle cx="700" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.18s" repeatCount="indefinite"/></circle>
+<circle cx="717" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.26s" repeatCount="indefinite"/></circle>
+<circle cx="734" cy="358" r="4.5" fill="none" stroke="#30363d" stroke-width="1"/>
+<circle cx="751" cy="358" r="4.5" fill="none" stroke="#30363d" stroke-width="1"/>
+<circle cx="768" cy="358" r="4.5" fill="none" stroke="#30363d" stroke-width="1"/>
+</svg>

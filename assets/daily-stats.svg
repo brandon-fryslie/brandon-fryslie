@@ -1,251 +1,365 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-08-26: 6 ranked horizontal bars show the top active repositories by commit count, with oscilla-animator-v2 dominating at 1708 commits; a 7-day vertical sparkline shows recent contribution rhythm behind 86 PRs merged this week; a grid of 67 dots represents each of the year's closed issues.">
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-08-27: 53 weekly aggregate bars trace the past 12 months of contributions with a clear peak of 836 commits in the busiest week and the current partial week highlighted in pink; a 6-segment proportional bar shows the 30-day language mix (Go 140, TypeScript 108, Shell 107, Python 68, Rust 21, JavaScript 2 of 446 total commits); scalar panels show 238 commits in the last 7 days and 87 issues closed all-time.">
 <defs>
-<style>text{font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;}</style>
+<style>text{font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;}.num{font-variant-numeric:tabular-nums;}</style>
 
-<linearGradient id="gRepo" x1="0" x2="1" y1="0" y2="0">
-  <stop offset="0" stop-color="#26a641">
-    <animate attributeName="stop-color" values="#26a641;#39d353;#26a641" dur="11s" repeatCount="indefinite"/>
-  </stop>
-  <stop offset="1" stop-color="#7ff5b3">
-    <animate attributeName="stop-color" values="#7ff5b3;#a4f0c6;#7ff5b3" dur="11s" repeatCount="indefinite"/>
-  </stop>
+<linearGradient id="gCal" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#39d353"/>
+  <stop offset="1" stop-color="#0e4429"/>
 </linearGradient>
 
-<linearGradient id="gPr" x1="0" x2="0" y1="1" y2="0">
-  <stop offset="0" stop-color="#be185d"/>
-  <stop offset="1" stop-color="#f472b6">
-    <animate attributeName="stop-color" values="#f472b6;#f9a8d4;#f472b6" dur="7s" repeatCount="indefinite"/>
-  </stop>
+<linearGradient id="gCalHi" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#f9a8d4"/>
+  <stop offset="1" stop-color="#831843"/>
 </linearGradient>
 
-<radialGradient id="gIssue" cx="0.35" cy="0.35" r="0.75">
-  <stop offset="0" stop-color="#fed7aa"/>
-  <stop offset="0.6" stop-color="#fb923c"/>
-  <stop offset="1" stop-color="#c2410c"/>
-</radialGradient>
-
-<filter id="glowGreen" x="-40%" y="-40%" width="180%" height="180%">
-  <feGaussianBlur stdDeviation="1.5" result="b">
-    <animate attributeName="stdDeviation" values="1.2;2.6;1.2" dur="13s" repeatCount="indefinite"/>
-  </feGaussianBlur>
-  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-</filter>
-
-<filter id="glowPink" x="-40%" y="-40%" width="180%" height="180%">
-  <feGaussianBlur stdDeviation="1.5" result="b">
-    <animate attributeName="stdDeviation" values="1.2;2.8;1.2" dur="11s" repeatCount="indefinite"/>
-  </feGaussianBlur>
-  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-</filter>
-
-<filter id="glowOrange" x="-40%" y="-40%" width="180%" height="180%">
-  <feGaussianBlur stdDeviation="1.5" result="b">
-    <animate attributeName="stdDeviation" values="1.2;2.8;1.2" dur="17s" repeatCount="indefinite"/>
-  </feGaussianBlur>
-  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-</filter>
-
-<linearGradient id="gShimmer" x1="0" x2="1" y1="0" y2="0">
+<linearGradient id="gShim" x1="0" x2="1" y1="0" y2="0">
   <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-  <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.18"/>
+  <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.22"/>
   <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
 </linearGradient>
 
-<clipPath id="clipRepoBars">
-  <rect x="200" y="112" width="500" height="132"/>
-</clipPath>
+<clipPath id="clipCal"><rect x="24" y="90" width="752" height="92"/></clipPath>
+
+<filter id="glowGreen" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="1.6" result="b">
+    <animate attributeName="stdDeviation" values="1.2;2.4;1.2" dur="11s" repeatCount="indefinite"/>
+  </feGaussianBlur>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+
+<filter id="glowPink" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="1.5" result="b">
+    <animate attributeName="stdDeviation" values="1.1;2.6;1.1" dur="13s" repeatCount="indefinite"/>
+  </feGaussianBlur>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+
+<filter id="glowOrange" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="1.5" result="b">
+    <animate attributeName="stdDeviation" values="1.1;2.4;1.1" dur="17s" repeatCount="indefinite"/>
+  </feGaussianBlur>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+
+<linearGradient id="gGo" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#00ADD8"/>
+</linearGradient>
+<linearGradient id="gTS" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#7db3ff"/><stop offset="1" stop-color="#3178C6"/>
+</linearGradient>
+<linearGradient id="gShell" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#b8f08b"/><stop offset="1" stop-color="#4a8f2a"/>
+</linearGradient>
+<linearGradient id="gPy" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#b45309"/>
+</linearGradient>
+<linearGradient id="gRust" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#c2410c"/>
+</linearGradient>
+<linearGradient id="gJS" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#fef08a"/><stop offset="1" stop-color="#a16207"/>
+</linearGradient>
 </defs>
 
 <rect width="800" height="400" fill="#0d1117"/>
 
-<!-- HEADER -->
+<!-- ============ HEADER ============ -->
 <text x="24" y="26" font-size="12" font-weight="700" letter-spacing="1.6" fill="#e6edf3">LIVE GITHUB STATS</text>
-<text x="776" y="26" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-08-26</text>
-<line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+<text x="776" y="26" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-08-27</text>
+<line x1="24" y1="40" x2="776" y2="40" stroke="#21262d" stroke-width="1"/>
 
-<!-- BAND 1: ACTIVE REPOS (6 ranked bars, widths ARE the commit counts, max 1708 -> 500px) -->
-<text x="24" y="62" font-size="9" letter-spacing="1.5" fill="#6e7681">MOST ACTIVE REPOSITORIES · TOP 6 BY COMMITS</text>
-<text x="24" y="80" font-size="13" font-weight="600" fill="#c9d1d9">Active Repos</text>
-<text x="24" y="94" font-size="10" fill="#8b949e">1 Year</text>
-<text x="776" y="90" text-anchor="end" font-size="36" font-weight="700" fill="#39d353" filter="url(#glowGreen)">59</text>
+<!-- ============ SECTION A: CONTRIBUTION RHYTHM ============ -->
+<text x="24" y="58" font-size="9" letter-spacing="1.5" fill="#6e7681">CONTRIBUTION RHYTHM · PAST 12 MONTHS · BY WEEK</text>
 
-<text x="190" y="124" text-anchor="end" font-size="11" fill="#c9d1d9">oscilla-animator-v2</text>
-<rect x="200" y="112" width="500" height="16" rx="2" fill="url(#gRepo)">
-  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="0s" repeatCount="indefinite"/>
+<!-- Reference lines at 25/50/75/100% of max (836) -->
+<line x1="24" y1="180" x2="776" y2="180" stroke="#21262d" stroke-width="1"/>
+<line x1="24" y1="158" x2="776" y2="158" stroke="#21262d" stroke-width="0.5" stroke-opacity="0.6" stroke-dasharray="2,3"/>
+<line x1="24" y1="136" x2="776" y2="136" stroke="#21262d" stroke-width="0.5" stroke-opacity="0.6" stroke-dasharray="2,3"/>
+<line x1="24" y1="114" x2="776" y2="114" stroke="#21262d" stroke-width="0.5" stroke-opacity="0.6" stroke-dasharray="2,3"/>
+<line x1="24" y1="92" x2="776" y2="92" stroke="#21262d" stroke-width="0.5" stroke-opacity="0.6" stroke-dasharray="2,3"/>
+
+<!-- Y-axis scale hints on the right -->
+<text x="780" y="94" font-size="8" fill="#6e7681" class="num">836</text>
+<text x="780" y="138" font-size="8" fill="#6e7681" class="num">418</text>
+<text x="780" y="182" font-size="8" fill="#6e7681" class="num">0</text>
+
+<!-- 53 weekly bars (each column = 7 days of counts summed; max week = 836) -->
+<!-- Bars: x_i = 24 + i*14.15, width=12, baseline y=180, max h=88 -->
+<rect x="24.00" y="179.89" width="12" height="0.11" fill="url(#gCal)"/>
+<rect x="52.30" y="179.89" width="12" height="0.11" fill="url(#gCal)"/>
+<rect x="80.60" y="179.89" width="12" height="0.11" fill="url(#gCal)"/>
+<rect x="94.75" y="179.68" width="12" height="0.32" fill="url(#gCal)"/>
+<rect x="108.90" y="179.79" width="12" height="0.21" fill="url(#gCal)"/>
+<rect x="123.05" y="179.47" width="12" height="0.53" fill="url(#gCal)"/>
+<rect x="137.20" y="179.26" width="12" height="0.74" fill="url(#gCal)"/>
+<rect x="151.35" y="179.05" width="12" height="0.95" fill="url(#gCal)"/>
+<rect x="165.50" y="177.26" width="12" height="2.74" fill="url(#gCal)"/>
+<rect x="179.65" y="175.47" width="12" height="4.53" fill="url(#gCal)"/>
+<rect x="193.80" y="179.68" width="12" height="0.32" fill="url(#gCal)"/>
+<rect x="207.95" y="179.58" width="12" height="0.42" fill="url(#gCal)"/>
+<rect x="222.10" y="179.89" width="12" height="0.11" fill="url(#gCal)"/>
+<rect x="236.25" y="176.21" width="12" height="3.79" fill="url(#gCal)"/>
+<rect x="250.40" y="167.15" width="12" height="12.85" fill="url(#gCal)"/>
+<rect x="264.55" y="154.93" width="12" height="25.07" fill="url(#gCal)"/>
+<rect x="278.70" y="177.89" width="12" height="2.11" fill="url(#gCal)"/>
+<rect x="292.85" y="157.46" width="12" height="22.54" fill="url(#gCal)"/>
+<rect x="307.00" y="146.51" width="12" height="33.49" fill="url(#gCal)"/>
+<rect x="321.15" y="132.19" width="12" height="47.81" fill="url(#gCal)"/>
+<rect x="335.30" y="126.71" width="12" height="53.29" fill="url(#gCal)"/>
+<rect x="349.45" y="155.67" width="12" height="24.33" fill="url(#gCal)"/>
+<rect x="363.60" y="158.20" width="12" height="21.80" fill="url(#gCal)"/>
+<rect x="377.75" y="131.66" width="12" height="48.34" fill="url(#gCal)"/>
+<rect x="391.90" y="143.13" width="12" height="36.87" fill="url(#gCal)"/>
+<rect x="406.05" y="157.25" width="12" height="22.75" fill="url(#gCal)"/>
+<rect x="420.20" y="149.14" width="12" height="30.86" fill="url(#gCal)"/>
+<rect x="434.35" y="155.98" width="12" height="24.02" fill="url(#gCal)"/>
+<rect x="448.50" y="171.05" width="12" height="8.95" fill="url(#gCal)"/>
+<rect x="462.65" y="163.67" width="12" height="16.33" fill="url(#gCal)"/>
+<rect x="476.80" y="171.36" width="12" height="8.64" fill="url(#gCal)"/>
+<rect x="490.95" y="160.41" width="12" height="19.59" fill="url(#gCal)"/>
+<rect x="505.10" y="160.62" width="12" height="19.38" fill="url(#gCal)"/>
+<rect x="519.25" y="143.24" width="12" height="36.76" fill="url(#gCal)"/>
+<rect x="533.40" y="153.68" width="12" height="26.32" fill="url(#gCal)"/>
+<rect x="547.55" y="166.83" width="12" height="13.17" fill="url(#gCal)"/>
+<rect x="561.70" y="144.30" width="12" height="35.70" fill="url(#gCal)"/>
+<rect x="575.85" y="141.77" width="12" height="38.23" fill="url(#gCal)"/>
+<rect x="590.00" y="149.56" width="12" height="30.44" fill="url(#gCal)"/>
+<rect x="604.15" y="92.00" width="12" height="88.00" fill="url(#gCal)">
+  <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
 </rect>
-<text x="708" y="124" font-size="12" font-weight="700" fill="#e6edf3">1708</text>
-
-<text x="190" y="146" text-anchor="end" font-size="11" fill="#c9d1d9">cc-dump</text>
-<rect x="200" y="134" width="133" height="16" rx="2" fill="url(#gRepo)">
-  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="1.1s" repeatCount="indefinite"/>
+<rect x="618.30" y="135.35" width="12" height="44.65" fill="url(#gCal)"/>
+<rect x="632.45" y="142.61" width="12" height="37.39" fill="url(#gCal)"/>
+<rect x="646.60" y="153.56" width="12" height="26.44" fill="url(#gCal)"/>
+<rect x="660.75" y="165.15" width="12" height="14.85" fill="url(#gCal)"/>
+<rect x="674.90" y="173.47" width="12" height="6.53" fill="url(#gCal)"/>
+<rect x="689.05" y="171.36" width="12" height="8.64" fill="url(#gCal)"/>
+<rect x="703.20" y="152.93" width="12" height="27.07" fill="url(#gCal)"/>
+<rect x="717.35" y="167.05" width="12" height="12.95" fill="url(#gCal)"/>
+<rect x="731.50" y="173.68" width="12" height="6.32" fill="url(#gCal)"/>
+<rect x="745.65" y="156.51" width="12" height="23.49" fill="url(#gCal)"/>
+<rect x="759.80" y="172.52" width="12" height="7.48" fill="url(#gCalHi)">
+  <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
 </rect>
-<text x="341" y="146" font-size="12" font-weight="700" fill="#e6edf3">455</text>
 
-<text x="190" y="168" text-anchor="end" font-size="11" fill="#c9d1d9">dotfiles</text>
-<rect x="200" y="156" width="132" height="16" rx="2" fill="url(#gRepo)">
-  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="2.2s" repeatCount="indefinite"/>
-</rect>
-<text x="340" y="168" font-size="12" font-weight="700" fill="#e6edf3">450</text>
+<!-- Missing bars 0,1,3 (zero values) intentionally skipped. Above list preserves order for non-zero weeks. -->
 
-<text x="190" y="190" text-anchor="end" font-size="11" fill="#c9d1d9">links-issue-tracker</text>
-<rect x="200" y="178" width="116" height="16" rx="2" fill="url(#gRepo)">
-  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="3.3s" repeatCount="indefinite"/>
-</rect>
-<text x="324" y="190" font-size="12" font-weight="700" fill="#e6edf3">396</text>
+<!-- Peak callout: bracket + label pointing at w41 (836 commits) -->
+<line x1="610.15" y1="88" x2="610.15" y2="92" stroke="#6e7681" stroke-width="0.75"/>
+<text x="610.15" y="82" text-anchor="middle" font-size="9" fill="#c9d1d9" class="num"><tspan font-weight="700">836</tspan><tspan fill="#6e7681"> commits · peak week</tspan></text>
 
-<text x="190" y="212" text-anchor="end" font-size="11" fill="#c9d1d9">cc-candybar</text>
-<rect x="200" y="200" width="88" height="16" rx="2" fill="url(#gRepo)">
-  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="4.4s" repeatCount="indefinite"/>
-</rect>
-<text x="296" y="212" font-size="12" font-weight="700" fill="#e6edf3">300</text>
+<!-- Current-week callout (right end) -->
+<text x="774" y="82" text-anchor="end" font-size="9" fill="#f9a8d4" class="num">this week</text>
+<line x1="765.80" y1="88" x2="765.80" y2="172" stroke="#f472b6" stroke-width="0.5" stroke-opacity="0.6" stroke-dasharray="2,2"/>
 
-<text x="190" y="234" text-anchor="end" font-size="11" fill="#c9d1d9">slopspot-web</text>
-<rect x="200" y="222" width="78" height="16" rx="2" fill="url(#gRepo)">
-  <animate attributeName="opacity" values="0.88;1;0.88" dur="11s" begin="5.5s" repeatCount="indefinite"/>
-</rect>
-<text x="286" y="234" font-size="12" font-weight="700" fill="#e6edf3">268</text>
+<!-- Month tick labels below the bars -->
+<text x="24.00" y="192" font-size="7" fill="#6e7681">Sep</text>
+<text x="52.30" y="192" font-size="7" fill="#6e7681">Oct</text>
+<text x="80.60" y="192" font-size="7" fill="#6e7681">Nov</text>
+<text x="108.90" y="192" font-size="7" fill="#6e7681">Dec</text>
+<text x="137.20" y="192" font-size="7" fill="#6e7681">Jan</text>
+<text x="179.65" y="192" font-size="7" fill="#6e7681">Feb</text>
+<text x="207.95" y="192" font-size="7" fill="#6e7681">Mar</text>
+<text x="250.40" y="192" font-size="7" fill="#6e7681">Apr</text>
+<text x="292.85" y="192" font-size="7" fill="#6e7681">May</text>
+<text x="335.30" y="192" font-size="7" fill="#6e7681">Jun</text>
+<text x="377.75" y="192" font-size="7" fill="#6e7681">Jul</text>
+<text x="420.20" y="192" font-size="7" fill="#6e7681">Aug</text>
+<text x="462.65" y="192" font-size="7" fill="#6e7681">Sep</text>
+<text x="505.10" y="192" font-size="7" fill="#6e7681">Oct</text>
+<text x="547.55" y="192" font-size="7" fill="#6e7681">Nov</text>
+<text x="590.00" y="192" font-size="7" fill="#6e7681">Dec</text>
+<text x="632.45" y="192" font-size="7" fill="#6e7681">Jan</text>
+<text x="674.90" y="192" font-size="7" fill="#6e7681">Feb</text>
+<text x="717.35" y="192" font-size="7" fill="#6e7681">Mar</text>
+<text x="759.80" y="192" font-size="7" fill="#6e7681">Apr</text>
 
-<!-- Shimmer sweep across the bars -->
-<g clip-path="url(#clipRepoBars)">
-  <rect x="-220" y="112" width="220" height="132" fill="url(#gShimmer)">
-    <animateTransform attributeName="transform" type="translate" from="0 0" to="920 0" dur="9s" repeatCount="indefinite"/>
+<!-- Shimmer sweep -->
+<g clip-path="url(#clipCal)">
+  <rect x="-260" y="90" width="260" height="92" fill="url(#gShim)">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="1060 0" dur="17s" repeatCount="indefinite"/>
   </rect>
 </g>
 
-<!-- Divider -->
-<line x1="24" y1="252" x2="776" y2="252" stroke="#21262d" stroke-width="1"/>
+<!-- ============ DIVIDER 1 ============ -->
+<line x1="24" y1="204" x2="776" y2="204" stroke="#21262d" stroke-width="1"/>
 
-<!-- BAND 2 LEFT: PRs MERGED - last 7 days sparkline (values 11,27,45,120,37,16,0; max 120, plot h 80) -->
-<text x="24" y="272" font-size="9" letter-spacing="1.5" fill="#6e7681">RECENT MERGES · DAILY ACTIVITY THIS WEEK</text>
-<text x="24" y="324" font-size="42" font-weight="700" fill="#f472b6" filter="url(#glowPink)">86</text>
-<text x="24" y="346" font-size="12" font-weight="600" fill="#c9d1d9">PRs Merged</text>
-<text x="24" y="360" font-size="10" fill="#8b949e">7 Days</text>
+<!-- ============ SECTION B: LANGUAGES (30d) ============ -->
+<text x="24" y="220" font-size="9" letter-spacing="1.5" fill="#6e7681">LANGUAGES · 30 DAYS · WIDTH ∝ COMMITS · 446 TOTAL</text>
 
-<line x1="200" y1="361" x2="386" y2="361" stroke="#30363d" stroke-width="1"/>
+<text x="24" y="258" font-size="34" font-weight="700" fill="#39d353" filter="url(#glowGreen)" class="num">6</text>
+<text x="24" y="276" font-size="12" font-weight="600" fill="#c9d1d9">Languages</text>
+<text x="24" y="290" font-size="10" fill="#8b949e">30 Days</text>
 
-<rect x="202" y="352.7" width="22" height="7.3" rx="1" fill="url(#gPr)">
-  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0s" repeatCount="indefinite"/>
+<!-- Proportional stacked bar (x=180..774, y=234..266, h=32) -->
+<rect x="180.00" y="234" width="186.50" height="32" fill="url(#gGo)">
+  <animate attributeName="opacity" values="0.9;1;0.9" dur="11s" begin="0s" repeatCount="indefinite"/>
 </rect>
-<text x="213" y="374" text-anchor="middle" font-size="8" fill="#6e7681">T</text>
-
-<rect x="229" y="342" width="22" height="18" rx="1" fill="url(#gPr)">
-  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="0.7s" repeatCount="indefinite"/>
+<rect x="366.50" y="234" width="143.90" height="32" fill="url(#gTS)">
+  <animate attributeName="opacity" values="0.9;1;0.9" dur="13s" begin="1.4s" repeatCount="indefinite"/>
 </rect>
-<text x="240" y="374" text-anchor="middle" font-size="8" fill="#6e7681">F</text>
-
-<rect x="256" y="330" width="22" height="30" rx="1" fill="url(#gPr)">
-  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+<rect x="510.40" y="234" width="142.50" height="32" fill="url(#gShell)">
+  <animate attributeName="opacity" values="0.9;1;0.9" dur="7s" begin="2.8s" repeatCount="indefinite"/>
 </rect>
-<text x="267" y="374" text-anchor="middle" font-size="8" fill="#6e7681">S</text>
-
-<rect x="283" y="280" width="22" height="80" rx="1" fill="url(#gPr)">
-  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="2.1s" repeatCount="indefinite"/>
+<rect x="652.90" y="234" width="90.60" height="32" fill="url(#gPy)">
+  <animate attributeName="opacity" values="0.9;1;0.9" dur="17s" begin="0.7s" repeatCount="indefinite"/>
 </rect>
-<text x="294" y="374" text-anchor="middle" font-size="8" fill="#6e7681">S</text>
-
-<rect x="310" y="335.3" width="22" height="24.7" rx="1" fill="url(#gPr)">
-  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="2.8s" repeatCount="indefinite"/>
+<rect x="743.50" y="234" width="28.00" height="32" fill="url(#gRust)">
+  <animate attributeName="opacity" values="0.85;1;0.85" dur="19s" begin="2.1s" repeatCount="indefinite"/>
 </rect>
-<text x="321" y="374" text-anchor="middle" font-size="8" fill="#6e7681">M</text>
-
-<rect x="337" y="349.3" width="22" height="10.7" rx="1" fill="url(#gPr)">
-  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="3.5s" repeatCount="indefinite"/>
+<rect x="771.50" y="234" width="2.70" height="32" fill="url(#gJS)">
+  <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" begin="0s" repeatCount="indefinite"/>
 </rect>
-<text x="348" y="374" text-anchor="middle" font-size="8" fill="#6e7681">T</text>
 
-<rect x="364" y="358" width="22" height="2" rx="1" fill="#30363d"/>
-<text x="375" y="374" text-anchor="middle" font-size="8" font-weight="700" fill="#e6edf3">W</text>
+<!-- Inside labels (segment name + count) — dark text for contrast on bright fills -->
+<text x="273.25" y="254" text-anchor="middle" font-size="11" font-weight="700" fill="#0d1117">Go 140</text>
+<text x="438.45" y="254" text-anchor="middle" font-size="11" font-weight="700" fill="#0d1117">TypeScript 108</text>
+<text x="581.65" y="254" text-anchor="middle" font-size="11" font-weight="700" fill="#0d1117">Shell 107</text>
+<text x="698.20" y="254" text-anchor="middle" font-size="11" font-weight="700" fill="#0d1117">Python 68</text>
 
-<!-- Vertical panel divider -->
-<line x1="400" y1="262" x2="400" y2="380" stroke="#21262d" stroke-width="1"/>
+<!-- Callouts for the two thin right-edge segments (Rust, JavaScript) -->
+<line x1="757.5" y1="266" x2="757.5" y2="282" stroke="#6e7681" stroke-width="0.5"/>
+<line x1="772.85" y1="266" x2="772.85" y2="288" stroke="#6e7681" stroke-width="0.5"/>
+<text x="776" y="288" text-anchor="end" font-size="9" fill="#c9d1d9" class="num">Rust 21</text>
+<text x="776" y="298" text-anchor="end" font-size="9" fill="#c9d1d9" class="num">JavaScript 2</text>
 
-<!-- BAND 2 RIGHT: MY ISSUES CLOSED (67-dot grid, 10x7, first 67 filled, last 3 empty) -->
-<text x="410" y="272" font-size="9" letter-spacing="1.5" fill="#6e7681">RESOLVED ISSUES · EACH DOT IS ONE ISSUE</text>
-<text x="410" y="324" font-size="42" font-weight="700" fill="#fb923c" filter="url(#glowOrange)">67</text>
-<text x="410" y="346" font-size="12" font-weight="600" fill="#c9d1d9">My Issues Closed</text>
-<text x="410" y="360" font-size="10" fill="#8b949e">1 Year</text>
+<!-- ============ DIVIDER 2 ============ -->
+<line x1="24" y1="314" x2="776" y2="314" stroke="#21262d" stroke-width="1"/>
 
-<!-- Row 0 (0-9) -->
-<circle cx="615" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0s" repeatCount="indefinite"/></circle>
-<circle cx="632" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.08s" repeatCount="indefinite"/></circle>
-<circle cx="649" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.16s" repeatCount="indefinite"/></circle>
-<circle cx="666" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.24s" repeatCount="indefinite"/></circle>
-<circle cx="683" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.32s" repeatCount="indefinite"/></circle>
-<circle cx="700" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.40s" repeatCount="indefinite"/></circle>
-<circle cx="717" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.48s" repeatCount="indefinite"/></circle>
-<circle cx="734" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.56s" repeatCount="indefinite"/></circle>
-<circle cx="751" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.64s" repeatCount="indefinite"/></circle>
-<circle cx="768" cy="280" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.72s" repeatCount="indefinite"/></circle>
+<!-- ============ SECTION C: SCALARS (Commits 238 · Issues 87) ============ -->
+<!-- Left panel: Commits -->
+<text x="24" y="332" font-size="9" letter-spacing="1.5" fill="#6e7681">RECENT COMMITS · SEARCH TOTAL</text>
+<text x="24" y="366" font-size="30" font-weight="700" fill="#f472b6" filter="url(#glowPink)" class="num">238</text>
+<text x="122" y="354" font-size="12" font-weight="600" fill="#c9d1d9">Commits</text>
+<text x="122" y="370" font-size="10" fill="#8b949e">7 Days</text>
 
-<!-- Row 1 (10-19) -->
-<circle cx="615" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.13s" repeatCount="indefinite"/></circle>
-<circle cx="632" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.21s" repeatCount="indefinite"/></circle>
-<circle cx="649" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.29s" repeatCount="indefinite"/></circle>
-<circle cx="666" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.37s" repeatCount="indefinite"/></circle>
-<circle cx="683" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.45s" repeatCount="indefinite"/></circle>
-<circle cx="700" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.53s" repeatCount="indefinite"/></circle>
-<circle cx="717" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.61s" repeatCount="indefinite"/></circle>
-<circle cx="734" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.69s" repeatCount="indefinite"/></circle>
-<circle cx="751" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.77s" repeatCount="indefinite"/></circle>
-<circle cx="768" cy="293" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.85s" repeatCount="indefinite"/></circle>
+<!-- Daily context strip beside the 238 — 7 bars: last 7 days of the calendar (27, 46, 135, 37, 34, 74, 15) -->
+<!-- Baseline y=375, max h=30, position x=220..316, columns spaced 14 -->
+<line x1="220" y1="375" x2="318" y2="375" stroke="#30363d" stroke-width="0.5"/>
+<rect x="220" y="369.0" width="12" height="6.0" rx="1" fill="#f472b6" opacity="0.55">
+  <animate attributeName="opacity" values="0.45;0.75;0.45" dur="7s" begin="0s" repeatCount="indefinite"/>
+</rect>
+<rect x="234" y="364.8" width="12" height="10.2" rx="1" fill="#f472b6" opacity="0.65">
+  <animate attributeName="opacity" values="0.5;0.85;0.5" dur="7s" begin="0.5s" repeatCount="indefinite"/>
+</rect>
+<rect x="248" y="345.0" width="12" height="30.0" rx="1" fill="#f472b6" opacity="0.9">
+  <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" begin="1.0s" repeatCount="indefinite"/>
+</rect>
+<rect x="262" y="366.8" width="12" height="8.2" rx="1" fill="#f472b6" opacity="0.6">
+  <animate attributeName="opacity" values="0.5;0.8;0.5" dur="7s" begin="1.5s" repeatCount="indefinite"/>
+</rect>
+<rect x="276" y="367.4" width="12" height="7.6" rx="1" fill="#f472b6" opacity="0.6">
+  <animate attributeName="opacity" values="0.5;0.8;0.5" dur="7s" begin="2.0s" repeatCount="indefinite"/>
+</rect>
+<rect x="290" y="358.6" width="12" height="16.4" rx="1" fill="#f472b6" opacity="0.75">
+  <animate attributeName="opacity" values="0.6;0.9;0.6" dur="7s" begin="2.5s" repeatCount="indefinite"/>
+</rect>
+<rect x="304" y="371.7" width="12" height="3.3" rx="1" fill="#f472b6" opacity="0.5">
+  <animate attributeName="opacity" values="0.4;0.7;0.4" dur="7s" begin="3.0s" repeatCount="indefinite"/>
+</rect>
+<text x="220" y="340" font-size="8" letter-spacing="1.2" fill="#6e7681">DAILY · LAST 7</text>
 
-<!-- Row 2 (20-29) -->
-<circle cx="615" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.26s" repeatCount="indefinite"/></circle>
-<circle cx="632" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.34s" repeatCount="indefinite"/></circle>
-<circle cx="649" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.42s" repeatCount="indefinite"/></circle>
-<circle cx="666" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.50s" repeatCount="indefinite"/></circle>
-<circle cx="683" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.58s" repeatCount="indefinite"/></circle>
-<circle cx="700" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.66s" repeatCount="indefinite"/></circle>
-<circle cx="717" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.74s" repeatCount="indefinite"/></circle>
-<circle cx="734" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.82s" repeatCount="indefinite"/></circle>
-<circle cx="751" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.90s" repeatCount="indefinite"/></circle>
-<circle cx="768" cy="306" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.98s" repeatCount="indefinite"/></circle>
+<!-- Vertical divider between the two scalar panels -->
+<line x1="400" y1="324" x2="400" y2="382" stroke="#21262d" stroke-width="1"/>
 
-<!-- Row 3 (30-39) -->
-<circle cx="615" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.39s" repeatCount="indefinite"/></circle>
-<circle cx="632" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.47s" repeatCount="indefinite"/></circle>
-<circle cx="649" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.55s" repeatCount="indefinite"/></circle>
-<circle cx="666" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.63s" repeatCount="indefinite"/></circle>
-<circle cx="683" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.71s" repeatCount="indefinite"/></circle>
-<circle cx="700" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.79s" repeatCount="indefinite"/></circle>
-<circle cx="717" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.87s" repeatCount="indefinite"/></circle>
-<circle cx="734" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.95s" repeatCount="indefinite"/></circle>
-<circle cx="751" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.03s" repeatCount="indefinite"/></circle>
-<circle cx="768" cy="319" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.11s" repeatCount="indefinite"/></circle>
+<!-- Right panel: Issues closed -->
+<text x="420" y="332" font-size="9" letter-spacing="1.5" fill="#6e7681">MY ISSUES CLOSED · ALL TIME</text>
+<text x="420" y="366" font-size="30" font-weight="700" fill="#fb923c" filter="url(#glowOrange)" class="num">87</text>
+<text x="486" y="354" font-size="12" font-weight="600" fill="#c9d1d9">My Issues Closed</text>
+<text x="486" y="370" font-size="10" fill="#8b949e">All Time</text>
 
-<!-- Row 4 (40-49) -->
-<circle cx="615" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.52s" repeatCount="indefinite"/></circle>
-<circle cx="632" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.60s" repeatCount="indefinite"/></circle>
-<circle cx="649" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.68s" repeatCount="indefinite"/></circle>
-<circle cx="666" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.76s" repeatCount="indefinite"/></circle>
-<circle cx="683" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.84s" repeatCount="indefinite"/></circle>
-<circle cx="700" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.92s" repeatCount="indefinite"/></circle>
-<circle cx="717" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.00s" repeatCount="indefinite"/></circle>
-<circle cx="734" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.08s" repeatCount="indefinite"/></circle>
-<circle cx="751" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.16s" repeatCount="indefinite"/></circle>
-<circle cx="768" cy="332" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.24s" repeatCount="indefinite"/></circle>
+<!-- 87-tick tally strip: 3 rows of 29, filling right-to-left as time progresses (one tick per closed issue) -->
+<g transform="translate(600,336)">
+  <!-- Row 0: ticks 0..28 -->
+  <rect x="0" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.00s" repeatCount="indefinite"/></rect>
+  <rect x="6" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.05s" repeatCount="indefinite"/></rect>
+  <rect x="12" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.10s" repeatCount="indefinite"/></rect>
+  <rect x="18" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.15s" repeatCount="indefinite"/></rect>
+  <rect x="24" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.20s" repeatCount="indefinite"/></rect>
+  <rect x="30" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.25s" repeatCount="indefinite"/></rect>
+  <rect x="36" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.30s" repeatCount="indefinite"/></rect>
+  <rect x="42" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.35s" repeatCount="indefinite"/></rect>
+  <rect x="48" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.40s" repeatCount="indefinite"/></rect>
+  <rect x="54" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.45s" repeatCount="indefinite"/></rect>
+  <rect x="60" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.50s" repeatCount="indefinite"/></rect>
+  <rect x="66" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.55s" repeatCount="indefinite"/></rect>
+  <rect x="72" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.60s" repeatCount="indefinite"/></rect>
+  <rect x="78" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.65s" repeatCount="indefinite"/></rect>
+  <rect x="84" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.70s" repeatCount="indefinite"/></rect>
+  <rect x="90" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.75s" repeatCount="indefinite"/></rect>
+  <rect x="96" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.80s" repeatCount="indefinite"/></rect>
+  <rect x="102" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.85s" repeatCount="indefinite"/></rect>
+  <rect x="108" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.90s" repeatCount="indefinite"/></rect>
+  <rect x="114" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.95s" repeatCount="indefinite"/></rect>
+  <rect x="120" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.00s" repeatCount="indefinite"/></rect>
+  <rect x="126" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.05s" repeatCount="indefinite"/></rect>
+  <rect x="132" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.10s" repeatCount="indefinite"/></rect>
+  <rect x="138" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.15s" repeatCount="indefinite"/></rect>
+  <rect x="144" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.20s" repeatCount="indefinite"/></rect>
+  <rect x="150" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.25s" repeatCount="indefinite"/></rect>
+  <rect x="156" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.30s" repeatCount="indefinite"/></rect>
+  <rect x="162" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.35s" repeatCount="indefinite"/></rect>
+  <rect x="168" y="0" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.40s" repeatCount="indefinite"/></rect>
 
-<!-- Row 5 (50-59) -->
-<circle cx="615" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.65s" repeatCount="indefinite"/></circle>
-<circle cx="632" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.73s" repeatCount="indefinite"/></circle>
-<circle cx="649" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.81s" repeatCount="indefinite"/></circle>
-<circle cx="666" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.89s" repeatCount="indefinite"/></circle>
-<circle cx="683" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.97s" repeatCount="indefinite"/></circle>
-<circle cx="700" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.05s" repeatCount="indefinite"/></circle>
-<circle cx="717" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.13s" repeatCount="indefinite"/></circle>
-<circle cx="734" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.21s" repeatCount="indefinite"/></circle>
-<circle cx="751" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.29s" repeatCount="indefinite"/></circle>
-<circle cx="768" cy="345" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.37s" repeatCount="indefinite"/></circle>
+  <!-- Row 1: ticks 29..57 -->
+  <rect x="0" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.02s" repeatCount="indefinite"/></rect>
+  <rect x="6" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.07s" repeatCount="indefinite"/></rect>
+  <rect x="12" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.12s" repeatCount="indefinite"/></rect>
+  <rect x="18" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.17s" repeatCount="indefinite"/></rect>
+  <rect x="24" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.22s" repeatCount="indefinite"/></rect>
+  <rect x="30" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.27s" repeatCount="indefinite"/></rect>
+  <rect x="36" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.32s" repeatCount="indefinite"/></rect>
+  <rect x="42" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.37s" repeatCount="indefinite"/></rect>
+  <rect x="48" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.42s" repeatCount="indefinite"/></rect>
+  <rect x="54" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.47s" repeatCount="indefinite"/></rect>
+  <rect x="60" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.52s" repeatCount="indefinite"/></rect>
+  <rect x="66" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.57s" repeatCount="indefinite"/></rect>
+  <rect x="72" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.62s" repeatCount="indefinite"/></rect>
+  <rect x="78" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.67s" repeatCount="indefinite"/></rect>
+  <rect x="84" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.72s" repeatCount="indefinite"/></rect>
+  <rect x="90" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.77s" repeatCount="indefinite"/></rect>
+  <rect x="96" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.82s" repeatCount="indefinite"/></rect>
+  <rect x="102" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.87s" repeatCount="indefinite"/></rect>
+  <rect x="108" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.92s" repeatCount="indefinite"/></rect>
+  <rect x="114" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.97s" repeatCount="indefinite"/></rect>
+  <rect x="120" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.02s" repeatCount="indefinite"/></rect>
+  <rect x="126" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.07s" repeatCount="indefinite"/></rect>
+  <rect x="132" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.12s" repeatCount="indefinite"/></rect>
+  <rect x="138" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.17s" repeatCount="indefinite"/></rect>
+  <rect x="144" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.22s" repeatCount="indefinite"/></rect>
+  <rect x="150" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.27s" repeatCount="indefinite"/></rect>
+  <rect x="156" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.32s" repeatCount="indefinite"/></rect>
+  <rect x="162" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.37s" repeatCount="indefinite"/></rect>
+  <rect x="168" y="14" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.42s" repeatCount="indefinite"/></rect>
 
-<!-- Row 6 (60-66 filled, 67-69 empty) -->
-<circle cx="615" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.78s" repeatCount="indefinite"/></circle>
-<circle cx="632" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.86s" repeatCount="indefinite"/></circle>
-<circle cx="649" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.94s" repeatCount="indefinite"/></circle>
-<circle cx="666" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.02s" repeatCount="indefinite"/></circle>
-<circle cx="683" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.10s" repeatCount="indefinite"/></circle>
-<circle cx="700" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.18s" repeatCount="indefinite"/></circle>
-<circle cx="717" cy="358" r="4.5" fill="url(#gIssue)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.26s" repeatCount="indefinite"/></circle>
-<circle cx="734" cy="358" r="4.5" fill="none" stroke="#30363d" stroke-width="1"/>
-<circle cx="751" cy="358" r="4.5" fill="none" stroke="#30363d" stroke-width="1"/>
-<circle cx="768" cy="358" r="4.5" fill="none" stroke="#30363d" stroke-width="1"/>
+  <!-- Row 2: ticks 58..86 (29 more) -->
+  <rect x="0" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.04s" repeatCount="indefinite"/></rect>
+  <rect x="6" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.09s" repeatCount="indefinite"/></rect>
+  <rect x="12" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.14s" repeatCount="indefinite"/></rect>
+  <rect x="18" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.19s" repeatCount="indefinite"/></rect>
+  <rect x="24" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.24s" repeatCount="indefinite"/></rect>
+  <rect x="30" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.29s" repeatCount="indefinite"/></rect>
+  <rect x="36" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.34s" repeatCount="indefinite"/></rect>
+  <rect x="42" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.39s" repeatCount="indefinite"/></rect>
+  <rect x="48" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.44s" repeatCount="indefinite"/></rect>
+  <rect x="54" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.49s" repeatCount="indefinite"/></rect>
+  <rect x="60" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.54s" repeatCount="indefinite"/></rect>
+  <rect x="66" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.59s" repeatCount="indefinite"/></rect>
+  <rect x="72" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.64s" repeatCount="indefinite"/></rect>
+  <rect x="78" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.69s" repeatCount="indefinite"/></rect>
+  <rect x="84" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.74s" repeatCount="indefinite"/></rect>
+  <rect x="90" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.79s" repeatCount="indefinite"/></rect>
+  <rect x="96" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.84s" repeatCount="indefinite"/></rect>
+  <rect x="102" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.89s" repeatCount="indefinite"/></rect>
+  <rect x="108" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.94s" repeatCount="indefinite"/></rect>
+  <rect x="114" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="0.99s" repeatCount="indefinite"/></rect>
+  <rect x="120" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.04s" repeatCount="indefinite"/></rect>
+  <rect x="126" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.09s" repeatCount="indefinite"/></rect>
+  <rect x="132" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.14s" repeatCount="indefinite"/></rect>
+  <rect x="138" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.19s" repeatCount="indefinite"/></rect>
+  <rect x="144" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.24s" repeatCount="indefinite"/></rect>
+  <rect x="150" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.29s" repeatCount="indefinite"/></rect>
+  <rect x="156" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.34s" repeatCount="indefinite"/></rect>
+  <rect x="162" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.39s" repeatCount="indefinite"/></rect>
+  <rect x="168" y="28" width="4" height="10" rx="0.5" fill="url(#gRust)"><animate attributeName="opacity" values="0.55;1;0.55" dur="13s" begin="1.44s" repeatCount="indefinite"/></rect>
+</g>
 </svg>
