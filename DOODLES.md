@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 29, 2026 — Krakatoa — 143rd Anniversary (August 27, 1883)
+
+<img src="./doodle-archive/2026/08/2026-08-29-060344.svg" width="800" alt="Daily doodle for August 27, 2026 — the 143rd anniversary of the paroxysmal eruption of Krakatoa. On the left half, a massive dark ash column rises from a glowing red-orange vent between the shattered silhouettes of Krakatoa's three cones in the Sunda Strait; embers rise upward, concentric pressure-wave rings expand across a blood-red sky, and a dark ocean rolls at the base. On the right, a huge cream AUGUST 27, 2026 headline underlined by an ember-to-ash sweep, an ember KRAKATOA · 143 YEARS subhead trailed by cream · SINCE 1883, an italic amber SUNDA STRAIT · JAVA · SUMATRA · RODRIGUES tertiary, a dim ash-grey CALDERA · PYROCLASTIC · 36,000 LOST roster, and a Georgia-italic 'the sound heard around the world.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the morning of 27 August 1883, four paroxysmal explosions tore the volcanic island of Krakatoa apart in the Sunda Strait between Java and Sumatra. The largest — at 10:02 local time — is among the loudest sounds ever recorded in human history: a sharp report heard 3,000 miles away on Rodrigues in the Indian Ocean, an atmospheric pressure wave that circled the Earth four times, and tsunamis over 30 metres tall that killed more than 36,000 people along the strait. Ash injected into the stratosphere cooled global temperatures for years and painted sunsets a strange fire-red as far away as Norway — the sky Edvard Munch would later remember in "The Scream." When it was over, two-thirds of the island had vanished beneath the sea; a new cone, Anak Krakatoa — the child of Krakatoa — began growing from the caldera forty-four years later.
+
+The left half is the eruption itself: a dark ash column boils skyward from a glowing vent between the shattered island silhouettes, embers stream upward, and pressure waves ring outward across a blood-red sky. On the right, a large cream AUGUST 27, 2026 headline anchors an ember KRAKATOA · 143 YEARS subhead, an italic amber SUNDA STRAIT · JAVA · SUMATRA · RODRIGUES tertiary, a dim ash-grey CALDERA · PYROCLASTIC · 36,000 LOST roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 27, 2026 — 19th Amendment Certified — 106th Anniversary (August 26, 1920)
 
 <img src="./doodle-archive/2026/08/2026-08-27-085814.svg" width="800" alt="Daily doodle for August 26, 2026 — the 106th anniversary of the Nineteenth Amendment being certified. On the left half, an aged parchment proclamation sits on a dark oak desk: the amendment's opening words in period type, a signature line where a fountain pen draws Bainbridge Colby's signature, and a deep purple wax seal stamped beside it with the year 1920. Above the parchment, a tricolor sash — suffragist purple, white, and gold — waves slowly with the words VOTES FOR WOMEN. On the right, a huge cream AUGUST 26, 2026 headline underlined by a purple-to-gold sweep, a purple 19TH AMENDMENT · 106 YEARS subhead trailed by cream · SINCE 1920, an italic amber STANTON · ANTHONY · CATT · PAUL · BURN tertiary, a dim cyan SENECA FALLS · TENNESSEE · CERTIFIED roster, and a Georgia-italic 'shall not be denied on account of sex.' caption at the base.">
