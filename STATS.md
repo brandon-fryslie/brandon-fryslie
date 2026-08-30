@@ -10,6 +10,14 @@ Captions carry each day's headline numbers so the gallery can be skimmed without
 
 <!-- STATS-GALLERY:START -->
 
+## August 29, 2026 · 06:14 UTC
+
+<img src="./stats-archive/2026/08/2026-08-29-061401.svg" width="960" alt="Live GitHub stats card for August 29, 2026">
+
+Longest Streak 82 (1 Year) · PRs Merged 2231 (All Time) · Commits 233 (7 Days) · Languages 14 (All Time)
+
+---
+
 ## August 27, 2026 · 09:19 UTC
 
 <img src="./stats-archive/2026/08/2026-08-27-091922.svg" width="960" alt="Live GitHub stats card for August 27, 2026">
