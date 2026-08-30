@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## August 30, 2026 — Michael Jackson — 68th Birthday (August 29, 1958)
+
+<img src="./doodle-archive/2026/08/2026-08-30-060219.svg" width="800" alt="Daily doodle for August 29, 2026 — the 68th birthday of Michael Jackson. On the left half, a dark stage under a warm circular spotlight; a single white sequined glove hovers above a tilted black fedora, small sparkles travelling across the glove's beading, and gold-star confetti drifts slowly down through the beam. On the right, a huge cream AUGUST 29, 2026 headline underlined by a gold-to-cream sweep, a gold KING OF POP · 68 YEARS subhead trailed by cream · SINCE 1958, an italic amber GARY · MOTOWN · THRILLER · NEVERLAND tertiary, a dim MOONWALK · SEQUIN · FEDORA · JACKSON 5 roster, and a Georgia-italic 'just beat it.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+Michael Joseph Jackson was born on 29 August 1958 in Gary, Indiana — the seventh of nine children in a small clapboard house on Jackson Street that has since become a pilgrimage site. By the age of eleven he was the falsetto lead of the Jackson 5; by twenty-four, Thriller had sold more copies than any album in history and quietly stayed that way for the rest of the century. He wore a single white rhinestone glove on the right hand, at first because he had vitiligo and it hid the depigmentation on that side, later because the accessory had outlived its explanation and become a symbol you could see from the back of the arena. He would have been 68 today.
+
+The left half is a dark stage under a warm circular spotlight: a single white sequined glove hovers above a tilted black fedora, both catching the beam. Small sparks travel across the beading, gold-star confetti drifts slowly downward through the light, and a faint amber pool ghosts across the polished stage floor. On the right, a large cream AUGUST 29, 2026 headline anchors a gold KING OF POP · 68 YEARS subhead, an italic amber GARY · MOTOWN · THRILLER · NEVERLAND tertiary, a dim MOONWALK · SEQUIN · FEDORA · JACKSON 5 roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 29, 2026 — Krakatoa — 143rd Anniversary (August 27, 1883)
 
 <img src="./doodle-archive/2026/08/2026-08-29-060344.svg" width="800" alt="Daily doodle for August 27, 2026 — the 143rd anniversary of the paroxysmal eruption of Krakatoa. On the left half, a massive dark ash column rises from a glowing red-orange vent between the shattered silhouettes of Krakatoa's three cones in the Sunda Strait; embers rise upward, concentric pressure-wave rings expand across a blood-red sky, and a dark ocean rolls at the base. On the right, a huge cream AUGUST 27, 2026 headline underlined by an ember-to-ash sweep, an ember KRAKATOA · 143 YEARS subhead trailed by cream · SINCE 1883, an italic amber SUNDA STRAIT · JAVA · SUMATRA · RODRIGUES tertiary, a dim ash-grey CALDERA · PYROCLASTIC · 36,000 LOST roster, and a Georgia-italic 'the sound heard around the world.' caption at the base.">
