@@ -1,260 +1,365 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Mary Shelley — 229th Birthday (August 30, 1797) -->
+<!-- theme: The Carrington Event — 167th Anniversary (September 1, 1859) -->
 <!-- about:
-Mary Wollstonecraft Shelley was born in London on 30 August 1797, the daughter of philosopher William Godwin and pioneering feminist Mary Wollstonecraft, who died eleven days after her birth. In the summer of 1816 — the "Year Without a Summer," darkened by the eruption of Mount Tambora — the eighteen-year-old Mary and her lover Percy Bysshe Shelley sat around a fire at the Villa Diodati on the shore of Lake Geneva with Lord Byron and John Polidori, trading ghost stories. From that competition came a waking dream of "the pale student of unhallowed arts kneeling beside the thing he had put together." Two years later Frankenstein; or, The Modern Prometheus appeared anonymously. She was twenty. She had invented science fiction while nobody was watching.
+On the morning of 1 September 1859, English astronomer Richard Carrington was sketching sunspots at his private observatory in Redhill, Surrey when the group he was watching flared white-hot for five minutes. Seventeen and a half hours later — hardly any time at all, by solar-wind standards — the coronal mass ejection reached Earth and triggered the most intense geomagnetic storm ever recorded. Aurorae blazed as far south as Cuba, Hawaii, Colombia, and Queensland; in the northeastern United States they were so bright that people got out of bed thinking morning had come and read the newspaper by their light. Telegraph systems across Europe and North America failed. Operators were shocked; paper tapes caught fire; some lines kept working with the batteries disconnected, driven purely by the current the storm had induced in the wires.
 
-The left half is her laboratory at midnight: a stone slab holds a shrouded form under a stormy vault, two brass electrodes crackle a Jacob's ladder of blue-white arcs rising between them, a hand emerges from beneath the sheet, a jagged bolt splits the sky, and a gothic turret glows with a single candle. On the right, a large cream AUGUST 30, 2026 headline anchors a violet MARY SHELLEY · 229 YEARS subhead, an italic FRANKENSTEIN · PROMETHEUS · GENEVA · DIODATI tertiary, a dim LIGHTNING · MANUSCRIPT · CASTLE · TRAVELER roster, and a Georgia-italic caption at the base.
+The left half is that morning at planetary scale: a swollen coronal sun in the upper-left hurls a warm plasma arc across the sky, gold particles streak toward a small blue Earth wrapped in rippling green-and-violet auroral curtains, and below, two telegraph poles stand against dark hills as bright cyan sparks jump from the induced-current wire between them. On the right, a large cream SEPTEMBER 1, 2026 headline anchors a green CARRINGTON EVENT · 167 YEARS subhead, an italic aurora-violet REDHILL · SOLAR FLARE · TELEGRAPHS · AURORAE tertiary, a dim CUBA · HAWAII · COLOMBIA · QUEENSLAND roster, and a Georgia-italic caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for August 30, 2026 — the 229th birthday of Mary Shelley. On the left half, a gothic laboratory at midnight: a stone slab holds a shrouded form under a stormy violet vault; two brass electrodes crackle rising blue-white Jacob's ladder arcs between them; a pale hand emerges from beneath the sheet reaching upward; a jagged violet lightning bolt flashes across the sky; a distant gothic castle turret with a single warm candle window silhouettes the storm; a small parchment with a quill sits at the corner. On the right, a huge cream AUGUST 30, 2026 headline underlined by a cyan-to-violet sweep, a violet MARY SHELLEY · 229 YEARS subhead trailed by cream · SINCE 1797, an italic pale-violet FRANKENSTEIN · PROMETHEUS · GENEVA · DIODATI tertiary, a dim slate LIGHTNING · MANUSCRIPT · CASTLE · TRAVELER roster, and a Georgia-italic 'the modern prometheus.' caption at the base.">
+     aria-label="Daily doodle for September 1, 2026 — the 167th anniversary of the Carrington Event geomagnetic storm. On the left half, a large glowing sun in the upper-left with a swirling corona hurls a warm plasma arc across the sky; gold particles streak from left to right toward a small blue Earth in the upper mid-right, which is wrapped in rippling green and violet auroral curtains that drape from top to horizon; below, silhouetted dark hills carry two telegraph poles, a sagging wire strung between them, and bright cyan-white sparks flashing along the wire from the induced current. On the right, a huge cream SEPTEMBER 1, 2026 headline underlined by a green-to-violet aurora sweep, a green CARRINGTON EVENT · 167 YEARS subhead trailed by cream · SINCE 1859, an italic aurora-violet REDHILL · SOLAR FLARE · TELEGRAPHS · AURORAE tertiary, a dim cyan CUBA · HAWAII · COLOMBIA · QUEENSLAND roster, and a Georgia-italic 'aurorae seen from the equator.' caption at the base.">
   <defs>
-    <!-- Stormy night sky -->
+    <!-- Deep space sky -->
     <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#0a0518"/>
-      <stop offset="55%"  stop-color="#160c26"/>
+      <stop offset="55%"  stop-color="#0e0824"/>
       <stop offset="100%" stop-color="#050208"/>
     </linearGradient>
 
-    <!-- Brass rod -->
-    <linearGradient id="brassG" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#2a1a08"/>
-      <stop offset="45%"  stop-color="#ffd97a"/>
-      <stop offset="55%"  stop-color="#e0b060"/>
-      <stop offset="100%" stop-color="#3a2410"/>
-    </linearGradient>
-
-    <!-- Arc glow -->
-    <radialGradient id="arcGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%"   stop-color="#e6f4ff" stop-opacity="0.75"/>
-      <stop offset="55%"  stop-color="#6ec4ff" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#6ec4ff" stop-opacity="0"/>
+    <!-- Sun body -->
+    <radialGradient id="sunG" cx="0.42" cy="0.4" r="0.7">
+      <stop offset="0%"   stop-color="#fff2b0"/>
+      <stop offset="35%"  stop-color="#ffcf5a"/>
+      <stop offset="75%"  stop-color="#ff7a2a"/>
+      <stop offset="100%" stop-color="#c53010"/>
     </radialGradient>
 
-    <!-- Shroud -->
-    <linearGradient id="shroudG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#6a5a78"/>
-      <stop offset="55%"  stop-color="#3a2a48"/>
-      <stop offset="100%" stop-color="#1a1024"/>
+    <!-- Sun corona -->
+    <radialGradient id="coronaG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ffbf5a" stop-opacity="0.55"/>
+      <stop offset="40%"  stop-color="#ff7030" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff5010" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- CME plasma arc -->
+    <linearGradient id="cmeG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffe6a0" stop-opacity="0.95"/>
+      <stop offset="50%"  stop-color="#ffb060" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#c04010" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Slab -->
-    <linearGradient id="slabG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#403040"/>
-      <stop offset="100%" stop-color="#0f0a14"/>
+    <!-- Aurora green ribbon -->
+    <linearGradient id="auroraGreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#6effa8" stop-opacity="0"/>
+      <stop offset="35%"  stop-color="#6effa8" stop-opacity="0.7"/>
+      <stop offset="70%"  stop-color="#4ac888" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1a4838" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Headline underline sweep -->
+    <!-- Aurora violet ribbon -->
+    <linearGradient id="auroraViolet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8a4ff" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#b088ff" stop-opacity="0.6"/>
+      <stop offset="75%"  stop-color="#7050c0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2a1840" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Aurora cyan tint -->
+    <linearGradient id="auroraCyan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a4e8ff" stop-opacity="0"/>
+      <stop offset="45%"  stop-color="#6ec4ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a3050" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Earth body -->
+    <radialGradient id="earthG" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0%"   stop-color="#4a7ab0"/>
+      <stop offset="60%"  stop-color="#1e3a6a"/>
+      <stop offset="100%" stop-color="#0a1830"/>
+    </radialGradient>
+
+    <!-- Earth aurora halo -->
+    <radialGradient id="earthGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#6effa8" stop-opacity="0.35"/>
+      <stop offset="60%"  stop-color="#b088ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#b088ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Headline underline sweep (aurora palette) -->
     <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#6ec4ff" stop-opacity="0"/>
-      <stop offset="18%"  stop-color="#6ec4ff" stop-opacity="1"/>
-      <stop offset="48%"  stop-color="#b088ff" stop-opacity="1"/>
-      <stop offset="78%"  stop-color="#e6d0ff" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="#6effa8" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#6effa8" stop-opacity="1"/>
+      <stop offset="48%"  stop-color="#6ec4ff" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#b088ff" stop-opacity="1"/>
       <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="panelSeam" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#b088ff" stop-opacity="0.55"/>
+      <stop offset="50%"  stop-color="#6effa8" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </linearGradient>
+
+    <!-- Spark radial -->
+    <radialGradient id="sparkG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#f0faff" stop-opacity="1"/>
+      <stop offset="55%"  stop-color="#6ec4ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#6ec4ff" stop-opacity="0"/>
+    </radialGradient>
 
     <clipPath id="leftPanel">
       <rect x="0" y="0" width="360" height="200"/>
     </clipPath>
   </defs>
 
-  <!-- ============ LEFT PANEL: GOTHIC LABORATORY ============ -->
+  <!-- ============ LEFT PANEL: THE SOLAR STORM ============ -->
   <g clip-path="url(#leftPanel)">
-    <!-- Sky background -->
+    <!-- Sky -->
     <rect x="0" y="0" width="360" height="200" fill="url(#skyG)"/>
 
-    <!-- Occasional distant lightning flash (whole-panel wash) -->
-    <rect x="0" y="0" width="360" height="200" fill="#a4c8ff" opacity="0">
-      <animate attributeName="opacity" values="0;0;0;0.10;0;0.05;0;0" keyTimes="0;0.3;0.35;0.36;0.4;0.42;0.46;1" dur="13s" repeatCount="indefinite"/>
+    <!-- Distant stars -->
+    <g fill="#e6d4ff">
+      <circle cx="180" cy="18" r="0.6" opacity="0.7"/>
+      <circle cx="205" cy="30" r="0.5" opacity="0.55"/>
+      <circle cx="150" cy="42" r="0.55" opacity="0.6"/>
+      <circle cx="330" cy="14" r="0.6" opacity="0.7"/>
+      <circle cx="310" cy="52" r="0.5" opacity="0.55"/>
+      <circle cx="240" cy="20" r="0.55" opacity="0.65"/>
+      <circle cx="120" cy="12" r="0.5" opacity="0.55"/>
+      <circle cx="90"  cy="24" r="0.45" opacity="0.5"/>
+      <circle cx="345" cy="88" r="0.5" opacity="0.55"/>
+      <circle cx="230" cy="82" r="0.5" opacity="0.5"/>
+      <circle cx="195" cy="60" r="0.45" opacity="0.5"/>
+      <circle cx="290" cy="102" r="0.5" opacity="0.5"/>
+    </g>
+
+    <!-- Aurora curtains: thin wispy ribbons stroked with soft gradients, lower opacity -->
+    <!-- Each ribbon: wavy vertical Bezier stroked wide, top-to-bottom fading -->
+    <g>
+      <!-- Green ribbon 1 -->
+      <path d="M 140 -6 Q 138 40 142 80 Q 146 118 140 152" fill="none"
+            stroke="#6effa8" stroke-width="6" stroke-linecap="round" opacity="0.28">
+        <animate attributeName="opacity" values="0.18;0.4;0.22;0.32;0.18" dur="13s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; -3 0; 2 0; 0 0" dur="13s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 140 -6 Q 138 40 142 80 Q 146 118 140 152" fill="none"
+            stroke="#a4ffcc" stroke-width="1.5" stroke-linecap="round" opacity="0.55">
+        <animate attributeName="opacity" values="0.35;0.7;0.4;0.55;0.35" dur="13s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; -3 0; 2 0; 0 0" dur="13s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Violet ribbon 2 -->
+      <path d="M 175 -6 Q 180 44 174 82 Q 168 120 178 158" fill="none"
+            stroke="#b088ff" stroke-width="7" stroke-linecap="round" opacity="0.24">
+        <animate attributeName="opacity" values="0.14;0.32;0.18;0.28;0.14" dur="17s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 4 0; -2 0; 0 0" dur="17s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 175 -6 Q 180 44 174 82 Q 168 120 178 158" fill="none"
+            stroke="#d8c0ff" stroke-width="1.4" stroke-linecap="round" opacity="0.5">
+        <animate attributeName="opacity" values="0.3;0.6;0.35;0.5;0.3" dur="17s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 4 0; -2 0; 0 0" dur="17s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Cyan-green ribbon 3 -->
+      <path d="M 210 -6 Q 214 40 208 78 Q 202 118 212 156" fill="none"
+            stroke="#6ec4ff" stroke-width="5" stroke-linecap="round" opacity="0.22">
+        <animate attributeName="opacity" values="0.12;0.3;0.16;0.24;0.12" dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; -4 0; 3 0; 0 0" dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 210 -6 Q 214 40 208 78 Q 202 118 212 156" fill="none"
+            stroke="#c8ecff" stroke-width="1.2" stroke-linecap="round" opacity="0.5">
+        <animate attributeName="opacity" values="0.3;0.65;0.4;0.55;0.3" dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; -4 0; 3 0; 0 0" dur="11s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Green ribbon 4 (right of Earth) -->
+      <path d="M 316 -6 Q 320 42 314 82 Q 308 120 318 158" fill="none"
+            stroke="#6effa8" stroke-width="7" stroke-linecap="round" opacity="0.26">
+        <animate attributeName="opacity" values="0.16;0.36;0.2;0.3;0.16" dur="19s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 3 0; -3 0; 0 0" dur="19s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 316 -6 Q 320 42 314 82 Q 308 120 318 158" fill="none"
+            stroke="#a4ffcc" stroke-width="1.5" stroke-linecap="round" opacity="0.55">
+        <animate attributeName="opacity" values="0.32;0.68;0.4;0.55;0.32" dur="19s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 3 0; -3 0; 0 0" dur="19s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Violet ribbon 5 (far right) -->
+      <path d="M 344 -6 Q 348 44 342 82 Q 336 120 346 158" fill="none"
+            stroke="#b088ff" stroke-width="6" stroke-linecap="round" opacity="0.22">
+        <animate attributeName="opacity" values="0.12;0.3;0.16;0.24;0.12" dur="23s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; -3 0; 2 0; 0 0" dur="23s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 344 -6 Q 348 44 342 82 Q 336 120 346 158" fill="none"
+            stroke="#d8c0ff" stroke-width="1.3" stroke-linecap="round" opacity="0.5">
+        <animate attributeName="opacity" values="0.28;0.6;0.35;0.5;0.28" dur="23s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; -3 0; 2 0; 0 0" dur="23s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- Overall aurora shimmer -->
+    <rect x="120" y="0" width="240" height="150" fill="#6effa8" opacity="0">
+      <animate attributeName="opacity" values="0;0.05;0;0.03;0" dur="7s" repeatCount="indefinite"/>
     </rect>
 
-    <!-- Distant hills silhouette -->
-    <path d="M 0 178 Q 90 168 180 176 Q 270 183 360 178 L 360 200 L 0 200 Z" fill="#050208"/>
+    <!-- ============ SUN (upper-left) ============ -->
+    <!-- Corona (large soft) -->
+    <circle cx="48" cy="52" r="66" fill="url(#coronaG)"/>
+    <circle cx="48" cy="52" r="52" fill="url(#coronaG)" opacity="0.6">
+      <animate attributeName="r" values="52;58;52" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.75;0.5" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Sun body -->
+    <circle cx="48" cy="52" r="30" fill="url(#sunG)"/>
+    <!-- Sunspot region (Carrington's flaring group) -->
+    <ellipse cx="62" cy="48" rx="6" ry="3" fill="#2a0808" opacity="0.65"/>
+    <ellipse cx="60" cy="48" rx="2" ry="1.2" fill="#000" opacity="0.7"/>
+    <!-- Flare highlight over sunspot -->
+    <circle cx="62" cy="48" r="4" fill="#fff8c0" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0.3;0.8;0" keyTimes="0;0.1;0.2;0.3;1" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3;7;4;6;3" keyTimes="0;0.1;0.2;0.3;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
 
-    <!-- Gothic castle turret on far left -->
-    <g fill="#0a0614">
-      <!-- Turret body -->
-      <rect x="8" y="60" width="38" height="140"/>
-      <!-- Battlements -->
-      <rect x="8"  y="52" width="7" height="8"/>
-      <rect x="19" y="52" width="7" height="8"/>
-      <rect x="30" y="52" width="7" height="8"/>
-      <rect x="41" y="52" width="5" height="8"/>
-      <!-- Conical roof -->
-      <path d="M 6 60 L 48 60 L 27 20 Z"/>
-      <!-- Pennant pole -->
-      <rect x="26.4" y="6" width="1.2" height="15"/>
-      <!-- Pennant -->
-      <path d="M 27.6 6 L 42 10 L 27.6 14 Z" fill="#3a1a2c" opacity="0.85"/>
+    <!-- ============ CME PLASMA ARC (sun -> earth) ============ -->
+    <!-- Wide translucent arc -->
+    <path d="M 76 46 Q 140 6 220 22 Q 260 32 280 46"
+          fill="none" stroke="url(#cmeG)" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
+    <!-- Bright core arc -->
+    <path d="M 76 46 Q 140 6 220 22 Q 260 32 280 46"
+          fill="none" stroke="#ffe6a0" stroke-width="2.4" stroke-linecap="round" opacity="0.9">
+      <animate attributeName="opacity" values="0.75;1;0.8" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <!-- Secondary lower streamer -->
+    <path d="M 74 62 Q 140 78 220 62 Q 250 56 276 54"
+          fill="none" stroke="#ffb060" stroke-width="1.6" stroke-linecap="round" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.7;0.35" dur="11s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Streaming plasma particles along the arc -->
+    <g fill="#fff2b0">
+      <circle r="1.6">
+        <animateMotion dur="3.5s" repeatCount="indefinite"
+                       path="M 76 46 Q 140 6 220 22 Q 260 32 280 46"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.3" fill="#ffcf5a">
+        <animateMotion dur="3.5s" begin="0.7s" repeatCount="indefinite"
+                       path="M 76 46 Q 140 6 220 22 Q 260 32 280 46"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.5s" begin="0.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.5" fill="#ffe6a0">
+        <animateMotion dur="3.5s" begin="1.4s" repeatCount="indefinite"
+                       path="M 76 46 Q 140 6 220 22 Q 260 32 280 46"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.5s" begin="1.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.2" fill="#ff8c40">
+        <animateMotion dur="3.5s" begin="2.1s" repeatCount="indefinite"
+                       path="M 76 46 Q 140 6 220 22 Q 260 32 280 46"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.5s" begin="2.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.4" fill="#ffe6a0">
+        <animateMotion dur="3.5s" begin="2.8s" repeatCount="indefinite"
+                       path="M 76 46 Q 140 6 220 22 Q 260 32 280 46"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.5s" begin="2.8s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
-    <!-- Warm candle window in turret -->
-    <rect x="21" y="94" width="12" height="16" rx="5" fill="#ffb85a" opacity="0.85">
-      <animate attributeName="opacity" values="0.65;0.95;0.72;0.9;0.65" dur="7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="21" y="94" width="12" height="16" rx="5" fill="none" stroke="#0a0614" stroke-width="0.6"/>
-    <line x1="27" y1="94" x2="27" y2="110" stroke="#0a0614" stroke-width="0.6"/>
-
-    <!-- Lightning bolt in sky (upper mid-right of left panel) -->
-    <g>
-      <path d="M 268 6 L 256 52 L 274 52 L 258 108" fill="none" stroke="#b088ff" stroke-width="5" stroke-linejoin="miter" opacity="0">
-        <animate attributeName="opacity" values="0;0;0;0.4;0;0.25;0;0" keyTimes="0;0.3;0.35;0.36;0.4;0.42;0.46;1" dur="13s" repeatCount="indefinite"/>
-      </path>
-      <path d="M 268 6 L 256 52 L 274 52 L 258 108" fill="none" stroke="#f0f4ff" stroke-width="1.6" stroke-linejoin="miter" opacity="0">
-        <animate attributeName="opacity" values="0;0;0;1;0;0.6;0;0" keyTimes="0;0.3;0.35;0.36;0.4;0.42;0.46;1" dur="13s" repeatCount="indefinite"/>
-      </path>
-    </g>
-
-    <!-- Stone laboratory floor line -->
-    <rect x="0" y="184" width="360" height="16" fill="#0a0510"/>
-    <line x1="0" y1="184" x2="360" y2="184" stroke="#2a1830" stroke-width="0.7" opacity="0.7"/>
-
-    <!-- Slab -->
-    <rect x="72" y="163" width="220" height="11" fill="url(#slabG)"/>
-    <rect x="72" y="163" width="220" height="1.5" fill="#6a4870" opacity="0.5"/>
-    <!-- Slab supports -->
-    <rect x="78" y="174" width="10" height="10" fill="#1a1020"/>
-    <rect x="276" y="174" width="10" height="10" fill="#1a1020"/>
-
-    <!-- Shrouded body on slab -->
-    <path d="M 90 163
-             Q 92 154 108 150
-             Q 130 146 165 148
-             Q 205 146 240 149
-             Q 265 148 273 153
-             Q 278 158 280 163 Z"
-          fill="url(#shroudG)"/>
-    <!-- Fold lines -->
-    <path d="M 108 156 Q 140 151 175 153 Q 220 151 255 155" fill="none" stroke="#2a1a34" stroke-width="0.5" opacity="0.7"/>
-    <path d="M 118 160 Q 150 157 190 158 Q 230 157 260 160" fill="none" stroke="#2a1a34" stroke-width="0.4" opacity="0.6"/>
-    <!-- Toe bumps -->
-    <ellipse cx="278" cy="161" rx="4" ry="3" fill="#4a3858" opacity="0.7"/>
-    <!-- Head/shoulder bumps -->
-    <ellipse cx="102" cy="155" rx="12" ry="6" fill="#4a3858" opacity="0.65"/>
-
-    <!-- Hand rising from shroud (center-right, palm-forward, fingers reaching up) -->
-    <g>
-      <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        values="0 0; 0 -3; 0 0" dur="7s" repeatCount="indefinite"/>
-      <g transform="translate(232, 148) rotate(-4)">
-        <!-- Forearm emerging from shroud -->
-        <path d="M -6 12 Q -5 4 -4 -2 L 6 -2 Q 7 4 6 12 Z" fill="#8a7a95"/>
-        <!-- Palm -->
-        <ellipse cx="1" cy="-5" rx="6" ry="5" fill="#8a7a95"/>
-        <!-- Fingers (four) -->
-        <path d="M -5 -7 Q -6 -14 -5 -18 Q -3 -20 -2 -18 Q -1 -14 -2 -7 Z" fill="#9a8aa5"/>
-        <path d="M -1 -8 Q -1 -18 0 -22 Q 2 -24 3 -22 Q 4 -18 3 -8 Z" fill="#9a8aa5"/>
-        <path d="M 3  -8 Q 4 -17 5 -21 Q 7 -23 8 -21 Q 8 -17 7 -8 Z" fill="#9a8aa5"/>
-        <path d="M 7  -7 Q 8 -14 9 -17 Q 11 -19 12 -17 Q 12 -14 11 -7 Z" fill="#9a8aa5"/>
-        <!-- Thumb -->
-        <path d="M -6 -4 Q -10 -8 -11 -12 Q -10 -14 -8 -13 Q -5 -10 -4 -6 Z" fill="#9a8aa5"/>
-        <!-- Highlight on fingertips (electric charge) -->
-        <circle cx="-3" cy="-19" r="0.9" fill="#e6f4ff">
-          <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="2" cy="-23" r="1.0" fill="#e6f4ff">
-          <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="0.5s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="7" cy="-22" r="0.9" fill="#e6f4ff">
-          <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="11" cy="-18" r="0.8" fill="#e6f4ff">
-          <animate attributeName="opacity" values="0.35;1;0.35" dur="3s" begin="1.5s" repeatCount="indefinite"/>
-        </circle>
-      </g>
-    </g>
-
-    <!-- Electrode rods -->
-    <g>
-      <!-- Left electrode base -->
-      <rect x="140" y="158" width="16" height="6" fill="#3a2410"/>
-      <rect x="139" y="164" width="18" height="2" fill="#1a0f04"/>
-      <!-- Left rod -->
-      <rect x="146" y="58" width="4" height="100" fill="url(#brassG)"/>
-      <!-- Left bulb tip -->
-      <circle cx="148" cy="56" r="4.5" fill="#8a6a30"/>
-      <circle cx="148" cy="55" r="2.2" fill="#f0d888"/>
-      <ellipse cx="147" cy="54" rx="0.9" ry="0.5" fill="#fff6d0"/>
-
-      <!-- Right electrode base -->
-      <rect x="204" y="158" width="16" height="6" fill="#3a2410"/>
-      <rect x="203" y="164" width="18" height="2" fill="#1a0f04"/>
-      <!-- Right rod -->
-      <rect x="210" y="58" width="4" height="100" fill="url(#brassG)"/>
-      <!-- Right bulb tip -->
-      <circle cx="212" cy="56" r="4.5" fill="#8a6a30"/>
-      <circle cx="212" cy="55" r="2.2" fill="#f0d888"/>
-      <ellipse cx="211" cy="54" rx="0.9" ry="0.5" fill="#fff6d0"/>
-    </g>
-
-    <!-- Glow between electrodes at tips (arc corona) -->
-    <ellipse cx="180" cy="60" rx="40" ry="26" fill="url(#arcGlow)">
-      <animate attributeName="opacity" values="0.35;0.9;0.4;0.65;0.35" dur="3s" repeatCount="indefinite"/>
+    <!-- ============ EARTH ============ -->
+    <!-- Aurora glow halo behind Earth -->
+    <circle cx="288" cy="52" r="30" fill="url(#earthGlow)">
+      <animate attributeName="r" values="28;33;28" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Earth body -->
+    <circle cx="288" cy="52" r="14" fill="url(#earthG)"/>
+    <!-- Continent hints -->
+    <path d="M 280 48 Q 284 46 288 48 Q 290 51 286 53 Q 282 52 280 48 Z" fill="#3a6a4a" opacity="0.85"/>
+    <path d="M 292 54 Q 296 55 297 58 Q 294 60 291 58 Z" fill="#3a6a4a" opacity="0.8"/>
+    <!-- Terminator shadow -->
+    <path d="M 288 38 A 14 14 0 0 1 288 66 A 8 14 0 0 0 288 38 Z" fill="#000" opacity="0.35"/>
+    <!-- Polar aurora ring on Earth's night side -->
+    <ellipse cx="288" cy="42" rx="8" ry="2" fill="none" stroke="#6effa8" stroke-width="0.9" opacity="0.85">
+      <animate attributeName="opacity" values="0.5;0.95;0.5" dur="5s" repeatCount="indefinite"/>
     </ellipse>
 
-    <!-- Jacob's ladder arcs — several arcs rising between the rods, staggered -->
-    <!-- Arc A -->
-    <g>
-      <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        values="0 155; 0 60" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;1;0.7;0" keyTimes="0;0.15;0.5;0.85;1" dur="3s" repeatCount="indefinite"/>
-      <path d="M 148 0 Q 160 -8 180 0 Q 200 8 212 0" fill="none" stroke="#6ec4ff" stroke-width="5" stroke-linecap="round" opacity="0.35"/>
-      <path d="M 148 0 Q 160 -8 180 0 Q 200 8 212 0" fill="none" stroke="#e6f4ff" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- ============ HORIZON / GROUND ============ -->
+    <!-- Distant hills -->
+    <path d="M 0 168 Q 60 158 130 162 Q 200 166 270 158 Q 320 154 360 160 L 360 200 L 0 200 Z"
+          fill="#050208"/>
+    <path d="M 0 176 Q 80 172 160 178 Q 240 182 360 174 L 360 200 L 0 200 Z"
+          fill="#020104" opacity="0.9"/>
+
+    <!-- ============ TELEGRAPH POLES + WIRE + SPARKS ============ -->
+    <!-- Left pole (with faint rim light so it reads against the hills) -->
+    <g fill="#1a1024">
+      <rect x="87" y="128" width="2.4" height="50"/>
+      <!-- Crossarm -->
+      <rect x="80" y="132" width="17" height="1.6"/>
+      <!-- Insulators -->
+      <circle cx="82" cy="131" r="1.4"/>
+      <circle cx="88.2" cy="131" r="1.4"/>
+      <circle cx="95" cy="131" r="1.4"/>
     </g>
-    <!-- Arc B (staggered 1s) -->
-    <g>
-      <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        values="0 155; 0 60" dur="3s" begin="1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;1;0.7;0" keyTimes="0;0.15;0.5;0.85;1" dur="3s" begin="1s" repeatCount="indefinite"/>
-      <path d="M 148 0 Q 165 6 180 -1 Q 196 -8 212 0" fill="none" stroke="#a4d0ff" stroke-width="5" stroke-linecap="round" opacity="0.35"/>
-      <path d="M 148 0 Q 165 6 180 -1 Q 196 -8 212 0" fill="none" stroke="#e6f4ff" stroke-width="1.6" stroke-linecap="round"/>
-    </g>
-    <!-- Arc C (staggered 2s) -->
-    <g>
-      <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        values="0 155; 0 60" dur="3s" begin="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.9;1;0.7;0" keyTimes="0;0.15;0.5;0.85;1" dur="3s" begin="2s" repeatCount="indefinite"/>
-      <path d="M 148 0 Q 158 4 180 -3 Q 202 4 212 0" fill="none" stroke="#6ec4ff" stroke-width="5" stroke-linecap="round" opacity="0.35"/>
-      <path d="M 148 0 Q 158 4 180 -3 Q 202 4 212 0" fill="none" stroke="#e6f4ff" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Right pole -->
+    <g fill="#1a1024">
+      <rect x="228" y="120" width="2.6" height="58"/>
+      <rect x="220" y="124" width="19" height="1.6"/>
+      <circle cx="222" cy="123" r="1.5"/>
+      <circle cx="229.3" cy="123" r="1.5"/>
+      <circle cx="237" cy="123" r="1.5"/>
     </g>
 
-    <!-- Small spark particles between rods -->
-    <g fill="#e6f4ff">
-      <circle cx="170" cy="0" r="0.9">
-        <animate attributeName="cy" values="150;58" dur="2.2s" repeatCount="indefinite"/>
-        <animate attributeName="cx" values="168;185" dur="2.2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+    <!-- Wire with sag between poles -->
+    <path d="M 88.2 133 Q 158 152 229.3 125" fill="none" stroke="#1a1024" stroke-width="0.8"/>
+    <path d="M 88.2 133 Q 158 152 229.3 125" fill="none" stroke="#3a2a48" stroke-width="0.5" opacity="0.75"/>
+
+    <!-- Sparks along the wire (induced current) -->
+    <g>
+      <!-- Spark 1 -->
+      <circle cx="120" cy="141" r="3" fill="url(#sparkG)" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.15;0.7;1" dur="2.3s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="190" cy="0" r="0.7" fill="#a4d0ff">
-        <animate attributeName="cy" values="150;58" dur="2.6s" begin="0.7s" repeatCount="indefinite"/>
-        <animate attributeName="cx" values="192;172" dur="2.6s" begin="0.7s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0" dur="2.6s" begin="0.7s" repeatCount="indefinite"/>
+      <circle cx="120" cy="141" r="1.1" fill="#f4faff" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.15;0.7;1" dur="2.3s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="180" cy="0" r="0.8">
-        <animate attributeName="cy" values="150;58" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
-        <animate attributeName="cx" values="178;182" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
+      <!-- Zigzag bolt down from wire -->
+      <path d="M 120 141 L 118 146 L 122 148 L 119 154" stroke="#e6f4ff" stroke-width="0.7" fill="none" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.15;0.7;1" dur="2.3s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Spark 2 (staggered) -->
+      <circle cx="158" cy="151" r="3.4" fill="url(#sparkG)" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.18;0.7;1" dur="2.6s" begin="0.6s" repeatCount="indefinite"/>
       </circle>
+      <circle cx="158" cy="151" r="1.2" fill="#f4faff" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.18;0.7;1" dur="2.6s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M 158 151 L 156 156 L 160 159 L 157 165" stroke="#e6f4ff" stroke-width="0.7" fill="none" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.18;0.7;1" dur="2.6s" begin="0.6s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Spark 3 -->
+      <circle cx="196" cy="147" r="2.8" fill="url(#sparkG)" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.15;0.7;1" dur="1.9s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="196" cy="147" r="1.0" fill="#f4faff" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.15;0.7;1" dur="1.9s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M 196 147 L 194 152 L 198 155 L 195 161" stroke="#e6f4ff" stroke-width="0.7" fill="none" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.15;0.7;1" dur="1.9s" begin="1.2s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Spark 4 (near right pole) -->
+      <circle cx="222" cy="130" r="3.2" fill="url(#sparkG)" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.18;0.7;1" dur="2.9s" begin="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="222" cy="130" r="1.1" fill="#f4faff" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.18;0.7;1" dur="2.9s" begin="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M 222 130 L 220 135 L 224 138 L 221 144" stroke="#e6f4ff" stroke-width="0.7" fill="none" opacity="0">
+        <animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;0.05;0.18;0.7;1" dur="2.9s" begin="1.8s" repeatCount="indefinite"/>
+      </path>
     </g>
 
-    <!-- Manuscript with quill at bottom-right corner of left panel -->
-    <g transform="translate(320, 172) rotate(-8)">
-      <rect x="-22" y="-11" width="42" height="24" fill="#e8d8b0"/>
-      <rect x="-22" y="-11" width="42" height="24" fill="none" stroke="#8a6828" stroke-width="0.4" opacity="0.6"/>
-      <line x1="-18" y1="-6" x2="15" y2="-6" stroke="#5a4028" stroke-width="0.35" opacity="0.85"/>
-      <line x1="-18" y1="-2" x2="13" y2="-2" stroke="#5a4028" stroke-width="0.35" opacity="0.85"/>
-      <line x1="-18" y1="2"  x2="16" y2="2"  stroke="#5a4028" stroke-width="0.35" opacity="0.85"/>
-      <line x1="-18" y1="6"  x2="10" y2="6"  stroke="#5a4028" stroke-width="0.35" opacity="0.85"/>
-      <!-- Quill -->
-      <path d="M 18 -8 L 30 -22 L 24 -6 Z" fill="#c8b8d0"/>
-      <path d="M 22 -14 L 26 -18 L 25 -13 Z" fill="#a89ab0"/>
-      <line x1="24" y1="-6" x2="18" y2="0" stroke="#3a2a48" stroke-width="0.6"/>
-    </g>
+    <!-- Faint reflected aurora on the hills -->
+    <rect x="0" y="168" width="360" height="10" fill="#6effa8" opacity="0.05"/>
   </g>
 
   <!-- Seam -->
@@ -263,15 +368,15 @@ The left half is her laboratory at midnight: a stone slab holds a shrouded form 
   <!-- ============ RIGHT TEXT PANEL ============ -->
   <rect x="360" y="0" width="440" height="200" fill="#0d1117"/>
 
-  <!-- Right-edge accent bars -->
-  <rect x="792" y="20" width="4" height="52" fill="#6ec4ff" opacity="0.85"/>
-  <rect x="792" y="72" width="4" height="52" fill="#b088ff" opacity="0.85"/>
-  <rect x="792" y="124" width="4" height="52" fill="#e6d0ff" opacity="0.85"/>
+  <!-- Right-edge accent bars (aurora palette) -->
+  <rect x="792" y="20" width="4" height="52" fill="#6effa8" opacity="0.85"/>
+  <rect x="792" y="72" width="4" height="52" fill="#6ec4ff" opacity="0.85"/>
+  <rect x="792" y="124" width="4" height="52" fill="#b088ff" opacity="0.85"/>
 
   <text x="386" y="66"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="34" font-weight="800" fill="#f0e6da" letter-spacing="1">
-    AUGUST 30, 2026
+    SEPTEMBER 1, 2026
   </text>
 
   <rect x="386" y="76" width="390" height="3" fill="url(#underlineGrad)">
@@ -281,24 +386,24 @@ The left half is her laboratory at midnight: a stone slab holds a shrouded form 
   <text x="386" y="106"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="17" font-weight="700" letter-spacing="1.2">
-    <tspan fill="#b088ff">MARY SHELLEY</tspan><tspan fill="#f0e6da" opacity="0.78">&#160;·&#160;229 YEARS</tspan><tspan fill="#8a94a8" opacity="0.85">&#160;·&#160;SINCE 1797</tspan>
+    <tspan fill="#6effa8">CARRINGTON EVENT</tspan><tspan fill="#f0e6da" opacity="0.8">&#160;·&#160;167 YEARS</tspan>
   </text>
 
   <text x="386" y="128"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="10.5" font-style="italic" fill="#e6d0ff" letter-spacing="1" opacity="0.95">
-    FRANKENSTEIN · PROMETHEUS · GENEVA · DIODATI
+        font-size="10.5" font-style="italic" fill="#c8a4ff" letter-spacing="1" opacity="0.95">
+    REDHILL · SOLAR FLARE · TELEGRAPHS · AURORAE
   </text>
 
   <text x="386" y="146"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="10.5" fill="#8a94a8" letter-spacing="1" opacity="0.9">
-    LIGHTNING · MANUSCRIPT · CASTLE · TRAVELER
+        font-size="10.5" fill="#6ec4ff" letter-spacing="1" opacity="0.75">
+    CUBA · HAWAII · COLOMBIA · QUEENSLAND
   </text>
 
   <text x="386" y="178"
         font-family="Georgia, 'Times New Roman', serif"
         font-size="12.5" font-style="italic" fill="#f0e6da" opacity="0.9">
-    &#8220;the modern prometheus.&#8221;
+    &#8220;aurorae seen from the equator.&#8221;
   </text>
 </svg>

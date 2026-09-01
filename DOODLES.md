@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 1, 2026 — Mary Shelley — 229th Birthday (August 30, 1797)
+
+<img src="./doodle-archive/2026/09/2026-09-01-060223.svg" width="800" alt="Daily doodle for August 30, 2026 — the 229th birthday of Mary Shelley. On the left half, a gothic laboratory at midnight: a stone slab holds a shrouded form under a stormy violet vault; two brass electrodes crackle rising blue-white Jacob's ladder arcs between them; a pale hand emerges from beneath the sheet reaching upward; a jagged violet lightning bolt flashes across the sky; a distant gothic castle turret with a single warm candle window silhouettes the storm; a small parchment with a quill sits at the corner. On the right, a huge cream AUGUST 30, 2026 headline underlined by a cyan-to-violet sweep, a violet MARY SHELLEY · 229 YEARS subhead trailed by cream · SINCE 1797, an italic pale-violet FRANKENSTEIN · PROMETHEUS · GENEVA · DIODATI tertiary, a dim slate LIGHTNING · MANUSCRIPT · CASTLE · TRAVELER roster, and a Georgia-italic 'the modern prometheus.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+Mary Wollstonecraft Shelley was born in London on 30 August 1797, the daughter of philosopher William Godwin and pioneering feminist Mary Wollstonecraft, who died eleven days after her birth. In the summer of 1816 — the "Year Without a Summer," darkened by the eruption of Mount Tambora — the eighteen-year-old Mary and her lover Percy Bysshe Shelley sat around a fire at the Villa Diodati on the shore of Lake Geneva with Lord Byron and John Polidori, trading ghost stories. From that competition came a waking dream of "the pale student of unhallowed arts kneeling beside the thing he had put together." Two years later Frankenstein; or, The Modern Prometheus appeared anonymously. She was twenty. She had invented science fiction while nobody was watching.
+
+The left half is her laboratory at midnight: a stone slab holds a shrouded form under a stormy vault, two brass electrodes crackle a Jacob's ladder of blue-white arcs rising between them, a hand emerges from beneath the sheet, a jagged bolt splits the sky, and a gothic turret glows with a single candle. On the right, a large cream AUGUST 30, 2026 headline anchors a violet MARY SHELLEY · 229 YEARS subhead, an italic FRANKENSTEIN · PROMETHEUS · GENEVA · DIODATI tertiary, a dim LIGHTNING · MANUSCRIPT · CASTLE · TRAVELER roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## August 30, 2026 — Michael Jackson — 68th Birthday (August 29, 1958)
 
 <img src="./doodle-archive/2026/08/2026-08-30-060219.svg" width="800" alt="Daily doodle for August 29, 2026 — the 68th birthday of Michael Jackson. On the left half, a dark stage under a warm circular spotlight; a single white sequined glove hovers above a tilted black fedora, small sparkles travelling across the glove's beading, and gold-star confetti drifts slowly down through the beam. On the right, a huge cream AUGUST 29, 2026 headline underlined by a gold-to-cream sweep, a gold KING OF POP · 68 YEARS subhead trailed by cream · SINCE 1958, an italic amber GARY · MOTOWN · THRILLER · NEVERLAND tertiary, a dim MOONWALK · SEQUIN · FEDORA · JACKSON 5 roster, and a Georgia-italic 'just beat it.' caption at the base.">
