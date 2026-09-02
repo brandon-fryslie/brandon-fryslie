@@ -10,6 +10,14 @@ Captions carry each day's headline numbers so the gallery can be skimmed without
 
 <!-- STATS-GALLERY:START -->
 
+## September 1, 2026 · 06:12 UTC
+
+<img src="./stats-archive/2026/09/2026-09-01-061254.svg" width="960" alt="Live GitHub stats card for September 1, 2026">
+
+Active Repos 61 (1 Year) · PRs Merged 2282 (All Time) · Days Active 266/365 (1 Year) · Longest Streak 82 (1 Year)
+
+---
+
 ## August 30, 2026 · 06:32 UTC
 
 <img src="./stats-archive/2026/08/2026-08-30-063238.svg" width="960" alt="Live GitHub stats card for August 30, 2026">
