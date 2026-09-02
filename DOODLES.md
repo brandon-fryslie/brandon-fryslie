@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 2, 2026 — The Carrington Event — 167th Anniversary (September 1, 1859)
+
+<img src="./doodle-archive/2026/09/2026-09-02-060159.svg" width="800" alt="Daily doodle for September 1, 2026 — the 167th anniversary of the Carrington Event geomagnetic storm. On the left half, a large glowing sun in the upper-left with a swirling corona hurls a warm plasma arc across the sky; gold particles streak from left to right toward a small blue Earth in the upper mid-right, which is wrapped in rippling green and violet auroral curtains that drape from top to horizon; below, silhouetted dark hills carry two telegraph poles, a sagging wire strung between them, and bright cyan-white sparks flashing along the wire from the induced current. On the right, a huge cream SEPTEMBER 1, 2026 headline underlined by a green-to-violet aurora sweep, a green CARRINGTON EVENT · 167 YEARS subhead trailed by cream · SINCE 1859, an italic aurora-violet REDHILL · SOLAR FLARE · TELEGRAPHS · AURORAE tertiary, a dim cyan CUBA · HAWAII · COLOMBIA · QUEENSLAND roster, and a Georgia-italic 'aurorae seen from the equator.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the morning of 1 September 1859, English astronomer Richard Carrington was sketching sunspots at his private observatory in Redhill, Surrey when the group he was watching flared white-hot for five minutes. Seventeen and a half hours later — hardly any time at all, by solar-wind standards — the coronal mass ejection reached Earth and triggered the most intense geomagnetic storm ever recorded. Aurorae blazed as far south as Cuba, Hawaii, Colombia, and Queensland; in the northeastern United States they were so bright that people got out of bed thinking morning had come and read the newspaper by their light. Telegraph systems across Europe and North America failed. Operators were shocked; paper tapes caught fire; some lines kept working with the batteries disconnected, driven purely by the current the storm had induced in the wires.
+
+The left half is that morning at planetary scale: a swollen coronal sun in the upper-left hurls a warm plasma arc across the sky, gold particles streak toward a small blue Earth wrapped in rippling green-and-violet auroral curtains, and below, two telegraph poles stand against dark hills as bright cyan sparks jump from the induced-current wire between them. On the right, a large cream SEPTEMBER 1, 2026 headline anchors a green CARRINGTON EVENT · 167 YEARS subhead, an italic aurora-violet REDHILL · SOLAR FLARE · TELEGRAPHS · AURORAE tertiary, a dim CUBA · HAWAII · COLOMBIA · QUEENSLAND roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 1, 2026 — Mary Shelley — 229th Birthday (August 30, 1797)
 
 <img src="./doodle-archive/2026/09/2026-09-01-060223.svg" width="800" alt="Daily doodle for August 30, 2026 — the 229th birthday of Mary Shelley. On the left half, a gothic laboratory at midnight: a stone slab holds a shrouded form under a stormy violet vault; two brass electrodes crackle rising blue-white Jacob's ladder arcs between them; a pale hand emerges from beneath the sheet reaching upward; a jagged violet lightning bolt flashes across the sky; a distant gothic castle turret with a single warm candle window silhouettes the storm; a small parchment with a quill sits at the corner. On the right, a huge cream AUGUST 30, 2026 headline underlined by a cyan-to-violet sweep, a violet MARY SHELLEY · 229 YEARS subhead trailed by cream · SINCE 1797, an italic pale-violet FRANKENSTEIN · PROMETHEUS · GENEVA · DIODATI tertiary, a dim slate LIGHTNING · MANUSCRIPT · CASTLE · TRAVELER roster, and a Georgia-italic 'the modern prometheus.' caption at the base.">
