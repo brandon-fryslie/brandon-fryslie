@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 3, 2026 — Great Fire of London — 360th Anniversary (September 2, 1666)
+
+<img src="./doodle-archive/2026/09/2026-09-03-060319.svg" width="800" alt="Daily doodle for September 2, 2026 — the 360th anniversary of the Great Fire of London. On the left half, a row of half-timbered Tudor houses along the burning waterfront: steep gables and chimneys silhouetted against a bruised red sky, yellow-white flames leaping from every rooftop and flickering out of the upstairs windows, dark smoke plumes drifting west, a shower of orange embers rising on the east wind, Old St Paul's square tower on the far horizon just beginning to catch, and the Thames at the base carrying the fire back at itself in a rippling reflection. On the right, a huge cream SEPTEMBER 2, 2026 headline underlined by an ember-to-cream sweep, an ember GREAT FIRE OF LONDON · 360 YEARS subhead trailed by cream · SINCE 1666, an italic amber PUDDING LANE · FARRINER · BAKERY · 2AM tertiary, a dim smoke-grey CHEAPSIDE · GUILDHALL · ST PAUL'S · 13,200 HOMES roster, and a Georgia-italic 'a most horrid malicious bloody flame. — pepys' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+Just after midnight on Sunday 2 September 1666, a spark from an unswept oven caught in Thomas Farriner's bakery on Pudding Lane. The maid refused to jump into the alley and became the fire's first fatality. A brisk east wind, streets of pitch-caulked timber, and a Lord Mayor who yawned that "a woman might piss it out" did the rest. For four days the flames walked west through the medieval City of London — Cheapside, the Guildhall, the Royal Exchange, eighty-seven parish churches, thirteen thousand two hundred houses, and finally Old St Paul's itself, whose lead roof melted and ran down Ludgate Hill in rivers. Samuel Pepys buried a wheel of Parmesan cheese in his garden and wrote of "a most horrid malicious bloody flame." The city that rose in its place — Wren's, brick and stone, wider streets, insurance offices on every corner — is essentially the one still standing today.
+
+The left half is that first night: a row of half-timbered Tudor houses along the burning waterfront, gables catching yellow-white flame, embers streaming upward on the east wind, a smoke pall drifting west across a bruised red sky, Old St Paul's tower silhouetted on the horizon, and the Thames below carrying the fire back at itself in a rippling reflection. On the right, a large cream SEPTEMBER 2, 2026 headline anchors an ember GREAT FIRE OF LONDON · 360 YEARS subhead, an italic amber PUDDING LANE · FARRINER · BAKERY · 2AM tertiary, a dim smoke-grey CHEAPSIDE · GUILDHALL · ST PAUL'S · 13,200 HOMES roster, and a Georgia-italic Pepys caption at the base.
+
+</details>
+
+---
+
 ## September 2, 2026 — The Carrington Event — 167th Anniversary (September 1, 1859)
 
 <img src="./doodle-archive/2026/09/2026-09-02-060159.svg" width="800" alt="Daily doodle for September 1, 2026 — the 167th anniversary of the Carrington Event geomagnetic storm. On the left half, a large glowing sun in the upper-left with a swirling corona hurls a warm plasma arc across the sky; gold particles streak from left to right toward a small blue Earth in the upper mid-right, which is wrapped in rippling green and violet auroral curtains that drape from top to horizon; below, silhouetted dark hills carry two telegraph poles, a sagging wire strung between them, and bright cyan-white sparks flashing along the wire from the induced current. On the right, a huge cream SEPTEMBER 1, 2026 headline underlined by a green-to-violet aurora sweep, a green CARRINGTON EVENT · 167 YEARS subhead trailed by cream · SINCE 1859, an italic aurora-violet REDHILL · SOLAR FLARE · TELEGRAPHS · AURORAE tertiary, a dim cyan CUBA · HAWAII · COLOMBIA · QUEENSLAND roster, and a Georgia-italic 'aurorae seen from the equator.' caption at the base.">

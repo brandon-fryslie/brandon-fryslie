@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Great Fire of London — 360th Anniversary (September 2, 1666) -->
+<!-- about:
+Just after midnight on Sunday 2 September 1666, a spark from an unswept oven caught in Thomas Farriner's bakery on Pudding Lane. The maid refused to jump into the alley and became the fire's first fatality. A brisk east wind, streets of pitch-caulked timber, and a Lord Mayor who yawned that "a woman might piss it out" did the rest. For four days the flames walked west through the medieval City of London — Cheapside, the Guildhall, the Royal Exchange, eighty-seven parish churches, thirteen thousand two hundred houses, and finally Old St Paul's itself, whose lead roof melted and ran down Ludgate Hill in rivers. Samuel Pepys buried a wheel of Parmesan cheese in his garden and wrote of "a most horrid malicious bloody flame." The city that rose in its place — Wren's, brick and stone, wider streets, insurance offices on every corner — is essentially the one still standing today.
+
+The left half is that first night: a row of half-timbered Tudor houses along the burning waterfront, gables catching yellow-white flame, embers streaming upward on the east wind, a smoke pall drifting west across a bruised red sky, Old St Paul's tower silhouetted on the horizon, and the Thames below carrying the fire back at itself in a rippling reflection. On the right, a large cream SEPTEMBER 2, 2026 headline anchors an ember GREAT FIRE OF LONDON · 360 YEARS subhead, an italic amber PUDDING LANE · FARRINER · BAKERY · 2AM tertiary, a dim CHEAPSIDE · GUILDHALL · ST PAUL'S · 13,200 HOMES roster, and a Georgia-italic Pepys caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for September 2, 2026 — the 360th anniversary of the Great Fire of London. On the left half, a row of half-timbered Tudor houses along the burning waterfront: steep gables and chimneys silhouetted against a bruised red sky, yellow-white flames leaping from every rooftop and flickering out of the upstairs windows, dark smoke plumes drifting west, a shower of orange embers rising on the east wind, Old St Paul's square tower on the far horizon just beginning to catch, and the Thames at the base carrying the fire back at itself in a rippling reflection. On the right, a huge cream SEPTEMBER 2, 2026 headline underlined by an ember-to-cream sweep, an ember GREAT FIRE OF LONDON · 360 YEARS subhead trailed by cream · SINCE 1666, an italic amber PUDDING LANE · FARRINER · BAKERY · 2AM tertiary, a dim smoke-grey CHEAPSIDE · GUILDHALL · ST PAUL'S · 13,200 HOMES roster, and a Georgia-italic 'a most horrid malicious bloody flame. — pepys' caption at the base.">
+  <defs>
+    <!-- Bruised night sky, ember-lit at horizon -->
+    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#050203"/>
+      <stop offset="45%"  stop-color="#22080a"/>
+      <stop offset="78%"  stop-color="#701c0a"/>
+      <stop offset="100%" stop-color="#c8461a"/>
+    </linearGradient>
+
+    <!-- Distant fire glow (behind the skyline) -->
+    <radialGradient id="fireGlow" cx="0.45" cy="0.85" r="0.7">
+      <stop offset="0%"   stop-color="#ffb860" stop-opacity="0.95"/>
+      <stop offset="35%"  stop-color="#ff6820" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#c02010" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Flame body gradient (vertical) -->
+    <linearGradient id="flameG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff2b0" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#ffe080" stop-opacity="0.95"/>
+      <stop offset="55%"  stop-color="#ff8028" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c02010" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Inner brighter flame core -->
+    <linearGradient id="flameCore" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#fff2b0" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffcf5a" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Smoke plume -->
+    <linearGradient id="smokeG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a0f14" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#2a1a22" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#050203" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Thames water surface -->
+    <linearGradient id="thamesG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#8a2a14" stop-opacity="0.85"/>
+      <stop offset="35%"  stop-color="#3a1008" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#050203" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Window glow inside houses -->
+    <radialGradient id="windowG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#fff2b0" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#ff8028" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#c02010" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Headline underline sweep (ember palette) -->
+    <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ff6020" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#ff6020" stop-opacity="1"/>
+      <stop offset="48%"  stop-color="#ffa040" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#ffe080" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="panelSeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#ff8028" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Reusable flame shape (asymmetric teardrop) -->
+    <symbol id="flameShape" viewBox="-10 -30 20 30" overflow="visible">
+      <path d="M 0 0 Q -8 -8 -5 -18 Q -3 -22 -6 -26 Q 0 -30 3 -24 Q 6 -20 4 -14 Q 9 -10 7 -4 Q 4 -1 0 0 Z"
+            fill="url(#flameG)"/>
+      <path d="M 0 -2 Q -4 -8 -2 -16 Q 0 -22 2 -16 Q 4 -10 1 -4 Q 0 -2 0 -2 Z"
+            fill="url(#flameCore)"/>
+    </symbol>
+
+    <clipPath id="leftPanel">
+      <rect x="0" y="0" width="360" height="200"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============ LEFT PANEL: BURNING LONDON ============ -->
+  <g clip-path="url(#leftPanel)">
+    <!-- Sky -->
+    <rect x="0" y="0" width="360" height="200" fill="url(#skyG)"/>
+
+    <!-- Overall fire glow behind the skyline -->
+    <ellipse cx="170" cy="168" rx="240" ry="90" fill="url(#fireGlow)">
+      <animate attributeName="opacity" values="0.85;1;0.9;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Sparse distant stars only above the smoke -->
+    <g fill="#e6d4b0">
+      <circle cx="60"  cy="14" r="0.5" opacity="0.55"/>
+      <circle cx="110" cy="9"  r="0.45" opacity="0.5"/>
+      <circle cx="235" cy="12" r="0.5" opacity="0.55"/>
+      <circle cx="320" cy="18" r="0.45" opacity="0.5"/>
+    </g>
+
+    <!-- ============ SMOKE PLUMES (drifting west/right→left before wind, but historically eastward wind pushed flames west across the city; keep drift left-to-right for visual sweep) ============ -->
+    <g opacity="0.85">
+      <path d="M 40 130 Q 30 90 55 60 Q 80 30 65 -10 L 5 -10 L 5 130 Z" fill="url(#smokeG)" opacity="0.7">
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 8 -4; -4 2; 0 0" dur="19s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 130 128 Q 110 90 135 55 Q 165 25 150 -10 L 95 -10 L 95 128 Z" fill="url(#smokeG)" opacity="0.75">
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 6 -3; -6 3; 0 0" dur="23s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 220 130 Q 200 90 230 55 Q 260 22 245 -10 L 190 -10 L 190 130 Z" fill="url(#smokeG)" opacity="0.7">
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 10 -5; -5 2; 0 0" dur="17s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 310 130 Q 290 90 320 55 Q 350 25 335 -10 L 280 -10 L 280 130 Z" fill="url(#smokeG)" opacity="0.65">
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 7 -4; -3 2; 0 0" dur="29s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- ============ OLD ST PAUL'S TOWER (far background, right side) ============ -->
+    <g fill="#0d0507" opacity="0.95">
+      <!-- Nave -->
+      <rect x="285" y="118" width="46" height="30"/>
+      <!-- Square tower (spire was lost in 1561) -->
+      <rect x="298" y="86" width="20" height="32"/>
+      <!-- Battlements -->
+      <rect x="298" y="82" width="4" height="4"/>
+      <rect x="304" y="82" width="4" height="4"/>
+      <rect x="310" y="82" width="4" height="4"/>
+      <rect x="316" y="82" width="2" height="4"/>
+      <!-- Small window on tower -->
+    </g>
+    <!-- Rim light on St Paul's tower (fire beginning to catch) -->
+    <rect x="317.5" y="86" width="0.9" height="32" fill="#ff8028" opacity="0.7">
+      <animate attributeName="opacity" values="0.4;0.9;0.5;0.85;0.4" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="317.5" y="118" width="0.9" height="30" fill="#ff6020" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.4;0.65;0.3" dur="11s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ============ ROW OF BURNING HOUSES (foreground) ============ -->
+    <!-- Each house: silhouette body + windows glowing + flame(s) rising from roof -->
+    <g>
+      <!-- House 1 (leftmost, three-story with gable) -->
+      <g fill="#0a0304">
+        <!-- Body -->
+        <rect x="8" y="118" width="42" height="42"/>
+        <!-- Gable triangle -->
+        <path d="M 8 118 L 29 96 L 50 118 Z"/>
+        <!-- Chimney -->
+        <rect x="42" y="98" width="4" height="12"/>
+      </g>
+      <!-- Fire-lit right edge -->
+      <path d="M 50 118 L 50 160 L 48 160 L 48 118 Z" fill="#ff5020" opacity="0.7">
+        <animate attributeName="opacity" values="0.5;0.85;0.55;0.8;0.5" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <!-- Windows -->
+      <ellipse cx="18" cy="130" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.75;1;0.8;0.95;0.75" dur="2.3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="32" cy="130" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.85;1;0.7;1;0.85" dur="2.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="18" cy="146" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.65;0.95;0.75;1;0.65" dur="3.1s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="32" cy="146" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.8;1;0.75;0.9;0.8" dur="2.5s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- Flames rising from gable peak & sides -->
+      <g transform="translate(29 96)">
+        <use href="#flameShape" width="20" height="30" x="-10" y="-30">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.15 1.2; 0.95 0.9; 1.08 1.1; 1 1" dur="1.7s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(14 118)">
+        <use href="#flameShape" width="16" height="22" x="-8" y="-22">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 0.9 0.95; 1.1 1.15; 0.95 1.05; 1 1" dur="1.9s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(44 118)">
+        <use href="#flameShape" width="14" height="20" x="-7" y="-20">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.12 1.1; 0.95 0.9; 1.05 1.15; 1 1" dur="2.3s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+    </g>
+
+    <!-- House 2 (Farriner's Bakery — with sign) -->
+    <g>
+      <g fill="#0a0304">
+        <rect x="58" y="112" width="52" height="48"/>
+        <!-- Stepped gable -->
+        <path d="M 58 112 L 58 100 L 68 100 L 68 92 L 84 92 L 84 100 L 110 100 L 110 112 Z"/>
+        <!-- Chimney -->
+        <rect x="98" y="82" width="4" height="18"/>
+      </g>
+      <!-- Sign hanging (bakery bread symbol implied) -->
+      <rect x="72" y="126" width="14" height="6" fill="#3a1a10" opacity="0.9"/>
+      <rect x="78" y="122" width="1" height="4" fill="#2a1008"/>
+      <!-- Fire-lit right edge (stronger — this is where it started) -->
+      <path d="M 110 112 L 110 160 L 107 160 L 107 112 Z" fill="#ff5020" opacity="0.85">
+        <animate attributeName="opacity" values="0.7;1;0.75;0.95;0.7" dur="5s" repeatCount="indefinite"/>
+      </path>
+      <!-- Windows blazing -->
+      <ellipse cx="70" cy="120" rx="3.5" ry="2.6" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.85;1;0.8;1;0.85" dur="1.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="84" cy="120" rx="3.5" ry="2.6" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.75;1;0.85;1;0.75" dur="2.7s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="98" cy="120" rx="3.5" ry="2.6" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.9;1;0.75;0.95;0.9" dur="2.1s" repeatCount="indefinite"/>
+      </ellipse>
+      <!-- Ground-floor doorway blazing (this is where it began) -->
+      <rect x="88" y="140" width="12" height="20" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.9;1;0.85;1;0.9" dur="1.3s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Big flames from gable peak -->
+      <g transform="translate(76 92)">
+        <use href="#flameShape" width="26" height="40" x="-13" y="-40">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.15 1.2; 0.9 0.85; 1.1 1.15; 1 1" dur="1.5s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(64 100)">
+        <use href="#flameShape" width="20" height="30" x="-10" y="-30">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 0.95 0.9; 1.1 1.2; 0.95 1.05; 1 1" dur="1.9s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(96 100)">
+        <use href="#flameShape" width="22" height="32" x="-11" y="-32">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.12 1.15; 0.92 0.9; 1.06 1.1; 1 1" dur="2.1s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+    </g>
+
+    <!-- House 3 (tall narrow, three-story) -->
+    <g>
+      <g fill="#0a0304">
+        <rect x="118" y="106" width="34" height="54"/>
+        <path d="M 118 106 L 135 88 L 152 106 Z"/>
+        <rect x="146" y="94" width="4" height="12"/>
+      </g>
+      <path d="M 152 106 L 152 160 L 150 160 L 150 106 Z" fill="#ff5020" opacity="0.75">
+        <animate attributeName="opacity" values="0.5;0.85;0.6;0.8;0.5" dur="6.5s" repeatCount="indefinite"/>
+      </path>
+      <ellipse cx="126" cy="118" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.75;1;0.8;0.95;0.75" dur="2.6s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="144" cy="118" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.85;1;0.7;1;0.85" dur="2.2s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="126" cy="134" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.7;0.95;0.8;1;0.7" dur="3.3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="144" cy="134" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.8;1;0.75;0.9;0.8" dur="2.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="126" cy="150" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.85;1;0.75;1;0.85" dur="1.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="144" cy="150" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.7;0.95;0.85;1;0.7" dur="2.4s" repeatCount="indefinite"/>
+      </ellipse>
+      <g transform="translate(135 88)">
+        <use href="#flameShape" width="24" height="36" x="-12" y="-36">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.15 1.2; 0.9 0.9; 1.1 1.1; 1 1" dur="1.7s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(122 106)">
+        <use href="#flameShape" width="14" height="22" x="-7" y="-22">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 0.9 0.95; 1.1 1.15; 0.95 1.05; 1 1" dur="2.5s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(148 106)">
+        <use href="#flameShape" width="14" height="22" x="-7" y="-22">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.1 1.1; 0.95 0.9; 1.05 1.15; 1 1" dur="2.1s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+    </g>
+
+    <!-- House 4 (double-gabled inn-like structure) -->
+    <g>
+      <g fill="#0a0304">
+        <rect x="160" y="120" width="60" height="40"/>
+        <!-- Two peaked gables -->
+        <path d="M 160 120 L 175 104 L 190 120 Z"/>
+        <path d="M 190 120 L 205 104 L 220 120 Z"/>
+        <rect x="184" y="108" width="4" height="12"/>
+        <rect x="214" y="108" width="4" height="12"/>
+      </g>
+      <path d="M 220 120 L 220 160 L 218 160 L 218 120 Z" fill="#ff5020" opacity="0.7">
+        <animate attributeName="opacity" values="0.55;0.85;0.6;0.8;0.55" dur="5.5s" repeatCount="indefinite"/>
+      </path>
+      <!-- Half-timbered look: little X patterns -->
+      <g stroke="#3a1a10" stroke-width="0.6" opacity="0.65" fill="none">
+        <line x1="166" y1="128" x2="172" y2="134"/>
+        <line x1="172" y1="128" x2="166" y2="134"/>
+        <line x1="196" y1="128" x2="202" y2="134"/>
+        <line x1="202" y1="128" x2="196" y2="134"/>
+      </g>
+      <ellipse cx="180" cy="132" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.8;1;0.75;0.95;0.8" dur="2.3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="210" cy="132" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.7;0.95;0.85;1;0.7" dur="2.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="180" cy="148" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.85;1;0.7;0.95;0.85" dur="1.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="210" cy="148" rx="3" ry="2.4" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.75;1;0.8;0.95;0.75" dur="2.5s" repeatCount="indefinite"/>
+      </ellipse>
+      <g transform="translate(175 104)">
+        <use href="#flameShape" width="20" height="30" x="-10" y="-30">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.12 1.15; 0.92 0.9; 1.08 1.1; 1 1" dur="2.1s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(205 104)">
+        <use href="#flameShape" width="20" height="30" x="-10" y="-30">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 0.95 0.9; 1.12 1.18; 0.98 1.08; 1 1" dur="1.9s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+    </g>
+
+    <!-- House 5 (shorter, catching fire) -->
+    <g>
+      <g fill="#0a0304">
+        <rect x="228" y="124" width="52" height="36"/>
+        <path d="M 228 124 L 254 108 L 280 124 Z"/>
+        <rect x="270" y="112" width="4" height="12"/>
+      </g>
+      <path d="M 280 124 L 280 160 L 278 160 L 278 124 Z" fill="#ff5020" opacity="0.65">
+        <animate attributeName="opacity" values="0.4;0.75;0.5;0.7;0.4" dur="8s" repeatCount="indefinite"/>
+      </path>
+      <ellipse cx="240" cy="136" rx="2.8" ry="2.2" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.6;0.95;0.7;0.9;0.6" dur="3.1s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="255" cy="136" rx="2.8" ry="2.2" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.55;0.9;0.7;0.85;0.55" dur="2.7s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="270" cy="136" rx="2.8" ry="2.2" fill="url(#windowG)">
+        <animate attributeName="opacity" values="0.7;1;0.75;0.9;0.7" dur="2.3s" repeatCount="indefinite"/>
+      </ellipse>
+      <g transform="translate(254 108)">
+        <use href="#flameShape" width="18" height="26" x="-9" y="-26">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 1.1 1.1; 0.95 0.95; 1.08 1.05; 1 1" dur="1.9s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+      <g transform="translate(268 124)">
+        <use href="#flameShape" width="12" height="18" x="-6" y="-18">
+          <animateTransform attributeName="transform" attributeType="XML" type="scale"
+                            values="1 1; 0.9 0.95; 1.15 1.1; 0.95 1.05; 1 1" dur="2.7s" repeatCount="indefinite"
+                            additive="sum"/>
+        </use>
+      </g>
+    </g>
+
+    <!-- Small silhouettes in front of St Paul's (city rooftops between) -->
+    <g fill="#0a0304" opacity="0.95">
+      <rect x="280" y="146" width="18" height="14"/>
+      <path d="M 280 146 L 289 140 L 298 146 Z"/>
+      <rect x="330" y="140" width="16" height="20"/>
+      <path d="M 330 140 L 338 132 L 346 140 Z"/>
+      <rect x="346" y="146" width="14" height="14"/>
+    </g>
+    <g>
+      <ellipse cx="337" cy="150" rx="1.8" ry="1.4" fill="url(#windowG)" opacity="0.85">
+        <animate attributeName="opacity" values="0.6;1;0.7;0.9;0.6" dur="2.9s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="289" cy="152" rx="1.8" ry="1.4" fill="url(#windowG)" opacity="0.85">
+        <animate attributeName="opacity" values="0.55;0.9;0.7;0.85;0.55" dur="3.3s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- ============ RISING EMBERS ============ -->
+    <g fill="#ff8028">
+      <circle r="1.1">
+        <animateMotion dur="6s" repeatCount="indefinite"
+                       path="M 30 130 Q 40 90 55 60 Q 75 30 90 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="0.9" fill="#ffcf5a">
+        <animateMotion dur="5.5s" begin="0.7s" repeatCount="indefinite"
+                       path="M 76 100 Q 90 70 100 40 Q 115 10 130 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="5.5s" begin="0.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.2">
+        <animateMotion dur="7s" begin="1.4s" repeatCount="indefinite"
+                       path="M 80 95 Q 95 60 108 30 Q 120 5 138 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="0.9" fill="#ffe080">
+        <animateMotion dur="5.5s" begin="2.1s" repeatCount="indefinite"
+                       path="M 135 90 Q 150 60 165 30 Q 178 5 195 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="5.5s" begin="2.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.1">
+        <animateMotion dur="6.5s" begin="0.4s" repeatCount="indefinite"
+                       path="M 178 105 Q 190 70 200 40 Q 215 10 230 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="6.5s" begin="0.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="0.9" fill="#ffcf5a">
+        <animateMotion dur="6s" begin="1.9s" repeatCount="indefinite"
+                       path="M 205 105 Q 218 75 230 40 Q 245 10 260 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="6s" begin="1.9s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.0">
+        <animateMotion dur="7.5s" begin="2.6s" repeatCount="indefinite"
+                       path="M 254 108 Q 268 78 278 45 Q 292 15 306 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="7.5s" begin="2.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="0.9" fill="#ffe080">
+        <animateMotion dur="6s" begin="3.3s" repeatCount="indefinite"
+                       path="M 100 90 Q 112 60 118 30 Q 122 5 135 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="6s" begin="3.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.1">
+        <animateMotion dur="7s" begin="4s" repeatCount="indefinite"
+                       path="M 160 100 Q 170 70 180 40 Q 190 10 205 -10"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.75;1" dur="7s" begin="4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ============ THAMES WATER ============ -->
+    <rect x="0" y="160" width="360" height="40" fill="url(#thamesG)"/>
+    <!-- Fire reflection ripples -->
+    <g opacity="0.7">
+      <path d="M 0 168 Q 30 166 60 168 Q 90 170 120 168 Q 150 166 180 168 Q 210 170 240 168 Q 270 166 300 168 Q 330 170 360 168"
+            fill="none" stroke="#ff8028" stroke-width="0.8">
+        <animate attributeName="d"
+                 values="M 0 168 Q 30 166 60 168 Q 90 170 120 168 Q 150 166 180 168 Q 210 170 240 168 Q 270 166 300 168 Q 330 170 360 168;
+                         M 0 168 Q 30 170 60 168 Q 90 166 120 168 Q 150 170 180 168 Q 210 166 240 168 Q 270 170 300 168 Q 330 166 360 168;
+                         M 0 168 Q 30 166 60 168 Q 90 170 120 168 Q 150 166 180 168 Q 210 170 240 168 Q 270 166 300 168 Q 330 170 360 168"
+                 dur="7s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 176 Q 40 174 80 176 Q 120 178 160 176 Q 200 174 240 176 Q 280 178 320 176 Q 340 175 360 176"
+            fill="none" stroke="#ff6020" stroke-width="0.7" opacity="0.75">
+        <animate attributeName="d"
+                 values="M 0 176 Q 40 174 80 176 Q 120 178 160 176 Q 200 174 240 176 Q 280 178 320 176 Q 340 175 360 176;
+                         M 0 176 Q 40 178 80 176 Q 120 174 160 176 Q 200 178 240 176 Q 280 174 320 176 Q 340 177 360 176;
+                         M 0 176 Q 40 174 80 176 Q 120 178 160 176 Q 200 174 240 176 Q 280 178 320 176 Q 340 175 360 176"
+                 dur="11s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 186 Q 50 184 100 186 Q 150 188 200 186 Q 250 184 300 186 Q 350 188 360 186"
+            fill="none" stroke="#c02010" stroke-width="0.6" opacity="0.65">
+        <animate attributeName="d"
+                 values="M 0 186 Q 50 184 100 186 Q 150 188 200 186 Q 250 184 300 186 Q 350 188 360 186;
+                         M 0 186 Q 50 188 100 186 Q 150 184 200 186 Q 250 188 300 186 Q 350 184 360 186;
+                         M 0 186 Q 50 184 100 186 Q 150 188 200 186 Q 250 184 300 186 Q 350 188 360 186"
+                 dur="13s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- Bright reflected fire glow on water directly under skyline -->
+    <ellipse cx="120" cy="168" rx="120" ry="6" fill="#ff8028" opacity="0.25">
+      <animate attributeName="opacity" values="0.18;0.35;0.22;0.32;0.18" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Seam -->
+  <rect x="358" y="10" width="2" height="180" fill="url(#panelSeam)"/>
+
+  <!-- ============ RIGHT TEXT PANEL ============ -->
+  <rect x="360" y="0" width="440" height="200" fill="#0d1117"/>
+
+  <!-- Right-edge accent bars (ember palette) -->
+  <rect x="792" y="20" width="4" height="52" fill="#ffe080" opacity="0.85"/>
+  <rect x="792" y="72" width="4" height="52" fill="#ff8028" opacity="0.85"/>
+  <rect x="792" y="124" width="4" height="52" fill="#c02010" opacity="0.85"/>
+
+  <text x="386" y="66"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="34" font-weight="800" fill="#f4e6c8" letter-spacing="1">
+    SEPTEMBER 2, 2026
+  </text>
+
+  <rect x="386" y="76" width="390" height="3" fill="url(#underlineGrad)">
+    <animate attributeName="x" values="386;396;386" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="386" y="106"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="17" font-weight="700" letter-spacing="1.2">
+    <tspan fill="#ff8028">GREAT FIRE OF LONDON</tspan><tspan fill="#f4e6c8" opacity="0.8">&#160;·&#160;360 YEARS</tspan>
+  </text>
+
+  <text x="386" y="128"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" font-style="italic" fill="#ffbf5a" letter-spacing="1" opacity="0.95">
+    PUDDING LANE · FARRINER · BAKERY · 2AM
+  </text>
+
+  <text x="386" y="146"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="10.5" fill="#b89a86" letter-spacing="1" opacity="0.85">
+    CHEAPSIDE · GUILDHALL · ST PAUL'S · 13,200 HOMES
+  </text>
+
+  <text x="386" y="178"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="12.5" font-style="italic" fill="#f4e6c8" opacity="0.9">
+    &#8220;a most horrid malicious bloody flame.&#8221; &#8212; pepys
+  </text>
+</svg>
