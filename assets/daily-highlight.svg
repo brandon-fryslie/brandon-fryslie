@@ -1,321 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Viking 2 Lands on Mars — 50th Anniversary (September 3, 1976) -->
+<!-- theme: Google — 28th Anniversary (September 4, 1998) -->
 <!-- about:
-On 3 September 1976 at 22:58 UTC, NASA's Viking 2 lander touched down on the plains of Utopia Planitia in Mars's northern hemisphere — the second spacecraft ever to survive a landing on another planet, forty-nine days after its twin at Chryse Planitia. Within minutes it returned a panorama of a boulder-strewn rust-orange desert under a salmon-pink sky, a photograph so unlike the expected black-of-space void that mission scientists initially color-balanced the sky blue by mistake before recomputing it. For nearly four Earth years it dug at the regolith with its sampling arm and ran the four Viking biology experiments looking for life; the results were ambiguous enough that people are still arguing about them today. It kept transmitting until 11 April 1980 when its batteries failed, having outlasted its ninety-day design life by more than a factor of sixteen.
+On 4 September 1998, Larry Page and Sergey Brin filed the incorporation papers for Google, Inc. from a rented garage in Menlo Park, California. The first check the company received had been made out to "Google Inc." before Google Inc. legally existed, so they needed a bank account, so they needed a company. Their search engine, briefly called BackRub, had been running on the Stanford campus network since 1996 and had already used enough bandwidth to earn the graduate-school administration's polite attention. The name was a misspelling of googol — ten to the hundredth power — meant to gesture at the size of the web the PageRank algorithm was ranking. Twenty-eight years later almost every daily art piece on a homepage is a distant nephew of the ones google.com started pinning to its logo in the late nineties; today's is a direct one.
 
-The left half is that first afternoon on the surface: the three-legged lander sits on a rust-orange plain under a warm salmon sky, its high-gain antenna dish angled toward Earth, camera mast pointing over a small rock, sampling arm extended, a red status LED softly pulsing, fine Martian dust drifting west across the ground and past distant hills. On the right, a large cream SEPTEMBER 3, 2026 headline anchors a rust VIKING 2 · 50 YEARS subhead, an italic amber UTOPIA PLANITIA · 22:58 UTC · 1976 tertiary, a dim slate CHRYSE · JPL · LANGLEY · BIOLOGY roster, and a Georgia-italic Carl Sagan caption at the base.
+The left half is a small Google Doodle in miniature: six primary-colored orbs bounce in staggered arcs above a rounded search bar with a blinking cursor and a cycling ghost query, a magnifying glass on the left, and two stubby buttons below. On the right, a large cream SEPTEMBER 4, 2026 headline anchors a Google-blue GOOGLE · 28 YEARS subhead, an italic amber MENLO PARK · GARAGE · STANFORD · 1998 tertiary, a dim slate PAGE · BRIN · PAGERANK · GOOGOL roster, and a Georgia-italic 'ten to the hundredth power.' caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for September 3, 2026 — the 50th anniversary of NASA's Viking 2 landing on Mars. On the left half, the Viking 2 lander stands on the rust-orange plain of Utopia Planitia beneath a warm salmon Martian sky: a hexagonal body on three splayed footpads, twin RTG covers rising from the top, a tall camera mast, a high-gain antenna dish pointed toward Earth, a horizontal meteorology boom, an extended soil-sampling arm reaching forward, and a small red status LED softly pulsing on the body. Distant mesas silhouette the horizon; a few faint stars sit in the darker upper sky; fine Martian dust drifts west across the ground. On the right, a huge cream SEPTEMBER 3, 2026 headline underlined by a rust-to-cream sweep, a rust VIKING 2 · 50 YEARS subhead trailed by cream · SINCE 1976, an italic amber UTOPIA PLANITIA · 22:58 UTC · 1976 tertiary, a dim slate CHRYSE · JPL · LANGLEY · BIOLOGY roster, and a Georgia-italic 'we are made of star-stuff. — sagan' caption at the base.">
+     aria-label="Daily doodle for September 4, 2026 — the 28th anniversary of Google's founding on September 4, 1998. On the left half, a cream Google-search-page-in-miniature: six primary-colored orbs (blue, red, yellow, blue, green, red) bounce in staggered arcs above a rounded search bar containing a blinking text cursor and cycling ghost query text, a small magnifying glass on the left of the bar, and two rounded 'Google Search' and 'I'm Feeling Lucky' buttons below. On the right, a huge cream SEPTEMBER 4, 2026 headline underlined by a blue-red-yellow-green sweep, a Google-blue GOOGLE · 28 YEARS subhead trailed by cream · SINCE 1998, an italic amber MENLO PARK · GARAGE · STANFORD · 1998 tertiary, a dim slate PAGE · BRIN · PAGERANK · GOOGOL roster, and a Georgia-italic 'ten to the hundredth power.' caption at the base.">
   <defs>
-    <!-- Mars sky: salmon at horizon fading up to dusty magenta -->
-    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#2a0d10"/>
-      <stop offset="30%"  stop-color="#5a2418"/>
-      <stop offset="65%"  stop-color="#a85838"/>
-      <stop offset="100%" stop-color="#d89068"/>
+    <!-- Cream 'search page' background -->
+    <linearGradient id="pageG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#faf7f0"/>
+      <stop offset="100%" stop-color="#ece4d4"/>
     </linearGradient>
 
-    <!-- Sun disk near horizon -->
-    <radialGradient id="sunG" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%"   stop-color="#fff2d8" stop-opacity="1"/>
-      <stop offset="45%"  stop-color="#ffcf88" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#d89068" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Ground: rust foreground -->
-    <linearGradient id="groundG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#8a3a1a"/>
-      <stop offset="45%"  stop-color="#6a2812"/>
-      <stop offset="100%" stop-color="#2a0d06"/>
+    <!-- Search bar fill -->
+    <linearGradient id="barG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f4eed8"/>
     </linearGradient>
 
-    <!-- Distant mesa shadow -->
-    <linearGradient id="mesaG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#4a1810" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#2a0d08" stop-opacity="0.95"/>
+    <!-- Button fill -->
+    <linearGradient id="btnG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f8f4e4"/>
+      <stop offset="100%" stop-color="#e0d8c0"/>
     </linearGradient>
 
-    <!-- Lander body metallic gold -->
-    <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#f0e0a8"/>
-      <stop offset="60%"  stop-color="#c8a860"/>
-      <stop offset="100%" stop-color="#7a5828"/>
-    </linearGradient>
-
-    <!-- RTG cover -->
-    <linearGradient id="rtgG" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#d8c890"/>
-      <stop offset="100%" stop-color="#6a4a20"/>
-    </linearGradient>
-
-    <!-- Antenna dish -->
-    <radialGradient id="dishG" cx="0.4" cy="0.35" r="0.7">
-      <stop offset="0%"   stop-color="#f8e8b0"/>
-      <stop offset="70%"  stop-color="#a8843c"/>
-      <stop offset="100%" stop-color="#4a3010"/>
-    </radialGradient>
-
-    <!-- Headline underline sweep (rust palette) -->
+    <!-- Underline sweep (Google palette) -->
     <linearGradient id="underlineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#c85030" stop-opacity="0"/>
-      <stop offset="18%"  stop-color="#c85030" stop-opacity="1"/>
-      <stop offset="48%"  stop-color="#e88848" stop-opacity="1"/>
-      <stop offset="78%"  stop-color="#f4e6c8" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="#4285F4" stop-opacity="0"/>
+      <stop offset="15%"  stop-color="#4285F4" stop-opacity="1"/>
+      <stop offset="42%"  stop-color="#EA4335" stop-opacity="1"/>
+      <stop offset="68%"  stop-color="#FBBC05" stop-opacity="1"/>
+      <stop offset="92%"  stop-color="#34A853" stop-opacity="1"/>
       <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="panelSeam" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#e88848" stop-opacity="0.55"/>
+      <stop offset="50%"  stop-color="#4285F4" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Dust wisp -->
-    <linearGradient id="dustG" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#d89068" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#e8a878" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#d89068" stop-opacity="0"/>
-    </linearGradient>
+    <!-- Soft glow for orbs -->
+    <radialGradient id="orbBlueG" cx="0.35" cy="0.3" r="0.7">
+      <stop offset="0%"   stop-color="#a8c7ff"/>
+      <stop offset="60%"  stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#1a3a80"/>
+    </radialGradient>
+    <radialGradient id="orbRedG" cx="0.35" cy="0.3" r="0.7">
+      <stop offset="0%"   stop-color="#ffb0a8"/>
+      <stop offset="60%"  stop-color="#EA4335"/>
+      <stop offset="100%" stop-color="#7a1810"/>
+    </radialGradient>
+    <radialGradient id="orbYelG" cx="0.35" cy="0.3" r="0.7">
+      <stop offset="0%"   stop-color="#ffedad"/>
+      <stop offset="60%"  stop-color="#FBBC05"/>
+      <stop offset="100%" stop-color="#7a5a00"/>
+    </radialGradient>
+    <radialGradient id="orbGrnG" cx="0.35" cy="0.3" r="0.7">
+      <stop offset="0%"   stop-color="#b0ecc0"/>
+      <stop offset="60%"  stop-color="#34A853"/>
+      <stop offset="100%" stop-color="#0f4a20"/>
+    </radialGradient>
 
     <clipPath id="leftPanel">
       <rect x="0" y="0" width="360" height="200"/>
     </clipPath>
   </defs>
 
-  <!-- ============ LEFT PANEL: MARS SURFACE ============ -->
+  <!-- ============ LEFT PANEL: MINI GOOGLE HOMEPAGE ============ -->
   <g clip-path="url(#leftPanel)">
-    <!-- Sky -->
-    <rect x="0" y="0" width="360" height="200" fill="url(#skyG)"/>
+    <!-- Cream page background -->
+    <rect x="0" y="0" width="360" height="200" fill="url(#pageG)"/>
 
-    <!-- Sun disc low over horizon -->
-    <ellipse cx="70" cy="118" rx="26" ry="16" fill="url(#sunG)">
-      <animate attributeName="opacity" values="0.9;1;0.95;1;0.9" dur="13s" repeatCount="indefinite"/>
-    </ellipse>
-
-    <!-- Faint stars in darker upper sky -->
-    <g fill="#f4e6c8">
-      <circle cx="40"  cy="14" r="0.45" opacity="0.5"/>
-      <circle cx="88"  cy="8"  r="0.5"  opacity="0.55"/>
-      <circle cx="140" cy="18" r="0.4"  opacity="0.45"/>
-      <circle cx="188" cy="10" r="0.5"  opacity="0.5"/>
-      <circle cx="240" cy="20" r="0.45" opacity="0.5"/>
-      <circle cx="290" cy="12" r="0.4"  opacity="0.45"/>
-      <circle cx="335" cy="16" r="0.45" opacity="0.5"/>
-    </g>
-    <g fill="#f4e6c8">
-      <circle cx="112" cy="30" r="0.35" opacity="0.35"/>
-      <circle cx="212" cy="34" r="0.35" opacity="0.35"/>
-      <circle cx="312" cy="30" r="0.35" opacity="0.35"/>
-    </g>
-
-    <!-- Distant mesas on horizon (right of sun) -->
-    <path d="M 130 128 L 148 118 L 170 124 L 190 116 L 215 122 L 240 114 L 268 122 L 295 116 L 330 124 L 360 120 L 360 132 L 130 132 Z"
-          fill="url(#mesaG)"/>
-    <path d="M 0 132 L 25 126 L 55 132 L 90 128 L 115 132 L 130 128 L 130 138 L 0 138 Z"
-          fill="url(#mesaG)" opacity="0.7"/>
-
-    <!-- Ground plain -->
-    <rect x="0" y="132" width="360" height="68" fill="url(#groundG)"/>
-
-    <!-- Ground texture: subtle horizontal shading bands -->
-    <g opacity="0.35">
-      <rect x="0" y="140" width="360" height="1" fill="#a04820"/>
-      <rect x="0" y="152" width="360" height="1" fill="#7a3018"/>
-      <rect x="0" y="168" width="360" height="1" fill="#5a2010"/>
+    <!-- Faint dot-grid texture -->
+    <g fill="#c8bfa8" opacity="0.35">
+      <circle cx="30"  cy="15" r="0.6"/>
+      <circle cx="70"  cy="15" r="0.6"/>
+      <circle cx="110" cy="15" r="0.6"/>
+      <circle cx="150" cy="15" r="0.6"/>
+      <circle cx="190" cy="15" r="0.6"/>
+      <circle cx="230" cy="15" r="0.6"/>
+      <circle cx="270" cy="15" r="0.6"/>
+      <circle cx="310" cy="15" r="0.6"/>
+      <circle cx="30"  cy="185" r="0.6"/>
+      <circle cx="70"  cy="185" r="0.6"/>
+      <circle cx="110" cy="185" r="0.6"/>
+      <circle cx="150" cy="185" r="0.6"/>
+      <circle cx="190" cy="185" r="0.6"/>
+      <circle cx="230" cy="185" r="0.6"/>
+      <circle cx="270" cy="185" r="0.6"/>
+      <circle cx="310" cy="185" r="0.6"/>
     </g>
 
-    <!-- Scattered surface rocks -->
-    <g fill="#2a0d06">
-      <ellipse cx="24"  cy="176" rx="10" ry="3"/>
-      <ellipse cx="52"  cy="188" rx="14" ry="3.5"/>
-      <ellipse cx="98"  cy="182" rx="7"  ry="2.5"/>
-      <ellipse cx="256" cy="178" rx="8"  ry="2.8"/>
-      <ellipse cx="290" cy="192" rx="16" ry="4"/>
-      <ellipse cx="330" cy="184" rx="9"  ry="3"/>
-    </g>
-    <g fill="#4a1810">
-      <ellipse cx="24"  cy="174.5" rx="9"  ry="2"/>
-      <ellipse cx="52"  cy="186"   rx="12" ry="2.2"/>
-      <ellipse cx="98"  cy="180.8" rx="6"  ry="1.6"/>
-      <ellipse cx="256" cy="176.8" rx="7"  ry="1.8"/>
-      <ellipse cx="290" cy="190.2" rx="14" ry="2.6"/>
-      <ellipse cx="330" cy="182.8" rx="8"  ry="1.9"/>
-    </g>
-
-    <!-- Small rock the sampling arm reaches toward -->
-    <ellipse cx="230" cy="172" rx="9" ry="2.6" fill="#2a0d06"/>
-    <ellipse cx="230" cy="170.5" rx="7.5" ry="1.7" fill="#5a2010"/>
-    <path d="M 224 170.5 L 227 166 L 232 165 L 236 168 L 236 170.5 Z" fill="#4a1810"/>
-
-    <!-- Dust drift wisps -->
-    <ellipse cx="180" cy="160" rx="60" ry="2.2" fill="url(#dustG)" opacity="0.6">
-      <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        values="-30 0; 30 -1; -30 0" dur="19s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="80" cy="172" rx="50" ry="1.8" fill="url(#dustG)" opacity="0.5">
-      <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        values="-25 0; 25 1; -25 0" dur="23s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="270" cy="164" rx="55" ry="2" fill="url(#dustG)" opacity="0.55">
-      <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        values="-28 0; 28 -1; -28 0" dur="17s" repeatCount="indefinite"/>
-    </ellipse>
-
-    <!-- ============ VIKING 2 LANDER (centered around x=160, footpad y=175) ============ -->
+    <!-- ============ SIX BOUNCING ORBS (Google palette) ============ -->
+    <!-- Baseline y=52, orbs bounce upward -->
     <g>
-      <!-- Ground shadow under lander -->
-      <ellipse cx="160" cy="178" rx="42" ry="4" fill="#1a0704" opacity="0.75"/>
-
-      <!-- LEG 1 (left) - strut from body to footpad -->
-      <g stroke="#3a2810" stroke-width="1.6" fill="none" stroke-linecap="round">
-        <line x1="140" y1="152" x2="126" y2="174"/>
-        <line x1="146" y1="152" x2="130" y2="174"/>
-      </g>
-      <ellipse cx="128" cy="176" rx="7" ry="2.4" fill="#c8a860" stroke="#5a3818" stroke-width="0.6"/>
-
-      <!-- LEG 2 (right) -->
-      <g stroke="#3a2810" stroke-width="1.6" fill="none" stroke-linecap="round">
-        <line x1="180" y1="152" x2="194" y2="174"/>
-        <line x1="174" y1="152" x2="190" y2="174"/>
-      </g>
-      <ellipse cx="192" cy="176" rx="7" ry="2.4" fill="#c8a860" stroke="#5a3818" stroke-width="0.6"/>
-
-      <!-- LEG 3 (back center — behind body) -->
-      <g stroke="#3a2810" stroke-width="1.6" fill="none" stroke-linecap="round">
-        <line x1="158" y1="152" x2="160" y2="172"/>
-        <line x1="162" y1="152" x2="164" y2="172"/>
-      </g>
-      <ellipse cx="162" cy="173" rx="6" ry="2" fill="#a88848" stroke="#5a3818" stroke-width="0.6" opacity="0.8"/>
-
-      <!-- BODY (hexagonal platform, seen slightly from above) -->
-      <!-- Top face -->
-      <path d="M 135 148 L 145 143 L 175 143 L 185 148 L 175 153 L 145 153 Z"
-            fill="url(#bodyG)" stroke="#3a2810" stroke-width="0.6"/>
-      <!-- Front face -->
-      <path d="M 135 148 L 145 153 L 175 153 L 185 148 L 185 158 L 175 163 L 145 163 L 135 158 Z"
-            fill="#8a6828" stroke="#3a2810" stroke-width="0.6"/>
-      <!-- Panel seam lines on front -->
-      <line x1="150" y1="153" x2="150" y2="163" stroke="#3a2810" stroke-width="0.4" opacity="0.7"/>
-      <line x1="160" y1="153" x2="160" y2="163" stroke="#3a2810" stroke-width="0.4" opacity="0.7"/>
-      <line x1="170" y1="153" x2="170" y2="163" stroke="#3a2810" stroke-width="0.4" opacity="0.7"/>
-
-      <!-- Red status LED on body (blinking) -->
-      <circle cx="176" cy="158" r="1.4" fill="#ff3018">
-        <animate attributeName="opacity" values="0.3;1;0.4;1;0.3" dur="2.3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="176" cy="158" r="2.6" fill="#ff3018" opacity="0.35">
-        <animate attributeName="opacity" values="0.1;0.5;0.15;0.5;0.1" dur="2.3s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Green LED on body -->
-      <circle cx="144" cy="158" r="1.2" fill="#40e070">
-        <animate attributeName="opacity" values="0.6;1;0.7;0.95;0.6" dur="3.7s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- RTG COVERS (two boxy protrusions on top, slightly angled outward) -->
-      <path d="M 138 143 L 140 132 L 154 132 L 152 143 Z" fill="url(#rtgG)" stroke="#3a2810" stroke-width="0.5"/>
-      <path d="M 168 143 L 170 132 L 184 132 L 182 143 Z" fill="url(#rtgG)" stroke="#3a2810" stroke-width="0.5"/>
-      <!-- RTG cooling fin lines -->
-      <g stroke="#3a2810" stroke-width="0.35" opacity="0.7">
-        <line x1="141" y1="135" x2="153" y2="135"/>
-        <line x1="141" y1="138" x2="152.5" y2="138"/>
-        <line x1="141" y1="141" x2="152" y2="141"/>
-        <line x1="171" y1="135" x2="183" y2="135"/>
-        <line x1="171" y1="138" x2="182.5" y2="138"/>
-        <line x1="171" y1="141" x2="182" y2="141"/>
-      </g>
-
-      <!-- CAMERA MAST (tall vertical rod with camera head, right of center) -->
-      <line x1="165" y1="143" x2="165" y2="112" stroke="#5a4020" stroke-width="1.4"/>
-      <!-- Camera head (cylindrical, small window) - slowly rotates side-to-side -->
-      <g transform="translate(165 108)">
-        <animateTransform attributeName="transform" attributeType="XML" type="rotate"
-                          values="-14 0 0; 14 0 0; -14 0 0" dur="17s" repeatCount="indefinite"
-                          additive="sum"/>
-        <rect x="-4" y="-6" width="8" height="10" fill="#d8c890" stroke="#3a2810" stroke-width="0.5" rx="1"/>
-        <rect x="-3" y="-4" width="6" height="2" fill="#1a0704"/>
-        <circle cx="0" cy="-3" r="0.6" fill="#40e070" opacity="0.85"/>
-      </g>
-
-      <!-- SECOND camera mast (left, shorter) -->
-      <line x1="150" y1="143" x2="150" y2="118" stroke="#5a4020" stroke-width="1.2"/>
-      <g transform="translate(150 115)">
-        <rect x="-3" y="-4" width="6" height="7" fill="#c8a860" stroke="#3a2810" stroke-width="0.5" rx="1"/>
-        <rect x="-2.5" y="-3" width="5" height="1.6" fill="#1a0704"/>
-      </g>
-
-      <!-- HIGH-GAIN ANTENNA DISH (angled up-and-right toward Earth) -->
-      <g transform="translate(190 138) rotate(-32)">
-        <!-- Support boom -->
-        <line x1="-4" y1="4" x2="-14" y2="14" stroke="#5a4020" stroke-width="1.3"/>
-        <!-- Dish -->
-        <ellipse cx="0" cy="0" rx="12" ry="4.5" fill="url(#dishG)" stroke="#3a2810" stroke-width="0.6"/>
-        <ellipse cx="0" cy="-0.5" rx="9" ry="3.2" fill="none" stroke="#8a6828" stroke-width="0.4" opacity="0.65"/>
-        <!-- Feed horn -->
-        <line x1="0" y1="0" x2="0" y2="-6" stroke="#5a4020" stroke-width="0.9"/>
-        <circle cx="0" cy="-6.5" r="1.2" fill="#8a6828" stroke="#3a2810" stroke-width="0.4"/>
-      </g>
-
-      <!-- METEOROLOGY BOOM (thin horizontal rod, left) -->
-      <line x1="135" y1="150" x2="118" y2="150" stroke="#5a4020" stroke-width="0.9"/>
-      <circle cx="116" cy="150" r="1.2" fill="#d8c890" stroke="#3a2810" stroke-width="0.4"/>
-      <line x1="116" y1="148" x2="116" y2="145" stroke="#5a4020" stroke-width="0.6"/>
-      <line x1="114" y1="150" x2="112" y2="150" stroke="#5a4020" stroke-width="0.6"/>
-
-      <!-- UHF ANTENNA (small stub top left) -->
-      <line x1="140" y1="132" x2="140" y2="126" stroke="#5a4020" stroke-width="0.7"/>
-      <circle cx="140" cy="125" r="0.9" fill="#d8c890"/>
-
-      <!-- SAMPLING ARM (extends forward-right toward the little rock at ~230,170) -->
+      <!-- Orb 1: blue (G) -->
       <g>
-        <!-- Shoulder mount on body -->
-        <circle cx="183" cy="156" r="1.8" fill="#5a4020" stroke="#3a2810" stroke-width="0.4"/>
-        <!-- Upper arm segment -->
-        <line x1="183" y1="156" x2="206" y2="164" stroke="#a88848" stroke-width="2"/>
-        <!-- Elbow -->
-        <circle cx="206" cy="164" r="1.3" fill="#5a4020"/>
-        <!-- Forearm -->
-        <line x1="206" y1="164" x2="226" y2="171" stroke="#a88848" stroke-width="1.8"/>
-        <!-- Scoop head at end -->
-        <g transform="translate(228 171)">
-          <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                            values="228 171; 228 170; 228 172; 228 171" dur="7s" repeatCount="indefinite"/>
-          <path d="M 0 -2 L 5 -1 L 6 2 L 3 3 L -1 2 Z" fill="#d8c890" stroke="#3a2810" stroke-width="0.4"/>
-        </g>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 0 -14; 0 0" dur="2.3s" begin="0s" repeatCount="indefinite"
+                          keyTimes="0;0.5;1"/>
+        <circle cx="95" cy="52" r="11" fill="url(#orbBlueG)"/>
+        <circle cx="92" cy="49" r="3" fill="#e8f0ff" opacity="0.7"/>
       </g>
-
-      <!-- Small US flag decal on body side -->
-      <g transform="translate(148 156)">
-        <rect x="0" y="0" width="7" height="4" fill="#f4e6c8" stroke="#3a2810" stroke-width="0.25"/>
-        <rect x="0" y="0.5" width="7" height="0.4" fill="#c8382a"/>
-        <rect x="0" y="1.3" width="7" height="0.4" fill="#c8382a"/>
-        <rect x="0" y="2.1" width="7" height="0.4" fill="#c8382a"/>
-        <rect x="0" y="2.9" width="7" height="0.4" fill="#c8382a"/>
-        <rect x="0" y="0" width="3" height="2" fill="#2a3a7a"/>
+      <!-- Orb 2: red (o) -->
+      <g>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 0 -14; 0 0" dur="2.3s" begin="0.2s" repeatCount="indefinite"
+                          keyTimes="0;0.5;1"/>
+        <circle cx="130" cy="52" r="11" fill="url(#orbRedG)"/>
+        <circle cx="127" cy="49" r="3" fill="#ffe8e4" opacity="0.7"/>
+      </g>
+      <!-- Orb 3: yellow (o) -->
+      <g>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 0 -14; 0 0" dur="2.3s" begin="0.4s" repeatCount="indefinite"
+                          keyTimes="0;0.5;1"/>
+        <circle cx="165" cy="52" r="11" fill="url(#orbYelG)"/>
+        <circle cx="162" cy="49" r="3" fill="#fff7d8" opacity="0.7"/>
+      </g>
+      <!-- Orb 4: blue (g) -->
+      <g>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 0 -14; 0 0" dur="2.3s" begin="0.6s" repeatCount="indefinite"
+                          keyTimes="0;0.5;1"/>
+        <circle cx="200" cy="52" r="11" fill="url(#orbBlueG)"/>
+        <circle cx="197" cy="49" r="3" fill="#e8f0ff" opacity="0.7"/>
+      </g>
+      <!-- Orb 5: green (l) -->
+      <g>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 0 -14; 0 0" dur="2.3s" begin="0.8s" repeatCount="indefinite"
+                          keyTimes="0;0.5;1"/>
+        <circle cx="235" cy="52" r="11" fill="url(#orbGrnG)"/>
+        <circle cx="232" cy="49" r="3" fill="#e4fae0" opacity="0.7"/>
+      </g>
+      <!-- Orb 6: red (e) -->
+      <g>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                          values="0 0; 0 -14; 0 0" dur="2.3s" begin="1.0s" repeatCount="indefinite"
+                          keyTimes="0;0.5;1"/>
+        <circle cx="270" cy="52" r="11" fill="url(#orbRedG)"/>
+        <circle cx="267" cy="49" r="3" fill="#ffe8e4" opacity="0.7"/>
       </g>
     </g>
 
-    <!-- Fine drifting dust particles across the whole scene -->
-    <g fill="#e8a878" opacity="0.65">
-      <circle r="0.7">
-        <animateMotion dur="14s" repeatCount="indefinite"
-                       path="M -5 168 Q 90 164 200 170 Q 300 174 370 168"/>
-        <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.85;1" dur="14s" repeatCount="indefinite"/>
+    <!-- ============ SEARCH BAR ============ -->
+    <!-- Soft shadow -->
+    <rect x="42" y="92" width="276" height="30" rx="15" fill="#000" opacity="0.08"/>
+    <!-- Bar body -->
+    <rect x="40" y="88" width="276" height="30" rx="15" fill="url(#barG)" stroke="#a89f88" stroke-width="0.9"/>
+
+    <!-- Magnifying glass icon inside bar (left) -->
+    <g transform="translate(58 103)" stroke="#5a5548" stroke-width="1.6" fill="none" stroke-linecap="round">
+      <circle cx="0" cy="0" r="5.2"/>
+      <line x1="3.8" y1="3.8" x2="7.5" y2="7.5"/>
+    </g>
+
+    <!-- Cycling ghost query text — each starts hidden, fades in during its own slot -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+       font-size="12" fill="#5a5548">
+      <text x="76" y="107" opacity="1">how did we get here
+        <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;1"
+                 keyTimes="0;0.28;0.33;0.61;0.66;0.94;0.99;0.995;1"
+                 dur="12s" repeatCount="indefinite"/>
+      </text>
+      <text x="76" y="107" opacity="0">what year is it
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0"
+                 keyTimes="0;0.28;0.33;0.61;0.66;0.94;0.99;0.995;1"
+                 dur="12s" repeatCount="indefinite"/>
+      </text>
+      <text x="76" y="107" opacity="0">am i online
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0;0;0"
+                 keyTimes="0;0.28;0.33;0.61;0.66;0.94;0.99;0.995;1"
+                 dur="12s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- Blinking cursor -->
+    <rect x="248" y="97" width="1.6" height="14" fill="#4285F4">
+      <animate attributeName="opacity" values="1;1;0;0;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Right-side clear (x) icon ghost -->
+    <g transform="translate(300 103)" stroke="#8a8272" stroke-width="1.1" fill="none" stroke-linecap="round">
+      <line x1="-3" y1="-3" x2="3" y2="3"/>
+      <line x1="-3" y1="3"  x2="3" y2="-3"/>
+    </g>
+
+    <!-- ============ TWO BUTTONS ============ -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+       font-size="9" fill="#3a3628" letter-spacing="0.3">
+      <rect x="88" y="134" width="82" height="20" rx="3" fill="url(#btnG)" stroke="#a89f88" stroke-width="0.7"/>
+      <text x="129" y="147" text-anchor="middle" font-weight="600">Google Search</text>
+
+      <rect x="186" y="134" width="82" height="20" rx="3" fill="url(#btnG)" stroke="#a89f88" stroke-width="0.7"/>
+      <text x="227" y="147" text-anchor="middle" font-weight="600">I&#8217;m Feeling Lucky</text>
+    </g>
+
+    <!-- ============ FOOTER STRIP ============ -->
+    <rect x="0" y="172" width="360" height="28" fill="#d8cfb8"/>
+    <line x1="0" y1="172" x2="360" y2="172" stroke="#a89f88" stroke-width="0.6"/>
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+       font-size="8.5" fill="#5a5548" letter-spacing="0.4">
+      <text x="14" y="189" opacity="0.85">Menlo Park &#183; California</text>
+      <text x="346" y="189" text-anchor="end" opacity="0.85">&#169; 1998&#8211;2026 &#183; 28 years</text>
+    </g>
+
+    <!-- Sparkle particles rising from the orbs occasionally -->
+    <g fill="#FBBC05" opacity="0.85">
+      <circle r="1">
+        <animateMotion dur="7s" repeatCount="indefinite"
+                       path="M 130 40 Q 140 22 160 18"/>
+        <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.4;1" dur="7s" repeatCount="indefinite"/>
       </circle>
-      <circle r="0.6" fill="#f4c090">
-        <animateMotion dur="16s" begin="2s" repeatCount="indefinite"
-                       path="M -5 155 Q 100 152 210 158 Q 300 162 370 156"/>
-        <animate attributeName="opacity" values="0;0.65;0.65;0" keyTimes="0;0.1;0.85;1" dur="16s" begin="2s" repeatCount="indefinite"/>
+      <circle r="0.9" fill="#4285F4">
+        <animateMotion dur="9s" begin="1.5s" repeatCount="indefinite"
+                       path="M 200 42 Q 215 24 240 22"/>
+        <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.4;1" dur="9s" begin="1.5s" repeatCount="indefinite"/>
       </circle>
-      <circle r="0.5">
-        <animateMotion dur="13s" begin="4s" repeatCount="indefinite"
-                       path="M -5 182 Q 95 180 205 184 Q 300 186 370 182"/>
-        <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.85;1" dur="13s" begin="4s" repeatCount="indefinite"/>
+      <circle r="0.8" fill="#EA4335">
+        <animateMotion dur="8s" begin="3s" repeatCount="indefinite"
+                       path="M 95 42 Q 80 24 60 22"/>
+        <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.4;1" dur="8s" begin="3s" repeatCount="indefinite"/>
       </circle>
-      <circle r="0.6" fill="#f4c090">
-        <animateMotion dur="17s" begin="6s" repeatCount="indefinite"
-                       path="M -5 148 Q 100 146 210 150 Q 300 152 370 148"/>
-        <animate attributeName="opacity" values="0;0.55;0.55;0" keyTimes="0;0.1;0.85;1" dur="17s" begin="6s" repeatCount="indefinite"/>
+      <circle r="0.9" fill="#34A853">
+        <animateMotion dur="11s" begin="2s" repeatCount="indefinite"
+                       path="M 270 42 Q 290 22 320 20"/>
+        <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.4;1" dur="11s" begin="2s" repeatCount="indefinite"/>
       </circle>
     </g>
   </g>
@@ -326,15 +240,16 @@ The left half is that first afternoon on the surface: the three-legged lander si
   <!-- ============ RIGHT TEXT PANEL ============ -->
   <rect x="360" y="0" width="440" height="200" fill="#0d1117"/>
 
-  <!-- Right-edge accent bars (Mars palette) -->
-  <rect x="792" y="20" width="4" height="52" fill="#f4e6c8" opacity="0.85"/>
-  <rect x="792" y="72" width="4" height="52" fill="#e88848" opacity="0.85"/>
-  <rect x="792" y="124" width="4" height="52" fill="#c85030" opacity="0.85"/>
+  <!-- Right-edge accent bars (Google palette) -->
+  <rect x="792" y="20" width="4" height="40" fill="#4285F4" opacity="0.9"/>
+  <rect x="792" y="60" width="4" height="40" fill="#EA4335" opacity="0.9"/>
+  <rect x="792" y="100" width="4" height="40" fill="#FBBC05" opacity="0.9"/>
+  <rect x="792" y="140" width="4" height="40" fill="#34A853" opacity="0.9"/>
 
   <text x="386" y="66"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="34" font-weight="800" fill="#f4e6c8" letter-spacing="1">
-    SEPTEMBER 3, 2026
+    SEPTEMBER 4, 2026
   </text>
 
   <rect x="386" y="76" width="390" height="3" fill="url(#underlineGrad)">
@@ -344,24 +259,24 @@ The left half is that first afternoon on the surface: the three-legged lander si
   <text x="386" y="106"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="17" font-weight="700" letter-spacing="1.2">
-    <tspan fill="#e88848">VIKING 2</tspan><tspan fill="#f4e6c8" opacity="0.8">&#160;·&#160;50 YEARS</tspan>
+    <tspan fill="#4285F4">GOOGLE</tspan><tspan fill="#f4e6c8" opacity="0.8">&#160;·&#160;28 YEARS</tspan><tspan fill="#f4e6c8" opacity="0.55">&#160;·&#160;SINCE 1998</tspan>
   </text>
 
   <text x="386" y="128"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="10.5" font-style="italic" fill="#ffbf5a" letter-spacing="1" opacity="0.95">
-    UTOPIA PLANITIA · 22:58 UTC · 1976
+    MENLO PARK &#183; GARAGE &#183; STANFORD &#183; 1998
   </text>
 
   <text x="386" y="146"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="10.5" fill="#a89686" letter-spacing="1" opacity="0.85">
-    CHRYSE · JPL · LANGLEY · BIOLOGY
+    PAGE &#183; BRIN &#183; PAGERANK &#183; GOOGOL
   </text>
 
   <text x="386" y="178"
         font-family="Georgia, 'Times New Roman', serif"
         font-size="12.5" font-style="italic" fill="#f4e6c8" opacity="0.9">
-    &#8220;we are made of star-stuff.&#8221; &#8212; sagan
+    &#8220;ten to the hundredth power.&#8221;
   </text>
 </svg>

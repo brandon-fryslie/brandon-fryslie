@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 4, 2026 — Viking 2 Lands on Mars — 50th Anniversary (September 3, 1976)
+
+<img src="./doodle-archive/2026/09/2026-09-04-060151.svg" width="800" alt="Daily doodle for September 3, 2026 — the 50th anniversary of NASA's Viking 2 landing on Mars. On the left half, the Viking 2 lander stands on the rust-orange plain of Utopia Planitia beneath a warm salmon Martian sky: a hexagonal body on three splayed footpads, twin RTG covers rising from the top, a tall camera mast, a high-gain antenna dish pointed toward Earth, a horizontal meteorology boom, an extended soil-sampling arm reaching forward, and a small red status LED softly pulsing on the body. Distant mesas silhouette the horizon; a few faint stars sit in the darker upper sky; fine Martian dust drifts west across the ground. On the right, a huge cream SEPTEMBER 3, 2026 headline underlined by a rust-to-cream sweep, a rust VIKING 2 · 50 YEARS subhead trailed by cream · SINCE 1976, an italic amber UTOPIA PLANITIA · 22:58 UTC · 1976 tertiary, a dim slate CHRYSE · JPL · LANGLEY · BIOLOGY roster, and a Georgia-italic 'we are made of star-stuff. — sagan' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 3 September 1976 at 22:58 UTC, NASA's Viking 2 lander touched down on the plains of Utopia Planitia in Mars's northern hemisphere — the second spacecraft ever to survive a landing on another planet, forty-nine days after its twin at Chryse Planitia. Within minutes it returned a panorama of a boulder-strewn rust-orange desert under a salmon-pink sky, a photograph so unlike the expected black-of-space void that mission scientists initially color-balanced the sky blue by mistake before recomputing it. For nearly four Earth years it dug at the regolith with its sampling arm and ran the four Viking biology experiments looking for life; the results were ambiguous enough that people are still arguing about them today. It kept transmitting until 11 April 1980 when its batteries failed, having outlasted its ninety-day design life by more than a factor of sixteen.
+
+The left half is that first afternoon on the surface: the three-legged lander sits on a rust-orange plain under a warm salmon sky, its high-gain antenna dish angled toward Earth, camera mast pointing over a small rock, sampling arm extended, a red status LED softly pulsing, fine Martian dust drifting west across the ground and past distant hills. On the right, a large cream SEPTEMBER 3, 2026 headline anchors a rust VIKING 2 · 50 YEARS subhead, an italic amber UTOPIA PLANITIA · 22:58 UTC · 1976 tertiary, a dim slate CHRYSE · JPL · LANGLEY · BIOLOGY roster, and a Georgia-italic Carl Sagan caption at the base.
+
+</details>
+
+---
+
 ## September 3, 2026 — Great Fire of London — 360th Anniversary (September 2, 1666)
 
 <img src="./doodle-archive/2026/09/2026-09-03-060319.svg" width="800" alt="Daily doodle for September 2, 2026 — the 360th anniversary of the Great Fire of London. On the left half, a row of half-timbered Tudor houses along the burning waterfront: steep gables and chimneys silhouetted against a bruised red sky, yellow-white flames leaping from every rooftop and flickering out of the upstairs windows, dark smoke plumes drifting west, a shower of orange embers rising on the east wind, Old St Paul's square tower on the far horizon just beginning to catch, and the Thames at the base carrying the fire back at itself in a rippling reflection. On the right, a huge cream SEPTEMBER 2, 2026 headline underlined by an ember-to-cream sweep, an ember GREAT FIRE OF LONDON · 360 YEARS subhead trailed by cream · SINCE 1666, an italic amber PUDDING LANE · FARRINER · BAKERY · 2AM tertiary, a dim smoke-grey CHEAPSIDE · GUILDHALL · ST PAUL'S · 13,200 HOMES roster, and a Georgia-italic 'a most horrid malicious bloody flame. — pepys' caption at the base.">
