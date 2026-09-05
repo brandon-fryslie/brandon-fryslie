@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 5, 2026 — Google — 28th Anniversary (September 4, 1998)
+
+<img src="./doodle-archive/2026/09/2026-09-05-060140.svg" width="800" alt="Daily doodle for September 4, 2026 — the 28th anniversary of Google's founding on September 4, 1998. On the left half, a cream Google-search-page-in-miniature: six primary-colored orbs (blue, red, yellow, blue, green, red) bounce in staggered arcs above a rounded search bar containing a blinking text cursor and cycling ghost query text, a small magnifying glass on the left of the bar, and two rounded 'Google Search' and 'I'm Feeling Lucky' buttons below. On the right, a huge cream SEPTEMBER 4, 2026 headline underlined by a blue-red-yellow-green sweep, a Google-blue GOOGLE · 28 YEARS subhead trailed by cream · SINCE 1998, an italic amber MENLO PARK · GARAGE · STANFORD · 1998 tertiary, a dim slate PAGE · BRIN · PAGERANK · GOOGOL roster, and a Georgia-italic 'ten to the hundredth power.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 4 September 1998, Larry Page and Sergey Brin filed the incorporation papers for Google, Inc. from a rented garage in Menlo Park, California. The first check the company received had been made out to "Google Inc." before Google Inc. legally existed, so they needed a bank account, so they needed a company. Their search engine, briefly called BackRub, had been running on the Stanford campus network since 1996 and had already used enough bandwidth to earn the graduate-school administration's polite attention. The name was a misspelling of googol — ten to the hundredth power — meant to gesture at the size of the web the PageRank algorithm was ranking. Twenty-eight years later almost every daily art piece on a homepage is a distant nephew of the ones google.com started pinning to its logo in the late nineties; today's is a direct one.
+
+The left half is a small Google Doodle in miniature: six primary-colored orbs bounce in staggered arcs above a rounded search bar with a blinking cursor and a cycling ghost query, a magnifying glass on the left, and two stubby buttons below. On the right, a large cream SEPTEMBER 4, 2026 headline anchors a Google-blue GOOGLE · 28 YEARS subhead, an italic amber MENLO PARK · GARAGE · STANFORD · 1998 tertiary, a dim slate PAGE · BRIN · PAGERANK · GOOGOL roster, and a Georgia-italic 'ten to the hundredth power.' caption at the base.
+
+</details>
+
+---
+
 ## September 4, 2026 — Viking 2 Lands on Mars — 50th Anniversary (September 3, 1976)
 
 <img src="./doodle-archive/2026/09/2026-09-04-060151.svg" width="800" alt="Daily doodle for September 3, 2026 — the 50th anniversary of NASA's Viking 2 landing on Mars. On the left half, the Viking 2 lander stands on the rust-orange plain of Utopia Planitia beneath a warm salmon Martian sky: a hexagonal body on three splayed footpads, twin RTG covers rising from the top, a tall camera mast, a high-gain antenna dish pointed toward Earth, a horizontal meteorology boom, an extended soil-sampling arm reaching forward, and a small red status LED softly pulsing on the body. Distant mesas silhouette the horizon; a few faint stars sit in the darker upper sky; fine Martian dust drifts west across the ground. On the right, a huge cream SEPTEMBER 3, 2026 headline underlined by a rust-to-cream sweep, a rust VIKING 2 · 50 YEARS subhead trailed by cream · SINCE 1976, an italic amber UTOPIA PLANITIA · 22:58 UTC · 1976 tertiary, a dim slate CHRYSE · JPL · LANGLEY · BIOLOGY roster, and a Georgia-italic 'we are made of star-stuff. — sagan' caption at the base.">
