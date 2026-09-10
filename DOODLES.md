@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 10, 2026 — First Computer Bug — 79th Anniversary (September 9, 1947)
+
+<img src="./doodle-archive/2026/09/2026-09-10-060138.svg" width="800" alt="Daily doodle for September 9, 2026 — the 79th anniversary of the first computer bug. On the left half, a page of Harvard Mark II's operator logbook: cream ruled paper with a red margin, timestamped 0800/1000/1525/1545 entries in typewriter font ending in '(moth) in relay,' a real moth taped across the page with two crossing yellowed tape strips, its wings faintly quivering, an italic cursive 'First actual case of bug being found.' beneath, and a faded red DEBUGGED oval stamp at the lower left. On the right, a huge cream SEPTEMBER 9, 2026 headline underlined by a copper-to-green sweep, a copper FIRST COMPUTER BUG · 79 YEARS subhead trailed by cream · SINCE 1947, an italic amber GRACE HOPPER · HARVARD MARK II · RELAY 70, PANEL F tertiary, a dim green MOTH · TAPE · LOGBOOK · 1545 HOURS roster, and a Georgia-italic 'the first actual case of bug being found.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 9 September 1947, operators of Harvard's Mark II Aiken Relay Calculator traced a mysterious hardware fault to Relay #70, Panel F, and found a moth wedged between the contacts. Grace Hopper's team taped the moth into the logbook, noted "First actual case of bug being found," and quietly turned an old engineer's slang for glitches into the enduring vocabulary of computing. The logbook — moth still fixed to the page — now sits in the Smithsonian's collection.
+
+The left half is that page of the operator's logbook: a moth taped over ruled cream paper, its wings quivering faintly, with the 0800/1000/1545 timestamps and the operator's inked note around it, and a dim DEBUGGED stamp at the corner. On the right, a large SEPTEMBER 9, 2026 headline anchors a copper FIRST COMPUTER BUG · 79 YEARS subhead, an italic amber GRACE HOPPER · HARVARD MARK II · RELAY 70, PANEL F tertiary, a dim green MOTH · TAPE · LOGBOOK · 1545 HOURS spec line, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 9, 2026 — Voyager 2 Launch — 49th Anniversary (August 20, 1977)
 
 <img src="./doodle-archive/2026/09/2026-09-09-060146.svg" width="800" alt="Daily doodle for August 20, 2026 — the 49th anniversary of the launch of Voyager 2. On the left half, the Voyager Golden Record — a gilded copper disc — turns slowly on a dark starfield, its etched grooves catching a rotating highlight and its pulsar-map rays radiating from the center. A small Voyager 2 spacecraft silhouette with its high-gain dish drifts leftward across the field, a thin blue crescent of Neptune tucked at the lower edge. On the right, a huge cream AUGUST 20, 2026 headline underlined by a gold-to-blue sweep, a gold VOYAGER 2 · 49 YEARS subhead trailed by cream · SINCE 1977, an italic amber JPL · TITAN III-E · CAPE CANAVERAL tertiary, a dim cyan JUPITER · SATURN · URANUS · NEPTUNE roster, and a Georgia-italic 'the grand tour continues.' caption at the base.">
