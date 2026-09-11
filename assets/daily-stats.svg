@@ -1,219 +1,232 @@
-<svg width="800" height="380" viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-09-10: three time windows — past 7 days (305 commits, daily bars), past 30 days (28 active repos with top-6 breakdown by activity), past 12 months (monthly contribution bars peaking at 2748 in Jun; 2552 PRs Merged, 275 of 365 Days Active, 66 Issues Closed, 82-day Longest Streak).">
+<svg width="800" height="340" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub Stats for brandon-fryslie on 2026-09-11: 10 languages this year (TypeScript 5490, Python 1992, Go 770, JavaScript 265, Shell 185, Rust 101, Swift 88, HTML 63), 277 of 365 days active, 82-day longest streak, 66 issues closed.">
 <defs>
 <style>text{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;}</style>
-<linearGradient id="gGreenH" x1="0" y1="0" x2="1" y2="0">
+<linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#4ade80"><animate attributeName="stop-color" values="#4ade80;#22c55e;#4ade80" dur="11s" repeatCount="indefinite"/></stop>
   <stop offset="1" stop-color="#22c55e"><animate attributeName="stop-color" values="#22c55e;#16a34a;#22c55e" dur="11s" repeatCount="indefinite"/></stop>
 </linearGradient>
-<linearGradient id="gGreenV" x1="0" y1="1" x2="0" y2="0">
-  <stop offset="0" stop-color="#0e4429"/>
-  <stop offset="1" stop-color="#39d353"><animate attributeName="stop-color" values="#39d353;#22c55e;#39d353" dur="13s" repeatCount="indefinite"/></stop>
+<linearGradient id="gAmber" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#fbbf24"><animate attributeName="stop-color" values="#fbbf24;#f59e0b;#fbbf24" dur="13s" repeatCount="indefinite"/></stop>
+  <stop offset="1" stop-color="#f97316"><animate attributeName="stop-color" values="#f97316;#ea580c;#f97316" dur="13s" repeatCount="indefinite"/></stop>
 </linearGradient>
 <linearGradient id="gViolet" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#c4b5fd"><animate attributeName="stop-color" values="#c4b5fd;#a78bfa;#c4b5fd" dur="13s" repeatCount="indefinite"/></stop>
   <stop offset="1" stop-color="#8b5cf6"><animate attributeName="stop-color" values="#8b5cf6;#6366f1;#8b5cf6" dur="13s" repeatCount="indefinite"/></stop>
 </linearGradient>
-<linearGradient id="gAmberH" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#fbbf24"><animate attributeName="stop-color" values="#fbbf24;#f59e0b;#fbbf24" dur="13s" repeatCount="indefinite"/></stop>
-  <stop offset="1" stop-color="#f97316"><animate attributeName="stop-color" values="#f97316;#ea580c;#f97316" dur="13s" repeatCount="indefinite"/></stop>
-</linearGradient>
-<linearGradient id="gRose" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#f9a8d4"><animate attributeName="stop-color" values="#f9a8d4;#f472b6;#f9a8d4" dur="17s" repeatCount="indefinite"/></stop>
-  <stop offset="1" stop-color="#ec4899"><animate attributeName="stop-color" values="#ec4899;#db2777;#ec4899" dur="17s" repeatCount="indefinite"/></stop>
-</linearGradient>
 <linearGradient id="gSweep" x1="0" x2="1" y1="0" y2="0">
   <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-  <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.20"/>
+  <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.18"/>
   <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
 </linearGradient>
-<clipPath id="cMonth"><rect x="24" y="240" width="752" height="66"/></clipPath>
+<clipPath id="cLang"><rect x="110" y="66" width="666" height="42" rx="4"/></clipPath>
+<clipPath id="cDA"><rect x="170" y="188" width="606" height="8" rx="4"/></clipPath>
+<clipPath id="cStreak"><rect x="170" y="252" width="606" height="8" rx="4"/></clipPath>
 </defs>
 
-<rect width="800" height="380" fill="#0d1117"/>
+<rect width="800" height="340" fill="#0d1117"/>
 
-<!-- HEADER -->
-<text x="24" y="28" font-size="12" font-weight="700" letter-spacing="1.4" fill="#e6edf3">LIVE GITHUB STATS</text>
-<text x="776" y="28" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-09-10</text>
-<line x1="24" y1="42" x2="776" y2="42" stroke="#21262d" stroke-width="1"/>
+<!-- Header -->
+<text x="24" y="26" font-size="12" font-weight="700" letter-spacing="1.4" fill="#e6edf3">LIVE GITHUB STATS</text>
+<text x="776" y="26" text-anchor="end" font-size="10" fill="#8b949e">brandon-fryslie · 2026-09-11</text>
+<line x1="24" y1="38" x2="776" y2="38" stroke="#21262d" stroke-width="1"/>
 
-<!-- ============ BAND 1: PAST 7 DAYS ============ -->
-<text x="24" y="60" font-size="9" letter-spacing="1.4" fill="#8b949e">PAST 7 DAYS · DAILY CONTRIBUTIONS</text>
+<!-- ============ LANGUAGES (stacked bar sized by line counts) ============ -->
+<text x="24" y="56" font-size="9" letter-spacing="1.4" fill="#8b949e">LANGUAGES · 1 YEAR</text>
+<text x="776" y="56" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">bar width = share of lines · 8954 total</text>
 
-<text x="24" y="100" font-size="40" font-weight="700" fill="url(#gGreenH)">305</text>
-<text x="112" y="88" font-size="12" font-weight="600" fill="#c9d1d9">Commits</text>
-<text x="112" y="103" font-size="10" fill="#6e7681">7 Days · shipped</text>
+<text x="24" y="104" font-size="44" font-weight="700" fill="url(#gGreen)">10</text>
 
-<!-- 7 daily bars, values [190, 211, 131, 127, 99, 9, 0], max 211 -->
-<line x1="470" y1="104.5" x2="776" y2="104.5" stroke="#30363d" stroke-width="1"/>
-<!-- bar_w=32, gap=13.67; x = 470 + i*(32+13.67) -->
-<!-- bar 0: v=190, h=190/211*42=37.82, y=66.18 -->
-<rect x="470.0" y="66.18" width="32" height="37.82" rx="2" fill="url(#gGreenH)"><animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.00s" repeatCount="indefinite"/></rect>
-<text x="486.0" y="60.5" text-anchor="middle" font-size="9" fill="#8b949e">190</text>
-<!-- bar 1: v=211, h=42, y=62 -->
-<rect x="515.67" y="62.00" width="32" height="42.00" rx="2" fill="url(#gGreenH)"><animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.40s" repeatCount="indefinite"/></rect>
-<text x="531.67" y="56.5" text-anchor="middle" font-size="9" fill="#8b949e">211</text>
-<!-- bar 2: v=131, h=26.07, y=77.93 -->
-<rect x="561.33" y="77.93" width="32" height="26.07" rx="2" fill="url(#gGreenH)"><animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="0.80s" repeatCount="indefinite"/></rect>
-<text x="577.33" y="72.5" text-anchor="middle" font-size="9" fill="#8b949e">131</text>
-<!-- bar 3: v=127, h=25.28, y=78.72 -->
-<rect x="607.0" y="78.72" width="32" height="25.28" rx="2" fill="url(#gGreenH)"><animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="1.20s" repeatCount="indefinite"/></rect>
-<text x="623.0" y="73.5" text-anchor="middle" font-size="9" fill="#8b949e">127</text>
-<!-- bar 4: v=99, h=19.71, y=84.29 -->
-<rect x="652.67" y="84.29" width="32" height="19.71" rx="2" fill="url(#gGreenH)"><animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="1.60s" repeatCount="indefinite"/></rect>
-<text x="668.67" y="79.0" text-anchor="middle" font-size="9" fill="#8b949e">99</text>
-<!-- bar 5: v=9, h=1.79 (min 2), y=102 -->
-<rect x="698.33" y="102.00" width="32" height="2.00" rx="1.5" fill="url(#gGreenH)"><animate attributeName="opacity" values="0.72;1;0.72" dur="7s" begin="2.00s" repeatCount="indefinite"/></rect>
-<text x="714.33" y="97.5" text-anchor="middle" font-size="9" fill="#8b949e">9</text>
-<!-- bar 6: v=0, tiny marker -->
-<rect x="744.0" y="102.50" width="32" height="1.50" rx="1" fill="#30363d"/>
-<text x="760.0" y="97.5" text-anchor="middle" font-size="9" fill="#6e7681">0</text>
+<!-- Stacked bar backing -->
+<rect x="110" y="66" width="666" height="42" rx="4" fill="#161b22"/>
 
-<line x1="24" y1="115" x2="776" y2="115" stroke="#161b22" stroke-width="1"/>
+<g clip-path="url(#cLang)">
+  <!-- TypeScript 5490 → w=408 -->
+  <rect x="110" y="66" width="408" height="42" fill="#3178c6">
+    <animate attributeName="fill" values="#3178c6;#4a8bd0;#3178c6" dur="13s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Python 1992 → w=148, x=518 -->
+  <rect x="518" y="66" width="148" height="42" fill="#ffd43b">
+    <animate attributeName="fill" values="#ffd43b;#e6be2d;#ffd43b" dur="11s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Go 770 → w=57, x=666 -->
+  <rect x="666" y="66" width="57" height="42" fill="#00add8">
+    <animate attributeName="fill" values="#00add8;#00c8ea;#00add8" dur="13s" repeatCount="indefinite"/>
+  </rect>
+  <!-- JavaScript 265 → w=20, x=723 -->
+  <rect x="723" y="66" width="20" height="42" fill="#f7df1e"/>
+  <!-- Shell 185 → w=14, x=743 -->
+  <rect x="743" y="66" width="14" height="42" fill="#89e051"/>
+  <!-- Rust 101 → w=7, x=757 -->
+  <rect x="757" y="66" width="7" height="42" fill="#dea584"/>
+  <!-- Swift 88 → w=7, x=764 -->
+  <rect x="764" y="66" width="7" height="42" fill="#f05138"/>
+  <!-- HTML 63 → w=5, x=771 -->
+  <rect x="771" y="66" width="5" height="42" fill="#e34c26"/>
 
-<!-- ============ BAND 2: PAST 30 DAYS ============ -->
-<text x="24" y="132" font-size="9" letter-spacing="1.4" fill="#8b949e">PAST 30 DAYS</text>
-<text x="776" y="132" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">bar length = repo's share of activity · max 162</text>
+  <!-- Sweep highlight -->
+  <rect x="0" y="66" width="120" height="42" fill="url(#gSweep)">
+    <animate attributeName="x" from="-120" to="776" dur="19s" repeatCount="indefinite"/>
+  </rect>
+</g>
 
-<text x="24" y="172" font-size="40" font-weight="700" fill="url(#gViolet)">28</text>
-<text x="80" y="163" font-size="12" font-weight="600" fill="#c9d1d9">Active Repos</text>
-<text x="80" y="177" font-size="10" fill="#6e7681">30 Days</text>
+<!-- Segment dividers (hairlines) -->
+<line x1="518" y1="66" x2="518" y2="108" stroke="#0d1117" stroke-width="0.5" opacity="0.7"/>
+<line x1="666" y1="66" x2="666" y2="108" stroke="#0d1117" stroke-width="0.5" opacity="0.7"/>
+<line x1="723" y1="66" x2="723" y2="108" stroke="#0d1117" stroke-width="0.5" opacity="0.7"/>
 
-<!-- 6 repo bars: names at x=178, bars x=290..710 (max_w=420), counts at x=776, rows spaced 11px starting y=142 -->
-<!-- dotfiles: 162/162 = 420 -->
-<text x="178" y="142" font-size="10" fill="#c9d1d9">dotfiles</text>
-<rect x="290" y="135" width="420" height="8" rx="2" fill="#161b22"/>
-<rect x="290" y="135" width="420.0" height="8" rx="2" fill="url(#gViolet)"><animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.00s" repeatCount="indefinite"/></rect>
-<text x="776" y="142" text-anchor="end" font-size="10" fill="#8b949e">162</text>
+<!-- Wide segment in-labels -->
+<text x="314" y="83" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">TypeScript</text>
+<text x="314" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">5490</text>
 
-<!-- laws: 146/162 = 378.5 -->
-<text x="178" y="153" font-size="10" fill="#c9d1d9">laws</text>
-<rect x="290" y="146" width="420" height="8" rx="2" fill="#161b22"/>
-<rect x="290" y="146" width="378.5" height="8" rx="2" fill="url(#gViolet)"><animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.35s" repeatCount="indefinite"/></rect>
-<text x="776" y="153" text-anchor="end" font-size="10" fill="#8b949e">146</text>
+<text x="592" y="83" text-anchor="middle" font-size="10" font-weight="700" fill="#0d1117">Python</text>
+<text x="592" y="99" text-anchor="middle" font-size="11" font-weight="700" fill="#0d1117">1992</text>
 
-<!-- links-issue-tracker: 126/162 = 326.7 -->
-<text x="178" y="164" font-size="10" fill="#c9d1d9">links-issue-tracker</text>
-<rect x="290" y="157" width="420" height="8" rx="2" fill="#161b22"/>
-<rect x="290" y="157" width="326.7" height="8" rx="2" fill="url(#gViolet)"><animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="0.70s" repeatCount="indefinite"/></rect>
-<text x="776" y="164" text-anchor="end" font-size="10" fill="#8b949e">126</text>
+<text x="694" y="83" text-anchor="middle" font-size="9" font-weight="700" fill="#0d1117">Go</text>
+<text x="694" y="99" text-anchor="middle" font-size="10" font-weight="700" fill="#0d1117">770</text>
 
-<!-- crom: 119/162 = 308.5 -->
-<text x="178" y="175" font-size="10" fill="#c9d1d9">crom</text>
-<rect x="290" y="168" width="420" height="8" rx="2" fill="#161b22"/>
-<rect x="290" y="168" width="308.5" height="8" rx="2" fill="url(#gViolet)"><animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.05s" repeatCount="indefinite"/></rect>
-<text x="776" y="175" text-anchor="end" font-size="10" fill="#8b949e">119</text>
+<!-- Legend below for narrow segments -->
+<g font-size="10">
+  <rect x="110" y="121" width="8" height="8" rx="1.5" fill="#f7df1e"/>
+  <text x="123" y="129" fill="#8b949e">JavaScript</text>
+  <text x="186" y="129" fill="#e6edf3" font-weight="600">265</text>
 
-<!-- rich-js: 104/162 = 269.6 -->
-<text x="178" y="186" font-size="10" fill="#c9d1d9">rich-js</text>
-<rect x="290" y="179" width="420" height="8" rx="2" fill="#161b22"/>
-<rect x="290" y="179" width="269.6" height="8" rx="2" fill="url(#gViolet)"><animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.40s" repeatCount="indefinite"/></rect>
-<text x="776" y="186" text-anchor="end" font-size="10" fill="#8b949e">104</text>
+  <rect x="230" y="121" width="8" height="8" rx="1.5" fill="#89e051"/>
+  <text x="243" y="129" fill="#8b949e">Shell</text>
+  <text x="280" y="129" fill="#e6edf3" font-weight="600">185</text>
 
-<!-- openconv: 101/162 = 261.9 -->
-<text x="178" y="197" font-size="10" fill="#c9d1d9">openconv</text>
-<rect x="290" y="190" width="420" height="8" rx="2" fill="#161b22"/>
-<rect x="290" y="190" width="261.9" height="8" rx="2" fill="url(#gViolet)"><animate attributeName="opacity" values="0.75;1;0.75" dur="11s" begin="1.75s" repeatCount="indefinite"/></rect>
-<text x="776" y="197" text-anchor="end" font-size="10" fill="#8b949e">101</text>
+  <rect x="325" y="121" width="8" height="8" rx="1.5" fill="#dea584"/>
+  <text x="338" y="129" fill="#8b949e">Rust</text>
+  <text x="370" y="129" fill="#e6edf3" font-weight="600">101</text>
+
+  <rect x="415" y="121" width="8" height="8" rx="1.5" fill="#f05138"/>
+  <text x="428" y="129" fill="#8b949e">Swift</text>
+  <text x="463" y="129" fill="#e6edf3" font-weight="600">88</text>
+
+  <rect x="505" y="121" width="8" height="8" rx="1.5" fill="#e34c26"/>
+  <text x="518" y="129" fill="#8b949e">HTML</text>
+  <text x="554" y="129" fill="#e6edf3" font-weight="600">63</text>
+</g>
+
+<!-- ============ DAYS ACTIVE (gauge sized by 277/365) ============ -->
+<text x="24" y="160" font-size="9" letter-spacing="1.4" fill="#8b949e">DAYS ACTIVE · 1 YEAR</text>
+<text x="776" y="160" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">bar fill = 277 of 365 = 76%</text>
+
+<text x="24" y="196" font-size="24" font-weight="700" fill="url(#gGreen)">277</text>
+<text x="72" y="196" font-size="11" fill="#8b949e">of 365 days</text>
+
+<rect x="170" y="188" width="606" height="8" rx="4" fill="#161b22"/>
+<g clip-path="url(#cDA)">
+  <rect x="170" y="188" width="460" height="8" rx="4" fill="url(#gGreen)">
+    <animate attributeName="opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="90" y="188" width="80" height="8" fill="url(#gSweep)">
+    <animate attributeName="x" from="90" to="710" dur="13s" repeatCount="indefinite"/>
+  </rect>
+</g>
+<!-- quarter tick marks -->
+<line x1="321.5" y1="196" x2="321.5" y2="200" stroke="#30363d" stroke-width="1"/>
+<line x1="473" y1="196" x2="473" y2="200" stroke="#30363d" stroke-width="1"/>
+<line x1="624.5" y1="196" x2="624.5" y2="200" stroke="#30363d" stroke-width="1"/>
 
 <line x1="24" y1="212" x2="776" y2="212" stroke="#161b22" stroke-width="1"/>
 
-<!-- ============ BAND 3: PAST 12 MONTHS ============ -->
-<text x="24" y="228" font-size="9" letter-spacing="1.4" fill="#8b949e">PAST 12 MONTHS</text>
-<text x="776" y="228" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">past 12 months · monthly contribution totals · peak Jun 2748</text>
+<!-- ============ LONGEST STREAK (gauge sized by 82/365) ============ -->
+<text x="24" y="224" font-size="9" letter-spacing="1.4" fill="#8b949e">LONGEST STREAK · 1 YEAR</text>
+<text x="776" y="224" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">bar fill = 82 of 365 = 22%</text>
 
-<!-- Monthly bar chart y=246..298, baseline y=298, max_h=52, max value 2748 -->
-<line x1="24" y1="298.5" x2="776" y2="298.5" stroke="#30363d" stroke-width="1"/>
-<!-- gridlines at 1000, 2000 -->
-<line x1="24" y1="279.6" x2="776" y2="279.6" stroke="#161b22" stroke-width="1" stroke-dasharray="2 4"/>
-<line x1="24" y1="260.2" x2="776" y2="260.2" stroke="#161b22" stroke-width="1" stroke-dasharray="2 4"/>
-<text x="28" y="283.6" font-size="7" fill="#6e7681">1k</text>
-<text x="28" y="264.2" font-size="7" fill="#6e7681">2k</text>
+<text x="24" y="260" font-size="24" font-weight="700" fill="url(#gAmber)">82</text>
+<text x="60" y="260" font-size="11" fill="#8b949e">consecutive days</text>
 
-<g clip-path="url(#cMonth)">
-<!-- bar_w=48, gap=16; x positions: 24, 88, 152, 216, 280, 344, 408, 472, 536, 600, 664, 728 -->
-<!-- Sep 1177: h=22.27, y=275.73 -->
-<rect x="24" y="275.73" width="48" height="22.27" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.00s" repeatCount="indefinite"/></rect>
-<text x="48" y="272.5" text-anchor="middle" font-size="8" fill="#8b949e">1177</text>
-<!-- Oct 23: h=2 (min), y=296 -->
-<rect x="88" y="296.00" width="48" height="2.00" rx="1" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.30s" repeatCount="indefinite"/></rect>
-<text x="112" y="292.5" text-anchor="middle" font-size="8" fill="#8b949e">23</text>
-<!-- Nov 87: h=2, y=296 (near-zero) -->
-<rect x="152" y="296.00" width="48" height="2.00" rx="1" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.60s" repeatCount="indefinite"/></rect>
-<text x="176" y="292.5" text-anchor="middle" font-size="8" fill="#8b949e">87</text>
-<!-- Dec 429: h=8.11, y=289.89 -->
-<rect x="216" y="289.89" width="48" height="8.11" rx="1.5" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="0.90s" repeatCount="indefinite"/></rect>
-<text x="240" y="286.5" text-anchor="middle" font-size="8" fill="#8b949e">429</text>
-<!-- Jan 1367: h=25.86, y=272.14 -->
-<rect x="280" y="272.14" width="48" height="25.86" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.20s" repeatCount="indefinite"/></rect>
-<text x="304" y="268.5" text-anchor="middle" font-size="8" fill="#8b949e">1367</text>
-<!-- Feb 1559: h=29.49, y=268.51 -->
-<rect x="344" y="268.51" width="48" height="29.49" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.50s" repeatCount="indefinite"/></rect>
-<text x="368" y="264.5" text-anchor="middle" font-size="8" fill="#8b949e">1559</text>
-<!-- Mar 1162: h=21.98, y=276.02 -->
-<rect x="408" y="276.02" width="48" height="21.98" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="1.80s" repeatCount="indefinite"/></rect>
-<text x="432" y="272.5" text-anchor="middle" font-size="8" fill="#8b949e">1162</text>
-<!-- Apr 849: h=16.06, y=281.94 -->
-<rect x="472" y="281.94" width="48" height="16.06" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="2.10s" repeatCount="indefinite"/></rect>
-<text x="496" y="278.5" text-anchor="middle" font-size="8" fill="#8b949e">849</text>
-<!-- May 1467: h=27.75, y=270.25 -->
-<rect x="536" y="270.25" width="48" height="27.75" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="2.40s" repeatCount="indefinite"/></rect>
-<text x="560" y="266.5" text-anchor="middle" font-size="8" fill="#8b949e">1467</text>
-<!-- Jun 2748: h=52 (peak), y=246 -->
-<rect x="600" y="246.00" width="48" height="52.00" rx="2" fill="url(#gAmberH)"><animate attributeName="opacity" values="0.82;1;0.82" dur="11s" begin="2.70s" repeatCount="indefinite"/></rect>
-<!-- Jul 818: h=15.48, y=282.52 -->
-<rect x="664" y="282.52" width="48" height="15.48" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="3.00s" repeatCount="indefinite"/></rect>
-<text x="688" y="279.0" text-anchor="middle" font-size="8" fill="#8b949e">818</text>
-<!-- Aug 1254: h=23.72, y=274.28 -->
-<rect x="728" y="274.28" width="48" height="23.72" rx="2" fill="url(#gGreenV)"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" begin="3.30s" repeatCount="indefinite"/></rect>
-<text x="752" y="270.5" text-anchor="middle" font-size="8" fill="#8b949e">1254</text>
-<!-- Sweep highlight -->
-<rect x="0" y="246" width="120" height="52" fill="url(#gSweep)"><animate attributeName="x" from="-120" to="776" dur="17s" repeatCount="indefinite"/></rect>
+<rect x="170" y="252" width="606" height="8" rx="4" fill="#161b22"/>
+<g clip-path="url(#cStreak)">
+  <rect x="170" y="252" width="136" height="8" rx="4" fill="url(#gAmber)">
+    <animate attributeName="opacity" values="0.78;1;0.78" dur="11s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="90" y="252" width="60" height="8" fill="url(#gSweep)">
+    <animate attributeName="x" from="90" to="710" dur="17s" repeatCount="indefinite"/>
+  </rect>
 </g>
-<text x="624" y="242" text-anchor="middle" font-size="9" font-weight="700" fill="#fbbf24">2748</text>
+<line x1="321.5" y1="260" x2="321.5" y2="264" stroke="#30363d" stroke-width="1"/>
+<line x1="473" y1="260" x2="473" y2="264" stroke="#30363d" stroke-width="1"/>
+<line x1="624.5" y1="260" x2="624.5" y2="264" stroke="#30363d" stroke-width="1"/>
 
-<!-- Month letters below baseline -->
-<text x="48" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Sep</text>
-<text x="112" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Oct</text>
-<text x="176" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Nov</text>
-<text x="240" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Dec</text>
-<text x="304" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Jan</text>
-<text x="368" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Feb</text>
-<text x="432" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Mar</text>
-<text x="496" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Apr</text>
-<text x="560" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">May</text>
-<text x="624" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#fbbf24">Jun</text>
-<text x="688" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Jul</text>
-<text x="752" y="308" text-anchor="middle" font-size="8" letter-spacing="0.3" fill="#6e7681">Aug</text>
+<line x1="24" y1="276" x2="776" y2="276" stroke="#161b22" stroke-width="1"/>
 
-<line x1="24" y1="317" x2="776" y2="317" stroke="#161b22" stroke-width="1"/>
+<!-- ============ ISSUES CLOSED (66-cell grid, one dot per issue) ============ -->
+<text x="24" y="288" font-size="9" letter-spacing="1.4" fill="#8b949e">MY ISSUES CLOSED · 1 YEAR</text>
+<text x="776" y="288" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">one square = one issue closed</text>
 
-<!-- 4 metric callouts, y=328 labels, y=352 values -->
-<!-- Col 1: PRs Merged 2552 -->
-<text x="24" y="330" font-size="9" letter-spacing="1.2" fill="#8b949e">PRS MERGED</text>
-<text x="24" y="352" font-size="22" font-weight="700" fill="url(#gGreenH)">2552</text>
-<text x="204" y="352" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">1 Year</text>
+<text x="24" y="311" font-size="22" font-weight="700" fill="url(#gViolet)">66</text>
+<text x="52" y="311" font-size="11" fill="#8b949e">closed</text>
 
-<!-- Col 2: Days Active 275 / of 365 -->
-<text x="214" y="330" font-size="9" letter-spacing="1.2" fill="#8b949e">DAYS ACTIVE</text>
-<text x="214" y="352" font-size="22" font-weight="700" fill="url(#gGreenH)">275</text>
-<text x="272" y="352" font-size="10" fill="#8b949e">of 365</text>
-<text x="394" y="352" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">1 Year</text>
-<!-- Days-active proportional micro-gauge just under value -->
-<rect x="214" y="360" width="180" height="3" rx="1.5" fill="#1f2937"/>
-<rect x="214" y="360" width="135.6" height="3" rx="1.5" fill="url(#gGreenH)"><animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/></rect>
-
-<!-- Col 3: My Issues Closed 66 -->
-<text x="404" y="330" font-size="9" letter-spacing="1.2" fill="#8b949e">MY ISSUES CLOSED</text>
-<text x="404" y="352" font-size="22" font-weight="700" fill="url(#gRose)">66</text>
-<text x="584" y="352" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">1 Year</text>
-
-<!-- Col 4: Longest Streak 82 / consecutive days -->
-<text x="594" y="330" font-size="9" letter-spacing="1.2" fill="#8b949e">LONGEST STREAK</text>
-<text x="594" y="352" font-size="22" font-weight="700" fill="url(#gAmberH)">82</text>
-<text x="634" y="352" font-size="10" fill="#8b949e">consecutive days</text>
-<text x="774" y="352" text-anchor="end" font-size="9" letter-spacing="0.4" fill="#6e7681">1 Year</text>
-<!-- Streak proportional micro-gauge (82/365) -->
-<rect x="594" y="360" width="180" height="3" rx="1.5" fill="#1f2937"/>
-<rect x="594" y="360" width="40.4" height="3" rx="1.5" fill="url(#gAmberH)"><animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/></rect>
+<!-- 66 dots: 3 rows x 22 cols, cell 5x5, step 8 -->
+<g fill="url(#gViolet)">
+<rect x="170" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.00s" repeatCount="indefinite"/></rect>
+<rect x="178" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.15s" repeatCount="indefinite"/></rect>
+<rect x="186" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.30s" repeatCount="indefinite"/></rect>
+<rect x="194" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.45s" repeatCount="indefinite"/></rect>
+<rect x="202" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.60s" repeatCount="indefinite"/></rect>
+<rect x="210" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.75s" repeatCount="indefinite"/></rect>
+<rect x="218" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.90s" repeatCount="indefinite"/></rect>
+<rect x="226" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.05s" repeatCount="indefinite"/></rect>
+<rect x="234" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.20s" repeatCount="indefinite"/></rect>
+<rect x="242" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.35s" repeatCount="indefinite"/></rect>
+<rect x="250" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.50s" repeatCount="indefinite"/></rect>
+<rect x="258" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.65s" repeatCount="indefinite"/></rect>
+<rect x="266" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.80s" repeatCount="indefinite"/></rect>
+<rect x="274" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.95s" repeatCount="indefinite"/></rect>
+<rect x="282" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.10s" repeatCount="indefinite"/></rect>
+<rect x="290" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.25s" repeatCount="indefinite"/></rect>
+<rect x="298" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.40s" repeatCount="indefinite"/></rect>
+<rect x="306" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.55s" repeatCount="indefinite"/></rect>
+<rect x="314" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.70s" repeatCount="indefinite"/></rect>
+<rect x="322" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.85s" repeatCount="indefinite"/></rect>
+<rect x="330" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.00s" repeatCount="indefinite"/></rect>
+<rect x="338" y="296" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.15s" repeatCount="indefinite"/></rect>
+<rect x="170" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.40s" repeatCount="indefinite"/></rect>
+<rect x="178" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.55s" repeatCount="indefinite"/></rect>
+<rect x="186" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.70s" repeatCount="indefinite"/></rect>
+<rect x="194" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.85s" repeatCount="indefinite"/></rect>
+<rect x="202" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.00s" repeatCount="indefinite"/></rect>
+<rect x="210" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.15s" repeatCount="indefinite"/></rect>
+<rect x="218" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.30s" repeatCount="indefinite"/></rect>
+<rect x="226" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.45s" repeatCount="indefinite"/></rect>
+<rect x="234" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.60s" repeatCount="indefinite"/></rect>
+<rect x="242" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.75s" repeatCount="indefinite"/></rect>
+<rect x="250" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.90s" repeatCount="indefinite"/></rect>
+<rect x="258" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.05s" repeatCount="indefinite"/></rect>
+<rect x="266" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.20s" repeatCount="indefinite"/></rect>
+<rect x="274" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.35s" repeatCount="indefinite"/></rect>
+<rect x="282" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.50s" repeatCount="indefinite"/></rect>
+<rect x="290" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.65s" repeatCount="indefinite"/></rect>
+<rect x="298" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.80s" repeatCount="indefinite"/></rect>
+<rect x="306" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.95s" repeatCount="indefinite"/></rect>
+<rect x="314" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.10s" repeatCount="indefinite"/></rect>
+<rect x="322" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.25s" repeatCount="indefinite"/></rect>
+<rect x="330" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.40s" repeatCount="indefinite"/></rect>
+<rect x="338" y="304" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.55s" repeatCount="indefinite"/></rect>
+<rect x="170" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.80s" repeatCount="indefinite"/></rect>
+<rect x="178" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="0.95s" repeatCount="indefinite"/></rect>
+<rect x="186" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.10s" repeatCount="indefinite"/></rect>
+<rect x="194" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.25s" repeatCount="indefinite"/></rect>
+<rect x="202" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.40s" repeatCount="indefinite"/></rect>
+<rect x="210" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.55s" repeatCount="indefinite"/></rect>
+<rect x="218" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.70s" repeatCount="indefinite"/></rect>
+<rect x="226" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="1.85s" repeatCount="indefinite"/></rect>
+<rect x="234" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.00s" repeatCount="indefinite"/></rect>
+<rect x="242" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.15s" repeatCount="indefinite"/></rect>
+<rect x="250" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.30s" repeatCount="indefinite"/></rect>
+<rect x="258" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.45s" repeatCount="indefinite"/></rect>
+<rect x="266" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.60s" repeatCount="indefinite"/></rect>
+<rect x="274" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.75s" repeatCount="indefinite"/></rect>
+<rect x="282" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="2.90s" repeatCount="indefinite"/></rect>
+<rect x="290" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.05s" repeatCount="indefinite"/></rect>
+<rect x="298" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.20s" repeatCount="indefinite"/></rect>
+<rect x="306" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.35s" repeatCount="indefinite"/></rect>
+<rect x="314" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.50s" repeatCount="indefinite"/></rect>
+<rect x="322" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.65s" repeatCount="indefinite"/></rect>
+<rect x="330" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.80s" repeatCount="indefinite"/></rect>
+<rect x="338" y="312" width="5" height="5" rx="1"><animate attributeName="opacity" values="0.35;1;0.35" dur="7s" begin="3.95s" repeatCount="indefinite"/></rect>
+</g>
 
 </svg>
