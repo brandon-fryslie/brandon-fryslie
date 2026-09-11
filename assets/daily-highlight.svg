@@ -1,236 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: LHC First Beam — 18th Anniversary (September 10, 2008) -->
+<!-- theme: Patriot Day — 25th Anniversary (September 11, 2001) -->
 <!-- about:
-On 10 September 2008, at 10:28 CEST, engineers at CERN steered a beam of protons all the way around the Large Hadron Collider's 27-kilometre ring for the first time — a single loop of the world's largest machine, threaded through a superconducting tunnel 100 metres beneath the France–Switzerland border. Full collisions were still more than a year away, but that first circulation was the moment the LHC actually became a collider. It has since delivered the Higgs boson, mapped the quark–gluon plasma at ALICE, sifted matter–antimatter asymmetries at LHCb, and rewritten the Standard Model's error bars from both sides.
+Twenty-five years ago today, on 11 September 2001, coordinated attacks in New York, at the Pentagon, and over a field near Shanksville, Pennsylvania killed 2,977 people. Since 2002, the anniversary has been observed in the United States as Patriot Day, marked at 08:46 EDT by a moment of silence. Every year on the evening of the anniversary, twin columns of pure white light — eighty-eight 7,000-watt xenon bulbs arrayed in two 48-foot squares near the World Trade Center site — are switched on at dusk and left burning until dawn. Called Tribute in Light, the installation first appeared six months after the attacks and has returned every September 11 since. It reaches four miles into the sky and is visible for sixty.
 
-The left half is the ring itself, seen from above: a heavy grey beam pipe circling a "27 KM" label with "CERN · GENEVA" underneath, two counter-rotating beams — cyan clockwise, amber counter-clockwise — sweeping around it as bright dashes, and four detector stations tagged ATLAS, CMS, ALICE, LHCb at the cardinal points. A small collision spark flashes at ATLAS. On the right, a large SEPTEMBER 10, 2026 headline anchors a cyan LHC · 18 YEARS subhead, an italic amber CERN · 27 KM RING · 7 TeV BEAMS tertiary, a dim green ATLAS · CMS · ALICE · LHCb roster, and a Georgia-italic caption at the base.
+The left half is that night: a low Manhattan skyline in silhouette, a scatter of quiet stars overhead, and two parallel columns of white light rising from the horizon to the top of the canvas, their intensity slowly breathing. On the right, a large SEPTEMBER 11, 2026 headline anchors a cream 25 YEARS · IN REMEMBRANCE subhead, an italic PATRIOT DAY · TRIBUTE IN LIGHT tertiary, a dim NEW YORK · ARLINGTON · SHANKSVILLE roster, and a Georgia-italic caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for September 10, 2026 — the 18th anniversary of the LHC's first circulating beam. On the left half, a top-down schematic of the Large Hadron Collider: a heavy grey ring with two counter-rotating beams — cyan clockwise and amber counter-clockwise — sweeping around it as bright dashes, four detector stations tagged ATLAS, CMS, ALICE, LHCb at the cardinal points, and a small collision spark flashing at ATLAS. A '27 KM' label with 'CERN · GENEVA' beneath sits at the center. On the right, a huge cream SEPTEMBER 10, 2026 headline underlined by a cyan-to-amber sweep, a cyan LHC · 18 YEARS subhead trailed by cream · SINCE 2008, an italic amber CERN · 27 KM RING · 7 TeV BEAMS tertiary, a dim green ATLAS · CMS · ALICE · LHCb roster, and a Georgia-italic 'the day the beam went around.' caption at the base.">
+     aria-label="Daily doodle for September 11, 2026 — the 25th anniversary of the September 11, 2001 attacks. On the left half, a night scene: a low Manhattan skyline in dark silhouette across the bottom, a quiet scatter of stars overhead, and two parallel columns of pure white light — the Tribute in Light memorial — rising vertically from the horizon to the top of the canvas, their brightness slowly breathing. On the right, a large cream SEPTEMBER 11, 2026 headline underlined by a soft blue-to-white sweep, a cream 25 YEARS · IN REMEMBRANCE subhead, an italic pale-blue PATRIOT DAY · TRIBUTE IN LIGHT tertiary, a dim NEW YORK · ARLINGTON · SHANKSVILLE roster, and a Georgia-italic 'we remember.' caption at the base.">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#06090f"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#02040d"/>
+      <stop offset="60%"  stop-color="#050a1a"/>
+      <stop offset="100%" stop-color="#0a1224"/>
     </linearGradient>
-    <radialGradient id="ringGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="60%"  stop-color="#5ac8ff" stop-opacity="0"/>
-      <stop offset="85%"  stop-color="#5ac8ff" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#5ac8ff" stop-opacity="0"/>
-    </radialGradient>
+    <!-- Beam gradient: bright core at bottom, fading up. Used vertically. -->
+    <linearGradient id="beamGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="15%"  stop-color="#e8f2ff" stop-opacity="0.85"/>
+      <stop offset="55%"  stop-color="#bcd6ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8fb4ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamCore" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="40%"  stop-color="#f4faff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#dceaff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamBase" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#e8f2ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#e8f2ff" stop-opacity="0"/>
+    </linearGradient>
     <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#5ac8ff"/>
-      <stop offset="55%"  stop-color="#a9d8ff"/>
-      <stop offset="100%" stop-color="#ffb14a"/>
+      <stop offset="0%"   stop-color="#6a9dff"/>
+      <stop offset="55%"  stop-color="#c8dcff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
     </linearGradient>
-    <linearGradient id="beamCyan" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#5ac8ff" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#c8ecff"/>
-      <stop offset="100%" stop-color="#5ac8ff" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="beamAmber" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#ffb14a" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#ffe0a8"/>
-      <stop offset="100%" stop-color="#ffb14a" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.4"/>
-    </filter>
-    <filter id="sparkGlow" x="-100%" y="-100%" width="300%" height="300%">
+    <filter id="beamBlur" x="-100%" y="-50%" width="300%" height="200%">
       <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+    <filter id="haze" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="200" fill="url(#bgGrad)"/>
+  <!-- Background: night sky -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
 
-  <!-- Faint hex-grid detector motif behind the ring -->
-  <g opacity="0.06" stroke="#5ac8ff" stroke-width="0.5" fill="none">
-    <path d="M 40 40 L 60 30 L 80 40 L 80 60 L 60 70 L 40 60 Z"/>
-    <path d="M 80 40 L 100 30 L 120 40 L 120 60 L 100 70 L 80 60"/>
-    <path d="M 40 60 L 60 70 L 60 90 L 40 100 L 20 90 L 20 70 Z"/>
-    <path d="M 300 150 L 320 140 L 340 150 L 340 170 L 320 180 L 300 170 Z"/>
-    <path d="M 340 150 L 360 140 L 380 150 L 380 170 L 360 180 L 340 170"/>
+  <!-- Distant horizon haze -->
+  <rect x="0" y="150" width="380" height="30" fill="#0a1a3a" opacity="0.55" filter="url(#haze)"/>
+
+  <!-- ============================== LEFT: NIGHT SKY + BEAMS ============================== -->
+
+  <!-- Stars: scattered quiet field over the left half -->
+  <g fill="#e8f2ff">
+    <circle cx="20"  cy="18"  r="0.7" opacity="0.7"><animate attributeName="opacity" values="0.35;0.9;0.35" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="55"  cy="42"  r="0.6" opacity="0.55"><animate attributeName="opacity" values="0.25;0.7;0.25" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="90"  cy="12"  r="0.9" opacity="0.85"><animate attributeName="opacity" values="0.5;1;0.5" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="118" cy="60"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="17s" repeatCount="indefinite"/></circle>
+    <circle cx="72"  cy="88"  r="0.6" opacity="0.6"><animate attributeName="opacity" values="0.3;0.75;0.3" dur="11s" repeatCount="indefinite" begin="1.4s"/></circle>
+    <circle cx="30"  cy="70"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.25;0.65;0.25" dur="13s" repeatCount="indefinite" begin="2.1s"/></circle>
+    <circle cx="140" cy="30"  r="0.7" opacity="0.7"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s"  repeatCount="indefinite" begin="0.6s"/></circle>
+    <circle cx="240" cy="20"  r="0.6" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" repeatCount="indefinite" begin="3.2s"/></circle>
+    <circle cx="270" cy="55"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.25;0.7;0.25" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="15"  r="0.7" opacity="0.7"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="7s" repeatCount="indefinite" begin="1.8s"/></circle>
+    <circle cx="335" cy="45"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="17s" repeatCount="indefinite"/></circle>
+    <circle cx="360" cy="80"  r="0.55" opacity="0.55"><animate attributeName="opacity" values="0.25;0.7;0.25" dur="13s" repeatCount="indefinite" begin="2.4s"/></circle>
+    <circle cx="200" cy="98"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="11s" repeatCount="indefinite" begin="0.9s"/></circle>
+    <circle cx="8"   cy="105" r="0.55" opacity="0.55"><animate attributeName="opacity" values="0.25;0.7;0.25" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="105" cy="120" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="17s" repeatCount="indefinite" begin="1.1s"/></circle>
+    <!-- A single brighter "beacon" star up high -->
+    <circle cx="175" cy="8"   r="1.1" opacity="0.95">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <!-- ============================== LEFT: LHC RING ============================== -->
-  <g transform="translate(200,100)">
-    <!-- Outer atmospheric glow -->
-    <circle r="94" fill="url(#ringGlow)"/>
+  <!-- Ground haze / halo at the base of the beams -->
+  <ellipse cx="167" cy="168" rx="70" ry="10" fill="#8fb4ff" opacity="0.18" filter="url(#haze)"/>
 
-    <!-- Main beam pipe: dark grey donut -->
-    <circle r="76" fill="none" stroke="#1a2030" stroke-width="14"/>
-    <circle r="76" fill="none" stroke="#2b3a55" stroke-width="10"/>
-    <circle r="76" fill="none" stroke="#3f5578" stroke-width="1" opacity="0.6"/>
+  <!-- ============================== TWIN BEAMS ============================== -->
+  <!-- Each beam: soft wide outer, mid, and a slim bright core. Beams "breathe" together with staggered phase. -->
 
-    <!-- Ring tick marks (magnet segments) -->
-    <g stroke="#5b7ab8" stroke-width="0.6" opacity="0.55">
-      <g>
-        <line x1="0" y1="-82" x2="0" y2="-70"/>
-        <g transform="rotate(15)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(30)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(45)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(60)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(75)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(90)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(105)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(120)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(135)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(150)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(165)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(180)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(195)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(210)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(225)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(240)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(255)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(270)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(285)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(300)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(315)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(330)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-        <g transform="rotate(345)"><line x1="0" y1="-82" x2="0" y2="-70"/></g>
-      </g>
-    </g>
-
-    <!-- Cyan beam (clockwise) — bright arc traveling around -->
-    <circle r="78" fill="none" stroke="#5ac8ff" stroke-width="2.4" stroke-linecap="round"
-            stroke-dasharray="55 435" opacity="0.95" filter="url(#softGlow)">
-      <animate attributeName="stroke-dashoffset" from="0" to="-490" dur="7s" repeatCount="indefinite"/>
-    </circle>
-    <!-- Cyan beam glow trail -->
-    <circle r="78" fill="none" stroke="#c8ecff" stroke-width="0.8" stroke-linecap="round"
-            stroke-dasharray="22 468" opacity="0.9">
-      <animate attributeName="stroke-dashoffset" from="0" to="-490" dur="7s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Amber beam (counter-clockwise) — inner ring -->
-    <circle r="74" fill="none" stroke="#ffb14a" stroke-width="2.4" stroke-linecap="round"
-            stroke-dasharray="55 410" opacity="0.95" filter="url(#softGlow)">
-      <animate attributeName="stroke-dashoffset" from="0" to="465" dur="7s" repeatCount="indefinite"/>
-    </circle>
-    <!-- Amber beam highlight -->
-    <circle r="74" fill="none" stroke="#ffe0a8" stroke-width="0.8" stroke-linecap="round"
-            stroke-dasharray="22 443" opacity="0.9">
-      <animate attributeName="stroke-dashoffset" from="0" to="465" dur="7s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Detector stations: four cardinal boxes -->
-    <g font-family="'Courier New', Courier, monospace" font-size="7.5" fill="#e6d5a8" text-anchor="middle" font-weight="bold" letter-spacing="0.8">
-      <!-- ATLAS (top) -->
-      <g>
-        <rect x="-18" y="-89" width="36" height="12" rx="1.5" fill="#0d1a30" stroke="#5b7ab8" stroke-width="0.9"/>
-        <text y="-80.5" fill="#c8ecff">ATLAS</text>
-      </g>
-      <!-- CMS (right) -->
-      <g>
-        <rect x="77" y="-6" width="30" height="12" rx="1.5" fill="#0d1a30" stroke="#5b7ab8" stroke-width="0.9"/>
-        <text x="92" y="2.5" fill="#c8ecff">CMS</text>
-      </g>
-      <!-- ALICE (bottom) -->
-      <g>
-        <rect x="-18" y="77" width="36" height="12" rx="1.5" fill="#0d1a30" stroke="#5b7ab8" stroke-width="0.9"/>
-        <text y="85.5" fill="#c8ecff">ALICE</text>
-      </g>
-      <!-- LHCb (left) -->
-      <g>
-        <rect x="-107" y="-6" width="30" height="12" rx="1.5" fill="#0d1a30" stroke="#5b7ab8" stroke-width="0.9"/>
-        <text x="-92" y="2.5" fill="#c8ecff">LHCb</text>
-      </g>
-    </g>
-
-    <!-- Radial connectors from ring to detector labels (subtle) -->
-    <g stroke="#3f5578" stroke-width="0.6" opacity="0.7">
-      <line x1="0" y1="-83" x2="0" y2="-77"/>
-      <line x1="83" y1="0" x2="77" y2="0"/>
-      <line x1="0" y1="83" x2="0" y2="77"/>
-      <line x1="-83" y1="0" x2="-77" y2="0"/>
-    </g>
-
-    <!-- Collision spark at ATLAS (top) -->
-    <g transform="translate(0,-76)">
-      <g filter="url(#sparkGlow)">
-        <g stroke="#fff5c8" stroke-width="0.9" stroke-linecap="round" opacity="0.9">
-          <animate attributeName="opacity" values="0.15;1;0.15" dur="1.7s" repeatCount="indefinite"/>
-          <line x1="0" y1="0" x2="9" y2="-7"/>
-          <line x1="0" y1="0" x2="-9" y2="-7"/>
-          <line x1="0" y1="0" x2="13" y2="0"/>
-          <line x1="0" y1="0" x2="-13" y2="0"/>
-          <line x1="0" y1="0" x2="6" y2="-11"/>
-          <line x1="0" y1="0" x2="-6" y2="-11"/>
-          <line x1="0" y1="0" x2="10" y2="6"/>
-          <line x1="0" y1="0" x2="-10" y2="6"/>
-        </g>
-      </g>
-      <circle r="2.2" fill="#fffbe0" filter="url(#sparkGlow)">
-        <animate attributeName="r" values="1.2;3.6;1.2" dur="1.7s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.7;1;0.7" dur="1.7s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-
-    <!-- Center label: 27 KM ring + CERN GENEVA -->
-    <text text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="13" font-weight="800" fill="#c8ecff" y="0" letter-spacing="1.5">27 KM</text>
-    <text text-anchor="middle" font-family="'Courier New', Courier, monospace"
-          font-size="6" fill="#5b7ab8" y="12" letter-spacing="1.6">CERN · GENEVA</text>
-
-    <!-- Beam-direction arrows (tiny, at 45deg positions) -->
-    <g stroke="#5ac8ff" stroke-width="0.8" fill="none" opacity="0.85" stroke-linecap="round">
-      <g transform="rotate(45)"><path d="M 78 -4 L 82 0 L 78 4"/></g>
-    </g>
-    <g stroke="#ffb14a" stroke-width="0.8" fill="none" opacity="0.85" stroke-linecap="round">
-      <g transform="rotate(225)"><path d="M 74 -4 L 70 0 L 74 4"/></g>
-    </g>
+  <!-- Beam 1 (left column) -->
+  <g>
+    <!-- Outer soft column -->
+    <rect x="146" y="6" width="20" height="164" fill="url(#beamGrad)" filter="url(#beamBlur)" opacity="0.75">
+      <animate attributeName="opacity" values="0.6;0.85;0.65;0.8;0.6" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Mid column -->
+    <rect x="152" y="4" width="9" height="166" fill="url(#beamGrad)" opacity="0.85">
+      <animate attributeName="opacity" values="0.7;0.95;0.75;0.9;0.7" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bright core -->
+    <rect x="155.5" y="2" width="3" height="168" fill="url(#beamCore)" opacity="1">
+      <animate attributeName="opacity" values="0.85;1;0.9;1;0.85" dur="13s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Base flare -->
+    <rect x="149" y="140" width="16" height="30" fill="url(#beamBase)" filter="url(#beamBlur)"/>
   </g>
+
+  <!-- Beam 2 (right column) -->
+  <g>
+    <rect x="186" y="6" width="20" height="164" fill="url(#beamGrad)" filter="url(#beamBlur)" opacity="0.75">
+      <animate attributeName="opacity" values="0.65;0.8;0.6;0.85;0.65" dur="11s" repeatCount="indefinite" begin="1.6s"/>
+    </rect>
+    <rect x="192" y="4" width="9" height="166" fill="url(#beamGrad)" opacity="0.85">
+      <animate attributeName="opacity" values="0.75;0.9;0.7;0.95;0.75" dur="7s" repeatCount="indefinite" begin="1.1s"/>
+    </rect>
+    <rect x="195.5" y="2" width="3" height="168" fill="url(#beamCore)" opacity="1">
+      <animate attributeName="opacity" values="0.9;1;0.85;1;0.9" dur="13s" repeatCount="indefinite" begin="2.3s"/>
+    </rect>
+    <rect x="189" y="140" width="16" height="30" fill="url(#beamBase)" filter="url(#beamBlur)"/>
+  </g>
+
+  <!-- ============================== SKYLINE ============================== -->
+  <!-- Low Manhattan silhouette across the bottom of the left half. Solid black-blue against the sky. -->
+  <g fill="#01030a">
+    <!-- Base ground -->
+    <rect x="0" y="170" width="400" height="30"/>
+    <!-- Building blocks (varied heights) -->
+    <rect x="4"   y="158" width="14" height="12"/>
+    <rect x="20"  y="150" width="10" height="20"/>
+    <rect x="32"  y="155" width="18" height="15"/>
+    <rect x="52"  y="146" width="12" height="24"/>
+    <rect x="66"  y="152" width="8"  height="18"/>
+    <rect x="76"  y="140" width="22" height="30"/>
+    <rect x="100" y="148" width="10" height="22"/>
+    <rect x="112" y="144" width="16" height="26"/>
+    <rect x="130" y="152" width="10" height="18"/>
+    <rect x="142" y="145" width="14" height="25"/>
+    <!-- Twin taller memorial pedestals under the beams -->
+    <rect x="146" y="132" width="22" height="38"/>
+    <rect x="186" y="132" width="22" height="38"/>
+    <!-- Right of beams -->
+    <rect x="210" y="150" width="10" height="20"/>
+    <rect x="222" y="146" width="14" height="24"/>
+    <rect x="238" y="152" width="10" height="18"/>
+    <rect x="250" y="142" width="18" height="28"/>
+    <rect x="270" y="150" width="10" height="20"/>
+    <rect x="282" y="146" width="14" height="24"/>
+    <rect x="298" y="154" width="10" height="16"/>
+    <rect x="310" y="148" width="16" height="22"/>
+    <rect x="328" y="152" width="10" height="18"/>
+    <rect x="340" y="145" width="14" height="25"/>
+    <rect x="356" y="150" width="10" height="20"/>
+    <rect x="368" y="155" width="14" height="15"/>
+    <rect x="384" y="158" width="12" height="12"/>
+  </g>
+
+  <!-- Faint window lights scattered on skyline -->
+  <g fill="#c8dcff" opacity="0.55">
+    <rect x="82"  y="146" width="1.2" height="1.2"/>
+    <rect x="87"  y="150" width="1.2" height="1.2"/>
+    <rect x="118" y="150" width="1.2" height="1.2"/>
+    <rect x="123" y="156" width="1.2" height="1.2"/>
+    <rect x="254" y="148" width="1.2" height="1.2"/>
+    <rect x="259" y="154" width="1.2" height="1.2"/>
+    <rect x="316" y="154" width="1.2" height="1.2"/>
+    <rect x="345" y="152" width="1.2" height="1.2"/>
+    <animate attributeName="opacity" values="0.4;0.65;0.4" dur="17s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Very subtle horizon glow just above skyline -->
+  <rect x="0" y="128" width="400" height="14" fill="#3a5488" opacity="0.10" filter="url(#haze)"/>
 
   <!-- ============================== RIGHT: TEXT STACK ============================== -->
   <g transform="translate(400,0)">
 
-    <!-- Faint schematic backdrop -->
-    <g opacity="0.09" stroke="#5ac8ff" stroke-width="0.6" fill="none">
-      <path d="M 20 24 h 40 v 10 h 30"/>
-      <circle cx="90" cy="34" r="1.4" fill="#5ac8ff"/>
-      <path d="M 300 32 h 40 v 10 h 30"/>
-      <circle cx="370" cy="42" r="1.4" fill="#ffb14a"/>
-      <path d="M 20 178 h 40 v -8 h 60"/>
+    <!-- Faint schematic backdrop marks -->
+    <g opacity="0.10" stroke="#8fb4ff" stroke-width="0.6" fill="none">
+      <path d="M 20 22 h 40"/>
+      <path d="M 320 40 h 40"/>
+      <path d="M 20 180 h 30"/>
     </g>
 
     <!-- Date headline -->
     <text x="20" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="30" font-weight="800" fill="#f0e6d2" letter-spacing="1.1">
-      SEPTEMBER 10, 2026
+          font-size="30" font-weight="800" fill="#f2f4fa" letter-spacing="1.1">
+      SEPTEMBER 11, 2026
     </text>
 
     <!-- Sweep underline -->
     <line x1="20" y1="70" x2="362" y2="70" stroke="url(#sweepGrad)" stroke-width="2.4" stroke-linecap="round">
       <animate attributeName="stroke-dasharray" values="0 342; 200 142; 342 0; 200 142; 0 342"
-               keyTimes="0;0.25;0.5;0.75;1" dur="11s" repeatCount="indefinite"/>
+               keyTimes="0;0.25;0.5;0.75;1" dur="13s" repeatCount="indefinite"/>
     </line>
 
     <!-- Subhead -->
     <text x="20" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
           font-size="13" font-weight="700" letter-spacing="1.5">
-      <tspan fill="#5ac8ff">LHC · 18 YEARS</tspan><tspan fill="#c8bfa8"> · SINCE 2008</tspan>
+      <tspan fill="#f2f4fa">25 YEARS</tspan><tspan fill="#8fb4ff"> · IN REMEMBRANCE</tspan>
     </text>
 
     <!-- Tertiary italic -->
-    <text x="20" y="117" font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#ffb14a" letter-spacing="0.4">
-      CERN · 27 KM RING · 7 TeV BEAMS
+    <text x="20" y="117" font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#bcd6ff" letter-spacing="0.4">
+      PATRIOT DAY · TRIBUTE IN LIGHT
     </text>
 
     <!-- Spec roster -->
     <text x="20" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="9" font-weight="600" fill="#6fbf8a" letter-spacing="2.5" opacity="0.92">
-      ATLAS · CMS · ALICE · LHCb
+          font-size="9" font-weight="600" fill="#6a86b8" letter-spacing="2.5" opacity="0.95">
+      NEW YORK · ARLINGTON · SHANKSVILLE
     </text>
 
     <!-- Caption -->
-    <text x="20" y="172" font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#d8cfb5">
-      &#8220;the day the beam went around.&#8221;
+    <text x="20" y="172" font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#d8dfec">
+      &#8220;we remember.&#8221;
     </text>
 
-    <!-- Blinking status indicator -->
-    <circle cx="380" cy="138" r="2.4" fill="#5ac8ff" filter="url(#softGlow)">
-      <animate attributeName="opacity" values="1;1;0.15;0.15;1" keyTimes="0;0.42;0.5;0.92;1" dur="1.3s" repeatCount="indefinite"/>
+    <!-- Small quiet indicator -->
+    <circle cx="380" cy="138" r="2.2" fill="#8fb4ff" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="7s" repeatCount="indefinite"/>
     </circle>
   </g>
 </svg>

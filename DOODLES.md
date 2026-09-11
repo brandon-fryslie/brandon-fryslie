@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 11, 2026 — LHC First Beam — 18th Anniversary (September 10, 2008)
+
+<img src="./doodle-archive/2026/09/2026-09-11-060225.svg" width="800" alt="Daily doodle for September 10, 2026 — the 18th anniversary of the LHC's first circulating beam. On the left half, a top-down schematic of the Large Hadron Collider: a heavy grey ring with two counter-rotating beams — cyan clockwise and amber counter-clockwise — sweeping around it as bright dashes, four detector stations tagged ATLAS, CMS, ALICE, LHCb at the cardinal points, and a small collision spark flashing at ATLAS. A '27 KM' label with 'CERN · GENEVA' beneath sits at the center. On the right, a huge cream SEPTEMBER 10, 2026 headline underlined by a cyan-to-amber sweep, a cyan LHC · 18 YEARS subhead trailed by cream · SINCE 2008, an italic amber CERN · 27 KM RING · 7 TeV BEAMS tertiary, a dim green ATLAS · CMS · ALICE · LHCb roster, and a Georgia-italic 'the day the beam went around.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 10 September 2008, at 10:28 CEST, engineers at CERN steered a beam of protons all the way around the Large Hadron Collider's 27-kilometre ring for the first time — a single loop of the world's largest machine, threaded through a superconducting tunnel 100 metres beneath the France–Switzerland border. Full collisions were still more than a year away, but that first circulation was the moment the LHC actually became a collider. It has since delivered the Higgs boson, mapped the quark–gluon plasma at ALICE, sifted matter–antimatter asymmetries at LHCb, and rewritten the Standard Model's error bars from both sides.
+
+The left half is the ring itself, seen from above: a heavy grey beam pipe circling a "27 KM" label with "CERN · GENEVA" underneath, two counter-rotating beams — cyan clockwise, amber counter-clockwise — sweeping around it as bright dashes, and four detector stations tagged ATLAS, CMS, ALICE, LHCb at the cardinal points. A small collision spark flashes at ATLAS. On the right, a large SEPTEMBER 10, 2026 headline anchors a cyan LHC · 18 YEARS subhead, an italic amber CERN · 27 KM RING · 7 TeV BEAMS tertiary, a dim green ATLAS · CMS · ALICE · LHCb roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 10, 2026 — First Computer Bug — 79th Anniversary (September 9, 1947)
 
 <img src="./doodle-archive/2026/09/2026-09-10-060138.svg" width="800" alt="Daily doodle for September 9, 2026 — the 79th anniversary of the first computer bug. On the left half, a page of Harvard Mark II's operator logbook: cream ruled paper with a red margin, timestamped 0800/1000/1525/1545 entries in typewriter font ending in '(moth) in relay,' a real moth taped across the page with two crossing yellowed tape strips, its wings faintly quivering, an italic cursive 'First actual case of bug being found.' beneath, and a faded red DEBUGGED oval stamp at the lower left. On the right, a huge cream SEPTEMBER 9, 2026 headline underlined by a copper-to-green sweep, a copper FIRST COMPUTER BUG · 79 YEARS subhead trailed by cream · SINCE 1947, an italic amber GRACE HOPPER · HARVARD MARK II · RELAY 70, PANEL F tertiary, a dim green MOTH · TAPE · LOGBOOK · 1545 HOURS roster, and a Georgia-italic 'the first actual case of bug being found.' caption at the base.">
