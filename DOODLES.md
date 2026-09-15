@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 15, 2026 — Patriot Day — 25th Anniversary (September 11, 2001)
+
+<img src="./doodle-archive/2026/09/2026-09-15-060239.svg" width="800" alt="Daily doodle for September 11, 2026 — the 25th anniversary of the September 11, 2001 attacks. On the left half, a night scene: a low Manhattan skyline in dark silhouette across the bottom, a quiet scatter of stars overhead, and two parallel columns of pure white light — the Tribute in Light memorial — rising vertically from the horizon to the top of the canvas, their brightness slowly breathing. On the right, a large cream SEPTEMBER 11, 2026 headline underlined by a soft blue-to-white sweep, a cream 25 YEARS · IN REMEMBRANCE subhead, an italic pale-blue PATRIOT DAY · TRIBUTE IN LIGHT tertiary, a dim NEW YORK · ARLINGTON · SHANKSVILLE roster, and a Georgia-italic 'we remember.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+Twenty-five years ago today, on 11 September 2001, coordinated attacks in New York, at the Pentagon, and over a field near Shanksville, Pennsylvania killed 2,977 people. Since 2002, the anniversary has been observed in the United States as Patriot Day, marked at 08:46 EDT by a moment of silence. Every year on the evening of the anniversary, twin columns of pure white light — eighty-eight 7,000-watt xenon bulbs arrayed in two 48-foot squares near the World Trade Center site — are switched on at dusk and left burning until dawn. Called Tribute in Light, the installation first appeared six months after the attacks and has returned every September 11 since. It reaches four miles into the sky and is visible for sixty.
+
+The left half is that night: a low Manhattan skyline in silhouette, a scatter of quiet stars overhead, and two parallel columns of white light rising from the horizon to the top of the canvas, their intensity slowly breathing. On the right, a large SEPTEMBER 11, 2026 headline anchors a cream 25 YEARS · IN REMEMBRANCE subhead, an italic PATRIOT DAY · TRIBUTE IN LIGHT tertiary, a dim NEW YORK · ARLINGTON · SHANKSVILLE roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 11, 2026 — LHC First Beam — 18th Anniversary (September 10, 2008)
 
 <img src="./doodle-archive/2026/09/2026-09-11-060225.svg" width="800" alt="Daily doodle for September 10, 2026 — the 18th anniversary of the LHC's first circulating beam. On the left half, a top-down schematic of the Large Hadron Collider: a heavy grey ring with two counter-rotating beams — cyan clockwise and amber counter-clockwise — sweeping around it as bright dashes, four detector stations tagged ATLAS, CMS, ALICE, LHCb at the cardinal points, and a small collision spark flashing at ATLAS. A '27 KM' label with 'CERN · GENEVA' beneath sits at the center. On the right, a huge cream SEPTEMBER 10, 2026 headline underlined by a cyan-to-amber sweep, a cyan LHC · 18 YEARS subhead trailed by cream · SINCE 2008, an italic amber CERN · 27 KM RING · 7 TeV BEAMS tertiary, a dim green ATLAS · CMS · ALICE · LHCb roster, and a Georgia-italic 'the day the beam went around.' caption at the base.">
