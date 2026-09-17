@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 17, 2026 — google.com Registered — 29th Anniversary (September 15, 1997)
+
+<img src="./doodle-archive/2026/09/2026-09-17-060359.svg" width="800" alt="Daily doodle for September 15, 2026 — the 29th anniversary of the registration of google.com. On the left half, a retro browser window: a title bar with three dots, a rounded address bar in which 'https://google.com' is typed out character by character beneath a blinking caret, and beneath it a row of six dots in the Google palette (blue, red, yellow, blue, green, red) bouncing in sequence, with a small WHOIS stub reading CREATED: 1997-09-15. On the right, a large cream SEPTEMBER 15, 2026 headline underlined by a blue-red-yellow-green sweep, a blue GOOGLE.COM subhead trailed by cream · 29 YEARS, an italic amber REGISTERED · STANFORD · 1997 tertiary, a dim green PAGE · BRIN · GOOGOL · WHOIS roster, and a Georgia-italic 'so the whole web could be indexed.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 15 September 1997, two Stanford graduate students named Larry Page and Sergey Brin registered the domain google.com. Their search engine had been running out of Stanford under the name BackRub since 1996, indexing the early web by the structure of its inbound links rather than by keyword frequency, and the new name was a play on "googol" — the number 10 to the 100th — meant to advertise their appetite for indexing everything. Incorporation as Google Inc. followed almost exactly a year later, in a friend's Menlo Park garage. Twenty-nine years on, the domain is arguably the busiest address on the public internet.
+
+The left half is the domain being born: a retro browser window renders "https://google.com" into its address bar one character at a time under a blinking caret, while the six Google-palette dots below bounce in the classic loader cadence. A WHOIS stub at the base flashes CREATED: 1997-09-15. On the right, a large SEPTEMBER 15, 2026 headline anchors a blue GOOGLE.COM · 29 YEARS subhead, an italic REGISTERED · STANFORD · 1997 tertiary, a dim PAGE · BRIN · GOOGOL · WHOIS roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 15, 2026 — Patriot Day — 25th Anniversary (September 11, 2001)
 
 <img src="./doodle-archive/2026/09/2026-09-15-060239.svg" width="800" alt="Daily doodle for September 11, 2026 — the 25th anniversary of the September 11, 2001 attacks. On the left half, a night scene: a low Manhattan skyline in dark silhouette across the bottom, a quiet scatter of stars overhead, and two parallel columns of pure white light — the Tribute in Light memorial — rising vertically from the horizon to the top of the canvas, their brightness slowly breathing. On the right, a large cream SEPTEMBER 11, 2026 headline underlined by a soft blue-to-white sweep, a cream 25 YEARS · IN REMEMBRANCE subhead, an italic pale-blue PATRIOT DAY · TRIBUTE IN LIGHT tertiary, a dim NEW YORK · ARLINGTON · SHANKSVILLE roster, and a Georgia-italic 'we remember.' caption at the base.">
