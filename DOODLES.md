@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 18, 2026 — Linux 0.01 Released — 35th Anniversary (September 17, 1991)
+
+<img src="./doodle-archive/2026/09/2026-09-18-060121.svg" width="800" alt="Daily doodle for September 17, 2026 — the 35th anniversary of the release of Linux 0.01. On the left half, a retro green-phosphor CRT terminal with a rounded bezel and drifting scanlines shows Linux 0.01 boot messages typing themselves in line by line — kernel version, memory sizing, VFS mount, an FTP fetch from funet.fi — ending at a blinking dollar prompt. On the right, a large cream SEPTEMBER 17, 2026 headline underlined by a green-to-amber sweep, a phosphor-green LINUX 0.01 subhead trailed by cream · 35 YEARS, an italic amber TORVALDS · HELSINKI · FTP.FUNET.FI tertiary, a dim green 386 · MINIX · GCC · KERNEL roster, and a Georgia-italic 'just a hobby, won't be big and professional like gnu.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 17 September 1991, a 21-year-old computer-science student in Helsinki named Linus Torvalds uploaded linux-0.01.tar.gz — 63 files, about ten thousand lines of C and 386 assembly — to a directory on ftp.funet.fi and quietly emailed a few people on the comp.os.minix newsgroup a pointer to it. Three weeks earlier he had introduced it there as "just a hobby, won't be big and professional like gnu." Version 0.01 could not yet self-host, ran only on a 386 with a hard disk and a Minix filesystem, and had exactly one user. Thirty-five years later the same kernel boots most of the internet, every Android phone, and every one of the top 500 supercomputers on Earth.
+
+The left half is a green-phosphor CRT booting Linux 0.01: scanlines drift across a curved screen while boot messages type themselves in one line at a time — kernel version, memory sizing, VFS mount, an FTP fetch of the tarball from funet.fi — and settle into a blinking prompt. On the right, a large SEPTEMBER 17, 2026 headline anchors a phosphor-green LINUX 0.01 · 35 YEARS subhead, an italic amber TORVALDS · HELSINKI · FTP.FUNET.FI tertiary, a dim green 386 · MINIX · GCC · KERNEL roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 17, 2026 — google.com Registered — 29th Anniversary (September 15, 1997)
 
 <img src="./doodle-archive/2026/09/2026-09-17-060359.svg" width="800" alt="Daily doodle for September 15, 2026 — the 29th anniversary of the registration of google.com. On the left half, a retro browser window: a title bar with three dots, a rounded address bar in which 'https://google.com' is typed out character by character beneath a blinking caret, and beneath it a row of six dots in the Google palette (blue, red, yellow, blue, green, red) bouncing in sequence, with a small WHOIS stub reading CREATED: 1997-09-15. On the right, a large cream SEPTEMBER 15, 2026 headline underlined by a blue-red-yellow-green sweep, a blue GOOGLE.COM subhead trailed by cream · 29 YEARS, an italic amber REGISTERED · STANFORD · 1997 tertiary, a dim green PAGE · BRIN · GOOGOL · WHOIS roster, and a Georgia-italic 'so the whole web could be indexed.' caption at the base.">

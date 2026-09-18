@@ -1,198 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Linux 0.01 Released — 35th Anniversary (September 17, 1991) -->
+<!-- theme: The New York Times — 175th Anniversary (September 18, 1851) -->
 <!-- about:
-On 17 September 1991, a 21-year-old computer-science student in Helsinki named Linus Torvalds uploaded linux-0.01.tar.gz — 63 files, about ten thousand lines of C and 386 assembly — to a directory on ftp.funet.fi and quietly emailed a few people on the comp.os.minix newsgroup a pointer to it. Three weeks earlier he had introduced it there as "just a hobby, won't be big and professional like gnu." Version 0.01 could not yet self-host, ran only on a 386 with a hard disk and a Minix filesystem, and had exactly one user. Thirty-five years later the same kernel boots most of the internet, every Android phone, and every one of the top 500 supercomputers on Earth.
+On 18 September 1851, a four-page broadsheet called The New-York Daily Times went on sale on the streets of lower Manhattan for one cent. Its founders, Henry Jarvis Raymond and George Jones, promised a paper that would stay calmly in the middle of the loud, partisan press of the era — no more hot temper than a subject demanded, no less. It ran European dispatches lifted from the previous week's steamer, a column of city commerce, and one page of advertisements. The name shortened to The New York Times in 1857; the motto "All the News That's Fit to Print" arrived in 1897. A hundred and seventy-five years later the paper still comes out every morning, and its masthead still uses the same blackletter it wore on day one.
 
-The left half is a green-phosphor CRT booting Linux 0.01: scanlines drift across a curved screen while boot messages type themselves in one line at a time — kernel version, memory sizing, VFS mount, an FTP fetch of the tarball from funet.fi — and settle into a blinking prompt. On the right, a large SEPTEMBER 17, 2026 headline anchors a phosphor-green LINUX 0.01 · 35 YEARS subhead, an italic amber TORVALDS · HELSINKI · FTP.FUNET.FI tertiary, a dim green 386 · MINIX · GCC · KERNEL roster, and a Georgia-italic caption at the base.
+The left half is Volume I, Number 1, laid out on a warm cream broadsheet with an ink-heavy serif masthead, a dated dateline reading THURSDAY, SEPTEMBER 18, 1851 · PRICE ONE CENT, and three columns of ruled text where a press-bar slowly sweeps top to bottom, printing the page fresh on each pass. On the right, a large SEPTEMBER 18, 2026 headline anchors a cream THE NEW YORK TIMES · 175 YEARS subhead, an italic amber RAYMOND · JONES · MANHATTAN tertiary, a dim TIMES · DAILY · PRESS · INK roster, and a Georgia-italic caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for September 17, 2026 — the 35th anniversary of the release of Linux 0.01. On the left half, a retro green-phosphor CRT terminal with a rounded bezel and drifting scanlines shows Linux 0.01 boot messages typing themselves in line by line — kernel version, memory sizing, VFS mount, an FTP fetch from funet.fi — ending at a blinking dollar prompt. On the right, a large cream SEPTEMBER 17, 2026 headline underlined by a green-to-amber sweep, a phosphor-green LINUX 0.01 subhead trailed by cream · 35 YEARS, an italic amber TORVALDS · HELSINKI · FTP.FUNET.FI tertiary, a dim green 386 · MINIX · GCC · KERNEL roster, and a Georgia-italic 'just a hobby, won't be big and professional like gnu.' caption at the base.">
+     aria-label="Daily doodle for September 18, 2026 — the 175th anniversary of the first edition of The New York Times, published on September 18, 1851. On the left half, a warm cream broadsheet page with an ink-heavy blackletter-style serif masthead reading 'The New-York Daily Times', a thin rule beneath, a dated line 'VOL. I · NO. 1 · THURSDAY, SEPTEMBER 18, 1851 · PRICE ONE CENT', and three columns of ruled body text with a few small headline caps ('EUROPE.', 'COMMERCE.', 'THE CITY.') as a press-blade shadow slowly sweeps top-to-bottom across the page. On the right, a large cream SEPTEMBER 18, 2026 headline underlined by a cream-to-amber sweep, a cream THE NEW YORK TIMES · 175 YEARS subhead, an italic amber RAYMOND · JONES · MANHATTAN tertiary, a dim TIMES · DAILY · PRESS · INK roster, and a Georgia-italic 'all the news that's fit to print.' caption at the base.">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#080b10"/>
     </linearGradient>
-    <linearGradient id="bezelGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#242a34"/>
-      <stop offset="50%"  stop-color="#161b23"/>
-      <stop offset="100%" stop-color="#0f131a"/>
+    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4ecd6"/>
+      <stop offset="55%"  stop-color="#ecdfbe"/>
+      <stop offset="100%" stop-color="#d9c89a"/>
     </linearGradient>
-    <radialGradient id="screenGrad" cx="0.5" cy="0.5" r="0.75">
-      <stop offset="0%"   stop-color="#0a1a12"/>
-      <stop offset="70%"  stop-color="#050d09"/>
-      <stop offset="100%" stop-color="#020604"/>
-    </radialGradient>
     <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#4aff7d"/>
-      <stop offset="55%"  stop-color="#8fe0a0"/>
-      <stop offset="100%" stop-color="#ffb000"/>
+      <stop offset="0%"   stop-color="#f2ecd8"/>
+      <stop offset="55%"  stop-color="#e8c98a"/>
+      <stop offset="100%" stop-color="#c98a3a"/>
     </linearGradient>
-    <!-- Subtle CRT phosphor glow -->
-    <filter id="phosGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="0.55"/>
+    <!-- Press-blade wet-ink shadow that sweeps down the page -->
+    <linearGradient id="pressBlade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a1408" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#1a1408" stop-opacity="0.28"/>
+      <stop offset="55%"  stop-color="#0d0a05" stop-opacity="0.55"/>
+      <stop offset="70%"  stop-color="#1a1408" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#1a1408" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="paperShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="off"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="1.2"/>
     </filter>
-    <!-- Scanline pattern -->
-    <pattern id="scanlines" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="4" fill="transparent"/>
-      <rect width="4" height="1" fill="#4aff7d" opacity="0.06"/>
-    </pattern>
-    <!-- Screen curvature clip -->
-    <clipPath id="screenClip">
-      <rect x="34" y="34" width="332" height="132" rx="14" ry="14"/>
+    <!-- Subtle newsprint speckle -->
+    <filter id="speckle" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="1" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.05
+                             0 0 0 0 0.03
+                             0 0 0 0 0.02
+                             0 0 0 0.18 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <!-- Clip path for the paper page so animations don't spill -->
+    <clipPath id="paperClip">
+      <rect x="22" y="17" width="356" height="166" rx="2" ry="2"/>
     </clipPath>
-    <!-- Vignette to fake CRT curvature -->
-    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.7">
-      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
-    </radialGradient>
   </defs>
 
   <!-- Background -->
   <rect width="800" height="200" fill="url(#bgGrad)"/>
 
-  <!-- Faint circuit-trace grid on the right side -->
-  <g opacity="0.06" stroke="#4aff7d" stroke-width="0.5" fill="none">
-    <path d="M 420 10 h 40 v 20 h 60"/>
-    <path d="M 700 20 v 30 h -40"/>
-    <path d="M 440 180 h 60 v -20 h 100"/>
-    <path d="M 760 170 h -30 v -30"/>
+  <!-- Faint compositor's rules on the right side -->
+  <g opacity="0.08" stroke="#c98a3a" stroke-width="0.5" fill="none">
+    <path d="M 420 10 h 40 v 22 h 60"/>
+    <path d="M 720 24 v 30 h -40"/>
+    <path d="M 440 184 h 60 v -18 h 100"/>
+    <path d="M 770 170 h -30 v -28"/>
   </g>
 
-  <!-- ============================== LEFT: CRT TERMINAL ============================== -->
-  <g transform="translate(20,15)">
-    <!-- Bezel outer -->
-    <rect x="0" y="0" width="360" height="170" rx="16" ry="16" fill="url(#bezelGrad)" stroke="#2a3040" stroke-width="1"/>
-    <!-- Bezel inner rim -->
-    <rect x="6" y="6" width="348" height="158" rx="12" ry="12" fill="none" stroke="#0a0d13" stroke-width="1.2"/>
-    <!-- Power LED -->
-    <circle cx="18" cy="160" r="2.2" fill="#4aff7d" filter="url(#softGlow)">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.3s" repeatCount="indefinite"/>
-    </circle>
-    <text x="26" y="163" font-family="'SFMono-Regular', Menlo, Consolas, monospace"
-          font-size="5.5" fill="#3a5a44" letter-spacing="0.9">PWR</text>
-    <text x="330" y="163" font-family="'SFMono-Regular', Menlo, Consolas, monospace"
-          font-size="5.5" fill="#3a5a44" letter-spacing="0.9">VT100</text>
+  <!-- ============================== LEFT: NEWSPAPER PAGE ============================== -->
+  <g transform="translate(20,15) rotate(-1 180 85)" filter="url(#paperShadow)">
+    <!-- Page -->
+    <rect x="0" y="0" width="360" height="170" rx="2" ry="2" fill="url(#paperGrad)" stroke="#8b7a4a" stroke-width="0.6"/>
+    <!-- Speckle layer (very subtle) -->
+    <rect x="0" y="0" width="360" height="170" fill="#f4ecd6" filter="url(#speckle)" opacity="0.6"/>
 
-    <!-- Screen -->
-    <rect x="16" y="16" width="328" height="128" rx="14" ry="14" fill="url(#screenGrad)"/>
+    <g clip-path="url(#paperClip)">
+      <!-- Masthead: "The New-York Daily Times" -->
+      <text x="180" y="36" text-anchor="middle"
+            font-family="'Times New Roman', 'Times', 'Georgia', serif"
+            font-size="21" font-weight="900" font-style="normal" fill="#141008"
+            letter-spacing="0.6">
+        <tspan font-style="italic" font-size="19">The</tspan>
+        <tspan font-weight="900" letter-spacing="1.2"> New-York Daily Times</tspan>
+      </text>
 
-    <g clip-path="url(#screenClip)">
-      <!-- Slight screen glow layer -->
-      <rect x="16" y="16" width="328" height="128" fill="#4aff7d" opacity="0.02"/>
+      <!-- Rule under masthead -->
+      <line x1="30" y1="43" x2="330" y2="43" stroke="#141008" stroke-width="0.8"/>
+      <line x1="30" y1="45.5" x2="330" y2="45.5" stroke="#141008" stroke-width="0.4"/>
 
-      <!-- Terminal text -->
-      <g font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="8" letter-spacing="0.2" filter="url(#phosGlow)">
-        <!-- Header status bar -->
-        <text x="42" y="30" fill="#2ea85a" font-weight="600">linux 0.01</text>
-        <text x="320" y="30" fill="#2ea85a" text-anchor="end">tty0</text>
-        <line x1="42" y1="34" x2="320" y2="34" stroke="#1e5c34" stroke-width="0.5"/>
+      <!-- Dateline -->
+      <text x="180" y="55" text-anchor="middle"
+            font-family="'Times New Roman', 'Times', serif"
+            font-size="6.5" fill="#241a0d" letter-spacing="1.4" font-weight="600">
+        VOL. I. · NO. 1. · NEW-YORK, THURSDAY, SEPTEMBER 18, 1851. · PRICE ONE CENT.
+      </text>
+      <line x1="30" y1="59" x2="330" y2="59" stroke="#241a0d" stroke-width="0.3"/>
 
-        <!-- Boot log — all lines visible at rest; motion elsewhere. -->
-        <text x="42" y="48" fill="#4aff7d">Linux version 0.01 (torvalds@kruuna)</text>
-        <text x="42" y="58" fill="#4aff7d">(gcc version 1.40) 1991-09-17</text>
-        <text x="42" y="68" fill="#4aff7d">Memory: 3800K/4096K available</text>
-        <text x="42" y="78" fill="#4aff7d">Console: 80x25 EGA+</text>
-        <text x="42" y="88" fill="#4aff7d">VFS: Mounted root (minix fs)</text>
-        <text x="42" y="102" fill="#8fe0a0"><tspan fill="#2ea85a">$</tspan> ftp ftp.funet.fi</text>
-        <text x="42" y="112" fill="#4aff7d">Connected. cd /pub/OS/Linux</text>
-        <text x="42" y="122" fill="#4aff7d">get linux-0.01.tar.gz ...71K <tspan fill="#ffb000">OK</tspan></text>
-        <!-- Final prompt with blinking cursor -->
-        <text x="42" y="136" fill="#8fe0a0"><tspan fill="#2ea85a">$</tspan> uname -sr</text>
-        <text x="42" y="146" fill="#4aff7d">Linux 0.01</text>
-        <!-- Blinking cursor block after the version -->
-        <rect x="88" y="139" width="5.5" height="8" fill="#4aff7d">
-          <animate attributeName="opacity" values="0.9;0.9;0;0;0.9" keyTimes="0;0.45;0.5;0.95;1" dur="1.1s" repeatCount="indefinite"/>
-        </rect>
+      <!-- Three columns of body text (ruled lines) -->
+      <g stroke="#241a0d" stroke-width="0.45" stroke-linecap="round" opacity="0.72">
+        <!-- Column 1 -->
+        <text x="35" y="70" font-family="'Times New Roman', serif" font-size="6.5"
+              font-weight="900" fill="#141008" letter-spacing="0.8">EUROPE.</text>
+        <line x1="35" y1="77" x2="105" y2="77"/>
+        <line x1="35" y1="82" x2="112" y2="82"/>
+        <line x1="35" y1="87" x2="108" y2="87"/>
+        <line x1="35" y1="92" x2="115" y2="92"/>
+        <line x1="35" y1="97" x2="103" y2="97"/>
+        <line x1="35" y1="102" x2="112" y2="102"/>
+        <line x1="35" y1="107" x2="98" y2="107"/>
+        <line x1="35" y1="112" x2="115" y2="112"/>
+        <line x1="35" y1="117" x2="107" y2="117"/>
+        <line x1="35" y1="122" x2="115" y2="122"/>
+        <line x1="35" y1="127" x2="94" y2="127"/>
+        <line x1="35" y1="132" x2="113" y2="132"/>
+        <line x1="35" y1="137" x2="105" y2="137"/>
+        <line x1="35" y1="142" x2="115" y2="142"/>
+        <line x1="35" y1="147" x2="100" y2="147"/>
+        <line x1="35" y1="152" x2="112" y2="152"/>
+        <line x1="35" y1="157" x2="88" y2="157"/>
+
+        <!-- Column 2 -->
+        <text x="128" y="70" font-family="'Times New Roman', serif" font-size="6.5"
+              font-weight="900" fill="#141008" letter-spacing="0.8">COMMERCE.</text>
+        <line x1="128" y1="77" x2="205" y2="77"/>
+        <line x1="128" y1="82" x2="200" y2="82"/>
+        <line x1="128" y1="87" x2="207" y2="87"/>
+        <line x1="128" y1="92" x2="196" y2="92"/>
+        <line x1="128" y1="97" x2="205" y2="97"/>
+        <line x1="128" y1="102" x2="192" y2="102"/>
+        <line x1="128" y1="107" x2="204" y2="107"/>
+        <line x1="128" y1="112" x2="200" y2="112"/>
+        <text x="128" y="120" font-family="'Times New Roman', serif" font-size="6.5"
+              font-weight="900" fill="#141008" letter-spacing="0.8">THE CITY.</text>
+        <line x1="128" y1="127" x2="205" y2="127"/>
+        <line x1="128" y1="132" x2="196" y2="132"/>
+        <line x1="128" y1="137" x2="207" y2="137"/>
+        <line x1="128" y1="142" x2="190" y2="142"/>
+        <line x1="128" y1="147" x2="205" y2="147"/>
+        <line x1="128" y1="152" x2="200" y2="152"/>
+        <line x1="128" y1="157" x2="185" y2="157"/>
+
+        <!-- Column 3 -->
+        <text x="222" y="70" font-family="'Times New Roman', serif" font-size="6.5"
+              font-weight="900" fill="#141008" letter-spacing="0.8">ADVERTISEMENTS.</text>
+        <line x1="222" y1="77" x2="298" y2="77"/>
+        <line x1="222" y1="82" x2="303" y2="82"/>
+        <line x1="222" y1="87" x2="292" y2="87"/>
+        <line x1="222" y1="92" x2="303" y2="92"/>
+        <line x1="222" y1="97" x2="288" y2="97"/>
+        <line x1="222" y1="102" x2="300" y2="102"/>
+        <line x1="222" y1="107" x2="295" y2="107"/>
+        <line x1="222" y1="112" x2="303" y2="112"/>
+        <line x1="222" y1="117" x2="280" y2="117"/>
+        <line x1="222" y1="122" x2="303" y2="122"/>
+        <line x1="222" y1="127" x2="295" y2="127"/>
+        <line x1="222" y1="132" x2="303" y2="132"/>
+        <line x1="222" y1="137" x2="288" y2="137"/>
+        <line x1="222" y1="142" x2="302" y2="142"/>
+        <line x1="222" y1="147" x2="295" y2="147"/>
+        <line x1="222" y1="152" x2="303" y2="152"/>
+        <line x1="222" y1="157" x2="278" y2="157"/>
       </g>
 
-      <!-- Drifting scanlines overlay -->
-      <rect x="16" y="16" width="328" height="128" fill="url(#scanlines)">
-        <animateTransform attributeName="transform" type="translate" from="0 -4" to="0 0" dur="7s" repeatCount="indefinite"/>
+      <!-- Column separators -->
+      <line x1="121" y1="64" x2="121" y2="162" stroke="#8b7a4a" stroke-width="0.35" opacity="0.5"/>
+      <line x1="215" y1="64" x2="215" y2="162" stroke="#8b7a4a" stroke-width="0.35" opacity="0.5"/>
+
+      <!-- Press-blade sweep (fresh ink laid on the page) -->
+      <rect x="22" y="0" width="336" height="44" fill="url(#pressBlade)">
+        <animate attributeName="y" values="-40;170;-40" keyTimes="0;0.5;1" dur="11s" repeatCount="indefinite"/>
       </rect>
 
-      <!-- Moving bright scan bar -->
-      <rect x="16" width="328" height="18" fill="#4aff7d" opacity="0.05">
-        <animate attributeName="y" values="16;144;16" keyTimes="0;0.5;1" dur="11s" repeatCount="indefinite"/>
-      </rect>
-
-      <!-- CRT vignette -->
-      <rect x="16" y="16" width="328" height="128" fill="url(#vignette)"/>
+      <!-- Bell / press indicator: tiny ink drop pulse near the bottom -->
+      <circle cx="330" cy="163" r="1.6" fill="#141008" opacity="0.65">
+        <animate attributeName="r" values="1.3;2.2;1.3" dur="7s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
-    <!-- Screen frame highlight (top) -->
-    <path d="M 20 20 Q 180 12 340 20" stroke="#2a3040" stroke-width="0.8" fill="none" opacity="0.6"/>
+    <!-- Folded corner (bottom-right) -->
+    <path d="M 358 168 l -12 -2 l 14 -6 z" fill="#c9b579" stroke="#8b7a4a" stroke-width="0.3"/>
   </g>
 
   <!-- ============================== RIGHT: TEXT STACK ============================== -->
   <g transform="translate(400,0)">
 
-    <!-- Tiny penguin silhouette hint in top-right corner -->
-    <g transform="translate(360,18)" opacity="0.85">
-      <!-- Body -->
-      <ellipse cx="7" cy="12" rx="6.5" ry="8.5" fill="#1a1f28" stroke="#2a3040" stroke-width="0.6"/>
-      <!-- Belly -->
-      <ellipse cx="7" cy="14" rx="4" ry="6" fill="#f2f4fa"/>
-      <!-- Head -->
-      <circle cx="7" cy="4.5" r="4" fill="#1a1f28" stroke="#2a3040" stroke-width="0.5"/>
-      <!-- Eyes -->
-      <circle cx="5.5" cy="4" r="0.9" fill="#f2f4fa"/>
-      <circle cx="8.5" cy="4" r="0.9" fill="#f2f4fa"/>
-      <circle cx="5.6" cy="4.1" r="0.4" fill="#0d1117"/>
-      <circle cx="8.6" cy="4.1" r="0.4" fill="#0d1117"/>
-      <!-- Beak -->
-      <path d="M 5.5 5.8 Q 7 7.2 8.5 5.8 Z" fill="#ffb000"/>
-      <!-- Feet -->
-      <ellipse cx="4.5" cy="20" rx="2.2" ry="1" fill="#ffb000"/>
-      <ellipse cx="9.5" cy="20" rx="2.2" ry="1" fill="#ffb000"/>
-      <!-- Subtle breathing -->
-      <animateTransform attributeName="transform" type="translate" values="360 18; 360 17; 360 18" dur="7s" repeatCount="indefinite"/>
+    <!-- Small newsboy/paperboy hint: a rolled-newspaper icon in the top-right corner -->
+    <g transform="translate(354,14)" opacity="0.9">
+      <!-- Rolled paper -->
+      <rect x="0" y="6" width="28" height="9" rx="2" ry="2" fill="#f2ecd8" stroke="#c98a3a" stroke-width="0.5"/>
+      <!-- Twine tie -->
+      <rect x="12" y="4" width="1.8" height="13" fill="#c98a3a"/>
+      <!-- Masthead peek -->
+      <line x1="3" y1="9.5" x2="10" y2="9.5" stroke="#141008" stroke-width="0.7"/>
+      <line x1="3" y1="11.5" x2="9" y2="11.5" stroke="#241a0d" stroke-width="0.4"/>
+      <line x1="3" y1="13" x2="8" y2="13" stroke="#241a0d" stroke-width="0.4"/>
+      <!-- Subtle nod -->
+      <animateTransform attributeName="transform" type="translate"
+                        values="354 14; 354 13; 354 14" dur="7s" repeatCount="indefinite"/>
     </g>
 
-    <!-- Faint schematic marks -->
-    <g opacity="0.10" stroke="#8fe0a0" stroke-width="0.6" fill="none">
+    <!-- Faint bracket rules -->
+    <g opacity="0.10" stroke="#e8c98a" stroke-width="0.6" fill="none">
       <path d="M 20 22 h 40"/>
       <path d="M 20 180 h 30"/>
     </g>
 
-    <!-- Date headline -->
+    <!-- Date headline (primary anchor) -->
     <text x="20" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
           font-size="30" font-weight="800" fill="#f2f4fa" letter-spacing="1.1">
-      SEPTEMBER 17, 2026
+      SEPTEMBER 18, 2026
     </text>
 
-    <!-- Sweep underline (phosphor to amber) -->
+    <!-- Sweep underline -->
     <line x1="20" y1="70" x2="362" y2="70" stroke="url(#sweepGrad)" stroke-width="2.4" stroke-linecap="round">
       <animate attributeName="stroke-dasharray" values="0 342; 220 122; 342 0; 220 122; 0 342"
                keyTimes="0;0.25;0.5;0.75;1" dur="13s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Subhead -->
+    <!-- Subhead: NYT · 175 YEARS -->
     <text x="20" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
           font-size="13" font-weight="700" letter-spacing="1.5">
-      <tspan fill="#4aff7d">LINUX 0.01</tspan><tspan fill="#f2f4fa"> · 35 YEARS</tspan>
+      <tspan fill="#e8c98a">THE NEW YORK TIMES</tspan><tspan fill="#f2f4fa"> · 175 YEARS</tspan>
     </text>
 
     <!-- Tertiary italic -->
-    <text x="20" y="117" font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#ffb000" letter-spacing="0.4">
-      TORVALDS · HELSINKI · FTP.FUNET.FI
+    <text x="20" y="117" font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#c98a3a" letter-spacing="0.4">
+      RAYMOND · JONES · MANHATTAN
     </text>
 
     <!-- Spec roster -->
     <text x="20" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="9" font-weight="600" fill="#6a8b78" letter-spacing="2.5" opacity="0.95">
-      386 · MINIX · GCC · KERNEL
+          font-size="9" font-weight="600" fill="#8b7a4a" letter-spacing="2.5" opacity="0.98">
+      TIMES · DAILY · PRESS · INK
     </text>
 
     <!-- Caption -->
     <text x="20" y="172" font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#d8dfec">
-      &#8220;just a hobby, won&#8217;t be big and professional&#8230;&#8221;
+      &#8220;all the news that&#8217;s fit to print.&#8221;
     </text>
 
-    <!-- Quiet phosphor indicator -->
-    <circle cx="380" cy="138" r="2.2" fill="#4aff7d" filter="url(#softGlow)">
+    <!-- Ink drop indicator -->
+    <circle cx="380" cy="138" r="2.2" fill="#c98a3a" filter="url(#softGlow)">
       <animate attributeName="opacity" values="0.35;1;0.35" dur="7s" repeatCount="indefinite"/>
     </circle>
   </g>
