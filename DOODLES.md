@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 22, 2026 — The New York Times — 175th Anniversary (September 18, 1851)
+
+<img src="./doodle-archive/2026/09/2026-09-22-060145.svg" width="800" alt="Daily doodle for September 18, 2026 — the 175th anniversary of the first edition of The New York Times, published on September 18, 1851. On the left half, a warm cream broadsheet page with an ink-heavy blackletter-style serif masthead reading 'The New-York Daily Times', a thin rule beneath, a dated line 'VOL. I · NO. 1 · THURSDAY, SEPTEMBER 18, 1851 · PRICE ONE CENT', and three columns of ruled body text with a few small headline caps ('EUROPE.', 'COMMERCE.', 'THE CITY.') as a press-blade shadow slowly sweeps top-to-bottom across the page. On the right, a large cream SEPTEMBER 18, 2026 headline underlined by a cream-to-amber sweep, a cream THE NEW YORK TIMES · 175 YEARS subhead, an italic amber RAYMOND · JONES · MANHATTAN tertiary, a dim TIMES · DAILY · PRESS · INK roster, and a Georgia-italic 'all the news that's fit to print.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 18 September 1851, a four-page broadsheet called The New-York Daily Times went on sale on the streets of lower Manhattan for one cent. Its founders, Henry Jarvis Raymond and George Jones, promised a paper that would stay calmly in the middle of the loud, partisan press of the era — no more hot temper than a subject demanded, no less. It ran European dispatches lifted from the previous week's steamer, a column of city commerce, and one page of advertisements. The name shortened to The New York Times in 1857; the motto "All the News That's Fit to Print" arrived in 1897. A hundred and seventy-five years later the paper still comes out every morning, and its masthead still uses the same blackletter it wore on day one.
+
+The left half is Volume I, Number 1, laid out on a warm cream broadsheet with an ink-heavy serif masthead, a dated dateline reading THURSDAY, SEPTEMBER 18, 1851 · PRICE ONE CENT, and three columns of ruled text where a press-bar slowly sweeps top to bottom, printing the page fresh on each pass. On the right, a large SEPTEMBER 18, 2026 headline anchors a cream THE NEW YORK TIMES · 175 YEARS subhead, an italic amber RAYMOND · JONES · MANHATTAN tertiary, a dim TIMES · DAILY · PRESS · INK roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 18, 2026 — Linux 0.01 Released — 35th Anniversary (September 17, 1991)
 
 <img src="./doodle-archive/2026/09/2026-09-18-060121.svg" width="800" alt="Daily doodle for September 17, 2026 — the 35th anniversary of the release of Linux 0.01. On the left half, a retro green-phosphor CRT terminal with a rounded bezel and drifting scanlines shows Linux 0.01 boot messages typing themselves in line by line — kernel version, memory sizing, VFS mount, an FTP fetch from funet.fi — ending at a blinking dollar prompt. On the right, a large cream SEPTEMBER 17, 2026 headline underlined by a green-to-amber sweep, a phosphor-green LINUX 0.01 subhead trailed by cream · 35 YEARS, an italic amber TORVALDS · HELSINKI · FTP.FUNET.FI tertiary, a dim green 386 · MINIX · GCC · KERNEL roster, and a Georgia-italic 'just a hobby, won't be big and professional like gnu.' caption at the base.">
