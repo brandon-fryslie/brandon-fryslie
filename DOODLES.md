@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 23, 2026 — Michael Faraday — 235th Birth Anniversary (September 22, 1791)
+
+<img src="./doodle-archive/2026/09/2026-09-23-060119.svg" width="800" alt="Daily doodle for September 22, 2026 — the 235th anniversary of the birth of Michael Faraday on September 22, 1791. On the left half, a copper solenoid drawn in cross-section as nine warm-metal loops with a red-north / blue-south bar magnet sliding through its core, blue electromagnetic flux arcs curving from pole to pole, and a small ammeter beneath the coil throwing its needle right as the magnet enters and left as it withdraws, with a faint ε = −dΦ/dt equation hanging in the field. On the right, a large cream SEPTEMBER 22, 2026 headline underlined by a copper-to-electric-blue sweep, a copper MICHAEL FARADAY · 235 YEARS subhead, an italic electric-blue ROYAL INSTITUTION · LONDON · 1791 tertiary, a dim INDUCTION · FLUX · COIL · SPARK roster, and a Georgia-italic 'nothing is too wonderful to be true.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 22 September 1791, in a poor quarter of south London, a blacksmith's son named Michael Faraday was born. He apprenticed to a bookbinder at fourteen, read the volumes that passed under his hands, and talked himself into a job as Humphry Davy's laboratory assistant at the Royal Institution. From that bench he discovered electromagnetic induction, laid out the laws of electrolysis, isolated benzene, and invented what became the electric motor, the generator, and the transformer. He worked without a university education and refused a knighthood. Two hundred and thirty-five years later, every dynamo, every hard drive, every phone charger, and every tap of a contactless card runs on the effect he first saw one October morning in 1831.
+
+The left half is a copper solenoid in cross-section: nine loops in warm metal, a bar magnet with red-north and blue-south halves sliding through the core, blue flux arcs curving from pole to pole. A small ammeter beneath the coil throws its needle right as the magnet enters and left as it withdraws, and a faint equation ε = −dΦ/dt hangs in the field. On the right, a large SEPTEMBER 22, 2026 headline anchors a MICHAEL FARADAY · 235 YEARS subhead, an italic ROYAL INSTITUTION · LONDON · 1791 tertiary, a dim INDUCTION · FLUX · COIL · SPARK roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 22, 2026 — The New York Times — 175th Anniversary (September 18, 1851)
 
 <img src="./doodle-archive/2026/09/2026-09-22-060145.svg" width="800" alt="Daily doodle for September 18, 2026 — the 175th anniversary of the first edition of The New York Times, published on September 18, 1851. On the left half, a warm cream broadsheet page with an ink-heavy blackletter-style serif masthead reading 'The New-York Daily Times', a thin rule beneath, a dated line 'VOL. I · NO. 1 · THURSDAY, SEPTEMBER 18, 1851 · PRICE ONE CENT', and three columns of ruled body text with a few small headline caps ('EUROPE.', 'COMMERCE.', 'THE CITY.') as a press-blade shadow slowly sweeps top-to-bottom across the page. On the right, a large cream SEPTEMBER 18, 2026 headline underlined by a cream-to-amber sweep, a cream THE NEW YORK TIMES · 175 YEARS subhead, an italic amber RAYMOND · JONES · MANHATTAN tertiary, a dim TIMES · DAILY · PRESS · INK roster, and a Georgia-italic 'all the news that's fit to print.' caption at the base.">
