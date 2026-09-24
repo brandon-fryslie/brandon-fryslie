@@ -1,257 +1,483 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Discovery of Neptune — 180th Anniversary (September 23, 1846) -->
+<!-- theme: Jim Henson — 90th Birth Anniversary (September 24, 1936) -->
 <!-- about:
-On the night of 23 September 1846, at the Berlin Observatory, Johann Gottfried Galle pointed a nine-inch refractor at a patch of sky in Aquarius and, within an hour, found an eighth-magnitude object exactly where a letter from Paris had said it would be. The letter was from Urbain Le Verrier, who had spent months analysing tiny irregularities in Uranus's orbit and calculated, by pure Newtonian mechanics, the position of the planet that must be tugging on it. Neptune became the first world found on paper before it was found in the sky. Galle wrote back four days later: "the planet whose position you have indicated really exists."
+On 24 September 1936, in Greenville, Mississippi, Jim Henson was born. He built his first puppet — Kermit — from a discarded turquoise spring coat of his mother's and two halves of a ping-pong ball, sewed onto a hand-shaped foam-and-fleece head. Sam and Friends went on the air in Washington in 1955 while he was still at university; Sesame Street followed in 1969; The Muppet Show in 1976. He treated puppetry as a serious art form for television — soft materials, expressive eyes, deadpan absurdity, unforced kindness — and built the Creature Shop that later gave the world Yoda's smaller cousins and a Labyrinth. He died in 1990 at fifty-three. Ninety years after he was born, felt and foam and googly eyes still mean what he made them mean.
 
-The left half is Neptune itself — a deep-blue orb with faint horizontal cloud bands drifting east, a slow-rolling Great Dark Spot, a soft rim-lit crescent, and a starfield behind it. A telescope reticle circles the planet, its crosshair centred, while Le Verrier's perturbation math ghosts faintly across the field. On the right, a large SEPTEMBER 23, 2026 headline anchors a NEPTUNE · 180 YEARS subhead, an italic GALLE · LE VERRIER · BERLIN · 1846 tertiary, a dim PREDICTION · PERTURBATION · OBSERVATION roster, and a Georgia-italic caption at the base.
+The left half is a small stage: a red curtain valance hangs across the top, and four abstract felt puppets bob on a wooden rail — a green frog-nod to Kermit, a pink diva, a warm-orange bear, and a blue oddball — each with wide white eyes, wandering pupils, and mouths that open and close as they sway. Warm spotlights fall from above and dust motes drift through the beams. On the right, a large cream SEPTEMBER 24, 2026 headline anchors a green JIM HENSON · 90 YEARS subhead, an italic pink MUPPETS · SESAME STREET · CREATURE SHOP tertiary, a dim FELT · FOAM · FOOLERY · HEART roster, and a Georgia-italic caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for September 23, 2026 — the 180th anniversary of the discovery of Neptune on September 23, 1846 at the Berlin Observatory. On the left half, Neptune as a large deep-blue orb with faint horizontal cloud bands drifting east, a slow-rolling Great Dark Spot, a soft rim-lit crescent, and a starfield behind it, with a telescope reticle circling the planet and Le Verrier's perturbation math ghosting faintly across the field. On the right, a large cream SEPTEMBER 23, 2026 headline underlined by a deep-blue-to-cyan sweep, a cyan NEPTUNE · 180 YEARS subhead, an italic pale-blue GALLE · LE VERRIER · BERLIN · 1846 tertiary, a dim PREDICTION · PERTURBATION · OBSERVATION roster, and a Georgia-italic 'the planet whose position you have indicated really exists.' caption at the base.">
+     aria-label="Daily doodle for September 24, 2026 — the 90th anniversary of the birth of Jim Henson on September 24, 1936. On the left half, a small stage with a red curtain valance across the top and four abstract felt puppets bobbing on a wooden rail — a green frog, a pink diva, a warm-orange bear, and a blue oddball — each with wide white eyes, wandering pupils, and mouths that open and close as they sway, warm spotlights falling from above and dust motes drifting through the beams. On the right, a large cream SEPTEMBER 24, 2026 headline underlined by a green-magenta-orange sweep, a green JIM HENSON · 90 YEARS subhead, an italic pink MUPPETS · SESAME STREET · CREATURE SHOP tertiary, a dim FELT · FOAM · FOOLERY · HEART roster, and a Georgia-italic 'the most sophisticated people i know — inside they are all children.' caption at the base.">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#050810"/>
+      <stop offset="100%" stop-color="#080a10"/>
     </linearGradient>
 
-    <!-- Neptune sphere: lit from upper-left -->
-    <radialGradient id="neptuneGrad" cx="0.35" cy="0.32" r="0.82">
-      <stop offset="0%"   stop-color="#7ec4ff"/>
-      <stop offset="25%"  stop-color="#4a86e0"/>
-      <stop offset="60%"  stop-color="#2755aa"/>
-      <stop offset="90%"  stop-color="#122c66"/>
-      <stop offset="100%" stop-color="#060e28"/>
-    </radialGradient>
-
-    <!-- Atmospheric band tint -->
-    <linearGradient id="bandGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#a8ccff" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#c8dcff" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#a8ccff" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Sweep underline gradient -->
+    <!-- Rainbow-ish sweep under headline (Muppet-band coloured) -->
     <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#122c66"/>
-      <stop offset="50%"  stop-color="#4a86e0"/>
-      <stop offset="100%" stop-color="#7ec4ff"/>
+      <stop offset="0%"   stop-color="#6cc24a"/>
+      <stop offset="50%"  stop-color="#f0a3c8"/>
+      <stop offset="100%" stop-color="#e6a648"/>
     </linearGradient>
 
-    <!-- Rim highlight -->
-    <radialGradient id="rimLight" cx="0.28" cy="0.26" r="0.5">
-      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.28"/>
-      <stop offset="60%"  stop-color="#ffffff" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    <!-- Warm stage backdrop -->
+    <radialGradient id="stageGlow" cx="0.5" cy="0.55" r="0.7">
+      <stop offset="0%"   stop-color="#3a2a1a" stop-opacity="0.85"/>
+      <stop offset="70%"  stop-color="#1a120c" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Clip to Neptune's disk for band motion -->
-    <clipPath id="neptuneClip">
-      <circle cx="0" cy="0" r="62"/>
-    </clipPath>
+    <!-- Curtain gradient -->
+    <linearGradient id="curtainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c33a44"/>
+      <stop offset="55%"  stop-color="#8f2229"/>
+      <stop offset="100%" stop-color="#4b1116"/>
+    </linearGradient>
+
+    <linearGradient id="curtainSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#4b1116"/>
+      <stop offset="50%"  stop-color="#a52e36"/>
+      <stop offset="100%" stop-color="#4b1116"/>
+    </linearGradient>
+
+    <!-- Puppet felt shading (subtle depth) -->
+    <radialGradient id="feltGreen" cx="0.35" cy="0.32" r="0.85">
+      <stop offset="0%"  stop-color="#9de07c"/>
+      <stop offset="55%" stop-color="#5cb84a"/>
+      <stop offset="100%" stop-color="#2c6d24"/>
+    </radialGradient>
+    <radialGradient id="feltPink" cx="0.35" cy="0.32" r="0.85">
+      <stop offset="0%"  stop-color="#ffcfe1"/>
+      <stop offset="55%" stop-color="#f0a3c8"/>
+      <stop offset="100%" stop-color="#a44b7b"/>
+    </radialGradient>
+    <radialGradient id="feltOrange" cx="0.35" cy="0.32" r="0.85">
+      <stop offset="0%"  stop-color="#f6c98a"/>
+      <stop offset="55%" stop-color="#d78c3a"/>
+      <stop offset="100%" stop-color="#7c4914"/>
+    </radialGradient>
+    <radialGradient id="feltBlue" cx="0.35" cy="0.32" r="0.85">
+      <stop offset="0%"  stop-color="#a9d5ea"/>
+      <stop offset="55%" stop-color="#5f95c4"/>
+      <stop offset="100%" stop-color="#26506e"/>
+    </radialGradient>
+
+    <!-- Eye white -->
+    <radialGradient id="eyeWhite" cx="0.35" cy="0.32" r="0.9">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="80%"  stop-color="#f3f0e6"/>
+      <stop offset="100%" stop-color="#c4c1b6"/>
+    </radialGradient>
+
+    <!-- Spotlight cone -->
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff2b8" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#fff2b8" stop-opacity="0"/>
+    </linearGradient>
 
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.6"/>
+      <feGaussianBlur stdDeviation="1.5"/>
     </filter>
-    <filter id="planetGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="4"/>
+    <filter id="stageBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
     </filter>
-    <filter id="starTwinkle" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="0.6"/>
-    </filter>
+
+    <!-- One puppet head: <use> plugs in colour + mouth timing -->
+    <symbol id="puppet" overflow="visible">
+      <!-- head -->
+      <circle r="26" fill="var(--felt, url(#feltGreen))"/>
+      <!-- felt texture speckles -->
+      <g opacity="0.28" fill="#000">
+        <circle cx="-14" cy="-6" r="0.6"/>
+        <circle cx="-8" cy="10" r="0.5"/>
+        <circle cx="6" cy="-14" r="0.55"/>
+        <circle cx="12" cy="6" r="0.6"/>
+        <circle cx="-2" cy="14" r="0.5"/>
+        <circle cx="16" cy="-4" r="0.5"/>
+        <circle cx="-18" cy="4" r="0.5"/>
+      </g>
+      <!-- rim shadow at bottom of head -->
+      <ellipse cx="0" cy="20" rx="20" ry="4" fill="#000" opacity="0.22"/>
+    </symbol>
   </defs>
 
   <!-- Background -->
   <rect width="800" height="200" fill="url(#bgGrad)"/>
 
-  <!-- Starfield -->
-  <g fill="#e6edff" filter="url(#starTwinkle)">
-    <circle cx="28" cy="24" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="7s" repeatCount="indefinite"/></circle>
-    <circle cx="72" cy="52" r="0.5"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="118" cy="18" r="0.9"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" repeatCount="indefinite"/></circle>
-    <circle cx="60" cy="176" r="0.6"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="7s" begin="1.5s" repeatCount="indefinite"/></circle>
-    <circle cx="20" cy="120" r="0.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
-    <circle cx="330" cy="30" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="3s" repeatCount="indefinite"/></circle>
-    <circle cx="360" cy="170" r="0.6"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" begin="0.7s" repeatCount="indefinite"/></circle>
-    <circle cx="278" cy="184" r="0.5"><animate attributeName="opacity" values="0.35;0.85;0.35" dur="11s" begin="4s" repeatCount="indefinite"/></circle>
-    <circle cx="102" cy="180" r="0.4"><animate attributeName="opacity" values="0.3;0.75;0.3" dur="13s" begin="1s" repeatCount="indefinite"/></circle>
-    <circle cx="316" cy="72" r="0.5"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="7s" begin="2.8s" repeatCount="indefinite"/></circle>
-    <circle cx="240" cy="14" r="0.6"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="11s" begin="5s" repeatCount="indefinite"/></circle>
-    <circle cx="8" cy="70" r="0.4"><animate attributeName="opacity" values="0.3;0.75;0.3" dur="13s" begin="0.3s" repeatCount="indefinite"/></circle>
-    <circle cx="150" cy="188" r="0.5"/>
-    <circle cx="196" cy="8" r="0.4"/>
-    <circle cx="264" cy="46" r="0.5"/>
+  <!-- Stage warm glow -->
+  <ellipse cx="200" cy="130" rx="220" ry="120" fill="url(#stageGlow)"/>
+
+  <!-- Backstage star confetti -->
+  <g fill="#fff2b8">
+    <circle cx="30" cy="30" r="0.9"><animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="70" cy="18" r="0.7"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="360" cy="26" r="0.9"><animate attributeName="opacity" values="0.5;1;0.5" dur="13s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="20" cy="180" r="0.7"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="182" r="0.8"><animate attributeName="opacity" values="0.35;0.9;0.35" dur="7s" begin="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="122" cy="10" r="0.6"><animate attributeName="opacity" values="0.4;1;0.4" dur="13s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="12" r="0.6"><animate attributeName="opacity" values="0.35;0.9;0.35" dur="11s" begin="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="188" r="0.6"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" begin="0.9s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- Ghostly Le Verrier perturbation math in the field -->
-  <g font-family="'Georgia', 'Times New Roman', serif" font-style="italic" fill="#7ec4ff" opacity="0.14" letter-spacing="0.4">
-    <text x="14" y="46" font-size="9">
-      &#948;r = &#8721; a&#8345; sin(n&#969;t + &#966;&#8345;)
-      <animate attributeName="opacity" values="0.08;0.22;0.08" dur="11s" repeatCount="indefinite"/>
-    </text>
-    <text x="222" y="42" font-size="8">
-      &#916;&#955; &#8776; +1&#176;
-      <animate attributeName="opacity" values="0.1;0.24;0.1" dur="13s" repeatCount="indefinite"/>
-    </text>
-    <text x="18" y="172" font-size="8">
-      &#955; = 326&#176; 32&#8242; (Le Verrier, 31 Aug 1846)
-      <animate attributeName="opacity" values="0.08;0.22;0.08" dur="13s" begin="2s" repeatCount="indefinite"/>
-    </text>
-    <text x="272" y="152" font-size="7.5">
-      a &#8776; 36.15 AU
-      <animate attributeName="opacity" values="0.1;0.22;0.1" dur="7s" begin="1s" repeatCount="indefinite"/>
-    </text>
-  </g>
-
-  <!-- ============================== LEFT: NEPTUNE ============================== -->
-  <g transform="translate(180,100)">
-
-    <!-- Outer soft halo -->
-    <circle r="72" fill="#2755aa" opacity="0.14" filter="url(#planetGlow)"/>
-    <circle r="66" fill="#4a86e0" opacity="0.10" filter="url(#planetGlow)"/>
-
-    <!-- Planet body -->
-    <circle r="62" fill="url(#neptuneGrad)"/>
-
-    <!-- Atmospheric bands + Great Dark Spot, clipped to disk -->
-    <g clip-path="url(#neptuneClip)">
-      <!-- Wide moving band shading -->
-      <g>
-        <animateTransform attributeName="transform" type="translate"
-                          values="-124 0; 0 0" dur="47s" repeatCount="indefinite"/>
-        <!-- Band 1 -->
-        <ellipse cx="0" cy="-30" rx="120" ry="4" fill="url(#bandGrad)" opacity="0.55"/>
-        <ellipse cx="124" cy="-30" rx="120" ry="4" fill="url(#bandGrad)" opacity="0.55"/>
-        <!-- Band 2 (equator, thicker/lighter) -->
-        <ellipse cx="0" cy="-6" rx="120" ry="6" fill="url(#bandGrad)" opacity="0.42"/>
-        <ellipse cx="124" cy="-6" rx="120" ry="6" fill="url(#bandGrad)" opacity="0.42"/>
-        <!-- Band 3 (equator second stripe) -->
-        <ellipse cx="0" cy="10" rx="120" ry="3" fill="url(#bandGrad)" opacity="0.28"/>
-        <ellipse cx="124" cy="10" rx="120" ry="3" fill="url(#bandGrad)" opacity="0.28"/>
-        <!-- Band 4 -->
-        <ellipse cx="0" cy="28" rx="120" ry="3.5" fill="url(#bandGrad)" opacity="0.4"/>
-        <ellipse cx="124" cy="28" rx="120" ry="3.5" fill="url(#bandGrad)" opacity="0.4"/>
-      </g>
-
-      <!-- Great Dark Spot - rolls slowly across the disk -->
-      <g>
-        <animateTransform attributeName="transform" type="translate"
-                          values="-90 0; 90 0; -90 0" dur="53s" repeatCount="indefinite"/>
-        <ellipse cx="0" cy="-8" rx="14" ry="7" fill="#0e2050" opacity="0.72"/>
-        <ellipse cx="-2" cy="-9" rx="6" ry="3" fill="#050e28" opacity="0.6"/>
-        <!-- Bright "companion" cloud below dark spot -->
-        <ellipse cx="4" cy="4" rx="6" ry="2" fill="#eaf3ff" opacity="0.4"/>
-      </g>
-
-      <!-- Secondary small dark spot -->
-      <g>
-        <animateTransform attributeName="transform" type="translate"
-                          values="90 0; -90 0; 90 0" dur="41s" repeatCount="indefinite"/>
-        <ellipse cx="0" cy="20" rx="8" ry="3.5" fill="#0e2050" opacity="0.5"/>
-      </g>
-
-      <!-- Subtle terminator shadow (right side) -->
-      <ellipse cx="26" cy="0" rx="52" ry="62" fill="#050810" opacity="0.34"/>
-    </g>
-
-    <!-- Rim light -->
-    <circle r="62" fill="url(#rimLight)"/>
-
-    <!-- Fine limb edge -->
-    <circle r="62" fill="none" stroke="#7ec4ff" stroke-width="0.5" opacity="0.35"/>
-
-    <!-- Telescope reticle (encircling Neptune from Berlin Observatory eyepiece) -->
-    <g stroke="#c9d9ff" stroke-width="0.7" fill="none" opacity="0.55">
-      <circle r="78"/>
-      <circle r="82" stroke-dasharray="1 3"/>
-      <!-- Crosshair extending past the limb -->
-      <line x1="-96" y1="0" x2="-70" y2="0" stroke-width="0.6"/>
-      <line x1="70" y1="0" x2="96" y2="0" stroke-width="0.6"/>
-      <line x1="0" y1="-96" x2="0" y2="-70" stroke-width="0.6"/>
-      <line x1="0" y1="70" x2="0" y2="96" stroke-width="0.6"/>
-      <!-- Tick marks around the reticle -->
-      <g stroke-width="0.6">
-        <line x1="55.15" y1="-55.15" x2="58.69" y2="-58.69"/>
-        <line x1="-55.15" y1="-55.15" x2="-58.69" y2="-58.69"/>
-        <line x1="55.15" y1="55.15" x2="58.69" y2="58.69"/>
-        <line x1="-55.15" y1="55.15" x2="-58.69" y2="58.69"/>
-      </g>
-      <!-- Slow reticle rotation -->
-      <animateTransform attributeName="transform" type="rotate"
-                        from="0" to="360" dur="97s" repeatCount="indefinite"/>
-    </g>
-
-    <!-- Tiny observation label under the reticle -->
-    <text x="0" y="102" text-anchor="middle" font-family="'Georgia', serif" font-style="italic"
-          font-size="8" fill="#7ec4ff" opacity="0.7" letter-spacing="0.6">
-      &#593;: 21&#8341; 53&#7504; &#8226; &#948;: &#8722;13&#176; 24&#8242;
-    </text>
-
-    <!-- Discovery-moment pulse: a brief flash at the reticle center to mark "found" -->
-    <circle r="3" fill="#eaf3ff" opacity="0" filter="url(#softGlow)">
-      <animate attributeName="opacity" values="0;0;0.9;0;0" keyTimes="0;0.55;0.6;0.7;1" dur="13s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="2;2;5;10;2" keyTimes="0;0.55;0.6;0.7;1" dur="13s" repeatCount="indefinite"/>
+  <!-- Drifting felt-dust motes in beams -->
+  <g fill="#fff2b8" opacity="0.55">
+    <circle cx="0" cy="0" r="0.9">
+      <animateMotion path="M 110 24 C 130 80 90 130 130 168" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.2;0.85;1" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="0.8">
+      <animateMotion path="M 220 20 C 235 70 200 130 240 170" dur="19s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.65;0.65;0" keyTimes="0;0.2;0.85;1" dur="19s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="0.7">
+      <animateMotion path="M 300 22 C 315 70 280 130 320 172" dur="23s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.2;0.85;1" dur="23s" begin="2s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Triton — a tiny moon drifting past -->
+  <!-- ============================== LEFT: PUPPET STAGE ============================== -->
+
+  <!-- Spotlight beams (behind curtain wings so they read as light coming in) -->
   <g>
-    <circle r="1.8" fill="#c9d9ff" opacity="0.85" filter="url(#softGlow)">
-      <animateMotion path="M 300 60 A 130 46 0 0 1 60 140 A 130 46 0 0 1 300 60" dur="43s" repeatCount="indefinite"/>
-    </circle>
+    <polygon points="90,10 60,180 180,180 130,10" fill="url(#beamGrad)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="11s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="270,10 240,180 360,180 310,10" fill="url(#beamGrad)">
+      <animate attributeName="opacity" values="1;0.7;1" dur="13s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- Curtain side wings (drapes on far left and near-middle) -->
+  <g>
+    <!-- Left wing -->
+    <path d="M 0 0 L 24 0 L 22 200 L 0 200 Z" fill="url(#curtainSide)"/>
+    <g fill="#4b1116" opacity="0.55">
+      <path d="M 6 0 L 8 200"/>
+      <path d="M 14 0 L 15 200"/>
+    </g>
+  </g>
+
+  <!-- Wooden stage rail the puppets sit behind -->
+  <g>
+    <rect x="0" y="150" width="400" height="10" fill="#5b3a20"/>
+    <rect x="0" y="150" width="400" height="2" fill="#8b5a30"/>
+    <rect x="0" y="158" width="400" height="2" fill="#2a1a0c" opacity="0.8"/>
+    <!-- wood-grain hint -->
+    <g stroke="#3a2410" stroke-width="0.4" opacity="0.6">
+      <path d="M 20 155 h 40"/>
+      <path d="M 100 156 h 60"/>
+      <path d="M 200 154 h 80"/>
+      <path d="M 300 156 h 50"/>
+    </g>
+  </g>
+
+  <!-- Top curtain valance (drooping arcs) -->
+  <g>
+    <path d="M 0 0 L 400 0 L 400 46
+             C 380 32 360 42 340 30
+             C 320 42 300 32 280 44
+             C 260 32 240 42 220 30
+             C 200 42 180 32 160 44
+             C 140 32 120 42 100 30
+             C 80 42 60 32 40 44
+             C 20 32 10 38 0 34 Z"
+          fill="url(#curtainGrad)"/>
+    <!-- fabric pleats / vertical shadow lines -->
+    <g stroke="#5a161c" stroke-width="0.8" opacity="0.5" fill="none">
+      <path d="M 20 0 Q 22 22 24 40"/>
+      <path d="M 60 0 Q 62 24 64 42"/>
+      <path d="M 100 0 Q 102 22 104 40"/>
+      <path d="M 140 0 Q 142 24 144 42"/>
+      <path d="M 180 0 Q 182 22 184 40"/>
+      <path d="M 220 0 Q 222 24 224 42"/>
+      <path d="M 260 0 Q 262 22 264 40"/>
+      <path d="M 300 0 Q 302 24 304 42"/>
+      <path d="M 340 0 Q 342 22 344 40"/>
+      <path d="M 380 0 Q 382 24 384 42"/>
+    </g>
+    <!-- Gold tassels hanging at scallop dips -->
+    <g fill="#e6a648">
+      <circle cx="40" cy="46" r="1.6"/>
+      <circle cx="100" cy="32" r="1.6"/>
+      <circle cx="160" cy="46" r="1.6"/>
+      <circle cx="220" cy="32" r="1.6"/>
+      <circle cx="280" cy="46" r="1.6"/>
+      <circle cx="340" cy="32" r="1.6"/>
+    </g>
+    <!-- Gold hem line -->
+    <path d="M 0 34 L 400 34" stroke="#e6a648" stroke-width="0.7" opacity="0.6" fill="none"/>
+  </g>
+
+  <!-- ============ Puppet 1: green (Kermit-nod) ============ -->
+  <g transform="translate(70,118)">
+    <g>
+      <!-- gentle sway -->
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-4;4;-4" dur="7s" repeatCount="indefinite" additive="sum"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0; 0 -3; 0 0" dur="11s" repeatCount="indefinite" additive="sum"/>
+
+      <!-- neck stub -->
+      <rect x="-6" y="18" width="12" height="18" fill="#2c6d24"/>
+
+      <!-- head -->
+      <circle r="26" fill="url(#feltGreen)"/>
+      <!-- collar ruffle -->
+      <path d="M -18 22 Q -10 30 0 26 Q 10 30 18 22 L 16 30 Q 8 34 0 32 Q -8 34 -16 30 Z"
+            fill="#a52e36"/>
+
+      <!-- eye stalks (two humps on top like Kermit) -->
+      <g>
+        <ellipse cx="-9" cy="-20" rx="9" ry="10" fill="url(#feltGreen)"/>
+        <ellipse cx="9"  cy="-20" rx="9" ry="10" fill="url(#feltGreen)"/>
+      </g>
+      <!-- eye whites -->
+      <circle cx="-9" cy="-22" r="6" fill="url(#eyeWhite)"/>
+      <circle cx="9"  cy="-22" r="6" fill="url(#eyeWhite)"/>
+      <!-- pupils (drift) -->
+      <g fill="#111">
+        <circle cx="-9" cy="-22" r="2.2">
+          <animate attributeName="cx" values="-10;-8;-10" dur="13s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="-22;-21;-23;-22" keyTimes="0;0.4;0.7;1" dur="13s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="9" cy="-22" r="2.2">
+          <animate attributeName="cx" values="8;10;8" dur="13s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="-22;-21;-23;-22" keyTimes="0;0.4;0.7;1" dur="13s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- mouth (opens/closes) -->
+      <g transform="translate(0,6)">
+        <ellipse cx="0" cy="0" rx="10" ry="1.5" fill="#2a0e0e">
+          <animate attributeName="ry" values="1.2;5;1.2;3;1.2" keyTimes="0;0.15;0.35;0.55;1" dur="4.7s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="0;2;0;1;0" keyTimes="0;0.15;0.35;0.55;1" dur="4.7s" repeatCount="indefinite"/>
+        </ellipse>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============ Puppet 2: pink diva ============ -->
+  <g transform="translate(160,118)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="3;-3;3" dur="11s" repeatCount="indefinite" additive="sum"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0; 0 -2; 0 0" dur="7s" begin="1s" repeatCount="indefinite" additive="sum"/>
+
+      <rect x="-7" y="18" width="14" height="18" fill="#a44b7b"/>
+
+      <!-- head -->
+      <circle r="26" fill="url(#feltPink)"/>
+      <!-- blonde curl fringe -->
+      <path d="M -22 -18 Q -20 -30 -8 -26 Q 0 -34 10 -26 Q 20 -30 22 -18
+               Q 14 -22 6 -18 Q 0 -24 -6 -18 Q -14 -22 -22 -18 Z"
+            fill="#f4d97a"/>
+      <!-- pearl necklace -->
+      <g fill="#fff5d6">
+        <circle cx="-12" cy="28" r="2"/>
+        <circle cx="-4" cy="30" r="2"/>
+        <circle cx="4"  cy="30" r="2"/>
+        <circle cx="12" cy="28" r="2"/>
+      </g>
+
+      <!-- lashes / eyelids as arcs above eyes -->
+      <g fill="none" stroke="#3a1327" stroke-width="1.2" stroke-linecap="round">
+        <path d="M -14 -20 Q -8 -26 -2 -20"/>
+        <path d="M 2 -20 Q 8 -26 14 -20"/>
+      </g>
+      <!-- eyes -->
+      <circle cx="-8" cy="-16" r="5" fill="url(#eyeWhite)"/>
+      <circle cx="8"  cy="-16" r="5" fill="url(#eyeWhite)"/>
+      <g fill="#111">
+        <circle cx="-8" cy="-16" r="2">
+          <animate attributeName="cx" values="-9;-7;-9" dur="11s" begin="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="8" cy="-16" r="2">
+          <animate attributeName="cx" values="7;9;7" dur="11s" begin="1.5s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- little snout / nose -->
+      <ellipse cx="0" cy="-2" rx="6" ry="4" fill="#e07fa6"/>
+      <circle cx="-2" cy="-3" r="0.9" fill="#3a1327"/>
+      <circle cx="2"  cy="-3" r="0.9" fill="#3a1327"/>
+      <!-- mouth -->
+      <g transform="translate(0,10)">
+        <ellipse cx="0" cy="0" rx="7" ry="1.4" fill="#3a1327">
+          <animate attributeName="ry" values="1.4;3.6;1.4;2.4;1.4" keyTimes="0;0.2;0.4;0.6;1" dur="5.3s" begin="0.6s" repeatCount="indefinite"/>
+        </ellipse>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============ Puppet 3: orange bear ============ -->
+  <g transform="translate(250,118)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="-3;3;-3" dur="13s" repeatCount="indefinite" additive="sum"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0; 0 -3; 0 0" dur="7s" begin="2.2s" repeatCount="indefinite" additive="sum"/>
+
+      <rect x="-7" y="18" width="14" height="18" fill="#7c4914"/>
+
+      <!-- fuzzy head outline (bumps) -->
+      <path d="M -26 -8
+               Q -30 -22 -18 -22
+               Q -22 -30 -10 -28
+               Q -4 -34 4 -30
+               Q 10 -34 18 -28
+               Q 26 -30 24 -22
+               Q 30 -14 26 -6
+               Q 30 6 24 14
+               Q 26 22 14 22
+               Q 6 26 -6 22
+               Q -18 24 -22 16
+               Q -30 8 -26 -8 Z"
+            fill="url(#feltOrange)"/>
+      <!-- little polka-dot bow-tie -->
+      <g transform="translate(0,26)">
+        <polygon points="-10,-3 -2,0 -10,3" fill="#c33a44"/>
+        <polygon points="10,-3 2,0 10,3" fill="#c33a44"/>
+        <rect x="-2" y="-2.5" width="4" height="5" rx="1" fill="#c33a44"/>
+        <circle cx="-6" cy="-1" r="0.7" fill="#fff5d6"/>
+        <circle cx="-7" cy="1"  r="0.7" fill="#fff5d6"/>
+        <circle cx="6" cy="-1"  r="0.7" fill="#fff5d6"/>
+        <circle cx="7" cy="1"   r="0.7" fill="#fff5d6"/>
+      </g>
+
+      <!-- eyes (small, cheerful) -->
+      <circle cx="-8" cy="-14" r="5" fill="url(#eyeWhite)"/>
+      <circle cx="8"  cy="-14" r="5" fill="url(#eyeWhite)"/>
+      <g fill="#111">
+        <circle cx="-8" cy="-14" r="2">
+          <animate attributeName="cy" values="-14;-13;-15;-14" keyTimes="0;0.4;0.7;1" dur="9s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="8" cy="-14" r="2">
+          <animate attributeName="cy" values="-14;-13;-15;-14" keyTimes="0;0.4;0.7;1" dur="9s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- muzzle -->
+      <ellipse cx="0" cy="0" rx="10" ry="7" fill="#f6c98a"/>
+      <ellipse cx="0" cy="-3" rx="2.4" ry="1.6" fill="#3a1a05"/>
+      <!-- mouth -->
+      <g transform="translate(0,6)">
+        <path d="M -6 0 Q 0 5 6 0" fill="none" stroke="#3a1a05" stroke-width="1.4" stroke-linecap="round">
+          <animate attributeName="d"
+                   values="M -6 0 Q 0 5 6 0;
+                           M -6 -1 Q 0 -5 6 -1;
+                           M -6 0 Q 0 5 6 0;
+                           M -6 1 Q 0 6 6 1;
+                           M -6 0 Q 0 5 6 0"
+                   keyTimes="0;0.25;0.5;0.75;1" dur="6.1s" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============ Puppet 4: blue oddball ============ -->
+  <g transform="translate(335,118)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="5;-5;5" dur="7s" repeatCount="indefinite" additive="sum"/>
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0; 0 -4; 0 0" dur="11s" begin="0.6s" repeatCount="indefinite" additive="sum"/>
+
+      <rect x="-6" y="18" width="12" height="18" fill="#26506e"/>
+
+      <!-- lumpy head -->
+      <ellipse rx="24" ry="26" fill="url(#feltBlue)"/>
+      <!-- long weird nose -->
+      <path d="M 0 -2
+               Q 22 -2 30 12
+               Q 22 20 8 16
+               Q 0 12 0 6 Z"
+            fill="url(#feltBlue)">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-4;4;-4" dur="5.3s" repeatCount="indefinite"/>
+      </path>
+      <!-- eyelids (heavy, half closed) -->
+      <path d="M -18 -18 Q -8 -14 2 -18" fill="url(#feltBlue)" opacity="0.9"/>
+      <path d="M 6 -18 Q 14 -14 18 -20"  fill="url(#feltBlue)" opacity="0.9"/>
+      <!-- eyes -->
+      <circle cx="-8" cy="-12" r="5" fill="url(#eyeWhite)"/>
+      <circle cx="10" cy="-14" r="4.5" fill="url(#eyeWhite)"/>
+      <g fill="#111">
+        <circle cx="-8" cy="-12" r="1.9">
+          <animate attributeName="cx" values="-9;-7;-9" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="10" cy="-14" r="1.9">
+          <animate attributeName="cx" values="9;11;9" dur="7s" begin="0.6s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- mouth (open circle) -->
+      <ellipse cx="6" cy="10" rx="3.4" ry="1.6" fill="#0a1830">
+        <animate attributeName="ry" values="1.4;4.2;1.4;2.6;1.4" keyTimes="0;0.2;0.45;0.7;1" dur="4.3s" begin="1.4s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+  </g>
+
+  <!-- Right-hand curtain wing (over the rightmost puppet edge) -->
+  <g>
+    <path d="M 378 0 L 400 0 L 400 200 L 376 200 Z" fill="url(#curtainSide)"/>
+    <g fill="#4b1116" opacity="0.55">
+      <path d="M 384 0 L 386 200"/>
+      <path d="M 392 0 L 393 200"/>
+    </g>
   </g>
 
   <!-- ============================== RIGHT: TEXT STACK ============================== -->
   <g transform="translate(400,0)">
 
-    <!-- Small orbital insignia top-right (Neptune symbol ♆) -->
-    <g transform="translate(348,18)" opacity="0.9">
-      <circle cx="10" cy="10" r="11" fill="none" stroke="#4a86e0" stroke-width="0.7" opacity="0.6"/>
-      <text x="10" y="14.5" text-anchor="middle" font-family="'Georgia', serif" font-size="14" fill="#7ec4ff">&#9798;</text>
-      <animateTransform attributeName="transform" type="translate"
-                        values="348 18; 348 17; 348 18" dur="7s" repeatCount="indefinite"/>
+    <!-- Small stage-star insignia top-right -->
+    <g transform="translate(350,20)">
+      <polygon points="0,-8 2.2,-2.4 8,-2 3.4,1.6 5,7.6 0,4.4 -5,7.6 -3.4,1.6 -8,-2 -2.2,-2.4"
+               fill="#e6a648">
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0" to="360" dur="47s" repeatCount="indefinite"/>
+      </polygon>
+      <circle r="12" fill="none" stroke="#e6a648" stroke-width="0.6" opacity="0.5"/>
     </g>
 
     <!-- Faint bracket rules -->
-    <g opacity="0.10" stroke="#7ec4ff" stroke-width="0.6" fill="none">
+    <g opacity="0.10" stroke="#f0a3c8" stroke-width="0.6" fill="none">
       <path d="M 20 22 h 40"/>
       <path d="M 20 180 h 30"/>
     </g>
 
     <!-- Date headline (primary anchor) -->
     <text x="20" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="30" font-weight="800" fill="#f2f4fa" letter-spacing="1.1">
-      SEPTEMBER 23, 2026
+          font-size="30" font-weight="800" fill="#f5f2e6" letter-spacing="1.1">
+      SEPTEMBER 24, 2026
     </text>
 
     <!-- Sweep underline -->
-    <line x1="20" y1="70" x2="362" y2="70" stroke="url(#sweepGrad)" stroke-width="2.4" stroke-linecap="round">
+    <line x1="20" y1="70" x2="362" y2="70" stroke="url(#sweepGrad)" stroke-width="2.6" stroke-linecap="round">
       <animate attributeName="stroke-dasharray" values="0 342; 220 122; 342 0; 220 122; 0 342"
                keyTimes="0;0.25;0.5;0.75;1" dur="13s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Subhead: NEPTUNE · 180 YEARS -->
+    <!-- Subhead: JIM HENSON · 90 YEARS -->
     <text x="20" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="13" font-weight="700" letter-spacing="1.5">
-      <tspan fill="#7ec4ff">NEPTUNE</tspan><tspan fill="#f2f4fa"> &#183; 180 YEARS</tspan>
+          font-size="13" font-weight="700" letter-spacing="1.6" xml:space="preserve">
+      <tspan fill="#7fd07a">JIM HENSON  </tspan><tspan fill="#f5f2e6">&#183; 90 YEARS</tspan>
     </text>
 
     <!-- Tertiary italic -->
-    <text x="20" y="117" font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#a8c4f5" letter-spacing="0.4">
-      GALLE &#183; LE VERRIER &#183; BERLIN &#183; 1846
+    <text x="20" y="117" font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#f0a3c8" letter-spacing="0.4">
+      MUPPETS &#183; SESAME STREET &#183; CREATURE SHOP
     </text>
 
     <!-- Spec roster -->
     <text x="20" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="9" font-weight="600" fill="#8b95a5" letter-spacing="2.5" opacity="0.98">
-      PREDICTION &#183; PERTURBATION &#183; OBSERVATION
+          font-size="9" font-weight="600" fill="#9a927e" letter-spacing="2.5" opacity="0.98">
+      FELT &#183; FOAM &#183; FOOLERY &#183; HEART
     </text>
 
-    <!-- Caption (Galle to Le Verrier) -->
-    <text x="20" y="172" font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#d8dfec">
-      &#8220;the planet whose position you have indicated really exists.&#8221;
+    <!-- Caption (Henson, from The Muppet Movie) -->
+    <text x="20" y="172" font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#e3dfd0">
+      &#8220;life's like a movie, write your own ending.&#8221;
     </text>
 
-    <!-- Pulse indicator — a small cyan node -->
-    <circle cx="380" cy="138" r="2.2" fill="#7ec4ff" filter="url(#softGlow)">
+    <!-- Pulse indicator (small green node) -->
+    <circle cx="380" cy="138" r="2.4" fill="#7fd07a" filter="url(#softGlow)">
       <animate attributeName="opacity" values="0.35;1;0.35" dur="7s" repeatCount="indefinite"/>
     </circle>
   </g>

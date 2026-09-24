@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 24, 2026 — Discovery of Neptune — 180th Anniversary (September 23, 1846)
+
+<img src="./doodle-archive/2026/09/2026-09-24-060146.svg" width="800" alt="Daily doodle for September 23, 2026 — the 180th anniversary of the discovery of Neptune on September 23, 1846 at the Berlin Observatory. On the left half, Neptune as a large deep-blue orb with faint horizontal cloud bands drifting east, a slow-rolling Great Dark Spot, a soft rim-lit crescent, and a starfield behind it, with a telescope reticle circling the planet and Le Verrier's perturbation math ghosting faintly across the field. On the right, a large cream SEPTEMBER 23, 2026 headline underlined by a deep-blue-to-cyan sweep, a cyan NEPTUNE · 180 YEARS subhead, an italic pale-blue GALLE · LE VERRIER · BERLIN · 1846 tertiary, a dim PREDICTION · PERTURBATION · OBSERVATION roster, and a Georgia-italic 'the planet whose position you have indicated really exists.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the night of 23 September 1846, at the Berlin Observatory, Johann Gottfried Galle pointed a nine-inch refractor at a patch of sky in Aquarius and, within an hour, found an eighth-magnitude object exactly where a letter from Paris had said it would be. The letter was from Urbain Le Verrier, who had spent months analysing tiny irregularities in Uranus's orbit and calculated, by pure Newtonian mechanics, the position of the planet that must be tugging on it. Neptune became the first world found on paper before it was found in the sky. Galle wrote back four days later: "the planet whose position you have indicated really exists."
+
+The left half is Neptune itself — a deep-blue orb with faint horizontal cloud bands drifting east, a slow-rolling Great Dark Spot, a soft rim-lit crescent, and a starfield behind it. A telescope reticle circles the planet, its crosshair centred, while Le Verrier's perturbation math ghosts faintly across the field. On the right, a large SEPTEMBER 23, 2026 headline anchors a NEPTUNE · 180 YEARS subhead, an italic GALLE · LE VERRIER · BERLIN · 1846 tertiary, a dim PREDICTION · PERTURBATION · OBSERVATION roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 23, 2026 — Michael Faraday — 235th Birth Anniversary (September 22, 1791)
 
 <img src="./doodle-archive/2026/09/2026-09-23-060119.svg" width="800" alt="Daily doodle for September 22, 2026 — the 235th anniversary of the birth of Michael Faraday on September 22, 1791. On the left half, a copper solenoid drawn in cross-section as nine warm-metal loops with a red-north / blue-south bar magnet sliding through its core, blue electromagnetic flux arcs curving from pole to pole, and a small ammeter beneath the coil throwing its needle right as the magnet enters and left as it withdraws, with a faint ε = −dΦ/dt equation hanging in the field. On the right, a large cream SEPTEMBER 22, 2026 headline underlined by a copper-to-electric-blue sweep, a copper MICHAEL FARADAY · 235 YEARS subhead, an italic electric-blue ROYAL INSTITUTION · LONDON · 1791 tertiary, a dim INDUCTION · FLUX · COIL · SPARK roster, and a Georgia-italic 'nothing is too wonderful to be true.' caption at the base.">
