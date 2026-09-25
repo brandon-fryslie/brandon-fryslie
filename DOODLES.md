@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 25, 2026 — Jim Henson — 90th Birth Anniversary (September 24, 1936)
+
+<img src="./doodle-archive/2026/09/2026-09-25-060257.svg" width="800" alt="Daily doodle for September 24, 2026 — the 90th anniversary of the birth of Jim Henson on September 24, 1936. On the left half, a small stage with a red curtain valance across the top and four abstract felt puppets bobbing on a wooden rail — a green frog, a pink diva, a warm-orange bear, and a blue oddball — each with wide white eyes, wandering pupils, and mouths that open and close as they sway, warm spotlights falling from above and dust motes drifting through the beams. On the right, a large cream SEPTEMBER 24, 2026 headline underlined by a green-magenta-orange sweep, a green JIM HENSON · 90 YEARS subhead, an italic pink MUPPETS · SESAME STREET · CREATURE SHOP tertiary, a dim FELT · FOAM · FOOLERY · HEART roster, and a Georgia-italic 'the most sophisticated people i know — inside they are all children.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 24 September 1936, in Greenville, Mississippi, Jim Henson was born. He built his first puppet — Kermit — from a discarded turquoise spring coat of his mother's and two halves of a ping-pong ball, sewed onto a hand-shaped foam-and-fleece head. Sam and Friends went on the air in Washington in 1955 while he was still at university; Sesame Street followed in 1969; The Muppet Show in 1976. He treated puppetry as a serious art form for television — soft materials, expressive eyes, deadpan absurdity, unforced kindness — and built the Creature Shop that later gave the world Yoda's smaller cousins and a Labyrinth. He died in 1990 at fifty-three. Ninety years after he was born, felt and foam and googly eyes still mean what he made them mean.
+
+The left half is a small stage: a red curtain valance hangs across the top, and four abstract felt puppets bob on a wooden rail — a green frog-nod to Kermit, a pink diva, a warm-orange bear, and a blue oddball — each with wide white eyes, wandering pupils, and mouths that open and close as they sway. Warm spotlights fall from above and dust motes drift through the beams. On the right, a large cream SEPTEMBER 24, 2026 headline anchors a green JIM HENSON · 90 YEARS subhead, an italic pink MUPPETS · SESAME STREET · CREATURE SHOP tertiary, a dim FELT · FOAM · FOOLERY · HEART roster, and a Georgia-italic caption at the base.
+
+</details>
+
+---
+
 ## September 24, 2026 — Discovery of Neptune — 180th Anniversary (September 23, 1846)
 
 <img src="./doodle-archive/2026/09/2026-09-24-060146.svg" width="800" alt="Daily doodle for September 23, 2026 — the 180th anniversary of the discovery of Neptune on September 23, 1846 at the Berlin Observatory. On the left half, Neptune as a large deep-blue orb with faint horizontal cloud bands drifting east, a slow-rolling Great Dark Spot, a soft rim-lit crescent, and a starfield behind it, with a telescope reticle circling the planet and Le Verrier's perturbation math ghosting faintly across the field. On the right, a large cream SEPTEMBER 23, 2026 headline underlined by a deep-blue-to-cyan sweep, a cyan NEPTUNE · 180 YEARS subhead, an italic pale-blue GALLE · LE VERRIER · BERLIN · 1846 tertiary, a dim PREDICTION · PERTURBATION · OBSERVATION roster, and a Georgia-italic 'the planet whose position you have indicated really exists.' caption at the base.">
