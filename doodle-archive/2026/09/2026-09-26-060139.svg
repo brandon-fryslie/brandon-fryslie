@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: TAT-1 — 70th Anniversary (September 25, 1956) -->
+<!-- about:
+On 25 September 1956, TAT-1 — the first transatlantic telephone cable — entered commercial service between Oban on the west coast of Scotland and Clarenville in Newfoundland. Two coaxial cables, one for each direction, ran 3,584 kilometres across the ocean floor with 51 vacuum-tube repeaters spaced along each line to keep the signal alive. It carried 36 simultaneous voice circuits, and on opening day handled 707 calls across the ocean. Before TAT-1 a call from London to New York went by shortwave radio, hissed and faded with the ionosphere, and cost a small fortune per minute. Seventy years later the Atlantic seabed carries hundreds of glass-fibre cables and most of the internet on Earth, but this was the first — the wire that made the ocean small.
+
+The scene is a full-width cross-section of the North Atlantic at night. Newfoundland rises out of the water on the left, Scotland on the right; between them the seabed carries a slender copper cable dotted with vacuum-tube repeaters, and bright cyan signal pulses drift along it in both directions with small bubbles trailing up through the deep. In the sky above, a centred SEPTEMBER 25, 2026 headline anchors a cyan TAT-1 · 70 YEARS subhead, an italic amber OBAN → CLARENVILLE · 1956 tertiary, and a dim italic caption at the horizon.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for September 25, 2026 — the 70th anniversary of TAT-1, the first transatlantic telephone cable, which entered commercial service on September 25, 1956 between Oban, Scotland and Clarenville, Newfoundland. The scene is a full-width cross-section of the North Atlantic at night. Newfoundland rises out of the water on the left, Scotland on the right; between them the seabed carries a slender copper cable with vacuum-tube repeater bulges, and bright cyan signal pulses drift along it in both directions with small bubbles trailing up through the deep. In the sky above, a large cream SEPTEMBER 25, 2026 headline centred over the ocean underlined by a copper-to-cyan sweep, a cyan TAT-1 · 70 YEARS subhead, an italic amber OBAN → CLARENVILLE · 1956 tertiary, and a dim italic 'thirty-six voices under the ocean.' caption at the horizon.">
+  <defs>
+    <!-- Night sky -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#050a14"/>
+      <stop offset="70%"  stop-color="#0a1524"/>
+      <stop offset="100%" stop-color="#12283e"/>
+    </linearGradient>
+
+    <!-- Ocean gradient (surface to deep) -->
+    <linearGradient id="oceanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a3d5e"/>
+      <stop offset="25%"  stop-color="#0d2942"/>
+      <stop offset="70%"  stop-color="#071a2f"/>
+      <stop offset="100%" stop-color="#030c18"/>
+    </linearGradient>
+
+    <!-- Seabed -->
+    <linearGradient id="seabedGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#2a2010"/>
+      <stop offset="100%" stop-color="#150f06"/>
+    </linearGradient>
+
+    <!-- Sweep underline: copper on left → cyan on right, mirroring the transatlantic direction -->
+    <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#d18a4a"/>
+      <stop offset="50%"  stop-color="#e6a648"/>
+      <stop offset="100%" stop-color="#7fe0ff"/>
+    </linearGradient>
+
+    <!-- Signal pulse glow -->
+    <radialGradient id="pulseGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#f0fbff" stop-opacity="1"/>
+      <stop offset="35%"  stop-color="#7fe0ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#4dd0e8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Coast silhouette -->
+    <linearGradient id="coastGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0e131c"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+
+    <!-- Moon glow -->
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#f0edd8" stop-opacity="0.9"/>
+      <stop offset="60%"  stop-color="#c4c0a8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#c4c0a8" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+
+    <filter id="signalGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+
+    <!-- Cable path for signals to travel along (from Newfoundland shore to Scotland shore) -->
+    <path id="cablePath" d="M 55 60 Q 60 90 65 118 Q 68 148 90 182 Q 200 194 400 190 Q 600 186 710 182 Q 730 148 736 118 Q 742 90 748 60"/>
+  </defs>
+
+  <!-- Sky background (fills full canvas; ocean will overlay lower portion) -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
+
+  <!-- Stars scattered across the sky -->
+  <g fill="#e0e6f0">
+    <circle cx="80"  cy="12" r="0.7"><animate attributeName="opacity" values="0.3;1;0.3"   dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="140" cy="8"  r="0.5"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="11s" begin="1s"   repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="18" r="0.6"><animate attributeName="opacity" values="0.5;1;0.5"   dur="13s" begin="2s"   repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="6"  r="0.7"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="14" r="0.5"><animate attributeName="opacity" values="0.35;0.9;0.35" dur="7s"  begin="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="460" cy="8"  r="0.6"><animate attributeName="opacity" values="0.4;1;0.4"   dur="13s" begin="3s"   repeatCount="indefinite"/></circle>
+    <circle cx="540" cy="16" r="0.5"><animate attributeName="opacity" values="0.35;0.9;0.35" dur="11s" begin="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="620" cy="10" r="0.6"><animate attributeName="opacity" values="0.3;0.9;0.3"  dur="7s"  begin="0.9s" repeatCount="indefinite"/></circle>
+    <circle cx="680" cy="18" r="0.6"><animate attributeName="opacity" values="0.4;1;0.4"    dur="13s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="8"  r="0.5"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" begin="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="30"  cy="22" r="0.5"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="7s"  begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="26" r="0.5"><animate attributeName="opacity" values="0.3;0.8;0.3"  dur="11s" begin="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="110" cy="30" r="0.4"><animate attributeName="opacity" values="0.25;0.7;0.25" dur="13s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="710" cy="32" r="0.4"><animate attributeName="opacity" values="0.3;0.75;0.3"  dur="7s"  begin="2.8s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Full moon high left over Newfoundland -->
+  <g transform="translate(140,32)">
+    <circle r="18" fill="url(#moonGlow)"/>
+    <circle r="6.5" fill="#f0edd8"/>
+    <circle cx="-2.2" cy="-1.6" r="1.2" fill="#c4c0a8" opacity="0.55"/>
+    <circle cx="2.4" cy="1.2" r="0.9" fill="#c4c0a8" opacity="0.45"/>
+    <circle cx="1.2" cy="-2.4" r="0.6" fill="#c4c0a8" opacity="0.5"/>
+  </g>
+
+  <!-- ============================== TEXT STACK (in the sky) ============================== -->
+
+  <!-- Date headline: centred, dominant -->
+  <text x="400" y="54" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f5f2e6" letter-spacing="1.6">
+    SEPTEMBER 25, 2026
+  </text>
+
+  <!-- Sweep underline under the date -->
+  <line x1="235" y1="66" x2="565" y2="66" stroke="url(#sweepGrad)" stroke-width="2.6" stroke-linecap="round">
+    <animate attributeName="stroke-dasharray"
+             values="0 330; 210 120; 330 0; 210 120; 0 330"
+             keyTimes="0;0.25;0.5;0.75;1" dur="13s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Subhead: TAT-1 · 70 YEARS -->
+  <text x="400" y="86" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="13" font-weight="700" letter-spacing="2.0" xml:space="preserve">
+    <tspan fill="#7fe0ff">TAT-1  </tspan><tspan fill="#f5f2e6">&#183;  70 YEARS</tspan>
+  </text>
+
+  <!-- Tertiary italic: OBAN -> CLARENVILLE · 1956 -->
+  <text x="400" y="105" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#e6a648" letter-spacing="0.6">
+    OBAN &#8594; CLARENVILLE &#183; 1956
+  </text>
+
+  <!-- Caption at the horizon -->
+  <text x="400" y="120" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10" font-style="italic" fill="#b8b3a4" opacity="0.9">
+    &#8220;thirty-six voices under the ocean.&#8221;
+  </text>
+
+  <!-- ============================== OCEAN BODY ============================== -->
+
+  <!-- Water block -->
+  <rect x="0" y="128" width="800" height="72" fill="url(#oceanGrad)"/>
+
+  <!-- Ocean surface: subtle undulating wave -->
+  <path fill="#2a5878" opacity="0.5">
+    <animate attributeName="d"
+             values="M 0 128 Q 40 125 80 128 T 160 128 T 240 128 T 320 128 T 400 128 T 480 128 T 560 128 T 640 128 T 720 128 T 800 128 L 800 132 L 0 132 Z;
+                     M 0 128 Q 40 131 80 128 T 160 128 T 240 128 T 320 128 T 400 128 T 480 128 T 560 128 T 640 128 T 720 128 T 800 128 L 800 132 L 0 132 Z;
+                     M 0 128 Q 40 125 80 128 T 160 128 T 240 128 T 320 128 T 400 128 T 480 128 T 560 128 T 640 128 T 720 128 T 800 128 L 800 132 L 0 132 Z"
+             dur="11s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Moon shimmer on water -->
+  <ellipse cx="140" cy="130" rx="22" ry="1" fill="#f0edd8" opacity="0.32">
+    <animate attributeName="opacity" values="0.18;0.4;0.18" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Faint depth sonar lines -->
+  <g stroke="#7fe0ff" stroke-width="0.3" opacity="0.05" fill="none">
+    <path d="M 80 148 h 640"/>
+    <path d="M 80 162 h 640"/>
+    <path d="M 80 176 h 640"/>
+  </g>
+
+  <!-- Seabed -->
+  <path d="M 0 190
+           Q 100 186 200 189 T 400 190 T 600 189 T 800 190
+           L 800 200 L 0 200 Z"
+        fill="url(#seabedGrad)"/>
+
+  <!-- Rocky bumps -->
+  <g fill="#0e0a04" opacity="0.85">
+    <ellipse cx="130" cy="192" rx="11" ry="2"/>
+    <ellipse cx="270" cy="193" rx="7"  ry="1.6"/>
+    <ellipse cx="480" cy="192" rx="13" ry="2.4"/>
+    <ellipse cx="620" cy="193" rx="9"  ry="1.8"/>
+  </g>
+
+  <!-- ============================== COASTS ============================== -->
+
+  <!-- Newfoundland silhouette (left) -->
+  <g>
+    <path d="M 0 128
+             L 0 78
+             L 6 74 L 12 60 L 20 78 L 28 66 L 38 82 L 46 72 L 54 88 L 60 82 L 70 100 L 78 108 L 88 118 L 98 124 L 105 128 Z"
+          fill="url(#coastGrad)"/>
+    <!-- rim highlight -->
+    <path d="M 6 74 L 12 60 L 20 78 L 28 66 L 38 82 L 46 72 L 54 88 L 60 82 L 70 100 L 78 108 L 88 118"
+          fill="none" stroke="#1a2a3a" stroke-width="0.6" opacity="0.85"/>
+    <!-- Tiny relay-station light (Clarenville) -->
+    <g transform="translate(38,66)">
+      <rect x="-1.4" y="-7" width="2.8" height="8" fill="#2a2416"/>
+      <circle cx="0" cy="-8" r="1.2" fill="#7fe0ff" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="0.35;1;0.35" dur="5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- CLARENVILLE label -->
+  <text x="18" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="7" font-weight="700" fill="#8aa0b8" letter-spacing="1.4" opacity="0.9">CLARENVILLE</text>
+
+  <!-- Scotland silhouette (right) — Oban -->
+  <g>
+    <path d="M 800 128
+             L 800 72
+             L 794 68 L 786 56 L 776 74 L 768 62 L 758 78 L 750 68 L 740 86 L 732 80 L 722 98 L 714 106 L 704 116 L 696 124 L 690 128 Z"
+          fill="url(#coastGrad)"/>
+    <path d="M 794 68 L 786 56 L 776 74 L 768 62 L 758 78 L 750 68 L 740 86 L 732 80 L 722 98 L 714 106 L 704 116"
+          fill="none" stroke="#1a2a3a" stroke-width="0.6" opacity="0.85"/>
+    <!-- Tiny lighthouse (Oban) -->
+    <g transform="translate(760,62)">
+      <rect x="-1.4" y="-8" width="2.8" height="8" fill="#2a2416"/>
+      <rect x="-1.9" y="-9.5" width="3.8" height="1.8" fill="#c33a44"/>
+      <circle cx="0" cy="-9.4" r="1.2" fill="#f5e6a8" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="6s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- OBAN label -->
+  <text x="782" y="146" text-anchor="end"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="7" font-weight="700" fill="#8aa0b8" letter-spacing="1.4" opacity="0.9">OBAN</text>
+
+  <!-- ============================== THE TAT-1 CABLE ============================== -->
+
+  <!-- Cable body: from Newfoundland shore, down into the sea, across the seabed, up to Scotland shore -->
+  <use href="#cablePath" fill="none" stroke="#2a1a0c" stroke-width="3.4" opacity="0.95"/>
+  <use href="#cablePath" fill="none" stroke="#c48a4a" stroke-width="1.4" opacity="0.75"/>
+  <use href="#cablePath" fill="none" stroke="#f5c88a" stroke-width="0.4" opacity="0.55"/>
+
+  <!-- Vacuum-tube repeater bulges along the seabed segment -->
+  <g>
+    <ellipse cx="150" cy="192" rx="5.5" ry="1.9" fill="#3a2515"/>
+    <ellipse cx="150" cy="191.4" rx="5.5" ry="0.7" fill="#a86e30" opacity="0.85"/>
+    <ellipse cx="270" cy="191" rx="5.5" ry="1.9" fill="#3a2515"/>
+    <ellipse cx="270" cy="190.4" rx="5.5" ry="0.7" fill="#a86e30" opacity="0.85"/>
+    <ellipse cx="400" cy="190" rx="5.5" ry="1.9" fill="#3a2515"/>
+    <ellipse cx="400" cy="189.4" rx="5.5" ry="0.7" fill="#a86e30" opacity="0.85"/>
+    <ellipse cx="530" cy="189" rx="5.5" ry="1.9" fill="#3a2515"/>
+    <ellipse cx="530" cy="188.4" rx="5.5" ry="0.7" fill="#a86e30" opacity="0.85"/>
+    <ellipse cx="650" cy="188" rx="5.5" ry="1.9" fill="#3a2515"/>
+    <ellipse cx="650" cy="187.4" rx="5.5" ry="0.7" fill="#a86e30" opacity="0.85"/>
+  </g>
+
+  <!-- ============================== SIGNAL PULSES ============================== -->
+
+  <!-- East-bound (Newfoundland → Scotland): three pulses staggered -->
+  <g>
+    <circle r="3.4" fill="url(#pulseGlow)" filter="url(#signalGlow)">
+      <animateMotion dur="13s" repeatCount="indefinite">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3.2" fill="url(#pulseGlow)" filter="url(#signalGlow)">
+      <animateMotion dur="13s" begin="4.3s" repeatCount="indefinite">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="13s" begin="4.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3.0" fill="url(#pulseGlow)" filter="url(#signalGlow)">
+      <animateMotion dur="13s" begin="8.6s" repeatCount="indefinite">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="13s" begin="8.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- West-bound (Scotland → Newfoundland): reversed via keyPoints="1;0" -->
+  <g>
+    <circle r="3.0" fill="url(#pulseGlow)" filter="url(#signalGlow)">
+      <animateMotion dur="17s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="17s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.8" fill="url(#pulseGlow)" filter="url(#signalGlow)">
+      <animateMotion dur="17s" begin="5.6s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="17s" begin="5.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.6" fill="url(#pulseGlow)" filter="url(#signalGlow)">
+      <animateMotion dur="17s" begin="11.3s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="17s" begin="11.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ============================== BUBBLES & SEA LIFE ============================== -->
+
+  <g fill="#7fe0ff" opacity="0.35">
+    <circle r="1" cx="200" cy="188">
+      <animate attributeName="cy" values="192;135;135" keyTimes="0;0.9;1" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0" keyTimes="0;0.5;1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="0.8" cx="340" cy="188">
+      <animate attributeName="cy" values="192;132;132" keyTimes="0;0.9;1" dur="19s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" keyTimes="0;0.5;1" dur="19s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="0.7" cx="500" cy="188">
+      <animate attributeName="cy" values="192;140;140" keyTimes="0;0.9;1" dur="17s" begin="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" keyTimes="0;0.5;1" dur="17s" begin="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="0.9" cx="620" cy="188">
+      <animate attributeName="cy" values="192;135;135" keyTimes="0;0.9;1" dur="23s" begin="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0" keyTimes="0;0.5;1" dur="23s" begin="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="0.7" cx="410" cy="188">
+      <animate attributeName="cy" values="192;138;138" keyTimes="0;0.9;1" dur="19s" begin="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" keyTimes="0;0.5;1" dur="19s" begin="12s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Small drifting fish silhouette -->
+  <g fill="#0a1a2c" opacity="0.7">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        values="200 160; 360 155; 520 162; 660 158; 200 160" dur="47s" repeatCount="indefinite"/>
+      <path d="M 0 0 L 8 -2.4 L 8 2.4 Z"/>
+      <path d="M 8 0 L 12 -1.6 L 12 1.6 Z"/>
+      <circle cx="2.4" cy="-0.6" r="0.4" fill="#7fe0ff" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Faint horizontal current line, slow drift -->
+  <g stroke="#7fe0ff" stroke-width="0.4" opacity="0.12" fill="none">
+    <path d="M 40 154 Q 200 150 400 154 T 760 154">
+      <animate attributeName="opacity" values="0.05;0.18;0.05" dur="17s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Tiny "3584 km" scale label above the cable, mid-ocean -->
+  <text x="400" y="180" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.5" font-weight="600" fill="#5a7080" letter-spacing="1.6" opacity="0.9">
+    3 584 km &#183; 51 REPEATERS &#183; 36 CIRCUITS
+  </text>
+</svg>

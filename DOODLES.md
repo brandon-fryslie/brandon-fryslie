@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 26, 2026 — TAT-1 — 70th Anniversary (September 25, 1956)
+
+<img src="./doodle-archive/2026/09/2026-09-26-060139.svg" width="800" alt="Daily doodle for September 25, 2026 — the 70th anniversary of TAT-1, the first transatlantic telephone cable, which entered commercial service on September 25, 1956 between Oban, Scotland and Clarenville, Newfoundland. The scene is a full-width cross-section of the North Atlantic at night. Newfoundland rises out of the water on the left, Scotland on the right; between them the seabed carries a slender copper cable with vacuum-tube repeater bulges, and bright cyan signal pulses drift along it in both directions with small bubbles trailing up through the deep. In the sky above, a large cream SEPTEMBER 25, 2026 headline centred over the ocean underlined by a copper-to-cyan sweep, a cyan TAT-1 · 70 YEARS subhead, an italic amber OBAN → CLARENVILLE · 1956 tertiary, and a dim italic 'thirty-six voices under the ocean.' caption at the horizon.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 25 September 1956, TAT-1 — the first transatlantic telephone cable — entered commercial service between Oban on the west coast of Scotland and Clarenville in Newfoundland. Two coaxial cables, one for each direction, ran 3,584 kilometres across the ocean floor with 51 vacuum-tube repeaters spaced along each line to keep the signal alive. It carried 36 simultaneous voice circuits, and on opening day handled 707 calls across the ocean. Before TAT-1 a call from London to New York went by shortwave radio, hissed and faded with the ionosphere, and cost a small fortune per minute. Seventy years later the Atlantic seabed carries hundreds of glass-fibre cables and most of the internet on Earth, but this was the first — the wire that made the ocean small.
+
+The scene is a full-width cross-section of the North Atlantic at night. Newfoundland rises out of the water on the left, Scotland on the right; between them the seabed carries a slender copper cable dotted with vacuum-tube repeaters, and bright cyan signal pulses drift along it in both directions with small bubbles trailing up through the deep. In the sky above, a centred SEPTEMBER 25, 2026 headline anchors a cyan TAT-1 · 70 YEARS subhead, an italic amber OBAN → CLARENVILLE · 1956 tertiary, and a dim italic caption at the horizon.
+
+</details>
+
+---
+
 ## September 25, 2026 — Jim Henson — 90th Birth Anniversary (September 24, 1936)
 
 <img src="./doodle-archive/2026/09/2026-09-25-060257.svg" width="800" alt="Daily doodle for September 24, 2026 — the 90th anniversary of the birth of Jim Henson on September 24, 1936. On the left half, a small stage with a red curtain valance across the top and four abstract felt puppets bobbing on a wooden rail — a green frog, a pink diva, a warm-orange bear, and a blue oddball — each with wide white eyes, wandering pupils, and mouths that open and close as they sway, warm spotlights falling from above and dust motes drifting through the beams. On the right, a large cream SEPTEMBER 24, 2026 headline underlined by a green-magenta-orange sweep, a green JIM HENSON · 90 YEARS subhead, an italic pink MUPPETS · SESAME STREET · CREATURE SHOP tertiary, a dim FELT · FOAM · FOOLERY · HEART roster, and a Georgia-italic 'the most sophisticated people i know — inside they are all children.' caption at the base.">
