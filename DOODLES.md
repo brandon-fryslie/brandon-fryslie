@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 27, 2026 — Stanislav Petrov — 43rd Anniversary (September 26, 1983)
+
+<img src="./doodle-archive/2026/09/2026-09-27-060307.svg" width="800" alt="Daily doodle for September 26, 2026 — the 43rd anniversary of the Stanislav Petrov incident of September 26, 1983, when a Soviet early-warning duty officer judged a report of five inbound American ICBMs to be a system fault and did not forward the alert. On the left, a phosphor-green radar screen with a rotating sweep arm and five red missile blips flaring and fading. On the right, a red glass-domed launch button under an open safety cover, unpressed, with a lit amber HELD indicator and a dark FIRE indicator. In the centre, a large cream SEPTEMBER 26, 2026 headline underlined by a green-to-amber-to-red sweep, a phosphor-green PETROV · 43 YEARS subhead, an italic amber THE MAN WHO CHOSE NOT TO tertiary, and a Georgia-italic 'a system fault, not a war.' caption.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the night of 26 September 1983, Lieutenant Colonel Stanislav Petrov was the duty officer at Serpukhov-15, a Soviet early-warning command bunker south of Moscow, when the Oko satellite system reported that the United States had launched five intercontinental ballistic missiles at the Soviet Union. Protocol required him to pass the alert up the chain within minutes — and a retaliatory launch would almost certainly have followed. Petrov judged it a system fault instead: five missiles, he reasoned, was not the shape a real first strike would take. He logged it as a false alarm and waited. Twenty-three minutes later, no warheads arrived. Sunlight glinting off high-altitude clouds had fooled the satellite. He kept the world from ending on a bureaucratic technicality, and was quietly reprimanded for the paperwork.
+
+The scene is a dim Cold-War operations screen. On the left a phosphor-green radar sweeps its arm around a dish while five red missile blips flare and fade in a loop — the false alarm coming and going. On the right, a glass-domed launch button sits unpressed under an open safety cover, while a small amber lamp reads HELD and the FIRE lamp stays dark. Between them, the date anchors a green PETROV · 43 YEARS subhead and a quiet caption.
+
+</details>
+
+---
+
 ## September 26, 2026 — TAT-1 — 70th Anniversary (September 25, 1956)
 
 <img src="./doodle-archive/2026/09/2026-09-26-060139.svg" width="800" alt="Daily doodle for September 25, 2026 — the 70th anniversary of TAT-1, the first transatlantic telephone cable, which entered commercial service on September 25, 1956 between Oban, Scotland and Clarenville, Newfoundland. The scene is a full-width cross-section of the North Atlantic at night. Newfoundland rises out of the water on the left, Scotland on the right; between them the seabed carries a slender copper cable with vacuum-tube repeater bulges, and bright cyan signal pulses drift along it in both directions with small bubbles trailing up through the deep. In the sky above, a large cream SEPTEMBER 25, 2026 headline centred over the ocean underlined by a copper-to-cyan sweep, a cyan TAT-1 · 70 YEARS subhead, an italic amber OBAN → CLARENVILLE · 1956 tertiary, and a dim italic 'thirty-six voices under the ocean.' caption at the horizon.">
