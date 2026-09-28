@@ -8,6 +8,10 @@ Day sections are written once and never rewritten. The raw, verbatim record of w
 
 ## 2026
 
+- **[Week of September 28](2026/2026-09-28.md)** — *in progress*
+- **[Week of September 21](2026/2026-09-21.md)** — *in progress*
+- **[Week of September 14](2026/2026-09-14.md)** — *in progress*
+- **[Week of September 7](2026/2026-09-07.md)** — elvenspeak stub-fleet router and Dockerfile publish gate · rich-js JSON and print fidelity · lit rename and plugin cleanup · memento 0.6–0.7 ceiling collapse
 - **[Week of August 17](2026/2026-08-17.md)** — *in progress*
 - **[Week of August 10](2026/2026-08-10.md)** — slopspot RAG stack and freshness trail · cc-candybar per-segment palette overrides · lit sync safety and licensing clean-room · cc-dump Anthropic-only proxy consolidation
 - **[Week of August 3](2026/2026-08-03.md)** — lit workflows 0.4.0 · cc-candybar option-domain seam and theme picker · slopspot-paste editor made editable end-to-end · room-eq-wizard-mcp surface completion
