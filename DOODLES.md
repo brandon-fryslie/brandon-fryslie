@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 28, 2026 — Rosetta Stone Deciphered — 204 Years (September 27, 1822)
+
+<img src="./doodle-archive/2026/09/2026-09-28-060234.svg" width="800" alt="Daily doodle for September 27, 2026 — the 204th anniversary of Jean-François Champollion's decipherment of Egyptian hieroglyphs, announced to the Académie des Inscriptions et Belles-Lettres in Paris on September 27, 1822. On the left, the Rosetta Stone as a dark basalt slab with three registers of text — amber hieroglyphs at the top, cursive demotic script in the middle, cream Greek letters at the base — and a warm lamplight slowly sweeping down its face. On the right, a royal cartouche in gold containing seven simplified hieroglyphs spelling PTOLMYS, with the Roman phonetic letters pulsing in and out beneath each sign. In the centre, a large cream SEPTEMBER 27, 2026 headline underlined by a sandstone-to-Egyptian-blue sweep, an amber CHAMPOLLION · 204 YEARS subhead, an italic sandstone PARIS · ACADÉMIE DES INSCRIPTIONS · 1822 tertiary, and a Georgia-italic 'Je tiens mon affaire!' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 27 September 1822, in Paris, Jean-François Champollion read his Lettre à M. Dacier before the Académie des Inscriptions et Belles-Lettres and announced that he had cracked Egyptian hieroglyphs. For fourteen centuries the script had been unreadable — thought to be pure symbolism, a language of pictures without sound. Working from a copy of the Rosetta Stone, whose parallel Greek text he could read, Champollion showed that the royal cartouches spelled foreign names phonetically: P-T-O-L-M-Y-S, then C-L-E-O-P-A-T-R-A. The whole script fell open — a mixed system of sound signs, category signs, and pure symbols. He is said to have run through the streets to his brother's rooms shouting "Je tiens mon affaire!" and collapsed in a five-day faint. Two hundred and four years later, nearly everything we know of pharaonic Egypt exists because of that morning.
+
+The scene is a study of decoding. On the left, the Rosetta Stone stands as a dark basalt slab with its three registers — hieroglyphs at the top, demotic script in the middle, Greek at the base — and a warm lamplight sweeps slowly down its face. On the right, a royal cartouche holds the glyphs of PTOLMYS with their phonetic letters pulsing in and out beneath each sign. In the centre, a large cream SEPTEMBER 27, 2026 headline anchors an amber CHAMPOLLION · 204 YEARS subhead, an italic PARIS · ACADÉMIE DES INSCRIPTIONS · 1822 tertiary, and a Georgia-italic French caption at the base.
+
+</details>
+
+---
+
 ## September 27, 2026 — Stanislav Petrov — 43rd Anniversary (September 26, 1983)
 
 <img src="./doodle-archive/2026/09/2026-09-27-060307.svg" width="800" alt="Daily doodle for September 26, 2026 — the 43rd anniversary of the Stanislav Petrov incident of September 26, 1983, when a Soviet early-warning duty officer judged a report of five inbound American ICBMs to be a system fault and did not forward the alert. On the left, a phosphor-green radar screen with a rotating sweep arm and five red missile blips flaring and fading. On the right, a red glass-domed launch button under an open safety cover, unpressed, with a lit amber HELD indicator and a dark FIRE indicator. In the centre, a large cream SEPTEMBER 26, 2026 headline underlined by a green-to-amber-to-red sweep, a phosphor-green PETROV · 43 YEARS subhead, an italic amber THE MAN WHO CHOSE NOT TO tertiary, and a Georgia-italic 'a system fault, not a war.' caption.">
