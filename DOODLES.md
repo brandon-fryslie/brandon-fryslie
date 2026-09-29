@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 29, 2026 — Discovery of Penicillin — 98 Years (September 28, 1928)
+
+<img src="./doodle-archive/2026/09/2026-09-29-060240.svg" width="800" alt="Daily doodle for September 28, 2026 — the 98th anniversary of Alexander Fleming's discovery of penicillin at St Mary's Hospital, London, on September 28, 1928. On the left, a petri dish seen from above with soft cream agar, a fuzzy blue-green Penicillium colony growing at its centre ringed by a widening clear halo of inhibition, and beyond the halo small golden Staphylococcus colonies still clustering. On the right, the skeletal formula of the penicillin core — a beta-lactam ring fused to a thiazolidine ring — hangs in the field, bonds shimmering as electrons pulse around the reactive C equals O. In the centre, a large cream SEPTEMBER 28, 2026 headline underlined by an agar-to-penicillin-green sweep, a green FLEMING · 98 YEARS subhead, an italic amber ST MARY'S · LONDON · 1928 tertiary, a dim MOULD · HALO · ACCIDENT · ANTIBIOTIC roster, and a Georgia-italic 'That's funny…' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 28 September 1928, in a small laboratory at St Mary's Hospital, Paddington, Alexander Fleming returned from a fortnight's holiday and began sorting through the Staphylococcus culture plates he had left stacked on a bench. One was contaminated by a wandering mould that had drifted in from the mycology lab downstairs. Around the mould, in a perfect clear ring, the bacteria had died. "That's funny," he is said to have remarked, and set the plate aside. The mould was Penicillium notatum; the substance it exuded, which he named penicillin, would not become a usable drug for another twelve years — Florey and Chain purified it at Oxford in 1940 — but the moment of noticing was here. It is the founding accident of the antibiotic age; a hundred million lives are downstream of one unwashed dish.
+
+The scene is a laboratory bench at close range. On the left, a petri dish seen from above holds a soft cream agar; a fuzzy blue-green Penicillium colony grows at its centre, ringed by a widening clear halo of inhibition, and beyond the halo small golden Staphylococcus colonies still cluster. On the right, the skeletal formula of the penicillin core — a β-lactam ring fused to a thiazolidine ring — hangs in the field, bonds shimmering as electrons redistribute around the reactive C=O. In the centre, a large cream SEPTEMBER 28, 2026 headline anchors a green FLEMING · 98 YEARS subhead, an italic ST MARY'S · LONDON · 1928 tertiary, and a Georgia-italic '"That's funny…"' caption.
+
+</details>
+
+---
+
 ## September 28, 2026 — Rosetta Stone Deciphered — 204 Years (September 27, 1822)
 
 <img src="./doodle-archive/2026/09/2026-09-28-060234.svg" width="800" alt="Daily doodle for September 27, 2026 — the 204th anniversary of Jean-François Champollion's decipherment of Egyptian hieroglyphs, announced to the Académie des Inscriptions et Belles-Lettres in Paris on September 27, 1822. On the left, the Rosetta Stone as a dark basalt slab with three registers of text — amber hieroglyphs at the top, cursive demotic script in the middle, cream Greek letters at the base — and a warm lamplight slowly sweeping down its face. On the right, a royal cartouche in gold containing seven simplified hieroglyphs spelling PTOLMYS, with the Roman phonetic letters pulsing in and out beneath each sign. In the centre, a large cream SEPTEMBER 27, 2026 headline underlined by a sandstone-to-Egyptian-blue sweep, an amber CHAMPOLLION · 204 YEARS subhead, an italic sandstone PARIS · ACADÉMIE DES INSCRIPTIONS · 1822 tertiary, and a Georgia-italic 'Je tiens mon affaire!' caption at the base.">
