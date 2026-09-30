@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## September 30, 2026 — National Coffee Day (September 29)
+
+<img src="./doodle-archive/2026/09/2026-09-30-060200.svg" width="800" alt="Daily doodle for September 29, 2026 — US National Coffee Day. On the left, a warm ceramic mug of espresso with a glowing crema layer on top and slow curling wisps of steam rising above it. On the right, a small cluster of roasted coffee beans with faint aroma trails rising, and a single ripe red coffee cherry on a green leafy sprig recalling the plant they came from. In the centre, a large cream SEPTEMBER 29, 2026 headline underlined by a coffee-to-cream-to-amber sweep, an amber NATIONAL COFFEE DAY subhead, an italic ETHIOPIA · YEMEN · THE WORLD tertiary, a dim GROUND · BREWED · POURED · SIPPED roster, and a Georgia-italic 'one cup, one small ritual' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On the last day of September, calendars across the United States mark National Coffee Day — a small commercial holiday that grew from a 2005 promotion into a widely observed date. Coffee itself is older and more mysterious. Legend places its discovery in ninth-century Ethiopia, where the goatherd Kaldi noticed his flock frisking after nibbling a certain shrub. Sufi mystics in Yemen were the first to brew it around the fifteenth century, keeping monks awake through night prayers. It reached Venice in 1615, London in 1652, Vienna in 1683. The world now drinks roughly two billion cups a day; this note is being written under one of them.
+
+The scene is a warm counter at close range. On the left, a ceramic mug of espresso sits with a glowing crema layer and slow curling wisps of steam rising and dissolving above it. In the centre, a large cream SEPTEMBER 29, 2026 headline anchors an amber NATIONAL COFFEE DAY subhead, an italic ETHIOPIA · YEMEN · THE WORLD tertiary, and a Georgia-italic 'one cup, one small ritual' caption. On the right, a small cluster of roasted beans rests on the counter with faint aroma trails rising and a single ripe red coffee cherry on a green sprig recalling the plant they came from.
+
+</details>
+
+---
+
 ## September 29, 2026 — Discovery of Penicillin — 98 Years (September 28, 1928)
 
 <img src="./doodle-archive/2026/09/2026-09-29-060240.svg" width="800" alt="Daily doodle for September 28, 2026 — the 98th anniversary of Alexander Fleming's discovery of penicillin at St Mary's Hospital, London, on September 28, 1928. On the left, a petri dish seen from above with soft cream agar, a fuzzy blue-green Penicillium colony growing at its centre ringed by a widening clear halo of inhibition, and beyond the halo small golden Staphylococcus colonies still clustering. On the right, the skeletal formula of the penicillin core — a beta-lactam ring fused to a thiazolidine ring — hangs in the field, bonds shimmering as electrons pulse around the reactive C equals O. In the centre, a large cream SEPTEMBER 28, 2026 headline underlined by an agar-to-penicillin-green sweep, a green FLEMING · 98 YEARS subhead, an italic amber ST MARY'S · LONDON · 1928 tertiary, a dim MOULD · HALO · ACCIDENT · ANTIBIOTIC roster, and a Georgia-italic 'That's funny…' caption at the base.">
