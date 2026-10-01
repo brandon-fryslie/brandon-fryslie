@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 1, 2026 — Ethernet — 46 Years (September 30, 1980)
+
+<img src="./doodle-archive/2026/09/2026-10-01-060155.svg" width="800" alt="Daily doodle for September 30, 2026 — the 46th anniversary of the DIX Ethernet v1.0 specification published by DEC, Intel, and Xerox on September 30, 1980. A thick yellow-orange coaxial cable spans the full width of the frame with terminator caps clamped at both ends. Four small silver workstations tap into the cable from beneath through drop cables, each with a glowing cyan screen and a small blinking activity LED. Along the cable, tagged packets in cyan, magenta, green, and amber — labelled DST, SRC, TYPE, DATA, FCS — slide left to right at different speeds. Above the bus, a large cream SEPTEMBER 30, 2026 headline underlined by an amber-to-cyan sweep, an amber ETHERNET · 46 YEARS subhead, an italic dim DIX v1.0 · DEC · INTEL · XEROX tertiary, a small COLLISION · BACKOFF · RETRANSMIT · ACK roster, and a Georgia-italic 'listen before you talk' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 30 September 1980, DEC, Intel, and Xerox jointly published version 1.0 of "The Ethernet, A Local Area Network. Data Link Layer and Physical Layer Specifications" — the DIX Blue Book. Robert Metcalfe's 1973 memo at Xerox PARC had already shown that a shared coaxial cable could carry packets between machines if every talker listened before speaking and backed off politely when two voices collided; the DIX spec turned that idea into a document any vendor could build to. Forty-six years on, almost every wired network on Earth is a descendant — the yellow thicknet is gone, the coax became twisted pair became fibre, but the frame, the MAC address, the preamble, and the polite-conversation rules on the wire are still Metcalfe's.
+
+The scene is a bus-topology LAN seen edge-on. A thick yellow-orange coaxial cable spans the full width of the frame, terminators clamped at both ends, four small workstations tapped in beneath it by their drop cables and blinking activity LEDs. Along the wire, tagged packets — DST, SRC, TYPE, DATA, FCS — slide steadily left to right at prime intervals, one of them the payload for today. Above the bus, a large cream SEPTEMBER 30, 2026 headline sits over an amber ETHERNET · 46 YEARS subhead, an italic DIX v1.0 · DEC · INTEL · XEROX tertiary, and a Georgia-italic 'listen before you talk' caption at the base.
+
+</details>
+
+---
+
 ## September 30, 2026 — National Coffee Day (September 29)
 
 <img src="./doodle-archive/2026/09/2026-09-30-060200.svg" width="800" alt="Daily doodle for September 29, 2026 — US National Coffee Day. On the left, a warm ceramic mug of espresso with a glowing crema layer on top and slow curling wisps of steam rising above it. On the right, a small cluster of roasted coffee beans with faint aroma trails rising, and a single ripe red coffee cherry on a green leafy sprig recalling the plant they came from. In the centre, a large cream SEPTEMBER 29, 2026 headline underlined by a coffee-to-cream-to-amber sweep, an amber NATIONAL COFFEE DAY subhead, an italic ETHIOPIA · YEMEN · THE WORLD tertiary, a dim GROUND · BREWED · POURED · SIPPED roster, and a Georgia-italic 'one cup, one small ritual' caption at the base.">
