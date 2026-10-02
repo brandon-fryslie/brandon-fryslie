@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 2, 2026 — NASA — 68 Years (October 1, 1958)
+
+<img src="./doodle-archive/2026/10/2026-10-02-060147.svg" width="800" alt="Daily doodle for October 1, 2026 — the 68th anniversary of NASA opening its doors in Washington on October 1, 1958. On the left, a cratered Moon hangs in a dark starfield with a small satellite tracing a slow orbit around it. On the right, a slim white rocket climbs from a launch pad on the Earth's curved horizon, with a flickering red-orange-yellow exhaust plume and a dashed ascent trail curling up behind it. Above the horizon, a large cream OCTOBER 1, 2026 headline underlined by a red-white-blue sweep, a red NASA · 68 YEARS subhead, an italic amber WASHINGTON · OCTOBER 1, 1958 tertiary, a dim MERCURY · GEMINI · APOLLO · SHUTTLE · ARTEMIS roster, and a Georgia-italic 'for the benefit of all' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 1 October 1958, the National Aeronautics and Space Administration opened its doors in Washington, taking over from the forty-three-year-old National Advisory Committee for Aeronautics. The agency was less than a year old as an idea — Sputnik had crossed the sky in October 1957, Explorer 1 in January 1958, and in July President Eisenhower signed the Space Act — but on day one it absorbed NACA's 8,000 engineers, five laboratories, and a hundred-some-million dollar budget, and inherited the Vanguard, Pioneer, and Mercury programmes already in flight. Sixty-eight years later, every US human spaceflight, every Mars rover, every great space telescope from Hubble to Webb carries that same meatball on its flank.
+
+The scene is a widescreen view out past low Earth orbit. On the left a cratered Moon hangs in a dark starfield with a small satellite tracing a slow orbit around it. On the right a slim white rocket climbs away from a small pad on the Earth's curved horizon, flame flickering, a thin dashed ascent trail curling up behind it. Above the horizon, a large cream OCTOBER 1, 2026 headline sits over a red NASA · 68 YEARS subhead, an italic amber WASHINGTON · OCTOBER 1, 1958 tertiary, a dim MERCURY · GEMINI · APOLLO · SHUTTLE · ARTEMIS roster, and a Georgia-italic 'for the benefit of all' caption at the base.
+
+</details>
+
+---
+
 ## October 1, 2026 — Ethernet — 46 Years (September 30, 1980)
 
 <img src="./doodle-archive/2026/09/2026-10-01-060155.svg" width="800" alt="Daily doodle for September 30, 2026 — the 46th anniversary of the DIX Ethernet v1.0 specification published by DEC, Intel, and Xerox on September 30, 1980. A thick yellow-orange coaxial cable spans the full width of the frame with terminator caps clamped at both ends. Four small silver workstations tap into the cable from beneath through drop cables, each with a glowing cyan screen and a small blinking activity LED. Along the cable, tagged packets in cyan, magenta, green, and amber — labelled DST, SRC, TYPE, DATA, FCS — slide left to right at different speeds. Above the bus, a large cream SEPTEMBER 30, 2026 headline underlined by an amber-to-cyan sweep, an amber ETHERNET · 46 YEARS subhead, an italic dim DIX v1.0 · DEC · INTEL · XEROX tertiary, a small COLLISION · BACKOFF · RETRANSMIT · ACK roster, and a Georgia-italic 'listen before you talk' caption at the base.">
