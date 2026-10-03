@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Peanuts — 76 Years (October 2, 1950) -->
+<!-- about:
+On 2 October 1950, Charles M. Schulz's four-panel comic strip Peanuts appeared in seven newspapers for the first time. In the opening panel a boy on a sidewalk watches another boy walk by and remarks, "Well! Here comes ol' Charlie Brown. Good ol' Charlie Brown — yes sir! Good ol' Charlie Brown…" and then, as the walker passes out of frame, "How I hate him!" The strip would run every single day for just under fifty years, through 17,897 installments, and end only the morning after Schulz himself did, in February 2000. Snoopy, perched on the ridge of his red doghouse and typing an eternally-unfinished novel that begins "It was a dark and stormy night…", is one of the most reproduced images of the twentieth century — a small white beagle who imagined himself a World War I flying ace, a lawyer, and, above all, a writer.
+
+The scene is Snoopy's roof on a dark and stormy night. Rain streaks diagonally across the frame; a soft lightning flash flickers behind the horizon. On the left, the familiar red doghouse pitches up against the sky with Snoopy stretched flat along its ridge, his head propped on his paws. A sheet of paper rises from a tiny typewriter in front of him and types the opening sentence out letter by letter. On the right, a large cream OCTOBER 2, 2026 headline sits over a red PEANUTS · 76 YEARS subhead, an italic amber CHARLES M. SCHULZ · 1950 tertiary, a dim CHARLIE · SNOOPY · LUCY · LINUS · WOODSTOCK roster, and a Georgia-italic 'Good grief.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 2, 2026 — the 76th anniversary of the Peanuts comic strip debut by Charles M. Schulz on October 2, 1950. On the left, Snoopy lies flat on top of his red doghouse on a dark and stormy night, head on paws, a small typewriter in front of him. A sheet of paper rises from the typewriter with the sentence 'It was a dark and stormy night...' typing itself out letter by letter, a blinking cursor at the end of the line. Diagonal rain streaks fall across the whole scene; a soft lightning flash flickers in the sky. On the right, a large cream OCTOBER 2, 2026 headline underlined by a yellow-and-black zigzag sweep, a red PEANUTS · 76 YEARS subhead, an italic amber CHARLES M. SCHULZ · OCTOBER 2, 1950 tertiary, a dim CHARLIE · SNOOPY · LUCY · LINUS · WOODSTOCK roster, and a Georgia-italic 'Good grief.' caption at the base.">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.6" stop-color="#141c2a"/>
+      <stop offset="1" stop-color="#0a0e18"/>
+    </linearGradient>
+
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2238"/>
+      <stop offset="1" stop-color="#060a14"/>
+    </linearGradient>
+
+    <linearGradient id="doghouseRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8302c"/>
+      <stop offset="1" stop-color="#8c1218"/>
+    </linearGradient>
+
+    <linearGradient id="roofRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f04040"/>
+      <stop offset="1" stop-color="#a01818"/>
+    </linearGradient>
+
+    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf6ea"/>
+      <stop offset="1" stop-color="#e8dcbc"/>
+    </linearGradient>
+
+    <radialGradient id="lightningGlow" cx="0.5" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#e8ecff" stop-opacity="0.65"/>
+      <stop offset="0.5" stop-color="#6878a8" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Yellow-black zigzag pattern — Charlie Brown's shirt -->
+    <pattern id="zigzag" x="0" y="0" width="16" height="6" patternUnits="userSpaceOnUse">
+      <polygon points="0,6 4,0 8,6 12,0 16,6 16,6 0,6" fill="#f5c518"/>
+      <polyline points="0,6 4,0 8,6 12,0 16,6" fill="none" stroke="#111111" stroke-width="1.2"/>
+    </pattern>
+
+    <!-- Clip for progressive text reveal. Starts fully typed; periodically resets and retypes. -->
+    <clipPath id="typedTextClip">
+      <rect x="166" y="46" width="94" height="42">
+        <animate attributeName="width"
+                 values="94;94;94;0;22;46;72;94;94"
+                 keyTimes="0;0.45;0.5;0.52;0.6;0.72;0.85;0.95;1"
+                 dur="11s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- =================== BACKGROUND SKY =================== -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
+
+  <!-- Soft lightning glow behind horizon — invisible at rest, flares during flashes -->
+  <ellipse cx="400" cy="170" rx="420" ry="70" fill="url(#lightningGlow)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.55;0;0;0;0.7;0;0" dur="13s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Full-canvas lightning flash -->
+  <rect width="800" height="200" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.15;0;0;0;0;0;0.22;0;0;0;0" dur="13s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Distant lightning bolt (right side) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.9;0.35;0;0;0;0;0.95;0.3;0;0;0" dur="13s" repeatCount="indefinite"/>
+    <polyline points="340,10 350,54 338,58 356,110" fill="none" stroke="#e8ecff" stroke-width="1.4" stroke-linejoin="miter"/>
+    <polyline points="340,10 350,54 338,58 356,110" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+  </g>
+
+  <!-- =================== RAIN =================== -->
+  <g stroke="#8fa8d8" stroke-width="0.6" stroke-linecap="round" opacity="0.55">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 -40;0 40" dur="0.8s" repeatCount="indefinite"/>
+      <line x1="30" y1="0" x2="22" y2="24"/>
+      <line x1="78" y1="-10" x2="70" y2="14"/>
+      <line x1="130" y1="-20" x2="122" y2="4"/>
+      <line x1="178" y1="-5" x2="170" y2="19"/>
+      <line x1="222" y1="-30" x2="214" y2="-6"/>
+      <line x1="270" y1="-15" x2="262" y2="9"/>
+      <line x1="318" y1="-25" x2="310" y2="-1"/>
+      <line x1="358" y1="-10" x2="350" y2="14"/>
+      <line x1="402" y1="-30" x2="394" y2="-6"/>
+      <line x1="448" y1="-5" x2="440" y2="19"/>
+      <line x1="488" y1="-20" x2="480" y2="4"/>
+      <line x1="528" y1="-10" x2="520" y2="14"/>
+      <line x1="572" y1="-25" x2="564" y2="-1"/>
+      <line x1="612" y1="-5" x2="604" y2="19"/>
+      <line x1="652" y1="-30" x2="644" y2="-6"/>
+      <line x1="692" y1="-15" x2="684" y2="9"/>
+      <line x1="732" y1="-20" x2="724" y2="4"/>
+      <line x1="772" y1="-10" x2="764" y2="14"/>
+    </g>
+  </g>
+  <g stroke="#a8bce0" stroke-width="0.5" stroke-linecap="round" opacity="0.42">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 -60;0 60" dur="0.6s" repeatCount="indefinite"/>
+      <line x1="54" y1="20" x2="46" y2="42"/>
+      <line x1="102" y1="40" x2="94" y2="62"/>
+      <line x1="158" y1="30" x2="150" y2="52"/>
+      <line x1="204" y1="60" x2="196" y2="82"/>
+      <line x1="248" y1="20" x2="240" y2="42"/>
+      <line x1="292" y1="50" x2="284" y2="72"/>
+      <line x1="340" y1="80" x2="332" y2="102"/>
+      <line x1="382" y1="40" x2="374" y2="62"/>
+      <line x1="422" y1="70" x2="414" y2="92"/>
+      <line x1="468" y1="30" x2="460" y2="52"/>
+      <line x1="508" y1="60" x2="500" y2="82"/>
+      <line x1="548" y1="40" x2="540" y2="62"/>
+      <line x1="588" y1="80" x2="580" y2="102"/>
+      <line x1="632" y1="50" x2="624" y2="72"/>
+      <line x1="672" y1="30" x2="664" y2="52"/>
+      <line x1="712" y1="60" x2="704" y2="82"/>
+      <line x1="752" y1="40" x2="744" y2="62"/>
+    </g>
+  </g>
+  <g stroke="#c0d4f8" stroke-width="0.7" stroke-linecap="round" opacity="0.5">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 -50;0 50" dur="0.9s" repeatCount="indefinite"/>
+      <line x1="18" y1="80" x2="10" y2="106"/>
+      <line x1="88" y1="100" x2="80" y2="126"/>
+      <line x1="148" y1="90" x2="140" y2="116"/>
+      <line x1="214" y1="110" x2="206" y2="136"/>
+      <line x1="282" y1="100" x2="274" y2="126"/>
+      <line x1="352" y1="90" x2="344" y2="116"/>
+      <line x1="418" y1="110" x2="410" y2="136"/>
+      <line x1="488" y1="100" x2="480" y2="126"/>
+      <line x1="558" y1="90" x2="550" y2="116"/>
+      <line x1="628" y1="110" x2="620" y2="136"/>
+      <line x1="698" y1="100" x2="690" y2="126"/>
+      <line x1="768" y1="90" x2="760" y2="116"/>
+    </g>
+  </g>
+
+  <!-- =================== GROUND HORIZON =================== -->
+  <path d="M -10 180 Q 60 168 130 174 T 270 172 T 410 176 T 550 170 T 690 174 T 810 172 L 810 210 L -10 210 Z"
+        fill="url(#groundGrad)"/>
+  <path d="M -10 180 Q 60 168 130 174 T 270 172 T 410 176 T 550 170 T 690 174 T 810 172"
+        fill="none" stroke="#2a3450" stroke-width="0.9"/>
+
+  <!-- Puddle ripples -->
+  <g fill="none" stroke="#5878a8" stroke-width="0.4" opacity="0.6">
+    <ellipse cx="340" cy="188" rx="4" ry="1">
+      <animate attributeName="rx" values="2;8;2" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="420" cy="192" rx="4" ry="1">
+      <animate attributeName="rx" values="2;7;2" dur="1.9s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="1.9s" begin="0.6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="520" cy="188" rx="4" ry="1">
+      <animate attributeName="rx" values="2;9;2" dur="2.7s" begin="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.7s" begin="1.1s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- =================== DOGHOUSE =================== -->
+  <!-- Positioned so Snoopy is on top of the roof peak. Doghouse centered at x=130. -->
+  <g transform="translate(130 0)">
+    <!-- Walls -->
+    <rect x="-40" y="130" width="80" height="50" fill="url(#doghouseRed)" stroke="#601014" stroke-width="0.9"/>
+    <!-- Door arch -->
+    <path d="M -12 180 L -12 158 Q -12 146 0 146 Q 12 146 12 158 L 12 180 Z" fill="#1a0608"/>
+    <!-- Roof — triangular front -->
+    <polygon points="-48,130 0,96 48,130" fill="url(#roofRed)" stroke="#601014" stroke-width="0.9"/>
+    <!-- Roof trim lines -->
+    <line x1="-44" y1="122" x2="44" y2="122" stroke="#8c1818" stroke-width="0.5" opacity="0.7"/>
+    <line x1="-40" y1="112" x2="40" y2="112" stroke="#8c1818" stroke-width="0.4" opacity="0.5"/>
+    <!-- Base plank -->
+    <rect x="-42" y="178" width="84" height="3" fill="#4a1012"/>
+    <!-- Name plate above door -->
+    <rect x="-16" y="138" width="32" height="6" rx="0.6" fill="#faf6ea" stroke="#4a1012" stroke-width="0.4"/>
+    <text x="0" y="143" text-anchor="middle"
+          font-family="'Georgia', serif" font-size="4.6" font-weight="700" fill="#1a0608" letter-spacing="0.6">SNOOPY</text>
+  </g>
+
+  <!-- =================== SNOOPY ON TOP =================== -->
+  <!-- Snoopy lies flat along the roof ridge. Head on the right, resting on paws. Roof peak at (130,96). -->
+  <g transform="translate(130 94)">
+    <!-- subtle breathing bob -->
+    <animateTransform attributeName="transform" type="translate"
+                      values="130 94; 130 92.5; 130 94" dur="7s" repeatCount="indefinite"/>
+
+    <!-- Body: horizontal oval lying flat on roof -->
+    <ellipse cx="0" cy="-6" rx="30" ry="7" fill="#faf6ea" stroke="#1a1a1a" stroke-width="1.0"/>
+
+    <!-- Rear leg stub (left) -->
+    <ellipse cx="-24" cy="-3" rx="5" ry="3.4" fill="#faf6ea" stroke="#1a1a1a" stroke-width="0.9"/>
+    <!-- Tail curling up -->
+    <path d="M -29 -7 Q -36 -14 -32 -20" fill="none" stroke="#1a1a1a" stroke-width="1.3" stroke-linecap="round"/>
+
+    <!-- Head on right -->
+    <circle cx="24" cy="-9" r="8.5" fill="#faf6ea" stroke="#1a1a1a" stroke-width="1.0"/>
+    <!-- Snout -->
+    <ellipse cx="32" cy="-6" rx="5" ry="3.4" fill="#faf6ea" stroke="#1a1a1a" stroke-width="0.9"/>
+    <!-- Nose -->
+    <ellipse cx="35" cy="-6.8" rx="1.6" ry="1.3" fill="#1a1a1a"/>
+    <!-- Mouth -->
+    <path d="M 29 -4 Q 31.5 -2 34 -3.6" fill="none" stroke="#1a1a1a" stroke-width="0.8" stroke-linecap="round"/>
+    <!-- Closed happy eye -->
+    <path d="M 21 -11 Q 24 -9.6 27 -11" fill="none" stroke="#1a1a1a" stroke-width="1.0" stroke-linecap="round"/>
+    <!-- Long drooping ear -->
+    <path d="M 18 -12 Q 10 -8 8 2" fill="#1a1a1a"/>
+    <!-- Collar -->
+    <path d="M 15 -5 Q 20 -3 24 -3" fill="none" stroke="#c82424" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- Front paws resting under chin, by the typewriter -->
+    <ellipse cx="17" cy="0" rx="3.2" ry="2.0" fill="#faf6ea" stroke="#1a1a1a" stroke-width="0.7"/>
+    <ellipse cx="12" cy="0" rx="3.2" ry="2.0" fill="#faf6ea" stroke="#1a1a1a" stroke-width="0.7"/>
+  </g>
+
+  <!-- =================== TYPEWRITER & PAPER =================== -->
+  <!-- Typewriter sits in front of Snoopy's paws on the roof peak. Peak at (130,96). Place typewriter at ~(170, 96) — on the right-sloping roof side. -->
+
+  <!-- Typewriter base and carriage -->
+  <g>
+    <!-- Base platform -->
+    <rect x="160" y="88" width="36" height="9" rx="1.0" fill="#f8d848" stroke="#4a1a08" stroke-width="0.8"/>
+    <!-- Keybed detail -->
+    <rect x="162" y="90" width="32" height="3" fill="#4a1a08"/>
+    <!-- Carriage (behind paper) -->
+    <rect x="156" y="80" width="44" height="8" rx="0.6" fill="#1a1a1a" stroke="#000" stroke-width="0.4"/>
+    <!-- Return lever -->
+    <line x1="200" y1="80" x2="206" y2="74" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="206" cy="74" r="1.2" fill="#1a1a1a"/>
+    <!-- Keys -->
+    <g fill="#2a2a2a">
+      <rect x="165" y="91" width="2" height="2"/>
+      <rect x="170" y="91" width="2" height="2"/>
+      <rect x="175" y="91" width="2" height="2"/>
+      <rect x="180" y="91" width="2" height="2"/>
+      <rect x="185" y="91" width="2" height="2"/>
+      <rect x="190" y="91" width="2" height="2"/>
+    </g>
+    <!-- One key flashing — being pressed -->
+    <rect x="175" y="91" width="2" height="2" fill="#f5c518">
+      <animate attributeName="opacity" values="0;0;1;0;0" dur="0.35s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="185" y="91" width="2" height="2" fill="#f5c518">
+      <animate attributeName="opacity" values="0;1;0;0;0" dur="0.5s" begin="0.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- PAPER — rises from behind the carriage, overlaps carriage bottom -->
+  <g>
+    <!-- Flutter: tiny up-down and tilt -->
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 0 -1.2; 0 0" dur="7s" repeatCount="indefinite"/>
+    <!-- Paper sheet -->
+    <path d="M 160 82 L 258 82 L 258 46 Q 258 42 254 42 L 164 42 Q 160 42 160 46 Z"
+          fill="url(#paperGrad)" stroke="#8a7a4a" stroke-width="0.6"/>
+    <!-- Curled corner (top-right) -->
+    <path d="M 250 42 L 258 42 L 258 50 Z" fill="#c8bc98" stroke="#8a7a4a" stroke-width="0.4"/>
+    <!-- Faint rule lines -->
+    <g stroke="#b0a070" stroke-width="0.25" opacity="0.5">
+      <line x1="166" y1="50" x2="252" y2="50"/>
+      <line x1="166" y1="60" x2="252" y2="60"/>
+      <line x1="166" y1="70" x2="252" y2="70"/>
+    </g>
+    <!-- Dark edge where paper enters carriage -->
+    <line x1="160" y1="82" x2="258" y2="82" stroke="#2a1a08" stroke-width="0.5" opacity="0.5"/>
+  </g>
+
+  <!-- Typed text — clipped to progressively reveal -->
+  <g clip-path="url(#typedTextClip)">
+    <text x="170" y="58" font-family="'Courier New', Courier, monospace"
+          font-size="7.6" font-weight="700" fill="#2a1a08" xml:space="preserve">It was a dark</text>
+    <text x="170" y="68" font-family="'Courier New', Courier, monospace"
+          font-size="7.6" font-weight="700" fill="#2a1a08" xml:space="preserve">and stormy</text>
+    <text x="170" y="78" font-family="'Courier New', Courier, monospace"
+          font-size="7.6" font-weight="700" fill="#2a1a08" xml:space="preserve">night...</text>
+  </g>
+
+  <!-- Blinking cursor at end of third line -->
+  <rect x="206" y="72.6" width="4" height="1.4" fill="#2a1a08">
+    <animate attributeName="opacity" values="1;1;0;1;0;1;0;1" dur="1.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- =================== TEXT STACK (right half) =================== -->
+
+  <!-- Date headline -->
+  <text x="560" y="56" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f4ecd0" letter-spacing="2.0">
+    OCTOBER 2, 2026
+  </text>
+
+  <!-- Zigzag underline (Charlie Brown shirt) -->
+  <rect x="420" y="66" width="280" height="6" fill="url(#zigzag)" opacity="0.95">
+    <animate attributeName="x" values="420;404;420;436;420" dur="13s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Subhead PEANUTS · 76 YEARS -->
+  <text x="560" y="94" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="800" letter-spacing="3.2" xml:space="preserve">
+    <tspan fill="#e8302c">PEANUTS  </tspan><tspan fill="#f4ecd0">&#183;  76 YEARS</tspan>
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="560" y="114" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#c8a858" letter-spacing="0.8">
+    CHARLES M. SCHULZ &#183; OCTOBER 2, 1950
+  </text>
+
+  <!-- Cast roster -->
+  <text x="560" y="134" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.6" font-weight="700" fill="#6888b8" letter-spacing="2.4" opacity="0.95">
+    CHARLIE &#183; SNOOPY &#183; LUCY &#183; LINUS &#183; WOODSTOCK
+  </text>
+
+  <!-- Caption -->
+  <text x="560" y="190" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#a0b8d8" opacity="0.95">
+    &#8220;Good grief.&#8221;
+  </text>
+
+</svg>

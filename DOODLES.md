@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 3, 2026 — Peanuts — 76 Years (October 2, 1950)
+
+<img src="./doodle-archive/2026/10/2026-10-03-060529.svg" width="800" alt="Daily doodle for October 2, 2026 — the 76th anniversary of the Peanuts comic strip debut by Charles M. Schulz on October 2, 1950. On the left, Snoopy lies flat on top of his red doghouse on a dark and stormy night, head on paws, a small typewriter in front of him. A sheet of paper rises from the typewriter with the sentence 'It was a dark and stormy night...' typing itself out letter by letter, a blinking cursor at the end of the line. Diagonal rain streaks fall across the whole scene; a soft lightning flash flickers in the sky. On the right, a large cream OCTOBER 2, 2026 headline underlined by a yellow-and-black zigzag sweep, a red PEANUTS · 76 YEARS subhead, an italic amber CHARLES M. SCHULZ · OCTOBER 2, 1950 tertiary, a dim CHARLIE · SNOOPY · LUCY · LINUS · WOODSTOCK roster, and a Georgia-italic 'Good grief.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 2 October 1950, Charles M. Schulz's four-panel comic strip Peanuts appeared in seven newspapers for the first time. In the opening panel a boy on a sidewalk watches another boy walk by and remarks, "Well! Here comes ol' Charlie Brown. Good ol' Charlie Brown — yes sir! Good ol' Charlie Brown…" and then, as the walker passes out of frame, "How I hate him!" The strip would run every single day for just under fifty years, through 17,897 installments, and end only the morning after Schulz himself did, in February 2000. Snoopy, perched on the ridge of his red doghouse and typing an eternally-unfinished novel that begins "It was a dark and stormy night…", is one of the most reproduced images of the twentieth century — a small white beagle who imagined himself a World War I flying ace, a lawyer, and, above all, a writer.
+
+The scene is Snoopy's roof on a dark and stormy night. Rain streaks diagonally across the frame; a soft lightning flash flickers behind the horizon. On the left, the familiar red doghouse pitches up against the sky with Snoopy stretched flat along its ridge, his head propped on his paws. A sheet of paper rises from a tiny typewriter in front of him and types the opening sentence out letter by letter. On the right, a large cream OCTOBER 2, 2026 headline sits over a red PEANUTS · 76 YEARS subhead, an italic amber CHARLES M. SCHULZ · 1950 tertiary, a dim CHARLIE · SNOOPY · LUCY · LINUS · WOODSTOCK roster, and a Georgia-italic 'Good grief.' caption at the base.
+
+</details>
+
+---
+
 ## October 2, 2026 — NASA — 68 Years (October 1, 1958)
 
 <img src="./doodle-archive/2026/10/2026-10-02-060147.svg" width="800" alt="Daily doodle for October 1, 2026 — the 68th anniversary of NASA opening its doors in Washington on October 1, 1958. On the left, a cratered Moon hangs in a dark starfield with a small satellite tracing a slow orbit around it. On the right, a slim white rocket climbs from a launch pad on the Earth's curved horizon, with a flickering red-orange-yellow exhaust plume and a dashed ascent trail curling up behind it. Above the horizon, a large cream OCTOBER 1, 2026 headline underlined by a red-white-blue sweep, a red NASA · 68 YEARS subhead, an italic amber WASHINGTON · OCTOBER 1, 1958 tertiary, a dim MERCURY · GEMINI · APOLLO · SHUTTLE · ARTEMIS roster, and a Georgia-italic 'for the benefit of all' caption at the base.">
