@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: German Reunification Day — 36 Years (October 3, 1990) -->
+<!-- about:
+On 3 October 1990, at the stroke of midnight, the German Democratic Republic ceased to exist and its five reconstituted states joined the Federal Republic. The Berlin Wall had come down eleven months earlier on a confused November night when a Politburo spokesman misread his notes and said the border would open "immediately, without delay"; what followed was ten months of negotiation — the Two Plus Four Treaty with the four occupying powers, a currency union in July, an all-German election set for December — compressed into a single legal act that took effect that Wednesday morning. Church bells rang across the country at midnight, the black-red-gold flag of the Federal Republic was raised in front of the Reichstag, and a crowd of a million people filled the plaza in front of the Brandenburg Gate. Thirty-six years on, it is the national holiday — Tag der Deutschen Einheit — and the only one shared by all sixteen Länder.
+
+The scene is a widescreen view of the Brandenburg Gate at the moment of celebration. Six Doric columns rise from a stone plinth under the entablature and the quadriga — Victory in her four-horse chariot — silhouetted on the attic. Behind the gate a warm dawn glows along the horizon. Fireworks bloom in black, red, and gold overhead at prime intervals, trailing sparks. On the right, a large cream OCTOBER 3, 2026 headline sits over a black-red-gold flag bar, a gold DEUTSCHE EINHEIT · 36 YEARS subhead, an italic amber TAG DER DEUTSCHEN EINHEIT · OCTOBER 3, 1990 tertiary, a dim BERLIN · BONN · DRESDEN · LEIPZIG · HAMBURG roster, and a Georgia-italic 'Wir sind ein Volk.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 3, 2026 — the 36th anniversary of German Reunification on October 3, 1990. On the left, the Brandenburg Gate: six Doric columns on a stone plinth, an entablature and attic above, and the quadriga — Victoria in her four-horse chariot — silhouetted on top. A warm dawn glow sits behind the gate along the horizon. Fireworks bloom overhead in black, red, and gold with trailing sparks, bursting at prime intervals. On the right, a large cream OCTOBER 3, 2026 headline underlined by a horizontal black-red-gold German flag bar, a gold DEUTSCHE EINHEIT · 36 YEARS subhead, an italic amber TAG DER DEUTSCHEN EINHEIT · OCTOBER 3, 1990 tertiary, a dim BERLIN · BONN · DRESDEN · LEIPZIG · HAMBURG roster, and a Georgia-italic 'Wir sind ein Volk.' caption at the base.">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.55" stop-color="#1a1f2e"/>
+      <stop offset="0.9" stop-color="#0a0e18"/>
+    </linearGradient>
+
+    <radialGradient id="dawnGlow" cx="0.5" cy="1" r="0.9">
+      <stop offset="0" stop-color="#ffce00" stop-opacity="0.42"/>
+      <stop offset="0.35" stop-color="#dd0000" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="stoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcd4c0"/>
+      <stop offset="1" stop-color="#8a7f68"/>
+    </linearGradient>
+
+    <linearGradient id="columnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6a5f48"/>
+      <stop offset="0.5" stop-color="#d4c9ad"/>
+      <stop offset="1" stop-color="#6a5f48"/>
+    </linearGradient>
+
+    <linearGradient id="plinthGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a4e3a"/>
+      <stop offset="1" stop-color="#2a2418"/>
+    </linearGradient>
+
+    <!-- Star twinkle filter — not animated, just a static soft point -->
+    <radialGradient id="starPoint" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- =================== SKY =================== -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
+
+  <!-- Dawn glow behind the gate -->
+  <ellipse cx="190" cy="170" rx="240" ry="100" fill="url(#dawnGlow)"/>
+
+  <!-- Twinkling stars -->
+  <g>
+    <circle cx="80" cy="30" r="1.2" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="140" cy="18" r="0.9" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="24" r="1.1" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="40" r="0.8" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="60" r="0.7" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="12" r="1.0" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- =================== FIREWORKS (above gate) =================== -->
+
+  <!-- Firework 1 — GOLD burst, upper left -->
+  <g transform="translate(120 40)">
+    <g>
+      <animate attributeName="opacity" values="0;0;1;0.6;0.2;0;0;0" dur="7s" repeatCount="indefinite"/>
+      <!-- central flash -->
+      <circle cx="0" cy="0" r="2" fill="#ffce00"/>
+      <!-- radial rays -->
+      <g stroke="#ffce00" stroke-width="1.2" stroke-linecap="round">
+        <line x1="0" y1="0" x2="0" y2="-20"/>
+        <line x1="0" y1="0" x2="14" y2="-14"/>
+        <line x1="0" y1="0" x2="20" y2="0"/>
+        <line x1="0" y1="0" x2="14" y2="14"/>
+        <line x1="0" y1="0" x2="0" y2="20"/>
+        <line x1="0" y1="0" x2="-14" y2="14"/>
+        <line x1="0" y1="0" x2="-20" y2="0"/>
+        <line x1="0" y1="0" x2="-14" y2="-14"/>
+      </g>
+      <g stroke="#fff4b0" stroke-width="0.6" stroke-linecap="round" opacity="0.85">
+        <line x1="0" y1="0" x2="8" y2="-18"/>
+        <line x1="0" y1="0" x2="18" y2="-8"/>
+        <line x1="0" y1="0" x2="18" y2="8"/>
+        <line x1="0" y1="0" x2="8" y2="18"/>
+        <line x1="0" y1="0" x2="-8" y2="18"/>
+        <line x1="0" y1="0" x2="-18" y2="8"/>
+        <line x1="0" y1="0" x2="-18" y2="-8"/>
+        <line x1="0" y1="0" x2="-8" y2="-18"/>
+      </g>
+      <!-- expansion -->
+      <animateTransform attributeName="transform" type="scale"
+                        values="0.1;1.2;1.4" keyTimes="0;0.3;1" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+
+  <!-- Firework 2 — RED burst, upper center -->
+  <g transform="translate(220 30)">
+    <g>
+      <animate attributeName="opacity" values="0;0;0;0;1;0.6;0.2;0;0" dur="11s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="2" fill="#ff2020"/>
+      <g stroke="#dd0000" stroke-width="1.3" stroke-linecap="round">
+        <line x1="0" y1="0" x2="0" y2="-24"/>
+        <line x1="0" y1="0" x2="17" y2="-17"/>
+        <line x1="0" y1="0" x2="24" y2="0"/>
+        <line x1="0" y1="0" x2="17" y2="17"/>
+        <line x1="0" y1="0" x2="0" y2="24"/>
+        <line x1="0" y1="0" x2="-17" y2="17"/>
+        <line x1="0" y1="0" x2="-24" y2="0"/>
+        <line x1="0" y1="0" x2="-17" y2="-17"/>
+      </g>
+      <g stroke="#ff6060" stroke-width="0.7" stroke-linecap="round" opacity="0.8">
+        <line x1="0" y1="0" x2="10" y2="-22"/>
+        <line x1="0" y1="0" x2="22" y2="-10"/>
+        <line x1="0" y1="0" x2="22" y2="10"/>
+        <line x1="0" y1="0" x2="10" y2="22"/>
+        <line x1="0" y1="0" x2="-10" y2="22"/>
+        <line x1="0" y1="0" x2="-22" y2="10"/>
+        <line x1="0" y1="0" x2="-22" y2="-10"/>
+        <line x1="0" y1="0" x2="-10" y2="-22"/>
+      </g>
+      <animateTransform attributeName="transform" type="scale"
+                        values="0.1;1.2;1.5" keyTimes="0;0.3;1" dur="11s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+
+  <!-- Firework 3 — WHITE/BLACK (sparkle) burst, upper right -->
+  <g transform="translate(320 50)">
+    <g>
+      <animate attributeName="opacity" values="0;0;0;0;0;0;1;0.5;0.1;0;0" dur="13s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="1.8" fill="#f4ecd0"/>
+      <g stroke="#f4ecd0" stroke-width="1.1" stroke-linecap="round">
+        <line x1="0" y1="0" x2="0" y2="-18"/>
+        <line x1="0" y1="0" x2="13" y2="-13"/>
+        <line x1="0" y1="0" x2="18" y2="0"/>
+        <line x1="0" y1="0" x2="13" y2="13"/>
+        <line x1="0" y1="0" x2="0" y2="18"/>
+        <line x1="0" y1="0" x2="-13" y2="13"/>
+        <line x1="0" y1="0" x2="-18" y2="0"/>
+        <line x1="0" y1="0" x2="-13" y2="-13"/>
+      </g>
+      <animateTransform attributeName="transform" type="scale"
+                        values="0.1;1.3;1.5" keyTimes="0;0.3;1" dur="13s" repeatCount="indefinite" additive="sum"/>
+    </g>
+  </g>
+
+  <!-- Ascending spark trails (whistling rockets going up) -->
+  <g>
+    <circle cx="0" cy="0" r="1.4" fill="#ffce00">
+      <animate attributeName="cx" values="80;80" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;40;40" keyTimes="0;0.28;1" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.28;0.3;1" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="1.3" fill="#dd0000">
+      <animate attributeName="cx" values="260;260" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;30;30" keyTimes="0;0.32;1" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.32;0.34;1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="1.2" fill="#f4ecd0">
+      <animate attributeName="cx" values="340;340" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;50;50" keyTimes="0;0.42;1" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.42;0.44;1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- =================== BRANDENBURG GATE =================== -->
+  <!-- Gate footprint: x=50..330, column zone y=90..150, plinth y=150..162,
+       entablature y=78..90, attic y=62..78, quadriga y=42..62 -->
+  <g>
+    <!-- Plinth (stone base) -->
+    <rect x="46" y="150" width="288" height="12" fill="url(#plinthGrad)" stroke="#1a1408" stroke-width="0.6"/>
+    <rect x="42" y="162" width="296" height="4" fill="#1a1408"/>
+
+    <!-- Columns (6 Doric) — each with capital, shaft, base -->
+    <g>
+      <!-- column shafts via a repeated group -->
+      <!-- centers: 60, 114, 168, 222, 276, 330? Let's compute: span 50..330 = 280.
+           6 columns, width 18 each. Total column width = 108.
+           Remaining 172 split across 7 gaps: 24.6 each.
+           Column edges: 50+24.6, +18, +24.6, ... -->
+      <!-- Simplified: centers at 68, 118, 168, 218, 268, 318 (spacing 50, width 18) -->
+      <g fill="url(#columnGrad)" stroke="#2a2418" stroke-width="0.4">
+        <rect x="59" y="92" width="18" height="58"/>
+        <rect x="109" y="92" width="18" height="58"/>
+        <rect x="159" y="92" width="18" height="58"/>
+        <rect x="209" y="92" width="18" height="58"/>
+        <rect x="259" y="92" width="18" height="58"/>
+        <rect x="309" y="92" width="18" height="58"/>
+      </g>
+      <!-- Capitals (slightly wider blocks on top) -->
+      <g fill="#c8bda0" stroke="#2a2418" stroke-width="0.4">
+        <rect x="56" y="88" width="24" height="4"/>
+        <rect x="106" y="88" width="24" height="4"/>
+        <rect x="156" y="88" width="24" height="4"/>
+        <rect x="206" y="88" width="24" height="4"/>
+        <rect x="256" y="88" width="24" height="4"/>
+        <rect x="306" y="88" width="24" height="4"/>
+      </g>
+      <!-- Column bases -->
+      <g fill="#8a7f68" stroke="#2a2418" stroke-width="0.4">
+        <rect x="56" y="150" width="24" height="3"/>
+        <rect x="106" y="150" width="24" height="3"/>
+        <rect x="156" y="150" width="24" height="3"/>
+        <rect x="206" y="150" width="24" height="3"/>
+        <rect x="256" y="150" width="24" height="3"/>
+        <rect x="306" y="150" width="24" height="3"/>
+      </g>
+      <!-- Faint vertical fluting on each column -->
+      <g stroke="#5a4e3a" stroke-width="0.3" opacity="0.6">
+        <line x1="63" y1="92" x2="63" y2="150"/>
+        <line x1="68" y1="92" x2="68" y2="150"/>
+        <line x1="73" y1="92" x2="73" y2="150"/>
+        <line x1="113" y1="92" x2="113" y2="150"/>
+        <line x1="118" y1="92" x2="118" y2="150"/>
+        <line x1="123" y1="92" x2="123" y2="150"/>
+        <line x1="163" y1="92" x2="163" y2="150"/>
+        <line x1="168" y1="92" x2="168" y2="150"/>
+        <line x1="173" y1="92" x2="173" y2="150"/>
+        <line x1="213" y1="92" x2="213" y2="150"/>
+        <line x1="218" y1="92" x2="218" y2="150"/>
+        <line x1="223" y1="92" x2="223" y2="150"/>
+        <line x1="263" y1="92" x2="263" y2="150"/>
+        <line x1="268" y1="92" x2="268" y2="150"/>
+        <line x1="273" y1="92" x2="273" y2="150"/>
+        <line x1="313" y1="92" x2="313" y2="150"/>
+        <line x1="318" y1="92" x2="318" y2="150"/>
+        <line x1="323" y1="92" x2="323" y2="150"/>
+      </g>
+    </g>
+
+    <!-- Entablature (architrave + frieze) -->
+    <rect x="42" y="78" width="296" height="10" fill="url(#stoneGrad)" stroke="#2a2418" stroke-width="0.5"/>
+    <line x1="42" y1="83" x2="338" y2="83" stroke="#5a4e3a" stroke-width="0.4" opacity="0.7"/>
+    <!-- Frieze triglyphs (vertical marks) -->
+    <g stroke="#5a4e3a" stroke-width="0.5" opacity="0.75">
+      <line x1="68" y1="79" x2="68" y2="87"/>
+      <line x1="118" y1="79" x2="118" y2="87"/>
+      <line x1="168" y1="79" x2="168" y2="87"/>
+      <line x1="218" y1="79" x2="218" y2="87"/>
+      <line x1="268" y1="79" x2="268" y2="87"/>
+      <line x1="318" y1="79" x2="318" y2="87"/>
+    </g>
+
+    <!-- Attic (block above entablature) -->
+    <rect x="80" y="62" width="220" height="16" fill="url(#stoneGrad)" stroke="#2a2418" stroke-width="0.5"/>
+    <!-- Attic shadow line -->
+    <line x1="80" y1="76" x2="300" y2="76" stroke="#5a4e3a" stroke-width="0.4" opacity="0.6"/>
+  </g>
+
+  <!-- =================== QUADRIGA (atop the attic) =================== -->
+  <!-- Centered at x=190, sitting on y=62. Four horses with chariot and Victoria holding standard. -->
+  <g transform="translate(190 62)">
+    <!-- Chariot body (behind horses) -->
+    <path d="M -4 0 L 24 0 L 22 -8 L -2 -8 Z" fill="#2a2418" stroke="#1a1408" stroke-width="0.4"/>
+    <!-- Wheel -->
+    <circle cx="18" cy="0" r="4.5" fill="none" stroke="#2a2418" stroke-width="1.1"/>
+    <line x1="18" y1="-4.5" x2="18" y2="4.5" stroke="#2a2418" stroke-width="0.5"/>
+    <line x1="13.5" y1="0" x2="22.5" y2="0" stroke="#2a2418" stroke-width="0.5"/>
+
+    <!-- Four horses — stacked silhouettes side-by-side -->
+    <!-- Horse 1 (farthest, slightly up) -->
+    <g fill="#1a1408" stroke="#1a1408" stroke-width="0.3">
+      <path d="M -24 0 Q -24 -9 -20 -11 Q -14 -13 -16 -10 Q -14 -8 -14 -2 L -10 -2 L -10 0 Z"/>
+      <!-- legs -->
+      <line x1="-22" y1="-2" x2="-22" y2="2" stroke="#1a1408" stroke-width="1.1"/>
+      <line x1="-12" y1="-2" x2="-12" y2="2" stroke="#1a1408" stroke-width="1.1"/>
+    </g>
+    <!-- Horse 2 -->
+    <g fill="#1a1408" stroke="#1a1408" stroke-width="0.3">
+      <path d="M -20 1 Q -20 -8 -16 -11 Q -10 -13 -12 -9 Q -10 -8 -10 -1 L -6 -1 L -6 1 Z"/>
+      <line x1="-18" y1="-1" x2="-18" y2="3" stroke="#1a1408" stroke-width="1.1"/>
+      <line x1="-8" y1="-1" x2="-8" y2="3" stroke="#1a1408" stroke-width="1.1"/>
+    </g>
+    <!-- Horse 3 -->
+    <g fill="#1a1408" stroke="#1a1408" stroke-width="0.3">
+      <path d="M -16 2 Q -16 -7 -12 -10 Q -6 -12 -8 -8 Q -6 -7 -6 0 L -2 0 L -2 2 Z"/>
+      <line x1="-14" y1="0" x2="-14" y2="4" stroke="#1a1408" stroke-width="1.1"/>
+      <line x1="-4" y1="0" x2="-4" y2="4" stroke="#1a1408" stroke-width="1.1"/>
+    </g>
+    <!-- Horse 4 (nearest, slightly down) -->
+    <g fill="#1a1408" stroke="#1a1408" stroke-width="0.3">
+      <path d="M -12 3 Q -12 -6 -8 -9 Q -2 -11 -4 -7 Q -2 -6 -2 1 L 2 1 L 2 3 Z"/>
+      <line x1="-10" y1="1" x2="-10" y2="5" stroke="#1a1408" stroke-width="1.1"/>
+      <line x1="0" y1="1" x2="0" y2="5" stroke="#1a1408" stroke-width="1.1"/>
+    </g>
+
+    <!-- Victoria (the charioteer) with standard -->
+    <g fill="#1a1408">
+      <!-- body -->
+      <path d="M 8 -2 L 12 -2 L 13 -12 L 7 -12 Z"/>
+      <!-- head -->
+      <circle cx="10" cy="-14" r="2"/>
+      <!-- raised arm with staff -->
+      <line x1="12" y1="-10" x2="20" y2="-20" stroke="#1a1408" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+    <!-- Prussian eagle / standard on top of the staff -->
+    <g transform="translate(20 -22)">
+      <path d="M 0 0 L 3 -2 L 1 -4 L 4 -3 L 2 -6 L 0 -3 L -2 -6 L -4 -3 L -1 -4 L -3 -2 Z" fill="#ffce00" stroke="#1a1408" stroke-width="0.3"/>
+      <!-- subtle shimmer -->
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="7s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- =================== GROUND / CROWD HINT =================== -->
+  <!-- Dark ground line in front of gate with silhouetted crowd heads -->
+  <rect x="0" y="166" width="800" height="34" fill="#06090f"/>
+  <g fill="#1a1f2e">
+    <!-- Crowd silhouette heads along the base -->
+    <circle cx="30" cy="172" r="3"/>
+    <circle cx="52" cy="174" r="2.5"/>
+    <circle cx="72" cy="171" r="3.2"/>
+    <circle cx="95" cy="174" r="2.6"/>
+    <circle cx="118" cy="172" r="3"/>
+    <circle cx="140" cy="175" r="2.8"/>
+    <circle cx="165" cy="172" r="3.1"/>
+    <circle cx="188" cy="174" r="2.5"/>
+    <circle cx="212" cy="171" r="3"/>
+    <circle cx="236" cy="174" r="2.7"/>
+    <circle cx="260" cy="172" r="3.1"/>
+    <circle cx="285" cy="174" r="2.6"/>
+    <circle cx="308" cy="172" r="3"/>
+    <circle cx="332" cy="175" r="2.5"/>
+    <circle cx="358" cy="173" r="2.8"/>
+  </g>
+
+  <!-- A small waving flag in the crowd — black/red/gold -->
+  <g transform="translate(170 170)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="170 170; 170.6 169.6; 170 170" dur="7s" repeatCount="indefinite"/>
+    <line x1="0" y1="0" x2="0" y2="-10" stroke="#8a7f68" stroke-width="0.6"/>
+    <rect x="0" y="-10" width="7" height="2.2" fill="#000000"/>
+    <rect x="0" y="-7.8" width="7" height="2.2" fill="#dd0000"/>
+    <rect x="0" y="-5.6" width="7" height="2.2" fill="#ffce00"/>
+  </g>
+  <g transform="translate(240 168)">
+    <animateTransform attributeName="transform" type="translate"
+                      values="240 168; 240.6 167.6; 240 168" dur="11s" repeatCount="indefinite"/>
+    <line x1="0" y1="0" x2="0" y2="-12" stroke="#8a7f68" stroke-width="0.6"/>
+    <rect x="0" y="-12" width="8" height="2.5" fill="#000000"/>
+    <rect x="0" y="-9.5" width="8" height="2.5" fill="#dd0000"/>
+    <rect x="0" y="-7" width="8" height="2.5" fill="#ffce00"/>
+  </g>
+
+  <!-- =================== TEXT STACK (right half) =================== -->
+
+  <!-- Date headline -->
+  <text x="560" y="56" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f4ecd0" letter-spacing="2.0">
+    OCTOBER 3, 2026
+  </text>
+
+  <!-- German flag horizontal bar underneath -->
+  <g>
+    <rect x="420" y="66" width="280" height="4" fill="#000000"/>
+    <rect x="420" y="70" width="280" height="4" fill="#dd0000"/>
+    <rect x="420" y="74" width="280" height="4" fill="#ffce00"/>
+    <!-- subtle sweep: a bright highlight passing across the flag bar -->
+    <rect x="420" y="66" width="48" height="12" fill="#ffffff" opacity="0.22">
+      <animate attributeName="x" values="420;700;420" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.28;0.0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Subhead DEUTSCHE EINHEIT · 36 YEARS -->
+  <text x="560" y="98" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="800" letter-spacing="3.2" xml:space="preserve">
+    <tspan fill="#ffce00">DEUTSCHE EINHEIT  </tspan><tspan fill="#f4ecd0">&#183;  36 YEARS</tspan>
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="560" y="118" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#c8a858" letter-spacing="0.7">
+    TAG DER DEUTSCHEN EINHEIT &#183; OCTOBER 3, 1990
+  </text>
+
+  <!-- Cast roster -->
+  <text x="560" y="138" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.8" font-weight="700" fill="#6888b8" letter-spacing="2.4" opacity="0.95">
+    BERLIN &#183; BONN &#183; DRESDEN &#183; LEIPZIG &#183; HAMBURG
+  </text>
+
+  <!-- Caption -->
+  <text x="560" y="190" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#a0b8d8" opacity="0.95">
+    &#8220;Wir sind ein Volk.&#8221;
+  </text>
+
+</svg>

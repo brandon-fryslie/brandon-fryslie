@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 4, 2026 — German Reunification Day — 36 Years (October 3, 1990)
+
+<img src="./doodle-archive/2026/10/2026-10-04-074316.svg" width="800" alt="Daily doodle for October 3, 2026 — the 36th anniversary of German Reunification on October 3, 1990. On the left, the Brandenburg Gate: six Doric columns on a stone plinth, an entablature and attic above, and the quadriga — Victoria in her four-horse chariot — silhouetted on top. A warm dawn glow sits behind the gate along the horizon. Fireworks bloom overhead in black, red, and gold with trailing sparks, bursting at prime intervals. On the right, a large cream OCTOBER 3, 2026 headline underlined by a horizontal black-red-gold German flag bar, a gold DEUTSCHE EINHEIT · 36 YEARS subhead, an italic amber TAG DER DEUTSCHEN EINHEIT · OCTOBER 3, 1990 tertiary, a dim BERLIN · BONN · DRESDEN · LEIPZIG · HAMBURG roster, and a Georgia-italic 'Wir sind ein Volk.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 3 October 1990, at the stroke of midnight, the German Democratic Republic ceased to exist and its five reconstituted states joined the Federal Republic. The Berlin Wall had come down eleven months earlier on a confused November night when a Politburo spokesman misread his notes and said the border would open "immediately, without delay"; what followed was ten months of negotiation — the Two Plus Four Treaty with the four occupying powers, a currency union in July, an all-German election set for December — compressed into a single legal act that took effect that Wednesday morning. Church bells rang across the country at midnight, the black-red-gold flag of the Federal Republic was raised in front of the Reichstag, and a crowd of a million people filled the plaza in front of the Brandenburg Gate. Thirty-six years on, it is the national holiday — Tag der Deutschen Einheit — and the only one shared by all sixteen Länder.
+
+The scene is a widescreen view of the Brandenburg Gate at the moment of celebration. Six Doric columns rise from a stone plinth under the entablature and the quadriga — Victory in her four-horse chariot — silhouetted on the attic. Behind the gate a warm dawn glows along the horizon. Fireworks bloom in black, red, and gold overhead at prime intervals, trailing sparks. On the right, a large cream OCTOBER 3, 2026 headline sits over a black-red-gold flag bar, a gold DEUTSCHE EINHEIT · 36 YEARS subhead, an italic amber TAG DER DEUTSCHEN EINHEIT · OCTOBER 3, 1990 tertiary, a dim BERLIN · BONN · DRESDEN · LEIPZIG · HAMBURG roster, and a Georgia-italic 'Wir sind ein Volk.' caption at the base.
+
+</details>
+
+---
+
 ## October 3, 2026 — Peanuts — 76 Years (October 2, 1950)
 
 <img src="./doodle-archive/2026/10/2026-10-03-060529.svg" width="800" alt="Daily doodle for October 2, 2026 — the 76th anniversary of the Peanuts comic strip debut by Charles M. Schulz on October 2, 1950. On the left, Snoopy lies flat on top of his red doghouse on a dark and stormy night, head on paws, a small typewriter in front of him. A sheet of paper rises from the typewriter with the sentence 'It was a dark and stormy night...' typing itself out letter by letter, a blinking cursor at the end of the line. Diagonal rain streaks fall across the whole scene; a soft lightning flash flickers in the sky. On the right, a large cream OCTOBER 2, 2026 headline underlined by a yellow-and-black zigzag sweep, a red PEANUTS · 76 YEARS subhead, an italic amber CHARLES M. SCHULZ · OCTOBER 2, 1950 tertiary, a dim CHARLIE · SNOOPY · LUCY · LINUS · WOODSTOCK roster, and a Georgia-italic 'Good grief.' caption at the base.">
