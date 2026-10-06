@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 6, 2026 — Sputnik 1 — 69 Years (October 4, 1957)
+
+<img src="./doodle-archive/2026/10/2026-10-06-060227.svg" width="800" alt="Daily doodle for October 4, 2026 — the 69th anniversary of the launch of Sputnik 1 from Baikonur Cosmodrome on October 4, 1957. The curve of the Earth sits along the bottom left with a thin blue atmospheric halo. Sputnik, a silver sphere with four thin whip antennas, tracks slowly along an elliptical orbit across the frame, pulsing concentric radio rings outward at prime intervals. A dark starfield twinkles behind it. On the right, a large cream OCTOBER 4, 2026 headline over a red sweep bar, a red SPUTNIK 1 · 69 YEARS subhead, an italic amber BAIKONUR · OCTOBER 4, 1957 tertiary, a dim R-7 · 184 LBS · 96 MINUTES · 2 WATTS roster, and a Georgia-italic 'The world listens.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 4 October 1957, at 10:28 pm Moscow time, an R-7 rocket lifted off from a secret steppe cosmodrome in Kazakhstan carrying a polished aluminium sphere 58 centimetres across, four whip antennas trailing behind it, and two radio transmitters inside beeping at 20.005 and 40.002 MHz. Ninety-six minutes later Sputnik 1 completed its first orbit of the Earth. For the next twenty-one days, until its batteries went flat, its beep could be heard on any shortwave set in the world — a steady, unmistakable "beep … beep … beep" sliding in pitch as it crossed the sky. Nobody had put anything in orbit before. The United States, which had planned to be first by about six months, convened a crisis meeting the next morning; a year later it founded NASA. The space age is dated from the night that signal first came through.
+
+The scene is a widescreen view of low Earth orbit. The curve of the Earth sits along the bottom left with a thin blue atmospheric halo. Sputnik — a silver sphere with four thin whip antennas — tracks slowly along an elliptical orbit across the frame, pulsing concentric radio rings outward at prime intervals. A dark starfield twinkles behind it. On the right, a large cream OCTOBER 4, 2026 headline sits over a red sweep bar, a red SPUTNIK 1 · 69 YEARS subhead, an italic amber BAIKONUR · OCTOBER 4, 1957 tertiary, a dim R-7 · 184 LBS · 96 MINUTES · 2 WATTS roster, and a Georgia-italic 'The world listens.' caption at the base.
+
+</details>
+
+---
+
 ## October 4, 2026 — German Reunification Day — 36 Years (October 3, 1990)
 
 <img src="./doodle-archive/2026/10/2026-10-04-074316.svg" width="800" alt="Daily doodle for October 3, 2026 — the 36th anniversary of German Reunification on October 3, 1990. On the left, the Brandenburg Gate: six Doric columns on a stone plinth, an entablature and attic above, and the quadriga — Victoria in her four-horse chariot — silhouetted on top. A warm dawn glow sits behind the gate along the horizon. Fireworks bloom overhead in black, red, and gold with trailing sparks, bursting at prime intervals. On the right, a large cream OCTOBER 3, 2026 headline underlined by a horizontal black-red-gold German flag bar, a gold DEUTSCHE EINHEIT · 36 YEARS subhead, an italic amber TAG DER DEUTSCHEN EINHEIT · OCTOBER 3, 1990 tertiary, a dim BERLIN · BONN · DRESDEN · LEIPZIG · HAMBURG roster, and a Georgia-italic 'Wir sind ein Volk.' caption at the base.">

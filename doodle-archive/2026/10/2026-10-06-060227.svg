@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Sputnik 1 — 69 Years (October 4, 1957) -->
+<!-- about:
+On 4 October 1957, at 10:28 pm Moscow time, an R-7 rocket lifted off from a secret steppe cosmodrome in Kazakhstan carrying a polished aluminium sphere 58 centimetres across, four whip antennas trailing behind it, and two radio transmitters inside beeping at 20.005 and 40.002 MHz. Ninety-six minutes later Sputnik 1 completed its first orbit of the Earth. For the next twenty-one days, until its batteries went flat, its beep could be heard on any shortwave set in the world — a steady, unmistakable "beep … beep … beep" sliding in pitch as it crossed the sky. Nobody had put anything in orbit before. The United States, which had planned to be first by about six months, convened a crisis meeting the next morning; a year later it founded NASA. The space age is dated from the night that signal first came through.
+
+The scene is a widescreen view of low Earth orbit. The curve of the Earth sits along the bottom left with a thin blue atmospheric halo. Sputnik — a silver sphere with four thin whip antennas — tracks slowly along an elliptical orbit across the frame, pulsing concentric radio rings outward at prime intervals. A dark starfield twinkles behind it. On the right, a large cream OCTOBER 4, 2026 headline sits over a red sweep bar, a red SPUTNIK 1 · 69 YEARS subhead, an italic amber BAIKONUR · OCTOBER 4, 1957 tertiary, a dim R-7 · 184 LBS · 96 MINUTES · 2 WATTS roster, and a Georgia-italic 'The world listens.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 4, 2026 — the 69th anniversary of the launch of Sputnik 1 from Baikonur Cosmodrome on October 4, 1957. The curve of the Earth sits along the bottom left with a thin blue atmospheric halo. Sputnik, a silver sphere with four thin whip antennas, tracks slowly along an elliptical orbit across the frame, pulsing concentric radio rings outward at prime intervals. A dark starfield twinkles behind it. On the right, a large cream OCTOBER 4, 2026 headline over a red sweep bar, a red SPUTNIK 1 · 69 YEARS subhead, an italic amber BAIKONUR · OCTOBER 4, 1957 tertiary, a dim R-7 · 184 LBS · 96 MINUTES · 2 WATTS roster, and a Georgia-italic 'The world listens.' caption at the base.">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05070d"/>
+      <stop offset="0.6" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#060912"/>
+    </linearGradient>
+
+    <radialGradient id="earthGrad" cx="0.35" cy="0.3" r="1.0">
+      <stop offset="0" stop-color="#3a6ea8"/>
+      <stop offset="0.5" stop-color="#1e3a66"/>
+      <stop offset="0.95" stop-color="#0a1a2e"/>
+      <stop offset="1" stop-color="#060a14"/>
+    </radialGradient>
+
+    <radialGradient id="atmoHalo" cx="0.35" cy="0.3" r="1.05">
+      <stop offset="0.85" stop-color="#6888b8" stop-opacity="0"/>
+      <stop offset="0.93" stop-color="#8fb3dd" stop-opacity="0.55"/>
+      <stop offset="0.97" stop-color="#4a7aae" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="sputnikBody" cx="0.35" cy="0.35" r="0.65">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset="0.5" stop-color="#c4c4c8"/>
+      <stop offset="1" stop-color="#4a4a52"/>
+    </radialGradient>
+
+    <radialGradient id="starPoint" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Elliptical orbit path for Sputnik -->
+    <path id="orbitPath"
+          d="M 440 160 Q 220 -40 20 100"
+          fill="none"/>
+  </defs>
+
+  <!-- =================== SKY =================== -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
+
+  <!-- Twinkling stars -->
+  <g>
+    <circle cx="60" cy="22" r="1.0" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="130" cy="14" r="0.8" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="30" r="1.2" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="275" cy="18" r="0.9" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="7s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="38" r="0.7" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="11s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="48" r="0.6" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="13s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="22" r="0.8" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="11s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="90" r="0.7" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" begin="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="52" r="0.5" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="13s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="160" cy="70" r="0.5" fill="url(#starPoint)">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="11s" begin="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- =================== EARTH (bottom left) =================== -->
+  <!-- Earth centre well below the frame so only the limb peeks in. Radius 260, centred at (-20, 420). -->
+  <g>
+    <!-- Atmosphere halo -->
+    <circle cx="-20" cy="420" r="268" fill="url(#atmoHalo)"/>
+    <!-- Earth disk -->
+    <circle cx="-20" cy="420" r="260" fill="url(#earthGrad)"/>
+    <!-- Continents (abstract silhouettes) along the visible limb -->
+    <g fill="#0e2238" opacity="0.75">
+      <!-- small landmasses hinted along the top crest -->
+      <path d="M 30 170 Q 60 164 90 170 Q 110 174 130 171 Q 140 173 155 172 L 160 180 L 25 182 Z"/>
+      <path d="M 180 168 Q 210 162 240 168 Q 260 170 275 169 L 280 178 L 175 180 Z"/>
+      <path d="M 300 170 Q 320 164 340 170 L 350 180 L 290 182 Z"/>
+    </g>
+    <!-- Terminator / shading -->
+    <circle cx="-20" cy="420" r="260" fill="#000" opacity="0.0"/>
+  </g>
+
+  <!-- Faint orbit arc for reference -->
+  <path d="M 440 160 Q 220 -40 20 100"
+        fill="none" stroke="#4a7aae" stroke-width="0.6" stroke-dasharray="2 4" opacity="0.35"/>
+
+  <!-- =================== SPUTNIK + RADIO RINGS =================== -->
+  <!-- Sputnik rides the orbit path. Along it, concentric radio rings pulse out. -->
+  <g>
+    <!-- Rings emitted from Sputnik's current position. We mimic them by animating cx/cy
+         along the same keyTimes used for the sphere, radius growing, opacity fading. -->
+    <!-- Ring 1 -->
+    <circle cx="440" cy="160" r="4" fill="none" stroke="#ffce00" stroke-width="1.2" opacity="0.9">
+      <animate attributeName="cx" dur="29s" repeatCount="indefinite"
+               values="440;390;340;290;240;190;140;90;40;20;20"
+               keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.95;1"/>
+      <animate attributeName="cy" dur="29s" repeatCount="indefinite"
+               values="160;100;60;30;10;0;10;30;60;100;100"
+               keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.95;1"/>
+      <animate attributeName="r" dur="7s" repeatCount="indefinite"
+               values="4;28;56" keyTimes="0;0.5;1"/>
+      <animate attributeName="opacity" dur="7s" repeatCount="indefinite"
+               values="0.9;0.45;0" keyTimes="0;0.5;1"/>
+    </circle>
+    <!-- Ring 2 -->
+    <circle cx="440" cy="160" r="4" fill="none" stroke="#ffce00" stroke-width="1.1" opacity="0.85">
+      <animate attributeName="cx" dur="29s" repeatCount="indefinite"
+               values="440;390;340;290;240;190;140;90;40;20;20"
+               keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.95;1"/>
+      <animate attributeName="cy" dur="29s" repeatCount="indefinite"
+               values="160;100;60;30;10;0;10;30;60;100;100"
+               keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.95;1"/>
+      <animate attributeName="r" dur="7s" begin="2.3s" repeatCount="indefinite"
+               values="4;28;56" keyTimes="0;0.5;1"/>
+      <animate attributeName="opacity" dur="7s" begin="2.3s" repeatCount="indefinite"
+               values="0.85;0.4;0" keyTimes="0;0.5;1"/>
+    </circle>
+    <!-- Ring 3 -->
+    <circle cx="440" cy="160" r="4" fill="none" stroke="#ff9020" stroke-width="1.0" opacity="0.8">
+      <animate attributeName="cx" dur="29s" repeatCount="indefinite"
+               values="440;390;340;290;240;190;140;90;40;20;20"
+               keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.95;1"/>
+      <animate attributeName="cy" dur="29s" repeatCount="indefinite"
+               values="160;100;60;30;10;0;10;30;60;100;100"
+               keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.95;1"/>
+      <animate attributeName="r" dur="7s" begin="4.6s" repeatCount="indefinite"
+               values="4;28;56" keyTimes="0;0.5;1"/>
+      <animate attributeName="opacity" dur="7s" begin="4.6s" repeatCount="indefinite"
+               values="0.8;0.35;0" keyTimes="0;0.5;1"/>
+    </circle>
+
+    <!-- Sputnik itself: a group that moves along the same curve.
+         We give it a trail (faint tail) and the four whip antennas. -->
+    <g>
+      <animateMotion dur="29s" repeatCount="indefinite" rotate="0"
+                     path="M 440 160 Q 220 -40 20 100"/>
+      <!-- Faint motion trail (short tail streaming behind) -->
+      <g opacity="0.6">
+        <circle cx="6" cy="-1" r="1.2" fill="#c4c4c8" opacity="0.5"/>
+        <circle cx="12" cy="-2" r="0.9" fill="#9a9aa0" opacity="0.4"/>
+        <circle cx="18" cy="-3" r="0.7" fill="#7a7a80" opacity="0.3"/>
+      </g>
+      <!-- Four whip antennas, swept slightly back -->
+      <g stroke="#e8e8ec" stroke-width="0.9" stroke-linecap="round" fill="none">
+        <line x1="2" y1="-2" x2="22" y2="-14"/>
+        <line x1="2" y1="2" x2="22" y2="14"/>
+        <line x1="1" y1="-3" x2="18" y2="-18"/>
+        <line x1="1" y1="3" x2="18" y2="18"/>
+      </g>
+      <!-- Antenna tip highlights -->
+      <circle cx="22" cy="-14" r="0.8" fill="#fff"/>
+      <circle cx="22" cy="14" r="0.8" fill="#fff"/>
+      <circle cx="18" cy="-18" r="0.6" fill="#fff" opacity="0.8"/>
+      <circle cx="18" cy="18" r="0.6" fill="#fff" opacity="0.8"/>
+      <!-- Body: polished aluminium sphere -->
+      <circle cx="0" cy="0" r="6" fill="url(#sputnikBody)" stroke="#2a2a30" stroke-width="0.4"/>
+      <!-- Specular highlight -->
+      <ellipse cx="-2" cy="-2.2" rx="2.2" ry="1.2" fill="#ffffff" opacity="0.75"/>
+      <!-- Equatorial seam line -->
+      <path d="M -5.5 0.4 Q 0 2 5.5 0.4" fill="none" stroke="#3a3a42" stroke-width="0.4" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- =================== TEXT STACK (right half) =================== -->
+
+  <!-- Date headline -->
+  <text x="580" y="56" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f4ecd0" letter-spacing="2.0">
+    OCTOBER 4, 2026
+  </text>
+
+  <!-- Red sweep bar beneath (Soviet-flag red) with a travelling signal pulse -->
+  <g>
+    <rect x="440" y="66" width="280" height="4" fill="#cc1a1a"/>
+    <rect x="440" y="70" width="280" height="2" fill="#8a1010"/>
+    <!-- Travelling bright pulse along the bar — the beep passing through -->
+    <rect x="440" y="66" width="42" height="6" fill="#ffce00" opacity="0.0">
+      <animate attributeName="x" values="440;720;440" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.75;0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Subhead SPUTNIK 1 · 69 YEARS -->
+  <text x="580" y="98" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="800" letter-spacing="3.2" xml:space="preserve">
+    <tspan fill="#ff5050">SPUTNIK 1  </tspan><tspan fill="#f4ecd0">&#183;  69 YEARS</tspan>
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="580" y="118" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#c8a858" letter-spacing="0.7">
+    BAIKONUR &#183; OCTOBER 4, 1957
+  </text>
+
+  <!-- Cast roster -->
+  <text x="580" y="138" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.8" font-weight="700" fill="#6888b8" letter-spacing="2.4" opacity="0.95">
+    R-7 &#183; 184 LBS &#183; 96 MINUTES &#183; 2 WATTS
+  </text>
+
+  <!-- Small Morse-like dot row — the beep -->
+  <g fill="#ffce00">
+    <circle cx="520" cy="156" r="1.4">
+      <animate attributeName="opacity" values="0;1;0" dur="7s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="540" cy="156" r="1.4">
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="0.3s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="156" r="1.4">
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="0.6s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="580" cy="156" r="1.4">
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="0.9s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="156" r="1.4">
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="1.2s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="620" cy="156" r="1.4">
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="1.5s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="156" r="1.4">
+      <animate attributeName="opacity" values="0;1;0" dur="7s" begin="1.8s" keyTimes="0;0.5;1" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Caption -->
+  <text x="580" y="190" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#a0b8d8" opacity="0.95">
+    &#8220;The world listens.&#8221;
+  </text>
+
+</svg>
