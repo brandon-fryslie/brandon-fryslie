@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 7, 2026 — Mad Hatter Day — 40 Years (October 6, 1986)
+
+<img src="./doodle-archive/2026/10/2026-10-07-060158.svg" width="800" alt="Daily doodle for October 6, 2026 — the 40th year of Mad Hatter Day (observed since October 6, 1986). On a Wonderland checkered floor, the Mad Hatter's great tilted top hat sits on the left with the famous 'In this style 10/6' price card poking from its band. A steaming teacup rocks gently beside it; a pocket watch above spins its hands backwards past six o'clock. Playing cards tumble through the background; sparkles flicker across the scene. On the right, a large cream OCTOBER 6, 2026 headline sits over a red-and-white checkered sweep, a magenta MAD HATTER DAY · 40 YEARS subhead, an italic amber WONDERLAND · OCTOBER 6, 1986 tertiary, a dim TEA · WATCH · CARDS · CHESHIRE · RIDDLES roster, and a Georgia-italic 'We're all mad here.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 6 October 1986, a group of computer technicians in Boulder, Colorado declared the day a holiday of unreason and have observed it, mostly on the internet, every year since. The date comes from John Tenniel's 1865 illustrations for Alice's Adventures in Wonderland, where the Hatter's enormous top hat carries a small white price card tucked into its band reading "In this style 10/6" — ten shillings sixpence, the shopkeeper's price. Mad Hatter Day is traditionally observed by doing silly things in a serious manner, holding meetings in which no decisions are reached, and taking tea at odd hours. Forty years in, it remains an engineer's joke that outlived its original mailing list: a day set aside, as the Hatter himself might have insisted, for the kind of logic that reaches its conclusions by the shortest possible path through the longest possible route.
+
+The scene is a Wonderland tea-party on a checkered floor. On the left, the Mad Hatter's great tilted top hat sits in the frame with the famous "In this style 10/6" price card poking from its band. A steaming teacup rocks gently beside it; a pocket watch above spins its hands backwards past six o'clock, perpetually stuck at tea-time. Playing cards tumble slowly through the background; small golden sparkles flicker across the scene. On the right, a large cream OCTOBER 6, 2026 headline sits over a red-and-white checkered sweep, a magenta MAD HATTER DAY · 40 YEARS subhead, an italic amber WONDERLAND · OCTOBER 6, 1986 tertiary, a dim TEA · WATCH · CARDS · CHESHIRE · RIDDLES roster, and a Georgia-italic 'We're all mad here.' caption at the base.
+
+</details>
+
+---
+
 ## October 6, 2026 — Sputnik 1 — 69 Years (October 4, 1957)
 
 <img src="./doodle-archive/2026/10/2026-10-06-060227.svg" width="800" alt="Daily doodle for October 4, 2026 — the 69th anniversary of the launch of Sputnik 1 from Baikonur Cosmodrome on October 4, 1957. The curve of the Earth sits along the bottom left with a thin blue atmospheric halo. Sputnik, a silver sphere with four thin whip antennas, tracks slowly along an elliptical orbit across the frame, pulsing concentric radio rings outward at prime intervals. A dark starfield twinkles behind it. On the right, a large cream OCTOBER 4, 2026 headline over a red sweep bar, a red SPUTNIK 1 · 69 YEARS subhead, an italic amber BAIKONUR · OCTOBER 4, 1957 tertiary, a dim R-7 · 184 LBS · 96 MINUTES · 2 WATTS roster, and a Georgia-italic 'The world listens.' caption at the base.">
