@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Barcode Patent — 74 Years (October 7, 1952) -->
+<!-- about:
+On 7 October 1952, U.S. Patent 2,612,994 — "Classifying Apparatus and Method" — was granted to Norman Joseph Woodland and Bernard Silver. The idea had come to Woodland four years earlier on a Miami Beach: a graduate student with Morse-code dots and dashes on his mind, he dragged four fingers through the sand and realized that if dots could stretch into bars and dashes into wider bars, a machine could read a code off any object printed with them. His first drawing, and the one favored in the patent, was not the linear bars we know but a bullseye — concentric circles so a scanner would read correctly from any angle. The technology sat dormant for twenty years waiting for a cheap laser and a computer small enough to carry one; the first supermarket beep did not sound until a pack of Wrigley's gum crossed a Marsh grocery scanner in Troy, Ohio, in June 1974. Seventy-four years from the patent grant, nearly every object made is identified by a descendant of the sand drawing.
+
+The scene is split like a scanner window. On the left, Woodland's bullseye — concentric cream rings on a dark field — sits beside a tall linear barcode, with a red laser line sweeping across both at a prime cadence and tiny digits ticking under the bars. On the right, a cream OCTOBER 7, 2026 headline sits over a row of barcode stripes, a red BARCODE PATENT · 74 YEARS subhead, an italic amber WOODLAND & SILVER · OCTOBER 7, 1952 tertiary, a dim BULLSEYE · UPC · LASER · US 2,612,994 roster, and a Georgia-italic 'Beep.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 7, 2026 — the 74th anniversary of U.S. Patent 2,612,994, granted to Norman Joseph Woodland and Bernard Silver for the barcode on October 7, 1952. On the left, Woodland's original bullseye design — concentric cream rings on a dark field — sits beside a tall linear barcode, with a red laser line sweeping across both at a prime cadence and tiny digits ticking under the bars. On the right, a cream OCTOBER 7, 2026 headline sits over a row of barcode stripes, a red BARCODE PATENT · 74 YEARS subhead, an italic amber WOODLAND &amp; SILVER · OCTOBER 7, 1952 tertiary, a dim BULLSEYE · UPC · LASER · US 2,612,994 roster, and a Georgia-italic 'Beep.' caption at the base.">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101620"/>
+      <stop offset="0.5" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#07090d"/>
+    </linearGradient>
+
+    <linearGradient id="laserGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff2a2a" stop-opacity="0"/>
+      <stop offset="0.15" stop-color="#ff2a2a" stop-opacity="0.95"/>
+      <stop offset="0.85" stop-color="#ff2a2a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ff2a2a" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="scannerGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff2a2a" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#ff2a2a" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.5"/>
+    </filter>
+
+    <!-- Clip region covering the two barcodes so the laser only shows over them -->
+    <clipPath id="scanClip">
+      <rect x="20" y="30" width="360" height="140"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Faint scanline grid in the background (very subtle, data-aesthetic) -->
+  <g opacity="0.06" stroke="#8aa0c8" stroke-width="0.5">
+    <line x1="0" y1="40" x2="800" y2="40"/>
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="160" x2="800" y2="160"/>
+  </g>
+
+  <!-- =================== BULLSEYE BARCODE (Woodland's original) =================== -->
+  <!-- Centered around (110, 100). Alternating cream and dark concentric rings. -->
+  <g transform="translate(110, 100)">
+    <!-- Soft outer glow pulse -->
+    <circle cx="0" cy="0" r="78" fill="url(#scannerGlow)" opacity="0.0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Rings from outside in. r values picked so each annulus reads clearly. -->
+    <circle cx="0" cy="0" r="72" fill="#f4ecd0"/>
+    <circle cx="0" cy="0" r="63" fill="#0d1117"/>
+    <circle cx="0" cy="0" r="56" fill="#f4ecd0"/>
+    <circle cx="0" cy="0" r="46" fill="#0d1117"/>
+    <circle cx="0" cy="0" r="40" fill="#f4ecd0"/>
+    <circle cx="0" cy="0" r="31" fill="#0d1117"/>
+    <circle cx="0" cy="0" r="26" fill="#f4ecd0"/>
+    <circle cx="0" cy="0" r="17" fill="#0d1117"/>
+    <circle cx="0" cy="0" r="12" fill="#f4ecd0"/>
+    <circle cx="0" cy="0" r="4"  fill="#0d1117"/>
+    <!-- Rotating highlight arc around the bullseye (subtle shimmer) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0;360" dur="29s" repeatCount="indefinite"/>
+      <path d="M 0 -75 A 75 75 0 0 1 53 -53" fill="none" stroke="#ffe08a" stroke-width="1.2" opacity="0.55"/>
+    </g>
+    <!-- Patent-filing marker beneath the bullseye -->
+    <text x="0" y="98" text-anchor="middle"
+          font-family="'Courier New', monospace" font-size="7" font-weight="700"
+          fill="#8aa0c8" letter-spacing="1.2" opacity="0.85">US 2,612,994</text>
+  </g>
+
+  <!-- =================== LINEAR BARCODE (modern UPC-ish, right of bullseye) =================== -->
+  <!-- Spans roughly x=215..355, y=42..155. Variable-width cream stripes on dark. -->
+  <g>
+    <!-- Dark backing to anchor the bars visually -->
+    <rect x="212" y="40" width="150" height="118" fill="#07090d" stroke="#1a2030" stroke-width="0.8"/>
+    <!-- Bars. Widths chosen to feel like a real UPC rhythm. -->
+    <g fill="#f4ecd0">
+      <rect x="218" y="46" width="2" height="100"/>
+      <rect x="222" y="46" width="1" height="100"/>
+      <rect x="226" y="46" width="3" height="100"/>
+      <rect x="231" y="46" width="2" height="100"/>
+      <rect x="236" y="46" width="4" height="100"/>
+      <rect x="242" y="46" width="1" height="100"/>
+      <rect x="245" y="46" width="2" height="100"/>
+      <rect x="249" y="46" width="5" height="100"/>
+      <rect x="256" y="46" width="1" height="100"/>
+      <rect x="259" y="46" width="3" height="100"/>
+      <rect x="264" y="46" width="2" height="100"/>
+      <rect x="268" y="46" width="1" height="100"/>
+      <rect x="271" y="46" width="4" height="100"/>
+      <rect x="277" y="46" width="2" height="100"/>
+      <rect x="281" y="46" width="3" height="100"/>
+      <rect x="286" y="46" width="1" height="100"/>
+      <rect x="289" y="46" width="2" height="100"/>
+      <rect x="293" y="46" width="5" height="100"/>
+      <rect x="300" y="46" width="1" height="100"/>
+      <rect x="303" y="46" width="2" height="100"/>
+      <rect x="307" y="46" width="4" height="100"/>
+      <rect x="313" y="46" width="1" height="100"/>
+      <rect x="316" y="46" width="3" height="100"/>
+      <rect x="321" y="46" width="2" height="100"/>
+      <rect x="325" y="46" width="2" height="100"/>
+      <rect x="329" y="46" width="4" height="100"/>
+      <rect x="335" y="46" width="1" height="100"/>
+      <rect x="338" y="46" width="2" height="100"/>
+      <rect x="342" y="46" width="3" height="100"/>
+      <rect x="347" y="46" width="1" height="100"/>
+      <rect x="350" y="46" width="2" height="100"/>
+      <rect x="354" y="46" width="3" height="100"/>
+    </g>
+    <!-- Digit row under the bars -->
+    <text x="287" y="153"
+          text-anchor="middle"
+          font-family="'Courier New', monospace" font-size="8" font-weight="700"
+          fill="#c8d0e0" letter-spacing="2.0">
+      0&#160;&#160;10071952&#160;&#160;74
+    </text>
+  </g>
+
+  <!-- =================== RED LASER SCAN LINE =================== -->
+  <!-- Sweeps vertically across the full barcode zone. Clipped to the scan region. -->
+  <g clip-path="url(#scanClip)">
+    <!-- Outer soft glow band -->
+    <rect x="20" y="-6" width="360" height="12" fill="url(#laserGrad)" opacity="0.5" filter="url(#softBlur)">
+      <animate attributeName="y" values="30;160;30" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Core bright line -->
+    <rect x="20" y="-1" width="360" height="2" fill="#ff3a3a">
+      <animate attributeName="y" values="30;160;30" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Scan-point LED on the right of the barcode (little diode blinking) -->
+  <g transform="translate(370, 100)">
+    <circle cx="0" cy="0" r="4" fill="#2a0808" stroke="#4a1010" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="2.2" fill="#ff2a2a">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Separator -->
+  <line x1="400" y1="30" x2="400" y2="170" stroke="#1a2030" stroke-width="0.6" opacity="0.6"/>
+
+  <!-- =================== TEXT STACK (right half) =================== -->
+
+  <!-- Date headline -->
+  <text x="600" y="56" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f4ecd0" letter-spacing="2.0">
+    OCTOBER 7, 2026
+  </text>
+
+  <!-- Barcode stripes used as the "sweep" bar beneath the headline -->
+  <g>
+    <rect x="440" y="66" width="320" height="6" fill="#07090d"/>
+    <g fill="#f4ecd0">
+      <rect x="442" y="66" width="2" height="6"/>
+      <rect x="446" y="66" width="1" height="6"/>
+      <rect x="450" y="66" width="3" height="6"/>
+      <rect x="455" y="66" width="2" height="6"/>
+      <rect x="460" y="66" width="4" height="6"/>
+      <rect x="466" y="66" width="1" height="6"/>
+      <rect x="470" y="66" width="2" height="6"/>
+      <rect x="474" y="66" width="5" height="6"/>
+      <rect x="481" y="66" width="1" height="6"/>
+      <rect x="484" y="66" width="3" height="6"/>
+      <rect x="489" y="66" width="2" height="6"/>
+      <rect x="493" y="66" width="1" height="6"/>
+      <rect x="496" y="66" width="4" height="6"/>
+      <rect x="502" y="66" width="2" height="6"/>
+      <rect x="506" y="66" width="3" height="6"/>
+      <rect x="511" y="66" width="1" height="6"/>
+      <rect x="514" y="66" width="2" height="6"/>
+      <rect x="518" y="66" width="5" height="6"/>
+      <rect x="525" y="66" width="1" height="6"/>
+      <rect x="528" y="66" width="2" height="6"/>
+      <rect x="532" y="66" width="4" height="6"/>
+      <rect x="538" y="66" width="1" height="6"/>
+      <rect x="541" y="66" width="3" height="6"/>
+      <rect x="546" y="66" width="2" height="6"/>
+      <rect x="550" y="66" width="2" height="6"/>
+      <rect x="554" y="66" width="4" height="6"/>
+      <rect x="560" y="66" width="1" height="6"/>
+      <rect x="563" y="66" width="2" height="6"/>
+      <rect x="567" y="66" width="3" height="6"/>
+      <rect x="572" y="66" width="1" height="6"/>
+      <rect x="575" y="66" width="2" height="6"/>
+      <rect x="580" y="66" width="4" height="6"/>
+      <rect x="586" y="66" width="1" height="6"/>
+      <rect x="589" y="66" width="2" height="6"/>
+      <rect x="593" y="66" width="3" height="6"/>
+      <rect x="598" y="66" width="2" height="6"/>
+      <rect x="602" y="66" width="1" height="6"/>
+      <rect x="605" y="66" width="4" height="6"/>
+      <rect x="611" y="66" width="2" height="6"/>
+      <rect x="615" y="66" width="3" height="6"/>
+      <rect x="620" y="66" width="1" height="6"/>
+      <rect x="624" y="66" width="2" height="6"/>
+      <rect x="628" y="66" width="5" height="6"/>
+      <rect x="635" y="66" width="1" height="6"/>
+      <rect x="638" y="66" width="2" height="6"/>
+      <rect x="642" y="66" width="4" height="6"/>
+      <rect x="648" y="66" width="1" height="6"/>
+      <rect x="651" y="66" width="3" height="6"/>
+      <rect x="656" y="66" width="2" height="6"/>
+      <rect x="660" y="66" width="2" height="6"/>
+      <rect x="664" y="66" width="4" height="6"/>
+      <rect x="670" y="66" width="1" height="6"/>
+      <rect x="673" y="66" width="2" height="6"/>
+      <rect x="677" y="66" width="3" height="6"/>
+      <rect x="682" y="66" width="1" height="6"/>
+      <rect x="685" y="66" width="2" height="6"/>
+      <rect x="690" y="66" width="5" height="6"/>
+      <rect x="697" y="66" width="1" height="6"/>
+      <rect x="700" y="66" width="3" height="6"/>
+      <rect x="705" y="66" width="2" height="6"/>
+      <rect x="709" y="66" width="4" height="6"/>
+      <rect x="715" y="66" width="1" height="6"/>
+      <rect x="718" y="66" width="2" height="6"/>
+      <rect x="722" y="66" width="3" height="6"/>
+      <rect x="727" y="66" width="2" height="6"/>
+      <rect x="731" y="66" width="4" height="6"/>
+      <rect x="737" y="66" width="1" height="6"/>
+      <rect x="740" y="66" width="2" height="6"/>
+      <rect x="744" y="66" width="5" height="6"/>
+      <rect x="751" y="66" width="1" height="6"/>
+      <rect x="754" y="66" width="3" height="6"/>
+    </g>
+    <!-- Red laser pulse travelling along the stripe bar -->
+    <rect x="440" y="66" width="48" height="6" fill="#ff2a2a" opacity="0.0">
+      <animate attributeName="x" values="440;712;440" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Subhead -->
+  <text x="600" y="98" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="800" letter-spacing="3.2" xml:space="preserve">
+    <tspan fill="#ff5a5a">BARCODE PATENT  </tspan><tspan fill="#f4ecd0">&#183;  74 YEARS</tspan>
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="600" y="118" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#c8a858" letter-spacing="0.7">
+    WOODLAND &amp; SILVER &#183; OCTOBER 7, 1952
+  </text>
+
+  <!-- Cast roster -->
+  <text x="600" y="138" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.8" font-weight="700" fill="#8aa0c8" letter-spacing="2.4" opacity="0.95">
+    BULLSEYE &#183; UPC &#183; LASER &#183; US 2,612,994
+  </text>
+
+  <!-- Caption -->
+  <text x="600" y="190" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#c8d0e0" opacity="0.95">
+    &#8220;Beep.&#8221;
+  </text>
+
+</svg>

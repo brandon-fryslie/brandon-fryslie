@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 8, 2026 — Barcode Patent — 74 Years (October 7, 1952)
+
+<img src="./doodle-archive/2026/10/2026-10-08-060148.svg" width="800" alt="Daily doodle for October 7, 2026 — the 74th anniversary of U.S. Patent 2,612,994, granted to Norman Joseph Woodland and Bernard Silver for the barcode on October 7, 1952. On the left, Woodland's original bullseye design — concentric cream rings on a dark field — sits beside a tall linear barcode, with a red laser line sweeping across both at a prime cadence and tiny digits ticking under the bars. On the right, a cream OCTOBER 7, 2026 headline sits over a row of barcode stripes, a red BARCODE PATENT · 74 YEARS subhead, an italic amber WOODLAND & SILVER · OCTOBER 7, 1952 tertiary, a dim BULLSEYE · UPC · LASER · US 2,612,994 roster, and a Georgia-italic 'Beep.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 7 October 1952, U.S. Patent 2,612,994 — "Classifying Apparatus and Method" — was granted to Norman Joseph Woodland and Bernard Silver. The idea had come to Woodland four years earlier on a Miami Beach: a graduate student with Morse-code dots and dashes on his mind, he dragged four fingers through the sand and realized that if dots could stretch into bars and dashes into wider bars, a machine could read a code off any object printed with them. His first drawing, and the one favored in the patent, was not the linear bars we know but a bullseye — concentric circles so a scanner would read correctly from any angle. The technology sat dormant for twenty years waiting for a cheap laser and a computer small enough to carry one; the first supermarket beep did not sound until a pack of Wrigley's gum crossed a Marsh grocery scanner in Troy, Ohio, in June 1974. Seventy-four years from the patent grant, nearly every object made is identified by a descendant of the sand drawing.
+
+The scene is split like a scanner window. On the left, Woodland's bullseye — concentric cream rings on a dark field — sits beside a tall linear barcode, with a red laser line sweeping across both at a prime cadence and tiny digits ticking under the bars. On the right, a cream OCTOBER 7, 2026 headline sits over a row of barcode stripes, a red BARCODE PATENT · 74 YEARS subhead, an italic amber WOODLAND & SILVER · OCTOBER 7, 1952 tertiary, a dim BULLSEYE · UPC · LASER · US 2,612,994 roster, and a Georgia-italic 'Beep.' caption at the base.
+
+</details>
+
+---
+
 ## October 7, 2026 — Mad Hatter Day — 40 Years (October 6, 1986)
 
 <img src="./doodle-archive/2026/10/2026-10-07-060158.svg" width="800" alt="Daily doodle for October 6, 2026 — the 40th year of Mad Hatter Day (observed since October 6, 1986). On a Wonderland checkered floor, the Mad Hatter's great tilted top hat sits on the left with the famous 'In this style 10/6' price card poking from its band. A steaming teacup rocks gently beside it; a pocket watch above spins its hands backwards past six o'clock. Playing cards tumble through the background; sparkles flicker across the scene. On the right, a large cream OCTOBER 6, 2026 headline sits over a red-and-white checkered sweep, a magenta MAD HATTER DAY · 40 YEARS subhead, an italic amber WONDERLAND · OCTOBER 6, 1986 tertiary, a dim TEA · WATCH · CARDS · CHESHIRE · RIDDLES roster, and a Georgia-italic 'We're all mad here.' caption at the base.">
