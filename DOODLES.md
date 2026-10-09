@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 9, 2026 — World Octopus Day (October 8)
+
+<img src="./doodle-archive/2026/10/2026-10-09-060201.svg" width="800" alt="Daily doodle for October 8, 2026 — World Octopus Day. A coral-pink octopus with eight slow-moving arms hangs in the dark water on the left, its mantle pulsing through chromatophore colour shifts, bubbles rising past it, pale light rays filtering down from above. On the right, a cream OCTOBER 8, 2026 headline sits over a double wave bar, a coral WORLD OCTOPUS DAY subhead, an italic amber EIGHT ARMS · NINE BRAINS · THREE HEARTS tertiary, a dim CHROMATOPHORES · INK · JET · CAMOUFLAGE · PUZZLE roster, and a Georgia-italic 'Think like a cephalopod.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+World Octopus Day falls on 8 October — a holiday for celebrating what may be the strangest intelligence on the planet. An octopus has three hearts: two pump blood through its gills, one through the body. It has nine brains: one central and one small ganglion in each arm, each arm thinking partly on its own. Roughly five hundred million neurons are distributed across it, two-thirds of them out in the arms themselves. Its chromatophores can rewrite the colour and texture of its skin in under a second, despite the octopus being by every measurement we have colour-blind. We still do not know whether a creature so distributed experiences being one.
+
+The scene is a slow-moving undersea tableau. In the dark water on the left, a coral-pink octopus hangs with its eight arms curling outward, rippling at prime cadences, its mantle pulsing through chromatophore colour shifts; small bubbles rise past it; pale light rays filter down from above. On the right, a cream OCTOBER 8, 2026 headline sits over a double wave bar, a coral WORLD OCTOPUS DAY subhead, an italic amber EIGHT ARMS · NINE BRAINS · THREE HEARTS tertiary, a dim CHROMATOPHORES · INK · JET · CAMOUFLAGE · PUZZLE roster, and a Georgia-italic 'Think like a cephalopod.' caption at the base.
+
+</details>
+
+---
+
 ## October 8, 2026 — Barcode Patent — 74 Years (October 7, 1952)
 
 <img src="./doodle-archive/2026/10/2026-10-08-060148.svg" width="800" alt="Daily doodle for October 7, 2026 — the 74th anniversary of U.S. Patent 2,612,994, granted to Norman Joseph Woodland and Bernard Silver for the barcode on October 7, 1952. On the left, Woodland's original bullseye design — concentric cream rings on a dark field — sits beside a tall linear barcode, with a red laser line sweeping across both at a prime cadence and tiny digits ticking under the bars. On the right, a cream OCTOBER 7, 2026 headline sits over a row of barcode stripes, a red BARCODE PATENT · 74 YEARS subhead, an italic amber WOODLAND & SILVER · OCTOBER 7, 1952 tertiary, a dim BULLSEYE · UPC · LASER · US 2,612,994 roster, and a Georgia-italic 'Beep.' caption at the base.">
