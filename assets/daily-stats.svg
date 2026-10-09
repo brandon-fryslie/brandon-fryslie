@@ -1,69 +1,218 @@
-<svg width="800" height="268" viewBox="0 0 800 268" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats">
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats">
 <defs>
-<linearGradient id="num" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ae1cf"/><stop offset="1" stop-color="#58a6ff"/></linearGradient>
-<linearGradient id="spark" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2b6a63"/><stop offset="0.5" stop-color="#4ec9b0"/><stop offset="1" stop-color="#8ae1cf"/></linearGradient>
-<linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8ae1cf" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="1" stop-color="#8ae1cf" stop-opacity="0"/></linearGradient>
-<linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
-<linearGradient id="cBar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0"/><stop offset="1" stop-color="#58a6ff"/></linearGradient>
-<linearGradient id="pBar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
-<linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0"/><stop offset="0.5" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
-<clipPath id="sparkClip"><rect x="24" y="72" width="752" height="68"/></clipPath>
-<clipPath id="clipL"><rect x="24" y="200" width="240" height="18" rx="3"/></clipPath>
-<clipPath id="clipC"><rect x="280" y="200" width="240.00" height="18" rx="3"/></clipPath>
-<clipPath id="clipP"><rect x="536" y="200" width="102.42" height="18" rx="3"/></clipPath>
+<linearGradient id="numGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ec9b0"/><stop offset="1" stop-color="#58a6ff"/></linearGradient>
+<linearGradient id="numGrad2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
+<linearGradient id="edgeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0"/><stop offset="0.5" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
+<linearGradient id="streakGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0" stop-opacity="0.5"/><stop offset="0.5" stop-color="#58a6ff" stop-opacity="1"/><stop offset="1" stop-color="#d2a8ff" stop-opacity="0.5"/><animate attributeName="x1" values="-1;0;-1" dur="7s" repeatCount="indefinite"/><animate attributeName="x2" values="0;1;0" dur="7s" repeatCount="indefinite"/></linearGradient>
+<linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.3"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<linearGradient id="sweepTeal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0" stop-opacity="0"/><stop offset="0.5" stop-color="#4ec9b0" stop-opacity="0.7"/><stop offset="1" stop-color="#4ec9b0" stop-opacity="0"/></linearGradient>
+<linearGradient id="sweepBlue" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#58a6ff" stop-opacity="0"/><stop offset="0.5" stop-color="#58a6ff" stop-opacity="0.7"/><stop offset="1" stop-color="#58a6ff" stop-opacity="0"/></linearGradient>
+<pattern id="dotPatA" x="40" y="130" width="8.7917" height="5" patternUnits="userSpaceOnUse"><circle cx="0" cy="0" r="2" fill="#4ec9b0" opacity="0.9"/></pattern>
+<pattern id="dotPatF" x="550" y="304" width="15.0714" height="8.5714" patternUnits="userSpaceOnUse"><circle cx="0" cy="0" r="2.4" fill="#58a6ff" opacity="0.9"/></pattern>
+<pattern id="streakTicks" x="548" y="158" width="0.589" height="14" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="0.35" height="14" fill="#4ec9b0" opacity="0.95"/></pattern>
+<symbol id="dX" overflow="visible"><circle r="2.6" fill="#161c25"/><circle r="2" fill="#262d35"/></symbol>
+<symbol id="fX" overflow="visible"><circle r="2.9" fill="#161c25"/><circle r="2.2" fill="#262d35"/></symbol>
+<clipPath id="clipA"><rect x="38" y="126" width="215" height="78"/></clipPath>
+<clipPath id="clipB"><rect x="293" y="126" width="215" height="78"/></clipPath>
+<clipPath id="clipC"><rect x="548" y="126" width="215" height="78"/></clipPath>
+<clipPath id="clipD"><rect x="38" y="298" width="215" height="78"/></clipPath>
+<clipPath id="clipE"><rect x="293" y="298" width="215" height="78"/></clipPath>
+<clipPath id="clipF"><rect x="548" y="298" width="215" height="78"/></clipPath>
 </defs>
-<rect width="800" height="268" rx="12" fill="#0d1117"/>
-<rect x="0.5" y="0.5" width="799" height="267" rx="12" fill="#10151c" stroke="#21262d" stroke-width="1"/>
-<rect x="0" y="0" width="800" height="2" fill="url(#edge)" opacity="0.85"/>
-<circle cx="30" cy="30" r="3.6" fill="#4ec9b0"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/><animate attributeName="r" values="3.6;4.6;3.6" dur="2s" repeatCount="indefinite"/></circle>
-<text x="44" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
-<text x="776" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#6e7681" text-anchor="end">Updated October 08, 2026</text>
-<line x1="24" y1="48" x2="776" y2="48" stroke="#21262d" stroke-width="1"/>
-<text x="24" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" font-weight="500">Daily contributions &#183; past 12 months</text>
-<text x="776" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">peak day 766</text>
-<g clip-path="url(#sparkClip)">
-<line x1="24" y1="140" x2="776" y2="140" stroke="#1f2a35" stroke-width="0.75"/>
-<path d="M25.03 140.0L25.03 139.50M27.08 140.0L27.08 139.50M29.14 140.0L29.14 139.50M31.19 140.0L31.19 139.50M33.25 140.0L33.25 139.50M35.30 140.0L35.30 139.50M37.36 140.0L37.36 139.50M39.41 140.0L39.41 139.50M41.46 140.0L41.46 139.50M43.52 140.0L43.52 139.50M45.57 140.0L45.57 139.50M47.63 140.0L47.63 139.50M49.68 140.0L49.68 139.50M51.74 140.0L51.74 139.50M53.79 140.0L53.79 139.50M55.85 140.0L55.85 139.50M57.90 140.0L57.90 139.50M59.96 140.0L59.96 139.50M62.01 140.0L62.01 139.50M64.07 140.0L64.07 139.50M66.12 140.0L66.12 139.50M68.17 140.0L68.17 139.50M70.23 140.0L70.23 139.50M72.28 140.0L72.28 139.50M74.34 140.0L74.34 139.50M76.39 140.0L76.39 139.50M78.45 140.0L78.45 139.50M80.50 140.0L80.50 139.50M82.56 140.0L82.56 139.47M84.61 140.0L84.61 138.93M86.67 140.0L86.67 139.50M88.72 140.0L88.72 139.50M90.78 140.0L90.78 139.38M92.83 140.0L92.83 139.50M94.89 140.0L94.89 139.50M96.94 140.0L96.94 139.47M98.99 140.0L98.99 137.07M101.05 140.0L101.05 139.50M103.10 140.0L103.10 139.50M105.16 140.0L105.16 139.50M107.21 140.0L107.21 139.50M109.27 140.0L109.27 139.50M111.32 140.0L111.32 139.50M113.38 140.0L113.38 139.50M115.43 140.0L115.43 139.50M117.49 140.0L117.49 139.50M119.54 140.0L119.54 139.50M121.60 140.0L121.60 139.50M123.65 140.0L123.65 139.50M125.70 140.0L125.70 139.50M127.76 140.0L127.76 139.50M129.81 140.0L129.81 139.50M131.87 140.0L131.87 139.50M133.92 140.0L133.92 139.50M135.98 140.0L135.98 139.50M138.03 140.0L138.03 139.50M140.09 140.0L140.09 139.50M142.14 140.0L142.14 139.50M144.20 140.0L144.20 139.50M146.25 140.0L146.25 139.50M148.31 140.0L148.31 139.50M150.36 140.0L150.36 139.50M152.42 140.0L152.42 139.11M154.47 140.0L154.47 139.11M156.52 140.0L156.52 139.50M158.58 140.0L158.58 139.50M160.63 140.0L160.63 139.47M162.69 140.0L162.69 139.50M164.74 140.0L164.74 139.50M166.80 140.0L166.80 138.22M168.85 140.0L168.85 139.29M170.91 140.0L170.91 137.69M172.96 140.0L172.96 137.25M175.02 140.0L175.02 137.87M177.07 140.0L177.07 137.87M179.13 140.0L179.13 138.85M181.18 140.0L181.18 138.93M183.23 140.0L183.23 137.25M185.29 140.0L185.29 138.31M187.34 140.0L187.34 134.58M189.40 140.0L189.40 132.28M191.45 140.0L191.45 137.78M193.51 140.0L193.51 139.50M195.56 140.0L195.56 139.50M197.62 140.0L197.62 138.85M199.67 140.0L199.67 139.50M201.73 140.0L201.73 139.50M203.78 140.0L203.78 139.50M205.84 140.0L205.84 139.50M207.89 140.0L207.89 139.50M209.95 140.0L209.95 139.50M212.00 140.0L212.00 138.67M214.05 140.0L214.05 139.50M216.11 140.0L216.11 130.95M218.16 140.0L218.16 139.50M220.22 140.0L220.22 136.98M222.27 140.0L222.27 134.85M224.33 140.0L224.33 138.40M226.38 140.0L226.38 136.01M228.44 140.0L228.44 138.14M230.49 140.0L230.49 137.78M232.55 140.0L232.55 134.76M234.60 140.0L234.60 130.50M236.66 140.0L236.66 134.67M238.71 140.0L238.71 130.95M240.77 140.0L240.77 135.30M242.82 140.0L242.82 134.67M244.87 140.0L244.87 137.34M246.93 140.0L246.93 131.30M248.98 140.0L248.98 133.79M251.04 140.0L251.04 135.74M253.09 140.0L253.09 132.01M255.15 140.0L255.15 132.37M257.20 140.0L257.20 136.98M259.26 140.0L259.26 128.64M261.31 140.0L261.31 135.65M263.37 140.0L263.37 130.32M265.42 140.0L265.42 134.41M267.48 140.0L267.48 134.41M269.53 140.0L269.53 135.38M271.58 140.0L271.58 135.21M273.64 140.0L273.64 137.16M275.69 140.0L275.69 139.02M277.75 140.0L277.75 138.05M279.80 140.0L279.80 137.51M281.86 140.0L281.86 138.93M283.91 140.0L283.91 138.14M285.97 140.0L285.97 139.20M288.02 140.0L288.02 135.65M290.08 140.0L290.08 128.90M292.13 140.0L292.13 139.50M294.19 140.0L294.19 139.29M296.24 140.0L296.24 139.50M298.30 140.0L298.30 139.11M300.35 140.0L300.35 136.72M302.40 140.0L302.40 132.19M304.46 140.0L304.46 127.57M306.51 140.0L306.51 128.81M308.57 140.0L308.57 133.96M310.62 140.0L310.62 128.19M312.68 140.0L312.68 131.57M314.73 140.0L314.73 132.28M316.79 140.0L316.79 134.76M318.84 140.0L318.84 139.02M320.90 140.0L320.90 136.80M322.95 140.0L322.95 132.10M325.01 140.0L325.01 137.78M327.06 140.0L327.06 135.92M329.11 140.0L329.11 139.29M331.17 140.0L331.17 137.07M333.22 140.0L333.22 135.03M335.28 140.0L335.28 131.30M337.33 140.0L337.33 137.87M339.39 140.0L339.39 126.51M341.44 140.0L341.44 137.07M343.50 140.0L343.50 133.34M345.55 140.0L345.55 136.72M347.61 140.0L347.61 137.34M349.66 140.0L349.66 138.31M351.72 140.0L351.72 136.98M353.77 140.0L353.77 137.16M355.83 140.0L355.83 138.58M357.88 140.0L357.88 134.32M359.93 140.0L359.93 138.67M361.99 140.0L361.99 136.09M364.04 140.0L364.04 135.47M366.10 140.0L366.10 136.54M368.15 140.0L368.15 137.78M370.21 140.0L370.21 139.47M372.26 140.0L372.26 139.50M374.32 140.0L374.32 138.85M376.37 140.0L376.37 139.29M378.43 140.0L378.43 138.58M380.48 140.0L380.48 138.05M382.54 140.0L382.54 139.50M384.59 140.0L384.59 139.50M386.64 140.0L386.64 138.05M388.70 140.0L388.70 138.67M390.75 140.0L390.75 139.50M392.81 140.0L392.81 138.93M394.86 140.0L394.86 131.12M396.92 140.0L396.92 138.40M398.97 140.0L398.97 139.29M401.03 140.0L401.03 139.50M403.08 140.0L403.08 139.50M405.14 140.0L405.14 138.58M407.19 140.0L407.19 138.31M409.25 140.0L409.25 138.22M411.30 140.0L411.30 139.47M413.36 140.0L413.36 139.20M415.41 140.0L415.41 138.76M417.46 140.0L417.46 137.25M419.52 140.0L419.52 131.39M421.57 140.0L421.57 137.87M423.63 140.0L423.63 137.60M425.68 140.0L425.68 139.50M427.74 140.0L427.74 139.02M429.79 140.0L429.79 137.60M431.85 140.0L431.85 131.83M433.90 140.0L433.90 137.78M435.96 140.0L435.96 136.63M438.01 140.0L438.01 137.34M440.07 140.0L440.07 129.61M442.12 140.0L442.12 134.94M444.17 140.0L444.17 134.32M446.23 140.0L446.23 136.36M448.28 140.0L448.28 139.50M450.34 140.0L450.34 131.74M452.39 140.0L452.39 135.21M454.45 140.0L454.45 134.67M456.50 140.0L456.50 135.30M458.56 140.0L458.56 135.12M460.61 140.0L460.61 134.76M462.67 140.0L462.67 134.05M464.72 140.0L464.72 138.85M466.78 140.0L466.78 138.14M468.83 140.0L468.83 139.50M470.89 140.0L470.89 138.40M472.94 140.0L472.94 138.85M474.99 140.0L474.99 138.14M477.05 140.0L477.05 136.27M479.10 140.0L479.10 138.85M481.16 140.0L481.16 136.36M483.21 140.0L483.21 138.76M485.27 140.0L485.27 139.50M487.32 140.0L487.32 133.16M489.38 140.0L489.38 135.92M491.43 140.0L491.43 137.69M493.49 140.0L493.49 126.77M495.54 140.0L495.54 130.41M497.60 140.0L497.60 137.78M499.65 140.0L499.65 134.58M501.70 140.0L501.70 134.41M503.76 140.0L503.76 127.93M505.81 140.0L505.81 137.25M507.87 140.0L507.87 128.46M509.92 140.0L509.92 135.03M511.98 140.0L511.98 134.14M514.03 140.0L514.03 133.52M516.09 140.0L516.09 125.62M518.14 140.0L518.14 137.43M520.20 140.0L520.20 137.16M522.25 140.0L522.25 139.20M524.31 140.0L524.31 137.51M526.36 140.0L526.36 117.19M528.42 140.0L528.42 128.64M530.47 140.0L530.47 125.62M532.52 140.0L532.52 131.03M534.58 140.0L534.58 139.47M536.63 140.0L536.63 117.36M538.69 140.0L538.69 127.48M540.74 140.0L540.74 135.92M542.80 140.0L542.80 138.31M544.85 140.0L544.85 134.76M546.91 140.0L546.91 139.50M548.96 140.0L548.96 133.25M551.02 140.0L551.02 135.21M553.07 140.0L553.07 120.03M555.13 140.0L555.13 129.61M557.18 140.0L557.18 126.86M559.23 140.0L559.23 126.95M561.29 140.0L561.29 139.38M563.34 140.0L563.34 139.50M565.40 140.0L565.40 139.50M567.45 140.0L567.45 139.11M569.51 140.0L569.51 131.39M571.56 140.0L571.56 136.98M573.62 140.0L573.62 139.47M575.67 140.0L575.67 135.83M577.73 140.0L577.73 139.50M579.78 140.0L579.78 138.40M581.84 140.0L581.84 126.86M583.89 140.0L583.89 137.16M585.95 140.0L585.95 139.47M588.00 140.0L588.00 136.72M590.05 140.0L590.05 133.16M592.11 140.0L592.11 136.54M594.16 140.0L594.16 139.47M596.22 140.0L596.22 139.50M598.27 140.0L598.27 139.50M600.33 140.0L600.33 139.50M602.38 140.0L602.38 139.50M604.44 140.0L604.44 136.98M606.49 140.0L606.49 139.50M608.55 140.0L608.55 136.54M610.60 140.0L610.60 139.47M612.66 140.0L612.66 139.11M614.71 140.0L614.71 139.50M616.77 140.0L616.77 139.50M618.82 140.0L618.82 139.50M620.87 140.0L620.87 136.54M622.93 140.0L622.93 134.94M624.98 140.0L624.98 137.69M627.04 140.0L627.04 139.50M629.09 140.0L629.09 136.80M631.15 140.0L631.15 138.22M633.20 140.0L633.20 138.85M635.26 140.0L635.26 125.80M637.31 140.0L637.31 133.16M639.37 140.0L639.37 139.50M641.42 140.0L641.42 139.29M643.48 140.0L643.48 139.50M645.53 140.0L645.53 139.50M647.58 140.0L647.58 137.96M649.64 140.0L649.64 139.50M651.69 140.0L651.69 128.64M653.75 140.0L653.75 138.58M655.80 140.0L655.80 139.50M657.86 140.0L657.86 139.50M659.91 140.0L659.91 139.50M661.97 140.0L661.97 138.85M664.02 140.0L664.02 138.31M666.08 140.0L666.08 137.78M668.13 140.0L668.13 139.50M670.19 140.0L670.19 139.50M672.24 140.0L672.24 139.50M674.30 140.0L674.30 137.87M676.35 140.0L676.35 137.07M678.40 140.0L678.40 133.61M680.46 140.0L680.46 121.98M682.51 140.0L682.51 134.94M684.57 140.0L684.57 135.30M686.62 140.0L686.62 132.10M688.68 140.0L688.68 132.19M690.73 140.0L690.73 139.50M692.79 140.0L692.79 137.43M694.84 140.0L694.84 130.23M696.90 140.0L696.90 133.61M698.95 140.0L698.95 132.90M701.01 140.0L701.01 128.99M703.06 140.0L703.06 121.89M705.11 140.0L705.11 123.13M707.17 140.0L707.17 121.27M709.22 140.0L709.22 128.37M711.28 140.0L711.28 128.73M713.33 140.0L713.33 130.68M715.39 140.0L715.39 139.20M717.44 140.0L717.44 133.61M719.50 140.0L719.50 129.88M721.55 140.0L721.55 129.97M723.61 140.0L723.61 137.25M725.66 140.0L725.66 131.30M727.72 140.0L727.72 136.09M729.77 140.0L729.77 123.67M731.83 140.0L731.83 135.38M733.88 140.0L733.88 136.63M735.93 140.0L735.93 138.93M737.99 140.0L737.99 137.25M740.04 140.0L740.04 131.57M742.10 140.0L742.10 136.36M744.15 140.0L744.15 135.74M746.21 140.0L746.21 120.47M748.26 140.0L748.26 136.80M750.32 140.0L750.32 129.26M752.37 140.0L752.37 90.11M754.43 140.0L754.43 131.83M756.48 140.0L756.48 72.00M758.54 140.0L758.54 130.95M760.59 140.0L760.59 134.05M762.64 140.0L762.64 134.32M764.70 140.0L764.70 94.64M766.75 140.0L766.75 121.36M768.81 140.0L768.81 133.61M770.86 140.0L770.86 120.83M772.92 140.0L772.92 136.63M774.97 140.0L774.97 139.50" stroke="url(#spark)" stroke-width="1.48" stroke-linecap="round" fill="none"/>
-<rect x="-80" y="72" width="80" height="68" fill="url(#sweep)" opacity="0.5"><animate attributeName="x" from="-80" to="800" dur="23s" repeatCount="indefinite"/></rect>
+
+<rect width="800" height="400" rx="12" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="399" rx="12" fill="#10151c" stroke="#21262d" stroke-width="1"/>
+<rect x="0" y="0" width="800" height="2" fill="url(#edgeGrad)" opacity="0.85"/>
+
+<!-- Header -->
+<circle cx="30" cy="28" r="3.6" fill="#4ec9b0"><animate attributeName="opacity" values="1;0.3;1" dur="2.3s" repeatCount="indefinite"/><animate attributeName="r" values="3.6;4.8;3.6" dur="2.3s" repeatCount="indefinite"/></circle>
+<text x="44" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
+<text x="777" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#6e7681" text-anchor="end">Updated October 09, 2026</text>
+<line x1="24" y1="46" x2="777" y2="46" stroke="#21262d" stroke-width="1"/>
+<line x1="24" y1="222" x2="777" y2="222" stroke="#1b232d" stroke-width="1" opacity="0.6"/>
+<line x1="273" y1="56" x2="273" y2="388" stroke="#1b232d" stroke-width="1" opacity="0.5"/>
+<line x1="528" y1="56" x2="528" y2="388" stroke="#1b232d" stroke-width="1" opacity="0.5"/>
+
+<!-- ============ PANEL A: Days Active 301/365 ============ -->
+<text x="38" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Days Active</text>
+<text x="253" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+<text x="38" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad)">301</text>
+<text x="112" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6e7681">/ 365</text>
+<!-- Grid: all 25x15=375 lit as teal, then 74 dim overlays for unlit cells (reading order fill of 301) -->
+<rect x="38" y="128" width="215" height="76" fill="url(#dotPatA)"/>
+<!-- Row 12 (cy=190): cols 1-24 dim (24 overlays) -->
+<use href="#dX" x="48.79" y="190"/><use href="#dX" x="57.58" y="190"/><use href="#dX" x="66.38" y="190"/><use href="#dX" x="75.17" y="190"/><use href="#dX" x="83.96" y="190"/><use href="#dX" x="92.75" y="190"/><use href="#dX" x="101.54" y="190"/><use href="#dX" x="110.33" y="190"/><use href="#dX" x="119.13" y="190"/><use href="#dX" x="127.92" y="190"/><use href="#dX" x="136.71" y="190"/><use href="#dX" x="145.50" y="190"/><use href="#dX" x="154.29" y="190"/><use href="#dX" x="163.08" y="190"/><use href="#dX" x="171.88" y="190"/><use href="#dX" x="180.67" y="190"/><use href="#dX" x="189.46" y="190"/><use href="#dX" x="198.25" y="190"/><use href="#dX" x="207.04" y="190"/><use href="#dX" x="215.83" y="190"/><use href="#dX" x="224.63" y="190"/><use href="#dX" x="233.42" y="190"/><use href="#dX" x="242.21" y="190"/><use href="#dX" x="251.00" y="190"/>
+<!-- Row 13 (cy=195): cols 0-24 dim (25 overlays) -->
+<use href="#dX" x="40" y="195"/><use href="#dX" x="48.79" y="195"/><use href="#dX" x="57.58" y="195"/><use href="#dX" x="66.38" y="195"/><use href="#dX" x="75.17" y="195"/><use href="#dX" x="83.96" y="195"/><use href="#dX" x="92.75" y="195"/><use href="#dX" x="101.54" y="195"/><use href="#dX" x="110.33" y="195"/><use href="#dX" x="119.13" y="195"/><use href="#dX" x="127.92" y="195"/><use href="#dX" x="136.71" y="195"/><use href="#dX" x="145.50" y="195"/><use href="#dX" x="154.29" y="195"/><use href="#dX" x="163.08" y="195"/><use href="#dX" x="171.88" y="195"/><use href="#dX" x="180.67" y="195"/><use href="#dX" x="189.46" y="195"/><use href="#dX" x="198.25" y="195"/><use href="#dX" x="207.04" y="195"/><use href="#dX" x="215.83" y="195"/><use href="#dX" x="224.63" y="195"/><use href="#dX" x="233.42" y="195"/><use href="#dX" x="242.21" y="195"/><use href="#dX" x="251.00" y="195"/>
+<!-- Row 14 (cy=200): cols 0-24 dim (25 overlays; last 10 are "unused" slots, visually indistinguishable from unlit) -->
+<use href="#dX" x="40" y="200"/><use href="#dX" x="48.79" y="200"/><use href="#dX" x="57.58" y="200"/><use href="#dX" x="66.38" y="200"/><use href="#dX" x="75.17" y="200"/><use href="#dX" x="83.96" y="200"/><use href="#dX" x="92.75" y="200"/><use href="#dX" x="101.54" y="200"/><use href="#dX" x="110.33" y="200"/><use href="#dX" x="119.13" y="200"/><use href="#dX" x="127.92" y="200"/><use href="#dX" x="136.71" y="200"/><use href="#dX" x="145.50" y="200"/><use href="#dX" x="154.29" y="200"/><use href="#dX" x="163.08" y="200"/><use href="#dX" x="171.88" y="200"/><use href="#dX" x="180.67" y="200"/><use href="#dX" x="189.46" y="200"/><use href="#dX" x="198.25" y="200"/><use href="#dX" x="207.04" y="200"/><use href="#dX" x="215.83" y="200"/><use href="#dX" x="224.63" y="200"/><use href="#dX" x="233.42" y="200"/><use href="#dX" x="242.21" y="200"/><use href="#dX" x="251.00" y="200"/>
+<!-- Perpetual sweep -->
+<g clip-path="url(#clipA)"><rect x="-10" y="126" width="50" height="78" fill="url(#sweepTeal)" opacity="0.6"><animate attributeName="x" from="-10" to="305" dur="11s" repeatCount="indefinite"/></rect></g>
+<text x="38" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">one cell per day · 301 of 365 lit</text>
+
+<!-- ============ PANEL B: Commits 2148 (30-day bars) ============ -->
+<text x="293" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Commits</text>
+<text x="508" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">30 Days</text>
+<text x="293" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad)">2148</text>
+<!-- 30 bars; baseline y=196; max=766 maps to height=68 -->
+<g opacity="0.95"><animate attributeName="opacity" values="0.82;1;0.82" dur="5s" repeatCount="indefinite"/>
+<rect x="294.00" y="189.61" width="5.16" height="6.39" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="301.17" y="185.88" width="5.16" height="10.12" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="308.33" y="185.97" width="5.16" height="10.03" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="315.50" y="193.25" width="5.16" height="2.75" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="322.67" y="187.30" width="5.16" height="8.70" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="329.83" y="192.09" width="5.16" height="3.91" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="337.00" y="179.67" width="5.16" height="16.33" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="344.17" y="191.38" width="5.16" height="4.62" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="351.33" y="192.63" width="5.16" height="3.37" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="358.50" y="194.93" width="5.16" height="1.07" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="365.67" y="193.25" width="5.16" height="2.75" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="372.83" y="187.57" width="5.16" height="8.43" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="380.00" y="192.36" width="5.16" height="3.64" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="387.17" y="191.74" width="5.16" height="4.26" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="394.33" y="176.56" width="5.16" height="19.44" rx="1" fill="#4ec9b0" opacity="0.9"/>
+<rect x="401.50" y="192.80" width="5.16" height="3.20" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="408.67" y="185.26" width="5.16" height="10.74" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="415.83" y="146.10" width="5.16" height="49.90" rx="1" fill="#58a6ff" opacity="0.95"/>
+<rect x="423.00" y="187.83" width="5.16" height="8.17" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="430.17" y="128.00" width="5.16" height="68.00" rx="1" fill="#d2a8ff" opacity="1.0"/>
+<rect x="437.33" y="186.94" width="5.16" height="9.06" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="444.50" y="190.05" width="5.16" height="5.95" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="451.67" y="190.32" width="5.16" height="5.68" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="458.83" y="150.63" width="5.16" height="45.37" rx="1" fill="#58a6ff" opacity="0.95"/>
+<rect x="466.00" y="177.36" width="5.16" height="18.64" rx="1" fill="#4ec9b0" opacity="0.9"/>
+<rect x="473.17" y="189.61" width="5.16" height="6.39" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="480.33" y="176.83" width="5.16" height="19.17" rx="1" fill="#4ec9b0" opacity="0.9"/>
+<rect x="487.50" y="192.63" width="5.16" height="3.37" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="494.67" y="187.65" width="5.16" height="8.35" rx="1" fill="#4ec9b0" opacity="0.75"/>
+<rect x="501.83" y="195.20" width="5.16" height="0.8" rx="1" fill="#1f2730" opacity="0.6"/>
 </g>
-<line x1="24" y1="155" x2="776" y2="155" stroke="#21262d" stroke-width="1"/>
-<text x="24" y="187" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="url(#num)">8</text>
-<rect x="24" y="200" width="240" height="18" rx="3" fill="#161c25"/>
-<rect x="24.00" y="200" width="112.07" height="18" fill="#F05138" opacity="0.92"/>
-<rect x="136.07" y="200" width="67.20" height="18" fill="#3572A5" opacity="0.92"/>
-<rect x="203.27" y="200" width="44.15" height="18" fill="#3178c6" opacity="0.92"/>
-<rect x="247.41" y="200" width="11.59" height="18" fill="#00ADD8" opacity="0.92"/>
-<rect x="259.00" y="200" width="3.54" height="18" fill="#dea584" opacity="0.92"/>
-<rect x="262.54" y="200" width="0.98" height="18" fill="#CC342D" opacity="0.92"/>
-<rect x="263.51" y="200" width="0.24" height="18" fill="#f1e05a" opacity="0.92"/>
-<rect x="263.76" y="200" width="0.24" height="18" fill="#e34c26" opacity="0.92"/>
-<line x1="136.07" y1="200" x2="136.07" y2="218" stroke="#0d1117" stroke-width="0.6" opacity="0.55"/>
-<line x1="203.27" y1="200" x2="203.27" y2="218" stroke="#0d1117" stroke-width="0.6" opacity="0.55"/>
-<line x1="247.41" y1="200" x2="247.41" y2="218" stroke="#0d1117" stroke-width="0.6" opacity="0.55"/>
-<line x1="259.00" y1="200" x2="259.00" y2="218" stroke="#0d1117" stroke-width="0.6" opacity="0.55"/>
-<line x1="262.54" y1="200" x2="262.54" y2="218" stroke="#0d1117" stroke-width="0.6" opacity="0.55"/>
-<g clip-path="url(#clipL)"><rect x="-60" y="200" width="60" height="18" fill="url(#shimmer)"><animate attributeName="x" from="-60" to="264" dur="11s" repeatCount="indefinite"/></rect></g>
-<text x="24" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" font-weight="500">Languages</text>
-<text x="264" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">30 Days</text>
-<circle cx="27" cy="248" r="3" fill="#F05138"/>
-<text x="34" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e">Swift</text>
-<circle cx="76.0" cy="248" r="3" fill="#3572A5"/>
-<text x="83.0" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e">Python</text>
-<circle cx="130.8" cy="248" r="3" fill="#3178c6"/>
-<text x="137.8" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e">TypeScript</text>
-<text x="280" y="187" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="url(#num)">9073</text>
-<rect x="280" y="200" width="240" height="18" rx="3" fill="#161c25"/>
-<rect x="280" y="200" width="240.00" height="18" rx="3" fill="url(#cBar)" opacity="0.92"/>
-<g clip-path="url(#clipC)"><rect x="-60" y="200" width="60" height="18" fill="url(#shimmer)"><animate attributeName="x" from="-60" to="520.00" dur="13s" repeatCount="indefinite"/></rect></g>
-<text x="280" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" font-weight="500">Commits</text>
-<text x="520" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">All Time</text>
-<text x="280" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">bar scale: this vs. PRs merged</text>
-<text x="536" y="187" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="url(#num)">3872</text>
-<rect x="536" y="200" width="240" height="18" rx="3" fill="#161c25"/>
-<rect x="536" y="200" width="240" height="18" rx="3" fill="url(#cBar)" opacity="0.12"/>
-<rect x="536" y="200" width="102.42" height="18" rx="3" fill="url(#pBar)" opacity="0.92"/>
-<g clip-path="url(#clipP)"><rect x="-60" y="200" width="60" height="18" fill="url(#shimmer)"><animate attributeName="x" from="-60" to="638.42" dur="17s" repeatCount="indefinite"/></rect></g>
-<text x="536" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9" font-weight="500">PRs Merged</text>
-<text x="776" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">All Time</text>
-<text x="536" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">42.7% of commits</text>
+<line x1="293" y1="196" x2="508" y2="196" stroke="#21262d" stroke-width="0.8"/>
+<!-- Highlight ring that races across the peak day -->
+<circle cx="432.75" cy="128" r="4.5" fill="none" stroke="#d2a8ff" stroke-width="1.2" opacity="0.85"><animate attributeName="r" values="4.5;10;4.5" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.95;0;0.95" dur="2.9s" repeatCount="indefinite"/></circle>
+<g clip-path="url(#clipB)"><rect x="263" y="126" width="30" height="78" fill="url(#shimmer)" opacity="0.9"><animate attributeName="x" from="263" to="540" dur="13s" repeatCount="indefinite"/></rect></g>
+<text x="293" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">bars = last 30 days · peak 766</text>
+
+<!-- ============ PANEL C: Longest Streak 82 ============ -->
+<text x="548" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Longest Streak</text>
+<text x="763" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+<text x="548" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad)">82</text>
+<text x="598" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6e7681">consecutive days</text>
+<!-- 365-day reference bar centered vertically in viz area; streak occupies 82/365 of it -->
+<text x="548" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">365-day reference</text>
+<rect x="548" y="161" width="215" height="4" rx="2" fill="#161c25"/>
+<rect x="548" y="160" width="48.3" height="6" rx="2" fill="url(#streakGrad)"/>
+<!-- 82 tick marks drawn via pattern (one SVG element renders all 82) -->
+<rect x="548" y="158" width="48.3" height="14" fill="url(#streakTicks)"/>
+<!-- Running pulse racing along the streak -->
+<circle cx="548" cy="163" r="4" fill="#ffffff" opacity="0.95"><animate attributeName="cx" from="548" to="596.3" dur="4.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;1;0.9;0.2" dur="4.3s" repeatCount="indefinite"/></circle>
+<!-- Scale ticks on reference bar: 90, 180, 270 day marks -->
+<line x1="601" y1="167" x2="601" y2="172" stroke="#2d3139" stroke-width="0.8"/>
+<line x1="654" y1="167" x2="654" y2="172" stroke="#2d3139" stroke-width="0.8"/>
+<line x1="707" y1="167" x2="707" y2="172" stroke="#2d3139" stroke-width="0.8"/>
+<text x="548" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">82 of 365 days · 22.5% of the year</text>
+<text x="548" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">one tick per day · chain of unbroken activity</text>
+
+<!-- ============ PANEL D: Active Repos 73 (top-6 breakdown) ============ -->
+<text x="38" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Active Repos</text>
+<text x="253" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+<text x="38" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad2)">73</text>
+<!-- 6 repo rows: name (left, mono), bar (middle), count (right, mono) -->
+<text x="38" y="311.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">oscilla-animator-v2</text>
+<rect x="146" y="304.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
+<rect x="146" y="304.7" width="65" height="6.6" rx="1.5" fill="#58a6ff" opacity="0.92"/>
+<text x="253" y="311.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">1994</text>
+
+<text x="38" y="323.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">dotfiles</text>
+<rect x="146" y="316.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
+<rect x="146" y="316.7" width="30.60" height="6.6" rx="1.5" fill="#4ec9b0" opacity="0.92"/>
+<text x="253" y="323.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">939</text>
+
+<text x="38" y="335.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">cc-candybar</text>
+<rect x="146" y="328.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
+<rect x="146" y="328.7" width="24.74" height="6.6" rx="1.5" fill="#d2a8ff" opacity="0.92"/>
+<text x="253" y="335.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">759</text>
+
+<text x="38" y="347.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">vhid</text>
+<rect x="146" y="340.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
+<rect x="146" y="340.7" width="21.09" height="6.6" rx="1.5" fill="#79c0ff" opacity="0.92"/>
+<text x="253" y="347.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">647</text>
+
+<text x="38" y="359.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">links-issue-tracker</text>
+<rect x="146" y="352.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
+<rect x="146" y="352.7" width="18.42" height="6.6" rx="1.5" fill="#8ae1cf" opacity="0.92"/>
+<text x="253" y="359.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">565</text>
+
+<text x="38" y="371.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">cc-dump</text>
+<rect x="146" y="364.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
+<rect x="146" y="364.7" width="17.50" height="6.6" rx="1.5" fill="#d2a8ff" opacity="0.92"/>
+<text x="253" y="371.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">537</text>
+
+<g clip-path="url(#clipD)"><rect x="-2" y="298" width="40" height="78" fill="url(#shimmer)" opacity="0.75"><animate attributeName="x" from="-2" to="293" dur="17s" repeatCount="indefinite"/></rect></g>
+<text x="38" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">top 6 by commit volume · of 73 total</text>
+
+<!-- ============ PANEL E: Languages 11 (stacked ribbon + legend) ============ -->
+<text x="293" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Languages</text>
+<text x="508" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+<text x="293" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad2)">11</text>
+<!-- Stacked ribbon: total=10916 across 215px wide, at y=308, h=22 -->
+<rect x="293.00" y="308" width="115.86" height="22" fill="#3178c6" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="5s" repeatCount="indefinite"/></rect>
+<rect x="408.86" y="308" width="54.66" height="22" fill="#3572A5" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/></rect>
+<rect x="463.52" y="308" width="19.99" height="22" fill="#F05138" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="9s" repeatCount="indefinite"/></rect>
+<rect x="483.51" y="308" width="16.84" height="22" fill="#00ADD8" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" repeatCount="indefinite"/></rect>
+<rect x="500.35" y="308" width="3.64" height="22" fill="#89e051" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="5s" repeatCount="indefinite"/></rect>
+<rect x="503.99" y="308" width="2.56" height="22" fill="#dea584" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/></rect>
+<rect x="506.55" y="308" width="1.26" height="22" fill="#e34c26" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="9s" repeatCount="indefinite"/></rect>
+<rect x="507.81" y="308" width="0.22" height="22" fill="#563d7c" opacity="0.92"/>
+<line x1="408.86" y1="308" x2="408.86" y2="330" stroke="#0d1117" stroke-width="0.8"/>
+<line x1="463.52" y1="308" x2="463.52" y2="330" stroke="#0d1117" stroke-width="0.8"/>
+<line x1="483.51" y1="308" x2="483.51" y2="330" stroke="#0d1117" stroke-width="0.8"/>
+<line x1="500.35" y1="308" x2="500.35" y2="330" stroke="#0d1117" stroke-width="0.8"/>
+<line x1="503.99" y1="308" x2="503.99" y2="330" stroke="#0d1117" stroke-width="0.8"/>
+<line x1="506.55" y1="308" x2="506.55" y2="330" stroke="#0d1117" stroke-width="0.8"/>
+<line x1="507.81" y1="308" x2="507.81" y2="330" stroke="#0d1117" stroke-width="0.8"/>
+<rect x="293" y="308" width="215" height="22" rx="3" fill="none" stroke="#21262d" stroke-width="0.6"/>
+<g clip-path="url(#clipE)"><rect x="253" y="308" width="40" height="22" fill="url(#shimmer)" opacity="0.9"><animate attributeName="x" from="253" to="548" dur="19s" repeatCount="indefinite"/></rect></g>
+<!-- Legend row 1 (y=344): TypeScript, Python, Swift, Go -->
+<rect x="293" y="337" width="7" height="7" rx="1.5" fill="#3178c6"/>
+<text x="304" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">TypeScript <tspan fill="#6e7681">54%</tspan></text>
+<rect x="346.75" y="337" width="7" height="7" rx="1.5" fill="#3572A5"/>
+<text x="357.75" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Python <tspan fill="#6e7681">25%</tspan></text>
+<rect x="400.5" y="337" width="7" height="7" rx="1.5" fill="#F05138"/>
+<text x="411.5" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Swift <tspan fill="#6e7681">9%</tspan></text>
+<rect x="454.25" y="337" width="7" height="7" rx="1.5" fill="#00ADD8"/>
+<text x="465.25" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Go <tspan fill="#6e7681">8%</tspan></text>
+<!-- Legend row 2 (y=358): Shell, Rust, HTML, CSS -->
+<rect x="293" y="351" width="7" height="7" rx="1.5" fill="#89e051"/>
+<text x="304" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Shell <tspan fill="#6e7681">2%</tspan></text>
+<rect x="346.75" y="351" width="7" height="7" rx="1.5" fill="#dea584"/>
+<text x="357.75" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Rust <tspan fill="#6e7681">1%</tspan></text>
+<rect x="400.5" y="351" width="7" height="7" rx="1.5" fill="#e34c26"/>
+<text x="411.5" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">HTML <tspan fill="#6e7681">1%</tspan></text>
+<rect x="454.25" y="351" width="7" height="7" rx="1.5" fill="#563d7c"/>
+<text x="465.25" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">CSS <tspan fill="#6e7681">&lt;1%</tspan></text>
+
+<!-- ============ PANEL F: Issues Closed 113 (15x8 dot tally) ============ -->
+<text x="548" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">My Issues Closed</text>
+<text x="763" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">All Time</text>
+<text x="548" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad2)">113</text>
+<!-- All 15x8=120 cells rendered as lit via pattern+rect, then overlay 7 dim at (row 7, cols 8-14) -->
+<rect x="548" y="302" width="215" height="64" fill="url(#dotPatF)"/>
+<use href="#fX" x="670.57" y="364"/>
+<use href="#fX" x="685.64" y="364"/>
+<use href="#fX" x="700.71" y="364"/>
+<use href="#fX" x="715.79" y="364"/>
+<use href="#fX" x="730.86" y="364"/>
+<use href="#fX" x="745.93" y="364"/>
+<use href="#fX" x="761.00" y="364"/>
+<!-- Twinkling pulses: a few representative dots blink on top for life -->
+<circle cx="550" cy="304" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="0s" repeatCount="indefinite"/></circle>
+<circle cx="625.36" cy="312.57" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="1.1s" repeatCount="indefinite"/></circle>
+<circle cx="700.71" cy="330" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="2.2s" repeatCount="indefinite"/></circle>
+<circle cx="595.21" cy="347.43" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="3.3s" repeatCount="indefinite"/></circle>
+<circle cx="745.93" cy="321.14" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="0.7s" repeatCount="indefinite"/></circle>
+<circle cx="670.57" cy="355.43" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="2.8s" repeatCount="indefinite"/></circle>
+<g clip-path="url(#clipF)"><rect x="518" y="298" width="40" height="78" fill="url(#sweepBlue)" opacity="0.5"><animate attributeName="x" from="518" to="795" dur="23s" repeatCount="indefinite"/></rect></g>
+<text x="548" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">one dot per issue · 7 empty slots in the tally</text>
+
 </svg>

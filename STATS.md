@@ -10,6 +10,14 @@ Captions carry each day's headline numbers so the gallery can be skimmed without
 
 <!-- STATS-GALLERY:START -->
 
+## October 8, 2026 · 06:08 UTC
+
+<img src="./stats-archive/2026/10/2026-10-08-060859.svg" width="960" alt="Live GitHub stats card for October 8, 2026">
+
+Languages 8 (30 Days) · Commits 9073 (All Time) · PRs Merged 3872 (All Time)
+
+---
+
 ## October 7, 2026 · 06:06 UTC
 
 <img src="./stats-archive/2026/10/2026-10-07-060627.svg" width="960" alt="Live GitHub stats card for October 7, 2026">
