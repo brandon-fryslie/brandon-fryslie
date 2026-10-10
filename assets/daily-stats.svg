@@ -1,218 +1,518 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats">
+<svg width="800" height="460" viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for October 10, 2026">
 <defs>
-<linearGradient id="numGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ec9b0"/><stop offset="1" stop-color="#58a6ff"/></linearGradient>
-<linearGradient id="numGrad2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
-<linearGradient id="edgeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0"/><stop offset="0.5" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
-<linearGradient id="streakGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0" stop-opacity="0.5"/><stop offset="0.5" stop-color="#58a6ff" stop-opacity="1"/><stop offset="1" stop-color="#d2a8ff" stop-opacity="0.5"/><animate attributeName="x1" values="-1;0;-1" dur="7s" repeatCount="indefinite"/><animate attributeName="x2" values="0;1;0" dur="7s" repeatCount="indefinite"/></linearGradient>
-<linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.3"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
-<linearGradient id="sweepTeal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0" stop-opacity="0"/><stop offset="0.5" stop-color="#4ec9b0" stop-opacity="0.7"/><stop offset="1" stop-color="#4ec9b0" stop-opacity="0"/></linearGradient>
-<linearGradient id="sweepBlue" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#58a6ff" stop-opacity="0"/><stop offset="0.5" stop-color="#58a6ff" stop-opacity="0.7"/><stop offset="1" stop-color="#58a6ff" stop-opacity="0"/></linearGradient>
-<pattern id="dotPatA" x="40" y="130" width="8.7917" height="5" patternUnits="userSpaceOnUse"><circle cx="0" cy="0" r="2" fill="#4ec9b0" opacity="0.9"/></pattern>
-<pattern id="dotPatF" x="550" y="304" width="15.0714" height="8.5714" patternUnits="userSpaceOnUse"><circle cx="0" cy="0" r="2.4" fill="#58a6ff" opacity="0.9"/></pattern>
-<pattern id="streakTicks" x="548" y="158" width="0.589" height="14" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="0.35" height="14" fill="#4ec9b0" opacity="0.95"/></pattern>
-<symbol id="dX" overflow="visible"><circle r="2.6" fill="#161c25"/><circle r="2" fill="#262d35"/></symbol>
-<symbol id="fX" overflow="visible"><circle r="2.9" fill="#161c25"/><circle r="2.2" fill="#262d35"/></symbol>
-<clipPath id="clipA"><rect x="38" y="126" width="215" height="78"/></clipPath>
-<clipPath id="clipB"><rect x="293" y="126" width="215" height="78"/></clipPath>
-<clipPath id="clipC"><rect x="548" y="126" width="215" height="78"/></clipPath>
-<clipPath id="clipD"><rect x="38" y="298" width="215" height="78"/></clipPath>
-<clipPath id="clipE"><rect x="293" y="298" width="215" height="78"/></clipPath>
-<clipPath id="clipF"><rect x="548" y="298" width="215" height="78"/></clipPath>
+<linearGradient id="gradHero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ec9b0"/><stop offset="1" stop-color="#58a6ff"/></linearGradient>
+<linearGradient id="gradHero2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
+<linearGradient id="gradEdge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ec9b0"/><stop offset="0.5" stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
+<linearGradient id="gradCalArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#58a6ff" stop-opacity="0.35"/><stop offset="1" stop-color="#58a6ff" stop-opacity="0"/></linearGradient>
+<linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<clipPath id="clipCal"><rect x="25" y="78" width="750" height="120"/></clipPath>
+<clipPath id="clipRepos"><rect x="25" y="395" width="370" height="55"/></clipPath>
+<clipPath id="clipLangs"><rect x="405" y="395" width="370" height="55"/></clipPath>
 </defs>
-
-<rect width="800" height="400" rx="12" fill="#0d1117"/>
-<rect x="0.5" y="0.5" width="799" height="399" rx="12" fill="#10151c" stroke="#21262d" stroke-width="1"/>
-<rect x="0" y="0" width="800" height="2" fill="url(#edgeGrad)" opacity="0.85"/>
-
-<!-- Header -->
-<circle cx="30" cy="28" r="3.6" fill="#4ec9b0"><animate attributeName="opacity" values="1;0.3;1" dur="2.3s" repeatCount="indefinite"/><animate attributeName="r" values="3.6;4.8;3.6" dur="2.3s" repeatCount="indefinite"/></circle>
-<text x="44" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
-<text x="777" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#6e7681" text-anchor="end">Updated October 09, 2026</text>
-<line x1="24" y1="46" x2="777" y2="46" stroke="#21262d" stroke-width="1"/>
-<line x1="24" y1="222" x2="777" y2="222" stroke="#1b232d" stroke-width="1" opacity="0.6"/>
-<line x1="273" y1="56" x2="273" y2="388" stroke="#1b232d" stroke-width="1" opacity="0.5"/>
-<line x1="528" y1="56" x2="528" y2="388" stroke="#1b232d" stroke-width="1" opacity="0.5"/>
-
-<!-- ============ PANEL A: Days Active 301/365 ============ -->
-<text x="38" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Days Active</text>
-<text x="253" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
-<text x="38" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad)">301</text>
-<text x="112" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6e7681">/ 365</text>
-<!-- Grid: all 25x15=375 lit as teal, then 74 dim overlays for unlit cells (reading order fill of 301) -->
-<rect x="38" y="128" width="215" height="76" fill="url(#dotPatA)"/>
-<!-- Row 12 (cy=190): cols 1-24 dim (24 overlays) -->
-<use href="#dX" x="48.79" y="190"/><use href="#dX" x="57.58" y="190"/><use href="#dX" x="66.38" y="190"/><use href="#dX" x="75.17" y="190"/><use href="#dX" x="83.96" y="190"/><use href="#dX" x="92.75" y="190"/><use href="#dX" x="101.54" y="190"/><use href="#dX" x="110.33" y="190"/><use href="#dX" x="119.13" y="190"/><use href="#dX" x="127.92" y="190"/><use href="#dX" x="136.71" y="190"/><use href="#dX" x="145.50" y="190"/><use href="#dX" x="154.29" y="190"/><use href="#dX" x="163.08" y="190"/><use href="#dX" x="171.88" y="190"/><use href="#dX" x="180.67" y="190"/><use href="#dX" x="189.46" y="190"/><use href="#dX" x="198.25" y="190"/><use href="#dX" x="207.04" y="190"/><use href="#dX" x="215.83" y="190"/><use href="#dX" x="224.63" y="190"/><use href="#dX" x="233.42" y="190"/><use href="#dX" x="242.21" y="190"/><use href="#dX" x="251.00" y="190"/>
-<!-- Row 13 (cy=195): cols 0-24 dim (25 overlays) -->
-<use href="#dX" x="40" y="195"/><use href="#dX" x="48.79" y="195"/><use href="#dX" x="57.58" y="195"/><use href="#dX" x="66.38" y="195"/><use href="#dX" x="75.17" y="195"/><use href="#dX" x="83.96" y="195"/><use href="#dX" x="92.75" y="195"/><use href="#dX" x="101.54" y="195"/><use href="#dX" x="110.33" y="195"/><use href="#dX" x="119.13" y="195"/><use href="#dX" x="127.92" y="195"/><use href="#dX" x="136.71" y="195"/><use href="#dX" x="145.50" y="195"/><use href="#dX" x="154.29" y="195"/><use href="#dX" x="163.08" y="195"/><use href="#dX" x="171.88" y="195"/><use href="#dX" x="180.67" y="195"/><use href="#dX" x="189.46" y="195"/><use href="#dX" x="198.25" y="195"/><use href="#dX" x="207.04" y="195"/><use href="#dX" x="215.83" y="195"/><use href="#dX" x="224.63" y="195"/><use href="#dX" x="233.42" y="195"/><use href="#dX" x="242.21" y="195"/><use href="#dX" x="251.00" y="195"/>
-<!-- Row 14 (cy=200): cols 0-24 dim (25 overlays; last 10 are "unused" slots, visually indistinguishable from unlit) -->
-<use href="#dX" x="40" y="200"/><use href="#dX" x="48.79" y="200"/><use href="#dX" x="57.58" y="200"/><use href="#dX" x="66.38" y="200"/><use href="#dX" x="75.17" y="200"/><use href="#dX" x="83.96" y="200"/><use href="#dX" x="92.75" y="200"/><use href="#dX" x="101.54" y="200"/><use href="#dX" x="110.33" y="200"/><use href="#dX" x="119.13" y="200"/><use href="#dX" x="127.92" y="200"/><use href="#dX" x="136.71" y="200"/><use href="#dX" x="145.50" y="200"/><use href="#dX" x="154.29" y="200"/><use href="#dX" x="163.08" y="200"/><use href="#dX" x="171.88" y="200"/><use href="#dX" x="180.67" y="200"/><use href="#dX" x="189.46" y="200"/><use href="#dX" x="198.25" y="200"/><use href="#dX" x="207.04" y="200"/><use href="#dX" x="215.83" y="200"/><use href="#dX" x="224.63" y="200"/><use href="#dX" x="233.42" y="200"/><use href="#dX" x="242.21" y="200"/><use href="#dX" x="251.00" y="200"/>
-<!-- Perpetual sweep -->
-<g clip-path="url(#clipA)"><rect x="-10" y="126" width="50" height="78" fill="url(#sweepTeal)" opacity="0.6"><animate attributeName="x" from="-10" to="305" dur="11s" repeatCount="indefinite"/></rect></g>
-<text x="38" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">one cell per day · 301 of 365 lit</text>
-
-<!-- ============ PANEL B: Commits 2148 (30-day bars) ============ -->
-<text x="293" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Commits</text>
-<text x="508" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">30 Days</text>
-<text x="293" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad)">2148</text>
-<!-- 30 bars; baseline y=196; max=766 maps to height=68 -->
-<g opacity="0.95"><animate attributeName="opacity" values="0.82;1;0.82" dur="5s" repeatCount="indefinite"/>
-<rect x="294.00" y="189.61" width="5.16" height="6.39" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="301.17" y="185.88" width="5.16" height="10.12" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="308.33" y="185.97" width="5.16" height="10.03" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="315.50" y="193.25" width="5.16" height="2.75" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="322.67" y="187.30" width="5.16" height="8.70" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="329.83" y="192.09" width="5.16" height="3.91" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="337.00" y="179.67" width="5.16" height="16.33" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="344.17" y="191.38" width="5.16" height="4.62" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="351.33" y="192.63" width="5.16" height="3.37" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="358.50" y="194.93" width="5.16" height="1.07" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="365.67" y="193.25" width="5.16" height="2.75" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="372.83" y="187.57" width="5.16" height="8.43" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="380.00" y="192.36" width="5.16" height="3.64" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="387.17" y="191.74" width="5.16" height="4.26" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="394.33" y="176.56" width="5.16" height="19.44" rx="1" fill="#4ec9b0" opacity="0.9"/>
-<rect x="401.50" y="192.80" width="5.16" height="3.20" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="408.67" y="185.26" width="5.16" height="10.74" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="415.83" y="146.10" width="5.16" height="49.90" rx="1" fill="#58a6ff" opacity="0.95"/>
-<rect x="423.00" y="187.83" width="5.16" height="8.17" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="430.17" y="128.00" width="5.16" height="68.00" rx="1" fill="#d2a8ff" opacity="1.0"/>
-<rect x="437.33" y="186.94" width="5.16" height="9.06" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="444.50" y="190.05" width="5.16" height="5.95" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="451.67" y="190.32" width="5.16" height="5.68" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="458.83" y="150.63" width="5.16" height="45.37" rx="1" fill="#58a6ff" opacity="0.95"/>
-<rect x="466.00" y="177.36" width="5.16" height="18.64" rx="1" fill="#4ec9b0" opacity="0.9"/>
-<rect x="473.17" y="189.61" width="5.16" height="6.39" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="480.33" y="176.83" width="5.16" height="19.17" rx="1" fill="#4ec9b0" opacity="0.9"/>
-<rect x="487.50" y="192.63" width="5.16" height="3.37" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="494.67" y="187.65" width="5.16" height="8.35" rx="1" fill="#4ec9b0" opacity="0.75"/>
-<rect x="501.83" y="195.20" width="5.16" height="0.8" rx="1" fill="#1f2730" opacity="0.6"/>
+<rect x="0.000" y="0.000" width="800.000" height="460.000" rx="12" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="459" rx="12" fill="#10151c" stroke="#21262d" stroke-width="1"/>
+<rect x="0" y="0" width="800" height="2" fill="url(#gradEdge)" opacity="0.85"/>
+<circle cx="30" cy="27" r="3.6" fill="#4ec9b0"><animate attributeName="opacity" values="1;0.3;1" dur="2.3s" repeatCount="indefinite"/><animate attributeName="r" values="3.6;4.9;3.6" dur="2.3s" repeatCount="indefinite"/></circle>
+<text x="44.00" y="32.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600">Live GitHub Stats</text>
+<text x="775.00" y="32.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#6e7681" text-anchor="end">October 10, 2026</text>
+<line x1="24" y1="48" x2="775" y2="48" stroke="#21262d" stroke-width="1"/>
+<text x="25.00" y="70.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Contribution Rhythm</text>
+<text x="775.00" y="70.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">past 12 months  ·  peak 766</text>
+<line x1="25" y1="196.5" x2="775" y2="196.5" stroke="#21262d" stroke-width="0.8"/>
+<line x1="25" y1="167.50" x2="775" y2="167.50" stroke="#1b232d" stroke-width="0.4" opacity="0.6"/>
+<line x1="25" y1="139.00" x2="775" y2="139.00" stroke="#1b232d" stroke-width="0.4" opacity="0.6"/>
+<line x1="25" y1="110.50" x2="775" y2="110.50" stroke="#1b232d" stroke-width="0.4" opacity="0.6"/>
+<polygon points="25.00,196.00 26.02,188.87 28.07,196.00 30.12,196.00 32.17,196.00 34.22,196.00 36.27,188.87 38.32,190.17 40.37,196.00 42.42,196.00 44.47,196.00 46.52,196.00 48.57,196.00 50.61,196.00 52.66,191.88 54.71,196.00 56.76,196.00 58.81,186.79 60.86,196.00 62.91,191.88 64.96,196.00 67.01,191.88 69.06,187.76 71.11,196.00 73.16,196.00 75.20,196.00 77.25,187.76 79.30,185.91 81.35,181.73 83.40,188.87 85.45,196.00 87.50,185.10 89.55,188.87 91.60,190.17 93.65,185.91 95.70,172.34 97.75,196.00 99.80,196.00 101.84,190.17 103.89,196.00 105.94,190.17 107.99,196.00 110.04,196.00 112.09,196.00 114.14,196.00 116.19,196.00 118.24,196.00 120.29,187.76 122.34,196.00 124.39,196.00 126.43,196.00 128.48,196.00 130.53,188.87 132.58,190.17 134.63,196.00 136.68,191.88 138.73,196.00 140.78,196.00 142.83,196.00 144.88,196.00 146.93,196.00 148.98,182.97 151.02,182.97 153.07,187.76 155.12,188.87 157.17,185.91 159.22,188.87 161.27,196.00 163.32,177.58 165.37,184.35 167.42,175.00 169.47,173.07 171.52,175.82 173.57,175.82 175.61,181.15 177.66,181.73 179.71,173.07 181.76,178.05 183.81,163.83 185.86,157.58 187.91,175.41 189.96,186.79 192.01,187.76 194.06,181.15 196.11,196.00 198.16,196.00 200.20,190.17 202.25,196.00 204.30,187.76 206.35,191.88 208.40,180.05 210.45,196.00 212.50,154.40 214.55,187.76 216.60,171.98 218.65,164.63 220.70,178.52 222.75,168.37 224.80,177.12 226.84,175.41 228.89,164.36 230.94,153.39 232.99,164.09 235.04,154.40 237.09,166.01 239.14,164.09 241.19,173.44 243.24,155.22 245.29,161.54 247.34,167.46 249.39,156.92 251.43,157.80 253.48,171.98 255.53,149.40 257.58,167.17 259.63,153.00 261.68,163.31 263.73,163.31 265.78,166.30 267.83,165.73 269.88,172.70 271.93,182.34 273.98,176.68 276.02,174.20 278.07,181.73 280.12,177.12 282.17,183.64 284.22,167.17 286.27,149.95 288.32,187.76 290.37,184.35 292.42,186.79 294.47,182.97 296.52,170.95 298.57,157.36 300.61,147.26 302.66,149.76 304.71,162.03 306.76,148.50 308.81,155.85 310.86,157.58 312.91,164.36 314.96,182.34 317.01,171.29 319.06,157.14 321.11,175.41 323.16,168.06 325.20,184.35 327.25,172.34 329.30,165.18 331.35,155.22 333.40,175.82 335.45,145.22 337.50,172.34 339.55,160.33 341.60,170.95 343.65,173.44 345.70,178.05 347.75,171.98 349.80,172.70 351.84,179.52 353.89,163.05 355.94,180.05 357.99,168.68 360.04,166.58 362.09,170.28 364.14,175.41 366.19,185.91 368.24,186.79 370.29,181.15 372.34,184.35 374.39,179.52 376.43,176.68 378.48,190.17 380.53,196.00 382.58,176.68 384.63,180.05 386.68,187.76 388.73,181.73 390.78,154.81 392.83,178.52 394.88,184.35 396.93,188.87 398.98,196.00 401.02,179.52 403.07,178.05 405.12,177.58 407.17,185.91 409.22,183.64 411.27,180.59 413.32,173.07 415.37,155.43 417.42,175.82 419.47,174.60 421.52,186.79 423.57,182.34 425.61,174.60 427.66,156.49 429.71,175.41 431.76,170.61 433.81,173.44 435.86,151.45 437.91,164.90 439.96,163.05 442.01,169.63 444.06,196.00 446.11,156.28 448.16,165.73 450.20,164.09 452.25,166.01 454.30,165.45 456.35,164.36 458.40,162.28 460.45,181.15 462.50,177.12 464.55,196.00 466.60,178.52 468.65,181.15 470.70,177.12 472.75,169.31 474.80,181.15 476.84,169.63 478.89,180.59 480.94,188.87 482.99,159.86 485.04,168.06 487.09,175.00 489.14,145.72 491.19,153.19 493.24,175.41 495.29,163.83 497.34,163.31 499.39,147.96 501.43,173.07 503.48,149.04 505.53,165.18 507.58,162.54 509.63,160.81 511.68,143.57 513.73,173.82 515.78,172.70 517.83,183.64 519.88,174.20 521.93,129.97 523.98,149.40 526.02,143.57 528.07,154.60 530.12,185.91 532.17,130.23 534.22,147.09 536.27,168.06 538.32,178.05 540.37,164.36 542.42,196.00 544.47,160.09 546.52,165.73 548.57,134.22 550.61,151.45 552.66,145.89 554.71,146.06 556.76,185.10 558.81,196.00 560.86,186.79 562.91,182.97 564.96,155.43 567.01,171.98 569.06,185.91 571.11,167.76 573.16,187.76 575.20,178.52 577.25,145.89 579.30,172.70 581.35,185.91 583.40,170.95 585.45,159.86 587.50,170.28 589.55,185.91 591.60,196.00 593.65,196.00 595.70,196.00 597.75,196.00 599.80,171.98 601.84,196.00 603.89,170.28 605.94,185.91 607.99,182.97 610.04,196.00 612.09,196.00 614.14,196.00 616.19,170.28 618.24,164.90 620.29,175.00 622.34,196.00 624.39,171.29 626.43,177.58 628.48,181.15 630.53,143.90 632.58,159.86 634.63,188.87 636.68,184.35 638.73,187.76 640.78,196.00 642.83,176.25 644.88,196.00 646.93,149.40 648.98,179.52 651.02,191.88 653.07,196.00 655.12,196.00 657.17,181.15 659.22,178.05 661.27,175.41 663.32,190.17 665.37,196.00 667.42,196.00 669.47,175.82 671.52,172.34 673.57,161.05 675.61,137.31 677.66,164.90 679.71,166.01 681.76,157.14 683.81,157.36 685.86,187.76 687.91,173.82 689.96,152.80 692.01,161.05 694.06,159.16 696.11,150.13 698.16,137.17 700.20,139.22 702.25,136.17 704.30,148.86 706.35,149.58 708.40,153.79 710.45,183.64 712.50,161.05 714.55,152.02 716.60,152.21 718.65,173.07 720.70,155.22 722.75,168.68 724.80,140.13 726.84,166.30 728.89,170.61 730.94,181.73 732.99,173.07 735.04,155.85 737.09,169.63 739.14,167.46 741.19,135.04 743.24,171.29 745.29,150.69 747.34,98.35 749.39,156.49 751.43,82.00 753.48,154.40 755.53,162.28 757.58,163.05 759.63,102.89 761.68,136.31 763.73,161.05 765.78,135.46 767.83,170.61 769.88,156.06 771.93,188.87 773.98,196.00 775.00,196.00" fill="url(#gradCalArea)" opacity="0.9"/>
+<g>
+<rect x="25.143" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="35.389" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="37.439" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="51.783" y="191.881" width="1.762" height="4.119" fill="#2b4b58" rx="0.6"/>
+<rect x="57.930" y="186.790" width="1.762" height="9.210" fill="#2b4b58" rx="0.6"/>
+<rect x="62.029" y="191.881" width="1.762" height="4.119" fill="#2b4b58" rx="0.6"/>
+<rect x="66.127" y="191.881" width="1.762" height="4.119" fill="#2b4b58" rx="0.6"/>
+<rect x="68.176" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="76.373" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="78.422" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="80.471" y="181.731" width="1.762" height="14.269" fill="#2b4b58" rx="0.6"/>
+<rect x="82.520" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="86.619" y="185.102" width="1.762" height="10.898" fill="#2b4b58" rx="0.6"/>
+<rect x="88.668" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="90.717" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="92.766" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="94.816" y="172.338" width="1.762" height="23.662" fill="#2b4b58" rx="0.6"/>
+<rect x="100.963" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="105.061" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="119.406" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="129.652" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="131.701" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="135.799" y="191.881" width="1.762" height="4.119" fill="#2b4b58" rx="0.6"/>
+<rect x="148.094" y="182.975" width="1.762" height="13.025" fill="#2b4b58" rx="0.6"/>
+<rect x="150.143" y="182.975" width="1.762" height="13.025" fill="#2b4b58" rx="0.6"/>
+<rect x="152.193" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="154.242" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="156.291" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="158.340" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="162.439" y="177.579" width="1.762" height="18.421" fill="#2b4b58" rx="0.6"/>
+<rect x="164.488" y="184.350" width="1.762" height="11.650" fill="#2b4b58" rx="0.6"/>
+<rect x="166.537" y="174.997" width="1.762" height="21.003" fill="#2b4b58" rx="0.6"/>
+<rect x="168.586" y="173.066" width="1.762" height="22.934" fill="#2b4b58" rx="0.6"/>
+<rect x="170.635" y="175.821" width="1.762" height="20.179" fill="#2b4b58" rx="0.6"/>
+<rect x="172.684" y="175.821" width="1.762" height="20.179" fill="#2b4b58" rx="0.6"/>
+<rect x="174.734" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="176.783" y="181.731" width="1.762" height="14.269" fill="#2b4b58" rx="0.6"/>
+<rect x="178.832" y="173.066" width="1.762" height="22.934" fill="#2b4b58" rx="0.6"/>
+<rect x="180.881" y="178.046" width="1.762" height="17.954" fill="#2b4b58" rx="0.6"/>
+<rect x="182.930" y="163.830" width="1.762" height="32.170" fill="#2b4b58" rx="0.6"/>
+<rect x="184.980" y="157.581" width="1.762" height="38.419" fill="#4ec9b0" rx="0.6"/>
+<rect x="187.029" y="175.405" width="1.762" height="20.595" fill="#2b4b58" rx="0.6"/>
+<rect x="189.078" y="186.790" width="1.762" height="9.210" fill="#2b4b58" rx="0.6"/>
+<rect x="191.127" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="193.176" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="199.324" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="203.422" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="205.471" y="191.881" width="1.762" height="4.119" fill="#2b4b58" rx="0.6"/>
+<rect x="207.520" y="180.047" width="1.762" height="15.953" fill="#2b4b58" rx="0.6"/>
+<rect x="211.619" y="154.400" width="1.762" height="41.600" fill="#4ec9b0" rx="0.6"/>
+<rect x="213.668" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="215.717" y="171.982" width="1.762" height="24.018" fill="#2b4b58" rx="0.6"/>
+<rect x="217.766" y="164.631" width="1.762" height="31.369" fill="#2b4b58" rx="0.6"/>
+<rect x="219.816" y="178.525" width="1.762" height="17.475" fill="#2b4b58" rx="0.6"/>
+<rect x="221.865" y="168.369" width="1.762" height="27.631" fill="#2b4b58" rx="0.6"/>
+<rect x="223.914" y="177.124" width="1.762" height="18.876" fill="#2b4b58" rx="0.6"/>
+<rect x="225.963" y="175.405" width="1.762" height="20.595" fill="#2b4b58" rx="0.6"/>
+<rect x="228.012" y="164.361" width="1.762" height="31.639" fill="#2b4b58" rx="0.6"/>
+<rect x="230.061" y="153.393" width="1.762" height="42.607" fill="#4ec9b0" rx="0.6"/>
+<rect x="232.111" y="164.094" width="1.762" height="31.906" fill="#2b4b58" rx="0.6"/>
+<rect x="234.160" y="154.400" width="1.762" height="41.600" fill="#4ec9b0" rx="0.6"/>
+<rect x="236.209" y="166.013" width="1.762" height="29.987" fill="#2b4b58" rx="0.6"/>
+<rect x="238.258" y="164.094" width="1.762" height="31.906" fill="#2b4b58" rx="0.6"/>
+<rect x="240.307" y="173.439" width="1.762" height="22.561" fill="#2b4b58" rx="0.6"/>
+<rect x="242.357" y="155.224" width="1.762" height="40.776" fill="#4ec9b0" rx="0.6"/>
+<rect x="244.406" y="161.538" width="1.762" height="34.462" fill="#4ec9b0" rx="0.6"/>
+<rect x="246.455" y="167.463" width="1.762" height="28.537" fill="#2b4b58" rx="0.6"/>
+<rect x="248.504" y="156.924" width="1.762" height="39.076" fill="#4ec9b0" rx="0.6"/>
+<rect x="250.553" y="157.802" width="1.762" height="38.198" fill="#4ec9b0" rx="0.6"/>
+<rect x="252.602" y="171.982" width="1.762" height="24.018" fill="#2b4b58" rx="0.6"/>
+<rect x="254.652" y="149.399" width="1.762" height="46.601" fill="#4ec9b0" rx="0.6"/>
+<rect x="256.701" y="167.167" width="1.762" height="28.833" fill="#2b4b58" rx="0.6"/>
+<rect x="258.750" y="152.997" width="1.762" height="43.003" fill="#4ec9b0" rx="0.6"/>
+<rect x="260.799" y="163.307" width="1.762" height="32.693" fill="#4ec9b0" rx="0.6"/>
+<rect x="262.848" y="163.307" width="1.762" height="32.693" fill="#4ec9b0" rx="0.6"/>
+<rect x="264.898" y="166.298" width="1.762" height="29.702" fill="#2b4b58" rx="0.6"/>
+<rect x="266.947" y="165.732" width="1.762" height="30.268" fill="#2b4b58" rx="0.6"/>
+<rect x="268.996" y="172.699" width="1.762" height="23.301" fill="#2b4b58" rx="0.6"/>
+<rect x="271.045" y="182.339" width="1.762" height="13.661" fill="#2b4b58" rx="0.6"/>
+<rect x="273.094" y="176.680" width="1.762" height="19.320" fill="#2b4b58" rx="0.6"/>
+<rect x="275.143" y="174.204" width="1.762" height="21.796" fill="#2b4b58" rx="0.6"/>
+<rect x="277.193" y="181.731" width="1.762" height="14.269" fill="#2b4b58" rx="0.6"/>
+<rect x="279.242" y="177.124" width="1.762" height="18.876" fill="#2b4b58" rx="0.6"/>
+<rect x="281.291" y="183.643" width="1.762" height="12.357" fill="#2b4b58" rx="0.6"/>
+<rect x="283.340" y="167.167" width="1.762" height="28.833" fill="#2b4b58" rx="0.6"/>
+<rect x="285.389" y="149.948" width="1.762" height="46.052" fill="#4ec9b0" rx="0.6"/>
+<rect x="287.439" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="289.488" y="184.350" width="1.762" height="11.650" fill="#2b4b58" rx="0.6"/>
+<rect x="291.537" y="186.790" width="1.762" height="9.210" fill="#2b4b58" rx="0.6"/>
+<rect x="293.586" y="182.975" width="1.762" height="13.025" fill="#2b4b58" rx="0.6"/>
+<rect x="295.635" y="170.945" width="1.762" height="25.055" fill="#2b4b58" rx="0.6"/>
+<rect x="297.684" y="157.360" width="1.762" height="38.640" fill="#4ec9b0" rx="0.6"/>
+<rect x="299.734" y="147.263" width="1.762" height="48.737" fill="#4ec9b0" rx="0.6"/>
+<rect x="301.783" y="149.764" width="1.762" height="46.236" fill="#4ec9b0" rx="0.6"/>
+<rect x="303.832" y="162.034" width="1.762" height="33.966" fill="#4ec9b0" rx="0.6"/>
+<rect x="305.881" y="148.498" width="1.762" height="47.502" fill="#4ec9b0" rx="0.6"/>
+<rect x="307.930" y="155.853" width="1.762" height="40.147" fill="#4ec9b0" rx="0.6"/>
+<rect x="309.980" y="157.581" width="1.762" height="38.419" fill="#4ec9b0" rx="0.6"/>
+<rect x="312.029" y="164.361" width="1.762" height="31.639" fill="#2b4b58" rx="0.6"/>
+<rect x="314.078" y="182.339" width="1.762" height="13.661" fill="#2b4b58" rx="0.6"/>
+<rect x="316.127" y="171.286" width="1.762" height="24.714" fill="#2b4b58" rx="0.6"/>
+<rect x="318.176" y="157.142" width="1.762" height="38.858" fill="#4ec9b0" rx="0.6"/>
+<rect x="320.225" y="175.405" width="1.762" height="20.595" fill="#2b4b58" rx="0.6"/>
+<rect x="322.275" y="168.064" width="1.762" height="27.936" fill="#2b4b58" rx="0.6"/>
+<rect x="324.324" y="184.350" width="1.762" height="11.650" fill="#2b4b58" rx="0.6"/>
+<rect x="326.373" y="172.338" width="1.762" height="23.662" fill="#2b4b58" rx="0.6"/>
+<rect x="328.422" y="165.176" width="1.762" height="30.824" fill="#2b4b58" rx="0.6"/>
+<rect x="330.471" y="155.224" width="1.762" height="40.776" fill="#4ec9b0" rx="0.6"/>
+<rect x="332.520" y="175.821" width="1.762" height="20.179" fill="#2b4b58" rx="0.6"/>
+<rect x="334.570" y="145.218" width="1.762" height="50.782" fill="#4ec9b0" rx="0.6"/>
+<rect x="336.619" y="172.338" width="1.762" height="23.662" fill="#2b4b58" rx="0.6"/>
+<rect x="338.668" y="160.329" width="1.762" height="35.671" fill="#4ec9b0" rx="0.6"/>
+<rect x="340.717" y="170.945" width="1.762" height="25.055" fill="#2b4b58" rx="0.6"/>
+<rect x="342.766" y="173.439" width="1.762" height="22.561" fill="#2b4b58" rx="0.6"/>
+<rect x="344.816" y="178.046" width="1.762" height="17.954" fill="#2b4b58" rx="0.6"/>
+<rect x="346.865" y="171.982" width="1.762" height="24.018" fill="#2b4b58" rx="0.6"/>
+<rect x="348.914" y="172.699" width="1.762" height="23.301" fill="#2b4b58" rx="0.6"/>
+<rect x="350.963" y="179.524" width="1.762" height="16.476" fill="#2b4b58" rx="0.6"/>
+<rect x="353.012" y="163.048" width="1.762" height="32.952" fill="#4ec9b0" rx="0.6"/>
+<rect x="355.061" y="180.047" width="1.762" height="15.953" fill="#2b4b58" rx="0.6"/>
+<rect x="357.111" y="168.678" width="1.762" height="27.322" fill="#2b4b58" rx="0.6"/>
+<rect x="359.160" y="166.585" width="1.762" height="29.415" fill="#2b4b58" rx="0.6"/>
+<rect x="361.209" y="170.277" width="1.762" height="25.723" fill="#2b4b58" rx="0.6"/>
+<rect x="363.258" y="175.405" width="1.762" height="20.595" fill="#2b4b58" rx="0.6"/>
+<rect x="365.307" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="367.357" y="186.790" width="1.762" height="9.210" fill="#2b4b58" rx="0.6"/>
+<rect x="369.406" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="371.455" y="184.350" width="1.762" height="11.650" fill="#2b4b58" rx="0.6"/>
+<rect x="373.504" y="179.524" width="1.762" height="16.476" fill="#2b4b58" rx="0.6"/>
+<rect x="375.553" y="176.680" width="1.762" height="19.320" fill="#2b4b58" rx="0.6"/>
+<rect x="377.602" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="381.701" y="176.680" width="1.762" height="19.320" fill="#2b4b58" rx="0.6"/>
+<rect x="383.750" y="180.047" width="1.762" height="15.953" fill="#2b4b58" rx="0.6"/>
+<rect x="385.799" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="387.848" y="181.731" width="1.762" height="14.269" fill="#2b4b58" rx="0.6"/>
+<rect x="389.898" y="154.810" width="1.762" height="41.190" fill="#4ec9b0" rx="0.6"/>
+<rect x="391.947" y="178.525" width="1.762" height="17.475" fill="#2b4b58" rx="0.6"/>
+<rect x="393.996" y="184.350" width="1.762" height="11.650" fill="#2b4b58" rx="0.6"/>
+<rect x="396.045" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="400.143" y="179.524" width="1.762" height="16.476" fill="#2b4b58" rx="0.6"/>
+<rect x="402.193" y="178.046" width="1.762" height="17.954" fill="#2b4b58" rx="0.6"/>
+<rect x="404.242" y="177.579" width="1.762" height="18.421" fill="#2b4b58" rx="0.6"/>
+<rect x="406.291" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="408.340" y="183.643" width="1.762" height="12.357" fill="#2b4b58" rx="0.6"/>
+<rect x="410.389" y="180.588" width="1.762" height="15.412" fill="#2b4b58" rx="0.6"/>
+<rect x="412.439" y="173.066" width="1.762" height="22.934" fill="#2b4b58" rx="0.6"/>
+<rect x="414.488" y="155.433" width="1.762" height="40.567" fill="#4ec9b0" rx="0.6"/>
+<rect x="416.537" y="175.821" width="1.762" height="20.179" fill="#2b4b58" rx="0.6"/>
+<rect x="418.586" y="174.597" width="1.762" height="21.403" fill="#2b4b58" rx="0.6"/>
+<rect x="420.635" y="186.790" width="1.762" height="9.210" fill="#2b4b58" rx="0.6"/>
+<rect x="422.684" y="182.339" width="1.762" height="13.661" fill="#2b4b58" rx="0.6"/>
+<rect x="424.734" y="174.597" width="1.762" height="21.403" fill="#2b4b58" rx="0.6"/>
+<rect x="426.783" y="156.492" width="1.762" height="39.508" fill="#4ec9b0" rx="0.6"/>
+<rect x="428.832" y="175.405" width="1.762" height="20.595" fill="#2b4b58" rx="0.6"/>
+<rect x="430.881" y="170.609" width="1.762" height="25.391" fill="#2b4b58" rx="0.6"/>
+<rect x="432.930" y="173.439" width="1.762" height="22.561" fill="#2b4b58" rx="0.6"/>
+<rect x="434.980" y="151.446" width="1.762" height="44.554" fill="#4ec9b0" rx="0.6"/>
+<rect x="437.029" y="164.902" width="1.762" height="31.098" fill="#2b4b58" rx="0.6"/>
+<rect x="439.078" y="163.048" width="1.762" height="32.952" fill="#4ec9b0" rx="0.6"/>
+<rect x="441.127" y="169.626" width="1.762" height="26.374" fill="#2b4b58" rx="0.6"/>
+<rect x="445.225" y="156.278" width="1.762" height="39.722" fill="#4ec9b0" rx="0.6"/>
+<rect x="447.275" y="165.732" width="1.762" height="30.268" fill="#2b4b58" rx="0.6"/>
+<rect x="449.324" y="164.094" width="1.762" height="31.906" fill="#2b4b58" rx="0.6"/>
+<rect x="451.373" y="166.013" width="1.762" height="29.987" fill="#2b4b58" rx="0.6"/>
+<rect x="453.422" y="165.453" width="1.762" height="30.547" fill="#2b4b58" rx="0.6"/>
+<rect x="455.471" y="164.361" width="1.762" height="31.639" fill="#2b4b58" rx="0.6"/>
+<rect x="457.520" y="162.285" width="1.762" height="33.715" fill="#4ec9b0" rx="0.6"/>
+<rect x="459.570" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="461.619" y="177.124" width="1.762" height="18.876" fill="#2b4b58" rx="0.6"/>
+<rect x="465.717" y="178.525" width="1.762" height="17.475" fill="#2b4b58" rx="0.6"/>
+<rect x="467.766" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="469.816" y="177.124" width="1.762" height="18.876" fill="#2b4b58" rx="0.6"/>
+<rect x="471.865" y="169.306" width="1.762" height="26.694" fill="#2b4b58" rx="0.6"/>
+<rect x="473.914" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="475.963" y="169.626" width="1.762" height="26.374" fill="#2b4b58" rx="0.6"/>
+<rect x="478.012" y="180.588" width="1.762" height="15.412" fill="#2b4b58" rx="0.6"/>
+<rect x="480.061" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="482.111" y="159.856" width="1.762" height="36.144" fill="#4ec9b0" rx="0.6"/>
+<rect x="484.160" y="168.064" width="1.762" height="27.936" fill="#2b4b58" rx="0.6"/>
+<rect x="486.209" y="174.997" width="1.762" height="21.003" fill="#2b4b58" rx="0.6"/>
+<rect x="488.258" y="145.721" width="1.762" height="50.279" fill="#4ec9b0" rx="0.6"/>
+<rect x="490.307" y="153.194" width="1.762" height="42.806" fill="#4ec9b0" rx="0.6"/>
+<rect x="492.357" y="175.405" width="1.762" height="20.595" fill="#2b4b58" rx="0.6"/>
+<rect x="494.406" y="163.830" width="1.762" height="32.170" fill="#2b4b58" rx="0.6"/>
+<rect x="496.455" y="163.307" width="1.762" height="32.693" fill="#4ec9b0" rx="0.6"/>
+<rect x="498.504" y="147.965" width="1.762" height="48.035" fill="#4ec9b0" rx="0.6"/>
+<rect x="500.553" y="173.066" width="1.762" height="22.934" fill="#2b4b58" rx="0.6"/>
+<rect x="502.602" y="149.036" width="1.762" height="46.964" fill="#4ec9b0" rx="0.6"/>
+<rect x="504.652" y="165.176" width="1.762" height="30.824" fill="#2b4b58" rx="0.6"/>
+<rect x="506.701" y="162.537" width="1.762" height="33.463" fill="#4ec9b0" rx="0.6"/>
+<rect x="508.750" y="160.807" width="1.762" height="35.193" fill="#4ec9b0" rx="0.6"/>
+<rect x="510.799" y="143.574" width="1.762" height="52.426" fill="#4ec9b0" rx="0.6"/>
+<rect x="512.848" y="173.819" width="1.762" height="22.181" fill="#2b4b58" rx="0.6"/>
+<rect x="514.898" y="172.699" width="1.762" height="23.301" fill="#2b4b58" rx="0.6"/>
+<rect x="516.947" y="183.643" width="1.762" height="12.357" fill="#2b4b58" rx="0.6"/>
+<rect x="518.996" y="174.204" width="1.762" height="21.796" fill="#2b4b58" rx="0.6"/>
+<rect x="521.045" y="129.968" width="1.762" height="66.032" fill="#58a6ff" rx="0.6"/>
+<rect x="523.094" y="149.399" width="1.762" height="46.601" fill="#4ec9b0" rx="0.6"/>
+<rect x="525.143" y="143.574" width="1.762" height="52.426" fill="#4ec9b0" rx="0.6"/>
+<rect x="527.193" y="154.605" width="1.762" height="41.395" fill="#4ec9b0" rx="0.6"/>
+<rect x="529.242" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="531.291" y="130.225" width="1.762" height="65.775" fill="#58a6ff" rx="0.6"/>
+<rect x="533.340" y="147.090" width="1.762" height="48.910" fill="#4ec9b0" rx="0.6"/>
+<rect x="535.389" y="168.064" width="1.762" height="27.936" fill="#2b4b58" rx="0.6"/>
+<rect x="537.439" y="178.046" width="1.762" height="17.954" fill="#2b4b58" rx="0.6"/>
+<rect x="539.488" y="164.361" width="1.762" height="31.639" fill="#2b4b58" rx="0.6"/>
+<rect x="543.586" y="160.092" width="1.762" height="35.908" fill="#4ec9b0" rx="0.6"/>
+<rect x="545.635" y="165.732" width="1.762" height="30.268" fill="#2b4b58" rx="0.6"/>
+<rect x="547.684" y="134.215" width="1.762" height="61.785" fill="#58a6ff" rx="0.6"/>
+<rect x="549.734" y="151.446" width="1.762" height="44.554" fill="#4ec9b0" rx="0.6"/>
+<rect x="551.783" y="145.890" width="1.762" height="50.110" fill="#4ec9b0" rx="0.6"/>
+<rect x="553.832" y="146.060" width="1.762" height="49.940" fill="#4ec9b0" rx="0.6"/>
+<rect x="555.881" y="185.102" width="1.762" height="10.898" fill="#2b4b58" rx="0.6"/>
+<rect x="559.980" y="186.790" width="1.762" height="9.210" fill="#2b4b58" rx="0.6"/>
+<rect x="562.029" y="182.975" width="1.762" height="13.025" fill="#2b4b58" rx="0.6"/>
+<rect x="564.078" y="155.433" width="1.762" height="40.567" fill="#4ec9b0" rx="0.6"/>
+<rect x="566.127" y="171.982" width="1.762" height="24.018" fill="#2b4b58" rx="0.6"/>
+<rect x="568.176" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="570.225" y="167.762" width="1.762" height="28.238" fill="#2b4b58" rx="0.6"/>
+<rect x="572.275" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="574.324" y="178.525" width="1.762" height="17.475" fill="#2b4b58" rx="0.6"/>
+<rect x="576.373" y="145.890" width="1.762" height="50.110" fill="#4ec9b0" rx="0.6"/>
+<rect x="578.422" y="172.699" width="1.762" height="23.301" fill="#2b4b58" rx="0.6"/>
+<rect x="580.471" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="582.520" y="170.945" width="1.762" height="25.055" fill="#2b4b58" rx="0.6"/>
+<rect x="584.570" y="159.856" width="1.762" height="36.144" fill="#4ec9b0" rx="0.6"/>
+<rect x="586.619" y="170.277" width="1.762" height="25.723" fill="#2b4b58" rx="0.6"/>
+<rect x="588.668" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="598.914" y="171.982" width="1.762" height="24.018" fill="#2b4b58" rx="0.6"/>
+<rect x="603.012" y="170.277" width="1.762" height="25.723" fill="#2b4b58" rx="0.6"/>
+<rect x="605.061" y="185.911" width="1.762" height="10.089" fill="#2b4b58" rx="0.6"/>
+<rect x="607.111" y="182.975" width="1.762" height="13.025" fill="#2b4b58" rx="0.6"/>
+<rect x="615.307" y="170.277" width="1.762" height="25.723" fill="#2b4b58" rx="0.6"/>
+<rect x="617.357" y="164.902" width="1.762" height="31.098" fill="#2b4b58" rx="0.6"/>
+<rect x="619.406" y="174.997" width="1.762" height="21.003" fill="#2b4b58" rx="0.6"/>
+<rect x="623.504" y="171.286" width="1.762" height="24.714" fill="#2b4b58" rx="0.6"/>
+<rect x="625.553" y="177.579" width="1.762" height="18.421" fill="#2b4b58" rx="0.6"/>
+<rect x="627.602" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="629.652" y="143.898" width="1.762" height="52.102" fill="#4ec9b0" rx="0.6"/>
+<rect x="631.701" y="159.856" width="1.762" height="36.144" fill="#4ec9b0" rx="0.6"/>
+<rect x="633.750" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
+<rect x="635.799" y="184.350" width="1.762" height="11.650" fill="#2b4b58" rx="0.6"/>
+<rect x="637.848" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="641.947" y="176.246" width="1.762" height="19.754" fill="#2b4b58" rx="0.6"/>
+<rect x="646.045" y="149.399" width="1.762" height="46.601" fill="#4ec9b0" rx="0.6"/>
+<rect x="648.094" y="179.524" width="1.762" height="16.476" fill="#2b4b58" rx="0.6"/>
+<rect x="650.143" y="191.881" width="1.762" height="4.119" fill="#2b4b58" rx="0.6"/>
+<rect x="656.291" y="181.149" width="1.762" height="14.851" fill="#2b4b58" rx="0.6"/>
+<rect x="658.340" y="178.046" width="1.762" height="17.954" fill="#2b4b58" rx="0.6"/>
+<rect x="660.389" y="175.405" width="1.762" height="20.595" fill="#2b4b58" rx="0.6"/>
+<rect x="662.439" y="190.175" width="1.762" height="5.825" fill="#2b4b58" rx="0.6"/>
+<rect x="668.586" y="175.821" width="1.762" height="20.179" fill="#2b4b58" rx="0.6"/>
+<rect x="670.635" y="172.338" width="1.762" height="23.662" fill="#2b4b58" rx="0.6"/>
+<rect x="672.684" y="161.049" width="1.762" height="34.951" fill="#4ec9b0" rx="0.6"/>
+<rect x="674.734" y="137.313" width="1.762" height="58.687" fill="#58a6ff" rx="0.6"/>
+<rect x="676.783" y="164.902" width="1.762" height="31.098" fill="#2b4b58" rx="0.6"/>
+<rect x="678.832" y="166.013" width="1.762" height="29.987" fill="#2b4b58" rx="0.6"/>
+<rect x="680.881" y="157.142" width="1.762" height="38.858" fill="#4ec9b0" rx="0.6"/>
+<rect x="682.930" y="157.360" width="1.762" height="38.640" fill="#4ec9b0" rx="0.6"/>
+<rect x="684.980" y="187.762" width="1.762" height="8.238" fill="#2b4b58" rx="0.6"/>
+<rect x="687.029" y="173.819" width="1.762" height="22.181" fill="#2b4b58" rx="0.6"/>
+<rect x="689.078" y="152.800" width="1.762" height="43.200" fill="#4ec9b0" rx="0.6"/>
+<rect x="691.127" y="161.049" width="1.762" height="34.951" fill="#4ec9b0" rx="0.6"/>
+<rect x="693.176" y="159.159" width="1.762" height="36.841" fill="#4ec9b0" rx="0.6"/>
+<rect x="695.225" y="150.133" width="1.762" height="45.867" fill="#4ec9b0" rx="0.6"/>
+<rect x="697.275" y="137.169" width="1.762" height="58.831" fill="#58a6ff" rx="0.6"/>
+<rect x="699.324" y="139.224" width="1.762" height="56.776" fill="#4ec9b0" rx="0.6"/>
+<rect x="701.373" y="136.168" width="1.762" height="59.832" fill="#58a6ff" rx="0.6"/>
+<rect x="703.422" y="148.856" width="1.762" height="47.144" fill="#4ec9b0" rx="0.6"/>
+<rect x="705.471" y="149.581" width="1.762" height="46.419" fill="#4ec9b0" rx="0.6"/>
+<rect x="707.520" y="153.793" width="1.762" height="42.207" fill="#4ec9b0" rx="0.6"/>
+<rect x="709.570" y="183.643" width="1.762" height="12.357" fill="#2b4b58" rx="0.6"/>
+<rect x="711.619" y="161.049" width="1.762" height="34.951" fill="#4ec9b0" rx="0.6"/>
+<rect x="713.668" y="152.021" width="1.762" height="43.979" fill="#4ec9b0" rx="0.6"/>
+<rect x="715.717" y="152.215" width="1.762" height="43.785" fill="#4ec9b0" rx="0.6"/>
+<rect x="717.766" y="173.066" width="1.762" height="22.934" fill="#2b4b58" rx="0.6"/>
+<rect x="719.816" y="155.224" width="1.762" height="40.776" fill="#4ec9b0" rx="0.6"/>
+<rect x="721.865" y="168.678" width="1.762" height="27.322" fill="#2b4b58" rx="0.6"/>
+<rect x="723.914" y="140.127" width="1.762" height="55.873" fill="#4ec9b0" rx="0.6"/>
+<rect x="725.963" y="166.298" width="1.762" height="29.702" fill="#2b4b58" rx="0.6"/>
+<rect x="728.012" y="170.609" width="1.762" height="25.391" fill="#2b4b58" rx="0.6"/>
+<rect x="730.061" y="181.731" width="1.762" height="14.269" fill="#2b4b58" rx="0.6"/>
+<rect x="732.111" y="173.066" width="1.762" height="22.934" fill="#2b4b58" rx="0.6"/>
+<rect x="734.160" y="155.853" width="1.762" height="40.147" fill="#4ec9b0" rx="0.6"/>
+<rect x="736.209" y="169.626" width="1.762" height="26.374" fill="#2b4b58" rx="0.6"/>
+<rect x="738.258" y="167.463" width="1.762" height="28.537" fill="#2b4b58" rx="0.6"/>
+<rect x="740.307" y="135.045" width="1.762" height="60.955" fill="#58a6ff" rx="0.6"/>
+<rect x="742.357" y="171.286" width="1.762" height="24.714" fill="#2b4b58" rx="0.6"/>
+<rect x="744.406" y="150.691" width="1.762" height="45.309" fill="#4ec9b0" rx="0.6"/>
+<rect x="746.455" y="98.353" width="1.762" height="97.647" fill="#d2a8ff" rx="0.6"/>
+<rect x="748.504" y="156.492" width="1.762" height="39.508" fill="#4ec9b0" rx="0.6"/>
+<rect x="750.553" y="82.000" width="1.762" height="114.000" fill="#d2a8ff" rx="0.6"/>
+<rect x="752.602" y="154.400" width="1.762" height="41.600" fill="#4ec9b0" rx="0.6"/>
+<rect x="754.652" y="162.285" width="1.762" height="33.715" fill="#4ec9b0" rx="0.6"/>
+<rect x="756.701" y="163.048" width="1.762" height="32.952" fill="#4ec9b0" rx="0.6"/>
+<rect x="758.750" y="102.889" width="1.762" height="93.111" fill="#d2a8ff" rx="0.6"/>
+<rect x="760.799" y="136.310" width="1.762" height="59.690" fill="#58a6ff" rx="0.6"/>
+<rect x="762.848" y="161.049" width="1.762" height="34.951" fill="#4ec9b0" rx="0.6"/>
+<rect x="764.898" y="135.463" width="1.762" height="60.537" fill="#58a6ff" rx="0.6"/>
+<rect x="766.947" y="170.609" width="1.762" height="25.391" fill="#2b4b58" rx="0.6"/>
+<rect x="768.996" y="156.065" width="1.762" height="39.935" fill="#4ec9b0" rx="0.6"/>
+<rect x="771.045" y="188.866" width="1.762" height="7.134" fill="#2b4b58" rx="0.6"/>
 </g>
-<line x1="293" y1="196" x2="508" y2="196" stroke="#21262d" stroke-width="0.8"/>
-<!-- Highlight ring that races across the peak day -->
-<circle cx="432.75" cy="128" r="4.5" fill="none" stroke="#d2a8ff" stroke-width="1.2" opacity="0.85"><animate attributeName="r" values="4.5;10;4.5" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.95;0;0.95" dur="2.9s" repeatCount="indefinite"/></circle>
-<g clip-path="url(#clipB)"><rect x="263" y="126" width="30" height="78" fill="url(#shimmer)" opacity="0.9"><animate attributeName="x" from="263" to="540" dur="13s" repeatCount="indefinite"/></rect></g>
-<text x="293" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">bars = last 30 days · peak 766</text>
-
-<!-- ============ PANEL C: Longest Streak 82 ============ -->
-<text x="548" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Longest Streak</text>
-<text x="763" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
-<text x="548" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad)">82</text>
-<text x="598" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6e7681">consecutive days</text>
-<!-- 365-day reference bar centered vertically in viz area; streak occupies 82/365 of it -->
-<text x="548" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">365-day reference</text>
-<rect x="548" y="161" width="215" height="4" rx="2" fill="#161c25"/>
-<rect x="548" y="160" width="48.3" height="6" rx="2" fill="url(#streakGrad)"/>
-<!-- 82 tick marks drawn via pattern (one SVG element renders all 82) -->
-<rect x="548" y="158" width="48.3" height="14" fill="url(#streakTicks)"/>
-<!-- Running pulse racing along the streak -->
-<circle cx="548" cy="163" r="4" fill="#ffffff" opacity="0.95"><animate attributeName="cx" from="548" to="596.3" dur="4.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;1;0.9;0.2" dur="4.3s" repeatCount="indefinite"/></circle>
-<!-- Scale ticks on reference bar: 90, 180, 270 day marks -->
-<line x1="601" y1="167" x2="601" y2="172" stroke="#2d3139" stroke-width="0.8"/>
-<line x1="654" y1="167" x2="654" y2="172" stroke="#2d3139" stroke-width="0.8"/>
-<line x1="707" y1="167" x2="707" y2="172" stroke="#2d3139" stroke-width="0.8"/>
-<text x="548" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">82 of 365 days · 22.5% of the year</text>
-<text x="548" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">one tick per day · chain of unbroken activity</text>
-
-<!-- ============ PANEL D: Active Repos 73 (top-6 breakdown) ============ -->
-<text x="38" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Active Repos</text>
-<text x="253" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
-<text x="38" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad2)">73</text>
-<!-- 6 repo rows: name (left, mono), bar (middle), count (right, mono) -->
-<text x="38" y="311.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">oscilla-animator-v2</text>
-<rect x="146" y="304.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
-<rect x="146" y="304.7" width="65" height="6.6" rx="1.5" fill="#58a6ff" opacity="0.92"/>
-<text x="253" y="311.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">1994</text>
-
-<text x="38" y="323.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">dotfiles</text>
-<rect x="146" y="316.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
-<rect x="146" y="316.7" width="30.60" height="6.6" rx="1.5" fill="#4ec9b0" opacity="0.92"/>
-<text x="253" y="323.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">939</text>
-
-<text x="38" y="335.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">cc-candybar</text>
-<rect x="146" y="328.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
-<rect x="146" y="328.7" width="24.74" height="6.6" rx="1.5" fill="#d2a8ff" opacity="0.92"/>
-<text x="253" y="335.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">759</text>
-
-<text x="38" y="347.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">vhid</text>
-<rect x="146" y="340.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
-<rect x="146" y="340.7" width="21.09" height="6.6" rx="1.5" fill="#79c0ff" opacity="0.92"/>
-<text x="253" y="347.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">647</text>
-
-<text x="38" y="359.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">links-issue-tracker</text>
-<rect x="146" y="352.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
-<rect x="146" y="352.7" width="18.42" height="6.6" rx="1.5" fill="#8ae1cf" opacity="0.92"/>
-<text x="253" y="359.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">565</text>
-
-<text x="38" y="371.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#e6edf3">cc-dump</text>
-<rect x="146" y="364.7" width="65" height="6.6" rx="1.5" fill="#161c25"/>
-<rect x="146" y="364.7" width="17.50" height="6.6" rx="1.5" fill="#d2a8ff" opacity="0.92"/>
-<text x="253" y="371.2" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end">537</text>
-
-<g clip-path="url(#clipD)"><rect x="-2" y="298" width="40" height="78" fill="url(#shimmer)" opacity="0.75"><animate attributeName="x" from="-2" to="293" dur="17s" repeatCount="indefinite"/></rect></g>
-<text x="38" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">top 6 by commit volume · of 73 total</text>
-
-<!-- ============ PANEL E: Languages 11 (stacked ribbon + legend) ============ -->
-<text x="293" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Languages</text>
-<text x="508" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
-<text x="293" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad2)">11</text>
-<!-- Stacked ribbon: total=10916 across 215px wide, at y=308, h=22 -->
-<rect x="293.00" y="308" width="115.86" height="22" fill="#3178c6" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="5s" repeatCount="indefinite"/></rect>
-<rect x="408.86" y="308" width="54.66" height="22" fill="#3572A5" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/></rect>
-<rect x="463.52" y="308" width="19.99" height="22" fill="#F05138" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="9s" repeatCount="indefinite"/></rect>
-<rect x="483.51" y="308" width="16.84" height="22" fill="#00ADD8" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="11s" repeatCount="indefinite"/></rect>
-<rect x="500.35" y="308" width="3.64" height="22" fill="#89e051" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="5s" repeatCount="indefinite"/></rect>
-<rect x="503.99" y="308" width="2.56" height="22" fill="#dea584" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="7s" repeatCount="indefinite"/></rect>
-<rect x="506.55" y="308" width="1.26" height="22" fill="#e34c26" opacity="0.92"><animate attributeName="opacity" values="0.78;1;0.78" dur="9s" repeatCount="indefinite"/></rect>
-<rect x="507.81" y="308" width="0.22" height="22" fill="#563d7c" opacity="0.92"/>
-<line x1="408.86" y1="308" x2="408.86" y2="330" stroke="#0d1117" stroke-width="0.8"/>
-<line x1="463.52" y1="308" x2="463.52" y2="330" stroke="#0d1117" stroke-width="0.8"/>
-<line x1="483.51" y1="308" x2="483.51" y2="330" stroke="#0d1117" stroke-width="0.8"/>
-<line x1="500.35" y1="308" x2="500.35" y2="330" stroke="#0d1117" stroke-width="0.8"/>
-<line x1="503.99" y1="308" x2="503.99" y2="330" stroke="#0d1117" stroke-width="0.8"/>
-<line x1="506.55" y1="308" x2="506.55" y2="330" stroke="#0d1117" stroke-width="0.8"/>
-<line x1="507.81" y1="308" x2="507.81" y2="330" stroke="#0d1117" stroke-width="0.8"/>
-<rect x="293" y="308" width="215" height="22" rx="3" fill="none" stroke="#21262d" stroke-width="0.6"/>
-<g clip-path="url(#clipE)"><rect x="253" y="308" width="40" height="22" fill="url(#shimmer)" opacity="0.9"><animate attributeName="x" from="253" to="548" dur="19s" repeatCount="indefinite"/></rect></g>
-<!-- Legend row 1 (y=344): TypeScript, Python, Swift, Go -->
-<rect x="293" y="337" width="7" height="7" rx="1.5" fill="#3178c6"/>
-<text x="304" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">TypeScript <tspan fill="#6e7681">54%</tspan></text>
-<rect x="346.75" y="337" width="7" height="7" rx="1.5" fill="#3572A5"/>
-<text x="357.75" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Python <tspan fill="#6e7681">25%</tspan></text>
-<rect x="400.5" y="337" width="7" height="7" rx="1.5" fill="#F05138"/>
-<text x="411.5" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Swift <tspan fill="#6e7681">9%</tspan></text>
-<rect x="454.25" y="337" width="7" height="7" rx="1.5" fill="#00ADD8"/>
-<text x="465.25" y="344" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Go <tspan fill="#6e7681">8%</tspan></text>
-<!-- Legend row 2 (y=358): Shell, Rust, HTML, CSS -->
-<rect x="293" y="351" width="7" height="7" rx="1.5" fill="#89e051"/>
-<text x="304" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Shell <tspan fill="#6e7681">2%</tspan></text>
-<rect x="346.75" y="351" width="7" height="7" rx="1.5" fill="#dea584"/>
-<text x="357.75" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">Rust <tspan fill="#6e7681">1%</tspan></text>
-<rect x="400.5" y="351" width="7" height="7" rx="1.5" fill="#e34c26"/>
-<text x="411.5" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">HTML <tspan fill="#6e7681">1%</tspan></text>
-<rect x="454.25" y="351" width="7" height="7" rx="1.5" fill="#563d7c"/>
-<text x="465.25" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#8b949e">CSS <tspan fill="#6e7681">&lt;1%</tspan></text>
-
-<!-- ============ PANEL F: Issues Closed 113 (15x8 dot tally) ============ -->
-<text x="548" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">My Issues Closed</text>
-<text x="763" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">All Time</text>
-<text x="548" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="url(#numGrad2)">113</text>
-<!-- All 15x8=120 cells rendered as lit via pattern+rect, then overlay 7 dim at (row 7, cols 8-14) -->
-<rect x="548" y="302" width="215" height="64" fill="url(#dotPatF)"/>
-<use href="#fX" x="670.57" y="364"/>
-<use href="#fX" x="685.64" y="364"/>
-<use href="#fX" x="700.71" y="364"/>
-<use href="#fX" x="715.79" y="364"/>
-<use href="#fX" x="730.86" y="364"/>
-<use href="#fX" x="745.93" y="364"/>
-<use href="#fX" x="761.00" y="364"/>
-<!-- Twinkling pulses: a few representative dots blink on top for life -->
-<circle cx="550" cy="304" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="0s" repeatCount="indefinite"/></circle>
-<circle cx="625.36" cy="312.57" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="1.1s" repeatCount="indefinite"/></circle>
-<circle cx="700.71" cy="330" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="2.2s" repeatCount="indefinite"/></circle>
-<circle cx="595.21" cy="347.43" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="3.3s" repeatCount="indefinite"/></circle>
-<circle cx="745.93" cy="321.14" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="0.7s" repeatCount="indefinite"/></circle>
-<circle cx="670.57" cy="355.43" r="3" fill="#8ae1cf" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="5s" begin="2.8s" repeatCount="indefinite"/></circle>
-<g clip-path="url(#clipF)"><rect x="518" y="298" width="40" height="78" fill="url(#sweepBlue)" opacity="0.5"><animate attributeName="x" from="518" to="795" dur="23s" repeatCount="indefinite"/></rect></g>
-<text x="548" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681">one dot per issue · 7 empty slots in the tally</text>
-
+<circle cx="751.43" cy="82.00" r="3" fill="none" stroke="#d2a8ff" stroke-width="1.2" opacity="0.9"><animate attributeName="r" values="3;9;3" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.95;0;0.95" dur="2.9s" repeatCount="indefinite"/></circle>
+<circle cx="751.43" cy="82.00" r="1.8" fill="#d2a8ff"/>
+<g clip-path="url(#clipCal)"><rect x="-35" y="78" width="80" height="120" fill="url(#shimmer)" opacity="0.9"><animate attributeName="x" from="-35" to="775" dur="11s" repeatCount="indefinite"/></rect></g>
+<line x1="25" y1="82" x2="25" y2="196" stroke="#58a6ff" stroke-width="0.6" opacity="0.55"><animate attributeName="x1" from="25" to="775" dur="13s" repeatCount="indefinite"/><animate attributeName="x2" from="25" to="775" dur="13s" repeatCount="indefinite"/></line>
+<line x1="25" y1="198" x2="25" y2="201" stroke="#484f58" stroke-width="0.8"/>
+<line x1="775" y1="198" x2="775" y2="201" stroke="#484f58" stroke-width="0.8"/>
+<text x="25.00" y="215.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">Oct 2025</text>
+<text x="775.00" y="215.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="end">Oct 2026</text>
+<text x="400.00" y="215.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681" text-anchor="middle">one bar per day · bar height = commits that day</text>
+<line x1="24" y1="227" x2="775" y2="227" stroke="#1b232d" stroke-width="1" opacity="0.6"/>
+<text x="25.00" y="248.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">PRs Merged</text>
+<text x="395.00" y="248.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+<text x="25.00" y="318.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="64" fill="url(#gradHero)" font-weight="700" letter-spacing="-1">3836</text>
+<rect x="285" y="274" width="7" height="42" rx="2" fill="url(#gradHero)" opacity="0.85"><animate attributeName="height" values="12.6;42.0;16.8;37.8;12.6" dur="2.3s" repeatCount="indefinite" begin="0.0s"/><animate attributeName="y" values="303.4;274.0;299.2;278.2;303.4" dur="2.3s" repeatCount="indefinite" begin="0.0s"/></rect>
+<rect x="299" y="288" width="7" height="28" rx="2" fill="url(#gradHero)" opacity="0.85"><animate attributeName="height" values="8.4;28.0;11.2;25.2;8.4" dur="1.7s" repeatCount="indefinite" begin="0.4s"/><animate attributeName="y" values="307.6;288.0;304.8;290.8;307.6" dur="1.7s" repeatCount="indefinite" begin="0.4s"/></rect>
+<rect x="313" y="266" width="7" height="50" rx="2" fill="url(#gradHero)" opacity="0.85"><animate attributeName="height" values="15.0;50.0;20.0;45.0;15.0" dur="2.9s" repeatCount="indefinite" begin="0.1s"/><animate attributeName="y" values="301.0;266.0;296.0;271.0;301.0" dur="2.9s" repeatCount="indefinite" begin="0.1s"/></rect>
+<rect x="327" y="282" width="7" height="34" rx="2" fill="url(#gradHero)" opacity="0.85"><animate attributeName="height" values="10.2;34.0;13.6;30.6;10.2" dur="2.1s" repeatCount="indefinite" begin="0.6s"/><animate attributeName="y" values="305.8;282.0;302.4;285.4;305.8" dur="2.1s" repeatCount="indefinite" begin="0.6s"/></rect>
+<rect x="341" y="272" width="7" height="44" rx="2" fill="url(#gradHero)" opacity="0.85"><animate attributeName="height" values="13.2;44.0;17.6;39.6;13.2" dur="3.1s" repeatCount="indefinite" begin="0.2s"/><animate attributeName="y" values="302.8;272.0;298.4;276.4;302.8" dur="3.1s" repeatCount="indefinite" begin="0.2s"/></rect>
+<rect x="355" y="290" width="7" height="26" rx="2" fill="url(#gradHero)" opacity="0.85"><animate attributeName="height" values="7.8;26.0;10.4;23.4;7.8" dur="1.9s" repeatCount="indefinite" begin="0.5s"/><animate attributeName="y" values="308.2;290.0;305.6;292.6;308.2" dur="1.9s" repeatCount="indefinite" begin="0.5s"/></rect>
+<text x="25.00" y="338.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">pull requests merged · your name on them</text>
+<text x="405.00" y="248.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">My Issues Closed</text>
+<text x="775.00" y="248.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+<text x="405.00" y="318.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="64" fill="url(#gradHero2)" font-weight="700" letter-spacing="-1">92</text>
+<circle cx="560" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"><animate attributeName="opacity" values="0.95;0.35;0.95" dur="4.4s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="624" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="262" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="270" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"><animate attributeName="opacity" values="0.95;0.35;0.95" dur="5.1s" begin="0.8s" repeatCount="indefinite"/></circle>
+<circle cx="592" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="278" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="286" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"><animate attributeName="opacity" values="0.95;0.35;0.95" dur="5.8s" begin="0.8s" repeatCount="indefinite"/></circle>
+<circle cx="600" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="294" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="302" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"><animate attributeName="opacity" values="0.95;0.35;0.95" dur="3.7s" begin="2.0s" repeatCount="indefinite"/></circle>
+<circle cx="576" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="310" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="608" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"><animate attributeName="opacity" values="0.95;0.35;0.95" dur="5.1s" begin="0.4s" repeatCount="indefinite"/></circle>
+<circle cx="632" cy="318" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="584" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="592" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="600" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"><animate attributeName="opacity" values="0.95;0.35;0.95" dur="3.0s" begin="0.4s" repeatCount="indefinite"/></circle>
+<circle cx="608" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="616" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="624" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="632" cy="326" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="560" cy="334" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="568" cy="334" r="2.6" fill="#58a6ff" opacity="0.95"></circle>
+<circle cx="576" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="584" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="592" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="600" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="608" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="616" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="624" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="632" cy="334" r="2.6" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.8"/>
+<circle cx="644.6" cy="296" r="3" fill="#58a6ff" opacity="0.95"/>
+<text x="653.60" y="300.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#e6edf3">closed</text>
+<circle cx="644.6" cy="314" r="3" fill="none" stroke="#484f58" stroke-width="0.9" opacity="0.9"/>
+<text x="653.60" y="318.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#8b949e">open slot</text>
+<text x="640.60" y="338.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">100-slot tally</text>
+<line x1="24" y1="348" x2="775" y2="348" stroke="#1b232d" stroke-width="1" opacity="0.6"/>
+<text x="25.00" y="362.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Active Repos</text>
+<text x="395.00" y="362.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">1 Year</text>
+<text x="25.00" y="388.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="url(#gradHero)" font-weight="700">73</text>
+<text x="65.00" y="388.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">repos touched this year  ·  top 6 by commits:</text>
+<rect x="25" y="395" width="370" height="53" rx="4" fill="#141a22"/>
+<rect x="25.00" y="395.00" width="135.87" height="53.00" rx="2" fill="#58a6ff" opacity="0.88"><animate attributeName="opacity" values="0.75;0.98;0.75" dur="5.0s" repeatCount="indefinite" begin="0.0s"/></rect>
+<rect x="25.00" y="395.00" width="135.87" height="53.00" rx="2" fill="none" stroke="#0d1117" stroke-width="1"/>
+<text x="30.00" y="408.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0d1117" font-weight="600">oscilla-animator-v2</text>
+<text x="30.00" y="419.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0b1016" font-weight="700">1994</text>
+<rect x="160.87" y="395.00" width="129.63" height="26.16" rx="2" fill="#4ec9b0" opacity="0.88"><animate attributeName="opacity" values="0.75;0.98;0.75" dur="6.3s" repeatCount="indefinite" begin="0.3s"/></rect>
+<rect x="160.87" y="395.00" width="129.63" height="26.16" rx="2" fill="none" stroke="#0d1117" stroke-width="1"/>
+<text x="165.87" y="408.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0d1117" font-weight="600">dotfiles</text>
+<text x="165.87" y="419.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0b1016" font-weight="700">939</text>
+<rect x="290.50" y="395.00" width="104.50" height="26.16" rx="2" fill="#d2a8ff" opacity="0.88"><animate attributeName="opacity" values="0.75;0.98;0.75" dur="7.6s" repeatCount="indefinite" begin="0.6s"/></rect>
+<rect x="290.50" y="395.00" width="104.50" height="26.16" rx="2" fill="none" stroke="#0d1117" stroke-width="1"/>
+<text x="295.50" y="408.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0d1117" font-weight="600">cc-candybar</text>
+<text x="295.50" y="419.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0b1016" font-weight="700">757</text>
+<rect x="160.87" y="421.16" width="85.85" height="26.84" rx="2" fill="#79c0ff" opacity="0.88"><animate attributeName="opacity" values="0.75;0.98;0.75" dur="8.9s" repeatCount="indefinite" begin="0.9s"/></rect>
+<rect x="160.87" y="421.16" width="85.85" height="26.84" rx="2" fill="none" stroke="#0d1117" stroke-width="1"/>
+<text x="165.87" y="434.16" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0d1117" font-weight="600">vhid</text>
+<text x="165.87" y="445.16" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0b1016" font-weight="700">638</text>
+<rect x="246.72" y="421.16" width="76.02" height="26.84" rx="2" fill="#8ae1cf" opacity="0.88"><animate attributeName="opacity" values="0.75;0.98;0.75" dur="10.2s" repeatCount="indefinite" begin="1.2s"/></rect>
+<rect x="246.72" y="421.16" width="76.02" height="26.84" rx="2" fill="none" stroke="#0d1117" stroke-width="1"/>
+<text x="251.72" y="434.16" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0d1117" font-weight="600">links</text>
+<text x="251.72" y="445.16" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0b1016" font-weight="700">565</text>
+<rect x="322.74" y="421.16" width="72.26" height="26.84" rx="2" fill="#c9a2ff" opacity="0.88"><animate attributeName="opacity" values="0.75;0.98;0.75" dur="11.5s" repeatCount="indefinite" begin="1.5s"/></rect>
+<rect x="322.74" y="421.16" width="72.26" height="26.84" rx="2" fill="none" stroke="#0d1117" stroke-width="1"/>
+<text x="327.74" y="434.16" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0d1117" font-weight="600">cc-dump</text>
+<text x="327.74" y="445.16" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0b1016" font-weight="700">537</text>
+<g clip-path="url(#clipRepos)"><rect x="-60" y="395" width="60" height="53" fill="url(#shimmer)" opacity="0.9"><animate attributeName="x" from="-60" to="395" dur="17s" repeatCount="indefinite"/></rect></g>
+<text x="405.00" y="362.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Languages</text>
+<text x="775.00" y="362.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#6e7681" text-anchor="end">All Time</text>
+<text x="405.00" y="388.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="url(#gradHero2)" font-weight="700">15</text>
+<text x="433.00" y="388.00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" fill="#6e7681">distinct languages · ranked by lines/commits:</text>
+<rect x="418.50" y="396.00" width="28.00" height="44.00" rx="1.5" fill="#3178c6" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="4.5s" repeatCount="indefinite" begin="0.0s"/></rect>
+<rect x="418.50" y="440.00" width="28.00" height="1" fill="#3178c6" opacity="0.6"/>
+<text x="432.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">TS</text>
+<rect x="463.50" y="409.41" width="28.00" height="30.59" rx="1.5" fill="#3572A5" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="5.1s" repeatCount="indefinite" begin="0.2s"/></rect>
+<rect x="463.50" y="440.00" width="28.00" height="1" fill="#3572A5" opacity="0.6"/>
+<text x="477.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">Py</text>
+<rect x="508.50" y="421.77" width="28.00" height="18.23" rx="1.5" fill="#F05138" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="5.7s" repeatCount="indefinite" begin="0.5s"/></rect>
+<rect x="508.50" y="440.00" width="28.00" height="1" fill="#F05138" opacity="0.6"/>
+<text x="522.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">Sw</text>
+<rect x="553.50" y="423.19" width="28.00" height="16.81" rx="1.5" fill="#00ADD8" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="6.3s" repeatCount="indefinite" begin="0.8s"/></rect>
+<rect x="553.50" y="440.00" width="28.00" height="1" fill="#00ADD8" opacity="0.6"/>
+<text x="567.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">Go</text>
+<rect x="598.50" y="428.53" width="28.00" height="11.47" rx="1.5" fill="#89e051" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="6.9s" repeatCount="indefinite" begin="1.0s"/></rect>
+<rect x="598.50" y="440.00" width="28.00" height="1" fill="#89e051" opacity="0.6"/>
+<text x="612.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">Sh</text>
+<rect x="643.50" y="433.35" width="28.00" height="6.65" rx="1.5" fill="#e34c26" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="7.5s" repeatCount="indefinite" begin="1.2s"/></rect>
+<rect x="643.50" y="440.00" width="28.00" height="1" fill="#e34c26" opacity="0.6"/>
+<text x="657.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">HT</text>
+<rect x="688.50" y="433.45" width="28.00" height="6.55" rx="1.5" fill="#dea584" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="8.1s" repeatCount="indefinite" begin="1.5s"/></rect>
+<rect x="688.50" y="440.00" width="28.00" height="1" fill="#dea584" opacity="0.6"/>
+<text x="702.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">Ru</text>
+<rect x="733.50" y="434.00" width="28.00" height="6.00" rx="1.5" fill="#244776" opacity="0.9"><animate attributeName="opacity" values="0.72;1;0.72" dur="8.7s" repeatCount="indefinite" begin="1.8s"/></rect>
+<rect x="733.50" y="440.00" width="28.00" height="1" fill="#244776" opacity="0.6"/>
+<text x="747.50" y="448.00" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace" font-size="7" fill="#8b949e" text-anchor="middle">Cf</text>
+<g clip-path="url(#clipLangs)"><rect x="345" y="395" width="60" height="55" fill="url(#shimmer)" opacity="0.85"><animate attributeName="x" from="345" to="775" dur="19s" repeatCount="indefinite"/></rect></g>
 </svg>
