@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 10, 2026 — Leif Erikson Day (October 9)
+
+<img src="./doodle-archive/2026/10/2026-10-10-060248.svg" width="800" alt="Daily doodle for October 9, 2026 — Leif Erikson Day. A Norse longship with a carved dragon prow and a striped red-and-cream sail glides across a dark sea under aurora bands drifting in slow green and violet, stars twinkling above. On the right, a cream OCTOBER 9, 2026 headline sits over a double aurora bar, a green LEIF ERIKSON DAY subhead, an italic amber VINLAND · c. 1000 CE tertiary, a dim NORSE · LONGSHIP · ATLANTIC · SAGA · NEWFOUNDLAND roster, and a Georgia-italic 'Westward across the sea.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 9 September 1964, President Lyndon Johnson proclaimed October 9 Leif Erikson Day, honouring the Norse explorer whose crews reached North America around the year 1000 — some five centuries before Columbus. The date is not Leif's birthday or landing; it marks the 1825 arrival of the sloop Restauration at New York harbour with the first organised party of Norwegian immigrants to the United States. The sagas place Leif in a camp he called Vinland somewhere along the Atlantic coast, and in 1960 the Norwegian pair Helge and Anne Stine Ingstad found exactly that camp at L'Anse aux Meadows, Newfoundland — the only confirmed Norse site in the Americas, radiocarbon-dated to around 1000 CE.
+
+The scene is a widescreen view of a longship under aurora. On the left, the ship — carved dragon prow, striped red-and-cream sail, round shields along the gunwale — glides across a dark sea, rocking gently with the swell. Above it, aurora bands drift in slow green and violet across a starry sky, stars twinkling at prime intervals. On the right, a cream OCTOBER 9, 2026 headline sits over a double aurora bar, a green LEIF ERIKSON DAY subhead, an italic amber VINLAND · c. 1000 CE tertiary, a dim NORSE · LONGSHIP · ATLANTIC · SAGA · NEWFOUNDLAND roster, and a Georgia-italic 'Westward across the sea.' caption at the base.
+
+</details>
+
+---
+
 ## October 9, 2026 — World Octopus Day (October 8)
 
 <img src="./doodle-archive/2026/10/2026-10-09-060201.svg" width="800" alt="Daily doodle for October 8, 2026 — World Octopus Day. A coral-pink octopus with eight slow-moving arms hangs in the dark water on the left, its mantle pulsing through chromatophore colour shifts, bubbles rising past it, pale light rays filtering down from above. On the right, a cream OCTOBER 8, 2026 headline sits over a double wave bar, a coral WORLD OCTOPUS DAY subhead, an italic amber EIGHT ARMS · NINE BRAINS · THREE HEARTS tertiary, a dim CHROMATOPHORES · INK · JET · CAMOUFLAGE · PUZZLE roster, and a Georgia-italic 'Think like a cephalopod.' caption at the base.">
