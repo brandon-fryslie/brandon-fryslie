@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: World Mental Health Day (October 10) -->
+<!-- about:
+World Mental Health Day was first observed on 10 October 1992, launched by the World Federation for Mental Health as a single annual call to raise awareness and mobilise support. The World Health Organization adopted it the following decade, and it is now marked in more than 150 countries with a different theme each year — this one asks us to take mental health seriously as a universal human right. The date is not an anniversary of any one event but a reminder that attention to the mind is a daily practice, not an emergency measure, and that most of the care that actually helps happens in ordinary conversations between ordinary people.
+
+The scene is a quiet dawn. On the left, a soft profile silhouette faces the sunrise; inside the head, a slender tree branches upward, its leaves unfolding at prime cadences and small sparks of light drifting slowly up through the mind. A warm radial glow pulses gently behind. On the right, a cream OCTOBER 10, 2026 headline sits over a double soft-green bar, a green WORLD MENTAL HEALTH DAY subhead, an italic amber SINCE 1992 · WFMH tertiary, a dim MIND · REST · GROWTH · CARE · COMMUNITY roster, and a Georgia-italic 'You are not alone.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 10, 2026 — World Mental Health Day. A soft profile silhouette on the left faces a warm dawn glow; inside the head, a slender tree branches upward with leaves unfolding and small sparks of light drifting slowly up through the mind. On the right, a cream OCTOBER 10, 2026 headline sits over a double soft-green bar, a green WORLD MENTAL HEALTH DAY subhead, an italic amber SINCE 1992 · WFMH tertiary, a dim MIND · REST · GROWTH · CARE · COMMUNITY roster, and a Georgia-italic 'You are not alone.' caption at the base.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#070b12"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="0.28" cy="0.55" r="0.42">
+      <stop offset="0" stop-color="#d8a858" stop-opacity="0.55"/>
+      <stop offset="0.4" stop-color="#8a5a2e" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="headGlow" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#f4ecd0" stop-opacity="0.0"/>
+      <stop offset="0.7" stop-color="#6ec8a0" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="headFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a2434"/>
+      <stop offset="1" stop-color="#0e141e"/>
+    </linearGradient>
+    <linearGradient id="trunkGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#5a4028"/>
+      <stop offset="1" stop-color="#8a6a3e"/>
+    </linearGradient>
+    <radialGradient id="sparkGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff4c8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff4c8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Head silhouette as a clip for the tree -->
+    <clipPath id="headClip">
+      <path d="M 110 180
+               L 110 158
+               Q 86 150, 80 128
+               Q 70 100, 86 70
+               Q 118 36, 180 38
+               Q 232 42, 246 82
+               L 245 102
+               Q 254 108, 256 116
+               Q 254 124, 244 126
+               Q 244 136, 236 142
+               L 230 148
+               L 228 158
+               L 222 170
+               L 222 180 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- Warm dawn glow behind the head -->
+  <rect width="800" height="200" fill="url(#dawn)">
+    <animate attributeName="opacity" values="0.75;1;0.8;1;0.75" dur="17s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Faint horizon line -->
+  <line x1="0" y1="182" x2="800" y2="182" stroke="#1a2030" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- =================== HEAD + MIND-TREE =================== -->
+  <g>
+    <animateTransform attributeName="transform" type="scale" values="1 1;1.015 1.015;1 1"
+                      additive="sum" dur="11s" repeatCount="indefinite"/>
+    <!-- Transform origin workaround: wrap and translate -->
+    <g>
+      <!-- Soft outer aura -->
+      <ellipse cx="168" cy="108" rx="110" ry="92" fill="url(#headGlow)">
+        <animate attributeName="opacity" values="0.6;1;0.7;0.95;0.6" dur="13s" repeatCount="indefinite"/>
+      </ellipse>
+
+      <!-- Head silhouette (profile facing right) -->
+      <path d="M 110 180
+               L 110 158
+               Q 86 150, 80 128
+               Q 70 100, 86 70
+               Q 118 36, 180 38
+               Q 232 42, 246 82
+               L 245 102
+               Q 254 108, 256 116
+               Q 254 124, 244 126
+               Q 244 136, 236 142
+               L 230 148
+               L 228 158
+               L 222 170
+               L 222 180 Z"
+            fill="url(#headFill)" stroke="#6ec8a0" stroke-width="1.2" opacity="0.95"/>
+
+      <!-- Soft inner rim light along the forehead/front -->
+      <path d="M 180 38 Q 232 42, 246 82 L 245 102 Q 254 108, 256 116"
+            fill="none" stroke="#f4ecd0" stroke-width="0.6" opacity="0.35"/>
+
+      <!-- Mind-tree, clipped inside the head -->
+      <g clip-path="url(#headClip)">
+        <!-- Roots fade -->
+        <path d="M 160 170 Q 150 165, 140 168 M 160 170 Q 170 164, 180 166 M 160 170 L 160 160"
+              stroke="#5a4028" stroke-width="1.2" fill="none" opacity="0.6"/>
+
+        <!-- Trunk -->
+        <path d="M 160 170 Q 158 140, 162 110 Q 164 92, 160 70"
+              stroke="url(#trunkGrad)" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+
+        <!-- Primary branches -->
+        <g stroke="#8a6a3e" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.9">
+          <path d="M 162 118 Q 150 110, 134 108"/>
+          <path d="M 162 100 Q 178 92, 196 90"/>
+          <path d="M 160 86 Q 150 76, 138 74"/>
+          <path d="M 160 76 Q 170 68, 186 66"/>
+          <path d="M 160 68 Q 158 60, 162 52"/>
+        </g>
+
+        <!-- Secondary twigs -->
+        <g stroke="#8a6a3e" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.75">
+          <path d="M 134 108 Q 128 102, 124 96"/>
+          <path d="M 134 108 Q 128 112, 122 114"/>
+          <path d="M 196 90 Q 204 84, 212 82"/>
+          <path d="M 196 90 Q 202 94, 208 94"/>
+          <path d="M 138 74 Q 132 68, 128 62"/>
+          <path d="M 186 66 Q 194 60, 200 58"/>
+          <path d="M 186 66 Q 194 68, 200 68"/>
+        </g>
+
+        <!-- Leaves (unfold via scale) -->
+        <g>
+          <g transform="translate(124 96)">
+            <ellipse cx="0" cy="0" rx="4" ry="2.4" fill="#6ec8a0" transform="rotate(-30)">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="13s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.3;0.95;0.9;0.95" dur="13s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g transform="translate(122 114)">
+            <ellipse cx="0" cy="0" rx="4" ry="2.4" fill="#6ec8a0" transform="rotate(-15)">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="17s" begin="-3s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.3;0.95;0.9;0.95" dur="17s" begin="-3s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g transform="translate(212 82)">
+            <ellipse cx="0" cy="0" rx="4.2" ry="2.6" fill="#86d8b0" transform="rotate(20)">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="11s" begin="-2s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.3;0.95;0.9;0.95" dur="11s" begin="-2s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g transform="translate(208 94)">
+            <ellipse cx="0" cy="0" rx="4" ry="2.4" fill="#6ec8a0" transform="rotate(10)">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="19s" begin="-5s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.3;0.9;0.85;0.9" dur="19s" begin="-5s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g transform="translate(128 62)">
+            <ellipse cx="0" cy="0" rx="4" ry="2.4" fill="#6ec8a0" transform="rotate(-45)">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="13s" begin="-6s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.3;0.9;0.85;0.9" dur="13s" begin="-6s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g transform="translate(200 58)">
+            <ellipse cx="0" cy="0" rx="4.2" ry="2.6" fill="#86d8b0" transform="rotate(35)">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="17s" begin="-7s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.3;0.95;0.9;0.95" dur="17s" begin="-7s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g transform="translate(200 68)">
+            <ellipse cx="0" cy="0" rx="3.6" ry="2.2" fill="#6ec8a0" transform="rotate(15)">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="11s" begin="-8s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.3;0.9;0.85;0.9" dur="11s" begin="-8s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g transform="translate(162 50)">
+            <ellipse cx="0" cy="0" rx="4.4" ry="2.8" fill="#a876ff" opacity="0.9">
+              <animateTransform attributeName="transform" type="scale" values="0.2;1;0.9;1" dur="19s" begin="-4s" repeatCount="indefinite" additive="sum"/>
+              <animate attributeName="opacity" values="0.4;0.95;0.9;0.95" dur="19s" begin="-4s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <!-- Mid-canopy small leaves -->
+          <circle cx="150" cy="86" r="1.6" fill="#6ec8a0" opacity="0.8">
+            <animate attributeName="opacity" values="0.4;0.9;0.5;0.9" dur="13s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="178" cy="92" r="1.5" fill="#86d8b0" opacity="0.85">
+            <animate attributeName="opacity" values="0.4;0.9;0.5;0.9" dur="11s" begin="-2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="174" cy="74" r="1.4" fill="#6ec8a0" opacity="0.8">
+            <animate attributeName="opacity" values="0.4;0.9;0.5;0.9" dur="17s" begin="-5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="146" cy="100" r="1.4" fill="#86d8b0" opacity="0.8">
+            <animate attributeName="opacity" values="0.4;0.9;0.5;0.9" dur="19s" begin="-7s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+
+        <!-- Rising sparks inside the head -->
+        <g fill="url(#sparkGlow)">
+          <circle cx="140" cy="160" r="1.6">
+            <animate attributeName="cy" values="160;40" dur="11s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.15;0.85;1" dur="11s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="170" cy="150" r="1.3">
+            <animate attributeName="cy" values="150;46" dur="13s" begin="-3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.15;0.85;1" dur="13s" begin="-3s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="196" cy="160" r="1.2">
+            <animate attributeName="cy" values="160;52" dur="17s" begin="-7s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.15;0.85;1" dur="17s" begin="-7s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="124" cy="150" r="1.1">
+            <animate attributeName="cy" values="150;60" dur="19s" begin="-5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.15;0.85;1" dur="19s" begin="-5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="214" cy="150" r="1.1">
+            <animate attributeName="cy" values="150;56" dur="23s" begin="-11s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.15;0.85;1" dur="23s" begin="-11s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Rising sparks outside the head (slow drift up to the sky) -->
+  <g fill="#f4ecd0">
+    <circle cx="260" cy="150" r="0.9" opacity="0.7">
+      <animate attributeName="cy" values="190;20" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.15;0.85;1" dur="23s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="282" cy="150" r="0.7" opacity="0.65">
+      <animate attributeName="cy" values="190;14" dur="29s" begin="-7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.75;0.75;0" keyTimes="0;0.15;0.85;1" dur="29s" begin="-7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="310" cy="150" r="0.8" opacity="0.65">
+      <animate attributeName="cy" values="190;22" dur="19s" begin="-5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.75;0.75;0" keyTimes="0;0.15;0.85;1" dur="19s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="150" r="0.8" opacity="0.65">
+      <animate attributeName="cy" values="190;18" dur="17s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.75;0.75;0" keyTimes="0;0.15;0.85;1" dur="17s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="34" cy="150" r="0.7" opacity="0.6">
+      <animate attributeName="cy" values="190;24" dur="29s" begin="-11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.15;0.85;1" dur="29s" begin="-11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Separator -->
+  <line x1="340" y1="30" x2="340" y2="170" stroke="#1a2030" stroke-width="0.6" opacity="0.45"/>
+
+  <!-- =================== TEXT STACK (right half) =================== -->
+
+  <!-- Date headline -->
+  <text x="580" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f4ecd0" letter-spacing="2.0">
+    OCTOBER 10, 2026
+  </text>
+
+  <!-- Twin green bar under headline -->
+  <path d="M 410 74 Q 450 68, 490 74 T 570 74 T 650 74 T 730 74 T 770 74" fill="none" stroke="#6ec8a0" stroke-width="2.4" opacity="0.95"/>
+  <path d="M 410 80 Q 450 74, 490 80 T 570 80 T 650 80 T 730 80 T 770 80" fill="none" stroke="#a876ff" stroke-width="1.3" opacity="0.7"/>
+
+  <!-- Subhead -->
+  <text x="580" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="15" font-weight="800" letter-spacing="3.2" fill="#86d8b0">
+    WORLD MENTAL HEALTH DAY
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="580" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#c8a858" letter-spacing="0.6">
+    SINCE 1992 &#183; WFMH
+  </text>
+
+  <!-- Roster -->
+  <text x="580" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.8" font-weight="700" fill="#8aa0c8" letter-spacing="2.4" opacity="0.95">
+    MIND &#183; REST &#183; GROWTH &#183; CARE &#183; COMMUNITY
+  </text>
+
+  <!-- Caption -->
+  <text x="580" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="11" font-style="italic" fill="#c8d0e0" opacity="0.95">
+    &#8220;You are not alone.&#8221;
+  </text>
+</svg>

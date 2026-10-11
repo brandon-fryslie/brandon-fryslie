@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 11, 2026 — World Mental Health Day (October 10)
+
+<img src="./doodle-archive/2026/10/2026-10-11-060118.svg" width="800" alt="Daily doodle for October 10, 2026 — World Mental Health Day. A soft profile silhouette on the left faces a warm dawn glow; inside the head, a slender tree branches upward with leaves unfolding and small sparks of light drifting slowly up through the mind. On the right, a cream OCTOBER 10, 2026 headline sits over a double soft-green bar, a green WORLD MENTAL HEALTH DAY subhead, an italic amber SINCE 1992 · WFMH tertiary, a dim MIND · REST · GROWTH · CARE · COMMUNITY roster, and a Georgia-italic 'You are not alone.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+World Mental Health Day was first observed on 10 October 1992, launched by the World Federation for Mental Health as a single annual call to raise awareness and mobilise support. The World Health Organization adopted it the following decade, and it is now marked in more than 150 countries with a different theme each year — this one asks us to take mental health seriously as a universal human right. The date is not an anniversary of any one event but a reminder that attention to the mind is a daily practice, not an emergency measure, and that most of the care that actually helps happens in ordinary conversations between ordinary people.
+
+The scene is a quiet dawn. On the left, a soft profile silhouette faces the sunrise; inside the head, a slender tree branches upward, its leaves unfolding at prime cadences and small sparks of light drifting slowly up through the mind. A warm radial glow pulses gently behind. On the right, a cream OCTOBER 10, 2026 headline sits over a double soft-green bar, a green WORLD MENTAL HEALTH DAY subhead, an italic amber SINCE 1992 · WFMH tertiary, a dim MIND · REST · GROWTH · CARE · COMMUNITY roster, and a Georgia-italic 'You are not alone.' caption at the base.
+
+</details>
+
+---
+
 ## October 10, 2026 — Leif Erikson Day (October 9)
 
 <img src="./doodle-archive/2026/10/2026-10-10-060248.svg" width="800" alt="Daily doodle for October 9, 2026 — Leif Erikson Day. A Norse longship with a carved dragon prow and a striped red-and-cream sail glides across a dark sea under aurora bands drifting in slow green and violet, stars twinkling above. On the right, a cream OCTOBER 9, 2026 headline sits over a double aurora bar, a green LEIF ERIKSON DAY subhead, an italic amber VINLAND · c. 1000 CE tertiary, a dim NORSE · LONGSHIP · ATLANTIC · SAGA · NEWFOUNDLAND roster, and a Georgia-italic 'Westward across the sea.' caption at the base.">
