@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 12, 2026 — International Day of the Girl Child (October 11)
+
+<img src="./doodle-archive/2026/10/2026-10-12-060506.svg" width="800" alt="Daily doodle for October 11, 2026 — International Day of the Girl Child. On the left, a girl stands in silhouette with arms raised and a long braid, haloed by a warm magenta dawn glow; above her a constellation of stars connects into the shape of a bird in flight while small sparks rise from her hands into it. On the right, a cream OCTOBER 11, 2026 headline sits over a double magenta-and-rose bar, a pink INTERNATIONAL DAY OF THE GIRL subhead, an italic amber UN · SINCE 2012 tertiary, a dim VOICE · EDUCATION · RIGHTS · POWER · FUTURE roster, and a Georgia-italic 'Her story, her future.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+The United Nations adopted the International Day of the Girl Child on 19 December 2011 and first observed it on 11 October 2012, naming a single day each year to focus the world's attention on the particular barriers girls face — in education, in safety, in whether their voices are counted — and on the enormous shift that follows when those barriers come down. Girls make up roughly one in nine people alive, and about 122 million of school age are still out of school; the Day is partly a tally and partly a dare, an insistence that the next generation of leaders is already here and is being asked, year by year, what the world is prepared to do for them.
+
+The scene is a dawn tableau. On the left, a girl stands in silhouette on a thin horizon with her arms lifted and a long braid trailing, framed by a warm magenta glow; above her, a loose constellation of stars connects into a quiet pattern — a bird in flight — as small sparks rise from her hands up into it. On the right, a cream OCTOBER 11, 2026 headline sits over a double magenta-and-rose bar, a pink INTERNATIONAL DAY OF THE GIRL subhead, an italic amber UN · SINCE 2012 tertiary, a dim VOICE · EDUCATION · RIGHTS · POWER · FUTURE roster, and a Georgia-italic 'Her story, her future.' caption at the base.
+
+</details>
+
+---
+
 ## October 11, 2026 — World Mental Health Day (October 10)
 
 <img src="./doodle-archive/2026/10/2026-10-11-060118.svg" width="800" alt="Daily doodle for October 10, 2026 — World Mental Health Day. A soft profile silhouette on the left faces a warm dawn glow; inside the head, a slender tree branches upward with leaves unfolding and small sparks of light drifting slowly up through the mind. On the right, a cream OCTOBER 10, 2026 headline sits over a double soft-green bar, a green WORLD MENTAL HEALTH DAY subhead, an italic amber SINCE 1992 · WFMH tertiary, a dim MIND · REST · GROWTH · CARE · COMMUNITY roster, and a Georgia-italic 'You are not alone.' caption at the base.">
