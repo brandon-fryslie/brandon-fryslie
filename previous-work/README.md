@@ -8,9 +8,11 @@ Day sections are written once and never rewritten. The raw, verbatim record of w
 
 ## 2026
 
+- **[Week of October 12](2026/2026-10-12.md)** — *in progress*
+- **[Week of October 5](2026/2026-10-05.md)** — *in progress*
 - **[Week of September 28](2026/2026-09-28.md)** — *in progress*
 - **[Week of September 21](2026/2026-09-21.md)** — *in progress*
-- **[Week of September 14](2026/2026-09-14.md)** — *in progress*
+- **[Week of September 14](2026/2026-09-14.md)** — universality's chaos cascade reaches rung 5 · slopspot read-along and on-device voice cloning · low-talker Mac distribution arc · rich-js diagnostics and 0.10.0
 - **[Week of September 7](2026/2026-09-07.md)** — elvenspeak stub-fleet router and Dockerfile publish gate · rich-js JSON and print fidelity · lit rename and plugin cleanup · memento 0.6–0.7 ceiling collapse
 - **[Week of August 17](2026/2026-08-17.md)** — *in progress*
 - **[Week of August 10](2026/2026-08-10.md)** — slopspot RAG stack and freshness trail · cc-candybar per-segment palette overrides · lit sync safety and licensing clean-room · cc-dump Anthropic-only proxy consolidation
