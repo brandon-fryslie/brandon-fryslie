@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 13, 2026 — Indigenous Peoples' Day (October 12)
+
+<img src="./doodle-archive/2026/10/2026-10-13-060317.svg" width="800" alt="Daily doodle for October 12, 2026 — Indigenous Peoples' Day. On the left, three layered desert mountain ridges in warm red and terracotta step back toward a geometric medallion sun of concentric rings and triangle rays; a dark eagle banks slowly overhead against a dawn sky; a thin zig-zag weaving pattern runs along the horizon. On the right, a cream OCTOBER 12, 2026 headline sits over a double terracotta-and-ochre bar, a terracotta INDIGENOUS PEOPLES' DAY subhead, an italic amber FIRST NATIONS · SINCE TIME IMMEMORIAL tertiary, a dim LAND · LANGUAGE · STORY · CEREMONY · FUTURE roster, and a Georgia-italic 'Still here.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+Indigenous Peoples' Day falls on the second Monday of October in the United States — a reframing of the older Columbus Day as an occasion to honour the first peoples of the Americas, their histories, their cultures, and the communities still living here. Berkeley, California held the first municipal observance in 1992, five hundred years after Columbus's landing; a federal proclamation followed in 2021. More than five hundred Native nations live within U.S. borders today, each with its own language, land relationship, and story that long predates and continues past the arrival of ships.
+
+The scene faces east at sunrise. On the left, three layered ridges of warm desert rock step back toward a geometric medallion sun — concentric rings with triangle rays, pulsing softly — while a dark eagle banks slowly overhead. A thin zig-zag weaving pattern runs along the horizon. On the right, a cream OCTOBER 12, 2026 headline sits over a double terracotta-and-ochre bar, a terracotta INDIGENOUS PEOPLES' DAY subhead, an italic amber FIRST NATIONS · SINCE TIME IMMEMORIAL tertiary, a dim LAND · LANGUAGE · STORY · CEREMONY · FUTURE roster, and a Georgia-italic 'Still here.' caption at the base.
+
+</details>
+
+---
+
 ## October 12, 2026 — International Day of the Girl Child (October 11)
 
 <img src="./doodle-archive/2026/10/2026-10-12-060506.svg" width="800" alt="Daily doodle for October 11, 2026 — International Day of the Girl Child. On the left, a girl stands in silhouette with arms raised and a long braid, haloed by a warm magenta dawn glow; above her a constellation of stars connects into the shape of a bird in flight while small sparks rise from her hands into it. On the right, a cream OCTOBER 11, 2026 headline sits over a double magenta-and-rose bar, a pink INTERNATIONAL DAY OF THE GIRL subhead, an italic amber UN · SINCE 2012 tertiary, a dim VOICE · EDUCATION · RIGHTS · POWER · FUTURE roster, and a Georgia-italic 'Her story, her future.' caption at the base.">
