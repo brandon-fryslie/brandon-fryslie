@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 14, 2026 — Ada Lovelace Day (October 13, 2026)
+
+<img src="./doodle-archive/2026/10/2026-10-14-060150.svg" width="800" alt="Daily doodle for October 13, 2026 — Ada Lovelace Day. On the left, three interlocking brass gears turn at prime cadences around a soft violet halo, a column of punched cards drifts upward through them, and floating fragments of Note G orbit slowly. On the right, a cream OCTOBER 13, 2026 headline sits over a double brass-and-violet bar, a lavender ADA LOVELACE DAY subhead, an italic amber 1815 – 1852 · FIRST PROGRAMMER tertiary, a dim MATHEMATICS · POETRY · ENGINE · ALGORITHM · LEGACY roster, and a Georgia-italic 'The science of operations.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+Ada Lovelace Day falls on the second Tuesday of October, honouring Augusta Ada King, Countess of Lovelace (1815–1852) and the women in science, technology, engineering, and mathematics who followed her. In 1843 Ada translated an Italian paper describing Charles Babbage's unbuilt Analytical Engine and appended seven notes of her own, more than twice the length of the original. Note G contained a step-by-step method for computing Bernoulli numbers — the first algorithm ever written for a machine, and the reason she is remembered as the first computer programmer. The modern Day was founded by Suw Charman-Anderson in 2009 to raise the profile of women in STEM; it is now observed worldwide.
+
+The scene is a Victorian clockwork tableau. On the left, three interlocking brass gears turn at prime cadences, with a column of punched cards drifting slowly upward through them and a soft violet glow haloing the mechanism. Floating fragments of Note G — "FOR N := 1" and a Bernoulli symbol — orbit the composition at a slow drift. On the right, a cream OCTOBER 13, 2026 headline sits over a double brass-and-violet bar, a lavender ADA LOVELACE DAY subhead, an italic amber 1815 – 1852 · FIRST PROGRAMMER tertiary, a dim MATHEMATICS · POETRY · ENGINE · ALGORITHM · LEGACY roster, and a Georgia-italic 'The science of operations.' caption at the base.
+
+</details>
+
+---
+
 ## October 13, 2026 — Indigenous Peoples' Day (October 12)
 
 <img src="./doodle-archive/2026/10/2026-10-13-060317.svg" width="800" alt="Daily doodle for October 12, 2026 — Indigenous Peoples' Day. On the left, three layered desert mountain ridges in warm red and terracotta step back toward a geometric medallion sun of concentric rings and triangle rays; a dark eagle banks slowly overhead against a dawn sky; a thin zig-zag weaving pattern runs along the horizon. On the right, a cream OCTOBER 12, 2026 headline sits over a double terracotta-and-ochre bar, a terracotta INDIGENOUS PEOPLES' DAY subhead, an italic amber FIRST NATIONS · SINCE TIME IMMEMORIAL tertiary, a dim LAND · LANGUAGE · STORY · CEREMONY · FUTURE roster, and a Georgia-italic 'Still here.' caption at the base.">
