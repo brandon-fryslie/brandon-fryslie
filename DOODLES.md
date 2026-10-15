@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 15, 2026 — Breaking the Sound Barrier (October 14, 1947)
+
+<img src="./doodle-archive/2026/10/2026-10-15-060122.svg" width="800" alt="Daily doodle for October 14, 2026 — Breaking the Sound Barrier. On the left, a stylised orange Bell X-1 rocket plane streaks right against a desert-sky gradient, trailing a pulsing contrail; a violet-pink Mach cone opens from its nose with shockwave diamonds strobing along the shaft and a thin horizon of distant mountains sitting far below. On the right, a cream OCTOBER 14, 2026 headline sits over a double orange-and-cyan bar, a cyan BREAKING THE SOUND BARRIER subhead, an italic amber BELL X-1 · MACH 1.06 · 1947 tertiary, a dim COURAGE · ENGINEERING · ALTITUDE · SPEED · HISTORY roster, and a Georgia-italic 'Poke a hole in the sky.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 14 October 1947 Captain Chuck Yeager flew the orange, bullet-shaped Bell X-1 — christened "Glamorous Glennis" after his wife — out of the belly of a B-29 at 20,000 feet over Muroc Dry Lake in California, lit its four rocket chambers, climbed to roughly 43,000 feet, and became the first person to fly faster than sound. Mach 1.06. He did it with two cracked ribs from a horseback fall two days earlier, having rigged a sawed-off broom handle to close the cockpit door one-handed. The barrier wasn't a wall of air so much as a wall of belief; engineers had watched aircraft shake apart approaching it. After Yeager, supersonic flight became a design problem instead of a death sentence.
+
+The scene is a Mojave morning at altitude. On the left, a stylised X-1 streaks right against a desert-to-stratosphere gradient, its contrail curling behind in prime-cadence pulses. A violet-pink Mach cone opens from its nose, shockwave diamonds strobe along the shaft, and a thin horizon of distant mountains sits far below. On the right, a cream OCTOBER 14, 2026 headline sits over a double orange-and-cyan bar, a cyan BREAKING THE SOUND BARRIER subhead, an italic amber BELL X-1 · MACH 1.06 · 1947 tertiary, a dim COURAGE · ENGINEERING · ALTITUDE · SPEED · HISTORY roster, and a Georgia-italic 'Poke a hole in the sky.' caption at the base.
+
+</details>
+
+---
+
 ## October 14, 2026 — Ada Lovelace Day (October 13, 2026)
 
 <img src="./doodle-archive/2026/10/2026-10-14-060150.svg" width="800" alt="Daily doodle for October 13, 2026 — Ada Lovelace Day. On the left, three interlocking brass gears turn at prime cadences around a soft violet halo, a column of punched cards drifts upward through them, and floating fragments of Note G orbit slowly. On the right, a cream OCTOBER 13, 2026 headline sits over a double brass-and-violet bar, a lavender ADA LOVELACE DAY subhead, an italic amber 1815 – 1852 · FIRST PROGRAMMER tertiary, a dim MATHEMATICS · POETRY · ENGINE · ALGORITHM · LEGACY roster, and a Georgia-italic 'The science of operations.' caption at the base.">

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Breaking the Sound Barrier (October 14, 1947) -->
+<!-- about:
+On 14 October 1947 Captain Chuck Yeager flew the orange, bullet-shaped Bell X-1 — christened "Glamorous Glennis" after his wife — out of the belly of a B-29 at 20,000 feet over Muroc Dry Lake in California, lit its four rocket chambers, climbed to roughly 43,000 feet, and became the first person to fly faster than sound. Mach 1.06. He did it with two cracked ribs from a horseback fall two days earlier, having rigged a sawed-off broom handle to close the cockpit door one-handed. The barrier wasn't a wall of air so much as a wall of belief; engineers had watched aircraft shake apart approaching it. After Yeager, supersonic flight became a design problem instead of a death sentence.
+
+The scene is a Mojave morning at altitude. On the left, a stylised X-1 streaks right against a desert-to-stratosphere gradient, its contrail curling behind in prime-cadence pulses. A violet-pink Mach cone opens from its nose, shockwave diamonds strobe along the shaft, and a thin horizon of distant mountains sits far below. On the right, a cream OCTOBER 14, 2026 headline sits over a double orange-and-cyan bar, a cyan BREAKING THE SOUND BARRIER subhead, an italic amber BELL X-1 · MACH 1.06 · 1947 tertiary, a dim COURAGE · ENGINEERING · ALTITUDE · SPEED · HISTORY roster, and a Georgia-italic 'Poke a hole in the sky.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 14, 2026 — Breaking the Sound Barrier. On the left, a stylised orange Bell X-1 rocket plane streaks right against a desert-sky gradient, trailing a pulsing contrail; a violet-pink Mach cone opens from its nose with shockwave diamonds strobing along the shaft and a thin horizon of distant mountains sitting far below. On the right, a cream OCTOBER 14, 2026 headline sits over a double orange-and-cyan bar, a cyan BREAKING THE SOUND BARRIER subhead, an italic amber BELL X-1 · MACH 1.06 · 1947 tertiary, a dim COURAGE · ENGINEERING · ALTITUDE · SPEED · HISTORY roster, and a Georgia-italic 'Poke a hole in the sky.' caption at the base.">
+  <defs>
+    <!-- Sky gradient: deep stratosphere up top, warming toward Mojave desert horizon -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.45" stop-color="#121a2a"/>
+      <stop offset="0.75" stop-color="#2a1a1a"/>
+      <stop offset="1" stop-color="#3a1a0a"/>
+    </linearGradient>
+
+    <!-- Mach cone: violet-pink shock -->
+    <linearGradient id="machCone" x1="1" y1="0.5" x2="0" y2="0.5">
+      <stop offset="0" stop-color="#ff6ab8" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#ff6ab8" stop-opacity="0.42"/>
+      <stop offset="0.8" stop-color="#b89cd4" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f0e4c8" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Mach cone edge glow -->
+    <linearGradient id="machEdge" x1="1" y1="0.5" x2="0" y2="0.5">
+      <stop offset="0" stop-color="#ff8ac8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ff8ac8" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fff0e4" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Fuselage: orange X-1 body with brass highlight -->
+    <linearGradient id="fuselage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb060"/>
+      <stop offset="0.5" stop-color="#e86820"/>
+      <stop offset="1" stop-color="#8a3010"/>
+    </linearGradient>
+    <linearGradient id="fuselageShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0d4" stop-opacity="0.75"/>
+      <stop offset="0.5" stop-color="#ffd088" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffd088" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Contrail: cream fading -->
+    <linearGradient id="trail" x1="1" y1="0.5" x2="0" y2="0.5">
+      <stop offset="0" stop-color="#f0e4c8" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#f0e4c8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Rocket exhaust glow -->
+    <radialGradient id="exhaust" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff0b0" stop-opacity="1"/>
+      <stop offset="0.4" stop-color="#ff8030" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ff6020" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Horizon haze -->
+    <linearGradient id="horizon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb060" stop-opacity="0.0"/>
+      <stop offset="0.5" stop-color="#ffb060" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8a3010" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Bell X-1 silhouette: fat bullet nose, straight wings, horizontal stab -->
+    <g id="x1">
+      <!-- Horizontal stab (behind body) -->
+      <path d="M -56 -1 L -70 -6 L -74 -5 L -72 -1 L -72 1 L -74 5 L -70 6 L -56 1 Z" fill="#8a3010"/>
+      <!-- Vertical tail -->
+      <path d="M -58 -4 L -74 -14 L -72 -2 L -56 -2 Z" fill="url(#fuselage)"/>
+      <path d="M -58 -4 L -74 -14 L -72 -11 L -62 -4 Z" fill="#ffb060" opacity="0.6"/>
+      <!-- Main wings (straight, mid-mount) -->
+      <path d="M -18 -2 L -32 -12 L -2 -4 L 10 -2 Z" fill="url(#fuselage)"/>
+      <path d="M -18 2 L -32 12 L -2 4 L 10 2 Z" fill="#8a3010"/>
+      <path d="M -18 -2 L -32 -12 L -14 -8 L -4 -4 Z" fill="#ffb060" opacity="0.5"/>
+      <!-- Fuselage body: bullet shape -->
+      <path d="M -58 -6 Q -58 -8, -40 -8 L 32 -8 Q 46 -8, 54 -3 Q 58 0, 54 3 Q 46 8, 32 8 L -40 8 Q -58 8, -58 6 Z" fill="url(#fuselage)"/>
+      <!-- Highlight sheen on top -->
+      <path d="M -56 -5 Q -40 -7, 20 -7 Q 40 -7, 50 -4" fill="none" stroke="url(#fuselageShine)" stroke-width="2"/>
+      <!-- Cockpit canopy bump -->
+      <path d="M -8 -8 Q -4 -13, 4 -13 Q 14 -13, 18 -8 Z" fill="#1a2838"/>
+      <path d="M -4 -11 Q 2 -12, 10 -11" fill="none" stroke="#88a8d8" stroke-width="0.8" opacity="0.9"/>
+      <!-- NACA band and stencil -->
+      <rect x="-24" y="-2" width="22" height="4" fill="#2a1008" opacity="0.5"/>
+      <text x="-13" y="1.6" text-anchor="middle" font-family="'Georgia', serif" font-size="4" font-weight="700" fill="#f0e4c8" opacity="0.9">X-1</text>
+      <!-- Nose rivet row -->
+      <g fill="#2a1008" opacity="0.55">
+        <circle cx="40" cy="-4" r="0.6"/>
+        <circle cx="44" cy="-3" r="0.6"/>
+        <circle cx="48" cy="-1.5" r="0.6"/>
+        <circle cx="40" cy="4" r="0.6"/>
+        <circle cx="44" cy="3" r="0.6"/>
+      </g>
+      <!-- Nose tip glow (compression) -->
+      <circle cx="54" cy="0" r="3" fill="#fff0d4" opacity="0.75"/>
+    </g>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Horizon haze band -->
+  <rect x="0" y="138" width="340" height="30" fill="url(#horizon)"/>
+
+  <!-- Distant Mojave mountain silhouettes -->
+  <path d="M 0 158 L 22 148 L 44 154 L 70 142 L 96 150 L 128 144 L 160 152 L 196 146 L 232 154 L 272 148 L 310 155 L 340 150 L 340 170 L 0 170 Z" fill="#2a1a1a" opacity="0.75"/>
+  <path d="M 0 164 L 30 158 L 60 162 L 100 156 L 150 161 L 200 157 L 260 162 L 320 158 L 340 160 L 340 170 L 0 170 Z" fill="#1a0e0e" opacity="0.9"/>
+
+  <!-- Scattered high-altitude stars -->
+  <g fill="#f0e4c8">
+    <circle cx="36" cy="22" r="0.8" opacity="0.7">
+      <animate attributeName="opacity" values="0.3;0.9;0.4;0.9;0.3" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="78" cy="14" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.25;0.8;0.35;0.8;0.25" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="158" cy="24" r="0.7" opacity="0.65">
+      <animate attributeName="opacity" values="0.3;0.85;0.4;0.85;0.3" dur="17s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="226" cy="16" r="0.5" opacity="0.55">
+      <animate attributeName="opacity" values="0.25;0.75;0.35;0.75;0.25" dur="13s" begin="-7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="292" cy="26" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.25;0.8;0.35;0.8;0.25" dur="11s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="112" cy="40" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.3;0.7;0.2" dur="17s" begin="-9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- =================== CONTRAIL (behind cone) =================== -->
+  <!-- Contrail stretching back from aircraft; pulsing opacity to feel alive -->
+  <g>
+    <path d="M 36 100 Q 90 97, 155 100" fill="none" stroke="url(#trail)" stroke-width="5" stroke-linecap="round" opacity="0.9">
+      <animate attributeName="opacity" values="0.6;0.95;0.7;0.95;0.6" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 46 100 Q 90 103, 155 100" fill="none" stroke="url(#trail)" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.75;0.4;0.75;0.3" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Little puff clumps along the trail -->
+    <g fill="#f0e4c8" opacity="0.55">
+      <circle cx="60" cy="100" r="2.2">
+        <animate attributeName="opacity" values="0.2;0.75;0.3;0.75;0.2" dur="7s" begin="-1s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="2.0;3.0;2.2;3.0;2.0" dur="7s" begin="-1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="86" cy="98" r="2.6">
+        <animate attributeName="opacity" values="0.25;0.8;0.35;0.8;0.25" dur="11s" begin="-3s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="2.3;3.3;2.6;3.3;2.3" dur="11s" begin="-3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="112" cy="102" r="2.3">
+        <animate attributeName="opacity" values="0.2;0.75;0.3;0.75;0.2" dur="13s" begin="-5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="2.0;3.1;2.3;3.1;2.0" dur="13s" begin="-5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="134" cy="100" r="2.0">
+        <animate attributeName="opacity" values="0.15;0.65;0.25;0.65;0.15" dur="11s" begin="-7s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="1.8;2.8;2.0;2.8;1.8" dur="11s" begin="-7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- =================== MACH CONE (opens from the nose, points right) =================== -->
+  <!-- Aircraft nose is at ~x=250, cone opens backward (leftward) from there -->
+  <g>
+    <!-- Outer cone shell (filled triangle), pulsing -->
+    <path d="M 250 100 L 160 68 L 160 132 Z" fill="url(#machCone)" opacity="0.75">
+      <animate attributeName="opacity" values="0.55;0.9;0.65;0.9;0.55" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <!-- Inner brighter cone -->
+    <path d="M 250 100 L 180 82 L 180 118 Z" fill="url(#machCone)" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;1;0.8;1;0.7" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Cone edge rays -->
+    <path d="M 250 100 L 160 68" stroke="url(#machEdge)" stroke-width="1.4" fill="none" opacity="0.95">
+      <animate attributeName="opacity" values="0.65;1;0.75;1;0.65" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 250 100 L 160 132" stroke="url(#machEdge)" stroke-width="1.4" fill="none" opacity="0.95">
+      <animate attributeName="opacity" values="0.65;1;0.75;1;0.65" dur="7s" begin="-1s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Shockwave diamond pattern (classic rocket exhaust diamonds, visible in supersonic trail) -->
+    <g>
+      <!-- Diamond 1 -->
+      <path d="M 236 100 L 230 96 L 224 100 L 230 104 Z" fill="#fff0d4" opacity="0.85">
+        <animate attributeName="opacity" values="0.5;0.95;0.6;0.95;0.5" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <!-- Diamond 2 -->
+      <path d="M 220 100 L 213 95 L 206 100 L 213 105 Z" fill="#ffd0b0" opacity="0.75">
+        <animate attributeName="opacity" values="0.45;0.9;0.55;0.9;0.45" dur="7s" begin="-1s" repeatCount="indefinite"/>
+      </path>
+      <!-- Diamond 3 -->
+      <path d="M 202 100 L 195 94 L 188 100 L 195 106 Z" fill="#ffb088" opacity="0.65">
+        <animate attributeName="opacity" values="0.35;0.8;0.45;0.8;0.35" dur="7s" begin="-2s" repeatCount="indefinite"/>
+      </path>
+      <!-- Diamond 4 -->
+      <path d="M 184 100 L 176 93 L 168 100 L 176 107 Z" fill="#ff8080" opacity="0.55">
+        <animate attributeName="opacity" values="0.3;0.7;0.4;0.7;0.3" dur="7s" begin="-3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- =================== BELL X-1 AIRCRAFT =================== -->
+  <!-- Positioned at (250, 100). Subtle hover motion. Exhaust glow trailing behind nose by convention of being at tail end -->
+  <g transform="translate(250 100)">
+    <!-- Rocket exhaust glow behind tail -->
+    <g transform="translate(-72 0)">
+      <ellipse cx="0" cy="0" rx="12" ry="5" fill="url(#exhaust)" opacity="0.9">
+        <animate attributeName="rx" values="10;14;11;14;10" dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.8;1;0.7" dur="7s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="2" cy="0" rx="6" ry="2.4" fill="#fff0d4" opacity="0.95">
+        <animate attributeName="rx" values="5;8;6;8;5" dur="7s" begin="-1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.75;1;0.85;1;0.75" dur="7s" begin="-1s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <!-- X-1 body with subtle hover -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1.4; 0 0.6; 0 -1.0; 0 0" dur="11s" repeatCount="indefinite"/>
+      <use href="#x1"/>
+    </g>
+  </g>
+
+  <!-- Compression halo (bow shock) in front of nose -->
+  <g transform="translate(304 100)">
+    <ellipse cx="0" cy="0" rx="5" ry="10" fill="#fff0d4" opacity="0.35">
+      <animate attributeName="opacity" values="0.2;0.5;0.3;0.5;0.2" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Small debris sparks (ripped through the barrier) -->
+  <g fill="#fff0d4">
+    <circle cx="128" cy="78" r="0.9" opacity="0.75">
+      <animate attributeName="opacity" values="0.25;0.9;0.35;0.9;0.25" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="156" cy="124" r="0.8" opacity="0.7">
+      <animate attributeName="opacity" values="0.2;0.85;0.3;0.85;0.2" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="188" cy="76" r="0.7" opacity="0.65">
+      <animate attributeName="opacity" values="0.25;0.8;0.35;0.8;0.25" dur="13s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="196" cy="128" r="0.8" opacity="0.7">
+      <animate attributeName="opacity" values="0.2;0.85;0.3;0.85;0.2" dur="7s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Altitude tick marks (reading edge, like an altimeter) -->
+  <g stroke="#88a8d8" stroke-width="0.5" opacity="0.4">
+    <line x1="18" y1="46" x2="24" y2="46"/>
+    <line x1="18" y1="76" x2="24" y2="76"/>
+    <line x1="18" y1="106" x2="24" y2="106"/>
+    <line x1="18" y1="136" x2="24" y2="136"/>
+  </g>
+  <g font-family="'Georgia', serif" font-size="5.5" fill="#88a8d8" opacity="0.55">
+    <text x="12" y="48" text-anchor="end">50k</text>
+    <text x="12" y="78" text-anchor="end">40k</text>
+    <text x="12" y="108" text-anchor="end">30k</text>
+    <text x="12" y="138" text-anchor="end">20k</text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="340" y1="30" x2="340" y2="170" stroke="#4a5878" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- =================== TEXT STACK (right half) =================== -->
+
+  <!-- Date headline -->
+  <text x="580" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f0e4c8" letter-spacing="2.0">
+    OCTOBER 14, 2026
+  </text>
+
+  <!-- Twin bar under headline (slight wave) -->
+  <path d="M 410 74 Q 450 68, 490 74 T 570 74 T 650 74 T 730 74 T 770 74" fill="none" stroke="#e86820" stroke-width="2.4" opacity="0.95"/>
+  <path d="M 410 80 Q 450 74, 490 80 T 570 80 T 650 80 T 730 80 T 770 80" fill="none" stroke="#88c8e0" stroke-width="1.3" opacity="0.85"/>
+
+  <!-- Subhead -->
+  <text x="580" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="15" font-weight="800" letter-spacing="2.6" fill="#9cd4e8">
+    BREAKING THE SOUND BARRIER
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="580" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#d4a858" letter-spacing="0.6">
+    BELL X-1 &#183; MACH 1.06 &#183; 1947
+  </text>
+
+  <!-- Roster -->
+  <text x="580" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.8" font-weight="700" fill="#9888a8" letter-spacing="2.4" opacity="0.95">
+    COURAGE &#183; ENGINEERING &#183; ALTITUDE &#183; SPEED &#183; HISTORY
+  </text>
+
+  <!-- Caption -->
+  <text x="580" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f0e4c8" opacity="0.95">
+    &#8220;Poke a hole in the sky.&#8221;
+  </text>
+</svg>
