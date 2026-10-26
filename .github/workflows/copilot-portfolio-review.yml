@@ -32,9 +32,12 @@ jobs:
 
       - name: Create Copilot coding agent task
         env:
-          GH_TOKEN: ${{ secrets.COPILOT_AGENT_TOKEN }}
+          COPILOT_AGENT_TOKEN: ${{ secrets.COPILOT_AGENT_TOKEN }}
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
+          # gh agent-task rejects tokens supplied via GH_TOKEN/GITHUB_TOKEN ("requires an OAuth
+          # token"), so the token goes into gh's own credential store instead of the environment.
+          printf '%s' "$COPILOT_AGENT_TOKEN" | gh auth login --with-token
           gh auth status
           gh agent-task create \
             --repo "$GITHUB_REPOSITORY" \
