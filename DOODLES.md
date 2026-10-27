@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 27, 2026 — Cassini–Huygens Launch 29th Anniversary (October 15, 1997)
+
+<img src="./doodle-archive/2026/10/2026-10-27-060203.svg" width="800" alt="Daily doodle for October 15, 2026 — Cassini–Huygens Launch 29th Anniversary. On the left, a tilted Saturn with three cream rings passing behind and in front of its golden body; a tiny gold-foil Cassini probe coasts in from upper-right along a dashed arc trajectory from a distant pale-blue Earth dot. Stars twinkle at prime cadences. On the right, a cream OCTOBER 15, 2026 headline sits over a double gold-and-cyan bar, a cyan CASSINI–HUYGENS subhead, an italic amber TITAN IV · 1997 · GRAND FINALE 2017 tertiary, a dim EXPLORATION · GRAVITY · RINGS · MOONS · LEGACY roster, and a Georgia-italic 'Twenty years to touch a ring.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+At 08:43 UTC on 15 October 1997 a Titan IV-B/Centaur lifted the Cassini–Huygens spacecraft off Pad 40 at Cape Canaveral — the heaviest, most instrumented interplanetary probe ever flown, a joint NASA/ESA/ASI mission almost two decades in the making. It took seven years and four gravity assists (Venus, Venus, Earth, Jupiter) to reach Saturn in 2004, where it dropped the Huygens lander onto Titan in January 2005 — the first and still only landing in the outer solar system — and then spent twelve more years mapping rings, moons, storms, and the geysers of Enceladus. On 15 September 2017, low on fuel and forbidden from contaminating any potentially habitable moon, the orbiter plunged into Saturn's upper atmosphere transmitting data to the end. The Grand Finale.
+
+The scene is deep space. Saturn hangs just left of centre, its ringplane tilted; three bands of cream rings pass behind the body and reappear in front, pulsing faintly as they rotate. A tiny Cassini probe — gold-foil bus, parabolic high-gain antenna, outstretched magnetometer boom — coasts in from the upper right along a dashed trajectory arc; a pale blue Earth dot sits far behind it. Stars twinkle at prime cadences. On the right, a cream OCTOBER 15, 2026 headline sits over a double gold-and-cyan bar, a cyan CASSINI–HUYGENS subhead, an italic amber TITAN IV · 1997 · GRAND FINALE 2017 tertiary, a dim EXPLORATION · GRAVITY · RINGS · MOONS · LEGACY roster, and a Georgia-italic 'Twenty years to touch a ring.' caption at the base.
+
+</details>
+
+---
+
 ## October 15, 2026 — Breaking the Sound Barrier (October 14, 1947)
 
 <img src="./doodle-archive/2026/10/2026-10-15-060122.svg" width="800" alt="Daily doodle for October 14, 2026 — Breaking the Sound Barrier. On the left, a stylised orange Bell X-1 rocket plane streaks right against a desert-sky gradient, trailing a pulsing contrail; a violet-pink Mach cone opens from its nose with shockwave diamonds strobing along the shaft and a thin horizon of distant mountains sitting far below. On the right, a cream OCTOBER 14, 2026 headline sits over a double orange-and-cyan bar, a cyan BREAKING THE SOUND BARRIER subhead, an italic amber BELL X-1 · MACH 1.06 · 1947 tertiary, a dim COURAGE · ENGINEERING · ALTITUDE · SPEED · HISTORY roster, and a Georgia-italic 'Poke a hole in the sky.' caption at the base.">

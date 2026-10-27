@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Cassini–Huygens Launch — 29th Anniversary (October 15, 1997) -->
+<!-- about:
+At 08:43 UTC on 15 October 1997 a Titan IV-B/Centaur lifted the Cassini–Huygens spacecraft off Pad 40 at Cape Canaveral — the heaviest, most instrumented interplanetary probe ever flown, a joint NASA/ESA/ASI mission almost two decades in the making. It took seven years and four gravity assists (Venus, Venus, Earth, Jupiter) to reach Saturn in 2004, where it dropped the Huygens lander onto Titan in January 2005 — the first and still only landing in the outer solar system — and then spent twelve more years mapping rings, moons, storms, and the geysers of Enceladus. On 15 September 2017, low on fuel and forbidden from contaminating any potentially habitable moon, the orbiter plunged into Saturn's upper atmosphere transmitting data to the end. The Grand Finale.
+
+The scene is deep space. Saturn hangs just left of centre, its ringplane tilted; three bands of cream rings pass behind the body and reappear in front, pulsing faintly as they rotate. A tiny Cassini probe — gold-foil bus, parabolic high-gain antenna, outstretched magnetometer boom — coasts in from the upper right along a dashed trajectory arc; a pale blue Earth dot sits far behind it. Stars twinkle at prime cadences. On the right, a cream OCTOBER 15, 2026 headline sits over a double gold-and-cyan bar, a cyan CASSINI–HUYGENS subhead, an italic amber TITAN IV · 1997 · GRAND FINALE 2017 tertiary, a dim EXPLORATION · GRAVITY · RINGS · MOONS · LEGACY roster, and a Georgia-italic 'Twenty years to touch a ring.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 15, 2026 — Cassini–Huygens Launch 29th Anniversary. On the left, a tilted Saturn with three cream rings passing behind and in front of its golden body; a tiny gold-foil Cassini probe coasts in from upper-right along a dashed arc trajectory from a distant pale-blue Earth dot. Stars twinkle at prime cadences. On the right, a cream OCTOBER 15, 2026 headline sits over a double gold-and-cyan bar, a cyan CASSINI–HUYGENS subhead, an italic amber TITAN IV · 1997 · GRAND FINALE 2017 tertiary, a dim EXPLORATION · GRAVITY · RINGS · MOONS · LEGACY roster, and a Georgia-italic 'Twenty years to touch a ring.' caption at the base.">
+  <defs>
+    <!-- Deep space gradient -->
+    <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0818"/>
+      <stop offset="0.5" stop-color="#0d1120"/>
+      <stop offset="1" stop-color="#140a22"/>
+    </linearGradient>
+
+    <!-- Saturn body: golden gas giant with latitudinal shading -->
+    <radialGradient id="saturn" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#f8e4a4"/>
+      <stop offset="0.4" stop-color="#e2bc70"/>
+      <stop offset="0.75" stop-color="#a07838"/>
+      <stop offset="1" stop-color="#4a2c10"/>
+    </radialGradient>
+
+    <!-- Saturn cloud band overlay (horizontal stripes) -->
+    <linearGradient id="bands" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e4a4" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#c89848" stop-opacity="0.35"/>
+      <stop offset="0.26" stop-color="#f0d484" stop-opacity="0.25"/>
+      <stop offset="0.42" stop-color="#a07838" stop-opacity="0.4"/>
+      <stop offset="0.55" stop-color="#e8c478" stop-opacity="0.25"/>
+      <stop offset="0.68" stop-color="#8a6428" stop-opacity="0.5"/>
+      <stop offset="0.82" stop-color="#c89848" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#4a2c10" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Ring color: cream with faint banding -->
+    <linearGradient id="ringLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f0dca8" stop-opacity="0.25"/>
+      <stop offset="0.25" stop-color="#f0dca8" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#e8cc90" stop-opacity="0.75"/>
+      <stop offset="0.75" stop-color="#f0dca8" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#f0dca8" stop-opacity="0.25"/>
+    </linearGradient>
+
+    <!-- Probe gold-foil -->
+    <linearGradient id="foil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe088"/>
+      <stop offset="0.5" stop-color="#d8a848"/>
+      <stop offset="1" stop-color="#8a5a18"/>
+    </linearGradient>
+
+    <!-- Antenna dish -->
+    <radialGradient id="dish" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#f0f4fa"/>
+      <stop offset="0.6" stop-color="#b8c4d4"/>
+      <stop offset="1" stop-color="#58647a"/>
+    </radialGradient>
+
+    <!-- Earth dot glow -->
+    <radialGradient id="earth" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#a8d8f8"/>
+      <stop offset="0.6" stop-color="#4a8ed8"/>
+      <stop offset="1" stop-color="#1a3a68"/>
+    </radialGradient>
+
+    <!-- Faint planet glow -->
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f0d484" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#f0d484" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#f0d484" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Clip the band overlay to the planet circle -->
+    <clipPath id="planetClip">
+      <circle cx="170" cy="100" r="44"/>
+    </clipPath>
+
+    <!-- Cassini probe silhouette (approximate scale, ~20px tall) -->
+    <g id="cassini">
+      <!-- Magnetometer boom (long thin boom extending left-rear) -->
+      <line x1="-18" y1="2" x2="4" y2="0" stroke="#c8d4e4" stroke-width="0.5" opacity="0.75"/>
+      <circle cx="-18" cy="2" r="0.8" fill="#e8ecf4" opacity="0.9"/>
+      <!-- RTG canisters (two cylinders at rear-lower) -->
+      <rect x="2" y="4" width="7" height="2.4" fill="#4a5464" rx="0.4"/>
+      <rect x="2" y="7" width="7" height="2.4" fill="#4a5464" rx="0.4"/>
+      <!-- Spacecraft bus (gold-foil box) -->
+      <rect x="4" y="-4" width="10" height="8" fill="url(#foil)" stroke="#8a5a18" stroke-width="0.3"/>
+      <!-- Thrusters/fine detail -->
+      <rect x="6" y="-6" width="2" height="2" fill="#2a2010"/>
+      <rect x="10" y="-6" width="2" height="2" fill="#2a2010"/>
+      <!-- High-gain antenna dish (parabolic, on top, facing right/outward) -->
+      <ellipse cx="9" cy="-11" rx="9" ry="2.4" fill="url(#dish)"/>
+      <ellipse cx="9" cy="-11" rx="7.5" ry="1.8" fill="#8094b0" opacity="0.65"/>
+      <!-- Dish stand -->
+      <rect x="8.4" y="-9" width="1.2" height="4" fill="#58647a"/>
+      <!-- Feed horn in center of dish -->
+      <circle cx="9" cy="-10.6" r="0.7" fill="#e8ecf4"/>
+      <!-- Side boom (radar) -->
+      <line x1="14" y1="0" x2="22" y2="-2" stroke="#c8d4e4" stroke-width="0.5" opacity="0.75"/>
+      <rect x="20" y="-3.2" width="3" height="2.4" fill="url(#foil)"/>
+    </g>
+  </defs>
+
+  <!-- Deep space background -->
+  <rect width="800" height="200" fill="url(#space)"/>
+
+  <!-- Distant star field -->
+  <g fill="#e0e8f8">
+    <circle cx="42" cy="24" r="0.9" opacity="0.85">
+      <animate attributeName="opacity" values="0.4;1;0.5;1;0.4" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="78" cy="52" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.25;0.8;0.35;0.8;0.25" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="86" r="0.7" opacity="0.7">
+      <animate attributeName="opacity" values="0.3;0.9;0.4;0.9;0.3" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="112" cy="30" r="0.5" opacity="0.55">
+      <animate attributeName="opacity" values="0.2;0.75;0.3;0.75;0.2" dur="17s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="196" cy="18" r="0.7" opacity="0.7">
+      <animate attributeName="opacity" values="0.3;0.9;0.4;0.9;0.3" dur="11s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="252" cy="34" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.25;0.85;0.35;0.85;0.25" dur="13s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="56" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.3;0.7;0.2" dur="17s" begin="-7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="296" cy="150" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.25;0.8;0.35;0.8;0.25" dur="11s" begin="-8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="172" r="0.7" opacity="0.65">
+      <animate attributeName="opacity" values="0.3;0.85;0.4;0.85;0.3" dur="13s" begin="-9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="36" cy="140" r="0.5" opacity="0.55">
+      <animate attributeName="opacity" values="0.2;0.75;0.3;0.75;0.2" dur="17s" begin="-10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="146" cy="168" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.25;0.8;0.35;0.8;0.25" dur="11s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="178" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.3;0.7;0.2" dur="13s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="94" cy="110" r="0.5" opacity="0.55">
+      <animate attributeName="opacity" values="0.2;0.75;0.3;0.75;0.2" dur="17s" begin="-11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Pale distant Earth dot (upper right of Saturn, departing viewpoint) -->
+  <g transform="translate(282 42)">
+    <circle r="4" fill="url(#halo)" opacity="0.9"/>
+    <circle r="2" fill="url(#earth)"/>
+    <text x="0" y="-7" text-anchor="middle" font-family="'Georgia', serif" font-size="5.5" fill="#88a8d8" opacity="0.75" font-style="italic">Earth</text>
+  </g>
+
+  <!-- Dashed trajectory arc from Earth (282,42) to Saturn (170,100) -->
+  <!-- Big curve passing through gravity assist region -->
+  <path d="M 282 42 Q 310 90, 260 120 T 192 108" fill="none" stroke="#88a8d8" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.55">
+    <animate attributeName="stroke-dashoffset" values="0;-24" dur="11s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- =================== SATURN (center-left, tilted ring plane) =================== -->
+  <!-- Soft halo behind planet -->
+  <circle cx="170" cy="100" r="70" fill="url(#halo)" opacity="0.55"/>
+
+  <g transform="rotate(-18 170 100)">
+    <!-- BACK HALF of rings (upper arcs, drawn behind planet) -->
+    <!-- Outer A ring -->
+    <path d="M 72 100 A 98 22 0 0 1 268 100" fill="none" stroke="url(#ringLight)" stroke-width="3" opacity="0.85"/>
+    <!-- Cassini division gap (dark thin arc just inside outer) -->
+    <path d="M 80 100 A 90 20 0 0 1 260 100" fill="none" stroke="#0a0818" stroke-width="1.4" opacity="0.9"/>
+    <!-- B ring (brightest, middle) -->
+    <path d="M 86 100 A 84 18 0 0 1 254 100" fill="none" stroke="url(#ringLight)" stroke-width="5" opacity="0.95"/>
+    <!-- Inner C ring (fainter) -->
+    <path d="M 112 100 A 58 12 0 0 1 228 100" fill="none" stroke="url(#ringLight)" stroke-width="2.5" opacity="0.55"/>
+
+    <!-- Rotation animation for the rings as a whole system (very subtle wobble) -->
+    <animateTransform attributeName="transform" type="rotate" from="-18 170 100" to="-19.5 170 100" dur="13s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Planet body -->
+  <circle cx="170" cy="100" r="44" fill="url(#saturn)"/>
+  <!-- Cloud band overlay, clipped to planet -->
+  <rect x="126" y="56" width="88" height="88" fill="url(#bands)" clip-path="url(#planetClip)" opacity="0.9"/>
+  <!-- Terminator shading (right side darker) -->
+  <circle cx="170" cy="100" r="44" fill="url(#space)" opacity="0.35" clip-path="url(#planetClip)" transform="translate(16 0)"/>
+  <!-- North pole hex hint (subtle) -->
+  <circle cx="170" cy="100" r="44" fill="none" stroke="#f8e4a4" stroke-width="0.3" opacity="0.15"/>
+
+  <g transform="rotate(-18 170 100)">
+    <!-- FRONT HALF of rings (lower arcs, drawn in front of planet) -->
+    <!-- Outer A ring -->
+    <path d="M 72 100 A 98 22 0 0 0 268 100" fill="none" stroke="url(#ringLight)" stroke-width="3" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;0.95;0.75;0.95;0.7" dur="11s" repeatCount="indefinite"/>
+    </path>
+    <!-- Cassini division -->
+    <path d="M 80 100 A 90 20 0 0 0 260 100" fill="none" stroke="#0a0818" stroke-width="1.4" opacity="0.9"/>
+    <!-- B ring -->
+    <path d="M 86 100 A 84 18 0 0 0 254 100" fill="none" stroke="url(#ringLight)" stroke-width="5" opacity="1">
+      <animate attributeName="opacity" values="0.8;1;0.85;1;0.8" dur="13s" begin="-2s" repeatCount="indefinite"/>
+    </path>
+    <!-- C ring -->
+    <path d="M 112 100 A 58 12 0 0 0 228 100" fill="none" stroke="url(#ringLight)" stroke-width="2.5" opacity="0.6"/>
+  </g>
+
+  <!-- Shadow of rings on planet (thin dark band across upper hemisphere) -->
+  <path d="M 128 92 Q 170 86, 212 92" fill="none" stroke="#2a1808" stroke-width="2.2" opacity="0.5" clip-path="url(#planetClip)" transform="rotate(-18 170 100)"/>
+
+  <!-- =================== CASSINI PROBE =================== -->
+  <!-- Positioned above-right of Saturn, tilted toward it; subtle drift animation -->
+  <g transform="translate(248 68)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; -4 4; 0 0; 4 -4; 0 0" dur="13s" repeatCount="indefinite"/>
+      <g transform="rotate(-32)">
+        <use href="#cassini"/>
+        <!-- Thrust glow near rear -->
+        <circle cx="-20" cy="2" r="1.4" fill="#88c8e0" opacity="0.75">
+          <animate attributeName="opacity" values="0.4;0.95;0.5;0.95;0.4" dur="7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+  </g>
+
+  <!-- Signal pulse from Cassini (data return) -->
+  <g transform="translate(248 68)">
+    <circle r="2" fill="none" stroke="#88c8e0" stroke-width="0.5" opacity="0">
+      <animate attributeName="r" values="2;16" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2" fill="none" stroke="#88c8e0" stroke-width="0.5" opacity="0">
+      <animate attributeName="r" values="2;16" dur="7s" begin="-3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" dur="7s" begin="-3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Separator between art and text -->
+  <line x1="340" y1="30" x2="340" y2="170" stroke="#4a5878" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- =================== TEXT STACK (right half) =================== -->
+
+  <!-- Date headline -->
+  <text x="580" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f0e4c8" letter-spacing="2.0">
+    OCTOBER 15, 2026
+  </text>
+
+  <!-- Twin bar under headline -->
+  <path d="M 410 74 Q 450 68, 490 74 T 570 74 T 650 74 T 730 74 T 770 74" fill="none" stroke="#e2bc70" stroke-width="2.4" opacity="0.95"/>
+  <path d="M 410 80 Q 450 74, 490 80 T 570 80 T 650 80 T 730 80 T 770 80" fill="none" stroke="#88c8e0" stroke-width="1.3" opacity="0.85"/>
+
+  <!-- Subhead -->
+  <text x="580" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="15" font-weight="800" letter-spacing="2.6" fill="#9cd4e8">
+    CASSINI&#8211;HUYGENS
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="580" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#d4a858" letter-spacing="0.6">
+    TITAN IV &#183; 1997 &#183; GRAND FINALE 2017
+  </text>
+
+  <!-- Roster -->
+  <text x="580" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.8" font-weight="700" fill="#9888a8" letter-spacing="2.4" opacity="0.95">
+    EXPLORATION &#183; GRAVITY &#183; RINGS &#183; MOONS &#183; LEGACY
+  </text>
+
+  <!-- Caption -->
+  <text x="580" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f0e4c8" opacity="0.95">
+    &#8220;Twenty years to touch a ring.&#8221;
+  </text>
+</svg>
