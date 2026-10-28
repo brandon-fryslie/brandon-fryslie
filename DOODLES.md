@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 28, 2026 — NYC Subway 122nd Anniversary (October 27, 1904)
+
+<img src="./doodle-archive/2026/10/2026-10-28-060124.svg" width="800" alt="Daily doodle for October 27, 2026 — NYC Subway 122nd Anniversary. On the left, a red IRT subway car emerges from a tiled underground tunnel, its headlights pulsing against the dark, warm passenger silhouettes glowing in a row of lit windows, sparks skipping along the energised third rail below. On the right, a cream OCTOBER 27, 2026 headline sits over a double red-and-green bar, a cream NYC SUBWAY subhead, an italic amber IRT · 1904 · 122 YEARS tertiary, a dim CITY HALL · 42 ST · GRAND CENTRAL · BROADWAY · HARLEM roster, and a Georgia-italic 'A city that moves underneath itself.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 27 October 1904 Mayor George B. McClellan Jr. drove the first Interborough Rapid Transit train out of City Hall station, inaugurating New York City's underground railway. Nine and a half miles of track ran from City Hall up the East Side to Grand Central, west under 42nd Street to Times Square, then north along Broadway to 145th Street — twenty-eight stations, carved from Manhattan schist in four years by roughly thirty thousand workers. A nickel bought a seat, and one hundred and fifty thousand riders took one on opening day. The system now carries over a billion rides a year across four hundred and seventy-two stations in all five boroughs, and the original IRT tunnels still clack beneath Lexington Avenue every morning.
+
+The scene is an underground station at the instant a train pulls in. A red IRT car emerges from a tiled tunnel on the left, headlights pulsing against the dark, warm silhouettes glowing in its row of windows, sparks skipping along the energised third rail below. On the right, a cream OCTOBER 27, 2026 headline sits over a double red-and-green bar, a cream NYC SUBWAY subhead, an italic amber IRT · 1904 · 122 YEARS tertiary, a dim CITY HALL · 42 ST · GRAND CENTRAL · BROADWAY · HARLEM roster, and a Georgia-italic 'A city that moves underneath itself.' caption at the base.
+
+</details>
+
+---
+
 ## October 27, 2026 — Cassini–Huygens Launch 29th Anniversary (October 15, 1997)
 
 <img src="./doodle-archive/2026/10/2026-10-27-060203.svg" width="800" alt="Daily doodle for October 15, 2026 — Cassini–Huygens Launch 29th Anniversary. On the left, a tilted Saturn with three cream rings passing behind and in front of its golden body; a tiny gold-foil Cassini probe coasts in from upper-right along a dashed arc trajectory from a distant pale-blue Earth dot. Stars twinkle at prime cadences. On the right, a cream OCTOBER 15, 2026 headline sits over a double gold-and-cyan bar, a cyan CASSINI–HUYGENS subhead, an italic amber TITAN IV · 1997 · GRAND FINALE 2017 tertiary, a dim EXPLORATION · GRAVITY · RINGS · MOONS · LEGACY roster, and a Georgia-italic 'Twenty years to touch a ring.' caption at the base.">

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: NYC Subway 122nd Anniversary (October 27, 1904) -->
+<!-- about:
+On 27 October 1904 Mayor George B. McClellan Jr. drove the first Interborough Rapid Transit train out of City Hall station, inaugurating New York City's underground railway. Nine and a half miles of track ran from City Hall up the East Side to Grand Central, west under 42nd Street to Times Square, then north along Broadway to 145th Street — twenty-eight stations, carved from Manhattan schist in four years by roughly thirty thousand workers. A nickel bought a seat, and one hundred and fifty thousand riders took one on opening day. The system now carries over a billion rides a year across four hundred and seventy-two stations in all five boroughs, and the original IRT tunnels still clack beneath Lexington Avenue every morning.
+
+The scene is an underground station at the instant a train pulls in. A red IRT car emerges from a tiled tunnel on the left, headlights pulsing against the dark, warm silhouettes glowing in its row of windows, sparks skipping along the energised third rail below. On the right, a cream OCTOBER 27, 2026 headline sits over a double red-and-green bar, a cream NYC SUBWAY subhead, an italic amber IRT · 1904 · 122 YEARS tertiary, a dim CITY HALL · 42 ST · GRAND CENTRAL · BROADWAY · HARLEM roster, and a Georgia-italic 'A city that moves underneath itself.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 27, 2026 — NYC Subway 122nd Anniversary. On the left, a red IRT subway car emerges from a tiled underground tunnel, its headlights pulsing against the dark, warm passenger silhouettes glowing in a row of lit windows, sparks skipping along the energised third rail below. On the right, a cream OCTOBER 27, 2026 headline sits over a double red-and-green bar, a cream NYC SUBWAY subhead, an italic amber IRT · 1904 · 122 YEARS tertiary, a dim CITY HALL · 42 ST · GRAND CENTRAL · BROADWAY · HARLEM roster, and a Georgia-italic 'A city that moves underneath itself.' caption at the base.">
+  <defs>
+    <!-- Underground atmosphere -->
+    <linearGradient id="under" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0d14"/>
+      <stop offset="0.55" stop-color="#101420"/>
+      <stop offset="1" stop-color="#060810"/>
+    </linearGradient>
+
+    <!-- Tunnel darkness -->
+    <radialGradient id="tunnelDark" cx="0.25" cy="0.5" r="0.85">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="0.55" stop-color="#05060c"/>
+      <stop offset="1" stop-color="#101420"/>
+    </radialGradient>
+
+    <!-- Cream tile wall -->
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0e4c8"/>
+      <stop offset="1" stop-color="#b89c70"/>
+    </linearGradient>
+
+    <!-- Train red (classic R-type carbody) -->
+    <linearGradient id="trainRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff6a52"/>
+      <stop offset="0.5" stop-color="#ee352e"/>
+      <stop offset="1" stop-color="#8e1408"/>
+    </linearGradient>
+
+    <!-- Silver band -->
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8ecf0"/>
+      <stop offset="0.5" stop-color="#a0a8b4"/>
+      <stop offset="1" stop-color="#404854"/>
+    </linearGradient>
+
+    <!-- Warm window glow -->
+    <radialGradient id="winGlow" cx="0.5" cy="0.4" r="0.75">
+      <stop offset="0" stop-color="#fff4c0"/>
+      <stop offset="0.55" stop-color="#f0c868"/>
+      <stop offset="1" stop-color="#7a4818"/>
+    </radialGradient>
+
+    <!-- Headlight warm white -->
+    <radialGradient id="headGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fffbe0"/>
+      <stop offset="0.5" stop-color="#fff0b4"/>
+      <stop offset="1" stop-color="#fff0b4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Spark/arc glow -->
+    <radialGradient id="railGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd468"/>
+      <stop offset="0.5" stop-color="#f08c20" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#f08c20" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Platform floor gradient -->
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1a22"/>
+      <stop offset="1" stop-color="#0a0810"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Underground background -->
+  <rect width="800" height="200" fill="url(#under)"/>
+
+  <!-- Faint tile grid along the station wall (left half, upper portion) -->
+  <g opacity="0.4" stroke="#c8b088" stroke-width="0.3">
+    <line x1="0" y1="32" x2="356" y2="32"/>
+    <line x1="0" y1="44" x2="356" y2="44"/>
+    <line x1="40" y1="20" x2="40" y2="44"/>
+    <line x1="80" y1="20" x2="80" y2="44"/>
+    <line x1="120" y1="20" x2="120" y2="44"/>
+    <line x1="160" y1="20" x2="160" y2="44"/>
+    <line x1="200" y1="20" x2="200" y2="44"/>
+    <line x1="240" y1="20" x2="240" y2="44"/>
+    <line x1="280" y1="20" x2="280" y2="44"/>
+    <line x1="320" y1="20" x2="320" y2="44"/>
+    <line x1="40" y1="32" x2="40" y2="44"/>
+  </g>
+
+  <!-- CITY HALL mosaic plaque (upper left, station sign) -->
+  <g transform="translate(170 24)" opacity="0.9">
+    <rect x="-60" y="-4" width="120" height="20" fill="#140e08" stroke="#c8a878" stroke-width="0.6" rx="1"/>
+    <rect x="-57" y="-1" width="114" height="14" fill="none" stroke="#8a6428" stroke-width="0.4" rx="0.5"/>
+    <text x="0" y="10" text-anchor="middle"
+          font-family="'Georgia', serif" font-size="10" font-weight="700" fill="#f0e4c8" letter-spacing="2.4">
+      CITY HALL
+    </text>
+  </g>
+
+  <!-- Platform floor across lower area (behind rails) -->
+  <rect x="0" y="175" width="356" height="25" fill="url(#floor)"/>
+  <line x1="0" y1="175" x2="356" y2="175" stroke="#2c2418" stroke-width="0.6" opacity="0.6"/>
+
+  <!-- ================= TUNNEL MOUTH ================= -->
+  <!-- Dark arched opening at the far left -->
+  <path d="M 0 50 L 58 50 Q 82 50, 82 72 L 82 170 L 0 170 Z" fill="url(#tunnelDark)"/>
+  <!-- Arch outline -->
+  <path d="M 0 50 L 58 50 Q 82 50, 82 72 L 82 170" fill="none" stroke="#584838" stroke-width="1.2" opacity="0.55"/>
+  <!-- Inner receding guide -->
+  <line x1="42" y1="52" x2="18" y2="156" stroke="#2c2418" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Receding tunnel ceiling lamps -->
+  <circle cx="38" cy="62" r="1.4" fill="#f4d890" opacity="0.75">
+    <animate attributeName="opacity" values="0.5;0.95;0.6;0.95;0.5" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="20" cy="68" r="1.0" fill="#f4d890" opacity="0.6">
+    <animate attributeName="opacity" values="0.35;0.8;0.45;0.8;0.35" dur="11s" begin="-2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Distant signal lamp (green) deep in tunnel -->
+  <circle cx="10" cy="110" r="1.6" fill="#58f088" opacity="0.9">
+    <animate attributeName="opacity" values="0.6;1;0.7;1;0.6" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="10" cy="110" r="4" fill="#58f088" opacity="0.25">
+    <animate attributeName="opacity" values="0.1;0.45;0.15;0.45;0.1" dur="13s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ================= TRACK & THIRD RAIL ================= -->
+  <!-- Rail ties -->
+  <g stroke="#3a3028" stroke-width="1" opacity="0.65">
+    <line x1="20" y1="166" x2="34" y2="174"/>
+    <line x1="54" y1="166" x2="70" y2="174"/>
+    <line x1="92" y1="166" x2="108" y2="174"/>
+    <line x1="130" y1="166" x2="146" y2="174"/>
+    <line x1="168" y1="166" x2="184" y2="174"/>
+    <line x1="206" y1="166" x2="222" y2="174"/>
+    <line x1="244" y1="166" x2="260" y2="174"/>
+    <line x1="282" y1="166" x2="298" y2="174"/>
+    <line x1="320" y1="166" x2="336" y2="174"/>
+  </g>
+  <!-- Running rails -->
+  <line x1="356" y1="165" x2="18" y2="165" stroke="#4a5262" stroke-width="1.6"/>
+  <line x1="356" y1="165" x2="18" y2="165" stroke="#a8b0bc" stroke-width="0.5" opacity="0.75"/>
+  <line x1="356" y1="172" x2="10" y2="172" stroke="#4a5262" stroke-width="1.8"/>
+  <line x1="356" y1="172" x2="10" y2="172" stroke="#a8b0bc" stroke-width="0.6" opacity="0.75"/>
+
+  <!-- Third rail (energised) -->
+  <line x1="356" y1="179" x2="12" y2="179" stroke="#8c6420" stroke-width="1.8"/>
+  <line x1="356" y1="179" x2="12" y2="179" stroke="#f4c468" stroke-width="0.6" opacity="0.85"/>
+
+  <!-- Arc sparks on third rail -->
+  <g>
+    <circle cx="80" cy="179" r="3" fill="url(#railGlow)" opacity="0">
+      <animate attributeName="opacity" values="0;0.95;0;0.5;0" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="2;6;2" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="179" r="3" fill="url(#railGlow)" opacity="0">
+      <animate attributeName="opacity" values="0;0.85;0;0.4;0" dur="11s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="2;5;2" dur="11s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="268" cy="179" r="2.5" fill="url(#railGlow)" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0;0.35;0" dur="13s" begin="-6s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1.5;4;1.5" dur="13s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ================= TRAIN ================= -->
+  <g>
+    <!-- Subtle rocking motion -->
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 0.5; 0 0; 0 -0.4; 0 0" dur="7s" repeatCount="indefinite"/>
+
+    <!-- Train shadow on platform/track -->
+    <ellipse cx="214" cy="162" rx="130" ry="3.5" fill="#000000" opacity="0.6"/>
+
+    <!-- Car body — rear flat (into tunnel), nose rounded (right) -->
+    <path d="M 76 62
+             L 326 62
+             Q 342 62, 342 76
+             L 342 134
+             Q 342 150, 326 150
+             L 76 150
+             Z"
+          fill="url(#trainRed)" stroke="#5a0808" stroke-width="0.8"/>
+
+    <!-- Dark roof shade -->
+    <path d="M 76 62 L 326 62 Q 342 62, 342 76 L 342 80 L 76 80 Z" fill="#1a0404" opacity="0.5"/>
+
+    <!-- Silver band (classic bumper) -->
+    <rect x="76" y="117" width="266" height="7" fill="url(#silver)" opacity="0.9"/>
+    <line x1="76" y1="117" x2="342" y2="117" stroke="#1a1a1f" stroke-width="0.4" opacity="0.7"/>
+    <line x1="76" y1="124" x2="342" y2="124" stroke="#1a1a1f" stroke-width="0.4" opacity="0.7"/>
+
+    <!-- Side windows (5) with warm interior glow and passenger silhouettes -->
+    <g>
+      <!-- Window frames (behind glow) -->
+      <rect x="92" y="82" width="30" height="28" rx="2" fill="url(#winGlow)" opacity="0.92"/>
+      <rect x="130" y="82" width="30" height="28" rx="2" fill="url(#winGlow)" opacity="0.88"/>
+      <rect x="168" y="82" width="30" height="28" rx="2" fill="url(#winGlow)" opacity="0.94"/>
+      <rect x="206" y="82" width="30" height="28" rx="2" fill="url(#winGlow)" opacity="0.86"/>
+      <rect x="244" y="82" width="30" height="28" rx="2" fill="url(#winGlow)" opacity="0.9"/>
+
+      <!-- Flicker on one window (lights buzzing) -->
+      <rect x="168" y="82" width="30" height="28" rx="2" fill="#fff4c0" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.35;0;0;0" dur="11s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Passenger silhouettes (head + torso) in various windows -->
+      <!-- W1 -->
+      <circle cx="102" cy="90" r="3" fill="#1a0e06" opacity="0.78"/>
+      <rect x="96" y="92" width="12" height="18" fill="#1a0e06" opacity="0.78"/>
+      <circle cx="114" cy="92" r="2.6" fill="#1a0e06" opacity="0.65"/>
+      <rect x="109" y="94" width="10" height="16" fill="#1a0e06" opacity="0.65"/>
+      <!-- W2 -->
+      <circle cx="140" cy="90" r="3" fill="#1a0e06" opacity="0.72"/>
+      <rect x="134" y="92" width="12" height="18" fill="#1a0e06" opacity="0.72"/>
+      <!-- W3 (empty, bright) -->
+      <!-- W4 -->
+      <circle cx="216" cy="90" r="3" fill="#1a0e06" opacity="0.78"/>
+      <rect x="210" y="92" width="12" height="18" fill="#1a0e06" opacity="0.78"/>
+      <circle cx="228" cy="92" r="2.6" fill="#1a0e06" opacity="0.6"/>
+      <rect x="223" y="94" width="10" height="16" fill="#1a0e06" opacity="0.6"/>
+      <!-- W5 -->
+      <circle cx="258" cy="90" r="3" fill="#1a0e06" opacity="0.72"/>
+      <rect x="252" y="92" width="12" height="18" fill="#1a0e06" opacity="0.72"/>
+    </g>
+
+    <!-- Window frames (strokes on top) -->
+    <g fill="none" stroke="#4a0404" stroke-width="0.7" opacity="0.85">
+      <rect x="92" y="82" width="30" height="28" rx="2"/>
+      <rect x="130" y="82" width="30" height="28" rx="2"/>
+      <rect x="168" y="82" width="30" height="28" rx="2"/>
+      <rect x="206" y="82" width="30" height="28" rx="2"/>
+      <rect x="244" y="82" width="30" height="28" rx="2"/>
+    </g>
+
+    <!-- Door seams between windows -->
+    <line x1="126" y1="80" x2="126" y2="150" stroke="#5a0808" stroke-width="0.6" opacity="0.65"/>
+    <line x1="202" y1="80" x2="202" y2="150" stroke="#5a0808" stroke-width="0.6" opacity="0.65"/>
+    <line x1="278" y1="80" x2="278" y2="150" stroke="#5a0808" stroke-width="0.6" opacity="0.65"/>
+
+    <!-- Front windscreen (big, at nose on right) -->
+    <path d="M 288 82
+             L 316 82
+             Q 332 82, 332 94
+             L 332 108
+             Q 332 114, 326 114
+             L 288 114
+             Z"
+          fill="url(#winGlow)" opacity="0.95"/>
+    <path d="M 288 82
+             L 316 82
+             Q 332 82, 332 94
+             L 332 108
+             Q 332 114, 326 114
+             L 288 114
+             Z"
+          fill="none" stroke="#2a0404" stroke-width="0.8"/>
+
+    <!-- Motorman silhouette in windscreen -->
+    <circle cx="312" cy="95" r="3.2" fill="#1a0e06" opacity="0.78"/>
+    <path d="M 306 97 L 318 97 L 320 114 L 304 114 Z" fill="#1a0e06" opacity="0.78"/>
+
+    <!-- Route sign plate above nose (brass with "1 LOCAL") -->
+    <rect x="294" y="64" width="38" height="12" fill="#1a1a1f" stroke="#c8a878" stroke-width="0.4" rx="1"/>
+    <text x="313" y="73" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+          font-size="7" font-weight="800" fill="#f0e4c8" letter-spacing="1">1 LOCAL</text>
+
+    <!-- Side NYC roundel (red "1" line marker) -->
+    <g transform="translate(230 136)">
+      <circle r="8" fill="#1a1a1f" stroke="#f0e4c8" stroke-width="0.6"/>
+      <circle r="6.6" fill="#ee352e"/>
+      <text x="0" y="2.6" text-anchor="middle"
+            font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+            font-size="9" font-weight="900" fill="#f0e4c8">1</text>
+    </g>
+
+    <!-- IRT monogram on left side of car -->
+    <text x="100" y="140" font-family="'Georgia', serif" font-size="8" font-weight="700" fill="#f4d8a8" opacity="0.75" letter-spacing="1.6">IRT</text>
+
+    <!-- Headlights (at nose, right side) -->
+    <circle cx="334" cy="128" r="4.2" fill="url(#headGlow)" opacity="0.95"/>
+    <circle cx="334" cy="128" r="2.4" fill="#fffbe0"/>
+    <circle cx="334" cy="142" r="4.2" fill="url(#headGlow)" opacity="0.95"/>
+    <circle cx="334" cy="142" r="2.4" fill="#fffbe0"/>
+
+    <!-- Headlight beams forward (short, into the right side) -->
+    <ellipse cx="346" cy="128" rx="14" ry="3.2" fill="url(#headGlow)" opacity="0.75">
+      <animate attributeName="opacity" values="0.5;0.9;0.6;0.9;0.5" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="346" cy="142" rx="14" ry="3.2" fill="url(#headGlow)" opacity="0.75">
+      <animate attributeName="opacity" values="0.5;0.9;0.6;0.9;0.5" dur="7s" begin="-3.5s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Wheel trucks -->
+    <g>
+      <rect x="92" y="150" width="52" height="8" rx="2" fill="#1a1a1f"/>
+      <rect x="268" y="150" width="60" height="8" rx="2" fill="#1a1a1f"/>
+      <!-- Wheels -->
+      <circle cx="104" cy="156" r="5.5" fill="#2a2a30" stroke="#5a5a62" stroke-width="0.6"/>
+      <circle cx="132" cy="156" r="5.5" fill="#2a2a30" stroke="#5a5a62" stroke-width="0.6"/>
+      <circle cx="280" cy="156" r="5.5" fill="#2a2a30" stroke="#5a5a62" stroke-width="0.6"/>
+      <circle cx="316" cy="156" r="5.5" fill="#2a2a30" stroke="#5a5a62" stroke-width="0.6"/>
+      <!-- Hubs -->
+      <circle cx="104" cy="156" r="1.4" fill="#8a8a94"/>
+      <circle cx="132" cy="156" r="1.4" fill="#8a8a94"/>
+      <circle cx="280" cy="156" r="1.4" fill="#8a8a94"/>
+      <circle cx="316" cy="156" r="1.4" fill="#8a8a94"/>
+      <!-- Spokes (just a cross) -->
+      <g stroke="#5a5a62" stroke-width="0.4" opacity="0.7">
+        <line x1="99" y1="156" x2="109" y2="156"/>
+        <line x1="104" y1="151" x2="104" y2="161"/>
+        <line x1="127" y1="156" x2="137" y2="156"/>
+        <line x1="132" y1="151" x2="132" y2="161"/>
+        <line x1="275" y1="156" x2="285" y2="156"/>
+        <line x1="280" y1="151" x2="280" y2="161"/>
+        <line x1="311" y1="156" x2="321" y2="156"/>
+        <line x1="316" y1="151" x2="316" y2="161"/>
+      </g>
+    </g>
+
+    <!-- Rivet row along silver band -->
+    <g fill="#1a1a1f" opacity="0.7">
+      <circle cx="96" cy="120.5" r="0.6"/>
+      <circle cx="114" cy="120.5" r="0.6"/>
+      <circle cx="132" cy="120.5" r="0.6"/>
+      <circle cx="150" cy="120.5" r="0.6"/>
+      <circle cx="168" cy="120.5" r="0.6"/>
+      <circle cx="186" cy="120.5" r="0.6"/>
+      <circle cx="204" cy="120.5" r="0.6"/>
+      <circle cx="222" cy="120.5" r="0.6"/>
+      <circle cx="258" cy="120.5" r="0.6"/>
+      <circle cx="276" cy="120.5" r="0.6"/>
+      <circle cx="294" cy="120.5" r="0.6"/>
+      <circle cx="312" cy="120.5" r="0.6"/>
+      <circle cx="330" cy="120.5" r="0.6"/>
+    </g>
+  </g>
+
+  <!-- Separator -->
+  <line x1="358" y1="30" x2="358" y2="170" stroke="#4a5878" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- ================= TEXT STACK ================= -->
+  <!-- Date headline -->
+  <text x="582" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f0e4c8" letter-spacing="2.0">
+    OCTOBER 27, 2026
+  </text>
+
+  <!-- Twin subway-line bar: red (1/2/3) + green (4/5/6) -->
+  <line x1="410" y1="74" x2="770" y2="74" stroke="#ee352e" stroke-width="2.6" opacity="0.95"/>
+  <line x1="410" y1="80" x2="770" y2="80" stroke="#00933c" stroke-width="1.6" opacity="0.9"/>
+
+  <!-- Subhead -->
+  <text x="582" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="15" font-weight="800" letter-spacing="2.8" fill="#f4e4b8">
+    NYC SUBWAY
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="582" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#d4a858" letter-spacing="0.6">
+    IRT &#183; 1904 &#183; 122 YEARS
+  </text>
+
+  <!-- Roster of original IRT stops -->
+  <text x="582" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.6" font-weight="700" fill="#9888a8" letter-spacing="2.2" opacity="0.95">
+    CITY HALL &#183; 42 ST &#183; GRAND CENTRAL &#183; BROADWAY &#183; HARLEM
+  </text>
+
+  <!-- Caption -->
+  <text x="582" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f0e4c8" opacity="0.95">
+    &#8220;A city that moves underneath itself.&#8221;
+  </text>
+</svg>
