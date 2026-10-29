@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Statue of Liberty 140th Anniversary (October 28, 1886) -->
+<!-- about:
+On 28 October 1886, under a cold grey rain and a thousand foghorns, President Grover Cleveland dedicated Liberty Enlightening the World on Bedloe's Island in New York Harbor. The 151-foot copper figure — designed by Frédéric Auguste Bartholdi, interior framework engineered by Gustave Eiffel, pedestal by Richard Morris Hunt — had taken twenty-one years from first sketch to unveiling, crossed the Atlantic in 350 pieces aboard the French frigate Isère, and been assembled on a star-shaped Civil War fort. It was a gift from France to the United States and still arguably the most legible silhouette in the world. Her torch has stood through 140 years of harbor weather; her copper skin oxidised to the pale green it keeps today around 1920.
+
+The scene is dawn in New York Harbor. On the left, Lady Liberty rises in her oxidised copper green against a warm peach-and-rose sky, her seven-rayed crown slowly brightening, her raised torch flickering with a golden flame. Harbor water pulses beneath her pedestal in gentle ripples; distant sloop silhouettes drift across the horizon. On the right, a cream OCTOBER 28, 2026 headline sits over a double copper-and-liberty-green bar, a verdigris STATUE OF LIBERTY subhead, an italic amber BARTHOLDI · 1886 · 140 YEARS tertiary, a dim BEDLOE'S ISLAND · ENLIGHTENING · HARBOR · GIFT · WELCOME roster, and a Georgia-italic 'Lift the lamp beside the golden door.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for October 28, 2026 — Statue of Liberty 140th Anniversary. On the left, Lady Liberty rises in oxidised copper green against a warm peach-and-rose dawn sky, her seven-rayed crown slowly brightening, her raised torch flickering with a golden flame. Harbor water pulses beneath her pedestal in gentle ripples; distant sloop silhouettes drift across the horizon. On the right, a cream OCTOBER 28, 2026 headline sits over a double copper-and-liberty-green bar, a verdigris STATUE OF LIBERTY subhead, an italic amber BARTHOLDI · 1886 · 140 YEARS tertiary, a dim BEDLOE'S ISLAND · ENLIGHTENING · HARBOR · GIFT · WELCOME roster, and a Georgia-italic 'Lift the lamp beside the golden door.' caption at the base.">
+  <defs>
+    <!-- Harbor dawn sky -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1830"/>
+      <stop offset="0.35" stop-color="#5a3048"/>
+      <stop offset="0.65" stop-color="#c86858"/>
+      <stop offset="0.88" stop-color="#f0a878"/>
+      <stop offset="1" stop-color="#604828"/>
+    </linearGradient>
+
+    <!-- Sun disc gradient -->
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff4c8"/>
+      <stop offset="0.5" stop-color="#ffc878"/>
+      <stop offset="1" stop-color="#ff7838" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Liberty copper-oxidised body gradient -->
+    <linearGradient id="liberty" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9ad8c0"/>
+      <stop offset="0.5" stop-color="#5aa090"/>
+      <stop offset="1" stop-color="#2c5048"/>
+    </linearGradient>
+
+    <!-- Liberty shadow side (right side of body) -->
+    <linearGradient id="libertyShade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a2824" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Pedestal stone -->
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#584840"/>
+      <stop offset="1" stop-color="#2a1e18"/>
+    </linearGradient>
+
+    <!-- Torch flame -->
+    <radialGradient id="flame" cx="0.5" cy="0.6" r="0.6">
+      <stop offset="0" stop-color="#fffbe0"/>
+      <stop offset="0.35" stop-color="#ffd868"/>
+      <stop offset="0.75" stop-color="#f08838"/>
+      <stop offset="1" stop-color="#c04010" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Water -->
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#684050"/>
+      <stop offset="0.5" stop-color="#3a2838"/>
+      <stop offset="1" stop-color="#140c18"/>
+    </linearGradient>
+
+    <!-- Crown-ray glow -->
+    <radialGradient id="rayGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff8d0"/>
+      <stop offset="1" stop-color="#fff8d0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Full Liberty silhouette path (approximate) -->
+    <g id="statue">
+      <!-- Pedestal (star-fort shape top, truncated pyramid) -->
+      <path d="M 150 182
+               L 150 148
+               L 164 128
+               L 192 128
+               L 206 148
+               L 206 182 Z"
+            fill="url(#stone)" stroke="#1a0e08" stroke-width="0.6"/>
+      <!-- Pedestal cornice -->
+      <rect x="152" y="132" width="52" height="3" fill="#3a2820"/>
+      <rect x="160" y="146" width="36" height="2" fill="#241812" opacity="0.8"/>
+      <!-- Pedestal shadow -->
+      <path d="M 178 128 L 206 148 L 206 182 L 178 182 Z" fill="#000" opacity="0.25"/>
+
+      <!-- Robes falling: wide skirt down to pedestal top -->
+      <path d="M 161 128
+               L 169 112
+               L 170 100
+               L 175 90
+               L 182 78
+               L 186 70
+               L 188 62
+               L 192 56
+               L 196 54
+               L 200 54
+               L 202 58
+               L 198 68
+               L 200 78
+               L 199 92
+               L 197 104
+               L 196 118
+               L 195 128 Z"
+            fill="url(#liberty)" stroke="#1c3830" stroke-width="0.5"/>
+      <!-- Robe folds -->
+      <path d="M 173 126 L 177 108 M 180 128 L 184 104 M 187 126 L 189 96 M 191 128 L 192 86"
+            stroke="#1c3830" stroke-width="0.5" fill="none" opacity="0.55"/>
+      <!-- Right-side shade overlay -->
+      <path d="M 182 78 L 186 70 L 188 62 L 192 56 L 196 54 L 200 54 L 202 58 L 198 68 L 200 78 L 199 92 L 197 104 L 196 118 L 195 128 L 182 128 Z"
+            fill="url(#libertyShade)"/>
+
+      <!-- Tablet (held in left arm, close to body) -->
+      <g transform="translate(190 60) rotate(14)">
+        <rect x="0" y="0" width="12" height="18" fill="#78b4a0" stroke="#1c3830" stroke-width="0.4"/>
+        <!-- Faint "JULY IV MDCCLXXVI" tick marks -->
+        <line x1="2" y1="4" x2="10" y2="4" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
+        <line x1="2" y1="7" x2="10" y2="7" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
+        <line x1="2" y1="10" x2="10" y2="10" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
+        <line x1="2" y1="13" x2="10" y2="13" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
+      </g>
+
+      <!-- Neck + head -->
+      <path d="M 184 48 L 184 54 L 188 56 L 192 56 L 196 54 L 196 48 Z" fill="url(#liberty)" stroke="#1c3830" stroke-width="0.4"/>
+      <ellipse cx="190" cy="42" rx="7.5" ry="8.5" fill="url(#liberty)" stroke="#1c3830" stroke-width="0.5"/>
+      <!-- Hair under crown -->
+      <path d="M 183 42 Q 182 48 185 50 L 188 48 Q 186 44 183 42 Z" fill="#2c5048"/>
+      <!-- Face features (subtle) -->
+      <path d="M 184 42 Q 183 44 184 46" stroke="#1c3830" stroke-width="0.5" fill="none" opacity="0.7"/>
+
+      <!-- Crown base -->
+      <path d="M 182 36 L 198 36 L 196 32 L 184 32 Z" fill="#78b4a0" stroke="#1c3830" stroke-width="0.4"/>
+
+      <!-- Seven crown rays -->
+      <g fill="#9ad8c0" stroke="#1c3830" stroke-width="0.4">
+        <polygon points="190,32 189,16 191,16"/>
+        <polygon points="186,32 182,18 184,17"/>
+        <polygon points="194,32 198,18 196,17"/>
+        <polygon points="182,33 174,22 176,21"/>
+        <polygon points="198,33 206,22 204,21"/>
+        <polygon points="179,34 168,28 169,27"/>
+        <polygon points="201,34 212,28 211,27"/>
+      </g>
+
+      <!-- Raised right arm with torch (arm rises up-right) -->
+      <!-- Shoulder + upper arm -->
+      <path d="M 196 56 Q 206 50, 214 40 Q 220 30, 224 20"
+            fill="none" stroke="url(#liberty)" stroke-width="7" stroke-linecap="round"/>
+      <path d="M 196 56 Q 206 50, 214 40 Q 220 30, 224 20"
+            fill="none" stroke="#1c3830" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+      <!-- Torch base (hand grip) -->
+      <rect x="221" y="16" width="7" height="6" fill="#78b4a0" stroke="#1c3830" stroke-width="0.4"/>
+      <!-- Torch cup -->
+      <path d="M 220 16 L 229 16 L 227 12 L 222 12 Z" fill="#f4c868" stroke="#8a5820" stroke-width="0.5"/>
+    </g>
+
+    <!-- Distant sailboat (small sloop silhouette) -->
+    <g id="sloop">
+      <path d="M 0 2 L 10 2 L 8 5 L 2 5 Z" fill="#1a0e14"/>
+      <path d="M 5 2 L 5 -6 L 10 2 Z" fill="#2a1824"/>
+    </g>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Distant sun disc (behind horizon, warm) -->
+  <circle cx="340" cy="138" r="38" fill="url(#sun)" opacity="0.85">
+    <animate attributeName="opacity" values="0.75;0.95;0.8;0.95;0.75" dur="13s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Distant harbor haze band -->
+  <rect x="0" y="134" width="400" height="6" fill="#f0a878" opacity="0.18"/>
+
+  <!-- Starry twilight dots (upper-left, few) -->
+  <g fill="#fff4d8">
+    <circle cx="40" cy="24" r="0.9" opacity="0.75">
+      <animate attributeName="opacity" values="0.4;0.95;0.5;0.95;0.4" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="88" cy="14" r="0.7" opacity="0.6">
+      <animate attributeName="opacity" values="0.25;0.85;0.35;0.85;0.25" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="130" cy="22" r="0.6" opacity="0.55">
+      <animate attributeName="opacity" values="0.2;0.75;0.3;0.75;0.2" dur="13s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="46" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.3;0.7;0.2" dur="11s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Water -->
+  <rect x="0" y="178" width="400" height="22" fill="url(#water)"/>
+
+  <!-- Water ripple highlights (horizontal lines, animated opacity) -->
+  <g stroke="#f0a878" stroke-width="0.5" opacity="0.5">
+    <line x1="6" y1="184" x2="60" y2="184">
+      <animate attributeName="opacity" values="0.2;0.6;0.3;0.6;0.2" dur="7s" repeatCount="indefinite"/>
+    </line>
+    <line x1="80" y1="188" x2="150" y2="188">
+      <animate attributeName="opacity" values="0.15;0.55;0.25;0.55;0.15" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="220" y1="186" x2="290" y2="186">
+      <animate attributeName="opacity" values="0.2;0.6;0.3;0.6;0.2" dur="13s" begin="-4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="40" y1="192" x2="110" y2="192">
+      <animate attributeName="opacity" values="0.15;0.5;0.25;0.5;0.15" dur="11s" begin="-5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="260" y1="194" x2="350" y2="194">
+      <animate attributeName="opacity" values="0.2;0.6;0.3;0.6;0.2" dur="7s" begin="-1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="130" y1="196" x2="200" y2="196">
+      <animate attributeName="opacity" values="0.15;0.55;0.25;0.55;0.15" dur="13s" begin="-6s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Distant sloops drifting slowly across horizon -->
+  <g>
+    <use href="#sloop" x="60" y="172">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 36 0" dur="97s" repeatCount="indefinite"/>
+    </use>
+    <use href="#sloop" x="268" y="174">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -30 0" dur="79s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Island base below the statue (small land shelf) -->
+  <path d="M 134 178 Q 180 174, 230 178 L 230 182 L 134 182 Z" fill="#1c1410" opacity="0.9"/>
+
+  <!-- Soft torch halo (behind torch) -->
+  <circle cx="225" cy="14" r="18" fill="url(#flame)" opacity="0.55">
+    <animate attributeName="opacity" values="0.4;0.75;0.5;0.75;0.4" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="16;22;17;22;16" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Crown rays halo (behind head) -->
+  <circle cx="190" cy="30" r="22" fill="url(#rayGlow)" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;0.6;0.35;0.6;0.3" dur="11s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- The statue -->
+  <use href="#statue"/>
+
+  <!-- Flame on top of torch (animated flicker) -->
+  <g>
+    <path d="M 225 12
+             Q 221 6, 223 0
+             Q 225 4, 227 -2
+             Q 229 4, 227 10
+             Q 225 8, 225 12 Z"
+          fill="url(#flame)">
+      <animateTransform attributeName="transform" type="scale" values="1 1; 1.12 1.18; 0.95 1.05; 1.08 1.14; 1 1"
+                        additive="sum" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;1;0.85;1;0.9" dur="7s" repeatCount="indefinite"/>
+    </path>
+    <!-- Inner bright core -->
+    <ellipse cx="225" cy="4" rx="2" ry="4" fill="#fffbe0" opacity="0.95">
+      <animate attributeName="opacity" values="0.75;1;0.8;1;0.75" dur="11s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Rising ember -->
+    <circle cx="226" cy="-2" r="0.9" fill="#ffd868" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-2;-14" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="223" cy="-4" r="0.7" fill="#ffb848" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="13s" begin="-3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-4;-18" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Reflection of statue in water (very faint vertical streak) -->
+  <g opacity="0.25">
+    <rect x="178" y="182" width="3" height="14" fill="#78b4a0"/>
+    <rect x="182" y="184" width="2" height="12" fill="#9ad8c0"/>
+    <rect x="186" y="183" width="2" height="13" fill="#78b4a0"/>
+    <rect x="190" y="182" width="2" height="15" fill="#5aa090"/>
+    <rect x="194" y="184" width="2" height="11" fill="#78b4a0"/>
+    <!-- Torch reflection -->
+    <rect x="223" y="182" width="2" height="12" fill="#ffd868" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.6;0.35;0.6;0.3" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Separator -->
+  <line x1="398" y1="30" x2="398" y2="170" stroke="#78b4a0" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- ================= TEXT STACK ================= -->
+  <!-- Date headline -->
+  <text x="600" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f8edd4" letter-spacing="2.0">
+    OCTOBER 28, 2026
+  </text>
+
+  <!-- Twin bar: copper and verdigris -->
+  <line x1="428" y1="74" x2="772" y2="74" stroke="#c87838" stroke-width="2.6" opacity="0.95"/>
+  <line x1="428" y1="80" x2="772" y2="80" stroke="#78b4a0" stroke-width="1.6" opacity="0.9"/>
+
+  <!-- Subhead -->
+  <text x="600" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="15" font-weight="800" letter-spacing="2.8" fill="#9ad8c0">
+    STATUE OF LIBERTY
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="600" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#e8b878" letter-spacing="0.6">
+    BARTHOLDI &#183; 1886 &#183; 140 YEARS
+  </text>
+
+  <!-- Roster -->
+  <text x="600" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.6" font-weight="700" fill="#b89880" letter-spacing="2.2" opacity="0.95">
+    BEDLOE&#8217;S ISLAND &#183; ENLIGHTENING &#183; HARBOR &#183; GIFT &#183; WELCOME
+  </text>
+
+  <!-- Caption -->
+  <text x="600" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f8edd4" opacity="0.95">
+    &#8220;Lift the lamp beside the golden door.&#8221;
+  </text>
+</svg>

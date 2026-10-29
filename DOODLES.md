@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## October 29, 2026 — Statue of Liberty 140th Anniversary (October 28, 1886)
+
+<img src="./doodle-archive/2026/10/2026-10-29-060123.svg" width="800" alt="Daily doodle for October 28, 2026 — Statue of Liberty 140th Anniversary. On the left, Lady Liberty rises in oxidised copper green against a warm peach-and-rose dawn sky, her seven-rayed crown slowly brightening, her raised torch flickering with a golden flame. Harbor water pulses beneath her pedestal in gentle ripples; distant sloop silhouettes drift across the horizon. On the right, a cream OCTOBER 28, 2026 headline sits over a double copper-and-liberty-green bar, a verdigris STATUE OF LIBERTY subhead, an italic amber BARTHOLDI · 1886 · 140 YEARS tertiary, a dim BEDLOE'S ISLAND · ENLIGHTENING · HARBOR · GIFT · WELCOME roster, and a Georgia-italic 'Lift the lamp beside the golden door.' caption at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On 28 October 1886, under a cold grey rain and a thousand foghorns, President Grover Cleveland dedicated Liberty Enlightening the World on Bedloe's Island in New York Harbor. The 151-foot copper figure — designed by Frédéric Auguste Bartholdi, interior framework engineered by Gustave Eiffel, pedestal by Richard Morris Hunt — had taken twenty-one years from first sketch to unveiling, crossed the Atlantic in 350 pieces aboard the French frigate Isère, and been assembled on a star-shaped Civil War fort. It was a gift from France to the United States and still arguably the most legible silhouette in the world. Her torch has stood through 140 years of harbor weather; her copper skin oxidised to the pale green it keeps today around 1920.
+
+The scene is dawn in New York Harbor. On the left, Lady Liberty rises in her oxidised copper green against a warm peach-and-rose sky, her seven-rayed crown slowly brightening, her raised torch flickering with a golden flame. Harbor water pulses beneath her pedestal in gentle ripples; distant sloop silhouettes drift across the horizon. On the right, a cream OCTOBER 28, 2026 headline sits over a double copper-and-liberty-green bar, a verdigris STATUE OF LIBERTY subhead, an italic amber BARTHOLDI · 1886 · 140 YEARS tertiary, a dim BEDLOE'S ISLAND · ENLIGHTENING · HARBOR · GIFT · WELCOME roster, and a Georgia-italic 'Lift the lamp beside the golden door.' caption at the base.
+
+</details>
+
+---
+
 ## October 28, 2026 — NYC Subway 122nd Anniversary (October 27, 1904)
 
 <img src="./doodle-archive/2026/10/2026-10-28-060124.svg" width="800" alt="Daily doodle for October 27, 2026 — NYC Subway 122nd Anniversary. On the left, a red IRT subway car emerges from a tiled underground tunnel, its headlights pulsing against the dark, warm passenger silhouettes glowing in a row of lit windows, sparks skipping along the energised third rail below. On the right, a cream OCTOBER 27, 2026 headline sits over a double red-and-green bar, a cream NYC SUBWAY subhead, an italic amber IRT · 1904 · 122 YEARS tertiary, a dim CITY HALL · 42 ST · GRAND CENTRAL · BROADWAY · HARLEM roster, and a Georgia-italic 'A city that moves underneath itself.' caption at the base.">

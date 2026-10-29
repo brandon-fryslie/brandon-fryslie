@@ -1,319 +1,354 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Statue of Liberty 140th Anniversary (October 28, 1886) -->
+<!-- theme: ARPANET First Message 57th Anniversary (October 29, 1969) -->
 <!-- about:
-On 28 October 1886, under a cold grey rain and a thousand foghorns, President Grover Cleveland dedicated Liberty Enlightening the World on Bedloe's Island in New York Harbor. The 151-foot copper figure — designed by Frédéric Auguste Bartholdi, interior framework engineered by Gustave Eiffel, pedestal by Richard Morris Hunt — had taken twenty-one years from first sketch to unveiling, crossed the Atlantic in 350 pieces aboard the French frigate Isère, and been assembled on a star-shaped Civil War fort. It was a gift from France to the United States and still arguably the most legible silhouette in the world. Her torch has stood through 140 years of harbor weather; her copper skin oxidised to the pale green it keeps today around 1920.
+At 10:30 p.m. Pacific time on 29 October 1969, a UCLA graduate student named Charley Kline sat down at an SDS Sigma 7 and tried to log in to a computer 350 miles up the coast at Stanford Research Institute. He typed "L." SRI's SDS 940 echoed it back. He typed "O." It echoed back. He typed "G" and the system crashed. The first message ever sent host-to-host over what became the Internet was therefore the word "lo," and the first thing the Internet ever did was fall over. ARPANET grew from those two nodes to four by December and to a global network by the mid-1980s. Fifty-seven years later, every packet is a descendant of that one.
 
-The scene is dawn in New York Harbor. On the left, Lady Liberty rises in her oxidised copper green against a warm peach-and-rose sky, her seven-rayed crown slowly brightening, her raised torch flickering with a golden flame. Harbor water pulses beneath her pedestal in gentle ripples; distant sloop silhouettes drift across the horizon. On the right, a cream OCTOBER 28, 2026 headline sits over a double copper-and-liberty-green bar, a verdigris STATUE OF LIBERTY subhead, an italic amber BARTHOLDI · 1886 · 140 YEARS tertiary, a dim BEDLOE'S ISLAND · ENLIGHTENING · HARBOR · GIFT · WELCOME roster, and a Georgia-italic 'Lift the lamp beside the golden door.' caption at the base.
+The scene is a late-night lab floor. Two 1969-era CRT terminals face each other — UCLA on the left, SRI on the right — joined by a dashed phone-line cable that pulses with glowing packets. The letters L, O, and G travel across the wire in sequence; the far screen prints LO, then the G arrives and the terminal flickers to static. On the right, a cream OCTOBER 29, 2026 headline sits over a double phosphor-and-amber bar, a phosphor ARPANET FIRST MESSAGE subhead, an italic amber UCLA → SRI · 1969 · 57 YEARS tertiary, a dim IMP · HOST · PACKET · NETWORK · GENESIS roster, and a Georgia-italic 'The internet said "lo" and fell over.' caption at the base.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for October 28, 2026 — Statue of Liberty 140th Anniversary. On the left, Lady Liberty rises in oxidised copper green against a warm peach-and-rose dawn sky, her seven-rayed crown slowly brightening, her raised torch flickering with a golden flame. Harbor water pulses beneath her pedestal in gentle ripples; distant sloop silhouettes drift across the horizon. On the right, a cream OCTOBER 28, 2026 headline sits over a double copper-and-liberty-green bar, a verdigris STATUE OF LIBERTY subhead, an italic amber BARTHOLDI · 1886 · 140 YEARS tertiary, a dim BEDLOE'S ISLAND · ENLIGHTENING · HARBOR · GIFT · WELCOME roster, and a Georgia-italic 'Lift the lamp beside the golden door.' caption at the base.">
+     aria-label="Daily doodle for October 29, 2026 — ARPANET First Message 57th Anniversary. On the left, two 1969-era CRT terminals face each other on a dark lab floor; UCLA's green phosphor screen types L then LO then LOG while SRI's amber screen receives L, then LO, then crashes to static. A dashed phone-line cable between them pulses with glowing packets. On the right, a cream OCTOBER 29, 2026 headline sits over a double phosphor-and-amber bar, a phosphor ARPANET FIRST MESSAGE subhead, an italic amber UCLA to SRI · 1969 · 57 YEARS tertiary, a dim IMP · HOST · PACKET · NETWORK · GENESIS roster, and a Georgia-italic caption at the base reading: the internet said lo and fell over.">
   <defs>
-    <!-- Harbor dawn sky -->
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2a1830"/>
-      <stop offset="0.35" stop-color="#5a3048"/>
-      <stop offset="0.65" stop-color="#c86858"/>
-      <stop offset="0.88" stop-color="#f0a878"/>
-      <stop offset="1" stop-color="#604828"/>
+    <!-- Lab floor gradient (very subtle) -->
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.75" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161a22"/>
     </linearGradient>
 
-    <!-- Sun disc gradient -->
-    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#fff4c8"/>
-      <stop offset="0.5" stop-color="#ffc878"/>
-      <stop offset="1" stop-color="#ff7838" stop-opacity="0"/>
+    <!-- Terminal case (warm metal/beige of 1969 hardware) -->
+    <linearGradient id="case" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a342a"/>
+      <stop offset="0.5" stop-color="#2a2420"/>
+      <stop offset="1" stop-color="#1a1612"/>
+    </linearGradient>
+
+    <!-- Green phosphor glow -->
+    <radialGradient id="greenGlow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#86efac" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#4ade80" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#4ade80" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Liberty copper-oxidised body gradient -->
-    <linearGradient id="liberty" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#9ad8c0"/>
-      <stop offset="0.5" stop-color="#5aa090"/>
-      <stop offset="1" stop-color="#2c5048"/>
-    </linearGradient>
-
-    <!-- Liberty shadow side (right side of body) -->
-    <linearGradient id="libertyShade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="1" stop-color="#1a2824" stop-opacity="0.6"/>
-    </linearGradient>
-
-    <!-- Pedestal stone -->
-    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#584840"/>
-      <stop offset="1" stop-color="#2a1e18"/>
-    </linearGradient>
-
-    <!-- Torch flame -->
-    <radialGradient id="flame" cx="0.5" cy="0.6" r="0.6">
-      <stop offset="0" stop-color="#fffbe0"/>
-      <stop offset="0.35" stop-color="#ffd868"/>
-      <stop offset="0.75" stop-color="#f08838"/>
-      <stop offset="1" stop-color="#c04010" stop-opacity="0"/>
+    <!-- Amber phosphor glow -->
+    <radialGradient id="amberGlow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#ffd968" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#ffbf00" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffbf00" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Water -->
-    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#684050"/>
-      <stop offset="0.5" stop-color="#3a2838"/>
-      <stop offset="1" stop-color="#140c18"/>
-    </linearGradient>
-
-    <!-- Crown-ray glow -->
-    <radialGradient id="rayGlow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#fff8d0"/>
-      <stop offset="1" stop-color="#fff8d0" stop-opacity="0"/>
+    <!-- Green screen glass -->
+    <radialGradient id="greenScreen" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#0f2a14"/>
+      <stop offset="0.7" stop-color="#071807"/>
+      <stop offset="1" stop-color="#040d04"/>
     </radialGradient>
 
-    <!-- Full Liberty silhouette path (approximate) -->
-    <g id="statue">
-      <!-- Pedestal (star-fort shape top, truncated pyramid) -->
-      <path d="M 150 182
-               L 150 148
-               L 164 128
-               L 192 128
-               L 206 148
-               L 206 182 Z"
-            fill="url(#stone)" stroke="#1a0e08" stroke-width="0.6"/>
-      <!-- Pedestal cornice -->
-      <rect x="152" y="132" width="52" height="3" fill="#3a2820"/>
-      <rect x="160" y="146" width="36" height="2" fill="#241812" opacity="0.8"/>
-      <!-- Pedestal shadow -->
-      <path d="M 178 128 L 206 148 L 206 182 L 178 182 Z" fill="#000" opacity="0.25"/>
+    <!-- Amber screen glass -->
+    <radialGradient id="amberScreen" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#2a1e08"/>
+      <stop offset="0.7" stop-color="#180e04"/>
+      <stop offset="1" stop-color="#0a0602"/>
+    </radialGradient>
 
-      <!-- Robes falling: wide skirt down to pedestal top -->
-      <path d="M 161 128
-               L 169 112
-               L 170 100
-               L 175 90
-               L 182 78
-               L 186 70
-               L 188 62
-               L 192 56
-               L 196 54
-               L 200 54
-               L 202 58
-               L 198 68
-               L 200 78
-               L 199 92
-               L 197 104
-               L 196 118
-               L 195 128 Z"
-            fill="url(#liberty)" stroke="#1c3830" stroke-width="0.5"/>
-      <!-- Robe folds -->
-      <path d="M 173 126 L 177 108 M 180 128 L 184 104 M 187 126 L 189 96 M 191 128 L 192 86"
-            stroke="#1c3830" stroke-width="0.5" fill="none" opacity="0.55"/>
-      <!-- Right-side shade overlay -->
-      <path d="M 182 78 L 186 70 L 188 62 L 192 56 L 196 54 L 200 54 L 202 58 L 198 68 L 200 78 L 199 92 L 197 104 L 196 118 L 195 128 L 182 128 Z"
-            fill="url(#libertyShade)"/>
-
-      <!-- Tablet (held in left arm, close to body) -->
-      <g transform="translate(190 60) rotate(14)">
-        <rect x="0" y="0" width="12" height="18" fill="#78b4a0" stroke="#1c3830" stroke-width="0.4"/>
-        <!-- Faint "JULY IV MDCCLXXVI" tick marks -->
-        <line x1="2" y1="4" x2="10" y2="4" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
-        <line x1="2" y1="7" x2="10" y2="7" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
-        <line x1="2" y1="10" x2="10" y2="10" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
-        <line x1="2" y1="13" x2="10" y2="13" stroke="#1c3830" stroke-width="0.35" opacity="0.65"/>
+    <!-- Reusable terminal body (100 wide, 90 tall) -->
+    <g id="terminalBody">
+      <!-- Shadow under -->
+      <ellipse cx="50" cy="92" rx="52" ry="4" fill="#000" opacity="0.55"/>
+      <!-- Main CRT body (trapezoidal profile) -->
+      <path d="M 6 2
+               L 94 2
+               Q 100 2, 100 8
+               L 100 56
+               Q 100 62, 94 62
+               L 6 62
+               Q 0 62, 0 56
+               L 0 8
+               Q 0 2, 6 2 Z"
+            fill="url(#case)" stroke="#120e0a" stroke-width="0.7"/>
+      <!-- Top vent slits -->
+      <g stroke="#120e0a" stroke-width="0.4" opacity="0.7">
+        <line x1="22" y1="6" x2="78" y2="6"/>
+        <line x1="22" y1="8.5" x2="78" y2="8.5"/>
       </g>
-
-      <!-- Neck + head -->
-      <path d="M 184 48 L 184 54 L 188 56 L 192 56 L 196 54 L 196 48 Z" fill="url(#liberty)" stroke="#1c3830" stroke-width="0.4"/>
-      <ellipse cx="190" cy="42" rx="7.5" ry="8.5" fill="url(#liberty)" stroke="#1c3830" stroke-width="0.5"/>
-      <!-- Hair under crown -->
-      <path d="M 183 42 Q 182 48 185 50 L 188 48 Q 186 44 183 42 Z" fill="#2c5048"/>
-      <!-- Face features (subtle) -->
-      <path d="M 184 42 Q 183 44 184 46" stroke="#1c3830" stroke-width="0.5" fill="none" opacity="0.7"/>
-
-      <!-- Crown base -->
-      <path d="M 182 36 L 198 36 L 196 32 L 184 32 Z" fill="#78b4a0" stroke="#1c3830" stroke-width="0.4"/>
-
-      <!-- Seven crown rays -->
-      <g fill="#9ad8c0" stroke="#1c3830" stroke-width="0.4">
-        <polygon points="190,32 189,16 191,16"/>
-        <polygon points="186,32 182,18 184,17"/>
-        <polygon points="194,32 198,18 196,17"/>
-        <polygon points="182,33 174,22 176,21"/>
-        <polygon points="198,33 206,22 204,21"/>
-        <polygon points="179,34 168,28 169,27"/>
-        <polygon points="201,34 212,28 211,27"/>
+      <!-- Screen bezel -->
+      <rect x="10" y="12" width="80" height="42" rx="4" fill="#0a0806" stroke="#1a1612" stroke-width="0.6"/>
+      <!-- Stand neck -->
+      <rect x="34" y="62" width="32" height="6" fill="#1a1612"/>
+      <!-- Base plate -->
+      <rect x="18" y="68" width="64" height="6" rx="1.5" fill="#2a2420" stroke="#120e0a" stroke-width="0.4"/>
+      <!-- Keyboard hint under stand -->
+      <rect x="12" y="76" width="76" height="7" rx="1" fill="#2a2420" stroke="#120e0a" stroke-width="0.4"/>
+      <!-- Key specks -->
+      <g fill="#1a1612">
+        <rect x="16" y="78.5" width="3" height="2"/>
+        <rect x="21" y="78.5" width="3" height="2"/>
+        <rect x="26" y="78.5" width="3" height="2"/>
+        <rect x="31" y="78.5" width="3" height="2"/>
+        <rect x="36" y="78.5" width="3" height="2"/>
+        <rect x="41" y="78.5" width="3" height="2"/>
+        <rect x="46" y="78.5" width="3" height="2"/>
+        <rect x="51" y="78.5" width="3" height="2"/>
+        <rect x="56" y="78.5" width="3" height="2"/>
+        <rect x="61" y="78.5" width="3" height="2"/>
+        <rect x="66" y="78.5" width="3" height="2"/>
+        <rect x="71" y="78.5" width="3" height="2"/>
+        <rect x="76" y="78.5" width="3" height="2"/>
+        <rect x="81" y="78.5" width="3" height="2"/>
+        <rect x="26" y="81.5" width="3" height="1.4"/>
+        <rect x="36" y="81.5" width="3" height="1.4"/>
+        <rect x="46" y="81.5" width="3" height="1.4"/>
+        <rect x="56" y="81.5" width="3" height="1.4"/>
+        <rect x="66" y="81.5" width="3" height="1.4"/>
       </g>
-
-      <!-- Raised right arm with torch (arm rises up-right) -->
-      <!-- Shoulder + upper arm -->
-      <path d="M 196 56 Q 206 50, 214 40 Q 220 30, 224 20"
-            fill="none" stroke="url(#liberty)" stroke-width="7" stroke-linecap="round"/>
-      <path d="M 196 56 Q 206 50, 214 40 Q 220 30, 224 20"
-            fill="none" stroke="#1c3830" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
-      <!-- Torch base (hand grip) -->
-      <rect x="221" y="16" width="7" height="6" fill="#78b4a0" stroke="#1c3830" stroke-width="0.4"/>
-      <!-- Torch cup -->
-      <path d="M 220 16 L 229 16 L 227 12 L 222 12 Z" fill="#f4c868" stroke="#8a5820" stroke-width="0.5"/>
     </g>
 
-    <!-- Distant sailboat (small sloop silhouette) -->
-    <g id="sloop">
-      <path d="M 0 2 L 10 2 L 8 5 L 2 5 Z" fill="#1a0e14"/>
-      <path d="M 5 2 L 5 -6 L 10 2 Z" fill="#2a1824"/>
-    </g>
+    <!-- Scanlines (horizontal) -->
+    <pattern id="scanlines" x="0" y="0" width="4" height="2" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="1" fill="#000" opacity="0.35"/>
+    </pattern>
   </defs>
 
-  <!-- Sky background -->
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#floor)"/>
 
-  <!-- Distant sun disc (behind horizon, warm) -->
-  <circle cx="340" cy="138" r="38" fill="url(#sun)" opacity="0.85">
-    <animate attributeName="opacity" values="0.75;0.95;0.8;0.95;0.75" dur="13s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Distant harbor haze band -->
-  <rect x="0" y="134" width="400" height="6" fill="#f0a878" opacity="0.18"/>
-
-  <!-- Starry twilight dots (upper-left, few) -->
-  <g fill="#fff4d8">
-    <circle cx="40" cy="24" r="0.9" opacity="0.75">
-      <animate attributeName="opacity" values="0.4;0.95;0.5;0.95;0.4" dur="7s" repeatCount="indefinite"/>
+  <!-- Subtle starfield / lab darkness (upper left) -->
+  <g fill="#86efac">
+    <circle cx="30" cy="18" r="0.6" opacity="0.3">
+      <animate attributeName="opacity" values="0.1;0.5;0.15;0.5;0.1" dur="7s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="88" cy="14" r="0.7" opacity="0.6">
-      <animate attributeName="opacity" values="0.25;0.85;0.35;0.85;0.25" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    <circle cx="80" cy="12" r="0.5" opacity="0.25">
+      <animate attributeName="opacity" values="0.08;0.4;0.12;0.4;0.08" dur="11s" begin="-3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="130" cy="22" r="0.6" opacity="0.55">
-      <animate attributeName="opacity" values="0.2;0.75;0.3;0.75;0.2" dur="13s" begin="-4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="20" cy="46" r="0.5" opacity="0.5">
-      <animate attributeName="opacity" values="0.2;0.7;0.3;0.7;0.2" dur="11s" begin="-6s" repeatCount="indefinite"/>
+    <circle cx="200" cy="20" r="0.5" opacity="0.2">
+      <animate attributeName="opacity" values="0.05;0.35;0.1;0.35;0.05" dur="13s" begin="-5s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Water -->
-  <rect x="0" y="178" width="400" height="22" fill="url(#water)"/>
+  <!-- ============ UCLA TERMINAL (green phosphor, left, "sender") ============ -->
+  <!-- Glow halo behind -->
+  <ellipse cx="80" cy="80" rx="60" ry="34" fill="url(#greenGlow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.35;0.65;0.4;0.65;0.35" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
 
-  <!-- Water ripple highlights (horizontal lines, animated opacity) -->
-  <g stroke="#f0a878" stroke-width="0.5" opacity="0.5">
-    <line x1="6" y1="184" x2="60" y2="184">
-      <animate attributeName="opacity" values="0.2;0.6;0.3;0.6;0.2" dur="7s" repeatCount="indefinite"/>
-    </line>
-    <line x1="80" y1="188" x2="150" y2="188">
-      <animate attributeName="opacity" values="0.15;0.55;0.25;0.55;0.15" dur="11s" begin="-2s" repeatCount="indefinite"/>
-    </line>
-    <line x1="220" y1="186" x2="290" y2="186">
-      <animate attributeName="opacity" values="0.2;0.6;0.3;0.6;0.2" dur="13s" begin="-4s" repeatCount="indefinite"/>
-    </line>
-    <line x1="40" y1="192" x2="110" y2="192">
-      <animate attributeName="opacity" values="0.15;0.5;0.25;0.5;0.15" dur="11s" begin="-5s" repeatCount="indefinite"/>
-    </line>
-    <line x1="260" y1="194" x2="350" y2="194">
-      <animate attributeName="opacity" values="0.2;0.6;0.3;0.6;0.2" dur="7s" begin="-1s" repeatCount="indefinite"/>
-    </line>
-    <line x1="130" y1="196" x2="200" y2="196">
-      <animate attributeName="opacity" values="0.15;0.55;0.25;0.55;0.15" dur="13s" begin="-6s" repeatCount="indefinite"/>
-    </line>
-  </g>
+  <g transform="translate(30 50)">
+    <use href="#terminalBody"/>
+    <!-- Screen glass -->
+    <rect x="12" y="14" width="76" height="38" rx="3" fill="url(#greenScreen)"/>
+    <!-- Scanlines overlay -->
+    <rect x="12" y="14" width="76" height="38" rx="3" fill="url(#scanlines)" opacity="0.4"/>
 
-  <!-- Distant sloops drifting slowly across horizon -->
-  <g>
-    <use href="#sloop" x="60" y="172">
-      <animateTransform attributeName="transform" type="translate" values="0 0; 36 0" dur="97s" repeatCount="indefinite"/>
-    </use>
-    <use href="#sloop" x="268" y="174">
-      <animateTransform attributeName="transform" type="translate" values="0 0; -30 0" dur="79s" repeatCount="indefinite"/>
-    </use>
-  </g>
+    <!-- Prompt chevron (always visible) -->
+    <text x="16" y="26" font-family="'Courier New', monospace" font-size="7.5" font-weight="700" fill="#86efac" opacity="0.9">UCLA&gt;</text>
 
-  <!-- Island base below the statue (small land shelf) -->
-  <path d="M 134 178 Q 180 174, 230 178 L 230 182 L 134 182 Z" fill="#1c1410" opacity="0.9"/>
+    <!-- Typed characters appearing one by one over 11s cycle -->
+    <!-- "L" appears at t=1s -->
+    <text x="40" y="26" font-family="'Courier New', monospace" font-size="7.5" font-weight="700" fill="#4ade80" opacity="0">
+      L
+      <animate attributeName="opacity" values="0;0;1;1;1;1;1;0;0" keyTimes="0;0.09;0.1;0.3;0.5;0.7;0.9;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <!-- "O" appears at t=3s -->
+    <text x="46" y="26" font-family="'Courier New', monospace" font-size="7.5" font-weight="700" fill="#4ade80" opacity="0">
+      O
+      <animate attributeName="opacity" values="0;0;1;1;1;1;0;0" keyTimes="0;0.27;0.28;0.5;0.7;0.9;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <!-- "G" appears at t=5s (triggers crash later) -->
+    <text x="52" y="26" font-family="'Courier New', monospace" font-size="7.5" font-weight="700" fill="#4ade80" opacity="0">
+      G
+      <animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.45;0.46;0.7;0.9;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </text>
 
-  <!-- Soft torch halo (behind torch) -->
-  <circle cx="225" cy="14" r="18" fill="url(#flame)" opacity="0.55">
-    <animate attributeName="opacity" values="0.4;0.75;0.5;0.75;0.4" dur="7s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="16;22;17;22;16" dur="7s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Crown rays halo (behind head) -->
-  <circle cx="190" cy="30" r="22" fill="url(#rayGlow)" opacity="0.4">
-    <animate attributeName="opacity" values="0.3;0.6;0.35;0.6;0.3" dur="11s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- The statue -->
-  <use href="#statue"/>
-
-  <!-- Flame on top of torch (animated flicker) -->
-  <g>
-    <path d="M 225 12
-             Q 221 6, 223 0
-             Q 225 4, 227 -2
-             Q 229 4, 227 10
-             Q 225 8, 225 12 Z"
-          fill="url(#flame)">
-      <animateTransform attributeName="transform" type="scale" values="1 1; 1.12 1.18; 0.95 1.05; 1.08 1.14; 1 1"
-                        additive="sum" dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.9;1;0.85;1;0.9" dur="7s" repeatCount="indefinite"/>
-    </path>
-    <!-- Inner bright core -->
-    <ellipse cx="225" cy="4" rx="2" ry="4" fill="#fffbe0" opacity="0.95">
-      <animate attributeName="opacity" values="0.75;1;0.8;1;0.75" dur="11s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- Rising ember -->
-    <circle cx="226" cy="-2" r="0.9" fill="#ffd868" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="-2;-14" dur="11s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="223" cy="-4" r="0.7" fill="#ffb848" opacity="0">
-      <animate attributeName="opacity" values="0;0.8;0" dur="13s" begin="-3s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="-4;-18" dur="13s" begin="-3s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- Reflection of statue in water (very faint vertical streak) -->
-  <g opacity="0.25">
-    <rect x="178" y="182" width="3" height="14" fill="#78b4a0"/>
-    <rect x="182" y="184" width="2" height="12" fill="#9ad8c0"/>
-    <rect x="186" y="183" width="2" height="13" fill="#78b4a0"/>
-    <rect x="190" y="182" width="2" height="15" fill="#5aa090"/>
-    <rect x="194" y="184" width="2" height="11" fill="#78b4a0"/>
-    <!-- Torch reflection -->
-    <rect x="223" y="182" width="2" height="12" fill="#ffd868" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.6;0.35;0.6;0.3" dur="7s" repeatCount="indefinite"/>
+    <!-- Blinking cursor (follows the last typed char position) -->
+    <rect x="40" y="20" width="5" height="8" fill="#4ade80" opacity="0.9">
+      <animate attributeName="opacity" values="0.95;0.95;0.1;0.95;0.1;0.95" keyTimes="0;0.08;0.09;0.1;0.11;1" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="40;40;46;46;52;52;52" keyTimes="0;0.09;0.1;0.27;0.28;0.95;1" dur="11s" repeatCount="indefinite"/>
     </rect>
+
+    <!-- Log line at the bottom of screen -->
+    <text x="16" y="42" font-family="'Courier New', monospace" font-size="5" fill="#86efac" opacity="0.7">22:30 PDT</text>
+    <text x="76" y="48" font-family="'Courier New', monospace" font-size="5" fill="#4ade80" opacity="0.6" text-anchor="end">SIGMA 7</text>
+
+    <!-- CRT reflective sheen (top-left highlight) -->
+    <path d="M 14 15 Q 30 15, 30 25 Q 20 20, 14 20 Z" fill="#86efac" opacity="0.08"/>
+
+    <!-- Label below terminal -->
+    <text x="50" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="7" font-weight="700" fill="#86efac" text-anchor="middle" letter-spacing="1.2">UCLA · 3420 BOELTER HALL</text>
+  </g>
+
+  <!-- ============ SRI TERMINAL (amber phosphor, right, "receiver") ============ -->
+  <!-- Glow halo behind -->
+  <ellipse cx="300" cy="80" rx="60" ry="34" fill="url(#amberGlow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.4;0.3;0.6;0.3;0.4" keyTimes="0;0.5;0.6;0.9;1" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <g transform="translate(250 50)">
+    <use href="#terminalBody"/>
+    <!-- Screen glass -->
+    <rect x="12" y="14" width="76" height="38" rx="3" fill="url(#amberScreen)"/>
+    <!-- Scanlines overlay -->
+    <rect x="12" y="14" width="76" height="38" rx="3" fill="url(#scanlines)" opacity="0.4"/>
+
+    <!-- Prompt -->
+    <text x="16" y="26" font-family="'Courier New', monospace" font-size="7.5" font-weight="700" fill="#ffd968" opacity="0.9">SRI&gt;</text>
+
+    <!-- Received characters (lag behind UCLA sends) -->
+    <!-- "L" received at t=2.5s -->
+    <text x="34" y="26" font-family="'Courier New', monospace" font-size="7.5" font-weight="700" fill="#ffbf00" opacity="0">
+      L
+      <animate attributeName="opacity" values="0;0;1;1;1;1;0;0" keyTimes="0;0.22;0.23;0.5;0.6;0.68;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </text>
+    <!-- "O" received at t=4.5s -->
+    <text x="40" y="26" font-family="'Courier New', monospace" font-size="7.5" font-weight="700" fill="#ffbf00" opacity="0">
+      O
+      <animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.4;0.41;0.6;0.68;0.95;1" dur="11s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Crash static (appears after "G" tries to arrive, t≈6.5s to 10s) -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.59;0.6;0.9;0.95" dur="11s" repeatCount="indefinite"/>
+      <rect x="12" y="14" width="76" height="38" rx="3" fill="#ff4020" opacity="0.18"/>
+      <!-- Garbled char rows -->
+      <g font-family="'Courier New', monospace" font-size="6" fill="#ff8838" font-weight="700">
+        <text x="14" y="34">#@%*&amp;$!?~#$%</text>
+        <text x="14" y="42">!!! ERR 0x7F !!</text>
+        <text x="14" y="49" fill="#ffbf00">?SYS CRASH</text>
+      </g>
+      <!-- Static speckle -->
+      <g fill="#ffd968">
+        <rect x="20" y="30" width="1.2" height="1.2" opacity="0.7"/>
+        <rect x="40" y="36" width="1.2" height="1.2" opacity="0.5"/>
+        <rect x="60" y="32" width="1.2" height="1.2" opacity="0.7"/>
+        <rect x="30" y="46" width="1.2" height="1.2" opacity="0.6"/>
+        <rect x="70" y="44" width="1.2" height="1.2" opacity="0.5"/>
+        <rect x="50" y="28" width="1.2" height="1.2" opacity="0.7"/>
+      </g>
+    </g>
+
+    <!-- Blinking cursor on SRI (before crash) -->
+    <rect x="34" y="20" width="5" height="8" fill="#ffbf00" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.95;0.1;0.95;0;0" keyTimes="0;0.22;0.23;0.3;0.4;0.59;1" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="34;34;40;40;40" keyTimes="0;0.4;0.41;0.59;1" dur="11s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Timestamp -->
+    <text x="16" y="42" font-family="'Courier New', monospace" font-size="5" fill="#ffd968" opacity="0.7">22:30 PDT</text>
+    <text x="76" y="48" font-family="'Courier New', monospace" font-size="5" fill="#ffbf00" opacity="0.6" text-anchor="end">SDS 940</text>
+
+    <!-- CRT reflective sheen -->
+    <path d="M 14 15 Q 30 15, 30 25 Q 20 20, 14 20 Z" fill="#ffd968" opacity="0.08"/>
+
+    <!-- Label -->
+    <text x="50" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="7" font-weight="700" fill="#ffd968" text-anchor="middle" letter-spacing="1.2">SRI · MENLO PARK</text>
+  </g>
+
+  <!-- ============ PHONE-LINE CABLE between the terminals ============ -->
+  <!-- The cable curves down and back up like a hanging phone line -->
+  <path d="M 130 92 Q 190 118, 250 92" fill="none" stroke="#4a4238" stroke-width="2.2" opacity="0.85"/>
+  <path d="M 130 92 Q 190 118, 250 92" fill="none" stroke="#86efac" stroke-width="0.5" stroke-dasharray="2.5 3" opacity="0.65">
+    <animate attributeName="stroke-dashoffset" values="0;-11" dur="11s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Traveling packet "L" along the cable, UCLA → SRI, ~1.5s to 2.5s -->
+  <g>
+    <circle r="3" fill="url(#greenGlow)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.13;0.14;0.22;0.23;1" dur="11s" repeatCount="indefinite"/>
+      <animateMotion dur="11s" repeatCount="indefinite" keyPoints="0;0;1;1;1" keyTimes="0;0.14;0.22;0.3;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+    </circle>
+    <text font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#86efac" text-anchor="middle" dy="3" opacity="0">
+      L
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.13;0.14;0.22;0.23;1" dur="11s" repeatCount="indefinite"/>
+      <animateMotion dur="11s" repeatCount="indefinite" keyPoints="0;0;1;1;1" keyTimes="0;0.14;0.22;0.3;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+    </text>
+  </g>
+
+  <!-- Traveling packet "O" ~3.5s to 4.5s -->
+  <g>
+    <circle r="3" fill="url(#greenGlow)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.31;0.32;0.4;0.41;1" dur="11s" repeatCount="indefinite"/>
+      <animateMotion dur="11s" repeatCount="indefinite" keyPoints="0;0;1;1;1" keyTimes="0;0.32;0.4;0.5;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+    </circle>
+    <text font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#86efac" text-anchor="middle" dy="3" opacity="0">
+      O
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.31;0.32;0.4;0.41;1" dur="11s" repeatCount="indefinite"/>
+      <animateMotion dur="11s" repeatCount="indefinite" keyPoints="0;0;1;1;1" keyTimes="0;0.32;0.4;0.5;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+    </text>
+  </g>
+
+  <!-- Traveling packet "G" (the one that crashes it) ~5.5s to 6.5s -->
+  <g>
+    <circle r="3" fill="#ff6648" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.49;0.5;0.58;0.59;1" dur="11s" repeatCount="indefinite"/>
+      <animateMotion dur="11s" repeatCount="indefinite" keyPoints="0;0;1;1;1" keyTimes="0;0.5;0.58;0.7;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+    </circle>
+    <text font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#ff8838" text-anchor="middle" dy="3" opacity="0">
+      G
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.49;0.5;0.58;0.59;1" dur="11s" repeatCount="indefinite"/>
+      <animateMotion dur="11s" repeatCount="indefinite" keyPoints="0;0;1;1;1" keyTimes="0;0.5;0.58;0.7;1" calcMode="linear">
+        <mpath href="#cablePath"/>
+      </animateMotion>
+    </text>
+  </g>
+
+  <!-- Hidden cable path for motion -->
+  <path id="cablePath" d="M 130 92 Q 190 118, 250 92" fill="none" stroke="none"/>
+
+  <!-- IMP boxes (Interface Message Processors) — tiny tagged boxes beside each terminal -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <rect x="128" y="86" width="12" height="8" fill="#1a1612" stroke="#4ade80" stroke-width="0.5" rx="1"/>
+    <text x="134" y="92" font-size="4" fill="#4ade80" text-anchor="middle" font-weight="700">IMP</text>
+    <rect x="240" y="86" width="12" height="8" fill="#1a1612" stroke="#ffbf00" stroke-width="0.5" rx="1"/>
+    <text x="246" y="92" font-size="4" fill="#ffbf00" text-anchor="middle" font-weight="700">IMP</text>
   </g>
 
   <!-- Separator -->
-  <line x1="398" y1="30" x2="398" y2="170" stroke="#78b4a0" stroke-width="0.6" opacity="0.4"/>
+  <line x1="398" y1="30" x2="398" y2="170" stroke="#4ade80" stroke-width="0.6" opacity="0.3"/>
 
-  <!-- ================= TEXT STACK ================= -->
+  <!-- ================= TEXT STACK (right half) ================= -->
   <!-- Date headline -->
   <text x="600" y="58" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="30" font-weight="800" fill="#f8edd4" letter-spacing="2.0">
-    OCTOBER 28, 2026
+        font-size="30" font-weight="800" fill="#f4e8d4" letter-spacing="2.0">
+    OCTOBER 29, 2026
   </text>
 
-  <!-- Twin bar: copper and verdigris -->
-  <line x1="428" y1="74" x2="772" y2="74" stroke="#c87838" stroke-width="2.6" opacity="0.95"/>
-  <line x1="428" y1="80" x2="772" y2="80" stroke="#78b4a0" stroke-width="1.6" opacity="0.9"/>
+  <!-- Twin bar: phosphor green over amber -->
+  <line x1="428" y1="74" x2="772" y2="74" stroke="#4ade80" stroke-width="2.6" opacity="0.95"/>
+  <line x1="428" y1="80" x2="772" y2="80" stroke="#ffbf00" stroke-width="1.6" opacity="0.9"/>
 
   <!-- Subhead -->
   <text x="600" y="104" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="15" font-weight="800" letter-spacing="2.8" fill="#9ad8c0">
-    STATUE OF LIBERTY
+        font-size="15" font-weight="800" letter-spacing="2.8" fill="#86efac">
+    ARPANET FIRST MESSAGE
   </text>
 
   <!-- Tertiary italic -->
   <text x="600" y="124" text-anchor="middle"
-        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#e8b878" letter-spacing="0.6">
-    BARTHOLDI &#183; 1886 &#183; 140 YEARS
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#ffd968" letter-spacing="0.6">
+    UCLA &#8594; SRI &#183; 1969 &#183; 57 YEARS
   </text>
 
   <!-- Roster -->
   <text x="600" y="145" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="6.6" font-weight="700" fill="#b89880" letter-spacing="2.2" opacity="0.95">
-    BEDLOE&#8217;S ISLAND &#183; ENLIGHTENING &#183; HARBOR &#183; GIFT &#183; WELCOME
+        font-size="6.6" font-weight="700" fill="#9aa0a6" letter-spacing="2.2" opacity="0.95">
+    IMP &#183; HOST &#183; PACKET &#183; NETWORK &#183; GENESIS
   </text>
 
   <!-- Caption -->
   <text x="600" y="188" text-anchor="middle"
-        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f8edd4" opacity="0.95">
-    &#8220;Lift the lamp beside the golden door.&#8221;
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f4e8d4" opacity="0.95">
+    &#8220;The internet said &#8216;lo&#8217; and fell over.&#8221;
   </text>
 </svg>
