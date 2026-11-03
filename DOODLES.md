@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 3, 2026 — ARPANET First Message 57th Anniversary (October 29, 1969)
+
+<img src="./doodle-archive/2026/11/2026-11-03-060148.svg" width="800" alt="Daily doodle for October 29, 2026 — ARPANET First Message 57th Anniversary. On the left, two 1969-era CRT terminals face each other on a dark lab floor; UCLA's green phosphor screen types L then LO then LOG while SRI's amber screen receives L, then LO, then crashes to static. A dashed phone-line cable between them pulses with glowing packets. On the right, a cream OCTOBER 29, 2026 headline sits over a double phosphor-and-amber bar, a phosphor ARPANET FIRST MESSAGE subhead, an italic amber UCLA to SRI · 1969 · 57 YEARS tertiary, a dim IMP · HOST · PACKET · NETWORK · GENESIS roster, and a Georgia-italic caption at the base reading: the internet said lo and fell over.">
+
+<details>
+<summary>About this doodle</summary>
+
+At 10:30 p.m. Pacific time on 29 October 1969, a UCLA graduate student named Charley Kline sat down at an SDS Sigma 7 and tried to log in to a computer 350 miles up the coast at Stanford Research Institute. He typed "L." SRI's SDS 940 echoed it back. He typed "O." It echoed back. He typed "G" and the system crashed. The first message ever sent host-to-host over what became the Internet was therefore the word "lo," and the first thing the Internet ever did was fall over. ARPANET grew from those two nodes to four by December and to a global network by the mid-1980s. Fifty-seven years later, every packet is a descendant of that one.
+
+The scene is a late-night lab floor. Two 1969-era CRT terminals face each other — UCLA on the left, SRI on the right — joined by a dashed phone-line cable that pulses with glowing packets. The letters L, O, and G travel across the wire in sequence; the far screen prints LO, then the G arrives and the terminal flickers to static. On the right, a cream OCTOBER 29, 2026 headline sits over a double phosphor-and-amber bar, a phosphor ARPANET FIRST MESSAGE subhead, an italic amber UCLA → SRI · 1969 · 57 YEARS tertiary, a dim IMP · HOST · PACKET · NETWORK · GENESIS roster, and a Georgia-italic 'The internet said "lo" and fell over.' caption at the base.
+
+</details>
+
+---
+
 ## October 29, 2026 — Statue of Liberty 140th Anniversary (October 28, 1886)
 
 <img src="./doodle-archive/2026/10/2026-10-29-060123.svg" width="800" alt="Daily doodle for October 28, 2026 — Statue of Liberty 140th Anniversary. On the left, Lady Liberty rises in oxidised copper green against a warm peach-and-rose dawn sky, her seven-rayed crown slowly brightening, her raised torch flickering with a golden flame. Harbor water pulses beneath her pedestal in gentle ripples; distant sloop silhouettes drift across the horizon. On the right, a cream OCTOBER 28, 2026 headline sits over a double copper-and-liberty-green bar, a verdigris STATUE OF LIBERTY subhead, an italic amber BARTHOLDI · 1886 · 140 YEARS tertiary, a dim BEDLOE'S ISLAND · ENLIGHTENING · HARBOR · GIFT · WELCOME roster, and a Georgia-italic 'Lift the lamp beside the golden door.' caption at the base.">
