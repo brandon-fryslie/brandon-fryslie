@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 10, 2026 — Laika — Sputnik 2 First Life in Orbit (November 3, 1957)
+
+<img src="./doodle-archive/2026/11/2026-11-10-060159.svg" width="800" alt="Daily doodle for November 3, 2026 — Laika and Sputnik 2, 69th anniversary of the first living creature in orbit. A thin crescent of Earth curves across the lower left in ocean blue with slowly drifting clouds; Sputnik 2 drifts past on a dashed orbital arc, four whip antennas trailing concentric radio pings into deep space. A small round porthole on the capsule frames Laika's silhouette looking out. On the right, a cream NOVEMBER 3, 2026 headline sits over a double red-and-cream bar, a cream LAIKA · FIRST LIFE IN ORBIT subhead, an italic amber SPUTNIK 2 · 1957 · 69 YEARS tertiary, a dim MOSCOW · ORBIT · PIONEER · COURAGE · MEMORY roster, and a Georgia-italic caption at the base reading: She saw Earth from above before any of us.">
+
+<details>
+<summary>About this doodle</summary>
+
+At 05:30 Moscow time on 3 November 1957, less than a month after Sputnik 1 cracked the sky open, the Soviet Union launched Sputnik 2 — four tonnes of satellite carrying a mongrel stray from the streets of Moscow named Laika. She was the first living creature to orbit Earth. The hardware had been designed and built in three weeks; there was no reentry plan and never had been. She died within hours of launch from overheating, a fact the Soviets concealed for forty-five years. The flight proved a mammal could survive launch and weightlessness, laid the groundwork for every crewed spaceflight that followed, and is remembered — rightly — as both a scientific milestone and an animal that was never going home.
+
+The scene is low Earth orbit, pre-dawn side. A thin crescent of Earth curves across the lower left; Sputnik 2 drifts past on a dashed orbital arc, its four whip antennas trailing radio pings into deep space. A small round porthole on the pressurised capsule frames Laika's silhouette looking out. On the right, a cream NOVEMBER 3, 2026 headline sits over a double red-and-cream bar, a cream LAIKA · FIRST LIFE IN ORBIT subhead, an italic amber SPUTNIK 2 · 1957 · 69 YEARS tertiary, a dim MOSCOW · ORBIT · PIONEER · COURAGE · MEMORY roster, and a Georgia-italic 'She saw Earth from above before any of us.' caption at the base.
+
+</details>
+
+---
+
 ## November 3, 2026 — ARPANET First Message 57th Anniversary (October 29, 1969)
 
 <img src="./doodle-archive/2026/11/2026-11-03-060148.svg" width="800" alt="Daily doodle for October 29, 2026 — ARPANET First Message 57th Anniversary. On the left, two 1969-era CRT terminals face each other on a dark lab floor; UCLA's green phosphor screen types L then LO then LOG while SRI's amber screen receives L, then LO, then crashes to static. A dashed phone-line cable between them pulses with glowing packets. On the right, a cream OCTOBER 29, 2026 headline sits over a double phosphor-and-amber bar, a phosphor ARPANET FIRST MESSAGE subhead, an italic amber UCLA to SRI · 1969 · 57 YEARS tertiary, a dim IMP · HOST · PACKET · NETWORK · GENESIS roster, and a Georgia-italic caption at the base reading: the internet said lo and fell over.">

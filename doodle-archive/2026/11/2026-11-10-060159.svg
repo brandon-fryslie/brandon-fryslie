@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Laika — Sputnik 2 First Life in Orbit (November 3, 1957) -->
+<!-- about:
+At 05:30 Moscow time on 3 November 1957, less than a month after Sputnik 1 cracked the sky open, the Soviet Union launched Sputnik 2 — four tonnes of satellite carrying a mongrel stray from the streets of Moscow named Laika. She was the first living creature to orbit Earth. The hardware had been designed and built in three weeks; there was no reentry plan and never had been. She died within hours of launch from overheating, a fact the Soviets concealed for forty-five years. The flight proved a mammal could survive launch and weightlessness, laid the groundwork for every crewed spaceflight that followed, and is remembered — rightly — as both a scientific milestone and an animal that was never going home.
+
+The scene is low Earth orbit, pre-dawn side. A thin crescent of Earth curves across the lower left; Sputnik 2 drifts past on a dashed orbital arc, its four whip antennas trailing radio pings into deep space. A small round porthole on the pressurised capsule frames Laika's silhouette looking out. On the right, a cream NOVEMBER 3, 2026 headline sits over a double red-and-cream bar, a cream LAIKA · FIRST LIFE IN ORBIT subhead, an italic amber SPUTNIK 2 · 1957 · 69 YEARS tertiary, a dim MOSCOW · ORBIT · PIONEER · COURAGE · MEMORY roster, and a Georgia-italic 'She saw Earth from above before any of us.' caption at the base.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for November 3, 2026 — Laika and Sputnik 2, 69th anniversary of the first living creature in orbit. A thin crescent of Earth curves across the lower left in ocean blue with slowly drifting clouds; Sputnik 2 drifts past on a dashed orbital arc, four whip antennas trailing concentric radio pings into deep space. A small round porthole on the capsule frames Laika's silhouette looking out. On the right, a cream NOVEMBER 3, 2026 headline sits over a double red-and-cream bar, a cream LAIKA · FIRST LIFE IN ORBIT subhead, an italic amber SPUTNIK 2 · 1957 · 69 YEARS tertiary, a dim MOSCOW · ORBIT · PIONEER · COURAGE · MEMORY roster, and a Georgia-italic caption at the base reading: She saw Earth from above before any of us.">
+  <defs>
+    <!-- Deep space gradient -->
+    <radialGradient id="space" cx="0.3" cy="0.7" r="0.95">
+      <stop offset="0" stop-color="#1a2340"/>
+      <stop offset="0.6" stop-color="#111727"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </radialGradient>
+
+    <!-- Earth ocean body -->
+    <radialGradient id="earth" cx="0.3" cy="0.3" r="0.95">
+      <stop offset="0" stop-color="#5a90d8"/>
+      <stop offset="0.55" stop-color="#2e5c9e"/>
+      <stop offset="1" stop-color="#13223e"/>
+    </radialGradient>
+
+    <!-- Atmospheric limb glow -->
+    <radialGradient id="limb" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0.82" stop-color="#4a7fc9" stop-opacity="0"/>
+      <stop offset="0.94" stop-color="#86b4ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#86b4ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sputnik metal -->
+    <linearGradient id="sput" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e4e8f0"/>
+      <stop offset="0.5" stop-color="#aab0bc"/>
+      <stop offset="1" stop-color="#4a505c"/>
+    </linearGradient>
+
+    <!-- Porthole brass rim -->
+    <radialGradient id="rim" cx="0.3" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#d4b060"/>
+      <stop offset="1" stop-color="#5a4418"/>
+    </radialGradient>
+
+    <!-- Clip paths -->
+    <clipPath id="earthClip">
+      <circle cx="60" cy="260" r="180"/>
+    </clipPath>
+  </defs>
+
+  <!-- ========== Background ========== -->
+  <rect width="800" height="200" fill="url(#space)"/>
+
+  <!-- Starfield (prime-cadence twinkle) -->
+  <g fill="#ffffff">
+    <circle cx="30" cy="22" r="0.7" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.9;0.3;0.2" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="14" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.15;0.75;0.25" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="36" r="0.6" opacity="0.5">
+      <animate attributeName="opacity" values="0.1;0.8;0.2" dur="13s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="210" cy="20" r="0.5" opacity="0.4">
+      <animate attributeName="opacity" values="0.15;0.7;0.25" dur="7s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="42" r="0.6" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.85;0.3" dur="11s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="18" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.15;0.75;0.25" dur="13s" begin="-1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="55" cy="68" r="0.4" opacity="0.4">
+      <animate attributeName="opacity" values="0.1;0.6;0.2" dur="7s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="135" cy="80" r="0.5" opacity="0.4">
+      <animate attributeName="opacity" values="0.1;0.7;0.2" dur="11s" begin="-7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="90" r="0.4" opacity="0.4">
+      <animate attributeName="opacity" values="0.15;0.65;0.2" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="370" cy="60" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.1;0.75;0.2" dur="7s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="110" r="0.4" opacity="0.3">
+      <animate attributeName="opacity" values="0.1;0.5;0.15" dur="11s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="110" cy="52" r="0.4" opacity="0.4">
+      <animate attributeName="opacity" values="0.1;0.65;0.2" dur="13s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ========== Earth (lower-left curve) ========== -->
+  <!-- Atmospheric glow outside the planet -->
+  <circle cx="60" cy="260" r="195" fill="url(#limb)" opacity="0.9"/>
+  <g clip-path="url(#earthClip)">
+    <!-- Ocean body -->
+    <circle cx="60" cy="260" r="180" fill="url(#earth)"/>
+    <!-- Continents (abstracted blobs) -->
+    <g fill="#3a6e3a" opacity="0.72">
+      <path d="M 5 92 Q 55 86, 95 100 Q 125 118, 108 140 Q 70 136, 20 118 Z"/>
+      <path d="M 125 148 Q 180 142, 215 158 Q 205 180, 155 180 Q 128 170, 125 148 Z"/>
+      <path d="M 160 85 Q 205 80, 232 96 Q 220 108, 185 104 Q 165 98, 160 85 Z"/>
+      <path d="M 215 125 Q 232 120, 240 135 Q 228 148, 212 142 Z"/>
+    </g>
+    <!-- Cloud wisps (slow drift) -->
+    <g fill="#eef0f8" opacity="0.28">
+      <ellipse cx="80" cy="112" rx="24" ry="3.5">
+        <animate attributeName="cx" values="60;120;60" dur="37s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="150" cy="138" rx="28" ry="4">
+        <animate attributeName="cx" values="130;195;130" dur="43s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="40" cy="130" rx="18" ry="3">
+        <animate attributeName="cx" values="30;80;30" dur="31s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="195" cy="100" rx="20" ry="3">
+        <animate attributeName="cx" values="170;230;170" dur="41s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <!-- Night terminator shadow on the right side of Earth -->
+    <ellipse cx="200" cy="200" rx="100" ry="200" fill="#0d1117" opacity="0.55"/>
+  </g>
+
+  <!-- ========== Orbital arc (dashed path) ========== -->
+  <path d="M -30 55 Q 180 20, 400 115" fill="none" stroke="#86b4ff" stroke-width="0.9"
+        stroke-dasharray="3 5" opacity="0.42">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="13s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- ========== Sputnik 2 with Laika ========== -->
+  <g>
+    <!-- Gentle orbital drift -->
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+                      values="0 0; 2 -2; 0 0; -2 2; 0 0" dur="13s" repeatCount="indefinite"/>
+    <g transform="translate(235 65)">
+      <!-- Radio pings expanding outward (prime cadences) -->
+      <g fill="none" stroke="#ffd968" stroke-width="0.9">
+        <circle cx="0" cy="0" r="8">
+          <animate attributeName="r" values="10;50;70" dur="7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0.25;0" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0" cy="0" r="8">
+          <animate attributeName="r" values="10;50;70" dur="7s" begin="-2.33s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0.25;0" dur="7s" begin="-2.33s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0" cy="0" r="8">
+          <animate attributeName="r" values="10;50;70" dur="7s" begin="-4.66s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0.25;0" dur="7s" begin="-4.66s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <!-- Four whip antennas (X pattern) -->
+      <g stroke="#c0c7d0" stroke-width="1.2" stroke-linecap="round" opacity="0.95">
+        <line x1="-7" y1="-6" x2="-34" y2="-26"/>
+        <line x1="7" y1="-6" x2="34" y2="-26"/>
+        <line x1="-7" y1="18" x2="-34" y2="34"/>
+        <line x1="7" y1="18" x2="34" y2="34"/>
+      </g>
+      <!-- Antenna tip glints -->
+      <g fill="#ffd968" opacity="0.9">
+        <circle cx="-34" cy="-26" r="0.9"/>
+        <circle cx="34" cy="-26" r="0.9"/>
+        <circle cx="-34" cy="34" r="0.9"/>
+        <circle cx="34" cy="34" r="0.9"/>
+      </g>
+
+      <!-- Upper instrument cone -->
+      <path d="M -6 -10 L 6 -10 L 11 -4 L -11 -4 Z" fill="url(#sput)" stroke="#2a3040" stroke-width="0.5"/>
+      <!-- Main cylindrical body -->
+      <rect x="-14" y="-4" width="28" height="22" fill="url(#sput)" stroke="#2a3040" stroke-width="0.5"/>
+      <!-- Capsule base bevel -->
+      <path d="M -14 18 L 14 18 L 10 22 L -10 22 Z" fill="#5a606e" stroke="#2a3040" stroke-width="0.5"/>
+      <!-- Hull band details -->
+      <line x1="-14" y1="-1" x2="14" y2="-1" stroke="#2a3040" stroke-width="0.4"/>
+      <line x1="-14" y1="16" x2="14" y2="16" stroke="#2a3040" stroke-width="0.4"/>
+      <!-- Bolts -->
+      <g fill="#2a3040">
+        <circle cx="-11" cy="1" r="0.5"/>
+        <circle cx="11" cy="1" r="0.5"/>
+        <circle cx="-11" cy="14" r="0.5"/>
+        <circle cx="11" cy="14" r="0.5"/>
+      </g>
+      <!-- Side vent -->
+      <rect x="-13" y="4" width="2" height="8" fill="#2a3040" opacity="0.6"/>
+      <rect x="11" y="4" width="2" height="8" fill="#2a3040" opacity="0.6"/>
+
+      <!-- Porthole with Laika -->
+      <!-- Rim -->
+      <circle cx="0" cy="7" r="5.5" fill="url(#rim)"/>
+      <!-- Glass -->
+      <circle cx="0" cy="7" r="4.4" fill="#071020"/>
+      <!-- Laika silhouette looking out (dog in profile-ish) -->
+      <g fill="#e4b878">
+        <!-- head -->
+        <ellipse cx="0" cy="7" rx="2.6" ry="2.1"/>
+        <!-- ears -->
+        <path d="M -2.4 5.3 L -2.9 3.5 L -1.4 5 Z"/>
+        <path d="M 2.4 5.3 L 2.9 3.5 L 1.4 5 Z"/>
+        <!-- snout -->
+        <ellipse cx="0" cy="8.3" rx="1.4" ry="1.1"/>
+      </g>
+      <!-- Eyes -->
+      <circle cx="-0.9" cy="6.7" r="0.3" fill="#1a1008"/>
+      <circle cx="0.9" cy="6.7" r="0.3" fill="#1a1008">
+        <animate attributeName="r" values="0.3;0.3;0.3;0.05;0.3;0.3" keyTimes="0;0.3;0.48;0.5;0.52;1" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-0.9" cy="6.7" r="0.05" fill="#1a1008" opacity="0">
+        <animate attributeName="opacity" values="0;0;0;1;0;0" keyTimes="0;0.3;0.48;0.5;0.52;1" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Nose -->
+      <circle cx="0" cy="8.6" r="0.35" fill="#1a1008"/>
+      <!-- Porthole glint -->
+      <path d="M -3 5 Q -2.2 4.3, -1.2 5" fill="none" stroke="#86b4ff" stroke-width="0.5" opacity="0.6"/>
+
+      <!-- CCCP marker on hull -->
+      <text x="0" y="19.5" text-anchor="middle" font-family="'Courier New', monospace"
+            font-size="2.4" font-weight="700" fill="#8a1a1a" letter-spacing="0.3">CCCP</text>
+    </g>
+  </g>
+
+  <!-- ========== Separator ========== -->
+  <line x1="398" y1="30" x2="398" y2="170" stroke="#86b4ff" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- ========== Text stack (right half) ========== -->
+  <!-- Date headline -->
+  <text x="600" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f4e8d4" letter-spacing="2.0">
+    NOVEMBER 3, 2026
+  </text>
+
+  <!-- Twin bar: Soviet red over cream -->
+  <line x1="428" y1="74" x2="772" y2="74" stroke="#e04040" stroke-width="2.6" opacity="0.95"/>
+  <line x1="428" y1="80" x2="772" y2="80" stroke="#f4e8d4" stroke-width="1.6" opacity="0.9"/>
+
+  <!-- Subhead -->
+  <text x="600" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="15" font-weight="800" letter-spacing="2.6" fill="#f4e8d4">
+    LAIKA &#183; FIRST LIFE IN ORBIT
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="600" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#ffd968" letter-spacing="0.6">
+    SPUTNIK 2 &#183; 1957 &#183; 69 YEARS
+  </text>
+
+  <!-- Roster -->
+  <text x="600" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.6" font-weight="700" fill="#9aa0a6" letter-spacing="2.2" opacity="0.95">
+    MOSCOW &#183; ORBIT &#183; PIONEER &#183; COURAGE &#183; MEMORY
+  </text>
+
+  <!-- Caption -->
+  <text x="600" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f4e8d4" opacity="0.95">
+    &#8220;She saw Earth from above before any of us.&#8221;
+  </text>
+</svg>
