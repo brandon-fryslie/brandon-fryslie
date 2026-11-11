@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Sesame Street Premiere — 57th Anniversary (November 10, 1969) -->
+<!-- about:
+At 10:00 a.m. Eastern on 10 November 1969, a long green street sign appeared on 180 PBS stations and a yellow eight-foot bird walked around a Harlem stoop asking after Mr. Hooper. Sesame Street was the first American children's show designed with a research agenda — Joan Ganz Cooney and Lloyd Morrisett had spent two years consulting psychologists, educators, and ad writers on how to use the formal grammar of television commercials to teach four-year-olds the alphabet and the numbers to twenty. Jim Henson supplied the Muppets. The format — a city block, puppets and people together, counting and letter segments between sketches — was radical, cheap, and immediately imitated. Fifty-seven years later, 160 countries co-produce local versions, and generations learned to read with Big Bird on the stoop.
+
+The scene is 123 Sesame Street at daybreak. On the left, a brownstone stoop with a lit window and the famous green street sign over the door; a warm cartoon sun climbs on the horizon while colorful numerals 1, 2, 3 and letters A, B, C drift upward like balloons in the warm dawn air. On the right, a cream NOVEMBER 10, 2026 headline sits over a double sunny-yellow-and-sign-green bar, a cream SESAME STREET · 57 YEARS ON AIR subhead, an italic sun-gold TV PREMIERE · PBS · 1969 tertiary, a dim COUNT · LEARN · READ · SHARE · IMAGINE roster, and a Georgia-italic caption at the base reading: Sunny days, sweeping the clouds away.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for November 10, 2026 — Sesame Street 57th anniversary of its premiere. A brownstone stoop at daybreak with a lit window and the famous green street sign over the door; a warm cartoon sun climbs on the horizon while colorful numerals 1, 2, 3 and letters A, B, C drift upward like balloons. On the right, a cream NOVEMBER 10, 2026 headline sits over a double yellow-and-green bar, a cream SESAME STREET · 57 YEARS ON AIR subhead, an italic sun-gold TV PREMIERE · PBS · 1969 tertiary, a dim COUNT · LEARN · READ · SHARE · IMAGINE roster, and a Georgia-italic caption at the base reading: Sunny days, sweeping the clouds away.">
+  <defs>
+    <!-- Dawn sky gradient: warm horizon fading to profile dark at the top -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.45" stop-color="#2a2340"/>
+      <stop offset="0.72" stop-color="#8f4a42"/>
+      <stop offset="0.90" stop-color="#e49450"/>
+      <stop offset="1" stop-color="#f6c86a"/>
+    </linearGradient>
+
+    <!-- The sun -->
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff2c4"/>
+      <stop offset="0.55" stop-color="#ffcd53"/>
+      <stop offset="1" stop-color="#ff9a2a"/>
+    </radialGradient>
+
+    <!-- Sun outer corona -->
+    <radialGradient id="corona" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0.55" stop-color="#ffcd53" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffcd53" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Brownstone body -->
+    <linearGradient id="brown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8e5a3a"/>
+      <stop offset="1" stop-color="#4e3321"/>
+    </linearGradient>
+
+    <!-- Sign post face -->
+    <linearGradient id="signFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3cae52"/>
+      <stop offset="1" stop-color="#1f7a36"/>
+    </linearGradient>
+
+    <!-- Window glow -->
+    <radialGradient id="window" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#ffe9a3"/>
+      <stop offset="1" stop-color="#b87c2e"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ========== Background sky ========== -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Stars in the darker upper region (prime-cadence twinkle) -->
+  <g fill="#ffffff">
+    <circle cx="40" cy="14" r="0.6" opacity="0.7">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="110" cy="22" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="11s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="10" r="0.5" opacity="0.6">
+      <animate attributeName="opacity" values="0.15;0.75;0.2" dur="13s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="28" r="0.4" opacity="0.5">
+      <animate attributeName="opacity" values="0.1;0.7;0.2" dur="7s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="16" r="0.5" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.85;0.25" dur="11s" begin="-5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="12" r="0.5" opacity="0.55">
+      <animate attributeName="opacity" values="0.15;0.75;0.2" dur="13s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="22" r="0.6" opacity="0.65">
+      <animate attributeName="opacity" values="0.25;0.9;0.3" dur="7s" begin="-1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="770" cy="8" r="0.4" opacity="0.5">
+      <animate attributeName="opacity" values="0.1;0.7;0.15" dur="11s" begin="-7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ========== Rising sun (right of brownstone, at the horizon) ========== -->
+  <g>
+    <!-- gentle rise -->
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+                      values="0 2; 0 -2; 0 2" dur="13s" repeatCount="indefinite"/>
+    <!-- corona -->
+    <circle cx="340" cy="182" r="62" fill="url(#corona)"/>
+    <!-- sun disc -->
+    <circle cx="340" cy="182" r="32" fill="url(#sun)"/>
+    <!-- slowly rotating rays -->
+    <g stroke="#ffcd53" stroke-width="2.4" stroke-linecap="round" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" from="0 340 182" to="360 340 182" dur="47s" repeatCount="indefinite"/>
+      <line x1="340" y1="138" x2="340" y2="124"/>
+      <line x1="340" y1="226" x2="340" y2="240"/>
+      <line x1="296" y1="182" x2="282" y2="182"/>
+      <line x1="384" y1="182" x2="398" y2="182"/>
+      <line x1="308" y1="150" x2="298" y2="140"/>
+      <line x1="372" y1="150" x2="382" y2="140"/>
+      <line x1="308" y1="214" x2="298" y2="224"/>
+      <line x1="372" y1="214" x2="382" y2="224"/>
+    </g>
+  </g>
+
+  <!-- ========== Horizon line (ground) ========== -->
+  <rect x="0" y="178" width="800" height="22" fill="#2b1a10"/>
+  <line x1="0" y1="178" x2="800" y2="178" stroke="#7a4a28" stroke-width="0.6" opacity="0.7"/>
+
+  <!-- ========== Brownstone (left of center) ========== -->
+  <g>
+    <!-- Facade -->
+    <rect x="30" y="78" width="200" height="100" fill="url(#brown)"/>
+    <!-- Brick texture (faint horizontal lines) -->
+    <g stroke="#2e1d11" stroke-width="0.4" opacity="0.5">
+      <line x1="30" y1="96" x2="230" y2="96"/>
+      <line x1="30" y1="110" x2="230" y2="110"/>
+      <line x1="30" y1="124" x2="230" y2="124"/>
+      <line x1="30" y1="138" x2="230" y2="138"/>
+      <line x1="30" y1="152" x2="230" y2="152"/>
+      <line x1="30" y1="166" x2="230" y2="166"/>
+    </g>
+    <!-- Cornice -->
+    <rect x="26" y="76" width="208" height="5" fill="#3a2515"/>
+
+    <!-- Lit window (upper left) -->
+    <rect x="48" y="98" width="30" height="34" fill="url(#window)" stroke="#2e1d11" stroke-width="0.8">
+      <animate attributeName="opacity" values="0.88;1;0.9;1;0.88" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="63" y1="98" x2="63" y2="132" stroke="#2e1d11" stroke-width="0.6"/>
+    <line x1="48" y1="115" x2="78" y2="115" stroke="#2e1d11" stroke-width="0.6"/>
+    <!-- window flower pot silhouette -->
+    <rect x="52" y="129" width="22" height="4" fill="#3a2515"/>
+
+    <!-- Upper right window (dark) -->
+    <rect x="166" y="98" width="30" height="34" fill="#1a1008" stroke="#2e1d11" stroke-width="0.8" opacity="0.9"/>
+    <line x1="181" y1="98" x2="181" y2="132" stroke="#3a2515" stroke-width="0.6"/>
+    <line x1="166" y1="115" x2="196" y2="115" stroke="#3a2515" stroke-width="0.6"/>
+
+    <!-- Door (center) -->
+    <rect x="108" y="130" width="44" height="48" fill="#2a1a0e" stroke="#4e3321" stroke-width="0.8"/>
+    <!-- Door highlight panels -->
+    <rect x="114" y="138" width="14" height="16" fill="none" stroke="#4e3321" stroke-width="0.6"/>
+    <rect x="132" y="138" width="14" height="16" fill="none" stroke="#4e3321" stroke-width="0.6"/>
+    <rect x="114" y="158" width="14" height="14" fill="none" stroke="#4e3321" stroke-width="0.6"/>
+    <rect x="132" y="158" width="14" height="14" fill="none" stroke="#4e3321" stroke-width="0.6"/>
+    <!-- Doorknob -->
+    <circle cx="145" cy="155" r="0.9" fill="#ffcd53"/>
+
+    <!-- Stoop steps -->
+    <rect x="98" y="172" width="64" height="3" fill="#5a4030"/>
+    <rect x="94" y="175" width="72" height="3" fill="#4a3324"/>
+
+    <!-- ===== The green Sesame Street sign ===== -->
+    <!-- Mounting bracket -->
+    <rect x="131" y="80" width="2.5" height="10" fill="#3a2515"/>
+    <!-- Sign plate (slight gentle sway) -->
+    <g transform="translate(70 92)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-1 70 0; 1 70 0; -1 70 0" dur="11s" repeatCount="indefinite"/>
+      <!-- Shadow -->
+      <rect x="2" y="2" width="124" height="22" rx="1.5" fill="#000" opacity="0.35"/>
+      <!-- Face -->
+      <rect x="0" y="0" width="124" height="22" rx="1.5" fill="url(#signFace)" stroke="#124a1e" stroke-width="0.8"/>
+      <!-- Inset border -->
+      <rect x="2.5" y="2.5" width="119" height="17" rx="1" fill="none" stroke="#ffffff" stroke-width="0.6" opacity="0.85"/>
+      <!-- Sign text -->
+      <text x="62" y="15.5" text-anchor="middle"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            font-size="11.5" font-weight="900" letter-spacing="1.4" fill="#ffffff">
+        SESAME ST
+      </text>
+    </g>
+    <!-- Address number plaque above door -->
+    <rect x="118" y="122" width="24" height="7" fill="#1a1008" stroke="#ffcd53" stroke-width="0.4"/>
+    <text x="130" y="128" text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="5.5" font-weight="800" fill="#ffcd53" letter-spacing="0.6">123</text>
+  </g>
+
+  <!-- ========== Floating letters & numbers (balloons) ========== -->
+  <!-- Each drifts up slowly with a gentle sway. Primary-color palette. -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="900">
+
+    <!-- A  (red) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        values="0 10; 0 -6; 0 10" dur="13s" repeatCount="indefinite"/>
+      <text x="252" y="150" font-size="24" fill="#e54848" stroke="#ffffff" stroke-width="0.6">A
+        <animate attributeName="x" values="250;256;250" dur="7s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- 1 (blue) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        values="0 -8; 0 8; 0 -8" dur="11s" repeatCount="indefinite"/>
+      <text x="290" y="112" font-size="22" fill="#4a8cd8" stroke="#ffffff" stroke-width="0.6">1
+        <animate attributeName="x" values="288;294;288" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- B (yellow) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        values="0 6; 0 -10; 0 6" dur="17s" repeatCount="indefinite"/>
+      <text x="326" y="82" font-size="26" fill="#f5c842" stroke="#2a1a05" stroke-width="0.5">B
+        <animate attributeName="x" values="324;330;324" dur="13s" begin="-3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- 2 (orange) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        values="0 -10; 0 6; 0 -10" dur="13s" repeatCount="indefinite"/>
+      <text x="358" y="142" font-size="22" fill="#ee7a2a" stroke="#ffffff" stroke-width="0.6">2
+        <animate attributeName="x" values="356;362;356" dur="7s" begin="-4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- C (teal) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        values="0 8; 0 -8; 0 8" dur="11s" repeatCount="indefinite"/>
+      <text x="396" y="108" font-size="24" fill="#3cb4a6" stroke="#ffffff" stroke-width="0.6">C
+        <animate attributeName="x" values="394;400;394" dur="11s" begin="-5s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- 3 (magenta) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        values="0 -6; 0 10; 0 -6" dur="17s" repeatCount="indefinite"/>
+      <text x="260" y="80" font-size="20" fill="#c84c9c" stroke="#ffffff" stroke-width="0.5">3
+        <animate attributeName="x" values="258;264;258" dur="13s" begin="-6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+
+  <!-- ========== Separator ========== -->
+  <line x1="420" y1="30" x2="420" y2="170" stroke="#f5c842" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- ========== Text stack (right half) ========== -->
+  <!-- Date headline -->
+  <text x="610" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f4e8d4" letter-spacing="2.0">
+    NOVEMBER 10, 2026
+  </text>
+
+  <!-- Twin bar: sunny yellow over sign green -->
+  <line x1="438" y1="74" x2="782" y2="74" stroke="#f5c842" stroke-width="2.6" opacity="0.95"/>
+  <line x1="438" y1="80" x2="782" y2="80" stroke="#3cae52" stroke-width="1.6" opacity="0.95"/>
+
+  <!-- Subhead -->
+  <text x="610" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="800" letter-spacing="2.4" fill="#f4e8d4">
+    SESAME STREET &#183; 57 YEARS ON AIR
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="610" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#ffcd53" letter-spacing="0.6">
+    TV PREMIERE &#183; PBS &#183; 1969
+  </text>
+
+  <!-- Roster -->
+  <text x="610" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.6" font-weight="700" fill="#9aa0a6" letter-spacing="2.2" opacity="0.95">
+    COUNT &#183; LEARN &#183; READ &#183; SHARE &#183; IMAGINE
+  </text>
+
+  <!-- Caption -->
+  <text x="610" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f4e8d4" opacity="0.95">
+    &#8220;Sunny days, sweeping the clouds away.&#8221;
+  </text>
+</svg>

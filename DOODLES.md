@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 11, 2026 — Sesame Street Premiere — 57th Anniversary (November 10, 1969)
+
+<img src="./doodle-archive/2026/11/2026-11-11-060202.svg" width="800" alt="Daily doodle for November 10, 2026 — Sesame Street 57th anniversary of its premiere. A brownstone stoop at daybreak with a lit window and the famous green street sign over the door; a warm cartoon sun climbs on the horizon while colorful numerals 1, 2, 3 and letters A, B, C drift upward like balloons. On the right, a cream NOVEMBER 10, 2026 headline sits over a double yellow-and-green bar, a cream SESAME STREET · 57 YEARS ON AIR subhead, an italic sun-gold TV PREMIERE · PBS · 1969 tertiary, a dim COUNT · LEARN · READ · SHARE · IMAGINE roster, and a Georgia-italic caption at the base reading: Sunny days, sweeping the clouds away.">
+
+<details>
+<summary>About this doodle</summary>
+
+At 10:00 a.m. Eastern on 10 November 1969, a long green street sign appeared on 180 PBS stations and a yellow eight-foot bird walked around a Harlem stoop asking after Mr. Hooper. Sesame Street was the first American children's show designed with a research agenda — Joan Ganz Cooney and Lloyd Morrisett had spent two years consulting psychologists, educators, and ad writers on how to use the formal grammar of television commercials to teach four-year-olds the alphabet and the numbers to twenty. Jim Henson supplied the Muppets. The format — a city block, puppets and people together, counting and letter segments between sketches — was radical, cheap, and immediately imitated. Fifty-seven years later, 160 countries co-produce local versions, and generations learned to read with Big Bird on the stoop.
+
+The scene is 123 Sesame Street at daybreak. On the left, a brownstone stoop with a lit window and the famous green street sign over the door; a warm cartoon sun climbs on the horizon while colorful numerals 1, 2, 3 and letters A, B, C drift upward like balloons in the warm dawn air. On the right, a cream NOVEMBER 10, 2026 headline sits over a double sunny-yellow-and-sign-green bar, a cream SESAME STREET · 57 YEARS ON AIR subhead, an italic sun-gold TV PREMIERE · PBS · 1969 tertiary, a dim COUNT · LEARN · READ · SHARE · IMAGINE roster, and a Georgia-italic caption at the base reading: Sunny days, sweeping the clouds away.
+
+</details>
+
+---
+
 ## November 10, 2026 — Laika — Sputnik 2 First Life in Orbit (November 3, 1957)
 
 <img src="./doodle-archive/2026/11/2026-11-10-060159.svg" width="800" alt="Daily doodle for November 3, 2026 — Laika and Sputnik 2, 69th anniversary of the first living creature in orbit. A thin crescent of Earth curves across the lower left in ocean blue with slowly drifting clouds; Sputnik 2 drifts past on a dashed orbital arc, four whip antennas trailing concentric radio pings into deep space. A small round porthole on the capsule frames Laika's silhouette looking out. On the right, a cream NOVEMBER 3, 2026 headline sits over a double red-and-cream bar, a cream LAIKA · FIRST LIFE IN ORBIT subhead, an italic amber SPUTNIK 2 · 1957 · 69 YEARS tertiary, a dim MOSCOW · ORBIT · PIONEER · COURAGE · MEMORY roster, and a Georgia-italic caption at the base reading: She saw Earth from above before any of us.">
