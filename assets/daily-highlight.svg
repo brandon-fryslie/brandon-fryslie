@@ -1,302 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Armistice Day — 108th Anniversary (November 11, 1918) -->
+<!-- theme: Voyager 1 at Saturn — 46th Anniversary (November 12, 1980) -->
 <!-- about:
-At the eleventh hour of the eleventh day of the eleventh month of 1918, in a railway carriage parked in the Compiègne forest north of Paris, Marshal Foch and a German delegation signed the armistice that ended the fighting of the First World War. Four years and three months of industrial-scale slaughter stopped mid-sentence along a five-hundred-mile line of trenches. Nine million soldiers were dead. The guns fell silent across Flanders, Picardy, and the Argonne; the silence travelled by telegraph and then by church bell. Red Flanders poppies, which had grown over the churned soil and the shallow graves, became the flower of remembrance after John McCrae's 1915 poem. One hundred and eight years later the two-minute silence at 11 a.m. is still kept.
+At 23:46 UTC on 12 November 1980, three years and three months out from the Cape, Voyager 1 passed within 124,000 km of Saturn's cloud tops. In a single flyby it returned the first high-resolution close-ups of the rings, discovered three new moons, resolved Titan as a world sheathed in thick orange nitrogen haze, and bent its trajectory out of the plane of the solar system. The Titan diversion came at a price — Voyager 1 would never reach Uranus or Neptune — but it put the spacecraft on a hyperbolic escape path. Forty-six years later it is the farthest human-made object from Earth, 25 light-hours out, still faintly answering the Deep Space Network from beyond the heliopause with 160 bits per second.
 
-The scene is a Flanders field at first light. On the left, a drift of red poppies sways in wind over dark earth, with a pale moonlit clockface at centre reading eleven o'clock sharp; small silhouette crosses recede toward the horizon and a quiet dove crosses the sky. On the right, a cream NOVEMBER 11, 2026 headline sits over a double poppy-red-and-cream bar, a cream ARMISTICE · 108 YEARS subhead, an italic amber 11TH HOUR · 11TH DAY · 11TH MONTH · 1918 tertiary, a dim REMEMBRANCE · SILENCE · POPPIES · FLANDERS · PEACE roster, and a Georgia-italic caption at the base reading: At the going down of the sun, we will remember them.
+The scene is deep space on the night side of Saturn. On the left, the ringed planet hangs in warm honey and amber, its tilted ring system glinting as fine dashes slowly rotate; Titan sits off its shoulder as a small orange disc, Enceladus as a bright pin. Voyager 1 drifts past on a curved trajectory, high-gain dish aimed back at a distant Sun, trailing a thin dashed arc of radio pings home. On the right, a cream NOVEMBER 12, 2026 headline sits over a double amber-and-cream bar, a cream VOYAGER 1 · SATURN FLYBY subhead, an italic amber NOV 12, 1980 · 46 YEARS tertiary, a dim TITAN · RINGS · GRAND TOUR · HELIOPAUSE · GOLDEN RECORD roster, and a Georgia-italic caption at the base reading: Still travelling.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for November 11, 2026 — Armistice Day 108th anniversary. A Flanders field at first light: red poppies sway in wind on the left over dark earth, a pale moonlit clockface at centre reads eleven o'clock, small crosses recede toward a dim horizon, and a dove crosses the sky. On the right, a cream NOVEMBER 11, 2026 headline sits over a double poppy-red-and-cream bar, a cream ARMISTICE · 108 YEARS subhead, an italic amber 11TH HOUR · 11TH DAY · 11TH MONTH · 1918 tertiary, a dim REMEMBRANCE · SILENCE · POPPIES · FLANDERS · PEACE roster, and a Georgia-italic caption at the base reading: At the going down of the sun, we will remember them.">
+     aria-label="Daily doodle for November 12, 2026 — 46th anniversary of Voyager 1's closest approach to Saturn. On the left, Saturn hangs in warm honey and amber with slowly rotating ring dashes; Titan as a small orange disc and Enceladus as a bright pin accompany it. Voyager 1 drifts past on a curved trajectory, its high-gain dish aimed back toward a distant Sun, trailing a dashed arc of radio pings. On the right, a cream NOVEMBER 12, 2026 headline sits over a double amber-and-cream bar, a cream VOYAGER 1 · SATURN FLYBY subhead, an italic amber NOV 12, 1980 · 46 YEARS tertiary, a dim TITAN · RINGS · GRAND TOUR · HELIOPAUSE · GOLDEN RECORD roster, and a Georgia-italic caption at the base reading: Still travelling.">
   <defs>
-    <!-- Cold dawn sky: deep profile dark fading to a slate-mauve horizon -->
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.45" stop-color="#1a1e2a"/>
-      <stop offset="0.75" stop-color="#3a2e3a"/>
-      <stop offset="0.92" stop-color="#5c3a3e"/>
-      <stop offset="1" stop-color="#73434a"/>
-    </linearGradient>
-
-    <!-- Earth of the battlefield -->
-    <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2a1a14"/>
-      <stop offset="1" stop-color="#140b08"/>
-    </linearGradient>
-
-    <!-- Poppy petal -->
-    <radialGradient id="poppy" cx="0.5" cy="0.5" r="0.6">
-      <stop offset="0" stop-color="#ff6d5a"/>
-      <stop offset="0.6" stop-color="#d6262a"/>
-      <stop offset="1" stop-color="#7a1414"/>
+    <!-- Deep space: profile dark fading to a warm plum at the horizon of the solar plane -->
+    <radialGradient id="space" cx="0.30" cy="0.55" r="0.85">
+      <stop offset="0" stop-color="#1a1424"/>
+      <stop offset="0.55" stop-color="#120d1a"/>
+      <stop offset="1" stop-color="#0d1117"/>
     </radialGradient>
 
-    <!-- Clockface pale moonlight -->
-    <radialGradient id="face" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#f4ecd4"/>
-      <stop offset="0.75" stop-color="#d8cdb0"/>
-      <stop offset="1" stop-color="#8a7a5c"/>
+    <!-- Saturn body: pale cream at limb, warm honey through middle, dusky amber on terminator -->
+    <radialGradient id="saturn" cx="0.42" cy="0.40" r="0.72">
+      <stop offset="0" stop-color="#f6d79a"/>
+      <stop offset="0.45" stop-color="#d9a24a"/>
+      <stop offset="0.80" stop-color="#8a5a24"/>
+      <stop offset="1" stop-color="#2a1a0c"/>
     </radialGradient>
 
-    <!-- Reusable poppy symbol: four red petals, dark centre -->
-    <symbol id="flower" overflow="visible">
-      <ellipse cx="0" cy="-5" rx="6" ry="7" fill="url(#poppy)"/>
-      <ellipse cx="-6" cy="0" rx="7" ry="6" fill="url(#poppy)" opacity="0.95"/>
-      <ellipse cx="6" cy="0" rx="7" ry="6" fill="url(#poppy)" opacity="0.95"/>
-      <ellipse cx="0" cy="5" rx="6" ry="7" fill="url(#poppy)" opacity="0.9"/>
-      <circle cx="0" cy="0" r="2.2" fill="#1a0808"/>
-      <circle cx="-0.8" cy="-0.8" r="0.6" fill="#f3d978" opacity="0.85"/>
-    </symbol>
+    <!-- Ring gradient: lane pattern, bright A/B ring, dim Cassini division suggested by opacity breaks -->
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6e2b0" stop-opacity="0"/>
+      <stop offset="0.08" stop-color="#f6e2b0" stop-opacity="0.75"/>
+      <stop offset="0.22" stop-color="#e5c070" stop-opacity="0.9"/>
+      <stop offset="0.36" stop-color="#2a1a0c" stop-opacity="0.2"/>
+      <stop offset="0.42" stop-color="#f6e2b0" stop-opacity="0.95"/>
+      <stop offset="0.58" stop-color="#f6e2b0" stop-opacity="0.95"/>
+      <stop offset="0.64" stop-color="#2a1a0c" stop-opacity="0.2"/>
+      <stop offset="0.78" stop-color="#e5c070" stop-opacity="0.9"/>
+      <stop offset="0.92" stop-color="#f6e2b0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#f6e2b0" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Titan haze -->
+    <radialGradient id="titan" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#f3b26a"/>
+      <stop offset="0.7" stop-color="#b56a28"/>
+      <stop offset="1" stop-color="#2a140a"/>
+    </radialGradient>
+
+    <!-- Clip the back half of the ring where it passes behind Saturn -->
+    <clipPath id="planet-clip">
+      <circle cx="210" cy="104" r="38"/>
+    </clipPath>
+
+    <!-- Ellipse of ring system (centre 210,104) rotated -18deg for tilt -->
   </defs>
 
-  <!-- ========== Sky background ========== -->
-  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- ========== Space background ========== -->
+  <rect width="800" height="200" fill="url(#space)"/>
 
-  <!-- A few quiet stars in the deep upper dark -->
+  <!-- Starfield: twinkling pinpoints distributed through the left two thirds -->
   <g fill="#e8e3d6">
-    <circle cx="60" cy="14" r="0.6" opacity="0.6">
-      <animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="160" cy="20" r="0.5" opacity="0.5">
-      <animate attributeName="opacity" values="0.2;0.75;0.2" dur="13s" begin="-4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="260" cy="10" r="0.5" opacity="0.5">
-      <animate attributeName="opacity" values="0.15;0.7;0.2" dur="7s" begin="-2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="700" cy="18" r="0.5" opacity="0.5">
-      <animate attributeName="opacity" values="0.2;0.8;0.25" dur="11s" begin="-6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="770" cy="8" r="0.4" opacity="0.4">
-      <animate attributeName="opacity" values="0.15;0.65;0.15" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    <circle cx="30"  cy="18"  r="0.6" opacity="0.6"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="7s"  repeatCount="indefinite"/></circle>
+    <circle cx="72"  cy="38"  r="0.4" opacity="0.5"><animate attributeName="opacity" values="0.2;0.8;0.2"  dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="118" cy="20"  r="0.5" opacity="0.6"><animate attributeName="opacity" values="0.25;0.9;0.3" dur="13s" begin="-4s" repeatCount="indefinite"/></circle>
+    <circle cx="165" cy="50"  r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.75;0.2" dur="7s"  begin="-1s" repeatCount="indefinite"/></circle>
+    <circle cx="48"  cy="78"  r="0.4" opacity="0.5"><animate attributeName="opacity" values="0.15;0.7;0.2" dur="11s" begin="-5s" repeatCount="indefinite"/></circle>
+    <circle cx="92"  cy="134" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.2;0.85;0.2" dur="13s" begin="-6s" repeatCount="indefinite"/></circle>
+    <circle cx="25"  cy="150" r="0.4" opacity="0.5"><animate attributeName="opacity" values="0.2;0.75;0.2" dur="7s"  begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="168" r="0.5" opacity="0.5"><animate attributeName="opacity" values="0.15;0.8;0.2" dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="26"  r="0.5" opacity="0.55"><animate attributeName="opacity" values="0.2;0.85;0.25" dur="13s" begin="-7s" repeatCount="indefinite"/></circle>
+    <circle cx="345" cy="56"  r="0.4" opacity="0.5"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="7s"  begin="-5s" repeatCount="indefinite"/></circle>
+    <circle cx="372" cy="22"  r="0.5" opacity="0.6"><animate attributeName="opacity" values="0.2;0.9;0.25" dur="11s" begin="-1s" repeatCount="indefinite"/></circle>
+    <circle cx="358" cy="146" r="0.5" opacity="0.55"><animate attributeName="opacity" values="0.2;0.85;0.2" dur="13s" begin="-3s" repeatCount="indefinite"/></circle>
+    <circle cx="282" cy="166" r="0.4" opacity="0.5"><animate attributeName="opacity" values="0.15;0.7;0.15" dur="7s"  begin="-4s" repeatCount="indefinite"/></circle>
+    <circle cx="395" cy="90"  r="0.6" opacity="0.7"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="11s" begin="-2s" repeatCount="indefinite"/></circle>
+    <!-- a distant Sun — tiny but bright dot off far right of the planet pane -->
+    <circle cx="405" cy="112" r="1.2" fill="#fff6d4" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- ========== Dove crossing the sky (slow, left-to-right over left half) ========== -->
-  <g opacity="0.75">
-    <animateTransform attributeName="transform" type="translate"
-                      values="-60 0; 440 -14; -60 0" dur="47s" repeatCount="indefinite"/>
-    <!-- Simple two-wing dove silhouette in pale warm white -->
-    <path d="M 0 0 q 6 -6 12 0 q 2 -4 6 -3 q -4 2 -4 5 q -4 -2 -8 1 q -3 2 -6 -3 z" fill="#efe6d0" opacity="0.9"/>
-    <!-- Wing flutter -->
-    <path d="M 2 -1 q 4 -8 10 -4" fill="none" stroke="#efe6d0" stroke-width="0.9" stroke-linecap="round">
-      <animate attributeName="d"
-               values="M 2 -1 q 4 -8 10 -4; M 2 -1 q 4 2 10 0; M 2 -1 q 4 -8 10 -4"
-               dur="1.3s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- ========== Distant horizon crosses (quiet memorial row) ========== -->
-  <g stroke="#5a4a44" stroke-width="0.9" opacity="0.7" fill="none" stroke-linecap="round">
-    <!-- cluster of small crosses receding toward the horizon -->
-    <g transform="translate(40 158)">
-      <line x1="0" y1="-5" x2="0" y2="2"/><line x1="-2" y1="-3" x2="2" y2="-3"/>
-    </g>
-    <g transform="translate(78 160)">
-      <line x1="0" y1="-4" x2="0" y2="2"/><line x1="-1.6" y1="-2.5" x2="1.6" y2="-2.5"/>
-    </g>
-    <g transform="translate(118 162)">
-      <line x1="0" y1="-3.4" x2="0" y2="1.6"/><line x1="-1.4" y1="-2" x2="1.4" y2="-2"/>
-    </g>
-    <g transform="translate(160 163)">
-      <line x1="0" y1="-3" x2="0" y2="1.4"/><line x1="-1.2" y1="-1.8" x2="1.2" y2="-1.8"/>
-    </g>
-    <g transform="translate(200 164)">
-      <line x1="0" y1="-2.6" x2="0" y2="1.2"/><line x1="-1" y1="-1.6" x2="1" y2="-1.6"/>
-    </g>
-    <g transform="translate(240 165)" opacity="0.8">
-      <line x1="0" y1="-2.2" x2="0" y2="1"/><line x1="-0.9" y1="-1.4" x2="0.9" y2="-1.4"/>
-    </g>
-    <g transform="translate(278 166)" opacity="0.7">
-      <line x1="0" y1="-1.9" x2="0" y2="0.8"/><line x1="-0.8" y1="-1.2" x2="0.8" y2="-1.2"/>
-    </g>
-    <g transform="translate(314 167)" opacity="0.6">
-      <line x1="0" y1="-1.6" x2="0" y2="0.7"/><line x1="-0.7" y1="-1" x2="0.7" y2="-1"/>
-    </g>
-    <g transform="translate(348 168)" opacity="0.5">
-      <line x1="0" y1="-1.4" x2="0" y2="0.6"/><line x1="-0.6" y1="-0.9" x2="0.6" y2="-0.9"/>
-    </g>
-    <g transform="translate(380 168.5)" opacity="0.45">
-      <line x1="0" y1="-1.2" x2="0" y2="0.5"/><line x1="-0.5" y1="-0.8" x2="0.5" y2="-0.8"/>
-    </g>
-  </g>
-
-  <!-- ========== Ground (dark earth of the field) ========== -->
-  <path d="M 0 170 Q 200 164 400 170 Q 200 176 0 176 Z" fill="url(#earth)"/>
-  <rect x="0" y="170" width="400" height="30" fill="url(#earth)"/>
-  <!-- subtle furrows -->
-  <g stroke="#3a241a" stroke-width="0.4" opacity="0.6" fill="none">
-    <path d="M 0 182 Q 200 178 400 182"/>
-    <path d="M 0 190 Q 200 186 400 190"/>
-    <path d="M 0 197 Q 200 193 400 197"/>
-  </g>
-
-  <!-- ========== The 11:00 clock face (centre-left, moonlit) ========== -->
+  <!-- Enceladus — bright icy pin near Saturn -->
   <g>
-    <!-- gentle breathing -->
-    <animateTransform attributeName="transform" type="translate" additive="sum"
-                      values="0 0; 0 -0.8; 0 0" dur="13s" repeatCount="indefinite"/>
-    <!-- soft halo -->
-    <circle cx="210" cy="92" r="60" fill="#f4ecd4" opacity="0.08"/>
-    <circle cx="210" cy="92" r="46" fill="#f4ecd4" opacity="0.12"/>
-    <!-- bezel -->
-    <circle cx="210" cy="92" r="40" fill="#1a1620" stroke="#6b5a48" stroke-width="1.6"/>
-    <!-- face -->
-    <circle cx="210" cy="92" r="36" fill="url(#face)"/>
-    <!-- hour pips -->
-    <g stroke="#1a1208" stroke-width="1.2" stroke-linecap="round">
-      <line x1="210" y1="60" x2="210" y2="64"/>
-      <line x1="226" y1="64.3" x2="224" y2="68"/>
-      <line x1="238" y1="76" x2="234" y2="78"/>
-      <line x1="242" y1="92" x2="238" y2="92"/>
-      <line x1="238" y1="108" x2="234" y2="106"/>
-      <line x1="226" y1="119.7" x2="224" y2="116"/>
-      <line x1="210" y1="124" x2="210" y2="120"/>
-      <line x1="194" y1="119.7" x2="196" y2="116"/>
-      <line x1="182" y1="108" x2="186" y2="106"/>
-      <line x1="178" y1="92" x2="182" y2="92"/>
-      <line x1="182" y1="76" x2="186" y2="78"/>
-      <line x1="194" y1="64.3" x2="196" y2="68"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 0; 0.6 -0.4; 0 0" dur="11s" repeatCount="indefinite"/>
+    <circle cx="268" cy="62" r="1.8" fill="#eaf2ff" opacity="0.95"/>
+    <circle cx="268" cy="62" r="4.2" fill="#eaf2ff" opacity="0.12"/>
+  </g>
+
+  <!-- ========== Saturn system ========== -->
+  <!-- Ring tilt group (rotate -18deg around Saturn centre 210,104) -->
+  <g transform="rotate(-18 210 104)">
+    <!-- Back half of ring (behind Saturn) — drawn first, dimmed -->
+    <ellipse cx="210" cy="104" rx="68" ry="12" fill="none" stroke="url(#ring)" stroke-width="7" opacity="0.55"/>
+    <!-- Mask: only the top half (behind the planet from viewer POV; we'll overlay planet, then ring front half) -->
+    <!-- To create the "ring passes behind" illusion: we draw the full ring once, then draw planet, then draw the front half. -->
+  </g>
+
+  <!-- Saturn body with soft rim shadow -->
+  <g>
+    <!-- subtle planet glow -->
+    <circle cx="210" cy="104" r="48" fill="#f3b26a" opacity="0.06"/>
+    <circle cx="210" cy="104" r="38" fill="url(#saturn)"/>
+    <!-- banding: faint horizontal bands via subtle ellipses -->
+    <g clip-path="url(#planet-clip)" opacity="0.35">
+      <ellipse cx="210" cy="89"  rx="40" ry="2.4" fill="#f6d79a"/>
+      <ellipse cx="210" cy="96"  rx="40" ry="1.6" fill="#8a5a24"/>
+      <ellipse cx="210" cy="104" rx="40" ry="3.0" fill="#e5a858"/>
+      <ellipse cx="210" cy="110" rx="40" ry="1.4" fill="#6a3a14"/>
+      <ellipse cx="210" cy="116" rx="40" ry="2.2" fill="#c98a3a"/>
     </g>
-    <!-- Roman XI at the 11 position (the hour the guns fell silent) -->
-    <text x="195" y="72" text-anchor="middle"
-          font-family="'Georgia', serif" font-size="9.5" font-weight="700" fill="#2a1c10">XI</text>
-    <text x="226" y="72" text-anchor="middle"
-          font-family="'Georgia', serif" font-size="7.5" font-weight="400" fill="#4a3a26" opacity="0.7">XII</text>
-    <!-- Hour hand pointing at 11 (angle -30° from vertical); minute hand at 12 -->
-    <line x1="210" y1="92" x2="196" y2="68" stroke="#1a1208" stroke-width="2.6" stroke-linecap="round"/>
-    <line x1="210" y1="92" x2="210" y2="62" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round"/>
-    <!-- centre cap -->
-    <circle cx="210" cy="92" r="2.2" fill="#1a1208"/>
-    <circle cx="210" cy="92" r="0.9" fill="#d6262a"/>
-    <!-- very faint second hand sweep (reverent, slow) -->
-    <g>
+    <!-- limb shadow on right side (terminator) -->
+    <circle cx="210" cy="104" r="38" fill="url(#space)" opacity="0.28"/>
+    <!-- subtle rim highlight on illuminated side -->
+    <path d="M 175 94 A 38 38 0 0 1 207 72" stroke="#fff3d4" stroke-width="0.9" fill="none" opacity="0.35"/>
+  </g>
+
+  <!-- Front half of ring (in front of Saturn) — draw ring arc that's below the planet's horizontal axis -->
+  <g transform="rotate(-18 210 104)">
+    <!-- Use a clip path to draw only the front (lower) half of the ring ellipse -->
+    <clipPath id="ring-front">
+      <rect x="130" y="104" width="160" height="20"/>
+    </clipPath>
+    <g clip-path="url(#ring-front)">
+      <ellipse cx="210" cy="104" rx="68" ry="12" fill="none" stroke="url(#ring)" stroke-width="7" opacity="0.95"/>
+    </g>
+    <!-- fine ring striations rotating slowly (adds motion) -->
+    <g opacity="0.75">
       <animateTransform attributeName="transform" type="rotate"
-                        from="0 210 92" to="360 210 92" dur="60s" repeatCount="indefinite"/>
-      <line x1="210" y1="92" x2="210" y2="60" stroke="#d6262a" stroke-width="0.6" opacity="0.6"/>
+                        from="0 210 104" to="360 210 104" dur="41s" repeatCount="indefinite"/>
+      <ellipse cx="210" cy="104" rx="64" ry="11" fill="none" stroke="#f6e2b0" stroke-width="0.3" stroke-dasharray="2 3" opacity="0.5"/>
+      <ellipse cx="210" cy="104" rx="60" ry="10.3" fill="none" stroke="#d9a24a" stroke-width="0.3" stroke-dasharray="1 4" opacity="0.5"/>
+      <ellipse cx="210" cy="104" rx="56" ry="9.6" fill="none" stroke="#f6e2b0" stroke-width="0.3" stroke-dasharray="3 2" opacity="0.4"/>
     </g>
   </g>
 
-  <!-- ========== Poppies in the field (front row — larger; back rows — smaller) ========== -->
-  <!-- Back row: smaller, mid-ground, swaying gently -->
-  <g>
-    <g transform="translate(60 158)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="-4 0 6; 4 0 6; -4 0 6" dur="7s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="14" stroke="#2a3a1c" stroke-width="0.8"/>
-      <use href="#flower" transform="scale(0.55)"/>
-    </g>
-    <g transform="translate(100 162)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="3 0 4; -3 0 4; 3 0 4" dur="11s" begin="-2s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="10" stroke="#2a3a1c" stroke-width="0.8"/>
-      <use href="#flower" transform="scale(0.45)"/>
-    </g>
-    <g transform="translate(300 160)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="-3 0 5; 3 0 5; -3 0 5" dur="13s" begin="-3s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="12" stroke="#2a3a1c" stroke-width="0.8"/>
-      <use href="#flower" transform="scale(0.5)"/>
-    </g>
-    <g transform="translate(345 157)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="4 0 5; -4 0 5; 4 0 5" dur="7s" begin="-1s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="12" stroke="#2a3a1c" stroke-width="0.8"/>
-      <use href="#flower" transform="scale(0.5)"/>
-    </g>
-    <g transform="translate(380 160)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="-4 0 5; 4 0 5; -4 0 5" dur="11s" begin="-4s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="10" stroke="#2a3a1c" stroke-width="0.8"/>
-      <use href="#flower" transform="scale(0.45)"/>
-    </g>
-  </g>
-
-  <!-- Front row: larger, closer to viewer, deeper sway -->
-  <g>
-    <g transform="translate(26 182)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="-6 0 14; 6 0 14; -6 0 14" dur="7s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="18" stroke="#2a3a1c" stroke-width="1.1"/>
-      <use href="#flower"/>
-    </g>
-    <g transform="translate(86 186)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="5 0 16; -5 0 16; 5 0 16" dur="11s" begin="-3s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="20" stroke="#2a3a1c" stroke-width="1.1"/>
-      <use href="#flower" transform="scale(0.9)"/>
-    </g>
-    <g transform="translate(140 184)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="-5 0 16; 5 0 16; -5 0 16" dur="13s" begin="-2s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="20" stroke="#2a3a1c" stroke-width="1.1"/>
-      <use href="#flower" transform="scale(0.95)"/>
-    </g>
-    <g transform="translate(276 186)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="6 0 14; -6 0 14; 6 0 14" dur="7s" begin="-5s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="18" stroke="#2a3a1c" stroke-width="1.1"/>
-      <use href="#flower"/>
-    </g>
-    <g transform="translate(328 188)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="-5 0 18; 5 0 18; -5 0 18" dur="11s" begin="-6s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="22" stroke="#2a3a1c" stroke-width="1.1"/>
-      <use href="#flower" transform="scale(0.95)"/>
-    </g>
-    <g transform="translate(378 185)">
-      <animateTransform attributeName="transform" type="rotate" additive="sum"
-                        values="5 0 16; -5 0 16; 5 0 16" dur="13s" begin="-1s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="0" y2="20" stroke="#2a3a1c" stroke-width="1.1"/>
-      <use href="#flower" transform="scale(0.9)"/>
-    </g>
-  </g>
-
-  <!-- A single poppy petal drifting across (remembrance) -->
+  <!-- Titan off Saturn's shoulder (lower right) -->
   <g>
     <animateTransform attributeName="transform" type="translate"
-                      values="80 60; 360 100; 420 150" dur="23s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum"
-                      values="0; 220; 460" dur="23s" repeatCount="indefinite"/>
-    <ellipse cx="0" cy="0" rx="4" ry="2" fill="#d6262a" opacity="0.85"/>
+                      values="0 0; 0.4 0.6; 0 0" dur="13s" repeatCount="indefinite"/>
+    <circle cx="300" cy="138" r="9" fill="url(#titan)"/>
+    <!-- haze halo -->
+    <circle cx="300" cy="138" r="12" fill="#f3b26a" opacity="0.14"/>
+    <circle cx="300" cy="138" r="14" fill="#f3b26a" opacity="0.07"/>
+  </g>
+
+  <!-- ========== Voyager 1 — small silhouette on curved trajectory ========== -->
+  <!-- Trajectory arc: a long faint dashed curve from upper-left past Saturn, out lower-right, suggesting the swing-by -->
+  <path d="M 10 50 Q 150 20 220 80 Q 290 140 410 180"
+        fill="none" stroke="#9aa0a6" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.4"/>
+
+  <!-- Voyager icon — tiny, drifts along a short section of the trajectory -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="130 36; 150 42; 170 52; 190 66; 220 86; 250 112; 280 138; 310 160; 340 174"
+                      keyTimes="0;0.125;0.25;0.375;0.5;0.625;0.75;0.875;1"
+                      dur="37s" repeatCount="indefinite"/>
+    <g transform="scale(1)">
+      <!-- rotate slightly along path -->
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-18; -10; 0; 12; 22; 30; 38; 44; 50"
+                        keyTimes="0;0.125;0.25;0.375;0.5;0.625;0.75;0.875;1"
+                        dur="37s" repeatCount="indefinite"/>
+      <!-- bus (body) -->
+      <rect x="-2.5" y="-1.8" width="5" height="3.6" fill="#c8ccd1" stroke="#1a1a20" stroke-width="0.3"/>
+      <!-- high-gain dish -->
+      <ellipse cx="0" cy="-5.5" rx="5" ry="1.2" fill="#e8e3d6" stroke="#1a1a20" stroke-width="0.3"/>
+      <line x1="0" y1="-4.4" x2="0" y2="-1.8" stroke="#1a1a20" stroke-width="0.4"/>
+      <!-- magnetometer boom -->
+      <line x1="2.5" y1="0" x2="10" y2="1.2" stroke="#c8ccd1" stroke-width="0.4"/>
+      <circle cx="10.2" cy="1.3" r="0.5" fill="#f3b26a"/>
+      <!-- RTG arm -->
+      <line x1="-2.5" y1="0.5" x2="-7" y2="1.8" stroke="#c8ccd1" stroke-width="0.4"/>
+      <rect x="-9" y="1.1" width="2.2" height="1.4" fill="#8a5a24"/>
+      <!-- science scan platform -->
+      <line x1="2.4" y1="1.6" x2="4.6" y2="3.4" stroke="#c8ccd1" stroke-width="0.4"/>
+      <rect x="4.4" y="3" width="1.6" height="1.2" fill="#c8ccd1"/>
+    </g>
+  </g>
+
+  <!-- Radio pings home — a few expanding circles emanating back toward the Sun (far-right small dot) -->
+  <g fill="none" stroke="#9aa0a6" stroke-width="0.4" opacity="0.5">
+    <circle cx="260" cy="122" r="3">
+      <animate attributeName="r" values="2;14;2" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0;0.55" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="122" r="3">
+      <animate attributeName="r" values="2;14;2" dur="11s" begin="-4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0;0.55" dur="11s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="122" r="3">
+      <animate attributeName="r" values="2;14;2" dur="11s" begin="-8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0;0.55" dur="11s" begin="-8s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
   <!-- ========== Separator ========== -->
-  <line x1="420" y1="30" x2="420" y2="170" stroke="#d6262a" stroke-width="0.6" opacity="0.3"/>
+  <line x1="420" y1="30" x2="420" y2="170" stroke="#d9a24a" stroke-width="0.6" opacity="0.3"/>
 
   <!-- ========== Right text stack ========== -->
   <!-- Date headline -->
   <text x="610" y="58" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="30" font-weight="800" fill="#f1e8d6" letter-spacing="2.0">
-    NOVEMBER 11, 2026
+    NOVEMBER 12, 2026
   </text>
 
-  <!-- Twin bar: poppy red over cream -->
-  <line x1="438" y1="74" x2="782" y2="74" stroke="#d6262a" stroke-width="2.6" opacity="0.95"/>
+  <!-- Twin bar: amber over cream -->
+  <line x1="438" y1="74" x2="782" y2="74" stroke="#d9a24a" stroke-width="2.6" opacity="0.95"/>
   <line x1="438" y1="80" x2="782" y2="80" stroke="#f1e8d6" stroke-width="1.6" opacity="0.85"/>
 
   <!-- Subhead -->
   <text x="610" y="104" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="14" font-weight="800" letter-spacing="2.4" fill="#f1e8d6">
-    ARMISTICE &#183; 108 YEARS
+    VOYAGER 1 &#183; SATURN FLYBY
   </text>
 
   <!-- Tertiary italic -->
   <text x="610" y="124" text-anchor="middle"
         font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#f3b26a" letter-spacing="0.6">
-    11TH HOUR &#183; 11TH DAY &#183; 11TH MONTH &#183; 1918
+    NOV 12, 1980 &#183; 46 YEARS
   </text>
 
   <!-- Roster -->
   <text x="610" y="145" text-anchor="middle"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
         font-size="6.6" font-weight="700" fill="#9aa0a6" letter-spacing="2.0" opacity="0.95">
-    REMEMBRANCE &#183; SILENCE &#183; POPPIES &#183; FLANDERS &#183; PEACE
+    TITAN &#183; RINGS &#183; GRAND TOUR &#183; HELIOPAUSE &#183; GOLDEN RECORD
   </text>
 
   <!-- Caption -->
   <text x="610" y="188" text-anchor="middle"
         font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f1e8d6" opacity="0.95">
-    &#8220;At the going down of the sun, we will remember them.&#8221;
+    &#8220;Still travelling.&#8221;
   </text>
 </svg>

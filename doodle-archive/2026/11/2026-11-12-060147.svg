@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Armistice Day — 108th Anniversary (November 11, 1918) -->
+<!-- about:
+At the eleventh hour of the eleventh day of the eleventh month of 1918, in a railway carriage parked in the Compiègne forest north of Paris, Marshal Foch and a German delegation signed the armistice that ended the fighting of the First World War. Four years and three months of industrial-scale slaughter stopped mid-sentence along a five-hundred-mile line of trenches. Nine million soldiers were dead. The guns fell silent across Flanders, Picardy, and the Argonne; the silence travelled by telegraph and then by church bell. Red Flanders poppies, which had grown over the churned soil and the shallow graves, became the flower of remembrance after John McCrae's 1915 poem. One hundred and eight years later the two-minute silence at 11 a.m. is still kept.
+
+The scene is a Flanders field at first light. On the left, a drift of red poppies sways in wind over dark earth, with a pale moonlit clockface at centre reading eleven o'clock sharp; small silhouette crosses recede toward the horizon and a quiet dove crosses the sky. On the right, a cream NOVEMBER 11, 2026 headline sits over a double poppy-red-and-cream bar, a cream ARMISTICE · 108 YEARS subhead, an italic amber 11TH HOUR · 11TH DAY · 11TH MONTH · 1918 tertiary, a dim REMEMBRANCE · SILENCE · POPPIES · FLANDERS · PEACE roster, and a Georgia-italic caption at the base reading: At the going down of the sun, we will remember them.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for November 11, 2026 — Armistice Day 108th anniversary. A Flanders field at first light: red poppies sway in wind on the left over dark earth, a pale moonlit clockface at centre reads eleven o'clock, small crosses recede toward a dim horizon, and a dove crosses the sky. On the right, a cream NOVEMBER 11, 2026 headline sits over a double poppy-red-and-cream bar, a cream ARMISTICE · 108 YEARS subhead, an italic amber 11TH HOUR · 11TH DAY · 11TH MONTH · 1918 tertiary, a dim REMEMBRANCE · SILENCE · POPPIES · FLANDERS · PEACE roster, and a Georgia-italic caption at the base reading: At the going down of the sun, we will remember them.">
+  <defs>
+    <!-- Cold dawn sky: deep profile dark fading to a slate-mauve horizon -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.45" stop-color="#1a1e2a"/>
+      <stop offset="0.75" stop-color="#3a2e3a"/>
+      <stop offset="0.92" stop-color="#5c3a3e"/>
+      <stop offset="1" stop-color="#73434a"/>
+    </linearGradient>
+
+    <!-- Earth of the battlefield -->
+    <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1a14"/>
+      <stop offset="1" stop-color="#140b08"/>
+    </linearGradient>
+
+    <!-- Poppy petal -->
+    <radialGradient id="poppy" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#ff6d5a"/>
+      <stop offset="0.6" stop-color="#d6262a"/>
+      <stop offset="1" stop-color="#7a1414"/>
+    </radialGradient>
+
+    <!-- Clockface pale moonlight -->
+    <radialGradient id="face" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f4ecd4"/>
+      <stop offset="0.75" stop-color="#d8cdb0"/>
+      <stop offset="1" stop-color="#8a7a5c"/>
+    </radialGradient>
+
+    <!-- Reusable poppy symbol: four red petals, dark centre -->
+    <symbol id="flower" overflow="visible">
+      <ellipse cx="0" cy="-5" rx="6" ry="7" fill="url(#poppy)"/>
+      <ellipse cx="-6" cy="0" rx="7" ry="6" fill="url(#poppy)" opacity="0.95"/>
+      <ellipse cx="6" cy="0" rx="7" ry="6" fill="url(#poppy)" opacity="0.95"/>
+      <ellipse cx="0" cy="5" rx="6" ry="7" fill="url(#poppy)" opacity="0.9"/>
+      <circle cx="0" cy="0" r="2.2" fill="#1a0808"/>
+      <circle cx="-0.8" cy="-0.8" r="0.6" fill="#f3d978" opacity="0.85"/>
+    </symbol>
+  </defs>
+
+  <!-- ========== Sky background ========== -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- A few quiet stars in the deep upper dark -->
+  <g fill="#e8e3d6">
+    <circle cx="60" cy="14" r="0.6" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.85;0.3" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="160" cy="20" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.75;0.2" dur="13s" begin="-4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="10" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.15;0.7;0.2" dur="7s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="18" r="0.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.8;0.25" dur="11s" begin="-6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="770" cy="8" r="0.4" opacity="0.4">
+      <animate attributeName="opacity" values="0.15;0.65;0.15" dur="13s" begin="-3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ========== Dove crossing the sky (slow, left-to-right over left half) ========== -->
+  <g opacity="0.75">
+    <animateTransform attributeName="transform" type="translate"
+                      values="-60 0; 440 -14; -60 0" dur="47s" repeatCount="indefinite"/>
+    <!-- Simple two-wing dove silhouette in pale warm white -->
+    <path d="M 0 0 q 6 -6 12 0 q 2 -4 6 -3 q -4 2 -4 5 q -4 -2 -8 1 q -3 2 -6 -3 z" fill="#efe6d0" opacity="0.9"/>
+    <!-- Wing flutter -->
+    <path d="M 2 -1 q 4 -8 10 -4" fill="none" stroke="#efe6d0" stroke-width="0.9" stroke-linecap="round">
+      <animate attributeName="d"
+               values="M 2 -1 q 4 -8 10 -4; M 2 -1 q 4 2 10 0; M 2 -1 q 4 -8 10 -4"
+               dur="1.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ========== Distant horizon crosses (quiet memorial row) ========== -->
+  <g stroke="#5a4a44" stroke-width="0.9" opacity="0.7" fill="none" stroke-linecap="round">
+    <!-- cluster of small crosses receding toward the horizon -->
+    <g transform="translate(40 158)">
+      <line x1="0" y1="-5" x2="0" y2="2"/><line x1="-2" y1="-3" x2="2" y2="-3"/>
+    </g>
+    <g transform="translate(78 160)">
+      <line x1="0" y1="-4" x2="0" y2="2"/><line x1="-1.6" y1="-2.5" x2="1.6" y2="-2.5"/>
+    </g>
+    <g transform="translate(118 162)">
+      <line x1="0" y1="-3.4" x2="0" y2="1.6"/><line x1="-1.4" y1="-2" x2="1.4" y2="-2"/>
+    </g>
+    <g transform="translate(160 163)">
+      <line x1="0" y1="-3" x2="0" y2="1.4"/><line x1="-1.2" y1="-1.8" x2="1.2" y2="-1.8"/>
+    </g>
+    <g transform="translate(200 164)">
+      <line x1="0" y1="-2.6" x2="0" y2="1.2"/><line x1="-1" y1="-1.6" x2="1" y2="-1.6"/>
+    </g>
+    <g transform="translate(240 165)" opacity="0.8">
+      <line x1="0" y1="-2.2" x2="0" y2="1"/><line x1="-0.9" y1="-1.4" x2="0.9" y2="-1.4"/>
+    </g>
+    <g transform="translate(278 166)" opacity="0.7">
+      <line x1="0" y1="-1.9" x2="0" y2="0.8"/><line x1="-0.8" y1="-1.2" x2="0.8" y2="-1.2"/>
+    </g>
+    <g transform="translate(314 167)" opacity="0.6">
+      <line x1="0" y1="-1.6" x2="0" y2="0.7"/><line x1="-0.7" y1="-1" x2="0.7" y2="-1"/>
+    </g>
+    <g transform="translate(348 168)" opacity="0.5">
+      <line x1="0" y1="-1.4" x2="0" y2="0.6"/><line x1="-0.6" y1="-0.9" x2="0.6" y2="-0.9"/>
+    </g>
+    <g transform="translate(380 168.5)" opacity="0.45">
+      <line x1="0" y1="-1.2" x2="0" y2="0.5"/><line x1="-0.5" y1="-0.8" x2="0.5" y2="-0.8"/>
+    </g>
+  </g>
+
+  <!-- ========== Ground (dark earth of the field) ========== -->
+  <path d="M 0 170 Q 200 164 400 170 Q 200 176 0 176 Z" fill="url(#earth)"/>
+  <rect x="0" y="170" width="400" height="30" fill="url(#earth)"/>
+  <!-- subtle furrows -->
+  <g stroke="#3a241a" stroke-width="0.4" opacity="0.6" fill="none">
+    <path d="M 0 182 Q 200 178 400 182"/>
+    <path d="M 0 190 Q 200 186 400 190"/>
+    <path d="M 0 197 Q 200 193 400 197"/>
+  </g>
+
+  <!-- ========== The 11:00 clock face (centre-left, moonlit) ========== -->
+  <g>
+    <!-- gentle breathing -->
+    <animateTransform attributeName="transform" type="translate" additive="sum"
+                      values="0 0; 0 -0.8; 0 0" dur="13s" repeatCount="indefinite"/>
+    <!-- soft halo -->
+    <circle cx="210" cy="92" r="60" fill="#f4ecd4" opacity="0.08"/>
+    <circle cx="210" cy="92" r="46" fill="#f4ecd4" opacity="0.12"/>
+    <!-- bezel -->
+    <circle cx="210" cy="92" r="40" fill="#1a1620" stroke="#6b5a48" stroke-width="1.6"/>
+    <!-- face -->
+    <circle cx="210" cy="92" r="36" fill="url(#face)"/>
+    <!-- hour pips -->
+    <g stroke="#1a1208" stroke-width="1.2" stroke-linecap="round">
+      <line x1="210" y1="60" x2="210" y2="64"/>
+      <line x1="226" y1="64.3" x2="224" y2="68"/>
+      <line x1="238" y1="76" x2="234" y2="78"/>
+      <line x1="242" y1="92" x2="238" y2="92"/>
+      <line x1="238" y1="108" x2="234" y2="106"/>
+      <line x1="226" y1="119.7" x2="224" y2="116"/>
+      <line x1="210" y1="124" x2="210" y2="120"/>
+      <line x1="194" y1="119.7" x2="196" y2="116"/>
+      <line x1="182" y1="108" x2="186" y2="106"/>
+      <line x1="178" y1="92" x2="182" y2="92"/>
+      <line x1="182" y1="76" x2="186" y2="78"/>
+      <line x1="194" y1="64.3" x2="196" y2="68"/>
+    </g>
+    <!-- Roman XI at the 11 position (the hour the guns fell silent) -->
+    <text x="195" y="72" text-anchor="middle"
+          font-family="'Georgia', serif" font-size="9.5" font-weight="700" fill="#2a1c10">XI</text>
+    <text x="226" y="72" text-anchor="middle"
+          font-family="'Georgia', serif" font-size="7.5" font-weight="400" fill="#4a3a26" opacity="0.7">XII</text>
+    <!-- Hour hand pointing at 11 (angle -30° from vertical); minute hand at 12 -->
+    <line x1="210" y1="92" x2="196" y2="68" stroke="#1a1208" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="210" y1="92" x2="210" y2="62" stroke="#1a1208" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- centre cap -->
+    <circle cx="210" cy="92" r="2.2" fill="#1a1208"/>
+    <circle cx="210" cy="92" r="0.9" fill="#d6262a"/>
+    <!-- very faint second hand sweep (reverent, slow) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        from="0 210 92" to="360 210 92" dur="60s" repeatCount="indefinite"/>
+      <line x1="210" y1="92" x2="210" y2="60" stroke="#d6262a" stroke-width="0.6" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- ========== Poppies in the field (front row — larger; back rows — smaller) ========== -->
+  <!-- Back row: smaller, mid-ground, swaying gently -->
+  <g>
+    <g transform="translate(60 158)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-4 0 6; 4 0 6; -4 0 6" dur="7s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#2a3a1c" stroke-width="0.8"/>
+      <use href="#flower" transform="scale(0.55)"/>
+    </g>
+    <g transform="translate(100 162)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="3 0 4; -3 0 4; 3 0 4" dur="11s" begin="-2s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#2a3a1c" stroke-width="0.8"/>
+      <use href="#flower" transform="scale(0.45)"/>
+    </g>
+    <g transform="translate(300 160)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-3 0 5; 3 0 5; -3 0 5" dur="13s" begin="-3s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#2a3a1c" stroke-width="0.8"/>
+      <use href="#flower" transform="scale(0.5)"/>
+    </g>
+    <g transform="translate(345 157)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="4 0 5; -4 0 5; 4 0 5" dur="7s" begin="-1s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#2a3a1c" stroke-width="0.8"/>
+      <use href="#flower" transform="scale(0.5)"/>
+    </g>
+    <g transform="translate(380 160)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-4 0 5; 4 0 5; -4 0 5" dur="11s" begin="-4s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#2a3a1c" stroke-width="0.8"/>
+      <use href="#flower" transform="scale(0.45)"/>
+    </g>
+  </g>
+
+  <!-- Front row: larger, closer to viewer, deeper sway -->
+  <g>
+    <g transform="translate(26 182)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-6 0 14; 6 0 14; -6 0 14" dur="7s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="18" stroke="#2a3a1c" stroke-width="1.1"/>
+      <use href="#flower"/>
+    </g>
+    <g transform="translate(86 186)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="5 0 16; -5 0 16; 5 0 16" dur="11s" begin="-3s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#2a3a1c" stroke-width="1.1"/>
+      <use href="#flower" transform="scale(0.9)"/>
+    </g>
+    <g transform="translate(140 184)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-5 0 16; 5 0 16; -5 0 16" dur="13s" begin="-2s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#2a3a1c" stroke-width="1.1"/>
+      <use href="#flower" transform="scale(0.95)"/>
+    </g>
+    <g transform="translate(276 186)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="6 0 14; -6 0 14; 6 0 14" dur="7s" begin="-5s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="18" stroke="#2a3a1c" stroke-width="1.1"/>
+      <use href="#flower"/>
+    </g>
+    <g transform="translate(328 188)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="-5 0 18; 5 0 18; -5 0 18" dur="11s" begin="-6s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#2a3a1c" stroke-width="1.1"/>
+      <use href="#flower" transform="scale(0.95)"/>
+    </g>
+    <g transform="translate(378 185)">
+      <animateTransform attributeName="transform" type="rotate" additive="sum"
+                        values="5 0 16; -5 0 16; 5 0 16" dur="13s" begin="-1s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#2a3a1c" stroke-width="1.1"/>
+      <use href="#flower" transform="scale(0.9)"/>
+    </g>
+  </g>
+
+  <!-- A single poppy petal drifting across (remembrance) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+                      values="80 60; 360 100; 420 150" dur="23s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum"
+                      values="0; 220; 460" dur="23s" repeatCount="indefinite"/>
+    <ellipse cx="0" cy="0" rx="4" ry="2" fill="#d6262a" opacity="0.85"/>
+  </g>
+
+  <!-- ========== Separator ========== -->
+  <line x1="420" y1="30" x2="420" y2="170" stroke="#d6262a" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- ========== Right text stack ========== -->
+  <!-- Date headline -->
+  <text x="610" y="58" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="800" fill="#f1e8d6" letter-spacing="2.0">
+    NOVEMBER 11, 2026
+  </text>
+
+  <!-- Twin bar: poppy red over cream -->
+  <line x1="438" y1="74" x2="782" y2="74" stroke="#d6262a" stroke-width="2.6" opacity="0.95"/>
+  <line x1="438" y1="80" x2="782" y2="80" stroke="#f1e8d6" stroke-width="1.6" opacity="0.85"/>
+
+  <!-- Subhead -->
+  <text x="610" y="104" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="800" letter-spacing="2.4" fill="#f1e8d6">
+    ARMISTICE &#183; 108 YEARS
+  </text>
+
+  <!-- Tertiary italic -->
+  <text x="610" y="124" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="10.5" font-style="italic" fill="#f3b26a" letter-spacing="0.6">
+    11TH HOUR &#183; 11TH DAY &#183; 11TH MONTH &#183; 1918
+  </text>
+
+  <!-- Roster -->
+  <text x="610" y="145" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="6.6" font-weight="700" fill="#9aa0a6" letter-spacing="2.0" opacity="0.95">
+    REMEMBRANCE &#183; SILENCE &#183; POPPIES &#183; FLANDERS &#183; PEACE
+  </text>
+
+  <!-- Caption -->
+  <text x="610" y="188" text-anchor="middle"
+        font-family="'Georgia', serif" font-size="12" font-style="italic" fill="#f1e8d6" opacity="0.95">
+    &#8220;At the going down of the sun, we will remember them.&#8221;
+  </text>
+</svg>

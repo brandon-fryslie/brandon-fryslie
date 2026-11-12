@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 12, 2026 — Armistice Day — 108th Anniversary (November 11, 1918)
+
+<img src="./doodle-archive/2026/11/2026-11-12-060147.svg" width="800" alt="Daily doodle for November 11, 2026 — Armistice Day 108th anniversary. A Flanders field at first light: red poppies sway in wind on the left over dark earth, a pale moonlit clockface at centre reads eleven o'clock, small crosses recede toward a dim horizon, and a dove crosses the sky. On the right, a cream NOVEMBER 11, 2026 headline sits over a double poppy-red-and-cream bar, a cream ARMISTICE · 108 YEARS subhead, an italic amber 11TH HOUR · 11TH DAY · 11TH MONTH · 1918 tertiary, a dim REMEMBRANCE · SILENCE · POPPIES · FLANDERS · PEACE roster, and a Georgia-italic caption at the base reading: At the going down of the sun, we will remember them.">
+
+<details>
+<summary>About this doodle</summary>
+
+At the eleventh hour of the eleventh day of the eleventh month of 1918, in a railway carriage parked in the Compiègne forest north of Paris, Marshal Foch and a German delegation signed the armistice that ended the fighting of the First World War. Four years and three months of industrial-scale slaughter stopped mid-sentence along a five-hundred-mile line of trenches. Nine million soldiers were dead. The guns fell silent across Flanders, Picardy, and the Argonne; the silence travelled by telegraph and then by church bell. Red Flanders poppies, which had grown over the churned soil and the shallow graves, became the flower of remembrance after John McCrae's 1915 poem. One hundred and eight years later the two-minute silence at 11 a.m. is still kept.
+
+The scene is a Flanders field at first light. On the left, a drift of red poppies sways in wind over dark earth, with a pale moonlit clockface at centre reading eleven o'clock sharp; small silhouette crosses recede toward the horizon and a quiet dove crosses the sky. On the right, a cream NOVEMBER 11, 2026 headline sits over a double poppy-red-and-cream bar, a cream ARMISTICE · 108 YEARS subhead, an italic amber 11TH HOUR · 11TH DAY · 11TH MONTH · 1918 tertiary, a dim REMEMBRANCE · SILENCE · POPPIES · FLANDERS · PEACE roster, and a Georgia-italic caption at the base reading: At the going down of the sun, we will remember them.
+
+</details>
+
+---
+
 ## November 11, 2026 — Sesame Street Premiere — 57th Anniversary (November 10, 1969)
 
 <img src="./doodle-archive/2026/11/2026-11-11-060202.svg" width="800" alt="Daily doodle for November 10, 2026 — Sesame Street 57th anniversary of its premiere. A brownstone stoop at daybreak with a lit window and the famous green street sign over the door; a warm cartoon sun climbs on the horizon while colorful numerals 1, 2, 3 and letters A, B, C drift upward like balloons. On the right, a cream NOVEMBER 10, 2026 headline sits over a double yellow-and-green bar, a cream SESAME STREET · 57 YEARS ON AIR subhead, an italic sun-gold TV PREMIERE · PBS · 1969 tertiary, a dim COUNT · LEARN · READ · SHARE · IMAGINE roster, and a Georgia-italic caption at the base reading: Sunny days, sweeping the clouds away.">
