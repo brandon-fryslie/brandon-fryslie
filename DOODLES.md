@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 17, 2026 — Voyager 1 at Saturn — 46th Anniversary (November 12, 1980)
+
+<img src="./doodle-archive/2026/11/2026-11-17-060128.svg" width="800" alt="Daily doodle for November 12, 2026 — 46th anniversary of Voyager 1's closest approach to Saturn. On the left, Saturn hangs in warm honey and amber with slowly rotating ring dashes; Titan as a small orange disc and Enceladus as a bright pin accompany it. Voyager 1 drifts past on a curved trajectory, its high-gain dish aimed back toward a distant Sun, trailing a dashed arc of radio pings. On the right, a cream NOVEMBER 12, 2026 headline sits over a double amber-and-cream bar, a cream VOYAGER 1 · SATURN FLYBY subhead, an italic amber NOV 12, 1980 · 46 YEARS tertiary, a dim TITAN · RINGS · GRAND TOUR · HELIOPAUSE · GOLDEN RECORD roster, and a Georgia-italic caption at the base reading: Still travelling.">
+
+<details>
+<summary>About this doodle</summary>
+
+At 23:46 UTC on 12 November 1980, three years and three months out from the Cape, Voyager 1 passed within 124,000 km of Saturn's cloud tops. In a single flyby it returned the first high-resolution close-ups of the rings, discovered three new moons, resolved Titan as a world sheathed in thick orange nitrogen haze, and bent its trajectory out of the plane of the solar system. The Titan diversion came at a price — Voyager 1 would never reach Uranus or Neptune — but it put the spacecraft on a hyperbolic escape path. Forty-six years later it is the farthest human-made object from Earth, 25 light-hours out, still faintly answering the Deep Space Network from beyond the heliopause with 160 bits per second.
+
+The scene is deep space on the night side of Saturn. On the left, the ringed planet hangs in warm honey and amber, its tilted ring system glinting as fine dashes slowly rotate; Titan sits off its shoulder as a small orange disc, Enceladus as a bright pin. Voyager 1 drifts past on a curved trajectory, high-gain dish aimed back at a distant Sun, trailing a thin dashed arc of radio pings home. On the right, a cream NOVEMBER 12, 2026 headline sits over a double amber-and-cream bar, a cream VOYAGER 1 · SATURN FLYBY subhead, an italic amber NOV 12, 1980 · 46 YEARS tertiary, a dim TITAN · RINGS · GRAND TOUR · HELIOPAUSE · GOLDEN RECORD roster, and a Georgia-italic caption at the base reading: Still travelling.
+
+</details>
+
+---
+
 ## November 12, 2026 — Armistice Day — 108th Anniversary (November 11, 1918)
 
 <img src="./doodle-archive/2026/11/2026-11-12-060147.svg" width="800" alt="Daily doodle for November 11, 2026 — Armistice Day 108th anniversary. A Flanders field at first light: red poppies sway in wind on the left over dark earth, a pale moonlit clockface at centre reads eleven o'clock, small crosses recede toward a dim horizon, and a dove crosses the sky. On the right, a cream NOVEMBER 11, 2026 headline sits over a double poppy-red-and-cream bar, a cream ARMISTICE · 108 YEARS subhead, an italic amber 11TH HOUR · 11TH DAY · 11TH MONTH · 1918 tertiary, a dim REMEMBRANCE · SILENCE · POPPIES · FLANDERS · PEACE roster, and a Georgia-italic caption at the base reading: At the going down of the sun, we will remember them.">
