@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 18, 2026 — Computer Mouse Patent — 56th Anniversary (November 17, 1970)
+
+<img src="./doodle-archive/2026/11/2026-11-18-060123.svg" width="800" alt="Daily doodle for November 17, 2026 — 56th anniversary of Doug Engelbart's computer mouse patent (US 3,541,541, granted November 17, 1970). On the left, a patent-blueprint sketch of the original wooden-shell mouse with its single red button and cord sits on cyan grid paper, with two dashed orthogonal wheels behind it; a pointer arrow traces an X-Y path across the grid. On the right, a cream NOVEMBER 17, 2026 headline sits over a double cream-and-cyan bar, a cream MOUSE PATENT · 56 YEARS subhead, an italic amber ENGELBART · US 3,541,541 · 1970 tertiary, a dim SRI · XEROX PARC · APPLE · WINDOWS · POINT roster, and a Georgia-italic caption at the base reading: One button, one dollar, one idea.">
+
+<details>
+<summary>About this doodle</summary>
+
+At 7:58 a.m. on 17 November 1970, US Patent 3,541,541 issued in the name of Douglas C. Engelbart for an "X-Y Position Indicator for a Display System." The application had been filed in 1967, three years after Engelbart and Bill English hand-carved the first prototype at SRI's Augmentation Research Center from a pine block the size of a bar of soap, with two steel wheels at right angles under the shell and a single red button on top. Engelbart demonstrated it publicly on 9 December 1968 in the ninety minutes now remembered as the Mother of All Demos, alongside hypertext, teleconferencing, and the outline editor. The device cost him a dollar in royalties. Fifty-six years later the pointer is the single interface metaphor every graphical operating system still runs on.
+
+The scene is a drafting board at first light. On the left, the patent sketch of the original mouse — rectangular pine shell, cord exit at the heel, single red button — sits over faint blueprint-grid cyan paper, with the two orthogonal wheels dashed in behind. A pointer arrow traces an X-Y path across the grid and returns. On the right, a cream NOVEMBER 17, 2026 headline sits over a double cream-and-cyan bar, a cream MOUSE PATENT · 56 YEARS subhead, an italic amber ENGELBART · US 3,541,541 · 1970 tertiary, a dim SRI · XEROX PARC · APPLE · WINDOWS · POINT roster, and a Georgia-italic caption at the base reading: One button, one dollar, one idea.
+
+</details>
+
+---
+
 ## November 17, 2026 — Voyager 1 at Saturn — 46th Anniversary (November 12, 1980)
 
 <img src="./doodle-archive/2026/11/2026-11-17-060128.svg" width="800" alt="Daily doodle for November 12, 2026 — 46th anniversary of Voyager 1's closest approach to Saturn. On the left, Saturn hangs in warm honey and amber with slowly rotating ring dashes; Titan as a small orange disc and Enceladus as a bright pin accompany it. Voyager 1 drifts past on a curved trajectory, its high-gain dish aimed back toward a distant Sun, trailing a dashed arc of radio pings. On the right, a cream NOVEMBER 12, 2026 headline sits over a double amber-and-cream bar, a cream VOYAGER 1 · SATURN FLYBY subhead, an italic amber NOV 12, 1980 · 46 YEARS tertiary, a dim TITAN · RINGS · GRAND TOUR · HELIOPAUSE · GOLDEN RECORD roster, and a Georgia-italic caption at the base reading: Still travelling.">

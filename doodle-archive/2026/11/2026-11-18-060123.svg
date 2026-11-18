@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- theme: Computer Mouse Patent — 56th Anniversary (November 17, 1970) -->
+<!-- about:
+At 7:58 a.m. on 17 November 1970, US Patent 3,541,541 issued in the name of Douglas C. Engelbart for an "X-Y Position Indicator for a Display System." The application had been filed in 1967, three years after Engelbart and Bill English hand-carved the first prototype at SRI's Augmentation Research Center from a pine block the size of a bar of soap, with two steel wheels at right angles under the shell and a single red button on top. Engelbart demonstrated it publicly on 9 December 1968 in the ninety minutes now remembered as the Mother of All Demos, alongside hypertext, teleconferencing, and the outline editor. The device cost him a dollar in royalties. Fifty-six years later the pointer is the single interface metaphor every graphical operating system still runs on.
+
+The scene is a drafting board at first light. On the left, the patent sketch of the original mouse — rectangular pine shell, cord exit at the heel, single red button — sits over faint blueprint-grid cyan paper, with the two orthogonal wheels dashed in behind. A pointer arrow traces an X-Y path across the grid and returns. On the right, a cream NOVEMBER 17, 2026 headline sits over a double cream-and-cyan bar, a cream MOUSE PATENT · 56 YEARS subhead, an italic amber ENGELBART · US 3,541,541 · 1970 tertiary, a dim SRI · XEROX PARC · APPLE · WINDOWS · POINT roster, and a Georgia-italic caption at the base reading: One button, one dollar, one idea.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
+     aria-label="Daily doodle for November 17, 2026 — 56th anniversary of Doug Engelbart's computer mouse patent (US 3,541,541, granted November 17, 1970). On the left, a patent-blueprint sketch of the original wooden-shell mouse with its single red button and cord sits on cyan grid paper, with two dashed orthogonal wheels behind it; a pointer arrow traces an X-Y path across the grid. On the right, a cream NOVEMBER 17, 2026 headline sits over a double cream-and-cyan bar, a cream MOUSE PATENT · 56 YEARS subhead, an italic amber ENGELBART · US 3,541,541 · 1970 tertiary, a dim SRI · XEROX PARC · APPLE · WINDOWS · POINT roster, and a Georgia-italic caption at the base reading: One button, one dollar, one idea.">
+  <defs>
+    <!-- Dark drafting-board backdrop, warm plum to profile dark -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121821"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- Blueprint paper: muted cyan paper patch behind the sketch -->
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#143a4a"/>
+      <stop offset="1" stop-color="#0e2a38"/>
+    </linearGradient>
+
+    <!-- Blueprint grid pattern -->
+    <pattern id="grid" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M 12 0 L 0 0 0 12" fill="none" stroke="#3fa8c8" stroke-width="0.4" stroke-opacity="0.35"/>
+    </pattern>
+    <pattern id="grid-major" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#5fc3e0" stroke-width="0.7" stroke-opacity="0.45"/>
+    </pattern>
+
+    <!-- Wooden shell tone (the patent was for a pine-block prototype) -->
+    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8d4a8"/>
+      <stop offset="1" stop-color="#b89467"/>
+    </linearGradient>
+
+    <linearGradient id="shellSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a6a3f"/>
+      <stop offset="1" stop-color="#5c4624"/>
+    </linearGradient>
+
+    <!-- Red button -->
+    <radialGradient id="btn" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#ff8a7a"/>
+      <stop offset="0.55" stop-color="#d33428"/>
+      <stop offset="1" stop-color="#6a1612"/>
+    </radialGradient>
+
+    <!-- Motion path for the pointer arrow — an X-Y "L" sweep: right, then down, then back -->
+    <path id="ptrPath" d="M 60 150 L 260 150 L 260 55 L 60 55 Z" fill="none"/>
+
+    <!-- Reusable pointer-arrow glyph (classic NW-pointing cursor) -->
+    <g id="ptr">
+      <path d="M 0 0 L 0 16 L 4.2 12.5 L 7.2 19.5 L 10.2 18.4 L 7.3 11.5 L 12.5 11 Z"
+            fill="#f6e2b0" stroke="#0d1117" stroke-width="1"/>
+    </g>
+  </defs>
+
+  <style>
+    .headline  { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: 1.5px; }
+    .sub       { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 2.4px; }
+    .tert      { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 1.8px; font-style: italic; }
+    .roster    { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2.6px; }
+    .caption   { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+    .stamp     { font-family: 'Courier New', Courier, monospace; letter-spacing: 1px; }
+
+    /* Subtle paper float */
+    @keyframes paperFloat {
+      0%,100% { transform: translateY(0); }
+      50%     { transform: translateY(-1.2px); }
+    }
+    .paper-group { animation: paperFloat 11s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+
+    /* Button push */
+    @keyframes btnPress {
+      0%, 86%, 100% { transform: translateY(0) scaleY(1); }
+      90%           { transform: translateY(1.2px) scaleY(0.88); }
+      93%           { transform: translateY(0.4px) scaleY(0.96); }
+    }
+    .btn-top { animation: btnPress 7s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+
+    /* Dashed-grid construction wheels — slow spin opposite directions */
+    @keyframes spinCW  { from { transform: rotate(0); }   to { transform: rotate(360deg); } }
+    @keyframes spinCCW { from { transform: rotate(0); }   to { transform: rotate(-360deg); } }
+    .wheel-x { animation: spinCW  17s linear infinite; transform-origin: center; transform-box: fill-box; }
+    .wheel-y { animation: spinCCW 23s linear infinite; transform-origin: center; transform-box: fill-box; }
+
+    /* Headline soft pulse (base visible so static render shows text) */
+    @keyframes softPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.86; } }
+    .fade-1 { animation: softPulse 13s ease-in-out infinite; }
+    .fade-2 { animation: softPulse 13s ease-in-out 0.4s infinite; }
+    .fade-3 { animation: softPulse 13s ease-in-out 0.8s infinite; }
+    .fade-4 { animation: softPulse 13s ease-in-out 1.2s infinite; }
+    .fade-5 { animation: softPulse 13s ease-in-out 1.6s infinite; }
+    .fade-6 { animation: softPulse 13s ease-in-out 2.0s infinite; }
+
+    /* Bar slide */
+    @keyframes barDraw { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+    .bar { transform-origin: left center; transform-box: fill-box; animation: barDraw 1.4s cubic-bezier(.3,.9,.2,1) 0.4s both; }
+
+    /* Dimensioning tick fade */
+    @keyframes dimFade { 0%,100% { opacity: 0.55; } 50% { opacity: 0.9; } }
+    .dim { animation: dimFade 13s ease-in-out infinite; }
+
+    /* Caption glimmer */
+    @keyframes capGlim { 0%,100% { opacity: 0.78; } 50% { opacity: 1; } }
+    .cap { animation: capGlim 13s ease-in-out infinite; }
+  </style>
+
+  <!-- Backdrop -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+
+  <!-- ============ LEFT: patent blueprint sketch ============ -->
+  <g class="paper-group">
+    <!-- Paper -->
+    <rect x="22" y="22" width="380" height="156" rx="4" fill="url(#paper)" stroke="#5fc3e0" stroke-opacity="0.55" stroke-width="0.8"/>
+    <!-- Grid overlay -->
+    <rect x="22" y="22" width="380" height="156" fill="url(#grid)"/>
+    <rect x="22" y="22" width="380" height="156" fill="url(#grid-major)"/>
+
+    <!-- Title block, corner of blueprint -->
+    <g transform="translate(28,30)">
+      <rect x="0" y="0" width="120" height="22" fill="#0e2a38" stroke="#5fc3e0" stroke-opacity="0.7" stroke-width="0.6"/>
+      <text x="6" y="9" font-size="5.5" class="stamp" fill="#9fd9ea">US PATENT 3,541,541</text>
+      <text x="6" y="16.5" font-size="5.5" class="stamp" fill="#9fd9ea">FILED 1967 · ISSUED 1970</text>
+    </g>
+
+    <!-- Dashed wheels (X and Y, orthogonal, under shell) -->
+    <g class="dim" stroke="#5fc3e0" stroke-opacity="0.75" fill="none" stroke-dasharray="3 2.5">
+      <!-- Y wheel (horizontal axis visible from side, roughly vertical disk) -->
+      <g class="wheel-y" transform="translate(205,138)">
+        <ellipse cx="0" cy="0" rx="22" ry="7"/>
+        <line x1="-22" y1="0" x2="22" y2="0" stroke-dasharray="2 2"/>
+        <line x1="0" y1="-7" x2="0" y2="7" stroke-dasharray="2 2"/>
+      </g>
+      <!-- X wheel (orthogonal) -->
+      <g class="wheel-x" transform="translate(260,138)">
+        <ellipse cx="0" cy="0" rx="7" ry="22"/>
+        <line x1="-7" y1="0" x2="7" y2="0" stroke-dasharray="2 2"/>
+        <line x1="0" y1="-22" x2="0" y2="22" stroke-dasharray="2 2"/>
+      </g>
+    </g>
+
+    <!-- The mouse: rectangular pine shell, isometric three-quarter view -->
+    <g transform="translate(170,70)">
+      <!-- side face (shadow) -->
+      <path d="M 0 48 L 0 60 L 120 60 L 120 48 Z" fill="url(#shellSide)" stroke="#2a1a0c" stroke-width="0.7"/>
+      <!-- front face (shadow edge) -->
+      <path d="M 120 48 L 132 36 L 132 50 L 120 60 Z" fill="#6a4e26" stroke="#2a1a0c" stroke-width="0.7"/>
+      <!-- top face (the pine block) -->
+      <path d="M 0 48 L 12 36 L 132 36 L 120 48 Z" fill="url(#shell)" stroke="#2a1a0c" stroke-width="0.7"/>
+
+      <!-- wood grain (thin streaks) -->
+      <g stroke="#8a6a3f" stroke-opacity="0.55" fill="none">
+        <path d="M 14 40 Q 50 41 118 39"/>
+        <path d="M 16 44 Q 60 46 116 43"/>
+      </g>
+
+      <!-- button recess outline on top -->
+      <ellipse cx="34" cy="43" rx="10" ry="3" fill="#8a6a3f" fill-opacity="0.45"/>
+
+      <!-- the single red button -->
+      <g class="btn-top">
+        <ellipse cx="34" cy="42" rx="10" ry="3.2" fill="url(#btn)" stroke="#2a0a08" stroke-width="0.7"/>
+      </g>
+
+      <!-- cord exit at the heel -->
+      <path d="M 0 52 C -10 58, -22 50, -40 62 C -55 70, -70 60, -84 76"
+            fill="none" stroke="#b89467" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 0 52 C -10 58, -22 50, -40 62 C -55 70, -70 60, -84 76"
+            fill="none" stroke="#5c4624" stroke-width="0.8" stroke-linecap="round"/>
+
+      <!-- dimensioning ticks (blueprint vibe) -->
+      <g class="dim" stroke="#5fc3e0" stroke-opacity="0.75" stroke-width="0.6" fill="#9fd9ea">
+        <line x1="12" y1="30" x2="132" y2="30"/>
+        <line x1="12" y1="27" x2="12" y2="33"/>
+        <line x1="132" y1="27" x2="132" y2="33"/>
+        <text x="60" y="27" font-size="6" class="stamp">X-Y INDICATOR</text>
+      </g>
+    </g>
+
+    <!-- Pointer arrow tracing an X-Y path (SMIL) -->
+    <g>
+      <use href="#ptr">
+        <animateMotion dur="11s" repeatCount="indefinite" rotate="0"
+                       keyPoints="0;0.25;0.5;0.75;1"
+                       keyTimes="0;0.25;0.5;0.75;1"
+                       calcMode="linear">
+          <mpath href="#ptrPath"/>
+        </animateMotion>
+      </use>
+    </g>
+
+    <!-- Drafting label pinned to paper -->
+    <text x="28" y="172" font-size="7" class="stamp" fill="#9fd9ea" opacity="0.8">FIG. 1 — X-Y POSITION INDICATOR FOR A DISPLAY SYSTEM</text>
+  </g>
+
+  <!-- ============ RIGHT: text column ============ -->
+  <!-- vertical separator -->
+  <line x1="420" y1="30" x2="420" y2="170" stroke="#2d3748" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- Headline: today's date -->
+  <text x="440" y="60" font-size="26" class="headline fade-1" fill="#f6e2b0">NOVEMBER 17, 2026</text>
+
+  <!-- Double bar beneath headline: cream + cyan (paper + blueprint) -->
+  <g transform="translate(440,70)">
+    <rect class="bar" x="0" y="0" width="300" height="3" fill="#f6e2b0"/>
+    <rect class="bar" x="0" y="5" width="220" height="2" fill="#5fc3e0"/>
+  </g>
+
+  <!-- Subhead -->
+  <text x="440" y="97" font-size="14" class="sub fade-2" fill="#f6e2b0">MOUSE PATENT · 56 YEARS</text>
+
+  <!-- Tertiary italic -->
+  <text x="440" y="117" font-size="10.5" class="tert fade-3" fill="#e5b76a">ENGELBART · US 3,541,541 · 1970</text>
+
+  <!-- Roster -->
+  <text x="440" y="140" font-size="8" class="roster fade-4" fill="#7a8491">SRI · XEROX PARC · APPLE · WINDOWS · POINT</text>
+
+  <!-- Caption -->
+  <text x="440" y="168" font-size="11" class="caption cap fade-5" fill="#c9d2dc">One button, one dollar, one idea.</text>
+
+  <!-- Faint patent date stamp, top right corner -->
+  <g class="fade-6" transform="translate(690,30)">
+    <rect x="0" y="0" width="86" height="30" fill="none" stroke="#5fc3e0" stroke-opacity="0.45" stroke-width="0.6"/>
+    <text x="43" y="12" font-size="6" class="stamp" fill="#9fd9ea" text-anchor="middle" opacity="0.85">ISSUED</text>
+    <text x="43" y="22" font-size="7.5" class="stamp" fill="#9fd9ea" text-anchor="middle" opacity="0.9">17 NOV 1970</text>
+  </g>
+</svg>

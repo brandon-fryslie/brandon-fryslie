@@ -1,59 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Computer Mouse Patent — 56th Anniversary (November 17, 1970) -->
+<!-- theme: Day of Two Noons — 143rd Anniversary of Standard Railway Time (November 18, 1883) -->
 <!-- about:
-At 7:58 a.m. on 17 November 1970, US Patent 3,541,541 issued in the name of Douglas C. Engelbart for an "X-Y Position Indicator for a Display System." The application had been filed in 1967, three years after Engelbart and Bill English hand-carved the first prototype at SRI's Augmentation Research Center from a pine block the size of a bar of soap, with two steel wheels at right angles under the shell and a single red button on top. Engelbart demonstrated it publicly on 9 December 1968 in the ninety minutes now remembered as the Mother of All Demos, alongside hypertext, teleconferencing, and the outline editor. The device cost him a dollar in royalties. Fifty-six years later the pointer is the single interface metaphor every graphical operating system still runs on.
+At exactly noon on Sunday, 18 November 1883, telegraph operators at the Naval Observatory in Washington sent a single signal down the wires of every major US and Canadian railroad, and across the continent every station clock was reset. Towns east of a new meridian nudged their hands forward, towns west dragged them back — in some places noon happened twice, in some it was skipped entirely. The day was remembered as "The Day of Two Noons." Until that morning there had been roughly three hundred local solar times in the United States, each pegged to its own courthouse sundial; a traveller between Chicago and Pittsburgh crossed six of them. The railroads could not run a schedule on it, so they simply agreed on four bands — Eastern, Central, Mountain, Pacific — and the rest of the country followed. One hundred and forty-three years later, every NTP packet, every UTC timestamp, every cron job inherits the same decision.
 
-The scene is a drafting board at first light. On the left, the patent sketch of the original mouse — rectangular pine shell, cord exit at the heel, single red button — sits over faint blueprint-grid cyan paper, with the two orthogonal wheels dashed in behind. A pointer arrow traces an X-Y path across the grid and returns. On the right, a cream NOVEMBER 17, 2026 headline sits over a double cream-and-cyan bar, a cream MOUSE PATENT · 56 YEARS subhead, an italic amber ENGELBART · US 3,541,541 · 1970 tertiary, a dim SRI · XEROX PARC · APPLE · WINDOWS · POINT roster, and a Georgia-italic caption at the base reading: One button, one dollar, one idea.
+The scene is a frontier telegraph office at the moment of the signal. On the left, a brass-rimmed station clock holds twelve — the solid hands mark the new standard time while a pair of ghost hands drift behind them, the old local noon still fading out. Below the clock, a stylised US map carries four vertical dashed bands that pulse eastward to westward as the signal reaches each zone. Telegraph wires strung above spark dot-and-dash pips along their length. On the right, a cream NOVEMBER 18, 2026 headline sits over a double cream-and-brass bar, a cream DAY OF TWO NOONS · 143 YEARS subhead, an italic amber STANDARD RAILWAY TIME · 1883 tertiary, a dim EASTERN · CENTRAL · MOUNTAIN · PACIFIC roster, and a Georgia-italic caption at the base reading: When America first agreed what time it was.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for November 17, 2026 — 56th anniversary of Doug Engelbart's computer mouse patent (US 3,541,541, granted November 17, 1970). On the left, a patent-blueprint sketch of the original wooden-shell mouse with its single red button and cord sits on cyan grid paper, with two dashed orthogonal wheels behind it; a pointer arrow traces an X-Y path across the grid. On the right, a cream NOVEMBER 17, 2026 headline sits over a double cream-and-cyan bar, a cream MOUSE PATENT · 56 YEARS subhead, an italic amber ENGELBART · US 3,541,541 · 1970 tertiary, a dim SRI · XEROX PARC · APPLE · WINDOWS · POINT roster, and a Georgia-italic caption at the base reading: One button, one dollar, one idea.">
+     aria-label="Daily doodle for November 18, 2026 — 143rd anniversary of The Day of Two Noons, when US and Canadian railroads adopted Standard Railway Time on November 18, 1883. On the left, a brass-rimmed station clock holds twelve with solid hands for standard time and ghost hands drifting behind for the old local noon; below it a small US map carries four dashed time-zone bands that pulse eastward to westward. Telegraph wires strung above spark dot-and-dash pips. On the right, a cream NOVEMBER 18, 2026 headline sits over a double cream-and-brass bar, a cream DAY OF TWO NOONS · 143 YEARS subhead, an italic amber STANDARD RAILWAY TIME · 1883 tertiary, a dim EASTERN · CENTRAL · MOUNTAIN · PACIFIC roster, and a Georgia-italic caption at the base reading: When America first agreed what time it was.">
   <defs>
-    <!-- Dark drafting-board backdrop, warm plum to profile dark -->
+    <!-- Warm dark backdrop -->
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#121821"/>
+      <stop offset="0" stop-color="#141a24"/>
       <stop offset="1" stop-color="#0d1117"/>
     </linearGradient>
 
-    <!-- Blueprint paper: muted cyan paper patch behind the sketch -->
-    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#143a4a"/>
-      <stop offset="1" stop-color="#0e2a38"/>
+    <!-- Brass rim of the station clock -->
+    <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#f0c868"/>
+      <stop offset="0.5" stop-color="#d4a84a"/>
+      <stop offset="1"   stop-color="#8a6a28"/>
     </linearGradient>
 
-    <!-- Blueprint grid pattern -->
-    <pattern id="grid" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-      <path d="M 12 0 L 0 0 0 12" fill="none" stroke="#3fa8c8" stroke-width="0.4" stroke-opacity="0.35"/>
-    </pattern>
-    <pattern id="grid-major" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#5fc3e0" stroke-width="0.7" stroke-opacity="0.45"/>
-    </pattern>
-
-    <!-- Wooden shell tone (the patent was for a pine-block prototype) -->
-    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e8d4a8"/>
-      <stop offset="1" stop-color="#b89467"/>
-    </linearGradient>
-
-    <linearGradient id="shellSide" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#8a6a3f"/>
-      <stop offset="1" stop-color="#5c4624"/>
-    </linearGradient>
-
-    <!-- Red button -->
-    <radialGradient id="btn" cx="0.35" cy="0.35" r="0.75">
-      <stop offset="0" stop-color="#ff8a7a"/>
-      <stop offset="0.55" stop-color="#d33428"/>
-      <stop offset="1" stop-color="#6a1612"/>
+    <!-- Clock face (aged enamel) -->
+    <radialGradient id="face" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0"   stop-color="#f6ecd4"/>
+      <stop offset="0.75" stop-color="#e6d5a8"/>
+      <stop offset="1"   stop-color="#b89a60"/>
     </radialGradient>
 
-    <!-- Motion path for the pointer arrow — an X-Y "L" sweep: right, then down, then back -->
-    <path id="ptrPath" d="M 60 150 L 260 150 L 260 55 L 60 55 Z" fill="none"/>
+    <!-- Reusable short-dash tick -->
+    <g id="hour-tick"><rect x="-1.2" y="-58" width="2.4" height="8" fill="#2a1a0c"/></g>
+    <g id="min-tick"><rect x="-0.5" y="-58" width="1" height="4" fill="#5a4418"/></g>
 
-    <!-- Reusable pointer-arrow glyph (classic NW-pointing cursor) -->
-    <g id="ptr">
-      <path d="M 0 0 L 0 16 L 4.2 12.5 L 7.2 19.5 L 10.2 18.4 L 7.3 11.5 L 12.5 11 Z"
-            fill="#f6e2b0" stroke="#0d1117" stroke-width="1"/>
-    </g>
+    <!-- Telegraph pip -->
+    <circle id="pip" r="2.2" fill="#f6ecd4"/>
+
+    <!-- Motion paths for telegraph pips along the wires -->
+    <path id="wire1" d="M 20 22 L 420 22" fill="none"/>
+    <path id="wire2" d="M 20 32 L 420 32" fill="none"/>
   </defs>
 
   <style>
@@ -62,31 +46,36 @@ The scene is a drafting board at first light. On the left, the patent sketch of 
     .tert      { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 1.8px; font-style: italic; }
     .roster    { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2.6px; }
     .caption   { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+    .roman     { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; }
     .stamp     { font-family: 'Courier New', Courier, monospace; letter-spacing: 1px; }
 
-    /* Subtle paper float */
-    @keyframes paperFloat {
-      0%,100% { transform: translateY(0); }
-      50%     { transform: translateY(-1.2px); }
+    /* Solid (standard-time) hands rotate about the clock centre */
+    @keyframes handTick { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .hand-sec  { animation: handTick 13s steps(60, end) infinite; transform-origin: 140px 118px; transform-box: view-box; }
+    .hand-min  { animation: handTick 61s linear infinite;         transform-origin: 140px 118px; transform-box: view-box; }
+    .hand-hr   { animation: handTick 503s linear infinite;        transform-origin: 140px 118px; transform-box: view-box; }
+
+    /* Ghost hands (old local noon) drift behind, pulsing out of phase */
+    @keyframes ghostFade {
+      0%, 100% { opacity: 0.0; }
+      35%      { opacity: 0.55; }
+      65%      { opacity: 0.0; }
     }
-    .paper-group { animation: paperFloat 11s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    .ghost-min { animation: ghostFade 7s ease-in-out infinite;        transform-origin: 140px 118px; transform-box: view-box; }
+    .ghost-hr  { animation: ghostFade 7s ease-in-out 1.6s infinite;   transform-origin: 140px 118px; transform-box: view-box; }
 
-    /* Button push */
-    @keyframes btnPress {
-      0%, 86%, 100% { transform: translateY(0) scaleY(1); }
-      90%           { transform: translateY(1.2px) scaleY(0.88); }
-      93%           { transform: translateY(0.4px) scaleY(0.96); }
+    /* Zone bands pulse eastward->westward on an 11s cycle */
+    @keyframes bandPulse {
+      0%, 100% { opacity: 0.22; }
+      50%      { opacity: 0.80; }
     }
-    .btn-top { animation: btnPress 7s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    .zone-E { animation: bandPulse 11s ease-in-out  0.0s infinite; }
+    .zone-C { animation: bandPulse 11s ease-in-out  1.4s infinite; }
+    .zone-M { animation: bandPulse 11s ease-in-out  2.8s infinite; }
+    .zone-P { animation: bandPulse 11s ease-in-out  4.2s infinite; }
 
-    /* Dashed-grid construction wheels — slow spin opposite directions */
-    @keyframes spinCW  { from { transform: rotate(0); }   to { transform: rotate(360deg); } }
-    @keyframes spinCCW { from { transform: rotate(0); }   to { transform: rotate(-360deg); } }
-    .wheel-x { animation: spinCW  17s linear infinite; transform-origin: center; transform-box: fill-box; }
-    .wheel-y { animation: spinCCW 23s linear infinite; transform-origin: center; transform-box: fill-box; }
-
-    /* Headline soft pulse (base visible so static render shows text) */
-    @keyframes softPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.86; } }
+    /* Soft pulse for text */
+    @keyframes softPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.85; } }
     .fade-1 { animation: softPulse 13s ease-in-out infinite; }
     .fade-2 { animation: softPulse 13s ease-in-out 0.4s infinite; }
     .fade-3 { animation: softPulse 13s ease-in-out 0.8s infinite; }
@@ -94,136 +83,211 @@ The scene is a drafting board at first light. On the left, the patent sketch of 
     .fade-5 { animation: softPulse 13s ease-in-out 1.6s infinite; }
     .fade-6 { animation: softPulse 13s ease-in-out 2.0s infinite; }
 
-    /* Bar slide */
+    /* Bar slide (reveal from left) */
     @keyframes barDraw { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
     .bar { transform-origin: left center; transform-box: fill-box; animation: barDraw 1.4s cubic-bezier(.3,.9,.2,1) 0.4s both; }
 
-    /* Dimensioning tick fade */
-    @keyframes dimFade { 0%,100% { opacity: 0.55; } 50% { opacity: 0.9; } }
-    .dim { animation: dimFade 13s ease-in-out infinite; }
-
     /* Caption glimmer */
-    @keyframes capGlim { 0%,100% { opacity: 0.78; } 50% { opacity: 1; } }
+    @keyframes capGlim { 0%,100% { opacity: 0.80; } 50% { opacity: 1; } }
     .cap { animation: capGlim 13s ease-in-out infinite; }
+
+    /* Dial tick fade */
+    @keyframes dimFade { 0%,100% { opacity: 0.85; } 50% { opacity: 1; } }
+    .dim { animation: dimFade 13s ease-in-out infinite; }
   </style>
 
   <!-- Backdrop -->
   <rect width="800" height="200" fill="url(#bg)"/>
 
-  <!-- ============ LEFT: patent blueprint sketch ============ -->
-  <g class="paper-group">
-    <!-- Paper -->
-    <rect x="22" y="22" width="380" height="156" rx="4" fill="url(#paper)" stroke="#5fc3e0" stroke-opacity="0.55" stroke-width="0.8"/>
-    <!-- Grid overlay -->
-    <rect x="22" y="22" width="380" height="156" fill="url(#grid)"/>
-    <rect x="22" y="22" width="380" height="156" fill="url(#grid-major)"/>
-
-    <!-- Title block, corner of blueprint -->
-    <g transform="translate(28,30)">
-      <rect x="0" y="0" width="120" height="22" fill="#0e2a38" stroke="#5fc3e0" stroke-opacity="0.7" stroke-width="0.6"/>
-      <text x="6" y="9" font-size="5.5" class="stamp" fill="#9fd9ea">US PATENT 3,541,541</text>
-      <text x="6" y="16.5" font-size="5.5" class="stamp" fill="#9fd9ea">FILED 1967 · ISSUED 1970</text>
+  <!-- ============ TELEGRAPH WIRES (top) ============ -->
+  <g opacity="0.55">
+    <line x1="20" y1="22" x2="420" y2="22" stroke="#6a512a" stroke-width="0.6"/>
+    <line x1="20" y1="32" x2="420" y2="32" stroke="#6a512a" stroke-width="0.6"/>
+    <!-- poles -->
+    <g fill="none" stroke="#6a512a" stroke-width="0.8">
+      <line x1="40"  y1="12" x2="40"  y2="46"/>
+      <line x1="32"  y1="22" x2="48"  y2="22"/>
+      <line x1="170" y1="12" x2="170" y2="46"/>
+      <line x1="162" y1="22" x2="178" y2="22"/>
+      <line x1="300" y1="12" x2="300" y2="46"/>
+      <line x1="292" y1="22" x2="308" y2="22"/>
     </g>
-
-    <!-- Dashed wheels (X and Y, orthogonal, under shell) -->
-    <g class="dim" stroke="#5fc3e0" stroke-opacity="0.75" fill="none" stroke-dasharray="3 2.5">
-      <!-- Y wheel (horizontal axis visible from side, roughly vertical disk) -->
-      <g class="wheel-y" transform="translate(205,138)">
-        <ellipse cx="0" cy="0" rx="22" ry="7"/>
-        <line x1="-22" y1="0" x2="22" y2="0" stroke-dasharray="2 2"/>
-        <line x1="0" y1="-7" x2="0" y2="7" stroke-dasharray="2 2"/>
-      </g>
-      <!-- X wheel (orthogonal) -->
-      <g class="wheel-x" transform="translate(260,138)">
-        <ellipse cx="0" cy="0" rx="7" ry="22"/>
-        <line x1="-7" y1="0" x2="7" y2="0" stroke-dasharray="2 2"/>
-        <line x1="0" y1="-22" x2="0" y2="22" stroke-dasharray="2 2"/>
-      </g>
-    </g>
-
-    <!-- The mouse: rectangular pine shell, isometric three-quarter view -->
-    <g transform="translate(170,70)">
-      <!-- side face (shadow) -->
-      <path d="M 0 48 L 0 60 L 120 60 L 120 48 Z" fill="url(#shellSide)" stroke="#2a1a0c" stroke-width="0.7"/>
-      <!-- front face (shadow edge) -->
-      <path d="M 120 48 L 132 36 L 132 50 L 120 60 Z" fill="#6a4e26" stroke="#2a1a0c" stroke-width="0.7"/>
-      <!-- top face (the pine block) -->
-      <path d="M 0 48 L 12 36 L 132 36 L 120 48 Z" fill="url(#shell)" stroke="#2a1a0c" stroke-width="0.7"/>
-
-      <!-- wood grain (thin streaks) -->
-      <g stroke="#8a6a3f" stroke-opacity="0.55" fill="none">
-        <path d="M 14 40 Q 50 41 118 39"/>
-        <path d="M 16 44 Q 60 46 116 43"/>
-      </g>
-
-      <!-- button recess outline on top -->
-      <ellipse cx="34" cy="43" rx="10" ry="3" fill="#8a6a3f" fill-opacity="0.45"/>
-
-      <!-- the single red button -->
-      <g class="btn-top">
-        <ellipse cx="34" cy="42" rx="10" ry="3.2" fill="url(#btn)" stroke="#2a0a08" stroke-width="0.7"/>
-      </g>
-
-      <!-- cord exit at the heel -->
-      <path d="M 0 52 C -10 58, -22 50, -40 62 C -55 70, -70 60, -84 76"
-            fill="none" stroke="#b89467" stroke-width="2" stroke-linecap="round"/>
-      <path d="M 0 52 C -10 58, -22 50, -40 62 C -55 70, -70 60, -84 76"
-            fill="none" stroke="#5c4624" stroke-width="0.8" stroke-linecap="round"/>
-
-      <!-- dimensioning ticks (blueprint vibe) -->
-      <g class="dim" stroke="#5fc3e0" stroke-opacity="0.75" stroke-width="0.6" fill="#9fd9ea">
-        <line x1="12" y1="30" x2="132" y2="30"/>
-        <line x1="12" y1="27" x2="12" y2="33"/>
-        <line x1="132" y1="27" x2="132" y2="33"/>
-        <text x="60" y="27" font-size="6" class="stamp">X-Y INDICATOR</text>
-      </g>
-    </g>
-
-    <!-- Pointer arrow tracing an X-Y path (SMIL) -->
-    <g>
-      <use href="#ptr">
-        <animateMotion dur="11s" repeatCount="indefinite" rotate="0"
-                       keyPoints="0;0.25;0.5;0.75;1"
-                       keyTimes="0;0.25;0.5;0.75;1"
-                       calcMode="linear">
-          <mpath href="#ptrPath"/>
-        </animateMotion>
-      </use>
-    </g>
-
-    <!-- Drafting label pinned to paper -->
-    <text x="28" y="172" font-size="7" class="stamp" fill="#9fd9ea" opacity="0.8">FIG. 1 — X-Y POSITION INDICATOR FOR A DISPLAY SYSTEM</text>
   </g>
 
-  <!-- ============ RIGHT: text column ============ -->
+  <!-- dot-and-dash pips travelling the wires -->
+  <g>
+    <use href="#pip">
+      <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#wire1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pip">
+      <animateMotion dur="7s" begin="1.2s" repeatCount="indefinite"><mpath href="#wire1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+    </use>
+    <use href="#pip" opacity="0.7">
+      <animateMotion dur="11s" begin="0.6s" repeatCount="indefinite"><mpath href="#wire2"/></animateMotion>
+      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="0.6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ============ LEFT: STATION CLOCK ============ -->
+  <!-- Outer brass rim -->
+  <circle cx="140" cy="118" r="62" fill="url(#brass)" stroke="#2a1a0c" stroke-width="1.2"/>
+  <!-- Inner shadow ring -->
+  <circle cx="140" cy="118" r="55" fill="#2a1a0c" opacity="0.6"/>
+  <!-- Enamel face -->
+  <circle cx="140" cy="118" r="52" fill="url(#face)" stroke="#8a6a28" stroke-width="0.6"/>
+
+  <!-- Tick marks -->
+  <g transform="translate(140 118)" class="dim">
+    <!-- 60 minute ticks -->
+    <g>
+      <use href="#min-tick" transform="rotate(0)"/>   <use href="#min-tick" transform="rotate(6)"/>
+      <use href="#min-tick" transform="rotate(12)"/>  <use href="#min-tick" transform="rotate(18)"/>
+      <use href="#min-tick" transform="rotate(24)"/>  <use href="#min-tick" transform="rotate(36)"/>
+      <use href="#min-tick" transform="rotate(42)"/>  <use href="#min-tick" transform="rotate(48)"/>
+      <use href="#min-tick" transform="rotate(54)"/>  <use href="#min-tick" transform="rotate(66)"/>
+      <use href="#min-tick" transform="rotate(72)"/>  <use href="#min-tick" transform="rotate(78)"/>
+      <use href="#min-tick" transform="rotate(84)"/>  <use href="#min-tick" transform="rotate(96)"/>
+      <use href="#min-tick" transform="rotate(102)"/> <use href="#min-tick" transform="rotate(108)"/>
+      <use href="#min-tick" transform="rotate(114)"/> <use href="#min-tick" transform="rotate(126)"/>
+      <use href="#min-tick" transform="rotate(132)"/> <use href="#min-tick" transform="rotate(138)"/>
+      <use href="#min-tick" transform="rotate(144)"/> <use href="#min-tick" transform="rotate(156)"/>
+      <use href="#min-tick" transform="rotate(162)"/> <use href="#min-tick" transform="rotate(168)"/>
+      <use href="#min-tick" transform="rotate(174)"/> <use href="#min-tick" transform="rotate(186)"/>
+      <use href="#min-tick" transform="rotate(192)"/> <use href="#min-tick" transform="rotate(198)"/>
+      <use href="#min-tick" transform="rotate(204)"/> <use href="#min-tick" transform="rotate(216)"/>
+      <use href="#min-tick" transform="rotate(222)"/> <use href="#min-tick" transform="rotate(228)"/>
+      <use href="#min-tick" transform="rotate(234)"/> <use href="#min-tick" transform="rotate(246)"/>
+      <use href="#min-tick" transform="rotate(252)"/> <use href="#min-tick" transform="rotate(258)"/>
+      <use href="#min-tick" transform="rotate(264)"/> <use href="#min-tick" transform="rotate(276)"/>
+      <use href="#min-tick" transform="rotate(282)"/> <use href="#min-tick" transform="rotate(288)"/>
+      <use href="#min-tick" transform="rotate(294)"/> <use href="#min-tick" transform="rotate(306)"/>
+      <use href="#min-tick" transform="rotate(312)"/> <use href="#min-tick" transform="rotate(318)"/>
+      <use href="#min-tick" transform="rotate(324)"/> <use href="#min-tick" transform="rotate(336)"/>
+      <use href="#min-tick" transform="rotate(342)"/> <use href="#min-tick" transform="rotate(348)"/>
+      <use href="#min-tick" transform="rotate(354)"/>
+    </g>
+    <!-- 12 hour ticks -->
+    <g>
+      <use href="#hour-tick" transform="rotate(0)"/>
+      <use href="#hour-tick" transform="rotate(30)"/>
+      <use href="#hour-tick" transform="rotate(60)"/>
+      <use href="#hour-tick" transform="rotate(90)"/>
+      <use href="#hour-tick" transform="rotate(120)"/>
+      <use href="#hour-tick" transform="rotate(150)"/>
+      <use href="#hour-tick" transform="rotate(180)"/>
+      <use href="#hour-tick" transform="rotate(210)"/>
+      <use href="#hour-tick" transform="rotate(240)"/>
+      <use href="#hour-tick" transform="rotate(270)"/>
+      <use href="#hour-tick" transform="rotate(300)"/>
+      <use href="#hour-tick" transform="rotate(330)"/>
+    </g>
+  </g>
+
+  <!-- Roman numerals XII, III, VI, IX -->
+  <g fill="#2a1a0c" text-anchor="middle">
+    <text class="roman" x="140" y="76"  font-size="12">XII</text>
+    <text class="roman" x="180" y="122" font-size="12">III</text>
+    <text class="roman" x="140" y="166" font-size="12">VI</text>
+    <text class="roman" x="100" y="122" font-size="12">IX</text>
+  </g>
+
+  <!-- Maker's mark -->
+  <text x="140" y="138" text-anchor="middle" font-size="5.5" class="stamp" fill="#6a512a" opacity="0.85">NAVAL OBS · 1883</text>
+
+  <!-- Ghost hands (old local noon) - behind the solid hands -->
+  <g>
+    <!-- ghost hour hand (pointing to ~11:42 position) -->
+    <g class="ghost-hr">
+      <rect x="138" y="80" width="4" height="40" fill="#8a6a28" transform="rotate(-9 140 118)"/>
+    </g>
+    <!-- ghost minute hand -->
+    <g class="ghost-min">
+      <rect x="139.3" y="62" width="1.4" height="58" fill="#8a6a28" transform="rotate(-18 140 118)"/>
+    </g>
+  </g>
+
+  <!-- Solid standard-time hands pointing exactly at 12:00:00 at t=0, then ticking -->
+  <g>
+    <!-- hour hand -->
+    <g class="hand-hr">
+      <rect x="138" y="80" width="4" height="40" fill="#1a1008" rx="1"/>
+    </g>
+    <!-- minute hand -->
+    <g class="hand-min">
+      <rect x="139.3" y="62" width="1.4" height="58" fill="#1a1008"/>
+    </g>
+    <!-- second hand (red) -->
+    <g class="hand-sec">
+      <rect x="139.7" y="66" width="0.6" height="54" fill="#c23a2a"/>
+      <circle cx="140" cy="132" r="4" fill="#c23a2a"/>
+    </g>
+  </g>
+
+  <!-- Centre boss -->
+  <circle cx="140" cy="118" r="3.2" fill="#1a1008" stroke="#f0c868" stroke-width="0.6"/>
+
+  <!-- Clock caption below -->
+  <text x="140" y="196" text-anchor="middle" font-size="7" class="stamp" fill="#9fd9ea" opacity="0.85">12:00 NOON · STANDARD</text>
+
+  <!-- ============ TIME-ZONE BAND STRIP (right of clock, left of text) ============ -->
+  <g transform="translate(220 72)">
+    <!-- outline strip -->
+    <rect x="0" y="0" width="190" height="88" rx="3" fill="#1a2230" stroke="#3a4a60" stroke-width="0.6"/>
+    <!-- four vertical bands (E,C,M,P) -->
+    <rect class="zone-E" x="6"   y="6" width="42" height="76" fill="#d4a84a"/>
+    <rect class="zone-C" x="52"  y="6" width="42" height="76" fill="#e5b76a"/>
+    <rect class="zone-M" x="98"  y="6" width="42" height="76" fill="#b89467"/>
+    <rect class="zone-P" x="144" y="6" width="40" height="76" fill="#5fc3e0"/>
+
+    <!-- zone initials -->
+    <g text-anchor="middle" fill="#0d1117" font-size="18" class="roman" font-weight="800">
+      <text x="27"  y="52">E</text>
+      <text x="73"  y="52">C</text>
+      <text x="119" y="52">M</text>
+      <text x="164" y="52">P</text>
+    </g>
+    <!-- +offset labels under each -->
+    <g text-anchor="middle" fill="#0d1117" font-size="6" class="stamp" opacity="0.8">
+      <text x="27"  y="72">UTC−5</text>
+      <text x="73"  y="72">UTC−6</text>
+      <text x="119" y="72">UTC−7</text>
+      <text x="164" y="72">UTC−8</text>
+    </g>
+    <!-- label header -->
+    <text x="95" y="-4" text-anchor="middle" font-size="7" class="stamp" fill="#9fd9ea">FOUR BANDS · NOV 18, 1883</text>
+  </g>
+
+  <!-- ============ RIGHT TEXT COLUMN ============ -->
   <!-- vertical separator -->
   <line x1="420" y1="30" x2="420" y2="170" stroke="#2d3748" stroke-width="0.6" opacity="0.5"/>
 
   <!-- Headline: today's date -->
-  <text x="440" y="60" font-size="26" class="headline fade-1" fill="#f6e2b0">NOVEMBER 17, 2026</text>
+  <text x="440" y="60" font-size="26" class="headline fade-1" fill="#f6ecd4">NOVEMBER 18, 2026</text>
 
-  <!-- Double bar beneath headline: cream + cyan (paper + blueprint) -->
+  <!-- Double bar beneath headline: cream + brass -->
   <g transform="translate(440,70)">
-    <rect class="bar" x="0" y="0" width="300" height="3" fill="#f6e2b0"/>
-    <rect class="bar" x="0" y="5" width="220" height="2" fill="#5fc3e0"/>
+    <rect class="bar" x="0" y="0" width="300" height="3" fill="#f6ecd4"/>
+    <rect class="bar" x="0" y="5" width="220" height="2" fill="#d4a84a"/>
   </g>
 
   <!-- Subhead -->
-  <text x="440" y="97" font-size="14" class="sub fade-2" fill="#f6e2b0">MOUSE PATENT · 56 YEARS</text>
+  <text x="440" y="97" font-size="14" class="sub fade-2" fill="#f6ecd4">DAY OF TWO NOONS · 143 YEARS</text>
 
   <!-- Tertiary italic -->
-  <text x="440" y="117" font-size="10.5" class="tert fade-3" fill="#e5b76a">ENGELBART · US 3,541,541 · 1970</text>
+  <text x="440" y="117" font-size="10.5" class="tert fade-3" fill="#e5b76a">STANDARD RAILWAY TIME · 1883</text>
 
   <!-- Roster -->
-  <text x="440" y="140" font-size="8" class="roster fade-4" fill="#7a8491">SRI · XEROX PARC · APPLE · WINDOWS · POINT</text>
+  <text x="440" y="140" font-size="8" class="roster fade-4" fill="#7a8491">EASTERN · CENTRAL · MOUNTAIN · PACIFIC</text>
 
   <!-- Caption -->
-  <text x="440" y="168" font-size="11" class="caption cap fade-5" fill="#c9d2dc">One button, one dollar, one idea.</text>
+  <text x="440" y="168" font-size="11" class="caption cap fade-5" fill="#c9d2dc">When America first agreed what time it was.</text>
 
-  <!-- Faint patent date stamp, top right corner -->
+  <!-- Faint station-master stamp, top right corner -->
   <g class="fade-6" transform="translate(690,30)">
-    <rect x="0" y="0" width="86" height="30" fill="none" stroke="#5fc3e0" stroke-opacity="0.45" stroke-width="0.6"/>
-    <text x="43" y="12" font-size="6" class="stamp" fill="#9fd9ea" text-anchor="middle" opacity="0.85">ISSUED</text>
-    <text x="43" y="22" font-size="7.5" class="stamp" fill="#9fd9ea" text-anchor="middle" opacity="0.9">17 NOV 1970</text>
+    <rect x="0" y="0" width="86" height="30" fill="none" stroke="#d4a84a" stroke-opacity="0.45" stroke-width="0.6"/>
+    <text x="43" y="12" font-size="6" class="stamp" fill="#e5b76a" text-anchor="middle" opacity="0.85">ADOPTED</text>
+    <text x="43" y="22" font-size="7.5" class="stamp" fill="#e5b76a" text-anchor="middle" opacity="0.9">18 NOV 1883</text>
   </g>
 </svg>
