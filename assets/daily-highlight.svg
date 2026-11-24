@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- theme: Day of Two Noons — 143rd Anniversary of Standard Railway Time (November 18, 1883) -->
+<!-- theme: On the Origin of Species — 167th Anniversary (November 24, 1859) -->
 <!-- about:
-At exactly noon on Sunday, 18 November 1883, telegraph operators at the Naval Observatory in Washington sent a single signal down the wires of every major US and Canadian railroad, and across the continent every station clock was reset. Towns east of a new meridian nudged their hands forward, towns west dragged them back — in some places noon happened twice, in some it was skipped entirely. The day was remembered as "The Day of Two Noons." Until that morning there had been roughly three hundred local solar times in the United States, each pegged to its own courthouse sundial; a traveller between Chicago and Pittsburgh crossed six of them. The railroads could not run a schedule on it, so they simply agreed on four bands — Eastern, Central, Mountain, Pacific — and the rest of the country followed. One hundred and forty-three years later, every NTP packet, every UTC timestamp, every cron job inherits the same decision.
+At nine in the morning on Thursday, 24 November 1859, John Murray of Albemarle Street in London released 1,250 copies of a 490-page green-cloth octavo titled On the Origin of Species by Means of Natural Selection. Every copy sold the same day. Charles Darwin, then fifty, was convalescing at a water-cure in Yorkshire and did not attend. The idea the book carried — that every living thing on earth descended from a single or a few common ancestors, and that the slow filter of differential survival did the sorting — had sat in his drawer for twenty-one years, since he first sketched a stubby branching tree in his B notebook above the words "I think." The 1859 edition contained one and only one diagram: a tree. One hundred and sixty-seven years later every phylogeny, every clade, every molecular dendrogram descends from that drawing.
 
-The scene is a frontier telegraph office at the moment of the signal. On the left, a brass-rimmed station clock holds twelve — the solid hands mark the new standard time while a pair of ghost hands drift behind them, the old local noon still fading out. Below the clock, a stylised US map carries four vertical dashed bands that pulse eastward to westward as the signal reaches each zone. Telegraph wires strung above spark dot-and-dash pips along their length. On the right, a cream NOVEMBER 18, 2026 headline sits over a double cream-and-brass bar, a cream DAY OF TWO NOONS · 143 YEARS subhead, an italic amber STANDARD RAILWAY TIME · 1883 tertiary, a dim EASTERN · CENTRAL · MOUNTAIN · PACIFIC roster, and a Georgia-italic caption at the base reading: When America first agreed what time it was.
+The scene is Darwin's aged-paper notebook under warm lamplight. On the left, a sepia-ink tree branches outward from a common root, four finches with different beak silhouettes perch at its tips, and the words "I think" sit in a handwritten hand at the top with an arrow curling down to the root. On the right, a cream NOVEMBER 24, 2026 headline sits over a double cream-and-sepia bar, a cream ORIGIN OF SPECIES · 167 YEARS subhead, an italic amber CHARLES DARWIN · LONDON · 1859 tertiary, a dim BEAGLE · GALÁPAGOS · FINCHES · SELECTION · DESCENT roster, and a Georgia-italic caption at the base reading: By so simple a beginning.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img"
-     aria-label="Daily doodle for November 18, 2026 — 143rd anniversary of The Day of Two Noons, when US and Canadian railroads adopted Standard Railway Time on November 18, 1883. On the left, a brass-rimmed station clock holds twelve with solid hands for standard time and ghost hands drifting behind for the old local noon; below it a small US map carries four dashed time-zone bands that pulse eastward to westward. Telegraph wires strung above spark dot-and-dash pips. On the right, a cream NOVEMBER 18, 2026 headline sits over a double cream-and-brass bar, a cream DAY OF TWO NOONS · 143 YEARS subhead, an italic amber STANDARD RAILWAY TIME · 1883 tertiary, a dim EASTERN · CENTRAL · MOUNTAIN · PACIFIC roster, and a Georgia-italic caption at the base reading: When America first agreed what time it was.">
+     aria-label="Daily doodle for November 24, 2026 — 167th anniversary of the publication of Charles Darwin's On the Origin of Species on November 24, 1859. On the left, a sepia-ink phylogenetic tree branches outward from a common root on aged notebook paper, four finches with different beak silhouettes perched at the branch tips, and the words 'I think' written in a handwritten hand above the trunk with an arrow curling to the root. On the right, a cream NOVEMBER 24, 2026 headline sits over a double cream-and-sepia bar, a cream ORIGIN OF SPECIES · 167 YEARS subhead, an italic amber CHARLES DARWIN · LONDON · 1859 tertiary, a dim BEAGLE · GALÁPAGOS · FINCHES · SELECTION · DESCENT roster, and a Georgia-italic caption at the base reading: By so simple a beginning.">
   <defs>
     <!-- Warm dark backdrop -->
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
@@ -14,30 +14,41 @@ The scene is a frontier telegraph office at the moment of the signal. On the lef
       <stop offset="1" stop-color="#0d1117"/>
     </linearGradient>
 
-    <!-- Brass rim of the station clock -->
-    <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"   stop-color="#f0c868"/>
-      <stop offset="0.5" stop-color="#d4a84a"/>
-      <stop offset="1"   stop-color="#8a6a28"/>
-    </linearGradient>
-
-    <!-- Clock face (aged enamel) -->
-    <radialGradient id="face" cx="0.5" cy="0.4" r="0.7">
-      <stop offset="0"   stop-color="#f6ecd4"/>
-      <stop offset="0.75" stop-color="#e6d5a8"/>
-      <stop offset="1"   stop-color="#b89a60"/>
+    <!-- Aged notebook paper -->
+    <radialGradient id="paper" cx="0.4" cy="0.45" r="0.75">
+      <stop offset="0"    stop-color="#f3e6c6"/>
+      <stop offset="0.6"  stop-color="#e7d5a8"/>
+      <stop offset="1"    stop-color="#9b7e46"/>
     </radialGradient>
 
-    <!-- Reusable short-dash tick -->
-    <g id="hour-tick"><rect x="-1.2" y="-58" width="2.4" height="8" fill="#2a1a0c"/></g>
-    <g id="min-tick"><rect x="-0.5" y="-58" width="1" height="4" fill="#5a4418"/></g>
+    <!-- Paper edge shadow -->
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.35"/>
+      <stop offset="0.1" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.9" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.45"/>
+    </linearGradient>
 
-    <!-- Telegraph pip -->
-    <circle id="pip" r="2.2" fill="#f6ecd4"/>
+    <!-- Lamp highlight -->
+    <radialGradient id="lamp" cx="0.35" cy="0.3" r="0.6">
+      <stop offset="0"   stop-color="#fff2c4" stop-opacity="0.35"/>
+      <stop offset="1"   stop-color="#fff2c4" stop-opacity="0"/>
+    </radialGradient>
 
-    <!-- Motion paths for telegraph pips along the wires -->
-    <path id="wire1" d="M 20 22 L 420 22" fill="none"/>
-    <path id="wire2" d="M 20 32 L 420 32" fill="none"/>
+    <!-- Finch silhouette -->
+    <g id="finch">
+      <ellipse cx="0" cy="0" rx="4.6" ry="3" fill="#2a1a0c"/>
+      <circle cx="3.6" cy="-1.8" r="2.4" fill="#2a1a0c"/>
+      <path d="M -4.2 0 L -8 -1 L -7.6 0.8 Z" fill="#2a1a0c"/>
+      <line x1="-0.6" y1="2.8" x2="-0.6" y2="4.6" stroke="#2a1a0c" stroke-width="0.7"/>
+      <line x1="1.4"  y1="2.8" x2="1.4"  y2="4.6" stroke="#2a1a0c" stroke-width="0.7"/>
+    </g>
+
+    <!-- Four distinct beak shapes -->
+    <g id="beakStout">  <path d="M 5.4 -1.8 L 9 -1.4 L 5.4 -0.2 Z" fill="#2a1a0c"/></g>
+    <g id="beakSlender"><path d="M 5.4 -1.8 L 11 -2.0 L 5.4 -0.9 Z" fill="#2a1a0c"/></g>
+    <g id="beakSharp">  <path d="M 5.4 -1.8 L 8.2 -2.8 L 5.4 -0.7 Z" fill="#2a1a0c"/></g>
+    <g id="beakHook">   <path d="M 5.4 -1.8 L 8.6 -2.0 Q 9.0 -1.2 7.4 -0.4 L 5.4 -0.8 Z" fill="#2a1a0c"/></g>
   </defs>
 
   <style>
@@ -46,35 +57,31 @@ The scene is a frontier telegraph office at the moment of the signal. On the lef
     .tert      { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 1.8px; font-style: italic; }
     .roster    { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2.6px; }
     .caption   { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
-    .roman     { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; }
+    .hand      { font-family: 'Bradley Hand', 'Snell Roundhand', 'Segoe Script', Georgia, cursive; font-style: italic; font-weight: 700; }
     .stamp     { font-family: 'Courier New', Courier, monospace; letter-spacing: 1px; }
 
-    /* Solid (standard-time) hands rotate about the clock centre */
-    @keyframes handTick { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    .hand-sec  { animation: handTick 13s steps(60, end) infinite; transform-origin: 140px 118px; transform-box: view-box; }
-    .hand-min  { animation: handTick 61s linear infinite;         transform-origin: 140px 118px; transform-box: view-box; }
-    .hand-hr   { animation: handTick 503s linear infinite;        transform-origin: 140px 118px; transform-box: view-box; }
+    /* Ink deepening pulse on the tree — subtle life, no reveal trick */
+    @keyframes inkPulse { 0%,100% { opacity: 0.92; } 50% { opacity: 1; } }
+    .branch { stroke: #3a240e; stroke-linecap: round; fill: none; animation: inkPulse 13s ease-in-out infinite; }
 
-    /* Ghost hands (old local noon) drift behind, pulsing out of phase */
-    @keyframes ghostFade {
-      0%, 100% { opacity: 0.0; }
-      35%      { opacity: 0.55; }
-      65%      { opacity: 0.0; }
-    }
-    .ghost-min { animation: ghostFade 7s ease-in-out infinite;        transform-origin: 140px 118px; transform-box: view-box; }
-    .ghost-hr  { animation: ghostFade 7s ease-in-out 1.6s infinite;   transform-origin: 140px 118px; transform-box: view-box; }
+    /* Finch perch-in (brief) then gentle sway */
+    @keyframes perchIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+    .finchIn1 { animation: perchIn 0.9s ease-out 0.4s both; }
+    .finchIn2 { animation: perchIn 0.9s ease-out 0.8s both; }
+    .finchIn3 { animation: perchIn 0.9s ease-out 1.2s both; }
+    .finchIn4 { animation: perchIn 0.9s ease-out 1.6s both; }
 
-    /* Zone bands pulse eastward->westward on an 11s cycle */
-    @keyframes bandPulse {
-      0%, 100% { opacity: 0.22; }
-      50%      { opacity: 0.80; }
-    }
-    .zone-E { animation: bandPulse 11s ease-in-out  0.0s infinite; }
-    .zone-C { animation: bandPulse 11s ease-in-out  1.4s infinite; }
-    .zone-M { animation: bandPulse 11s ease-in-out  2.8s infinite; }
-    .zone-P { animation: bandPulse 11s ease-in-out  4.2s infinite; }
+    @keyframes sway { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-0.8px); } }
+    .sway1 { animation: sway 7s  ease-in-out 2.0s infinite; transform-box: fill-box; }
+    .sway2 { animation: sway 11s ease-in-out 2.4s infinite; transform-box: fill-box; }
+    .sway3 { animation: sway 13s ease-in-out 2.8s infinite; transform-box: fill-box; }
+    .sway4 { animation: sway 7s  ease-in-out 3.2s infinite; transform-box: fill-box; }
 
-    /* Soft pulse for text */
+    /* "I think" subtle ink pulse */
+    @keyframes handPulse { 0%,100% { opacity: 0.88; } 50% { opacity: 1; } }
+    .ithink { animation: handPulse 11s ease-in-out infinite; }
+
+    /* Text pulses */
     @keyframes softPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.85; } }
     .fade-1 { animation: softPulse 13s ease-in-out infinite; }
     .fade-2 { animation: softPulse 13s ease-in-out 0.4s infinite; }
@@ -83,7 +90,7 @@ The scene is a frontier telegraph office at the moment of the signal. On the lef
     .fade-5 { animation: softPulse 13s ease-in-out 1.6s infinite; }
     .fade-6 { animation: softPulse 13s ease-in-out 2.0s infinite; }
 
-    /* Bar slide (reveal from left) */
+    /* Bar slide */
     @keyframes barDraw { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
     .bar { transform-origin: left center; transform-box: fill-box; animation: barDraw 1.4s cubic-bezier(.3,.9,.2,1) 0.4s both; }
 
@@ -91,203 +98,149 @@ The scene is a frontier telegraph office at the moment of the signal. On the lef
     @keyframes capGlim { 0%,100% { opacity: 0.80; } 50% { opacity: 1; } }
     .cap { animation: capGlim 13s ease-in-out infinite; }
 
-    /* Dial tick fade */
-    @keyframes dimFade { 0%,100% { opacity: 0.85; } 50% { opacity: 1; } }
-    .dim { animation: dimFade 13s ease-in-out infinite; }
+    /* Floating ink motes drifting upward */
+    @keyframes drift {
+      0%   { transform: translate(0,0);   opacity: 0; }
+      20%  { opacity: 0.6; }
+      100% { transform: translate(10px,-24px); opacity: 0; }
+    }
+    .mote { fill: #7a5530; }
+    .m1 { animation: drift 11s ease-in-out infinite; transform-box: fill-box; }
+    .m2 { animation: drift 13s ease-in-out 2s infinite; transform-box: fill-box; }
+    .m3 { animation: drift 7s  ease-in-out 4s infinite; transform-box: fill-box; }
+
+    /* Lamp glow pulse */
+    @keyframes lampPulse { 0%,100% { opacity: 0.85; } 50% { opacity: 1; } }
+    .lamp { animation: lampPulse 11s ease-in-out infinite; }
   </style>
 
   <!-- Backdrop -->
   <rect width="800" height="200" fill="url(#bg)"/>
 
-  <!-- ============ TELEGRAPH WIRES (top) ============ -->
-  <g opacity="0.55">
-    <line x1="20" y1="22" x2="420" y2="22" stroke="#6a512a" stroke-width="0.6"/>
-    <line x1="20" y1="32" x2="420" y2="32" stroke="#6a512a" stroke-width="0.6"/>
-    <!-- poles -->
-    <g fill="none" stroke="#6a512a" stroke-width="0.8">
-      <line x1="40"  y1="12" x2="40"  y2="46"/>
-      <line x1="32"  y1="22" x2="48"  y2="22"/>
-      <line x1="170" y1="12" x2="170" y2="46"/>
-      <line x1="162" y1="22" x2="178" y2="22"/>
-      <line x1="300" y1="12" x2="300" y2="46"/>
-      <line x1="292" y1="22" x2="308" y2="22"/>
-    </g>
-  </g>
-
-  <!-- dot-and-dash pips travelling the wires -->
+  <!-- ============ LEFT: NOTEBOOK PAGE ============ -->
   <g>
-    <use href="#pip">
-      <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#wire1"/></animateMotion>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="7s" repeatCount="indefinite"/>
-    </use>
-    <use href="#pip">
-      <animateMotion dur="7s" begin="1.2s" repeatCount="indefinite"><mpath href="#wire1"/></animateMotion>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-    </use>
-    <use href="#pip" opacity="0.7">
-      <animateMotion dur="11s" begin="0.6s" repeatCount="indefinite"><mpath href="#wire2"/></animateMotion>
-      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.05;0.95;1" dur="11s" begin="0.6s" repeatCount="indefinite"/>
-    </use>
+    <rect x="18" y="18" width="378" height="164" rx="3" fill="url(#paper)"/>
+    <rect x="18" y="18" width="378" height="164" rx="3" fill="url(#edge)" opacity="0.55"/>
+    <rect x="18" y="18" width="378" height="164" rx="3" fill="url(#lamp)" class="lamp"/>
+    <g stroke="#9b7e46" stroke-width="0.25" opacity="0.35">
+      <line x1="30" y1="50"  x2="384" y2="50"/>
+      <line x1="30" y1="70"  x2="384" y2="70"/>
+      <line x1="30" y1="90"  x2="384" y2="90"/>
+      <line x1="30" y1="110" x2="384" y2="110"/>
+      <line x1="30" y1="130" x2="384" y2="130"/>
+      <line x1="30" y1="150" x2="384" y2="150"/>
+      <line x1="30" y1="170" x2="384" y2="170"/>
+    </g>
+    <text x="376" y="30" text-anchor="end" font-size="5.5" class="stamp" fill="#6a4a1e" opacity="0.7">NOTEBOOK B · p. 36 · 1837</text>
   </g>
 
-  <!-- ============ LEFT: STATION CLOCK ============ -->
-  <!-- Outer brass rim -->
-  <circle cx="140" cy="118" r="62" fill="url(#brass)" stroke="#2a1a0c" stroke-width="1.2"/>
-  <!-- Inner shadow ring -->
-  <circle cx="140" cy="118" r="55" fill="#2a1a0c" opacity="0.6"/>
-  <!-- Enamel face -->
-  <circle cx="140" cy="118" r="52" fill="url(#face)" stroke="#8a6a28" stroke-width="0.6"/>
+  <!-- "I think" — handwritten text + arrow -->
+  <g class="ithink">
+    <text x="42" y="54" font-size="19" class="hand" fill="#2a1a0c">I think</text>
+    <!-- curling arrow down to the trunk -->
+    <path d="M 70 62 Q 88 72 96 84" stroke="#2a1a0c" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M 96 84 L 91 82 M 96 84 L 93 79" stroke="#2a1a0c" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  </g>
 
-  <!-- Tick marks -->
-  <g transform="translate(140 118)" class="dim">
-    <!-- 60 minute ticks -->
-    <g>
-      <use href="#min-tick" transform="rotate(0)"/>   <use href="#min-tick" transform="rotate(6)"/>
-      <use href="#min-tick" transform="rotate(12)"/>  <use href="#min-tick" transform="rotate(18)"/>
-      <use href="#min-tick" transform="rotate(24)"/>  <use href="#min-tick" transform="rotate(36)"/>
-      <use href="#min-tick" transform="rotate(42)"/>  <use href="#min-tick" transform="rotate(48)"/>
-      <use href="#min-tick" transform="rotate(54)"/>  <use href="#min-tick" transform="rotate(66)"/>
-      <use href="#min-tick" transform="rotate(72)"/>  <use href="#min-tick" transform="rotate(78)"/>
-      <use href="#min-tick" transform="rotate(84)"/>  <use href="#min-tick" transform="rotate(96)"/>
-      <use href="#min-tick" transform="rotate(102)"/> <use href="#min-tick" transform="rotate(108)"/>
-      <use href="#min-tick" transform="rotate(114)"/> <use href="#min-tick" transform="rotate(126)"/>
-      <use href="#min-tick" transform="rotate(132)"/> <use href="#min-tick" transform="rotate(138)"/>
-      <use href="#min-tick" transform="rotate(144)"/> <use href="#min-tick" transform="rotate(156)"/>
-      <use href="#min-tick" transform="rotate(162)"/> <use href="#min-tick" transform="rotate(168)"/>
-      <use href="#min-tick" transform="rotate(174)"/> <use href="#min-tick" transform="rotate(186)"/>
-      <use href="#min-tick" transform="rotate(192)"/> <use href="#min-tick" transform="rotate(198)"/>
-      <use href="#min-tick" transform="rotate(204)"/> <use href="#min-tick" transform="rotate(216)"/>
-      <use href="#min-tick" transform="rotate(222)"/> <use href="#min-tick" transform="rotate(228)"/>
-      <use href="#min-tick" transform="rotate(234)"/> <use href="#min-tick" transform="rotate(246)"/>
-      <use href="#min-tick" transform="rotate(252)"/> <use href="#min-tick" transform="rotate(258)"/>
-      <use href="#min-tick" transform="rotate(264)"/> <use href="#min-tick" transform="rotate(276)"/>
-      <use href="#min-tick" transform="rotate(282)"/> <use href="#min-tick" transform="rotate(288)"/>
-      <use href="#min-tick" transform="rotate(294)"/> <use href="#min-tick" transform="rotate(306)"/>
-      <use href="#min-tick" transform="rotate(312)"/> <use href="#min-tick" transform="rotate(318)"/>
-      <use href="#min-tick" transform="rotate(324)"/> <use href="#min-tick" transform="rotate(336)"/>
-      <use href="#min-tick" transform="rotate(342)"/> <use href="#min-tick" transform="rotate(348)"/>
-      <use href="#min-tick" transform="rotate(354)"/>
-    </g>
-    <!-- 12 hour ticks -->
-    <g>
-      <use href="#hour-tick" transform="rotate(0)"/>
-      <use href="#hour-tick" transform="rotate(30)"/>
-      <use href="#hour-tick" transform="rotate(60)"/>
-      <use href="#hour-tick" transform="rotate(90)"/>
-      <use href="#hour-tick" transform="rotate(120)"/>
-      <use href="#hour-tick" transform="rotate(150)"/>
-      <use href="#hour-tick" transform="rotate(180)"/>
-      <use href="#hour-tick" transform="rotate(210)"/>
-      <use href="#hour-tick" transform="rotate(240)"/>
-      <use href="#hour-tick" transform="rotate(270)"/>
-      <use href="#hour-tick" transform="rotate(300)"/>
-      <use href="#hour-tick" transform="rotate(330)"/>
+  <!-- ============ PHYLOGENETIC TREE (always visible) ============ -->
+  <!-- Root trunk -->
+  <path class="branch" stroke-width="2.4" d="M 100 160 L 100 100"/>
+
+  <!-- First split -->
+  <path class="branch" stroke-width="1.9" d="M 100 100 Q 112 88 134 78"/>
+  <path class="branch" stroke-width="1.9" d="M 100 100 Q 114 100 144 102"/>
+
+  <!-- Second splits (upper arm) -->
+  <path class="branch" stroke-width="1.5" d="M 134 78 Q 158 64 186 54"/>
+  <path class="branch" stroke-width="1.5" d="M 134 78 Q 158 80 188 82"/>
+
+  <!-- Second splits (lower arm) -->
+  <path class="branch" stroke-width="1.5" d="M 144 102 Q 170 110 196 118"/>
+  <path class="branch" stroke-width="1.5" d="M 144 102 Q 170 128 196 144"/>
+
+  <!-- Terminal twigs -->
+  <path class="branch" stroke-width="1.2" d="M 186 54 Q 210 48 236 46"/>
+  <path class="branch" stroke-width="1.2" d="M 188 82 Q 214 80 244 76"/>
+  <path class="branch" stroke-width="1.2" d="M 196 118 Q 224 118 254 118"/>
+  <path class="branch" stroke-width="1.2" d="M 196 144 Q 224 148 254 150"/>
+
+  <!-- Tiny perpendicular tip marks -->
+  <g stroke="#3a240e" stroke-width="1" opacity="0.8">
+    <line x1="234" y1="42" x2="238" y2="50"/>
+    <line x1="242" y1="72" x2="246" y2="80"/>
+    <line x1="252" y1="114" x2="256" y2="122"/>
+    <line x1="252" y1="146" x2="256" y2="154"/>
+  </g>
+
+  <!-- Finches perched at tips -->
+  <g class="finchIn1">
+    <g transform="translate(246,41)" class="sway1">
+      <use href="#finch"/>
+      <use href="#beakStout"/>
     </g>
   </g>
-
-  <!-- Roman numerals XII, III, VI, IX -->
-  <g fill="#2a1a0c" text-anchor="middle">
-    <text class="roman" x="140" y="76"  font-size="12">XII</text>
-    <text class="roman" x="180" y="122" font-size="12">III</text>
-    <text class="roman" x="140" y="166" font-size="12">VI</text>
-    <text class="roman" x="100" y="122" font-size="12">IX</text>
+  <g class="finchIn2">
+    <g transform="translate(254,71)" class="sway2">
+      <use href="#finch"/>
+      <use href="#beakSharp"/>
+    </g>
+  </g>
+  <g class="finchIn3">
+    <g transform="translate(264,113)" class="sway3">
+      <use href="#finch"/>
+      <use href="#beakSlender"/>
+    </g>
+  </g>
+  <g class="finchIn4">
+    <g transform="translate(264,145)" class="sway4">
+      <use href="#finch"/>
+      <use href="#beakHook"/>
+    </g>
   </g>
 
-  <!-- Maker's mark -->
-  <text x="140" y="138" text-anchor="middle" font-size="5.5" class="stamp" fill="#6a512a" opacity="0.85">NAVAL OBS · 1883</text>
+  <!-- Micro species labels -->
+  <g font-size="5" class="stamp" fill="#5a4418" opacity="0.8">
+    <text x="278" y="43">A.</text>
+    <text x="288" y="73">B.</text>
+    <text x="298" y="115">C.</text>
+    <text x="298" y="147">D.</text>
+  </g>
 
-  <!-- Ghost hands (old local noon) - behind the solid hands -->
+  <!-- Notebook caption under the tree -->
+  <text x="200" y="176" text-anchor="middle" font-size="6.5" class="caption" fill="#5a4418" opacity="0.85">Case must be that one generation then should have as many living as now.</text>
+
+  <!-- Floating ink motes -->
   <g>
-    <!-- ghost hour hand (pointing to ~11:42 position) -->
-    <g class="ghost-hr">
-      <rect x="138" y="80" width="4" height="40" fill="#8a6a28" transform="rotate(-9 140 118)"/>
-    </g>
-    <!-- ghost minute hand -->
-    <g class="ghost-min">
-      <rect x="139.3" y="62" width="1.4" height="58" fill="#8a6a28" transform="rotate(-18 140 118)"/>
-    </g>
+    <circle class="mote m1" cx="300" cy="150" r="0.9"/>
+    <circle class="mote m2" cx="150" cy="40"  r="0.7"/>
+    <circle class="mote m3" cx="220" cy="90"  r="0.8"/>
   </g>
 
-  <!-- Solid standard-time hands pointing exactly at 12:00:00 at t=0, then ticking -->
-  <g>
-    <!-- hour hand -->
-    <g class="hand-hr">
-      <rect x="138" y="80" width="4" height="40" fill="#1a1008" rx="1"/>
-    </g>
-    <!-- minute hand -->
-    <g class="hand-min">
-      <rect x="139.3" y="62" width="1.4" height="58" fill="#1a1008"/>
-    </g>
-    <!-- second hand (red) -->
-    <g class="hand-sec">
-      <rect x="139.7" y="66" width="0.6" height="54" fill="#c23a2a"/>
-      <circle cx="140" cy="132" r="4" fill="#c23a2a"/>
-    </g>
-  </g>
+  <!-- "C. Darwin" signature at corner -->
+  <text x="376" y="178" text-anchor="end" font-size="9" class="hand" fill="#5a4418" opacity="0.9">C. Darwin</text>
 
-  <!-- Centre boss -->
-  <circle cx="140" cy="118" r="3.2" fill="#1a1008" stroke="#f0c868" stroke-width="0.6"/>
-
-  <!-- Clock caption below -->
-  <text x="140" y="196" text-anchor="middle" font-size="7" class="stamp" fill="#9fd9ea" opacity="0.85">12:00 NOON · STANDARD</text>
-
-  <!-- ============ TIME-ZONE BAND STRIP (right of clock, left of text) ============ -->
-  <g transform="translate(220 72)">
-    <!-- outline strip -->
-    <rect x="0" y="0" width="190" height="88" rx="3" fill="#1a2230" stroke="#3a4a60" stroke-width="0.6"/>
-    <!-- four vertical bands (E,C,M,P) -->
-    <rect class="zone-E" x="6"   y="6" width="42" height="76" fill="#d4a84a"/>
-    <rect class="zone-C" x="52"  y="6" width="42" height="76" fill="#e5b76a"/>
-    <rect class="zone-M" x="98"  y="6" width="42" height="76" fill="#b89467"/>
-    <rect class="zone-P" x="144" y="6" width="40" height="76" fill="#5fc3e0"/>
-
-    <!-- zone initials -->
-    <g text-anchor="middle" fill="#0d1117" font-size="18" class="roman" font-weight="800">
-      <text x="27"  y="52">E</text>
-      <text x="73"  y="52">C</text>
-      <text x="119" y="52">M</text>
-      <text x="164" y="52">P</text>
-    </g>
-    <!-- +offset labels under each -->
-    <g text-anchor="middle" fill="#0d1117" font-size="6" class="stamp" opacity="0.8">
-      <text x="27"  y="72">UTC−5</text>
-      <text x="73"  y="72">UTC−6</text>
-      <text x="119" y="72">UTC−7</text>
-      <text x="164" y="72">UTC−8</text>
-    </g>
-    <!-- label header -->
-    <text x="95" y="-4" text-anchor="middle" font-size="7" class="stamp" fill="#9fd9ea">FOUR BANDS · NOV 18, 1883</text>
-  </g>
-
-  <!-- ============ RIGHT TEXT COLUMN ============ -->
-  <!-- vertical separator -->
+  <!-- ============ VERTICAL SEPARATOR ============ -->
   <line x1="420" y1="30" x2="420" y2="170" stroke="#2d3748" stroke-width="0.6" opacity="0.5"/>
 
-  <!-- Headline: today's date -->
-  <text x="440" y="60" font-size="26" class="headline fade-1" fill="#f6ecd4">NOVEMBER 18, 2026</text>
+  <!-- ============ RIGHT TEXT COLUMN ============ -->
+  <text x="440" y="60" font-size="26" class="headline fade-1" fill="#f3e6c6">NOVEMBER 24, 2026</text>
 
-  <!-- Double bar beneath headline: cream + brass -->
   <g transform="translate(440,70)">
-    <rect class="bar" x="0" y="0" width="300" height="3" fill="#f6ecd4"/>
-    <rect class="bar" x="0" y="5" width="220" height="2" fill="#d4a84a"/>
+    <rect class="bar" x="0" y="0" width="300" height="3" fill="#f3e6c6"/>
+    <rect class="bar" x="0" y="5" width="220" height="2" fill="#b98a46"/>
   </g>
 
-  <!-- Subhead -->
-  <text x="440" y="97" font-size="14" class="sub fade-2" fill="#f6ecd4">DAY OF TWO NOONS · 143 YEARS</text>
+  <text x="440" y="97" font-size="14" class="sub fade-2" fill="#f3e6c6">ORIGIN OF SPECIES · 167 YEARS</text>
 
-  <!-- Tertiary italic -->
-  <text x="440" y="117" font-size="10.5" class="tert fade-3" fill="#e5b76a">STANDARD RAILWAY TIME · 1883</text>
+  <text x="440" y="117" font-size="10.5" class="tert fade-3" fill="#e5b76a">CHARLES DARWIN · LONDON · 1859</text>
 
-  <!-- Roster -->
-  <text x="440" y="140" font-size="8" class="roster fade-4" fill="#7a8491">EASTERN · CENTRAL · MOUNTAIN · PACIFIC</text>
+  <text x="440" y="140" font-size="8" class="roster fade-4" fill="#7a8491">BEAGLE · GALÁPAGOS · FINCHES · SELECTION · DESCENT</text>
 
-  <!-- Caption -->
-  <text x="440" y="168" font-size="11" class="caption cap fade-5" fill="#c9d2dc">When America first agreed what time it was.</text>
+  <text x="440" y="168" font-size="11" class="caption cap fade-5" fill="#c9d2dc">By so simple a beginning.</text>
 
-  <!-- Faint station-master stamp, top right corner -->
   <g class="fade-6" transform="translate(690,30)">
-    <rect x="0" y="0" width="86" height="30" fill="none" stroke="#d4a84a" stroke-opacity="0.45" stroke-width="0.6"/>
-    <text x="43" y="12" font-size="6" class="stamp" fill="#e5b76a" text-anchor="middle" opacity="0.85">ADOPTED</text>
-    <text x="43" y="22" font-size="7.5" class="stamp" fill="#e5b76a" text-anchor="middle" opacity="0.9">18 NOV 1883</text>
+    <rect x="0" y="0" width="86" height="30" fill="none" stroke="#b98a46" stroke-opacity="0.45" stroke-width="0.6"/>
+    <text x="43" y="12" font-size="6" class="stamp" fill="#e5b76a" text-anchor="middle" opacity="0.85">JOHN MURRAY</text>
+    <text x="43" y="22" font-size="7.5" class="stamp" fill="#e5b76a" text-anchor="middle" opacity="0.9">24 NOV 1859</text>
   </g>
 </svg>

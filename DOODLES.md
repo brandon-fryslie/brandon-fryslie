@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 24, 2026 — Day of Two Noons — 143rd Anniversary of Standard Railway Time (November 18, 1883)
+
+<img src="./doodle-archive/2026/11/2026-11-24-060124.svg" width="800" alt="Daily doodle for November 18, 2026 — 143rd anniversary of The Day of Two Noons, when US and Canadian railroads adopted Standard Railway Time on November 18, 1883. On the left, a brass-rimmed station clock holds twelve with solid hands for standard time and ghost hands drifting behind for the old local noon; below it a small US map carries four dashed time-zone bands that pulse eastward to westward. Telegraph wires strung above spark dot-and-dash pips. On the right, a cream NOVEMBER 18, 2026 headline sits over a double cream-and-brass bar, a cream DAY OF TWO NOONS · 143 YEARS subhead, an italic amber STANDARD RAILWAY TIME · 1883 tertiary, a dim EASTERN · CENTRAL · MOUNTAIN · PACIFIC roster, and a Georgia-italic caption at the base reading: When America first agreed what time it was.">
+
+<details>
+<summary>About this doodle</summary>
+
+At exactly noon on Sunday, 18 November 1883, telegraph operators at the Naval Observatory in Washington sent a single signal down the wires of every major US and Canadian railroad, and across the continent every station clock was reset. Towns east of a new meridian nudged their hands forward, towns west dragged them back — in some places noon happened twice, in some it was skipped entirely. The day was remembered as "The Day of Two Noons." Until that morning there had been roughly three hundred local solar times in the United States, each pegged to its own courthouse sundial; a traveller between Chicago and Pittsburgh crossed six of them. The railroads could not run a schedule on it, so they simply agreed on four bands — Eastern, Central, Mountain, Pacific — and the rest of the country followed. One hundred and forty-three years later, every NTP packet, every UTC timestamp, every cron job inherits the same decision.
+
+The scene is a frontier telegraph office at the moment of the signal. On the left, a brass-rimmed station clock holds twelve — the solid hands mark the new standard time while a pair of ghost hands drift behind them, the old local noon still fading out. Below the clock, a stylised US map carries four vertical dashed bands that pulse eastward to westward as the signal reaches each zone. Telegraph wires strung above spark dot-and-dash pips along their length. On the right, a cream NOVEMBER 18, 2026 headline sits over a double cream-and-brass bar, a cream DAY OF TWO NOONS · 143 YEARS subhead, an italic amber STANDARD RAILWAY TIME · 1883 tertiary, a dim EASTERN · CENTRAL · MOUNTAIN · PACIFIC roster, and a Georgia-italic caption at the base reading: When America first agreed what time it was.
+
+</details>
+
+---
+
 ## November 18, 2026 — Computer Mouse Patent — 56th Anniversary (November 17, 1970)
 
 <img src="./doodle-archive/2026/11/2026-11-18-060123.svg" width="800" alt="Daily doodle for November 17, 2026 — 56th anniversary of Doug Engelbart's computer mouse patent (US 3,541,541, granted November 17, 1970). On the left, a patent-blueprint sketch of the original wooden-shell mouse with its single red button and cord sits on cyan grid paper, with two dashed orthogonal wheels behind it; a pointer arrow traces an X-Y path across the grid. On the right, a cream NOVEMBER 17, 2026 headline sits over a double cream-and-cyan bar, a cream MOUSE PATENT · 56 YEARS subhead, an italic amber ENGELBART · US 3,541,541 · 1970 tertiary, a dim SRI · XEROX PARC · APPLE · WINDOWS · POINT roster, and a Georgia-italic caption at the base reading: One button, one dollar, one idea.">
