@@ -1,0 +1,229 @@
+<svg width="800" height="380" viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for November 24, 2026" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<defs>
+<linearGradient id="edgeTop" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#58a6ff"/><stop offset="0.35" stop-color="#a371f7"/>
+<stop offset="0.7" stop-color="#f78166"/><stop offset="1" stop-color="#39d353"/>
+<animate attributeName="x1" values="0;-1;0" dur="23s" repeatCount="indefinite"/>
+<animate attributeName="x2" values="1;2;1" dur="23s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#1f5a3a"/>
+<stop offset="0.4" stop-color="#26a641"/>
+<stop offset="1" stop-color="#7ff69e"/>
+</linearGradient>
+<linearGradient id="streakGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffd27a"/>
+<stop offset="0.5" stop-color="#f78166"/>
+<stop offset="1" stop-color="#ffd27a"/>
+<animate attributeName="x1" values="0;-1;0" dur="13s" repeatCount="indefinite"/>
+<animate attributeName="x2" values="1;2;1" dur="13s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="valGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9ffcc"/><stop offset="1" stop-color="#39d353"/></linearGradient>
+<linearGradient id="valOrange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#f78166"/></linearGradient>
+<linearGradient id="valBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ee6ec"/><stop offset="1" stop-color="#58a6ff"/></linearGradient>
+<linearGradient id="valPurple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2a8ff"/><stop offset="1" stop-color="#a371f7"/></linearGradient>
+<linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.22"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="barBlue" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#58a6ff"/>
+<stop offset="1" stop-color="#9ee6ec"/>
+</linearGradient>
+<clipPath id="gaugeClip"><rect x="36" y="140" width="348" height="14" rx="4"/></clipPath>
+<clipPath id="repoClip"><rect x="112" y="289" width="212" height="72"/></clipPath>
+<clipPath id="langClip"><rect x="416" y="300" width="348" height="26"/></clipPath>
+</defs>
+
+<!-- Frame -->
+<rect x="0" y="0" width="800" height="380" rx="12" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="379" rx="12" fill="#10151c" stroke="#21262d" stroke-width="1"/>
+<rect x="0" y="0" width="800" height="2" fill="url(#edgeTop)" opacity="0.9"/>
+
+<!-- Header -->
+<circle cx="28" cy="30" r="4" fill="#58a6ff">
+<animate attributeName="opacity" values="1;0.35;1" dur="2.3s" repeatCount="indefinite"/>
+<animate attributeName="r" values="4;5.6;4" dur="2.3s" repeatCount="indefinite"/>
+</circle>
+<text x="44" y="34" font-size="13" font-weight="700" fill="#f0f6fc" letter-spacing="0.9">LIVE GITHUB STATS</text>
+<text x="780" y="30" font-size="12" fill="#c9d1d9" text-anchor="end">Tuesday &#183; November 24, 2026</text>
+<text x="780" y="44" font-size="10" fill="#8b949e" text-anchor="end">brandon-fryslie</text>
+<line x1="20" y1="52" x2="780" y2="52" stroke="#21262d" stroke-width="1"/>
+
+<!-- ===== PANEL 1: Days Active 328/365 (top-left) ===== -->
+<rect x="22" y="60" width="376" height="152" rx="6" fill="#0b1118" stroke="#21262d" stroke-width="0.8"/>
+<text x="36" y="82" font-size="10" font-weight="700" fill="#39d353" letter-spacing="0.9">DAYS ACTIVE <tspan fill="#8b949e" font-weight="400">&#183; 1 YEAR</tspan></text>
+<text x="384" y="82" font-size="9" fill="#6e7681" text-anchor="end">ratio of 365</text>
+
+<!-- Hero value -->
+<text x="36" y="122" font-size="36" font-weight="800" fill="url(#valGreen)">328</text>
+<text x="118" y="122" font-size="18" font-weight="400" fill="#8b949e">/ 365 days</text>
+
+<!-- Fill gauge: rail + filled portion (348 * 328/365 = 312.66) -->
+<rect x="36" y="140" width="348" height="14" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.6"/>
+<g clip-path="url(#gaugeClip)">
+<rect x="36" y="140" width="312.66" height="14" rx="4" fill="url(#gaugeGrad)">
+<animate attributeName="opacity" values="0.92;1;0.92" dur="5.3s" repeatCount="indefinite"/>
+</rect>
+<!-- internal running highlight -->
+<rect x="-80" y="140" width="80" height="14" fill="url(#sweepGrad)">
+<animate attributeName="x" values="-80;360;-80" dur="11s" repeatCount="indefinite"/>
+</rect>
+</g>
+<!-- Scale ticks (25/50/75%) -->
+<g stroke="#30363d" stroke-width="0.7" opacity="0.6">
+<line x1="123" y1="137" x2="123" y2="157"/>
+<line x1="210" y1="137" x2="210" y2="157"/>
+<line x1="297" y1="137" x2="297" y2="157"/>
+</g>
+<g font-size="8" fill="#6e7681">
+<text x="123" y="166" text-anchor="middle">25%</text>
+<text x="210" y="166" text-anchor="middle">50%</text>
+<text x="297" y="166" text-anchor="middle">75%</text>
+</g>
+<!-- End-of-fill indicator (where 328/365 reaches) -->
+<circle cx="348.66" cy="147" r="3" fill="#b9ffcc" stroke="#0d1117" stroke-width="0.9">
+<animate attributeName="r" values="3;4.4;3" dur="2.9s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="1;0.7;1" dur="2.9s" repeatCount="indefinite"/>
+</circle>
+<text x="348.66" y="183" font-size="9" fill="#b9ffcc" text-anchor="middle">89.9%</text>
+
+<text x="36" y="200" font-size="10" fill="#8b949e">days with at least one commit in the past 12 months</text>
+
+<!-- ===== PANEL 2: Longest Streak 96 (top-right) ===== -->
+<rect x="402" y="60" width="376" height="152" rx="6" fill="#0b1118" stroke="#21262d" stroke-width="0.8"/>
+<text x="416" y="82" font-size="10" font-weight="700" fill="#f78166" letter-spacing="0.9">LONGEST STREAK <tspan fill="#8b949e" font-weight="400">&#183; 1 YEAR</tspan></text>
+<text x="764" y="82" font-size="9" fill="#6e7681" text-anchor="end">unbroken run</text>
+
+<text x="416" y="122" font-size="36" font-weight="800" fill="url(#valOrange)">96</text>
+<text x="474" y="122" font-size="18" font-weight="400" fill="#8b949e">consecutive days</text>
+
+<!-- Year timeline rail (348 wide, representing 365 days) -->
+<rect x="416" y="146" width="348" height="2" rx="1" fill="#30363d"/>
+<!-- Tick marks every ~91 days (quarter) -->
+<g stroke="#30363d" stroke-width="0.7" opacity="0.6">
+<line x1="416" y1="143" x2="416" y2="151"/>
+<line x1="503" y1="143" x2="503" y2="151"/>
+<line x1="590" y1="143" x2="590" y2="151"/>
+<line x1="677" y1="143" x2="677" y2="151"/>
+<line x1="764" y1="143" x2="764" y2="151"/>
+</g>
+
+<!-- Highlighted streak segment: 96/365 of 348 = 91.5px wide, positioned near recent end -->
+<!-- Place ending at ~95% of year (right side), so start x = 416 + 348*0.95 - 91.5 = 416 + 330.6 - 91.5 = 655.1 -->
+<rect x="655.1" y="140" width="91.5" height="14" rx="3" fill="url(#streakGrad)">
+<animate attributeName="opacity" values="0.88;1;0.88" dur="4.1s" repeatCount="indefinite"/>
+</rect>
+<!-- Edge glow lines pointing to segment -->
+<path d="M 655.1 140 L 655.1 134 L 746.6 134 L 746.6 140" fill="none" stroke="#f78166" stroke-width="1" opacity="0.7"/>
+<!-- Running tracer dot along the streak -->
+<circle cx="655.1" cy="147" r="3.2" fill="#ffd27a" stroke="#0d1117" stroke-width="0.9">
+<animate attributeName="cx" values="655.1;746.6;655.1" dur="7s" repeatCount="indefinite"/>
+<animate attributeName="r" values="3.2;4.6;3.2" dur="2.3s" repeatCount="indefinite"/>
+</circle>
+
+<!-- Timeline endpoint labels -->
+<g font-size="9" fill="#6e7681">
+<text x="416" y="166" text-anchor="start">1y ago</text>
+<text x="503" y="166" text-anchor="middle">-9mo</text>
+<text x="590" y="166" text-anchor="middle">-6mo</text>
+<text x="677" y="166" text-anchor="middle">-3mo</text>
+<text x="764" y="166" text-anchor="end">today</text>
+</g>
+<text x="700.85" y="183" font-size="9" fill="#ffd27a" text-anchor="middle">26.3% of the year, unbroken</text>
+
+<text x="416" y="200" font-size="10" fill="#8b949e">longest consecutive-active window in the past 12 months</text>
+
+<!-- ===== PANEL 3: Active Repos 11 (bottom-left) ===== -->
+<rect x="22" y="220" width="376" height="152" rx="6" fill="#0b1118" stroke="#21262d" stroke-width="0.8"/>
+<text x="36" y="242" font-size="10" font-weight="700" fill="#58a6ff" letter-spacing="0.9">ACTIVE REPOS <tspan fill="#8b949e" font-weight="400">&#183; 7 DAYS</tspan></text>
+<text x="384" y="242" font-size="9" fill="#6e7681" text-anchor="end">top 6 by commits</text>
+
+<text x="36" y="282" font-size="36" font-weight="800" fill="url(#valBlue)">11</text>
+<text x="78" y="282" font-size="14" font-weight="400" fill="#8b949e">repos touched this week</text>
+
+<!-- 6 repo bars (ranked by commit count; max = 95 maps to 200px width) -->
+<g font-size="9">
+<!-- Row 1: cc-candybar 95 -->
+<text x="108" y="302" fill="#c9d1d9" text-anchor="end">cc-candybar</text>
+<rect x="114" y="295" width="200.00" height="7" rx="1.5" fill="url(#barBlue)"/>
+<text x="318" y="302" fill="#8b949e">95</text>
+<!-- Row 2: cc-hands 48 -->
+<text x="108" y="313" fill="#c9d1d9" text-anchor="end">cc-hands</text>
+<rect x="114" y="306" width="101.05" height="7" rx="1.5" fill="url(#barBlue)" opacity="0.92"/>
+<text x="219.05" y="313" fill="#8b949e">48</text>
+<!-- Row 3: lit2 47 -->
+<text x="108" y="324" fill="#c9d1d9" text-anchor="end">lit2</text>
+<rect x="114" y="317" width="98.95" height="7" rx="1.5" fill="url(#barBlue)" opacity="0.88"/>
+<text x="216.95" y="324" fill="#8b949e">47</text>
+<!-- Row 4: cc-dump-web 41 -->
+<text x="108" y="335" fill="#c9d1d9" text-anchor="end">cc-dump-web</text>
+<rect x="114" y="328" width="86.32" height="7" rx="1.5" fill="url(#barBlue)" opacity="0.84"/>
+<text x="204.32" y="335" fill="#8b949e">41</text>
+<!-- Row 5: vhid 37 -->
+<text x="108" y="346" fill="#c9d1d9" text-anchor="end">vhid</text>
+<rect x="114" y="339" width="77.89" height="7" rx="1.5" fill="url(#barBlue)" opacity="0.8"/>
+<text x="195.89" y="346" fill="#8b949e">37</text>
+<!-- Row 6: dotfiles 23 -->
+<text x="108" y="357" fill="#c9d1d9" text-anchor="end">dotfiles</text>
+<rect x="114" y="350" width="48.42" height="7" rx="1.5" fill="url(#barBlue)" opacity="0.75"/>
+<text x="166.42" y="357" fill="#8b949e">23</text>
+</g>
+<!-- Shimmer across bars -->
+<g clip-path="url(#repoClip)">
+<rect x="-70" y="289" width="70" height="72" fill="url(#shimmer)">
+<animate attributeName="x" values="-70;350;-70" dur="13s" repeatCount="indefinite"/>
+</rect>
+</g>
+
+<!-- ===== PANEL 4: Languages 4 (bottom-right) ===== -->
+<rect x="402" y="220" width="376" height="152" rx="6" fill="#0b1118" stroke="#21262d" stroke-width="0.8"/>
+<text x="416" y="242" font-size="10" font-weight="700" fill="#a371f7" letter-spacing="0.9">LANGUAGES <tspan fill="#8b949e" font-weight="400">&#183; 30 DAYS</tspan></text>
+<text x="764" y="242" font-size="9" fill="#6e7681" text-anchor="end">share of commits</text>
+
+<text x="416" y="282" font-size="36" font-weight="800" fill="url(#valPurple)">4</text>
+<text x="446" y="282" font-size="14" font-weight="400" fill="#8b949e">languages this month</text>
+
+<!-- 100% stacked bar (348 wide, total commits 2085): TS 850 (40.77%), Py 500 (23.98%), Sw 449 (21.53%), Go 286 (13.72%) -->
+<g clip-path="url(#langClip)">
+<rect x="416" y="300" width="141.89" height="26" fill="#58a6ff"/>
+<rect x="557.89" y="300" width="83.45" height="26" fill="#39d353"/>
+<rect x="641.34" y="300" width="74.93" height="26" fill="#f78166"/>
+<rect x="716.27" y="300" width="47.73" height="26" fill="#a371f7"/>
+<line x1="557.89" y1="300" x2="557.89" y2="326" stroke="#0d1117" stroke-width="1"/>
+<line x1="641.34" y1="300" x2="641.34" y2="326" stroke="#0d1117" stroke-width="1"/>
+<line x1="716.27" y1="300" x2="716.27" y2="326" stroke="#0d1117" stroke-width="1"/>
+<!-- segment labels -->
+<text x="486.95" y="314" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">TypeScript</text>
+<text x="486.95" y="323" font-size="8" fill="#0d1117" text-anchor="middle" opacity="0.7">850 &#183; 40.8%</text>
+<text x="599.62" y="314" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">Python</text>
+<text x="599.62" y="323" font-size="8" fill="#0d1117" text-anchor="middle" opacity="0.7">500 &#183; 24.0%</text>
+<text x="678.80" y="314" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">Swift</text>
+<text x="678.80" y="323" font-size="8" fill="#0d1117" text-anchor="middle" opacity="0.7">449 &#183; 21.5%</text>
+<text x="740.13" y="314" font-size="10" font-weight="700" fill="#0d1117" text-anchor="middle">Go</text>
+<text x="740.13" y="323" font-size="8" fill="#0d1117" text-anchor="middle" opacity="0.7">286</text>
+<!-- shimmer sweep -->
+<rect x="-160" y="300" width="160" height="26" fill="url(#shimmer)">
+<animate attributeName="x" values="-160;800;-160" dur="17s" repeatCount="indefinite"/>
+</rect>
+</g>
+
+<!-- Percentage axis below bar -->
+<g font-size="8" fill="#6e7681">
+<text x="416" y="340">0%</text>
+<text x="590" y="340" text-anchor="middle">50%</text>
+<text x="764" y="340" text-anchor="end">100%</text>
+</g>
+<g stroke="#30363d" stroke-width="0.6" opacity="0.5">
+<line x1="590" y1="328" x2="590" y2="332"/>
+</g>
+
+<text x="416" y="361" font-size="10" fill="#8b949e">commit-weighted share across public code</text>
+
+</svg>
