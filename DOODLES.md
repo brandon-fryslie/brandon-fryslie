@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 25, 2026 — On the Origin of Species — 167th Anniversary (November 24, 1859)
+
+<img src="./doodle-archive/2026/11/2026-11-25-060208.svg" width="800" alt="Daily doodle for November 24, 2026 — 167th anniversary of the publication of Charles Darwin's On the Origin of Species on November 24, 1859. On the left, a sepia-ink phylogenetic tree branches outward from a common root on aged notebook paper, four finches with different beak silhouettes perched at the branch tips, and the words 'I think' written in a handwritten hand above the trunk with an arrow curling to the root. On the right, a cream NOVEMBER 24, 2026 headline sits over a double cream-and-sepia bar, a cream ORIGIN OF SPECIES · 167 YEARS subhead, an italic amber CHARLES DARWIN · LONDON · 1859 tertiary, a dim BEAGLE · GALÁPAGOS · FINCHES · SELECTION · DESCENT roster, and a Georgia-italic caption at the base reading: By so simple a beginning.">
+
+<details>
+<summary>About this doodle</summary>
+
+At nine in the morning on Thursday, 24 November 1859, John Murray of Albemarle Street in London released 1,250 copies of a 490-page green-cloth octavo titled On the Origin of Species by Means of Natural Selection. Every copy sold the same day. Charles Darwin, then fifty, was convalescing at a water-cure in Yorkshire and did not attend. The idea the book carried — that every living thing on earth descended from a single or a few common ancestors, and that the slow filter of differential survival did the sorting — had sat in his drawer for twenty-one years, since he first sketched a stubby branching tree in his B notebook above the words "I think." The 1859 edition contained one and only one diagram: a tree. One hundred and sixty-seven years later every phylogeny, every clade, every molecular dendrogram descends from that drawing.
+
+The scene is Darwin's aged-paper notebook under warm lamplight. On the left, a sepia-ink tree branches outward from a common root, four finches with different beak silhouettes perch at its tips, and the words "I think" sit in a handwritten hand at the top with an arrow curling down to the root. On the right, a cream NOVEMBER 24, 2026 headline sits over a double cream-and-sepia bar, a cream ORIGIN OF SPECIES · 167 YEARS subhead, an italic amber CHARLES DARWIN · LONDON · 1859 tertiary, a dim BEAGLE · GALÁPAGOS · FINCHES · SELECTION · DESCENT roster, and a Georgia-italic caption at the base reading: By so simple a beginning.
+
+</details>
+
+---
+
 ## November 24, 2026 — Day of Two Noons — 143rd Anniversary of Standard Railway Time (November 18, 1883)
 
 <img src="./doodle-archive/2026/11/2026-11-24-060124.svg" width="800" alt="Daily doodle for November 18, 2026 — 143rd anniversary of The Day of Two Noons, when US and Canadian railroads adopted Standard Railway Time on November 18, 1883. On the left, a brass-rimmed station clock holds twelve with solid hands for standard time and ghost hands drifting behind for the old local noon; below it a small US map carries four dashed time-zone bands that pulse eastward to westward. Telegraph wires strung above spark dot-and-dash pips. On the right, a cream NOVEMBER 18, 2026 headline sits over a double cream-and-brass bar, a cream DAY OF TWO NOONS · 143 YEARS subhead, an italic amber STANDARD RAILWAY TIME · 1883 tertiary, a dim EASTERN · CENTRAL · MOUNTAIN · PACIFIC roster, and a Georgia-italic caption at the base reading: When America first agreed what time it was.">
