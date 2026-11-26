@@ -10,6 +10,14 @@ Captions carry each day's headline numbers so the gallery can be skimmed without
 
 <!-- STATS-GALLERY:START -->
 
+## November 26, 2026 · 06:23 UTC
+
+<img src="./stats-archive/2026/11/2026-11-26-062325.svg" width="960" alt="Live GitHub stats card for November 26, 2026">
+
+Languages 4 (30 Days) · Commits 342 (7 Days) · Days Active 329/365 (1 Year) · Longest Streak 98 (1 Year) · PRs Merged 6137 (All Time)
+
+---
+
 ## November 25, 2026 · 07:19 UTC
 
 <img src="./stats-archive/2026/11/2026-11-25-071908.svg" width="960" alt="Live GitHub stats card for November 25, 2026">
