@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 26, 2026 — Thanksgiving Day (November 26, 2026)
+
+<img src="./doodle-archive/2026/11/2026-11-26-122454.svg" width="800" alt="Daily doodle for November 26, 2026 — Thanksgiving Day in the United States. On the left, a woven cornucopia tipped on its side spills a pumpkin, an apple, an ear of corn, and a sheaf of wheat across the canvas; autumn leaves drift downward in staggered motion across the whole scene. On the right, a cream NOVEMBER 26, 2026 headline sits over a double cream-and-cranberry bar, a cream THANKSGIVING DAY · 405 YEARS subhead, an italic amber PLYMOUTH · 1621 · HARVEST FEAST tertiary, a dim HARVEST · GRATITUDE · GATHERING · HOME · AUTUMN roster, and a Georgia-italic caption at the base reading: For what we are about to receive.">
+
+<details>
+<summary>About this doodle</summary>
+
+Thanksgiving Day in the United States falls on the fourth Thursday of November by federal statute — Franklin Roosevelt signed the date into law on 26 December 1941 after two years of calendar politics with retailers who wanted a longer shopping season. The holiday itself is far older: a three-day harvest feast held at Plymouth Colony in the autumn of 1621 between fifty-odd English settlers and about ninety Wampanoag under Massasoit is the scene usually invoked, though Abraham Lincoln is the one who made it an annual national day in 1863, in the thick of the Civil War, after a letter-writing campaign by Sarah Josepha Hale. What has stayed constant for four centuries is the smaller gesture underneath the pageant — a table, more food than any one person can eat, and the small ceremony of saying out loud what the year gave you.
+
+The scene is a cornucopia tipped on its side. On the left, a woven horn of plenty curves across the canvas; pumpkins, apples, an ear of corn, and a sheaf of wheat spill from its mouth and roll toward the centre. Autumn leaves drift down across the whole canvas on slow, staggered paths. On the right, a cream NOVEMBER 26, 2026 headline sits over a double cream-and-cranberry bar, a cream THANKSGIVING DAY · 405 YEARS subhead, an italic amber PLYMOUTH · 1621 · HARVEST FEAST tertiary, a dim HARVEST · GRATITUDE · GATHERING · HOME · AUTUMN roster, and a Georgia-italic caption at the base reading: For what we are about to receive.
+
+</details>
+
+---
+
 ## November 26, 2026 — General Relativity — 111th Anniversary (November 25, 1915)
 
 <img src="./doodle-archive/2026/11/2026-11-26-060124.svg" width="800" alt="Daily doodle for November 25, 2026 — 111th anniversary of Einstein's presentation of the field equations of general relativity to the Prussian Academy on November 25, 1915. On the left, a warped grid of spacetime sags toward a glowing mass at its centre, with a photon's curved path and small stars in the background. On the right, a cream NOVEMBER 25, 2026 headline sits over a double cream-and-amber bar, a cream GENERAL RELATIVITY · 111 YEARS subhead, an italic amber ALBERT EINSTEIN · BERLIN · 1915 tertiary, a dim CURVATURE · GEODESIC · LIGHT · TIME · MASS roster, and the field equation Rμν − ½gμνR + Λgμν = 8πG⁄c⁴ Tμν at the base.">
