@@ -1,4 +1,4 @@
-<svg width="800" height="340" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for Wednesday, November 25, 2026" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub stats for Thursday, November 26, 2026" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <defs>
 <linearGradient id="edgeTop" x1="0" y1="0" x2="1" y2="0">
 <stop offset="0" stop-color="#58a6ff"/><stop offset="0.35" stop-color="#a371f7"/>
@@ -6,52 +6,61 @@
 <animate attributeName="x1" values="0;-1;0" dur="23s" repeatCount="indefinite"/>
 <animate attributeName="x2" values="1;2;1" dur="23s" repeatCount="indefinite"/>
 </linearGradient>
-<linearGradient id="dimGreen" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#2ea04d"/>
-<stop offset="1" stop-color="#19381f"/>
+<linearGradient id="greenRing" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#39d353"/><stop offset="1" stop-color="#2ea04d"/>
+</linearGradient>
+<linearGradient id="greenText" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#9ee89e"/><stop offset="1" stop-color="#39d353"/>
 </linearGradient>
 <linearGradient id="streakOrange" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#ffd27a"/>
-<stop offset="1" stop-color="#f78166"/>
+<stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#f78166"/>
 </linearGradient>
-<linearGradient id="streakOrangeH" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="#ffd27a"/>
-<stop offset="0.5" stop-color="#f78166"/>
-<stop offset="1" stop-color="#ffd27a"/>
-<animate attributeName="x1" values="0;-1;0" dur="11s" repeatCount="indefinite"/>
-<animate attributeName="x2" values="1;2;1" dur="11s" repeatCount="indefinite"/>
+<linearGradient id="orangeText" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#f78166"/>
 </linearGradient>
-<linearGradient id="prsGrad" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="#d2a8ff"/>
-<stop offset="1" stop-color="#a371f7"/>
-<animate attributeName="x1" values="0;0.5;0" dur="13s" repeatCount="indefinite"/>
+<linearGradient id="blueCommit" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#9ee6ec"/><stop offset="1" stop-color="#58a6ff"/>
 </linearGradient>
-<linearGradient id="reposGrad" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#9ee6ec"/>
-<stop offset="1" stop-color="#58a6ff"/>
+<linearGradient id="purpleGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#d2a8ff"/><stop offset="1" stop-color="#a371f7"/>
 </linearGradient>
-<linearGradient id="barBlue" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="#58a6ff"/>
-<stop offset="1" stop-color="#9ee6ec"/>
+<linearGradient id="langTs" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#3178c6"/><stop offset="1" stop-color="#58a6ff"/>
+</linearGradient>
+<linearGradient id="langPy" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#3572a5"/><stop offset="1" stop-color="#9ee6ec"/>
+</linearGradient>
+<linearGradient id="langSw" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#f05138"/><stop offset="1" stop-color="#ffb37a"/>
+</linearGradient>
+<linearGradient id="langGo" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#00add8"/><stop offset="1" stop-color="#75dfea"/>
 </linearGradient>
 <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
 <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.22"/>
+<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.32"/>
 <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="streakWave" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-<stop offset="0.5" stop-color="#ffffff" stop-opacity="0.4"/>
-<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-</linearGradient>
-<clipPath id="ridgeClip"><rect x="20" y="60" width="760" height="142"/></clipPath>
-<clipPath id="streakClip"><rect x="579.26" y="60" width="198.42" height="142"/></clipPath>
-<clipPath id="repoClip"><rect x="558" y="266" width="222" height="60"/></clipPath>
+<radialGradient id="pulseRadial" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#9ee6ec" stop-opacity="0.55"/>
+<stop offset="0.6" stop-color="#58a6ff" stop-opacity="0.25"/>
+<stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+</radialGradient>
+<pattern id="commitDots" x="598.5" y="112" width="7" height="7" patternUnits="userSpaceOnUse">
+<circle cx="3.5" cy="3.5" r="2.1" fill="url(#blueCommit)"/>
+</pattern>
+<pattern id="streakCells" x="303" y="114" width="16" height="16" patternUnits="userSpaceOnUse">
+<rect x="1.5" y="1.5" width="13" height="13" rx="2.5" fill="url(#streakOrange)" opacity="0.88"/>
+</pattern>
+<clipPath id="streakClip"><rect x="303" y="114" width="224" height="112"/></clipPath>
+<clipPath id="commitClip"><rect x="598.5" y="112" width="133" height="126"/></clipPath>
+<clipPath id="langClip"><rect x="145" y="301" width="170" height="68"/></clipPath>
+<clipPath id="prClip"><rect x="420" y="352" width="341" height="24"/></clipPath>
 </defs>
 
 <!-- Frame -->
-<rect x="0" y="0" width="800" height="340" rx="12" fill="#0d1117"/>
-<rect x="0.5" y="0.5" width="799" height="339" rx="12" fill="#10151c" stroke="#21262d" stroke-width="1"/>
+<rect x="0" y="0" width="800" height="400" rx="12" fill="#0d1117"/>
+<rect x="0.5" y="0.5" width="799" height="399" rx="12" fill="#10151c" stroke="#21262d" stroke-width="1"/>
 <rect x="0" y="0" width="800" height="2" fill="url(#edgeTop)" opacity="0.9"/>
 
 <!-- Header -->
@@ -60,160 +69,126 @@
 <animate attributeName="r" values="4;5.5;4" dur="2.3s" repeatCount="indefinite"/>
 </circle>
 <text x="36" y="34" font-size="12" font-weight="700" fill="#f0f6fc" letter-spacing="1">LIVE GITHUB STATS</text>
-<text x="780" y="32" font-size="12" fill="#c9d1d9" text-anchor="end">Wednesday &#183; November 25, 2026</text>
-<text x="780" y="46" font-size="10" fill="#8b949e" text-anchor="end">brandon-fryslie</text>
-<line x1="20" y1="53" x2="780" y2="53" stroke="#21262d" stroke-width="1"/>
+<text x="780" y="32" font-size="12" fill="#c9d1d9" text-anchor="end">Thursday &#183; November 26, 2026</text>
+<text x="780" y="46" font-size="10" fill="#8b949e" text-anchor="end">brandon-fryslie &#183; past 12 months</text>
+<line x1="20" y1="54" x2="780" y2="54" stroke="#21262d" stroke-width="1"/>
 
-<!-- Section captions -->
-<text x="20" y="69" font-size="10" font-weight="700" fill="#8b949e" letter-spacing="0.9">CONTRIBUTIONS BY WEEK <tspan fill="#6e7681" font-weight="400">&#183; past 12 months</tspan></text>
-<text x="780" y="69" font-size="9" fill="#6e7681" text-anchor="end">each bar &#183; one week &#183; tallest = 1812</text>
-
-<!-- Ridgeline baseline -->
-<line x1="20" y1="200" x2="780" y2="200" stroke="#30363d" stroke-width="0.6"/>
-
-<!-- Non-streak weekly bars (weeks 0 to 38) -->
-<g fill="url(#dimGreen)">
-<rect x="20.00" y="198.0" width="12" height="2.0" rx="1"/>
-<rect x="34.34" y="198.0" width="12" height="2.0" rx="1"/>
-<rect x="48.68" y="197.4" width="12" height="2.6" rx="1"/>
-<rect x="63.02" y="189.5" width="12" height="10.5" rx="1"/>
-<rect x="77.36" y="182.8" width="12" height="17.2" rx="1"/>
-<rect x="91.70" y="198.0" width="12" height="2.0" rx="1"/>
-<rect x="106.04" y="184.7" width="12" height="15.3" rx="1"/>
-<rect x="120.38" y="176.0" width="12" height="24.0" rx="1"/>
-<rect x="134.72" y="166.9" width="12" height="33.1" rx="1"/>
-<rect x="149.06" y="159.9" width="12" height="40.1" rx="1"/>
-<rect x="163.40" y="181.2" width="12" height="18.8" rx="1"/>
-<rect x="177.74" y="183.6" width="12" height="16.4" rx="1"/>
-<rect x="192.08" y="166.0" width="12" height="34.0" rx="1"/>
-<rect x="206.42" y="163.4" width="12" height="36.6" rx="1"/>
-<rect x="220.76" y="179.2" width="12" height="20.8" rx="1"/>
-<rect x="235.10" y="172.7" width="12" height="27.3" rx="1"/>
-<rect x="249.44" y="181.3" width="12" height="18.7" rx="1"/>
-<rect x="263.78" y="193.2" width="12" height="6.8" rx="1"/>
-<rect x="278.12" y="188.9" width="12" height="11.1" rx="1"/>
-<rect x="292.46" y="194.0" width="12" height="6.0" rx="1"/>
-<rect x="306.80" y="185.1" width="12" height="14.9" rx="1"/>
-<rect x="321.14" y="183.6" width="12" height="16.4" rx="1"/>
-<rect x="335.48" y="169.4" width="12" height="30.6" rx="1"/>
-<rect x="349.82" y="176.5" width="12" height="23.5" rx="1"/>
-<rect x="364.16" y="189.4" width="12" height="10.6" rx="1"/>
-<rect x="378.50" y="169.7" width="12" height="30.3" rx="1"/>
-<rect x="392.84" y="164.0" width="12" height="36.0" rx="1"/>
-<rect x="407.18" y="171.4" width="12" height="28.6" rx="1"/>
-<rect x="421.52" y="124.7" width="12" height="75.3" rx="1"/>
-<rect x="435.86" y="165.6" width="12" height="34.4" rx="1"/>
-<rect x="450.20" y="168.9" width="12" height="31.1" rx="1"/>
-<rect x="464.54" y="174.6" width="12" height="25.4" rx="1"/>
-<rect x="478.88" y="185.9" width="12" height="14.1" rx="1"/>
-<rect x="493.22" y="194.3" width="12" height="5.7" rx="1"/>
-<rect x="507.56" y="190.5" width="12" height="9.5" rx="1"/>
-<rect x="521.90" y="177.8" width="12" height="22.2" rx="1"/>
-<rect x="536.24" y="187.2" width="12" height="12.8" rx="1"/>
-<rect x="550.58" y="195.7" width="12" height="4.3" rx="1"/>
-<rect x="564.92" y="172.1" width="12" height="27.9" rx="1"/>
-</g>
-
-<!-- Streak weekly bars (weeks 39 to 52) -->
-<g fill="url(#streakOrange)">
-<animate attributeName="opacity" values="0.92;1;0.92" dur="3.7s" repeatCount="indefinite"/>
-<rect x="579.26" y="168.0" width="12" height="32.0" rx="1"/>
-<rect x="593.60" y="123.5" width="12" height="76.5" rx="1"/>
-<rect x="607.94" y="160.6" width="12" height="39.4" rx="1"/>
-<rect x="622.28" y="166.4" width="12" height="33.6" rx="1"/>
-<rect x="636.62" y="119.2" width="12" height="80.8" rx="1"/>
-<rect x="650.96" y="70.0" width="12" height="130.0" rx="1"/>
-<rect x="665.30" y="166.6" width="12" height="33.4" rx="1"/>
-<rect x="679.64" y="115.0" width="12" height="85.0" rx="1"/>
-<rect x="693.98" y="142.9" width="12" height="57.1" rx="1"/>
-<rect x="708.32" y="137.6" width="12" height="62.4" rx="1"/>
-<rect x="722.66" y="140.7" width="12" height="59.3" rx="1"/>
-<rect x="737.00" y="126.0" width="12" height="74.0" rx="1"/>
-<rect x="751.34" y="147.7" width="12" height="52.3" rx="1"/>
-<rect x="765.68" y="188.6" width="12" height="11.4" rx="1"/>
-</g>
-
-<!-- Travelling wave through streak bars only -->
-<g clip-path="url(#streakClip)">
-<rect x="479.26" y="60" width="100" height="142" fill="url(#streakWave)">
-<animate attributeName="x" values="479.26;777.68;479.26" dur="9s" repeatCount="indefinite"/>
-</rect>
-</g>
-
-<!-- Shimmer sweep across the whole ridgeline -->
-<g clip-path="url(#ridgeClip)">
-<rect x="-200" y="60" width="200" height="142" fill="url(#sweep)">
-<animate attributeName="x" values="-200;800;-200" dur="19s" repeatCount="indefinite"/>
-</rect>
-</g>
-
-<!-- Streak bracket under bars 39-52 -->
-<path d="M 579.26 203 L 579.26 209 L 777.68 209 L 777.68 203" stroke="#f78166" stroke-width="1.1" fill="none" opacity="0.85"/>
-
-<!-- Today marker (pulsing dot at the rightmost bar top) -->
-<circle cx="771.68" cy="194.3" r="3" fill="#ffd27a" stroke="#0d1117" stroke-width="0.9">
-<animate attributeName="r" values="3;5;3" dur="2.9s" repeatCount="indefinite"/>
-<animate attributeName="opacity" values="1;0.55;1" dur="2.9s" repeatCount="indefinite"/>
+<!-- ===================== Panel A: Days Active ring (329/365) ===================== -->
+<!-- Dim background ring (full 365-day circle) -->
+<circle cx="150" cy="165" r="78" fill="none" stroke="#21262d" stroke-width="22"/>
+<!-- 329/365 = 324.4 deg filled arc, clockwise from top -->
+<path d="M 150 87 A 78 78 0 1 1 104.6 91.6" fill="none" stroke="url(#greenRing)" stroke-width="22" stroke-linecap="round" opacity="0.95">
+<animate attributeName="stroke-width" values="22;24;22" dur="5.3s" repeatCount="indefinite"/>
+</path>
+<!-- Rotating bead orbiter -->
+<g>
+<circle cx="150" cy="87" r="5" fill="#f0f6fc">
+<animate attributeName="r" values="5;7;5" dur="3.3s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0.95;0.55;0.95" dur="3.3s" repeatCount="indefinite"/>
 </circle>
+<animateTransform attributeName="transform" type="rotate" from="0 150 165" to="360 150 165" dur="19s" repeatCount="indefinite"/>
+</g>
+<!-- Center value -->
+<text x="150" y="176" font-size="54" font-weight="800" fill="url(#greenText)" text-anchor="middle">329</text>
+<text x="150" y="200" font-size="14" font-weight="500" fill="#8b949e" text-anchor="middle">/365 days</text>
+<!-- Caption -->
+<text x="150" y="265" font-size="11" font-weight="700" fill="#39d353" text-anchor="middle" letter-spacing="1.2">DAYS ACTIVE &#183; 1 YEAR</text>
 
-<!-- Year axis endpoints -->
-<text x="20" y="222" font-size="9" fill="#6e7681">a year ago</text>
-<text x="400" y="222" font-size="9" fill="#6e7681" text-anchor="middle">past 12 months</text>
-<text x="780" y="222" font-size="9" fill="#6e7681" text-anchor="end">today</text>
+<!-- ===================== Panel B: Longest Streak 14x7 grid ===================== -->
+<!-- big value above grid -->
+<text x="415" y="102" font-size="40" font-weight="800" fill="url(#orangeText)" text-anchor="middle">98</text>
+<!-- 14 cols x 7 rows pattern-tiled = exactly 98 cells -->
+<rect x="303" y="114" width="224" height="112" fill="url(#streakCells)"/>
+<!-- Horizontal sweep clipped to grid, scanning across the streak -->
+<g clip-path="url(#streakClip)">
+<rect x="223" y="114" width="80" height="112" fill="url(#sweep)">
+<animate attributeName="x" values="223;527;223" dur="9s" repeatCount="indefinite"/>
+</rect>
+</g>
+<!-- Grid-wide breathing pulse -->
+<rect x="303" y="114" width="224" height="112" rx="4" fill="url(#streakOrange)" opacity="0">
+<animate attributeName="opacity" values="0;0.18;0" dur="7s" repeatCount="indefinite"/>
+</rect>
+<!-- axis annotations -->
+<text x="303" y="241" font-size="9" fill="#6e7681" text-anchor="start">14 weeks</text>
+<text x="527" y="241" font-size="9" fill="#6e7681" text-anchor="end">7 days each</text>
+<!-- caption -->
+<text x="415" y="265" font-size="11" font-weight="700" fill="#f78166" text-anchor="middle" letter-spacing="1.2">LONGEST STREAK &#183; 1 YEAR</text>
 
-<!-- Streak call-out label (centered under bracket) -->
-<text x="678.47" y="222" font-size="10" font-weight="700" fill="#f78166" letter-spacing="1" text-anchor="middle">LONGEST STREAK</text>
-<text x="667" y="240" font-size="15" font-weight="800" fill="url(#streakOrangeH)" text-anchor="end">98</text>
-<text x="671" y="240" font-size="10" fill="#ffd27a" text-anchor="start">consecutive days &#183; 1 year</text>
+<!-- ===================== Panel C: Commits 19x18 dot grid (= 342) ===================== -->
+<text x="665" y="102" font-size="40" font-weight="800" fill="url(#blueCommit)" text-anchor="middle">342</text>
+<!-- Dot pattern: tile 7x7 with one dot; rect 133 wide x 126 tall tiles to 19x18=342 dots -->
+<rect x="598.5" y="112" width="133" height="126" fill="url(#commitDots)"/>
+<!-- Radial pulse through dots, two staggered waves for perpetual motion -->
+<g clip-path="url(#commitClip)">
+<circle cx="665" cy="175" r="0" fill="url(#pulseRadial)">
+<animate attributeName="r" values="0;120;0" dur="5.7s" repeatCount="indefinite"/>
+</circle>
+<circle cx="665" cy="175" r="0" fill="url(#pulseRadial)">
+<animate attributeName="r" values="0;120;0" dur="5.7s" begin="-2.85s" repeatCount="indefinite"/>
+</circle>
+</g>
+<!-- axis annotations -->
+<text x="598.5" y="253" font-size="9" fill="#6e7681" text-anchor="start">19 &#215; 18</text>
+<text x="731.5" y="253" font-size="9" fill="#6e7681" text-anchor="end">one dot &#183; one commit</text>
+<text x="665" y="265" font-size="11" font-weight="700" fill="#58a6ff" text-anchor="middle" letter-spacing="1.2">COMMITS &#183; 7 DAYS</text>
 
-<!-- Divider between hero and metric strip -->
-<line x1="20" y1="252" x2="780" y2="252" stroke="#21262d" stroke-width="0.6"/>
+<!-- row divider -->
+<line x1="20" y1="283" x2="780" y2="283" stroke="#21262d" stroke-width="0.6"/>
 
-<!-- Left panel: PRs Merged -->
-<text x="36" y="268" font-size="10" font-weight="700" fill="#a371f7" letter-spacing="1">PRS MERGED <tspan fill="#8b949e" font-weight="400">&#183; 1 YEAR</tspan></text>
-<text x="36" y="312" font-size="44" font-weight="800" fill="url(#prsGrad)">6039</text>
-<text x="36" y="326" font-size="10" fill="#8b949e">pull requests merged this year</text>
+<!-- ===================== Panel D (bottom-left): Languages (4) ===================== -->
+<text x="55" y="298" font-size="10" font-weight="700" fill="#58a6ff" text-anchor="middle" letter-spacing="1.1">LANGUAGES</text>
+<text x="55" y="353" font-size="54" font-weight="800" fill="url(#blueCommit)" text-anchor="middle">4</text>
+<text x="55" y="372" font-size="10" fill="#8b949e" text-anchor="middle">30 DAYS</text>
+<line x1="100" y1="294" x2="100" y2="378" stroke="#21262d" stroke-width="0.6"/>
+<!-- 4 bars with widths proportional to tokens-committed -->
+<g font-size="10">
+<text x="140" y="310" fill="#c9d1d9" text-anchor="end">TypeScript</text>
+<rect x="145" y="303" width="170.0" height="10" rx="2" fill="url(#langTs)"/>
+<text x="319" y="311" fill="#8b949e" text-anchor="start">853</text>
 
-<!-- Vertical divider -->
-<line x1="400" y1="258" x2="400" y2="328" stroke="#21262d" stroke-width="0.6"/>
+<text x="140" y="326" fill="#c9d1d9" text-anchor="end">Python</text>
+<rect x="145" y="319" width="103.8" height="10" rx="2" fill="url(#langPy)"/>
+<text x="252.8" y="327" fill="#8b949e" text-anchor="start">521</text>
 
-<!-- Right panel: Active Repos + top-6 breakdown -->
-<text x="416" y="268" font-size="10" font-weight="700" fill="#58a6ff" letter-spacing="1">ACTIVE REPOS <tspan fill="#8b949e" font-weight="400">&#183; 30 DAYS</tspan></text>
-<text x="770" y="268" font-size="9" fill="#6e7681" text-anchor="end">top 6 by commits</text>
-<text x="416" y="312" font-size="36" font-weight="800" fill="url(#reposGrad)">21</text>
-<text x="416" y="326" font-size="9" fill="#6e7681">repos touched</text>
+<text x="140" y="342" fill="#c9d1d9" text-anchor="end">Swift</text>
+<rect x="145" y="335" width="80.1" height="10" rx="2" fill="url(#langSw)"/>
+<text x="229.1" y="343" fill="#8b949e" text-anchor="start">402</text>
 
-<!-- Breakdown rows (names right-anchored, bars, counts left-anchored) -->
-<g font-size="8">
-<text x="556" y="280" fill="#c9d1d9" text-anchor="end">cc-candybar</text>
-<rect x="560" y="276" width="180.0" height="3" rx="1" fill="url(#barBlue)"/>
-<text x="744" y="280" fill="#8b949e">431</text>
-
-<text x="556" y="289" fill="#c9d1d9" text-anchor="end">low-talker</text>
-<rect x="560" y="285" width="119.5" height="3" rx="1" fill="url(#barBlue)" opacity="0.93"/>
-<text x="684" y="289" fill="#8b949e">286</text>
-
-<text x="556" y="298" fill="#c9d1d9" text-anchor="end">cc-dump-web</text>
-<rect x="560" y="294" width="89.0" height="3" rx="1" fill="url(#barBlue)" opacity="0.86"/>
-<text x="654" y="298" fill="#8b949e">213</text>
-
-<text x="556" y="307" fill="#c9d1d9" text-anchor="end">cc-hands</text>
-<rect x="560" y="303" width="83.1" height="3" rx="1" fill="url(#barBlue)" opacity="0.8"/>
-<text x="648" y="307" fill="#8b949e">199</text>
-
-<text x="556" y="316" fill="#c9d1d9" text-anchor="end">memento</text>
-<rect x="560" y="312" width="79.4" height="3" rx="1" fill="url(#barBlue)" opacity="0.74"/>
-<text x="644" y="316" fill="#8b949e">190</text>
-
-<text x="556" y="325" fill="#c9d1d9" text-anchor="end">lit2</text>
-<rect x="560" y="321" width="61.0" height="3" rx="1" fill="url(#barBlue)" opacity="0.68"/>
-<text x="626" y="325" fill="#8b949e">146</text>
+<text x="140" y="358" fill="#c9d1d9" text-anchor="end">Go</text>
+<rect x="145" y="351" width="56.0" height="10" rx="2" fill="url(#langGo)"/>
+<text x="205.0" y="359" fill="#8b949e" text-anchor="start">281</text>
+</g>
+<text x="145" y="374" font-size="9" fill="#6e7681">bar width &#183; commits by language (relative)</text>
+<!-- shimmer across bars -->
+<g clip-path="url(#langClip)">
+<rect x="65" y="301" width="80" height="68" fill="url(#sweep)">
+<animate attributeName="x" values="65;315;65" dur="11s" repeatCount="indefinite"/>
+</rect>
 </g>
 
-<!-- Shimmer across breakdown bars -->
-<g clip-path="url(#repoClip)">
-<rect x="-90" y="266" width="90" height="60" fill="url(#sweep)">
-<animate attributeName="x" values="-90;320;-90" dur="13s" repeatCount="indefinite"/>
+<!-- ===================== Panel E (bottom-right): PRs Merged (6137) ===================== -->
+<text x="420" y="298" font-size="10" font-weight="700" fill="#a371f7" text-anchor="start" letter-spacing="1.1">PRS MERGED</text>
+<text x="770" y="298" font-size="10" fill="#8b949e" text-anchor="end" letter-spacing="0.8">ALL TIME</text>
+<text x="420" y="342" font-size="36" font-weight="800" fill="url(#purpleGrad)" text-anchor="start">6137</text>
+<!-- 62 unit blocks (61 full + 1 at 37% for the trailing 37 PRs); each block = 100 PRs merged -->
+<g fill="url(#purpleGrad)">
+<!-- Row 0: columns 0..30 (blocks 1..31) at y=354 -->
+<rect x="420" y="354" width="9" height="10" rx="1.5"/><rect x="431" y="354" width="9" height="10" rx="1.5"/><rect x="442" y="354" width="9" height="10" rx="1.5"/><rect x="453" y="354" width="9" height="10" rx="1.5"/><rect x="464" y="354" width="9" height="10" rx="1.5"/><rect x="475" y="354" width="9" height="10" rx="1.5"/><rect x="486" y="354" width="9" height="10" rx="1.5"/><rect x="497" y="354" width="9" height="10" rx="1.5"/><rect x="508" y="354" width="9" height="10" rx="1.5"/><rect x="519" y="354" width="9" height="10" rx="1.5"/><rect x="530" y="354" width="9" height="10" rx="1.5"/><rect x="541" y="354" width="9" height="10" rx="1.5"/><rect x="552" y="354" width="9" height="10" rx="1.5"/><rect x="563" y="354" width="9" height="10" rx="1.5"/><rect x="574" y="354" width="9" height="10" rx="1.5"/><rect x="585" y="354" width="9" height="10" rx="1.5"/><rect x="596" y="354" width="9" height="10" rx="1.5"/><rect x="607" y="354" width="9" height="10" rx="1.5"/><rect x="618" y="354" width="9" height="10" rx="1.5"/><rect x="629" y="354" width="9" height="10" rx="1.5"/><rect x="640" y="354" width="9" height="10" rx="1.5"/><rect x="651" y="354" width="9" height="10" rx="1.5"/><rect x="662" y="354" width="9" height="10" rx="1.5"/><rect x="673" y="354" width="9" height="10" rx="1.5"/><rect x="684" y="354" width="9" height="10" rx="1.5"/><rect x="695" y="354" width="9" height="10" rx="1.5"/><rect x="706" y="354" width="9" height="10" rx="1.5"/><rect x="717" y="354" width="9" height="10" rx="1.5"/><rect x="728" y="354" width="9" height="10" rx="1.5"/><rect x="739" y="354" width="9" height="10" rx="1.5"/><rect x="750" y="354" width="9" height="10" rx="1.5"/>
+<!-- Row 1: columns 0..29 (blocks 32..61, 30 more full) at y=366 -->
+<rect x="420" y="366" width="9" height="10" rx="1.5"/><rect x="431" y="366" width="9" height="10" rx="1.5"/><rect x="442" y="366" width="9" height="10" rx="1.5"/><rect x="453" y="366" width="9" height="10" rx="1.5"/><rect x="464" y="366" width="9" height="10" rx="1.5"/><rect x="475" y="366" width="9" height="10" rx="1.5"/><rect x="486" y="366" width="9" height="10" rx="1.5"/><rect x="497" y="366" width="9" height="10" rx="1.5"/><rect x="508" y="366" width="9" height="10" rx="1.5"/><rect x="519" y="366" width="9" height="10" rx="1.5"/><rect x="530" y="366" width="9" height="10" rx="1.5"/><rect x="541" y="366" width="9" height="10" rx="1.5"/><rect x="552" y="366" width="9" height="10" rx="1.5"/><rect x="563" y="366" width="9" height="10" rx="1.5"/><rect x="574" y="366" width="9" height="10" rx="1.5"/><rect x="585" y="366" width="9" height="10" rx="1.5"/><rect x="596" y="366" width="9" height="10" rx="1.5"/><rect x="607" y="366" width="9" height="10" rx="1.5"/><rect x="618" y="366" width="9" height="10" rx="1.5"/><rect x="629" y="366" width="9" height="10" rx="1.5"/><rect x="640" y="366" width="9" height="10" rx="1.5"/><rect x="651" y="366" width="9" height="10" rx="1.5"/><rect x="662" y="366" width="9" height="10" rx="1.5"/><rect x="673" y="366" width="9" height="10" rx="1.5"/><rect x="684" y="366" width="9" height="10" rx="1.5"/><rect x="695" y="366" width="9" height="10" rx="1.5"/><rect x="706" y="366" width="9" height="10" rx="1.5"/><rect x="717" y="366" width="9" height="10" rx="1.5"/><rect x="728" y="366" width="9" height="10" rx="1.5"/><rect x="739" y="366" width="9" height="10" rx="1.5"/>
+</g>
+<!-- Partial trailing block (62nd), opacity = 0.37 to show the remaining 37 of 100 PRs -->
+<rect x="750" y="366" width="9" height="10" rx="1.5" fill="url(#purpleGrad)" opacity="0.37">
+<animate attributeName="opacity" values="0.37;0.75;0.37" dur="2.9s" repeatCount="indefinite"/>
+</rect>
+<!-- block-legend -->
+<text x="420" y="389" font-size="9" fill="#6e7681" text-anchor="start">each block &#183; 100 PRs merged</text>
+<text x="770" y="389" font-size="9" fill="#6e7681" text-anchor="end">62 blocks &#183; last at 37%</text>
+<!-- shimmer sweep across block grid -->
+<g clip-path="url(#prClip)">
+<rect x="340" y="352" width="80" height="24" fill="url(#sweep)">
+<animate attributeName="x" values="340;761;340" dur="13s" repeatCount="indefinite"/>
 </rect>
 </g>
 
