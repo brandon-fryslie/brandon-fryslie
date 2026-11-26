@@ -347,7 +347,28 @@ jobs:
 
             ## Task 4: Render RECENT-ACTIVITY
 
-            Replace the content between `<!-- RECENT-ACTIVITY:START -->` and `<!-- RECENT-ACTIVITY:END -->` with a scannable bulleted list — NOT prose paragraphs. The previous format was dense paragraphs that no one read; this is a deliberate format change.
+            Replace the content between `<!-- RECENT-ACTIVITY:START -->` and `<!-- RECENT-ACTIVITY:END -->` with a scannable bulleted list — NOT prose paragraphs.
+
+            Who reads this: a visitor to the profile who has never opened any of these repositories and will skim the region in under a minute. They want to know which projects are moving and, in a phrase, what changed. They do not want a changelog, and they do not need one from you: every commit and PR is one click away through the links, and the full day-by-day record is the week file you write in Task 5. So this region can afford to leave things out, and it must.
+
+            This region has drifted before. The instruction said "terse" and the output grew, one true clause at a time, into bullets like this — do NOT produce this:
+
+            ```
+            - `owner/repo` — 20 commits: four merged PRs. [#11](url) — the command event carries four facts it conflated: a frame's refusal is a sealed sum (`Truncated`, `NoMagic`, `OverBound`), the error line is said inside `Record` by the `Say` stage. [#10](url) — one `recover` from the run's start to its event. [#9](url) — a command's row is the one source of its name and grammar ([commits](url)).
+            ```
+
+            Every statement in that bullet is accurate, and nobody outside the repo can read it. The same day, written for the visitor:
+
+            ```
+            - `owner/repo` — 20 commits: the command log now records why a malformed entry was refused, and a crash anywhere in a run is kept as an event ([commits](url))
+            ```
+
+            Budgets. These are limits, not targets, and they hold however much shipped:
+
+            - A bullet is ONE sentence of at most 30 words, counted from after the dash to before the links.
+            - A bullet carries at most 2 links: the repo's `commits` link, plus at most one PR link when a single PR is the headline. Everything else the bullet could have linked is already behind the `commits` link.
+            - Say what changed in terms of what the tool does for the person using it. An internal type, function, file or branch name appears only when it is itself the thing shipped — a command, a flag, a skill, a release version.
+            - On a busy day, pick the one or two changes that matter most to someone using the tool and leave the rest to the link. A merged PR that goes unmentioned here is not an omission; it is in the week file.
 
             Structure:
 
@@ -358,17 +379,19 @@ jobs:
 
             ### Last 24 Hours
 
-            - `repo-name` — terse phrase describing what shipped ([commits](url) or [#N](url) for PR/issue references)
-            - `another-repo` — what changed ([repo](url))
+            - `owner/repo` — one sentence, 30 words at most ([commits](url))
+            - `owner/another-repo` — one sentence ([#N](url), [commits](url))
+
+            (At most 6 bullets, the repos with the most consequential changes first. If more than 6 repos had commits, end the section with a single line `Also: ` followed by the remaining repo names in backticks — names only, no descriptions.)
 
             (This first section covers the trailing 24 hours before this run, not the calendar day — the run fires at 06:00 UTC, when "today" is nearly empty by definition. If the past-24h data from Task 2 has commits, use the header `### Last 24 Hours` exactly. If it has NO commits, do NOT render an empty section — never output "No new commits today." or any similar placeholder; the profile must not lead with a void when real recent work exists. Instead, find the most recent UTC calendar day that has commits in the past-7-days data and render that day's bullets under the header `### Latest — <Weekday>, <Month> <D>`, e.g. `### Latest — Friday, August 7`. Only if the entire past 7 days has zero commits, render `### Last 24 Hours` with the single line "Quiet week — no commits in the past 7 days.")
 
             ### This Week
 
-            - `repo-name` — N commits: comma-separated highlights, kept terse ([commits](url))
-            - `another-repo` — N commits: highlights ([commits](url))
+            - `owner/repo` — N commits: one sentence, 30 words at most ([commits](url))
+            - `owner/another-repo` — N commits: one sentence ([commits](url))
 
-            (One bullet per repo with activity in the past 7 days. Order by commit volume descending.)
+            (One bullet per repo with activity in the past 7 days, ordered by commit volume descending, at most 8 bullets; if more than 8 repos were active, close with one `Also: ` line of names as above. The same budgets apply. Say where the week took that repo — what it does now that it did not a week ago — rather than listing the week's PRs, and do not restate the Last 24 Hours bullet inside it.)
 
             ### This Month
 
@@ -379,7 +402,11 @@ jobs:
             - ... (top 6–10)
 
             Languages: comma-separated list of primary languages.
+
+            Every PR behind these bullets, day by day: [this week's log](./previous-work/YYYY/YYYY-MM-DD.md)
             ```
+
+            (That last line points at the current week's file under `previous-work/` — compute its path exactly as Task 5 step 1 does, `previous-work/$YEAR/$MON.md`. Write the line only if that file exists now or you are about to create it in Task 5, which is whenever the past 24 hours had commits. Otherwise omit the line; never link a file that is not there.)
 
             Then a horizontal rule (`---`), then a `<details><summary>Previous highlights</summary>` block listing the most recent daily-archive files (up to 7, newest first). Format each entry as `- [YYYY-MM-DD](./daily-archive/YYYY-MM-DD.md)`. If no archives exist, write "No previous highlights yet."
 
@@ -392,9 +419,11 @@ jobs:
 
             Tone for bullets: matter-of-fact, third-person past tense. Plain verbs ("Added", "Renamed", "Migrated", "Fixed"). Name concrete artifacts. No editorial adjectives. No promotional framing. No commit hashes or SHAs in the visible text — links carry that.
 
+            Before you leave this task, read back the region as it now stands in README.md — the file, not your memory of writing it — and check every bullet against the budgets: one sentence, 30 words at most, 2 links at most. A bullet that is over gets rewritten shorter, with a change dropped; trimming a word to slip under the limit is not the fix.
+
             ## Task 5: Append Today's Day Section to the Weekly Archive
 
-            `previous-work/` is the durable, curated record of engineering work — one file per week, written as each week happens. `previous-work/README.md` is its contract. Your job here is narrow: on a day with commits, append today's day section to the current week's file, reusing the SAME bullets you rendered in the RECENT-ACTIVITY "Last 24 Hours" section above. The day section is written once, with same-day context, and is never re-summarized later.
+            `previous-work/` is the durable, curated record of engineering work — one file per week, written as each week happens. `previous-work/README.md` is its contract. Your job here is narrow: on a day with commits, append today's day section to the current week's file. It covers the same 24 hours as the RECENT-ACTIVITY "Last 24 Hours" section above, but it is the full record where that section is the short form — this is where the detail the README leaves out is kept. The day section is written once, with same-day context, and is never re-summarized later.
 
             Do this ONLY if Task 2 found commits in the past 24h. On a no-commit day, do NOT create, open, or touch any file under `previous-work/` — skip this task entirely. In particular: if RECENT-ACTIVITY fell back to a `### Latest — ...` section, that section describes a PAST day whose archive entry is already frozen — do not re-append or rewrite it here.
 
@@ -419,7 +448,7 @@ jobs:
 
                [← Week of <PREV_TITLE>](<PREV_MON>.md) · [Archive index](../README.md)
                ```
-            3. Build today's day section from today's activity — one bullet per repo with commits in the past 24h, byte-for-byte the same bullet text and links you rendered in the RECENT-ACTIVITY "Last 24 Hours" section (same work, recorded in two places; they must not drift). Same link rules as Task 4:
+            3. Build today's day section from today's activity — one bullet per repo with commits in the past 24h, every such repo, including any that the README section folded into its `Also:` line. Name each notable change with its PR link, at whatever length the day needs: the README's 30-word and 2-link budgets do NOT apply here, and a bullet that only repeats the README's short sentence has thrown the record away. The two texts are tied in one direction only — every fact a README bullet states must also be in that repo's bullet here, so the short form can never say something the record does not. Same link-construction rules and tone as Task 4:
                ```
                ## <TODAY_HEAD>
 
@@ -435,32 +464,55 @@ jobs:
 
             ## Task 6: Render SELECTED-PROJECTS
 
-            README.md has a marker pair `<!-- SELECTED-PROJECTS:START -->` / `<!-- SELECTED-PROJECTS:END -->` wrapping a six-cell project table. Replace the content between those markers with up to six projects Brandon has actually made substantial recent commits to.
+            README.md has a marker pair `<!-- SELECTED-PROJECTS:START -->` / `<!-- SELECTED-PROJECTS:END -->` wrapping a project table. Replace the content between those markers with up to six projects.
 
-            1. Use the past-90-days commit aggregation from Task 2.
-            2. A repo qualifies as "substantial" if it has at least **10 commits by Brandon** in those 90 days.
-            3. Pick the top 6 qualifying repos by commit count.
-            4. If fewer than 6 qualify, fill remaining slots with the highest-commit-count repos from the past 365 days that have at least 5 commits. If still short of 6, render fewer cells rather than padding with low-activity repos. (For 365d, run an additional query: `gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '365 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '.items[].repository.full_name' | sort | uniq -c | sort -rn`)
+            Who reads this: the same visitor as Task 4, deciding in about thirty seconds what Brandon builds and whether any of it is worth opening. Each entry answers "what is this, and what would I use it for." It is not an activity report — activity is RECENT-ACTIVITY's job. This region carries NO commit counts and NO PR numbers.
 
-            For each chosen repo, fetch metadata:
-            `gh api repos/<owner>/<name> --jq '{description, language, stargazers_count, license: .license.spdx_id}'`
+            ### Choosing the projects
 
-            Do NOT fabricate any field — if it's empty or null, omit it.
+            1. Use the past-90-days commit aggregation from Task 2. A repo is a candidate if it has at least **10 commits by Brandon** in those 90 days. Take the top 12 candidates by commit count.
+            2. If fewer than 6 repos are candidates, add the highest-commit-count repos from the past 365 days that have at least 5 commits. (For 365d, run an additional query: `gh api "search/commits?q=author:brandon-fryslie+committer-date:>$(date -u -d '365 days ago' +%Y-%m-%dT%H:%M:%SZ)&per_page=100&sort=committer-date" --paginate --jq '.items[].repository.full_name' | sort | uniq -c | sort -rn`)
+            3. For each candidate, fetch its metadata and the opening of its README:
+               `gh api repos/<owner>/<name> --jq '{description, language, stargazers_count, license: .license.spdx_id, homepage, fork, archived}'`
+               `gh api repos/<owner>/<name>/readme --jq '.content | gsub("\\s"; "") | @base64d | .[0:4000]'`
+               (A 404 from the second command means the repo has no README.)
+            4. From the candidates choose up to six. Commit volume made a repo a candidate; it does not rank it. Prefer, in this order:
+               - a project a stranger can install or try today — its README gives an install command, a release, or a live demo — over one whose README says it is unreleased or not yet implemented;
+               - a tool with a purpose of its own over personal configuration, a fork that exists to carry patches, or a from-scratch rewrite of a project that is itself a candidate (show the one people can use);
+               - then commit count.
+            5. A repo with neither a README nor a description cannot be described without guessing — leave it out. If fewer than six are worth showing, render fewer cells. Never pad.
 
-            Render as a 2-column HTML `<table>` matching the existing layout: two `<td width="50%" valign="top">` columns with 3 project entries stacked in each (6 total when available). For each project entry, use the actual `<owner>/<name>` from the commit data — do NOT hard-code `brandon-fryslie/` since a qualifying repo could be a fork or org-owned. Each entry:
+            This list used to be the top six by commit count, which put whichever repo had the loudest month first whether or not anyone could use it. Do not fall back to that ordering because it is easier to compute.
+
+            ### Rendering
+
+            Open the region with at most one sentence, 35 words at most, above the table, saying how the chosen projects relate to one another — when their READMEs show that they do. For example: that several are parts of one workflow, and which part each is. Take the relationship from what the READMEs say, not from the repo names. If the projects do not relate, write no sentence. The sentence describes the projects; it says nothing about Brandon and makes no claim about quality.
+
+            Then a 2-column HTML `<table>` matching the existing layout: two `<td width="50%" valign="top">` columns with 3 project entries stacked in each (6 total when available). For each project entry, use the actual `<owner>/<name>` from the commit data — do NOT hard-code `brandon-fryslie/` since a chosen repo could be org-owned. Each entry:
 
             ```
             ### [<name>](https://github.com/<owner>/<name>)
             **<one-line metadata: e.g. "Go · MIT" or "TypeScript · 41★">**
 
-            <2–3 sentences of plain description: what the project is, what it does, plus one sentence on what shipped recently in it.>
+            <What it is and what it is for: one or two sentences, 45 words at most, present tense, in words someone who has never used it understands. Draw it from the README's own opening and the repo description.> <If the README gives a one-line install command or a demo link, exactly one of them: the command as inline code, or the link.> <Optionally one more sentence, 20 words at most, past tense: what changed this week for someone using it.>
             ```
 
-            Tone: matter-of-fact, third-person past tense. Plain verbs. No editorial adjectives. Same rules as RECENT-ACTIVITY bullets.
+            Do NOT fabricate any field — if it's empty or null, omit it (a star count of 0 is omitted too). Copy an install command or a demo URL from the README character for character, or leave it out.
+
+            Do NOT produce an entry like this one, which is what the region drifted into — a commit count, then the week's PRs in the repo's internal vocabulary:
+
+            ```
+            A web UI for inspecting sessions. 213 commits over the past 90 days, 20 this week. Every JSON document the app receives is read by one reader family — a refused field costs what its declaration holds it to ([#60](url)); a stored view is read field by field by persist's own storage ([#53](url)).
+            ```
+
+            Tone: matter-of-fact. Plain verbs. No editorial adjectives — if a README's own opening says "powerful" or "blazing fast," leave the adjective behind and keep the fact.
+
+            Before you leave this task, read back the region as it now stands in README.md and check each entry: no commit counts, no PR numbers, description within 45 words. Rewrite any entry that fails.
 
             ## Cross-cutting rules
 
             - ACCURACY IS PARAMOUNT across all three regions. Only reference real commits and real work. Never fabricate.
+            - Accuracy is not completeness. In RECENT-ACTIVITY and SELECTED-PROJECTS, a true detail that would push a bullet or an entry past its budget is cut. It is not lost: it stays reachable through the links and in the week file from Task 5. When you are deep in the commit data and one more clause feels necessary, that is the moment this rule is for.
             - Routine commits (merge commits, CI tweaks, dependency bumps, typo fixes) get folded into a single bullet at most, or omitted.
             - Do not touch any region or file outside your three markers, `daily-archive/`, and `previous-work/`.
 
