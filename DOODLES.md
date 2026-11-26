@@ -15,6 +15,21 @@ Today's doodle is shown live at the top of [README.md](./README.md). The moment 
 Newest first. Multiple entries on the same date are intentional — every run that archives a live doodle prepends its own entry, so a single calendar day can hold more than one when the workflow fires more than once.
 
 <!-- DOODLE-GALLERY:START -->
+## November 26, 2026 — General Relativity — 111th Anniversary (November 25, 1915)
+
+<img src="./doodle-archive/2026/11/2026-11-26-060124.svg" width="800" alt="Daily doodle for November 25, 2026 — 111th anniversary of Einstein's presentation of the field equations of general relativity to the Prussian Academy on November 25, 1915. On the left, a warped grid of spacetime sags toward a glowing mass at its centre, with a photon's curved path and small stars in the background. On the right, a cream NOVEMBER 25, 2026 headline sits over a double cream-and-amber bar, a cream GENERAL RELATIVITY · 111 YEARS subhead, an italic amber ALBERT EINSTEIN · BERLIN · 1915 tertiary, a dim CURVATURE · GEODESIC · LIGHT · TIME · MASS roster, and the field equation Rμν − ½gμνR + Λgμν = 8πG⁄c⁴ Tμν at the base.">
+
+<details>
+<summary>About this doodle</summary>
+
+On Thursday, 25 November 1915, Albert Einstein stood before the Prussian Academy of Sciences in Berlin and read out the final form of the field equations of general relativity. For eight years he had been chasing a theory in which gravity was not a force but a geometry — spacetime itself, curved by mass and energy. A month of furious competition with the mathematician David Hilbert had culminated in four lectures over four Thursdays in November. The equation he wrote on the board that morning — Rμν − ½gμνR + Λgμν = 8πG⁄c⁴ · Tμν — tied every particle in the universe to the shape of the space it was moving through. Four years later, Eddington's eclipse expedition measured starlight bending around the sun and the geometry was confirmed. One hundred and eleven years later, every GPS fix, every gravitational-wave chirp, every black-hole photograph is still working in the arithmetic Einstein handed in that day.
+
+The scene is a warped grid of spacetime. On the left, a cream mesh sags toward a glowing mass at its centre, geodesic lines bending inward; a photon traces a curved path around the well while small stars drift in the background. On the right, a cream NOVEMBER 25, 2026 headline sits over a double cream-and-amber bar, a cream GENERAL RELATIVITY · 111 YEARS subhead, an italic amber ALBERT EINSTEIN · BERLIN · 1915 tertiary, a dim CURVATURE · GEODESIC · LIGHT · TIME · MASS roster, and the field equation itself in italics at the base: Rμν − ½gμνR + Λgμν = 8πG⁄c⁴ · Tμν.
+
+</details>
+
+---
+
 ## November 25, 2026 — On the Origin of Species — 167th Anniversary (November 24, 1859)
 
 <img src="./doodle-archive/2026/11/2026-11-25-060208.svg" width="800" alt="Daily doodle for November 24, 2026 — 167th anniversary of the publication of Charles Darwin's On the Origin of Species on November 24, 1859. On the left, a sepia-ink phylogenetic tree branches outward from a common root on aged notebook paper, four finches with different beak silhouettes perched at the branch tips, and the words 'I think' written in a handwritten hand above the trunk with an arrow curling to the root. On the right, a cream NOVEMBER 24, 2026 headline sits over a double cream-and-sepia bar, a cream ORIGIN OF SPECIES · 167 YEARS subhead, an italic amber CHARLES DARWIN · LONDON · 1859 tertiary, a dim BEAGLE · GALÁPAGOS · FINCHES · SELECTION · DESCENT roster, and a Georgia-italic caption at the base reading: By so simple a beginning.">
