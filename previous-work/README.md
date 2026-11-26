@@ -1,6 +1,6 @@
 # Previous Engineering Work
 
-One curated document per week of engineering activity across Brandon's repositories. Each week's document is written *as the week happens*: on every day with commits, the daily `narrative` job appends that day's section — same-day context, real commit and PR links. When the week closes, the weekly job adds the summary header (title line, topics, totals) and links the finished document below. Weeks with no commits get no document.
+One curated document per week of engineering activity across Brandon's repositories. Each week's document is written *as the week happens*: on every day with commits, the daily `narrative` job appends that day's section — same-day context, real commit and PR links. That section is the full record of the day: the profile README's *Recent Engineering Work* is its short form, held to a sentence per repo, and links here for the rest. When the week closes, the weekly job adds the summary header (title line, topics, totals) and links the finished document below. Weeks with no commits get no document.
 
 Day sections are written once and never rewritten. The raw, verbatim record of what the profile README said each day lives in [`daily-archive/`](../daily-archive/).
 
