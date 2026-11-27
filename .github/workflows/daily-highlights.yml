@@ -456,7 +456,7 @@ jobs:
                - `another/repo` — what changed ([repo](url))
                ```
             4. Insert today's section between the in-progress note and the `---` footer:
-               - If a heading for TODAY (`## <TODAY_HEAD>`) already exists in the file (the workflow ran earlier today), replace THAT section's body in place — do NOT add a second copy of today.
+               - If a heading for TODAY (`## <TODAY_HEAD>`) already exists in the file (the workflow ran earlier today), do NOT add a second copy of today — and do NOT replace that section's body with this run's view alone. The earlier run recorded an earlier 24-hour window; work near the start of that window has since slid out of yours, and replacing the section deletes it from the record. Merge instead: keep every repo bullet already there; for a repo you also have data for, extend its existing bullet with the changes it does not yet name and correct its commit count; add bullets for repos that are new. Nothing an earlier run recorded today is removed.
                - Otherwise append it as the LAST day section, immediately before the `---` footer, so day sections stay in chronological order (Monday first).
                - NEVER modify a day section for a past day. Prior days are frozen; only today's section may be added or rewritten.
 
